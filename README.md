@@ -1,2 +1,2 @@
 # Open-Sturmovik
-Unofficial addon for IL2 1946
+Open-Sturmovik is an unofficial addon for IL2 1946
