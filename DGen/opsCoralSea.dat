@@ -1,0 +1,69 @@
+// Midway and alike = IJN vs US carriers and islands
+[Macros]
+JpReinforce		10622:50814:N 				USN 8nFf		IJN 3nFf 6N	
+UsReinforce		10622:50814:N 				USN 4nFf 8N		IJN 6nFf 	
+JpNavyMin		10622:50814:N 				USN 2nF			IJN 3N	
+JpNavyMin		10622:50814:N 				USN 2nF			IJN 3N	
+JpNavyMin		10622:50814:N 				USN 0F			IJN 3N	
+JpNavyMin		10622:50814:N 				USN 2nF			IJN 3N	
+JpNavyMin		10622:50814:N 				USN 0nF			IJN 3N 3nF
+JpNavyMin		10622:50814:N 				USN 2nF 2nF 2nF	IJN 3N 3nF 
+JpNavyMed		10622:50814:N				USN 2nF 2nF 4nF	IJN 6N
+JpNavyMed		10622:50814:N				USN 4nF 4nF 4nF	IJN 6N 6nF
+JpNavyMed		10622:50814:N				USN 8nF 			IJN 6N 6nF
+JpNavyScram		10622:50814:N				USN 3nBx 6nBx 6nBr	IJN 3N 3nF 3nF
+JpNavyScram		10622:50814:N				USN 6nBx 6nBr		IJN 3N 3nF 6nF 6nF
+JpNavyScram		10622:50814:N				USN 6nBx 6nBr		IJN 3N 3nF 6nF  
+JpNavyInt		10622:50814:N				USN 6nBr 6nBr 6nBr	IJN 3N 3nF 3nF
+JpNavyInt		10622:50814:N				USN 6nBr 6nBr		IJN 3N 3nF 3nF
+JpNavyInt		10622:50814:N				USN 6nBr 6nBr		IJN 3N 3nF 6nF  
+JpNavyAttack	10622:50814:N				USN 8nF			IJN 6N 6nF 6nB 6nF
+JpAttackShips	10622:50814:N				USN 8nF			IJN 6N 6nF 6nB 6nF
+JpBombShips		10622:50814:N				USN 8nF			IJN 6nB 6N 6nB 6nF
+JpNavyAttack	10622:50814:N				USN 4nF			IJN 6N 6nF 6nF 6nF
+JpNavyBomb		10622:50814:N				USN 4nF 8nF 		IJN 6nB 6N 6nB 6nF
+JpNavyRecInt	10622:50814:N				USN 2Hr 2nF 		IJN 3N
+JpNavyRecInt	10622:50814:N				USN 1Hr 2nF  	IJN 3N
+UsNavyMin		10622:50814:N				USN 2N			IJN 0nF
+UsNavyMin		10622:50814:N				USN 2N			IJN 3nF
+UsNavyMin		10622:50814:N				USN 4N			IJN 3nF
+UsNavyMed		10622:50814:N				USN 8N			IJN 6nF
+UsNavyMed		10622:50814:N				USN 6N			IJN 6nF
+UsAttackShips	10622:50814:N				USN 8N 8nB 8nF	IJN 6nF
+UsBombShips		10622:50814:N				USN 8nB 8N 8nB	IJN 6nF
+UsNavyScram		10622:50814:N				USN 4N 4nF 4nF	IJN 6nBx 3nBx 6nBx 
+UsNavyScram		10622:50814:N				USN 6N 6nF		IJN 6nBx 6nBx 6nBx 
+UsNavyInt		10622:50814:N				USN 4N 4nF 4nF	IJN 6nBr 3nBr 6nBr 
+UsNavyInt		10622:50814:N				USN 6N 6nF		IJN 6nBr 6nBr 6nBr 
+UsNavyAttack	10622:50814:N				USN 8N 8nF 8nF		IJN 6nF
+UsNavyAttack	10622:50814:N				USN 6N 4nF 8nF		IJN 6nF
+UsNavyAttack	10622:50814:N				USN 4N 8nF 8nF		IJN 6nF
+UsNavyAttack	10622:50814:N				USN 8N 4nF 4nF		IJN 6nF
+UsNavyBomb		10622:50814:N				USN 8nB 8N 8nF		IJN 6nF
+UsNavyRecInt	10622:50814:N				USN 4N			 	IJN 3nF
+[Operations]
+oUsReinforce		{UsReinforce}
+oJpReinforce		{JpReinforce}
+oJpRescue			{JpNavyMin}
+oJpReconSub			{JpNavyMin}
+oJpAttackSub		{JpNavyMin}
+oJpRescue			{JpNavyMin}
+oJpScramble			{JpNavyScram}
+oJpIntercept		{JpNavyInt}
+oJpAttackCarrier	{JpAttackShips}
+oJpBombCarrier		{JpBombShips}
+oJpAttackConvoy		{JpAttackShips}
+oJpBombConvoy		{JpBombShips}
+oJpFreeHunt			{JpNavyMed}
+oJpPatrol			{JpNavyMed}
+oJpReconIntercept	{JpNavyRecInt}
+oUsReconCarrier		{UsNavyMin}
+oUsAttackCarrier	{UsAttackShips}
+oUsBombCarrier		{UsBombShips}
+oUsReconSub			{UsNavyMin}
+oUsAttackSub		{UsNavyMin}
+oUsRescue			{UsNavyMin}
+oUsScramble			{UsNavyScram}
+oUsIntercept		{UsNavyInt}
+oUsPatrol			{UsNavyMed}
+oUsReconIntercept	{UsNavyRecInt}

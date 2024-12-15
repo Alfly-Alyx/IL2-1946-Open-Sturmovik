@@ -1,0 +1,219 @@
+[$select]
+HostChoice Podle vybìru hostitele
+RedJABO  Provedení úderu stíhacím-bombardovacím letectvem
+BlueJABO Provedení úderu stíhacím-bombardovacím letectvem
+[$missions]
+[$locale]
+name Krym '42
+note Krym '42 - kampaò podle výbìru hostitele
+MPD	Datum/úkol(y)	
+DiD	Typ kampanì	
+AIskill UI - stupeò zkušenosti
+AIvsOption Typ opozice
+RedPlaneEsc  Doprovodný letoun VVS
+RedPlanePat  Hlídkovácí letoun VVS
+RedPlaneAtt  Úderný letoun VVS
+BluePlaneEsc Doprovodný letoun Luftwaffe
+BluePlanePat Hlídkovácí letoun Luftwaffe
+BluePlaneAtt Úderný letoun Luftwaffe
+RedNumEsc  Poèet:
+RedNumPat  Poèet:
+RedNumAtt  Poèet:
+BlueNumEsc  Poèet:
+BlueNumPat  Poèet:
+BlueNumAtt  Poèet:
+RedSquadEsc  Doprovodná letka VVS
+RedSquadPat  Hlídkující letka VVS
+RedSquadAtt  Úderná letka VVS
+BlueSquadEsc Doprovodná letka Luftwaffe
+BlueSquadPat Hlídkující letka Luftwaffe
+BlueSquadAtt Úderná letka Luftwaffe
+[$data]
+NGen/Crimea42.DB
+lang=English,USSR
+1
+20502
+20503
+20504
+20505
+20506
+20507
+20508
+20509
+20510
+20511
+20512
+20513
+20514
+20515
+20517
+20519
+20521
+20523
+20525
+20527
+20530
+20603
+20605
+20607
+20608
+20609
+20610
+20611
+20612
+20613
+20614
+20615
+20616
+20617
+20618
+20619
+20620
+20621
+20622
+20623
+20624
+20625
+20701
+[MPD]
+  MPD:1     Datum se zmìní po jediném úkolu
+  MPD:2     Datum se zmìní po 2 úkolech
+  MPD:3     Datum se zmìní po 3 úkolech
+  MPD:4     Datum se zmìní po 4 úkolech
+  MPD:5     Datum se zmìní po 5 úkolech
+  MPD:10    Datum se zmìní po 10 úkolech
+[DiD]
+  DiDmode     Mrtvý je mrtvý
+  Immortal    Nesmrtelní bojovníci
+[AIskill]
+  AIskill:-1 Náhodný
+  AIskill:0 Zaèáteèník
+  AIskill:1 Kadet
+  AIskill:2 Veterán
+  AIskill:3 Eso
+[AIvsOption]
+  AIvsDefault	Èlovìk vs èlovìk
+  AIvsRed	Èervení vs UI
+  AIvsBlue	Modøí vs UI
+[RedPlaneAtt]
+  pAttRed:IL_4_DB3F DB-3F
+  pAttRed:IL_4_DB3M DB-3M
+  pAttRed:PE_2SERIES1 Pe-2
+  pAttRed:IL_2_1941Early IL-2  3.série
+  pAttRed:IL_2_1941Late IL-2 polní mod.
+  pAttRed:I_153_M62 I-153 M62
+  pAttRed:I_153P I-153P
+  pAttRed:I_16TYPE18 I-16 typ 18
+  pAttRed:I_16TYPE24 I-16 typ 24
+  pAttRed:LAGG_3SERIES4 LaGG-3 4.série
+  pAttRed:SB_2M103 SB-2 m103
+  Any Náhodný
+[RedNumAtt]
+  nAttRed:4 4
+  nAttRed:8 8
+  nAttRed:6 6
+  nAttRed:2 2
+  nAttRed:1 1
+  nAttRed:-1 Náhodný
+[RedSquadAtt]
+  RedSquadAtt:431ShAP 431.ŠAP
+  RedSquadAtt:34BAP 34.BAP
+[RedPlaneEsc]
+  pEscRed:I_153_M62 I-153 M62
+  pEscRed:I_153P I-153P
+  pEscRed:I_16TYPE18  I-16 typ 18
+  pEscRed:I_16TYPE24  I-16 typ 24
+  pEscRed:LAGG_3SERIES4 LaGG-3 4.série
+  pEscRed:MIG_3UD MiG-3ud
+  pEscRed:YAK_1 Jak-1
+  pEscRed:PE_3SERIES1 Pe-3
+  Any Náhodný
+[RedNumEsc]
+  nEscRed:4 4
+  nEscRed:8 8
+  nEscRed:6 6
+  nEscRed:2 2
+  nEscRed:0 0
+  nEscRed:-1 Náhodný
+[RedSquadEsc]
+  RedSquadEsc:160IAP 160.IAP
+  RedSquadEsc:165IAP 165.IAP
+[RedPlanePat]
+  pPatRed:I_153_M62 I-153 M62
+  pPatRed:I_153P I-153P
+  pPatRed:I_16TYPE18  I-16 typ 18
+  pPatRed:I_16TYPE24  I-16 typ 24
+  pPatRed:LAGG_3SERIES4 LaGG-3  4.série
+  pPatRed:MIG_3UD MiG-3/ud
+  pPatRed:YAK_1 Jak-1
+  pPatRed:PE_3SERIES1 Pe-3
+  Any Náhodný
+[RedNumPat]
+  nPatRed:4 4
+  nPatRed:8 8
+  nPatRed:6 6
+  nPatRed:2 2
+  nPatRed:0 0
+  nPatRed:-1 Náhodný
+[RedSquadPat]
+  RedSquadPat:160IAP 160.IAP
+  RedSquadPat:165IAP 165.IAP
+[BluePlaneAtt]
+  pAttBlue:JU_88A4 Ju-88 A-4
+  pAttBlue:HE_111H2 He-111 H-2
+  pAttBlue:JU_87B2 Ju-87 B-2
+  pAttBlue:BF_110C4B Bf-110 C-4B
+  pAttBlue:BF_109E4B Bf-109 E-4B
+  pAttBlue:BF_109E4B Bf-109 E-7
+[BlueNumAtt]
+  nAttBlue:4 4
+  nAttBlue:8 8
+  nAttBlue:6 6
+  nAttBlue:2 2
+  nAttBlue:1 1
+  nAttBlue:-1 Náhodný
+[BlueSquadAtt]
+  BlueSquadAtt:I_KG1 I/KG1
+  BlueSquadAtt:II_KG1 II/KG1
+  BlueSquadAtt:III_KG1 III/KG1
+  BlueSquadAtt:Stab_KG1 Stab/KG1
+  BlueSquadAtt:I_KG3 I/KG3
+  BlueSquadAtt:II_KG3 II/KG3
+  BlueSquadAtt:III_KG3 III/KG3
+  BlueSquadAtt:Stab_KG3 Stab/KG3
+  BlueSquadAtt:I_KG26 I/KG26
+  BlueSquadAtt:II_KG26 II/KG26
+  BlueSquadAtt:III_KG26 III/KG26
+  BlueSquadAtt:Stab_KG26 Stab/KG26
+[BluePlaneEsc]
+  pEscBlue:BF_109F2 Bf-109 F-2
+  pEscBlue:BF_109F2 Bf-109 F-4
+  pEscBlue:BF_109E4 Bf-109 E-4
+  Any Náhodný
+[BlueNumEsc]
+  nEscBlue:4 4
+  nEscBlue:8 8
+  nEscBlue:6 6
+  nEscBlue:2 2
+  nEscBlue:0 0
+  nEscBlue:-1 Náhodný
+[BlueSquadEsc]
+  BlueSquadEsc:I_JG1 I/JG1
+  BlueSquadEsc:II_JG1 II/JG1
+  BlueSquadEsc:III_JG1 III/JG1
+[BluePlanePat]
+  pPatBlue:BF_109F2 Bf-109 F-2
+  pPatBlue:BF_109F2 Bf-109 F-4
+  pPatBlue:BF_109E4 Bf-109 E-4
+  Any Náhodný
+[BlueNumPat]
+  nPatBlue:4 4
+  nPatBlue:8 8
+  nPatBlue:6 6
+  nPatBlue:2 2
+  nPatBlue:0 0
+  nPatBlue:-1 Náhodný
+[BlueSquadPat]
+  BlueSquadPat:I_JG1 I/JG1
+  BlueSquadPat:II_JG1 II/JG1
+  BlueSquadPat:III_JG1 III/JG1

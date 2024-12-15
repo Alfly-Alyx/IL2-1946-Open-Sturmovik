@@ -1,0 +1,58 @@
+// 45 US Air Start
+[Macros]
+UsNavyMin		10622:50814:N			USN 2N				IJN 3F
+UsNavyMin		10622:50814:N			USN 4N				IJN 3F
+UsNavyMed		10622:50814:N			USN 6N				IJN 6F
+UsNavyMed		10622:50814:N			USN 6N				IJN 4F
+UsKamiInt		10622:50814:N			USN 4N				IJN 1Kr 1Kr 1Kr 1Kr 1Kr 1Kr
+UsKamiInt		10622:50814:N			USN 6N				IJN 1Kr 1Kr 1Kr 1Kr 1Kr 1Kr
+UsNavyScram		10622:50814:N			USN 4N 2nF 2nF		IJN 6Bx 3Bx 6Bx 
+UsNavyScram		10622:50814:N			USN 4N 6nF			IJN 6Bx 6Bx 6Bx 
+UsNavyAttack	10622:50814:N			USN 6N 6nF 6nF		IJN 6F
+UsNavyAttack	10622:50814:N			USN 6N 4nF 6nF		IJN 6F
+UsNavyAttack	10622:50814:N			USN 4N 6nF 6nF		IJN 6F
+UsNavyAttack	10622:50814:N			USN 6N 4nF 4nF		IJN 12F
+UsNavyBomb		10622:50814:N			USN 6nB 6N 6nF		IJN 6F
+[Operations]
+oJpScramble	10622:60101:A					USN 13hB 4aF		IJN 6Y  
+oJpScramble	10622:60101:A					USN 13hB 8aF		IJN 6Y  
+oJpScramble	10622:60101:A					USN 13hB 8aF		IJN 8Y  
+oJpReinfiorce	10622:60101:A				USN 8F			IJN 6F 8Y  
+oJpPatrolCluster 10622:60601:A			USN 4fB 2F 		IJN 6Y
+oJpPatrolAF 10622:60101:A					USN 4fB  		IJN 8Y 2F
+oJpPatrolAF 10622:50814:A					USN 9hB 8aF 		IJN 8Y 4F
+oUsBombAF 10622:50814:A					USN 13hB 6U 	IJN 6F
+oUsBombAF 10622:50814:A					USN 13hB 6U 	IJN 6F
+oUsBombAF 10622:50814:A					USN 13hB 8U 	IJN 8F
+oUsBombCluster 10622:50814:A				USN 13hB 6U 	IJN 6F
+oUsBombCluster 10622:50814:A				USN 13hB 8U 	IJN 6F
+oUsAttackArmor 10622:50814:A		USN 6U 4F	IJN 6F
+oUsAttackHQ	10622:50814:A	USN 4U 4F	IJN 4F
+oUsAttackPort	10622:50814:A	USN 8U 4F	IJN 6F
+oUsAttackDepot	10622:50814:A	USN 6U 2F	IJN 8F
+oUsAttackBattery	10622:50814:A	USN 6U 4F	IJN 6F
+oUsAttackTroops	10622:50814:A	USN 6U 2F	IJN 2F
+oUsAttackCars	10622:50814:A	USN 6U 4F	IJN 6F
+oUsAttackTrain	10622:50814:A	USN 6U 4F	IJN 6F
+oUsBombConvoy		{UsNavyBomb}
+oUsReconAF			{UsNavyMin}
+oUsKamikazeIntercept {UsKamiInt}
+oUsBDAAF			{UsNavyMin}
+oUsScramble			{UsNavyScram}
+oUsAttackAF			{UsNavyAttack}
+oUsAttackArmor		{UsNavyAttack}
+oUsAttackHQ			{UsNavyAttack}
+oUsAttackPort		{UsNavyAttack}
+oUsAttackDepot		{UsNavyAttack}
+oUsAttackBattery	{UsNavyAttack}
+oUsAttackTroops		{UsNavyAttack}
+oUsAttackCars		{UsNavyAttack}
+oUsBombAF			{UsNavyBomb}
+oUsBombArmor		{UsNavyBomb}
+oUsBombHQ			{UsNavyBomb}
+oUsBombPort			{UsNavyBomb}
+oUsBombDepot		{UsNavyBomb}
+oUsBombBattery		{UsNavyBomb}
+oUsBombTroops		{UsNavyBomb}
+oUsBombCars			{UsNavyBomb}
+oUsPatrolAmph		{UsNavyMed}

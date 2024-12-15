@@ -1,0 +1,110 @@
+[Macros]
+UsNavyMin		10622:40618:N			USN 2N				IJN 3F
+UsNavyMin		10622:40618:N			USN 4N				IJN 3F
+UsNavyMed		10622:40618:N			USN 6N				IJN 6F
+UsNavyMed		10622:40618:N			USN 6N				IJN 4F
+UsNavyScram		10624:40618:N			USN 4N 2nF 2nF		IJN 6Bx 3Bx 6Bx 
+UsNavyScram		10622:40618:N			USN 4N 6nF			IJN 6Bx 6Bx 6Bx 
+UsNavyAttack	10622:40618:N			USN 6N 6nF 6nF		IJN 6F
+UsNavyAttack	10622:40618:N			USN 6N 4nF 6nF		IJN 6F
+UsNavyAttack	10622:40618:N			USN 4N 6nF 6nF		IJN 6F
+UsNavyAttack	10622:40618:N			USN 6N 4nF 4nF		IJN 12F
+UsNavyBomb		10622:40618:N			USN 6nB 6N 6nF		IJN 6F
+UsRecInt		10622:40618:N			USN 4N			 	IJN 2R 2F
+UsNavyMin		40620:50814:N			USN 2N				IJN 3F
+UsNavyMin		40620:50814:N			USN 4N				IJN 3F
+UsNavyMed		40620:50814:N			USN 6N				IJN 6F
+UsNavyMed		40620:50814:N			USN 6N				IJN 4F
+UsNavyScram		40620:50814:N			USN 4N 2nF 2nF		IJN 6Bx 3Bx 6Bx 
+UsNavyScram		40620:50814:N			USN 4N 6nF			IJN 6Bx 6Bx 6Bx 
+UsNavyAttack	40620:50814:N			USN 6N 6nF 6nF		IJN 6F
+UsNavyAttack	40620:50814:N			USN 6N 4nF 6nF		IJN 6F
+UsNavyAttack	40620:50814:N			USN 4N 6nF 6nF		IJN 6F
+UsNavyAttack	40620:50814:N			USN 6N 4nF 4nF		IJN 12F
+UsNavyBomb		40620:50814:N			USN 6nB 6N 6nF		IJN 6F
+UsRecInt		40620:50814:N			USN 4N			 	IJN 2R 2F
+JpNavalRecInt	10622:50814:A			USN 3nF 		 	IJN 4Y
+JpArmyScram		10622:50814:A			USN 6nBx 6nBx 6nBx	IJN 6Y   
+JpArmyInt		10622:50814:A			USN 6nBr 6nBr 6nBr	IJN 6Y   
+JpArmyMin		10622:50814:A			USN 4nF				IJN 3Y
+JpArmyMed		10622:50814:A			USN 6nF 6nF   		IJN 6Y 6F
+JpArmyCAP		10622:50814:A			USN 6nB 6nF 		IJN 6Y
+JpArmyCAP		10622:50814:A			USN 6nB 4nF 		IJN 6Y
+JpArmyCAP		10622:50814:A			USN 6nB 4nF 		IJN 6Y
+JpArmyAttack	10622:50814:A			USN 4nF 			IJN 6Y 6F
+UsNavyMin		40619:40619:N			USN 2N			IJN 0nF
+UsNavyMed		40619:40619:N			USN 8N			IJN 6nF
+UsAttackShips	40619:40619:N			USN 8N 8nB 8nF	IJN 6nF
+UsBombShips		40619:40619:N			USN 8nB 8N 8nB	IJN 6nF
+UsNavyScram		40619:40619:N			USN 4N 4nF 4nF	IJN 6nBx 3nBx 6nBx 
+UsNavyInt		40619:40619:N			USN 4N 4nF 4nF	IJN 6nBr 3nBr 6nBr 
+UsNavyAttack	40619:40619:N			USN 8N 8nF 8nF		IJN 6nF
+UsNavyBomb		40619:40619:N			USN 8nB 8N 8nF		IJN 6nF
+UsNavyRecInt	40619:40619:N			USN 4N			 	IJN 3nF
+[Operations]
+oUsReinforce		{UsReinforce}
+oJpReinforce		{JpReinforce}
+oJpRescue			{JpNavyMin}
+oJpReconSub			{JpNavyMin}
+oJpAttackSub		{JpNavyMin}
+oJpRescue			{JpNavyMin}
+oJpScramble			{JpNavyScram}
+oJpIntercept		{JpNavyInt}
+oJpAttackCarrier	{JpAttackShips}
+oJpBombCarrier		{JpBombShips}
+oJpAttackConvoy		{JpAttackShips}
+oJpBombConvoy		{JpBombShips}
+oJpFreeHunt			{JpNavyMed}
+oJpPatrol			{JpNavyMed}
+oJpReconIntercept	{JpNavyRecInt}
+oUsReconCarrier		{UsNavyMin}
+oUsAttackCarrier	{UsAttackShips}
+oUsBombCarrier		{UsBombShips}
+oUsReconSub			{UsNavyMin}
+oUsAttackSub		{UsNavyMin}
+oUsRescue			{UsNavyMin}
+oUsScramble			{UsNavyScram}
+oUsIntercept		{UsNavyInt}
+oUsPatrol			{UsNavyMed}
+oUsReconIntercept	{UsNavyRecInt}
+oUsAttackConvoy		{UsNavyAttack}
+oUsBombConvoy		{UsNavyBomb}
+oUsReconAF			{UsNavyMin}
+oUsBDAAF			{UsNavyMin}
+oUsScramble			{UsNavyScram}
+oUsAttackAF			{UsNavyAttack}
+oUsAttackArmor		{UsNavyAttack}
+oUsAttackHQ			{UsNavyAttack}
+oUsAttackPort		{UsNavyAttack}
+oUsAttackDepot		{UsNavyAttack}
+oUsAttackBattery	{UsNavyAttack}
+oUsAttackTroops		{UsNavyAttack}
+oUsAttackCars		{UsNavyAttack}
+oUsBombAF			{UsNavyBomb}
+oUsBombArmor		{UsNavyBomb}
+oUsBombHQ			{UsNavyBomb}
+oUsBombPort			{UsNavyBomb}
+oUsBombDepot		{UsNavyBomb}
+oUsBombBattery		{UsNavyBomb}
+oUsBombTroops		{UsNavyBomb}
+oUsBombCars			{UsNavyBomb}
+oUsPatrolAmph		{UsNavyMed}
+oJpAttackAmph		{JpArmyMed}
+oUsFreeHunt			{UsNavyMed}
+oUsPatrol			{UsNavyMed}
+oUsReconIntercept	{UsRecInt}
+oUsRescue			{UsNavyMin}
+oJpReconCarrier		{JpArmyMin}
+oJpAttackCarrier	{JpArmyAttack}
+oJpScramble			{JpArmyScram}
+oJpPatrolTroops		{JpArmyCAP}
+oJpPatrolBattery	{JpArmyCAP}
+oJpPatrolDepot		{JpArmyCAP}
+oJpPatrolPort		{JpArmyCAP}
+oJpPatrolHQ			{JpArmyCAP}
+oJpFreeHunt			{JpArmyMed}
+oJpPatrolAF			{JpArmyCAP}
+oJpPatrolArmor		{JpArmyCAP}
+oJpPatrolCars		{JpArmyCAP}
+oJpPatrol			{JpArmyMed}
+oJpReconIntercept	{JpNavalRecInt}

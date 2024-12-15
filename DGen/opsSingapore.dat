@@ -1,0 +1,79 @@
+// Singapore
+[Macros]
+UsArmyMin		10622:50814:A			USN 2Y				IJN 3F
+UsArmyMin		10622:50814:A			USN 4Y				IJN 3F
+UsArmyMed		10622:50814:A			USN 6Y				IJN 6F
+UsArmyMed		10622:50814:A			USN 6Y				IJN 4F
+UsArmyScram		10622:50814:A			USN 4Y 2F 2F		IJN 6Bx 3Bx 6Bx 
+UsArmyScram		10622:50814:A			USN 4Y 2F 2F		IJN 6Bx 3Bx 6Bx 
+UsArmyScram		10622:50814:A			USN 4Y 6F			IJN 6Bx 6Bx 6Bx 
+UsArmyInt		10622:50814:A			USN 4Y 2F 2F		IJN 6Br 3Br 6Br 
+UsArmyInt		10622:50814:A			USN 4Y 2F 2F		IJN 6Br 3Br 6Br 
+UsArmyInt		10622:50814:A			USN 4Y 6F			IJN 6Br 6Br 6Br 
+UsArmyAttack	10622:50814:A			USN 6Y 6F 6F		IJN 6F
+UsArmyAttack	10622:50814:A			USN 6Y 4F 6F		IJN 6F
+UsArmyAttack	10622:50814:A			USN 4Y 6F 6F		IJN 6F
+UsArmyAttack	10622:50814:A			USN 6Y 4F 4F		IJN 3F
+UsArmyBomb		10622:50814:A			USN 6B 6Y 6F		IJN 6F
+UsRecInt		10622:50814:N			USN 4Y			 	IJN 2R 2F
+JpArmyScram		10622:50814:A			USN 6Bx 6Bx 6Bx		IJN 6Y   
+JpArmyInt		10622:50814:A			USN 6Br 6Br 		IJN 6Y   
+JpArmyMin		10622:50609:A			USN 4F				IJN 3Y
+JpArmyMed		10622:50814:A			USN 6F 6F   		IJN 6Y 6F
+JpArmyCAP		10622:50814:A			USN 3B 2F	 		IJN 6Y
+JpArmyCAP		10622:50814:A			USN 6B 2F 			IJN 6Y
+JpArmyCAP		10622:50814:A			USN 3B 2F 			IJN 6Y
+JpArmyAttack	10622:50814:A			USN 4F 				IJN 6Y 6F
+JpArmyAttack	10622:50814:A			USN 4F				IJN 6Y 9F
+JpArmyBomb		10622:50814:A			USN 8F 4F			IJN 6B 6Y 6F
+JpArmyBomb		10622:50814:A			USN 4F 4F			IJN 6B 3Y 3F
+[Operations]
+oUsAttackConvoy		{UsArmyAttack}
+oUsBombConvoy		{UsArmyBomb}
+oUsScramble			{UsArmyScram}
+oUsIntercept		{UsArmyScram}
+oUsAttackArmor		{UsArmyAttack}
+oUsAttackHQ			{UsArmyAttack}
+oUsAttackPort		{UsArmyAttack}
+oUsAttackDepot		{UsArmyAttack}
+oUsAttackBattery	{UsArmyAttack}
+oUsAttackTroops		{UsArmyAttack}
+oUsAttackCars		{UsArmyAttack}
+oUsAttackAF			{UsArmyAttack}
+oUsBombArmor		{UsArmyBomb}
+oUsBombHQ			{UsArmyBomb}
+oUsBombPort			{UsArmyBomb}
+oUsBombDepot		{UsArmyBomb}
+oUsBombBattery		{UsArmyBomb}
+oUsBombTroops		{UsArmyBomb}
+oUsBombCars			{UsArmyBomb}
+oUsFreeHunt			{UsArmyMed}
+oUsPatrol			{UsArmyMed}
+oUsReconIntercept	{UsRecInt}
+oUsRescue			{UsArmyMin}
+oJpScramble			{JpArmyScram}
+oJpPatrolTroops		{JpArmyCAP}
+oJpPatrolBattery	{JpArmyCAP}
+oJpPatrolDepot		{JpArmyCAP}
+oJpPatrolPort		{JpArmyCAP}
+oJpPatrolHQ			{JpArmyCAP}
+oJpFreeHunt			{JpArmyMed}
+oJpPatrolAF			{JpArmyCAP}
+oJpPatrolArmor		{JpArmyCAP}
+oJpPatrolCars		{JpArmyCAP}
+oJpPatrol			{JpArmyMed}
+oJpReconIntercept	{JpNavalRecInt}
+oJpAttackHQ			{JpArmyAttack}
+oJpAttackShips		{JpArmyAttack}
+oJpAttackPort		{JpArmyAttack}
+oJpAttackDepot		{JpArmyAttack}
+oJpAttackBattery	{JpArmyAttack}
+oJpAttackTroops		{JpArmyAttack}
+oJpAttackCars		{JpArmyAttack}
+oJpBombArmor		{JpArmyBomb}
+oJpBombHQ			{JpArmyBomb}
+oJpBombPort			{JpArmyBomb}
+oJpBombDepot		{JpArmyBomb}
+oJpBombBattery		{JpArmyBomb}
+oJpBombTroops		{JpArmyBomb}
+oJpBombCars			{JpArmyBomb}

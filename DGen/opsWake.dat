@@ -1,0 +1,72 @@
+// Wake 
+[Macros]
+JpReinforce		10622:50814:N 				USN 8Ff			IJN 3nFf 6N	
+UsReinforce		10622:50814:A 				USN 4Ff 8Y		IJN 6nFf 	
+JpNavyMin		10622:50814:N 				USN 2F			IJN 3N	
+JpNavyMin		10622:50814:N 				USN 2F			IJN 3N	
+JpNavyMin		10622:50814:N 				USN 0F			IJN 3N	
+JpNavyMin		10622:50814:N 				USN 2F			IJN 3N	
+JpNavyMin		10622:50814:N 				USN 0F			IJN 3N 3nF
+JpNavyMin		10622:50814:N 				USN 2F 2F 2F	IJN 3N 3nF 
+JpNavyMed		10622:50814:N				USN 2F 2F 4F	IJN 6N
+JpNavyMed		10622:50814:N				USN 4F 4F 4F	IJN 6N 6nF
+JpNavyMed		10622:50814:N				USN 8F 			IJN 6N 6nF
+JpNavyAttack	10622:50814:N				USN 8F			IJN 6N 6nF 6nB 6nF
+JpNavyAttack	10622:50814:N				USN 4F			IJN 6N 6nF 6nF 6nF
+JpNavyBomb		10622:50814:N				USN 4F 8F 		IJN 6nB 6N 6nB 6nF
+JpNavyRecInt	10622:50814:N				USN 2Hr 2F 		IJN 3N
+JpNavyRecInt	10622:50814:N				USN 1Hr 2F  	IJN 3N
+UsArmyMin		10622:50814:A				USN 2Y			IJN 3nF
+UsArmyMin		10622:50814:A				USN 4Y			IJN 3nF
+UsArmyMed		10622:50814:A				USN 8Y			IJN 6nF
+UsArmyMed		10622:50814:A				USN 6Y			IJN 6nF
+UsArmyScram		10622:50814:A				USN 2Y 		IJN 6nBx 6nBx 6nBx 
+UsArmyInt		10622:50814:A				USN 2Y 2F		IJN 6nBr 6nBr 6nBr 
+UsArmyCAP		10622:50814:A				USN 2Y 2F 		IJN 6nB 6nF 
+UsArmyCAP		10622:50814:A				USN 2Y	 		IJN 6nB 6nF
+UsArmyCAP		10622:50814:A				USN 2Y	 		IJN 6nB 3nF 
+UsArmyCAP		10622:50814:A				USN 2Y	 		IJN 6nB 6nF 
+UsArmyCAP		10622:50814:A				USN 2Y	 		IJN 6nB 3nF 
+UsArmyRecInt		10622:50814:A				USN 4Y	 		IJN 3nF
+[Operations]
+oUsReinforce		{UsReinforce}
+oJpRescue			{JpNavyMin}
+oJpReconSub			{JpNavyMin}
+oJpAttackSub		{JpNavyMin}
+oJpRescue			{JpNavyMin}
+oJpReconAF			{JpNavyMin}
+oJpBDAAF			{JpNavyMin}
+oJpAttackAF			{JpNavyAttack}
+oJpAttackArmor		{JpNavyAttack}
+oJpAttackHQ			{JpNavyAttack}
+oJpAttackPort		{JpNavyAttack}
+oJpAttackDepot		{JpNavyAttack}
+oJpAttackBattery	{JpNavyAttack}
+oJpAttackTroops		{JpNavyAttack}
+oJpAttackCars		{JpNavyAttack}
+oJpAttackConvoy		{JpAttackShips}
+oJpBombConvoy		{JpBombShips}
+oJpAttackArmor		{JpNavyAttack}
+oJpBombAF			{JpNavyBomb}
+oJpBombArmor		{JpNavyBomb}
+oJpBombHQ			{JpNavyBomb}
+oJpBombPort			{JpNavyBomb}
+oJpBombDepot		{JpNavyBomb}
+oJpBombBattery		{JpNavyBomb}
+oJpBombTroops		{JpNavyBomb}
+oJpBombCars			{JpNavyBomb}
+oJpFreeHunt			{JpNavyMed}
+oJpPatrol			{JpNavyMed}
+oJpReconIntercept	{JpNavyRecInt}
+oUsScramble			{UsArmyScram}
+oUsIntercept		{UsNavyInt}
+oUsIntercept		{UsArmyInt}
+oUsPatrolTroops		{UsArmyCAP}
+oUsPatrolBattery	{UsArmyCAP}
+oUsPatrolDepot		{UsArmyCAP}
+oUsPatrolPort		{UsArmyCAP}
+oUsPatrolHQ			{UsArmyCAP}
+oUsPatrolAF			{UsArmyCAP}
+oUsPatrolArmor		{UsArmyCAP}
+oUsPatrolCars		{UsArmyCAP}
+oUsReconIntercept	{UsArmyRecInt}

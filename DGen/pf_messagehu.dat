@@ -1,0 +1,1352 @@
+<DGen:>		<*>
+	--------------------------------------------------------------------------------------------
+		 Translation guidelines. 
+
+	Every line not starting with symbol < will be ignored. You may use it for comments.
+ 	Messages consist of three parts: message ID, optional message selector and text.
+
+	For every ID code there may be up to 10 variants of texts - one will be picked up randomly.
+	You don't need to translate every line exactly, you just need to describe the same situation.
+
+	Message selector in () brackets defines which campaign will use them.
+	*JA means all Japanese
+	aJA Japanese Army only
+	nJA Japanese Navy only
+
+	other codes are 
+	*U*, for all Allies
+	*UK, for RAF and RN
+	aUK, for RAF, RNZAF, RAAF 
+	aUD, for Dutch
+	nUK, for RN
+	*US, for USAAF,USMC,USN
+	aUS, for USAAF
+	nUS, for US Navy
+	mUS, for US Marine Corps
+
+	Some messages can be made map-specific. For instance:
+
+//<AttackAF>(*U*)
+
+	is a generic AF attack, while:
+
+//<AttackAF:Tarawa>(*U*) can contain some references to invasion of Tarawa. If there is map-specific varioant, 
+   only this version will be used.
+
+
+	Symbols \n ans %s must be left intact. \n means new line, %s means that some substring will be 
+	placed there - usually town name. 
+
+	Message texts cannot contain new lines - make them as long as you need (but not longer than 256 chars).
+	--------------------------------------------------------------------------------------------
+
+//<Retrn>		<Egy kis kiképzés után a százada ismét akcióban...\n>
+
+<Retrn>		< >
+
+--------------------------------------------------------------------------------------------
+	The following messages are for pilot's logbook
+--------------------------------------------------------------------------------------------
+
+
+
+<logCAS>				<A légi támogatás megszüntetése>
+<logAttack>				<Támadás>
+<logNavalAttack>		<Tengerészeti támadás>
+<logCAP>				<A légi õrjárat támadása>
+<logFleetPatrol>		<Flottaõrjárat>
+<logParaEscort>			<Kíséret>
+<logIntercept>			<Elfogás>
+<logReconEscort>		<Felderítõ kíséret>
+<logRecon>				<Felderítés>
+<logFighterSweep>		<Vadászgépes átfésülés>
+<logScramble>			<Gyors felszállás>
+<logRescue>				<Mentés>
+<logNone>				< >
+<logStrikeEscort>		<Támadási kíséret>
+<logTransfer>			<Áthelyezés>
+
+<logBailed> 			<Kiugrás>	
+<logKill> 				<A szükséges %k lelõve>		
+<logCrashed> 			<Ütközött>	
+<logLandedAF> 			<Leszállt>
+<logLanded> 			<Leszállt>
+
+
+<logAttackAF>			<Megtámadott ellenséges légtér>
+<logTank>               <Megsemmisített ellenséges tank>
+<logShip>				<Megsemmisített ellenséges hajó>
+<logArtillery>			<Megtámadott ellenséges légvédelmi poszt>
+<logColumn>				<Megtámadott ellenséges szállítókonvoj>
+<logTrain>				<Megtámadott ellenséges vonat> 
+<logBridge>				<Lerombolt híd>
+<logTroops>				<Megtámadott ellenséges csapat>
+
+	--------------------------------------------------------------------------------------------
+	The following messages are for pilot's personal files
+	--------------------------------------------------------------------------------------------
+
+<rstJoined> 		<csatlakozott a századhoz>
+<rstPromoted> 		<%-vá léptették elõ>
+<rstAwarded> 		<%-val díjazták>
+
+<rstTransfered>(*U*) 	<amerikai íróasztali munkára helyezték át>
+<rstTransfered>(*JA) 	<a hazai szigetekre helyezték át>
+
+<rstHospitalize> 		<megsebesült és kórházba szállították>
+<rstReunited> 		<visszatért a századhoz>
+
+
+<recJoined> 		<{DATE} {lastname} {RANK} csatlakozott a századhoz>
+<recPromoted> 		<{DATE} {lastname} {OLDRANK}-t  {RANK}-á léptették elõ>
+<recAwarded> 		<{DATE} {lastname} {RANK}-t {érem}-mel jutalmazták>
+
+<recTransfered>(*U*) 	<{DATE} {lastname} {RANK}-t amerikai íróasztali munkára helyezték át >
+<recTransfered>(*JA) 	<{DATE} {lastname} {RANK}-t a hazai szigetekre helyezték át>>
+
+<recHospitalize> 		<{DATE} {lastname} {RANK} megsebesült és kórházba szállították>
+<recReunited> 		<{DATE} {lastname} {RANK} visszatért a századhoz>
+
+
+<rstKilled> 				<ütközetben elesett>
+<rstMissed> 				<ütközetben eltûnt>
+
+	--------------------------------------------------------------------------------------------
+	Please do not translate words Name and Description - they are used by IL2
+	--------------------------------------------------------------------------------------------
+<nSHR> 		<DGen küldetés\n>
+<nHDR> 		<Name küldetés %k\n>
+<hShortRuB>	<Bombázó. %k, '4%d>
+<hShortRuF>	<Vadászgép. %k, '4%d>
+<hShortJaB>	<Bombázó. %k, '4%d>
+<hShortJaF>	<Vadászgép. %k, '4%d>
+
+<hLongRuB>	<Description amerikai bombázópilóta dinamikus hadjárata. %s, 194%d>
+<hLongRuF>	<Description amerikai vadászpilóta dinamikus hadjárata. %s, 194%d>
+<hLongJaB>	<Description japán bombázópilóta dinamikus hadjárata. %s, 194%d>
+<hLongJaF>	<Description japán vadászpilóta dinamikus hadjárata %s, 194%d>
+
+	--------------------------------------------------------------------------------------------
+	Plane names to appear in briefings
+	--------------------------------------------------------------------------------------------
+
+<JU_52_3MG4E>	<Ju-52 3MG4E>
+<LI_2>	<Li-2>
+<P_39D1>		<P-39D>
+<P_39D2>		<P-39D>
+<P_39N>		<P-39N>
+<P_39Q1>	<P-39Q1>
+<P_39Q10>	<P-39Q10>
+<P_400>		<P-400>
+<P_40E>		<P-40>
+<P_40EM105>	<P-40>	
+<P_40M>>	<P-40M>
+
+<P_40SUKAISVOLOCHHAWKA2> <P-40B>
+<P_40SUKAISVOLOCHB>	<P-40B>
+<P_40SUKAISVOLOCHC>	<P-40C>
+<P_40SUKAISVOLOCH2A> <Tomahawk>
+<P_40SUKAISVOLOCH2B> <Tomahawk II>
+
+<HurricaneMkIa>	<Hurricane>
+<HurricaneMkIIb>	<Hurricane>
+<HurricaneMkIIc>	<Hurricane>
+<HurricaneMkIIbMod>	<Hurricane>
+<BLENHEIM1>	<Blenheim>
+<BLENHEIM4>	<Blenheim>
+
+<F2A_B239> <Brewster>
+<MS406> <M.S.406>
+<MS410> <M.S.410>
+<P_47D10> <P-47>
+<P_47D22> <P-47>
+<P_47D22> <P-47>
+<P_47D10> <P-47>
+<P_47D22> <P-47>
+<P_47D27> <P-47>
+<P_51D20NA>	<P-51>
+<P_51D5NT>	<P-51>
+<P_51CM>	<P-51>
+<TEMPEST5>	<Tempest V>
+<B_17E> <B-17>
+<B_17D> <B-17>
+<B_17G> <B-17>
+<B_29> <B-29>
+
+<P_38J>	<P-38>
+<P_38L>	<P-38>
+<P_38LLate>	<P-38>
+
+<A6M2>(*U*)	<Zeke>
+<A6M3>(*U*)	<Hamp>
+<A6M2_21>(*U*)	<Zeke>
+<A6M2N>(*U*)	<Rufe>
+<A6M5A>(*U*)	<Zeke>
+<A6M5B>(*U*)	<Zeke>
+<A6M5C>(*U*)	<Zeke>
+<A6M5>(*U*)	<Zeke>
+<A6M5A>(*U*)	<Zeke>
+<A6M7_62>(*U*) <Zeke>
+<A6M7_63>(*U*) <Zeke>
+
+<A6M2>(*JA)	<A6M2>
+<A6M3>(*JA)	<A6M3>
+<A6M2_21>(*JA)	<A6M2>
+<A6M2N>(*JA)	<A6M2-N>
+<A6M5A>(*JA)	<A6M5a>
+<A6M5B>(*JA)	<A6M5b>
+<A6M5C>(*JA)	<A6M5c>
+<A6M5>(*JA)	<A6M5>
+<A6M5A>(*JA)	<A6M5a>
+<A6M7_62>(*JA) <A6M7>
+<A6M7_63>(*JA) <A6M7>
+
+<KI_84_IA>(*JA)	<Hayate>
+<KI_84_IB>(*JA)	<Hayate>
+<KI_84_IC>(*JA)	<Hayate>
+<KI_84_IA>(*U*)	<Frank>
+<KI_84_IB>(*U*)	<Frank>
+<KI_84_IC>(*U*)	<Frank>
+
+<KI_43_IA>(*JA)	<Hayabusa>
+<KI_43_IB>(*JA)	<Hayabusa>
+<KI_43_IC>(*JA)	<Hayabusa>
+<KI_43_II>(*JA)	<Hayabusa II>
+<KI_43_IIKAI>(*JA)	<Hayabusa II>
+
+<KI_43_IA>(*U*)	<Oscar>
+<KI_43_IB>(*U*)	<Oscar>
+<KI_43_IC>(*U*)	<Oscar>
+<KI_43_II>(*U*)	<Oscar Mk. 2>
+<KI_43_IIKAI>(*U*)	<Oscar Mk. 2>
+
+<KI_46_OTSU>(*JA)	 <Shitei Otsu>
+<KI_46_OTSUHEI>(*JA) <Shitei Otsu Hei>
+<KI_46_RECCE>(*JA)	 <Shitei Recce>
+<KI_61_IKO>(*JA)	 <Hien>
+<KI_61_IHEI>(*JA)	 <Hien>
+<KI_61_IOTSU>(*JA)	 <Hien>
+
+<KI_46_OTSU>(*U*)		<Dinah>
+<KI_46_OTSUHEI>(*U*)	<Dinah>
+<KI_46_RECCE>(*U*)		<Dinah>
+<KI_61_IKO>(*U*)		<Tony>
+<KI_61_IHEI>(*U*)		<Tony>
+<KI_61_IOTSU>(*U*)		<Tony>
+
+<KI_100_IKO> (*JA) <Ki-100>
+<KI_100_IKO> (*U*) <Tony>
+
+<D3A1>(*JA)	<Kanbaku>
+<D3A1>(*U*)	<Val>
+
+<B5N2>(*JA)	<Kankoh>
+<B5N2>(*U*)	<Kate>
+
+<G4M1_11>(*JA)	<Rikko>
+<G4M1_11>(*U*)	<Betty>
+
+<F6F3>(*U*)	<F6F-3>
+<F6F5>(*U*)	<F6F-5>
+<F4U1A>(*U*)	<F4U>
+<F4U1C>(*U*)	<F4U>
+<F4U1D>(*U*)	<F4U>
+<TBF1C>(*US)		<TBF-1>
+<TBF1C>(*UK)		<Tarpon>
+
+<TBF1>(*U*) <TBF-1>
+<TBM3AVENGER3>(*U*) <Avenger>
+<TBM3>(*U*) <TBM-3>
+
+<F4F3>(*U*)	<F4F-3>
+<F4F4>(*U*)	<F4F-4>
+<F4F_FM2>(*U*)	<FM-2>
+
+<F4F3>(*JA)	<Wildcat>
+<F4F4>(*JA)	<Wildcat>
+<F4F_FM2>(*JA)	<Wildcat>
+
+<SEAFIRE3> <Seafire>
+
+<F6F3>(*JA)	<Hellcat>
+<F6F5>(*JA)	<Hellcat>
+<F4U1A>(*JA)	<Corsair>
+<F4U1C>(*JA)	<Corsair>
+<F4U1D>(*JA)	<Corsair>
+<F4U1A>(*JA)	<Corsair>
+<F4U1C>(*JA)	<Corsair>
+<F4U1D>(*JA)	<Corsair>
+<TBF1C>(*JA) <Avenger>
+<TBF1>(*JA) <Avenger>
+<TBM3AVENGER3>(*JA) <Avenger>
+<TBM3>(*JA) <Avenger>
+
+<B_25J1>(*U*)	<B-25>
+<B_25J1>(*JA)	<B-25>
+<B_25C25>(*U*)	<B-25>
+<B_25C25>(*JA)	<B-25>
+<A_20G>(*U*)	<A-20>
+<A_20G>(*JA)	<A-20>
+
+
+<F4UCORSAIR1>(*U*) <Corsair>
+<F4UCORSAIR2>(*U*) <Corsair>
+<F4UCORSAIR4>(*U*) <Corsair>
+<BEAU21>(*U*) <Beaufighter>
+<SBD3>(*U*)	<SBD-3>
+<B_17E>(*U*) <B-17>
+<B_24J100>(*U*)	<B-24>
+
+<F4UCORSAIR1>(*JA) <Corsair>
+<F4UCORSAIR2>(*JA) <Corsair>
+<F4UCORSAIR4>(*JA) <Corsair>
+<BEAU21>(*JA) <Beaufighter>
+<SBD3>(*JA)	<Dauntless>
+<B_17E>(*JA) <B-17>
+<B_24J100>(*JA) <Liberator>
+
+
+	--------------------------------------------------------------------------------------------
+	Geographic names - if spelling is different from English
+	<Moscow>	<Moszkva>
+	<Crimea>		<Krim>
+	--------------------------------------------------------------------------------------------
+
+<dbrDEAD>	<Megölték.>
+<dbrCAPTURED>	<\nElfogták.>
+<dbrCAPTURED>(*U*)	<\nElfogták és hadifogolytáborba küldték.>
+<dbrWOUNDED>	<\nMegsebesült és kórházba szállították.>
+
+<SQ> <A százada C/O-ja %k\n>
+<CO> <A százada C/O-jává nevezték ki!\n>
+
+<dbrEnemyLost> <\nA század a következõ veszteségeket okozta az ellenségnek:\n>
+
+<CUR_KILLS>		<E küldetés során a következõket semmisítette meg:>
+<CUR_KILLS>		<A legutóbbi küldetés során a következõket ölte meg:>
+<CUR_KILLS>		<A legutóbbi bevetés során a következõ célpontok semmisültek meg:>
+
+<TOT_KILLS>		<A karrierje során a következõket semmisítette meg:>
+<TOT_KILLS>		<Az ön által megsemmisített célpontok teljes listája:>
+<TOT_KILLS>		<Eddig a következõket semmisítette meg:>
+
+<dbrNplanes>	<Repülõgépek: %d\n>
+<dbrNplanesG>	<Földön tartózkodó repülõgépek: %d\n>
+<dbrNtanks>		<Páncéloserõk: %d\n>
+<dbrNguns>		<Gépágyuk: %d\n>
+<dbrNcars>		<Jármûvek: %d\n>
+<dbrNwagons>	<Vasúti vagonok: %d\n>
+<dbrNbridges>	<Hidak: %d\n>
+<dbrNships>		<Hajók: %d\n>
+
+<logRecon> 				<Légi felderítés>
+<logNavalRecon> 		<Tengerészeti felderítés>
+<logReconB> 			<Légi felderítés>
+
+<YouAreBack> <\nVisszatért az aktív szolgálatba\n>
+
+
+////////////////////////////////////////////////////////////////////////////
+	MACROS:
+
+	{FIRSTNAME}		your first name
+	{LASTNAME}		your last name
+	{RANK}			your rank (abbreviated, Lt.Col)
+	{PLANE}			your plane
+	{SECTOR}	    destination sector (100,330)
+	(#)				number of planes in your group (4)
+	(#a)			number of planes in your group (four)
+	(#A)			number of planes in your group (Four)
+	{LDR_NAME}		group leader's last name
+	{LDR_RANK}		group leader's rank
+	{LDR_FULLRANK}  group leader's rank
+
+	{ESCORTED} escorted plane type.
+
+	{W0_RANK} the leader of player's group of up to 4 planes
+	{W1_RANK} his wingmen
+	{W2_RANK}
+	{W3_RANK}
+
+	{W0_NAME} the leader of player's group of up to 4 planes
+	{W1_NAME} his wingmen
+	{W2_NAME}
+	{W3_NAME}
+
+	{DATE}		  1 Janvier 1944
+	{DATE_D.MY}   1. Januar 1944
+	{DATE_DMY}    1 Janvier 1944
+	{DATE_MDY}    January 1, 1944
+	{DATE_DM,Y}	  1 January, 1944
+	{TIME}		9:15
+	{MTIME}		0915
+
+	{DIR} expands to whatever is written under {E} {NW}
+	{TO}
+	{FROM}
+
+	Temporary macros (calculated multiple times, just before usage)
+
+	(plane)
+	{rank}
+	{lastname}
+	{=#} number of planes
+	{=#a} number of planes
+	{=#A} number of planes
+	(~#) approximate number of planes
+
+////////////////////////////////////////////////////////////////////////////
+
+<One>			<Egy>
+<Two>			<Kettõ>
+<Three>			<Három>
+<Four>			<Négy>
+<Five>			<Öt>
+<Six>			<Hat>
+<Seven>			<Hét>
+<Eight>			<Nyolc>
+<Nine>			<Kilenc>
+<Ten>			<Tíz>
+<Eleven>		<Tizenegy>
+<Twelve>		<Tizenkettõ>
+<Thirteen>		<Tizenhárom>
+<Twenty six>	<Huszonhat>
+<Thirty nine>	<Harminckilenc>
+
+<one>			<egy>
+<two>			<kettõ>
+<three>			<három>
+<four>			<négy>
+<five>			<öt>
+<six>			<hat>
+<seven>			<hét>
+<eight>			<nyolc>
+<nine>			<kilenc>
+<ten>			<tíz>
+<eleven>		<tizenegy>
+<twelve>		<tizenkettõ>
+<thirteen>		<tizenhárom>
+<twenty six>	<huszonhat>
+<thirty nine>	<harminckilenc>
+
+<RANK0>(aUS) 	<lég. tiszt>
+<RANK1>(aUS) 	<alh.>
+<RANK2>(aUS) 	<fõh.>
+<RANK3>(aUS) 	<sz.>
+<RANK4>(aUS) 	<õrn.>
+<RANK5>(aUS)	<alezr.>
+<RANK6>(aUS) 	<ezr.>
+
+<RANK0>(mUS) 	<õrm.>
+<RANK1>(mUS) 	<alh.>
+<RANK2>(mUS) 	<fõh.>
+<RANK3>(mUS) 	<sz.>
+<RANK4>(mUS) 	<õrn.>
+<RANK5>(mUS)	<alezr.>
+<RANK6>(mUS) 	<ezr.>
+
+
+<RANK0>(nUS) 	<1. oszt. pil.>
+<RANK1>(nUS) 	<zászl.>
+<RANK2>(nUS) 	<h., jun>
+<RANK3>(nUS) 	<h.>
+<RANK4>(nUS) 	<fõh.>
+<RANK5>(nUS)	<Par.>
+<RANK6>(nUS) 	<százados>
+
+<RANK0>(aUK) <õrmester>
+<RANK1>(aUK) <pilótatiszt>
+<RANK2>(aUK) <köteléktiszt>
+<RANK3>(aUK) <hadnagy>
+<RANK4>(aUK) <százados>
+<RANK5>(aUK) <wingparancsnok>
+<RANK6>(aUK) <csoportparancsnok>
+
+<RANK0>(nUK) <rajpar.>
+<RANK1>(nUK) <kötelékpar.>
+<RANK2>(nUK) <fedélzetm.>
+<RANK3>(nUK) <alhadnagy>
+<RANK4>(nUK) <hadnagy>
+<RANK5>(nUK) <fõhadnagy>
+<RANK6>(nUK) <par.>
+
+<RANK0>(aJA) <Jun-i> 
+<RANK1>(aJA) <Sho-i> 	
+<RANK2>(aJA) <Chu-i> 
+<RANK3>(aJA) <Tai-i>  
+<RANK4>(aJA) <Sho-sa>  
+<RANK5>(aJA) <Chu-sa>
+<RANK6>(aJA) <Tai-sa>
+
+<RANK0>(nJA) <Joto (Hiko) Heiso> 
+<RANK1>(nJA) <Sho-i> 	
+<RANK2>(nJA) <Chu-i> 
+<RANK3>(nJA) <Tai-i>  
+<RANK4>(nJA) <Sho-sa>  
+<RANK5>(nJA) <Chu-sa>
+<RANK6>(nJA) <Dai-sa>
+
+<RANK0>(aUD) <Vaandrig>
+<RANK1>(aUD) <Tweede Luitenant>
+<RANK2>(aUD) <Eerste Luitenant>
+<RANK3>(aUD) <Kapitein>
+<RANK4>(aUD) <Majoor>
+<RANK5>(aUD) <Luitenant-Kolonel>
+<RANK6>(aUD) <Kolonel>
+
+<FULLRANK0>(aUS) <légügyi tiszt>
+<FULLRANK1>(aUS) <alhadnagy>
+<FULLRANK2>(aUS) <fõhadnagy>
+<FULLRANK3>(aUS) <százados>
+<FULLRANK4>(aUS) <õrmester>
+<FULLRANK5>(aUS) <alezredes>
+<FULLRANK6>(aUS) <ezredes>
+
+<FULLRANK0>(mUS) <tüzérségi õrmester>
+<FULLRANK1>(mUS) <alhadnagy>
+<FULLRANK2>(mUS) <fõhadnagy>
+<FULLRANK3>(mUS) <százados>
+<FULLRANK4>(mUS) <õrnagy>
+<FULLRANK5>(mUS) <alezredes>
+<FULLRANK6>(mUS) <ezredes>
+
+<FULLRANK0>(nUS) <elsõ osztályú pilóta>
+<FULLRANK1>(nUS) <zászlós>
+<FULLRANK2>(nUS) <hadnagy, junior>
+<FULLRANK3>(nUS) <hadnagy>
+<FULLRANK4>(nUS) <fõhadnagy>
+<FULLRANK5>(nUS) <parancsnok>
+<FULLRANK6>(nUS) <százados>
+
+<FULLRANK0>(aUK) <õrmester>
+<FULLRANK1>(aUK) <pilótatiszt>
+<FULLRANK2>(aUK) <köteléktiszt>
+<FULLRANK3>(aUK) <hadnagy>
+<FULLRANK4>(aUK) <százados>
+<FULLRANK5>(aUK) <wingparancsnok>
+<FULLRANK6>(aUK) <csoportparancsnok>
+
+<FULLRANK0>(nUK) <rajparancsnok>
+<FULLRANK1>(nUK) <kötelékparancsnok>
+<FULLRANK2>(nUK) <fedélzetmester>
+<FULLRANK3>(nUK) <alhadnagy>
+<FULLRANK4>(nUK) <hadnagy>
+<FULLRANK5>(nUK) <fõhadnagy>
+<FULLRANK6>(nUK) <parancsnok>
+
+<FULLRANK0>(aJA) <Jun-i> 
+<FULLRANK1>(aJA) <Sho-i> 	
+<FULLRANK2>(aJA) <Chu-i> 
+<FULLRANK3>(aJA) <Tai-i>  
+<FULLRANK4>(aJA) <Sho-sa>  
+<FULLRANK5>(aJA) <Chu-sa>
+<FULLRANK6>(aJA) <Tai-sa>
+
+<FULLRANK0>(nJA) <Joto (Hiko) Heiso> 
+<FULLRANK1>(nJA) <Sho-i> 	
+<FULLRANK2>(nJA) <Chu-i> 
+<FULLRANK3>(nJA) <Tai-i>  
+<FULLRANK4>(nJA) <Sho-sa>  
+<FULLRANK5>(nJA) <Chu-sa>
+<FULLRANK6>(nJA) <Dai-sa>
+
+<FULLRANK0>(aUD) <Vaandrig>
+<FULLRANK1>(aUD) <Tweede Luitenant>
+<FULLRANK2>(aUD) <Eerste Luitenant>
+<FULLRANK3>(aUD) <Kapitein>
+<FULLRANK4>(aUD) <Majoor>
+<FULLRANK5>(aUD) <Luitenant-Kolonel>
+<FULLRANK6>(aUD) <Kolonel>
+
+<AWARD0>(aUS) 		<repülõs érem>
+<AWARD1>(aUS)		<bronzcsillag>
+<AWARD2>(aUS) 		<kiváló repülõ kereszt>
+<AWARD3>(aUS) 		<érdemrend>
+<AWARD4>(aUS) 		<ezüstcsillag>
+<AWARD5>(aUS) 		<kiváló szolgálat keresztje>
+<AWARD6>(aUS) 		<kongresszusi érdemérem>
+<AWARD7>(aUS) 		<kongresszusi érdemérem>
+
+<AWARD0>(nUS) 		<bronzcsillag>
+<AWARD1>(nUS)		<tengerészeti és tengeri hadtest érem>
+<AWARD2>(nUS) 		<kiváló repülõ kereszt>
+<AWARD3>(nUS) 		<érdemrend>
+<AWARD4>(nUS) 		<ezüstcsillag>
+<AWARD5>(nUS) 		<tengerészeti kereszt>
+<AWARD6>(nUS) 		<kongresszusi érdemérem>
+<AWARD7>(nUS) 		<kongresszusi érdemérem>
+
+<AWARD0>(mUS) 		<bronzcsillag>
+<AWARD1>(mUS)		<tengerészeti és tengeri hadtest érem>
+<AWARD2>(mUS) 		<kiváló repülõ kereszt>
+<AWARD3>(mUS) 		<érdemrend>
+<AWARD4>(mUS) 		<ezüstcsillag>
+<AWARD5>(mUS) 		<tengerészeti kereszt>
+<AWARD6>(mUS) 		<kongresszusi érdemérem>
+<AWARD7>(mUS) 		<kongresszusi érdemérem>
+
+<AWARD0>(*UK) <védelmi érem>
+<AWARD1>(*UK) <kiváló repülõ érem>
+<AWARD2>(*UK) <kiváló repülõ kereszt>
+<AWARD3>(*UK) <csík a kiváló repülõ kereszthez>
+<AWARD4>(*UK) <kiváló szolgálat érdemrend>
+<AWARD5>(*UK) <George-kereszt>
+<AWARD6>(*UK) <Victoria-kereszt>
+<AWARD7>(*UK) <1939-1945. csillag>
+
+<AWARD0>(aUD) <Vliegerkruis>
+<AWARD1>(aUD) <Vliegerkruis with Ribbon>
+<AWARD2>(aUD) <Kruis van Verdienste>
+<AWARD3>(aUD) <Ridder in de Orde van Oranje-Nassau>
+<AWARD4>(aUD) <Officer in der Orde van Oranje-Nassau>
+<AWARD5>(aUD) <Commander in der Orde van Oranje-Nassau>
+<AWARD6>(aUD) <Groot-Officer in de Orde van Oranje-Nassau>
+<AWARD7>(aUD) <Groot-Officer in de Orde van Oranje-Nassau>
+
+<AWARD0>(*JA) 		<szakéserleg>
+<AWARD1>(*JA)		<felkelõ nap bizonyítvány>
+<AWARD2>(*JA) 		<megjelölt Hinomaru-zászló>
+<AWARD3>(*JA) 		<flaska és szakéserleg>
+<AWARD4>(*JA) 		<Rövidkard>
+<AWARD5>(*JA) 		<Nambu pisztoly>
+<AWARD6>(*JA) 		<Nambu pisztolytáska>
+<AWARD7>(*JA) 		<Szamuráj katana>
+
+<Time&Weather>(*U*) <{DATE_MDY} {MTIME} óra\nIdõjárás: {WEATHER}. Felhõk {CLOUDS_FT} láb magasságban.>
+<Time&Weather>(*JA) <{DATE_DMY} {MTIME} órs\nIdõjárás: {WEATHER}. Felhõk {CLOUDS_M} méter magasságban.>
+
+<Clear>  		<Tiszta>
+<Good>(*U*)		<3/10>
+<Hazy>(*U*) 	<7/10>
+<Poor>(*U*)		<10/10>
+<Blind>(*U*)	<Nagyon rossz látási viszonyok, 10/10>
+<Rain>(*U*)		<Esõ, 10/10>
+<Snow>(*U*)		<Hó, 10/10>
+<Thunderstorm>(*U*)	<Zivatar, 10/10>
+<Snowstorm>(*U*)		<Hóvihar, 10/10>
+
+<Clear>  		<Tiszta>
+<Good>(*JA)		<Jó>
+<Hazy>(*JA) 	<Ködös>
+<Poor>(*JA)		<Rossz>
+<Blind>(*JA)	<Nagyon rossz>
+<Rain>(*JA)		<Esõ>
+<Snow>(*JA)		<Hó>
+<Thunderstorm>(*JA)	<Zivatar>
+<Snowstorm>(*JA)		<Hóvihar>
+
+
+<January>		<január>
+<February>		<február>
+<March>			<március>
+<April>			<április>
+<May>			<május>
+<June>			<június>
+<July>			<július>
+<August>		<augusztus>
+<September>		<szeptember>
+<October>		<október>
+<November>		<november>
+<December>		<december>
+
+<from N>	<északról>	
+<from S>	<délrõl>	
+<from E>	<keletrõl>	
+<from W>	<nyugatról>	
+<from NE>	<északkeletrõl>	
+<from NW>	<északnyugatról>	
+<from SE>	<délkeletrõl>	
+<from SW>	<délnyugatról>	
+
+<to N>	<északra>	
+<to S>	<délre>	
+<to E>	<keletre>	
+<to W>	<nyugatra>	
+<to NE>	<északkeletre>	
+<to NW>	<északnyugatra>	
+<to SE>	<délkeletre>	
+<to SW>	<délnyugatra>
+
+<N>	<észak>	
+<S>	<dél>	
+<E>	<kelet>	
+<W>	<nyugat>	
+<NE>	<északkelet>	
+<NW>	<északnyugat>	
+<SE>	<délkelet>	
+<SW>	<délnyugat>
+
+<Leader>	< >
+<Leader22>	<{RANK} {LASTNAME} vezeti a második köteléket. {W1_RANK} {W1_NAME} repül kötelékben.>
+<Leader23>	<{RANK} {LASTNAME} vezeti a második köteléket. {W1_RANK} {W1_NAME} és {W2_RANK} {W2_NAME} lesz a 2-es, illetve 3-as számú.>
+<Leader24>	<{RANK} {LASTNAME} vezeti a második köteléket. {W1_RANK} {W1_NAME} repül kötelékben. {W2_RANK} {W2_NAME} vezeti a második egységet, és {W3_RANK} {W3_NAME} repül leghátul.>
+<Leader32>	<{RANK} {LASTNAME} vezeti a második köteléket. {W1_RANK} {W1_NAME} repül kötelékben.>
+<Leader33>	<{RANK} {LASTNAME} vezeti a második köteléket. {W1_RANK} {W1_NAME} és {W2_RANK} {W2_NAME} lesz a 2-es, illetve 3-as számú.>
+<Leader34>	<{RANK} {LASTNAME} vezeti a második köteléket. {W1_RANK} {W1_NAME} repül kötelékben.  {W2_RANK} {W2_NAME} vezeti a második egységet. {W3_RANK} {W3_NAME} repül leghátul
+<Wingman>	<{RANK} {LASTNAME} repül {W0_RANK} {W0_NAME} vezetésével.>
+<Wingman12>	<{RANK} {LASTNAME} repül {W0_RANK} {W0_NAME} vezetésével az elsõ, kétgépes kötelékben.>
+<Wingman13>	<{RANK} {LASTNAME} repül {W0_RANK} {W0_NAME} vezetésével az elsõ, háromgépes kötelékben.>
+<Wingman14>	<{RANK} {LASTNAME} repül {W0_RANK} {W0_NAME} vezetésével az elsõ, négygépes kötelékben.>
+<Wingman22>	<{RANK} {LASTNAME} repül {W0_RANK} {W0_NAME} vezetésével a második, kétgépes kötelékben.>
+<Wingman23>	<{RANK} {LASTNAME} repül {W0_RANK} {W0_NAME} vezetésével a második, háromgépes kötelékben.>
+<Wingman24>	<{RANK} {LASTNAME} repül {W0_RANK} {W0_NAME} vezetésével a második, négygépes kötelékben.>
+<Wingman32>	<{RANK} {LASTNAME} repül {W0_RANK} {W0_NAME} vezetésével az utolsó, kétgépes kötelékben.>
+<Wingman33>	<{RANK} {LASTNAME} repül {W0_RANK} {W0_NAME} vezetésével az utolsó, háromgépes kötelékben.>
+<Wingman34>	<{LRANK} {LASTNAME} repül {W0_RANK} {W0_NAME} vezetésével az utolsó, négygépes kötelékben.>
+
+<Route>(*U*)	<A célpont távolsága: {DIST_NM} tengeri mérföld, a repülési magasság: {ALT_FT} láb.>
+<Route>(*U*)	<{ALT_FT} láb magasságon fog repülni, a célpont távolsága {DIST_NM} tengeri mérföld.>
+<Route>(*JA)	<A célpont távolsága: {DIST_KM} km, a repülési magasság: {ALT_M} m.>
+<Route>(*JA)	<{ALT_M} méter magasságon fog repülni, a célpont távolsága {DIST_KM} km.>
+
+// War victory and defeat messages can be customized according to operaiton
+// <WarDefeatDb:Hawaii>. The following are generic defeat messages.
+
+<WarDefeatDb>(*JA) <Ez a hadmûvelet katasztrofálisan végzõdött!\n\nSemmi komoly veszteséget nem okoztunk az ellenségnek, miközben rengeteg gyakorlott tengerészt és pilótát vesztettünk... Ez minden bizonnyal a vég kezdete, és vezetõink nagy része valószínûleg szeppukut fog elkövetni a következõ napokban!\n\nA megalázott flottánk feladata most az, hogy megmaradt erejével a Császári Hadsereget segítse, különben a csendes-óceáni japán birodalom csak egy álom lesz, mely soha nem válik valóra.....>
+<WarVictoryDb>(*JA) <Hatalmas gyõzelmet arattunk! A flottánk következetesen bekerítette Hawaii szigetét, miközben sikeresen védtük az újonnan megszerzett területeket.\n\nAz USA és szövetségesei harci kedvét úgy elvettük, hogy fegyverszünetet ajánlottak. Azonban tudjuk, hogy még nem jött el a béke ideje. Ha sikerül legyõzniük Németországot, még veszélyt jelenthetnek számunkra, de egy idõre biztonságban vagyunk.\n\nKonoje herceg kormánya szerint most a legbölcsebb legalább egy évre visszavonulni, hogy az új nyersanyagaink segítségével befejezzük az ipar fejlesztését, és megerõsítsük seregünket.\n\nAztán befejezzük Kína elfoglalását, és megtámadjuk Oroszországot, hogy segítsük német barátainknak megteremteni a teljes európai dominanciát.\n\nHa ez sikerül, Németország Európában, Japán pedig a csendes-óceáni térségben fogja elindítani a fejlõdés új korszakát.>
+<WarDefeatDb>(*U*) <Hatalmas vereséget szenvedtünk! A japán flotta következetesen bekerítette Hawaii szigetét, miközben sikeresen védte az újonnan megszerzett területeket.\n\nA nyugati part fenyegetésével harci kedvünket úgy elvették, hogy Rooseveltnek fegyverszünetet kellett ajánlania, melyet a japánok szerencsére elfogadták.\n\nMég nem jött el a béke ideje. Ha sikerül legyõznünk a németeket, újra fenyegetést jelentünk számukra, de egyelõre biztonságban vannak..... \n\nMost próbáljunk meg hatékonyan harcolni az európai fronton, mielõtt újra lecsapunk a gonosz Felkelõ Napra.>
+<WarVictoryDb>(*U*) <Ez aztán a gyõzelem!\n\nMegváltoztak az erõviszonyok a csendes-óceáni térségben!\n\nHamarosan elkezdjük visszaszerezni a Japán által elfoglalt csendes-óceáni területeinket, és hazazavarjuk a fiúkat!>
+
+// Operational briefings/debriefings. Debriefis may be replaced with end of war debrief.
+
+<HawaiiBr>(*US) <Mióta Japán 1937-ben megszállta Kínát, nõtt a feszültség a nyugati országok és a Felkelõ Nap Császára között. Az ipar ellátásához nyersanyagokra van szükségük, ezért terjeszkedniük kell, mellyel Anglia, Hollandia, Franciaország és az USA érdekeit sértik.\n\nA  Japán haditengerészet egyet nem értése és a császár tartózkodása ellenére segítségnyújtási egyezséget kötöttek a német és az olasz kormánnyal. Nem sokkal késõbb megszállták Francia Indokínát, és az USA kénytelen volt a nyersanyagok embargójával súlytani õket.\n\nNomura nagykövet és  Cordel Hull, a külügyminiszterünk, sokat tárgyalt a kérdésrõl, de még nem találtak békés megoldást, és a japán-amerikai háború kitörésétõl félnek. A csendes-óceáni flotta hónapokkal ezelõtt San Diegoból Pearl Harborba vonult, hogy megmutassuk a japánoknak, hogy készek vagyunk megvédeni csendes-óceáni érdekeltségeinket. A központ azonban egy pusztító csapástól tart, mert a cirkálóink légitámadás esetén nagyon nehezen tudnak elmenekülni a sekély víz és a keskeny csatornák miatt.\n\nA központ azt reméli, hogy a kikötõ 40 lábas vízmélysége megakadályozza a torpedós támadást, ugyanis hírszerzésünk szerint a japán torpedóknak legalább 75 lábas mélységre van szükségük. A térség védelmét megerõsítettük, Ohaun pl. 394 gépet helyeztünk el, melyek nagy része vadászgép, de senki sem érzi magát teljes biztonságban. Ohaun november óta teljes készültség van érvényben, de mivel még nem történt semmi, ez nem sokat jelent. Walter C Short tábornok, a hawaii-i hadsereg fõparancsnoka, úgy határozott, hogy az összes gépet egymáshoz közel kell tárolni, mert attól fél, hogy a Hawaii-n élõ 13.000 japán amerikai nagyobb veszélyt jelent, mint a Japán haditengerészet légitámadása. Emellett a Katonai Rendõrség feladatát is megkönnyítette ezzel.\n\nSzerencsére rengeteg reptér van Ohaun, és néhány század vezetõje úgy döntött, hogy néhány gépet a biztonság kedvéért másodlagos reptereken helyeznek el....\n\n--------------\n\n>
+<HawaiiVictoryDb>(*US) <A ma reggeli, 1941. december 7-ei, trükkös japán támadás némi veszteséget okozott a csendes-óceáni flottánknak.\n\nSzámos csatahajónk és nehéz cirkálónk elsüllyedt vagy súlyosan megsérült, több tíz repülõgép megsemmisült, és sok tapasztalt embert vesztettünk.\n\nNéhány hõsünk fel tudott szállni a golyózáporban, és komoly veszteséget okozott a japánoknak.\n\nEz a nap sötét jövõt vetít elénk, de a Lexington és az Enterprise még a tengeren vannak, és a legnagyobb üzemanyag-tartalékaink is sértetlenek. Pilótáink megmutatták bátorságukat, amint a levegõbe emelkedtek. A japánok hamarosan megtudják, milyen elszántak vagyunk
+<HawaiiDefeatDb>(*US) <A ma reggeli, 1941. december 7-ei, trükkös japán támadás hatalmas veszteséget okozott a csendes-óceáni flottánknak.\n\nSzámos csatahajónk és nehéz cirkálónk elsüllyedt vagy súlyosan megsérült, több tíz repülõgép megsemmisült, és sok tapsztalt embert vesztettünk.\n\nNéhány hõsünk fel tudott szállni a golyózáporban, és törleszteni próbált, de sajnos kevés sikerrel.\n\nEz a nap sötét jövõt vetít elénk. Hamarosan meg kell találnunk az efféle támadások ellenszerét, hogy esélyünk legyen az ellentámadásra.>
+<HawaiiDb>(*US) <A ma reggeli, 1941. december 7-ei, aljas japán támadás komoly károkat okozott a csendes-óceáni flottánknak.\n\nAz Arizonát és az Oklhaomát elvesztettük , a California, a Nevada és a West Virginia elsüllyedt, a Pennsylvania, a Tenesse és a Maryland pedig súlyosan megsérült. 188 repülõgép megsemmisült, 159 pedig megsérült. 2400 pilóta, tengerész és katona vesztette életét, 1350 pedig megsebesült.\n\nNéhány hõsünk fel tudott szállni a golyózáporban, de a japánok mindössze 29 repülõgépet és 5 kis tengeralattjárót vesztettek.\n\nEz a nap sötét jövõt vetít elénk, de a Lexington és az Enterprise még a tengeren vannak, és a legnagyobb üzemanyag-tartalékaink is sértetlenek. Amerika fel fog állni, és végleg legyõzi Japánt!>
+<HawaiiBr>(*JA) <Az utóbbi években nõtt a feszültség országunk és az USA között. Iszonyúan nagy szükségünk van a nyersanyagokra, hogy ellássuk az iparunkat, és sajnos nem rendelkezünk elegendõvel a hazai földön.\n\nA hadseregünk 1937-ben megtámadta Kínát, és nemrég vonult be Francia Indokínába. Azóta az USA embargóval sújtott minket, amivel a háború számbavételére kényszerítette országunkat.\n\nA császári haditengerészet vezetõje Jamamoto altengernagy, mióta Ziengo Josida haditengerészeti miniszterként csatlakozott Fuminake Konoje herceg kormányához. Õt bízták meg az USA elleni támadás kidolgozásával. Kockáztatni szeretne, de tudja mit csinál. Az USA csendes-óceáni flottáját Pearl Harbornál tervezi megtámadni, mint ahogy a britek tették Tarentonál. Minél több repülõgép-hordozó és cirkáló megsemmisítése a cél, hogy szabad legyen az út Indonézia felé.\n\nAmint megszûnik az amerikai flotta fenyegetése, gyorsan le tudjuk gyõzni az európai, gyarmati seregeket, és elég haderõnk lesz, hogy jobb belátásra bírjuk az USA-t a csendes-óceáni érdekszféránkkal kapcsolatban. Legalábbis ez Hideki Todzso tábornok, egyben hadügyi miniszter elképzelése.....\n\nA támadó flottánk 1941. november 26-án indult el észak felé, nehogy bemérjék. Hamarosan megkaptuk a „mászd meg Niikata hegyét” kódüzenetet, mely megerõsítette a támadási parancsot. Minoru Genda, az elsõ flotta tisztje, elküldte a támadás részleteit, és minket is eligazított. Fusida vezeti az elsõ hullámot, jó kezekben leszünk!\n\nSajnos most tudtuk meg Nagumo tengernagytól, a flotta vezetõjétõl, hogy az amerikai repülõgép-hordozók néhány napja elhagyták Pearl Harbort, de hamarosan rájuk is sor kerül, miután végzünk a Pearl-ben lévõ cirkálókkal.\n\nAz éjszaka rövid volt, és már hajnalodik.....\n\n------------------------------------------------------------\n\n>
+<HawaiiVictoryDb>(*JA) <Úgy látszik, Jamamoto tengernagy kockáztatása bejött.\n\nIgaz, hogy elvétettük a Pearl Harbortól messze lévõ repülõgép-hordozókat, de a csatahajókra és a cirkálókra komoly csapást mértünk, és legénységünk nagyon csekély veszteséget szenvedett.\n\nA hatalmi mérleg nyelve nyilvánvalóan a mi oldalunkra billen, és csendes-óceáni hódításunkat teljes egészében véghez vihetjük, ráadásul talán kis ellenállással kell szembenéznünk.>
+<HawaiiDefeatDb>(*JA) < Úgy látszik, Jamamoto tengernagy kockáztatása nem jött be.\n\nA csatahajókra és a cirkálókra ugyan komoly csapást mértünk, de elvétettük a Pearl Harbortól messze lévõ repülõgép-hordozókat, az üzemanyag-tartalékokat, és a legénységünk komoly veszteséget szenvedet .\n\nA hatalmi mérleg nyelve még mindig a mi oldalunkra billen, de sikeresebbnek kell lennünk, ha a csendes-óceáni hódítást teljes egészében véghez akarjuk vinni.>
+<HawaiiDb>(*JA) <Jamamoto tengernagy kockáztatása bejött.\n\nIgaz, hogy elvétettük a Pearl Harbortól messze lévõ repülõgép-hordozókat, de a csatahajókra és a cirkálókra komoly csapást mértünk, hiszen az Arizona és az Oklhaoma megsemmisült, a California, a Nevada és a West Virginia elsüllyedt, a Pennsylvania, a Tenesse és a Maryland pedig súlyosan megsérült. Közel 200 repülõgépet megsemmisítettünk, 200 pedig megsérült. A hírszerzés több, mint 3000 fõs veszteséget jelentette az ellenséges csapatoknál. Mindezt 29 repülõgép és 5 kis tengeralattjáró elvesztése árán értük el.\n\nA hatalmi mérleg nyelve nyilvánvalóan a mi oldalunkra billen, és a csendes-óceáni hódításunkat teljes egészében véghez vihetjük, mielõtt az USA eredményesen vissza tudna vágni.>
+
+<WakeBr>(*JA)		<Az erõinknek Wake szigete ellen kell támadást indítaniuk, mely így egy elõretolt állás lesz Hawaii és a kaliforniai partvidék felé történõ elõrehaladásunk során. A korallzátonyt gyengén védik, elfoglalása csak órák kérdése, ha a Császári Flotta eléri a partjait. Csak arra ügyeljenek, hogy a hajóink és a gyalogságunk ne ütközzön semmiféle komoly ellenállásba a levegõben és a földön. 
+<WakeVictoryDb>(*JA)	<Wake végre megadta magát. Kadzsioka tengernagy és csapatai legyõzték a buta amerikai tengeri csapatokat, és az elhagyott szigetet „Otori Sima” (Madarak szigete) névre keresztelték, mely név a költészet szülötte, és elesett barátainkat biztosan a mennybe kíséri. Szerencsére a veszteségeink csekélyek, és mindannyiunknak gratulálhatunk, hogy ilyen gyorsan és sikeresen elfoglaltuk ezt az apró, de stratégiailag igen fontos homokzátonyt. A következõ lépés a Hawaii-i szigetvilág!>
+<WakeDefeatDb>(*JA)	<Még mindig nem tudom, hogy veszthettünk ilyen nevetséges erõk ellen, de a tények magukért beszélnek: teljes anyagi és emberi fölényünk ellenére tengerészek és pilóták maroknyi csapata legyõzte a Japán Császári Haditengerészet elit alakulatát. Nos ez minden, csak nem jó ómen a következõ hadmûveletek szempontjából... Jelentkezzen a központban, hogy a századát egy forróbb hadszíntérre vezényeljék át!>
+<WakeDb>(*JA)		<Hihetetlen, hogy egy ilyen kis sziget miatt ilyen sok katonát vesztettünk. Az ellenség bátorsága nem az egyedüli oka annak, hogy ilyen hihetetlen magas árat fizettünk ezért a kisarányú gyõzelemért. A veszteségeink valóban hatalmasak, ha figyelembe vesszük az objektumot védõ ellenséges csapat méretét. A Császári Hadsereg reméli, hogy ezek az amerikai tengerészgyalogosok nem okoznak több gondot a jövõben annak ellenére, hogy ezek az emberek - akik majdnem olyan bátrak, mint a mieink - szokatlan vitézségrõl tettek tanúbizonyságot az elmúlt pár nap harcaiban. Sajnos a fülöp-szigeteki hódítás azt mutatja, hogy az effajta vitézség nem egyedi. Reméljük, hogy nem találkozunk többet ezzel az egységgel a háború során, mert jócskán megdrágítják a gyõzelmet számunkra.>
+<WakeBr>(*US)		<Tengerészgyalogosok! Pihenj!\nBiztos vagyok benne, hogy itt mindenki tisztában van a helyzet súlyosságával. Néhány órával ezelõtt Japán hadba lépett az USA ellen azzal, hogy légitámadást intézett Pearl Harbort és a csendes-óceáni flotta ellen. Földrajzi helyzetünk miatt itt Wake szigetén mi vagyunk az amerikai védelem legelõbbre tolt bástyája. A CINCPAC szerint az ellenség hamarosan elér minket, de szerencsére az erõsítés már úton van. Az ellenség kombinált, tengeri-légi támadásának esetére repülõgép-hordozó bázisú légi segítségre kaptunk ígéretet. Mindenki harckészültségbe! Pilóták, felkészülni!>
+<WakeVictoryDb>(*US)	<Bátor katonáinknak, pilótáinknak és a régóta várt légi támogatásnak köszönhetõen sikeresen visszavertük a japán támadást, és ez a szövetségesek elsõ gyõzelme a csendes-óceáni térségben. Katonák, büszkék lehetnek arra, hogy visszaadták a reményt az erõinknek. Most már biztosan tudjuk, hogy a japánok messze nem legyõzhetetlenek.>
+<WakeDefeatDb>(*US)	<A fenébe! Wake hamarabb elesett, mint gondoltuk. Sajnos cserbenhagyott tengerészgyalogosainknak egy legyõzhetetlen ellenséggel kellet harcolniuk egy elkeseredett küzdelemben, mert a repülõgép-hordozóink nem érkeztek meg idõben. Nos, meg kell várnunk a következõ csatát, ha gyõzni akarunk…>
+<WakeDb>(*US)		<A hosszú, kemény ellenállás ellenére meg kellett adni magunkat a túlerõben lévõ japán erõknek, mert a saját tengeri erõink cserbenhagytak minket. Azonban ebben az elkeseredett csatában megtapasztalták a japánok, mire képesek a tengerészgyalogosok a földön és a levegõben. Reméljük, hogy hamarosan lehetõségünk lesz ebben a háborúban bosszút állni Wake szigetéért és elesett hõseinkért.>
+
+<CoralSeaBr>(*JA)		<Önt és a bajtársait választották, hogy részt vegyenek a Császári Haditengerészet következõ nagyszabású hadmûveletében, melynek célja Új-Guinea teljes megszállása, majd Ausztrália esetleges megszállása. Inouje tengernagy vezeti az erõinket ebben a hadmûveletben, melynek kódja: MO. Az elsõdleges cél Port Moresby elfoglalása, a második pedig, hogy létrehozzunk egy légi bázist Tulagin, a Salamon-szigetek középsõ részén. Jamamoto tengernagy kérése az, hogy felkutassuk és megsemmisítsük a térségben tartózkodó amerikai repülõgép-hordozókat. Ez az 5-ös repülõgép-hordozó divízió (Sokaku és Zuikaku) feladata, míg a Soho könnyû repülõgép-hordozó a Port Moresby-t támadó erõknek nyújt légi támogatást.>
+<CoralSeaVictoryDb>(*JA)	<Szép munka volt, szamuráj! A Kido Butai felsõ vezetés elégedett. A dél-csendes-óceáni amerikai repülõgép-hordozókat egyetlen támadással szétmorzsoltuk, így már semmi nem áll köztünk és ausztrál partok között. Az ausztrálok buták lennének, ha folytatnák ezt az elkeseredett küzdelmet, miután amerikai is brit szövetségeseik cserbenhagyták õket, és többé képtelenek megvédeni a földjüket gyõzedelmes seregeinktõl. Az 5-ös divízió és a többi haditengerészeti egység most visszamegy Trukba, hogy elvégezzék a javításokat és az utánpótlásokat. A mostani sikernek köszönhetõen részt vehetnek a Kido Butai következõ csatájában is, mellyel végsõ és teljes gyõzelmet aratunk a csendes-óceáni hadszíntéren. Hamarosan bejelentjük a nagyszerû sikert a császárnak is. Biztosíthatjuk önöket, hogy az egész Kanto lelkesen és büszkén fogja ünnepelni a gyõzelmünket!>
+<CoralSeaDefeatDb>(*JA)	<Mindig szerénynek kell maradnunk, és nem szabad túlbecsülnünk a szerencsénket! Ez a csata kiváló példa erre. Az ellenség megmutatta, milyen jól tudja hasznosítani a repülõgép-hordozóit a csatában, és sikerült megállítaniuk a támadásunkat a térségben. Az MO hadmûveletet hatalmas veszteségeink miatt töröltük, és az összes hajónak vissza kell térnie Rabaulba és Trukba azonnali javításra és/vagy kihallgatásra. Ne feledjék, hogy ezt a háborút gyorsan kell megnyernünk, mert egy olyan ellenséggel nézünk szembe, mely minden nap egyre erõsebbé válik, és az ilyen vereségek nem segítenek ebben. Reméljük, hogy a másik nagyszabású hadmûveletünk sikerrel jár. Többet nem hibázhatunk!>
+<CoralSeaDb>(*JA)		<Csalódtunk e csata kimenetelében. A taktikai gyõzelem nem ellensúlyozza azt, hogy Port Moresby megszállását el kell halasztanunk, ami rövid haladékot ad az ausztráloknak. Hamarosan vissza kell térnünk, hogy befejezzük a feladatot. Szerencsére ez már könnyû lesz és mindenféle következmény nélküli. Az 5-ös repülõgép-hordozó divízió azonnal térjen vissza Trukba! A leginkább sérült egységek visszatérnek a hazai kikötõjükbe, hogy elvégezzék rajtuk a jól megérdemelt javításokat.>
+<CoralSeaBr>(*US)		<Ne kérdezzék, honnan származik az információ, de a legfrissebb hírszerzési jelentések szerint egy nagyszabású japán hadmûveletre kell számítanunk a következõ napokban a Korall-tenger térségében. A fenyegetettség miatt egy egyesített csapatot küldtünk a térségbe, mely az USS Lexington TF11-esébõl és az USS Yorktown TF17-esébõl áll, és Fltecher tengernagy a parancsnoka. Ha a japánok kicsit késnek, még az USS Hornet és az USS Enterprise segítségére is számíthatunk, melyek az észak-csendes-óceáni térségbõl tartanak visszafelé. Az út azonban hosszú, és legalább egy hétig várnunk kell rájuk. Addig a saját védelmi és támadó erõinkre kell hagyatkoznunk, hogy felkutassuk és megsemmisítsük az ellenség repülõgép-hordozóit és megszálló erõit, melyek a fõ célpontjaink. Keressék meg a repülõgép-anyahajókat. Ha azokat a tenger fenekére küldjük, semmi nem áll majd köztünk és a szállítócsapataik között.> 
+<CoralSeaVictoryDb>(*US)	<Micsoda gyõzelem, fiúk! Japán történetének legnagyobb vereségét szenvedte. Természetesen Tokió még messze van, de ezzel az elsõ csapással minden megváltozott, és Japán kénytelen elgondolkodni azon, hogy helyes döntés volt-e ez a háború. Bosszút álltunk Pearl Harbor miatt – szép munka volt! Most irány észak, mert azt jelentették, hogy ott szükség lehet ránk, mert a Japánok még nem játszották ki az összes kártyájukat…>
+<CoralSeaDefeatDb>(*US)	<Az erõinket szétmorzsolták! Ausztrália hamarosan elvesztheti szabadságát, és ez a mi hibánk, mert nem voltunk képesek a csapatainkat a japán polip hatótávolságán kívül tartani. Nem vesztegethetjük tovább az idõt. Igaz, hogy elveszthetjük Ausztráliát, de most a saját túlélésünkért kell harcolnunk az egyesített japán flotta ellen a közép-csendes-óceáni térségben. Egy végsõ csapást szeretnének ránk mérni, de nem kockáztathatunk még egy katasztrófát, mert különben a következõ csata valahol Seattle-ben vagy San Diegoban zajlik majd…>
+<CoralSeaDb>(*US)		<Mindkét fél nagy veszteségeket szenvedett a repülõgép-hordozókon alapuló haderõk elsõ küzdelmében. Nem láttunk egyetlen valódi hajó-hajó küzdelmet, de most már tudjuk, hogy a harci repülõgépek alkalmazásától nem vált ez az újfajta háború kevésbé kegyetlenné. Mindazonáltal még ha papíron nincs is valódi gyõztes és vesztes, a tény, hogy megakadályoztuk a japánokat, hogy elfoglalják Port Moresby-t, azt jelzi, hogy a japán erõk egy kicsit nagyobb erõfeszítéssel legyõzhetõk. De ilyen nagy veszteségeket nem bírunk ki sokáig. A következõ harcban döntõ gyõzelmet kell aratnunk, ha meg akarjuk állítani a japán hadigépezetet.>
+
+<MidwayBr>(*JA)		<A korall-tengeri csata óta tudjuk, hogy az amerikai repülõgép-hordozók milyen fenyegetést jelentenek a hadmûveleteinkre, ha esetleg az 1942-es, április 18-ai, repülõgép-hordozókról indított tokiói bombázás nem volt elég figyelmeztetés. .\n\nJamamoto tengernagy végül meggyõzte a császári központot, hogy jóváhagyja a midway-i támadási tervét.\n\nMialatt a haditengerészeti bombázóink Midway-t támadják, egy második flotta az Aleuti-szigeteket fogja támadni. Reméljük, emiatt az amerikai repülõgép-hordozók elhagyják Pearl Harbort, és a térségben õrjáratozó tengeralattjáróink megtalálják õket. Ekkor rájuk küldjük a csatahajóinkat, és a fenyegetésnek vége!\n\nAz MI hadmûvelet április 26-án kezdõdött, amikor az Aleuti-szigeteket támadó flotta elhagyta Japánt. A következõ napon Nagumo tengernagy repülõgép-hordozókból álló flottája elindult Midway felé. Hamarosan követte õt a szállító csapat, és végül április 29-én a harci flotta. A hadmûveletet személyesen Jamamoto tengernagy fogja irányítani a Jamato óriás-csatahajóról.\n\nSajnos a K hadmûveletet, mely Pearl Harbor május 31-ei nagy hatótávolságú felderítése, törölni kellet, de a Jamato hírszerzési tisztjei intenzívebb rádióadást észleltek Midway-en mindkét irányba. Nem tudjuk pontosan, hol az ellenség, de biztosan valahol a térségben tartózkodnak, azaz bekapták a csalit......\n\n------------------------------------------------------------\n\n>
+<MidwayVictoryDb>(*JA)	<Jamamoto tengernagy terve részben helyesnek bizonyult.\n\nHabár a nagy veszteségek miatt törölnünk kellett Midway elfoglalást, az amerikai flotta jelentõs veszteségeket szenvedett, és így nem jelent fenyegetést az újonnan megszerzett területeinkre,  - hacsak nem csoportosítják át erõiket az Atlanti-óceánról - és aztán német és olasz szövetségeseink hozzásegítenek minket a végsõ gyõzelemhez.\n\nMost megerõsítjük a pozíciónkat a csendes-óceáni térség középsõ és déli részén, amíg újra nem építjük támadó erõinket és nem támadunk újra. Ezalatt az Aleuti-szigetek elleni hadjárat remélhetõleg szép eredményekkel folytatódik.>
+<MidwayDefeatDb>(*JA)	<Ez a hadmûvelet katasztrofális eredménnyel végzõdött!\n\nNem csak a Midway elleni támadást kell törölnünk, de semmiféle veszteséget nem okoztunk az ellenség flottájának. Mindegyik repülõgép-hordozónkat elvesztettük, számos cirkálónk és tengeralattjárónk elsüllyedt, és több ezer pilótát és tengerészt vesztettünk... Mindez Midway új, sikeres bombázásáért.\n\nEz minden bizonnyal a vég kezdete, és vezetõink nagy része valószínûleg szeppukut fog elkövetni a következõ napokban!\n\nA megalázott flottánk feladata most az, hogy megmaradt erejével a Császári Hadsereget segítse, mialatt az amerikai haditengerészet repülõgép-hordozói hamarosan támadást indíthatnak, hiszen most már olyan erõsek, mint a mieink.>
+<MidwayDb>(*JA)		<Jamamoto túlkomplikált terve megmutatta a gyengeségeit, és a következmény fájdalmas... Elvesztettük az Akagi, a Kaga, a Soryu és a Hiryu nehéz repülõgép-hordozókat, valamint a Mikuma nehéz cirkálót egyetlen ellenséges repülõgép-hordozóért, a Yorktown-ért, és a Midway-en okozott károkért.\n\nAz amerikai pilóták nagyszerû áldozatvállalása és szerencséje legyõzték Nagumo tengernagy taktikai hibáit. Bár a pilótáink teljesítették a kötelességüket, mégis 110-et elvesztettünk, ráadásul 2500 tapasztalt tengerészünk is odaveszett.\n\nAz, hogy az ellenséges pilóták nagyobb veszteséget szenvedtek, nem vígasztal minket. Amíg folyik az Aleuti-szigetek elleni hadjárat, a csendes-óceáni térség középsõ és déli részében nem számíthatunk semmiféle japán terjeszkedésre.>
+<MidwayBr>(*US)		<A korall-tengeri csata után az amerikai haditengerészet és a japánok újabb párbajra készülnek, amely a kimeneteltõl függõen az amerikai offenzíva kezdetét, vagy a végsõ vereséget jelentheti. Az amerikaiak harci kedve sokat javult Doolittle áprilisi, tokiói támadása után, de mindannyian tudjuk, hogy az erõmérleg nyelve még nem a mi oldalunkra billen.\n\nReynolds parancsnok, a Lackamawa õrhajó kapitánya, 1867 augusztus 28-án amerikai tulajdonná nyilvánította a midway-i korallzátonyt. Azóta nem sok hasznát vettük, csak rádióátjátszóként használtuk, illetve a 30-as években megállította a Pan Am vitorlásait.\n\nAz amerikai kormány csak 1939-ben ismerte fel stratégiai fontosságát, és a hadsereg azóta megerõsítette a védelmét. A szigetet 1941. december 7-én két japán romboló bombázta, és azóta még jobban megerõsítették a védelmét. A sziget reptereit sokféle géppel szórták tele (Vindicator, Dauntless, Buffalo, PBY, B17, Wildcat, Avenger vagy B26).\n\nMióta a Pearl-i „Hypo” hirszerzési állomás részben megfejtette az IJN kódot, tudjuk, hogy Midway-t hamarosan a valaha volt legnagyobb japán flotta fenyegeti, amely még a Pearl Harbort támadónál is nagyobb. Ezért Nimitz tengernagy a 29-42-es hadmûveleti tervében a 16-os és 17-es Csapatokat arra utasította, hogy FRANK J Fletcher és Ray Spruance tengernagyok parancsnoksága alatt a „szerencseponton” – ami Midway-tõl 325 mérföldre, északkeletre van -  várják meg a feltehetõen június 3-án korán reggel felbukkanó ellenséget....\n\n------------------------------------------------------------\n\n>
+<MidwayVictoryDb>(*US)	<A pilótáink büszkék lehetnek erre a nagyszerû gyõzelemre. Messze felülmúltuk Nimitz tengernagy legoptimistább elképzeléseit is, és nagyon kis veszteséggel megvertük a japán flottát.\n\nItt az ideje, hogy a támadáson gondolkodjunk. Most lendületben vagyunk, és megállítottuk a japán terjeszkedést!>
+<MidwayDefeatDb>(*US)	<Betartottuk Nimitz tengernagy parancsait, de a megengedettnél sokkal többet vesztettünk.\n\nMidway megszállását persze meg tudtuk akadályozni, de mivel a Csendes-óceáni Flottánk majdnem megsemmisült, az Atlanti-óceánról kell segítséget kérnünk, ami komoly következményekkel járhat a Tengelyhatalmak elleni globális stratégiánkat illetõen.\n\nMég néhány ilyen félgyõzelem, és a japánok megszerezhetik egy idõre az uralmat a csendes-óceáni térség felett...\nHogy megerõsítsük a flottánkat, az Atlanti-óceánról átvezényeltek néhány hajót, melyekre azonban ott is szükség lenne, és ez negatívan érinti a kölcsönbérleti programot is.>
+<MidwayDb>(*US) 	<Bátorságunknak, eltökéltségünknek és – valljuk be – egy kis szerencsének köszönhetõen a midway-i csatában nagy sikert arattunk, hiszen csak egy repülõgép-hordozót vesztettünk (Yorktown), míg a japánok négy nehéz repülõgép-hordozót (Akagi, Kaga, Szoryu and Hiryu) és a Miukma nehéz cirkálót, ráadásul törölniük kellet a megszállási terveiket.\n\nSajnos 189 pilótánk életébe került, de az eredmény magáért beszél. Ráadásul a csendes-óceáni térség eddigi legnagyobb flottáját sikerült legyõznünk.\n\nTanulni fogunk a hibáinkból, és az elavult Devastatorok és Vindicatorok talán utoljára vettek részt küzdelemben. Itt az ideje, hogy a támadáson gondolkodjunk, mert repülõgép-hordozóink hadereje majdnem egy szinten van a japánokéval.>
+<TarawaBr>(*JA)		<A legutóbbi jelentések szerint az ellenség most a Gilbert-szigetek ellen indíthat támadást. Minden lehetséges erõnkkel a térségbeli ellenséges aktivitást kell kutatnunk. Az ellenség új nehéz repülõgép-hordozói talán segítséget nyújtanak egy lehetséges leszálláshoz a Makin és a Betio szektorban.>
+<TarawaVictoryDb>(*JA)	<A több száz bevetett repülõgép ellenére az ellenség nem tudott megfelelõ légi támogatást biztosítani a haditengerészete számára, és hõseink elviselhetetlen veszteségeket okoztak nekik.\n\nRáadásul az ellenséges flottának nagy veszteségeket okozott a légi és a tengeralattjárós támadás.\n\nNagyon fontos gyõzelem volt ez az amerikaiak számára!>
+
+<TarawaDefeatDb>(*JA)	<A hadmûveletben résztvevõ több ezer repülõgépnek köszönhetõen az ellenség egy hatékony bombázással készítette elõ az elfoglalást.\n\nHõsiesen küzdõ védõink nem tudtak  komoly védelmet nyújtani.\n\nAz ellenség légi fölénye majdnem teljes volt, és nem sikerült jelentõs veszteséget okoznunk nekik.>
+<TarawaDb>(*JA)		<Nem tudtuk korlátlanul védeni Tarawát, de ez a gyõzelem sokba került az ellenségnek.>
+<TarawaBr>(*US)		<1943 õszén kiûztük a japánokat az észak-csendes-óceáni Aleuti-szigetekrõl. A 3. Tengerészgyalogos Divízió bougainville-i partraszállásával már majdnem a végéhez ért a salamon-szigeteki hódítás. Gen McArthur a dél-csendes-óceáni térségben megszerezte Új-Guineát, és most a Bismarck elfoglalására készül.\n\nA Gilbert szigetek korallzátonyok egy csoportja, melyet Byron parancsnok fedezett fel 1765-ben, és keresztezi az egyenlítõt. A szigetcsoport 1892. május 27-étõl egészen a háború 1941. decemberi kitöréséig a britek kezén volt. Ekkor vették birtokba a japánok. Északra, illetve nyugatra fekszik néhány tulajdonunkban lévõ szigettõl, és közvetlenül délre, illetve keletre fekszik néhány fontos caroline-szigeteki, illetve marshall-szigeteki japán bázistól.\n\nAz 1943 augusztusi, québec-i QADRANT konferencián kijelölték a japánnal szembeni stratégiát, és a gilbert-, marshall- és marina-szigeteki hadmûveletek mellett döntöttek.\n\nA TF50-est, a TF54-est és a TF57-est vezetõ R.A. Spruance altengernagy vezeti a GALVANIC hadmûveletet. A TF-50-es részeként A.E. Montgomery tengernagy Déli Szállító Csoportjának feladata a légi elfogás és a szükség szerinti parti támogatás. A TF54-ös részeként a 2. Tengerészgyalogos Divízió feladata az, hogy elfoglalja a Tarawa-korallzátony délnyugati sarkán lévõ, keményen védett Betio-sziget.\n\nEz a csata a meglepetésen alapul, tehát nem tervezünk elõzetes, hosszú légi elõkészületeket, a rendelkezésre álló rövid idõ alatt kell hatékonyan támadnunk. A tengerészgyalogosok partraszállása után nagyon nehéz lesz a légi támogatás, a támadók és a védõk nagyon közel lesznek egymáshoz.\n\n------------------------------------------------------------\n\n >
+<TarawaVictoryDb>(*US)	<A hadmûveletben résztvevõ 900 repülõgépnek köszönhetõen hatékony bombázással sikerült elõkészíteni az elfoglalást.\n\nAz akciónknak köszönhetõen a fiúk a vártnál sokkal kisebb veszteséget szenvedtek, és a közeli légi támogatás a tengerészgyalogosok és a japán védõk közelsége ellenére nagyon hatékony volt.\n\nA légi fölényünk majdnem teljes volt, és a flottánk kis veszteségei ellenére nagyon jó eredményt értünk el.\n\nEz a gyors gyõzelem több repteret biztosít számunkra a közép-csendes-óceáni japán jelenlét szívébe vezetõ úton, és most már a Hellcat-ekre hagyatkozhatunk, melyek egyértelmûen felülmúlták a Zekéket. >
+<TarawaDefeatDb>(*US)	<A hadmûveletben résztvevõ 900 repülõgép ellenére nem sikerült megfelelõ légi támogatást nyújtanunk a 2. Tengerészgyalogos Divíziónak, és elviselhetetlen veszteséget okozott nekik a japán helyõrség, és talán a mi bombáink és lövedékeink is.n\nRáadásul a flotta komoly veszteséget szenvedett a légi és a tengeralattjárós támadások során.\n\nMivel az MTO-ban a nemzet erõinek fele részt vesz, nem engedhetünk meg magunknak ilyen drága gyõzelmeket, mert különben 1960 elõtt nem szálljuk meg Tokiót!!!!! >
+<TarawaDb>(*US)		<A hadmûveletben résztvevõ 900 repülõgépnek köszönhetõen igen hatékony bombázással sikerült elõkészíteni az elfoglalást.\n\nAzonban a 2. Tengerészgyalogos Divízió partraszállása elõtti utolsó bombázás eltörlése hiba volt, és a japán helyõrség emberei nagy veszteséget okoztak a fiúknak, amint a rejtekhelyeikrõl géppuskákkal és gépágyúkkal tüzeltek rájuk.\n\nA közeli légi támogatás tehát nem volt túl hatékony a tengerészgyalogosok és a japán védõk közelsége miatt.\n\nA légi fölény nem volt teljes, de elfogadható eredményeket értünk el, miközben csupán egy repülõgép-hordozónkat süllyesztette el egy tengeralattjáró, egy másik pedig a légi támadás során sérült meg.\n\nEz a drága gyõzelem bebizonyította, hogy a jövõbeni hadmûveletekben át kell dolgoznunk a partraszállási taktikánkat, viszont most már a Hellcat-ekre hagyatkozhatunk, melyek egyértelmûen felülmúlták a Zekéket.>
+
+<PalauBr>(*JA)		<Tudhattuk volna! Azt gondoltuk, Palaut sokkal elõbb elfoglalják, mint a Mariana-szigeteket, de tévedtünk. Most, hogy a Mariana-szigetek elfoglalása már történelem, Peleliu, amely a fõ hadiszállásunk a szigetvilágban, pokollá válik. Ellen kell állnunk és bármi áron vissza kell küldenünk a tengerészgyalogosokat a tengerbe. Természetesen a megmaradt légierõnk fülöp-szigeteki és új-guineai csapatai is ezen lesznek.>
+<PalauVictoryDb>(*JA)	<Peleliu elesett, de csak egy nagyon kemény légi és tengeri csata árán. A veterán 1. Tengerészgyalogos Divízió megsemmisült az ütközetben, ezért az ellenségnek további csapatokat kellet bevonnia a harcba. Az effajta késleltetõ akciók nagyon hasznosak, és az ellenség sok katonájába kerülnek. Az amerikaiak harci kedvére gyakorolt hatása is nagy, és mindez az önök munkájának köszönhetõ!>
+<PalauDefeatDb>(*JA)	<Sajnos peleliui csapataink nem tudtak ellenállni az elit 1. Tengerészgyalogos Divíziónak, és a peleliui magaslatokon elhelyezett védelem nem bizonyult sikeresnek. Még ha komoly veszteséget okoztunk is az ellenségnek, ennek ára kicsit magas volt. Reménykedjünk, hogy a Fülöp-szigetek sikeresebb csatatér lesz!>
+<PalauDb>(*JA)		<Az Umurbrogol-magaslatok jelentették az 1. Tengerészgyalogos Divízió balsorsát. Több száz vagy több ezer tengerészgyalogosuk halt meg egyetlen szikláért, melynek nincs semmiféle stratégiai jelentõsége. Ez jó hír számunkra, és reméljük, hogy a fülöp-szigeteki küzdelem még nagyobb veszteségeket okoz az ellenségnek!>
+<PalauBr>(*US)			<A Holtpont hadmûvelet elkezdõdött. A mariana-szigeteki robbantás után repülégép-hordozóink csapata a Palau-szigetek felé közeledik, hogy a Fülöp-szigetek és Tajvan felé történõ elõrehaladásunk bal szárnyát biztosítsa. Rupterus tengerészgyalogosai partra szállnak Peleliun, a helyi megerõsített szigeten, hogy elhallgattassák a repterek és a helyõrség csapatait. Így a bal szárnyat megtisztítják mindenféle légi vagy tengeri aktivitástól.>
+<PalauVictoryDb>(*US)	<Peleliu egy szempillantás alatt elesett. A veszteségeink számottevõek, de az egész hadmûvelet nagyon hatékony volt. Szép munkát végeztek! Már senki sem zavar minket a bal szárnyon, miközben Manila és Tajpej felé haladunk.>
+<PalauDefeatDb>(*US)	<Emlékeztetnünk kell a vezérkart, hogy a tengerészgyalogos nem egyfajta alacsony költségû eszköz, melyet olyan buta és halálos akciókra képeznek ki, mint ez. Még néhány hasonló hadmûvelet, és lefogadom, hogy a katonáink a bloody-gerinci és a tenerau-i csatákat a régi szép idõkként fogják felidézni. Többé nem engedhetünk meg ekkora haszontalan áldozatot!>
+<PalauDb>(*US)			<Peleliu nagy fájdalom a katonáinknak, nagyok a veszteségeink. Persze nincs már egyetlen elõ, japán kókuszdiófa a szigeten, de a nagy ár, amit ezért fizettünk, megtanított minket, hogy többé nem engedhetjük meg, hogy értékes tengerészgyalogosainkat egyszerû ágyútöltelékként használjuk az effajta drága hadmûveletekben. Gyerünk tovább!>
+
+<IwoBr>(*JA)		<A hazánkat fenyegetõ gonosz bombázások elleni több hetes bátor ellenállás után Iwo Dzsimát a megszállás veszélye fenyegeti. Szerencsére Tadamacsi Kuribajasi tábornok tudatában van ennek, és a kis szigetet egy hatalmas erõddé változtatta. Azt ígérte, hogy a végsõkig harcol. Katonai pilótaként az ön felelõssége az, hogy tisztelje a szamurájtársai bátorságát, és komoly veszteségeket okozzon az amerikaiaknak. Ha a hadsereg és a légierõ is jól hajtja végre a feladatát, Iwo Dzsima ezer és ezer gonosz nyugati végzetévé válhat. A felkelõ nap zászlajának továbbra is büszkén kell ragyognia a Szuribacsi-magaslatokon!>
+<IwoVictoryDb>(*JA)	<Vesztettünk, de ez egy briliáns vereség volt! Valójában nem is vesztettünk, és biztosak vagyunk benne, hogy a történelem nagyszerû császári gyõzelemként fogja Iwo Dzsimát említeni. Ha megnézzük a kevés birtokunkban lévõ amerikai jelentést, kiderül, hogy Iwa Dzsima inkább egy elveszett gyõzelem a tengerészgyalogosok számára.  Reménykedjünk, hogy az amerikaiak ugyanezt a stratégiát folytatják. Amíg így lesz, semmi esélyük hogy bármiféle döntõ gyõzelmet arassanak.>
+<IwoDefeatDb>(*JA)	<Sajnos Iwo Dzsima védõinek elszántsága nem volt elegendõ a hatalmas ellenséggel szemben ezen az apró szigeten. A küzdelmek több ezer ellenséges katona vesztét okozták, de sajnos sok ezer ártatlan szamuráj is elesett. Egy effajta áldozat sokkal jobb sorsot érdemelne…>
+<IwoDb>(*JA)		<Iwo Dzsima ugyan az ellenség kezére került végül, de nem Kuribajasi-szan utolsó csatakiáltása nélkül. Egyetlen szamuráj sem adta meg magát, mindegyikük a legdicsõségesebb módon, a Busido hagyományai szerint halt meg. A Császár büszke elesett, bátor fiaira. Éljen soká a Császárság és a Császár!>
+<IwoBr>(*U*)	<Iwo Dzsima szigete egy akadály, mely a Mariana-szigeteken állomásozó, Japán felé tartó B-29-esek útjában áll. Meg kell szereznünk, tehát megszálljuk. Mivel nem tartunk túlzottan az ellenség légi és tengeri aktivitásától, a haditengerészetünk légierejének fõ feladata a megszállás elõtti takarítás és a partraszállás utáni földi támogatás. Azonban elõször az Iwo Dzsimán és környékén tartózkodó ellenséges légi csapatokat kell megsemmisítenünk. Készüljenek fel arra, hogy olyan ellenséges pilótákkal állnak szemben, akiknek nincs veszteni valójuk, viszont van bizonyítani valójuk. Hajrá, fiúk!>
+<IwoVictoryDb>(*U*) <Szép munka volt, fiúk! Hosszú hetek véres és módszeres harcai után végre miénk ez a fránya szikla! Kicsit tovább tartott, mint reméltük, de az eredmény magáért beszél. LeMay B-29-esei sokat köszönhetnek az önök szakértelmének. Nagyon szép munka volt!>
+<IwoDefeatDb>(*U*)	<Iwo Dzsima egy véres katlan volt! Több ezren veszették eletüket csak azért, hogy ezeknek a Superfortress-es fiúknak még egy rohadt tankolási pontjuk legyen. Úgy látszik a tengerészgyalogosokat csak olcsó húsnak tekintik, mikor buta stratégiai célokról van szó.>
+<IwoDb>(*U*)		<Tengerészgyalogosok százai vesztek oda. Még egy sziget, még egy mészárlás, de legalább a B-29-eseink leszállhatnak itt tankolni, és javításra. Azonban lefogadom, hogy Superfortress-es barátaink sokáig érezni fogják a halál nehéz terhét mindig, mikor leszállnak ezeken a fránya kifutókon…>
+
+<OkinawaBr>(*JA)	<Az ellenséges flottákat néhány napja Okinawa felé látták haladni. Az ellenség fõhajója tegnap este tüzet nyitott, és egész éjjel az állásainkat ostromolta. Gyorsan kell reagálnunk, és csapást kell mérnünk az amerikai haditengerészetre! A vezérkar a kamikázeakciók fokozását parancsolta, amihez szükség van a célponthoz vezetõ út védelmére. Gondoskodjon róla, hogy bátor hõseink elérik a céljukat, és az ellenséges gépek zaklatása nélkül teljesíthetik kötelességüket!>
+<OkinawaVictoryDb>(*JA)	<Keményen megleckéztettük az amerikai erõket. Több száz hajójukat elsüllyesztették, és több ezer tengerészgyalogosukat és tengerészüket megölték odaadó hõseink és bombáink. Nagy pillanat ez a történelmünkben, és generációk fogják megköszönni hatékony munkánkat. Az amerikaiak most már kétszer is meggondolják, hogy kockáztatják-e szent földünkért katonáik életét.>
+<OkinawaDefeatDb>(*JA)	<Okinawa a vártnál gyorsabban esett el. Természetesen ez nem veszi el a harci kedvünket, de még mindig keresnünk kell a végsõ fegyvert, mely megakadályozza, hogy a gonosz ellenség közvetlenül a hazai földünket támadja. De ha az Istenek úgy döntenek, hogy ránk akasztják ezt a terhet, megkapják tõlünk az amerikaiak, amire vágynak.>
+<OkinawaDb>(*JA)		<Kemény ellenállásunk ellenére végül elesett Okinawa, de keményen megleckéztettük az amerikaiakat, és nagy veszteségeket szenvedtek. Még egy ilyen támadás, és úgy gondoljuk, hogy az amerikaiak harci kedve végül elszáll. Most már tisztán látják, milyen áldozatra van szükség, ha el akarnak foglalni szent szigeteinket.>
+<OkinawaBr>(*U*)		<Holnap megtámadjuk Okinawát, mely a japánok legfõbb álláspontja a Ryukyu-szigeteken. Ez a végsõ csata a hazájuk megszállásának fõpróbája lesz. Ahogy megszoktuk, az amerikai és a brit repülõgép-hordozók csoportjai is közeli támogatást nyújtanak a célpontot támadó légi küldetések számára. Mivel a japánok helyzete egyre romlik, készüljenek fel a kamikázeakciók erõsödésére! Az öngyilkos repülõk nem juthatnak át a védelmi ernyõnkön, mert különben kritikus veszteségeket szenvedhetünk!>
+<OkinawaVictoryDb>(*U*)	<Okinawai veszteségeink sokkal kisebbek a vártnál. Ez jó, mert így láthatjuk, hogy hazai szigeteik is legyõzhetõk. Készüljünk erre a végsõ menetre, mely hamarosan kezdõdik!>
+<OkinawaDefeatDb>(*U*)	<Okinawa egy véres hely volt, a vártnál sokkal több emnbert vesztettünk. Még rosszabb, hogy a japánok harci kedve erõsebb, mint valaha. Hogy vesszük rá õket, hogy meghajoljanak az akaratunk elõtt? Ha a megszokott eszközökkel nem érhetjük el a gyõzelmet, valami mást kell kitalálnunk, hogy véget vessünk ennek a soha véget nem érõ háborúnak.>
+<OkinawaDb>(*U*)		<Elfoglaltuk Okinawát, de ez sok amerikai és brit katona életébe került. Ez felettébb aggasztó, és továbbra is kétségessé teszi Japán megszállásának megvalósíthatóságát. Sajnos úgy látszik, ez az egyetlen módja annak, hogy a japán tiszteket megadásra kényszerítsük.>
+
+<Guadal1Br>(nUS)		<A japánok május óta megszállás alatt tartják a Salamon-szigetvilágot. Mostanában fogtak hozzá egy kifutó építéséhez, mely komoly veszélyt jelent ránk nézve, ha üzembe helyezik. Az Õrtorony hadmûvelet célja az, hogy átvegyük ennek a kifutónak az irányítását azáltal, hogy a japánokat messzire ûzzük a Guadalcanaltól. Önök a Tulagi-térséget fogják átfésülni, és légi fedezetet nyújtanak a partraszálló erõknek. Vandergrift tábornok tengerészgyalogosai támadó ékként fognak szolgálni a csendes-óceáni háború elsõ nagyszabású támadásában. Hibázásra nincs lehetõség! Az erõs légi aktivitás ellenére – Rabulban a japán haditengerészet elit légierejével fognak szemben állni – a szállítócsapatokat minden áron meg kell védeni!>
+<Guadal1Db>(nUS)		<Ma korán reggel egy ellenséges cirkálókból álló erõ beosont a Savo-sziget és a Guandalcanal közti szorosba, és hihetetlen nagy károkat okozott a kísérõ erõknek. Nem kockáztathatjuk tovább hajóinkat! Fletcher tengernagy azt parancsolta, hogy vonjuk vissza a repülõgép-hordozóinkat, melyek így az Egyesített Flottával a következõ harcra fognak készülni.>
+<Guadal2Br>(mUS)		<A guandalcanal-i Henderson Reptér már mûködik. A tengerészgyalogos-szárnynak le kell szállnia ott, és el kell kezdenie a légi hadmûveleteket. Meg kell védenie a kifutót az ellenség légi és tengeri támadásaitól. Mindent kövessenek el, hogy elvágják az ellenség utánpótlását, hogy a gyalogos társaik kevesebbet szenvedjenek! Ha sikerül fedezniük a Henderson Repteret, jó esélyünk van, hogy megtartsuk ellenõrzésünket a sziget felett.>
+<Guadal2Br>(aUS)		<Mióta mûködik a Henderson reptér, a Cactus Légierõ kiválóan védi a repteret, és megakadályozta a japánok csapatok ellátását is. Az ön szárnyának feladata az, hogy leszálljon ott, és minél hamarabb kezdje el a légi hadmûveleteket, hogy segítsen az ott lévõ tengerészgyalogos és haditengerészeti egységeknek ellátni a fontos feladatukat. Védjék a légteret, kísérjék a japán ellátások elleni támadásokat, és nyújtsanak légi támogatást a szárazföldi erõknek!>
+<Guadal2VictoryDb>(*US)	<Szép munka volt! Guandalcanal a terveknek megfelelõen esett el. Büszke lehet az elért eredményekre. Ez fordulópontot jelent, és ígérem, hogy erõink sosem kényszerülnek többé védekezõ pozícióba helyezkedni. De ne feledje, hogy a gyõzelemért való küzdelem csak most kezdõdött. Továbbra is kitartás!>
+<Guadal2DefeatDb>(*US)	<Ugyan az amerikai csapatok vitézül ellenáltak a nagy fölényben lévõ japán erõknek, de sajnos légi és tengeri erõink képtelenek voltak a megfelelõ védelmet és ellátást biztosítani, hogy a holtpontról a gyõzelem felé billenjen a csata kimenetele. A szállítócsapatok éppen most evakuálják az utolsó amerikai katonákat. Némelyiküket sokkolta a japánok kegyetlensége, némelyikük pedig megbetegedtek a guandalcanali életkörülmények miatt. Milyen keserû véget ért ez a bátor erõfeszítés... Ki tudja, mikor tudunk megint támadni? Reménykedjünk, hogy elõre nem látható katasztrófa miatt nem bukik el Ausztrália…>
+<Guadal2Db>(*US)		<Gyõzelem! Fájdalmas ugyan, de gyõzelem. Úgy tûnik, az éj sötétségét kihasználva az utolsó japán katona is elhagyta Guandalcanalt. Hónapok kemény küzdelme után a kimerült amerikai Hadsereg és a Haditengerészet katonái büszkék lehetnek arra a szokatlan bátorságra, amit az egész hadjárat során tanúsítottak. Szép munka volt, de még hosszú és kemény út áll elõttünk Tokióig!>
+
+<Guadal1Br>(*JA)	<Guandalcanal partjaitól északra számos amerikai, haditengerészeti egységet láttak korán reggel. Az ellenséges hajók gyorsan elkezdték tüzelni guandalcanali és tulagi állásainkat, aztán váratlanul kétéltûek támadták meg bátor katonáinkat. A Tengernagyi Hivatal ezt nem nézheti tétlenül. Nagy hatótávolságú Tainan-csoportbéli A6M vadászgépek fognak légi kíséretet biztosítani a G4M és a D3A bombázóknak, miközben célpontjuk felé haladnak. A Rabaul és Guandalcanal közti nagy távolság miatt a vadászgépeinknek le kell szállniuk a bougainvillei kifutón, mikor visszafelé repülnek. Biztosíthatom, hogy mindent megteszünk, hogy az összes sérült vagy üzemanyagból kifogyott géppel leszálló pilótát megmentsük.>
+<Guadal1VictoryDb>(*JA)	<Az amerikaiak itt Guandalcanalnál próbálták meg megváltoztatni a háború menetét, de önnek és bajtársainak köszönhetõen ez nem sikerült nekik. A maradék amerikai erõk talán pár nap múlva megadják magukat gyõzedelmes erõinknek. Fiatal szamuráj, ön megmutatta, hogy a tökéletesség elérhetõ, ha elég magabiztosak vagyunk ahhoz, hogy higgyünk a saját sikerünkben. A Császár és egész Japán az önök fényes gyõzelmét ünnepeli, és gratulálnak, hogy ilyen tántoríthatatlanul végrehajtották a kötelességüket.>
+<Guadal1DefeatDb>(*JA)	<Erõfeszítéseink ellenére katonáink, pilótáink és tengerészeink nem tudtak ellenállni a túlerõben lévõ amerikaiaknak. Az effajta katasztrófa elfogadhatatlan, és nagymértékben veszélyezteti a dél-csendes-óceáni pozíciónkat. Azonnal jelentkezzen a Haditengerészet Légi Központjában új feladatra! Nem engedhetjük, hogy az amerikaiak kihasználják a legutóbbi sikerüket!>
+<Guadal1Db>(*JA)		<Nem sikerült Guandalcanalt az ameriak hatókörén kívül tartanunk. Az elmúlt éjjel gyors szállítócsapataink Tassafarongánál a legutolsó csapatainkat is evakuálták a szigetrõl. Súlyos vereséget szenvedtünk, de a Salamon-szigetvilág nagyobb része még mindig a mi felügyeletünk alatt áll. A Salamon-szigetek visszafoglalásával olyan fájdalmat okozunk nekik, amit nem hevernek ki!>
+
+<ChichiBr>(*U*) <A repülõgép-hordozókon alapuló erõink ma támadást intéznak Csicsi Dzsima ellen, mely Iwo Dzsima után a második legfontosabb japán támaszpont a Bonin-szigeten. Mielõtt a közeljövõben partra szállnánk a térségben, fel kell mérnünk a kis sziget védelmi lehetõségeit. Tüzeljen a helyõrségre, szedje le az összes felbukkanó repülõt, és derítse fel a térséget!>
+<ChichiVictoryDb>(*U*) <Ha Csicsi Dzsima valaha is fenyegetést jelentett, az ön határozott fellépésének köszönhetõen már nem így van. A támadásai halálosnak bizonyultak, és a fotók, melyeket készített, elegendõek ahhoz, hogy pontos képet kapjunk a sziget helyõrségérõl. Szép munka volt! Most nézzük meg Okinawát!... >
+<ChichiDefeatDb>(*U*) <Csicsi Dzsima nem érte meg azt az árat amit ezért a kevés információért fizettünk. Csak annyit tudunk, hogy Csicsi Dzsima egy jól védett sziget, melyet a japánok nem hagynak el egy könnyen...>
+<ChichiDb>(*U*) <Szép munka volt! Van némi veszteségünk, de komoly veszteségeket okoztunk a csicsi dzsimai japán erõknek. Ráadásul már azt is tudjuk, hogy Csicsi Dzsima a szigetvilág fõ kommunikációs és ellátó központja. Ha legközelebb erre járunk, tudjuk, hol tudunk komoly csapást mérni a japánokra. >
+<ChichiBr>(*JA) <A legutóbbi jelentések szerint egy ellenséges flotta közeledik a Bonin-szigetek felé, hogy iwo dzsimai és csicsi dzsimai állásainkat támadja. Maszaki ezredes és Horie õrnagy remélik, hogy az ellenség légi támadásaitól sikeresen fogják védeni a fontos kommunikációs és ellátó központunkat. Gondoskodjon róla, hogy az agresszorok csak keserû tapasztalatokkal hagyhassák el Csicsi Dzsimát!> 
+<ChichiVictoryDb>(*JA) <Sok amerikai repülõgép-hordozóról felszálló gépet szedtünk le az elmúlt pár napban, és maradék légierejük az önök bátor ellenállásának köszönhetõen, úgy látszik, törölte a további támadásokat. Az amerikaiak talán hamarosan visszatérnek, de higgye el, hogy már nem lesznek olyan arrogánsak és magabiztosak, mint korábban...> 
+<ChichiDefeatDb>(*JA) <Csicsi dzsimai védelmünket elsöpörte az ellenség. Nem jelentettünk ellenfelet a szakképzett amerikai pilótáknak, akiktõl leckét kaptunk repülésbõl a Bonin-szigetek felett. Gyorsan újjá kell építenünk az erõinket, ha el akarunk kerülni egy újabb csalódást, ha ezek az ördögök visszatérnek és megtámadják a szigeteinket! >
+<ChichiDb>(*JA) <Védelmi erõink nagy veszteségeket szenvedtek Csicsi Dzsimában, de az amerikaiak is aránytalanul nagy árat fizettek. Szerintem döntetlenrõl beszélhetünk, mert kiegyenlített volt a küzdelem. Most már legalább tudják az amerikaiak, hogy a Bonion-szigetek megszállása nem gyerekjáték... > 
+
+<LeyteBr>(*U*) < >
+<LeyteVictoryDb>(*U*) < >
+<LeyteDefeatDb>(*U*) < >
+<LeyteDb>(*U*) < >
+
+<LeyteBr>(*JA) < >
+<LeyteVictoryDb>(*JA) < >
+<LeyteDefeatDb>(*JA) < >
+<LeyteDb>(*JA) < >
+
+<Japan1Br>(aUS) <A mariana-szigeteki új légi bázis egy olyan lehetõség, amivel élnünk kell. Most, hogy a B-29-es „Superfortress” már nagy számban rendelkezésre áll, fontolóra vehetjük Japán módszeres bombázását, mint ahogy azt a 8. Légierõ teszi Németországban. A nagy-hatótávolságú Mustangok hatékony kíséretet biztosíthatnak a bombázóknak egész útjuk során, és ráadásul elsöpörhetnek mindenféle császári, légi ellenállást, mellyel a bombázás megindítása elõtt találkoznának. Legfõbb célpontjaink az ipari központok. Az ön területe a Kyusu-szektor, mely egy fontos ipari, hadi és haditengerészeti központ. Mutassa meg a japánoknak, hogy sehol sem lehetnek biztonságban, amíg reménytelenül ellenállnak a légi fölényünknek.>
+<Japan1VictoryDb>(aUS) <Gratulálunk, tiszt! Az ön hatékony vadászgép-támogatásának köszönhetõen a japánok komoly veszteségeket szenvedtek mid a földön, mind a levegõben. A bombázóink sikeresen támadták a japán ipari létesítményeket, és Kyusut egy lángoló katlanná változtatták. Az ellenséges vadászgépek többé nem szállnak fel még a saját hazájuk védelmében sem. Ez azt mutatja, hogy az önök erõfeszítéseinek köszönhetõen az ellenség harci kedve nagyon gyenge.>
+<Japan1DefeatDb>(aUS) <Nem gondoltuk, hogy az ellenséges erõk ilyen komoly ellenállást jelentenek a bombázóinknak. Komoly védelmi fegyverzete ellenére a B-29-es sérülékenynek bizonyult az ellenséges vadászgépekkel szemben. Igazából ha a vadászgépeink hatékonyabban védték volna nagyobb testvéreiket, nem lenne ilyen nagy a veszteségünk. Egy új stratégiát kell kidolgoznunk. Japán szemmel láthatóan még nem omlott össze.>
+<Japan1Db>(aUS) <Lemay tábornok úgy hiszi, hogy a bombázások mennyisége kompenzálja azok pontatlanságát. Tulajdonképpen nem egészen sikerült elérni az elsõdleges célunkat a bombázási fázis során, mivel a B-29-es kicsit csalódást keltõen szerepelt. Szerencsére a vadászgépek jól teljesítettek, és az ellenséges vadászgépek sokat szenvedtek pilótáink agresszív támadásaiban.>
+
+<Japan1Br>(nUS) <A flottánknak meg kell tisztítaniai Kyushu-t az ellenséges légierõtõl, mielõtt új támadást indítanánk a Csendes-Óceán nyugati részében. A sziget repülõterei ellen fog csapásmérõ küldetéseket végrehajtani, megsemmisítve minden olyan célpontot, aminek az elpusztítása hasznos a parancsnokság számára: ebbe beletartozik bármilyen repülõgép, katonai konvoj, vonatok, hajók, üzemanyagraktárak és egyéb katonai állások. Az ellenséges légi és tengeri célpontok megsemmisítése a fõ feladat. Ne felejtsen légifedezetet nyújtani a repülõgép-hordozóinknak, hiszen a háború során amerikai hadihajók még soha nem voltak ilyen közel a japán partokhoz.>
+<Japan1VictoryDb>(nUS) <Szép munka, pilóta! Hatalmas pusztítást végzett a japán repülõtereken. Kyushu-t több száz használhatatlan repülõgép roncsa borítja, a kikötõk bejáratát pedig eltorlaszolják a Császári Haditengerészet elsüllyedt hajóinak roncsai – most már folytathatjuk a tervezett elõrenyomulásunkat a nyugati hadszíntéren, anélkül, hogy erõteljes légi ellentámadástól kellene tartanunk.>
+<Japan1DefeatDb>(nUS) <A Kyushu elleni támadásaink gyenge eredményeket hoztak. Sok ellenséges gépet lelõttünk, de képtelenek voltunk a sziget feletti ellenséges légierõt megsemmisíteni. Ráadásul a kikötõkben lehorgonyzott japán hajók csak könnyû sérüléseket szenvedtek, ha egyáltalán találatot kaptak. E kevés eredménynek igen nagy ára volt, és a hajóinknak ez idõ alatt a szigetrõl felszálló replülõk súlyos támadásaival kellett szembenézniük. A legközelebbi alkalommal már tanulni fogunk ebbõl a kudarcból.>
+<Japan1Db>(nUS) <Jó munkát végzett a Kyushu-n levõ ellenséges célpontok elleni támadásban. Az ellenséges légierõ is nagy veszteségeket szenvedett, mégha a fõ erõiket sikerült is visszavonniuk a gépeink hatótávolságán kívülre. Csekély veszteségeink voltak, különösen ha figyelembe veszzük, hogy milyen közel vagyunk a japán szigetekhez – ezt a késõbbi támadásaink során figyelembe kell vennünk.>
+
+<Japan1Br>(*JA) <Császárunk fiai, több évszázadnyi háború után, most elõször az ellenség a hazánkat fenyegeti. Ráadásul, gonosz erõk számos több ezer kilóméterre levõ repülõteret helyeztek üzembe, úgródeszkánként az országunkat támadó nehézbombázók számára. Ezen kívül az ellenséges flotta a bázisaink elleni direkt támadásokra készül, elõkészítve a terepet egy átfogó támadáshoz a területeink ellen. Kyushu, a szigetvilágunk legdélebbi szigete, a legsérülékenyebb célpont. Meg kell védeni a Honshu irányába tartó déli folyosót, valamint vissza kell verni minden Kyushu, és az északi városa és ipari központja ellen indított támadást. Egyetlen amerikai gép sem menekülhet szent földünkrõl és bátor pilótáink haragja elõl.>
+<Japan1VictoryDb>(*JA) <Szamuráj, sikerült megvédenie a légterünket a nyugati barbárok támadásaitól. A B-29-es századok súlyos veszteségeket szenvedtek szokatlan hatékonyságának és kitûnõ taktikájának köszönhetõen. Az ellenséges bombázás totális kudarc volt, mert nem állította le a gyárainkat és törte meg bátor polgáraink morálját. Ezen kívül, az amerikaiak bátortalan kísérlete, hogy csapást mérjenek a part menti védelmeinkre az amerikaiak mészárszékévé változott. A császár büszke magára!>
+<Japan1DefeatDb>(*JA) <Kyushu lángokban áll, mert a vadászaink képtelenek voltak feltartani az ellenséges támadást. Bombák tonnái hullottak a városainkra, miközben az ellenséges bombázók zavartalanul visszatérhettek a bázisaikra. Ezen kívül, az amerikai haditengerészet és légierõ gépei lerombolták reptereinket, és több száz értékes repülõnket pusztították el még a földön, nagyon kicsi veszteségeket szenvedve. Az ilyen helyzet különleges áldozatokat fog tõlünk követelni, ha meg akarjuk õrizni a becsületünket és a gyõzelmi esélyeinket.>
+<Japan1Db>(*JA) <Sok kárt okoztak az ellenséges bombázások, de az ellenséges B-29-esek nagy árat fizettek ezért. A bombázók elsárgult levélként hullottak az égbõl Kyushu-ra, halálos hatékonyságának köszönhetõen, de ha végleg vissza akarjuk szorítani õket, az még több erõfeszítést igényel.>
+
+<SantaCruzBr>(*U*) <Kinkaid admirális kapta a feladatot, hogy elpusztítson egy ellenséges hajórajt a Santa Cruz szigetektõl északra, ami jelentések szerint légitámogatást nyújtana egy új nagyszabású utánpótlási mûveletnek. TF.16 és 17 az egyedüli rendelkezésre álló tengeri légierõnk, mivel a USS Wasp – nyugodjon békében – és a USS Saratoga az erõs ellenséges tengeralattjáró-aktivitás miatt kiestek a szolgálatból. Mivel nincs sok információnk az ellenség jelenlegi helyzetérõl, a légi egységek feladata lesz kiterjedt felderítés küldetések végrehajtása, míg a Henderson Field-rõl felszálló gépek feladata lesz a szállító erõk megsemmisítése, amik a szoroson fognak áthaladni a következõ napokban. Próbáljon meg jelentõs károkat okozni az ellenséges repülõgép-hordozókban, anélkül, hogy fölösleges kockázatokat vállalna.>
+<SantaCruzVictoryDb>(*U*) <Halsey admirális büszke a fiaira! Kinkaid admirálisnak sikerült súlyos csapást mérnie az ellenség repülõgép-hordozóira, anélkül, hogy kockáztatta volna a saját repülõgép-hordozóinkat. Az ellenséges légierõ megsemmisült, és a szállító konvoj komolyabb légifedezet nélkül maradt - Cactus Force égõ roncsokká fogja változtatni õket, ha valahol felbukkannak. Ez minden bizonnyal az utolsó komoly japán kísérlet volt Guadalcanal felé – és a tengerészgyalogosok nagyon örülnek, hogy elhárította ezt a veszélyt!>
+<SantaCruzDefeatDb>(*U*) <Nem sikerült súlyos károkat okozni az ellenséges flottában. Ami még súlyosabb, hogy elvesztettük a teljes repülõgép-hordozó flottánkat ebben a körzetben, ami miatt a Henderson Field és a szoros minden légi fedezet nélkül maradt. Most az ellenség szabadon elvégezheti az utánpótlást  - reméljük, hogy bátor szárazföldi erõink és a Cactus Force meg tudja ezt gátolni a segítségünk nélkül is.>
+<SantaCruzDb>(*U*) <Komoly veszteségek voltak mindkét oldalon, és a repülõgép-hordozó flották gyakorlatilag megsemmisítették egymást. Nem tudom, hogy beszélhetünk-e itt gyõztesrõl vagy vesztesrõl – a végsõ gyõzelem a Guadalcanal környéki szárazföldi harcokban fog eldõlni.>
+
+<SantaCruzBr>(*JA) <Yamamoto admirális kitervelt egy csapdát, ami a Salamon-szigeteki hadjárat gyors és sikeres befejezését ígéri. A célpont ismét az ellenséges repülõgép-hordozó flotta, ami már csak néhány mûködõ hajóból áll, köszönhetõen annak, hogy tengeralattjáróink elsüllyesztették a USS Wasp és USS Saratoga hordozókat. Carrier Division 5 megkeresi az ellenséges TG(s) és elsüllyeszti az amerikai hordozókat, hogy Guadalcanal körzetét megtisztítsa az amerikai haditengerészet repülõgépeitõl. Eközben felszíni egységek elnémítják a Henderson Fleet-et nehézágyúk tüzével, és megtisztítják a tengeri folyosót, ami Lunga Point-ig vezet, ahol csapataink pár napon belül partra szállnak. Amint a  Tassafaronga-nál a pozíciónk kellõen megerõsödik, egy döntõ támadást indítunk a tengerészgyalogosok ellen a Henderson Field-nél, és visszaszorítjuk õket egészen az Aola-öbölig, vissza a tengerbe.>
+<SantaCruzVictoryDb>(*JA) <A császári flotta pilótái és tengerészei, büszkék vagyunk rátok! Az ellenséges flotta elpusztításával, megmutattátok ördögi ellenségeinknek a Kido Butai dicsõséges erejét. Most, hogy az ellenséges hordozók a tenger mélyén vannak, köszönhetõen az erõsítésnek, a szárazföldi csapataink Guadalcanal-nál egy végsõ támadásra készülnek, ami kisöpri a maradék tengerészgyalogosokat. Szép munka!>
+<SantaCruzDefeatDb>(*JA) <Kudarcunk miatt,Guadalcanal-nál a pozíciónk bizonytalanná vált. Most csak abban reménykedhetünk, hogy Abe admirális megsemmisíti az ellenséges felszíni célpontokat a tengeren – amit még nehezebb lesz elérnie, mivel az ellenséges erõknek erõs légi fedezetet nyújtanak a haditengerészet egységei, amiket mai akciónk során nem sikerült semlegesítenünk.>
+<SantaCruzDb>(*JA) <Az ellenség súlyos veszteségeket szenvedett, de ez sok bajtársunk életébe került tengern és levegõben egyaránt. Az ellenséges hajókat új típusú, nagy tûzgyorsaságú légelhárító ágyúk védték, amik borzalmas pusztítást végeztek a védtelen repülõgépeink soraiban. Mindemellett a csapataink bátorsága ezt az összecsapást nagy gyõzelemmé változtatta, megbosszulva a kudarcunkat Midway-nél. Most, hogy a Kido Butai elvégezte a feladatát, Abe admirálison és felszíni erõin múlik, hogy utolsó csapást mérjenek az amerikai haditengerészetre Guadalcanal-nál.>
+
+<MarianasBr>(nJA)	<Úgy terveztük, hogy az ellenség elõször Palau-nél támad - tévedtünk. Az amerikai hajók hamarosan a Marianas-al néznek szembe – szerencsénkre, erre is fel voltunk készülve. Toyoda admirális terve arra épül, hogy a szárazföldrõl felszálló gépeink súlyos károkat okoznak az ellenségnek a csata elsõ napjaiban. Ezután Ozawa admirális hajói felszámolják a maradék ellenséges ellenállást. Ez egy jó terv, jó esélyekkel, ha a hadsereg és a haditengerészet is pontosan végrehajtja a feladatát.>
+<MarianasBr>(aJA)	< Úgy terveztük, hogy az ellenség elõször Palau-nél támad - tévedtünk. Az amerikai hajók hamarosan a Marianas-al néznek szembe – szerencsénkre, erre is fel voltunk készülve. Számos légi egységünk állomásozik Guam-on, Saipan-on és Tinian-on, arra várva, hogy a nyugati ördögök feltûnjenek. Amint megtalálja az ellenséges repülõket, támadja õket egy perc szünet nélkül, és könnyítse meg a Combined Fleet feladatát, azokét a hajókét és repülõkét, amik végül elintézik az ellenséges rajokat. Úgy gondoljuk, hogy ezt az összecsapást egy mi javunkra váló pusztító csatává változtathatjuk: számítunk magára!>
+<MarianasVictoryDb>(*JA)	<Gratulálunk szamuráj! A Kido Butai akciója rendkívül hatékony volt, és a nyugati ördögök nem fogják elfelejteni a kemény leckét, amit bátor csapatainktól kaptak. Sok ellenséges hajó elsüllyedt, és a Marianas elleni invázió el lett halasztva; Toyoda, Ozawa, Kurita és Nagumo admirálisok hamarosan egy új tervvel állnak elõ, amivel átvehetjük a kezdeményezést a Csendes-óceán középsõ térségében. A gyõzelem már nincs messze, végre!>
+<MarianasDefeatDb>(*JA)	<Hallottam olyan tisztekrõl, akik kisebb kudarc miatt is szeppukut követtek el. A Marianas összecsapás nagy gyõzelem helyett csúfos kudarccal végzõdött! A Kido Butai már soha nem fog felépülni a meglepõen hatékony ellenségtõl itt elszenvedett vereségbõl. Vonjuk össze megmaradt erõinket egy utolsó elkeseredett harcra …>
+<MarianasDb>(*JA)		<Nem sikerült súlyos veszteségeket okoznunk az ellenségnek, és elvesztettük megmaradt légierõnk javát. Ez egy sötét nap a Kido Butai számára, mégha a tengeri veszteségeink nem is oly súlyosak. Gondolnunk kell a további mûveleteinkre: a császári flottának még van esélye, hogy megállítsa az amerikai elõrenyomulást, abban a pillanatban, hogy a gonosz ellenségeink megtámadják a Fülöp-szigeteket. De több vereség nem lehetséges, ha életben akarjuk tartani a gyõzelmi reményeinket.>
+<MarianasBr>(*US)		<A Mariana-szigetek a következõ célpontunk. A Forager hadmûvelet célja a szigetcsoport három fõ szigetének a teljes inváziója, amivel egy elõretolt bázist szerezhetünk mind a tengeri egységeinknek, mind a stratégiai bombázóinknak. Mint a korábbi hasonló mûveletek során, a feladata az lesz, hogy támadja a körzet repülõtereit, és légitámogatást nyújtson a partraszálló cspatainknak. De emlékezzen, már nem zátonyokat támadunk – a célpontjaink valódi szigetek, valódi erõdítményekkel és védelemmel. Azt is reméljük, hogy a Mobile Fleet megpróbálja meggátolni a céljainkat: legyen készen nehéz CAP és keresési tevékenységre, amíg meg nem találjuk a fõ ellenséges erõt. Amennyiben összecsapásra kerül a sor, annak döntõnek kell lennie: A Mariana-szigetek kell, hogy legyen a Mobile Fleet végzete.>
+<MarianasVictoryDb>(*US)	<Szép munka, fiúk, Guam, Saipan és Tinian biztosítása a tervezettnél kevesebb veszteséggel történt meg. A Combined Fleet megpróbált egy döntõ csatát kierõszakolni – és ez sikerült is neki, de nem úgy, ahogy a japánok számítottak rá. A császári haditengerészet veszteségei súlyosak, de ami fontosabb pótolhatatlanok voltak. A légierõ egységei is súlzos veszteségeket szenvedtek – japán pilóták ezrei haltak meg az elmúlt napok harcaiban. Olyan csapást mértünk a Császári Haditengerészetre, amibõl soha nem fog felállni.>
+<MarianasDefeatDb>(*US)	<Alábecsülni az ellenséget nagyon nagy hiba – és az egész Forager hadmûvelet egy nagy hiba volt. Súlyos veszteségeket szenvedtünk mind a vizen, mind a szárazföldön, köszönhetõen a váratlan vizi és légi ellenállásnak. Vissza kellett vonulnunk kelet felé, a szigeteket japán uralom alatt hagyva. A Mobile Fleet megmutatta, hogy nem vesztette el professzionalizmusát a korábbi veszteségek ellenére. Milyen fájdalmas csalódás!>
+<MarianasDb>(*US)		<Guam, Saipan és Tinian most már biztosítva van. Ha a szárazföldi ütközet normálisan is zajlott – leszámítva a vártnál nagyobb veszteségeket – a tengeri csata befejezetlen maradt. Tengeralattjáróink gyõzelmei és pilótáink támadásai ellenére az ellenség fõ ereje csak kisebb veszteségeket szenvedve el tudott menekülni, és Spruance admirális nem érte el a megsemmisítõ gyõzelmet, amit szeretett volna. Ezért várnunk kell néhány hetet egy hasonló lehetõségre. Szép munka egyébként - a "Great Marianas Turkeys Shot" megmutatta, hogy az ellenséges légierõ már nem jelent veszélyt >
+
+<MarianasBr>(nJA)	<Úgy terveztük, hogy az ellenség elõször Palau-nél támad - tévedtünk. Az amerikai hajók hamarosan a Marianas-al néznek szembe – szerencsénkre, erre is fel voltunk készülve. Toyoda admirális terve arra épül, hogy a szárazföldrõl felszálló gépeink súlyos károkat okoznak az ellenségnek a csata elsõ napjaiban. Ezután Ozawa admirális hajói felszámolják a maradék ellenséges ellenállást. Ez egy jó terv, jó esélyekkel, ha a hadsereg és a haditengerészet is pontosan végrehajtja a feladatát.>
+<MarianasBr>(aJA)	< Úgy terveztük, hogy az ellenség elõször Palau-nél támad - tévedtünk. Az amerikai hajók hamarosan a Marianas-al néznek szembe – szerencsénkre, erre is fel voltunk készülve. Számos légi egységünk állomásozik Guam-on, Saipan-on és Tinian-on, arra várva, hogy a nyugati ördögök feltûnjenek. Amint megtalálja az ellenséges repülõket, támadja õket egy perc szünet nélkül, és könnyítse meg a Combined Fleet feladatát, azokét a hajókét és repülõkét, amik végül elintézik az ellenséges rajokat. Úgy gondoljuk, hogy ezt az összecsapást egy mi javunkra váló pusztító csatává változtathatjuk: számítunk magára!>
+<MarianasVictoryDb>(*JA)	<Gratulálunk szamuráj! A Kido Butai akciója rendkívül hatékony volt, és a nyugati ördögök nem fogják elfelejteni a kemény leckét, amit bátor csapatainktól kaptak. Sok ellenséges hajó elsüllyedt, és a Marianas elleni invázió el lett halasztva; Toyoda, Ozawa, Kurita és Nagumo admirálisok hamarosan egy új tervvel állnak elõ, amivel átvehetjük a kezdeményezést a Csendes-óceán középsõ térségében. A gyõzelem már nincs messze, végre!>
+<MarianasDefeatDb>(*JA)	<Hallottam olyan tisztekrõl, akik kisebb kudarc miatt is szeppukut követtek el. A Marianas összecsapás nagy gyõzelem helyett csúfos kudarccal végzõdött! A Kido Butai már soha nem fog felépülni a meglepõen hatékony ellenségtõl itt elszenvedett vereségbõl. Vonjuk össze megmaradt erõinket egy utolsó elkeseredett harcra …>
+<MarianasDb>(*JA)		<Nem sikerült súlyos veszteségeket okoznunk az ellenségnek, és elvesztettük megmaradt légierõnk javát. Ez egy sötét nap a Kido Butai számára, mégha a tengeri veszteségeink nem is oly súlyosak. Gondolnunk kell a további mûveleteinkre: a császári flottának még van esélye, hogy megállítsa az amerikai elõrenyomulást, abban a pillanatban, hogy a gonosz ellenségeink megtámadják a Fülöp-szigeteket. De több vereség nem lehetséges, ha életben akarjuk tartani a gyõzelmi reményeinket.>
+<MarianasBr>(*US)		<A Mariana-szigetek a következõ célpontunk. A Forager hadmûvelet célja a szigetcsoport három fõ szigetének a teljes inváziója, amivel egy elõretolt bázist szerezhetünk mind a tengeri egységeinknek, mind a stratégiai bombázóinknak. Mint a korábbi hasonló mûveletek során, a feladata az lesz, hogy támadja a körzet repülõtereit, és légitámogatást nyújtson a partraszálló cspatainknak. De emlékezzen, már nem zátonyokat támadunk – a célpontjaink valódi szigetek, valódi erõdítményekkel és védelemmel. Azt is reméljük, hogy a Mobile Fleet megpróbálja meggátolni a céljainkat: legyen készen nehéz CAP és keresési tevékenységre, amíg meg nem találjuk a fõ ellenséges erõt. Amennyiben összecsapásra kerül a sor, annak döntõnek kell lennie: A Mariana-szigetek kell, hogy legyen a Mobile Fleet végzete.>
+<MarianasVictoryDb>(*US)	<Szép munka, fiúk, Guam, Saipan és Tinian biztosítása a tervezettnél kevesebb veszteséggel történt meg. A Combined Fleet megpróbált egy döntõ csatát kierõszakolni – és ez sikerült is neki, de nem úgy, ahogy a japánok számítottak rá. A császári haditengerészet veszteségei súlyosak, de ami fontosabb pótolhatatlanok voltak. A légierõ egységei is súlzos veszteségeket szenvedtek – japán pilóták ezrei haltak meg az elmúlt napok harcaiban. Olyan csapást mértünk a Császári Haditengerészetre, amibõl soha nem fog felállni.>
+<MarianasDefeatDb>(*US)	<Alábecsülni az ellenséget nagyon nagy hiba – és az egész Forager hadmûvelet egy nagy hiba volt. Súlyos veszteségeket szenvedtünk mind a vizen, mind a szárazföldön, köszönhetõen a váratlan vizi és légi ellenállásnak. Vissza kellett vonulnunk kelet felé, a szigeteket japán uralom alatt hagyva. A Mobile Fleet megmutatta, hogy nem vesztette el professzionalizmusát a korábbi veszteségek ellenére. Milyen fájdalmas csalódás!>
+<MarianasDb>(*US)		<Guam, Saipan és Tinian most már biztosítva van. Ha a szárazföldi ütközet normálisan is zajlott – leszámítva a vártnál nagyobb veszteségeket – a tengeri csata befejezetlen maradt. Tengeralattjáróink gyõzelmei és pilótáink támadásai ellenére az ellenség fõ ereje csak kisebb veszteségeket szenvedve el tudott menekülni, és Spruance admirális nem érte el a megsemmisítõ gyõzelmet, amit szeretett volna. Ezért várnunk kell néhány hetet egy hasonló lehetõségre. Szép munka egyébként - a "Great Marianas Turkeys Shot" megmutatta, hogy az ellenséges légierõ már nem jelent veszélyt >
+
+<MarianasBr>(nJA)	<Úgy terveztük, hogy az ellenség elõször Palau-nél támad - tévedtünk. Az amerikai hajók hamarosan a Marianas-al néznek szembe – szerencsénkre, erre is fel voltunk készülve. Toyoda admirális terve arra épül, hogy a szárazföldrõl felszálló gépeink súlyos károkat okoznak az ellenségnek a csata elsõ napjaiban. Ezután Ozawa admirális hajói felszámolják a maradék ellenséges ellenállást. Ez egy jó terv, jó esélyekkel, ha a hadsereg és a haditengerészet is pontosan végrehajtja a feladatát.>
+<MarianasBr>(aJA)	< Úgy terveztük, hogy az ellenség elõször Palau-nél támad - tévedtünk. Az amerikai hajók hamarosan a Marianas-al néznek szembe – szerencsénkre, erre is fel voltunk készülve. Számos légi egységünk állomásozik Guam-on, Saipan-on és Tinian-on, arra várva, hogy a nyugati ördögök feltûnjenek. Amint megtalálja az ellenséges repülõket, támadja õket egy perc szünet nélkül, és könnyítse meg a Combined Fleet feladatát, azokét a hajókét és repülõkét, amik végül elintézik az ellenséges rajokat. Úgy gondoljuk, hogy ezt az összecsapást egy mi javunkra váló pusztító csatává változtathatjuk: számítunk magára!>
+<MarianasVictoryDb>(*JA)	<Gratulálunk szamuráj! A Kido Butai akciója rendkívül hatékony volt, és a nyugati ördögök nem fogják elfelejteni a kemény leckét, amit bátor csapatainktól kaptak. Sok ellenséges hajó elsüllyedt, és a Marianas elleni invázió el lett halasztva; Toyoda, Ozawa, Kurita és Nagumo admirálisok hamarosan egy új tervvel állnak elõ, amivel átvehetjük a kezdeményezést a Csendes-óceán középsõ térségében. A gyõzelem már nincs messze, végre!>
+<MarianasDefeatDb>(*JA)	<Hallottam olyan tisztekrõl, akik kisebb kudarc miatt is szeppukut követtek el. A Marianas összecsapás nagy gyõzelem helyett csúfos kudarccal végzõdött! A Kido Butai már soha nem fog felépülni a meglepõen hatékony ellenségtõl itt elszenvedett vereségbõl. Vonjuk össze megmaradt erõinket egy utolsó elkeseredett harcra …>
+<MarianasDb>(*JA)		<Nem sikerült súlyos veszteségeket okoznunk az ellenségnek, és elvesztettük megmaradt légierõnk javát. Ez egy sötét nap a Kido Butai számára, mégha a tengeri veszteségeink nem is oly súlyosak. Gondolnunk kell a további mûveleteinkre: a császári flottának még van esélye, hogy megállítsa az amerikai elõrenyomulást, abban a pillanatban, hogy a gonosz ellenségeink megtámadják a Fülöp-szigeteket. De több vereség nem lehetséges, ha életben akarjuk tartani a gyõzelmi reményeinket.>
+<MarianasBr>(*US)		<A Mariana-szigetek a következõ célpontunk. A Forager hadmûvelet célja a szigetcsoport három fõ szigetének a teljes inváziója, amivel egy elõretolt bázist szerezhetünk mind a tengeri egységeinknek, mind a stratégiai bombázóinknak. Mint a korábbi hasonló mûveletek során, a feladata az lesz, hogy támadja a körzet repülõtereit, és légitámogatást nyújtson a partraszálló cspatainknak. De emlékezzen, már nem zátonyokat támadunk – a célpontjaink valódi szigetek, valódi erõdítményekkel és védelemmel. Azt is reméljük, hogy a Mobile Fleet megpróbálja meggátolni a céljainkat: legyen készen nehéz CAP és keresési tevékenységre, amíg meg nem találjuk a fõ ellenséges erõt. Amennyiben összecsapásra kerül a sor, annak döntõnek kell lennie: A Mariana-szigetek kell, hogy legyen a Mobile Fleet végzete.>
+<MarianasVictoryDb>(*US)	<Szép munka, fiúk, Guam, Saipan és Tinian biztosítása a tervezettnél kevesebb veszteséggel történt meg. A Combined Fleet megpróbált egy döntõ csatát kierõszakolni – és ez sikerült is neki, de nem úgy, ahogy a japánok számítottak rá. A császári haditengerészet veszteségei súlyosak, de ami fontosabb pótolhatatlanok voltak. A légierõ egységei is súlzos veszteségeket szenvedtek – japán pilóták ezrei haltak meg az elmúlt napok harcaiban. Olyan csapást mértünk a Császári Haditengerészetre, amibõl soha nem fog felállni.>
+<MarianasDefeatDb>(*US)	<Alábecsülni az ellenséget nagyon nagy hiba – és az egész Forager hadmûvelet egy nagy hiba volt. Súlyos veszteségeket szenvedtünk mind a vizen, mind a szárazföldön, köszönhetõen a váratlan vizi és légi ellenállásnak. Vissza kellett vonulnunk kelet felé, a szigeteket japán uralom alatt hagyva. A Mobile Fleet megmutatta, hogy nem vesztette el professzionalizmusát a korábbi veszteségek ellenére. Milyen fájdalmas csalódás!>
+<MarianasDb>(*US)		<Guam, Saipan és Tinian most már biztosítva van. Ha a szárazföldi ütközet normálisan is zajlott – leszámítva a vártnál nagyobb veszteségeket – a tengeri csata befejezetlen maradt. Tengeralattjáróink gyõzelmei és pilótáink támadásai ellenére az ellenség fõ ereje csak kisebb veszteségeket szenvedve el tudott menekülni, és Spruance admirális nem érte el a megsemmisítõ gyõzelmet, amit szeretett volna. Ezért várnunk kell néhány hetet egy hasonló lehetõségre. Szép munka egyébként - a "Great Marianas Turkeys Shot" megmutatta, hogy az ellenséges légierõ már nem jelent veszélyt >
+
+<Marianas2Br>(nJA)	<Úgy terveztük, hogy az ellenség elõször Palau-nél támad - tévedtünk. Az amerikai hajók hamarosan a Marianas-al néznek szembe – szerencsénkre, erre is fel voltunk készülve. Toyoda admirális terve arra épül, hogy a szárazföldrõl felszálló gépeink súlyos károkat okoznak az ellenségnek a csata elsõ napjaiban. Ezután Ozawa admirális hajói felszámolják a maradék ellenséges ellenállást. Ez egy jó terv, jó esélyekkel, ha a hadsereg és a haditengerészet is pontosan végrehajtja a feladatát.>
+<Marianas2Br>(aJA)	< Úgy terveztük, hogy az ellenség elõször Palau-nél támad - tévedtünk. Az amerikai hajók hamarosan a Marianas-al néznek szembe – szerencsénkre, erre is fel voltunk készülve. Számos légi egységünk állomásozik Guam-on, Saipan-on és Tinian-on, arra várva, hogy a nyugati ördögök feltûnjenek. Amint megtalálja az ellenséges repülõket, támadja õket egy perc szünet nélkül, és könnyítse meg a Combined Fleet feladatát, azokét a hajókét és repülõkét, amik végül elintézik az ellenséges rajokat. Úgy gondoljuk, hogy ezt az összecsapást egy mi javunkra váló pusztító csatává változtathatjuk: számítunk magára!>
+<Marianas2VictoryDb>(*JA)	<Gratulálunk szamuráj! A Kido Butai akciója rendkívül hatékony volt, és a nyugati ördögök nem fogják elfelejteni a kemény leckét, amit bátor csapatainktól kaptak. Sok ellenséges hajó elsüllyedt, és a Marianas elleni invázió el lett halasztva; Toyoda, Ozawa, Kurita és Nagumo admirálisok hamarosan egy új tervvel állnak elõ, amivel átvehetjük a kezdeményezést a Csendes-óceán középsõ térségében. A gyõzelem már nincs messze, végre!>
+<Marianas2DefeatDb>(*JA)	<Hallottam olyan tisztekrõl, akik kisebb kudarc miatt is szeppukut követtek el. A Marianas összecsapás nagy gyõzelem helyett csúfos kudarccal végzõdött! A Kido Butai már soha nem fog felépülni a meglepõen hatékony ellenségtõl itt elszenvedett vereségbõl. Vonjuk össze megmaradt erõinket egy utolsó elkeseredett harcra …>
+<Marianas2Db>(*JA)		<Nem sikerült súlyos veszteségeket okoznunk az ellenségnek, és elvesztettük megmaradt légierõnk javát. Ez egy sötét nap a Kido Butai számára, mégha a tengeri veszteségeink nem is oly súlyosak. Gondolnunk kell a további mûveleteinkre: a császári flottának még van esélye, hogy megállítsa az amerikai elõrenyomulást, abban a pillanatban, hogy a gonosz ellenségeink megtámadják a Fülöp-szigeteket. De több vereség nem lehetséges, ha életben akarjuk tartani a gyõzelmi reményeinket.>
+<Marianas2Br>(*US)		<A Mariana-szigetek a következõ célpontunk. A Forager hadmûvelet célja a szigetcsoport három fõ szigetének a teljes inváziója, amivel egy elõretolt bázist szerezhetünk mind a tengeri egységeinknek, mind a stratégiai bombázóinknak. Mint a korábbi hasonló mûveletek során, a feladata az lesz, hogy támadja a körzet repülõtereit, és légitámogatást nyújtson a partraszálló cspatainknak. De emlékezzen, már nem zátonyokat támadunk – a célpontjaink valódi szigetek, valódi erõdítményekkel és védelemmel. Azt is reméljük, hogy a Mobile Fleet megpróbálja meggátolni a céljainkat: legyen készen nehéz CAP és keresési tevékenységre, amíg meg nem találjuk a fõ ellenséges erõt. Amennyiben összecsapásra kerül a sor, annak döntõnek kell lennie: A Mariana-szigetek kell, hogy legyen a Mobile Fleet végzete.>
+<Marianas2VictoryDb>(*US)	<Szép munka, fiúk, Guam, Saipan és Tinian biztosítása a tervezettnél kevesebb veszteséggel történt meg. A Combined Fleet megpróbált egy döntõ csatát kierõszakolni – és ez sikerült is neki, de nem úgy, ahogy a japánok számítottak rá. A császári haditengerészet veszteségei súlyosak, de ami fontosabb pótolhatatlanok voltak. A légierõ egységei is súlzos veszteségeket szenvedtek – japán pilóták ezrei haltak meg az elmúlt napok harcaiban. Olyan csapást mértünk a Császári Haditengerészetre, amibõl soha nem fog felállni.>
+<Marianas2DefeatDb>(*US)	<Alábecsülni az ellenséget nagyon nagy hiba – és az egész Forager hadmûvelet egy nagy hiba volt. Súlyos veszteségeket szenvedtünk mind a vizen, mind a szárazföldön, köszönhetõen a váratlan vizi és légi ellenállásnak. Vissza kellett vonulnunk kelet felé, a szigeteket japán uralom alatt hagyva. A Mobile Fleet megmutatta, hogy nem vesztette el professzionalizmusát a korábbi veszteségek ellenére. Milyen fájdalmas csalódás!>
+<Marianas2Db>(*US)		<Guam, Saipan és Tinian most már biztosítva van. Ha a szárazföldi ütközet normálisan is zajlott – leszámítva a vártnál nagyobb veszteségeket – a tengeri csata befejezetlen maradt. Tengeralattjáróink gyõzelmei és pilótáink támadásai ellenére az ellenség fõ ereje csak kisebb veszteségeket szenvedve el tudott menekülni, és Spruance admirális nem érte el a megsemmisítõ gyõzelmet, amit szeretett volna. Ezért várnunk kell néhány hetet egy hasonló lehetõségre. Szép munka egyébként - a "Great Marianas Turkeys Shot" megmutatta, hogy az ellenséges légierõ már nem jelent veszélyt >
+
+<SingaporeBr>(nJA)	<Japán Császári Haditengerészet katonái, felvirradt a dicsõség napja! A haditengerészeti légierõ teljes Indokínában állomásozó személyzetét mozgósítják a Malaya-félszigeten állomásozó gonosz, elnyomó brit hadsereg elleni hadjáratunkhoz. Bombázóink zavarják az ellenséges utánpótlást, lecsapnak a brit raktárakra és légitámaszpontokra. Vadászgépeink hatékony fedezetet biztosítanak a célterületeken a RAF Buffalói és Hurricane-jei ellen - veterán pilótáink képességei és harci tapasztalata minden bizonnyal a mi javunkra billentiik majd a mérleget. Mindenki a gépekhez! Éljen soká a Császárság!>
+<SingaporeVictoryDb>(nJA)	<Nem hittük volna, hogy ilyen könnyû lesz. Yamashita tábornok hozzáértõen vezette a csapatokat, és az ellenségénél kisebb erõvel bevette Szingapúr erõdjét. A hadsereg pilótái kiváló munkát végeztek, semlegesítve a brit távol-keleti flottát és a térségben állomásozó angol légierõt. A fehér ember uralma ebben a régióban immár történelem, hála Önnek és bajtársainak! Most Burma és India ellen indulunk - Kalkuttában majd lesz idõnk megpihenni.>
+<SingaporeDefeatDb>(nJA)	<A hadmûvelet nem haladt túl jól, és Yamashita tábornoknak nem sikerült kiaknáznia a meglepetés nyújtotta elõnyt. A britek már vártak ránk, a levegõben, a tengeren és a szárazföldön egyaránt. Nem tudtuk leküzdeni az ellenséges flottát, mely súlyos veszteségeket okozott haditengerészetünknek, és nem sikerült megtörnünk a Malaya feletti brit légifölényt. A tokiói vezetés igen elégedetlen a teljesítményünkkel, és új tervet készít, hogy ezt a csorbát kiköszörülje.>
+<SingaporeDb>(nJA)		<Nehéz hadmûvelet volt, de végül sikeresen kiûztük a brit erõket a Malaya-félszigetrõl. Veszteségeink jelentõsek, de az eredmény megérte a véráldozatot. A szingapúri erõd immár a múlté, és seregeink most Burma és a Holland Kelet-Indiák felé indulhatnak, hogy bevégezzék küldetésüket Délkelet-Ázsiában.>
+<SingaporeBr>(aUK)		<Néhány órával ezelõtt Japán hadat üzent az Egyesült Államoknak, és csapást mért a Pearl Harbourban állomásozó amerikai csendes-óceáni flottára. Ez egyszerre jó és rossz hír: jó, mert ezután számíthatunk az Egyesült Államok segítségére a Tengelyhatalmak elleni harcban; rossz, mert nagy a valószínûséggel hamarosan japán erõk partraszállására számíthatunk a Malaya-félszigeten. Minden eshetõségre fel kell készülnünk. Ma este a Királyi haditengerészet egységei kifutnak Szingapúr kikötõjébõl és ellenséges csapatszállító hajók keresésére indul. A légierõ fedezetet nyújt hajóinknak és Szingapúr városának, mely minden valószínûség szerint légitámadások célpontja lesz a közeljövõben. A gyõzelem vagy vereség esélye Malayában nagyrészt a RAF személyzet vállán nyugszik: ne okozzanak csalódást, semmisítség meg az agresszort, máskülönben Szingapúr hamarosan a túlélésért való küzdelemre kényszerül.>
+<SingaporeBr>(*U*)		<Néhány órával ezelõtt Japán hadat üzent az Egyesült Államoknak, és csapást mért a Pearl Harbourban állomásozó amerikai csendes-óceáni flottára. Ez egyszerre jó és rossz hír: jó, mert ezután számíthatunk az Egyesült Államok segítségére a Tengelyhatalmak elleni harcban; rossz, mert nagy a valószínûséggel hamarosan japán erõk partraszállására számíthatunk a Malaya-félszigeten. Minden eshetõségre fel kell készülnünk. Ma este a Királyi haditengerészet egységei kifutnak Szingapúr kikötõjébõl és ellenséges csapatszállító hajók keresésére indul. A légierõ fedezetet nyújt hajóinknak és Szingapúr városának, mely minden valószínûség szerint légitámadások célpontja lesz a közeljövõben. A gyõzelem vagy vereség esélye Malayában nagyrészt a RAF személyzet vállán nyugszik: ne okozzanak csalódást, semmisítség meg az agresszort, máskülönben Szingapúr hamarosan a túlélésért való küzdelemre kényszerül.>
+<SingaporeVictoryDb>(*U*)	<Gratulálunk, uraim! Megállítottuk a japán polipot Malaya küszöbén. Yamashita erõi elakadtak, és kénytelenek beásni magukat, hogy túlélhessék ellentámadásainkat. A császári hadsereg elszenvedte elsõ vereségét, és ezt nagyrészt Önnek és bajtársainak köszönhetjük. Most, hogy Szingapúr biztonságban van, már megtervezhetjük, hogyan küldjük haza örökre a japánokat...>
+<SingaporeDefeatDb>(*U*)	<Nem tudtuk leküzdeni az elsöprõ japán támadást. Tengeri és légi veszteségeink miatt a maláj partvidék védtelenül maradt, amikor az ellenség partraszállt, és Yamashita, akit most már csak Malaya Tigriseként emlegetnek, könnyedén birtokába vette az egész félszigetet, beleértve a mi úgynevezett Szingapúr-erõdünket is. Ez katasztrófa! Nemzetközösségi katonák ezrei tették le a fegyvert egyetlen lövés nélkül. Kérdéses, hogy a távol-keleti brit térség valaha is felépül ebbõl a keserû vereségbõl.>
+<SingaporeDb>(*U*)		<Megtettük, amit lehetett, de Malaya és Szingapúr végül elesett, alig néhány hét véres küzdelem után. Hatékony munkánknak köszönhetõen a brit egységek nem szóródtak szét, teljes rendben vonultunk vissza Burma irányába. A távol-keleti brit birodalomért vívott igazi csatát majd ott kell megvívnunk!>
+
+<Singapore2Br>(aJA)	<Japán Császári Hadsereg katonái, felvirradt a dicsõség napja! A haditengerészeti légierõ teljes Indokínában állomásozó személyzetét mozgósítják a Malaya-félszigeten állomásozó gonosz, elnyomó brit hadsereg elleni hadjáratunkhoz. Bombázóink zavarják az ellenséges utánpótlást, lecsapnak a brit raktárakra és légitámaszpontokra. Vadászgépeink hatékony fedezetet biztosítanak a célterületeken a RAF Buffalói és Hurricane-jei ellen - veterán pilótáink képességei és harci tapasztalata minden bizonnyal a mi javunkra billentiik majd a mérleget. Mindenki a gépekhez! Éljen soká a Császárság!>
+<Singapore2VictoryDb>(aJA)	<Nem hittük volna, hogy ilyen könnyû lesz. Yamashita tábornok hozzáértõen vezette a csapatokat, és az ellenségénél kisebb erõvel bevette Szingapúr erõdjét. A hadsereg pilótái kiváló munkát végeztek, semlegesítve a brit távol-keleti flottát és a térségben állomásozó angol légierõt. A fehér ember uralma ebben a régióban immár történelem, hála Önnek és bajtársainak! Most Burma és India ellen indulunk - Kalkuttában majd lesz idõnk megpihenni.>
+<Singapore2DefeatDb>(aJA)	<A hadmûvelet nem haladt túl jól, és Yamashita tábornoknak nem sikerült kiaknáznia a meglepetés nyújtotta elõnyt. A britek már vártak ránk, a levegõben, a tengeren és a szárazföldön egyaránt. Nem tudtuk leküzdeni az ellenséges flottát, mely súlyos veszteségeket okozott haditengerészetünknek, és nem sikerült megtörnünk a Malaya feletti brit légifölényt. A tokiói vezetés igen elégedetlen a teljesítményünkkel, és új tervet készít, hogy ezt a csorbát kiköszörülje.>
+<Singapore2Db>(aJA)		<Nehéz hadmûvelet volt, de végül sikeresen kiûztük a brit erõket a Malaya-félszigetrõl. Veszteségeink jelentõsek, de az eredmény megérte a véráldozatot. A szingapúri erõd immár a múlté, és seregeink most Burma és a Holland Kelet-Indiák felé indulhatnak, hogy bevégezzék küldetésüket Délkelet-Ázsiában.> 
+<SingaporeBr>(aUK)		<Néhány órával ezelõtt Japán hadat üzent az Egyesült Államoknak, és csapást mért a Pearl Harbourban állomásozó amerikai csendes-óceáni flottára. Ez egyszerre jó és rossz hír: jó, mert ezután számíthatunk az Egyesült Államok segítségére a Tengelyhatalmak elleni harcban; rossz, mert nagy a valószínûséggel hamarosan japán erõk partraszállására számíthatunk a Malaya-félszigeten. Minden eshetõségre fel kell készülnünk. Ma este a Királyi haditengerészet egységei kifutnak Szingapúr kikötõjébõl és ellenséges csapatszállító hajók keresésére indul. A légierõ fedezetet nyújt hajóinknak és Szingapúr városának, mely minden valószínûség szerint légitámadások célpontja lesz a közeljövõben. A gyõzelem vagy vereség esélye Malayában nagyrészt a RAF személyzet vállán nyugszik: ne okozzanak csalódást, semmisítség meg az agresszort, máskülönben Szingapúr hamarosan a túlélésért való küzdelemre kényszerül.>
+<Singapore2Br>(*U*)		<Néhány órával ezelõtt Japán hadat üzent az Egyesült Államoknak, és csapást mért a Pearl Harbourban állomásozó amerikai csendes-óceáni flottára. Ez egyszerre jó és rossz hír: jó, mert ezután számíthatunk az Egyesült Államok segítségére a Tengelyhatalmak elleni harcban; rossz, mert nagy a valószínûséggel hamarosan japán erõk partraszállására számíthatunk a Malaya-félszigeten. Minden eshetõségre fel kell készülnünk. Ma este a Királyi haditengerészet egységei kifutnak Szingapúr kikötõjébõl és ellenséges csapatszállító hajók keresésére indul. A légierõ fedezetet nyújt hajóinknak és Szingapúr városának, mely minden valószínûség szerint légitámadások célpontja lesz a közeljövõben. A gyõzelem vagy vereség esélye Malayában nagyrészt a RAF személyzet vállán nyugszik: ne okozzanak csalódást, semmisítség meg az agresszort, máskülönben Szingapúr hamarosan a túlélésért való küzdelemre kényszerül.>
+<Singapore2VictoryDb>(*U*)	<Gratulálunk, uraim! Megállítottuk a japán polipot Malaya küszöbén. Yamashita erõi elakadtak, és kénytelenek beásni magukat, hogy túlélhessék ellentámadásainkat. A császári hadsereg elszenvedte elsõ vereségét, és ezt nagyrészt Önnek és bajtársainak köszönhetjük. Most, hogy Szingapúr biztonságban van, már megtervezhetjük, hogyan küldjük haza örökre a japánokat...>
+<Singapore2DefeatDb>(*U*)	<Nem tudtuk leküzdeni az elsöprõ japán támadást. Tengeri és légi veszteségeink miatt a maláj partvidék védtelenül maradt, amikor az ellenség partraszállt, és Yamashita, akit most már csak Malaya Tigriseként emlegetnek, könnyedén birtokába vette az egész félszigetet, beleértve a mi úgynevezett Szingapúr-erõdünket is. Ez katasztrófa! Nemzetközösségi katonák ezrei tették le a fegyvert egyetlen lövés nélkül. Kérdéses, hogy a távol-keleti brit térség valaha is felépül ebbõl a keserû vereségbõl.>
+<Singapore2Db>(*U*)		<Megtettük, amit lehetett, de Malaya és Szingapúr végül elesett, alig néhány hét véres küzdelem után. Hatékony munkánknak köszönhetõen a brit egységek nem szóródtak szét, teljes rendben vonultunk vissza Burma irányába. A távol-keleti brit birodalomért vívott igazi csatát majd ott kell megvívnunk!>
+
+<NewGuineaBr>(*JA)			<A Lae-n és Salamaua-n felépített erõs légitámaszpontok révén komoly elõrelépést értünk el abban, hogy meghódítsuk a még nem ellenõrzött részeket Új-Guinea déli részén. Buna elfoglalása logikus következménye volt elõrenyomulásunknak. A következõ célpontunk az ellenség megerõsített központja Port Moresby-ben, amit minden áron el kell foglalnunk, vagy a vízrõl vagy a levegõbõl. Port Moresby-nek el kell esnie a Császári Hadsereg és a Császári Haditengerészet egyesített csapásai alatt, mintha az ellenséges bázis az ördög és mély kék óceán között lenne. Port Moresby elfoglalása után nem lesz semmi, ami útjába állhatna gyõztes seregeinknek az Ausztráliába vezetõ úton.>
+<NewGuineaVictoryDb>(*JA)	<A Port Moresby-be vezetõ út meg van tisztítva minden földi ellenállástól. US és ANZAC csapatok nem voltak egy súlycsoportban a szamuráj katonáinkkal, akik régóta hozzá vannak szokva az ádáz dzsungelharchoz. Az ellenséges környezet a mi javunkra szolgált, és gyengítette az ellenséges védelmi vonalakat, amik végül nem bírtak a mindent elsöprõ támadásunkkal, bár keményen védekeztek. Szép munka volt katona, a császári erõk hamarosan partra szállhatnak Ausztráliában és a Csendes-Óceán déli részén gyakorlatilag befejezték a küzdelmet.>	
+<NewGuineaDefeatDb>(*JA)	<A szövetséges csapatok sokkal hatékonyabbak voltak a dzszungelharcban mint számítottunk rá. Gyorsan hozzászoktak ehhez a harcmodorhoz, és minden kezdeményezésünket visszaverték, nem hagyva esélyt arra, hogy visszatámadjunk. Ez a csata a kezdettõl fogva patthelyzet volt – nem volt esély császári gyõzelemre, és örülünk, hogy végül sikerült visszavonulnunk ebbõl a várható katasztrófából, hogy máshol tegyük partra csapatainkat a Csendes-Óceánon, olyan helyen, ahol hasznosabbak, ahelyett, hogy hagyjuk õket itt lemészároltatni a gyõzelem legkisebb esélye nélkül.>
+<NewGuineaDb>(*JA)			<Erõfeszítéseink ellenére, az Owen Range magaslat és a Milne-öböl szövetséges kézen maradt. Nem tudtuk teljesíteni a kitûzött célt, de a komoly veszteségek, amiket a US és ANZAC cspatoknak okoztunk, hátráltatta a sziget visszafoglalását, és a szövetségesek tervei és koordinációja egy idõre megakadtak Új-Guinea déli szektorában. És bár a dszungelharc többé már nem válik az elõnyünkre, hamarosan elhagyjuk Új-Guinea délkeleti partjait, azzal az érzéssel, hogy legalább tettünk valamit, mégha nem is értek el az eredményt, amire számítottunk …>
+<NewGuineaBr>(*U*)			<Új-Guinea nyugati csücske a hadjáratunk központja ebben a szektorban. Ez tengeri és szárazföldi küzdelem: támogatnunk kell az amerikai, ausztrál, és új-zélandi gyalogságot, ahogy haladnak elõre a veszélyes mocsarakon és nagy magasságokon kerersztül, miközben megsemmisítik az ellenséges csapatszállító konvojokat, amik a vonalaink mögött próbálnak partraszállni, fenyegetve a Port Moresby-ben levõ fõ bázisunkat, az Owen Range hegyek által nyújtott természetes védelem ellenére. Vissza kell szorítanunk az ellenséget, és el kell foglalnunk a Buna repteret elsõ lépésként, mielõtt felszabadítjuk Salamaua-t és Lae-t a japán megszállástól.>
+<NewGuineaVictoryDb>(*U*)	<Új-Guinea halálos harcmezõ volt, közel olyan halálos, mint a japánok maguk. De sikerült, és a japán erõket végleg visszaszorítottuk. Most, hogy biztosak lehetünk abban, hogy az ellenség nem lép többet Új-Guinea déli részére, haladhatunk tovább észak felé. Lae, Új-Britannia és az északi part még ránk vár, katonák, fejezzük be a munkát! >
+<NewGuineaDefeatDb>(*U*)	<Új-Guinea dzsungele volt a leghalálosabb hely a földön. Annyi katonát vesztettünk az ellenséges tûzben, mint amennyit az egészségtelen és veszélyes környezet miatt, ami szó szerint elfojtotta az erõfeszítéseinket és kifárasztotta gyenge harcoló alakulatainkat. Most vissza kell vonulnunk a déli partra, mivel nem tudjuk tovább késleltetni a japán elõrenyomulást. Reménykedjünk, hogy a kudarcunk nem fogja súlyosan veszélyeztetni Ausztráliát, vagy sajnálhatjuk az elvesztett dzsungelünket, amint Mikado uralma alá kerülünk …>
+<NewGuineaDb>(*U*)			<Végül a japánokat kiûztük Új-Guinea déli részérõl – de ez amerikai, ausztrál és új-zélandi katonák életének ezreibe került, miközben az egyedüli tét egy véget nem érõ, egészségtelen, sûrû dzsungel volt … Vajon ezek a fák és mocsarak megérték ezt az áldozatot? Ha figyelembe vesszük, hogy ez megmentette Ausztráliát a japán poliptól, akkor azt kell válaszoljam "igen, megérte". Szép munka!>
+
+<NewGuinea1Br>(*JA)			<A Lae-n és Salamaua-n felépített erõs légitámaszpontok révén komoly elõrelépést értünk el abban, hogy meghódítsuk a még nem ellenõrzött részeket Új-Guinea déli részén. Buna elfoglalása logikus következménye volt elõrenyomulásunknak. A következõ célpontunk az ellenség megerõsített központja Port Moresby-ben, amit minden áron el kell foglalnunk, vagy a vízrõl vagy a levegõbõl. Port Moresby-nek el kell esnie a Császári Hadsereg és a Császári Haditengerészet egyesített csapásai alatt, mintha az ellenséges bázis az ördög és mély kék óceán között lenne. Port Moresby elfoglalása után nem lesz semmi, ami útjába állhatna gyõztes seregeinknek az Ausztráliába vezetõ úton.>
+<NewGuinea1VictoryDb>(*JA)	<A Port Moresby-be vezetõ út meg van tisztítva minden földi ellenállástól. US és ANZAC csapatok nem voltak egy súlycsoportban a szamuráj katonáinkkal, akik régóta hozzá vannak szokva az ádáz dzsungelharchoz. Az ellenséges környezet a mi javunkra szolgált, és gyengítette az ellenséges védelmi vonalakat, amik végül nem bírtak a mindent elsöprõ támadásunkkal, bár keményen védekeztek. Szép munka volt katona, a császári erõk hamarosan partra szállhatnak Ausztráliában és a Csendes-Óceán déli részén gyakorlatilag befejezték a küzdelmet.>	
+<NewGuinea1DefeatDb>(*JA)	<A szövetséges csapatok sokkal hatékonyabbak voltak a dzszungelharcban mint számítottunk rá. Gyorsan hozzászoktak ehhez a harcmodorhoz, és minden kezdeményezésünket visszaverték, nem hagyva esélyt arra, hogy visszatámadjunk. Ez a csata a kezdettõl fogva patthelyzet volt – nem volt esély császári gyõzelemre, és örülünk, hogy végül sikerült visszavonulnunk ebbõl a várható katasztrófából, hogy máshol tegyük partra csapatainkat a Csendes-Óceánon, olyan helyen, ahol hasznosabbak, ahelyett, hogy hagyjuk õket itt lemészároltatni a gyõzelem legkisebb esélye nélkül.>
+<NewGuinea1Db>(*JA)			<Erõfeszítéseink ellenére, az Owen Range magaslat és a Milne-öböl szövetséges kézen maradt. Nem tudtuk teljesíteni a kitûzött célt, de a komoly veszteségek, amiket a US és ANZAC cspatoknak okoztunk, hátráltatta a sziget visszafoglalását, és a szövetségesek tervei és koordinációja egy idõre megakadtak Új-Guinea déli szektorában. És bár a dszungelharc többé már nem válik az elõnyünkre, hamarosan elhagyjuk Új-Guinea délkeleti partjait, azzal az érzéssel, hogy legalább tettünk valamit, mégha nem is értek el az eredményt, amire számítottunk …>
+<NewGuinea1Br>(*U*)			<Új-Guinea nyugati csücske a hadjáratunk központja ebben a szektorban. Ez tengeri és szárazföldi küzdelem: támogatnunk kell az amerikai, ausztrál, és új-zélandi gyalogságot, ahogy haladnak elõre a veszélyes mocsarakon és nagy magasságokon kerersztül, miközben megsemmisítik az ellenséges csapatszállító konvojokat, amik a vonalaink mögött próbálnak partraszállni, fenyegetve a Port Moresby-ben levõ fõ bázisunkat, az Owen Range hegyek által nyújtott természetes védelem ellenére. Vissza kell szorítanunk az ellenséget, és el kell foglalnunk a Buna repteret elsõ lépésként, mielõtt felszabadítjuk Salamaua-t és Lae-t a japán megszállástól.>
+<NewGuinea1VictoryDb>(*U*)	<Új-Guinea halálos harcmezõ volt, közel olyan halálos, mint a japánok maguk. De sikerült, és a japán erõket végleg visszaszorítottuk. Most, hogy biztosak lehetünk abban, hogy az ellenség nem lép többet Új-Guinea déli részére, haladhatunk tovább észak felé. Lae, Új-Britannia és az északi part még ránk vár, katonák, fejezzük be a munkát! >
+<NewGuinea1DefeatDb>(*U*)	<Új-Guinea dzsungele volt a leghalálosabb hely a földön. Annyi katonát vesztettünk az ellenséges tûzben, mint amennyit az egészségtelen és veszélyes környezet miatt, ami szó szerint elfojtotta az erõfeszítéseinket és kifárasztotta gyenge harcoló alakulatainkat. Most vissza kell vonulnunk a déli partra, mivel nem tudjuk tovább késleltetni a japán elõrenyomulást. Reménykedjünk, hogy a kudarcunk nem fogja súlyosan veszélyeztetni Ausztráliát, vagy sajnálhatjuk az elvesztett dzsungelünket, amint Mikado uralma alá kerülünk …>
+<NewGuinea1Db>(*U*)			<Végül a japánokat kiûztük Új-Guinea déli részérõl – de ez amerikai, ausztrál és új-zélandi katonák életének ezreibe került, miközben az egyedüli tét egy véget nem érõ, egészségtelen, sûrû dzsungel volt … Vajon ezek a fák és mocsarak megérték ezt az áldozatot? Ha figyelembe vesszük, hogy ez megmentette Ausztráliát a japán poliptól, akkor azt kell válaszoljam "igen, megérte". Szép munka!>
+
+// A text after "special" end mission
+
+<WarIsOver>			<{FULLRANK} {FIRSTNAME} {LASTNAME}! Az ön számára a háború véget ért.>
+
+
+// Linked codes
+
+<ReconIntercept-F-Scramble>(nU*) <Észrevettünk egy átkozott felderítõgépet, {FULLRANK}! Üljön be egy {#a} {PLANE} gépbe és azonnal szálljon fel. Ne hagyja elmenekülni, különben hamarosan itt lesz az egész flottájuk!>
+<ReconIntercept-F-Scramble>(*U*) <Nem sikerült elkapnunk a japán felderítõt, és Zero-k közelednek! Csak {#a} {PLANE} repülõink vannak. Azonnal szálljon fel, {FULLRANK}!>
+<ReconIntercept-F-Scramble>(*U*) <Az ellenséges felderítés megadta a pozíciónkat és hamarosan banditák várhatók! Csak {#a} {PLANE} gépek vannak felszállásra készen. {FULLRANK} azonnal szálljon fel !>
+<ReconIntercept-F-Scramble>(*U*) <Az ellenséges felderítõ elmenekült a vadászaink elõl, ezért ellenséges támadást várunk bármelyik percben! Az egyedüli felszállásra kész gépeink a {#a} {PLANE}. Haladéktalanul szálljon fel, {FULLRANK}!>
+<ReconIntercept-F-Scramble>(*U*) <Vadászaink nem tudták lelõni a japán felderítõt és légitámadás várható bármikor!{#a} {PLANE} az egyedüli mûködõ gépeink, ezzel kell megoldanunk ezt a feladatot. {FULLRANK} Parancsot kapott az azonnali felszállásra!>
+<ReconIntercept-F-Scramble>(*U*) <Erõfeszítéseink ellenére a japán felderítõ elmenekült a flottánk pozíciójával. Légitámadásra számítunk hamarosan.Csak {#a} {PLANE} gépek állnak most rendelkezésre. {FULLRANK}, azonnal kezdje meg a felszállást!>
+<ReconIntercept-F-Scramble>(nJA) <A fedélzeti megfigyelõ észrevett egy ellenséges felderítõgépet. A parancs, hogy üljön be egy {#a} {PLANE} gépbe és azonnal szálljon fel, {FULLRANK}!>
+<ReconIntercept-F-Scramble>(*JA) <Az ellenséges felderítés megadta a pozíciónkat és banditák várhatóak hamarosan! Csak {#a} {PLANE} gépek tudnak felszállni. {FULLRANK} azonnal szálljon fel!>
+<ReconIntercept-F-Scramble>(*JA) <Nem sikerült az amerikai felderítõt lelõni, és ellenséges gépek várhatók. Csak {#a} {PLANE} gépeink vannak. Azonnal szálljon fel, {FULLRANK}!>
+<ReconIntercept-F-Scramble>(*JA) < Az amerikai felderítõ elmenekült a vadászaink elõl, ezért ellenséges támadást várunk bármelyik percben! Jelenleg csak {#a} {PLANE} gépeink vannak. Azonnal szálljon fel, {FULLRANK}!>
+<ReconIntercept-F-Scramble>(*JA) <Erõfeszítéseink ellenére az amerikai felderítõ elmenekült. Ki vagyunk téve egy légicsapásnak, ezért üljön be egy {#a} {PLANE} gépbe és védje a légteret. {FULLRANK} Már várják a repülési fedélzeten!>
+<Scramble-F-ReconCarrier>(*JA) <{FIRSTNAME}, létfontosságú, hogy megtaláljuk az ellenséges hordozót, ami az elõbb megzavart minket! {LDR_RANK} {LDR_NAME} fogja vezetni {#A} {PLANE} gépeket és felderíti a szektort {SECTOR}.>
+<Scramble-F-ReconCarrier>(nJA) <Pilóták, légi õrjáratunk hordozóról felszálló támadó gépekkel harcol! {#A} {PLANE} gépek, {LDR_RANK} {LDR_NAME} parancsnoksága alatt felszállnak és megkeresik a hordozót, ami valahol a {SECTOR} szektorban lehet.>
+<Scramble-F-ReconCarrier>(*JA) <{FIRSTNAME}, meg kel találnunk az ellenséges hordozót, ami megtámadott! {#A} {PLANE} gépek, {LDR_RANK} {LDR_NAME}parancsnoksága alatt felderítik a {SECTOR} szektort.>
+<Scramble-F-ReconCarrier>(*JA) <{FIRSTNAME}, létfontosságú, hogy a hordozót, ami megtámadott, megtaláljuk! {#A} {PLANE} gépeink állnak készen,{LDR_RANK} {LDR_NAME} vezetésével felszállnak és a {SECTOR} szektorba tartanak.>
+<Scramble-F-ReconCarrier>(*JA) <{FIRSTNAME} mosolyogjanak rád az istenek! Az a feladata, hogy megtalálja az ellenséges repülõgép-hordozót, ami korábban megtámadott minket. {LDR_RANK} {LDR_NAME} áldott vezetése alatt, {#A} {PLANE} repülõk indulnak a {SECTOR} szektorba.>
+<Scramble-S-ReconCarrier>(*U*) <{FIRSTNAME}, létfontosságú, hogy a hordozót, ami megtámadott, megtaláljuk! {#A} {PLANE} gépek, {LDR_RANK} {LDR_NAME}parancsnoksága alatt felderítik a {SECTOR} szektort.>
+<Scramble-S-ReconCarrier>(nU*) <Fiúk, pilótáink keményen küzdenek a támadó gépekkel! {LDR_RANK} {LDR_NAME} vezetésével {#a} {PLANE} gépek szállnak fel és megkeresik a fészküket a {SECTOR} szektorban. {FIRSTNAME}, maga is velük megy!> 
+<Scramble-S-ReconCarrier>(*U*) <{FIRSTNAME}, meg kel találnunk az ellenséges hordozót, ami megtámadott! {#A} {PLANE} gépek, {LDR_RANK} {LDR_NAME}parancsnoksága alatt felderítik a {SECTOR} szektort.>
+<Scramble-S-ReconCarrier>(*U*) <Üljön le,{FIRSTNAME}. Felderítõcsapatot állítunk össze, hogy megtaláljuk az ellenséges hordozót.{LDR_RANK} {LDR_NAME} fogja vezetni a {#A} {PLANE} köteléket a {SECTOR} szektorban. Sok szerencsét!>
+<Scramble-F-AttackCarrier>(nU*) <Megtaláltuk a szemetet, aki ránk támadt korábban. Most mi jövünk! {LDR_RANK} {LDR_NAME} vezetésével {#a} {PLANE} gépek fognak repülni a {SECTOR} szektorba és olyan leckét adnak nekik, amit nem felejtenek el!> 
+<Scramble-F-AttackCarrier>(*U*) <Uraim, követtük az ellenséges gépeket, és megtaláltuk a hordozót, ami megtámadott. Most mi követklezünk! {LDR_RANK} {LDR_NAME} fogja vezetni a {#a} {PLANE} köteléket az ellenséges erõkhöz a {SECTOR} szektorban.>
+<Scramble-F-AttackCarrier>(*U*) <Felderítõink megtalálták az ellenséges hordozót, ami korábban ránk támadt, most majd õk kapnak! {#a} {PLANE} gépek fogják megtámadni az ellenséges erõket a {SECTOR} szektorban, {LDR_RANK} {LDR_NAME} vezeti az akciót.>
+<Scramble-F-AttackCarrier>(*U*) <Rendben, fiúk, eljött a dicsõség órája! Az ellenséges flottát lokalizáltuk {LDR_RANK} {LDR_NAME} vezetésével egy szakasz {#a} {PLANE} gép indul hogy megsemmisítse azt. A célpont a {SECTOR} szektorban van. Sok sikert!>
+<Scramble-S-BombCarrier>(nJA) <Gyáva ellenségeink egyenesen a hordozójukig menekültek, hogy mentsék nyomorúságos életüket. {LDR_RANK} {LDR_NAME} vezetésével egy század {#a} {PLANE} gép fogja elkísérni a {ESCORTED}gépeket az ellenséghez a {SECTOR} szektorba, hogy teljesen elpusztítsa azt. Banzai!>
+<Scramble-S-BombCarrier>(*JA) <Dicsõség az isteneknek! Nem csak az ellenséges támadást vertük vissza, hanem a felderítõnk megállapította a az ellenséges flotta helyzetét.A {SECTOR} szektor tele van ellenséges hajókkal, ezért {LDR_RANK} {LDR_NAME} vezetésével {#a} {PLANE} gépek kísérik el a {ESCORTED} repülõket a támadás idejére. Éljen sokáig a császár!>
+<Scramble-S-BombCarrier>(*JA) <Óriási gyõzelem! Nem csak a támadást vertük vissza, hanem a gépeket követve megtaláltuk a minket megtámadó hordozót. Most mi következünk! {LDR_RANK} {LDR_NAME} vezetésével {#a} {PLANE} gépek kísérik el {ESCORTED} gépeket az ellenséghez a {SECTOR} szektorban.>
+<Scramble-S-BombCarrier>(*U*) <{LDR_RANK} {LDR_NAME} vezeti a mai akciót. A {#a} {PLANE} gépeink fogják kísérni a {ESCORTED} gépeket, biztosítva, hogy nem keverik most össze a hajókat bálnákkal. A célpont a {SECTOR} szektorban van. Hozzátok vissza õket épségben, fiúk, és sok sikert!>
+<Scramble-S-BombCarrier>(*U*) <Uraim, követtük az ellenséges gépeket, és megtaláltuk az ellenséges hordozót. Most mi jövünk! {LDR_RANK} {LDR_NAME} vezetésével {#a} {PLANE} gépek fogják kísérni a {ESCORTED} repülõket az ellenséges flottához a {SECTOR} szektorban.>
+<Scramble-S-BombCarrier>(*JA) <Felderítõink megtalálták az ellenséges hordozót, ami korábban ránk támadt, most majd õk kapnak! {#a} {PLANE} gépek fogják megtámadni az ellenséges erõket a {SECTOR} szektorban, {LDR_RANK} {LDR_NAME} vezeti az akciót.>
+<Scramble-S-BombCarrier>(*U*) <A támadás visszaverése után megtaláltuk az ellenség fészkét, adjunk nekik egy leckét! {ESCORTED} repülõinket a {SECTOR} szektorba fogják kísérni {#a} {PLANE} gépek {LDR_RANK} {LDR_NAME} vezetésével.>
+
+// These lines are generic mission description, used only if specific one was not found. Should never happen.
+
+<Generic>(*U*) <Hölgyeim! Ma {LDR_RANK} {LDR_NAME} vezeti a {#a} {PLANE} gépeket az ellenséges {SECTOR} szektorba. Adjatok nekik!>
+<Generic>(*U*) <Figyelem! Ma {LDR_RANK} {LDR_NAME} vezeti a {#a} {PLANE} gépeket a {SECTOR} szektorba.>
+<Generic>(*U*) <Uraim, a mai küldetést {LDR_RANK} {LDR_NAME} vezeti, {#a} {PLANE} gépeket küldünk a {SECTOR} szektorba.>
+<Generic>(*JA) <Szamuráj! A bátor {LDR_RANK} {LDR_NAME} fogja ma vezetni a {#a} {PLANE} gépeket a {SECTOR} szektorba. Reméljük, ma nem menekül el az ellenség!>
+<Generic>(*JA) <Szamuráj! Ma {LDR_RANK} {LDR_NAME} fogja vezetni a {#a} {PLANE} gépeket a {SECTOR} szektorba.>
+<Generic>(*JA) <Szamuráj! A mai küldetést {LDR_RANK} {LDR_NAME} fogja vezetni, {#a} {PLANE} gépeket küldünk a {SECTOR} szektorba.>
+
+// These descriptions should be normally used for all escort (*Bomb*) missions. There may be more specific texts
+// for some mission types.
+
+<GenericEscort>(*U*)	<Uraim! Ma {ESCORTED} gépeket kísérünk a {SECTOR} szektorba. A feladatot {#a} {PLANE} gépek látják el {LDR_RANK} {LDR_NAME} vezetése alatt.>
+<GenericEscort>(*U*)	<Légi kíséret van mára, fiúk. {ESCORTED} gépeink hiányolni fognak minden lehetséges célpontot a körzetben, biztosítania kell, hogy ne foghassák a japánokra. A {ESCORTED} gépek védelmét {#a} {PLANE} gépek látják el {LDR_RANK} {LDR_NAME} vezetésével. Sok szerencsét!>
+<GenericEscort>(*U*)	<Uraim!\nEbben a küldetésben {ESCORTED} gépeket fognak kísérni. Maradjon mindig a bombázókkal, és ne kezdjen légiharcba a japán vadászokkal.>
+<GenericEscort>(*U*)	<Uraim!\nÚgy tûnik ma mókás napunk lesz. {ESCORTED} gépeket fognak kísérni egészen a {SECTOR} szektorig és vissza. Sok japán gépre számítsanak a levegõben.>
+<GenericEscort>(*U*)	<Rendben fiúk, figyelem! Jó hírem van azok számára, akinek viszket az ujja a ravaszon. A mai nap során {ESCORTED} repülõink támadást intéznek egy ígéretes célpont ellen. A japánok biztos ott lesznek. Fõ kíséretként valószínû sok akciót fognak látni. {#A} {PLANE} gépek, {LDR_RANK} {LDR_NAME} vezetésével fogják végrehajtani ezt az akciót.>
+<GenericEscort>(*U*)	<Uraim!\nA mai küldetés {#a} {PLANE} gépek számára néhány {ESCORTED} gép kísérete lesz. {LDR_FULLRANK} {LDR_NAME} már sokszor csinálta ezt korábban, szóval rövid leszek. Maradjanak a bombázók felett, fegyelmezetten használják a rádiót, ne keveredjenek légiharcba. Próbáljon épségben hazatérni.>
+<GenericEscort>(*U*)    <Tudom, hogy fáradtak, de valakinek meg kell csinálni! Ma {ESCORTED} gépeket kísérünk a {SECTOR} szektorba. {#a} {PLANE} gépekkel repülnek és {LDR_RANK} {LDR_NAME} lesz a vezér. Sok sikert!>
+<GenericEscort>(*U*)    <{ESCORTED} gépeink hölgyei hangosan sikoltoztak ma, ezért távol kell tartanunk tõlük az ellenséget {#a} {PLANE} gépekkel. {LDR_RANK} {LDR_NAME} lesz a fõ babysitter, úgyhogy maradjanak rajta!>
+<GenericEscort>(*U*)    <Fiúk, {ESCORTED}repülõink navigációs képességei olyan jók, hogy nekünk kell megtalálnunk az ellenséges {SECTOR} szektort számukra, és biztosítani, hogy vissza is találnak. Fogadhatnak, hogy holnap {LDR_RANK} {LDR_NAME} fogja a bombázást is csinálni helyettük a {#a} {PLANE} gépekkel! >
+<GenericEscort>(*U*)	<Uraim! {LDR_RANK} {LDR_NAME} vezeti egy csoport {#a} {PLANE} gépet, a feladat a {ESCORTED} gépek elkísérése a {SECTOR} szektorba.>
+<GenericEscort>(*U*)	<Ma {ESCORTED} repülõket kell kísérnünk ismét, úgy tûnik új rekordot akarnak felállítani a bombák pazarlásában, {LDR_RANK} {LDR_NAME} vezetésével {#a} {PLANE} gépek fogják biztosítani, hogy a {ESCORTED} gépek közel kerülnek ehhez a rekordhoz.>
+<GenericEscort>(*U*)	<Uraim!n\ {ESCORTED} repülõinknek ismét szüksége van a kíséretre. Figyelem: Ne kezdjen légiharcba, és ne távolodjon el a bombázóktól, mindig maradjon mellettük!>
+<GenericEscort>(*U*)	<Úgy látszik, uraim, ma találkozhatnak ellenséges vadászokkal. A feladatuk, hogy elkísérjék {ESCORTED} gépeinket a {SECTOR} szektorba és onnan vissza ! Figyeljen az ellenséges gépekre, biztos találkozni fog velük.>
+<GenericEscort>(*U*)	<Figyelem, hölgyeim ! Lusta {ESCORTED} barátaink ismét adnak a szomszédainknak, ez egy jó lehetõség, hogy néhány gyõzelmi jelet festhessenek a gépeikre.{#A} {PLANE} gépeket {LDR_RANK} {LDR_NAME} fogja vezetni. Sok sikert, uraim !>
+<GenericEscort>(*U*)	<Hölgyeim ! {LDR_FULLRANK} {LDR_NAME} fogja vezetni  {#a} {PLANE} gépeket ezen a kísérõ küldetésen. Biztosítsa, hogy a {ESCORTED} gépek eljutnak a célpontig és vissza is térnek ! Már jópárszor csinálták ezt, úgyhogy mindenkit várok vissza.>
+<GenericEscort>(*U*)	<Rendben fiúk, néhány {ESCORTED} repülõ tart a (SECTOR} szektorba, és szokás szerint védelmet kértek tõlünk. Tudom, hogy nem ez a kedvenc feladat, de vissza kell hoznunk azokat a gépeket. {#a} {PLANE} gépek szállnak fel {LDR_RANK} {LDR_NAME} vezetésével.>
+<GenericEscort>(*U*)	<Azok a kövér {ESCORTED} gépek {SECTOR} szektorba tartanak, és ideális célpontok az ellenséges vadászoknak, ezért tõlünk kértek védelmet. {LDR_RANK} {LDR_NAME} fogja vezetni a küldetést {#a} {PLANE} gépekkel az irányítása alatt.>
+<GenericEscort>(*U*)	<Ismét szükség van a szolgálatainkra. {ESCORTED}gépek a {SECTOR} szektorba tartanak, {LDR_RANK} {LDR_NAME} vezeti a kíséretet, ami {#a} {PLANE} gépekbõl áll. Tartsák nyitva a szemüket, és hozzák haza õket!>
+
+<GenericEscort>(*JA)	<Szamuráj! Ma {ESCORTED} repülõket kell kísérni a {SECTOR} szektorba. Ezt a feladatot {#a} {PLANE} gépek fogják ellátni {LDR_RANK} {LDR_NAME} vezetésével.>
+<GenericEscort>(*JA)	<<Légi kíséret van mára, fiúk. {ESCORTED} gépeink hiányolni fognak minden lehetséges célpontot a körzetben, biztosítania kell, hogy ne foghassák a japánokra. A {ESCORTED} repülõk védelmét {#a} {PLANE} gépek látják el {LDR_RANK} {LDR_NAME} vezetésével. Sok szerencsét!>
+<GenericEscort>(*JA)	<Szamuráj!\nEbben a küldetésben {ESCORTED} gépeket fog kísérni. Erõs ellenséges vadász jelenlét várható, úgyhogy maradjon a bombázókkal mindig és ne keveredjen légiharcba.>
+<GenericEscort>(*JA)	<Szamuráj!\nMa mókás napunk lesz. {ESCORTED} repülõket fog kísérni a {SECTOR} szektorig és vissza. Sok amerikai vadász várható.>
+<GenericEscort>(*JA)	<Figyelem! Jó hírem van azok számára, akiknek viszket az ujja a ravaszon. A mai nap során {ESCORTED} gépek támadást intéznek egy ígéretes célpont ellen. Az amerikaiak biztos ott lesznek. Fõ kíséretként valószínû sok akciót fognak látni. {#A} {PLANE} gépek, {LDR_RANK} {LDR_NAME} vezetésével fogják végrehajtani ezt az akciót.>
+<GenericEscort>(*JA)	<Figyelem!\nA mai küldetés {#a} {PLANE} gépek számára néhány {ESCORTED} gép kísérete lesz. {LDR_FULLRANK} {LDR_NAME} már sokszor csinálta ezt korábban, szóval rövid leszek. Maradjanak a bombázók felett, fegyelmezetten használják a rádiót, ne keveredjenek légiharcba. Próbáljanak épségben hazatérni.>
+<GenericEscort>(*JA)	<Szamuráj! {ESCORTED} gépeink a {SECTOR} szektorban fognak támadást végrehajtani. {#a} {PLANE} gépekkel fog kíséretet adni nekik, a köteléket {LDR_RANK} {LDR_NAME} vezeti.>
+<GenericEscort>(*JA)	<Harcosok! Ma {ESCORTED} repülõink ismét támadják az ellenséget, {#a} {PLANE} gépek {LDR_RANK} {LDR_NAME} vezetésével fogják biztosítani a bátor bombázó pilótáinkat!>
+<GenericEscort>(*JA)	<Szamuráj!\nFedezetet kell nyújtania {ESCORTED} repülõinknek a célpontig és vissza! Kerülje el a légiharcot, ami eltávolítaná a bombázóktól!>
+<GenericEscort>(*JA)	<Szamuráj!>\n A {ESCORTED} gépeink a {SECTOR} szektorba tartanak, ahol sok amerikai repülõt jelentettek. Biztosítsa a bombázóink hazatérését !> 
+<GenericEscort>(*JA)	<{ESCORTED} gépeink ismét adnak az amerikaiaknak, ez egy jó lehetõség, hogy néhány gyõzelmi jelet festhessenek a gépeikre.{#A} {PLANE} gépeket {LDR_RANK} {LDR_NAME} fogja vezetni. Sok sikert, uraim !>
+<GenericEscort>(*JA)	<Figyelem!\n{#a} {PLANE} gépek {LDR_FULLRANK} {LDR_NAME} vezetésével kíséretet adnak {ESCORTED} gépeinknek, sokszor csinálták már, úgyhogy nem mondom el, mi a teendõ.Biztosítsa, hogy a bombázóink hazatérjenek!>
+<GenericEscort>(*JA)	<Az admirális csapásmérést tervez a {SECTOR} szektorban. {ESCORTED}gépeink tartanak arra {#a} {PLANE} gépek védelme alatt. {LDR_RANK} {LDR_NAME} fogja gyõzelemre vezetni a küldetést szeretett császárunk nevében!.>
+<GenericEscort>(*JA)	<A {SECTOR} szektor a mai célpont. {ESCORTED} gépeink fognak lehetséges célpontok után kutatni, amíg a {#a} {PLANE} gépek {LDR_RANK} {LDR_NAME} vezetésével légi fedezetet nyújtanak.>
+<GenericEscort>(*JA)	<Ma a {SECTOR} szektort támadjuk. Erre a feladatra az admirális {ESCORTED} gépeket jelölt ki {#a} {PLANE} gépekkel kíséretként. {LDR_RANK} {LDR_NAME} vezetheti a küldetést. Sok sikert!>
+
+<KamikazeEscort>(*JA) <Ma egy különleges küldetésünk van: feladata a {ESCORTED} gépek from Különleges Támadóerõ kísérete  - el kell jutniuk a {SECTOR} szektorba egy darabban! Ebben a küldetésben {#a} {PLANE} gépek {LDR_RANK} {LDR_NAME} vezetésével fogják biztosítani nagyszerû harcosainkat !>
+<KamikazeEscort>(*JA) <Ma  {ESCORTED} repülõinket from Különleges Támadóerõ kell elkísérniük a {SECTOR} szektorba. Ezt a feladatot {#a} {PLANE} gépek látják el {LDR_RANK} {LDR_NAME} vezetésével. Vissza kell térnie a bázisra és beszámolnia a támadás eredményérõl.>
+<KamikazeEscort>(*JA) <A Istenek Szele ismét halált fog hozni az ellenségeinkre. {LDR_RANK} {LDR_NAME} fogja vezetni a {#a} {PLANE} gépeket, amíg a {ESCORTED} repülõk from Különleges Támadóerõ teljesíti a feladatát a {SECTOR} szektorban. Visszatéréskor az admirális elvárja a jelentést a sikerrõl. Banzaai! >
+
+
+// These are used by default for all intercept and naval recon missions
+// (fleets, subs). You don't know what you will see there.
+
+<GenericPatrol>(*U*) <Uraim!\n{#A} {PLANE) gépek {LDR_FULLRANK} {LDR_NAME} vezetése alatt a {SECTOR} szektorban fognak õrjáratozni. Jelentõs számbeli fölényünk van az egész terület vonatkozásában, de helyi szinten a japánok is túlerõbe tudnak kerülni. Más vadászaink is a légtérben õrjáratoznak, szóval legyen biztos benne, hogy japán gépet lõ.>
+<GenericPatrol>(*U*) <Figyelem, kérem !\nMa a {SECTOR} szektorban kell õrjáratoznia, ebben a küldetésben {#A} {PLANE} gépekkel fog repülni {LDR_FULLRANK} {LDR_NAME} vezetésével. Bár úgy tûnik a japánpok súlyos veszteségeket szenvedtek, még képesek harcolni! Tartsák nyitva a szemüket, és jöjjenek vissza egy darabban!>
+<GenericPatrol>(*U*) <Uraim!\n{#A} {PLANE} gépek {LDR_FULLRANK} {LDR_NAME} vezetésével õrjáratozni fognak a {SECTOR} szektorban. Számítson a váratlanra is, mert a japánok egyre merészebbek a támadásaikban. Ne hozzanak ránk szégyent!>
+<GenericPatrol>(*U*) <{#A} Ma {PLANE} gépek {LDR_FULLRANK} {LDR_NAME} irányításával biztosítani fogják a légifölényünket a {SECTOR} szektorban. Bizonyos jelek szerint a japánok ezt szállítóútvonalnak használják, feladata az ellenséges légi tevékenység megzavarása lesz. Sok sikert!>
+<GenericPatrol>(*JA) <Szamuráj!\n{LDR_FULLRANK} {LDR_NAME} fogja az õrjáratot vezetni, tartsa nyitva aszemét, mert több jelentés is érkezett erõteljes ellenséges jelenlétrõl!>
+<GenericPatrol>(*JA) <Pilóták!\nMa {LDR_FULLRANK} {LDR_NAME} vezetésével egy csoport jenkikre fog vadászni a {SECTOR} szektorban. Elég erõteljes légi jelenlét volt az elmúlt napokban, úgyhogy legyen készenlétben állandóan!>
+<GenericPatrol>(*JA) <Pilóták!\n A {SECTOR} szektor létfontosságú a hadmûveleteinkhez, ezért meg kell tisztítani az ellenséges gépektõl. {LDR_FULLRANK} {LDR_NAME} fogja vezetni a jenkik elleni vadászatot. Intenzív légi jelenlét volt a megelõzõ napokban, szóval tartsa nyitva a szemét!>
+<GenericPatrol>(*JA) <Pilóták!\n A {SECTOR} szektor létfontosságú a hadmûveleteinkhez, ezért meg kell tisztítani az ellenséges gépektõl. {LDR_FULLRANK} {LDR_NAME} fogja vezetni a jenkik elleni vadászatot. Intenzív légi jelenlét volt a megelõzõ napokban, szóval tartsa nyitva a szemét!> 
+
+// These descriptions should be normally used for all *Patrol* and *Defend* mission. There may be more specific texts
+// for some mission types.
+
+<Reinforce>(*U*) <{LDR_FULLRANK} {LDR_NAME}, a {ESCORTED} gépeinket ellenséges gépek támadták meg a {SECTOR} szektorban. Azonnal szálljon fel!>
+<Reinforce>(*U*) <A {ESCORTED} gépeinket megtámadták a {SECTOR} szektorban, azonnal szálljon fel ! {LDR_FULLRANK} {LDR_NAME} vezeti a küldetést.>
+<Reinforce>(*U*) <A fiaink kemény ellenállásba ütköztek a {SECTOR} szektorban. {LDR_FULLRANK} {LDR_NAME} fogja vezetni az erõsítést, ami {#A} {PLANE} gépekbõl áll. A feladata, hogy segítse a {ESCORTED} repülõinket és verje vissza támadást.>
+<Reinforce>(*JA) <{LDR_FULLRANK} {LDR_NAME} fogja vezetni az utánpótlást a {SECTOR} szektorban, ahol a {ESCORTED} gépeink ellenséges gépekbe botlottak. Az istenek legyenek veletek a mai napon!>
+<Reinforce>(*JA) <A {ESCORTED} gépeinket témadás érte a {SECTOR} szektorban, azonnal szálljon fel! {LDR_FULLRANK} {LDR_NAME} vezeti a küldetést.>
+<Reinforce>(*JA) <{LDR_FULLRANK} {LDR_NAME}, {ESCORTED} gépeinket ellenséges támadás érte a {SECTOR} szektorban. Haladéktalanul szálljon fel!>
+
+<GenericIntercept>(*U*) <Figyelem! Feladatunk légi õrjárat a {SECTOR} szektorban. {LDR_RANK} {LDR_NAME} fogja odavezetni a {#a} {PLANE} gépeket. Tudja a feladatát. Sok sikert!>
+<GenericIntercept>(*U*) <A mai célpontunk a {SECTOR} szektorban van. Nagy valószínûséggel ellenséges gépekkel fog találkozni. {#A} {PLANE} gépek {LDR_RANK} {LDR_NAME} vezetésével 15 percen belül felszállnak.> 
+<GenericIntercept>(*U*) <Rendben, {LDR_FULLRANK} {LDR_NAME}, elsõdleges feladata, hogy a (SECTOR} szektorban õrjáratozzon. Ne kövessen más körzetben levõ repülõt, amennyiben több ellenséges raj is áthalad a területen. {#a} gépek vannak a parancsnoksága alatt.>
+<GenericIntercept>(*U*) <Uraim!\n{#A} {PLANE) gépek {LDR_FULLRANK} {LDR_NAME} vezetése alatt a {SECTOR} szektorban fognak õrjáratozni. Jelentõs számbeli fölényünk van az egész terület vonatkozásában, de helyi szinten a japánok is túlerõbe tudnak kerülni. Más vadászaink is a légtérben õrjáratoznak, szóval legyen biztos benne, hogy japán gépet lõ.>
+<GenericIntercept>(*U*) <Pilóták!\nMa {LDR_FULLRANK} {LDR_NAME} vezetésével egy csoport japánokra fog vadászni a {SECTOR} szektorban. Elég erõteljes légi jelenlét volt az elmúlt napokban, úgyhogy legyen készenlétben állandóan!>
+<GenericIntercept>(*U*) <A mai célpont a {SECTOR} szektor. Továbbra is támadjuk az ellenséges gépeket a földön és a levegõben, és mivel elég komoly harcok voltak az elmúlt napokban, nagy az esélye, hogy ellenséges gépekkel találkozik.>
+<GenericIntercept>(*U*) <Rendben, fiúk, nézzenek a térképre, {SECTOR} szektor a fõ célpont mára. {LDR_FULLRANK} {LDR_NAME} fogja vezetni a {#a} {PLANE} gépeket.>
+<GenericIntercept>(*U*) <Ébresztõ uraim! A {SECTOR} szektorban kell õrjáratozniuk {#a} {PLANE} gépekkel, {LDR_RANK} {LDR_NAME} fogja vezetni az akciót.>
+<GenericIntercept>(*U*) <Emeljétek fel a lusta seggeteket, minkátok van! {#A} {PLANE} gépek fognak õrjáratozni a {SECTOR} szektorban, õket {LDR_RANK} {LDR_NAME} fogja vezetni.>
+<GenericIntercept>(*U*) <Ideje, hogy megdolgozzanak a pénzükért! Õrjáratot kell küldenünk a {SECTOR} szektorba, {LDR_FULLRANK} {LDR_NAME} fogja vezetni {#A} {PLANE} gépeket.Tartsa nyitva a szemét!>
+<GenericIntercept>(*U*) <Uraim! Észrevettem, hogy unatkoznak, úgyhogy õrjáratozniuk kell {#A} {PLANE} gépekkel a {SECTOR} szektorban.{LDR_FULLRANK} {LDR_NAME} lesz a küldetés vezetõje.>
+<GenericIntercept>(*U*) <Fiygelem hölgyeim! Ma õrjáratozniuk kell a {SECTOR} szektorban, {LDR_FULLRANK} {LDR_NAME} fogja vezetni a küldetést. És ne feledjék... ne vizezzék össze a csizmájukat! >
+<GenericIntercept>(*U*) <Ma a {SECTOR} szektorban fog õrjáratozni, {LDR_FULLRANK} {LDR_NAME} fogja a {#a} {PLANE} gépeket a területre vezetni. Valószínõleg találkozni fog ellenséges gépekkel, úgyhogy tartsa nyitva a szemét!>
+<GenericIntercept>(*U*) <Viruljanak fiúk! Ma ismét õrjáratozni fogunk a {SECTOR} szektorban, {LDR_FULLRANK} {LDR_NAME} fogja vezetni a {#a} {PLANE} gépeiket. Ne hagyjanak cserben: etessék meg a halakat a japánokkal!>
+
+<GenericIntercept>(*JA) <A mai feladatunk õrjárat a {SECTOR} szektorban. {LDR_RANK} {LDR_NAME} fogja vezetni a {#a} {PLANE} gépeket. Tudja a feladatát. Banzai!>
+<GenericIntercept>(*JA) <A küldetésünk õrjárat a {SECTOR} szektorban. {LDR_RANK} {LDR_NAME} vezeti a {#a} {PLANE} gépekbõl álló csapatot. Tudja a kötelességét. Sok sikert!>
+<GenericIntercept>(*JA) <A mai célpontunk a {SECTOR} szektor. Mivel súlyos harcok folytak az elmúlt napokban, szinte 100% hogy ellenséges gépekkel fognak találkozni. {#A} {PLANE} gépek {LDR_RANK} {LDR_NAME} vezetésével 15 perc múlva felszállnak.> 
+<GenericIntercept>(*JA) <{LDR_FULLRANK} {LDR_NAME}, elsõdleges feladata õrjárat a {SECTOR} szektorban. Ne kövessen más körzetben levõ repülõt, amennyiben több ellenséges raj is áthalad a területen.  {#a} gépek vannak a parancsnoksága alatt.>
+<GenericIntercept>(*JA) <Szamuráj!\n{#A} {PLANE} gépek {LDR_FULLRANK} {LDR_NAME} vezetése alatt õrjáratozni fognak a {SECTOR} szektorban. Helyi szinten az amerikaiak is túlerõbe tudnak kerülni. Más vadászaink is a légtérben õrjáratoznak, szóval legyen biztos benne, hogy ellenséges gépet lõ.>
+<GenericIntercept>(*JA) <Pilóták!\nMa {LDR_FULLRANK} {LDR_NAME} vezetésével egy csoport jenkikre fog vadászni a {SECTOR} szektorban. Elég erõteljes légi jelenlét volt az elmúlt napokban, úgyhogy legyen készenlétben állandóan!>
+<GenericIntercept>(*JA) <A mai célpont a {SECTOR} szektor. Továbbra is támadjuk az ellenséges gépeket a földön és a levegõben, és mivel elég komoly harcok voltak az elmúlt napokban, nagy az esélye, hogy ellenséges gépekkel találkozik.>
+<GenericIntercept>(*JA) <Nézzenek a térképre, {SECTOR} szektor a fõ célpont mára. {LDR_FULLRANK} {LDR_NAME} fogja vezetni a {#a} {PLANE} gépeket.Banzai!>
+
+//<ReconIntercept>(*JA)	<Ma a {SECTOR} szektorban fogunk õrjáratozni. A legfontosabb feladat, hogy minden felderítõgépet lelõjünk. {#A} {PLANE} gépek {LDR_RANK} {LDR_NAME} vezetésével 15 percen belül felszállnak.> 
+//<ReconIntercept>(*U*)	<Ma a {SECTOR} szektorban fogunk õrjáratozni. A legfontosabb feladat, hogy minden felderítõgépet lelõjünk. {#A} {PLANE} gépek {LDR_RANK} {LDR_NAME} vezetésével 15 percen belül felszállnak.> 
+
+<AttackPearlHarbor>		<Pilóták! A döntõ csata órája elérkezett. A küldetés sikere a meglepetésen múlik. A fõparancsnok üzenetében sok szerencsét kívánt. \n \nMindenki tudja a feladatát. {LDR_RANK} {LDR_NAME} fogja vezetni a {#a} {PLANE} gépeket Pearl Harbor-ba. >
+<BombPearlHarbor>		<Pilóták! A döntõ csata órája elérkezett. A küldetés sikere a meglepetésen múlik. A fõparancsnok üzenetében sok szerencsét kívánt. \n \nMindenki tudja a feladatát. {LDR_RANK} {LDR_NAME} fogja vezetni a {#a} {PLANE} gépeket Pearl Harbor-ba. Meg kell védenie a {ESCORTED} gépeket az ellenséges vadászoktól, és támadnia az ellenséges reptereket, hogy meggátolja az amerikaiak esetleges megtorló támadásait.>
+<ScramblePearlHarbor>	<Légitámadás Pearl Harbor ellen! Ez nem gyakorlat!>
+
+// These are defaults for ground attack missions. There should normally be more specific description
+
+<GenericAttack>(*U*)	<Figyelem! Ma a {SECTOR} szektorban támadjuk az ellenséget. {LDR_RANK} {LDR_NAME} fogja vezetni {#a} {PLANE} gépeinket. Tudja a kötelességét. Sok szerencsét!>
+<GenericAttack>(*U*)	<Rendben, egy újabb szárazföldi támadás a számotokra. A célpont itt található, a {SECTOR} szektorban. Számos lehetséges célpont található a küldetési zónában. {#A} {PLANE} gépek {LDR_RANK} {LDR_NAME} vezetésével 15 percen belül felszállnak.> 
+<GenericAttack>(*U*)	<{LDR_FULLRANK} {LDR_NAME}, újabb szárazföldi csapásmérés, fiúk. A célpont itt van, a {SECTOR} szektorban. Ez nem lesz könnyû. {#a} {PLANE} gépekkel fog repülni.>
+<GenericAttack>(*U*)	<Uraim!\nNézzenek a térképre, a célpont a {SECTOR} szektor. Felderítésünk hiányos, és nem pontosan tudjuk mit fognak támadni, de nyugodjanak meg, lesz mit eltalálni. Az ellenséges szárazföldi tevékenység elég hektikus volt újabban, úgyhogy nem fognak hiányt szenvedni lehetséges célpontokban. Lássuk mire képesek a {#a} {PLANE} gépeinkkel.>
+<GenericAttack>(*U*)	<Uraim!\nIdeje egy újabb látogatást tenni a japán barátainknál, már régóta várják speciális küldeményünket a {SECTOR} szektorban. {LDR_FULLRANK} {LDR_NAME} fogja vezetni a {#a} {PLANE} gépek csoportját.>
+<GenericAttack>(*U*)	<Uraim!\nA parancsnokságon hallották, hogy néhány pilóta panaszkodik az imétlõdõ küldetések miatt. Ezért ma teljesen más lesz terítéken, szárazföldi célpontokat fognak támadni a {SECTOR} szektorban.>
+<GenericAttack>(*U*)	<Uraim!\nAhogy a szárazföldi bombákat felszerelõ személyzetbõl már kitalálhatták, ma újabb szárazföldi támadás lesz a feladat. Célpont: {SECTOR} szektor. {#A} {PLANE} gépek, {LDR_RANK} {LDR_NAME} vezetésével 20 perc múlva felszállnak.>
+
+<GenericAttack>(*JA)	<Figyelem! Ma az ellenséget a {SECTOR} szektorban támadjuk. {LDR_RANK} {LDR_NAME} vezeti a {#a} {PLANE} gépek csoportját oda. Tudja a kötelességét. Sok sikert!>
+<GenericAttack>(*JA)	<Pilóták, ez egy újabb szárazföldi támadás lesz. A célpont it található, a {SECTOR} szektorban. Jelentõs ellenséges csapatmozások történtek az elmúlt napokban, tehát az elsõdleges célpontokon kívül számos lehetséges célpont lesz a bevetési területen. {#a} {PLANE} gépek egy csoportja  {LDR_RANK} {LDR_NAME} vezetésével 15 percen belül felszáll.> 
+<GenericAttack>(*JA)	<{LDR_FULLRANK} {LDR_NAME}, újabb szárazföldi támadás a számotokra, fiúk. A célpont itt van, a {SECTOR} szektorban. Ez most nem lesz könnyû. {#a} {PLANE} gépek egy csoportját fogja vezetni.>
+<GenericAttack>(*JA)	<Szamuráj!\nNézzenek a térképre, a célpont a {SECTOR} szektor. Felderítésünk hiányos, és nem pontosan tudjuk mit fognak támadni, de nyugodjanak meg, lesz mit eltalálni. Az ellenséges szárazföldi tevékenység elég hektikus volt újabban, úgyhogy nem fognak hiányt szenvedni lehetséges célpontokban. Lássuk mire képesek a {#a} {PLANE} gépeinkkel.>
+<GenericAttack>(*JA)	<Szamuráj!\nIdeje egy újabb látogatást tenni a japán barátainknál, már régóta várják speciális küldeményünket a {SECTOR} szektorban. {LDR_FULLRANK} {LDR_NAME} fogja vezetni a {#a} {PLANE} gépek csoportját.>
+<GenericAttack>(*JA)	<Szamuráj!\nA parancsnokságon hallották, hogy néhány pilóta panaszkodik az imétlõdõ küldetések miatt. Ezért ma teljesen más lesz terítéken, szárazföldi célpontokat fognak támadni a {SECTOR} szektorban.>
+<GenericAttack>(*JA)	<Szamuráj!\nAhogy a szárazföldi bombákat felszerelõ személyzetbõl már kitalálhatták, ma újabb szárazföldi támadás lesz a feladat. Célpont: {SECTOR} szektor. {#A} {PLANE} gépek, {LDR_RANK} {LDR_NAME} vezetésével 20 perc múlva felszállnak.>
+
+// Specific Attack type texts. Please add more variants.
+
+<AttackTrain>(*U*)	<Figyelem! Ma az ellenséget a {SECTOR} szektorban támadjuk. {LDR_RANK} {LDR_NAME} fogja a {#a} {PLANE} gépek egy csoportját vezetni a területre. Az elsõdleges célpont a vasúti forgalom. Sok sikert!>
+<AttackCars>(*U*)		<Rendben, ez egy újabb szárazföldi támadás lesz. A célpont it található, a {SECTOR} szektorban. Jelentõs ellenséges csapatmozások történtek az elmúlt napokban, tehát az elsõdleges célpontokon kívül számos lehetséges célpont lesz a bevetési területen. Semmisítse meg az ellenséges szárazföldi jármûveket, különösen az utánpótlást szállító teherautókat. Ellenséges repülõkre nem számítunk, úgyhogy elhasználhatja a lõszerét, anélkül, hogy légiharctól kellene tartania. (#a} {PLANE} gépek egy csoportja {LDR_RANK} {LDR_NAME} vezetésével 15 percen belül felszáll.> 
+<AttackArmor>(*U*)	<{LDR_FULLRANK} {LDR_NAME}, újabb szárazföldi támadás, fiúk. A célpont itt van, a {SECTOR} szektorban. A fõ célpontok az ellenséges tankok. Ez most nem lesz egyszerû. {#a} {PLANES} gépek egy csoportját fogja vezetni.>
+<AttackAF>(*U*)		<Uraim!\nNézzenek a térképre, a célpont az ellenséges reptér a {SECTOR} szektorban. A bázis teljsen mûködõképes és nagyon veszélyes. Természetesen útja során nehéz légelhárító tûzre számíthat, úgyhogy figyeljen, és jöjjön vissza épségben. Lássuk mire képesek a {#a} {PLANE} gépeinkkel.>
+<AttackAF:Tarawa>(*U*)	<Uraim!\nNézzenek a térképre, a célpont az egyetlen ellenséges reptér Tarawa-n. El kell hallgattatnunk, hogy garantáljuk  az inváziónk sikerét. Természetesen útja során nehéz légelhárító tûzre számíthat, úgyhogy figyeljen, és jöjjön vissza épségben. Lássuk mire képesek a {#a} {PLANE} gépeinkkel.>
+<AttackAF:Palau>(*U*)	<Uraim!\nNézzenek a térképre, a célpont a legfontosabb repülõtér a Palau-szigeteken. El kell hallgattatnunk, hogy garantáljuk  az inváziónk sikerét. Természetesen útja során nehéz légelhárító tûzre számíthat, úgyhogy figyeljen, és jöjjön vissza épségben. Lássuk mire képesek a {#a} {PLANE} gépeinkkel.>
+<AttackAF:Palau>(*U*)	<Uraim!\nNézzenek a térképre, a célpont a legfontosabb repülõtér a Palau-szigeteken. El kell hallgattatnunk, hogy garantáljuk  az inváziónk sikerét. Természetesen útja során nehéz légelhárító tûzre számíthat, úgyhogy figyeljen, és jöjjön vissza épségben. Lássuk mire képesek a {#a} {PLANE} gépeinkkel.>
+
+<AttackBridge>(*U*)	<Uraim!\nIdeje egy újabb látogatást tenni a japán barátainknál, már régóta várják speciális küldeményünket a {SECTOR} szektorban. Ahhoz, hogy megzavarjuk az ellenség utánpótlási vonalait, {#a} {PLANE} gépek fogják itt a hidat megtámadni. {LDR_FULLRANK} {LDR_NAME} vezeti a csoportot.>
+<AttackStation>(*U*)	<Uraim!\ nA parancsnokságon hallották, hogy néhány pilóta panaszkodik az imétlõdõ küldetések miatt. Ezért ma teljesen más lesz terítéken, vasútállomást fognak támadni a {SECTOR} szektorban.>
+<AttackDepot>(*U*)	<Uraim!\nAhogy a szárazföldi bombákat felszerelõ személyzetbõl már kitalálhatták, ma újabb szárazföldi támadás lesz a feladat. Célpont: ellenséges raktár a {SECTOR} szektorban. {#A} {PLANE} gépek, {LDR_RANK} {LDR_NAME} vezetésével 20 perc múlva felszállnak.>
+<AttackShips>(*U*)	<Figyelem! Ma az ellenséget a {SECTOR} szektorban támadjuk. {LDR_RANK} {LDR_NAME} fogja vezetni a {#a} {PLANE} gépek egy csoportját. Elsõdleges célpontok az ellenséges hajók. Sok szerencsét!>
+
+
+<AttackTrain>(*JA)	<Figyelem! Ma az ellenséget a {SECTOR} szektorban támadjuk. {LDR_RANK} {LDR_NAME} fogja a {#a} {PLANE} gépek egy csoportját vezetni a területre. Az elsõdleges célpont a vasúti forgalom. Banzai!>
+<AttackCars>(*JA)		<Figyelem, ez egy újabb szárazföldi támadás lesz. A célpont it található, a {SECTOR} szektorban. Jelentõs ellenséges csapatmozások történtek az elmúlt napokban, tehát az elsõdleges célpontokon kívül számos lehetséges célpont lesz a bevetési területen. Semmisítse meg az ellenséges szárazföldi jármûveket, különösen az utánpótlást szállító teherautókat. Ellenséges repülõkre nem számítunk, úgyhogy elhasználhatja a lõszerét, anélkül, hogy légiharctól kellene tartania. (#a} {PLANE} gépek egy csoportja {LDR_RANK} {LDR_NAME} vezetésével 15 percen belül felszáll.> 
+<AttackArmor>(*JA)	<{LDR_FULLRANK} {LDR_NAME}, újabb szárazföldi támadás, fiúk. A célpont itt van, a {SECTOR} szektorban. A fõ célpontok az ellenséges tankok. Ez most nem lesz egyszerû. {#a} {PLANES} gépek egy csoportját fogja vezetni.>
+<AttackAF>(*JA)		<Pilóták!\nNézzenek a térképre, a célpont az ellenséges reptér a {SECTOR} szektorban. Ez az egyik még mûködõképes amerikai bázis a körzetben. Természetesen útja során nehéz légelhárító tûzre számíthat, úgyhogy figyeljen, és jöjjön vissza épségben. Lássuk mire képesek a {#a} {PLANE} gépeinkkel.>
+<AttackAF:Wake>(*JA)	<Pilóták!\nNézzenek a térképre, a célpont az ellenséges reptér a Wake-szigeten. Ez az egyetlen még mûködõképes amerikai bázis a körzetben. Természetesen útja során nehéz légelhárító tûzre számíthat, úgyhogy figyeljen, és jöjjön vissza épségben. Lássuk mire képesek a {#a} {PLANE} gépeinkkel.>
+<AttackBridge>(*JA)	<Szamuráj!\nIdeje egy újabb látogatást tenni az amerikai barátainknál, már régóta várják speciális küldeményünket a {SECTOR} szektorban. Ahhoz, hogy megzavarjuk az ellenség utánpótlási vonalait, {#a} {PLANE} gépek fogják itt a hidat megtámadni. {LDR_FULLRANK} {LDR_NAME} vezeti a csoportot.>
+<AttackStation>(*JA)	<Szamuráj!\ nA parancsnokságon hallották, hogy néhány pilóta panaszkodik az imétlõdõ küldetések miatt. Ezért ma teljesen más lesz terítéken, vasútállomást fognak támadni a {SECTOR} szektorban.> <AttackDepot>(*JA)	<Pilóták!\nAhogy a szárazföldi bombákat felszerelõ személyzetbõl már kitalálhatták, ma újabb szárazföldi támadás lesz a feladat. Célpont: ellenséges raktár a {SECTOR} szektorban. {#A} {PLANE} gépek, {LDR_RANK} {LDR_NAME} vezetésével 20 perc múlva felszállnak.>
+<AttackShips>(*JA)	<Pilóták! Ma az ellenséget a {SECTOR} szektorban támadjuk. {LDR_RANK} {LDR_NAME} fogja vezetni a {#a} {PLANE} gépek egy csoportját. Elsõdleges célpontok az ellenséges hajók. Sok szerencsét!>
+
+
+// These are left generic
+
+//<AttackHQ>(*U*)		<>
+//<AttackBattery>(*U*)		<>
+//<AttackTroops>(*U*)		<>
+//<AttackPort>(*U*)		<>
+
+//<AttackPort>(*JA)	<>
+//<AttackHQ>(*JA)		<>
+//<AttackBattery>(*JA)	<>
+
+
+
+//  These are defaults for Recon missions 
+
+<GenericNavalRecon>(*U*) <Uraim! Ma felderítést fogunk végezni, japán hajókat keresve. {#A} {PLANE} gépek,  {LDR_RANK} {LDR_NAME} vezetésével átkutatják a  {SECTOR} szektort.>
+<GenericNavalRecon>(*JA) <Pilóták! Ma felderítést fogunk végezni, amerikai hajókat keresve. {#A} {PLANE} gépek,  {LDR_RANK} {LDR_NAME} vezetésével átkutatják a  {SECTOR} szektort.>
+
+
+// Specific recon targets
+
+//<ReconCarrier>(*U*) <Uraim! Ma felderítést fogunk végezni, japán hajókat keresve. {#A} {PLANE} gépek,  {LDR_RANK} {LDR_NAME} vezetésével átkutatják a  {SECTOR} szektort.>
+//<ReconCarrier>(*JA) Pilóták! Ma felderítést fogunk végezni, amerikai hajókat keresve. {#A} {PLANE} gépek,  {LDR_RANK} {LDR_NAME} vezetésével átkutatják a  {SECTOR} szektort.>
+
+//<ReconSub>(*U*) <{FULLRANK} {LASTNAME}, a {SECTOR} szektort fogja felderíteni japán tengeralattjárók után kutatva.>
+//<ReconSub>(*JA) <{FULLRANK} {LASTNAME}, a {SECTOR} szektort fogja felderíteni amerikai tengeralattjárók után kutatva.>
+
+<AttackSub>(*U*) <{LDR_FULLRANK} {LDR_NAME}, egy japán tengeralattjárót láttak a {SECTOR} szektorban. Szálljanak fel a {#a} {PLANE} gépekkel, és semmisítsék meg!>
+<AttackSub>(*JA) <{LDR_FULLRANK} {LDR_NAME}, egy amerikai tengeralattjárót láttak a {SECTOR} szektorban. Szálljanak fel a {#a} {PLANE} gépekkel, és semmisítsék meg!>
+<AttackCarrier>(*U*) <{LDR_FULLRANK} {LDR_NAME}, egy japán repülõgép-hordozót láttak a {SECTOR} szektorban. Szálljanak fel a (#a} {PLANE} gépekkel, és semmisítsék meg!>
+<BombCarrier>(*U*) <{LDR_FULLRANK} {LDR_NAME}, egy japán repülõgép-hordozót láttak a {SECTOR} szektorban. {ESCORTED} gépeket fog odakísérni.>
+<AttackCarrier>(*JA) <{LDR_FULLRANK} {LDR_NAME}, egy amerikai repülõgép-hordozót láttak a {SECTOR} szektorban. Szálljanak fel a (#a} {PLANE} gépekkel, és semmisítsék meg!>
+
+<BombCarrier>(*JA) <{LDR_FULLRANK} {LDR_NAME}, egy amerikai repülõgép-hordozót láttak a {SECTOR} szektorban. {ESCORTED} gépeket fog odakísérni.
+<AttackConvoy>(*U*) <{LDR_FULLRANK} {LDR_NAME}, egy japán konvojt láttak a {SECTOR} szektorban. Szálljanak fel a (#a} {PLANE} gépekkel, és semmisítsék meg!>
+<BombConvoy>(*U*) <{LDR_FULLRANK} {LDR_NAME}, egy japán konvojt láttak a {SECTOR} szektorban. {ESCORTED} gépeket fog odakísérni a {#a} {PLANE }gépekkel>
+<AttackConvoy>(*JA) <{LDR_FULLRANK} {LDR_NAME}, egy amerikai konvojt láttak a {SECTOR} szektorban. Szálljanak fel a (#a} {PLANE} gépekkel, és semmisítsék meg!>
+<BombConvoy>(*JA) <{LDR_FULLRANK} {LDR_NAME}, egy amerikai konvojt láttak a {SECTOR} szektorban. {ESCORTED} gépeket fog odakísérni a {#a} {PLANE }gépekkel>
+
+<AttackAmph>(*U*) <{LDR_FULLRANK} {LDR_NAME}, egy japán inváziós flottát láttak a {SECTOR} szektorban. Szálljanak fel a (#a} {PLANE} gépekkel, és semmisítsék meg!>
+<AttackAmph>(*JA) <{LDR_FULLRANK} {LDR_NAME}, egy amerikai inváziós flottát láttak a {SECTOR} szektorban. Szálljanak fel a (#a} {PLANE} gépekkel, és semmisítsék meg!>
+
+<PatrolAmph>(*U*) <{LDR_FULLRANK} {LDR_NAME}, japán repülõgépek támadják a tengerészgyalogosainkat a {SECTOR} szektorban. Szálljanak fel a {#a} {PLANE} gépekkel és védjék meg a kétéltû partraszálló egységeinket!>
+<PatrolAmph>(*JA) <{LDR_FULLRANK} {LDR_NAME}, amerikai repülõgépek támadják a partraszálló egységeinket a {SECTOR} szektorban. Szálljanak fel a {#a} {PLANE} gépekkel és védjék meg a katonáinkat!>
+
+<Rescue>(*U*) <{LDR_FULLRANK} {LDR_NAME}, jelentették, hogy egy {PLANE} gép kényszerleszállást hajtott végre a {SECTOR} szektorban. Próbálják megtalálni a pilótát.>
+<Rescue>(*JA) <{LDR_FULLRANK} {LDR_NAME}, jelentették, hogy egy {PLANE} gép kényszerleszállást hajtott végre a {SECTOR} szektorban. Próbálják megtalálni a pilótát.>
+
+
+
+// Scramble missions
+
+<KamikazeIntercept>	<Ellenséges gépek, valószínû kamikazék közelednek {FROM} felõl! Azonnal szálljanak fel!>
+
+<Intercept>(*U*) 	<Ellenséges gépek közelednek {FROM} felõl, feltehetõen támadni fognak! {#A} {PLANE} gépek {LDR_FULLRANK} {LDR_NAME} vezetésével támadják meg õket. Azonnal szálljanak fel!>
+<Intercept>(*JA) 	<Ellenséges gépek közelednek {FROM} felõl, feltehetõen támadni fognak! {#A} {PLANE} gépek {LDR_FULLRANK} {LDR_NAME} vezetésével támadják meg õket. Azonnal szálljanak fel!>
+
+<Scramble>(*U*)	<Riadó! Ellenséges gépek közelednek {FROM} felõl. Csak {#a} {PLANE} gépeink vannak. Azonnal szálljanak fel, {FULLRANK}!>
+<Scramble>(*U*) 	<Riadó, riadó, riadó! Közeledõ légicsapásról érkezett jelentés! >
+<Scramble>(*U*) 	<Légitámadás! Ez nem gyakorlat! Ellenséges bombázókat jelentettek {FROM} felõl! Azonnal szálljanak fel!>
+<Scramble>(*U*) 	<Ellenséges gépek közelednek {FROM} felõl! Alig van idõnk felszállni! Gyerünk, gyerünk, gyerünk! >
+
+<Scramble>(*JA)	<Riadó! Ellenséges gépek közelednek {FROM} felõl. Csak {#a} {PLANE} gépeink vannak. Azonnal szálljanak fel, {FULLRANK}!>
+<Scramble>(*JA) 	<Riadó, riadó, riadó! Közeledõ légicsapásról érkezett jelentés! >
+<Scramble>(*JA) 	<Légitámadás! Ez nem gyakorlat! Ellenséges bombázókat jelentettek {FROM} felõl! Azonnal szálljanak fel!>
+<Scramble>(*JA) 	<Ellenséges gépek közelednek {FROM} felõl! Alig van idõnk felszállni! Gyerünk, gyerünk, gyerünk! >
+
+// All these missions are <GenericInercept>(*U*). If we need specifics, uncomment and expand them.
+
+//<DefendTrain>(*U*)		<>
+//<DefendArmor>(*U*)		<>
+//<DefendBridge>(*U*)		<>
+//<DefendStation>(*U*)		<>
+//<DefendPort>(*U*)		<>
+//<DefendDepot>(*U*)		<>
+//<DefendHQ>(*U*)			<>
+//<DefendBattery>(*U*)		<>
+//<DefendTroops>(*U*)		<>
+//<PatrolTrain>(*U*)		<>
+//<PatrolCars>(*U*)		<>
+//<PatrolTown>(*U*)		<>
+//<FreeHunt>(*U*)			<>
+//<PatrolStation>(*U*)		<>
+//<PatrolPort>(*U*)		<>
+//<PatrolDepot>(*U*)		<>
+//<PatrolHQ>(*U*)			<>
+//<PatrolBattery>(*U*)		<>
+//<PatrolTroops>(*U*)		<>
+
+// All these missions are <GenericEscort>. If we need specifics, uncomment and expand them.
+
+//<BombTown>(*U*)		<>
+//<BombTrain>(*U*)		<>
+//<BombCars>(*U*)		<>
+//<BombArmor>(*U*)		<>
+//<BombAF>(*U*)		<>
+//<BombBridge>(*U*)	<>
+//<BombShips>(*U*)		<>
+//<BombConvoy>(*U*)	<>
+//<BombStation>(*U*)	<>
+//<BombPort>(*U*)		<>
+//<BombDepot>(*U*)		<>
+//<BombHQ>(*U*)		<>
+//<BombBattery>(*U*)	<>
+//<BombTroops>(*U*)	<>
+
+//<BombStation>(*JA)		<>
+//<BombPort>(*JA)		<>
+//<BombDepot>(*JA)		<>
+//<BombHQ>(*JA)		<>
+//<BombBattery>(*JA)		<>
+//<BombTroops>(*JA)		<>
+//<BombArmor>(*JA)		<>
+//<BombAF>(*JA)		<>
+//<BombBridge>(*JA)		<>
+//<BombTrain>(*JA)		<>
+//<BombCars>(*JA)		<>
+//<BombTown>(*JA)		<>
+
+
+/////////////////////////////////////
+
+
+//<ReconAF>(*U*)		<>
+//<BDAAF>(*U*)		<>
+//<DefendTrans>(*U*)		<>
+//<TranIntercept>(*U*)		<>
+//<ParadropEscort>(*U*)		<>
+
+//<ReconEscort>(*U*)		<>
+//<ReconIntercept>(*U*)		<>
+//<Rescue>(*U*)		<>
+//<Verify>(*U*)		<>
+//<ReconHQ>(*U*)		<>
+//<ReconArty>(*U*)		<>
+//<ReconDepot>(*U*)		<>
+//
+//<Rescue>(*JA)		<>
+//<Verify>(*JA)		<>
+//<ReconHQ>(*JA)		<>
+//<ReconArty>(*JA)		<>
+//<ReconDepot>(*JA)		<>
+//<ReconAF>(*JA)		<>
+//<BDAAF>(*JA)		<>
+//<PatrolTown>(*JA)		<>
+//<TranIntercept>(*JA)		<>
+
+//<DefendTrain>(*JA)		<>
+//<DefendCars>(*JA)		<>
+//<PatrolTrain>(*JA)		<>
+//<PatrolCars>(*JA)		<>
+//<DefendArmor>(*JA)		<>
+//<PatrolArmor>(*JA)		<>
+//<DefendAF>(*JA)		<>
+//<PatrolAF>(*JA)		<>
+//<Scramble>(*JA)		<>
+//<ParadropIntercept>(*JA)		<>
+//<ParadropEscort>(*JA)		<>
+//<PatrolBridge>(*JA)		<>
+//<DefendBridge>(*JA)		<>
+//<Patrol>(*JA)		<>
+//<FreeHunt>(*JA)		<>
+//<ReconIntercept>(*JA)		<>
+//<ReconEscort>(*JA)		<>
+//<DefendShips>(*JA)		<>
+//<PatrolShips>(*JA)		<>
+//<DefendShips>(*JA)		<>
+//<DefendConvoy>(*JA)		<>
+//<AttackConvoy>(*JA)		<>
+//<PatrolConvoy>(*JA)		<>
+//<DefendConvoy>(*JA)		<>
+//<DefendStation>(*JA)		<>
+//<DefendPort>(*JA)		<>
+//<DefendDepot>(*JA)		<>
+//<DefendHQ>(*JA)		<>
+//<DefendBattery>(*JA)		<>
+//<DefendTroops>(*JA)		<>
+//<AttackTroops>(*JA)		<>
+//<PatrolStation>(*JA)		<>
+//<PatrolPort>(*JA)		<>
+//<PatrolDepot>(*JA)		<>
+//<PatrolHQ>(*JA)		<>
+//<PatrolBattery>(*JA)		<>
+//<PatrolTroops>(*JA)		<>
+//////////////////////
+
+<repHeader>			<	HARCI JELENTÉS\n>
+<repDate>			< \nDÁTUM: {DATE}\n>
+<repTimeTO>			<IDÕ: felszállás: {MTIME_TAKEOFF}>
+<repTimeContact>		< Kontaktus: {MTIME_CONTACT}>
+<repTimeTarget>		< Célpont felett: {MTIME_TARGET}>
+<repTimeBack>		< Pancake: {MTIME_LANDING}>
+<repMission>		<KÜLDETÉS: >
+<repForces>			< \nHARCOLÓ ERÕK:\n>
+<repOwn>			<   SAJÁT: {=#} {plane}s\n>
+<repOtherFriendly>	<        {=#} {plane}s\n>
+<repFirstEnemy>		<   ELLENSÉG: {~#} {plane}s>
+<repOtherEnemy>		<, {~#} {plane}s>
+
+<repResults>		< \nEREDMÉNYEK:\n>
+<repEnemyLosses>	<    ELLENSÉGES VESZTESÉGEK:\n>
+
+<repVictory>	<        {rang} {keresztnév} - 1 gyõzelem\n>
+<repVictories>	<        {rang} {keresztnév} - {=#} gyõzelmek\n>
+
+<repOurLosses>		<    SAJÁT VESZTESÉGEK:\n>
+<repKIA>		<        {rang} {keresztnév} – ütközetben meghalt\n>
+<repMIA>		<        {rang} {keresztnév} – ütközetben eltûnt\n>
+<repWIA>		<        {rang} {keresztnév} - sebesült\n>
+
+
+<repCVkill>	<Egy ellenséges repülõgép-hordozó elsüllyedt\n>
+<repCVkills> <{#A} ellenséges repülõgép-hordozók elsüllyedtek\n>
+<repCAkill> <Egy ellenséges csatahajó elsüllyedt\n>>
+<repCAkills> <{#A} ellenséges nagy hadihajóks elsüllyedtek\n>
+<repFleetLosses> <A flottánk súlyos veszteségeket szenvedett \n>
+
+<fileHall>		<Hall Of Fame>
+<titleHall>		<Hall of Fame>
+<recHall>		<{FULLRANK} {FIRSTNAME} {LASTNAME} {SORTIES} sorties, {AKILLS} kills ({POINTS}) 
+
+<fileAirKills>	<Légi gyõzelmek>
+<titleAirKills>	<Lelõtt repülõgépek {FIRSTNAME} {LASTNAME}\n>
+<recAirKill>		<{DATE}: {plane}\n>
+
+<fileWarDiary>  <Harci napló>
+<titleWarDiary>  <HARCI NAPLÓ\n>
+
+<fileSummary>   <Szárazföldi és tengeri gyõzelmek >
+<titleSummary>   <{FULLRANK} {FIRSTNAME} {LASTNAME}\n>
+
+<filePersonnel> <Kitüntetések és Elõléptetések>
+<titlePersonnel> <Kitüntetések és Elõléptetések\n\n>
+
+<YOURGROUP>	<\n \n>
+
+// Maps
+
+<Japan1> <Japán>
+<NewGuinea> <Új-Guinea>
+<Guadal> <Guadalcanal>
+<Guadal1> <Guadalcanal>
+<Guadal2> <Guadalcanal>
+<CoralSea> <Coral Sea>
+<SantaCruz> <Santa Cruz>
+

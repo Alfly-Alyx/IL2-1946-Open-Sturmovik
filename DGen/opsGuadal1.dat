@@ -1,0 +1,62 @@
+// Iwo and alike = later war US carriers vs islands
+[Macros]
+UsNavyMin		10622:50814:N			USN 2N				IJN 3F
+UsNavyMin		10622:50814:N			USN 4N				IJN 3F
+UsNavyMed		10622:50814:N			USN 6N				IJN 6F
+UsNavyMed		10622:50814:N			USN 6N				IJN 4F
+UsNavyScram		10622:50814:N			USN 4N 2nF 2nF		IJN 6Bx 3Bx 6Bx 
+UsNavyScram		10622:50814:N			USN 4N 2nF 2nF		IJN 6nBx 3nBx 6nBx 
+UsNavyScram		10622:50814:N			USN 4N 6nF			IJN 6Bx 6Bx 6Bx 
+UsNavyAttack	10622:50814:N			USN 6N 6nF 6nF		IJN 6F
+UsNavyAttack	10622:50814:N			USN 6N 4nF 6nF		IJN 6F
+UsNavyAttack	10622:50814:N			USN 4N 6nF 6nF		IJN 6F
+UsNavyAttack	10622:50814:N			USN 6N 4nF 4nF		IJN 12F
+UsNavyBomb		10622:50814:N			USN 6nB 6N 6nF		IJN 6F
+UsRecInt		10622:50814:N			USN 4N			 	IJN 2R 2F
+JpNavalRecInt	10622:50814:A			USN 3nF 		 	IJN 4Y
+JpArmyScram		10622:50814:A			USN 6nBx 6nBx 6nBx	IJN 6Y   
+JpArmyInt		10622:50814:A			USN 6nBr 6nBr 6nBr	IJN 6Y   
+JpArmyMin		10622:50609:A			USN 4nF				IJN 3Y
+JpArmyMed		10622:50814:A			USN 6nF 6nF   		IJN 6Y 6F
+JpArmyCAP		10622:50814:A			USN 6nB 6nF 		IJN 6Y
+JpArmyCAP		10622:50814:A			USN 6nB 4nF 		IJN 6Y
+JpArmyCAP		10622:50814:A			USN 6nB 4nF 		IJN 6Y
+JpArmyAttack	10622:50814:A			USN 4nF 			IJN 6Y 6F
+[Operations]
+oUsAttackConvoy		{UsNavyAttack}
+oJpAttackCarrier		{JpArmyAttack}
+oUsBombConvoy		{UsNavyBomb}
+oUsScramble		{UsNavyScram}
+oUsAttackArmor		{UsNavyAttack}
+oUsAttackHQ		{UsNavyAttack}
+oUsAttackPort		{UsNavyAttack}
+oUsAttackDepot		{UsNavyAttack}
+oUsAttackBattery		{UsNavyAttack}
+oUsAttackTroops		{UsNavyAttack}
+oUsAttackCars		{UsNavyAttack}
+oUsBombArmor		{UsNavyBomb}
+oUsBombHQ			{UsNavyBomb}
+oUsBombPort			{UsNavyBomb}
+oUsBombDepot		{UsNavyBomb}
+oUsBombBattery		{UsNavyBomb}
+oUsBombTroops		{UsNavyBomb}
+oUsBombCars			{UsNavyBomb}
+oUsPatrolAmph		{UsNavyMed}
+oJpAttackAmph		{JpArmyMed}
+oUsFreeHunt			{UsNavyMed}
+oUsPatrol			{UsNavyMed}
+oUsReconIntercept	{UsRecInt}
+oUsRescue			{UsNavyMin}
+oJpReconCarrier		{JpArmyMin}
+oJpScramble			{JpArmyScram}
+oJpPatrolTroops		{JpArmyCAP}
+oJpPatrolBattery	{JpArmyCAP}
+oJpPatrolDepot		{JpArmyCAP}
+oJpPatrolPort		{JpArmyCAP}
+oJpPatrolHQ			{JpArmyCAP}
+oJpFreeHunt			{JpArmyMed}
+oJpPatrolAF			{JpArmyCAP}
+oJpPatrolArmor		{JpArmyCAP}
+oJpPatrolCars		{JpArmyCAP}
+oJpPatrol			{JpArmyMed}
+oJpReconIntercept	{JpNavalRecInt}

@@ -1,0 +1,182 @@
+Installation and Settings Instructions
+
+Unzip to any folder on the same hard-drive as your IL-2 Sturmovik game with create folder options on. For simplicity sake, you might want to name the folder "IL2DCG". 
+
+When you run the program for the first time, you may be required to set a path to your IL-2 "Sturmovik" or IL-2 "Forgotten Battle" folder and to IL2DCG itself and optionally to a campaign folder. 
+
+The first path to set is to the IL2.EXE program (located in the game's "IL2 Sturmovik" or "IL2 Forgotten Battles" folder) or the IL2Server.exe (if you are using the dedicated server). This one must always be set or DCG will give you an "Invalid File Name" error. If you receive this error, exit and restart DCG and select the correct path to your game folder. 
+
+You might also want to configure DCG using the "Wizard" under "Run" in the menu.  And if DCG doesn't appear to be recognizing your game version, you can set the game version under "File" and "Set Game Version".
+ 
+If you want to fly a specific DCG campaign, you can click on the "folder" icon. Set the path to one of these folders by selecting the squadrons.dcg file in that folder. Depending on your selection and the mode you chose, DCG will select the appropriate folder to write the missions to. You may activate an old campaign by selecting (in the DCG menu under "Files") "Select DCG Campaign Folder" or you can start by creating a new campaign (under the DCG "Run" menu or by clicking on the "world" icon).  
+
+Note: if for any reason, these paths need to be revised, you reselect them through the "File" Menu. 
+
+--------------------------------------------------------------------------------
+
+Panels
+
+DCG has a number of panels on which you can configure details of the campaign.
+
+Campaign Settings Panel: Many key settings in the campaign can be changed on this panel including the location of the front line, the number of planes in a flight, and the density of the various objects.
+
+Squadron Editor Panel: On this panel, you can edit the various squadrons in the campaign you have selected. You can also add or remove squadrons and access the Pilot Editor Panel.
+
+Pilot Editor Panel: On this panel, you can edit the pilots in the squadron.
+
+Ground War Settings Panel: On this panel, you can set date and the allegiance of the locations in the campaign, as well as set the supply data for the campaign.
+
+Waypoint and Offset Distance Settings Panel: This panel allows you to edit the altitude at the various waypoints as well as define which squadrons will circle on take off and which will not. Some settings on this panel effect all squadrons and some only effect the player squadron.
+
+Quick Mission Preference Panel: On this panel, the player can set weather preferences as well as mission time and mission type. Note: often DCG cannot generate the requested mission given the situation in the campaign and will subsitute another.
+
+Aircraft Class Editor Panel: On this panel, the player can change various parameters for each plane type.
+
+Ground Objects Editor Panel: This panel allows the player to modify the column types, names, and locations, as well as set static objects active or not active.
+
+FBDaemon Panel: On this panel, you can modify parameters for dogfight campaigns using FBDaemon.
+
+--------------------------------------------------------------------------------
+
+Options
+
+Under Menu/Options, the following settings can be toggled on (checked) or off (not checked). 
+
+Active Front: If checked, anti-tank guns (or in somecase armor) will be placed at contested locations. If unchecked, no extra guns or tanks will be placed. 
+
+Aircraft Downgrades: If checked, a squadron that has less planes available then the minimum to outfit the number of flights required for the mission will fly the "downgrade" of their aircraft type. If unchecked, the squadron will be grounded (or in the case of the player squadron, be forced to fly understrength). 
+
+Air Starts: if checked, allows flights to start airborne. If unchecked, all flights will start on the ground. 
+
+Delayed Start Times: allow non-player squadrons to spawn on runways during the game. 
+
+Historical Production Dates: If this is checked, over time, a player may now fly more than one plane type in the course of a year and other squadrons may receive new plane types as well. In addition, if a player choses a plane that is not yet available, it will prompt the player to chose another. 
+
+Island Palm Trees: if checked, the "Pacific" island will have palm trees (and poorer frame rates). If unchecked, the island will not have palm trees. 
+
+Link Maximums to Flights/Squadron: if unchecked, the maximum number of planes/squadron at the start of the campaign is 16 (4 for reconnaissance and transport squadrons). If checked, the maximum is the maximum number of active flights/squadron times 4. 
+
+Massed Bombers: if checked, any heavy/medium bomber unit will spawn with up to four flights regardless of the number of default flights selected. This group will always start airborne. 
+
+Normandy British Base: Activate the fictional British island base on the Normandy map. 
+
+No Transfers: if checked, no squadron will transfer unless their airfield is over-run. Exception: transport planes will always "transfer" from one base to the next as part of their duties. 
+
+On-Line Briefings: if checked, on-line briefings will appear. If not checked, only a general description will appear. 
+
+Paratroopers: some planes such as the JU-52 can carry paratroopers. If this option is checked, these planes will drop paratroopers rather than bombs. (Not recommended for slower computers). 
+
+Primary Objectives: if checked will require the player to complete their primary mission before being able to advance to a new mission in Pilot Career mode. Note: users of the original IL-2 game should check this option. FB/AEP users should make sure "Instant Success" is selected in the game's difficulty settings. 
+
+Ships Remain Sunk: if checked, all ships that are sunk will be eliminated from the campaign. If unchecked, transports and destroyers designated "DD" will be resurrected. 
+
+Single Map Campaign: if checked, the campaign will end when one side captures the other's last airfield or supply point. If unchecked, the campaign will switch to the next map in sequence. For example, if Germany wins in Crimea, the campaign will move to Kuban. 
+
+Stats Reset on Death: if check if the player dies in Career mode, his pilot statistics will be reset to zero and any other events that happened that mission will be recorded. If unchecked, the mission can be reflown without penalty as if it never happened. 
+
+Tank Downgrades: if checked, if a tank is not yet available, DCG will try to replace it with an earlier equivalent. If not check, DCG will not activate it until it is available. 
+
+Track Losses: will keep a tally of losses to air and ground units. Note: the IL2/FB eventlog must be active for this feature to work. Note: even if this feature is unchecked, ground units will be tracked if the eventlog is activated. 
+
+Track On-Line Players: if checked DCG will assign and track ranks and awards for on-line campaigns (both coop and dogfight). If unchecked, no ranks or awards are given. Note: if you check and uncheck this option, all ranks will be reset to the lowest rank available. 
+
+
+--------------------------------------------------------------------------------
+
+Modes 
+
+Under Menu/Modes, the following modes can be toggled on (checked) or off (not checked).
+
+Off-Line Career: With DCG not even running, Pilot Career missions will be created automatically using this feature. Generate the first mission of new pilot using the "Generate Mission" button and the others will be created automatically as you play a "Pilot Career". Note: this option only works for Pilot Career mode and does not work for On-Line modes or for Single Missions. 
+
+On-Line Co-op: DCG will generate missions specifically for Co-op games. 
+
+On-Line Dogfight: DCG will generate missions specifically for Dogfight games.
+
+Save Copy of Mission: DCG will create a back up mission for Co-op and Campaign missions in the Single Missions folder of the country. It will be named after the map and the date (for example: "smolensk19410721"). Useful for players wanting to re-fly more memorable missions. In Dogfight mode, DCG will create a unique name for each mission.
+
+--------------------------------------------------------------------------------
+
+Campaign Generation
+
+There are four ways to generate campaign missions: manually, manually using the hotkey, using the auto-generation mode or full auto-generation mode (replace DGen).
+
+Manual Mission Generation Mode (Pilot Career, Single Mission, Coop, or Dogfight). 
+
+1. Run DCG.
+2. Select the mission mode: Coop, or Dogfight or Single Player Manual (SPManual = no mode checked).
+3. If this is a new campaign, click on the "World" icon, otherwise skip to #6.
+4. From the drop-down box that appears, select the campaign.
+5. Click on the "Start Button".
+6. Make any other changes such as squadron, plane, weather, etc.
+7. Click the Generate Mission button. 
+8. Run IL2/FB and fly the mission.
+9. When you are finished flying the mission, ALT + TAB out of IL2/FB and manually generate a new mission.
+
+Hot-Key Generation Mode (Manual Mode as above using Hot-Key).
+
+1. Run DCG.
+2. Start and/or make any changes to your campaign as above.
+3. Run IL2/FB.
+4. Press CTRL + SHFT + G. DCG will generate a new mission in the mode set in 2 above.
+5. Fly the mission.
+6. When you are finished, before hitting "Apply", press CTRL + SHIFT + G.
+7. Prepare to fly the next mission.
+
+Off-Line Career Mode.
+
+To use the Off-Line (Auto-Generation) Career mode while flying a career, ensure that the mode is checked under the options. Even if DCG is not running, IL2 will call DCG when it requires a new mission. This mode does not work for Co-op, Dogfight, or Single missions.
+
+In order to start an IL2 DCG campaign in Forgotten Battles using the Auto-Generation Career mode while not replacing DGEN, use the following steps.
+
+1. Run IL2 DCG.
+2. Turn off the off-line Career (Auto-Generation) Mode. 
+3. If starting a new campaign, click the "Globe" icon.
+4. From the drop-down box that appears, select the campaign.
+5. Click on the "Start Button".
+6. Make any other changes such as squadron, plane, weather, etc.
+7. Generate one mission by hitting the DCG "Generate Mission" button.
+8. Run IL2 Forgotten Battles.
+9. Start a new career with the Nationality you want to fly. DCG should appear as one of the options. Select it.
+10. Return to the Main Menu and minimize FB by Alt+Tab (or Exit FB altogether).
+11. Turn on DCG's off-line Career (Auto-Generation) Mode. Press the "Generate Mission" button.
+12. Close IL2 DCG. The DCG campaign should generate missions automatically from this point on without your having to reconfigure anything.. 
+13. Return to the FB Main screen then re-enter the Career Mode.
+
+Note: Using this mode limits you to flying a maximum of one campaign/nationality. Using the mode below, you can have more than one campaign/nationality active.
+
+Full Off-Line Career Mode.
+
+Using this mode replaces the in-game generator (DGen) with DCG.  Careers can then be created directly from the game set up screens and DCG never needs to be run except to edit the campaign files.
+
+1. Run DCG.
+2. Select the off-line Career Auto-Generation mode from the DCG Menu.
+3. Select "Replace Career Generator (DGen)" from the DCG Menu "Mode" and click "Yes". Close DCG.
+4. Run IL-2 "Forgotten Battles".
+5. Select any of the stock or DCG campaigns available in IL2 "Forgotten Battles" or any campaign in "Pacific Fighters" that is designated "*" and "(DCG)". DCG will generate and run a campaign based on your selection criteria.
+6. Play the campaign.
+
+Note: a copy of DGen.exe will be made called DGEN_bak.exe. It is strongly recommended that your restore your DGen.exe file before installing any upgrades of IL2 "Forgotten Battles". You can do this by clicking "Replace DGen" when it's checked or delete the file DGen.exe and rename DGen_bak.exe to DGen.exe.
+
+Note: FB and AEP users who do not have the Battle over Europe add-on will need to get the USAAF and RAF add-ons from Netwings.org to fly American and British campaigns. They can both be got from Netwings.org.
+
+Custom Coop-Campaign Mode (Replacing In-Game Coop Generator [NGen] with DCG).
+
+1. Run DCG.
+2. Select "Coop" from the DCG Menu "Mode".
+3. Select "Replace Coop Campaign Generator (NGen)" from the DCG Menu "Mode" and click "Yes". Close DCG.
+4. Run IL-2 "Forgotten Battles".
+5. Select any of the DCG coop campaigns available in IL2 "Forgotten Battles". Do NOT select any that do not have "DCG" in their name. DCG will generate and run an on-line campaign based on your selection criteria.
+6. Play the campaign.
+
+Note: a copy of NGen.exe will be made called NGEN_bak.exe. It is strongly recommended that your restore your NGen.exe file before installing any upgrades of IL2 "Forgotten Battles". You can do this by clicking "Replace NGen" when it's checked or delete the file NGen.exe and rename NGen_bak.exe to NGen.exe.
+
+Note: FB and AEP users who do not have the Battle over Europe add-on will need to get the USAAF and RAF add-ons from Netwings.org to fly American and British on-line campaigns. 
+
+--------------------------------------------------------------------------------
+
+Paul Lowengrin, October 13, 2007
+http://www.lowengrin.com
+ 
+
+

@@ -1,0 +1,1438 @@
+Deutsche Übersetzung von Martin Zeilinger (88.IAP_Zmir) und Jörg Wiedemann (yogy AKA 88.IAP_Pirx) - Rohkorrektur M. Lun der letzten Rotte als Rottenflieger von {W0_FULLRANK} {W0_NAME}.>
+
+dolf, Partnertrans GmbH
+<DGen:>		<*>
+	--------------------------------------------------------------------------------------------
+		 Translation guidelines. 
+
+	Every line not starting with symbol < will be ignored. You may use it for comments.
+ 	Messages consist of three parts: message ID, optional message selector and text.
+
+	For every ID code there may be up to 10 variants of texts - one will be picked up randomly.
+	You don't need to translate every line exactly, you just need to describe the same situation.
+
+	Message selector in () brackets defines which campaign will use them.
+	*JA means all Japanese
+	aJA Japanese Army only
+	nJA Japanese Navy only
+
+	other codes are 
+	*U*, for all Allies
+	*UK, for RAF and RN
+	aUK, for RAF, RNZAF, RAAF 
+	aUD, for Dutch
+	nUK, for RN
+	*US, for USAAF,USMC,USN
+	aUS, for USAAF
+	nUS, for US Navy
+	mUS, for US Marine Corps
+
+	Some messages can be made map-specific. For instance:
+
+//<AttackAF>(*U*)
+
+	is a generic AF attack, while:
+
+//<AttackAF:Tarawa>(*U*) can contain some references to invasion of Tarawa. If there is map-specific varioant, 
+   only this version will be used.
+
+
+	Symbols \n ans %s must be left intact. \n means new line, %s means that some substring will be 
+	placed there - usually town name. 
+
+	Message texts cannot contain new lines - make them as long as you need (but not longer than 256 chars).
+	--------------------------------------------------------------------------------------------
+
+//<Retrn>		<After some much needed R & R your squadron is back in action...\n>
+
+<Retrn>		< >
+
+--------------------------------------------------------------------------------------------
+	The following messages are for pilot's logbook
+--------------------------------------------------------------------------------------------
+
+
+
+<logCAS>				<Luftnahunterstützung>
+<logAttack>				<Angriff>
+<logNavalAttack>		<Angriff auf Seeziele>
+<logCAP>				<Sperre>
+<logFleetPatrol>		<Sperre über Flotte>
+<logParaEscort>			<Geleitschutz>
+<logIntercept>			<Abfangjagd>
+<logReconEscort>		<Aufklärergeleitschutz>
+<logRecon>				<Aufklärungsflug>
+<logFighterSweep>		<Freie Jagd>
+<logScramble>			<Alarmstart>
+<logRescue>				<Rettungseinsatz>
+<logNone>				< >
+<logStrikeEscort>		<Geleitschutz für Luftangriff>
+<logTransfer>			<Verlegungsflug>
+
+<logBailed> 			<Fallschirmabsprung>	
+<logKill> 				<Abschuss von %s >		
+<logCrashed> 			<Absturz>	
+<logLandedAF> 			<Landung>
+<logLanded> 			<Außenlandung>
+
+
+<logAttackAF>			<Angriff auf Flugplatz>
+<logTank>               <Feindlicher Panzer vernichtet>
+<logShip>				<Feindliches Schiff versenkt>
+<logArtillery>			<Angriff auf feindliche Artillerie>
+<logColumn>				<Angriff auf feindliche Nachschubkolonne>
+<logTrain>				<Angriff auf feindlichen Zug> 
+<logBridge>				<Brücke zerstört>
+<logTroops>				<Angriff auf feindliche Truppen>
+
+	--------------------------------------------------------------------------------------------
+	The following messages are for pilot's personal files
+	--------------------------------------------------------------------------------------------
+
+<rstJoined> 		<zur Staffel versetzt>
+<rstPromoted> 		<zum %s befördert>
+<rstAwarded> 		<Verleihung %s>
+
+<rstTransfered>(*U*) 	<Versetzung zur Flugschule>
+<rstTransfered>(*JA) 	<Versetzung nach Japan>
+
+<rstHospitalize> 		<Verwundet und im Lazarett>
+<rstReunited> 		<Rückkehr zur Staffel>
+
+
+<recJoined> 		<{DATE} {rank} {lastname} versetzt zur Staffel>
+<recPromoted> 		<{DATE} {oldrank} {lastname} befördert zum {rank}>
+<recAwarded> 		<{DATE} {rank} {lastname} Verleihung {medal}>
+
+<recTransfered>(*U*) 	<{DATE} {rank} {lastname} zur Flugschule versetzt>
+<recTransfered>(*JA) 	<{DATE} {rank} {lastname} nach Japan versetzt>
+
+<recHospitalize> 		<{DATE} {rank} {lastname} verwundet und im Lazarett >
+<recReunited> 		<{DATE} {rank} {lastname} zur Staffel zurückgekehrt>
+
+
+<rstKilled> 				<gefallen>
+<rstMissed> 				<vermisst>
+
+	--------------------------------------------------------------------------------------------
+	Please do not translate words Name and Description - they are used by IL2
+	--------------------------------------------------------------------------------------------
+<nSHR> 		<DGen mission\n>
+<nHDR> 		<Name Mission %s\n>
+<hShortRuB>	<Bomber. %s, '4%d>
+<hShortRuF>	<Jäger. %s, '4%d>
+<hShortJaB>	<Bomber. %s, '4%d>
+<hShortJaF>	<Jäger. %s, '4%d>
+
+<hLongRuB>	<Description Dynamic campaign for American bomber pilot. %s, 194%d>
+<hLongRuF>	<Description Dynamic campaign for American fighter pilot. %s, 194%d>
+<hLongJaB>	<Description Dynamic campaign for Japanese bomber pilot. %s, 194%d>
+<hLongJaF>	<Description Dynamic campaign for Japanese fighter pilot. %s, 194%d>
+
+	--------------------------------------------------------------------------------------------
+	Plane names to appear in briefings
+	--------------------------------------------------------------------------------------------
+
+<JU_52_3MG4E>	<Ju-52 3MG4E>
+<LI_2>	<Li-2>
+<P_39D1>		<P-39D>
+<P_39D1>(*JA)		<Airacobra>
+<P_39D2>		<P-39D>
+<P_39D2>(*JA)		<Airacobra>
+<P_39N>		<P-39N>
+<P_39N>(*JA)		<Airacobra>
+<P_39Q1>	<P-39Q1>
+<P_39Q1>(*JA)		<Airacobra>
+<P_39Q10>	<P-39Q10>
+<P_39Q10>(*JA)		<Airacobra>
+<P_400>		<P-400>
+<P_400>(*JA)		<Airacobra>
+
+<P_40SUKAISVOLOCHHAWKA2> <Hawk 81A>
+<P_40SUKAISVOLOCHB>	<P-40B>
+<P_40SUKAISVOLOCHC>	<P-40C>
+<P_40SUKAISVOLOCH2A> <Tomahawk>
+<P_40SUKAISVOLOCH2B> <Tomahawk II>
+
+<P_40E>		<P-40B>
+<P_40E>		<P-40E Warhawk>
+<P_40E>(*JA)		<Curtiss>
+<P_40EM105>	<P-40>	
+<P_40M>		<P-40M Warhawk>
+<P_40M>(*JA)		<Curtiss>
+<HurricaneMkIa>	<Hurricane>
+<HurricaneMkIIb>	<Hurricane>
+<HurricaneMkIIc>	<Hurricane>
+<HurricaneMkIIbMod>	<Hurricane>
+<BLENHEIM1>	<Blenheim>
+<BLENHEIM4>	<Blenheim>
+
+<F2A2> <Brewster>
+<F2A_B339> <Brewster>
+<F2A_B239> <Brewster>
+<F2A2>(*UK) <Buffalo>
+<F2A_B239>(*US)  <F2A Buffalo>
+<MS406> <M.S.406>
+<MS410> <M.S.410>
+<P_47D10> <P-47D>
+<P_47D22> <P-47D>
+<P_47D22> <P-47D>
+<P_47D10>(*JA) <Thunderbolt>
+<P_47D22>(*JA) <Thunderbolt>
+<P_47D27>(*JA) <Thunderbolt>
+<P_51D20NA>	<P-51D>
+<P_51D5NT>	<P-51D>
+<P_51CM>	<Mustang III>
+<TEMPEST5>	<Tempest V>
+<P_51D20NA>(*JA)	<Mustang>
+<P_51D5NT>(*JA)	<Mustang>
+<P_51CM>(*JA)	<Mustang>
+
+<P_47D10de> <Thunderbolt>
+<P_47D22de> <Thunderbolt>
+<P_47D27de> <Thunderbolt>
+<P_51D20NAde>	<Mustang>
+<P_51D5NTde>	<Mustang>
+<B_17D> <B-17D>
+<B_17E> <B-17E>
+<B_17E>(*JA) <B-17 Flying Fortress>
+<B_17G> <B-17G>
+<B_29> <B-29>
+
+<B_24J100> < B-24>
+<P_38J>	<P-38>
+<P_38L>	<P-38>
+<P_38LLate>	<P-38>
+
+
+<A6M2>(*U*)	<Zero>
+<A6M2>(*JA)	<A6M2 Rei-sen>
+<A6M3>(*U*)	<Zero>
+<A6M2_21>(*U*)	<Zeke>
+<A6M2_21>(*JA)	<A6M2 Typ 21 Rei-sen>
+<A6M2N>(*U*)	<Rufe>
+<A6M2N>(*JA)	<A6M2N>
+<A6M5A>(*U*)	<Zero>
+<A6M5A>(*JA)	<A6M5 Rei-sen>
+
+<KI_84_IA>(*JA)	<Ki-84 Ia Hayate>
+<KI_84_IB>(*JA)	<Ki-84 Ib Hayate>
+<KI_84_IC>(*JA)	<Ki-84 Ic Hayate>
+<KI_84_IA>(*U*)	<Frank>
+<KI_84_IB>(*U*)	<Frank>
+<KI_84_IC>(*U*)	<Frank>
+
+<KI_43_IA>(*JA)	<Ki-43 Ia Hayabusa>
+<KI_43_IB>(*JA)	<Ki-43 Ib Hayabusa>
+<KI_43_IC>(*JA)	<Ki-43 Ic Hayabusa>
+<KI_43_II>(*JA)	<Ki-43>
+<KI_43_IIKAI>(*JA)	<Ki-43>
+
+<KI_43_IA>(*U*)	<Oscar>
+<KI_43_IB>(*U*)	<Oscar>
+<KI_43_IC>(*U*)	<Oscar>
+<KI_43_II>(*U*)	<Ki-43>
+<KI_43_IIKAI>(*U*)	<Ki-43>
+
+<KI_46_OTSU>(*JA)	 <Ki-46>
+<KI_46_OTSUHEI>(*JA) <Ki-46>
+<KI_46_RECCE>(*JA)	 <Ki-46>
+<KI_61_IKO>(*JA)	 <Ki-61>
+<KI_61_IHEI>(*JA)	 <Ki-61>
+<KI_61_IOTSU>(*JA)	 <Ki-61>
+
+<KI_46_OTSU>(*U*)		<Dinah>
+<KI_46_OTSUHEI>(*U*)	<Dinah>
+<KI_46_RECCE>(*U*)		<Dinah>
+<KI_61_IKO>(*U*)		<Tony>
+<KI_61_IHEI>(*U*)		<Tony>
+<KI_61_IOTSU>(*U*)		<Tony>
+
+<KI_100_IKO> (*JA) <Ki-100>
+<KI_100_IKO> (*U*) <Tony>
+
+
+
+<D3A1>(*JA)	<D3A>
+<D3A1>(*U*)	<Aichi Val>
+
+<B5N2>(*JA)	<B5N2>
+<B5N2>(*U*)	<Kate>
+
+<G4M1_11>(*JA)	<G4M1 Rikko>
+<G4M1_11>(*U*)	<Betty>
+
+<F6F3>(*U*)	<Hellcat>
+<F6F5>(*US)	<F6F-5 Hellcat>
+<F6F5>(*UK)	<Hellcat Mk II>
+<F6F5>(*JA)	<Grumman Hellcat>
+<F4U1A>(*US)	<F4U-1A Corsair>
+<F4U1A>(*UK)	<Corsair Mk I>
+<F4U1A>(*JA)	<Corsair>
+<F4U1C>(*U*)	<F4U Corsair>
+<F4U1D>(*U*)	<F4U>
+<F4U1D>(*US*)	<F4U-1D Corsair>
+<F4U1D>(*UK)	<Corsair Mk III>
+<TBF1C>(*US)		<TBF1>
+<TBF1C>(*UK)		<Tarpon Mk I>
+<TBF1C>(*JA)		<Avenger>
+
+<TBF1>(*U*) <TBF-1 Avenger>
+<TBF1>(*JA)	<Avenger>
+<TBM3AVENGER3>(*U*) <TBM-3 Avenger>
+<TBM3AVENGER3>(*JA)		<Avenger>
+<TBM3>(*U*) <TBM-3 Avenger>
+<TBM3>(*JA)		<Avenger>
+
+<F4F3>(*U*)	<F4F Wildcat>
+<F4F4>(*U*)	<F4F Wildcat>
+<F4F_FM2>(*U*)	<F4F Wildcat>
+
+<F4F3>(*JA)	<Wildcat>
+<F4F4>(*JA)	<Wildcat>
+<F4F_FM2>(*JA)	<Wildcat>
+
+<SEAFIRE3>(*UK) <Seafire Mk III>
+<SEAFIRE3> <Seafire>
+
+<F6F3>(*JA)	<Hellcat>
+<F6F5>(*JA)	<Hellcat>
+<F4U1A>(*JA)	<Corsair>
+<F4U1C>(*JA)	<Corsair>
+<F4U1D>(*JA)	<Corsair>
+<TBF1C>(*JA) <Avenger>
+<TBF1>(*JA) <Avenger>
+<TBM3AVENGER3>(*JA) <Avenger>
+<TBM3>(*JA) <Avenger>
+
+<B_25C25>(*U*)	<B-25 Mitchell>
+<B_25C25>(*JA)	<Mitchell>
+<B_25J1>(*U*)	<B-25 Mitchell>
+<B_25J1>(*JA)	<Mitchell>
+<A_20G>(*U*)	<A-20 Havoc>
+<A_20G>(*JA)	<Douglas Boston>
+
+
+<F4UCORSAIR1>(*U*) <Corsair>
+<F4UCORSAIR2>(*U*) <Corsair>
+<F4UCORSAIR4>(*U*) <Corsair>
+<BEAU21>(*U*) <Beaufighter>
+<SBD3>(*U*)	<SBD3>
+
+
+<F4UCORSAIR1>(*JA) <Corsair>
+<F4UCORSAIR2>(*JA) <Corsair>
+<F4UCORSAIR4>(*JA) <Corsair>
+<BEAU21>(*JA) <Beaufighter>
+<SBD3>(*JA)	<Dauntless>
+
+	--------------------------------------------------------------------------------------------
+	Geographic names - if spelling is different from English
+	<Moscow>	<Moskau>
+	<Crimea>		<Krim>
+	--------------------------------------------------------------------------------------------
+
+
+<dbrDEAD>	<Sie sind gefallen.>
+<dbrCAPTURED>	<\nSie wurden gefangen genommen.>
+<dbrCAPTURED>(*U*)	<\nSie wurden gefangen genommen und zu Zwangsarbeit verurteilt.>
+<dbrWOUNDED>	<\nSie wurden verwundet und liegen im Lazarett.>
+
+<SQ>(*U*) <Ihr Staffelkapitän ist %s\n>
+<SQ>(*JA) <Ihr Hikotaicho ist %s\n>
+<CO>(*U*) <Sie übernehmen das Kommando über die Staffel!\n>
+<CO>(*JA) <Sie wurden zum Hikotaicho ernannt!\n>
+
+<dbrEnemyLost> <\nIn Kämpfen unter Beteiligung unserer Piloten verlor der Feind:\n>
+
+<CUR_KILLS>		<Diese Mission vernichteten Sie:>
+<CUR_KILLS>		<Ergebnis der letzten Mission:>
+<CUR_KILLS>		<Letzen Einsatz gab es folgende Erfolge:>
+
+<TOT_KILLS>		<Ergebnis der Laufbahn:>
+<TOT_KILLS>		<Ihre Abschussliste:>
+<TOT_KILLS>		<Ihre Erfolge:>
+
+<dbrNplanes> <Abschüsse: %d\n>
+<dbrNplanesG> <Vernichtete Flugzeuge am Boden: %d\n>
+<dbrNtanks> <Panzerabschüsse: %d\n>
+<dbrNguns> <Vernichtete Geschütze: %d\n>
+<dbrNcars> <Vernichtete Fahrzeuge: %d\n>
+<dbrNwagons> <Vernichtete Eisenbahnwagen: %d\n>
+<dbrNbridges> <Zerstörte Brücken: %d\n> 
+<dbrNships> <Versenkte Schiffe: %d\n> 
+
+
+<logRecon> 				<Aufklärungsflug>
+<logNavalRecon> 		<Seeaufklärungsflug>
+<logReconB> 			<Aufklärungsflug>
+
+<YouAreBack> <\nSie haben Ihren Dienst wieder aufgenommen\n>
+
+
+////////////////////////////////////////////////////////////////////////////
+	MACROS:
+
+	{FIRSTNAME}		your first name
+	{LASTNAME}		your last name
+	{RANK}			your rank (abbreviated, Lt.Col)
+	{PLANE}			your plane
+	{SECTOR}	    destination sector (100,330)
+	(#)				number of planes in your group (4)
+	(#a)			number of planes in your group (four)
+	(#A)			number of planes in your group (Four)
+	{LDR_NAME}		group leader's last name
+	{LDR_RANK}		group leader's rank
+	{LDR_FULLRANK}  group leader's rank
+
+	{ESCORTED} escorted plane type.
+
+	{W0_RANK} the leader of player's group of up to 4 planes
+	{W1_RANK} his wingmen
+	{W2_RANK}
+	{W3_RANK}
+
+	{W0_NAME} the leader of player's group of up to 4 planes
+	{W1_NAME} his wingmen
+	{W2_NAME}
+	{W3_NAME}
+
+	{DATE}		  1 Janvier 1944
+	{DATE_D.MY}   1. Januar 1944
+	{DATE_DMY}    1 Janvier 1944
+	{DATE_MDY}    January 1, 1944
+	{DATE_DM,Y}	  1 January, 1944
+	{TIME}		9:15
+	{MTIME}		0915
+
+	{DIR} expands to whatever is written under {E} {NW}
+	{TO}
+	{FROM}
+
+	Temporary macros (calculated multiple times, just before usage)
+
+	(plane)
+	{rank}
+	{lastname}
+	{=#} number of planes
+	{=#a} number of planes
+	{=#A} number of planes
+	(~#) approximate number of planes
+
+////////////////////////////////////////////////////////////////////////////
+
+<One>			<Eins>
+<Two>			<Zwei>
+<Three>			<Drei>
+<Four>			<Vier>
+<Five>			<Fünf>
+<Six>			<Sechs>
+<Seven>			<Sieben>
+<Eight>			<Acht>
+<Nine>			<Neun>
+<Ten>			<Zehn>
+<Eleven>		<Elf>
+<Twelve>		<Zwölf>
+<Thirteen>		<Dreizehn>
+<Twenty six>	<Sechsundzwanzig>
+<Thirty nine>	<Neununddreißig>
+
+<one>			<eins>
+<two>			<zwei>
+<three>			<drei>
+<four>			<vier>
+<five>			<fünf>
+<six>			<sechs>
+<seven>			<sieben>
+<eight>			<acht>
+<nine>			<neun>
+<ten>			<zehn>
+<eleven>		<elf>
+<twelve>		<zwölf>
+<thirteen>		<dreizehn>
+<twenty six>	<sechsundzwanzig>
+<thirty nine>	<neununddreißig>
+
+<RANK0>(aUS) 	<Flt.Of.>
+<RANK1>(aUS) 	<2nd Lt.>
+<RANK2>(aUS) 	<1st Lt.>
+<RANK3>(aUS) 	<Cpt.>
+<RANK4>(aUS) 	<Maj.>
+<RANK5>(aUS)	<Lt.Col.>
+<RANK6>(aUS) 	<Col.>
+
+<RANK0>(mUS) 	<Gun.Sgt.>
+<RANK1>(mUS) 	<2nd Lt.>
+<RANK2>(mUS) 	<1st Lt.>
+<RANK3>(mUS) 	<Cpt.>
+<RANK4>(mUS) 	<Maj.>
+<RANK5>(mUS)	<Lt.Col.>
+<RANK6>(mUS) 	<Col.>
+
+
+<RANK0>(nUS) 	<Av.Plt.1c>
+<RANK1>(nUS) 	<Ens.>
+<RANK2>(nUS) 	<Lt(jg).>
+<RANK3>(nUS) 	<Lt.>
+<RANK4>(nUS) 	<LtCmdr.>
+<RANK5>(nUS)	<Cmdr.>
+<RANK6>(nUS) 	<Cpt.>
+
+<RANK0>(aUK) <Flight Sergeant>
+<RANK1>(aUK) <Pilot Officer>
+<RANK2>(aUK) <Flying Officer>
+<RANK3>(aUK) <Flight Lieutenant>
+<RANK4>(aUK) <Squadron Leader>
+<RANK5>(aUK) <Wing Commander>
+<RANK6>(aUK) <Group Captain>
+
+<RANK0>(nUK) <FPO>
+<RANK1>(nUK) <FCPO>
+<RANK2>(nUK) <WO>
+<RANK3>(nUK) <SubLt.>
+<RANK4>(nUK) <Lt.>
+<RANK5>(nUK) <LtCmdr.>
+<RANK6>(nUK) <Cmdr.>
+
+<RANK0>(nUK) <Flight Sergeant>
+<RANK1>(nUK) <Pilot Officer>
+<RANK2>(nUK) <Flying Officer>
+<RANK3>(nUK) <Flight Lieutenant>
+<RANK4>(nUK) <Squadron Leader>
+<RANK5>(nUK) <Wing Commander>
+<RANK6>(nUK) <Group Captain>
+
+<RANK0>(aJA) <Jun-i> 
+<RANK1>(aJA) <Sho-i> 	
+<RANK2>(aJA) <Chu-i> 
+<RANK3>(aJA) <Tai-i>  
+<RANK4>(aJA) <Sho-sa>  
+<RANK5>(aJA) <Chu-sa>
+<RANK6>(aJA) <Tai-sa>
+
+<RANK0>(nJA) <Joto (Hiko) Heiso> 
+<RANK1>(nJA) <Sho-i> 	
+<RANK2>(nJA) <Chu-i> 
+<RANK3>(nJA) <Tai-i>  
+<RANK4>(nJA) <Sho-sa>  
+<RANK5>(nJA) <Chu-sa>
+<RANK6>(nJA) <Dai-sa>
+
+<RANK0>(aUD) <Vaandrik>
+<RANK1>(aUD) <Tweede Luitenant>
+<RANK2>(aUD) <Eerste Luitenant>
+<RANK3>(aUD) <Kapitein>
+<RANK4>(aUD) <Majoor>
+<RANK5>(aUD) <Luitenant-Kolonel>
+<RANK6>(aUD) <Kolonel>
+
+<FULLRANK0>(aUS) <Flight Officer>
+<FULLRANK1>(aUS) <Second Lieutenant>
+<FULLRANK2>(aUS) <First Lieutenant>
+<FULLRANK3>(aUS) <Captain>
+<FULLRANK4>(aUS) <Major>
+<FULLRANK5>(aUS) <Lieutenant Colonel>
+<FULLRANK6>(aUS) <Colonel>
+
+<FULLRANK0>(mUS) <Gunnery Sergeant>
+<FULLRANK1>(mUS) <Second Lieutenant>
+<FULLRANK2>(mUS) <First Lieutenant>
+<FULLRANK3>(mUS) <Captain>
+<FULLRANK4>(mUS) <Major>
+<FULLRANK5>(mUS) <Lieutenant Colonel>
+<FULLRANK6>(mUS) <Colonel>
+
+<FULLRANK0>(nUS) <Aviation Pilot 1st class>
+<FULLRANK1>(nUS) <Ensign>
+<FULLRANK2>(nUS) <Lieutenant (Junior Grade)>
+<FULLRANK3>(nUS) <Lieutenant>
+<FULLRANK4>(nUS) <Lieutenant Commander>
+<FULLRANK5>(nUS) <Commander>
+<FULLRANK6>(nUS) <Captain>
+
+<FULLRANK0>(aUK) <Flight Sergeant>
+<FULLRANK1>(aUK) <Pilot Officer>
+<FULLRANK2>(aUK) <Flying Officer>
+<FULLRANK3>(aUK) <Flight Lieutenant>
+<FULLRANK4>(aUK) <Squadron Leader>
+<FULLRANK5>(aUK) <Wing Commander>
+<FULLRANK6>(aUK) <Group Captain>
+
+<FULLRANK0>(nUK) <Flight Petty Officer>
+<FULLRANK1>(nUK) <Flight Chief Petty Officer>
+<FULLRANK2>(nUK) <Warrant Officer>
+<FULLRANK3>(nUK) <Sub-Lieutenant>
+<FULLRANK4>(nUK) <Lieutenant>
+<FULLRANK5>(nUK) <Lieutenant-Commander>
+<FULLRANK6>(nUK) <Commander>
+
+<FULLRANK0>(aJA) <Jun-i> 
+<FULLRANK1>(aJA) <Sho-i> 	
+<FULLRANK2>(aJA) <Chu-i> 
+<FULLRANK3>(aJA) <Tai-i>  
+<FULLRANK4>(aJA) <Sho-sa>  
+<FULLRANK5>(aJA) <Chu-sa>
+<FULLRANK6>(aJA) <Tai-sa>
+
+<FULLRANK0>(nJA) <Joto (Hiko) Heiso> 
+<FULLRANK1>(nJA) <Sho-i> 	
+<FULLRANK2>(nJA) <Chu-i> 
+<FULLRANK3>(nJA) <Tai-i>  
+<FULLRANK4>(nJA) <Sho-sa>  
+<FULLRANK5>(nJA) <Chu-sa>
+<FULLRANK6>(nJA) <Dai-sa>
+
+<FULLRANK0>(aUD) <Vaandrik>
+<FULLRANK1>(aUD) <Tweede Luitenant>
+<FULLRANK2>(aUD) <Eerste Luitenant>
+<FULLRANK3>(aUD) <Kapitein>
+<FULLRANK4>(aUD) <Majoor>
+<FULLRANK5>(aUD) <Luitenant-Kolonel>
+<FULLRANK6>(aUD) <Kolonel>
+
+<AWARD0>(aUS) 		<Air Medal>
+<AWARD1>(aUS)		<Bronze Star>
+<AWARD2>(aUS) 		<Distinguished Flying Cross >
+<AWARD3>(aUS) 		<Legion of Merit>
+<AWARD4>(aUS) 		<Silver Star>
+<AWARD5>(aUS) 		<Distinguished Service Cross>
+<AWARD6>(aUS) 		<Congressional Medal of Honor>
+<AWARD7>(aUS) 		<Congressional Medal of Honor>
+
+<AWARD0>(nUS) 		<Bronze Star>
+<AWARD1>(nUS)		<Navy and Marine Corps Medal>
+<AWARD2>(nUS) 		<Distinguished Flying Cross >
+<AWARD3>(nUS) 		<Legion of Merit>
+<AWARD4>(nUS) 		<Silver Star>
+<AWARD5>(nUS) 		<Navy Cross>
+<AWARD6>(nUS) 		<Congressional Medal of Honor>
+<AWARD7>(nUS) 		<Congressional Medal of Honor>
+
+<AWARD0>(mUS) 		<Bronze Star>
+<AWARD1>(mUS)		<Navy and Marine Corps Medal>
+<AWARD2>(mUS) 		<Distinguished Flying Cross >
+<AWARD3>(mUS) 		<Legion of Merit>
+<AWARD4>(mUS) 		<Silver Star>
+<AWARD5>(mUS) 		<Navy Cross>
+<AWARD6>(mUS) 		<Congressional Medal of Honor>
+<AWARD7>(mUS) 		<Congressional Medal of Honor>
+
+<AWARD0>(*UK) <Defence Medal>
+<AWARD1>(*UK) <Distinguished Flying Medal>
+<AWARD2>(*UK) <Distinguished Flying Cross>
+<AWARD3>(*UK) <Bar for the Distinguished Flying Cross>
+<AWARD4>(*UK) <Distinguished Service Order>
+<AWARD5>(*UK) <George Cross>
+<AWARD6>(*UK) <Victoria Cross>
+<AWARD7>(*UK) <1939 - 1945 Star>
+
+<AWARD0>(aUD) <Vliegerkruis>
+<AWARD1>(aUD) <Vliegerkruis with Ribbon>
+<AWARD2>(aUD) <Kruis van Verdienste>
+<AWARD3>(aUD) <Ridder in de Orde van Oranje-Nassau>
+<AWARD4>(aUD) <Officer in der Orde van Oranje-Nassau>
+<AWARD5>(aUD) <Commander in der Orde van Oranje-Nassau>
+<AWARD6>(aUD) <Groot-Officer in de Orde van Oranje-Nassau>
+<AWARD7>(aUD) <Groot-Officer in de Orde van Oranje-Nassau>
+
+<AWARD0>(*JA) 		<Tasse Sake>
+<AWARD1>(*JA)		<Urkunde mit Aufgehender Sonne>
+<AWARD2>(*JA) 		<Signierte Hinomaru Flagge>
+<AWARD3>(*JA) 		<Fläschchen und Tasse Sake>
+<AWARD4>(*JA) 		<Tanto-Dolch>
+<AWARD5>(*JA) 		<Nambu-Pistole>
+<AWARD6>(*JA) 		<Nambu-Halfter>
+<AWARD7>(*JA) 		<Samurai Katana>
+
+<Time&Weather>(*U*) <{DATE_D.MY}, Uhrzeit {TIME} \nWetter: {WEATHER}. Wolken auf {CLOUDS_FT.} Fuß.>
+<Time&Weather>(*JA) <{DATE_D.MY}, Uhrzeit {TIME} \nWetter: {WEATHER}. Wolken auf {CLOUDS_M} m.>
+
+<Clear>  		<Klar>
+<Good>(*U*)		<3/10>
+<Hazy>(*U*) 		<7/10>
+<Poor>(*U*)		<10/10>
+<Blind>(*U*)		<Null Sicht, 10/10>
+<Rain>(*U*)		<Regen, 10/10>
+<Snow>(*U*)		<Schnee, 10/10>
+<Thunderstorm>(*U*)	<Gewitter, 10/10>
+<Snowstorm>(*U*)		<Schneesturm, 10/10>
+
+<Clear>  		<Klar>
+<Good>(*JA)		<Gut>
+<Hazy>(*JA) 		<Dunstig>
+<Poor>(*JA)		<Schlecht>
+<Blind>(*JA)		<Blindflugbedingungen>
+<Rain>(*JA)		<Regen>
+<Snow>(*JA)		<Schnee>
+<Thunderstorm>(*JA)	<Gewitter>
+<Snowstorm>(*JA)		<Schneesturm>
+
+
+<January>		<Januar>
+<February>		<Februar>
+<March>			<März>
+<April>			<April>
+<May>			<Mai>
+<June>			<Juni>
+<July>			<Juli>
+<August>		<August>
+<September>		<September>
+<October>		<Oktober>
+<November>		<November>
+<December>		<Dezember>
+
+<from N>	<von Nord>	
+<from S>	<von Süd>	
+<from E>	<von Ost>	
+<from W>	<von West>	
+<from NE>	<von Nordost>	
+<from NW>	<von Nordwest>	
+<from SE>	<von Südost>	
+<from SW>	<von Südwest>
+
+<to N>	<nach Nord>	
+<to S>	<nach Süd>	
+<to E>	<nach Ost>	
+<to W>	<nach West>	
+<to NE>	<nach Nordost>	
+<to NW>	<nach Nordwest>	
+<to SE>	<nach Südost>	
+<to SW>	<nach Südwest>
+
+<N>	<Norden>	
+<S>	<Süden>	
+<E>	<Osten>	
+<W>	<Westen>	
+<NE>	<Nordosten>	
+<NW>	<Nordwesten>	
+<SE>	<Südosten>	
+<SW>	<Südwesten>
+
+<Leader>	< >
+<Leader22>	<{FULLRANK} {LASTNAME}, Sie führen die erste Gruppe, {W1_RANK} {W1_NAME} ist Ihr Rottenflieger.>
+<Leader23>	<{FULLRANK} {LASTNAME}, Sie führen die zweite Gruppe, {W1_RANK} {W1_NAME} und {W2_RANK} {W2_NAME} sind Ihre Rottenflieger.>
+<Leader24>	<{FULLRANK} {LASTNAME}, Sie führen die zweite Gruppe, {W1_RANK} {W1_NAME}, {W2_RANK} {W2_NAME} und {W1_RANK} {W1_NAME} und {W3_RANK} {W3_NAME} sind Ihre Rottenflieger.>
+<Leader32>	<{FULLRANK} {LASTNAME}, Sie führen die letzte Gruppe, {W1_RANK} {W1_NAME} ist Ihr Rottenflieger.>
+<Leader33>	<{FULLRANK} {LASTNAME}, Sie führen die letzte Gruppe, {W1_RANK} {W1_NAME} und {W2_RANK} {W2_NAME} sind Ihre Rottenflieger.>
+<Leader34>	<{FULLRANK} {LASTNAME}, Sie führen die letzte Gruppe, {W1_RANK} {W1_NAME}, {W2_RANK} {W2_NAME} und {W1_RANK} {W1_NAME} und {W3_RANK} {W3_NAME} sind Ihre Rottenflieger.>
+<Wingman>	<{FULLRANK} {LASTNAME}, Sie fliegen als Rottenflieger für {W0_FULLRANK} {W0_NAME}.>
+<Wingman12>	<{FULLRANK} {LASTNAME}, Sie fliegen in der ersten Rotte als Rottenflieger von {W0_FULLRANK} {W0_NAME}.>
+<Wingman13>	<{FULLRANK} {LASTNAME}, Sie fliegen in der ersten Kette als Kettenhund von {W0_FULLRANK} {W0_NAME}.>
+<Wingman14>	<{FULLRANK} {LASTNAME}, Sie fliegen im ersten Schwarm als Rottenflieger von {W0_FULLRANK} {W0_NAME}.>
+<Wingman22>	<{FULLRANK} {LASTNAME}, Sie fliegen in der zweiten Rotte als Rottenflieger von {W0_FULLRANK} {W0_NAME}.>
+<Wingman23>	<{FULLRANK} {LASTNAME}, Sie fliegen in der zweiten Kette als Kettenhund von {W0_FULLRANK} {W0_NAME}.>
+<Wingman24>	<{FULLRANK} {LASTNAME}, Sie fliegen im zweiten Schwarm als Rottenflieger von {W0_FULLRANK} {W0_NAME}.>
+<Wingman32>	<{FULLRANK} {LASTNAME}, Sie fliegen in der letzten Rotte als Rottenflieger von {W0_FULLRANK} {W0_NAME}.>
+<Wingman33>	<{FULLRANK} {LASTNAME}, Sie fliegen in der letzten Kette als Kettenhund von {W0_FULLRANK} {W0_NAME}.>
+<Wingman34>	<{FULLRANK} {LASTNAME}, Sie fliegen im letzten Schwarm als Rottenflieger von {W0_FULLRANK} {W0_NAME}.>
+
+<Route>(*U*)	<Entfernung zum Ziel: {DIST_NM} nm, Flughöhe: {ALT_FT.} Fuß.>
+<Route>(*U*)	<Sie steigen auf {ALT_FT.} Fuß, Entfernung zum Ziel {DIST_NM} NM.>
+<Route>(*JA)	<Distanz zum Ziel: {DIST_KM} km, Flughöhe: {ALT_M} m.>
+<Route>(*JA)	<Angriffshöhe {ALT_M} m, Entfernung zum Ziel {DIST_KM} km.>
+
+
+// War victory and defeat messages can be customized according to operaiton
+// <WarDefeatDb:Hawaii>. The following are generic defeat messages.
+
+<WarDefeatDb>(*JA) <Diese Operation endete in einem totalen Desaster!\n\nWir erlitten katastrophale Verluste an Piloten und Soldaten, unsere Anführer haben angekündigt, Sepukku zu begehen!\n\nUnsere Marine hat stark an Ansehen verloren und wird nun eine zweite Rolle hinter der Armee spielen. Es steht schlecht um den japanischen Traum ...>
+
+<WarVictoryDb>(*JA) <Sieg! Unsere Flotte hat eine Seeblockade, um Hawaii verhängt und unsere siegreichen Armeen haben starke Verteidigungsstellungen eingenommen.\n\nDie Kampfmoral der Amerikaner und ihrer Verbündeten ist so geschwächt, dass sie um Waffenstillstand nachsuchen. Es ist noch nicht der Frieden. Sollten die Kämpfe in Europa mit der Niederlage Deutschlands enden, werden sie wieder angreifen, aber bis auf weiteres sind wir sicher.\n\nDie Regierung des Prinzen Konoye hat beschlossen, eine Strategie der Konsolidierung und Verstärkung für mindestens ein Jahr zu verfolgen.\n\nVerstärkt werden wir dann China ganz unterwerfen und in Sibirien einrücken, um Deutschland gegen Stalin zu unterstützen.\n\nDann wird Japan zusammen mit Deutschland die Welt beherrschen und Asien zu neuem Wohlstand führen!>
+<WarDefeatDb>(*U*) <Eine fürchterliche Niederlage. Die japanische Flotte blockiert Hawaii und die von Japan eroberten Gebiete sind zu stark verteidigt für eine erfolgreiche Gegenoffensive.\n\nDie Moral an der Heimatfront ist am Boden und Präsident Roosevelt hat dem japanischen Premier Konoye einen Waffenstillstand angeboten.\n\nEs ist nicht wirklich das Ende im Pazifik. Sollten wir zusammen mit den Russen es schaffen, Deutschland zu besiegen, wird sich der Zorn der Alliierten auf Japan richten.\n\nAber bis auf weiteres liegt Schwerpunkt in Europa, und unsere von den Japanern besetzten Gebiete sind verloren.>
+
+<WarVictoryDb>(*U*) <Das war ein überragender SIEG!\n\nDie Machtbalance im Pazifik hat sich zu unseren Gunsten verlagert!\n\nJetzt geht es nach Westen, und wenn wir unsere Gebiete wiedererobert haben, führt unser Weg nach Tokio!>
+
+// Operational briefings/debriefings. Debriefis may be replaced with end of war debrief.
+
+<HawaiiBr>(*US) <Seit dem japanischen Angriff auf China im Frühjahr 1937 wachsen die Spannungen in Ostasien. Japan braucht dringend Rohstoffe, um seine Industrie am Laufen zu halten, aber weitere Expansion würde die Interessen der USA und der europäischen Kolonialmächte England und Niederlande verletzen.\n\nDie japanische Regierung hat trotz Opposition der Marine und ohne direkte Zustimmung des Kaisers eine Zusammenarbeit mit den europäischen Achsenmächten vereinbart. Die USA verhängten ein Embargo über Japan, nachdem japanische Truppen 1940 in Französisch-Indochina einmarschiert waren.\n\nTrotz heftiger diplomatischer Bemühungen, vor allem zwischen US-Außenminister Hull und dem japanischen Botschafter Nomura mehren sich die Zeichen für Krieg. Die Hauptmacht der Pazifikflotte wurde von San Diego nach Pearl Harbor auf Oahu verlegt, auch wenn viele Admirale den Hafen mit seinen engen Zufahrten für eine Todesfalle halten.\n\Allerdings gilt Pearl Harbor mit seiner geringen Wassertiefe als sicher gegen Flugzeugtorpedos, die etwa 20 Meter eintauchen müssen, um zuverlässig zu arbeiten. Zudem haben Navy und Army über 394 Flugzeuge auf den Flugplätzen Oahus konzentriert. Die Streitkräfte auf Oahu sind in Alarmbereitschaft und Lt. General Walter C. Short, der Oberbefehlshaber der US Army in Hawaii, sieht die Hauptgefahr in Sabotageakten der über 13.000 in Hawaii lebenden Japaner, nicht in Luftangriffen. Aus diesem Grunde wurden die meisten Flugzeuge eng beieinander geparkt, um die Bewachung zu erleichtern.\n\nGlücklicherweise gibt es viele kleinere Flugfelder auf Oahu und einige Kommandeure haben ihre eigenen Vorstellungen von Sicherheit ...\n\n--------------\n\n>
+
+<HawaiiVictoryDb>(*US) <Der hinterhältige Angriff Japans heute Morgen, dem 7. Dezember 1941, verursachte schwere Verluste in unserer Pazifikflotte.\n\n Viele unserer Schlachtschiffe und schwerer Kreuzer wurden versenkt oder schwer beschädigt sowie Dutzende Flugzeuge zerstört und viele erfahrene Soldaten getötet.\n\nEinige unserer Helden konnten jedoch starten - oft unter schwerem Feuer, geschützt von unserer Fliegerabwehr. Sie konnten die Japaner zurückschlagen und ihnen empfindliche Verluste zufügen.\n\nDieser Tag bedeutet nichts Gutes für die nahe Zukunft, doch die Tatsache, dass Lexington und Enterprise noch auf den Meeren kreuzen und unsere Treibstoffreserven praktisch unangetastet sind, ist eine positive Nachricht. Unsere Piloten und Flugzeuge zeigten, dass sie in der Luft wenig zu fürchten hatten - bald werden wir einen Gegenschlag durchführen.>
+
+<HawaiiDefeatDb>(*US) <Der überraschende japanische Luftangriff am Morgen des 7. Dezember richtete verheerende Schäden an.\n\nViele unserer Schlachtschiffe und Kreuze sind versenkt, die meisten anderen schwer beschädigt.\n\nEinige wenige Jäger konnten aufsteigen, aber sowohl sie als auch das heftige Flakfeuer konnten nichts ändern.\n\nDieser Tag der Niedertracht wirft schlimme Schatten auf unsere Zukunft und weitere Angriffe dieser Art sind wahrscheinlich.>
+
+<HawaiiDb>(*US) <Der verräterische japanische Überfall am Morgen des 7. Dezember hat schwere Verluste gefordert.\n\nDie Schlachtschiffe Arizona und Oklahoma sind Totalverluste, California, Nevada und West Virginia sind gesunken, aber wohl noch zu retten, Pennsylvania, Tenessee and Maryland sind schwer beschädigt und fallen für mindestens ein Jahr aus. 188 Flugzeuge wurden zerstört, 159 beschädigt und 2400 Seeleute, Soldaten und Piloten sind gefallen, 1350 verwundet.\n\nEinige wenige Piloten schafften es zu starten, waren aber hoffnungslos unterlegen. Vorläufigen Schätzungen nach verloren die Japaner 29 Flugzeuge und 5 Klein-U-Boote, die nach Pearl Harbor eindringen wollten.\n\nPräsident Roosevelt nannte dies den "Tag der Niedertracht". Ein kleiner Hoffnungsschimmer bleibt. Unsere Träger Lexington und Enterprise waren auf See und entgingen den Japanern, und unsere Treibstoffreserven in Pearl Harbor sind intakt. Wir haben eine Schlacht verloren, aber nicht den Krieg, und wir werden diesen Krieg bis zum Sieg führen!>
+
+<HawaiiBr>(*JA) <Die Spannungen zwischen uns und den Amerikanern sind immer weiter gestiegen in den letzten Jahren. Wir brauchen dringend Rohstoffe für unsere Industrie, die es auf den Heimatinseln und in Manschuko nicht gibt, vor allem Erdöl und Kautschuk.\n\nDie Armee hat den China-Zwischenfall fast erfolgreich abgeschlossen und hat Indochina besetzt. Die Besetzung Indochinas jedoch hatte ein amerikanisches Embargo zur Folge und nun stehen die Zeichen auf Krieg. Es wird immer noch verhandelt in Washington, aber die Chancen auf eine friedliche Einigung sind schlecht.\n\nAdmiral Yamamoto, Flottenchef seit seiner Ernennung zum Marineminister durch Premierminister Prinz Konoye 1937, hat einen Plan. Es ist ein Vabanquespiel, aber es könnte sich auszahlen. Er sieht vor, in einer Art vergrößerten Version des britischen Angriffes auf Tarent von 1940 die amerikanische Flotte im Hafen von Pearl Harbor zu vernichten, und damit unserer Invasionsstreitmacht den Weg nach Malaysia und Indonesien freizumachen.\n\nSobald die US Navy ausgeschaltet ist, sollte es unseren Kräften gelingen, die Kolonien in Ostasien zu besetzen und aus einer Position der Stärke heraus mit den Amerikanern zu verhandeln, zumindest hofft der neue Premier Hideki Tojo dies ...\n\nUnser Trägerverband aus 6 Trägern hat Japan am 26. November verlassen und hält seitdem Funkstille. Das Codewort "Besteigt den Berg Niitaka" wurde gestern empfangen. Kapitän zur See Minoru Genda, Stabsoffizier der ersten Luftflotte hat den Angriffsplan ausgearbeitet und Korvettenkapitän Fuchida wird die erste Welle führen!\n\nLeider hat uns Vizeadmiral Nagumo mitgeteilt, dass keine Flugzeugträger in Pearl Harbor sind, also werden die Schlachtschiffe das Hauptziel des Angriffes werden, zusammen mit den Flugplätzen.\n\nDie Nacht war kurz, und der Morgen ist angebrochen ...\n\n------------------------------------------------------------\n\n>
+
+<HawaiiVictoryDb>(*JA) <Admiral Yamamoto hat alles auf eine Karte gesetzt und gewonnen!\n\nZwar waren keine Träger anwesend, aber die Erfolge gegen Schlachtschiffe und Kreuzer sind überwältigend!\n\nDie US-Pazifikflotte ist als Machtfaktor vorerst ausgeschaltet und wir beherrschen den Pazifik!>
+
+<HawaiiDefeatDb>(*JA) <Yamamotos Wagnis hat sich nicht ausgezahlt.\n\nWir haben nicht nur die Träger verfehlt, sondern auch die Treibstofflager. Allerdings waren die Versenkungserfolge gegen Schlachtschiffe immer noch überwältigend.\n\nDas Machtgleichgewicht ist immer noch auf unserer Seite, aber wir werden nicht viel Zeit haben, um unsere Pläne umzusetzen.>
+
+<HawaiiDb>(*JA) <Admiral Yamamotos Wagnis hat sich ausgezahlt.\n\nWir haben zwar die Träger nicht erwischt, aber dafür ist praktisch die gesamte US-Schlachtschiff-Flotte im Pazifik ausgeschaltet. Die Arizona ist explodiert, die Oklahoma ist gekentert; California, Nevada and West Virginia sind auf Grund gesunken, Pennsylvania, Tenessee und Maryland schwer beschädigt. Wir zerstörten 200 Flugzeuge am Boden und beschädigten weitere 200, und es hat wohl über 3000 Tote gegeben. Unsere eigenen Verluste betrugen 29 Flugzeuge und 5 Kleinst-U-Boote.\n\nDie US-Flotte ist als Machtfaktor vorerst ausgeschaltet, und wir müssen diesen Vorteil nun nutzen.>
+
+<WakeBr>(*JA)		<Unsere Kräfte starteten den Angriff auf Wake Island, welche einen wichtigen Außenposten im Bezug unserer Pläne auf Hawaii und Richtung Kalifornischer Küste vorzurücken, darstellt. Das Atoll ist schwach besetzt und es sollte nur wenige Stunden dauern, sobald die kaiserliche Marine das Feuer eröffnet. Stellen Sie sicher, dass nichts in der Luft oder am Boden ernsthafte Gegenwehr gegenüber unseren Schiffen oder der Infanterie leisten kann.>
+
+<WakeVictoryDb>(*JA)	<Wake Island konnte eingenommen werde. Admiral Kajioka und seine Männer konnten die primitiven amerikanischen Marines schlagen. Wir gaben der verlassenen Insel den Namen "Otori Shima" - Insel der Vögel - ein poetischer Name, der unsere gefallenen Freunde auf ihrem Weg zum Himmel begleiten wird. Zum Glück waren die Verluste gering, sodass wir uns für die schnelle Eroberung dieses schmalen, sandigen Streifens gratulieren können. Der nächste Schritt: Hawaii.>
+
+<WakeDefeatDb>(*JA)	<Ich weis immer noch nicht wie wir gegen derart schwache Feinde verlieren konnten - die Fakten stehen fest: Trotz unserer materiellen und geistiger Überlegenheit konnten eine Hand voll Marines und wenige Piloten die Elite der kaiserlichen japanischen Marine schlagen. Dies ist ein schlechtes Omen, was zukünftige Operationen betrifft ... melden Sie sich beim Hauptquartier um in ein "interessanteres" Kampfgebiet überstellt zu werden.>
+
+<WakeDb>(*JA)		<Es ist unglaublich, dass uns eine so kleine Insel derart große Umstände bereitet und uns so viele Soldaten kostet. Die Motivation des Feindes kann kaum den schrecklichen Preis für diesen Pyrrhussieg erklären. Unsere Verluste erscheinen in einem noch viel fürchterlicheren Licht, wenn wir die Größe der feindlichen Kräfte mit in Bedacht ziehen! Wir können nur hoffen, dass diese sogenannten "US-Marines" uns keine weiteren Probleme in der Zukunft bereiten. Dieser Feind bewies eine beinahe so große Courage wie die kaiserliche Armee - wie es aussieht, scheint dies eine schlechte Angewohntheit dieser Amerikaner zu werden - wie uns auch die andauernden Kämpfe um die Philippinen zeigen. Ich habe Ihnen für Ihren schnellen Einsatz zu danken, hoffen wir nicht mehr auf diese Einheiten zu treffen bis der Krieg zu Ende ist, denn sie erhöhen den Preis für unseren Sieg enorm!>
+
+<WakeBr>(*US)		<Marines! Rühren!\nIch bin mir sicher, das Sie sich über die kritische Situation bewusst sind. Vor einigen Stunden erklärte Japan uns den Krieg und startete den Angriff auf Pearl Harbor und unsere Pazifikflotte. Durch unsere geographische Lage sehen wir uns in der brenzligen Situation ein primäres Ziel der Japaner zu sein - doch Verstärkung ist auf dem Weg und wir haben im Falle einer Invasion aus der Luft Zusicherung auf Luftunterstützung von Flugzeugträgern. Nun zurück auf Ihre Posten! Piloten auf Bereitschaft!>
+
+<WakeVictoryDb>(*US)	<Dank an unsere glorreichen Piloten und Soldaten sowie an die sehnsüchtig erwartete Trägerunterstützung welcher es und ermöglichte die Japaner erfolgreich zurückzuschlagen und den ersten alliierten Sieg im Pazifik davonzutragen. Marines! Sie können sich gratulieren einen Funken Hoffnung losgeschlagen zu haben, welcher unseren Soldaten den Glauben an einen Sieg wiedergibt: Die Japaner haben ihren Ruf, unschlagbar zu sein, endgültig verloren.>
+
+<WakeDefeatDb>(*US)	<Verflucht, Wake fiel schneller als erwartet! Die Marines mussten ohne Unterstützung gegen eine unschlagbare Übermacht in einer ungleichen Schlacht antreten, bevor unsere Flugzeugträger die Insel erreichen und sichern konnten. Wir werden auf eine weitere Gelegenheit hoffen müssen, um doch noch das Blatt zu wenden ...>
+
+<WakeDb>(*US)		<Wir mussten den anstürmenden japanischen Horden lange Zeit, von der Navy verlassen, erbitterten Widerstand entgegensetzen. Doch die Kämpfe zeigen den Japanern das Kampfvermögen unserer Marines: Sie mussten lernen die Boden sowie Lufteinheiten des US Marine Corps zu respektieren. Lassen Sie uns hoffen, dass dieser Krieg uns die Chance gibt die gefallenen Helden von Wake Island zu rächen.>
+
+<CoralSeaBr>(*JA)		<Sie und Ihre Kameraden wurden auserkoren, einen Teil zur nächsten großen Mission der kaiserlichen Marine beizutragen, welche das Ziel anstrebt Neu-Guinea, als Teil der Vorbereitungen einer Invasion Australiens, zu erobern. Admiral Inouye wird unsere Kräfte bei dieser Operation, mit dem Kodenamen MO, kommandieren und das Primärziel, den Flugplatz auf Moresby zu erobern, sowie das Sekundärziel, die Errichtung eines Stützpunktes für Wasserflugzeuge im Zentrum der Salomonen auf Tulagi zu errichten, erfolgreich abschließen. Admiral Yamamoto hat sich zum Ziel gesetzt jeden feindlichen US-Flugzeugträger in der Gegend zu zerstören. Die Träger der 5. Trägerdivision (Shokaku & Zuikaku) werden diese ehrenhafte Aufgabe übernehmen, während der leichte Träger Shoho die Unterstützung der Landetruppen bei ihrem Angriff auf Moresby übernehmen wird.>
+<CoralSeaVictoryDb>(*JA)	<Das Kido Butai Oberkommando ist mit Ihnen zufrieden. Gute Arbeit, Samurai! Die amerikanische Trägerflotte des Südpazifik wurde während einer einzigen Schlacht zerstört. Nun steht kein Hindernis mehr zwischen uns und der australischen Küste. Die Australier müssten Dummköpfe sein, wenn sie jetzt noch ihren sinnlosen Kampf gegen unsere glorreiche Armee fortführen würden - wo sie nun jede Unterstützung ihrer amerikanischen und britischen Alliierten verloren haben. Die 5. Trägerdivision sowie andere Marineeinheiten wurden augenblicklich zurück nach Truk beordert, um Reparaturen und Nachschub zu erhalten - aufgrund ihres großen Erfolgs werden sie vermutlich in der nächsten Schlacht des Kido Butais, welche über Sieg oder Niederlage entscheiden wird, eingesetzt. Wir werden baldigst Ihren großen Dienst für den Kaiser belohnen - seien Sie sicher, dass der gesamte Kanto Ihren Sieg mit Begeisterung und Stolz feiern wird!>
+<CoralSeaDefeatDb>(*JA)	<Wir sollten stets wachsam bleiben und unser Glück nicht überstrapazieren. Diese Schlacht lehrt uns diese bittere Lektion. Der Feind demonstrierte seine Fähigkeit, Flugzeugträger effektiv einzusetzen und erreichte ein Stoppen unserer Offensive in diesem Gebiet. Die Operation MO wurde nach großen Verlusten unsererseits abgeblasen und sämtliche verbleibenden Schiffe nach Rabaul oder Truk zurückbeordert, um möglichst bald wieder einsatzbereit zu sein. Ich muss daran erinnern, dass dieser Krieg möglichst schnell gewonnen werden muss, da sonst mit schweren Konsequenzen zu rechnen ist: Der Feind wird von Tag zu Tag stärker und derartige Rückschläge sind uns nicht hilfreich. Hoffen wir, dass die nächste große Operation uns helfen wird. Es werden keine weiteren Fehler akzeptiert.>
+<CoralSeaDb>(*JA)		<Wir sind unschlüssig über den Erfolg der Gefechte. Der taktische Sieg kann nicht die Tatsache kompensieren, dass der Flugplatz Moresby noch in alliierten Hand ist und den Australiern eine Atempause verschafft. Wir sollten zügigst zurückkehren und das Begonnene zu Ende führen - dies sollte keine weiteren Schwierigkeiten mit sich ziehen. Die 5. Trägerdivision kehrte nach Truk zurück, die beschädigten Einheiten werden zu den Heimatinseln zurückkehren, um eine vollständige Wiederherstellung ihrer Kampfkraft zu garantieren.>
+<CoralSeaBr>(*US)		<Fragen Sie mich bloß nicht, wie wir an die Informationen gelangen konnten, aber der Geheimdienst meldet, dass die Japaner bereits sehr bald einen großen Schlag im Bereich des Korallenmeeres planen. Es wurde eine Task Force (Einsatzgruppe), bestehend aus der USS Lexington (TF11) sowie der USS Yorktown (TF17) unter dem Kommando von Konteradmiral Fletcher gebildet und in die Gegend geschickt, um auf die Bedrohung reagieren zu können. Falls die Japaner etwas später kommen als erwartet, können wir mit der Hilfe der USS Hornet/USS Enterprise-Task Force rechnen, welche gerade vom nördlichen Pazifik zurückkehren. Doch ihr Weg ist weit und wir können ihre Hilfe nicht vor mindestens einer Woche erwarten. Bis dahin werden wir uns selbst dem Feind stellen müssen - Das bedeutet die Aufklärung sowie die Zerstörung der feindlichen Träger sowie Landungskräfte - dies sind unsere Hauptziele. Finden Sie die Träger - sobald sie am Grund des Ozeans liegen, steht nichts mehr zwischen uns und der Invasionsflotte.>
+
+<CoralSeaVictoryDb>(*US)	<Sehr gut, Männer! Ihr konntet den Japanern die empfindlichste Niederlage ihrer Geschichte verpassen! Natürlich, Tokio ist fern, sehr fern. Doch nach diesem Schlag muss Japan ernsthaft darüber nachdenken, ob der Krieg wirklich eine so gute Idee war. Pearl Harbor ist gerächt, gute Arbeit! Nun geht's ab nach Norden, es wird gemunkelt, dass wir dort gebraucht werden. Japan hat noch nicht alle Karten auf den Tisch gelegt ...>
+<CoralSeaDefeatDb>(*US)	<Unsere Truppen wurden verlegt! Die Freiheit Australiens wird bald ein blutiges Ende erleben - und das ist auf unser Versagen zurückzuführen, da wir unsere Alliierten nicht aus den Fangarmen der japanischen Krake befreien konnten. Wir dürfen keine Zeit mehr verlieren - Australien ist möglicherweise verloren, das ist wahr. Doch wir werden noch weitere Schlachten im Zentrum des Pazifiks führen und die gesamte japanische kombinierte Flotte bekämpfen, um unsere eigene Freiheit zu wahren. Nach der Niederlage im Korallenmeer dürfen wir kein weiteres Desaster riskieren, sonst findet die nächste Schlacht irgendwo zwischen Seattle und San Diego statt ...>
+
+<CoralSeaDb>(*US)		<Beide Seiten erlitten hohe Verluste in der ersten Trägerschlacht der Geschichte. Es gab keinen einzigen Kampf Schiff gegen Schiff, doch wir wissen, dass die Verwendung von Kampfflugzeugen in diesem neuen Krieg keineswegs das verbreitete Unheil lindern wird. Auf dem Papier gibt es weder einen Sieger noch einen Verlierer. Fakt ist, dass wir die japanische Invasion Port Moresbys stoppen und erneut zeigen konnten, dass die japanischen Truppen nicht unbesiegbar sind und mit ein wenig Engagement erfolgreich aufgehalten werden können. Doch wir können uns keine großen Verluste erlauben: Wenn wir die japanische Kriegsmaschinerie stoppen wollen, müssen wir in naher Zukunft klare Siege erringen.>
+<MidwayBr>(*JA)		<Seit der Schlacht im Korallenmeer wissen wir, welche Probleme die US-Trägerflotte für unsere weiteren Operationen darstellt. Der sogenannte "Doolittle Raid" einiger mittlerer US-Bomber auf Tokio war lediglich ein Vorgeschmack auf das, wozu der Feind in der Lage ist.\n\nAdmiral Yamamoto konnte schließlich das kaiserliche Hauptquartier von seinen Plänen, Midway zu erobern, überzeugen.\n\nZeitgleich dem Bombardement unserer Marinebomber auf Midway, wird eine zweite Flotte einen Angriff auf die Aleuten starten. Hoffentlich wird eine dieser Operationen die US Trägerflotte aus ihrem Versteck Pearl Harbor locken und sie in die von unseren U-Booten überwachten Gewässern führen. Dann können wir unsere schweren Kriegsschiffe einsetzen und das Blatt endgültig auf unsere Seite wenden!\n\nDie Operation MI wurde am 26.Mai gestartet, als die Angriffsflotte mit dem Ziel der Aleuten den Heimathafen in Japan verließ. Am folgenden Tag, dem 29., verließ Amiral Nagumos Trägerflotte die Häfen, mit Kurs auf Midway - gefolgt von Truppentransportern und der Schlachtflotte. Admiral Yamamoto persönlich wird die Operationen leiten, an Bord des gigantischen Schlachtschiffs Yamato.\n\nDie unglückliche Operation K, die Langstreckenaufklärung auf Pearl Harbour, geplant für den 31.Mai, musste abgebrochen werden. Doch die Yamato konnte vermehrten Funkverkehr von und zur Insel Midway feststellen. Wir wissen nicht, wo sich die feindlichen Träger befinden, doch sie sind irgendwo in der Gegend - möglicherweise schlucken sie den Köder ...\n\n------------------------------------------------------------\n\n>
+<MidwayVictoryDb>(*JA)	<Admiral Yamamotos Plan scheint teilweise aufzugehen.\n\nAuch wenn wir die Invasion Midways aufgrund hoher Verluste abbrechen mussten, erlitt die US-Flott signifikante Schäden und wird unsere weiteren Eroberungen nicht verhindern können - auch nicht mit der Verstärkung, welche sie von der Atlantikflotte erwartet. Unsere dadurch entlasteten Verbündeten, Deutschland und Italien, werden uns helfen den Endsieg zu erringen.\n\nWir werden unsere generelle Vormachtstellung im Pazifik behaupten, bis wir eine neue Invasionsflotte aufbauen können. Währenddessen geht die Eroberung der Aleuten mit bisher guten Ergebnissen voran.>
+
+<MidwayDefeatDb>(*JA)	<Die gesamte Operation ist eine Katastrophe!\n\nNicht nur, dass wir die Invasion Midways abblasen mussten: Wir konnten den feindlichen Flotte keinerlei Verluste zufügen und haben selbst alle Flugzeugträger, viele Kreuzer, U-Boote und tausende erfahrene Seeleute und Piloten verloren ... alles für ein wenig erfolgreiches Bombardement auf Midway.\n\nEs ist der Anfang vom Ende und viele unserer Offiziere werden in den nächsten Tagen den Seppuku antreten!\n\nUnsere gedemütigte Marine wird nun jede erdenkliche Hilfe für die kaiserliche Armee bereitstellen müssen, während die US-Trägerflotte nun in der Lage ist eine Offensive zu starten - der Feind ist zu gleicher Stärke aufgestiegen.>
+<MidwayDb>(*JA)		<Der komplizierte Plan Admiral Yamamotos zeigte seine Schwächen, und dies schmerzt ... wir verloren die Träger Akagi, Kaga, Soryu und Hiryu sowie den schweren Kreuzer Mikuma - im Gegenzug konnten wir lediglich die USS Yorktown versenken und etwas Schaden auf Midway selbst anrichten.\n\nDie US-Piloten, mit mutigem Geist und viel Glück, gewannen abermals wegen taktischer Fehlentscheidungen Admiral Nagumos. Während unsere Piloten ihren Einsatz heldenhaft erfüllten, verloren wir mehr als 110 von ihnen und mehr als 2500 hochspezialisierter Seeleute.\n\nAuch wenn der Feind mehr Piloten verloren haben sollte, ist dies keine Entschuldigung. Während die Schlacht um die Aleuten fortgesetzt wird, wird der Zentral- und Südpazifik vermutlich keine japanische Expansion mehr erleben.>
+<MidwayBr>(*US)		<Nach der Schlacht im Korallenmeer bereiten sich die US Navy sowie die Japaner auf ein neues Duell vor, welches den Beginn einer US-amerikanischen Offensive darstellen könnte - dies hängt jedoch vom Ausgang des Duells ab. Die Moral unter den US-Truppen steigt nach dem Doolittle Raid auf Tokio im April. Doch wir wissen alle, das die Machtverhältnisse noch auf Seiten der Japaner liegen.\n\nDas Midway Atoll wurde am 28.August 1867 unter Commander Reynolds, Kapitän der Lackamawa, für die USA beansprucht. Seit dessen fand es wenig Nutzen - mit Ausnahme einer Radiostation und als Zwischenstop für Passagier-Flugboote in den 30er Jahren.\n\nDie strategische Bedeutung wurde von der US-Regierung erst 1939 erkannt, wodurch die Inseln verstärkt von der Army benutzt wurde. Die Inseln wurden am 7.Dezember 1941 von zwei japanischen Zerstörern unter Beschuss genommen. Seit diesem Zwischenfall wurde der Verstärkung mehr Bedeutung beigemessen, sodass die Flugfelder mit vielen verschiedenen Typen wie Vindicator, Dauntless, Buffalo, PBY, B17, Wildcat, Avenger und B26 aufgestockt wurden.\n\nSeit es der "Hypo" Geheimdienststation auf Pearl gelang große Teile des KJM-Codes zu knacken, wissen wir, das Midway bald von der größten jemals ausgelaufenen japanischen Flotte -größer als die Angriffsflotte auf Pearl Harbor - attackiert werden wird. Als Konsequenz beorderte Admiral Nimitz in Folge seines OP-Plans 29-42 die Carrier Task Force 16 und 17 unter Konteradmiral Frank J Fletcher und Admiral Ray Spruance zu der Position "point luck", 325 Meilen nordöstlich von Midway, um auf das Eintreffen des Feindes zu warten, welches am frühen Morden des 3.Junis erwartet wurde ...\n\n------------------------------------------------------------\n\n>
+
+<MidwayVictoryDb>(*US)	<Unsere Piloten können Stolz auf diesen großen Sieg sein, welcher selbst die optimistischsten Erwartungen Admiral Nimitz' bei weitem übertrifft und die japanische Marine, bei denkbar geringen eigenen Verlusten, komplett aufrieb.\n\nNun können wir in die Offensive gehen, der japanische Eroberungsfeldzug ist gestoppt!>
+<MidwayDefeatDb>(*US)	<Wir konnten die Befehle von Admiral Nimitz nicht befolgen und verloren dadurch wesentlich mehr als nötig gewesen wäre.\n\nNatürlich hatten wir genug Glück, die Invasion Midways zu verhindern, doch mit unserer angeschlagenen Pazifikflotte müssen wir auf Verstärkungen aus dem Atlantik warten, was unsere Strategie gegen die Achsenmächte, global gesehen, in Gefahr bringt.\n\nWenn wir uns noch weitere dieser "Teilsiege" leisten, wird Japan seine Macht über den Pazifik noch lange nicht verlieren ...\nUm unsere Flotte wieder zu verstärken werden dort ebenso dringend benötigte Schiffe aus dem Atlantik abkommandiert - dies wirft ein schlechtes Licht auf unsere Lend&Lease- Hilfeleistungen.>
+<MidwayDb>(*US)		<Durch Einsatzbereitschaft, Mut, und nicht zuletzt ein bisschen Glück ist es uns gelungen, die Schlacht um Midway siegreich zu beenden. Unserem verlorenen Träger (Yorktown) stehen vier der besten Träger Japans (Akagi, Kaga, Soryu und Hiryu) als gesunken gegenüber, dazu kommt noch der schwere Kreuzer Mikuma.\n\nDie Verluste unter unseren Männern waren mit 189 gefallenen Piloten sehr hoch. Doch dieser Sieg wurde gegen die größte im Pazifik kreuzende Flotte erzielt.\n\nWir werden aus unseren Fehlern lernen, und die veralteten Devastators und Vindicators haben möglicherweise ihren letzten Einsatz erlebt. Doch nun ist die Zeit gekommen an die Offensive zu denken, da wir eine beinahe gleich starke Trägerflotte wie die Japaner vorweisen können.>
+
+<TarawaBr>(*JA)		<Unseren letzten Informationen zufolge plant der Feind einen massiven Schlag gegen die Gilbertinseln. Alle verfügbaren Kräfte werden dazu eingesetzt feindliche Einheiten im Gebiet aufzuspüren. Es ist heftige Gegenwehr von trägergestützten Einheiten zu erwarten, wenn eine Operation im Gang ist - die neuen feindlichen Flottenträger sind einsatzbereit und unterstützen eine mögliche Invasion im Makin und Betui Sektor.>
+
+<TarawaVictoryDb>(*JA)	<Obwohl die Alliierten Hunderte Flugzeuge in diese Operation warfen, war es ihnen nicht möglich ihren Marines ausreichende Luftunterstützung zur Verfügung zu stellen, wodurch diese enorme Verluste durch unsere tapfere Garnison erlitten.\n\nZusätzlich erlitt ihre Flotte hohe Verluste durch U-Boote sowie aus der Luft.\n\nEs war ein Pyrrhussieg für die Amerikaner: Sie werden es sich nicht leisten können, den Krieg unter diesen Vorraussetzungen weiterzuführen!>
+
+<TarawaDefeatDb>(*JA)	<Mittels tausender eingesetzter Flugzeuge war es dem Feind möglich, eine effektive Bombardierung durchzuführen, welche ihnen die Invasion erheblich erleichterte.\n\nUnsere heldenhaften Verteidiger konnten keine ernstzunehmende Verteidigung aufbauen.\n\nDie amerikanische Luftüberlegenheit war so lückenlos, dass wir der feindlichen Flotte keine nennenswerten Schäden zufügen konnten.>
+
+<TarawaDb>(*JA)		<Wir konnten Tarawa nicht retten, doch der Sieg musste von den Amerikanern teuer bezahlt werden.>
+
+<TarawaBr>(*US)		<Die Ereignisse im Jahr '43 überschlagen sich. Die Japaner konnten von den Aleuten und damit aus dem Nordpazifik verdrängt werden; mit der Landung der 3rd Marine Division auf Bougainville geht die Eroberung der Salomonen im Südpazifik in die entscheidende Phase. General MacArthur konnte im Südpazifik Ost Neu-Guinea sichern und bereitet sich darauf vor, die Bismarck Inseln zu erobern.\n\nDie Gilbertinseln sind eine Inselgruppe des Korallenmeeres auf der Äquatorlinie, 1765 entdeckt von Commander Byron. Sie wurden seit dem 27.Mai 1892 von den Briten gehalten, bis sie beim Ausbruch dieses Krieges im Dezember 1941 von den Japanern überrannt wurden. Sie befinden sich im Norden sowie im Westen anderer Inseln, welche in unserem Besitz sind, während sie südlich und östlich von wichtigen japanischen Basen auf den Karolinen sowie Marshallinseln umgeben sind.\n\nWährend der QUADRANT Konferenz in Quebec, August 1943, wurde die Strategie gegen Japan festgelegt. Man entschied sich für Operationen im Bereicht der Gilbert und Marshallinseln sowie der Marianen.\n\nViceadmiral R.A.Spruance, welcher die TF50,TF54 und TF57 kommandiert, befindet sich in der Vorbereitung der Operation GALVANIC. Als Teil der TF50 muss Konteradmiral A.E. Montgomerys südliche Trägergruppe feindliche Flugzeuge abfangen und wenn nötig für Nachschub sorgen. Die 2nd Marine Division wird mit der Aufklärung der schwer verteidigten Betio Insel im Südwesten des Tarawa Atolls beginnen.\n\nWir müssen den Feind überraschen, also werden keine Vorbereitungen aus der Luft durchgeführt. Wir müssen in möglichst kurzer Zeit effektiv zuschlagen. Luftunterstützung wird sehr schwer zu gewährleisten sein, sobald die Marines an Land gehen da Angreifer und Verteidiger sich praktisch Auge in Auge gegenüberstehen.\n\n------------------------------------------------------------\n\n >
+
+<TarawaVictoryDb>(*US)	<Mit den 900 eingesetzten Flugzeugen war es uns möglich eine sehr gründliche Vorbereitung der Invasion innerhalb kürzester Zeit durchzuführen.\n\nDank unseres Einsatzes erlitten die Jungs am Boden wesentlich weniger Verluste durch die japanische Garnison als angenommen. Und die Luftnahunterstützung war äußerst effektiv, obwohl sich die Marines und Japaner so dicht gegenüberstanden.\n\nWir hatten beinahe vollständige Luftüberlegenheit und können mit dem exzellenten Ergebnis, nur geringe Schäden an der Flotte erlitten zu haben, äußerst zufrieden sein.\n\nDieser Sieg gibt uns weitere Flugfelder auf dem Weg direkt ins Herz der japanischen Präsenz im Zentralpazifik. Zusätzlich können wir nun auf die Hellcat setzen, welche nun ihre Überlegenheit gegen die Zero beweisen konnte. >
+
+<TarawaDefeatDb>(*US)	<Trotz 900 für diese Mission zur Verfügung stehenden Flugzeugen gelang es uns nicht, ausreichende Luftunterstützung für die 2nd Marine Division zu stellen, und so mussten sie schreckliche Verluste durch die feindliche Garnison erleiden - teils sogar durch Beschuss eigener Einheiten aus der Luft!\n\nZusätzlich erlitt die Flotte schwere Verluste durch Angriffe aus der Luft und durch U-Boote.\n\nDa die Hälfte der Amerikanischen Kräfte im MTO eingesetzt wird, können wir uns keine Siege dieser Art mehr leisten, oder wir bekommen Tokio nicht vor 1960 zu Gesicht!!! >
+
+<TarawaDb>(*US)		<Durch die 900 eingesetzten Flugzeuge gelang uns ein effektives Bombardement zur Vorbereitung der Invasion.\n\nDoch der Abbruch der letzten Bombardierung war ein Fehler, wodurch die 2nd Marine Division schwere Verluste durch die schnell wiederbesetzten MG und Küstenartilleriestellungen der Japaner erlitt.\n\nDie Luftnahunterstützung war ebenso nicht besonders effektiv, da aus der Luft oft unklar war, ob es sich um feindliche Verteidiger oder Marines handelt.\n\nDie Luftüberlegenheit war nicht 100%ig, doch mit nur einem, durch ein U-Boot versenkten Träger sowie einen weiteren, durch einen Torpedobomber beschädigten, kann sich das Ergebnis sehen lassen.\n\nNach dieser verlustreichen Operation müssen wird unsere Invasionstaktik überdenken, doch ab jetzt können wir auf die Hellcat vertrauen, welche uns sämtlichen Zeken vom Leibe halten wird.>
+
+<PalauBr>(*JA)		<Wir hätten es wissen sollen. Wir dachten, dass Palau erst nach den Marianen das Ziel der Amerikaner darstellt - doch wir irrten. Nun, da die Marianen verloren sind, fällt Feuer auf unsere Köpfe, mitten in Peleliu, unserem Stärkepunkt im Archipelago. Wir müssen verharren und die Marines zurück ins Meer jagen - mit allem was wir aufbieten können! Unsere verbliebenen Kräfte in diesem Gebiet, den Philippinen und Neu-Guinea wurden naturgemäß mit dieser Aufgabe beauftragt.>
+
+<PalauVictoryDb>(*JA)	<Peleliu ist gefallen, obwohl es sehr schwere Kämpfe gegen feindliche Luft- und Seeeinheiten gab. Die kampferprobte 1st Marine Division wurde komplett ausgelöscht, sodass der Feind neue Kräfte für die Invasion zuziehen musste. Solche Verzögerungsaktionen sind für uns sehr profitabel und sie kosten dem Feind viele Soldaten, was die Moral der USA stark beeinträchtigen wird - Danke für Ihre erbrachten Leistungen!>
+
+<PalauDefeatDb>(*JA)	<Obwohl die Verteidiger anfangs der 1st US Marines Elite-Division widerstehen konnten - wobei die Anhöhen keine besonders gute Verteidigungslage bilden, konnten die starken Verluste den Feind nicht daran hindern den Sieg zu erringen. Der von uns gezahlte Preis ist zu hoch - hoffen wir, dass die Philippinen uns als Schlachtfeld mehr Glück bringen.>
+
+<PalauDb>(*JA)		<Die Umurbrogol-Anhöhen waren der Untergang der 1st US Marines Division. Hunderte, möglicherweise Tausende Marines ließen ihr Leben für einen einsamen Felsen ohne jeglichen strategischen Wert - dies sind gute Nachrichten und wir werden die Amerikaner noch wesentlich empfindlicher treffen, falls sie wie von uns vermutet eine Invasion der Philippinen starten werden!>
+
+<PalauBr>(*US)			<Operation Stalemate hat begonnen. Nachdem wir die Japsen von den Marianen gefegt haben, ist unsere Trägerflotte auf dem Weg nach Palau, um die linke Flanke unseres Vormarsches auf die Philippinen und Taiwan zu sichern. Die Marines von Rupertus werden auf Peleliu, einer teils befestigten Insel, landen und den Flugplatz sowie die japanische Garnison zum Schweigen bringen, um uns die linke Flanke unserer Offensive von feindlichen Luft- und Seebewegungen frei zu halten.>
+
+<PalauVictoryDb>(*US)	<Peleliu fiel wie eine reife Frucht. Verluste traten auf, doch die Operation wurde mit hoher Effektivität durchgeführt. Gute Arbeit! Es ist niemand auf der linken Flanke übrig, der uns noch bei unserer Reise nach Manila oder Taipeh im Weg stehen könnte.>
+
+<PalauDefeatDb>(*US)	<Wir sollten den Generalstab darüber informieren, dass US Marines keine entbehrlichen Billigsoldaten sind, welche in dummen und sinnlosen Offensiven, wie dieser, verheizt werden können. Noch ein paar derartige Operationen und ich wette, dass unsere Soldaten beginnen sich Gedanken über die gute alte Zeit zu machen und Reißaus nehmen ... Wir können uns keine weiteren nutzlosen Opfergaben leisten.>
+
+<PalauDb>(*US)			<Peleliu war eine wahre Qual für unsere Soldaten. Die Verluste sind hoch. Natürlich ist auf der Insel keine einzige japanische Kokosnusspalme übrig, doch der hohe Preis lehrt uns, dass wir unsere tapferen Marines nicht länger als simples Kanonenfutter in solchen aufwändigen, aber ineffektiven, Operationen missbrauchen dürfen. Doch nun geht es weiter vorwärts!>
+
+<IwoBr>(*JA)		<Nach Wochen ungestörter Abfangoperationen gegen die teuflischen Bomberströme, welche unser Heimatland zum Ziel haben, steht Iwo Jima nun vor der Bedrohung einer Invasion. General Tadamachi Kuribayashi fürchtet eine derartige Attacke und ließ die kleine Insel in eine gigantische Festung umbauen. Er versicherte, bis zum letzten Ende zu kämpfen: Als Pilot der kaiserlichen japanischen Armee haben Sie die Pflicht und die Ehre in die Fußstapfen der Samurais zu treten und den Amerikanern empfindliche maritime Verluste zuzufügen. Beide, die Armee und die kaiserliche Luftwaffe erfüllen ihre Aufgabe gut genug. Iwo Jima wird ein Ort des Untergangs für Tausende und Abertausende dieser westlichen Teufel. Die Flagge der aufgehenden Sonne wird bestehen, stolz und siegreich über den Höhen von Suribachi wehen!>
+
+<IwoVictoryDb>(*JA)	<Wir haben verloren, doch dies äußerst brillant! In Wirklichkeit haben wir nicht verloren - wir sind sicher, dass Iwo Jima als weiterer glorreicher Sieg der kaiserlichen Armee in die Geschichte eingehen wird: Werfen Sie einen Blick auf die vielen abgefangenen Feindmeldungen und Sie werden erkennen, dass es keine Niederlage für uns, sondern ein äußerst blutiger Pyrrhussieg der Marines war. Lassen Sie uns hoffen, dass Amerika seine Strategie beibehalten wird - solange sie uns auf diese Weise bekämpfen, gibt es keine einzige Chance auf einen entscheidenden Sieg für die USA.>
+
+<IwoDefeatDb>(*JA)	<Der Wille der Verteidiger Iwo Jimas reichte nicht aus, um die gewaltige Übermacht zu bezwingen, welche der kleinen Insel entgegenstand. Die blutigen Kämpfe um Iwo Jima kosteten tausenden teuflischen feindlichen Soldaten das Leben - doch ebenso unzähligen tapferen Samurais. Ein solch hoffnungsloses Opfer hätte ein besseres Schicksal verdient ...>
+
+<IwoDb>(*JA)		<Es ist korrekt, dass Iwo Jima in feindliche Hände fiel - doch nicht ohne einen letzten siegreichen Schrei Kuribayashi Sans. Kein einziger Samurai überlebte, alle gingen sie den ehrenhaften Weg, in der Tradition des Bushido. Der Kaiser ist stolz auf seine gefallenen, ruhmreichen Söhne. Lang lebe das Reich und der Kaiser!>
+
+<IwoBr>(*U*)	<Die Insel Iwo Jima ist wie ein lästiges Hindernis für unsere B29-Superfortress Bomber auf ihrem Weg nach Japan - mitten in den Marianen. Wir müssen diesen Störfaktor ausschalten indem wir eine Invasion durchführen. Da wir weder feindliche Aktivitäten aus der Luft, noch zur See ernsthaft fürchten müssen, wird die Navy erst die Insel sturmreif schießen und nach der Landung weitere Unterstützung geben. Seien Sie bereit, in den nächsten Tagen Kindermädchen für die Marines zu spielen. Doch zuerst müssen wir den Luftraum über und um Iwo Jima von feindlichen Flugzeugen befreien. Machen Sie sich auf japanische Piloten der Armee gefasst, welche nichts zu verlieren und nichts zu gewinnen haben. Los, los Jungs!>
+
+<IwoVictoryDb>(*U*) <Gute Arbeit, Männer, dieser tödliche Felshaufen fiel nach Wochen blutiger Kämpfe endgültig in die Hände unserer Soldaten. Es benötigte mehr Zeit als erwartet, doch das Ergebnis ist bereits gelandet: LeMays B-29 beglückwünscht Sie zu Ihrer Professionalität. Wirklich gute Arbeit!>
+
+<IwoDefeatDb>(*U*)	<Iwo Jima war ein blutiges Massaker! Wir verloren tausende Menschenleben nur, um diesen verfluchten Superfortress-Boys einen weiteren Tankplatz zu geben! Es scheint, dass das Leben eines Marines nicht viel mehr Wert ist als ein Klumpen billiges Fleisch, wenn es um idiotische strategische Entscheidungen geht.>
+
+<IwoDb>(*U*)		<Wir verloren hunderte Marines. Eine weitere Insel, ein weiteres Gemetzel - werden es die japanischen Teufel irgendwann begreifen? Hauptsache unsere B-29s können nun hier landen, um aufgetankt und repariert zu werden - ich hoffe lediglich, dass unsere Freunde in den Superfortress bei jeder Landung den hohen Blutzoll unserer GIs zu schätzen wissen ...>
+
+<OkinawaBr>(*JA)	<Die feindliche Flotte wurde vor einigen Tagen mit Kurs auf Okinawa gesichtet. Die Flaggschiffe eröffneten gestern Abend bis heute morgen das Feuer auf unsere Stellungen. Wir müssen schnell handeln und die US Navy empfindlich treffen. Der Generalstab ordnete an, Kamikaze-Aktionen durchzuführen, welche auf ihrem Weg zum Ziel Begleitschutz brauchen werden. Stellen Sie sicher, dass unsere tapferen Helden ihr Ziel erreichen und die schwere Aufgabe ungestört von Feindflugzeugen erfüllen können.>
+
+<OkinawaVictoryDb>(*JA)	<Wir konnten den Amerikanern eine schwierige Zeit bereiten. Hunderte Schiffe wurden versenkt und unzählige Marines und Seeleute fielen durch die Kamikaze-Piloten und durch unsere Bomben. Dies war ein wichtiger Punkt in unserer Geschichte und viele Generationen werden uns für diese Arbeit danken. Nun werden es sich die Amerikaner zweimal überlegen, bevor sie es wagen, einen Fuß auf den heiligen Boden Japans setzen.>
+
+<OkinawaDefeatDb>(*JA)	<Okinawa fiel schneller als erwartet. Natürlich schmälert dies nicht unseren Willen zu kämpfen, doch wir suchen noch immer nach der ultimativen Waffe, um unseren vom Teufel gesandten Feind davon abzuhalten unser heiliges Land weiter anzugreifen. Doch selbst wenn wir von den Göttern mit einem derart schwerem Schicksal beladen wurden, werden wir den Amerikanern jene Schwierigkeiten bereiten, nach denen sie suchen.>
+
+<OkinawaDb>(*JA)		<Okinawa fiel trotz allem Widerstand. Doch wir erteilten den Amerikanern eine bittere Lektion, bei welcher die Eindringlinge hohe Verluste in Kauf nahmen. Ein weiterer Angriff wie dieser könnte die Moral der Amerikaner zum Kollaps führen. Nun dürften sie ein klares Bild davon haben, welche Opfer wir zu geben bereit sind - wenn sie wirklich daran denken sollten unser heiliges Land zu erobern.>
+
+<OkinawaBr>(*U*)		<Morgen werden wir Okinawa angreifen, die größte Insel der Japaner in den Ryukyus. Diese ultimative Schlacht wird eine gigantische Wiederholung erleben, sobald die Invasion der Hauptinseln startet - machen sie sich bereit, jede einzelne Hütte der Japaner zu erobern. Wenn nötig werden sowohl US als auch britische Trägergruppen Luftnahunterstützung und Aufklärungsmissionen über dem Zielgebiet fliegen. Da sich die japanische Situation weiter verschlechtert, sollten wir uns auf vermehrten Einsatz von Kamikazeflugzeugen gefasst machen: Die todgeweihten Flugzeuge dürfen den Verteidigungsschirm nicht durchbrechen - andernfalls haben wir mit kritischen Verlusten zu rechnen!>
+
+<OkinawaVictoryDb>(*U*)	<Unsere Verluste um Okinawa sind wesentlich geringer als erwartet. Das ist die Nachricht, die beweist, dass eine Invasion der Heimatinseln durchaus denkbar ist. Wir werden uns auf dieses Finale vorbereiten, welches bereits sehr bald zur Realität werden wird.>
+
+<OkinawaDefeatDb>(*U*)	<Okinawa ist mit unserem Blut getränkt. Wir verloren mehr Männer als erwartet. Noch schlimmer als das, ist die Moral der Japaner, welche stärker denn je erscheint. Wie können wir ihren Willen brechen? Wenn wir nicht mit konventionellen Mitteln siegen können, müssen wir etwas anderes finden, um diesen endlosen Krieg zu einem Ende zu führen.>
+
+<OkinawaDb>(*U*)		<Okinawa ist erobert - doch es kostete uns tausende Leben der Navy, Marines und Briten. Solch ein Resultat ist äußerst ärgerlich und lässt uns über die Möglichkeit, Japan einer Invasion zu unterwerfen, zweifeln. Doch es scheint die einzige Lösung zu sein, die Führer Japans zu einer Kapitulation zu bewegen.>
+
+<Guadal1Br>(nUS)		<Seit Mai besetzen die Japaner das Zentrum des Salomonen Archipels. Nun begannen sie mit der Errichtung eines Flugfeldes, welches nach seiner Fertigstellung eine große Gefahr für uns darstellen wird. Das Ziel ist es den kleinen Streifen zu erobern und die Japaner weit, weit weg von Guadalcanal zu vertreiben. Sie werden zum Tulagi Archipel verlegt, um Landungseinheiten dort Luftunterstützung zu geben. General Vandergrifts Marines werden die Speerspitze unserer großangelegten Offensive im Pazifikkrieg sein - und glauben Sie mir, es gibt keinen Freiraum für Fehler. Erwarten Sie heftige feindliche Luftbewegungen, da Sie es mit der Elite der japanischen Marineluftwaffe in Rabaul zu tun haben: Die Transporter müssen um jeden Preis geschützt werden!>
+
+<Guadal1Db>(nUS)		<Heute früh konnten einige feindliche Kreuzer zwischen Savo und Guadalcanal durchbrechen und unglaubliche Schäden an unseren Schiffen anrichten. Wir können unsere Schiffe nicht länger aufs Spiel setzen. Admiral Fletcher ordnete einen Rückzug unserer Trägerkräfte an. Dies wird den Japanern erlauben sich auf die nächste Konfrontation mit der alliierten Flotte vorzubereiten.>
+
+<Guadal2Br>(mUS)		<Henderson Field auf Guadalcanal ist nun vollständig einsatzbereit. Ihre Marines werden dort landen und möglichst bald Einsätze fliegen. Sie werden sich sowohl gegen Angriffe aus der Luft als auch vom Meer in Acht nehmen müssen. Tun Sie Ihr Bestes, den Nachschub des Gegners zu unterbrechen und damit die Probleme unserer nachfolgenden Infanterie zu minimieren. Wenn wir es schaffen, das Flugfeld zu verteidigen, stehen wir nicht in Gefahr die Kontrolle über die Insel zu verlieren.>
+
+<Guadal2Br>(aUS)		<Seit das Henderson Flugfeld aktiv genutzt werden kann, leistet die Cactus Air Force gute Arbeit bei der Störung japanischer Nachschubeinheiten sowie der Verteidigung der Insel. Ihre Gruppe wird auf das Feld verlegt und soll möglichst bald mit der Unterstützung der bereits dort stationieren Marines sowie der Navy bei ihren wichtigen Missionen beginnen. Schützen Sie das Flugfeld, eskortieren Sie Ihre Kameraden bei Angriffen auf japanische Schiffe und geben Sie den Soldaten am Boden Luftunterstützung.>
+
+<Guadal2VictoryDb>(*US)	<Gute Arbeit! Guadalcanal wurde laut Zeitplan erobert. Sie können stolz auf Ihr Resultat sein: Nach diesem entscheidenden Wendepunkt kann ich Ihnen versichern, dass unsere Kräfte nie mehr in die Verteidigungsposition gedrängt werden. Doch bedenken Sie, dass der Kampf um den Sieg erst begonnen hat: Setzen Sie Ihre Arbeit fort!>
+
+<Guadal2DefeatDb>(*US)	<Obwohl US-Truppen gegen die Wellen angreifender Japaner bestehen konnten, waren unsere Luft- und Seeeinheiten nicht in der Lage, für Deckung und Nachschub während dieses blutigen Stillstands und somit für den Sieg zu sorgen. Transporter evakuierten die letzten Soldaten, viele von ihnen sind von den japanischen Gräueltaten geschockt oder an den unwirtlichen Lebensbedingungen auf Guadalcanal erkrankt. Welch ein bitteres Ende einer so mutig durchgeführten Anstrengung ... Wer weiß, wann wir wieder eine Chance auf einen Offensivschlag bekommen? Hoffentlich haben wir mit diesem unvorhersehbaren Desaster nicht den Untergang Australiens besiegelt ...>
+
+<Guadal2Db>(*US)		<Sieg! Wenn auch ein schmerzhafter. Der letzte japanische Soldat ist heute morgen von der Insel verschwunden. Nach Monaten schwerer Kämpfe können die US Marines und die Army stolz auf ihre einzigartigen Leistungen während des gesamten Feldzuges blicken. Gute Arbeit - doch es ist noch ein weiter Weg nach Tokio!>
+
+<Guadal1Br>(*JA)	<Zahlreiche feindliche Schiffe wurden diesen morgen nördlich von Guadalcanal gesichtet. Die Aggressoren begannen sofort mit der Zerstörung von Zielen auf Guadalcanal und Tulagi, um eine amphibische Landung vorzubereiten welche unserer Soldaten vollkommen überraschte. Unsere Admiräle können dieser Entwicklung nicht zusehen ohne etwas zu unternehmen. Langsteckenjäger von Tainan des Typs A6M werden die G4M- und D3A-Bomber auf ihren Weg zu den Zielen eskortieren. Aufgrund der Distanz zwischen Rabaul und Guadalcanal werden unsere Jagdpiloten bei ihrem Rückzug gezwungen sein auf den improvisierten Pisten von Bougainville zu landen. Stellen Sie sicher, dass unsere aufgrund Spritmangel notlandenden Piloten gerettet werden können.>
+
+<Guadal1VictoryDb>(*JA)	<Die Amerikaner versuchten in Guadalcanal den Spieß umzudrehen - dank Ihnen und der Hilfe Ihrer Kameraden gelang ihnen das nicht. Die verbleibenden Soldaten werden sich binnen weniger Tage unseren Truppen ergeben. Sie zeigten, dass die Perfektion erst im Glauben an sich Selbst erreicht werden kann, junger Samurai! Der Kaiser und ganz Japan feiert den überwältigenden Sieg und gratuliert Ihnen zur Ausübung Ihrer Pflicht mit ungebrochenem Willen.>
+
+<Guadal1DefeatDb>(*JA)	<Trotz unserer Anstrengungen, unseren Soldaten, Piloten und Seeleuten war es uns unmöglich, der amerikanischen Überlegenheit zu widerstehen. Solch ein Desaster kann nicht akzeptiert werden und gefährdet unserer Position im Südpazifik. Melden Sie sich beim Marinefliegerhauptquartier wegen des Einsatzortes Ihrer Einheit. Wir dürfen den Amerikanern keine weitere Gelegenheit bieten, ihr Glück weiter auszubauen.>
+
+<Guadal1Db>(*JA)		<Wir haben es nicht geschafft, Guadalcanal zu verteidigen. Letzte Nacht evakuierten Truppentransporter die letzten Soldaten aus Tassafaronga - ein Rückzug, um Schlimmeres zu verhindern. Wir hatten eine Niederlage auf allen Ebenen, doch der größte Teil der Salomonen ist noch unter unserer Kontrolle: Machen wir ihre sogenannte "Rückeroberung" der Inseln zu einem Desaster, von dem sie sich nicht erholen können.>
+
+<ChichiBr>(*U*) <Heute werden unsere Trägerverbände eine Offensive gegen Chichi Jima, dem wichtigsten japanischen Außenposten nach Iwo Jima, starten. Aufgrund einer möglichen Landeoperation in naher Zukunft müssen wir uns ein Bild der Verteidigungsanlagen der kleinen Insel machen. Schlagen Sie die Garnison, bringen Sie jedes feindliche Flugzeug zu Boden und fliegen Sie Aufklärungsmissionen über dem Zielgebiet.>
+
+<ChichiVictoryDb>(*U*) <Wenn Chichi Jima früher auch eine Bedrohung gewesen sein sollte, nach unserer Intervention ist dies vorbei. Ihre Ausflüge waren tödlich für die feindlichen Truppen und Ihre Bilder gaben uns eine sehr genaue Vorstellung der auf der Insel vorhandenen japanischen Garnison. Gute Arbeit - nun werden wir einen Blick Richtung Okinawa wagen ... >
+
+<ChichiDefeatDb>(*U*) <Chichi Jima ist den Preis nicht wert, den wir zahlen mussten, um einige Aufklärungsphotos zu erhalten. Alles was wir nun wissen ist, dass Chichi Jima ein schwer verteidigter Ort der Japaner zu sein scheint, welcher nicht ohne erbitterte Kämpfe erobert werden wird ...>
+
+<ChichiDb>(*U*) <Gute Arbeit. Wir hatten zwar Verluste, doch der bei den Japanern auf Chichi Jima angerichtete Schaden wiegt deutlich schwerer. Zusätzlich können wir die Insel als Hauptkommunikations- und Versorgungszentrum im Archipelago verwenden - das nächste mal werden wir genau wissen, wo die Japaner zu schlagen sind. >
+
+<ChichiBr>(*JA) <Neueste Geheimdienstberichte melden eine feindliche Flotte mit Kurs auf die Boninen, um unsere Installationen auf Iwo sowie Chichi Jima zu zerstören. Colonel Masaki und Major Horie auf Chichi hoffen, dass sie in der Lage sind die Kommunikations- und Nachschubzentren erfolgreich gegen feindliche Luftangriffe zu beschützen. Lassen Sie die Aggressoren mit dem bitteren Geschmack der Niederlage das Schlachtfeld verlassen. > 
+
+<ChichiVictoryDb>(*JA) <Viele amerikanische Flugzeuge gingen in den letzten Tagen verloren und die Verbliebenen stellen ihre Angriffe aufgrund Ihrer fabelhaften Leistungen ein. Die Amerikaner werden zurückkehren, doch glauben Sie mir, dass sie in Zukunft weniger Arroganz und Selbstvertrauen haben werden ... > 
+
+<ChichiDefeatDb>(*JA) <Unsere Luftverteidigung über Chichi Jima wurde durch den Feind komplett aufgerieben. Wir waren keine Gegner für die erfahrenen US-Piloten, welche uns eine Lektion über den Boninen erteilten. Unsere Kräfte müssen schnell wieder aufgebaut werden, wenn wir einer weiteren Invasion dieser Teufel zuvorkommen wollen! >
+
+<ChichiDb>(*JA) <Wir hatten schwere Verluste bei der Verteidigung Chichi Jimas - doch die Amerikaner bezahlten einen ebenso hohen Preis. Meiner Meinung nach können wir von einem Unentschieden sprechen, da jeder der Seiten seine Grenze gefunden hat. Nun wissen die Amerikanern, dass die Eroberung der Boninen kein Zuckerschlecken für sie wird ... > 
+
+<LeyteBr>(*U*) < >
+<LeyteVictoryDb>(*U*) < >
+<LeyteDefeatDb>(*U*) < >
+<LeyteDb>(*U*) < >
+
+<LeyteBr>(*JA) < >
+<LeyteVictoryDb>(*JA) < >
+<LeyteDefeatDb>(*JA) < >
+<LeyteDb>(*JA) < >
+
+<Japan1Br>(aUS) <Die Errichtung neuer Flugfelder auf den Marianen ist ein Ziel, welches wir nicht verfehlen dürfen. Nun, da uns die brandneuen B29 "Superfortress" Bomber in großer Zahl zur Verfügung stehen, können wir über eine methodische Bombardierung Japans - wie sie gegen Deutschland von der 8th Air Force praktiziert wird- nachdenken. Die Mustang-Langstreckenjäger werden eine effektive Eskorte bilden und zusätzlich die japanische Luftwaffe entgültig zum Verstummen bringen. Die Industriezentren werden die ersten Ziele sein - Sie sind dem Kyushu-Sektor zugewiesen, einem wichtigen Industrie-, Marine- und Armeezentrum. Zeigen Sie den Japanern, dass sie sich nicht in Sicherheit wiegen können, solange sie ihren hoffnungslosen Kampf gegen unsere unschlagbare Luftüberlegenheit weiterführen.>
+
+<Japan1VictoryDb>(aUS) <Ich gratuliere Ihnen. Die japanischen Verluste am Boden als auch in der Luft waren dank Ihrer Leistung unglaublich hoch. Unsere Bomber konnten die feindliche Industrie hart treffen und sie in eine brennende Hölle der japanischen Armee und Wirtschaft verwandeln. Es starten keine weiteren Feindflugzeuge - nicht einmal zur Verteidigung ihres Heimatlandes - dies ist ein Zeichen, dass die Moral des Feindes, dank Ihrer Mithilfe, sinkt.>
+
+<Japan1DefeatDb>(aUS) <Wir hätten nicht gedacht, dass der Feind einen derart großen Widerstand gegen unsere Bomberströme entwickelt. Die B-29 ist trotz ihrer starken Abwehrstellungen verwundbar gegen feindliche Jägerangriffe. Natürlich wäre die Verlustrate weit geringer, wenn die Jäger ein wenig mehr Interesse daran zeigen würden, ihre großen Freunde zu beschützen ... Wir müssen über eine neue Strategie nachdenken, Japan steht noch nicht vor dem Kollaps!>
+
+<Japan1Db>(aUS) <General Lemay glaubt, dass die Anzahl die geringe Effektivität der Bombardements aufheben kann. Wir konnten unser Ziel nicht gleich zu Beginn der Angriffe erreichen, da die B-29-Aktionen ein wenig planlos verliefen. Doch unsere Jäger erfüllten ihre Aufgabe mit unglaublicher Aggressivität und konnten herbe Verluste unter den Feindjägern herbeiführen.>
+
+<Japan1Br>(nUS) <Unsere Trägergruppe soll Kyushu von jeglicher feindlicher Luftbewegung befreien, um die Priorität auf die Offensive im Westpazifik zu verlegen. Sie werden Offensiveinsätze gegen die Flugbasen der Inseln fliegen und nach jedem militärischen Gelegenheitsziel, daher nach jeder Art von Flugzeugen, militärischen Konvois, Zügen, Schiffen, Treibstoffdepots und sonstigen militärischen Installationen Ausschau halten, um sie zu vernichten. Die Zerstörung der feindlichen Luft- und Seestreitkräfte hat oberstes Gebot. Vergessen Sie nicht, einen effektiven Jagdschutz um unsere Träger aufrechtzuerhalten, da noch nie zuvor in diesem Krieg amerikanische Kriegsschiffe so nahe vor der japanischen Küste kreuzten.>
+
+<Japan1VictoryDb>(nUS) <Gute Arbeit, Pilot! Sie erreichten die Vernichtung der japanischen Flugbasen. Kyushu ist mit hunderten nutzloser, japanischer Flugzeugwracks übersäht, während die Häfen durch die gesunkenen Rümpfe der kaiserlichen Kriegsschiffe blockiert sind - nun können wir mit der Invasion beginnen, ohne Angst vor feindlichen Luftangriffen haben zu müssen.>
+
+<Japan1DefeatDb>(nUS) <Der Schlag gegen Kyushu ist von mäßigem Erfolg. Wir konnten viele feindliche Flugzeuge vernichten, doch wir haben die Chance verpasst, die Lufthoheit zu erringen. Weiterhin erlitten anwesende KJM-Marineeinheiten lediglich leichte Schäden, wenn überhaupt. Der Preis für den Erfolg war hoch und unsere Schiffe litten während der gesamten Zeit unter den Angriffen tödlicher, landgestützter Flugzeuge. Wenn wir wiederkehren, müssen wir die Schlüsse aus dieser kleinen Enttäuschung lernen.>
+
+<Japan1Db>(nUS) <Wir waren erfolgreich in der Beseitigung der militärischen Ziele auf Kyushu. Obwohl der Hauptteil der japanischen Luftwaffe außer Reichweite unserer Maschinen positioniert war, erlitt sie ebenso hohe Verluste. Unsere Verluste sind hingegen leicht, vor allem wenn man bedenkt, wie nahe wir an den japanischen Heimatinseln sind - wir sollten dies in der nächsten Runde nicht vergessen.>
+
+
+<Japan1Br>(nUK) <Unsere Trägergruppe soll Kyushu von jeglicher feindlicher Luftbewegung befreien, um die Priorität auf die Offensive im Westpazifik zu verlegen. Sie werden Offensiveinsätze gegen die Flugbasen der Inseln fliegen und nach jedem militärischen Gelegenheitsziel, daher nach jeder Art von Flugzeugen, militärischen Konvois, Zügen, Schiffen, Treibstoffdepots und sonstigen militärischen Installationen Ausschau halten, um sie zu vernichten. Die Zerstörung der feindlichen Luft- und Seestreitkräfte hat oberstes Gebot. Vergessen Sie nicht, einen effektiven Jagdschutz um unsere Träger aufrechtzuerhalten, da noch nie zuvor in diesem Krieg amerikanische Kriegsschiffe so nahe vor der japanischen Küste kreuzten.>
+
+<Japan1VictoryDb>(nUK) <Gute Arbeit, Pilot! Sie erreichten die Vernichtung der japanischen Flugbasen. Kyushu ist mit hunderten nutzloser, japanischer Flugzeugwracks übersäht, während die Häfen durch die gesunkenen Rümpfe der kaiserlichen Kriegsschiffe blockiert sind - nun können wir mit der Invasion beginnen, ohne Angst vor feindlichen Luftangriffen haben zu müssen.>
+
+<Japan1DefeatDb>(nUK) <Der Schlag gegen Kyushu ist von mäßigem Erfolg. Wir konnten viele feindliche Flugzeuge vernichten, doch wir haben die Chance verpasst, die Lufthoheit zu erringen. Weiterhin erlitten anwesende KJM-Marineeinheiten lediglich leichte Schäden, wenn überhaupt. Der Preis für den Erfolg war hoch und unsere Schiffe litten während der gesamten Zeit unter den Angriffen tödlicher, landgestützter Flugzeuge. Wenn wir wiederkehren, müssen wir die Schlüsse aus dieser kleinen Enttäuschung lernen.>
+
+<Japan1Db>(nUK) <Wir waren erfolgreich in der Beseitigung der militärischen Ziele auf Kyushu. Obwohl der Hauptteil der japanischen Luftwaffe außer Reichweite unserer Maschinen positioniert war, erlitt sie ebenso hohe Verluste. Unsere Verluste sind hingegen leicht, vor allem wenn man bedenkt, wie nahe wir an den japanischen Heimatinseln sind - wir sollten dies in der nächsten Runde nicht vergessen.>
+
+
+<Japan1Br>(*JA) <Söhne des Kaisers, dies ist das Erste mal seit Jahrhunderten, dass unser Heimatland von feindlichen Truppen betreten wird. Die bösartigen Kräfte haben es geschafft, Einheiten in den Kampf zu schicken, welche auf Flugplätzen tausende Kilometer entfernt positioniert waren. Diese Basen werden nun als Stützpunkte für deren schwere Bomber genutzt, welche in Schwärmen unser Heimatland überfallen. Zusätzlich belastet die feindliche Trägerflotte unsere Flugbasen mit direkten Angriffen in Vorbereitung der Eroberung unserer Gebiete. Kyushu, als die südlichste Insel des Archipels, ist das verwundbarste Ziel. Sie müssen den südlichen Bereich bis Honshu decken und gleichzeitig jede Offensive gegen Kyushu und dessen nördlich gelegene Industrieanlagen abwehren. Kein einziges amerikanisches Flugzeug soll den heiligen Boden sicher verlassen und den Zorn unserer tapferer Kämpfer spüren.>
+
+<Japan1VictoryDb>(*JA) <Samurai, Sie haben es geschafft unseren reinen Himmel von den westlichen Barbaren zu befreien. Die B-29-Ströme wurden durch Ihr effektives Handeln sowie Ihre überlegenen Taktik zurückgeschlagen, wodurch die feindliche strategische Bombardierung, im Glauben die Moral unserer Zivilbevölkerung brechen zu können, zu einem Versagen führte. Zusätzlich wurde die US Navy bei ihrem Versuch unsere Küstenverteidigung lahm zu legen, fehlgeschlagen. Der Kaiser ist stolz auf Sie!>
+
+<Japan1DefeatDb>(*JA) <Kyushu brennt, da unsere Jagdeinheiten nicht fähig waren die feindliche Aggression zu stoppen. Tausende Tonnen Bomben vielen auf unsere Städte, während die Bomber sicher zu ihren Basen zurückkehrten. Weiterhin konnten USAAF und USN Flieger mit geringsten eigenen Verlusten, unsere Basen sowie Hunderte Jagdflugzeuge am Boden zerstören. Diese Situation lässt uns ungewohnte Möglichkeiten ergreifen, um unsere Ehre rein und die Siegeschancen intakt zu halten.>
+
+<Japan1Db>(*JA) <Wir leiden unter den feindlichen Bombardements, doch andererseits müssen die B-29 uns einen hohen Tribut zollen. Bomber fallen wie tote Blätter auf den Boden von Kyushu. Dies ist ein Zeichen unserer tödlichen Effektivität - doch wenn wir die Bomber zurückwerfen wollen, müssen wir einen höheren Blutzoll entrichten.>
+
+<SantaCruzBr>(*U*) <Admiral Kinkaid hat den Auftrag eine feindliche Trägergruppe nördlich von Santa Cruz anzugreifen, welche vermutlich Luftunterstützung für eine riesige Truppenansammlung gibt. TF.16 und 17 sind die einzigen in der Nähe, da die USS Wasp - möge sie in Frieden ruhen - und die USS Saratoga aufgrund heftiger feindlicher U-Bootaktivitäten nicht mehr eingesetzt werden können. Da wir keinen Schimmer davon haben, wo sich die feindlichen Träger aufhalten könnten, werden wir erst jede Menge Aufklärung fliegen müssen, während das Henderson Flugfeld Flugzeuge zur Zerstörung der feindlichen Nachschubkräfte, welche jederzeit aufbrechen könnten, entsenden wird. Versuchen Sie, die feindlichen Träger möglichst hart zu treffen, ohne ein allzu großes Risiko dabei einzugehen!>
+
+<SantaCruzVictoryDb>(*U*) <Admiral Halsey ist stolz auf seine Jungs! Admiral Kinkaid konnte der feindlichen Trägergruppe einen Schlag versetzen, ohne unsere eigenen Trägern in Gefahr zu bringen. Ganze feindliche Geschwader wurden ausradiert und die Transporteinheiten sind nun ohne wirkliche Verteidigung - Die Cactus Force wird zurückkehren und die Reste in brennende Wracks verwandeln. Dies war womöglich der letzte ernstzunehmende Zwischenfall mit Japanern um Guadalcanal - und die Marines sind froh, dass Sie die Japaner auf diese Weise zurückschlagen konnten!>
+
+<SantaCruzDefeatDb>(*U*) <Wir konnten die feindliche Flotte nicht ausreichend beschädigen. Was noch schlimmer ist: der Zusammenbruch unserer Trägerkräfte in dem Gebiet, welche das Henderson Field sowie die Passage ohne Luftunterstützung zurücklassen. Nun kann der Feind seinen Nachschub ohne Störung einsetzen - hoffen wir, dass unsere Bodentruppen und die Cactus Force den Angriffen ohne unsere Hilfe widerstehen können.>
+
+<SantaCruzDb>(*U*) <Die Verluste waren auf beiden Seiten sehr hoch und die Träger schalteten sich quasi gegenseitig aus. Ich bin nicht sicher, ob wir von einem Sieg oder einer Niederlage sprechen sollten, da der Sieg noch durch Gefechte am Boden entschieden werden muss.>
+
+<SantaCruzBr>(*JA) <Admiral Yamamoto entwarf einen neuen Plan, welcher die Salomonen schnell in unsere Hand bringen dürfte. Das Ziel ist abermals die feindliche Trägerflotte, welche nun auf wenige operationsfähige Einheiten reduziert wurde dank der Angriffe unserer U-Boote auf die USS Wasp und USS Saratoga. Die 5. Trägerdivision wird nach feindlichen Trägern suchen und sie zerstören, um Guadalcanal frei von feindlichen Flugaktivitäten zu halten. In der Zwischenzeit werden unsere Truppen binnen weniger Tage an Land gehen und unter der Unterstützung schwerer Schiffsartillerie das Henderson Flugfeld sowie noch vorhandene Schiffe auf der Seestraße, welche nach Lunga Point führt, zum Schweigen bringen. Sobald unsere Position in Tassafaronga gesichert ist, werden wir die verbliebenen Marines Richtung Aola Bay jagen, und sie in die tobende See treiben.>
+
+<SantaCruzVictoryDb>(*JA) <Piloten und Seeleute der kaiserlichen Marine, wir sind Stolz auf Ihre glanzvolle Leistung! Durch die totale Auslöschung der feindlichen Flotte, zeigten Sie dem Feind die Macht des Kido Butai. Jetzt wo die Feindträger am Grund des Meeres liegen, können unsere Verstärkungen in Kürze eintreffen und die verbleibenden Marines endgültig schlagen. Gute Arbeit!>
+
+<SantaCruzDefeatDb>(*JA) <Durch unser Versagen ist die Situation in Guadalcanal in ernster Gefahr. Alles, was wir nun tun können ist auf Admiral Abe zu hoffen, welcher den Feind noch auf See schlagen könnte - ein Ziel das kaum erreichbar sein wird, da der Feind immer noch massive Luftunterstützung erhält, welche wir bis heute nicht ausschalten konnten.>
+
+<SantaCruzDb>(*JA) <Der Feind erlitt schwere Verluste, doch wir verloren viele Freunde in der Luft als auch auf See. Die feindlichen Schiffe wurden von einer neuen Fliegerabwehrkanone sehr hoher Kadenz verteidigt, welche verheerende Verluste an unseren Angriffsflugzeugen verursachte. Dennoch konnten unsere heldenhaften Truppen die Lage in einen Sieg verwandeln und somit unsere Niederlage in Midway rächen. Nun da die Kido Butai ihren Job erledigt hat, ist es Admiral Abes Aufgabe, die Marines auf der Insel endgültig ins offene Meer zu jagen.>
+
+<Marianas1Br>(nJA)	<Wir dachten, dass der Feind erst Palau angreifen würde - ein Irrtum. US Verbände werden bald die Marianen erreichen - wir sind auch darauf vorbereitet. Admiral Toyodas Plan basiert sehr stark auf unseren landgestützten Jägern, um die feindlichen Aufgebote in den ersten Tagen der Schlacht zu besiegen. Anschließend werden Admiral Ozawas Schiffe jeglichen weiteren Widerstand zur See ausschalten. Es ist ein guter Plan mit guten Siegeschancen, wenn jeder in der Armee und Marine seine Aufgaben bis zum Äußersten erfüllt.>
+<Marianas1Br>(aJA)	<Wir dachten, dass der Feind erst Palau angreifen würde - ein Irrtum. US Verbände werden bald die Marianen erreichen - wir sind auch darauf vorbereitet. Zahlreiche Armeeflieger sind in Guam, Saipan und Tinian stationiert und warten nur darauf, dass sich der Feind zeigt. Sobald Feinde gefunden werden, haben Sie Order augenblicklich anzugreifen. Ebenso sollen Sie die alliierte Flotte, die Schiffe und Seeleute der feindlichen Trägergruppe ausschalten. Wir glauben, dass dies eine neue Vernichtungsschlacht mit dem Vorteil auf unserer Seite sein wird: Wir zählen auf Sie!>
+<Marianas1VictoryDb>(*JA)	<Gratulation, Samurai! Die Kido Butai Aktionen war von schrecklicher Effizienz und die westlichen Teufel werden diese harte Stunde des Kampfes gegen unsere ruhmreichen Soldaten nicht vergessen. Viele feindliche Schiffe wurden versenkt und die Invasion auf die Marianen verschoben; Admiral Toyoda, Ozawa, Kurita und Nagumo werden bald neue Offensivpläne schmieden, um die Initiative im Zentralpazifik zurückzuerobern. Der Sieg scheint nun nicht mehr fern!>
+<Marianas1DefeatDb>(*JA)	<Ich hörte von Offizieren, welche Seppuku für wesentlich geringere unehrenhafte Niederlagen begingen. Das Eingreifen in den Marianen wurde, statt eines großen Sieges ein vernichtendes Desaster! Der Kido Butai wird sich möglicherweise niemals von diesen Schlägen erholen. Die feindlichen Träger agieren äußerst kompetent - lasst uns unsere Kräfte für einen letzten ultimativen Schlag neu gruppieren ...>
+<Marianas1Db>(*JA)		<Wir konnten dem Feind nicht ausreichend Schaden zufügen und verloren den Hauptteil unserer luftgestützten Einheiten. Es ist ein dunkler Tag für den Kido Butai, auch wenn die maritimen Verluste sich in Grenzen halten. Wie dem auch sei, unsere zukünftigen Operationen sehen einen Angriff auf die amerikanische Flotte bei einem Versuch die Philippinen zu erobern vor. Die kaiserliche Flotte hat noch eine Chance den Sieg zu erringen, doch wir dürfen uns keine weiteren Niederlagen leisten, wenn wir unsere Chancen erhalten wollen.>
+<Marianas1Br>(*US)		<Die Marianen sind unser nächstes Ziel. Das Ziel der Operation Forager ist es, alle drei Hauptinseln des Archipels einzunehmen, um eine vorgelagerte Basis für unsere strategischen Bomber zu erhalten. Wie auch bei früheren Aktionen dieser Art werden Sie erst die feindlichen Flugplätze sturmreif schießen und anschließend den Marines Unterstützung bieten. Ich möchte Sie daran erinnern, das wir keine Atolle, sondern größere Inseln mit wesentlich stärkerer Verteidigung und ernstzunehmenden Befestigungen, angreifen. Wir hoffen auch auf die alliierte Flotte, welche uns bei der Erfüllung der Mission helfen könnte: Erwarten Sie vermehrt Überwachungs- und Aufklärungsflüge, solange wir nicht den Kern der feindlichen Kräfte erspäht haben. Falls es zu einem Aufeinandertreffen kommt, muss es ein entscheidendes werden: Die Marianen sollen den Untergang der feindlichen Flotte besiegeln.>
+<Marianas1VictoryDb>(*US)	<Gute Arbeit Leute: Guam, Saipan und Tinian konnten mit wesentlich weniger Verlusten als erwartet erobert werden. Wir ließen uns auf die von den Japanern geforderte Entscheidungsschlacht ein, doch sie endete anders, als sich unser Feind es vorstellte. Die kaiserliche Marine erlitt herbe Verluste - irreparable Verluste. Die erfahrenen Piloten litten ebenso unter der Schlacht - Tausende fielen während weniger Tage des Kampfes. Wir verpassten der kaiserlichen Marine einen Schlag, von dem sie sich nicht mehr erholen wird.>
+<Marianas1DefeatDb>(*US)	<Den Gegner zu unterschätzen, ist ein Anfängerfehler - und die komplette Operation Forager war ein Fehler. Wir erlitten schwere Verluste sowohl an Land als auch auf See, im Anblick unerwarteter feindlicher Luft- und Marineeinheiten. Wir mussten uns zurückziehen und die Inseln unter japanischer Herrschaft lassen. Die feindliche Flotte hat nichts ihrer Professionalität eingebüßt - trotz der vielen Rückschläge. Welche schmerzliche Feststellung!>
+<Marianas1Db>(*US)		<Guam, Saipan und Tinian sind nun gesichert. Während die Kämpfe an Land, wie gewohnt, mit hohen Verlusten verliefen, war die Seeschlacht wie ein unvollendetes Werk. Trotz der erfolgreichen U-Boot und Flugzeugattacken konnte der Kern des Feindes entkommen. Admiral Spruance bekam nicht den entscheidenden Sieg, den er erträumt hatte. Wir werden einige weitere Wochen warten müssen, bevor wir eine weitere Operation dieser Art durchführen können. Trotzdem: Gute Arbeit - der "Great Marianas Turkey Shot" zeigte, dass der Feind über keine guten Piloten und Flugzeuge mehr verfügt.>
+
+
+<Marianas2Br>(nJA)	<Wir dachten, dass der Feind erst Palau angreifen würde - ein Irrtum. US Verbände werden bald die Marianen erreichen - wir sind auch darauf vorbereitet. Admiral Toyodas Plan basiert sehr stark auf unseren landgestützten Jägern, um die feindlichen Aufgebote in den ersten Tagen der Schlacht zu besiegen. Anschließend werden Admiral Ozawas Schiffe jeglichen weiteren Widerstand zur See ausschalten. Es ist ein guter Plan mit guten Siegeschancen, wenn jeder in der Armee und Marine seine Aufgaben bis zum Äußersten erfüllt.>
+<Marianas2Br>(aJA)	<Wir dachten, dass der Feind erst Palau angreifen würde - ein Irrtum. US Verbände werden bald die Marianen erreichen - wir sind auch darauf vorbereitet. Zahlreiche Armeeflieger sind in Guam, Saipan und Tinian stationiert und warten nur darauf, dass sich der Feind zeigt. Sobald Feinde gefunden werden, haben Sie Order augenblicklich anzugreifen. Ebenso sollen Sie die alliierte Flotte, die Schiffe und Seeleute der feindlichen Trägergruppe ausschalten. Wir glauben, dass dies eine neue Vernichtungsschlacht mit dem Vorteil auf unserer Seite sein wird: Wir zählen auf Sie!>
+<Marianas2VictoryDb>(*JA)	<Gratulation, Samurai! Die Kido Butai Aktionen war von schrecklicher Effizienz und die westlichen Teufel werden diese harte Stunde des Kampfes gegen unsere ruhmreichen Soldaten nicht vergessen. Viele feindliche Schiffe wurden versenkt und die Invasion auf die Marianen verschoben; Admiral Toyoda, Ozawa, Kurita und Nagumo werden bald neue Offensivpläne schmieden, um die Initiative im Zentralpazifik zurückzuerobern. Der Sieg scheint nun nicht mehr fern!>
+<Marianas2DefeatDb>(*JA)	<Ich hörte von Offizieren, welche Seppuku für wesentlich geringere unehrenhafte Niederlagen begingen. Das Eingreifen in den Marianen wurde, statt eines großen Sieges ein vernichtendes Desaster! Der Kido Butai wird sich möglicherweise niemals von diesen Schlägen erholen. Die feindlichen Träger agieren äußerst kompetent - lasst uns unsere Kräfte für einen letzten ultimativen Schlag neu gruppieren ...>
+<Marianas2Db>(*JA)		<Wir konnten dem Feind nicht ausreichend Schaden zufügen und verloren den Hauptteil unserer luftgestützten Einheiten. Es ist ein dunkler Tag für den Kido Butai, auch wenn die maritimen Verluste sich in Grenzen halten. Wie dem auch sei, unsere zukünftigen Operationen sehen einen Angriff auf die amerikanische Flotte bei einem Versuch die Philippinen zu erobern vor. Die kaiserliche Flotte hat noch eine Chance den Sieg zu erringen, doch wir dürfen uns keine weiteren Niederlagen leisten, wenn wir unsere Chancen erhalten wollen.>
+<Marianas2Br>(*US)		<Die Marianen sind unser nächstes Ziel. Das Ziel der Operation Forager ist es, alle drei Hauptinseln des Archipels einzunehmen, um eine vorgelagerte Basis für unsere strategischen Bomber zu erhalten. Wie auch bei früheren Aktionen dieser Art werden Sie erst die feindlichen Flugplätze sturmreif schießen und anschließend den Marines Unterstützung bieten. Ich möchte Sie daran erinnern, das wir keine Atolle, sondern größere Inseln mit wesentlich stärkerer Verteidigung und ernstzunehmenden Befestigungen, angreifen. Wir hoffen auch auf die alliierte Flotte, welche uns bei der Erfüllung der Mission helfen könnte: Erwarten Sie vermehrt Überwachungs- und Aufklärungsflüge, solange wir nicht den Kern der feindlichen Kräfte erspäht haben. Falls es zu einem Aufeinandertreffen kommt, muss es ein entscheidendes werden: Die Marianen sollen den Untergang der feindlichen Flotte besiegeln.>
+<Marianas2VictoryDb>(*US)	<Gute Arbeit Leute: Guam, Saipan und Tinian konnten mit wesentlich weniger Verlusten als erwartet erobert werden. Wir ließen uns auf die von den Japanern geforderte Entscheidungsschlacht ein, doch sie endete anders, als sich unser Feind es vorstellte. Die kaiserliche Marine erlitt herbe Verluste - irreparable Verluste. Die erfahrenen Piloten litten ebenso unter der Schlacht - Tausende fielen während weniger Tage des Kampfes. Wir verpassten der kaiserlichen Marine einen Schlag, von dem sie sich nicht mehr erholen wird.>
+<Marianas2DefeatDb>(*US)	<Den Gegner zu unterschätzen, ist ein Anfängerfehler - und die komplette Operation Forager war ein Fehler. Wir erlitten schwere Verluste sowohl an Land als auch auf See, im Anblick unerwarteter feindlicher Luft- und Marineeinheiten. Wir mussten uns zurückziehen und die Inseln unter japanischer Herrschaft lassen. Die feindliche Flotte hat nichts ihrer Professionalität eingebüßt - trotz der vielen Rückschläge. Welche schmerzliche Feststellung!>
+<Marianas2Db>(*US)		<Guam, Saipan und Tinian sind nun gesichert. Während die Kämpfe an Land, wie gewohnt, mit hohen Verlusten verliefen, war die Seeschlacht wie ein unvollendetes Werk. Trotz der erfolgreichen U-Boot und Flugzeugattacken konnte der Kern des Feindes entkommen. Admiral Spruance bekam nicht den entscheidenden Sieg, den er erträumt hatte. Wir werden einige weitere Wochen warten müssen, bevor wir eine weitere Operation dieser Art durchführen können. Trotzdem: Gute Arbeit - der "Great Marianas Turkey Shot" zeigte, dass der Feind über keine guten Piloten und Flugzeuge mehr verfügt.>
+
+
+<SingaporeBr>(nJA)	<Soldaten der kaiserlichen Armee, die Stunde der Ehre ist gekommen! Alle Mannschaften von Indochina werden für Offensiveinsätze gegen die malaysische Halbinsel sowie die britischen Truppen fliegen. Unsere Bomber müssen alle feindlichen Schiffe und die britischen Flugfelder und Depots zerstören. Die Jagdpiloten werden das Gebiet gegen die Buffalos und Hurricanes der RAF verteidigen. Die Erfahrung unserer Piloten wird uns zum Sieg führen. Zu den Flugzeugen, lang lebe das Kaiserreich!>
+<SingaporeVictoryDb>(nJA)	<Wir dachten nicht, das es so einfach werden würde. General Yamashita führte seine Truppen mit großer Weisheit und übernahm die Festung Singapur mit unterlegenen Einheiten. Unsere Jäger konnten die britische "Far-Eastern Fleet" sowie die RAF in dem Gebiet in Schach halten. Die Herrschaft des weißen Mannes ist nun entgültig vorbei, dank Ihnen und Ihrer Kameraden! Nun müssen wir noch Burma und Indien erobern - dann haben wir die benötigte Zeit, uns in Kalkutta neu zu formieren!>
+<SingaporeDefeatDb>(nJA)	<Die Operation verlief nicht allzu gut und General Yamashita hat den Überraschungsmoment verspielt. Die Briten haben auf uns gewartet. Sowohl in der Luft, an Land, als auch im Meer. Wir haben es nicht geschafft, die feindliche Flotte, welche uns großen Schaden zufügte, zum Schweigen zu bringen, und konnten der RAF nicht die Lufthoheit über Malaysia abringen. Der Generalstab ist über unsere "Leistungen" sehr verwundert und muss nun andere Wege finden, dieses Hindernis zu beseitigen.>
+<SingaporeDb>(nJA)		<Die Mission war hart, doch letzten Endes haben wir die Briten von der malaiischen Halbinsel vertrieben. Die Verluste waren sehr hoch, aber das Ziel rechtfertigt dies. Die Festung Singapur ist Geschichte und unsere Truppen können nun Richtung Burma oder holländisch Ost-Indien aufbrechen und ihre Arbeit in Südasien beenden.>
+<SingaporeBr>(*U*)		<Vor einigen Stunden erklärte Japan den USA den Krieg, indem es die Pazifikflotte in Pearl Harbor angriff. Es gibt eine gute und eine schlechte Nachricht: Die gute ist, dass wir endlich auf die Hilfe der Amerikaner im Kampf gegen die Achsenmächte zählen können. Die schlechte ist, dass die Japaner Malaysia mit amphibischen Landungseinheit binnen der nächsten Tage angreifen könnten. Wir müssen auf alles gefasst sein. Noch diesen Nachmittag wird die Royal Navy aus Singapur auslaufen und nach feindlichen Truppentransportern suchen. Die RAF wird unseren Schiffen Deckung geben und die Stadt Singapur schützen, welche vermutlich schon sehr bald von feindlichen Flugzeugen angegriffen wird. Die RAF entscheidet über Sieg oder Niederlage: Enttäuschen Sie uns nicht und zerstören Sie den Aggressor - andernfalls muss Singapur um sein Überleben fürchten.>
+<SingaporeVictoryDb>(*U*)	<Gratuliere, Gentlemen! Die japanische Krake muss an der Schwelle zu Malaysia halt machen. Yamashitas Kräfte wurden aufgehalten und mussten sich aufgrund unserer Gegenangriffe verschanzen. Die kaiserliche Armee erlitt ihre erste Niederlage und dafür müssen wir unseren Kameraden danken. Nun, da Singapur sicher ist, sollten wir darüber nachdenken, wie wir die Japaner zurück in ihre Heimat bringen ...>
+<SingaporeDefeatDb>(*U*)	<Wir konnten dem japanischen Vormarsch nicht widerstehen. Unsere Verluste in der Luft, als auch zur See, zwangen uns die Verteidigung der Küste abzubrechen, wodurch Yamashita, der "Tiger von Malaya", und seine Truppen mit Leichtigkeit die sogenannte "Festung" Singapur einnehmen konnte. Welch ein Desaster! Tausende Männer des Commonwealth mussten sich ergeben, ohne einen einzigen Schuss abzugeben. Hoffentlich erholt sich die britische Präsenz im fernen Osten von diesem Unglück.>
+<SingaporeDb>(*U*)		<Wir haben alles in unserer Macht Stehende getan, doch Malaysia und Singapur sind nach einigen Wochen erbitterter Kämpfe gefallen. Dank unseres klugen Kommandostabs wurden die britischen Truppen nicht aufgerieben, sondern zogen sich Richtung Burma zurück. Wir werden eine große Schlacht schlagen müssen, um das British Empire im fernen Osten zu sichern!>
+
+<Singapore2Br>(aJA)	<Soldaten der kaiserlichen Armee, die Stunde der Ehre ist gekommen! Alle Mannschaften von Indochina werden für Offensiveinsätze gegen die malaysische Halbinsel sowie die britischen Truppen fliegen. Unsere Bomber müssen alle feindlichen Schiffe und die britischen Flugfelder und Depots zerstören. Die Jagdpiloten werden das Gebiet gegen die Buffalos und Hurricanes der RAF verteidigen. Die Erfahrung unserer Piloten wird uns zum Sieg führen. Zu den Flugzeugen, lang lebe das Kaiserreich!>
+<Singapore2VictoryDb>(aJA)	<Wir dachten nicht, das es so einfach werden würde. General Yamashita führte seine Truppen mit großer Weisheit und übernahm die Festung Singapur mit unterlegenen Einheiten. Unsere Jäger konnten die britische "Far-Eastern Fleet" sowie die RAF in dem Gebiet in Schach halten. Die Herrschaft des weißen Mannes ist nun entgültig vorbei, dank Ihnen und Ihrer Kameraden! Nun müssen wir noch Burma und Indien erobern - dann haben wir die benötigte Zeit, uns in Kalkutta neu zu formieren!>
+<Singapore2DefeatDb>(aJA)	<Die Operation verlief nicht allzu gut und General Yamashita hat den Überraschungsmoment verspielt. Die Briten haben auf uns gewartet. Sowohl in der Luft, an Land, als auch im Meer. Wir haben es nicht geschafft, die feindliche Flotte, welche uns großen Schaden zufügte, zum Schweigen zu bringen und konnten der RAF nicht die Lufthoheit über Malaysia abringen. Der Generalstab ist über unsere "Leistungen" sehr verwundert und muss nun andere Wege finden, dieses Hindernis zu beseitigen.>
+<Singapore2Db>(aJA)		<Die Mission war hart, doch letzten Endes haben wir die Briten von der malaiischen Halbinsel vertrieben. Die Verluste waren sehr hoch, aber das Ziel rechtfertigt dies. Die Festung Singapur ist Geschichte und unsere Truppen können nun Richtung Burma oder holländisch Ost-Indien aufbrechen und ihre Arbeit in Südasien beenden.>
+<Singapore2Br>(*U*)		<Vor einigen Stunden erklärte Japan den USA den Krieg, indem es die Pazifikflotte in Pearl Harbor angriff. Es gibt eine gute und eine schlechte Nachricht: Die gute ist, dass wir endlich auf die Hilfe der Amerikaner im Kampf gegen die Achsenmächte zählen können. Die schlechte ist, dass die Japaner Malaysia mit amphibischen Landungseinheit binnen der nächsten Tage angreifen könnten. Wir müssen auf alles gefasst sein. Noch diesen Nachmittag wird die Royal Navy aus Singapur auslaufen und nach feindlichen Truppentransportern suchen. Die RAF wird unseren Schiffen Deckung geben und die Stadt Singapur schützen, welche vermutlich schon sehr bald von feindlichen Flugzeugen angegriffen wird. Die RAF entscheidet über Sieg oder Niederlage: Enttäuschen Sie uns nicht und zerstören Sie den Aggressor - andernfalls muss Singapur um sein Überleben fürchten.>
+<Singapore2VictoryDb>(*U*)	<Gratuliere, Gentlemen! Die japanische Krake muss an der Schwelle zu Malaysia halt machen. Yamashitas Kräfte wurden aufgehalten und mussten sich aufgrund unserer Gegenangriffe verschanzen. Die kaiserliche Armee erlitt ihre erste Niederlage und dafür müssen wir unseren Kameraden danken. Nun, da Singapur sicher ist, sollten wir darüber nachdenken, wie wir die Japaner zurück in ihre Heimat bringen ...>
+<Singapore2DefeatDb>(*U*)	<Wir konnten dem japanischen Vormarsch nicht widerstehen. Unsere Verluste in der Luft, als auch zur See, zwangen uns die Verteidigung der Küste abzubrechen, wodurch Yamashita, der "Tiger von Malaya", und seine Truppen mit Leichtigkeit die sogenannte "Festung" Singapur einnehmen konnte. Welch ein Desaster! Tausende Männer des Commonwealth mussten sich ergeben, ohne einen einzigen Schuss abzugeben. Hoffentlich erholt sich die britische Präsenz im fernen Osten von diesem Unglück.>
+<Singapore2Db>(*U*)		<Wir haben alles in unserer Macht Stehende getan, doch Malaysia und Singapur sind nach einigen Wochen erbitterter Kämpfe gefallen. Dank unseres klugen Kommandostabs wurden die britischen Truppen nicht aufgerieben, sondern zogen sich Richtung Burma zurück. Wir werden eine große Schlacht schlagen müssen, um das British Empire im fernen Osten zu sichern!>
+
+<NewGuineaBr>(*JA)			<Durch die Errichtung der Basen in Lae und Salamaua konnten wir binnen Kürze die bislang von uns unkontrollierten Gebiete in Süd-Neu-Guinea erobern. Die Invasion Bunas war die logische Konsequenz unseres Vorstoßes in diesem Gebiet. Unser nächstes Ziel bildet die alliierte Garnison in Port Moresby, welcher um jeden Preis genommen werden muss - von See als auch von Land aus. Port Moresby muss durch die kombinierten Angriffe der kaiserlichen Armee sowie der Marine fallen. Sie ist ein Keil zwischen dem Teufel und dem weiten Ozean. Sobald Port Moresby fällt, steht nichts mehr zwischen unserer siegreichen Armee und Australien.>
+<NewGuineaVictoryDb>(*JA)	<Der Weg nach Port Moresby ist nun frei jeglicher Bodenhindernisse. Die US- und ANZAC-Truppen waren keine Gegner für unsere überlegenen Samurai-Fußtruppen mit ihrer langen Erfahrung in Dschungelkämpfen. Die feindlichen Bewegungen spielten uns in die Hände und schwächten die Verteidigungslinien, welche unserem Ansturm nicht widerstehen konnten und nur vernachlässigbare Probleme bereiteten. Gut gemacht, Soldat, unsere kaiserlichen Kräfte sind bereit in Australien einzumarschieren - das Blatt im Südpazifik hat sich endgültig zu unseren Gunsten gewendet.>	
+<NewGuineaDefeatDb>(*JA)	<Die Alliierten scheinen weit bessere Dschungelkämpfer zu sein als vermutet. Sie haben schnell neue Taktiken entwickelt und warfen all unsere Initiativen zurück, ohne uns auch nur eine Chance zu lassen, eine Gegenreaktion auszuführen. Die Schlacht war bereits zu Beginn im Stillstand - es gab keine Gelegenheit für einen kaiserlichen Sieg und wir können froh sein, diesem Desaster wieder entkommen zu sein, um unsere Truppen anderswo neu zu versorgen. In einem Gebiet, wo es mehr Chancen auf einen Sieg gibt, anstatt sie hier in diesem Morast untergehen zu lassen.>
+<NewGuineaDb>(*JA)			<Trotz unserer Anstrengungen in diesem Gebiet, bleibt der Owen Range-Höhenzug und die Milne Bay in alliierter Hand. Wir verfehlten die Erfüllung unserer Ziele, doch wir konnten den US- und ANZAC-Truppen schwere Verluste zufügen. Dies verhinderte die Pläne des alliierten Hauptquartiers, da ihre Luftstreitkräfte weiter im südlichen Sektor Neu-Guineas gebunden sind. Auch wenn der Dschungelkrieg nicht mehr zu unserem Vorteil verläuft, werden wir bald die Südostküste verlassen und dabei doch das Gefühl in uns tragen, etwas erreicht zu haben - auch wenn es nicht der positive Ausgang war, den wir erwarteten ...>
+<NewGuineaBr>(*U*)			<Das westliche Ende Neu-Guineas steht im Rampenlicht unserer Vorhaben in diesem Sektor. Es ist sowohl ein Kampf zu Land als auch zur See: Wir werden die US-Amerikaner, Australier und Neuseeländer auf der Erde unterstützen, wenn sie sich durch giftige Sümpfe und über gefährliche Höhen bewegen, als auch feindliche Truppentransporter, welche versuchen hinter unseren Linien bei Port Moresby zu landen, bekämpfen. Wir müssen den Feind zurückschlagen und die Buna-Flugfelder zurückerobern. Dies wird der erste Schritt der Befreiung von Salamaua und Lae von den japanischen Invasoren.>
+<NewGuineaVictoryDb>(*U*)	<Neu-Guinea war ein tödliches Schlachtfeld, beinahe so tödlich wie die Japaner. Wir haben es geschafft und die Japaner weit zurückgedrängt. Nun, da wir sicher sind, dass unser Gegner den Boden Süd-Neu-Guineas nicht mehr betreten wird, können wir über ein Vorrücken nach Norden nachdenken. Lae, Neubritannien und die Nordküste warten immer noch auf uns, lasst uns das Begonnene zu Ende führen! >
+<NewGuineaDefeatDb>(*U*)	<Der Dschungel Neu-Guineas war der tödlichste Ort der Welt. Wir verloren viele Soldaten an das feindliche Feuer als auch an die gefährliche, unwirtliche Natur, welche unseren Nachschub wahrlich erstickt hat und unserer tapfere Truppe zerstreuen konnte. Nun müssen wir uns zur Südküste zurückziehen, ohne in der Lage zu sein den japanischen Vormarsch zu verzögern. Hoffen wir, dass unser Versagen nicht die Freiheit Australiens gefährdet, sonst werden wir noch unter der Herrschaft der Mikados reuig an die vergebene Chance zurückdenken ...>
+
+<NewGuinea1Br>(*JA)			<Durch die Errichtung der Basen in Lae und Salamaua konnten wir binnen Kürze die bislang von uns unkontrollierten Gebiete in Süd-Neu-Guinea erobern. Die Invasion Bunas war die logische Konsequenz unseres Vorstoßes in diesem Gebiet. Unser nächstes Ziel bildet die alliierte Garnison in Port Moresby, welcher um jeden Preis genommen werden muss - von See als auch von Land aus. Port Moresby muss durch die kombinierten Angriffe der kaiserlichen Armee sowie der Marine fallen. Sie ist ein Keil zwischen dem Teufel und dem weiten Ozean. Sobald Port Moresby fällt, steht nichts mehr zwischen unserer siegreichen Armee und Australien.>
+<NewGuinea1VictoryDb>(*JA)	<Der Weg nach Port Moresby ist nun frei jeglicher Bodenhindernisse. Die US- und ANZAC-Truppen waren keine Gegner für unsere überlegenen Samurai-Fußtruppen mit ihrer langen Erfahrung in Dschungelkämpfen. Die feindlichen Bewegungen spielten uns in die Hände und schwächten die Verteidigungslinien, welche unserem Ansturm nicht widerstehen konnten und nur vernachlässigbare Probleme bereiteten. Gut gemacht, Soldat, unsere kaiserlichen Kräfte sind bereit in Australien einzumarschieren - das Blatt im Südpazifik hat sich endgültig zu unseren Gunsten gewendet.>	
+<NewGuinea1DefeatDb>(*JA)	<Die Alliierten scheinen weit bessere Dschungelkämpfer zu sein als vermutet. Sie haben schnell neue Taktiken entwickelt und warfen all unsere Initiativen zurück, ohne uns auch nur eine Chance zu lassen, eine Gegenreaktion auszuführen. Die Schlacht war bereits zu Beginn im Stillstand - es gab keine Gelegenheit für einen kaiserlichen Sieg und wir können froh sein, diesem Desaster wieder entkommen zu sein, um unsere Truppen anderswo neu zu versorgen. In einem Gebiet, wo es mehr Chancen auf einen Sieg gibt, anstatt sie hier in diesem Morast untergehen zu lassen.>
+<NewGuinea1Db>(*JA)			<Trotz unserer Anstrengungen in diesem Gebiet, bleibt der Owen Range-Höhenzug und die Milne Bay in alliierter Hand. Wir verfehlten die Erfüllung unserer Ziele, doch wir konnten den US- und ANZAC-Truppen schwere Verluste zufügen. Dies verhinderte die Pläne des alliierten Hauptquartiers, da ihre Luftstreitkräfte weiter im südlichen Sektor Neu-Guineas gebunden sind. Auch wenn der Dschungelkrieg nicht mehr zu unserem Vorteil verläuft, werden wir bald die Südostküste verlassen und dabei doch das Gefühl in uns tragen, etwas erreicht zu haben - auch wenn es nicht der positive Ausgang war, den wir erwarteten ...>
+<NewGuinea1Br>(*U*)			<Das westliche Ende Neu-Guineas steht im Rampenlicht unserer Vorhaben in diesem Sektor. Es ist sowohl ein Kampf zu Land als auch zur See: Wir werden die US-Amerikaner, Australier und Neuseeländer auf der Erde unterstützen, wenn sie sich durch giftige Sümpfe und über gefährliche Höhen bewegen, als auch feindliche Truppentransporter, welche versuchen hinter unseren Linien bei Port Moresby zu landen, bekämpfen. Wir müssen den Feind zurückschlagen und die Buna-Flugfelder zurückerobern. Dies wird der erste Schritt der Befreiung von Salamaua und Lae von den japanischen Invasoren.>
+<NewGuinea1VictoryDb>(*U*)	<Neu-Guinea war ein tödliches Schlachtfeld, beinahe so tödlich wie die Japaner. Wir haben es geschafft und die Japaner weit zurückgedrängt. Nun, da wir sicher sind, dass unser Gegner den Boden Süd-Neu-Guineas nicht mehr betreten wird, können wir über ein Vorrücken nach Norden nachdenken. Lae, Neubritannien und die Nordküste warten immer noch auf uns, lasst uns das Begonnene zu Ende führen! >
+<NewGuinea1DefeatDb>(*U*)	<Der Dschungel Neu-Guineas war der tödlichste Ort der Welt. Wir verloren viele Soldaten an das feindliche Feuer als auch an die gefährliche, unwirtliche Natur, welche unseren Nachschub wahrlich erstickt hat und unserer tapfere Truppe zerstreuen konnte. Nun müssen wir uns zur Südküste zurückziehen, ohne in der Lage zu sein den japanischen Vormarsch zu verzögern. Hoffen wir, dass unser Versagen nicht die Freiheit Australiens gefährdet, sonst werden wir noch unter der Herrschaft der Mikados reuig an die vergebene Chance zurückdenken ...>
+
+
+<NewGuineaDb>(*U*)			<Letztlich konnten die Japaner von Süd Neu Guinea vertrieben werden - doch es kostete tausenden GIs, Aussies und Kiwis das Leben, während wir uns an einem Stück unwirtlichen, tiefe Dschungels festhielten ... waren es diese Bäume und Sümpfe Wert, das Opfer unserer Männer verlangen? Wenn man bedenkt, dass es Australien vor dem japanischen Kraken gesichert hat, würde ich diese Frage mit einem klaren "Ja, das war es", beantworten. Gute Arbeit!>
+
+// A text after "special" end mission
+
+<WarIsOver>			<{FULLRANK} {FIRSTNAME} {LASTNAME}! Für Sie ist der Krieg vorbei!>
+
+
+// Linked codes
+
+<ReconIntercept-F-Scramble>(nU*) <Wir haben soeben einen Aufklärer erspäht, {FULLRANK}! Nehmen Sie {#a} {PLANE} und holen Sie ihn sofort runter. Lassen Sie ihn nicht entwischen, sonst haben wir bald ihre gesamte Flotte im Nacken!>
+
+<ReconIntercept-F-Scramble>(*U*) <Wir konnten den Feindaufklärer nicht abschießen, Japaner im Anflug! Wir haben nur {#a} {PLANE} einsatzbereit. Sofort starten, {FULLRANK}!>
+
+<ReconIntercept-F-Scramble>(*U*) <Ein Aufklärer hat unsere Position durchgegeben - wir bekommen bald Besuch! Wir haben nur {#a} {PLANE} zur Verfügung. {FULLRANK} starten Sie sofort !>
+
+<ReconIntercept-F-Scramble>(*U*) <Ein japanischer Aufklärer konnte unseren Jägern entkommen: Wir erwarten jede Sekunde einen Angriff! Zur Zeit stehen nur {#a} {PLANE} bereit. Auf geht's, {FULLRANK}!>
+
+<ReconIntercept-F-Scramble>(*U*) <Unsere Abfangjäger verpassten einen japanischen Aufklärer und ein Schlag aus der Luft steht bevor! {#a} {PLANE} stehen bereit, wir werden schon damit fertig. {FULLRANK}, Sie haben Befehl sofort zu starten!>
+
+<ReconIntercept-F-Scramble>(*U*) <Trotz unserer Bemühungen ist ein japanischer Aufklärer mit der Position der Task Force entwischt. Wir erwarten einen Angriff. Nur {#a} {PLANE} sind bereit, eine Sperre zu fliegen. {FULLRANK}, bereiten Sie sich auf Ihren sofortigen Flug vor!>
+
+<ReconIntercept-F-Scramble>(nJA) <Ein Beobachter an Deck will etwas wie einen feindlichen Aufklärer gesehen haben. Schnappen Sie sich eine der {#a} {PLANE} und starten Sie unverzüglich, {FULLRANK}!>
+
+<ReconIntercept-F-Scramble>(*JA) <Der feindliche Aufklärer hat unsere Position durchgegeben, die feindliche Angriffswelle ist im Anflug. Wir werden sie mit {#a} {PLANE} abfangen. Alarmstart!>
+
+<ReconIntercept-F-Scramble>(*JA) <Wir konnten einen Aufklärer nicht abfangen und Feindflugzeuge sind im Anflug. Alles was wir haben sind {#a} {PLANE}. Starten Sie schon, {FULLRANK}!>
+
+<ReconIntercept-F-Scramble>(*JA) <Ein amerikanischer Aufklärer konnte unseren Abfangjägern entkommen, wodurch wir mir mit einem baldigen Angriff zu rechnen haben! Wir haben {#a} {PLANE}. Los geht's, {FULLRANK}!>
+
+<ReconIntercept-F-Scramble>(*JA) <Unsere Bemühungen einen amerikanischen Aufklärer abzufangen, sind fehlgeschlagen. Wir sind nun verwundbar durch Luftangriffe, also bringen wir unsere {#a} {PLANE} in die Luft! {FULLRANK}, Sie werden am Flugdeck erwartet!>
+
+<Scramble-F-ReconCarrier>(*JA) <{FIRSTNAME}, wir müssen den feindlichen Träger finden, bevor er noch eine Angriffswelle startet! {#A} {PLANE}, unter {LDR_RANK} {LDR_NAME} werden {SECTOR} aufklären.>
+
+<Scramble-F-ReconCarrier>(nJA) <Piloten, unsere Luftüberwachung hat mit einigen trägergestützten Angriffsflugzeugen zu tun! {#A} {PLANE}, unter dem Kommando von {LDR_RANK} {LDR_NAME} werden sofort starten und den feindlichen Träger im vermuteten Sektor {SECTOR} aufspüren.>
+
+<Scramble-F-ReconCarrier>(*JA) <{FIRSTNAME}, wir müssen den Träger finden, welcher uns angriff! {#A} {PLANE}, unter {LDR_RANK} {LDR_NAME} werden den Sektor {SECTOR} auskundschaften.>
+
+<Scramble-F-ReconCarrier>(*JA) <{FIRSTNAME}, es ist von höchster Priorität, dass der Träger, welcher uns angriff, gefunden wird! Wir haben {#a} {PLANE} bereit. Sie werden unter dem Kommando von {LDR_RANK} {LDR_NAME} starten und Kurs auf Sektor {SECTOR} nehmen.>
+
+<Scramble-F-ReconCarrier>(*JA) <{FIRSTNAME}, möglicherweise werfen Ihnen die Götter heute ein Lächeln zu! Ihre Aufgabe ist es, den feindlichen Träger auszumachen. Unter der begnadeten Führung von {LDR_RANK} {LDR_NAME} werden {#a} {PLANE} mit Kurs auf den Sektor {SECTOR} starten.>
+
+<Scramble-S-ReconCarrier>(*U*) <{FIRSTNAME}, es ist elementar, dass wir den Aufenthaltsort des feindlichen Trägers ausfindig machen, der uns heute gestört hat! Unter dem Kommando von {LDR_RANK} {LDR_NAME} werden {#a} {PLANE} im Sektor {SECTOR} patrouillieren.>
+
+<Scramble-S-ReconCarrier>(nU*) <Jungs, unsere Piloten kämpfen gerade gegen eintrudelnde trägergestützte Flugzeuge! {LDR_RANK} {LDR_NAME} wird mit {#a} {PLANE} starten und ihr Nest in {SECTOR} suchen. {FIRSTNAME}, Sie kommen mit!> 
+
+<Scramble-S-ReconCarrier>(*U*) <{FIRSTNAME}, ein, feindlicher Träger ist irgendwo da draußen! {#A} {PLANE}, geführt von {LDR_RANK} {LDR_NAME} klären in Richtung {SECTOR}auf. Finden Sie diesen verdammten Träger!>
+
+<Scramble-S-ReconCarrier>(*U*) <Nehmen Sie Platz, {FIRSTNAME}. Wir senden Aufklärer, um den feindlichen Träger zu finden. {LDR_RANK} {LDR_NAME} wird den Flug aus {#a} {PLANE} in den Sektor {SECTOR} führen. Viel Glück!>
+
+<Scramble-F-AttackCarrier>(nU*) <Wir haben den Bastard, der uns zuvor ins Gesicht geschlagen hat. Nun sind wir am Zug! {LDR_RANK} {LDR_NAME} und {#a} {PLANE} werden Richtung {SECTOR} fliegen und ihnen eine unvergessliche Lektion erteilen!> 
+
+<Scramble-F-AttackCarrier>(*U*) <Gentlemen, unsere Aufklärer haben die zurückkehrenden Feindbomber verfolgt und sind ihnen bis zu ihrem Träger gefolgt. Jetzt sind wir am Zug! {LDR_RANK} {LDR_NAME} führt eine Angriffswelle von {#a} {PLANE} zur feindlichen Kampfgruppe in Sektor {SECTOR}. Viel Glück!>
+
+<Scramble-F-AttackCarrier>(*U*) <Unsere Aufklärer haben den Träger entdeckt, der uns zuvor angriff. Jetzt haben wir sie! {#a} {PLANE} werden die feindliche Gruppe im Sektor {SECTOR} angreifen, {LDR_RANK} {LDR_NAME} übernimmt die Operation.>
+
+<Scramble-F-AttackCarrier>(*U*) <OK, Leute, die Stunde des Ruhms ist gekommen! Die feindliche Task Force ist lokalisiert und {LDR_RANK} {LDR_NAME} wird ihnen einen Flug bestehend aus {#a} {PLANE} entgegenschicken, um dem Träger in den Hintern zu treten. Das Ziel ist im Sektor {SECTOR}. Macht uns stolz!>
+
+<Scramble-S-BombCarrier>(nJA) <Unsere feigen Feinde fliegen geradewegs zu ihrem Trägerverband, um ihre wertlosen Leben zu retten. {LDR_RANK} {LDR_NAME} wird {#a} {PLANE} führen, welche {ESCORTED} zur feindlichen Task Force im Sektor {SECTOR} eskortieren, um diese komplett auszulöschen. Banzai!>
+
+<Scramble-S-BombCarrier>(*JA) <Lobt die Götter! Nicht nur der feindliche Angriff wurde abgewehrt, auch ein Aufklärer mit der Position der feindlichen Task Force musste bei uns notlanden. Sektor {SECTOR} ist von alliierten Schiffen verseucht, als schicken wir {LDR_RANK} {LDR_NAME} mit {#a} {PLANE}, um die {ESCORTED} während des Angriffs zu schützen. Lang lebe der Kaiser!>
+
+<Scramble-S-BombCarrier>(*JA) <Welch ein Glück! Nicht nur, dass wir den Angriff abwehren konnten, sondern auch, dass wir einem feindlichen Flugzeug bis zu seinem Träger folgen konnten! Jetzt sind wir am Zug. {LDR_RANK} {LDR_NAME} wird mit {#a} {PLANE} die {ESCORTED} zur feindlichen Tast Force im Sektor {SECTOR} geleiten.>
+
+<Scramble-S-BombCarrier>(*U*) <{LDR_RANK} {LDR_NAME} trägt Heute die ganze Ehre. Unsere {#a} {PLANE} werden die {ESCORTED} begleiten, um sicherzugehen, dass keiner mehr Torpedos auf Wale, statt auf Schiffe werfen muss. Unser Zielort ist {SECTOR}. Bringen Sie alle sicher zurück - Gott sei mit Ihnen!>
+
+<Scramble-S-BombCarrier>(*U*) <Gentlemen, wir verfolgten feindliche Flugzeuge und fanden den japanischen Träger. Jetzt dürfen wir ran! {LDR_RANK} {LDR_NAME} wird mit {#a} {PLANE} die {ESCORTED} mit Kurs auf {SECTOR} eskortieren.>
+
+<Scramble-S-BombCarrier>(*JA)<Unsere Aufklärer haben es geschafft. Sie haben die Feinde bis zu ihrem Träger verfolgt und seine Position gemeldet! {LDR_RANK} {LDR_NAME} mit {#a} {PLANE} wird die Angriffsgruppe aus {ESCORTED} zur vermuteten Position des Trägers in {SECTOR} begleiten.>
+
+<Scramble-S-BombCarrier>(*U*) <Gentlemen, jetzt sind wir am Drücker! Die Aufklärer haben den japanischen Träger gefunden! {LDR_RANK} {LDR_NAME} mit {#a} {PLANE} stellt den Jagdschutz für die Strike Group aus {ESCORTED}. Der Träger wird in {SECTOR} vermutet. Viel Glück!>
+
+// These lines are generic mission description, used only if specific one was not found. Should never happen.
+
+<Generic>(*U*) <Herhören! {LDR_RANK} {LDR_NAME} führt eine Gruppe von {#a} {PLANE} nach Sektor {SECTOR}.>
+<Generic>(*JA) <Piloten! {LDR_RANK} {LDR_NAME} führt {#a} {PLANE} nach {SECTOR}.>
+<Generic>(*U*) <Männer! Heute ist {LDR_RANK} {LDR_NAME} an der Reihe {#a} {PLANE} Richtung Feind im Sektor {SECTOR} zu führen. Jagt sie zum Teufel!>
+<Generic>(*U*) <Gentlemen, die heutige Mission wird von {LDR_RANK} {LDR_NAME} angeführt, wir werden {#a} {PLANE} zum Sektor {SECTOR} senden.>
+<Generic>(*JA) <Samurai! Der tapfere {LDR_RANK} {LDR_NAME} wird euch und eure {#a} {PLANE} zum Sektor {SECTOR} führen. Hoffentlich läuft uns der Feind nicht wieder weg!>
+<Generic>(*JA) <Samurai! Die heutige Mission wird von {LDR_RANK} {LDR_NAME} angeführt und besteht aus {#a} {PLANE}, welche Kurs auf {SECTOR} halten.>
+
+// These descriptions should be normally used for all escort (*Bomb*) missions. There may be more specific texts
+// for some mission types.
+
+<GenericEscort>(*U*)	<Gentlemen! Heute fliegen wir Geleitschutz für {ESCORTED}, die ein Ziel in {SECTOR} angreifen. Eine Gruppe aus {#a} {PLANE} unter {LDR_RANK} {LDR_NAME} darf Babysitter spielen.>
+<GenericEscort>(*U*)	<Jungs, heut ist mal wieder Geleitschutz angesagt. Ein Haufen {ESCORTED} werden mal wieder das Zielgebiet umpflügen und doch alles wichtige verfehlen, und wir sorgen dafür, dass sie's nicht auf die Japaner schieben können. Diese glorreiche Aufgabe, die {ESCORTED} zu begleiten, haben wir uns für {#a} {PLANE} unter {LDR_RANK} {LDR_NAME} aufgehoben.>
+<GenericEscort>(*U*)	<Gentlemen!\nHeute begleiten Sie {ESCORTED}. Die Bomber werden leicht nervös, wenn ihr sie alleine lasst, also seid einmal nicht versessen auf Abschüsse, sondern kümmert euch darum, dass die Bomber ungestört werfen können.>
+<GenericEscort>(*U*)	<Gentlemen!\nHeute wird's relativ spaßig. Ihr begleitet {ESCORTED} den ganzen langen Weg nach {SECTOR} und zurück. Es dürfte zwar einen Haufen Japaner geben, aber wichtig ist die Sicherheit der Bomber.>
+<GenericEscort>(*U*)	<OK, Männer, herhören! Ich hab ein paar Neuigkeiten für euch abschussgierigen Hunde! Unsere {ESCORTED} greifen ein wichtiges Ziel an. Es sollten genug Japaner für alle da sein. {#A} {PLANE}, geführt von {LDR_RANK} {LDR_NAME} werden diesen Einsatz fliegen.>
+<GenericEscort>(*U*)	<Gentlemen!\nHeute fliegen {#a} {PLANE} Geleitschutz für {ESCORTED}. {LDR_FULLRANK} {LDR_NAME} hat schon öfters solche Einsätze geflogen, also haltet euch an ihn und tut ausnahmsweise mal, was er sagt. Keine Alleingänge! Es ist wichtiger, keine Bomberverluste zu riskieren, als Abschüsse zu erzielen!>
+
+<GenericEscort>(*JA)         <Samurai! Heute begleiten wir {ESCORTED}nach {SECTOR}. {#a} {PLANE} unter Befehl von {LDR_RANK} {LDR_NAME} werden diesen Auftrag ausführen.>
+<GenericEscort>(*JA)	<Heute dürft ihr mal wieder Geleitschutz fliegen. {ESCORTED} wollen ein paar Bomben in der Gegend verstreuen. Damit sie das tun können, ohne vom Feind gestört zu werden, schicken wir {#a} {PLANE} unter {LDR_RANK} {LDR_NAME} als Geleit. Banzai!>
+<GenericEscort>(*JA)	<Samurai!\nHeute begleitet ihr {ESCORTED}. Es ist damit zu rechnen, dass der Gegner den Angriff erwartet. Verluste unter den {ESCORTED} sind um jeden Preis zu vermeiden. Um jeden Preis ...>
+<GenericEscort>(*JA)	<Samurai!\nHeute fliegen wir mal wieder eine Geleitmission für die Kameraden in ihren {ESCORTED}. Es geht nach SECTOR} und zurück. Es dürfte Kämpfe geben, also gebt euer Bestes.>
+<GenericEscort>(*JA)	<Pilots! Heute könnt ihr mal euer Abschusskonto aufpolieren. Nachher begleiten wir {ESCORTED} zu einem ziemlich gut verteidigten Ziel. Der Feind wird auf uns warten, und es wird einen großen Kampf geben. {#A} {PLANE} fliegen diesen Einsatz. {LDR_RANK} {LDR_NAME} hat die Ehre, diesen Einsatz zu führen.>
+<GenericEscort>(*JA)	<Achtung!\nWir schicken {#a} {PLANE}auf eine Geleitmission für eine Staffel {ESCORTED}. {LDR_FULLRANK} {LDR_NAME} wird diesen Einsatz führen. Hängt euch an ihn dran und folgt ihm.>
+
+<KamikazeEscort>(*JA) <Heute begleiten wir {ESCORTED} des Spezialangriffskorps nach {SECTOR}. {#a} {PLANE} werden diesen Einsatz fliegen. {LDR_RANK} {LDR_NAME} wird den Einsatz führen. Wenigstens ein Pilot muss zurückkehren und die Ergebnisse des Einsatzes der Spezialangreifer berichten.>
+
+// These are used by default for all intercept and naval recon missions
+// (fleets, subs). You don't know what you will see there.
+
+<GenericPatrol>(*U*)  <Gentlemen!\n{#A} {PLANE} unter Führung von {LDR_FULLRANK} {LDR_NAME} fliegen freie Jagd in {SECTOR}. Wir sind zwar zahlenmäßig überlegen, aber manchmal konzentriert der Gegner seine Kräfte in einem Abschnitt und kann durchbrechen. Andere eigene Verbände sind in diesem Gebiet unterwegs, ich will keine Fälle von Abschüssen durch eigene Einheiten! Also seht zu, dass ihr nur auf eindeutig als japanisch identifizierte Flugzeuge schießt!>
+<GenericPatrol> (*JA) <Schaut auf die Karte, Jungs. Heute geht's nach {SECTOR}. {LDR_FULLRANK} {LDR_NAME} führt {#a} {PLANE} auf freier Jagd. Banzai!>
+
+
+// These descriptions should be normally used for all *Patrol* and *Defend* mission. There may be more specific texts
+// for some mission types.
+
+<Reinforce>(*U*) <{LDR_FULLRANK} {LDR_NAME}, unsere {ESCORTED} haben gemeldet, dass sie in {SECTOR} angegriffen werden! Sofort starten!>
+<Reinforce>(*JA) <{LDR_FULLRANK} {LDR_NAME}, eine Meldung von {ESCORTED} in {SECTOR}. Sie werden angegriffen! Alarmstart!>
+
+<GenericIntercept>(*U*) <Herhören! Wir werden im Sektor {SECTOR} freie Jagd fliegen. {LDR_RANK} {LDR_NAME} wird {#a} {PLANE} anführen. Ihr wisst was zu tun ist, Hals- und Beinbruch!>
+<GenericIntercept>(*U*) <Heute geht's nach Sektor {SECTOR}. Wir werden wohl auf Feindflugzeuge stoßen. {#A} {PLANE}, geführt von {LDR_RANK} {LDR_NAME} fliegen freie Jagd. Start in 15 Minuten. Wegtreten!> 
+<GenericIntercept>(*U*) <Ok, {LDR_FULLRANK} {LDR_NAME}, wir fliegen heute freie Jagd im Sektor {SECTOR}. Wichtig ist, dass dieser Sektor feindfrei ist, keine Alleingänge und Verfolgungsjagden auf einzelne Gegner! Sie haben das Kommando über {#a} Maschinen.>
+<GenericIntercept>(*U*) <Gentlemen!\n{#A} {PLANE} unter Führung von {LDR_FULLRANK} {LDR_NAME} fliegen freie Jagd in {SECTOR}. Wir sind zwar zahlenmäßig überlegen, aber manchmal konzentriert der Gegner seine Kräfte in einem Abschnitt und kann durchbrechen. Andere eigene Verbände sind in diesem Gebiet unterwegs, ich will keine Fälle von Abschüssen durch eigene Einheiten! Also seht zu, dass ihr nur auf eindeutig als japanisch identifizierte Flugzeuge schießt!>
+<GenericIntercept>(*U*) <Gentlemen!\nHeute geht ihr unter Führung von {LDR_FULLRANK} {LDR_NAME} auf freie Jagd im Sektor {SECTOR}. Wie ihr wisst, war in letzter Zeit viel los in diesem Gebiet, also aufpassen! Bringt ein paar Abschüsse mit!>
+<GenericIntercept>(*U*) <Jungs, heute geht's nach {SECTOR}. {LDR_FULLRANK} {LDR_NAME} führt {#a} {PLANE}. Freie Jagd!>
+
+<GenericIntercept>(*JA) <Unser Auftrag ist freie Jagd in Sektor {SECTOR}. {LDR_RANK} {LDR_NAME} führt einen Verband aus {#a} {PLANE}. Tut eure Pflicht. Banzai!>
+<GenericIntercept>(*JA) <Heute fliegen wir freie Jagd in Sektor {SECTOR}. In diesem Luftraum fanden in den letzten Tagen heftige Luftkämpfe statt, es dürfte ziemlich sicher sein, dass wir kämpfen müssen. {#A} {PLANE} unter Führung von {LDR_RANK} {LDR_NAME} starten in 15 Minuten.>
+<GenericIntercept>(*JA) <Samurai!\n{#A} {PLANE} unter {LDR_FULLRANK} {LDR_NAME} fliegen Sperre in Sektor {SECTOR}. Die Amerikaner waren in letzter Zeit öfters in der Lage, lokale Luftüberlegenheit zu erringen. Sie mögen zwar mehr sein, aber wir sind besser! Also zeigt's ihnen!>
+<GenericIntercept>(*JA) <Piloten!\nHeute wird die Shotai von {LDR_FULLRANK} {LDR_NAME} mal gründlich in {SECTOR} aufräumen! Da ging es in den letzten Tagen ziemlich zur Sache, also werdet ihr euch nicht über zu wenig Kämpfe beklagen können!>
+<GenericIntercept>(*JA) <Kameraden, heute geht es nach {SECTOR}. Wir werden versuchen, dem Gegner die Luftüberlegenheit zu entreißen. Es sollte ziemlich heiß hergehen, also bereitet euch auf alles vor.>
+<GenericIntercept>(*JA) <Schaut auf die Karte, Jungs. Heute geht's nach {SECTOR}. {LDR_FULLRANK} {LDR_NAME} führt {#a} {PLANE} auf freier Jagd. Banzai!>
+
+//<ReconIntercept>(*JA)	<Heute fliegen wir Sperre in Sektor {SECTOR}. Es geht vor allem darum, feindliche Aufklärungsflugzeuge abzufangen. {#A} {PLANE} unter {LDR_RANK} {LDR_NAME} starten in einer Viertelstunde.> 
+//<ReconIntercept>(*U*)	<Die Japaner senden vermehrt Aufklärer nach Sektor {SECTOR}. Wir fliegen deshalb Sperre und werden versuchen, jeden Aufklärer abzuschießen, der sich blicken lässt. {#A} {PLANE} unter unserem allseits beliebten {LDR_RANK} {LDR_NAME} starten in 15 Minuten.> 
+
+<AttackPearlHarbor>		<Piloten! Die Stunde, auf die wir unser ganzes Leben gewartet haben, ist gekommen! Das Schicksal Japans liegt in unseren Händen. Alles wird vom Überraschungsmoment abhängen. Der Flottenchef wünscht uns viel Glück. \n \nJeder weiß, was er zu tun hat. {LDR_RANK} {LDR_NAME} führt {#a} {PLANE} ... nach Pearl Harbor! Banzai! >
+<BombPearlHarbor>		<Kameraden! Der Tag ist gekommen! Der Erfolg unseres Schlages hängt von der Überraschung der Amerikaner ab. Der Flottenchef wünscht uns Kriegsglück. \n \nJeder weiß, was er zu tun hat. {LDR_RANK} {LDR_NAME} führt {#a} {PLANE} nach Pearl Harbor. Sie werden eine Angriffswelle aus {ESCORTED} begleiten. Sollten sich keine Feindjäger zeigen, fliegen Sie Bordwaffenangriffe auf die Flugplätze.>
+<ScramblePearlHarbor>	<Pearl Harbor wird bombardiert! Dies ist keine Übung! Alarmstart!>
+
+// These are defaults for ground attack missions. There should normally be more specific description
+
+<GenericAttack>(*U*)	<Herhören! Heute greifen wir Ziele im Sektor {SECTOR} an. {LDR_RANK} {LDR_NAME} führt den Angriffsverband, der aus {#a} {PLANE} besteht.>
+<GenericAttack>(*U*)	<Ihr werdet's erraten habe, wir greifen mal wieder Bodenziele an. Diesmal im Sektor {SECTOR}. Es dürfte genug Gelegenheitsziele in dieser Gegend geben. {#A} {PLANE} unter {LDR_RANK} {LDR_NAME} starten in 15 Minuten.> 
+<GenericAttack>(*U*)	<{LDR_FULLRANK} {LDR_NAME}, es geht mal wieder gegen Bodenziele. Euer Ziel ist hier, im Sektor {SECTOR}. Es dürfte Flak geben und vielleicht auch Jäger. Ihr Verband besteht aus {#a} {PLANE}.>
+<GenericAttack>(*U*)	<Herhören!\nSeht auf die Karte, das Ziel liegt in Sektor {SECTOR}. Unsere Aufklärungsdaten sind vage und wir wissen daher nicht, was genau euch erwartet. Aber wir können sicher sein, dass ihr etwas finden werdet. Die feindlichen Bewegungen am Boden waren in den letzten Tagen ziemlich hektisch, daher sollten sich genügend Gelegenheitsziele bieten. Jetzt zeigt mal, was ihr mit euren {#a} {PLANE} ausrichten könnt!>
+<GenericAttack>(*U*)	<Gentlemen!\nWir besuchen mal wieder unsere lieben japanischen Freunde und knallen ihnen ein paar Dinger auf's Dach. Genauer gesagt geht es nach {SECTOR}. {LDR_FULLRANK} {LDR_NAME} führt den Angriffsverband aus {#a} {PLANE}.>
+<GenericAttack>(*U*)	<Gentlemen!\nDer Stab hat gehört, dass ihr euch über langweilige Bodenangriffseinsätze aufregt. Also heute mal was ganz anderes: Zur Abwechslung mal ein Bodenangriff im Sektor {SECTOR} ...>
+<GenericAttack>(*U*)	<Gentlemen!\nIhr werdet's euch schon gedacht haben, dass das Bodenpersonal die Bomben nicht zum Spaß durch die Gegend schleppt. Heute wird {SECTOR} angegriffen. {#A} {PLANE} bilden den Angriffsverband, geführt von {LDR_RANK} {LDR_NAME}. Start ist in 20 Minuten!>
+
+<GenericAttack>(*JA)	<Achtung! Heute wird der Feind bei {SECTOR} angegriffen! {LDR_RANK} {LDR_NAME} wird {#a} {PLANE} anführen. Ihr kennt eure Pflicht, also viel Glück!>
+<GenericAttack>(*JA)	<Piloten, es geht heute nach {SECTOR}. Der Feind ist sehr stark präsent in diesem Gebiet, also sollte es nach dem Angriff auf das Hauptziel noch genug Gelegenheitsziele geben. Eine Shotai aus {#a} {PLANE} unter {LDR_RANK} {LDR_NAME} wird diesen Einsatz durchführen. Start in 20 Minuten.> 
+<GenericAttack>(*JA)	<{LDR_FULLRANK} {LDR_NAME}, es geht mal wieder gegen Bodenziele, und zwar im Sektor {SECTOR}. Es wird nicht leicht werden, mit starker Abwehr ist zu rechnen. Aber das Ziel muss auf jeden Fall angegriffen werden! Sie führen {#a} {PLANE} bei diesem Einsatz.>
+<GenericAttack>(*JA)	<Samurai!\nWie ihr auf der Karte erkennen könnt, ist das Ziel für heute {SECTOR}. Es ist nicht so ganz sicher, was genau sich im Zielgebiet befindet, aber es sollte Ziele geben für jede der {#a} {PLANE}. Bringt mir jede Bombe ins Ziel!>
+<GenericAttack>(*JA)	<Samurai!\nUnsere amerikanischen Freunde fragen sich bestimmt schon, wo wir bleiben. Also greifen wir heute {SECTOR} an. {LDR_FULLRANK} {LDR_NAME} ist Hikotaicho bei dieser Mission und führt {#a} {PLANE} zum Ziel.>
+<GenericAttack>(*JA)	<Samurai!\nHeute werden zum hundersten Mal Bodenziele bei {SECTOR} angegriffen. Keine Beschwerden bitte! Wir sind kaiserliche Piloten und keine Kinder, wir tun unsere Pflicht!>
+<GenericAttack>(*JA)	<Piloten!\nUnsere armen Mechaniker dürfen mal wieder Bomben schleppen. Unseren Flugzeugen fällt das leichter, aber die haben ja auch den längeren Weg. Das Ziel: Sektor {SECTOR}. Angriffsstärke: {#A} {PLANE}, geführt von {LDR_RANK} {LDR_NAME}. Start: In 20 Minuten.>
+
+// Specific Attack type texts. Please add more variants.
+
+<AttackTrain>(*U*)		<Herhören! Heute greifen wir den feindlichen Schienenverkehr bei {SECTOR} an. {LDR_RANK} {LDR_NAME} führt einen Verband aus {#a} {PLANE}. Ich weiß, Züge seid ihr nicht im Pazifik nicht gewohnt, aber sie fliegen sehr schön in die Luft, wenn ihr draufhaltet, also Abstand halten!>
+<AttackCars>(*U*)		<Jungs, es geht nach {SECTOR}. Die es gab starke Truppenbewegungen dort in letzter Zeit, und wir werden den Verkehr dort heute lahm legen. Hauptziel ist jede Art von Kraftfahrzeugen. Fliegt Bordwaffenangriffe bis die Munition alle ist, es sollte keine feindlichen Jäger geben. {#a} {PLANE} unter {LDR_RANK} {LDR_NAME} starten in 15 Minuten.> 
+<AttackArmor>(*U*)		<{LDR_FULLRANK} {LDR_NAME}, heute mal was besonderes. Die Japaner setzen nicht oft Panzer ein, aber wenn sie es tun, ist es ein Anzeichen für eine wichtige Operation. Panzer wurden im Sektor {SECTOR} gesichtet. Japanische Panzer sind zwar nicht mit unseren Shermans zu vergleichen, aber gegen Infanterie sehr wirkungsvoll. Jeder Panzer, der aus der Luft vernichtet wird, kann keinem GI oder Marine mehr schaden! Sie haben das Kommando über {#a} {PLANE}.>
+<AttackAF>(*U*)			<Gentlemen!\nSchauen Sie auf die Karte, Ziel heute ist ein feindlicher Flughafen im Sektor {SECTOR}. Er ist voll in Betrieb und sehr gefährlich. Sie können natürlich schwere Flak auf dem Weg dorthin erwarten, also sein Sie auf der Hut und kommen Sie sicher heim. Lassen Sie sehen, was Sie mit Ihren {#a} {PLANE} anrichten können.>
+<AttackAF:Tarawa>(*U*)	<Gentlemen!\nHeute geht es los! Wir greifen das Flugfeld von Tarawa an! Es muss ausgeschaltet werden, bevor die Invasionsflotte sich nähern kann. Schwere Flak ist um das Ziel in Stellung, und es sollte genug Zekes für jeden geben. Mehrere U-Boote sind rings um Tarawa in Position, um euch im Fall der Fälle aus dem Bach zu fischen, also versucht so weit wie möglich vom Atoll wegzukommen, bevor ihr die Kiste in den Bach setzt. Sie führen {#a} {PLANE}.>
+<AttackAF:Palau>(*U*)	<Gentlemen!\nHeute geht es los! Wir greifen das Flugfeld von Palau an! Es muss ausgeschaltet werden, bevor die Invasionsflotte sich nähern kann. Schwere Flak ist um das Ziel in Stellung, und es sollte genug Zekes für jeden geben. Mehrere U-Boote sind rings um Palau in Position, um euch im Fall der Fälle aus dem Bach zu fischen, also versucht so weit wie möglich von der Inselgruppe wegzukommen, bevor ihr die Kiste in den Bach setzt. Sie führen {#a} {PLANE}.>
+<AttackBridge>(*U*)		<Gentlemen!\nHeute steht ein schweres Ziel auf dem Plan: die Brücke bei {SECTOR}. Eine Brücke muss mit einem Volltreffer ausgeschaltet werden, also werft ausnahmsweise mal gut. Damit wenigstens einer triff, schicken wir {#a} {PLANE}. Vorsicht, es dürfte sich starke Flak um das Ziel herum befinden. {LDR_FULLRANK} {LDR_NAME} führt den Angriff durch.>
+<AttackStation>(*U*)	<Gentlemen!\nHeute greifen wir mal nicht Züge auf offener Strecke an, sondern einen wichtigen Bahnhof bei {SECTOR}.>
+<AttackDepot>(*U*)		<Gentlemen!\nDie Aufklärer haben ein wichtiges Nachschublager bei {SECTOR} ausgemacht. Wir greifen an. Vorsicht vor starker Flak und wahrscheinlich auch Jäger. Wir schicken {#a} {PLANE}, die Führung übernimmt {LDR_RANK} {LDR_NAME}. Start in 20 Minuten, viel Glück!>
+<AttackShips>(*U*)		<Herhören! Heute geht's nach {SECTOR}. Unser Ziel ist der feindliche Frachtverkehr entlang der Küste. Jedes feindliche Schiff, sei es auch noch so klein, ist anzugreifen! {LDR_RANK} {LDR_NAME} wird eine Gruppe aus {#a} {PLANE} anführen. Viel Glück!>
+
+
+<AttackTrain>(*JA)		<Der Feind im Sektor {SECTOR} verlässt sich vor allem auf den Schienenweg. {LDR_RANK} {LDR_NAME} wird {#a} {PLANE} dorthin führen und jeden angetroffenen Zug vernichten! Banzai!>
+<AttackCars>(*JA)		<Heute fliegen wir einen Angriff im Sektor {SECTOR}. Da die Amerikaner ja genug Treibstoff haben, fährt bei ihnen alles mit LKWs. Wir machen heute Jagd auf LKWs im Zielgebiet. Der Angriffsverband besteht aus {#a} {PLANE} unter {LDR_RANK} {LDR_NAME} Start in 15 Minuten.> 
+<AttackArmor>(*JA)		<{LDR_FULLRANK} {LDR_NAME}, Die amerikanischen Panzer bereiten unserer Infanterie Schwierigkeiten. Der Gegner führt einen Panzerangriff bei {SECTOR}. Ein Panzer ist eine harte Nuss, aber jeder Abschuss bedeutet Entlastung für die Infanterie. Sie führen {#a} {PLANE}.>
+<AttackAF>(*JA)			<Pilots!\nHeute greifen wir ein feindliches Flugfeld bei {SECTOR} an! Die Amerikaner werden schwere Flak dort stationiert haben und mit Jägern ist auch zu rechnen. Deshalb schicken wir auch gleich {#a} {PLANE}.>
+<AttackAF:Wake>(*JA)	<Piloten!\nWie es bestimmt erwartet habt, greifen wir heute den amerikanischen Außenposten auf Wake an. Mindestens drei Flakbatterien und eine Staffel Jäger sind dort stationiert, aber mit etwas Glück überraschen wir sie. Der Angriff wird von {#a} {PLANE} geflogen. Banzai!>
+<AttackBridge>(*JA)		<Samurai!\nHeute haben wir ein schweres Ziel nahe {SECTOR}: eine Brücke. Der meiste feindliche Nachschub in diesem Gebiet muss durch dieses Nadelöhr, das wir heute zerstören werden! {#a} {PLANE} greifen an, {LDR_FULLRANK} {LDR_NAME} übernimmt die Führung.>
+<AttackStation>(*JA)	<Samurai!\Heute greifen wir ein wichtiges Ziel im Sektor {SECTOR} an. Über diesen Bahnhof rollt der gesamte feindliche Nachschub in unserem Frontabschnitt. Schwere Flak ist zu erwarten und feindliche Jäger sind ebenfalls wahrscheinlich. Banzai!>
+<AttackDepot>(*JA)		<Piloten!\nHeute greifen wir das zentrale Nachschublager im Sektor {SECTOR} an. Dies sollte den feindlichen Nachschub empfindlich treffen und unseren Bodentruppen Zeit für neue Aktionen verschaffen. {#A} {PLANE} werden das Ziel angreifen, geführt von {LDR_RANK} {LDR_NAME}. Start in 20 Minuten.>
+<AttackShips>(*JA)		<Piloten! Unser Ziel heute ist der feindliche Nachschub zu See in Sektor {SECTOR}. {LDR_RANK} {LDR_NAME} übernimmt die Führung von {#a} {PLANE}. Jedes feindliche Schiff ist anzugreifen!>
+
+
+// These are left generic
+
+//<AttackHQ>(*U*)		<>
+//<AttackBattery>(*U*)		<>
+//<AttackTroops>(*U*)		<>
+//<AttackPort>(*U*)		<>
+
+//<AttackPort>(*JA)	<>
+//<AttackHQ>(*JA)		<>
+//<AttackBattery>(*JA)	<>
+
+
+
+//  These are defaults for Recon missions 
+
+<GenericNavalRecon>(*U*) <Gentlemen! Wir fliegen Seeaufklärung auf der Suche nach feindlichen Schiffen. {#A} {PLANE} unter {LDR_RANK} {LDR_NAME} suchen Sektor {SECTOR} ab.>
+<GenericNavalRecon>(*JA) <Piloten! Wir fliegen Seeaufklärung auf der Suche nach feindlichen Schiffen. {#A} {PLANE} unter {LDR_RANK} {LDR_NAME} suchen Sektor {SECTOR} ab.>
+
+// Specific recon targets
+
+<GenericNavalRecon>(*U*) <Gentlemen! Wir fliegen Seeaufklärung auf der Suche nach feindlichen Schiffen. {#A} {PLANE} unter {LDR_RANK} {LDR_NAME} suchen Sektor {SECTOR} ab.>
+<GenericNavalRecon>(*JA) <Piloten! Wir fliegen Seeaufklärung auf der Suche nach feindlichen Schiffen. {#A} {PLANE} unter {LDR_RANK} {LDR_NAME} suchen Sektor {SECTOR} ab.>
+
+//<ReconSub>(*U*) <{FULLRANK} {LASTNAME}, Sie suchen den Sektor {SECTOR} nach japanischen U-Booten ab. Sollten Sie eins sichten, sofort Positionsmeldung abgeben und angreifen!>
+//<ReconSub>(*JA*) <{FULLRANK} {LASTNAME}, Sie suchen den Sektor {SECTOR} nach feindlichen U-Booten ab. Sollten Sie eins sichten, sofort Positionsmeldung abgeben und angreifen!>
+
+<AttackSub>(*U*) <{FULLRANK} {LASTNAME}, einer unserer Aufklärer hat ein japanisches U-Boot in Sektor {SECTOR} gesichtet und angegriffen. Es scheint bei dem Angriff beschädigt worden zu sein. Starten Sie mit {#a} {PLANE} und geben Sie ihm den Rest!>
+<AttackSub>(*JA) <{FULLRANK} {LASTNAME}, ein amerikanisches U-Boot wurde gesichtet! Sektor {SECTOR}. Sie und {#a} {PLANE} werden es vernichten!>
+<AttackCarrier>(*U*) <{FULLRANK} {LASTNAME}, ein japanischer Träger wurde im Sektor {SECTOR} gesichtet. Nehmen Sie {#a} {PLANE}, finden und versenken Sie ihn!>
+<BombCarrier>(*U*) <{FULLRANK} {LASTNAME}, endlich hatten unsere Aufklärer Erfolg. Ein feindlicher Träger wurde im Sektor {SECTOR} gesichtet. Ein Angriffsverband aus {ESCORTED} startet in 20 Minuten. Diese Mission könnte entscheidend sein. Halten Sie ihnen die Zeros vom Hals!>
+<AttackCarrier>(*JA) <{FULLRANK} {LASTNAME}, wir haben den amerikanischen Träger gesichtet! Sektor {SECTOR}! Nehmen Sie einen Angriffsverband von {#a} {PLANE} und versenken Sie ihn! Diese Mission könnte diese Seeschlacht entscheiden!>
+<BombCarrier>(*JA) <{FULLRANK} {LASTNAME}, der amerikanische Träger wurde in Sektor {SECTOR} gesichtet. Jetzt schlagen wir zu! Ein Verband von {ESCORTED} wird angreifen und Sie fliegen Geleitschutz.>
+<AttackConvoy>(*U*) <{FULLRANK} {LASTNAME}, ein japanischer Geleitzug wurde von unseren Aufklärern entdeckt. Er befindet sich im Sektor {SECTOR}. Sie führen einen Verband aus {#a} {PLANE}, finden Sie den Geleitzug und versenken Sie so viele Schiffe wie möglich!>
+<BombConvoy>(*U*) <{FULLRANK} {LASTNAME}, ein japanischer Konvoi wurde im Sektor {SECTOR} ausgemacht. Unsere {ESCORTED} greifen ihn an, Sie fliegen mit {#a} {PLANE} Geleitschutz für sie.>
+<AttackConvoy>(*JA) <{FULLRANK} {LASTNAME}, ein amerikanischer Geleitzug wurde von unseren Aufklärern entdeckt. Er befindet sich im Sektor {SECTOR}. Sie führen einen Verband aus {#a} {PLANE}, finden Sie den Geleitzug und versenken Sie so viele Schiffe wie möglich!>
+<BombConvoy>(*JA) <{FULLRANK} {LASTNAME}, ein feindlicher Konvoi wurde im Sektor {SECTOR} ausgemacht. Unsere {ESCORTED} greifen ihn an, Sie fliegen mit {#a} {PLANE} Geleitschutz für sie.>
+
+<AttackAmph>(*U*) <{FULLRANK} {LASTNAME}, die Japaner unternehmen eine amphibische Landung bei {SECTOR}. Starten Sie sofort mit {#a} {PLANE} und richten Sie so viel Schaden wie möglich an!>
+<AttackAmph>(*JA) <{FULLRANK} {LASTNAME}, die Amerikaner landen bei {SECTOR}. Jetzt ist die Invasion in ihrer schwächsten Phase. Greifen Sie den Brückenkopf mit {#a} {PLANE} an. Schwerste Abwehr ist zu erwarten, aber Sie wissen was Ihre Pflicht ist ...>
+
+<PatrolAmph>(*U*) <{FULLRANK} {LASTNAME}, unser Brückenkopf bei {SECTOR} ist ständigen japanischen Luftangriffen ausgesetzt. Sie fliegen mit {#a} {PLANE} Sperre und verhindern weitere Angriffe!>
+<PatrolAmph>(*JA) <{FULLRANK} {LASTNAME}, unsere Landung bei {SECTOR} wird von den Amerikanern aus der Luft angegriffen. Starten Sie mit {#a} {PLANE} und fliegen Sie Sperre.>
+
+<Rescue>(*U*) <{FULLRANK} {LASTNAME}, eine unserer {PLANE} musste nahe {SECTOR} notlanden. Fliegen Sie Deckung für die Rettung und helfen Sie, die Besatzung zu bergen!>
+<Rescue>(*JA) <{FULLRANK} {LASTNAME}, eine {PLANE} musste eine Notlandung bei {SECTOR} machen. Der Pilot ist unverletzt, aber der Feind ist nahe. Finden Sie ihn!>
+
+
+// Scramble missions
+
+<KamikazeIntercept>	<Bogies im Anflug, vermutlich Kamikazes {FROM}! Alarmstart!>
+
+<Intercept>(*U*) 	<Feind im Anflug aus {FROM}, mit Kurs auf uns! {#A} {PLANE} unter {LDR_FULLRANK} {LDR_NAME} werden sie abfangen. Los geht's!>
+<Intercept>(*JA) 	<Feindflugzeuge aus {FROM} geortet! Wahrscheinlich im Anflug auf uns! {#A} {PLANE}, geführt von {LDR_FULLRANK} {LDR_NAME} werden sofort aufsteigen und sie abschießen!>
+
+<Scramble>(*U*)	<Alarm! Feind im Anflug aus {FROM}. {#a} {PLANE} sind startbereit. {FULLRANK}, sofort starten!>
+<Scramble>(*U*) 	<Alarmstart! Feind im Anflug! >
+<Scramble>(*U*) 	<Alarm! Feind im Anflug! Feindliche Bomber im Anflug aus {FROM}! Alle verfügbaren Jäger sofort starten!>
+<Scramble>(*U*) 	<Feind im Anflug aus {FROM}! Wir müssen sofort los, damit wir noch rechtzeitig auf Höhe kommen! >
+
+<Scramble>(*JA)	<Alarm! Feind im Anflug aus {FROM}.Wir haben {#a} {PLANE} startbereit. Sie übernehmen die Führung, {FULLRANK}!>
+<Scramble>(*JA) 	<Alarmstart! Feind im Anflug! >
+<Scramble>(*JA) <Alarm! Feind im Anflug! Feindliche Bomber im Anflug aus {FROM}! Alle verfügbaren Jäger sofort starten!>
+<Scramble>(*JA) 	<Feind im Anflug aus {FROM}! Wir müssen sofort los damit wir noch rechtzeitig auf Höhe kommen! >
+
+// All these missions are <GenericInercept>(*U*). If we need specifics, uncomment and expand them.
+
+//<DefendTrain>(*U*)		<>
+//<DefendArmor>(*U*)		<>
+//<DefendBridge>(*U*)		<>
+//<DefendStation>(*U*)		<>
+//<DefendPort>(*U*)		<>
+//<DefendDepot>(*U*)		<>
+//<DefendHQ>(*U*)			<>
+//<DefendBattery>(*U*)		<>
+//<DefendTroops>(*U*)		<>
+//<PatrolTrain>(*U*)		<>
+//<PatrolCars>(*U*)		<>
+//<PatrolTown>(*U*)		<>
+//<FreeHunt>(*U*)			<>
+//<PatrolStation>(*U*)		<>
+//<PatrolPort>(*U*)		<>
+//<PatrolDepot>(*U*)		<>
+//<PatrolHQ>(*U*)			<>
+//<PatrolBattery>(*U*)		<>
+//<PatrolTroops>(*U*)		<>
+
+// All these missions are <GenericEscort>. If we need specifics, uncomment and expand them.
+
+//<BombTown>(*U*)		<>
+//<BombTrain>(*U*)		<>
+//<BombCars>(*U*)		<>
+//<BombArmor>(*U*)		<>
+//<BombAF>(*U*)		<>
+//<BombBridge>(*U*)	<>
+//<BombShips>(*U*)		<>
+//<BombConvoy>(*U*)	<>
+//<BombStation>(*U*)	<>
+//<BombPort>(*U*)		<>
+//<BombDepot>(*U*)		<>
+//<BombHQ>(*U*)		<>
+//<BombBattery>(*U*)	<>
+//<BombTroops>(*U*)	<>
+
+//<BombStation>(*JA)		<>
+//<BombPort>(*JA)		<>
+//<BombDepot>(*JA)		<>
+//<BombHQ>(*JA)		<>
+//<BombBattery>(*JA)		<>
+//<BombTroops>(*JA)		<>
+//<BombArmor>(*JA)		<>
+//<BombAF>(*JA)		<>
+//<BombBridge>(*JA)		<>
+//<BombTrain>(*JA)		<>
+//<BombCars>(*JA)		<>
+//<BombTown>(*JA)		<>
+
+
+/////////////////////////////////////
+
+
+//<ReconAF>(*U*)		<>
+//<BDAAF>(*U*)		<>
+//<DefendTrans>(*U*)		<>
+//<TranIntercept>(*U*)		<>
+//<ParadropEscort>(*U*)		<>
+
+//<ReconEscort>(*U*)		<>
+//<ReconIntercept>(*U*)		<>
+//<Rescue>(*U*)		<>
+//<Verify>(*U*)		<>
+//<ReconHQ>(*U*)		<>
+//<ReconArty>(*U*)		<>
+//<ReconDepot>(*U*)		<>
+//
+//<Rescue>(*JA)		<>
+//<Verify>(*JA)		<>
+//<ReconHQ>(*JA)		<>
+//<ReconArty>(*JA)		<>
+//<ReconDepot>(*JA)		<>
+//<ReconAF>(*JA)		<>
+//<BDAAF>(*JA)		<>
+//<PatrolTown>(*JA)		<>
+//<TranIntercept>(*JA)		<>
+
+//<DefendTrain>(*JA)		<>
+//<DefendCars>(*JA)		<>
+//<PatrolTrain>(*JA)		<>
+//<PatrolCars>(*JA)		<>
+//<DefendArmor>(*JA)		<>
+//<PatrolArmor>(*JA)		<>
+//<DefendAF>(*JA)		<>
+//<PatrolAF>(*JA)		<>
+//<Scramble>(*JA)		<>
+//<ParadropIntercept>(*JA)		<>
+//<ParadropEscort>(*JA)		<>
+//<PatrolBridge>(*JA)		<>
+//<DefendBridge>(*JA)		<>
+//<Patrol>(*JA)		<>
+//<FreeHunt>(*JA)		<>
+//<ReconIntercept>(*JA)		<>
+//<ReconEscort>(*JA)		<>
+//<DefendShips>(*JA)		<>
+//<PatrolShips>(*JA)		<>
+//<DefendShips>(*JA)		<>
+//<DefendConvoy>(*JA)		<>
+//<AttackConvoy>(*JA)		<>
+//<PatrolConvoy>(*JA)		<>
+//<DefendConvoy>(*JA)		<>
+//<DefendStation>(*JA)		<>
+//<DefendPort>(*JA)		<>
+//<DefendDepot>(*JA)		<>
+//<DefendHQ>(*JA)		<>
+//<DefendBattery>(*JA)		<>
+//<DefendTroops>(*JA)		<>
+//<AttackTroops>(*JA)		<>
+//<PatrolStation>(*JA)		<>
+//<PatrolPort>(*JA)		<>
+//<PatrolDepot>(*JA)		<>
+//<PatrolHQ>(*JA)		<>
+//<PatrolBattery>(*JA)		<>
+//<PatrolTroops>(*JA)		<>
+//////////////////////
+
+<repHeader>			<	EINSATZBERICHT\n>
+<repDate>			< \nDATUM: {DATE}\n>
+<repTimeTO>			<Startzeit: {MTIME_TAKEOFF}>
+<repTimeContact>	< Feindberührung: {MTIME_CONTACT}>
+<repTimeTarget>		< Über Ziel: {MTIME_TARGET}>
+<repTimeBack>		< Rückkehr: {MTIME_LANDING} >
+<repMission>		<Einsatzart: >
+<repForces>			< \nGegner:\n>
+<repOwn>			<   Eigene Kräfte: {=#} {plane}\n>
+<repOtherFriendly>	<        {=#} {plane}\n>
+<repFirstEnemy>		<   Gegner: {~#} {plane}>
+<repOtherEnemy>		<, {~#} {plane}>
+
+<repResults>		< \nErgebnisse:\n>
+<repEnemyLosses>	<    feindliche Verluste:\n>
+
+<repVictory>	<        {rank} {lastname} - 1 Luftsieg\n>
+<repVictories>	<        {rank} {lastname} - {=#} Luftsiege\n>
+
+<repOurLosses>		<    EIGENE VERLUSTE:\n>
+<repKIA>		<        {rank} {lastname} - im Luftkampf gefallen\n>
+<repMIA>		<        {rank} {lastname} - nach Luftkampf vermisst\n>
+<repWIA>		<        {rank} {lastname} - verwundet\n>
+
+
+<repCVkill>	<feindlicher Träger versenkt\n>
+<repCVkills> <{#A} feindliche Träger versenkt\n>
+<repCAkill> <feindliches Schlachtschiff versenkt\n>>
+<repCAkills> <{#A} feindliche Schlachtschiffe versenkt\n>
+<repFleetLosses> <Unsere Flotte hat schwere Verluste erlitten\n>
+
+<fileHall>		<Ehrentafel>
+<titleHall>		<Ehrentafel \n>
+<recHall>		<{FULLRANK} {FIRSTNAME} {LASTNAME} {SORTIES} Einsätze, {AKILLS} Abschüsse ({POINTS}) 
+
+<fileAirKills>	<Luftsiege>
+<titleAirKills>	<Luftsiege durch {FIRSTNAME} {LASTNAME}\n>
+<recAirKill>		<{DATE}: {plane}\n>
+
+<fileWarDiary>  <Kriegstagebuch>
+<titleWarDiary>  <Kriegstagebuch\n>
+
+<fileSummary>   <Gesamte Erfolge>
+<titleSummary>   <{FULLRANK} {FIRSTNAME} {LASTNAME}\n>
+
+<filePersonnel> <Auszeichnungen und Beförderungen>
+<titlePersonnel> <Auszeichnungen und Beförderungen\n\n>
+
+<YOURGROUP>	<\n \n>
+
+// Maps
+
+
+<Japan1> <Japan>
+<Guadal1> <Guadalcanal>
+<Guadal2> <Guadalcanal>
+<CoralSea> <Korallenmeer>
+<SantaCruz> <Santa Cruz>
+<Marianas> <Marianen>
+<Marianas1> <Marianen>
+<Marianas2> <Marianen>

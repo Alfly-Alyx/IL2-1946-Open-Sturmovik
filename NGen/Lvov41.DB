@@ -1,0 +1,92 @@
+Lvov
+[Towns]
+10 Krosno
+10 Lesko
+10 Pshemisl
+10 Dobromil
+10 Hyirov
+10 Mihalovtse
+10 Uzhgorod
+5 Nizhnie_Vorota
+5 Volovets
+10 Dolina
+10 Bolehov
+10 Stryi
+10 Drogobych
+10 Gorodok
+5 Nikolaev
+5 Pustomyty
+5 Davydov
+5 Lvov
+[Roads]
+Krosno BLUE Lesko Hyirov
+Lesko BLUE Krosno Hyirov
+Pshemisl Dobromil Hyirov Gorodok
+Dobromil Hyirov Pshemisl Gorodok
+Hyirov Lesko Dobromil Drogobych
+Mihalovtse BLUE Uzhgorod Nizhnie_Vorota Volovets 
+Uzhgorod Mihalovtse Nizhnie_Vorota Volovets
+Nizhnie_Vorota Uzhgorod Volovets
+Volovets Nizhnie_Vorota Uzhgorod Dolina Bolehov Stryi
+Dolina Bolehov RED Nizhnie_Vorota Volovets 
+Bolehov Dolina Stryi
+Stryi Bolehov 
+Drogobych Stryi Nikolaev Bolehov Hyirov
+Gorodok Pustomyty Lvov Davydov
+Nikolaev Pustomyty Stryi RED
+Pustomyty Davydov Lvov 
+Davydov RED Lvov Gorodok 
+Lvov RED Gorodok Davydov
+[Schedule]
+10622 0 64 0
+10623 1 12 7 
+10624 2 16 6
+10625 0 15 5
+10626 3 14 4
+10627 4 13 3
+10628 0 13 3
+10629 1 12 2
+10630 2 12 2
+10701 2 5 5
+[Planes]
+56 5 I_153_M62
+44 5 I_153P
+43 1 I_16TYPE18
+28 7 I_16TYPE24
+10 7 LAGG_3SERIES4
+4 4 TB_3_4M_17
+5 7 LI_2
+22 1 MIG_3EARLY
+5 1 MIG_3UD
+37 7 U_2VS
+8 7 R_10
+10 7 SU_2
+32 7 SB_2M100A
+33 7 BF_110C4B
+25 4 HE_111H2
+12 4 JU_52_3MG4E
+28 4 JU_88A4
+41 4 JU_87B2
+24 4 FI_156
+8 4 FW_189A2
+9 3 BF_109E4
+30 4 BF_109E4B
+18 4 BF_109E7
+66 3 BF_109F2
+[Operations]
+oRedSoft
+oBlueSoft
+oRedTown
+oBlueTown
+oRedArmor
+oBlueArmor
+oRedAF
+oBlueAF
+oRedBridge
+oRedBridge
+oRedBridge
+oBlueBridge
+oRedCluster
+oBlueCluster
+oRedRecon
+oBlueRecon

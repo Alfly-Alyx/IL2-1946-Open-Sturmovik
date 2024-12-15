@@ -1,0 +1,36 @@
+// Iwo and alike = later war US carriers vs islands
+[Macros]
+UsNavyMin		10622:50814:N			USN 2N				IJN 3F
+UsNavyMin		10622:50814:N			USN 4N				IJN 3F
+UsNavyMed		10622:50814:N			USN 6N				IJN 6F
+UsNavyMed		10622:50814:N			USN 6N				IJN 4F
+UsKamiInt		10622:50814:N			USN 4N				IJN 1Kr 1Kr 1Kr 1Kr 1Kr 1Kr
+UsKamiInt		10622:50814:N			USN 6N				IJN 1Kr 1Kr 1Kr 1Kr 1Kr 1Kr
+UsNavyScram		10622:50814:N			USN 4N 2nF 2nF		IJN 6Bx 3Bx
+UsNavyScram		10622:50814:N			USN 4N 6nF			IJN 6Bx 
+UsNavyAttack	10622:50814:N			USN 6N 6nF 6nF		IJN 6F
+UsNavyAttack	10622:50814:N			USN 6N 4nF 6nF		IJN 6F
+UsNavyAttack	10622:50814:N			USN 4N 6nF 6nF		IJN 6F
+UsNavyAttack	10622:50814:N			USN 6N 4nF 4nF		IJN 3F
+UsNavyBomb		10622:50814:N			USN 6nB 6N 6nF		IJN 6F
+UsRecInt		10622:50814:N			USN 4N			 	IJN 2R 2F
+JpNavalRecInt	10622:50814:A			USN 3nF 		 	IJN 4Y
+[Operations]
+oUsAttackConvoy		{UsNavyAttack}
+oUsBombConvoy		{UsNavyBomb}
+oUsScramble			{UsNavyScram}
+oUsAttackArmor		{UsNavyAttack}
+oUsAttackHQ			{UsNavyAttack}
+oUsAttackPort		{UsNavyAttack}
+oUsAttackDepot		{UsNavyAttack}
+oUsAttackBattery	{UsNavyAttack}
+oUsAttackTroops		{UsNavyAttack}
+oUsAttackCars		{UsNavyAttack}
+oUsBombArmor		{UsNavyBomb}
+oUsBombHQ			{UsNavyBomb}
+oUsBombPort			{UsNavyBomb}
+oUsBombDepot		{UsNavyBomb}
+oUsBombBattery		{UsNavyBomb}
+oUsBombTroops		{UsNavyBomb}
+oUsBombCars			{UsNavyBomb}
+oUsReconIntercept	{UsRecInt}

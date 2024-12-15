@@ -1,0 +1,159 @@
+Stalingrad
+[Towns]
+5 Pogodin
+5 Kalach_na_Donu
+5 Stepnoy
+5 Vertyachiy
+5 Ilovlya
+5 Kachalino
+5 Nizhniy_Chir
+5 Logovskiy
+5 Vasilevka
+5 Oktyabrskiy
+5 Vodniy
+5 Loznoye
+5 Privolniy
+5 Plodovitoe
+5 Dubrovka
+5 Vodostroy
+5 Gorodishe
+5 Gumrak 
+5 Pitomnik
+5 Gorodovikovo
+5 Khomichev
+5 Vyazovka
+5 Duboviy_Ovrag 
+5 Ivanovka
+50 Stalingrad
+5 Primarsk
+5 Novonikolskoe
+5 Rakhinka
+5 Verhnepogromnoe
+5 Volzhskiy
+5 Leninsk 
+50 Znamensk
+[Roads]
+Pogodin BLUE Kalach_na_Donu Nizhniy_Chir
+Kalach_na_Donu BLUE Pogodin Stepnoy Logovskiy Vertyachiy
+Stepnoy Kalach_na_Donu Pogodin Logovskiy Vertyachiy Vodniy Gumrak Pitomnik
+Vertyachiy Kalach_na_Donu Kachalino Ilovlya Stepnoy
+Ilovlya BLUE Vertyachiy Kachalino Loznoye
+Kachalino Ilovlya Vertyachiy Loznoye Gorodishe
+Nizhniy_Chir BLUE Pogodin Logovskiy
+Logovskiy Nizhniy_Chir Pogodin Stepnoy Vasilevka
+Vasilevka Logovskiy Vertyachiy Vodniy Privolniy
+Oktyabrskiy Nizhniy_Chir BLUE Logovskiy Vasilevka Privolniy
+Vodniy Gumrak Pitomnik Stepnoy Logovskiy Vasilevka Privolniy
+Loznoye Ilovlya Kachalino Dubrovka Vodostroy
+Privolniy Vasilevka Plodovitoe Vodniy
+Plodovitoe Privolniy Gorodovikovo Khomichev
+Dubrovka Vodostroy Loznoye Primarsk Novonikolskoe
+Vodostroy Dubrovka Gorodishe Vertyachiy Stalingrad
+Gorodishe Vertyachiy Kachalino Gumrak Pitomnik
+Gumrak Stalingrad Pitomnik Gorodishe
+Pitomnik Gumrak Stalingrad Gorodishe Vodniy
+Gorodovikovo Khomichev Plodovitoe
+Khomichev Vyazovka Vyazovka Gorodovikovo Duboviy_Ovrag
+Vyazovka Khomichev Ivanovka RED
+Duboviy_Ovrag Vodniy Plodovitoe Khomichev Ivanovka
+Ivanovka Vyazovka Duboviy_Ovrag Leninsk
+Stalingrad Pitomnik Gumrak Gorodishe Volzhskiy
+Primarsk RED Loznoye Novonikolskoe
+Novonikolskoe RED Primarsk Rakhinka
+Rakhinka RED Verhnepogromnoe Novonikolskoe
+Verhnepogromnoe RED Rakhinka Vodostroy Volzhskiy
+Volzhskiy Verhnepogromnoe RED Vodostroy
+Leninsk RED Volzhskiy Znamensk
+Znamensk RED Leninsk
+[Schedule]
+20912 0  40 0
+20914 1  10 5
+20916 2  10 5
+20918 0  10 5
+20920 3  10 5
+20922 0  9 4
+20924 12 9 4
+20926 0  9 4
+20928 0  8 3
+20930 4  8 3
+21002 0  8 3
+21004 10 7 2
+21006 0  7 2
+21008 1  7 2
+21010 2  7 2
+21012 3  6 1
+21015 4  6 1
+21018 0  6 1
+21021 0  6 1
+21024 1  6 1
+21027 1  7 2
+21030 0  8 3
+21103 0  9 4
+21106 0  10 5
+21107 0  11 6
+21108 1  9  7
+21109 1  8  6
+21110 0  7  5
+21111 1  6  4
+21112 2  5  5
+21113 1  5  5
+21114 0  4  4
+21115 1  5  4
+21116 0  5  5
+21117 1  6  6
+21118 0  6  8
+21119 1  7 20
+[Planes]
+12 4 I_153_M62
+18 4 I_153P
+22 1 I_16TYPE18
+47 5 I_16TYPE24
+16 1 HurricaneMkIIb
+16 1 HurricaneMkIIbMod
+9 4 IL_2_1941Early
+2 4 IL_2_1941Late
+11 4 IL_2MEarly
+16 4 IL_4_IL4
+29 7 LAGG_3SERIES4
+6 7 LA_5
+3 4 LI_2
+18 2 MIG_3UD
+14 4 SU_2
+10 4 PE_2SERIES1
+5 4 PE_3BIS
+11 4 U_2VS
+14 4 SB_2M103
+21 3 YAK_1
+2 4 P_11C
+6 3 IAR_80
+4 3 IAR_81a
+32 4 BF_109E7
+33 3 BF_109F4
+26 7 BF_109G2
+14 5 BF_110C4
+14 5 BF_110C4B
+25 4 HE_111H2
+19 4 HE_111H6
+8 4 JU_52_3MG4E
+35 4 JU_87D3
+22 4 JU_88A4
+7 4 FW_189A2
+12 4 FI_156
+12 3 MC_202
+[Operations]
+oRedSoft
+oBlueSoft
+oRedTown
+oBlueTown
+oRedArmor
+oBlueArmor
+oRedAF
+oBlueAF
+oRedBridge
+oRedBridge
+oRedBridge
+oBlueBridge
+oRedCluster
+oBlueCluster
+oRedRecon
+oBlueRecon

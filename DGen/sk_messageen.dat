@@ -1,0 +1,1146 @@
+<DGen:>		<*>
+	---------------------------------------------------------------------------------------------------------------------------
+
+		 Translation guidelines. 
+
+	Every line not starting with symbol < will be ignored. You may use it for comments.
+ 	Otherwise every message consists of two parts: message ID and Message text,
+	both in < > brackets.
+
+	For every ID code there may be up to 10 variants of texts - one will be picked up randomly.
+	You don't need to translate every line exactly, you just need to describe the same situation.
+
+	Symbols \n and %s must be left intact. \n means new line, %s means that some substring will be 
+	placed there - usually town name. Some lines have space in the end. Please leave it in place -
+	it means that there will be another sentence that will continue the briefing. The space separates them. 
+
+	Message texts cannot contain new lines - make them as long as you need (but not longer than 256 chars).
+	---------------------------------------------------------------------------------------------------------------------------
+
+
+
+	---------------------------------------------------------------------------------------------------------------------------
+
+	The following messages are the first part of the briefing. 
+	They describe general situation and target area	 		---------------------------------------------------------------------------------------------------------------------------
+			
+<DeTranInt>	<\nRussian transport planes are delivering supplies to %s. >
+<RuTranInt>	<\nGerman transport planes are delivering supplies to %s. >
+<RuTranIntR>	<Our task is to stop enemy air operations.\n>
+<DeTranIntD>	<Our task is to stop enemy air operations.\n>
+
+<RuCAP>		<\nIncreased Luftwaffe activity has been noted around %s. >
+<RuCAP>		<\nToday we will cover the %s area. >
+<RuCAP>		<\nComrade Officers, we received an order to patrol airspace over %s. >
+<RuCAP>		<\nOur destination today is %s. >
+<RuCAP>		<\nWe have to protect an important strategic area of %s from German attacks. >
+<RuCAP>		<\nArmy intelligence suggests that Luftwaffe may attack %s today. >
+
+<DeCAP>	<\nIncreased VVS activity has been noted around %s. >
+<DeCAP>	<\nToday we will cover the %s area. >
+<DeCAP>	<\nPilots, we received an order to patrol airspace over %s. >
+<DeCAP>	<\nOur destination today is %s. >
+<DeCAP>	<\nWe have to protect an important strategic area of %s from Russian attacks. >
+<DeCAP>	<\nGerman intelligence suggests that VVS may attack %s today. >
+
+<RuEsc>		<\nOur comrades are performing an attack in the %s area. >
+<RuEsc>		<\nOur strike group is heading in direction of %s. >
+<RuEsc>		<\nOur bombers are preparing a nasty surprise for Germans around %s. >
+<RuEsc>		<\nToday we are helping our comrades heading to %s. >
+
+<DeEsc>		<\nOur German friends from the strike group are performing attack in the %s area. >
+<DeEsc>		<\nThe strike group of our German allies is heading in direction of %s. >
+<DeEsc>		<\nGermans are preparing a nasty surprise for the Ivans around %s. >
+<DeEsc>		<\nToday we are helping our German comrades heading to %s. >
+
+<RuEscP>	<\nToday our paratroopers will be dropped in the %s area. >
+<RuEscP>	<\nBy special Stavka order our transport planes will drop paratroopers in the %s area today. >
+
+<DeEscP>	<\nToday German paratroopers will be dropped in the %s area. >
+
+<RuEscR>	<\nToday our recon plane will photograph important targets near %s. >
+<DeEscR>	<\nToday our recon plane will photograph important targets near %s. >
+
+<RuCAS>		<\nHas everyone got a map of the %s Sector? You'll need it for this mission. >
+<RuCAS>		<\nOur destination is not far from %s. >
+<RuCAS>		<\nWe will hit the %s area in this mission. >
+<RuCAS>		<\nAttention! In 20 minutes we are leaving for the %s area. >
+<RuCAS>		<\nAttention! We are going to the %s area. >
+<RuCAS>		<\nPilots! Our objective is located near %s. >
+<RuCAS>		<\nComrade Officers, we received an order to strike %s sector. >
+<RuCAS>		<\nComrade Officers, we are visiting our German friends around %s. >
+<RuCAS>		<\nComrades! we are heading to %s. >
+<RuCAS>		<\n%s sector is assigned as a destination of this mission. >
+
+<DeCAS>	<\nEverybody has a map of %s sector? You'll need it in this mission. >
+<DeCAS>	<\nOur destination is not far from %s. >
+<DeCAS>	<\nWe will hit the %s area in this mission. >
+<DeCAS>	<\nAttention! In 20 minutes we are leaving for the %s area. >
+<DeCAS>	<\nAttention! We are going to the %s area. >
+<DeCAS>	<\nPilots! Our objective is located near %s. >
+<DeCAS>	<\nPilots, we received an order to strike %s sector. >
+<DeCAS>	<\nPilots! we are heading to %s. >
+<DeCAS>	<\n%s sector is assigned as a destination of this mission. >
+<DeCAS>	<\nPilots, we are visiting our Russian friends around %s. >
+
+
+<DeSwp>		<\nOur destination is not far from %s. >
+<DeSwp>		<\nAttention! In 30 minutes we are leaving for the %s area. >
+<DeSwp>		<\nAttention! We are going to the %s area. >
+<DeSwp>		<\nPilots! We are heading to %s. >
+<DeSwp>		<\n%s sector is assigned as a destination of this mission. >
+<DeSwp>		<\nWe go to %s. >
+
+<RuSwp>		<\nOur destination is not far from %s. >
+<RuSwp>		<\nAttention! In 30 minutes we are leaving for the %s area. >
+<RuSwp>		<\nAttention! We are going to the %s area. >
+<RuSwp>		<\nComrades! We are heading to %s. >
+<RuSwp>		<\n%s sector is assigned as a destination of this mission. >
+<RuSwp>		<\nWe go to %s. >
+
+<RuScramSit>	<\nAlarm! Enemy planes are heading toward our airfield. >
+<RuScramSit>	<\nAlarm! Luftwaffe planes are heading this way. >
+<RuScramSit>	<\nGerman planes are approaching our airfield! >
+<RuScramSit>	<\nWe've just received a warning, that enemy planes are approaching our airfield. >
+
+<DeScramSit>	<\nAlarm! Red planes are heading toward our airfield. >
+<DeScramSit>	<\nAlarm! VVS planes are heading this way. >
+<DeScramSit>	<\nRussian planes are approaching our airfield! >
+<DeScramSit>	<\nWe've just received a warning, that enemy planes are approaching our airfield. >
+
+<RuScram>	<Take off immediately!>
+<RuScram>	<Intercept them!>
+<DeScram>	<Take off immediately!>
+<DeScram>	<Intercept them!>
+
+<YourAF>	<\nYou are located at %s airfield. >
+
+<RuTranRep>		<\nYou are being transferred from %s to a new airfield: %s.\n>
+<RuTranRep>		<\nSay goodbye to %s. We are moving to a new airfield: %s.\n>
+<RuTranRep>		<\nWe are leaving %s. Our new airfield is located near %s.\n>
+<RuTranRep>		<\nPrepare to leave %s. Our new new airfield is %s.\n>
+<DeTranRep>		<\nYou are being transferred from %s to a new airfield: %s.\n>
+<DeTranRep>		<\nSay goodbye to %s. We are moving to a new airfield: %s.\n>
+<DeTranRep>		<\nWe are leaving %s. Our new airfield is located near %s.\n>
+<DeTranRep>		<\nPrepare to leave %s. Our new airfield is %s.\n>
+
+		---------------------------------------------------------------------------------------------------------------------------
+	The following messages will continue the briefing. They will go after first part. 
+	Message ID is build as situation code plus side code. 
+	RuBTrainR means that Russians bomb German train, and briefing is for Russians. 
+	RuBTrainD means the same situation but briefing is for Germans.	
+	---------------------------------------------------------------------------------------------------------------------------
+
+<RuBTrainR>		<Priority targets are enemy trains. You must protect the bombers.\n>
+<RuBTrainR>		<Enemy reinforcements are arriving by trains. You must protect the bombers.\n>
+<RuBTrainR>		<Attacking railroads we can seriously disrupt enemy operations in the area. The strike group must be protected from nterception by German fighters.\n>
+<RuBTrainR>		<We have information that new enemy tanks are arriving by rail. Protect the attacking aircraft.\n>
+<RuBTrainR>		<Military intelligence has information that an important officer may arrive by railroad today. Keep our bombers free from any enemy intervention.\n>
+
+<RuBTrainD>		<The most frequent targets of Russian attacks there are trains. We must inflict heavy losses to VVS bombers in order to stop them.\n>
+<RuBTrainD>		<Railway is the most important target there. We must destroy as many VVS bombers as possible to stop their attack.\n>
+<RuBTrainD>		<Our supplies there depend on railroad. The VVS bombing campaign must be stopped.\n>
+<RuBTrainD>		<Today we expect an important German officer to arrive by rail. You have to protect him.\n>
+<RuBTrainD>		<Counter-intelligence of our German friends spread rumours about arrival of important officer from Berlin. We expect Russian bobmers to attack the train. Don't give Soviet bombers a chance to escape!\n>
+
+<RuATrainR>		<Priority targets are German trains!\n>
+<RuATrainR>		<German reinforcements are arriving by trains. They should not reach their destination!\n>
+<RuATrainR>		<Attacking railroads we can seriously disrupt German operations in the area.\n>
+<RuATrainR>		<We have information that new German tanks are arriving by railroad. They should not reach their destination!\n>
+<RuATrainR>		<Military intelligence has information that important general from Berlin may arrive by railroad today. Destroy that train!\n>
+
+<RuATrainD>		<The most frequent targets of Russian attacks there are trains. We must protect the railroad!\n>
+<RuATrainD>		<Railroad is the most important target there. The trains must go without delays.\n>
+<RuATrainD>		<Our supplies there depend on railroad. We need every barrel of gasoline, every piece of ammunition.\n>
+<RuATrainD>		<Artists from Berlin are arriving today by railroad. We must protect them from danger.\n>
+
+<DeBTrainR>		<The most frequent targets of German attacks there are trains. We must inflict heavy losses to Luftwaffe.\n>
+<DeBTrainR>		<Railroad is the most important target there. We must destroy as many Luftwaffe bombers as possible to stop their attack.\n>
+<DeBTrainR>		<Our supplies there depend on railroad. Luftwaffe bombing campaign must be stopped.\n>
+<DeBTrainR>		<Artists from Moscow are arriving today by railroad. Destroy German bombers if they will attack.\n>
+<DeBTrainR>		<Our counter-intelligence spread rumours about arrival of important Stavka officer. We expect German bombers to attack the train. Don't give Germans a chance to escape!\n>
+
+<DeBTrainD>		<Priority targets are Russian trains. You must protect the friendly bombers.\n>
+<DeBTrainD>		<Russian reinforcements are arriving by trains. You must protect the German bombers.\n>
+<DeBTrainD>		<Attacking railroads we can seriously disrupt Russian operations in the area. The German strike group must be protected from any VVS actions.\n>
+<DeBTrainD>		<We have information that new Russian tanks are arriving by railroad. Attack group must have freedom of actions.\n>
+<DeBTrainD>		<Military intelligence of our Geschwader has information that important Stavka officer may arrive by railroad today. Keep bombers free from any VVS intervention.\n>
+
+<DeATrainR>		<The most frequent targets of German attacks there are trains. We must protect the railroad!\n>
+<DeATrainR>		<Railroad is the most important target there. The trains must go without delays.\n>
+<DeATrainR>		<Our supplies there depend on railroad. We need every tank, every shell.\n>
+<DeATrainR>		<Artists from Moscow are arriving today by railroad. We must protect them from danger.\n>
+
+<DeATrainD>		<Priority targets are Russian trains!\n>
+<DeATrainD>		<Russian reinforcements are arriving by trains. They should not reach their destination!\n>
+<DeATrainD>		<Attacking railroads we can seriously disrupt Russian operations in the area.\n>
+<DeATrainD>		<We have information that new Russian tanks are arriving by railroad. They should not reach their destination!\n>
+<DeATrainD>		<Military intelligence of our Geschwader has information that important Stavka officer may arrive by railroad today. Destroy that train!\n>
+
+<RuBShipR>	<Targets for today are German ships. You must protect the bombers.\n>
+<RuBShipR>	<German reinforcements are arriving by sea. You must protect the bombers.\n>
+<RuBShipR>	<German Navy creates many problems for our operations in the area. The strike group must be protected from any Luftwaffe actions.\n>
+<RuBShipR>	<We must suppress operations of German Navy. Attack group must have freedom of actions.\n>
+<RuBShipR>	<To help our Marines we must destroy as many German ships as possible. Keep bombers free from any Luftwaffe intervention.\n>
+
+<RuBShipD>	<Russians often attack ships of our German allies there. We must inflict heavy losses to VVS bombers in order to stop them.\n>
+<RuBShipD>	<Naval operations are of highest importance there. We must destroy as many VVS bombers as possible to stop their attacks.\n>
+<RuBShipD>	<Our supplies there depend on sea communications. VVS bombing campaign must be stopped.\n>
+<RuBShipD>	<German counter-intelligence spread rumours about arrival of important Navy officer. We expect Ivans to attack the ship. Don't give Soviet bombers a chance to escape!\n>
+
+<RuAShipR>	<Target for today is German ship. You must destroy it.\n>
+<RuAShipR>	<Targets for today - German ships.\n>
+<RuAShipR>	<German reinforcements are arriving by sea. Destroy the ships!\n>
+<RuAShipR>	<German Navy creates many problems for our operations in the area. We must deal a heavy blow to them!\n>
+<RuAShipR>	<We must suppress operations of German Navy. Destroy any ship you see!\n>
+<RuAShipR>	<To help our Marines we must destroy as many German ships as possible!\n>
+
+<RuAShipD>	<Russians often attack ships of our German allies there. We must help to protect them!\n>
+<RuAShipD>	<Naval operations are of highest importance there. We must protect the ships!\n>
+<RuAShipD>	<Our supplies there depend on sea communications. Protect the ships!\n>
+
+<DeBShipR>	<Germans often attack our ships there. We must inflict heavy losses to Luftwaffe bombers in order to stop them.\n>
+<DeBShipR>	<Naval operations are of highest importance there. We must destroy as many Luftwaffe bombers as possible to stop their attacks.\n>
+<DeBShipR>	<Our supplies there depend on sea communications. Luftwaffe bombing campaign must be stopped.\n>
+<DeBShipR>	<Our counter-intelligence spread rumours about arrival of important Navy officer. We hope that Germans will attack the ship. Don't give German bombers a chance to escape!\n>
+
+<DeBShipD>	<Targets for today are Russian ships. You must protect the friendly bombers.\n>
+<DeBShipD>	<Russian reinforcements are arriving by sea. You must protect the German bombers.\n>
+<DeBShipD>	<Russian Navy creates many problems for operations of German naval forces in the area. The strike group must be protected from any VVS actions.\n>
+<DeBShipD>	<We must suppress operations of Russian Navy. Attack group must have freedom of actions.\n>
+<DeBShipD>	<To help our German comrades on the ground we must destroy as many Russian ships as possible. Keep bombers free from any VVS intervention.\n>
+
+<DeAShipR>	<Germans often attack our ships there. We must protect them!\n>
+<DeAShipR>	<Naval operations are of highest importance there. We must protect the ships!\n>
+<DeAShipR>	<Our supplies there depend on sea communications. Protect the ships!\n>
+
+<DeAShipD>	<Targets for today - Russian ships.\n>
+<DeAShipD>	<Russian reinforcements are arriving by sea. Destroy the ships!\n>
+<DeAShipD>	<Russian Navy creates many problems for our German friends in the area. We must deal a heavy blow to them!\n>
+<DeAShipD>	<We must suppress operations of Russian Navy. Destroy any ship you see!\n>
+<DeAShipD>	<To help our German allies on the ground we must destroy as many Russian ships as possible!\n>
+
+<RuBColR>	<Priority targets are transport columns. You must protect the bombers.\n>
+<RuBColR>	<German reinforcements are arriving by transport columns. You must protect the bombers.\n>
+<RuBColR>	<Attacking roads we can seriously disrupt German operations in the area. The strike group must be protected from any Luftwaffe actions.\n>
+<RuBColR>	<Captured Germans report that they experience lack of fuel and ammunition. Attacking transport column is a high priority task. Our bombers must have freedom of actions.\n>
+<RuBColR>	<With railroad attacked by partisans, Germans now heavily depend on supplies by transport columns. Keep bombers free from any Luftwaffe intervention.\n>
+
+<RuBColD>	<Russian favorite targets there are transport columns. We must inflict heavy losses to VVS bombers in order to stop them.\n>
+<RuBColD>	<To protect our roads there, we must destroy as many VVS bombers as possible to stop their attack.\n>
+<RuBColD>	<Our supplies there depend on transport columns. VVS bombing campaign must be stopped.\n>
+
+<RuAColR>	<Targets for today - German transport columns.\n>
+<RuAColR>	<To prevent German reinforcements from reaching the frontline, destroy any cars that you see!\n>
+<RuAColR>	<We must suppress German transport columns. Destroy any car you see!\n>
+
+<RuAColD>	<The most frequent targets of Russian attacks there are cars. We must protect our transport communications\n>
+<RuAColD>	<Our transport communications are the most vulnerable targets there. The columns must go without delays.\n>
+<RuAColD>	<Our supplies there depend on transport columns. We have to minimize our losses in cars.\n>
+
+<DeBColR>	<German favorite targets there are transport columns. We must inflict heavy losses to Luftwaffe in order to stop them.\n>
+<DeBColR>	<To protect our roads there, we must destroy as many Luftwaffe bombers as possible. Target leaders!\n>
+<DeBColR>	<Our supplies there depend on transport columns. Luftwaffe bombing campaign must be stopped.\n>
+
+<DeBColD>	<Target for today is Russian transport column. You must protect the German bombers.\n>
+<DeBColD>	<Priority targets are transport columns. You must protect the German bombers.\n>
+<DeBColD>	<Russian reinforcements are arriving by transport columns. You must protect the friendly bombers.\n>
+<DeBColD>	<Attacking roads we can seriously disrupt Russian operations in the area. The strike group must be protected from any VVS actions.\n>
+<DeBColD>	<Soviet deserters report that they experience lack of food and ammunition. Attacking transport columns is a high priority task. Friendly bombers must have freedom of actions.\n>
+<DeBColD>	<With most of railroads destroyed, Russians now heavily depend on supplies by transport columns. Keep friendly bombers free from any VVS intervention.\n>
+
+<DeAColR>	<The most frequent targets of German attacks there are cars. We must protect our transport communications\n>
+<DeAColR>	<Our transport communications are the most vulnerable targets there. The columns must go without delays.\n>
+<DeAColR>	<Our supplies there depend on transport columns. We have to minimize our losses in cars.\n>
+
+<DeAColD>	<Targets for today - Russian transport columns.\n>
+<DeAColD>	<To prevent Russian reinforcements from reaching the frontline, destroy any cars that you see!\n>
+<DeAColD>	<We must suppress Russian transport columns. Destroy any car you see!\n>
+
+<RuBArmR>	<The bombers will attack advancing German tanks. Don't allow Luftwaffe to intercept them.\n>
+<RuBArmR>	<You must protect the bombers, they will attack German tanks in the area.\n>
+<RuBArmR>	<Protect the bombers, German tanks that they will attack are a big threat to our infantry.\n>
+<RuBArmR>	<Our ground forces are threatened by German tanks moving to the frontline. Don't allow Luftwaffe to intercept the bombers.\n>
+<RuBArmR>	<Bombers must complete their attack run, we need these tanks to be destroyed.\n>
+
+<RuBArmD>	<We must protect tanks of our German allies from potential Russian air attacks. Target leaders, Russians do not have many experienced bomber pilots.\n>
+<RuBArmD>	<German tanks are primary targets of Russian air attacks. Destroy the bombers if they dare to appear there.\n>
+<RuBArmD>	<We need to protect German armored forces from Russian air attacks. Destroy the bombers if they dare to appear there.\n>
+<RuBArmD>	<German armored forces are our main assets in the area. Cover them from any air attacks.\n>
+
+<RuAArmR>	<Targets for today are German tanks.\n>
+<RuAArmR>	<We will attack advancing German tanks.\n>
+<RuAArmR>	<We will attack German tanks in the area.\n>
+<RuAArmR>	<German tanks are the biggest threat to our infantry. Destroy them!\n>
+<RuAArmR>	<Our ground forces are threatened by German tanks moving to the frontline. Destroy them!\n>
+<RuAArmR>	<We need German tanks there to be destroyed.\n>
+
+<RuAArmD>	<We must protect tanks of our German friends from potential Russian air attacks.\n>
+<RuAArmD>	<German tanks are primary targets of Russian air attacks.\n>
+<RuAArmD>	<We need to protect German armored forces from Russian air attacks.\n>
+<RuAArmD>	<German armored forces are our main assets in the area. Cover them from any air attacks.\n>
+
+<DeBArmD>	<Targets for today are Russian tanks. You must protect the German bombers.\n>
+<DeBArmD>	<The allied bombers will attack advancing Russian tanks. Don't allow VVS to intercept them.\n>
+<DeBArmD>	<You must protect the bombers of our German allies, they will attack Russian tanks in the area.\n>
+<DeBArmD>	<Protect the bombers, Russian tanks that they will attack are a big threat to German infantry.\n>
+<DeBArmD>	<German ground forces are threatened by Russian tanks moving to the frontline. Don't allow VVS to intercept the bombers.\n>
+<DeBArmD>	<German bombers must complete their attack run, we need enemy tanks to be destroyed.\n>
+
+<DeBArmR>	<We must protect our tanks from potential German air attacks. Target leaders to demoralize bomber pilots.\n>
+<DeBArmR>	<Our tanks are primary targets of Luftwaffe attacks. Destroy the bombers if they dare to appear there.\n>
+<DeBArmR>	<We need to protect our armored forces Luftwaffe attacks. Destroy the bombers if they dare to appear there.\n>
+<DeBArmR>	<Our armored forces are our main assets in the area. Cover them from any air attacks.\n>
+
+<DeAArmD>	<Targets for today are Russian tanks. You must destroy them.\n>
+<DeAArmD>	<Targets for today are Russian tanks.\n>
+<DeAArmD>	<We will attack advancing Russian tanks.\n>
+<DeAArmD>	<We will attack Russian tanks in the area.\n>
+<DeAArmD>	<Russian tanks are the biggest threat to German infantry. Destroy them!\n>
+<DeAArmD>	<Allied German ground forces are threatened by Soviet tanks moving to the frontline. Destroy them!\n>
+<DeAArmD>	<We need Soviet tanks there to be destroyed.\n>
+
+<DeAArmR>	<We must protect our tanks from potential German air attacks.\n>
+<DeAArmR>	<Our tanks are primary targets of German air attacks.\n>
+<DeAArmR>	<We need to protect our armored forces from German air attacks.\n>
+<DeAArmR>	<Our armored forces are our main assets in the area. Cover them from any air attacks.\n>
+
+<RuBTownR>	<Targets for today are German ammunition depots in the city. You must protect the bombers.\n>
+<RuBTownR>	<Targets for today are German factories. You must protect the bombers.\n>
+<RuBTownR>	<Our bombers will target German supply depots in the city. You must protect the attack group.\n>
+<RuBTownR>	<Targets for today are railroad stations in the city. Protect the bombers.\n>
+
+<RuBTownD>	<VVS is bombing the city almost daily. Don't allow Russian bombers to reach the target!\n>
+<RuBTownD>	<Ammunition depots of our Slovak divisions in the city are regularly bombed by VVS. Destroy any Russian bomber that you see!\n>
+<RuBTownD>	<VVS is attempting to diminish our war potential by targeting our factories in the city. You must destroy the bombers.\n>
+<RuBTownD>	<Russian planes are bombing our supply depots in the city. Don't allow Russian bombers to reach the target!\n>
+
+<DeBTownD>	<Targets for today are Russian factories in the city. You must protect the friendly bombers.\n>
+<DeBTownD>	<Targets for today are Russian ammunition depots in the city. You must protect the German bombers.\n>
+<DeBTownD>	<Targets for today are Russian factories. You must protect the friendly bombers.\n>
+<DeBTownD>	<Our bombers will target Soviet supply depots in the city. You must protect the German attack group.\n>
+<DeBTownD>	<Targets for today are railroad stations in the city. Protect the German bombers.\n>
+
+<DeBTownR>	<Germans are bombing the city almost daily. Don't allow Luftwaffe bombers to reach the target!\n>
+<DeBTownR>	<Our ammunition depots in the city are regularly bombed by Luftwaffe. Destroy any German bomber that you see!\n>
+<DeBTownR>	<Luftwaffe is attempting to diminish our war potential by targeting our factories in the city. You must destroy the bombers.\n>
+<DeBTownR>	<Luftwaffe is bombing our supply depots in the city. Don't allow German bombers to reach the target!\n>
+
+<RuBAFR>	<Target for today is German airfield. You must protect the bombers.\n>
+<RuBAFR>	<Today we strike German airfields in the area. Protect the bombers!\n>
+<RuBAFR>	<Our bombers will attack German airfield.\nYou must protect the bombers.\n>
+
+<RuBAFD>	<Today we will protect our airfields. If Russians will attack - destroy the leaders.\n>
+<RuBAFD>	<Our task today is patrol over the airfield. If Russians will attack - destroy the leaders.\n>
+<RuBAFD>	<We will patrol over the airfield today. Russians often attack around this time.\n>
+
+<RuAAFR>	<Target for today is German airfield. You must inflict heavy damage to it.\n>
+<RuAAFR>	<Today we attack German airfield in the area. Suppress AAA, then strike the planes!\n>
+<RuAAFR>	<It is payback time. Today we will attack German airfield.\n>
+
+<RuAAFD>	<Today we will protect our airfields around the city.\n>
+<RuAAFD>	<Our task today is patrol over the airfield.\n>
+<RuAAFD>	<We will patrol over the airfield today. Russians often attack around this time.\n>
+
+<DeBAFD>	<Target for today is Russian airfield. You must protect the friendly bombers.\n>
+<DeBAFD>	<Today we strike Soviet airfields in the area. Protect the German bombers!\n>
+<DeBAFD>	<Our German allies will attack Russian airfield. You must protect the bombers.\n>
+
+<DeBAFR>	<Today we will protect our airfields. If Germans attack - destroy the leaders.\n>
+<DeBAFR>	<Our task today is patrol over the airfield. If Germans will attack - destroy the leaders.\n>
+<DeBAFR>	<We will patrol over the airfield today. Germans often attack around this time.\n>
+
+<DeAAFR>	<Today we will protect our airfields around the city.\n>
+<DeAAFR>	<Our task today is patrol over the airfield.\n>
+<DeAAFR>	<We will patrol over the airfield today. Germans often attack around this time.\n>
+
+<DeAAFD>	<Target for today is Soviet airfield. You must inflict heavy damage to it.\n>
+<DeAAFD>	<Today we attack Russian airfield in the area. Suppress AAA, then strike the planes!\n>
+<DeAAFD>	<It is payback time. Today we will attack Russian airfield.\n>
+
+<RuBBridgeR>	<Target for today is a bridge that Germans actively use to transfer supplies. You must protect the bombers.\n>
+<RuBBridgeR>	<We are attacking bridges in the area today. Protect the bombers!\n>
+<RuBBridgeR>	<Target for today is a key bridge in the area. You must protect the bombers.\n>
+<RuBBridgeR>	<Bridges are our priority targets. Protect the bombers!\n>
+
+<RuBBridgeD>	<Pay special attention to protection of bridges, Russians are attacking them daily. If VVS appear, target leaders!\n>
+<RuBBridgeD>	<Bridges are very important for our operations there. Russians are attacking them daily. If VVS appear, target leaders!\n>
+<RuBBridgeD>	<Bridges in the area are essential for success of our operations. Destroy any VVS bomber that you see!\n>
+
+<DeBBridgeR>	<Pay special attention to protection of bridges, Luftwaffe is attacking them daily. If Germans appear, target leaders!\n>
+<DeBBridgeR>	<Bridges are very important for our operations there. Germans are attacking them daily. If they appear, target leaders!\n>
+<DeBBridgeR>	<Bridges in the area are essential for success of our operations. No German bomber should pass!\n>
+
+<DeBBridgeD>	<Target for today is a bridge that Russians actively use to transfer supplies. You must protect the German comrades in bombers.\n>
+<DeBBridgeD>	<We are attacking bridges in the area today. Protect the friendly bombers!\n>
+<DeBBridgeD>	<Target for today is a key bridge in the area. You must protect the German bombers.\n>
+<DeBBridgeD>	<Bridges are our priority targets. Protect the friendly bombers!\n>
+
+<RuABridgeR>	<Target for today is a bridge that Germans actively use to transfer supplies.\n>
+<RuABridgeR>	<We are attacking bridges in the area today.\n>
+<RuABridgeR>	<Target for today is a key bridge in the area.\n>
+<RuABridgeR>	<Bridges are our priority targets.\n>
+
+<RuABridgeD>	<Pay special attention to protection of bridges, Russians are attacking them daily.\n>
+<RuABridgeD>	<Bridges are very important for our operations there. Russians are attacking them daily.\n>
+<RuABridgeD>	<Bridges in the area are essential for success of our operations. You must protect them.\n>
+
+<DeABridgeR>	<Pay special attention to protection of bridges, Germans are attacking them daily.\n>
+<DeABridgeR>	<Bridges are very important for our operations there. Germans are attacking them daily.\n>
+<DeABridgeR>	<Bridges in the area are essential for success of our operations. You must protect them.\n>
+
+<DeABridgeD>	<Target for today is Russian bridge. You must destroy it.\n>
+<DeABridgeD>	<Target for today is a bridge that Russians actively use to transfer supplies.\n>
+<DeABridgeD>	<We are attacking bridges in the area today.\n>
+<DeABridgeD>	<Target for today is a key bridge in the area.\n>
+<DeABridgeD>	<Bridges are our priority targets.\n>
+
+<RuParaR>	<You must protect the transports.\n>
+<RuParaD>	<Destroy any Russian plane that you see.\n>
+
+<DeParaR>	<Destroy any German plane that you see.\n>
+<DeParaD>	<You must protect the transports.\n>
+
+<RuReconR>	<You must protect the recon plane.\n>
+<RuReconD>	<Be ready to destroy any Russian plane that you see.\n>
+
+<DeReconR>	<Be ready to destroy any German plane that you see.\n>
+<DeReconD>	<You must protect the recon plane.\n>
+
+<RuDeAirRD>		<The main goal for today is control over city's airspace. You must destroy enemy planes.\n>
+
+<RuBalloon>	<A German observation baloon is directing enemy artillery fire in this sector. If we could destroy it, the effectiveness of enemy artillery would be severly weakened. Locate it and shoot it down!>
+<DeBalloon>	<A balloon is guiding the fire of German artillery in this sector. The Russians have surely spotted it and will most likely try to shoot it down. Patrol over the balloon and intercept any russian fighter trying to attack it.>
+
+<Retrn>		<\nAfter rest and retraining, your unit was sent to the front again...\n>
+
+
+
+	---------------------------------------------------------------------------------------------------------------------------
+	The following messages are for pilot's logbook
+	---------------------------------------------------------------------------------------------------------------------------
+
+
+<logTransfer>			<Transfer %s-%s>
+<logAttackSoft> 			<Attack of ground targets near %s>
+<logCAP> 			<Protection of ground troops in the %s area>
+<logCAPB> 			<Protection of ground troops>
+<logPatrolTown> 			<Protection of %s from air raids>
+<logEscortBomb> 			<Escort of bombers to %s>
+<logAttackArmor> 			<Attack of armor near %s>
+<logDefendArmor> 			<Protection of armor in the %s area>
+<logAttackAF> 			<Attack of airfield near %s>
+<logDefendAF> 			<Patrol over airfield near %s>
+<logEscortPara> 			<Escort of paratroopers to %s>
+<logAttackBridge> 			<Attack of a bridge near %s>
+<logDefendBridge> 			<Protection of bridges near %s>
+<logFreeHunt> 			<Free Hunt>
+<logEscortRecon> 			<Escort of recon plane to %s>
+<logAttackShips> 			<Attack of enemy ships>
+<logDefendShips> 			<Protection of our ships>
+<logAttackArtillery> 		<Attack of artillery positions>
+<logScramble> 				<Scramble>
+<logBailed> 				<Bailed %s>			// W of Smolensk
+<logKill> 					<Shot down %s %s>		// Me-262 over Berlin
+<logCrashed> 				<Crashed %s>			// SW of Kursk
+<logLandedAF> 				<Landed at %s airfield>// Pitomnik
+<logLanded> 				<Landed in the field>
+
+<logAttackAF>				<Attacked %s airfield> // Krasnoe
+<logTank>                   <Destroyed enemy tank %s> // S of Pushkin  
+<logShip>					<Destroyed enemy ship %s>
+<logArtillery>				<Attacked enemy artillery positions %s>
+<logColumn>					<Attacked enemy transport column %s>
+<logTrain>					<Attacked enemy train %s> 
+<logBridge>					<Destroyed bridge %s>
+<logTroops>					<Attacked enemy troops %s>
+<dirIn> 					<in>
+
+<dirOver> 					<over>
+<dirW> 						<W of>
+<dirNW> 					<NW of>
+<dirN> 						<N of>
+<dirNE> 					<NE of>
+<dirE> 						<E of>
+<dirSE> 					<SE of>
+<dirS> 						<S of>
+<dirSW> 					<SW of>
+
+	---------------------------------------------------------------------------------------------------------------------------
+	The following messages are for pilot's personal files
+	---------------------------------------------------------------------------------------------------------------------------
+
+<rstJoined> 		<joined the Staffel>
+<rstPromoted> 		<promoted to %s>
+<rstAwarded> 		<awarded %s>
+
+<rstTransferedDe> 		<transfered to FlightSchool>
+<rstTransferedDe> 		<transfered back to Slovakia>
+<rstTransferedDe> 		<transfered to Air Forces HQ>
+<rstTransferedDe> 		<transfered to ground staff>
+<rstTransferedDe> 		<transfered back to Slovakia>
+<rstTransferedDe> 		<transfered to Training Unit>
+<rstTransferedDe> 		<transfered back to Slovakia>
+
+<rstTransferedRu> 		<transfered to Northern Front>
+<rstTransferedRu> 		<transfered to Far East>
+<rstTransferedRu> 		<transfered to NII VVS>
+<rstTransferedRu> 		<transfered to Front HQ>
+<rstTransferedRu> 		<transfered to flight school>
+
+<rstHospitalize> 		<wounded and hospitalized   >
+<rstReunitedDe> 		<returned to the Staffel>
+<rstReunitedRu> 		<returned to the squadron>
+
+
+<rstKilled> 				<killed in combat near %s>
+<rstMissed> 				<missing in combat near %s>
+
+<awdR1> 		<Order of the Red Star>
+<awdR2> 		<Order of the Red Banner>
+<awdR3> 		<Gold Star of Hero of the Soviet Union>
+<awdR4> 		<Second Gold Star>
+<awdR5> 		<Order of Patriotic War 2nd Class>
+<awdR6> 		<Order of Patriotic War 1st Class>
+<awdR7> 		<Order of the Red Banner>
+<awdR8> 		<Third Gold Star>
+
+<awdD1> 		<Bronze Bravery Medal>
+<awdD2> 		<Silver Bravery Medal>
+<awdD3> 		<Gold Bravery Medal>
+<awdD4> 		<Silver Medal of War Merit Cross>
+<awdD5>	 		<Gold Medal of War Merit Cross>
+<awdD6>			<Bronze War Victory Cross>
+<awdD7>			<Silver War Victory Cross>
+<awdD8>			<Gold War Victory Cross>
+
+<Clear>  		<Clear>
+<Good>			<Good>
+<Hazy> 			<Hazy>
+<Poor>			<Poor>
+<Blind>			<Blind>
+<Rain>			<Rain>
+<Thunderstorm>		<Thunderstorm>
+<Snowstorm>		<Snowstorm>
+
+
+	---------------------------------------------------------------------------------------------------------------------------
+	Please do not translate words Name and Description - they are used by IL2
+	---------------------------------------------------------------------------------------------------------------------------
+
+<nSHR> 		<DGen mission\n>
+<nHDR> 		<Name Mission %s\n>
+<hWthRep>	<Description %s\nDate: %s\nTime: %d:%02.2d\nWeather: %s\nClouds at %ld m\n> 
+
+<hShortRuB>	<Bomber. %s, '4%d>
+<hShortRuF>	<Fighter. %s, '4%d>
+<hShortDeB>	<Bomber. %s, '4%d>
+<hShortDeF>	<Fighter. %s, '4%d>
+
+<hLongRuB>	<Description Dynamic campaign for Russian bomber pilot. %s, 194%d>
+<hLongRuF>	<Description Dynamic campaign for Russian fighter pilot. %s, 194%d>
+<hLongDeB>	<Description Dynamic campaign for German bomber pilot. %s, 194%d>
+<hLongDeF>	<Description Dynamic campaign for German fighter pilot. %s, 194%d>
+
+<hLastRep>	<Description Description The war is over. You survived.\n> 
+
+<YOURGROUP>	<\nYour group:\n\n>
+<YOURKILLS>	<\nYour kills:\n\n>
+
+<VICTORY>	<%s %s: %d kill %s\n>
+<VICTORIES>	<%s %s: %d kills %s\n>
+
+<hROUTE>	<\nDistance to target %d km\nFlight Altitude: %d m\n>
+
+<TOWNLIB> 	<Victorious German troops have captured %s>
+<TOWNLIB> 	<We've taken %s>
+<TOWNLIB> 	<We captured %s>
+<TOWNLIB> 	<The enemy surrendered %s>
+<TOWNLIB> 	<German troops entered %s>
+<TOWNLIB> 	<We now control %s>
+<TOWNLIB> 	<In a decisive victory, German troops have taken %s>
+<TOWNLIB> 	<German forces now control %s> 
+<AND> 		< and > 
+<TOWNLOST> 	<Under attacks of numerically superior enemy, we had to abandon %s>
+<TOWNLOST> 	<Regardless heroic resistance of German troops, we have left %s>
+<TOWNLOST> 	<German troops have left %s>
+<TOWNLOST> 	<We left %s>
+<TOWNLOST> 	<We abandonned %s>
+<TOWNLOST> 	<The enemy have taken %s> 
+<TOWNLOST> 	<German troops have left %s> 
+
+
+	---------------------------------------------------------------------------------------------------------------------------
+	Plane names to appear in briefings
+	---------------------------------------------------------------------------------------------------------------------------
+
+<IL_2T>		<IL-2T>
+<PE_2SERIES1>	<Pe-2>
+<PE_2SERIES84>	<Pe-2>
+<PE_2SERIES110>		<Pe-2>
+<PE_2SERIES359>		<Pe-2>
+<PE_3SERIES1>	<Pe-3>
+<PE_3BIS>	<Pe-3 bis>
+<TU_2S>		<Tu-2S>
+<PE_8>	<Pe-8>
+<JU_87B2>	<Ju-87B2>
+<JU_87D3>	<Ju-87D3>
+<JU_87D5>	<Ju-87D5>
+<JU_87G1>	<Ju-87G1>
+<JU_52_3MG4E>	<Ju-52 3MG4E>
+<LI_2>	<Li-2>
+<IL_2_1940Early>	<IL-2>
+<IL_2_1940Late>		<IL-2>
+<IL_2_1941Early>	<IL-2>
+<IL_2_1941Late>		<IL-2>
+<IL_2MEarly>	<IL-2M>
+<IL_2MLate>		<IL-2M>
+<IL_2Type3>		<IL-2 Type 3>
+<IL_2Type3M>	<IL-2 Type 3M>
+<I_153_M62>		<I-153/M62>
+<I_153P>	<I-153P>
+<I_16TYPE24>	<I-16>
+<I_16TYPE18>	<I-16>
+<LA_7>	<LA-7>
+<P_39N>		<P-39N>
+<P_39Q1>	<P-39Q1>
+<P_39Q10>	<P-39Q10>
+<LAGG_3SERIES4>		<LaGG-3 S4>
+<LAGG_3IT>	<LaGG-3IT>
+<LAGG_3SERIES66>	<LaGG-3 S66>
+<LA_5FN>	<La-5FN>
+<MIG_3EARLY>	<MiG-3>
+<MIG_3UD>	<MiG-3UD>
+<MIG_3U>	<MiG-3U>
+<MIG_3UB>	<MiG-3UB>
+<MIG_3AM38>		<MiG-3AM38>
+<MIG_3SHVAK>	<MiG-3 ShVAK>
+<YAK_1>		<Yak-1>
+<YAK_1B>	<Yak-1B>
+<YAK_7B>	<Yak-7B>
+<YAK_3>		<Yak-3>
+<YAK_9>		<Yak-9>
+<YAK_9D>	<Yak-9D>
+<YAK_9K>	<Yak-9K>
+<YAK_9T>	<Yak-9T>
+<YAK_9U>	<Yak-9U>
+<R_10>	<R-10>
+<U_2VS>		<U-2VS>
+<BF_109E4>	<BF-109E4>
+<BF_109E4B>		<BF-109E4B>
+<BF_109E7>	<BF-109E7>
+<BF_109E7NZ>	<BF-109E7>
+<BF_109F2>	<BF-109F2>
+<BF_109F4>	<BF-109F4>
+<BF_109G2>	<BF-109G2>
+<BF_109G6>	<BF-109G6>
+<BF_109G6Late>	<BF-109G6>
+<BF_109G6AS>	<BF-109G6>
+<FW_189A2>	<FW-189A2>
+<FW_190A4>	<FW-190A4>
+<FW_190A5>	<FW-190A5>
+<FW_190A8>	<FW-190A8>
+<FW_190A9>	<FW-190A9>
+<FW_190D9>	<FW-190D9>
+<FW_190D9LATE>	<FW-190D9>
+<JU_88A4>	<Ju-88A4>
+<HE_111H2>	<He-111H2>
+<HE_111H6>	<He-111H6>
+<HS_129B2>	<Hs-129B2>
+<HS_129B3Wa>	<Hs-129B3Wa>
+<P_11C>		<P-11C>
+<IL_2I>		<IL-2I>
+<LA_5>		<LA-5>
+<LA_5F>		<LA-5F>
+<LA_7B20>	<LA-7>
+<P_40E>		<P-40>
+<P_40EM105>	<P-40>	
+<P_40M>>	<P-40M>
+<BF_110C4>	<BF-110C4>
+<BF_110C4B>	<BF-110C4B>
+<BF_110G2>	<BF-110G2>
+<HurricaneMkIa>	<Hurricane>
+<HurricaneMkIIb>	<Hurricane>
+<HurricaneMkIIc>	<Hurricane>
+<HurricaneMkIIbMod>	<Hurricane>
+<BLENHEIM1>	<Blenheim>
+<BLENHEIM4>	<Blenheim>
+<SB_2M100A>	<SB-2>
+<SB_2M103>	<SB-2>
+<TB_3_4M_17> <TB-3>
+
+<F2A_B239> <Brewster>
+<MS406> <M.S.406>
+<MS410> <M.S.410>
+<G50>   <Fiat G-50>
+<P_47D10> <P-47>
+<P_47D22> <P-47>
+<P_47D22> <P-47>
+<ME_210CA1> <Me-210>
+<ME_210CA1ZSTR> <Me-210>
+<ME_262A1A> <Me-262>
+<ME_262A2A> <Me-262>
+
+<IL_4_DB3B>			<DB-3>
+<IL_4_DB3M>			<DB-3>
+<IL_4_DB3F>			<DB-3>
+<IL_4_IL4>			<IL-4>
+<FW_190F8>          <FW-190 A8>
+<BF_109G10>			<BF-109 G10>
+<BF_109G14>			<BF-109 G14>
+<BF_109K4>			<BF-109 K4>
+<P_51D20NA>			<P-51>
+
+<B_25C25>		<B-25>
+<B_25G1>		<B-25>
+<B_25H1>		<B-25>
+<B_25J1>		<B-25>
+<SPITFIRE9C>	<Spitfire>
+<SPITFIRE9CCLP>	<Spitfire>
+<SPITFIRE9E>	<Spitfire>
+<SPITFIRE9ECLP>	<Spitfire>
+<SPITFIRE9EHF>	<Spitfire>
+<FW_190A6>	<FW-190/A6>
+<IAR_80>	<IAR-80>
+<IAR_81A>	<IAR-81A>
+<IAR_81C>	<IAR-81C>
+<LAGG_3SERIES29>	<LaGG-3>
+<LAGG_3SERIES35>	<LaGG-3>
+<YAK_7A>	<YAK-7A>
+<YAK_9B>	<YAK-9B>
+<YAK_9M>	<YAK-9M>
+<YAK_3P>	<YAK-3P>
+<YAK_9UT>	<YAK-9UT>
+<I_185M71>	<I-185>
+<I_185M82A>	<I_185>
+
+	---------------------------------------------------------------------------------------------------------------------------
+	Geographic names - if spelling is different from English
+	<Moscow>	<Moskau>
+	<Crimea>		<Krim>
+	---------------------------------------------------------------------------------------------------------------------------
+<DeACE_KILLED> <Our intelligence reports that famous German ace %s was killed in this combat.\n>
+<RuACE_KILLED> <Our intelligence reports that famous Russian ace %s was killed in this combat.\n>
+<DeACE_CAPTURED> <Our troops have captured famous German ace %s, who was shot down in this combat.\n>
+<RuACE_CAPTURED> <Our troops have captured famous Russian ace %s, who was shot down in this combat.\n>
+<DeACE_DOWN> <German ace %s was shot down in this combat, but escaped alive.\n>
+<RuACE_DOWN> <Russian ace %s was shot down in this combat, but escaped alive.\n>
+
+<RuAArtyR>	<Targets for today are German artillery positions. You must destroy the guns!\n>
+<RuAArtyD>	<Our main asset in the area is artillery. You must protect it.\n>
+<DeAArtyR>	<Germans often attack our artillery in the area. You must protect it.\n>
+<DeAArtyD>	<Targets for today are Russian artillery positions. Attack them!\n>
+<RuBArtyR>	<Targets for today are German artillery positions. You must protect the bombers.\n>
+<RuBArtyD>	<Our main asset in the area is artillery of our German allies. Destroy the bombers if they dare to appear there.\n>
+<DeBArtyR>	<Germans often attack our artillery in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBArtyD>	<Targets for today are Russian artillery positions. You must protect the German bombers.\n>
+
+<RuARailR>	<Target for today is German railroad station. Destroy everything there!\n>
+<RuARailD>	<Russians often attack our railroad station in the area. You must protect it.\n>
+<DeARailR>	<Germans often attack our railroad station in the area. You must protect it.\n>
+<DeARailD>	<Target for today is Russian railroad station. Attack them!\n>
+<RuBRailR>	<Target for today is German railroad station. You must protect the bombers.\n>
+<RuBRailD>	<Russians often attack our railroad station in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBRailR>	<Germans often attack our railroad station in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBRailD>	<Target for today is Russian railroad station. You must protect the friendly bombers.\n>
+
+<RuADepotR>	<Target for today is German supply depot. Destroy everything there!\n>
+<RuADepotD>	<Russians often attack our supply depot in the area. You must protect it.\n>
+<DeADepotR>	<Germans often attack our supply depot in the area. You must protect it.\n>
+<DeADepotD>	<Target for today is Russian supply depot. Attack them!\n>
+<RuBDepotR>	<Target for today is German supply depot. You must protect the bombers.\n>
+<RuBDepotD>	<Russians often attack our supply depot in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBDepotR>	<Germans often attack our supply depot in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBDepotD>	<Target for today is Russian supply depot. You must protect the bombers.\n>
+
+<RuAPortR>	<Target for today is German port. Destroy everything there!\n>
+<RuAPortD>	<Russians often attack our port in the area. You must protect it.\n>
+<DeAPortR>	<Germans often attack our port in the area. You must protect it.\n>
+<DeAPortD>	<Target for today is Russian port. Attack them!\n>
+<RuBPortR>	<Target for today is German port. You must protect the bombers.\n>
+<RuBPortD>	<Russians often attack our port in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBPortR>	<Germans often attack our port in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBPortD>	<Target for today is Russian port. You must protect the bombers.\n>
+
+<RuAHQR>	<Target for today is German field HQ. Destroy everything there!\n>
+<RuAHQD>	<Russians may attack our field HQ in the area. You must protect it.\n>
+<DeAHQR>	<Germans may attack our field HQ in the area. You must protect it.\n>
+<DeAHQD>	<Target for today is Russian field HQ. Attack them!\n>
+<RuBHQR>	<Target for today is German field HQ. You must protect the bombers.\n>
+<RuBHQD>	<Russians may attack our field HQ in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBHQR>	<Germans may attack our field HQ in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBHQD>	<Target for today is Russian field HQ. You must protect the German bombers.\n>
+
+<RuATroopR>	<Targets for today are German troops in the area. Destroy everything there!\n>
+<RuATroopD>	<Russians often attack our troops in the area. You must protect them.\n>
+<DeATroopR>	<Germans often attack our troops in the area. You must protect them.\n>
+<DeATroopD>	<Targets for today are Russian troops. Attack them!\n>
+<RuBTroopR>	<Targets for today are German troops. You must protect the bombers.\n>
+<RuBTroopD>	<Russians often attack troops of our German allies in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBTroopR>	<Germans often attack our troops in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBTroopD>	<Targets for today are Russian troops. You must protect the allied bombers.\n>
+
+<dbrDeEXCELLENT>	<Your performance in this mission was excellent. You set an example for all of us.>
+<dbrDeEXCELLENT>	<You performed exceptionally in this mission - your actions deserve to be studied by all Luftwaffe pilots.>
+<dbrDeEXCELLENT>	<In this mission you demonstrated that you are an exceptional pilot. Your commander is very pleased by your actions.>
+<dbrDeGOOD>	<Your performance in this mission was good. We need more pilots like you.>
+<dbrDeGOOD>	<It was a fine mission. You make good progress as a combat pilot.>
+<dbrDeGOOD>	<Good work! Your commander is pleased.>
+<dbrDeGOOD>	<You've done well. Slovakia needs pilots like you>
+<dbrDeOK>	<This day is over, time to rest and prepare for tomorrow.>
+<dbrDeOK>	<You survived and can fight another day.>
+<dbrDeOK>	<You need more practice. But for today, it's over. Be ready for tomorrow's work.>
+<dbrDeOK>	<This mission is over. You'll have a chance to do better tomorrow.>
+<dbrDeOK>	<This day could be better. But it could be much worse.>
+<dbrDeOK>	<Not every day brings glory, but you have fulfilled your duty.>
+<dbrDeOK>	<Don't worry, not every pilot can be an ace - but you have done what you could.>
+<dbrDeOK>	<A mission like many others. You'll do better next time.>
+<dbrDeBAD>	<It was definitely not your best day. But at least you survived.>
+<dbrDeBAD>	<Your performance in this mission was not remarkable.>
+<dbrDeBAD>	<Not a mission to write home about.>
+
+<dbrRuEXCELLENT>	<Your performance in this mission was excellent. You set an example for all of us.>
+<dbrRuEXCELLENT>	<You performed exceptionally in this mission - your actions deserve to be studied by all VVS pilots.>
+<dbrRuEXCELLENT>	<In this mission you demonstrated that you are an exceptional pilot. Your CO is very pleased by your actions.>
+<dbrRuGOOD>	<Your performance in this mission was good. We need more pilots like you.>
+<dbrRuGOOD>	<It was a fine mission. You make good progress as a combat pilot.>
+<dbrRuGOOD>	<Good work! Your commander is pleased.>
+<dbrRuGOOD>	<You've done well. The Motherland needs pilots like you>
+<dbrRuOK>	<This day is over, time to rest and prepare for tomorrow.>
+<dbrRuOK>	<You survived and can fight another day.>
+<dbrRuOK>	<You need more practice. But for today, it's over. Be ready for  tomorrow's work.>
+<dbrRuOK>	<This mission is over. You'll have a chance to do better tomorrow.>
+<dbrRuOK>	<This day could be better. But it could be much worse.>
+<dbrRuOK>	<Not every day brings glory, but you have fulfilled your duty.>
+<dbrRuOK>	<Don't worry, not every pilot can be an ace - but you have done what you could.>
+<dbrRuOK>	<A mission like many others. You'll do better next time.>
+<dbrRuBAD>	<It was definitely not your best day. But at least you survived.>
+<dbrRuBAD>	<Your performance in this mission was not remarkable.>
+<dbrDeBAD>	<Not a mission they write in Pravda about.>
+
+<dbrRuDEAD>	<\nYou were killed.>
+<dbrDeDEAD>	<\nYou were killed.>
+<dbrRuCAPTURED>	<\nYou were captured.>
+<dbrDeCAPTURED>	<\nYou were captured.>
+<dbrRuWOUNDED>	<\nYou were wounded.>
+<dbrDeWOUNDED>	<\nYou were wounded.>
+<dbrRuHWOUNDED>	<\nYou were heavily wounded.>
+<dbrDeWHOUNDED>	<\nYou were heavily wounded.>
+
+<dbrLOST1> <We lost one plane in this mission>
+<dbrLOST1> <One of our planes was shot down>
+<dbrLOST> <We lost %d planes in this mission>
+<dbrKILL1> <We shot down one enemy plane>
+<dbrKILL1> <One enemy plane was shot down>
+<dbrKILL1> <The enemy lost one plane>
+<dbrKILL> <The enemy lost %d planes>
+
+<RuSHORTAGE> <Your squadron has only %d combat ready planes left\n>
+<RuSHORTAGE> <Your squadron has %d combat ready planes\n> 
+<RuOUT> <You had to borrow planes from training unit\n> 
+<RuOUT> <You had to borrow planes from divisional reserves\n> 
+<DeSHORTAGE> <Your Staffel has only %d combat ready planes left\n> 
+<DeSHORTAGE> <Your Staffel has %d combat ready planes\n> 
+<DeOUT> <You had to borrow planes from training unit\n>
+<DeOUT> <You had to borrow planes from neighbouring Staffel\n>
+<RESUPPLIED> <Your Staffel has been resupplied.\n>
+
+<DeSQ1> <You are assigned to 13th Staffel of JG52, commanded by mjr. let. Ondrej Dumbala.\n>
+<DeSQ2> <You are assigned to 13th Staffel of JG52, commanded by mjr. let. Ondrej Dumbala.\n>
+<DeSQ3> <You are assigned to 13th Staffel of JG52, commanded by mjr. let. Ondrej Dumbala.\n>
+
+<RuSQ1> <You are assigned to 1st eskadrilya, commanded by %s\n>
+<RuSQ2> <You are assigned to 2nd eskadrilya, commanded by %s\n>
+<RuSQ3> <You are assigned to 3rd eskadrilya, commanded by %s\n>
+
+<DeCO1> <You are assigned  a CO of  the 13th Staffel.\n>
+<DeCO2> <You are assigned  a CO of  the 13th Staffel.\n>
+<DeCO3> <You are assigned  a CO of  the 13th Staffel.\n>
+
+<RuCO1> <You are assigned a CO of  the first eskadrilya\n>
+<RuCO2> <You are assigned a CO of  the second eskadrilya\n>
+<RuCO3> <You are assigned a CO of  the third eskadrilya\n>
+
+<Stabsfw.> 		<ctk.>
+<Lt.>  			<rtk.>
+<Oblt.>   		<zvk.>
+<Hptm.>   		<por. let.>
+<Maj.>   		<npor. let.>
+<Obstlt.>   		<stot. let.>
+<Obst.>   		<maj. let.>
+
+<dbrRuSqEXCELLENT> <\nComrades! This battle is over. Our escadrilya has covered itself with glory. >
+<dbrDeSqEXCELLENT> <\nPilots! This battle is over. Our Staffel has covered itself with glory. >
+
+<dbrRuSqGOOD> <\nComrade Officers! Our escadrilya has distinguished itself in this battle. >
+<dbrDeSqGOOD> <\nPilots! Our Staffel has distinguished itself in this battle. >
+
+<dbrRuSqOK> <\nComrade Officers! The battle was difficult, but everybody did what they could. >
+<dbrDeSqOK> <\nPilots! The battle was difficult, but everybody did what they could. >
+
+<dbrRuSqBAD> <\nComrade Officers! The battle was extremely difficult. Our losses were not in vain, but we have to learn from our mistakes. >
+<dbrDeSqBAD> <\nPilots! The battle was extremely difficult. Our losses were not in vain, but we have to learn from our mistakes. >
+
+<dbrRuEnemyLost> <\nIn combats with participation of our pilots the enemy lost:\n>
+<dbrDeEnemyLost> <\nIn combats with participation of our pilots the enemy lost:\n>
+
+<dbrNplanes>	<Planes: %d\n>
+<dbrNtanks>		<Tanks: %d\n>
+<dbrNguns>		<Guns: %d\n>
+<dbrNcars>		<Vehicles: %d\n>
+<dbrNwagons>	<Railroad cars: %d\n>
+<dbrNships>		<Ships: %d\n>
+
+<dbrRuWeLost> <\nOur side has lost %d planes.\nDismissed!>
+<dbrRuNoLoss> <\nOur losses are minimal.\nDismissed!>
+
+<dbrDeWeLost> <\nOur side has lost %d planes.\nDismissed!>
+<dbrDeNoLoss> <\nOur losses are minimal.\nDismissed!>
+
+<logRecon> 				<Air recon of the %s area>
+<logReconB> 			<Air recon>
+
+<RuRec>     <\nWe need you to perform air recon of the %s area. >
+<RuRec>     <\nWe need to you to locate an important target near %s. >
+
+<DeRec>     <\nWe need you to perform air recon of the %s area. >
+<DeRec>     <\nWe need to you to locate an important target near %s. >
+
+<RuRHQR>    <Try to locate German field HQ, that, as we suspect, should be located there.\n>
+<RuRHQR>    <Partisans report that Germans have field HQ located somewhere in the region, try to find it.\n>
+<RuRArtyR>  <Try to locate German battery, acting from there.\n>
+<RuRDepotR> <Germans should have a supply depot somewhere in the region, try to find it.\n>
+
+<DeRHQD>    <Try to locate Russian field HQ, that, as we suspect, should be located there.\n>
+<DeRHQD>    <Deserters report that the Russians have field HQ located somewhere in the region, try to find it.\n>
+<DeRArtyD>  <Try to locate Russian battery, acting from there.\n>
+<DeRDepotD> <Soviets should have a supply depot somewhere in the region, try to find it.\n>
+
+<Lvov41DeBr> <On 22nd June 1941, our offensive against Stalin's Soviet Union will begin! Our forces, together with our allies from Finland, Rumania, Slovakia and Hungary, will attack along the entire Soviet western border. As a part of Luftflotte 2, our first task is to secure air supremacy in area around Lemberg. According to intelligence reports, much of the Soviet air force is concentrated on forward air fields. Our first task will be to put the Soviet planes out of action, preferably on the ground, then we will directly support our advancing armoured spearheads of Heeresgruppe Mitte. With luck, we will be in Moscow in a few months!>
+<Lvov41DeDb> <The German attack was totally successful. Heeresgruppe Mitte took Lemberg after a few days. Luftflotte 2 was instrumental in this success. As on other parts of the front, the total of destroyed enemy planes is almost incredible, several thousands on the ground alone. The fighter units also maintained air cover above our troops by shooting down hundreds of attacking Soviet bombers. Our troops continue to advance deeper and deeper into Soviet territory. The Soviet resistance in the air has almost ceased, while on the ground numerous, but ill trained and equipped Soviet troops offer heavy resistance. The Luftwaffe is the decisive force in this ground war and we have to keep up our efforts to keep the pace of our advance.>
+<Lvov41RuBr> <As a part of 15 SAD of the Kiev Special Military District, our unit is based on a forward airfield in the area of Lvov in the western Ukraine. High command has ordered us to maintain a high state of readiness, since strong German troops have deployed in the border area. But we are also under strict order not to engage in any activity that could be interpreted as hostile by a clique of revisionist German generals who want to provoke Hitler into a war with us.>
+<Lvov41RuDb> <On the morning of June 22nd, the German forces attacked. The attack came as a total surprise and resulted in heavy losses. Lvov was lost after several days of fighting to the Germans, who were assisted by anti-Soviet Ukrainian nationalists. They committed many atrocities there and everywhere else. The VVS took extremely heavy losses, mainly on the ground due to surprise attacks. In the air, the VVS fought bravely and made the Germans pay a heavy price for their aggression.>
+<Lvov41HDeBr> <On 22nd June 1941, our offensive against Stalin's Soviet Union will begin! Our forces, together with our allies from Finland, Rumania, Slovakia and Hungary, will attack along the entire Soviet western border. As a part of Luftflotte 2, our first task is to secure air supremacy in area around Lemberg. According to intelligence reports, much of the Soviet air force is concentrated on forward air fields. Our first task will be to put the Soviet planes out of action, preferably on the ground, then we will directly support our advancing armoured spearheads of Heeresgruppe Mitte. With luck, we will be in Moscow in a few months!>
+<Lvov41HDeDb> <The German attack was totally successful. Heeresgruppe Mitte took Lemberg after a few days. Luftflotte 2 was instrumental in this success. As on other parts of the front, the total of destroyed enemy planes is almost incredible, several thousands on the ground alone. The fighter units also maintained air cover above our troops by shooting down hundreds of attacking Soviet bombers. Our troops continue to advance deeper and deeper into Soviet territory. The Soviet resistance in the air has almost ceased, while on the ground numerous, but ill trained and equipped Soviet troops offer heavy resistance. The Luftwaffe is the decisive force in this ground war and we have to keep up our efforts to keep the pace of our advance.>
+<Lvov41HRuBr> <As a part of 15 SAD of the Kiev Special Military District, our unit is based on a forward airfield in the area of Lvov in the western Ukraine. High command has ordered us to maintain a high state of readiness, since strong German troops have deployed in the border area. But we are also under strict order not to engage in any activity that could be interpreted as hostile by a clique of revisionist German generals who want to provoke Hitler into a war with us.>
+<Lvov41HRuDb> <On the morning of June 22nd, the German forces attacked. The attack came as a total surprise and resulted in heavy losses. Lvov was lost after several days of fighting to the Germans, who were assisted by anti-Soviet Ukrainian nationalists. They committed many atrocities there and everywhere else. The VVS took extremely heavy losses, mainly on the ground due to surprise attacks. In the air, the VVS fought bravely and made the Germans pay a heavy price for their aggression.>
+
+<BarbarossaDeBr> <Heeresgruppe Mitte is advancing on Smolensk, a main city on the road to Moscow exactly on the main axis of advance. The Soviets are know to have staked a lot into the defence of this city, at least six fresh Soviet armies equipped with modern weapons have been spotted in the area, and for the first time since the early days of this campaign, the Soviet air force is very active again. It looks as if the Soviet high command has selected the area around the city as the place for a major delaying action. Heeresgruppe Mitte will attempt to envelope the bulk of the Soviet forces near Orsha in yet another annihilation battle. Luftflotte 2, with Fliegerkorps II and VIII, will support this by breaking the concentration of Soviet airpower in this area and then by isolating the battlefield from the air and flying close support. The battle ahead may be decisive for the entire war!>
+<BarbarossaDeDb> <Heeresgruppe Mitte has won a total victory in the Smolensk area! The bulk of the Soviet forces were enveloped and annihilated at Orsha and Yelnya, with yet another half million prisoners and thousands of guns and tanks captured. Luftflotte 2 was the key to this success, as the constant and accurate air support helped to halt the Soviet counterattack at Rogachev and managed to win air superiority against a strong force of Soviet fighter and bomber units, which for the first time since June tried to actively challenge the Luftwaffe. That challenge failed and the Soviet air strength in the central front has been all but annihilated, as has been the majority of Soviet armoured strength. Heeresgruppe Mitte moves onwards to Moscow!>
+<BarbarossaRuBr> <The German forces on the central front are approaching Smolensk. Stavka has decided to try and hold the enemy advance in this area. For this operation, six fresh armies have been committed, as well as strong VVS reserves, including 6 IAK of the Moscow PVO. For success in the upcoming battle, it is absolutely necessary to break the German air superiority. For the first time since the attack in June, we are under orders directly challenge the German Luftwaffe! Strong reinforcements, most notably many regiments equipped with the latest Yakovlev and LaGG fighters, as well as many of the new armoured attack aircraft Il-2 have been deployed to the area around Smolensk. Once air supremacy is established, we will be able to halt or even turn back the German aggression!>
+<BarbarossaRuDb> <Due to many failures on division and corps command level, the German armies were able to envelop Red Army forces at Orsha and annihilate them, but only at a severe cost of their own. The VVS in the Smolensk area has been dealt severe losses in extremely hard fighting, but managed to maintain local superiority, even if only for a limited time. The new plane types have proved to be very effective. While as a whole the battle was a defeat, the sacrifice of our comrades at Smolensk has bought precious time to strengthen the defence of Moscow.>
+<BarbarossaHDeBr> <Heeresgruppe Mitte is advancing on Smolensk, a main city on the road to Moscow exactly on the main axis of advance. The Soviets are know to have staked a lot into the defence of this city, at least six fresh Soviet armies equipped with modern weapons have been spotted in the area, and for the first time since the early days of this campaign, the Soviet air force is very active again. It looks as if the Soviet high command has selected the area around the city as the place for a major delaying action. Heeresgruppe Mitte will attempt to envelope the bulk of the Soviet forces near Orsha in yet another annihilation battle. Luftflotte 2, with Fliegerkorps II and VIII, will support this by breaking the concentration of Soviet airpower in this area and then by isolating the battlefield from the air and flying close support. The battle ahead may be decisive for the entire war!>
+<BarbarossaHDeDb> <Heeresgruppe Mitte has won a total victory in the Smolensk area! The bulk of the Soviet forces were enveloped and annihilated at Orsha and Yelnya, with yet another half million prisoners and thousands of guns and tanks captured. Luftflotte 2 was the key to this success, as the constant and accurate air support helped to halt the Soviet counterattack at Rogachev and managed to win air superiority against a strong force of Soviet fighter and bomber units, which for the first time since June tried to actively challenge the Luftwaffe. That challenge failed and the Soviet air strength in the central front has been all but annihilated, as has been the majority of Soviet armoured strength. Heeresgruppe Mitte moves onwards to Moscow!>
+<BarbarossaHRuBr> <The German forces on the central front are approaching Smolensk. Stavka has decided to try and hold the enemy advance in this area. For this operation, six fresh armies have been committed, as well as strong VVS reserves, including 6 IAK of the Moscow PVO. For success in the upcoming battle, it is absolutely necessary to break the German air superiority. For the first time since the attack in June, we are under orders directly challenge the German Luftwaffe! Strong reinforcements, most notably many regiments equipped with the latest Yakovlev and LaGG fighters, as well as many of the new armoured attack aircraft Il-2 have been deployed to the area around Smolensk. Once air supremacy is established, we will be able to halt or even turn back the German aggression!>
+<BarbarossaHRuDb> <Due to many failures on division and corps command level, the German armies were able to envelop Red Army forces at Orsha and annihilate them, but only at a severe cost of their own. The VVS in the Smolensk area has been dealt severe losses in extremely hard fighting, but managed to maintain local superiority, even if only for a limited time. The new plane types have proved to be very effective. While as a whole the battle was a defeat, the sacrifice of our comrades at Smolensk has bought precious time to strengthen the defence of Moscow.>
+
+<TyphoonDeBr> <The final push on Moscow has begun! Heeresgruppe Mitte will first attempt a giant pincer movement with the aim of enveloping the majority of the Red Army forces near Vyasma, followed by a direct thrust towards the Soviet capital. In order to succeed, Luftflotte 2 must make a maximum effort once again, even if its units, after three months of constant fighting, are only at 50 per cent strength. We have to take Moscow before the winter or Soviet reinforcements arrive and the Luftwaffe will win this race!>
+<TyphoonDeDb> <We have suffered a serious defeat. While the initial pincer movement in front of Moscow was successful, annihilating yet another half million Soviet soldiers has cost Heeresgruppe Mitte much time. By the time the thrust on Moscow began, the typical Russian fall with mud and rain immobilized our forces, and by the time our offensive finally came in the vicinity of Moscow, "General Winter" struck, followed by severe Soviet counterattacks. Luftflotte 2 had already totally exhausted itself in supporting the Vyasma annihilation battle and was unable to prevent the total collapse of the front by December. While our remaining Messerschmitts still rule the sky when they are able to take off, they are almost permanently grounded due to cold and lack of spare parts, as are the bombers. The Luftflotte has nothing more to give and we can be glad if we can hold the front as it stands now. Conquering Moscow has now become all but impossible.>
+<TyphoonRuBr> <After the battle of Smolensk, the German advance on Moscow getting faster again. Stavka has decided to commit the majority of the Red Army  of the western front west of Vyasma in a defensive position, while the Siberian forces have been ordered to transfer to the defence of Moscow. Western Front VVS and Moscow PVO have been allocated the vast majority of all modern aircraft available in the whole Soviet union and will support the defence of the Soviet capital with an all out effort. Absolute priority has the slowdown of enemy forces, as well as the defence of Moscow against enemy bombing raids. If the western front manages to delay the enemy advance until the arrival of the first snow, our Siberian forces can attempt a counterattack!>
+<TyphoonRuDb> <For the first time in this war, we have achieved a great victory! While our forces suffered severe losses, the enemy advance was considerably slowed down by winter and constant pressure from both the Red Army and the VVS. By December, the counterattack of our Siberian divisions has overwhelmed the Germans and they are falling back in total panic and disorder! The Soviet pilots were instrumental in this success. The Moscow PVO successfully prevented further German terror raids on Moscow while the western front VVS achieved total air superiority over the Luftwaffe and effectively attacked German ground forces. We will turn to total counteroffensive as soon as possible!>
+<TyphoonHDeBr> <The final push on Moscow has begun! Heeresgruppe Mitte will first attempt a giant pincer movement with the aim of enveloping the majority of the Red Army forces near Vyasma, followed by a direct thrust towards the Soviet capital. In order to succeed, Luftflotte 2 must make a maximum effort once again, even if its units, after three months of constant fighting, are only at 50 per cent strength. We have to take Moscow before the winter or Soviet reinforcements arrive and the Luftwaffe will win this race!>
+<TyphoonHDeDb> <We have suffered a serious defeat. While the initial pincer movement in front of Moscow was successful, annihilating yet another half million Soviet soldiers has cost Heeresgruppe Mitte much time. By the time the thrust on Moscow began, the typical Russian fall with mud and rain immobilized our forces, and by the time our offensive finally came in the vicinity of Moscow, "General Winter" struck, followed by severe Soviet counterattacks. Luftflotte 2 had already totally exhausted itself in supporting the Vyasma annihilation battle and was unable to prevent the total collapse of the front by December. While our remaining Messerschmitts still rule the sky when they are able to take off, they are almost permanently grounded due to cold and lack of spare parts, as are the bombers. The Luftflotte has nothing more to give and we can be glad if we can hold the front as it stands now. Conquering Moscow has now become all but impossible.>
+<TyphoonHRuBr> <After the battle of Smolensk, the German advance on Moscow getting faster again. Stavka has decided to commit the majority of the Red Army  of the western front west of Vyasma in a defensive position, while the Siberian forces have been ordered to transfer to the defence of Moscow. Western Front VVS and Moscow PVO have been allocated the vast majority of all modern aircraft available in the whole Soviet union and will support the defence of the Soviet capital with an all out effort. Absolute priority has the slowdown of enemy forces, as well as the defence of Moscow against enemy bombing raids. If the western front manages to delay the enemy advance until the arrival of the first snow, our Siberian forces can attempt a counterattack!>
+<TyphoonHRuDb> <For the first time in this war, we have achieved a great victory! While our forces suffered severe losses, the enemy advance was considerably slowed down by winter and constant pressure from both the Red Army and the VVS. By December, the counterattack of our Siberian divisions has overwhelmed the Germans and they are falling back in total panic and disorder! The Soviet pilots were instrumental in this success. The Moscow PVO successfully prevented further German terror raids on Moscow while the western front VVS achieved total air superiority over the Luftwaffe and effectively attacked German ground forces. We will turn to total counteroffensive as soon as possible!>
+
+<Crimea41DeBr> <On the 5th October 1941 Wehrmacht forces reached the Sea of Azov, effectively cutting the land corridor into the Crimea and trapping Soviet forces on the peninsula. The Perekop Isthmus, only 8 km wide at its narrowest point, is once again fortified against an invader, as it was in the Civil War and by the Tatars and Greeks hundreds of years ago.It is no use - German tank forces, aided by Heinkel and Stuka bombers, have broken through the Perekop defences and have gained a foothold in the Crimea. Together with our Rumanian allies, fresh from their victory at Odessa two weeks ago, German forces are preparing to strike south at Simferopol, Crimea's capital, and Sevastopol, home of the Black Sea Fleet. Earlier this year we were involved in the victorious Greece Campaign and we have now been attached to Luftflotte 4, responsible for the Army Group South area in Operation Barbarossa - the attack on the Soviet Union. Together with the Rumanians we are holding the right flank, facing both the Red Airforce and the Black Sea Fleet air regiments. Our opponents are flying a few modern fighters such as the Yak and a seemingly inexhaustible supply of the older Polikarpov designs. Our successes so far and the high scores amassed by our pilots have been based on our skill, teamwork and determination to start every fight with the altitude advantage. >
+<Crimea41DeDb> <Our forces now control the entire Crimea except for the port and city of Sevastopol, where determined Russian army and navy troops continue to defy us, backed by the determined Black Sea Fleet airforce. However winter is drawing in and the city lies besieged by German and Rumanian troops. It is time to look eastwards - north of the Crimea German forces are strectched along the Sea of Azov almost to the Don, but the Russian winter and growing Soviet strength have halted their advance. What will 1942 bring?>
+<Crimea41RuBr> <The Crimea was protected by the bottleneck of the Perrekop Isthmus and our defensive lines, but the Germans and Rumanians have smashed their way through in heavy fighting. The Crimea lies open before them, with the prize of the Sevastopol Naval Base within their reach. It will be up to each one of us, the airmen of the Soviet Airforce and the Black Sea Fleet Naval Airforce, to slow down the enemy and give the defenders of Sevastopol and the Crimean capital, Simferopol, time to prepare. The Rumanians must surely have been badly weakened by their assault on Odessa earlier this month and the German supply lines are stretched to breaking point. Now is the time to deal them a bloody nose.>
+<Crimea41RuDb> <Your valiant defence of the Crimea has left us in control of the port of Sevastopol but the enemy holds the rest of the Crimea, though weakly.The Germans and Rumanians surround us here and air battles continue as the weather permits, but both sides are beginning to conserve their forces for the inevitable spring push to capture the city. Yet even as the fate of Sevastopol grows desperate we hear of increasing resistance by our forces outside Moscow and Leningrad and our resolve to withstand the enemy will not falter. Indeed, plans are afoot to take advantage of the enemy's weakness in the rest of the Crimea. The coming year offers both despair and hope.>
+
+<Crimea42DeBr> <The 11th Army of Heeresgruppe Süd had taken all of the Crimea except the port city and fortress Sevastopol in last November. However, in December and January, while the Bulk of Luftflotte 4 was fighting the Soviet counteroffensive at Rostov, the Black Sea fleet undertook amphibious landings at Kerch, Eupatoria and Feodosia. This forced Generaloberst von Manstein to cancel the assault on Sevastopol. While the landings at Eupatoria and Feodosia were quickly wiped out by makeshift battle groups formed out of rear area units, the Kerch bridgehead could not be contained. The Soviets now again control most of the Kerch peninsula and are preparing for an offensive with at least army strength in order to retake the rest of the Crimea. Also, Sevastopol remains a thorn in the side of the German forces on the Crimea. After the fighting around Rostov quieted down, Luftflotte 4 was shifted back to the Crimea, in order to support the fight against both Kerch and Sevastopol. Its main tasks are the regaining of air superiority, the interdiction of supply ships and direct support for the 11th Army under von Manstein.>
+<Crimea42DeDb> <The Soviets finally lashed out from the Kerch Bridgehead in the first days of March, but their strong, but ill coordinated and planned attack did not gain much ground, mostly thanks to constant attacks of the bombers, Stukas and Schlachtflieger of Luftflotte 4. On May 7th, the German counterattack began, again heavily supported by Luftflotte 4. Airbase raids destroyed much of the Soviet air force in this area, and the Soviet front entirely broke in just about two weeks. On May 20th, Kerch finally fell after bitter house fighting. The Kerch Bridgehead had been annihilated, with over 100.000 Soviet soldiers killed or captured. Generaloberst von Manstein could resume the operations to take Sevastopol. It took a bitter two months of trench and bunker warfare and 24.000 German casualties, but on July 1st, the Battle of Sevastopol was finally over. Without constant Luftwaffe support, led by the inventor of the Blitzkrieg tactic, Generaloberst von Richthofen, it would have been impossible to take Sevastopol. The Soviet fighter pilots flew very skilful and aggressive over Sevastopol, but were finally beaten. The Heeresgruppe Mitte has already launched Operation Blau to break through to the Volga at Stalingrad.>
+<Crimea42RuBr> <At the beginning of spring 1942, the situation in the Crimea looks promising for our struggle. The amphibious landings of the Black Sea fleet this winter have been successful in establishing a very strong beachhead at the Kerch Peninsula, the Tartar rampart being the front right now. Also, the fortified defences of Sevastopol, as well as the skilful air defence of VVS Black Sea fleet have proven too strong for the Germans. With our supply situation improving day by day and the Germans having a fortress in their back they are unable to bypass, the chance is there to liberate the Crimea from the German occupation! Strong air forces have been allocated to VVS Crimean front and the VVS Black Sea fleet fighter squadrons has proven themselves as a skilful force equal to all the Germans have. Soon we will launch our offensive and drive the Germans from the Crimea!>
+<Crimea42RuDb> <We have suffered another defeat. Due to many mistakes made in the leadership of the Crimean front, our offensive was launched without proper coordination and intelligence and bogged down after a few days. By removing air strength from other sectors, the Luftwaffe brought together a huge air force in the Crimea, which made front movement almost impossible. The Luftwaffe simply overwhelmed the VVS Crimean front, while it fought bravely, it was destroyed. Kerch fell in the end of May. This enabled the German army commander, General von Manstein, to concentrate its forces on Sevastopol. Our troops and the VVS Black Sea fleet fought heroically, and the fleet launched a maximum effort to  supply the city. But the German strength was simply too much. At least the Fleet managed to evacuate many of the defenders in a heroic operation, but on the end the German raised their banner over Sevastopol.>
+<Crimea42HDeBr> <The 11th Army of Heeresgruppe Süd had taken all of the Crimea except the port city and fortress Sevastopol in last November. However, in December and January, while the Bulk of Luftflotte 4 was fighting the Soviet counteroffensive at Rostov, the Black Sea fleet undertook amphibious landings at Kerch, Eupatoria and Feodosia. This forced Generaloberst von Manstein to cancel the assault on Sevastopol. While the landings at Eupatoria and Feodosia were quickly wiped out by makeshift battle groups formed out of rear area units, the Kerch bridgehead could not be contained. The Soviets now again control most of the Kerch peninsula and are preparing for an offensive with at least army strength in order to retake the rest of the Crimea. Also, Sevastopol remains a thorn in the side of the German forces on the Crimea. After the fighting around Rostov quieted down, Luftflotte 4 was shifted back to the Crimea, in order to support the fight against both Kerch and Sevastopol. Its main tasks are the regaining of air superiority, the interdiction of supply ships and direct support for the 11th Army under von Manstein.>
+<Crimea42HDeDb> <The Soviets finally lashed out from the Kerch Bridgehead in the first days of March, but their strong, but ill coordinated and planned attack did not gain much ground, mostly thanks to constant attacks of the bombers, Stukas and Schlachtflieger of Luftflotte 4. On May 7th, the German counterattack began, again heavily supported by Luftflotte 4. Airbase raids destroyed much of the Soviet air force in this area, and the Soviet front entirely broke in just about two weeks. On May 20th, Kerch finally fell after bitter house fighting. The Kerch Bridgehead had been annihilated, with over 100.000 Soviet soldiers killed or captured. Generaloberst von Manstein could resume the operations to take Sevastopol. It took a bitter two months of trench and bunker warfare and 24.000 German casualties, but on July 1st, the Battle of Sevastopol was finally over. Without constant Luftwaffe support, led by the inventor of the Blitzkrieg tactic, Generaloberst von Richthofen, it would have been impossible to take Sevastopol. The Soviet fighter pilots flew very skilful and aggressive over Sevastopol, but were finally beaten. The Heeresgruppe Mitte has already launched Operation Blau to break through to the Volga at Stalingrad.>
+
+<Kuban42DeBr> <Operation Blau, Heeresgruppe Süd's break through the Don front aimed at Stalingrad, has been a huge success so far. On the southern flank of the main axis of advance, the Caucasus coast is becoming increasingly isolated. The Wehrmacht is advancing in this direction as well, aiming at the ports of the Kuban coast, where the Black Sea fleet has fled after being driven from Odessa and Sevastopol. The aim of this drive is to take the Soviet oil fields at Baku on the Caspian Sea, the main source of oil for the Soviets. The advance is slowed down by mountainous terrain. Once again, the success of this operation will depend on the air support of Luftflotte 4.>
+<Kuban42DeDb> <The thrust into the Caucasus was successful. Our Gebirgsjäger have put up the German flag on Mount Elbrus and our Panzer divisions are advancing towards Astrakhan. Our forces have taken the port cities on the coast. The only problem is the fighting at Stalingrad, which will demand the transfer of almost all units of Luftflotte 4 northward to support the main thrust of Heeresgruppe Mitte.>
+<Kuban42RuBr> <Strong German forces have broken through the Don front and took Rostov in July. Our forces cannot stop the German advance right now. While the main German advance seems to be towards the Volga, the Germans are also attempting an attack on the Caucasus. This area is of strategic importance, as it is the main source of oil for the Soviet Union. The VVS will support Soviet units at the Kuban coast in an attempt to buy time for organizing a defence of the Volga front and the Caucasus oil cities.>
+<Kuban42RuDb> <While the Germans have penetrated deep into the Caucasus, we have been successful in establishing a fairly defendable front at the Kuban coast. The VVS fought well against the Luftwaffe and showed a lot of progress from previous battles. The focus of the fighting in the southern sector is increasingly shifting northwards, to Stalingrad.>
+<Kuban42SkBr> <Operation Blau, Heeresgruppe Süd's break through the Don front aimed at Stalingrad, has been a huge success so far. On the southern flank of the main axis of advance, the Caucasus coast is becoming increasingly isolated. The Wehrmacht, together with the Slovak Fast Division, is advancing in this direction as well, aiming at the ports of the Kuban coast, where the Black Sea fleet has fled after being driven from Odessa and Sevastopol. The aim of this drive is to take the Soviet oil fields at Baku on the Caspian Sea, the main source of oil for the Soviets. The advance is slowed down by mountainous terrain. At this time Slovakia, being a German ally, sends its own fighter unit equipped with Bf 109E to help Germans in the culminating battle for air superiority over the Eastern front. Slovaks form the 13th Staffel in the famous Jagdgeschwader 52.>
+<Kuban42SkDb> <The thrust into the Caucasus was successful. German troops, together with our Slovak Fast Division have advanced deep in the Caucasus. The Gebirgsjäger have put up the German flag on Mount Elbrus and German Panzer divisions are advancing towards Astrakhan. German forces have taken the port cities on the coast. The only problem is the fighting at Stalingrad, which will demand the transfer of almost all units of Luftflotte 4 northward to support the main thrust of Heeresgruppe Mitte. By this time our Slovak 13th Staffel, despite difficult conditions and harsh weather, has achieved first victories and suffered first losses on the Eastern front. However, the war isn't likely to end quickly: there are still plenty of Soviet planes in the air and our Bf 109E fighters are getting weary and obsolete. >
+
+<StalingradDeBr> <Generaloberst Paulus' 6th Army is advancing on Stalingrad. We have crossed the Tchir and are heading towards the very important industrial City on the Volga. Stalingrad is important not only because of its industry, but also because it is the gate to the Caucasus. By taking it, Heeresgruppe Süd can sever the connection between the oil fields of the Caucasus and the rest of the Soviet Union. The Battle of Stalingrad may decide the whole war! Luftflotte 4 has been severely strengthened by Fliegerkorps X that had been pulled back from Sicily. The Russians know of the importance of this battle as well and both the army and the air force have been strengthened severely. The Luftwaffe will have to do its utmost to support the drive of the 6th Army in this very important battle. >
+<StalingradDeDb> <The 6th Army has taken the major part of Stalingrad and has crossed the Volga at several points. Luftflotte 4 has been instrumental in this struggle. The VVS has been up in strength as never before on the southern front, with new types and much more aggressive than ever. Nevertheless, the fighters of the Luftwaffe have gained control in the air and inflicted heavy losses at a relatively light cost. Troubling us is the weather situation, which is becoming increasingly worse in the last days. If this continues, we will not be able to fly in a few days and our troops will not be able to advance further without air cover.>
+<StalingradRuBr> <The Germans are advancing on Stalingrad! Stavka has transferred every air unit at hand to the Volga front. The City must not fall, because that would sever the connection between the Caucasus and the rest of the USSR, stopping our indigenous oil supply and leaving us at the mercy of oil from the western allies. To prevent that, strong forces have been allocated to this sector. The VVS, equipped with new types and with the experience gained in the struggles of over a year, will try to claim air superiority. Stalingrad must not fall!>
+<StalingradRuDb> <At the beginning of October, the German advance has been almost stopped. While the Germans control a major part of Stalingrad, every inch is costing them dearly and our forces are becoming stronger day by day. Soon we will launch a counteroffensive and drive them back!>
+<StalingradHDeBr> <Generaloberst Paulus' 6th Army is advancing on Stalingrad. We have crossed the Tchir and are heading towards the very important industrial City on the Volga. Stalingrad is important not only because of its industry, but also because it is the gate to the Caucasus. By taking it, Heeresgruppe Süd can sever the connection between the oil fields of the Caucasus and the rest of the Soviet Union. The Battle of Stalingrad may decide the whole war! Luftflotte 4 has been severely strengthened by Fliegerkorps X that had been pulled back from Sicily. The Russians know of the importance of this battle as well and both the army and the air force have been strengthened severely. The Luftwaffe will have to do its utmost to support the drive of the 6th Army in this very important battle. >
+<StalingradHDeDb> <The 6th Army has taken the major part of Stalingrad and has crossed the Volga at several points. Luftflotte 4 has been instrumental in this struggle. The VVS has been up in strength as never before on the southern front, with new types and much more aggressive than ever. Nevertheless, the fighters of the Luftwaffe have gained control in the air and inflicted heavy losses at a relatively light cost. Troubling us is the weather situation, which is becoming increasingly worse in the last days. If this continues, we will not be able to fly in a few days and our troops will not be able to advance further without air cover.>
+
+<Stalingrad2DeBr> <We have a serious situation at the Stalingrad front. The Russians have used to past November days of bad weather to launch a pincer operation at the flanks of the 6th army covered by Rumanian units. Both the northern and southern attacks have been completely devastating, totally scattering our front and throwing our entire rear area into total chaos. As you know well, several field bases of the Luftwaffe were overrun in the last days. The Soviets have trapped almost the entire 6th Army in a pocket around Stalingrad. The Staff of Luftflotte 4 and Panzergruppe Hoth are desperately trying to form a holding front made up mostly of scratch units formed from rear echelons and Luftwaffe ground personnel. At the same time, High command has ordered the Luftwaffe to resupply the 6th army, which is to remain at Stalingrad in order to bind Soviet forces. Oberst Dr. Kühl, the Commodore of KG55, has been tasked with the coordination of the air effort to help Stalingrad. But with bad weather, a rear area in total confusion, our main airbases  under constant threat of being overrun, a precarious supply situation and the Soviet air force stronger than ever this task will be extremely difficult.>
+<Stalingrad2DeDb> <It is over. On the 2nd February, the 6th Army capitulated. 200.000 German soldiers have been killed or captured. The Luftwaffe has given all it had, but it wasn't enough. The airlift alone cost 488 planes, an entire Fliegerkorps! But without Luftflotte 4, the situation would have been much worse. The Luftwaffe attacked advancing troops, protected the airfields in the pocket and often had to defend its own airfields. Heeresgruppe Süd will have to pull back to the Don front, except for the Kuban bridgehead, which will most likely have to be evacuated as well. For the first time in this war, we have suffered a total defeat. An uncertain future lies ahead of all of us.>
+<Stalingrad2RuBr> <Operation Uranus, the Pincer movement against Kalach, was a huge success. The German 6th Army is now trapped in Stalingrad. For unknown reasons, the Germans have not yet attempted to break out of the pocket. We now have a unique opportunity at hand: To destroy an entire German field army and blunt the German war effort for the entire East front! As they did at Demyansk and Kholm in the northern sector, the Germans will most likely try to supply the 6th army from the air. The VVS will try to interdict the supply effort both by attacking airbases and shooting down transports in the air.>
+<Stalingrad2RuDb> <In 2nd February 1943, the German 6th Army under command of Generaloberst Paulus capitulated. Over 200.000 half starved German and Rumanian soldiers have been taken prisoner. The terrible conditions in Stalingrad bear witness to how effective the efforts of the VVS against the air supply operations have been. This has been our greatest victory yet. Even more, the whole German front has been pushed back until almost the starting point of last year's German summer offensive. The German front is that weak that it might be possible to break through at Kharkov and liberate the entire Ukraine!>
+<Stalingrad2HDeBr> <Operation Uranus, the Pincer movement against Kalach, was a huge success. The German 6th Army is now trapped in Stalingrad. For unknown reasons, the Germans have not yet attempted to break out of the pocket. We now have a unique opportunity at hand: To destroy an entire German field army and blunt the German war effort for the entire East front! As they did at Demyansk and Kholm in the northern sector, the Germans will most likely try to supply the 6th army from the air. The VVS will try to interdict the supply effort both by attacking airbases and shooting down transports in the air.>
+<Stalingrad2HDeDb> <In 2nd February 1943, the German German 6th Army under command of Generaloberst Paulus capitulated. Over 200.000 half starved German and Rumanian soldiers have been taken prisoner. The terrible conditions in Stalingrad bear witness to how effective the efforts of the VVS against the air supply operations have been. This has been our greatest victory yet. Even more, the whole German front has been pushed back until almost the starting point of last year's German summer offensive. The German front is that weak that it might be possible to break through at Kharkov and liberate the entire Ukraine!>
+
+<Rzhev42DeBr> <The summer of 1942 had seen no greater front movements in the central sector of the East front. The units of Heeresgruppe Mitte were able to establish a fairly stable defensive position. But a Soviet bulge existed in the front, with the western and southernmost point being Rzhev. It was clear that the Soviets would use this position to lash out southward. The units of Luftflotte 2 had been severely weakened during the last months, major units were transferred both to Luftflotte 4 and the Mediterranean front. While the fighters have received the new Fw 190 fighter, the Soviets have introduced new planes that match the performance of our fighters. They are also becoming more and more aggressive and better in tactics. On November 18th, the Soviets opened their winter offensive from Rzhew and Velikye Lukiy. Luftflotte 2 in this area only had the two Gruppen of JG 51 Mölders, the KG 4 and several staffeln of Stukas, as well as a new Hs 129 squadron, forming Gefechtsverband Schmidt. Gefechtsverband Schmidt is tasked with close support against the advancing Soviets as well as air defence.>
+<Rzhev42DeDb> <The Soviets succeeded in throwing back Heeresgruppe Mitte further, but the main goal, trapping large forces of it in a huge pocket west of Vyasma has not been accomplished. The Wehrmacht managed to withdraw from the Vyasma bulge during the Büffel movement without great losses. In a movement war, losing territory is preferrable to losing troops. The scratch formation, Gefechtsverband Schmidt, was instrumental in this move, it kept constant pressure on the Soviets. The new Fw 190s have proven themselves to be very suited for East front conditions. After the setbacks of the winter, our forces are still intact and we will turn the tide this summer!>
+<Rzhev42RuBr> <After the difficult winter battles of early 1942, the central front before Moscow remained quiet during summer. The Germans threw all their forces in the advance in the south, while we were gathering strength. The frontline gave us the opportunity to try a pincer operation southward from the bulge at Rzhew in an attempt to isolate most of the German forces on the Moscow front, much the same like our comrades in the south did at Stalingrad. The German Luftwaffe in this area has fielded a new fighter, the Focke-Wulf 190. We still have not much experience against this type, but I am sure our new planes and tactics are up to this challenge. There are also reports of Spanish pilots flying with the Luftwaffe's Mölders squadron in this sector. In order for our offensive to succeed, the VVS must wrestle air superiority from the Germans and enable our troops to operate without a threat from German bombers.>
+<Rzhev42RuDb> <Our offensive from Rzhew was a success, the Red Army was able to liberate another large area of the Russian SSR from German occupation. However, the advance was slower than expected, this enabled a large number of German troops to escape encirclement. While the strategic goal was not fully met, the operation was still a success. The VVS has once again proven itself. Our fighters managed to master air combat against the new German fighters, while our ground attackers were more efficient than ever in supporting our troops. The next large operation will most likely take place in summer.>
+<Rzhev42HDeBr> <The summer of 1942 had seen no greater front movements in the central sector of the East front. The units of Heeresgruppe Mitte were able to establish a fairly stable defensive position. But a Soviet bulge existed in the front, with the western and southernmost point being Rzhev. It was clear that the Soviets would use this position to lash out southward. The units of Luftflotte 2 had been severely weakened during the last months, major units were transferred both to Luftflotte 4 and the Mediterranean front. While the fighters have received the new Fw 190 fighter, the Soviets have introduced new planes that match the performance of our fighters. They are also becoming more and more aggressive and better in tactics. On November 18th, the Soviets opened their winter offensive from Rzhew and Velikye Lukiy. Luftflotte 2 in this area only had the two Gruppen of JG 51 Mölders, the KG 4 and several staffeln of Stukas, as well as a new Hs 129 squadron, forming Gefechtsverband Schmidt. Gefechtsverband Schmidt is tasked with close support against the advancing Soviets as well as air defence.>
+<Rzhev42HDeDb> <The Soviets succeeded in throwing back Heeresgruppe Mitte further, but the main goal, trapping large forces of it in a huge pocket west of Vyasma has not been accomplished. The Wehrmacht managed to withdraw from the Vyasma bulge during the Büffel movement without great losses. In a movement war, losing territory is preferrable to losing troops. The scratch formation, Gefechtsverband Schmidt, was instrumental in this move, it kept constant pressure on the Soviets. The new Fw 190s have proven themselves to be very suited for East front conditions. After the setbacks of the winter, our forces are still intact and we will turn the tide this summer!>
+
+<Kuban43DeBr> <Things are beginning to look a little brighter again in the southern area: General von Manstein managed to blunt the Soviet advance at Kharkov with a series of bold manoeuvre battles, stabilizing the front. This ended the possibility of a "Super-Stalingrad" in the entire Crimea, Kuban and southern Ukraine. While the front is relatively stable in the Ukraine, Stalin apparently decided to try smaller bites first. Forces of Heeresgruppe Süd are still holding a chunk of the Soviet Kuban coast from Taman to Novorossisk. Intelligence indicates the Red Army will launch its next offensive exactly there. For that reason, the major part of Luftflotte 4, including the whole Jagdgeschwader 52, have been sent to airfields in the Kuban and Eastern Crimea. They will try to support the bridgehead against the Soviet onslaught. Since the flying weather is good, I am confident we will be able to achieve air supremacy. It is known the Soviet air force has moved very strong units there, mainly equipped with planes delivered from the Americans or British.>
+<Kuban43DeDb> <The Soviets have failed to crush the Kuban bridgehead, but it was a close call. They managed to retake about half of the bridgehead and our German allies will be forced to abandon it to avoid losing the troops holding it. The really worrying news is the extremely tough air battles that were fought over the Kuban. The Soviet air force, especially the fighters, was very well organized, numerically superior and very aggressive. The aces of JG 3 and 52 managed to hold themselves, but the air war over the East front is not what it used to be just half a year ago. The air war of the East front is becoming more and more unfavourable for our side.>
+<Kuban43RuBr> <Even after our successful operation in the Don front area, the Germans still hold the Crimea and a bridgehead at the Kuban coast. The Red Army will eliminate this beachhead, liberating the coast from Krasnodar to Taman. A fast operation is necessary, as we want to deny the Germans the possibility of evacuation their forces to the Crimea. It can be assumed the Germans will move strong air forces into the bridgehead in order to support their troops. We have build up the VVS in this area as well. The battle will be a good opportunity to test new tactics and planes.>
+<Kuban43RuDb> <Our troops have managed to liberate Krasnodar and a good part of the Kuban coast. More importantly, the VVS performed extremely well. For the very first time, the VVS met a strong Luftwaffe concentration head on and came out victorious. Our new tactics have proved to be very effective. While the German Kuban bridgehead has not been totally eliminated, the Germans will have to evacuate it in order to avoid greater losses. The frontlines are now set for a decision this summer.>
+<Kuban43SkBr> <Things are beginning to look a little brighter again in the southern area: General von Manstein managed to blunt the Soviet advance at Kharkov with a series of bold manoeuvre battles, stabilizing the front. This ended the possibility of a "Super-Stalingrad" in the entire Crimea, Kuban and southern Ukraine. While the front is relatively stable in the Ukraine, Stalin apparently decided to try smaller bites first. Forces of Heeresgruppe Süd are still holding a chunk of the Soviet Kuban coast from Taman to Novorossisk. Intelligence indicates the Red Army will launch its next offensive exactly there. For that reason, the major part of Luftflotte 4, including the whole Jagdgeschwader 52, has been sent to airfields in the Kuban and Eastern Crimea. They will try to support the bridgehead against the Soviet onslaught. It is known the Soviet air force has moved very strong units there, mainly equipped with planes delivered from the Americans or British. However, our 13th Staffel has also been re-equipped with Bf 109Fs and even with brand-new Bf 109G fighters. Since the flying weather is good, I am confident we will be able to achieve air supremacy.>
+<Kuban43SkDb> <The Soviets have failed to crush the Kuban bridgehead, but it was a close call. They managed to retake about half of the bridgehead and our German allies will be forced to abandon it to avoid losing the troops holding it. The really worrying news is the extremely tough air battles that were fought over the Kuban. The Soviet air force, especially the fighters, was very well organized, numerically superior and very aggressive. Our pilots from the 13th Staffel together with the aces of JG 3 and JG 52 have managed to hold themselves, but air war over the Eastern front is not what it used to be just half a year ago. The enemy, regardless of enormous losses suffered, throws more and more planes into the battle, while our reserves are diminishing.>
+
+<KurskDeBr> <After difficult defensive winter battles in the Ukraine, the frontlines have stabilized themselves again in April 1943. A significant Soviet bulge had developed at Kursk, followed by a German Bulge, the Orelbogen, north of it. At the time, the German high command had decided to crush this bulge in a pincer operation from north and south. The most modern equipment, including new heavy tanks will be brought up to support the offensive. The operation has allready been delayed twice and Soviet forces in the bulge are very strong and fortified. Luftflotte 4 will support the northern Thrust from Orel. Main tasks will include winning air supremacy, close support and raids against the Soviet supply system.>
+<KurskDeDb> <Our offensive at Kursk met extremely heavy resistance. The advance bogged down after only a few kilometers due to heavy fortifications and strong counterattacks. The Soviets have had terrible losses but continue to throw more and more tanks at our poor soldiers. Luftflotte 4 gave an excellent performance against a very strong Soviet air force.  And even more important, our Stukas and Schlachtflieger managed to locate and destroy a Soviet brigade trying to envelop our northern thrust. The efforts of our Pilots alone turned a total defeat into a bloody draw. But the Orelbogen cannot be hold anymore, we will have to abandon it. For the first time, a major German summer offensive has failed.>
+<KurskRuBr> <After this year's winter offensives, our forces have occupied a huge bulge in the front around Kursk. It is obvious the German leadership plans an attack on this bulge as the starting point for their summer offensive this year. For reasons unknown to us, however, this offensive has been delayed for almost two months now. This gave us the possibility the strengthen our forces in the Kursk bulge to a point an attack cannot succeed. We expect the German forces to attack anyway, though. The task of our Air army will be to support the defence against the southern German pincer. Our main task will be to secure air supremacy and to attack German tanks and supply columns.>
+<KurskRuDb> <The German offensive starting in June became a total disaster for the Germans. Even though the German army used its most modern tanks, their advance did not get far in face of the heroic resistance of our Red Army soldiers. While the VVS failed to destroy the Luftwaffe forces on the ground, it managed to claim air superiority in hard fought air battles, while our attack squadrons wiped out entire tank divisions! For the first time, we blunted a German offensive from the start. This may well be the turning point of the war!>
+<KurskHDeBr> <After difficult defensive winter battles in the Ukraine, the frontlines have stabilized themselves again in April 1943. A significant Soviet bulge had developed at Kursk, followed by a German Bulge, the Orelbogen, north of it. At the time, the German high command had decided to crush this bulge in a pincer operation from north and south. The most modern equipment, including new heavy tanks will be brought up to support the offensive. The operation has allready been delayed twice and Soviet forces in the bulge are very strong and fortified. Luftflotte 4 will support the northern Thrust from Orel. Main tasks will include winning air supremacy, close support and raids against the Soviet supply system.>
+<KurskHDeDb> <Our offensive at Kursk met extremely heavy resistance. The advance bogged down after only a few kilometers due to heavy fortifications and strong counterattacks. The Soviets have had terrible losses but continue to throw more and more tanks at our poor soldiers. Luftflotte 4 gave an excellent performance against a very strong Soviet air force.  And even more important, our Stukas and Schlachtflieger managed to locate and destroy a Soviet brigade trying to envelop our northern thrust. The efforts of our Pilots alone turned a total defeat into a bloody draw. But the Orelbogen cannot be hold anymore, we will have to abandon it. For the first time, a major German summer offensive has failed.>
+
+<ProkhorovkaDeBr> <After difficult defensive winter battles in the Ukraine, the frontlines have stabilized themselves again in April 1943. A significant Soviet bulge had developed at Kursk, followed by a German Bulge, the Orelbogen, north of it. At the time, the German high command had decided to crush this bulge in a pincer operation from north and south. The most modern equipment, including new heavy tanks will be brought up to support the offensive. The operation has already been delayed twice and Soviet forces in the bulge are very strong and fortified. Luftflotte 6 will support the southern Thrust. Main tasks will include winning air supremacy, close support and raids against the Soviet supply system.>
+<ProkhorovkaDeDb> <Our offensive at Kursk met extremely heavy resistance. The advance bogged down after only a few kilometers due to heavy fortifications and strong counterattacks. The Soviets have had terrible losses but continue to throw more and more tanks at our poor soldiers. Luftflotte 4 gave an excellent performance against a very strong Soviet air force.  And even more important, our Stukas and Schlachtflieger managed to locate and destroy a Soviet brigade trying to envelop our northern thrust. The efforts of our Pilots alone turned a total defeat into a bloody draw. But the Orelbogen cannot be hold anymore, we will have to abandon it. For the first time, a major German summer offensive has failed.>
+<ProkhorovkaHuBr> <After difficult defensive winter battles in the Ukraine, the frontlines have stabilized themselves again in April 1943. A significant Soviet bulge had developed at Kursk, followed by a German Bulge, the Orelbogen, north of it. At the time, the German high command had decided to crush this bulge in a pincer operation from north and south. The most modern equipment, including new heavy tanks will be brought up to support the offensive. The operation has already been delayed twice and Soviet forces in the bulge are very strong and fortified. The fighter units of the Royal Hungarian air force are attached to Luftflotte 6 and will support the southern Thrust. The main task is the protection of our ground forces from enemy bombers.>
+<ProkhorovkaHuDb> <The German offensive at Kursk has failed, but our pilots have fought bravely and have shot down a huge number of Soviet planes. Unfortunately, American heavy bombers have started to raid Budapest and all fighter units are needed for home defence. It is bitter to leave our German comrades, but we have to.>
+<ProkhorovkaRuBr> <After this year's winter offensives, our forces have occupied a huge bulge in the front around Kursk. It is obvious the German leadership plans an attack on this bulge as the starting point for their summer offensive this year. For reasons unknown to us, however, this offensive has been delayed for almost two months now. This gave us the possibility the strengthen our forces in the Kursk bulge to a point an attack cannot succeed. We expect the German forces to attack anyway, though. The task of our Air army will be to support the defence against the southern German pincer. Our main task will be to secure air supremacy and to attack German tanks and supply columns.>
+<ProkhorovkaRuDb> <The German offensive starting in June became a total disaster for the Germans. Even though the German army used its most modern tanks, their advance did not get far in face of the heroic resistance of our Red Army soldiers. While the VVS failed to destroy the Luftwaffe forces on the ground, it managed to claim air superiority in hard fought air battles, while our attack squadrons wiped out entire tank divisions! For the first time, we blunted a German offensive from the start. This may well be the turning point of the war!>
+
+<Kubanlate43DeBr> <After the failed Operation Zitadelle, the Russians have launched an offensive in the entire Ukraine. The Crimea is about to be cut off and in the Ukraine, Feldmarschall von Manstein has ordered the Army Group South to retreat behind the Dnjepr. The Kuban Bridgehead is totally isolated, and the 17th Army has to be evacuated. High Command has ordered the evacuation by sea to the Crimea, which is also threatened. The Luftwaffe has to protect the Evacuation with the meager remaining forces after the losses from Kursk. We are numerically inferior, but the fighting spirit of our fighter units is unbroken. Heavy resistance in the air and a massive sortie from the Black Sea fleet have to be expected.>
+<Kubanlate43DeDb> <The last German soldier has left the Asiatic continent on the 9th October, when Taman was evacuated. The operation went along as planned with remarkably low losses, due to the heroic efforts of our Luftwaffe. The fighters of JG 52 have retained air supremacy and the Stukas managed to sink three Soviet destroyers and dealt a crippling blow to the Black Sea fleet.>
+<Kubanlate43RuBr> <After the German offensive at Kursk has failed, the red army has launched a liberating offensive in the entire Ukraine! The German forces are fleeing to the Dniepr river line. Now it is time to eradicate the last german stronghold on the Caucasus, the Kuban bridgehead. The german 17th Army there could, if successfully evacuated, strengthen the german defense in the Crimea or the Ukraine. According to intelligence, the germans will this time not attempt to hold the bridgehead, but will evacuate. Thus, the main task of the VVS will be to interdict the evacuation of men and material across the straits of Kerch. The black Sea fleet will use all its remaining ships to support that operation. The german air units are still weakened from Kursk, while our equipment, training and moral are better than ever!>
+<Kubanlate43RuDb> <The Red Banner is flying again over Taman! On the 9th October, the last German has left the Caucasus. Parts of the 17th Army managed to escape, though mostly without material. Also, they are now trapped on the Crimea. The VVS managed to sink a lot of transports, though the Black Sea fleet did not perform as expected and suffered heavy losses. The liberation of the Crimea is next!>
+<Kubanlate43SkBr> <After the failed Operation Zitadelle, the Russians have launched an offensive in the entire Ukraine. The Crimea is about to be cut off and in the Ukraine, Feldmarschall von Manstein has ordered the Army Group South to retreat behind the Dnjepr. The Kuban Bridgehead is totally isolated, and the 17th Army has to be evacuated. High German Command has ordered the evacuation by sea to the Crimea, which is also threatened. The Luftwaffe has to protect the Evacuation with the meager remaining forces after the losses from Kursk. At this time, the second garniture of Slovak pilots comes to replace the highly successful, but exhausted first garniture from the 13th Staffel of JG 52. We are numerically inferior, but I do hope the fighting spirit of our fighter unit will remain high. The numbers of Soviet aircrafts in the air seems to be inexhaustible, so there is no lack of targets and potential victories.>
+<Kubanlate43SkDb> <The last Axis soldier has left the Asiatic continent on the 9th October, when Taman was evacuated. The operation went along as planned with remarkably low losses, due to the heroic efforts of Luftwaffe. The fighters of JG 52 have retained air supremacy and the Stukas managed to sink three Soviet destroyers and dealt a crippling blow to the Black Sea fleet. However, what is really worrying is the deteriorating spirit of our pilots from 13th Staffel. Dozens of confirmed victories achieved in battles are in a bitter contrast with 7 pilots who betrayed our country and flew over to the Soviets. It is time to withdraw the 13th Staffel back to Slovakia.>
+
+<Crimea44DeBr> <In Winter 1943, the Soviets managed to gain a foothold on the Crimea. They hold Kerch and a small bridgehead, but do not have attempted any offensives so far. However, during the general retreat after the failed Kursk offensive, the land connection of the Crimea, the Perekop Isthmus, was occupied by the Soviets. It is obvious that the Soviets will try to conquer all of Crimea this spring. Our forces in the area are scarce. Most of Luftflotte 6 has been withdrawn to Rumania to counter American air raids on Rumanian oil fields. Only II./JG52, parts of SG2 and KG 100 remain in the Crimea to cover the evacuation from Sevastopol. We will have to fight great odds to cover the evacuation fleet.>
+<Crimea44DeDb> <The Soviets, attacking with great numbers from both the Perekop and Kerch managed to take all of Crimea except a small pocket around Sevastopol, which managed to hold out a little longer. The German and Rumanian air and naval transports managed to evacuate around 200.000 soldiers from the Crimea, but a lot of ships were sunk. Also, around 100.000 soldiers were left on the Crimea and captured. The small Luftwaffe units fought bravely and destroyed over 600 Soviet planes, but had to leave most of their ground personnel on Crimea. At least we managed to save a lot of soldiers.>
+<Crimea44RuBr> <After our winter offensives in 1943, almost all of Ukraine have been liberated and our forces are advancing into Rumania. The Crimea remains occupied by German forces, though we have established a beachhead on Kerch. We will finally take the Crimea in May. German and Rumanian forces are still present on the Island, but an evacuation operation has been launched, both via sea and air routes. The main tasks of the VVS will be not only close support for the ground fighting, but also the interdiction of the evacuation fleet. This will allow us to trap a large number of enemy soldiers.>
+<Crimea44RuDb> <The Crimea has been liberated! Sevastopol has fallen after heavy fighting. The VVS was instrumental in this victory. The evacuation fleet suffered heavy losses due to air strikes and our fighters decimated the enemy transport planes. The Luftwaffe was not able to put up much resistance against us this time, but that will surely change in the next battles.>
+
+<BagrationDeBr> <After the Soviet offensives in the Ukraine, Rumania is now under attack from the Soviets. The Soviets managed to push our forces back from their territory everywhere in the south. Heeresgruppe Mitte holds a huge "front balcony" extending to the Dnepr. A huge building up of Soviet forces in the vicinity suggests that the Soviets will try to take this bulge in their own 1944 summer offensive. The German forces in the bulge cannot hold it. Due to the invasion in the Normandy, much of the mobile forces have been sent westward. The Luftwaffe has the same situation: Many experienced pilots of JG 51, the only fighter unit in the area, have been transferred to the Reichsluftverteidigung. Our forces are hopelessly outnumbered.>
+<BagrationDeDb> <On the third anniversary of the attack on the Soviet Union, the Soviet offensive started to crush Heeresgruppe Mitte. Within days, over 300.00 0 German soldiers died or were captured. A disaster larger than Stalingrad. The Luftwaffe was too weak to render any effective resistance. Constant Il-2 attacks on our airfields kept us fighting for our very lives while entire armies died in the field. The whole central East front has collapsed and we don't know how or when we can contain the Soviet breakthrough.>
+<BagrationRuBr> <In the third year of this war, the tide has turned. Unlike in the previous years, we will be launching a summer offensive, not the Germans. On the exact anniversary of the German aggression the Red Army will execute Operation Bagratation, a strike at the German occupied part of Belarus. Our aim is to crush the German front and break through into Poland, enabling us to launch attacks both on Hungary and East Prussia. The VVS will massively support this offensive, the main task will be to destroy the Luftwaffe in our sector and the support the offensive.>
+<BagrationRuDb> <Operation Bagration has been a huge success! Vitebsk was taken and our forces are still contiuing westward. In the area around Vitebsk, more German soldiers were killed or captured than at Stalingrad. The Luftwaffe was not able to put of any serious resistance and was mostly not even able to defend its own airfields from constant VVS attacks. Except for the Baltics, now all of our Motherland has been liberated from the Germans. Now we will carry the war to them!>
+
+<Lvov44DeBr> <After the disaster around Smolensk and Vitebsk, the remains of Heeresgruppe Mitte are on constant retreat. A holding line has been set up around Lemberg in the southern part of the Soviet advance, but it will not hold very long. We expect the Soviet advance to turn south there and cross the Karpathian Mountains into Hungary. This move would cut off Germany from the oil fields in Rumania and Hungary. Heeresgruppe Süd will support the Royal Hungarian army in the defence of the Hungarian border. Luftflotte 6, supported by units of the RLV, will give air cover alongside the Hungarian air force.>
+<Lvov44DeDb> <Lemberg fell after a short time, and the Soviets managed to cross the Carpathians into Hungary. At least we were able to prevent the Hungarians from changing sides. While the Luftwaffe and the Hungarian air force fought well, they were simply overwhelmed by the Soviets.>
+<Lvov44RuBr> <After crushing the enemy front in Belarus, our forces are moving westward very quickly. The next target of the Red Army's advance is Lvov. From this city, several armies will turn south and try to force their way over the Carpathian Mountains into Hungary, Debrecen being the first target. The taking of large parts of Hungary will sever the German access to the oil fields of Rumania and Hungary. For that reason, heavy resistance from both Hungarian and German forces can be expected.>
+<Lvov44RuDb> <The Red Army successfully took Lvov and managed to cross the Dukla pass over the Carpathians into Hungary. A Hungarian attempt to negotiate a separate peace was crushed by the Germans, turning a satellite state into another occupied country. The Hungarian military however fights on. Once again, the VVS was very successful in supporting the advance and gained air supremacy over both Hungarian and German enemies.>
+<Lvov44HuBr> <After the Soviets crushed the German central front, they are in a position to attack Hungary from the north. Even though the Americans heavily bomb Budapest and other cities, the defence of our borders is more important. All available MHKL squadrons will support the defensive battles in the Carpathians.>
+<Lvov44HuDb> <The Soviets managed to break into Hungarian territory, despite our and the Luftwaffe's best efforts. A small clique of aristocrats tried to negotiate a separate peace, but the Hungarian military will fight on alongside our German comrades in arms.>
+
+<BerlinDeBr> <The Russian offensive of Summer 44 had pushed us back almost to the 1937 borders of Germany. In February 1945, the Soviets attacked East Prussia. The Kriegsmarine launched an all out effort to save as many soldiers and civilians as possible, and the fighting over a small bridgehead near Pillau is still ongoing, as well as on Hela. The Soviets will soon launch their final offensive on Berlin. After the Ardennes offensive and the failed Operation Bodenplatte, most RLV fighter units have been assigned to the East front, leaving the defence against the US air raids to the Jet fighters of JG 7. Luftflotte 6 has an impressive order of battle, more units ever since Operation Barbarossa. But most units are understrenght, short on fuel and have only novice pilots. The key of success will be the Oder crossings. If we can destroy the Bridges across the Oder, the Soviets will not be able to advance. Gefechtsverband Bohrmann is tasked with that, and all fighter units will support it, as well as fly Jabo missions against Soviet troops. Air supremacy is only a secondary task, due to the huge enemy advantage in numbers. This is going to be our last stand. Especially since the treacherous murder attempt on 20th July last year, the Führer expects fanatical resistance and total devotion to duty!>
+<BerlinDeDb> <In late February, the Soviets crossed the Oder. An intense air campaign during which every possible weapon was used against the bridges began. However, it proved impossible to destroy the bridges permanently. A last major defensive battle at the Seelower Höhen didn't buy much time and Berlin was surrounded by end of March. The Luftwaffe did what it could, mostly close support missions, but was not able to make any difference. On 2nd May finally, the Führer died in his Bunker and the city surrendered. Karl Dönitz, his successor, has build a provisional government in Flensburg and tries to salvage what is possible from the East, but the war is lost. Six years of war and so many lives have been lost in vain.>
+<BerlinRuBr> <After successful offensives against East Prussia, Pommerania and Danzig, the Red Army is ready for the final blow against fascism, the assault on Berlin! In late February, several Red Army fronts will cross the Oder River in order to envelop Berlin and take it, preferably with all the German leadership in it. The role of the VVS will be close support for our troops, as well as air cover, especially for the Oder bridges. This will be the last and most important battle of all!>
+<BerlinRuDb> <Victory! The red flag has been raised over the Reichstag and Hitler is dead, presumably suicide. The peoples of the Soviet Union have totally defeated the German aggression! We will help the oppressed German people to rebuild their nation as a stable and peaceful country. The VVS, as usual, performed brilliantly in this huge battle. It successfully protected the Oder bridges from German raids and helped eliminate all serious resistance. The VVS has made incredible progress during the war years and was instrumental in winning the war.>
+
+<BalatonDeBr> <Soviet forces surrounded Budapest in February and took it after brutal house fighting. Now, in March, the frontline is just along the southeastern shore of the Plattensee. 1st SS Panzerkorps has been brought up to the front and will launch an offensive aimed at liberating Budapest. Luftflotte 4 and the Hungarian air force will support the Operation Frühlingserwachen. Most important tasks will be close support and escort for our jabos.>
+<BalatonDeDb> <Operation Frühlingserwachen didn't get far. Due to mud and rain, the offensive bogged down after a few kilometres and the SS units had to withdraw in order not to get enveloped. A few days later, the Soviets launched their own offensive. Our forces were unable to stop them and by mid April the Soviets crossed the Austrian border and took Vien. Luftflotte 4 and our Hungarian brothers in arms fought bravely, shooting down a large number of Soviet planes. But Soviet and American superiority in numbers was too large to let us make a difference. A few days after Wien, Berlin fell as well. The war is over, and all Luftwaffe units are ordered to fly westward and surrender themselves to the Americans. At least most of us will have a country to return to, unlike our Hungarian comrades. You fought well, all we fought for was in vain.>
+<BalatonRuBr> <While our central fronts are converging on Berlin, the Red Army managed to take Budapest, the capital of Germany's last ally. Now in March 1945 the frontline is around lake Balaton and the army is ready to strike further into Austria. The VVS will support this offensive aimed at liberating Austria from German occupation.>
+<BalatonRuDb> <The German SS launched a rather weak offensive in mid march, which did not penetrate very far. Immediately afterwards, our own offensive began, quickly sweeping the Germans from Hungary into Austria. Vienna was taken in May, and the triumph of the southern fronts is as complete as the victory at Berlin. The VVS fought brilliantly against the Luftwaffe's last gasp and came out victorious again. Our complete victory over fascism was to a large part due to the VVS.>
+<BalatonHuBr> <Budapest has fallen after a brutal battle, and the Soviets have conquered most of our country. Still, we have to do our duty as soldiers of the Royal Hungarian army. We will fight alongside the Luftwaffe until the last man. Yet, there is hope: the German elite 1. SS Panzerkorps will launch an offensive to liberate Budapest. I expect all of you to give your utmost in this desperate battle.>
+<BalatonHuDb> <The offensive of the SS has failed after a few days and the Soviets have pushed the Germans back to the Austrian border. Sopron was the last Hungarian city to fall into their hands. Our country is again in the hands of the Bolsheviks and the Red terror of 1919 will return. At least we have shown the world how royal Hungarian soldiers fight and have done our duty. But our country is lost for us and we will have to go into exile.>
+
+<Finland41FiBr> <After the Soviets have bombed Helsinki on 25th June, Marshal Mannerheim decided to join the war on the German side in order to regain the East Karelian territories the soviets had grabbed after the winter war of 1939. The army will soon launch an offensive to liberate our territories in East Karelia. The task of the ILV will be not only the protection of Helsinki from the air, but also cover for our troops.>
+<Finland41FiDb> <The Germans so far have failed to take Leningrad, but have put the city under a devastating siege and heavy air attacks. We have accomplished all goals of our war, but while 200.000 reservists are demobilized, a state of war still exists with the Soviet union, even if actual combat is limited to air combat and static warfare in front of Leningrad. We will hold the front and wait how the general situation of the German-Russian war develops before entering peace negotiations on our terms with the Soviets.>
+
+<Leningrad41DeBr> <After difficult battles in the Baltic states and around the Ilmensee, Heeresgruppe Nord is advancing towards Tallinn and finally Leningrad. With our Finnish allies closing in on the Karelian front, Leningrad is to be totally cut off from the rest of the Soviet Union. Luftflotte 1, under command of Generaloberst Keller, is tasked with air operations over the Gulf of Finland and its military strongholds. The fighters are to win air supremacy while Stukas and Bombers will systematically attack the defensive emplacements, as well as interdict the supply shipping. Another primary target is the Red Banner Baltic fleet, which is based at Kronstadt. Luftflotte 1 will attack and destroy these ships in order to prevent their breakout to neutral Sweden.>
+<Leningrad41RuBr> <A few days ago, the German forces have attacked the Soviet Union! So far, the Germans are advancing into the Lithuanian SSR and it is very likely that the final goal of the northern thrust is Leningrad, but the situation is even worse: The rulers of Finland are known to seek a revision of the 1940 peace treaty. A Finnish attack is very likely and preparations have to be made for a two front war at the Leningrad front. Leningrad PVO, Baltic fleet VVS and the northern front VVS will have to defend Leningrad and the front, while the DBA will execute pre-emptive strikes against Finnish military and political targets.>
+<Leningrad41FiBr> <After the Soviets have bombed Helsinki on 25th June, Marshal Mannerheim decided to join the war on the German side in order to regain the East Karelian territories the soviets had grabbed after the winter war of 1939. The army will soon launch an offensive to liberate our territories in East Karelia. The task of the ILV will be not only the protection of Helsinki from the air, but also cover for our troops.>
+
+<Leningrad41DeDb> <Our air war against Leningrad has not been totally successful. While our fighters, skilfully led by Major Trautloft, are ruling the skies, strong Soviet flak as made bombing raids on Leningrad very difficult. Especially the attacks on the Baltic fleet didn't have the expected success. Though some ships were sunk, the bulk of the fleet is still operational and remains a threat. Our ground troops also so far have failed to make more gains against the defensive emplacements and trench warfare reminiscent of the last war has developed in front of Leningrad. Isolating the city will also get more and more difficult in the winter when the Soviets will be able to supply the city via the frozen Ladogasee.>
+<Leningrad41RuDb> <The Germans have failed to take Leningrad, but we are under siege and a terrible famine has broken out in the city. We must hope the supply situation gets better when Lake Ladoga is frozen and usable for truck traffic. The VVS and PVO regiments have fought heroically in the skies over Leningrad, preventing larger German terror raids and protecting the Red Banner Baltic fleet from being annihilated from the air. While doing so, they air regiments have taken heavily losses. For the upcoming counteroffensives, the VVS and PVO of Leningrad will have to be rebuild.>
+<Leningrad41FiDb> <The Germans so far have failed to take Leningrad, but have put the city under a devastating siege and heavy air attacks. We have accomplished all goals of our war, but while 200.000 reservists are demobilized, a state of war still exists with the Soviet union, even if actual combat is limited to air combat and static warfare in front of Leningrad. We will hold the front and wait how the general situation of the German-Russian war develops before entering peace negotiations on our terms with the Soviets.>
+
+<Leningrad42DeBr> <After the difficult battles at Demyansk and Volkhov, the siege ring around Leningrad has been closed again. The only supply route for the city is the Ladogasee. During winter, the Soviets are sending truck convoys over the ice and during summer, ships delivering supplies. Luftflotte 1 has the grim mission of keeping the pressure on Leningrad, both by maintaining air supremacy and striking at Soviet industry and supplies.>
+<Leningrad42RuBr> <The efforts by the Red Army to re-establish the land connection to Leningrad have failed. The city still is in a difficult position, even though the supplies brought in via Lake Ladoga are now barely sufficient to sustain the civilians and soldiers in Leningrad. The main task of the VVS will for the next time will be to keep the city alive. For this, we have to protect our supply routes from air attacks, strike at the German positions and protect the city itself.>
+<Leningrad42FiBr> <While we have re-established the pre 1940 borders and have demobilized many reservists, a state of war continues to exist between the Soviets and us. For that reason, we must keep the pressure on them to prevent Soviet offensives. The Finnish air force's task is to maintain air supremacy north of Leningrad and on the Karelian front.>
+
+<Leningrad42DeDb> <Leningrad is still under siege. We have fortified our emplacements, but it is well possible that the Russians will attempt another breakout operation this winter. The baltic fleet has been struck again, but is still operational. The fighters of JG 54 are still ruling the skies, but soviet air strenght is increasing. The soviet air force in Leningrad is especially strenghthened by planes from the US or England.>
+<Leningrad42RuDb> <The Germans have so far failed to make any gains against Leningrad. The Germans have also failed in sinking any more ships of the Baltic fleet. Enemy landing operations on the islands in Lake Ladoga have been repulsed. The route over the lake is secure for now. In next winter, the red army is ready for another attempt to open a land route to Leningrad.>
+<Leningrad42FiDb> <The Germans have failed to take Leningrad so far, and the siege is holding. The conditions in the city must be terrible. Yet the siege of Leningrad is instrumental in keeping the soviets from attacking Finland again. We must keep the pressure on the Soviets.>
+
+<Leningrad43DeBr> <During the last days, the sovies have started to attack the positions of our 18th army at the souther shore of the Ladogasee, near Schlüsselburg. The attack is aimed at opening a land corridor to the city. We will not be able to keep the siege if the soviets can resupply by land. Luftflotte 1 must undertake a maximum effort to support our ground forces. >
+<Leningrad43RuBr> <Operation Iskra, the relief offensive for Leningrad, is about to begin! The VVS on the Karelian and Leningrad front will support 2nd Shock army and 67th army in their move against the german salient near Shlisselburg. The enemy air forces are weaker than previous year, as the germans have withdrawn some forces westward and the finnish have assumed a defensive posture.>
+<Leningrad43FiBr> <The Soviets are preparing for another offensive to relieve Leningrad. Their forces are ready to strike a german position south of Ladoga. The siege of Leningrad will be very difficult to maintain when the russians can open a land corridor. We must support the germans in the defense of the Schlüsselburg salient. >
+
+<Leningrad43DeDb> <After almost two years, the pressure from Soviet units inside Leningrad is growing, Luftflotte 1 is more and more forced to a defensive stance. While the air units have performed brilliantly, the Luftflotte has been forced to give a lot of units to other theaters and fronts. For that reason, our strength has decreased while the enemy is stronger than ever. We enter the third year with an uncertain future ahead...>
+<Leningrad43RuDb> <Leningrad has been through two terrible years, but the worst is over now. The Red Army and VVS defending the city are stronger than ever and everything is ready for breaking out of the siege. The VVS was instrumental in keeping Leningrad alive for two years. It fought the best German pilots, it protected the supply routes and now has turned offensive against German airfields and positions.>
+<Leningrad43FiDb> <During the last two years, the ILV has fought very well, but Soviet air strength has increased severely. Even with the new 109s from Germany, we are simply outnumbered by the Soviets. It is very likely that the Soviets will attempt to break out of the siege of Leningrad soon. And after that, it is only a matter of time until they attack Finland again.>
+
+<Leningrad44DeBr> <This morning, the Baltic fleet has commenced a heavy bombardment of our forward positions at Oranienbaum! The Soviets are breaking out of Leningrad! Luftflotte 1 must support the ground forces on their retreat and help the establishment of a new defensive line near Narva. The VVS is stronger than ever, but we still have qualitative superiority.>
+<Leningrad44RuBr> <This morning, our comrades of the Baltic fleet have started to bombard the German siege positions! The time is there to end the siege of Leningrad! The VVS will support the offensive. Our main task will be to  destroy the Luftwaffe's bases and cover the advance of our troops. If this offensive succeeds, the entire Baltic and Finland may soon be liberated as well!>
+<Leningrad44FiBr> <The Soviets have broken out of the Siege of Leningrad in January and have reconquered most of the Baltic states. Reconnaissance has revealed a huge Soviet build-up at our borders. It is only a matter of time until the Soviets will attack us and this time we might not be able to stop them. The ILV must defend our cities and protect our ground forces.>
+
+<Leningrad44RuDb> <Leningrad is free again! We have broken the siege and the Red Army is rapidly advancing in the Baltic republics. Narva has fallen and Tallinn will fall soon. The German forces are regrouping in the south and are forming a pocket, which we will have to eliminate in the next time. Also, our offensive in Karelia has been a huge success, we have re-established the 1940 border and the Finns have signed an honorable peace with us. Two bitter years of hunger and suffering are over for the people of Leningrad!>
+<Leningrad44DeDb> <The siege positions around Leningrad, shell-shocked by the massive bombardment, have been totally overrun. The new defensive line at Narva did not hold very long and it is only a matter of time until the Soviets take Tallinn. Luftflotte 1 will withdraw to Kurland to cover our forces there.>
+<Leningrad44FiDb> <In June, the Soviet offensive finally struck. Two Soviet armies, with over 200.000 men and thousands of tanks, supported by a huge air fleet, have attacked us. The ILV and the Germans have fought bravely, shooting down 800 planes, but were not able to keep air supremacy. With massive German help, we were able to stop the Soviet offensive just on the 1940 border, but we cannot maintain this line for long. We have to negotiate for peace or the very existence of our country will be at stake.>
+
+<RuRescueSit> <We received a report that a plane of our regiment's Chief of Staff who participated in an attack of %s made an emergency landing somewhere in the area. >
+<RuRescueSit> <Our neighbours just lost one of their pilots, who participated in an attack of %s. They say he crash landed somewhere in the area. >
+<RuRescueSit> <One of our regiment's planes did not return from a recon mission of %s. The pilot reported that he will attempt to make an emergency landing. >
+<DeRescueSit> <We received a report that our gruppe commander, who participated in an attack of %s made an emergency landing somewhere in the area. >
+<DeRescueSit> <Our neighbours just lost one of their pilots, who participated in an attack of %s. They say he crash landed somewhere in the area. >
+<DeRescueSit> <One of our planes did not return from a recon mission of %s. The pilot reported that he will attempt to make an emergency landing. >
+
+<RuRescue> <Do your best to save him!>
+<RuRescue> <Try to locate the plane and report immediately!>
+<DeRescue> <Do your best to save him!>
+<DeRescue> <Try to locate the plane and report immediately!>
+
+<RuVerifySit> <One of our young pilots reports that he downed a German bomber near %s. Ground observers cannot confirm it. >
+<DeVerifySit> <One of our young pilots reports that he downed a Soviet bomber near %s. Ground observers cannot confirm it. >
+
+<RuVerify> <Try to locate the plane - it may be equipped with a new radar.>
+<RuVerify> <Try to find the plane - we trust the pilot, but he cannot be credited without a proof.>
+<RuVerify> <Search the area - the plane may be equipped with a new night sight.>
+
+<DeVerify> <Try to locate the plane - it may be equipped with a new radar.>
+<DeVerify> <Try to find the plane - we trust the pilot, but he cannot be credited without a proof.>
+<DeVerify> <Search the area - the plane may be equipped with a new night sight.>
+
+<RuIceRoadCAP> <We are covering the Road of Life. >
+<RuIceRoadCAP> <We will cover the main Leningrad supply line today - the Road of Life. >
+<RuIceRoadCAP> <Comrade Officers! Today we received and order to protect the Road of Life from German monsters. >
+<RuIceRoadCAP> <In this mission we will cover the Road of Life. >
+<RuIceRoadCAP> <We are entrusted with the defense of the Ladoga ice road against German murderers. >
+
+<DeIceRoadCAS> <We will attack the main Russian line of supplies - the ice road over Ladogasee. >
+<DeIceRoadCAS> <To help our troops we must stop Russian trucks supplying Leningrad over the Ladogasee ice. >
+<DeIceRoadCAS> <Pilots! Today we received and order to hit Soviet ice road. >
+
+<logIceRoadCAP> <Protection of the Ladoga ice road.>
+<logAttackIceRoad> <Attack of the Ladoga ice road.>
+<DeIceRoad> <Destroy everything that you see!>
+<RuIceRoad> <Remember that to save lives of Leningrad defenders we need every truck!>
+
+<RuLadogaCAP> <We are covering Ladoga ports. >
+<RuLadogaCAP> <We will cover the main Leningrad supply line today - Ladoga ports. >
+<RuLadogaCAP> <Comrade Officers! Today we received and order to protect ports on Ladoga lake from German monsters. >
+
+<DeLadogaCAS> <We will attack the main Russian line of supplies - Ladogasee. >
+<DeLadogaCAS> <To help our troops we must stop the ships supplying Leningrad over the Ladogasee. >
+<DeLadogaCAS> <Pilots! Today we received and order to hit Ladoga ports. >
+
+<logLadogaCAP> <Protection of the Ladoga ports.>
+<logAttackLadoga> <Attack of the Ladoga ports.>
+<DeLadoga> <Destroy everything that you see!>
+<RuLadoga> <Protect the ships and equipment - remember that they deliver food to Leningrad defenders and evacuate those who can not fight!>
+
+<YouAreBack> <\nYou returned to active service\n>
+
+<CUR_KILLS>		<In this mission you destroyed:>
+<CUR_KILLS>		<The following kills were confirmed for your last mission:>
+<CUR_KILLS>		<These targets were destroyed in the last sortie:>
+
+<TOT_KILLS>		<During your career you destroyed:>
+<TOT_KILLS>		<Your list of destroyed targets:>
+<TOT_KILLS>		<All targets that you destroyed:>
+
+<dbrNplanes>	<Planes: %d\n>
+<dbrNplanesG>	<Planes on the ground: %d\n>
+<dbrNtanks>		<Tanks: %d\n>
+<dbrNguns>		<Guns: %d\n>
+<dbrNcars>		<Vehicles: %d\n>
+<dbrNwagons>	<Railroad cars: %d\n>
+<dbrNbridges>	<Bridges: %d\n>
+<dbrNships>		<Ships: %d\n>

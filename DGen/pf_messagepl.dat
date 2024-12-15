@@ -1,0 +1,1338 @@
+<DGen:>		<*>
+	--------------------------------------------------------------------------------------------
+		 Translation guidelines. 
+
+	Every line not starting with symbol < will be ignored. You may use it for comments.
+ 	Messages consist of three parts: message ID, optional message selector and text.
+
+	For every ID code there may be up to 10 variants of texts - one will be picked up randomly.
+	You don't need to translate every line exactly, you just need to describe the same situation.
+
+	Message selector in () brackets defines which campaign will use them.
+	*JA means all Japanese
+	aJA Japanese Army only
+	nJA Japanese Navy only
+
+	other codes are 
+	*U*, for all Allies
+	*UK, for RAF and RN
+	aUK, for RAF, RNZAF, RAAF 
+	aUD, for Dutch
+	nUK, for RN
+	*US, for USAAF,USMC,USN
+	aUS, for USAAF
+	nUS, for US Navy
+	mUS, for US Marine Corps
+
+	Some messages can be made map-specific. For instance:
+
+//<AttackAF>(*U*)
+
+	is a generic AF attack, while:
+
+//<AttackAF:Tarawa>(*U*) can contain some references to invasion of Tarawa. If there is map-specific varioant, 
+   only this version will be used.
+
+
+	Symbols \n ans %s must be left intact. \n means new line, %s means that some substring will be 
+	placed there - usually town name. 
+
+	Message texts cannot contain new lines - make them as long as you need (but not longer than 256 chars).
+	--------------------------------------------------------------------------------------------
+
+//<Retrn>		<After some much needed R & R your squadron is back in action...\n>
+
+<Retrn>		< >
+
+--------------------------------------------------------------------------------------------
+	The following messages are for pilot's logbook
+--------------------------------------------------------------------------------------------
+
+
+
+<logCAS>				<Bezpoœrednie wsparcie z powietrza>
+<logAttack>				<Atak>
+<logNavalAttack>		<Atak morski>
+<logCAP>				<Patrol bojowy>
+<logFleetPatrol>		<Patrol floty>
+<logParaEscort>			<Os³ona>
+<logIntercept>			<Przechwytywanie>
+<logReconEscort>		<Os³ona rozpoznania>
+<logRecon>				<Rozpoznanie>
+<logFighterSweep>		<Wymiatanie myœliwskie>
+<logScramble>			<Start>
+<logRescue>				<Ratunek>
+<logNone>				< >
+<logStrikeEscort>		<Os³ona ataku>
+<logTransfer>			<Przeniesienie>
+
+<logBailed> 			<Wyskoczy³ ze spadochronem>	
+<logKill> 				<%s - uznano za zestrzelonego>		
+<logCrashed> 			<Rozbity>	
+<logLandedAF> 			<Wyl¹dowa³>
+<logLanded> 			<Wyl¹dowa³>
+
+
+<logAttackAF>			<Atak na lotnisko nieprzyjacielskie>
+<logTank>               <Zniszczenie nieprzyjacielskiego zbiornika>
+<logShip>				<Zniszczenie statku nieprzyjacielskiego>
+<logArtillery>			<Atak na pozycje nieprzyjacielskiej artylerii>
+<logColumn>				<Atak na nieprzyjacielsk¹ kolumnê transportow¹>
+<logTrain>				<Atak na nieprzyjacielski poci¹g> 
+<logBridge>				<Zniszczenie mostu>
+<logTroops>				<Atak na wojska nieprzyjacielskie>
+
+	--------------------------------------------------------------------------------------------
+	The following messages are for pilot's personal files
+	--------------------------------------------------------------------------------------------
+
+<rstJoined> 		<przydzielony do eskadry>
+<rstPromoted> 		<awansowany do stopnia: %s>
+<rstAwarded> 		<otrzymuje odznaczenie: %s>
+
+<rstTransfered>(*U*) 	<przeniesiony do pracy biurowej w Stanach>
+<rstTransfered>(*JA) 	<przeniesiony na Wyspy Japoñskie>
+
+<rstHospitalize> 		<ranny i skierowany do szpitala>
+<rstReunited> 		<powraca do eskadry>
+
+
+<recJoined> 		<{DATE}: {rank} {lastname} przybywa do eskadry>
+<recPromoted> 		<{DATE}: {oldrank} {lastname} otrzymuje awans do stopnia: {rank}>
+<recAwarded> 		<{DATE}: {rank} {lastname} otrzymuje odznaczenie: {medal}>
+
+<recTransfered>(*U*) 	<{DATE}: {rank} {lastname} zostaje przeniesiony do pracy biurowej w Stanach>
+<recTransfered>(*JA) 	<{DATE}: {rank} {lastname} zostaje przeniesiony na Wyspy Japoñskie>
+
+<recHospitalize> 		<{DATE}: {rank} {lastname} odnosi ranê i zostaje skierowany do szpitala>
+<recReunited> 		<{DATE}: {rank} {lastname} wraca do eskadry>
+
+
+<rstKilled> 				<zostaje uznany za zabitego w akcji>
+<rstMissed> 				<zostaje uznany za zaginionego w akcji>
+
+	--------------------------------------------------------------------------------------------
+	Please do not translate words Name and Description - they are used by IL2
+	--------------------------------------------------------------------------------------------
+<nSHR> 		<DGen misja\n>
+<nHDR> 		<Name Misja %s\n>
+<hShortRuB>	<Bombowiec. %s, '4%d>
+<hShortRuF>	<Myœliwiec. %s, '4%d>
+<hShortJaB>	<Bombowiec. %s, '4%d>
+<hShortJaF>	<Myœliwiec. %s, '4%d>
+
+<hLongRuB>	<Description kampania dynamiczna amerykañskiego pilota bombowca. %s, 194%d>
+<hLongRuF>	<Description kampania dynamiczna amerykañskiego pilota myœliwca. %s, 194%d>
+<hLongJaB>	<Description kampania dynamiczna japoñskiego pilota bombowca. %s, 194%d>
+<hLongJaF>	<Description kampania dynamiczna japoñskiego pilota myœliwca. %s, 194%d>
+
+	--------------------------------------------------------------------------------------------
+	Plane names to appear in briefings
+	--------------------------------------------------------------------------------------------
+
+<JU_52_3MG4E>	<Ju-52 3MG4E>
+<LI_2>	<Li-2>
+<P_39D1>		<P-39D>
+<P_39D2>		<P-39D>
+<P_39N>		<P-39N>
+<P_39Q1>	<P-39Q1>
+<P_39Q10>	<P-39Q10>
+<P_400>		<P-400>
+<P_40E>		<P-40>
+<P_40EM105>	<P-40>	
+<P_40M>>	<P-40M>
+
+<P_40SUKAISVOLOCHHAWKA2> <P-40B>
+<P_40SUKAISVOLOCHB>	<P-40B>
+<P_40SUKAISVOLOCHC>	<P-40C>
+<P_40SUKAISVOLOCH2A> <Tomahawk>
+<P_40SUKAISVOLOCH2B> <Tomahawk II>
+
+<HurricaneMkIa>	<Hurricane>
+<HurricaneMkIIb>	<Hurricane>
+<HurricaneMkIIc>	<Hurricane>
+<HurricaneMkIIbMod>	<Hurricane>
+<BLENHEIM1>	<Blenheim>
+<BLENHEIM4>	<Blenheim>
+
+<F2A_B239> <Brewster>
+<F2A_B339> <Brewster>
+<MS406> <M.S.406>
+<MS410> <M.S.410>
+<P_47D10> <P-47>
+<P_47D22> <P-47>
+<P_47D22> <P-47>
+<P_47D10> <P-47>
+<P_47D22> <P-47>
+<P_47D27> <P-47>
+<P_51D20NA>	<P-51>
+<P_51D5NT>	<P-51>
+<P_51CM>	<P-51>
+<TEMPEST5>	<Tempest V>
+<B_17E> <B-17>
+<B_17D> <B-17>
+<B_17G> <B-17>
+<B_29> <B-29>
+
+<P_38J>	<P-38>
+<P_38L>	<P-38>
+<P_38LLate>	<P-38>
+
+<A6M2>(*U*)	<Zeke>
+<A6M3>(*U*)	<Hamp>
+<A6M2_21>(*U*)	<Zeke>
+<A6M2N>(*U*)	<Rufe>
+<A6M5A>(*U*)	<Zeke>
+<A6M5B>(*U*)	<Zeke>
+<A6M5C>(*U*)	<Zeke>
+<A6M5>(*U*)	<Zeke>
+<A6M5A>(*U*)	<Zeke>
+<A6M7_62>(*U*) <Zeke>
+<A6M7_63>(*U*) <Zeke>
+
+<A6M2>(*JA)	<A6M2>
+<A6M3>(*JA)	<A6M3>
+<A6M2_21>(*JA)	<A6M2>
+<A6M2N>(*JA)	<A6M2-N>
+<A6M5A>(*JA)	<A6M5a>
+<A6M5B>(*JA)	<A6M5b>
+<A6M5C>(*JA)	<A6M5c>
+<A6M5>(*JA)	<A6M5>
+<A6M5A>(*JA)	<A6M5a>
+<A6M7_62>(*JA) <A6M7>
+<A6M7_63>(*JA) <A6M7>
+
+<KI_84_IA>(*JA)	<Hayate>
+<KI_84_IB>(*JA)	<Hayate>
+<KI_84_IC>(*JA)	<Hayate>
+<KI_84_IA>(*U*)	<Frank>
+<KI_84_IB>(*U*)	<Frank>
+<KI_84_IC>(*U*)	<Frank>
+
+<KI_43_IA>(*JA)	<Hayabusa>
+<KI_43_IB>(*JA)	<Hayabusa>
+<KI_43_IC>(*JA)	<Hayabusa>
+<KI_43_II>(*JA)	<Hayabusa II>
+<KI_43_IIKAI>(*JA)	<Hayabusa II>
+
+<KI_43_IA>(*U*)	<Oscar>
+<KI_43_IB>(*U*)	<Oscar>
+<KI_43_IC>(*U*)	<Oscar>
+<KI_43_II>(*U*)	<Oscar Mk. 2>
+<KI_43_IIKAI>(*U*)	<Oscar Mk. 2>
+
+<KI_46_OTSU>(*JA)	 <Shitei Otsu>
+<KI_46_OTSUHEI>(*JA) <Shitei Otsu Hei>
+<KI_46_RECCE>(*JA)	 <Shitei Recce>
+<KI_61_IKO>(*JA)	 <Hien>
+<KI_61_IHEI>(*JA)	 <Hien>
+<KI_61_IOTSU>(*JA)	 <Hien>
+
+<KI_46_OTSU>(*U*)		<Dinah>
+<KI_46_OTSUHEI>(*U*)	<Dinah>
+<KI_46_RECCE>(*U*)		<Dinah>
+<KI_61_IKO>(*U*)		<Tony>
+<KI_61_IHEI>(*U*)		<Tony>
+<KI_61_IOTSU>(*U*)		<Tony>
+
+<KI_100_IKO> (*JA) <Ki-100>
+<KI_100_IKO> (*U*) <Tony>
+
+<D3A1>(*JA)	<Kanbaku>
+<D3A1>(*U*)	<Val>
+
+<B5N2>(*JA)	<Kankoh>
+<B5N2>(*U*)	<Kate>
+
+<G4M1_11>(*JA)	<Rikko>
+<G4M1_11>(*U*)	<Betty>
+
+<F6F3>(*U*)	<F6F-3>
+<F6F5>(*U*)	<F6F-5>
+<F4U1A>(*U*)	<F4U>
+<F4U1C>(*U*)	<F4U>
+<F4U1D>(*U*)	<F4U>
+<TBF1C>(*US)		<TBF-1>
+<TBF1C>(*UK)		<Tarpon>
+
+<TBF1>(*U*) <TBF-1>
+<TBM3AVENGER3>(*U*) <Avenger>
+<TBM3>(*U*) <TBM-3>
+
+<F4F3>(*U*)	<F4F-3>
+<F4F4>(*U*)	<F4F-4>
+<F4F_FM2>(*U*)	<FM-2>
+
+<F4F3>(*JA)	<Wildcat>
+<F4F4>(*JA)	<Wildcat>
+<F4F_FM2>(*JA)	<Wildcat>
+
+<SEAFIRE3> <Seafire>
+
+<F6F3>(*JA)	<Hellcat>
+<F6F5>(*JA)	<Hellcat>
+<F4U1A>(*JA)	<Corsair>
+<F4U1C>(*JA)	<Corsair>
+<F4U1D>(*JA)	<Corsair>
+<F4U1A>(*JA)	<Corsair>
+<F4U1C>(*JA)	<Corsair>
+<F4U1D>(*JA)	<Corsair>
+<TBF1C>(*JA) <Avenger>
+<TBF1>(*JA) <Avenger>
+<TBM3AVENGER3>(*JA) <Avenger>
+<TBM3>(*JA) <Avenger>
+
+<B_25J1>(*U*)	<B-25>
+<B_25J1>(*JA)	<B-25>
+<B_25C25>(*U*)	<B-25>
+<B_25C25>(*JA)	<B-25>
+<A_20G>(*U*)	<A-20>
+<A_20G>(*JA)	<A-20>
+
+
+<F4UCORSAIR1>(*U*) <Corsair>
+<F4UCORSAIR2>(*U*) <Corsair>
+<F4UCORSAIR4>(*U*) <Corsair>
+<BEAU21>(*U*) <Beaufighter>
+<SBD3>(*U*)	<SBD-3>
+<B_17E>(*U*) <B-17>
+<B_24J100>(*U*)	<B-24>
+
+<F4UCORSAIR1>(*JA) <Corsair>
+<F4UCORSAIR2>(*JA) <Corsair>
+<F4UCORSAIR4>(*JA) <Corsair>
+<BEAU21>(*JA) <Beaufighter>
+<SBD3>(*JA)	<Dauntless>
+<B_17E>(*JA) <B-17>
+<B_24J100>(*JA) <Liberator>
+
+
+	--------------------------------------------------------------------------------------------
+	Geographic names - if spelling is different from English
+	<Moscow>	<Moskwa>
+	<Crimea>		<Krym>
+	--------------------------------------------------------------------------------------------
+
+<dbrDEAD>	<Zgin¹³eœ.>
+<dbrCAPTURED>	<\nTrafi³eœ do niewoli.>
+<dbrCAPTURED>(*U*)	<\nZosta³eœ schwytany i wys³any do obozu jenieckiego.>
+<dbrWOUNDED>	<\nOdnios³eœ rany i zosta³eœ skierowany do szpitala.>
+
+<SQ> <Dowódc¹ twojej eskadry jest %s\n>
+<CO> <Zostajesz wyznaczony na dowódcê swojej eskadry!\n>
+
+<dbrEnemyLost> <\nDziêki dzia³aniom eskadry wróg odniós³ nastêpuj¹ce straty:\n>
+
+<CUR_KILLS>		<W trakcie misji zniszczy³eœ:>
+<CUR_KILLS>		<Zg³osi³eœ zniszczenie w trakcie misji nastêpuj¹cych celów:>
+<CUR_KILLS>		<W ostatnim locie zniszczono nastêpuj¹ce cele:>
+
+<TOT_KILLS>		<W trakcie kariery zniszczy³eœ:>
+<TOT_KILLS>		<Pe³na lista zniszczonych przez ciebie celów:>
+<TOT_KILLS>		<Jak dot¹d zniszczy³eœ:>
+
+<dbrNplanes>	<Samoloty: %d\n>
+<dbrNplanesG>	<Samoloty na ziemi: %d\n>
+<dbrNtanks>		<Pojazdy pancerne: %d\n>
+<dbrNguns>		<Dzia³a: %d\n>
+<dbrNcars>		<Pojazdy: %d\n>
+<dbrNwagons>	<Wagony kolejowe: %d\n>
+<dbrNbridges>	<Mosty: %d\n>
+<dbrNships>		<Statki: %d\n>
+
+<logRecon> 				<Rozpoznanie lotnicze>
+<logNavalRecon> 		<Rozpoznanie morskie>
+<logReconB> 			<Rozpoznanie lotnicze>
+
+<YouAreBack> <\nPowracasz do czynnej s³u¿by\n>
+
+
+////////////////////////////////////////////////////////////////////////////
+	MACROS:
+
+	{FIRSTNAME}		your first name
+	{LASTNAME}		your last name
+	{RANK}			your rank (abbreviated, Lt.Col)
+	{PLANE}			your plane
+	{SECTOR}	    destination sector (100,330)
+	(#)				number of planes in your group (4)
+	(#a)			number of planes in your group (four)
+	(#A)			number of planes in your group (Four)
+	{LDR_NAME}		group leader's last name
+	{LDR_RANK}		group leader's rank
+	{LDR_FULLRANK}  group leader's rank
+
+	{ESCORTED} escorted plane type.
+
+	{W0_RANK} the leader of player's group of up to 4 planes
+	{W1_RANK} his wingmen
+	{W2_RANK}
+	{W3_RANK}
+
+	{W0_NAME} the leader of player's group of up to 4 planes
+	{W1_NAME} his wingmen
+	{W2_NAME}
+	{W3_NAME}
+
+	{DATE}		  1 Janvier 1944
+	{DATE_D.MY}   1. Januar 1944
+	{DATE_DMY}    1 Janvier 1944
+	{DATE_MDY}    January 1, 1944
+	{DATE_DM,Y}	  1 January, 1944
+	{TIME}		9:15
+	{MTIME}		0915
+
+	{DIR} expands to whatever is written under {E} {NW}
+	{TO}
+	{FROM}
+
+	Temporary macros (calculated multiple times, just before usage)
+
+	(plane)
+	{rank}
+	{lastname}
+	{=#} number of planes
+	{=#a} number of planes
+	{=#A} number of planes
+	(~#) approximate number of planes
+
+////////////////////////////////////////////////////////////////////////////
+
+<One>			<Jeden>
+<Two>			<Dwa>
+<Three>			<Trzy>
+<Four>			<Cztery>
+<Five>			<Piêæ>
+<Six>			<Szeœæ>
+<Seven>			<Siedem>
+<Eight>			<Osiem>
+<Nine>			<Dziewiêæ>
+<Ten>			<Dziesiêæ>
+<Eleven>		<Jedenaœcie>
+<Twelve>		<Dwanaœcie>
+<Thirteen>		<Trzynaœcie>
+<Twenty six>	<Dwadzieœcia szeœæ>
+<Thirty nine>	<Trzydzieœci dziewiêæ>
+
+<one>			<jeden>
+<two>			<dwa>
+<three>			<trzy>
+<four>			<cztery>
+<five>			<piêæ>
+<six>			<szeœæ>
+<seven>			<siedem>
+<eight>			<osiem>
+<nine>			<dziewiêæ>
+<ten>			<dziesiêæ>
+<eleven>		<jedenaœcie>
+<twelve>		<dwanaœcie>
+<thirteen>		<trzynaœcie>
+<twenty six>	<dwadzieœcia szeœæ>
+<thirty nine>	<trzydzieœci dziewiêæ>
+
+<RANK0>(aUS) 	<sier.>
+<RANK1>(aUS) 	<podpor.>
+<RANK2>(aUS) 	<por.>
+<RANK3>(aUS) 	<kap.>
+<RANK4>(aUS) 	<maj.>
+<RANK5>(aUS)	<podpu³.>
+<RANK6>(aUS) 	<pu³.>
+
+<RANK0>(mUS) 	<sier.>
+<RANK1>(mUS) 	<podpor.>
+<RANK2>(mUS) 	<por.>
+<RANK3>(mUS) 	<kap.>
+<RANK4>(mUS) 	<maj.>
+<RANK5>(mUS)	<podpu³.>
+<RANK6>(mUS) 	<pu³.>
+
+
+<RANK0>(nUS) 	<chor.>
+<RANK1>(nUS) 	<podpor.>
+<RANK2>(nUS) 	<por.>
+<RANK3>(nUS) 	<kap.>
+<RANK4>(nUS) 	<kom. podpor.>
+<RANK5>(nUS)	<kom. por.>
+<RANK6>(nUS) 	<kom.>
+
+<RANK0>(aUK) <sier¿ant>
+<RANK1>(aUK) <podporucznik>
+<RANK2>(aUK) <porucznik>
+<RANK3>(aUK) <kapitan>
+<RANK4>(aUK) <major>
+<RANK5>(aUK) <podpu³kownik>
+<RANK6>(aUK) <pu³kownik>
+
+<RANK0>(nUK) <chor.>
+<RANK1>(nUK) <podpor.>
+<RANK2>(nUK) <por.>
+<RANK3>(nUK) <kap.>
+<RANK4>(nUK) <kom. podpor.>
+<RANK5>(nUK) <kom. por.>
+<RANK6>(nUK) <kom.>
+
+<RANK0>(aJA) <sier¿ant> 
+<RANK1>(aJA) <podporucznik> 	
+<RANK2>(aJA) <porucznik> 
+<RANK3>(aJA) <kapitan>  
+<RANK4>(aJA) <major>  
+<RANK5>(aJA) <podpu³kownik>
+<RANK6>(aJA) <pu³kownik>
+
+<RANK0>(nJA) <chor¹¿y> 
+<RANK1>(nJA) <podporucznik> 	
+<RANK2>(nJA) <porucznik> 
+<RANK3>(nJA) <kapitan>  
+<RANK4>(nJA) <komandor podporucznik>  
+<RANK5>(nJA) <komandor porucznik>
+<RANK6>(nJA) <komandor>
+
+<RANK0>(aUD) <sier¿ant>
+<RANK1>(aUD) <podporucznik>
+<RANK2>(aUD) <porucznik>
+<RANK3>(aUD) <kapitan>
+<RANK4>(aUD) <major>
+<RANK5>(aUD) <podpu³kownik>
+<RANK6>(aUD) <pu³kownik>
+
+<FULLRANK0>(aUS) <sier¿ant>
+<FULLRANK1>(aUS) <podporucznik>
+<FULLRANK2>(aUS) <porucznik>
+<FULLRANK3>(aUS) <kapitan>
+<FULLRANK4>(aUS) <major>
+<FULLRANK5>(aUS) <podpu³kownik>
+<FULLRANK6>(aUS) <pu³kownik>
+
+<FULLRANK0>(mUS) <sier¿ant>
+<FULLRANK1>(mUS) <podporucznik>
+<FULLRANK2>(mUS) <porucznik>
+<FULLRANK3>(mUS) <kapitan>
+<FULLRANK4>(mUS) <major>
+<FULLRANK5>(mUS) <podpu³kownik>
+<FULLRANK6>(mUS) <pu³kownik>
+
+<FULLRANK0>(nUS) <chor¹¿y>
+<FULLRANK1>(nUS) <podporucznik>
+<FULLRANK2>(nUS) <porucznik>
+<FULLRANK3>(nUS) <kapitan>
+<FULLRANK4>(nUS) <komandor podporucznik>
+<FULLRANK5>(nUS) <komandor porucznik>
+<FULLRANK6>(nUS) <komandor>
+
+<FULLRANK0>(aUK) <sier¿ant>
+<FULLRANK1>(aUK) <podporucznik>
+<FULLRANK2>(aUK) <porucznik>
+<FULLRANK3>(aUK) <kapitan>
+<FULLRANK4>(aUK) <major>
+<FULLRANK5>(aUK) <podpu³kownik>
+<FULLRANK6>(aUK) <pu³kownik>
+
+<FULLRANK0>(nUK) <chor¹¿y>
+<FULLRANK1>(nUK) <podporucznik>
+<FULLRANK2>(nUK) <porucznik>
+<FULLRANK3>(nUK) <kapitan>
+<FULLRANK4>(nUK) <komandor podporucznik>
+<FULLRANK5>(nUK) <komandor porucznik>
+<FULLRANK6>(nUK) <komandor>
+
+<FULLRANK0>(aJA) <sier¿ant> 
+<FULLRANK1>(aJA) <podporucznik> 	
+<FULLRANK2>(aJA) <porucznik> 
+<FULLRANK3>(aJA) <kapitan>  
+<FULLRANK4>(aJA) <major>  
+<FULLRANK5>(aJA) <podpu³kownik>
+<FULLRANK6>(aJA) <pu³kownik>
+
+<FULLRANK0>(nJA) <chor¹¿y> 
+<FULLRANK1>(nJA) <podporucznik> 	
+<FULLRANK2>(nJA) <porucznik> 
+<FULLRANK3>(nJA) <kapitan>  
+<FULLRANK4>(nJA) <komandor podporucznik>  
+<FULLRANK5>(nJA) <komandor porucznik>
+<FULLRANK6>(nJA) <komandor>
+
+<FULLRANK0>(aUD) <sier¿ant>
+<FULLRANK1>(aUD) <podporucznik>
+<FULLRANK2>(aUD) <porucznik>
+<FULLRANK3>(aUD) <kapitan>
+<FULLRANK4>(aUD) <major>
+<FULLRANK5>(aUD) <podpu³kownik>
+<FULLRANK6>(aUD) <pu³kownik>
+
+<AWARD0>(aUS) 		<Medal Lotniczy>
+<AWARD1>(aUS)		<Br¹zowa Gwiazda>
+<AWARD2>(aUS) 		<Krzy¿ Wybitnego Lotnika>
+<AWARD3>(aUS) 		<Legia Zas³ugi>
+<AWARD4>(aUS) 		<Srebrna Gwiazda>
+<AWARD5>(aUS) 		<Krzy¿ za Wybitn¹ S³u¿bê>
+<AWARD6>(aUS) 		<Kongresowy Medal Honoru>
+<AWARD7>(aUS) 		<Kongresowy Medal Honoru>
+
+<AWARD0>(nUS) 		<Br¹zowa Gwiazda>
+<AWARD1>(nUS)		<Medal Marynarki i Korpusu Piechoty Morskiej>
+<AWARD2>(nUS) 		<Krzy¿ Wybitnego Lotnika>
+<AWARD3>(nUS) 		<Legia Zas³ugi>
+<AWARD4>(nUS) 		<Srebrna Gwiazda>
+<AWARD5>(nUS) 		<Krzy¿ Marynarki>
+<AWARD6>(nUS) 		<Kongresowy Medal Honoru>
+<AWARD7>(nUS) 		<Kongresowy Medal Honoru>
+
+<AWARD0>(mUS) 		<Br¹zowa Gwiazda>
+<AWARD1>(mUS)		<Medal Marynarki i Korpusu Piechoty Morskiej>
+<AWARD2>(mUS) 		<Krzy¿ Wybitnego Lotnika>
+<AWARD3>(mUS) 		<Legia Zas³ugi>
+<AWARD4>(mUS) 		<Srebrna Gwiazda>
+<AWARD5>(mUS) 		<Krzy¿ Marynarki>
+<AWARD6>(mUS) 		<Kongresowy Medal Honoru>
+<AWARD7>(mUS) 		<Kongresowy Medal Honoru>
+
+<AWARD0>(*UK) <Medal za Obronê>
+<AWARD1>(*UK) <Medal Wybitnego Lotnika>
+<AWARD2>(*UK) <Krzy¿ Wybitnego Lotnika>
+<AWARD3>(*UK) <Belka do Krzy¿a Wybitnego Lotnika>
+<AWARD4>(*UK) <Order za Wybitn¹ S³u¿bê>
+<AWARD5>(*UK) <Krzy¿ Jerzego>
+<AWARD6>(*UK) <Krzy¿ Wiktorii>
+<AWARD7>(*UK) <Gwiazda 1939 - 1945>
+
+<AWARD0>(aUD) <Vliegerkruis>
+<AWARD1>(aUD) <Vliegerkruis z Wstêg¹>
+<AWARD2>(aUD) <Kruis van Verdienste>
+<AWARD3>(aUD) <Ridder in de Orde van Oranje-Nassau>
+<AWARD4>(aUD) <Officer in der Orde van Oranje-Nassau>
+<AWARD5>(aUD) <Commander in der Orde van Oranje-Nassau>
+<AWARD6>(aUD) <Groot-Officer in de Orde van Oranje-Nassau>
+<AWARD7>(aUD) <Groot-Officer in de Orde van Oranje-Nassau>
+
+<AWARD0>(*JA) 		<Puchar sake>
+<AWARD1>(*JA)		<Certyfikat Wschodz¹cego S³oñca>
+<AWARD2>(*JA) 		<Flaga Hinomaru z podpisem>
+<AWARD3>(*JA) 		<Butelka i puchar sake>
+<AWARD4>(*JA) 		<Sztylet Tanto>
+<AWARD5>(*JA) 		<Pistolet Nambu>
+<AWARD6>(*JA) 		<Kabura Nambu>
+<AWARD7>(*JA) 		<Katana samurajska>
+
+<Time&Weather>(*U*) <Godzina: {DATE_MDY} {MTIME}\nPogoda: {WEATHER}. Pu³ap chmur na wysokoœci {CLOUDS_FT} stóp.>
+<Time&Weather>(*JA) <Godzina: {DATE_DMY} {MTIME}\nPogoda: {WEATHER}. Pu³ap chmur na wysokoœcu {CLOUDS_M} m.>
+
+<Clear>  		<Bezchmurnie>
+<Good>(*U*)		<3/10>
+<Hazy>(*U*) 	<7/10>
+<Poor>(*U*)		<10/10>
+<Blind>(*U*)	<Widocznoœæ 0, 10/10>
+<Rain>(*U*)		<Deszcz, 10/10>
+<Snow>(*U*)		<Œnieg, 10/10>
+<Thunderstorm>(*U*)	<Burza z piorunami, 10/10>
+<Snowstorm>(*U*)		<Burza œnie¿na, 10/10>
+
+<Clear>  		<Bezchmurnie>
+<Good>(*JA)		<Dobra>
+<Hazy>(*JA) 	<Mgliœcie>
+<Poor>(*JA)		<S³aba>
+<Blind>(*JA)	<S³aba widocznoœæ>
+<Rain>(*JA)		<Deszcz>
+<Snow>(*JA)		<Œnieg>
+<Thunderstorm>(*JA)	<Burza z piorunami>
+<Snowstorm>(*JA)		<Burza œnie¿na>
+
+
+<January>		<Styczeñ>
+<February>		<Luty>
+<March>			<Marzec>
+<April>			<Kwiecieñ>
+<May>			<Maj>
+<June>			<Czerwiec>
+<July>			<Lipiec>
+<August>		<Sierpieñ>
+<September>		<Wrzesieñ>
+<October>		<PaŸdziernik>
+<November>		<Listopad>
+<December>		<Grudzieñ>
+
+<from N>	<z pó³nocy>	
+<from S>	<z po³udnia>	
+<from E>	<ze wschodu>	
+<from W>	<z zachodu>	
+<from NE>	<z pó³nocnego wschodu>	
+<from NW>	<z pó³nocnego zachodu>	
+<from SE>	<z po³udniowego wschodu>	
+<from SW>	<z po³udniowego zachodu>	
+
+<to N>	<na pó³noc>	
+<to S>	<na po³udnie>	
+<to E>	<na wschód>	
+<to W>	<na zachód>	
+<to NE>	<na pó³nocny wschód>	
+<to NW>	<na pó³nocny zachód>	
+<to SE>	<na po³udniowych wschód>	
+<to SW>	<na po³udniowy zachód>
+
+<N>	<Pó³noc>	
+<S>	<Po³udnie>	
+<E>	<Wschód>	
+<W>	<Zachód>	
+<NE>	<Pó³nocny wschód>	
+<NW>	<Pó³nocny zachód>	
+<SE>	<Po³udniowy wschód>	
+<SW>	<Po³udniowy zachód>
+
+<Leader>	< >
+<Leader22>	<{RANK} {LASTNAME} poprowadzi drugi lot. {W1_RANK} {W1_NAME} poleci jako jego skrzyd³owy.>
+<Leader23>	<{RANK} {LASTNAME} poprowadzi drugi lot. {W1_RANK} {W1_NAME} oraz {W2_RANK} {W2_NAME} polec¹ jako jego skrzyd³owi nr 2 i 3.>
+<Leader24>	<{RANK} {LASTNAME} poprowadzi drugi lot. {W1_RANK} {W1_NAME} poleci jako jego skrzyd³owy. {W2_RANK} {W2_NAME} poprowadzi drug¹ liniê, a {W3_RANK} {W3_NAME} bêdzie zamyka³ klucz.>
+<Leader32>	<{RANK} {LASTNAME} poprowadzi ostatni lot. {W1_RANK} {W1_NAME} poleci jako jego skrzyd³owy.>
+<Leader33>	<{RANK} {LASTNAME} poprowadzi ostatni lot. {W1_RANK} {W1_NAME} oraz {W2_RANK} {W2_NAME} polec¹ jako jego skrzyd³owi nr 2 i 3.>
+<Leader34>	<{RANK} {LASTNAME} poprowadzi ostatni lot. {W1_RANK} {W1_NAME} poleci jako jego skrzyd³owy.  {W2_RANK} {W2_NAME} poprowadzi drug¹ liniê. {W3_RANK} {W3_NAME} bêdzie zamyka³ klucz.>
+<Wingman>	<{RANK} {LASTNAME} poleci jako skrzyd³owy - lot prowadzi {W0_RANK} {W0_NAME}.>
+<Wingman12>	<{RANK} {LASTNAME} poleci jako skrzyd³owy w pierwszym locie. Grupa liczy dwa samoloty - lot prowadzi {W0_RANK} {W0_NAME}.>
+<Wingman13>	<{RANK} {LASTNAME} poleci jako skrzyd³owy w pierwszym locie. Grupa liczy trzy samoloty - lot prowadzi {W0_RANK} {W0_NAME}.>
+<Wingman14>	<{RANK} {LASTNAME} poleci jako skrzyd³owy w pierwszym locie. Grupa liczy cztery samoloty - lot prowadzi {W0_RANK} {W0_NAME}.>
+<Wingman22>	<{RANK} {LASTNAME} poleci jako skrzyd³owy w drugim locie. Grupa liczy dwa samoloty - lot prowadzi {W0_RANK} {W0_NAME}.>
+<Wingman23>	<{RANK} {LASTNAME} poleci jako skrzyd³owy w drugim locie. Grupa liczy trzy samoloty - lot prowadzi {W0_RANK} {W0_NAME}.>
+<Wingman24>	<{RANK} {LASTNAME} poleci jako skrzyd³owy w drugim locie. Grupa liczy cztery samoloty - lot prowadzi {W0_RANK} {W0_NAME}.>
+<Wingman32>	<{RANK} {LASTNAME} poleci jako skrzyd³owy w ostatnim locie. Grupa liczy dwa samoloty - lot prowadzi {W0_RANK} {W0_NAME}.>
+<Wingman33>	<{RANK} {LASTNAME} poleci jako skrzyd³owy w ostatnim locie. Grupa liczy trzy samoloty - lot prowadzi {W0_RANK} {W0_NAME}.>
+<Wingman34>	<{LRANK} {LASTNAME} poleci jako skrzyd³owy w ostatnim locie. Grupa liczy cztery samoloty - lot prowadzi {W0_RANK} {W0_NAME}.>
+
+<Route>(*U*)	<Odleg³oœæ do celu: {DIST_NM} mil morskich, wysokoœæ lotu: {ALT_FT} stóp.>
+<Route>(*U*)	<Polecisz na wysokoœci {ALT_FT} stóp, odleg³oœæ do celu wynosi {DIST_NM} mil morskich.>
+<Route>(*JA)	<Odleg³oœæ do celu: {DIST_KM} km, wysokoœæ lotu: {ALT_M} m.>
+<Route>(*JA)	<Polecisz na wysokoœci {ALT_M} m, odleg³oœæ do celu wynosi {DIST_KM} km.>
+
+
+// War victory and defeat messages can be customized according to operaiton
+// <WarDefeatDb:Hawaii>. The following are generic defeat messages.
+
+<WarDefeatDb>(*JA) <Operacja zakoñczy³a siê katastrof¹!\n\nNie uda³o nam siê zadaæ wrogowi powa¿niejszych strat, a sami straciliœmy tysi¹ce doœwiadczonych marynarzy i pilotów... to z pewnoœci¹ pocz¹tek koñca, w najbli¿szych dniach wielu naszych dowódców zapewne pope³ni seppuku!\n\nNasza upokorzona marynarka wojenna nie bêdzie w stanie wspieraæ Armii Cesarskiej, a marzenie o Imperium Japoñskim na Pacyfiku pozostanie tylko niespe³nion¹ wizj¹.....>
+<WarVictoryDb>(*JA) <Nasz sukces jest niepodwa¿alny. Nasza flota otoczy³a Hawaje i utworzy³a silny system obrony nowych terytoriów.\n\nMorale USA i ich sprzymierzeñców bardzo podupad³o i zmuszeni byli zaproponowaæ nam rozejm. Wiemy, ¿e to jeszcze nie jest trwa³y pokój i je¿eli aliantom uda siê pokonaæ Niemców, zapewne znowu nam zagro¿¹, ale chwilowo jesteœmy bezpieczni.\n\nRz¹d ksiêcia Konoye podj¹³ decyzjê strategiczn¹, i¿ przez rok powinniœmy powstrzymaæ ekspansjê i skorzystaæ z nowo zdobytych z³ó¿ surowców, aby przyspieszyæ rozwój przemys³owy oraz wzmocniæ armiê.\n\nPotem dokoñczymy podbój Chin i zaatakujemy Rosjê, aby pomóc naszym niemieckim sojusznikom wywalczyæ pe³n¹ dominacjê w Europie.\n\nJe¿eli plan siê powiedzie, Niemcy zaw³adn¹ Europ¹, a Japonia Pacyfikiem i nasze dwa kraje wspólnie poprowadz¹ œwiat ku nowej epoce dobrobytu.>
+<WarDefeatDb>(*U*) <Ponieœliœmy dotkliw¹ pora¿kê. Japoñska flota otoczy³a Hawaje i utworzy³a silny system obrony nowych terytoriów.\n\nNasze morale upad³o, zachodnie wybrze¿e Ameryki jest powa¿nie zagro¿one, a my nie jesteœmy w stanie nic przeciwstawiæ japoñskiej potêdze morskiej. Prezydent Roosevelt zmuszony by³ poprosiæ o rozejm, na szczêœcie Japoñczycy go zaakceptowali.\n\nTo jeszcze nie jest ostateczny pokój, je¿eli pokonamy Niemców, znowu pomyœlimy o Pacyfiku - ale na razie maj¹ spokój..... \n\nSkupmy siê teraz na europejskim teatrze wojny, a do walki ze z³owrogim Imperium Wschodz¹cego S³oñca jeszcze powrócimy.>
+<WarVictoryDb>(*U*) <To by³o wspania³e zwyciêstwo !\n\nRównowaga si³ na Pacyfiku zmieni³a siê bezpowrotnie !\n\nWkrótce zaczniemy odzyskiwaæ zajête przez Japoñczyków terytoria amerykañskie. Bagnetami zapêdzimy ¿ó³tków z powrotem do domu!>
+
+// Operational briefings/debriefings. Debriefis may be replaced with end of war debrief.
+
+<HawaiiBr>(*US) <Od czasu japoñskiej inwazji na Chiny w roku 1937, napiêcie pomiêdzy krajami zachodnimi a Imperium Wschodz¹cego S³oñca nieustannie ros³o. Japoñczycy pilnie potrzebowali surowców naturalnych, aby zaopatrywaæ swój przemys³. Zaprezentowali siê œwiatu jako groŸne, ekspansjonistyczne mocarstwo, zagra¿aj¹ce interesom Wielkiej Brytanii, Holandii, Francji i Stanów Zjednoczonych.\n\nPomimo sprzeciwu japoñskiej Marynarki Wojennej oraz ch³odnej rezerwy cesarza, rz¹d japoñski podpisa³ ostatnio porozumienie o pomocy z rz¹dami Niemiec i W³och. Nied³ugo póŸniej Japonia zaatakowa³ Indochiny Francuskie. W reakcji na tê agresjê, rz¹d USA zmuszony by³ ob³o¿yæ Japoniê embargiem na dostawy surowców.\n\nCzêstotliwoœæ rozmów dyplomatycznych pomiêdzy ambasadorem Nomur¹ a Sekretarzem Stanu Cordellem Hullem w ostatnich miesi¹cach znacznie siê nasili³a. Wielu ludzi zaczê³o z lêkiem mówiæ o wojnie z Japoni¹. Flota Pacyfiku zosta³a przesuniêta z San Diego do Pearl Harbor, aby pokazaæ Japoñczykom, ¿e bêdziemy broniæ naszych interesów na Oceanie Spokojnym. Dowództwo naczelne obawia³o siê ewentualnego, tragicznego w skutkach ataku na ten port - ucieczka pancerników z Pearl Harbor by³a bardzo utrudniona z uwagi na p³ytkie wody i w¹skie tory ¿eglugowe w tym porcie.\n\nDowódcy mieli jedynie nadziejê, ¿e wody o g³êbokoœci zaledwie 12 metrów uniemo¿liwi¹ ataki torpedowe - wywiad meldowa³ bowiem, ¿e torpedy japoñskie wymagaj¹ g³êbokoœci co najmniej 22 metrów. W celu wzmocnienia obrony obszaru, na pobliskiej wyspie Oahu rozmieszczono 394 samoloty bojowe, g³ównie myœliwce, ale i tak nie nikt nie czu³ siê do koñca bezpieczny. Baza Oahu jest w stanie pe³nej gotowoœci bojowej od listopada, ale nadal nic siê nie wydarzy³o. Genera³ Walter C. Short, g³ównodowodz¹cy si³ skupionych na Hawajach nakaza³ zaparkowaæ samoloty bardzo blisko siebie z obawy, ¿e 13.000 Amerykanów pochodzenia japoñskiego zamieszkuj¹cych Hawaje, z których ka¿dy mo¿e byæ potencjalnym sabota¿yst¹, to wiêksze zagro¿enie ni¿ atak lotniczy maszyn japoñskiej Marynarki..... ale te¿ po to, aby u³atwiæ pracê stra¿ników.\n\nNa szczêœcie na Oahu jest wiele lotnisk i kilku dowódców eskadr zdecydowa³o siê rozmieœciæ czeœæ maszyn równie¿ na l¹dowiskach zapasowych, tak na wszelki wypadek....\n\n--------------\n\n>
+<HawaiiVictoryDb>(*US) <Dziœ rano, 7 grudnia 1941 roku, podstêpny atak japoñski zada³ straty naszej Flocie Pacyfiku.\n\nCzêœæ naszych pancerników i ciê¿kich kr¹¿owników zosta³a zatopiona lub silnie uszkodzona, zniszczono dziesi¹tki samolotów, zginê³o wielu doœwiadczonych ¿o³nierzy.\n\nPomimo ciê¿kiego ognia nieprzyjaciela, kilku bohaterskim lotnikom uda³o siê wystartowaæ, podj¹æ walkê z lotnictwem wroga, odp³aciæ Japoñczykom i zadaæ im znaczne straty.\n\nTen smutny dzieñ zapowiada dla nas trudne czasy, ale faktem jest, ¿e okrêty Lexington i Enterprise nadal s¹ na morzu, a nasze strategiczne rezerwy paliwa nie zosta³y zniszczone. Nasi piloci i samoloty dowiedli, ¿e kiedy ju¿ wejd¹ do walki, nie maj¹ siê czego wstydziæ. Japonia wkrótce dowie siê, na co staæ podra¿niony naród amerykañski.>
+<HawaiiDefeatDb>(*US) <Dziœ rano, 7 grudnia 1941 roku, atak japoñski zada³ naszej Flocie Pacyfiku ogromne straty.\n\nWiele spoœród naszych pancerników i ciê¿kich kr¹¿owników zosta³o zatopionych lub silnie uszkodzonych, zniszczono dziesi¹tki samolotów, zginê³o wielu doœwiadczonych ¿o³nierzy.\n\Kilku bohaterskim lotnikom uda³o siê wystartowaæ i podj¹æ walkê z lotnictwem wroga, ale z niewielkim skutkiem.\n\nTen smutny dzieñ zapowiada dla nas trudne czasy. Musimy nauczyæ siê odpieraæ takie ataki, je¿eli chcemy odp³aciæ Japoñczykom t¹ sam¹ monet¹.>
+<HawaiiDb>(*US) <Dziœ rano, 7 grudnia 1941 roku, zdradziecki atak japoñski zada³ naszej Flocie Pacyfiku ogromne straty.\n\nOkrêty Arizona i Oklahoma s¹ stracone, California, Nevada i West Virginia zatonê³y, Pennsylvania, Tenesse i Maryland zosta³y ciê¿ko uszkodzone. Zniszczono 188 samolotów, a 159 kolejnych zosta³o uszkodzonych. Zginê³o 2400 marynarzy, pilotów i ¿o³nierzy, a 1350 osób odnios³o rany.\n\nPomimo ciê¿kiego ognia nieprzyjaciela, kilku bohaterskim lotnikom uda³o siê wystartowaæ, podj¹æ walkê z lotnictwem wroga i odp³aciæ Japoñczykom, ale stracili oni zaledwie 29 samolotów i 5 miniaturowych ³odzi podwodnych.\n\nTen smutny dzieñ zapowiada dla nas trudne czasy, ale faktem jest, ¿e okrêty Lexington i Enterprise nadal s¹ na morzu, a nasze strategiczne rezerwy paliwa nie zosta³y zniszczone. Ameryka powstanie i bêdzie walczyæ z Japoñczykami a¿ do ostatecznego zwyciêstwa.>
+<HawaiiBr>(*JA) <W ostatnich lata napiêcie pomiêdzy naszym krajem a Stanami Zjednoczonymi nieustannie narasta³o. Nasz rozkwitaj¹cy przemys³ pilnie potrzebuje surowców naturalnych, a na terenie Japonii nie mamy wystarczaj¹cych z³ó¿.\n\nW 1937 roku armia zaatakowa³ Chiny, a potem zajê³a Indochiny Francuskie. Wówczas USA ob³o¿y³o nasz kraj embargiem handlowym, co kaza³o nam pomyœleæ o wojnie. W Waszyngtonie nadal tocz¹ siê negocjacje, ale nikt nie ma nadziei, ¿e Amerykanie zgodz¹ siê podpisaæ umowy handlowe.\n\nOdk¹d Ziengo Yoshida wszed³ w sk³ad rz¹du ksiêcia Fuminako Konoye jako minister marynarki, na czele floty cesarskiej stoi wiceadmira³ Yamamoto. To on otrzyma³ zadanie przygotowania ataku na USA. Admira³ chce podj¹æ du¿e ryzyko i jest tego w pe³ni œwiadomy. Chce on w wielkim stylu powtórzyæ brytyjski atak na Tarento i zaatakowaæ amerykañsk¹ Flotê Pacyfiku stacjonuj¹c¹ w Pearl Harbor, zatapiaj¹c tyle lotniskowców i kr¹¿owników, ile siê da, aby zapewniæ sobie spokój w Indonezji od ewentualnych ataków marynarki USA.\n\nKiedy zagro¿enie, jakie stanowi marynarka amerykañska zostanie za¿egnane, nasze wojska bêd¹ mog³y skupiæ siê na rozbiciu armii kolonialnych mocarstw europejskich i zebraæ doœæ si³, ¿eby przekonaæ Amerykanów do korzystniejszego podzia³u sfer wp³ywów na Pacyfiku - tak przynajmniej planuje genera³ Hideki Tojo, minister wojny.....\n\nNasza flota uderzeniowa wyp³ynê³a z Japonii 26 listopada 1941 roku i obra³a kurs na pó³noc, aby unikn¹æ wykrycia. Nied³ugo potem otrzymaliœmy kod "wspi¹æ siê na górê Niitaka", co oznacza potwierdzenie rozkazu ataku. Minoru Genda, oficer sztabowy lotnictwa I Floty przedstawi³ nam szczegó³y planu ataku. Pierwsz¹ falê nalotu poprowadzi Fushida, a wiêc jesteœmy w dobrych rêkach!\n\nNiestety, admira³ Nagumo, dowódca floty, powiedzia³, ¿e z raportów wywiadu wynika, i¿ lotniskowce amerykañskie kilka dni temu wysz³y z portu Pearl Harbor. Na pewno wkrótce je zatopimy, ale teraz musimy skupiæ siê na pancernikach stoj¹cych w Pearl.\n\nNoc by³a wyj¹tkowo krótka, nadchodzi œwit....\n\n------------------------------------------------------------\n\n>
+<HawaiiVictoryDb>(*JA) <Ryzykowny plan admira³a Yamamoto zakoñczy³ siê pe³nym sukcesem.\n\nCo prawda nie uda³o nam siê zniszczyæ lotniskowców amerykañskich, które znacznie oddali³y siê od Pearl Harbor, ale wyniki ataku na pancerniki i kr¹¿owniki s¹ imponuj¹ce. My sami ponieœliœmy bardzo niewielkie straty.\n\nRównowaga si³ przechyli³a siê na nasz¹ stronê, mo¿emy wprowadziæ w ¿ycie plan podboju Pacyfiku i nikt nie jest w stanie nam siê przeciwstawiæ.>
+<HawaiiDefeatDb>(*JA) <Ryzykowny plan admira³a Yamamoto nie zakoñczy³ siê sukcesem.\n\nNie tylko nie uda³o nam siê zniszczyæ lotniskowców amerykañskich, które znacznie oddali³y siê od Pearl Harbor, ale te¿ chocia¿ zadaliœmy ciê¿kie uszkodzenia pancernikom i kr¹¿ownikom, to nie uda³o siê zniszczyæ rezerw paliwa i straciliœmy wiele za³óg bior¹cych udzia³ w walce.\n\nSzala wojny nadal przechyla siê na nasz¹ stronê, ale je¿eli chcemy przeprowadziæ ca³y plan podboju Pacyfiku, to musimy zacz¹æ walczyæ znacznie bardziej skutecznie.>
+<HawaiiDb>(*JA) <Ryzykowny manewr admira³a Yamamoto zakoñczy³ siê sukcesem.\n\nMimo i¿ atak nie dotkn¹³ lotniskowców amerykañskich, które przebywa³y poza Pearl Harbor, skutki bombardowania pancerników i kr¹¿owników by³y dotkliwe - Arizona i Oklahoma s¹ stracone, California, Nevada i West Virginia zatonê³y, Pennsylvania, Tenesse i Maryland zosta³y ciê¿ko uszkodzone. Prawie 200 samolotów uznano za zniszczone, a kolejne 200 zosta³o uszkodzonych. Meldunki wywiadu wskazuj¹, ¿e wróg straci³ ponad 3000 ludzi. Za te sukcesy zap³aciliœmy utrat¹ zaledwie 29 samolotów i 5 miniaturowych ³odzi podwodnych.\n\nRównowaga si³ przechyli³a siê na nasz¹ stronê, mo¿emy wprowadziæ w ¿ycie plan podboju Pacyfiku i nikt nie jest w stanie nam siê przeciwstawiæ.>
+
+<WakeBr>(*JA)		<Nasze wojska musz¹ przeprowadziæ atak na wyspê Wake, która bêdzie tymczasow¹ baz¹ wojsk cesarskich do natarcia na Hawaje i wybrze¿e Kalifornii. Atol jest broniony przez s³aby garnizon. Kiedy tylko Flota Cesarska stanie u jego brzegów, podbój wyspy bêdzie tylko kwesti¹ czasu. Musicie dopilnowaæ, aby nic w powietrzu ani na ziemi nie by³o w stanie postawiæ znacz¹cego oporu naszym statkom i piechurom.>
+<WakeVictoryDb>(*JA)	<Wake nareszcie siê podda³o. Admira³ Kajioka i jego wojska rozbili tych g³upich ¿o³nierzy amerykañskich z piechoty morskiej i przemianowali tê przeklêt¹ wyspê na "Otori Shima" - Wyspa Ptaków. To nazwa pe³na poezji, która poprowadzi dusze naszych poleg³ych kolegów prosto do niebios. Na szczêœcie nasze straty nie by³y zbyt du¿e, mo¿emy sobie pogratulowaæ szybkiej i udanej inwazji na tê maleñk¹, ale bardzo wa¿n¹ strategicznie, kupê piachu. Nastêpny przystanek: archipelag Hawajów!>
+<WakeDefeatDb>(*JA)	<Nadal nie rozumiem, jak mogliœmy ulec tak œmiesznym si³om wroga, ale fakty s¹ nieub³agane: pomimo naszej przygniataj¹cej przewagi w ludziach i sprzêcie, garstka amerykañskich marines i lotników pokona³a elitê japoñskiej Marynarki Cesarskiej. Trudno to uznaæ za dobry omen dla najbli¿szych operacji... Zamelduj siê w dowództwie, twoja eskadra zostanie przeniesiona w rejon, gdzie walki s¹ bardziej intensywne.>
+<WakeDb>(*JA)		<To niewiarygodne, ¿e ta maleñka wysepka mog³a kosztowaæ nas ¿ycie a¿ tylu ¿o³nierzy. Odwaga wroga nie t³umaczy do koñca wygórowanej ceny, jak¹ musieliœmy zap³aciæ za nasze pyrrusowe zwyciêstwo. Je¿eli spojrzeæ na liczebnoœæ nieprzyjació³, którzy bronili wyspy, to nasze straty s¹ pora¿aj¹co wysokie! Dowództwo Armii Cesarskiej ma tylko nadziejê, ¿e ci tak zwani "marines" nie bêd¹ w przysz³oœci sprawiaæ nam a¿ tyle k³opotów. Ci ludzie, niemal tak odwa¿ni jak nasi samuraje, dali dowody nies³ychanego mêstwa w trakcie tych kilkudniowych walk. Na nasze nieszczêœcie, meldunki z Filipin wskazuj¹, ¿e takie bohaterstwo wœród amerykañskich marines to nie wyj¹tek, ale raczej regu³a... Musimy siê b³yskawicznie posuwaæ naprzód, mo¿e dziêki temu unikniemy kolejnego spotkania z tymi jednostkami. Przez nich cena, jak¹ musimy zap³aciæ za zwyciêstwo, staje siê znacznie zbyt wysoka.>
+<WakeBr>(*US)		<Marines! Spocznij!\nNa pewno wszyscy wiecie, w jakiej krytycznej sytuacji siê znajdujemy. Kilka godzin temu Japonia wypowiedzia³a wojnê Stanom Zjednoczonym i zaatakowa³a z powietrza port Pearl Harbor i stacjonuj¹c¹ tam Flotê Pacyfiku. Ze wzglêdu na nasze po³o¿enie geograficzne, nasza placówka tutaj na Wake jest najbardziej wysuniêt¹ jednostk¹ si³ amerykañskich. Dowództwo CINCPAC uwa¿a, ¿e wkrótce mo¿emy spodziewaæ siê desantu japoñskiego - na szczêœcie posi³ki s¹ ju¿ w drodze. Obiecano nam te¿ wsparcie lotnicze z lotniskowców na wypadek gdyby wróg zastosowa³ kombinowany atak z morza i z l¹du. Teraz wracajcie na stanowiska bojowe! Piloci, b¹dŸcie w gotowoœci!>
+<WakeVictoryDb>(*US)	<Dziêki bohaterstwu naszych mê¿nych lotników i ¿o³nierzy oraz wsparciu d³ugo wyczekiwanego lotniskowca, uda³o nam siê odepchn¹æ Japoñczyków i wywalczyæ dla aliantów pierwsze zwyciêstwo w wojnie na Pacyfiku. ¯o³nierze, mo¿ecie sobie pogratulowaæ - daliœcie nadziejê ca³ej naszej armii. Teraz wszyscy wiedz¹, ¿e Japoñczycy nie s¹ niezwyciê¿eni.>
+<WakeDefeatDb>(*US)	<Do diab³a, Wake pad³o szybciej ni¿ siê spodziewaliœmy. Niestety, nasi marines musieli walczyæ z niezwyciê¿onym wrogiem w beznadziejnej walce, poniewa¿ nasze lotniskowce nie dop³ynê³y do wyspy na czas, ¿eby udzieliæ im wsparcia. Có¿, na nasze pierwsze zwyciêstwo musimy poczekaæ do nastêpnej bitwy...>
+<WakeDb>(*US)		<Po wielu dniach za¿artego oporu zmuszeni byliœmy poddaæ siê przewa¿aj¹cym si³om wroga, tym bardziej, ¿e w koñcu opuœci³y nas nasze si³y morskie. Ale ta desperacka bitwa pokaza³a Japoñczykom, do czego zdolni s¹ marines: bez w¹tpienia daliœmy im lekcjê szacunku dla ¿o³nierzy korpusu piechoty morskiej i naszych lotników. Miejmy nadziejê, ¿e ta przeklêta wojna da nam wkrótce okazjê pomœciæ wyspê Wake i poleg³ych bohaterów z korpusu piechoty morskiej.>
+
+<CoralSeaBr>(*JA)		<Wraz ze swoimi kolegami weŸmiesz udzia³ w kolejnej wielkiej operacji Marynarki Cesarskiej, której celem jest ostateczne opanowanie Nowej Gwinei przed ewentualn¹ inwazj¹ na Australiê. W tej operacji opatrzonej kryptonimem MO naszymi si³ami dowodzi³ bêdzie admira³ Inouye. Podstawowy cel to opanowaæ Port Moresby, zaœ w drugiej kolejnoœci pomyœlimy o za³o¿eniu bazy hydrolotów na Tulagi, w œrodkowej czêœci Wysp Salomona. Admira³ Yamamoto rozkaza³, abyœmy odszukali i zniszczyli wszelkie lotniskowce amerykañskie obecne w tym rejonie - do tego zadania oddelegowano V Dywizjon Lotniskowców (Shokaku i Zuikaku), zaœ lekki lotniskowiec Shoho bêdzie zapewnia³ os³onê lotnicz¹ si³om l¹dowym atakuj¹cym Port Moresby.>
+<CoralSeaVictoryDb>(*JA)	<Dowództwo floty Kido Butai cieszy siê z twoich osi¹gniêæ - dobra robota, samuraju! Po³udniowy Pacyfik zosta³ oczyszczony z amerykañskich lotniskowców w jednym decyduj¹cym starciu i teraz nic nie zatrzyma naszego ataku na wybrze¿a Australii. Australijczycy bêd¹ g³upcami, je¿eli postawi¹ nam opór - zw³aszcza teraz kiedy opuœcili ich sprzymierzeñcy z USA i Wielkiej Brytanii, którzy zreszt¹ sami nie s¹ w stanie broniæ swoich ziem przed naszymi zwyciêskimi armiami. V Dywizjon Lotniskowców i inne jednostki morskie powróc¹ bezzw³ocznie na wyspy Truk w celu naprawy i zaopatrzenia - dziêki chwale, jak¹ siê okry³eœ, bêdziesz móg³ wzi¹æ udzia³ w kolejnej bitwie floty Kido Butai, która z pewnoœci¹ przypieczêtuje nasze ostateczne i ca³kowite zwyciêstwo na Pacyfiku. Wkrótce powiadomimy Cesarza o twoich wspania³ych zwyciêstwach - ca³e Kanto bêdzie z dum¹ i radoœci¹ œwiêtowaæ twój sukces!>
+<CoralSeaDefeatDb>(*JA)	<Musimy zachowaæ skromnoœæ i nie polegaæ zbytnio tylko na szczêœciu. Ta bitwa dobrze uzmys³owi³a nam tê naukê. Wróg z imponuj¹c¹ sprawnoœci¹ pos³uguje siê lotniskowcami w boju i zdo³a³ powstrzymaæ nasz¹ ofensywê w tym rejonie. Ze wzglêdu na nasze ciê¿kie straty operacja MO musi zostaæ odwo³ana. Wszystkie okrêty powróc¹ do portów Rabaul i na wyspy Truk w celu naprawy i zaopatrzenia. Pamiêtaj, tê wojnê musimy wygraæ szybko albo czekaj¹ nas wielkie trudnoœci. Wróg ka¿dego dnia roœnie w si³ê - a takie klêski nie przybli¿aj¹ nas do sukcesu. Miejmy nadziejê, ¿e nasza kolejna wielka operacja nie zakoñczy siê fiaskiem. Nie mo¿emy sobie pozwoliæ na nastêpn¹ klêskê.>
+<CoralSeaDb>(*JA)		<Wynik bitwy g³êboko nas rozczarowa³. Mo¿emy przypisaæ sobie zwyciêstwo taktyczne, ale nic nie zmieni faktu, ¿e inwazja na Port Moresby musi zostaæ od³o¿ona, przez co daliœmy Australijczykom wiêcej czasu na przygotowanie. Nied³ugo tu powrócimy, aby dokoñczyæ zadanie - na szczêœcie to tylko drobne za³amanie bez wiêkszych konsekwencji. V Dywizjon Lotniskowców bezzw³ocznie powróci na wyspy Truk. Najciê¿ej uszkodzone jednostki odp³yn¹ do portów macierzystych w Japonii, gdzie zostan¹ naprawione.>
+<CoralSeaBr>(*US)		<Nie pytaj mnie, sk¹d mamy takie informacje, ale ostatnie meldunki wywiadu wskazuj¹, ¿e w ci¹gu kilku najbli¿szych dni Japoñczycy najprawdopodobniej przeprowadz¹ du¿¹ operacjê na Morzu Koralowym. W tê okolicê skierowana zosta³a po³¹czony Zespó³ Operacyjny sk³adaj¹ca siê z USS Lexington TF11 oraz USS Yorktown TF17 pod dowództwem kontradmira³a Fletchera, która ma uporaæ siê z nowym zagro¿eniem. Je¿eli Japoñczycy spóŸni¹ siê z atakiem, mo¿liwe, ¿e uda nam siê równie¿ uzyskaæ wsparcie od Zespo³u Operacyjnego USS Hornet i USS Enterprise,  która w³aœnie p³ynie tu z pó³nocnego Pacyfiku. Dzieli ich od nas jeszcze kawa³ oceanu i mo¿emy siê ich spodziewaæ nie wczeœniej ni¿ za tydzieñ. Do tego czasu musimy polegaæ na naszych w³asnych œrodkach ataku i obrony. Nasze g³ówne zadanie to odszukaæ i zniszczyæ nieprzyjacielskie lotniskowce i si³y inwazyjne. ZnajdŸcie lotniskowce - kiedy wyœlemy je na dno oceanu, ju¿ nic nie przeszkodzi nam w topieniu transportowców z ¿o³nierzami wroga.>
+<CoralSeaVictoryDb>(*US)	<Co za wspania³y sukces, ch³opcy! Zadaliœcie Japonii najciê¿sz¹ klêskê w ca³ej jej historii! Oczywiœcie nadal mamy dalek¹ drogê do Tokio, ale po tym pierwszym starciu nic ju¿ nie bêdzie takie samo! Japoñczycy naprawdê siê teraz zastanowi¹, czy dobrze zrobili rozpêtuj¹c tê wojnê. Pearl Harbor pomszczone - dobra robota! Ruszamy teraz na pó³noc, podobno bêdziemy tam potrzebni, bo Japoñczycy maj¹ jeszcze parê asów w rêkawie...>
+<CoralSeaDefeatDb>(*US)	<Nasze si³y zosta³y pokonane! Wolnoœæ Australii wkrótce zostanie utopiona we krwi i bêdzie to g³ównie nasza wina, bo nie uda³o nam siê utrzymaæ naszego sojusznika z dala od macek japoñskiej oœmiornicy. Nie wolno nam d³u¿ej traciæ czasu: mo¿e straciliœmy Australiê, ale teraz musimy biæ siê o nasze w³asne przetrwanie na œrodkowym Pacyfiku z g³ównymi si³ami Floty Cesarskiej. Czekamy tam na ostateczne starcie - po klêsce na Morzu Koralowym nie mo¿emy pozwoliæ sobie na kolejne niepowodzenie. W przeciwnym wypadku, nastêpna bitwa rozegra siê ju¿ pomiêdzy Seattle a San Diego...>
+<CoralSeaDb>(*US)		<Pierwsze starcie dwóch zespo³ów lotniskowców w historii przynios³o ciê¿kie straty obydwu stronom. W trakcie bitwy nie dosz³o do ¿adnej bezpoœredniej walki dwóch statków - ale wiemy ju¿, ¿e zastosowanie samolotów bojowych nie oznacza, ¿e taki nowy rodzaj wojny jest mniej œmiercionoœny. Pomimo i¿ na papierze ta bitwa nie ma zwyciêzcy ani pokonanego, fakt powstrzymania japoñskiej inwazji na  Port Moresby dowodzi, ¿e Japoñczycy nie s¹ niezwyciê¿eni i przy odrobinie wysi³ku mo¿na ich pokonaæ. Ale nie mo¿emy pozwoliæ sobie na dalsze straty: je¿eli mamy na dobre z³amaæ japoñsk¹ machinê wojenn¹, nastêpna bitwa musi przynieœæ nam decyduj¹ce zwyciêstwo.>
+
+<MidwayBr>(*JA)		<Od czasów bitwy na Morzu Koralowym wiemy, jak groŸne mog¹ byæ amerykañskie lotniskowce. Jakby tego by³o nie doœæ, nalot amerykañskich œrednich bombowców pok³adowych na Tokio, który mia³ miejsce 18 kwietnia 1942 roku, stanowi³ ju¿ chyba wystarczaj¹ce ostrze¿enie.\n\nAdmira³ Yamamoto wreszcie przekona³ Cesarskie Naczelne Dowództwo do ataku na Midway.\n\nW czasie, kiedy bombowce Marynarki bêd¹ atakowaæ na Midway, równoczeœnie nasza druga flota przypuœci szturm na Aleuty. Mamy nadziejê, ¿e jedna z tych dwóch operacji skusi amerykañskie lotniskowce do opuszczenia Pearl Harbor i zauwa¿¹ to nasze ³odzie podwodne patroluj¹ce okolicê. Wówczas rzucimy na nich nasze pancerniki i zagro¿enie zostanie zlikwidowane !\n\nOperacja MI rozpoczê³a siê 26 maja, kiedy to flota atakuj¹ca Aleuty opuœci³a Japoniê. Nastêpnego dnia z portów wyp³ynê³a flotylla admira³a Nagumo, która skierowa³a siê w rejon wyspy Midway. Nied³ugo po niej na morze ruszy³y transportowce z wojskami desantowymi, zaœ 29 maja z portu wysz³y g³ówne si³y floty bojowej. Admira³ Yamamoto bêdzie osobiœcie dowodzi³ dzia³aniami z pok³adu gigantycznego pancernika Yamato.\n\nNiestety operacja K, zwiad dalekiego zasiêgu w rejonie Pearl Harbor zaplanowana na 31 maja zosta³a odwo³ana, ale oficerowie nas³uchu z Yamato wykryli nasilaj¹cy siê ruch w eterze w rejonie Midway. Nie wiemy wiêc, gdzie s¹ nieprzyjacielskie lotniskowce, ale zapewne znajduj¹ siê w pobli¿u i ju¿ po³knê³y haczyk......\n\n------------------------------------------------------------\n\n>
+<MidwayVictoryDb>(*JA)	<Plan admira³a Yamamoto czêœciowo sprawdzi³ siê.\n\nPomimo i¿ musieliœmy odwo³aæ inwazjê na Midway ze wzglêdu na znaczne straty w³asne, Marynarka USA ponios³a ciê¿kie straty i nie bêdzie w stanie zagroziæ naszym nowym zdobyczom terytorialnym bez œci¹gniêcia si³ z Atlantyku. W takim wypadku jednak, nasi sojusznicy, Niemcy i W³osi, bêd¹ mogli pomóc nam w osi¹gniêciu ostatecznego zwyciêstwa.\n\nMamy teraz czas, aby wzmocniæ nasze pozycje na œrodkowym i po³udniowym Pacyfiku, do czasu kiedy odbudujemy nasz¹ si³ê ofensywn¹ i bêdziemy mogli wykonaæ kolejne uderzenie. Równoczeœnie kampania na Aleutach przebiega bardzo dobrze i przynosi spodziewane rezultaty.>
+<MidwayDefeatDb>(*JA)	<Operacja zakoñczy³a siê katastrof¹!\n\nNie doœæ, ¿e musieliœmy odwo³aæ desant na Midway, to nie zadaliœmy nieprzyjacielskiej flocie ¿adnych strat, straciliœmy wszystkie lotniskowce oraz wiele kr¹¿owników i ³odzi podwodnych oraz tysi¹ce doœwiadczonych marynarzy i pilotów... a w zamian zaledwie kilka razy z sukcesem zbombardowaliœmy Midway.\n\nTo z pewnoœci¹ pocz¹tek koñca, w najbli¿szych dniach wielu naszych dowódców zapewne pope³ni seppuku!\n\nNasza upokorzona marynarka wojenna nie bêdzie ju¿ w stanie wspieraæ Armii Cesarskiej, a Amerykanie maj¹ ju¿ teraz tyle samo lotniskowców co my... mog¹ rozpocz¹æ ofensywê lada chwila.>
+<MidwayDb>(*JA)		<Nadmiernie skomplikowany plan admira³a Yamamoto mia³ wiele s³abych punktów, za które przysz³o nam zap³aciæ.... straciliœmy ciê¿kie lotniskowce Akagi, Kaga, Soryu i Hiryu oraz kr¹¿ownik Mikuma. W odpowiedzi zatopiliœmy tylko jeden lotniskowiec wroga, Yorktown i uszkodziliœmy umocnienia na wyspie Midway.\n\nAmerykañscy piloci z ogromnym poœwiêceniem i dziêki ³utowi szczêœcia wykorzystali b³êdy taktyczne admira³a Nagumo. Nasi piloci stanêli na wysokoœci zadania, ale straty wœród nich wynios³y 110 ludzi. Do tego trzeba doliczyæ ponad 2500 wykwalifikowanych marynarzy.\n\nStraty w szeregach lotnictwa wroga s¹ prawdopodobnie wiêksze, ale to niewielka pociecha. Chocia¿ kampania na Aleutach rozwija siê pomyœlnie, mam wra¿enie, ¿e japoñska ekspansja na œrodkowym i po³udniowym Pacyfiku zosta³a zatrzymana na dobre.>
+<MidwayBr>(*US)		<Po bitwie na Morzu Koralowym, Marynarka amerykañska i japoñska szykuj¹ siê do nowej konfrontacji, która - w zale¿noœci od wyniku -  mo¿e oznaczaæ pocz¹tek ofensywy Amerykanów albo ich ostateczn¹ klêskê. Po œmia³ym kwietniowym rajdzie bombowców pu³kownika Doolitle'a nad Tokio morale Amerykanów zaczê³o rosn¹æ, ale zdajemy sobie sprawê, ¿e wróg nadal posiada przewagê.\n\nAtol Midway zosta³ przy³¹czony do USA 28 sierpnia 1867 roku przez komandora Reynoldsa, kapitana s³upu "Lackamawa". Od tamtego czasu niewiele siê tu dzia³o, je¿eli nie liczyæ budowy radiowej stacji przekaŸnikowej oraz przystani dla szybkich statków Pan Am Clippers w latach 30.\n\nRz¹d amerykañski doceni³ strategiczne po³o¿enie wyspy dopiero w 1939 roku - od tego czasu wojsko do³o¿y³o wiele wysi³ków, aby umocniæ wyspê. Midway zosta³o ostrzelane 7 grudnia 1941 roku przez dwa niszczyciele japoñskie. W odpowiedzi tempo umacniania wyspy jeszcze zwiêkszono, buduj¹c tam serie lotnisk, na których a¿ roi siê od najrozmaitszych typów samolotów: Vindicator, Dauntless, Buffalo, PBY, B17, Wildcat, Avenger czy B26.\n\nOdk¹d stacja nas³uchowa "Hypo" w Pearl Harbor z³ama³a czêœciowo szyfr Marynarki Cesarskiej, wiemy, ¿e wkrótce pod Midway pojawi siê najwiêksza flota japoñska w historii - wiêksza nawet od tej, która przeprowadzi³a atak na Pearl Harbor. Admira³ Nimitz w planie operacyjnym 29-42 rozkaza³ Zespo³om Operacyjnym 16 i 17, dowodzonym przez kontradmira³a Franka J. Fletchera i admira³a Raya Spruance'a zajêcie pozycji w punkcie "luck", 325 mil na pó³nocny wschód od Midway i oczekiwaæ na wroga, który mia³ prawdopodobnie pojawiæ siê 3 czerwca we wczesnych godzinach porannych....\n\n------------------------------------------------------------\n\n>
+<MidwayVictoryDb>(*US)	<Nasi lotnicy mog¹ byæ dumni z tego wspania³ego zwyciêstwa, przekroczyliœmy nawet najbardziej optymistyczne prognozy admira³a Nimitza i tanim kosztem rozbiliœmy w py³ ca³¹ marynarkê japoñsk¹.\n\nCzas teraz pomyœleæ o ofensywie, jesteœmy rozpêdzeni i mo¿emy powstrzymaæ japoñsk¹ ekspansjê!>
+<MidwayDefeatDb>(*US)	<Nie uda³o nam siê wykonaæ za³o¿eñ admira³a Nimitza, straciliœmy wiêcej ni¿ powinniœmy.\n\nChocia¿ uda³o nam siê odeprzeæ inwazjê na Midway, nasza Flota Pacyfiku jest w rozsypce i bêdziemy musieli wzmocniæ siê okrêtami z Oceanu Atlantyckiego, co zak³óci nasz¹ globaln¹ strategiê walki z pañstwami Osi.\n\nJeszcze parê takich "po³owicznych zwyciêstw" jak to, a Japonia na d³ugi czas utrzyma kontrolê nad Pacyfikiem...\nW ramach wzmacniania floty musieliœmy wycofaæ z Atlantyku czêœæ okrêtów, które by³y tam niezwykle potrzebne. Negatywnie odbi³o siê to na realizacji paktu Lend-Lease.>
+<MidwayDb>(*US) 	<Dziêki odwadze, determinacji oraz - trzeba to przyznaæ - ³utowi szczêœcia, bitwa o Midway okaza³a siê byæ wielkim sukcesem: straciliœmy jeden lotniskowiec (Yorktown) zatapiaj¹c cztery lotniskowce (Akagi, Kaga, Soryu i Hiryu) oraz kr¹¿ownik Mikuma. Japoñskie plany inwazji zosta³y pokrzy¿owane.\n\nNasze straty w ludziach s¹ wysokie - zginê³o 189 pilotów, ale osi¹gnêliœmy zamierzony cel i zwyciê¿yliœmy w bitwie z najwiêksz¹ flot¹, jaka kiedykolwiek p³ywa³a po Pacyfiku.\n\nWyci¹gniemy wnioski z b³êdów. Przestarza³e maszyny Devastator i Vindicator powinny zostaæ wycofane z pierwszej linii. Zrównaliœmy siê z Japoñczykami pod wzglêdem liczebnoœci lotniskowców - czas wiêc pomyœleæ o nowej ofensywie.>
+
+<TarawaBr>(*JA)		<Ostatnie raporty wskazuj¹, ¿e wróg planuje podjêcie zmasowanych dzia³añ w rejonie Wysp Gilberta. Wszystkie jednostki, jakimi dysponujemy, usi³uj¹ zlokalizowaæ wroga w tamtym rejonie. Mo¿esz spodziewaæ siê znacznej aktywnoœci samolotów wroga startuj¹cych z lotniskowców. Bitwa praktycznie ju¿ siê zaczê³a - nowe ciê¿kie lotniskowce nieprzyjacielskie wesz³y ju¿ do s³u¿by i zapewne bêd¹ os³aniaæ ewentualny desant w sektorze wysp Makin i Betio.>
+<TarawaVictoryDb>(*JA)	<Pomimo setek samolotów, jakie nieprzyjaciel rzuci³ do walki w tej operacji, nie uda³o mu siê zapewniæ dostatecznej os³ony dla korpusu piechoty morskiej i nasz bohaterski garnizon zada³ l¹duj¹cym marines ogromne straty.\n\nDodatkowo flota nieprzyjacielska dozna³a strat od ataków lotniczych i podwodnych.\n\nTo by³o pyrrusowe zwyciêstwo Amerykanów, nie bêd¹ w stanie d³ugo prowadziæ wojny na takich warunkach!>
+<TarawaDefeatDb>(*JA)	<Wróg rzuci³ w tej operacji do walki tysi¹ce samolotów, które skutecznie zbombardowa³y pozycje obronne, przygotowuj¹c inwazjê.\n\nNasi bohaterscy obroñcy nie byli w stanie postawiæ oporu.\n\nNieprzyjaciel niemal ca³kowicie panowa³ w powietrzu i nie uda³o nam siê zadaæ powa¿niejszych strat jego flocie.>
+<TarawaDb>(*JA)		<Nie mogliœmy broniæ Tarawy bez koñca, ale wróg drogo zap³aci³ za to zwyciêstwo.>
+<TarawaBr>(*US)		<Jesieni¹ 1943 roku Japoñczycy zostali wyparci z Aleutów na pó³nocy, zaœ desant 3 Dywizji Piechoty Morskiej w Bougainville oznacza³, ¿e podbój Wysp Salomona na po³udniowym Pacyfiku równie¿ jest niemal zakoñczony. Genera³ MacArthur w po³udniowo-zachodnim basenie Oceanu Spokojnego opanowa³ Now¹ Gwineê i przygotowywa³ siê do desantu na Archipelag Bismarcka.\n\nWyspy Gilberta to grupa atoli koralowych le¿¹cych na równiku, które odkry³ w roku 1765 komandor Byron. Wyspy by³y pod panowaniem korony brytyjskiej od 27 maja 1892 roku a¿ do wybuchu wojny w grudniu 1941, kiedy to zajêli je Japoñczycy. Le¿¹ one na pó³noc i na zachód od innych wysp bêd¹cych pod nasza kontrol¹ oraz niedaleko na po³udnie i na wschód od wa¿nych baz japoñskich w archipelagach Karolinów i Wysp Marshalla.\n\nNa konferencji QUADRANT w Quebecu w sierpniu 1943 roku opracowano plan natarcia na posiad³oœci japoñskie, który zak³ada³ odzyskanie kolejno Wysp Gilberta, Wysp Marshalla oraz Marianów.\n\nDowództwo nad operacj¹ GALVANIC obj¹³ wiceadmira³ R.A. Spruance, który mia³ do dyspozycji grupy bojowe TF50, TF54 oraz TF57. W sk³ad grupy bojowej TF50 wchodzi Po³udniowa Grupa Lotniskowców kontradmira³a A.E. Montgomery'ego, której zadanie jest przechwytywanie samolotów wroga i wsparcie si³ l¹dowych w miarê potrzeb. Grupa Bojowa TF54 obejmuje 2 Dywizjê Piechoty Morskiej, która otrzyma³a rozkaz opanowania w pierwszej kolejnoœci silnie bronionej wyspy Betio na po³udniowo-zachodnim krañcu atolu Tarawa.\n\nWynik tej bitwy bêdzie zale¿a³ od wyzyskania efektu zaskoczenia - nie bêdzie wiêc d³ugiego przygotowania lotniczego, musimy uderzyæ z maksymaln¹ skutecznoœci¹ w jak najkrótszym czasie. Kiedy marines wyl¹duj¹ na wyspie, mo¿liwoœci wsparcia z powietrza bêd¹ ograniczone, poniewa¿ pozycje atakuj¹cych i obroñców bêd¹ le¿eæ bardzo blisko siebie.\n\n------------------------------------------------------------\n\n >
+<TarawaVictoryDb>(*US)	<Rzuciliœmy do walki 900 samolotów i dziêki temu wykonaliœmy bardzo skuteczne przygotowanie bombowe przed desantem.\n\nDziêki naszej akcji garnizon japoñski by³ w stanie zadaæ naszym ch³opcom znacznie mniejsze straty ni¿ to pierwotnie przewidywano. Bezpoœrednie wsparcie powietrzne okaza³o siê bardzo skuteczne nawet pomimo bliskoœci pozycji naszych marines i Japoñczyków.\n\nPrawie ca³kowicie dominowaliœmy w powietrzu, a nasza flota dozna³a tylko nieznacznych uszkodzeñ.\n\nDziêki temu b³yskawicznemu zwyciêstwu zdobyliœmy nowe lotniska, przybli¿aj¹ce nas do serca posiad³oœci japoñskich na œrodkowym Pacyfiku. Przekonaliœmy siê te¿, ¿e mo¿emy polegaæ na myœliwcach Hellcat, które udowodni³y swoj¹ przewagê nad japoñskimi Zeke'ami. >
+<TarawaDefeatDb>(*US)	<Mimo i¿ rzuciliœmy do tej operacji 900 samolotów, nie uda³o nam siê wystarczaj¹co silnie wesprzeæ z powietrza desantu 2 Dywizji Piechoty Morskiej i ponieœli oni ogromne straty, albo od ognia japoñskiego garnizonu, albo co gorsza od ognia naszych w³asnych samolotów.\n\nDodatkowo flota dozna³a ciê¿kich strat od ataków lotniczych i podwodnych.\n\nPonad po³owa si³ kraju zosta³a zaanga¿owana na  europejskim teatrze dzia³añ - nie staæ nas na tak kosztowne zwyciêstwa, bo nie zdobêdziemy Tokio przed rokiem 1960!!!!! >
+<TarawaDb>(*US)		<Rzuciliœmy do tej operacji 900 samolotów i uda³o nam siê zapewniæ doœæ skuteczn¹ os³onê bombow¹ dla desantu.\n\nNiesety, odwo³anie ostatniego nalotu przez desantem 2 Dywizji Piechoty Morskiej by³o b³êdem - jak tylko japoñski garnizon wyleg³ ze schronów, zdo³a³ wykorzystaæ ocala³e karabiny maszynowe i baterie nadbrze¿ne, aby zadaæ naszych ch³opcom ciê¿kie straty.\n\nBezpoœrednie wsparcie lotnicze równie¿ nie by³o zbyt skuteczne ze wzglêdu na bliskoœæ pozycji marines i japoñskich obroñców wyspy.\n\nNie mieliœmy ca³kowitej dominacji w powietrzu, ale spisaliœmy siê nie najgorzej - japoñska ³ódŸ podwodna zatopi³a tylko jeden z naszych lotniskowców, a drugi zosta³ uszkodzony przez atak samolotów torpedowych.\n\nTo kosztowne zwyciêstwo nauczy nas, aby lepiej przemyœleæ taktykê desantow¹ w przysz³ych operacjach. Przekonaliœmy siê przynajmniej, ¿e mo¿emy polegaæ na myœliwcach Hellcat, które udowodni³y swoj¹ przewagê nad japoñskimi Zeke'ami.>
+
+<PalauBr>(*JA)		<Powinniœmy byli siê tego domyœliæ. Spodziewaliœmy siê, ¿e Palau zostanie zaatakowane przed Marianami - ale byliœmy w b³êdzie. Teraz, kiedy walki o Mariany to ju¿ przesz³oœæ, czeka nas piek³o wojny tutaj w Peleliu, naszej g³ównej twierdzy na archipelagu. Musimy wytrzymaæ napór i zepchn¹æ marines z powrotem do morza przy u¿yciu wszelkich dostêpnych œrodków - ca³e si³y lotnicze, jakie jeszcze posiadamy w tym rejonie, na Filipinach oraz na Nowej Gwinei zosta³y skierowane do tego zadania.>
+<PalauVictoryDb>(*JA)	<Peleliu pad³o, ale po bardzo zaciek³ej walce z nieprzyjacielskimi si³ami lotniczymi i morskimi. Doœwiadczona 1 Dywizja Piechoty Morskiej zosta³a ca³kowicie zniszczona w bitwie i nieprzyjaciel musia³ œci¹gaæ dodatkowe si³y inwazyjne. Takie dzia³ania opóŸniaj¹ce s¹ bardzo cenne i kosztuj¹ wroga znaczne straty w ludziach. To z pewnoœci¹ silnie wp³ynie na morale wojsk wroga - dziêki twoim zas³ugom!>
+<PalauDefeatDb>(*JA)	<Niestety, nasi obroñcy Peleliu nie byli w stanie powstrzymaæ elitarnej 1 Dywizji Piechoty Morskiej, a fortyfikacje na wzgórzach wokó³ Peleliu okaza³y siê byæ zbyt s³ab¹ pozycj¹ obronn¹. Mimo i¿ zadaliœmy wrogowi znaczne straty, cena, jak¹ sami zap³aciliœmy jest zbyt wysoka. Miejmy nadziejê, ¿e batalia na Filipinach pójdzie nam lepiej.>
+<PalauDb>(*JA)		<Wzgórza Umurbrogol sta³y siê miejscem zag³ady 1 Dywizji Piechoty Morskiej. Setki, mo¿e nawet tysi¹ce marines zginê³y w walce o jedn¹ ska³ê bez wiêkszego znaczenia strategicznego. To dla nas doskona³e wiadomoœci - poczekamy teraz na inwazjê na Filipiny i tam zgotujemy wrogowi jeszcze wiêksze k³opoty i jeszcze bardziej krwaw¹ przeprawê.>
+<PalauBr>(*US)			<Rozpoczê³a siê operacja Stalemate. Po ataku na Mariany nasze lotniskowce p³yn¹ w stronê wysp Palau, broni¹cych lewej flanki Filipin i Tajwanu. ¯o³nierze Marines genera³a Rupertusa bêd¹ l¹dowaæ na Peleliu, najsilniej umocnionej wyspie w okolicy, aby opanowaæ tamtejsze lotnisko i garnizon i oczyœciæ lewe skrzyd³o naszej ofensywy z si³ lotniczych lub morskich nieprzyjaciela.>
+<PalauVictoryDb>(*US)	<Peleliu wpad³o w nasze rêce jak dojrza³y owoc. Straty by³y konieczne, ale ca³a operacja zosta³a przeprowadzona bardzo ekonomicznie. Dobra robota! Lewa strona naszej ofensywy zosta³a oczyszczona i nikt nie zak³óci nam dalszego natarcia w kierunku Manili lub Tajpej.>
+<PalauDefeatDb>(*US)	<Ktoœ powinien przypomnieæ sztabowi generalnemu, ¿e Korpus Piechoty Morskiej USA to nie jakieœ tanie, poœlednie miêso armatnie, które mo¿na posy³aæ na takie g³upie, beznadziejne akcje! Jeszcze kilka takich desantów, a nasi ch³opcy zaczn¹ wspominaæ Krwawe Wzgórze i walki o rzekê Tenaru jako dobre, spokojne czasy... Nie mo¿emy pozwoliæ sobie na takie bezsensowne ofiary.>
+<PalauDb>(*US)			<Pod Peleliu nasza armia otrzyma³a znacz¹cy cios. Straty by³y znaczne. Rzecz jasna, Japoñczycy zostali ca³kowicie wyparci z Peleliu, ale wysoka cena, jak¹ zap³aciliœmy, ka¿e nam pamiêtaæ, ¿e nie mo¿emy marnowaæ cennych oddzia³ów piechoty morskiej jako celów æwiczebnych dla wroga w taki operacjach, które drogo nas kosztuj¹, ale przynosz¹ niewiele. Teraz ruszajmy dalej!>
+
+<IwoBr>(*JA)		<Po tygodniach bohaterskiej walki w celu powstrzymania zbrodniczych nalotów bombowych, które kalecz¹ nasz¹ œwiêt¹ ojczyznê, teraz sama Iwo Jima stanê³a przed groŸb¹ inwazji. Na szczêœcie genera³ Tadamachi Kuribayashi przewidzia³ atak Amerykanów i zamieni³ tê wysepkê w ogromn¹ fortecê. Z³o¿y³ przysiêgê, ¿e bêdzie walczy³ do samego koñca: jako pilot wojskowy, twoim obowi¹zkiem jest oddaæ czeœæ mêstwu twoich braci, samurajów walcz¹cych na ziemi, i zadaæ amerykañskiej marynarce jak najciê¿sze straty. Je¿eli Armia i lotnictwo dobrze wykonaj¹ swój obowi¹zek, Iwo Jima stanie siê grobem dla wielu tysiêcy zachodnich diab³ów. Flaga z symbolem wschodz¹cego s³oñca bêdzie nadal dumnie i zwyciêsko powiewaæ nad wzgórzami Suribachi!>
+<IwoVictoryDb>(*JA)	<Przegraliœmy, ale w jakim wspania³ym stylu! W gruncie rzeczy, to my jesteœmy zwyciêzcami - jestem przekonany, ¿e historia uzna Iwo Jimê za kolejne chwalebne zwyciêstwo Cesarstwa: wystarczy spojrzeæ na tych kilka raportów amerykañskich, jakie trafi³y w nasze rêce. Iwo Jima nie jest nasz¹ klêsk¹, ale przede wszystkim nieprzekonuj¹cym zwyciêstwem amerykañskich marines okupionym ogromnym morzem krwi. Miejmy nadziejê, ¿e Amerykanie nie zmieni¹ taktyki, bo jak na razie nie maj¹ szans odnieœæ decyduj¹cego zwyciêstwa.>
+<IwoDefeatDb>(*JA)	<Niestety mêstwo obroñców Iwo Jimy nie wystarczy³o na ogromne si³y inwazyjne, jakie runê³y na tê maleñk¹ wyspê. Krwawe walki na Iwo Jimie po¿ar³y tysi¹ce zbrodniczych ¿o³nierzy wroga  - ale równie¿ tysi¹ce niewinnych, mê¿nych samurajów. Taka ogromna ofiara zas³ugiwa³a na lepszy los...>
+<IwoDb>(*JA)		<To prawda, Iwo Jima wreszcie wpad³a w rêce wroga - ale wczeœniej rozleg³ siê ostatni zwyciêski okrzyk genera³a Kuribayashi. ¯aden samuraj nie podda³ siê wrogowi, wszyscy zginêli honorowo, wed³ug pradawnych tradycji kodeksu Bushido. Cesarz jest dumny ze swoich poleg³ych, mê¿nych synów. Niech ¿yje Cesarstwo i Syn Niebios!>
+
+<IwoBr>(*U*)	<Wyspa Iwo Jima to haniebna przeszkoda stercz¹ca na drodze lotu bombowców B-29 lec¹cych z Marianów na bombardowanie Japonii. Musimy zaj¹æ tê irytuj¹ca wysepkê i zlikwidowaæ ten k³opot. Nie spodziewamy siê aktywnoœci wroga w powietrzu i na morzu, wiêc dzia³ania lotnictwa morskiego bêd¹ obejmowaæ g³ównie bombardowanie wyspy przed inwazj¹ oraz wsparcie si³ l¹dowych w trakcie walki. Przez najbli¿sze dni bêdziecie niañkami dla marines. Najpierw jednak musimy zniszczyæ wszystkie japoñskie si³y lotnicze na Iwo Jimie i w jej okolicy. B¹dŸcie œwiadomi, ¿e walczycie z pilotami, którzy nie maj¹ nic do stracenia i wszystko do udowodnienia. Do roboty, ch³opcy!>
+<IwoVictoryDb>(*U*) <Dobra robota, ch³opaki, ta przeklêta ska³a wreszcie wpad³a w rêce naszych mê¿nych ch³opców po ca³ych tygodniach metodycznej, krwawej rzeŸni. Zabra³o nam to wiêcej czasu ni¿ siê spodziewaliœmy, ale w koñcu doczekaliœmy siê efektów. Piloci B-29 od LeMaya powinni podziêkowaæ wam za profesjonalizm. Œwietnie siê spisaliœcie!>
+<IwoDefeatDb>(*U*)	<Iwo Jima to cholerna, krwawa pomy³ka! Straciliœmy tam tysi¹ce ch³opców tylko po to, aby zapewniæ tym przeklêtym za³ogom Superfortec dodatkowy punkt tankowania paliwa! Wygl¹da na to, ¿e kiedy przychodzi do podejmowania decyzji strategicznych, marines s¹ warci tyle co tanie miêso.>
+<IwoDb>(*U*)		<Straciliœmy setki ¿o³nierzy piechoty morskiej. Kolejna wyspa, kolejna rzeŸ - czy te japoñskie diab³y kiedykolwiek ugn¹ siê? Przynajmniej teraz nasze B-29 mog¹ tu tankowaæ paliwo - ale za³o¿ê siê, ¿e za³ogi Superfortec jeszcze d³ugo bêd¹ wyczuwaæ ciê¿ki zapach œmierci za ka¿dym razem, kiedy wyl¹duj¹ na tych skrwawionych pasach startowych...>
+
+<OkinawaBr>(*JA)	<Kilka dni temu dostrze¿ono ugrupowania nieprzyjacielskiej floty p³yn¹ce w kierunku wyspy Okinawa. Wczoraj liniowce nieprzyjacielskie otworzy³y ogieñ do naszych pozycji i prowadzi³y ostrza³ przez ca³¹ noc. Musimy natychmiast zareagowaæ i uderzyæ na marynarkê amerykañsk¹. Sztab Generalny rozkaza³ nasiliæ ataki kamikaze, które musz¹ byæ chronione podczas dolotu do celów. Zadbajcie, aby nasi bohaterowie dotarli w rejon ataku oraz aby wróg nie zak³óci³ ich boskiego obowi¹zku.>
+<OkinawaVictoryDb>(*JA)	<Zadaliœmy si³om amerykañskim bardzo powa¿ne straty. Zatopiliœmy setki statków, a wiele tysiêcy marines i marynarzy zginê³o od ataków naszych boskich bohaterów i ich bomb. To wspania³y moment naszej historii. Przysz³e pokolenia bêd¹ z wdziêcznoœci¹ myœleæ o tym poœwiêceniu. Teraz Amerykanie zastanowi¹ siê dwa razy, zanim znowu postawi¹ stopê na naszej œwiêtej ziemi.>
+<OkinawaDefeatDb>(*JA)	<Okinawa pad³a szybciej ni¿ siê spodziewaliœmy, Oczywiœcie to nie za³amie naszej woli walki, ale nadal szukamy ostatecznego orê¿a, który powstrzyma szatañskiego wroga przed atakiem na nasz¹ œwiêt¹ ziemiê. Je¿eli jednak bogowie zechc¹ zes³aæ na nas tê próbê, zgotujemy Amerykanom piek³o, w które sami siê pchaj¹.>
+<OkinawaDb>(*JA)		<Okinawa w koñcu pad³a pomimo naszego zaciek³ego oporu. Tak czy inaczej, daliœmy Amerykanom gorzk¹ lekcjê i najeŸdŸcy ponieœli ciê¿kie straty. Jeszcze jeden taki atak, a amerykañskie morale w koñcu za³amie siê. Teraz jasno zrozumiej¹ jak¹ ofiarê bêd¹ musieli ponieœæ, je¿eli oœmiel¹ siê sprofanowaæ nasze œwiête wyspy.>
+<OkinawaBr>(*U*)		<Jutro zaatakujemy Okinawê, g³ówn¹ bazê japoñsk¹ w archipelagu Riukiu. Ta bitwa bêdzie czymœ w rodzaju gigantycznej próby generalnej przed planowan¹ inwazj¹ na Wyspy Japoñskie - przeprowadzamy desant na przedpokój gmachu, jakim jest Japonia. Tak jak zazwyczaj, zespo³y lotniskowców brytyjskich i amerykañskich bêd¹ zapewniaæ bezpoœrednie wsparcie i patrole powietrzne nad wyznaczonym obszarem. Sytuacja Japoñczyków jest z ka¿dym dniem gorsza, wiêc b¹dŸcie gotowi na nasilenie ataków kamikaze: lotnicy samobójcy nie mog¹ sforsowaæ naszej obrony albo gro¿¹ nam ogromne straty!>
+<OkinawaVictoryDb>(*U*)	<Nasze straty na Okinawie by³y ni¿sze ni¿ przewidywano. To dobra wieœæ, poniewa¿ dowodzi, ¿e ewentualna inwazja na Wyspach Japoñskich jest jednak mo¿liwa. Przygotujmy siê do tej ostatecznej rozgrywki, która wkrótce nas czeka.>
+<OkinawaDefeatDb>(*U*)	<Okinawa to krwawe miejsce. Nasze straty s¹ znacznie wiêksze ni¿ siê spodziewaliœmy. Co gorsza, determinacja Japoñczyków wcale nie maleje. Jak sk³oniæ ich do pos³uszeñstwa? Je¿eli nie mo¿na osi¹gn¹æ zwyciêstwa œrodkami konwencjonalnymi, musimy pomyœleæ o innym sposobie na przerwanie tej niekoñcz¹cej siê wojny.>
+<OkinawaDb>(*U*)		<Okinawa wpad³a w nasze rêce - ale kosztowa³o nas to ¿ycie setek marynarzy i marines amerykañskich oraz ¿o³nierzy brytyjskich. To smutne rozstrzygniêcie i ka¿e podaæ w w¹tpliwoœæ sens ewentualnej inwazji na Japoniê. Niestety, jak na razie to chyba jedyna metoda, aby sk³oniæ w³adze japoñskie do kapitulacji.>
+
+<Guadal1Br>(nUS)		<Od maja Japoñczycy okupuj¹ centraln¹ czêœæ archipelagu Wysp Salomona. Ostatnio zaczêli nawet budowaæ tam l¹dowisko - je¿eli je uruchomi¹, bêdzie dla nas powa¿nym zagro¿eniem. Celem operacji Watchtower jest przejêcie kontroli nad lotniskiem i wyparcie Japoñczyków z Guadalcanal. Bêdziecie oczyszczaæ rejon Tulagi i os³aniaæ wojska desantowe z powietrza. ¯o³nierze piechoty morskiej genera³a Vandergrifta poprowadz¹ tê nasz¹ pierwsz¹ szeroko zakrojon¹ ofensywê w wojnie na Pacyfiku - i pamiêtajcie, ¿e nie mo¿emy pozwoliæ sobie na pora¿kê. Mo¿ecie spodziewaæ siê silnej aktywnoœci wroga w powietrzu. Bêdziecie walczyæ z doborowymi eskadrami japoñskimi stacjonuj¹cymi w Rabaul: za wszelk¹ cenê musicie os³aniaæ transportowce z piechot¹!>
+<Guadal1Db>(nUS)		<Dziœ rano nieprzyjacielskie kr¹¿owniki wkrad³y siê w cieœninê pomiêdzy wyspami Savo a Guadalcanal i zada³y bardzo ciê¿kie straty naszej eskorcie. Nie mo¿emy ryzykowaæ utraty kolejnych okrêtów. Admira³ Fletcher rozkaza³ wycofaæ nasze jednostki, które bêd¹ siê przygotowywaæ do kolejnego starcia z flot¹ japoñsk¹.>
+<Guadal2Br>(mUS)		<Lotnisko Henderson Field na Guadalcanal zosta³o oddane do u¿ytku. Twoje skrzyd³o lotnictwa Korpusu Piechoty Morskiej zostanie tam przebazowane i ma jak najszybciej w³¹czyæ siê do dalszych operacji. Musicie broniæ lotniska przed atakami z powietrza i z morza. Postarajcie siê te¿ utrudniæ wrogom uzupe³nianie si³, aby ul¿yæ trochê swoim kolegom z piechoty. Je¿eli skutecznie os³onicie Henderson Field, nie powinniœmy straciæ kontroli nad wysp¹.>
+<Guadal2Br>(aUS)		<Odk¹d korzystamy z lotniska Henderson Field, grupa Cactus Air Force z powodzeniem os³ania³a samo l¹dowisko i przerywa³o  japoñskie ³añcuchy zaopatrzeniowa. Twoje skrzyd³o zostanie tam przebazowane i ma jak najszybciej podj¹æ operacje, aby wspieraæ grupy lotnictwa Marynarki i Korpusu Piechoty Morskiej w realizacji wa¿nych celów. Broñ lotniska, os³aniaj naloty na japoñskie statki i wspieraj z powietrza si³y naziemne.>
+<Guadal2VictoryDb>(*US)	<Doskona³a robota! Guadalcanal wpad³o w nasze rêce wed³ug planu. Mo¿esz byæ dumny ze swoich osi¹gniêæ: to by³ punkt zwrotny w wojnie, obiecujê, ¿e nasze wojska ju¿ nigdy nie powróc¹ do defensywy! Ale pamiêtaj, ¿e walka o zwyciêstwo dopiero siê rozpoczê³a: tak trzymaæ!>
+<Guadal2DefeatDb>(*US)	<Mimo i¿ wojska amerykañskie stawia³y Japoñczykom za¿arty opór, nasze si³y morskie i powietrzne nie by³y w stanie zapewniæ os³ony i zaopatrzenia niezbêdnego, aby przekszta³ciæ ten krwawy pat w zwyciêstwo. Transportowce ewakuuj¹ w³aœnie ostatnich ¿o³nierzy amerykañskich. Wielu z nich popad³o w szok po konfrontacji z bezlitosnym okrucieñstwem wojsk japoñskich, czêœæ rozchorowa³a siê od fatalnych warunków, jakie panuj¹ na Guadalcanal. Có¿ za gorzki koniec tak heroicznej kampanii... Kto wie kiedy bêdziemy w stanie powtórzyæ tak¹ ofensywê? Miejmy nadziejê, ¿e ta zaskakuj¹ca klêska nie oznacza zag³ady dla Australii...>
+<Guadal2Db>(*US)		<Zwyciêstwo! Zap³aciliœmy za nie wysok¹ cenê, ale tak czy inaczej, wygraliœmy. Ostatni ¿o³nierze japoñscy ewakuowali siê dziœ z Guadalcanal pod os³on¹ ciemnoœci. Po miesi¹cach zaciek³ych walk wyczerpani ¿o³nierze US Army i korpusu piechoty morskiej mog¹ byæ dumni z nies³ychanego mêstwa, jakiego dowody dali przez ca³¹ kampaniê. Dobra robota - ale nadal mamy d³ug¹ drogê do Tokio!>
+
+<Guadal1Br>(*JA)	<Dziœ rano na pó³noc od wybrze¿y Guadalcanal dostrze¿ono liczne jednostki amerykañskie. Nieprzyjacielskie okrêty po³o¿y³y ciê¿ki ogieñ na naszych pozycjach na wyspach Guadalcanal i Tulagi, a potem przeprowadzi³y b³yskawiczny desant, który zaskoczy³ naszych walecznych ¿o³nierzy. Admiralicja nie bêdzie bezczynnie czekaæ na rozwój wydarzeñ. Grupa myœliwców dalekiego zasiêgu A6M z Tainan ma os³aniaæ bombowce G4M i D3A podczas ataku na cele. Daleka odleg³oœæ pomiêdzy Rabaul a Guadalcanal zmusi nasze myœliwce do l¹dowania na wysuniêtych lotniskach w Bougainville w drodze powrotnej. Mo¿ecie byæ pewni, ¿e zrobimy wszystko, aby uratowaæ wszystkich pilotów zestrzelonych lub zmuszonych do l¹dowania w wyniku braku paliwa.>
+<Guadal1VictoryDb>(*JA)	<Amerykanie próbowali tutaj na Guadalcanal odwróciæ losy wojny - ale dziêki tobie i twoim towarzyszom, ponieœli klêskê. Ostatni ¿o³nierze amerykañscy najprawdopodobniej poddadz¹ siê naszym zwyciêskim wojskom w ci¹gu kilku dni. Pokaza³eœ, ¿e je¿eli cz³owiek mocno wierzy w sukces, mo¿e osi¹gn¹æ najwy¿sz¹ doskona³oœæ, m³ody samuraju! Cesarz i ca³a Japonia œwiêtuj¹ wasze przygniataj¹ce zwyciêstwo i gratuluj¹ wam niez³omnej woli, która da³a wam zwyciêstwo.>
+<Guadal1DefeatDb>(*JA)	<Pomimo wysi³ków,  nasi ¿o³nierze, piloci i marynarze nie byli w stanie przeciwstawiæ siê przygniataj¹cej przewadze Amerykanów. Taka klêska to rzecz niedopuszczalna! Powa¿nie zagrozi³a ona naszym pozycjom na po³udniowym Pacyfiku. Zg³oœ siê natychmiast do Dowództwa Lotnictwa Morskiego po nowy przydzia³ dla swojej eskadry. Nie mo¿emy pozwoliæ, aby Amerykanie wykorzystali ten sukces.>
+<Guadal1Db>(*JA)		<Nie uda³o nam siê utrzymaæ Guadalcanal z dala od ³ap Amerykanów. Zesz³ej nocy nasze transportowce ewakuowa³y ostatnie wojska z Tassafaronga, co oznacza, ¿e na dobre opuœciliœmy wyspê. Ponieœliœmy tu dotkliw¹ pora¿kê, ale wiêksza czêœæ Wysp Salomona nadal jest w naszych rêkach: musimy sprawiæ, aby za ich "wyzwalanie" Salomona Amerykanie zap³acili tak¹ cenê, która zgasi ich zapa³ bojowy.>
+
+<ChichiBr>(*U*) <Dziœ nasze lotniskowce wykonaj¹ uderzenie na wyspê Chichi Jima, najwa¿niejszy punkt oporu Japoñczyków w archipelagu Bonin po Iwo Jimie. Przed ewentualnym desantem na tej wyspie w nieodleg³ej przysz³oœci, musimy najpierw zbadaæ si³ê jej obroñców. Zaatakujcie garnizon, zestrzelcie ewentualne napotkane samoloty nieprzyjacielskie i dok³adnie rozpoznajcie wyznaczony obszar. >
+<ChichiVictoryDb>(*U*) <Nawet je¿eli Chichi Jima w przesz³oœci stanowi³a zagro¿enie, po twojej zdecydowanej akcji straci³a na znaczeniu. Twoje naloty sia³y œmieræ w szeregach wroga, a wykonane fotografie lotnicze daj¹ nam dok³adne pojêcie o sile jednostek rozmieszczonych na wyspie. Dobra robota - przyjrzyjmy siê teraz bli¿ej wyspie Okinawa... >
+<ChichiDefeatDb>(*U*) <Chichi Jima nie by³a warta ceny, jak¹ musieliœmy zap³aciæ za zebrane tam materia³y wywiadowcze. W zasadzie wiemy tylko tyle, ¿e Chichi Jima jest bardzo dobrze broniona, a Japoñczycy nie oddadz¹ jej bez krwawego boju...>
+<ChichiDb>(*U*) <Dobra robota. Ponieœliœmy pewne straty, ale ogólnie patrz¹c, doœæ powa¿nie nadszarpnêliœmy pozycje japoñskie na Chichi Jimie. Dodatkowo wiemy teraz, ¿e Chichi Jima jest g³ównym wêz³em ³¹cznoœci i zaopatrzenia w ca³ym archipelagu. Kiedy tu powrócimy, bêdziemy wiedzieli gdzie uderzyæ Japoñczyków tak, aby ich zabola³o. >
+<ChichiBr>(*JA) <Ostatnie meldunki wywiadowcze wskazuj¹, i¿ flota nieprzyjacielska skierowa³a siê w kierunku Boninów, aby uderzyæ na nasze pozycje na wyspach Iwo Jima i Chichi Jima. Pu³kownik Masaki i major Horie na Chichi maj¹ nadziejê, ¿e bêdziesz skutecznie chroni³ ich centrum ³¹cznoœciowe i zaopatrzeniowe przed nalotami nieprzyjaciela. Dopilnuj, aby wrogowie opuszczali Chichi z gorzkim poczuciem pora¿ki.> 
+<ChichiVictoryDb>(*JA) <W ci¹gu ostatnich dni str¹ciliœmy wiele samolotów amerykañskich, a dziêki naszemu mê¿nemu oporowi, pozosta³e jednostki nieprzyjacielskie zrezygnowa³y z kolejnych uderzeñ. Amerykanie zapewne wkrótce powróc¹, ale na pewno nie bêd¹ ju¿ tacy aroganccy i pewni siebie...> 
+<ChichiDefeatDb>(*JA) <Nasza obrona lotnicza nad Chichi Jim¹ zosta³a rozbita przez naszych œmiertelnych wrogów. Doœwiadczeni piloci amerykañscy dali nam nad Boninami lekcjê walki powietrznej. Musimy jak najszybciej odbudowaæ nasze si³y lotnicze, je¿eli chcemy unikn¹æ kolejnego rozczarowania, kiedy te diab³y powróc¹ i zaatakuj¹ nasze wyspy! >
+<ChichiDb>(*JA) <Ponieœliœmy ciê¿kie straty broni¹c naszych jednostek na niebie nad Chichi Jim¹ - ale Amerykanie równie¿ zap³acili wygórowan¹ cenê. Wed³ug mnie mo¿na mówiæ o remisie - trafi³a kosa na kamieñ. Teraz przynajmniej amerykañska Marynarka wie, ¿e inwazja na Wyspy Bonin to nie bêdzie spacerek...> 
+
+<LeyteBr>(*U*) < >
+<LeyteVictoryDb>(*U*) < >
+<LeyteDefeatDb>(*U*) < >
+<LeyteDb>(*U*) < >
+
+<LeyteBr>(*JA) < >
+<LeyteVictoryDb>(*JA) < >
+<LeyteDefeatDb>(*JA) < >
+<LeyteDb>(*JA) < >
+
+<Japan1Br>(aUS) <Nowe bazy lotnicze na Marianach otwieraj¹ przed nami szansê, której nie mo¿emy zmarnowaæ. Otrzymaliœmy du¿¹ liczbê nowiutkich bombowców B-29 "Superforteca" i mo¿emy pomyœleæ o kampanii metodycznych bombardowañ Japonii, takiej samej, jak¹ 8 Flota prowadzi nad Niemcami. Myœliwce dalekiego zasiêgu Mustang zapewni¹ skuteczn¹ os³onê dla bombowców na ca³ej trasie lotu nad Wyspy Japoñskie. Dodatkowo bêdziemy przeprowadzaæ wymiatania lotnicze, aby zniszczyæ lotnictwo cesarskie jeszcze przed nalotami bombowymi. Nasze pierwsze cele to oœrodki przemys³owe - zosta³eœ przydzielony do ataku na wyspê Kiusiu, wa¿ne centrum przemys³owe, rejon rozmieszczenia wielu stoczni Marynarki oraz oœrodka dowodzenia armi¹. Poka¿cie Japoñczykom, ¿e nigdzie nie mog¹ czuæ siê bezpieczni i nie maj¹ szans przeciwstawiæ siê naszej przygniataj¹cej dominacji w powietrzu.>
+<Japan1VictoryDb>(aUS) <Gratulacje, panie oficerze. Dziêki skutecznej os³onie myœliwskiej naszych bombowców, straty japoñskie w powietrzu i na ziemi s¹ bardzo wysokie. Nasze bombowce ciê¿ko okaleczy³y przemys³ japoñski, zamieniaj¹c Kiusiu w wyspê p³on¹cych zgliszcz, bezu¿ytecznych dla gospodarki i armii japoñskiej.  Wrogie myœliwce nie startuj¹ ju¿ nawet po to, aby broniæ w³asnej ojczyzny - to oznaka, ¿e dziêki waszym wysi³kom morale w nieprzyjacielskiej armii za³ama³o siê.>
+<Japan1DefeatDb>(aUS) <Nie spodziewaliœmy siê, ¿e si³y nieprzyjacielskie postawi¹ taki opór naszym bombowcom. Pomimo ciê¿kiego uzbrojenia obronnego B-29, myœliwce japoñskie ³atwo sobie z nimi radzi³y. Z drugiej strony, gdyby nasze myœliwce lepiej os³ania³y swoich wiêkszych kolegów, straty nie by³yby tak znaczne... Musimy obmyœliæ now¹ strategiê - najwyraŸniej Japonia nie chyli siê jeszcze ku upadkowi!>
+<Japan1Db>(aUS) <Genera³ LeMay twierdzi, ¿e intensywnoœæ nalotów w koñcu zrekompensuje s³ab¹ celnoœæ bombardowania. Prawd¹ jest, ¿e nie wype³niliœmy pierwszego za³o¿enia podczas fazy bombardowania i wyniki nalotu B-29 by³y doœæ rozczarowuj¹ce. Na szczêœcie myœliwce dobrze siê spisa³y i wróg straci³ sporo maszyn po atakach naszych pilotów.>
+
+<Japan1Br>(nUS) <Przed now¹ ofensyw¹ na Pacyfiku nasze si³y lotnicze startuj¹ce z lotniskowców musz¹ oczyœciæ obszar wyspy Kiusiu z wrogów. Bêdziecie wykonywaæ zadania ofensywne z baz na wyspach i wyszukiwaæ wszelkie cele wojskowe, których zniszczenie nakaza³o dowództwo: lista obejmuje wszelkie samoloty, konwoje wojskowe, poci¹gi, statki, sk³ady paliwa oraz napotkane budowle wojskowe. Zniszczenie si³ powietrznych i morskich wroga to podstawowy cel naszych zmasowanych uderzeñ. Pamiêtajcie te¿ o os³onie naszych lotniskowców, bowiem jeszcze nigdy nasze okrêty wojenne nie znalaz³y siê tak blisko wybrze¿a Japonii.>
+<Japan1VictoryDb>(nUS) <Œwietna robota, pilocie! Zasia³eœ panikê w japoñskich bazach lotniczych. Kiusiu pokry³o siê setkami zniszczonych wraków japoñskich samolotów, a porty s¹ zablokowane kad³ubami zniszczonych okrêtów cesarskich. Mo¿emy teraz w spokoju przeprowadziæ planowan¹ inwazjê na europejskim teatrze dzia³añ bez obawy, ¿e w Japonii napotkamy na zmasowany opór lotniczy.>
+<Japan1DefeatDb>(nUS) <Nasze uderzenia na Kiusiu nie przynios³y znacz¹cych rezultatów. Zestrzeliliœmy sporo maszyn wroga, ale nie z³amaliœmy dominacji nieprzyjaciela w powietrzu nad wysp¹. Dodatkowo statki cesarskie zakotwiczone w porcie dozna³y tylko lekkich uszkodzeñ. Za te ograniczone sukcesy sami musieliœmy zap³aciæ wysok¹ cenê i teraz nasze okrêty s¹ zagro¿one silnymi, zabójczymi atakami z l¹du. Nastêpnym razem, kiedy spróbujemy tu walczyæ, musimy wyci¹gn¹æ wnioski z tego rozczarowania.>
+<Japan1Db>(nUS) <Dobrze siê spisa³eœ podczas ataków na cele wojskowe na wyspie Kiusiu. Nieprzyjaciel odniós³ spore straty, lecz zdo³a³ te¿ wycofaæ g³ówn¹ czêœæ swoich wojsk poza zasiêg naszych samolotów. Sami ponieœliœmy stosunkowo lekkie straty, zw³aszcza bior¹c pod uwagê fakt, jak blisko Wysp Japoñskich siê znaleŸliœmy. Trzeba to  uwzglêdniæ w przysz³oœci, kiedy powrócimy tu, aby dokoñczyæ bitwê.>
+
+<Japan1Br>(nUK) <Grupa naszych lotniskowców musi zdobyæ panowanie w powietrzu w rejonie Kiusiu, zanim rozpocznie siê nasza ofensywa na Zachodnim Pacyfiku. WeŸmiesz udzia³ w misjach ofensywnych skierowanych przeciwko lotniskom znajduj¹cym siê na wyspie, twoim zadaniem bêdzie zniszczenie dostrze¿onych celów wojskowych: dowolnych samolotów, konwojów wojska, poci¹gów, sk³adów paliwa i innych placówek wojskowych. G³ównym celem naszych zmasowanych uderzeñ jest zniszczenie zaplecza powietrznego i nawodnego. Nie zapominaj o odpowiedniej eskorcie myœliwskiej dla naszych lotniskowców, brytyjskie okrêty jeszcze nigdy nie znalaz³y siê tak blisko wybrze¿a Japonii.>
+<Japan1VictoryDb>(nUK) <Dobra robota, pilocie! Spowodowa³eœ olbrzymie zniszczenia na japoñskich lotniskach. Kiusiu jest ochraniane przez setki bezu¿ytecznych wraków japoñskich samolotów, porty s¹ zablokowane przez wywrócone okrêty Cesarskiej Floty - teraz mo¿emy rozpocz¹æ zaplanowane inwazje na zachodzie nie obawiaj¹c siê silnego oporu wroga w powietrzu.>
+<Japan1DefeatDb>(nUK) <Nasze ataki na Kiusiu przynios³y mierne rezultaty. Zestrzeliliœmy wiele samolotów, ale nie uda³o nam siê zdobyæ przewagi powietrznej w okolicach wyspy. Ponadto okrêty Cesarskiej Floty odnios³y tylko niewielkie uszkodzenia, lub nie zosta³y uszkodzone. Za tak s³abe wyniki zap³aciliœmy wysok¹ cenê, nasze okrêty musia³y zmierzyæ siê z ciê¿kimi i zabójczymi atakami nieprzyjacielskich samolotów startuj¹cych z baz l¹dowych. Kiedy znajdziemy siê tam ponownie wyci¹gniemy wnioski z tej pora¿ki.>
+<Japan1Db>(nUK) <Dobrze siê spisa³eœ w czasie ataków na cele wojskowe na Kiusiu. Lotnictwo nieprzyjaciela ponios³o du¿e straty, mimo, ¿e uda³o im siê przenieœæ du¿¹ czêœæ swoich si³ w rejony znajduj¹ce siê poza zasiêgiem naszych samolotów. Nasze straty by³y niewielkie bior¹c pod uwagê fakt, ¿e znajdowaliœmy siê blisko Wysp Japoñskich - musimy o tym pamiêtaæ kiedy wrócimy tu na kolejn¹ rundê.>
+
+<Japan1Br>(*JA) <Synowie Cesarza, po stuleciach wojen po raz pierwszy wróg zagrozi³ naszej ziemi ojczystej. Szatañskie wojska Amerykanów uruchomi³y kilka lotnisk tysi¹ce kilometrów st¹d, które wykorzystuj¹ jako wysuniête bazy do nalotów bombowych na Wyspy Japoñskie. Dodatkowo nieprzyjacielska flota lotniskowców przygotowuje bezpoœredni atak na nasze bazy w ramach przygotowañ do kolejnej zbrodniczej inwazji na nasze terytoria. Kiusiu, najbardziej wysuniêta na po³udnie wyspa archipelagu jest dla nieprzyjaciela najdogodniejszym celem. Musicie broniæ Honsiu od po³udnia oraz odeprzeæ ka¿dy atak przeciwko Kiusiu, le¿¹cemu tam miastu oraz oœrodkom przemys³owym. Nawet jeden samolot amerykañski nie mo¿e bezpiecznie uciec z naszego nieba, je¿eli nie zakosztuje gniewu naszych walecznych wojowników.>
+<Japan1VictoryDb>(*JA) <Samuraju, uda³o ci siê obroniæ nasze niebo przed zniewag¹, jak¹ chcieli nam sprawiæ barbarzyñcy z zachodu. Eskadry B-29 zosta³y zdziesi¹tkowane dziêki twojej rzadko spotykanej skutecznoœci i bieg³oœci taktycznej. Nieprzyjacielska kampania bombardowañ strategicznych zakoñczy³a siê ca³kowit¹ pora¿k¹ i nie zdo³a³a ona przeszkodziæ w pracy naszego przemys³u ani z³amaæ morale walecznej japoñskiej ludnoœci cywilnej. Co wiêcej, nieœmia³e próby atakowania naszej obrony wybrze¿a przez Marynarkê USA zakoñczy³y siê rzezi¹ Jankesów! Cesarz jest z was dumny!>
+<Japan1DefeatDb>(*JA) <Kiusiu stoi w p³omieniach, gdy¿ nasze eskadry myœliwskie nie by³y w stanie powstrzymaæ ataku nieprzyjaciela. Na nasze miasta spad³y setki ton bomb, a zbrodnicze bombowce w spokoju powróci³y do swoich baz. Dodatkowo myœliwce amerykañskiego lotnictwa i marynarki ogo³oci³y nasze l¹dowiska i zniszczy³y na ziemi setki cennych myœliwców, zaœ same ponios³y tylko minimalne straty. Je¿eli nie chcemy splamiæ swojego honoru i zachowaæ szanse na zwyciêstwo, bêdziemy musieli uciec siê do wielkich ofiar.>
+<Japan1Db>(*JA) <Ponieœliœmy bolesne straty od nieprzyjacielskich bombardowañ, ale te¿ wrogie B-29 zap³aci³y wysoki haracz za to, i¿ wzbudzi³y nasz œwiêty gniew. Bombowce spada³y na Kiusiu jak zwiêd³e liœcie, daj¹c dowody twojej zabójczej skutecznoœci - ale je¿eli chcemy na dobre wygnaæ st¹d wrogów, musimy zdobyæ siê na jeszcze wiêkszy wysi³ek.>
+
+<SantaCruzBr>(*U*) <Admira³ Kinkaid otrzyma³ rozkaz ataku na nieprzyjacielsk¹ grupê lotniskowców na pó³noc od Wysp Santa Cruz, która zapewne bêdzie os³aniaæ z powietrza wielk¹ operacjê zaopatrzeniow¹ wroga. Mamy do dyspozycji wy³¹cznie lotnictwo morskie grup bojowych TF 16 i 17, poniewa¿ USS Wasp - niech spoczywa w pokoju - oraz USS Saratoga zosta³y ca³kowicie wy³¹czone z dzia³añ na skutek ataków nieprzyjacielskich ³odzi podwodnych. Nie mamy zbyt wielu wskazówek na temat rozmieszczenia si³ nieprzyjaciela, wiêc twoje eskadry musz¹ gruntownie przeszukaæ rejon, zaœ samoloty startuj¹ce z Henderson Field bêd¹ niszczyæ transportowce, które lada dzieñ bêd¹ przep³ywaæ przez cieœninê Slot. Postarajcie siê jak najciê¿ej uszkodziæ lotniskowce wroga bez niepotrzebnego nara¿ania naszych w³asnych jednostek.>
+<SantaCruzVictoryDb>(*U*) <Admira³ Halsey jest dumny ze swoich ch³opców! Admira³ Kinkaid zada³ ciê¿kie straty grupie nieprzyjacielskich lotniskowców, jednoczeœnie skutecznie chroni¹c nasze w³asne bezcenne lotniskowce. Nieprzyjacielskie si³y lotnicze zosta³y przetrzebione i konwój transportowy pozosta³ bez eskorty - je¿eli oœmiel¹ siê tu pojawiæ, skrzyd³o Cactus zamieni ich statki w dymi¹c¹ kupê wraków. To z pewnoœci¹ ostatnia powa¿na próba Japoñczyków w rejonie Guadalcanal - marines bêd¹ ci wdziêczni, ¿e pomog³eœ im za³atwiæ tê sprawê!>
+<SantaCruzDefeatDb>(*U*) <Nie uda³o nam siê powa¿nie uszkodziæ floty wroga. Co gorsza, straciliœmy nasze w³asne lotniskowce w tym rejonie, wiêc lotnisko Henderson Field i cieœnina Slot pozosta³y zupe³nie bez os³ony. Teraz wróg mo¿e swobodnie dostarczyæ zaopatrzenie dla swoich wojsk - miejmy nadziejê, ¿e nasi waleczni ¿o³nierze i skrzyd³o Cactus bêd¹ mieæ doœæ si³, aby ich powstrzymaæ.>
+<SantaCruzDb>(*U*) <Obydwie strony ponios³y istotne straty, a lotniskowce dos³ownie wy³¹czy³y siê nawzajem z akcji. Nie wiem, czy mo¿emy tu mówiæ o zwyciêzcach i pokonanych - ostateczne rozstrzygniêcie le¿y w rêkach si³ l¹dowych walcz¹cych o Guadalcanal.>
+
+<SantaCruzBr>(*JA) <Admira³ Yamamoto obmyœli³ now¹ pu³apkê, która powinna daæ nam szybkie, mia¿d¿¹ce zwyciêstwo w kampanii na Wyspach Salomona. Celem jest znowu flota nieprzyjaciela, która liczy ju¿ tylko kilka lotniskowców, dziêki temu ¿e nasze ³odzie podwodne z dum¹ zameldowa³y o zatopieniu USS Wasp i USS Saratoga. V Dywizjon Lotniskowców poszuka nieprzyjacielskich grup bojowych i zatopi amerykañskie lotniskowce w celu oczyszczenia rejonu Guadalcanal z lotnictwa morskiego USA. W miêdzyczasie inne jednostki ucisz¹ lotnisko Henderson Field za pomoc¹ ciê¿kich dzia³ okrêtowych i oczyszcz¹ drogê morsk¹ na Przyl¹dek Lunga, gdzie za kilka dni wysadzimy nasze wojska. Kiedy tylko nasza pozycja w rejonie Tassafaronga zostanie wzmocniona, przeprowadzimy decyduj¹cy atak na amerykañsk¹ piechotê morsk¹ broni¹c¹ Henderson Field i zepchniemy ich do zatoki Aola, prosto w szalej¹ce fale morskie.>
+<SantaCruzVictoryDb>(*JA) <Piloci i marynarze Floty Cesarskiej, jesteœmy dumni z waszego zwyciêstwa! Niszcz¹c nieprzyjacielsk¹ flotê pokazaliœcie naszym szatañskim wrogom moc mêstwa floty Kido Butai. Teraz lotniskowce wroga le¿¹ na dnie oceanu, a dziêki wielkiej operacji zaopatrzeniowej, nasze wojska na Guadalcanal przygotowuj¹ ostatni¹ ofensywê, która rozbije pozosta³e stanowiska przeklêtych marines. Doskona³a robota!>
+<SantaCruzDefeatDb>(*JA) <Ponieœliœmy pora¿kê i nasza sytuacja na Guadalcanal jest bardzo zagro¿ona. Mo¿emy tylko liczyæ, ¿e admira³ Abe rozbije okrêty amerykañskie w bitwie morskiej, ale jest to ma³o prawdopodobne, gdy¿ wróg ma silne wsparcie lotnictwa morskiego, którego nie zdo³aliœmy dziœ wyeliminowaæ.>
+<SantaCruzDb>(*JA) <Wróg poniós³ ciê¿kie straty, ale ten wysi³ek kosztowa³ nas ¿ycia wielu naszych kolegów walcz¹cych na morzu i w powietrzu. Nieprzyjacielskich okrêtów broni³y nowe szybkostrzelne dzia³ka przeciwlotnicze, które zebra³y krwawe ¿niwo wœród naszych samolotów. Odwaga naszych pilotów pozwoli³a jednak przekuæ to starcie w wielkie zwyciêstwo, zemstê za pora¿kê pod Midway. Teraz kiedy flota Kido Butai wykona³o zadanie, Admira³ Abe i jego jednostki morskie musz¹ zadaæ ostatni cios Marynarce USA na wodach Guadalcanal.>
+
+<Marianas1Br>(nJA)	<Wed³ug naszych prognoz, wróg mia³ uderzyæ najpierw na Palau - ale pope³niliœmy b³¹d. Amerykañskie statki wkrótce znajd¹ siê poœród archipelagu Marianów - na szczêœcie na tê ewentualnoœæ równie¿ jesteœmy przygotowani. Plan admira³a Toyody opiera siê g³ównie na wykorzystaniu naszych myœliwców startuj¹cych z l¹du do pokrzy¿owania planów wroga w pierwszych dniach bitwy. Potem przybêd¹ okrêty admira³a Ozawy, które zniszcz¹ pozosta³e amerykañskie jednostki morskie. To dobry plan i ma on szanse powodzenia, je¿eli wszyscy, zarówno Armia jak i Marynarka, dok³adnie wype³ni¹ swoje zadania.>
+<Marianas1Br>(aJA)	<Wed³ug naszych prognoz, wróg mia³ uderzyæ najpierw na Palau - ale pope³niliœmy b³¹d. Amerykañskie statki wkrótce znajd¹ siê poœród archipelagu Marianów - na szczêœcie na tê ewentualnoœæ równie¿ jesteœmy przygotowani. Liczne jednostki lotnictwa Armii s¹ rozmieszczone na wyspach Guam, Sajpan i Tinian, gdzie oczekuj¹ na pojawienie siê zachodnich diab³ów. Kiedy tylko wykryjemy wrogie samoloty, musimy je bezzw³ocznie zaatakowaæ, aby u³atwiæ zadanie lotnictwu floty, które spróbuje uderzyæ na nieprzyjacielskie grupy bojowe. S¹dzimy, ¿e jest szansa zamieniæ to starcie w now¹ "bitwê na wyniszczenie", któr¹ rozstrzygniemy na swoj¹ korzyœæ: liczymy na ciebie!>
+<Marianas1VictoryDb>(*JA)	<Gratulacje, samuraju! Atak floty Kido Butai by³ niezwykle skuteczny i te zachodnie diab³y d³ugo nie zapomn¹ tej bolesnej lekcji, jak¹ zgotowali im nasi waleczni ¿o³nierze. Zatopiliœmy wiele nieprzyjacielskich statków, a inwazja na Mariany zosta³a od³o¿ona. Admira³owie Toyoda, Ozawa, Kurita i Nagumo wkrótce zaplanuj¹ now¹ ofensywê, która pozwoli nam odzyskaæ inicjatywê na œrodkowym Pacyfiku. Ostateczne zwyciêstwo coraz bardziej siê przybli¿a!>
+<Marianas1DefeatDb>(*JA)	<S³ysza³em ju¿ o oficerach pope³niaj¹cych seppuku za hañbê nawet mniejsz¹ ni¿ ta, która nas spotka³a. Bitwa o Mariany zamiast staæ siê naszym zwyciêstwem zamieni³a siê w druzgoc¹c¹ klêskê! Flota Kido Butai chyba nigdy nie podŸwignie siê po pora¿ce, któr¹ zgotowa³y nam tutaj zaskakuj¹co sprawne lotniskowce nieprzyjaciela. Przegrupujmy si³y i przygotujmy siê na ostatni desperacki wysi³ek...>
+<Marianas1Db>(*JA)		<Nie uda³o nam siê zadaæ wrogowi powa¿niejszych strat, a sami straciliœmy du¿¹ czêœæ naszych si³ lotniczych. To ponury dzieñ dla floty Kido Butai, nawet mimo faktu, i¿ straty wœród jednostek morskich nie s¹ zbyt du¿e. Musimy pomyœleæ o nastêpnych operacjach: Flota Cesarska nadal ma szansê postawiæ zdecydowany opór wobec amerykañskiego natarcia, kiedy wrogowie napadn¹ na Filipiny. Ale je¿eli marzy nam siê jeszcze zwyciêstwo, nie mo¿emy sobie pozwoliæ na pora¿kê.>
+<Marianas1Br>(*US)		<Nasz nastêpny cel to Mariany. Celem operacji Forager jest inwazja na trzy najwa¿niejsze wyspy tego archipelagu, gdzie za³o¿ymy wysuniête bazy dla naszej marynarki i bombowców dalekiego zasiêgu. Podobnie jak przy poprzednich ofensywach tego typu, musicie dok³adnie oczyœciæ bazy lotnicze nieprzyjaciela w okolicy, a potem wspieraæ bezpoœrednio nasze si³y desantowe. Pamiêtajcie tylko, ¿e tym razem nie atakujemy jakiegoœ atoliku - nasz cel to prawdziwe, du¿e wyspy z prawdziwymi fortyfikacjami i systemem obrony. Mamy nadziejê, ¿e japoñska Flota Ruchoma spróbuje wydaæ nam bitwê w tym rejonie: b¹dŸcie przygotowani na liczne zadania patrolowe oraz poszukiwanie celów, je¿eli nie znajdziemy ich g³ównych si³. Je¿eli dojdzie do konfrontacji, bêdzie to decyduj¹ce starcie: Mariany musz¹ staæ siê grobem Floty Ruchomej.>
+<Marianas1VictoryDb>(*US)	<Dobra robota ch³opcy, Guam, Sajpan i Tinian wpad³y w nasze rêce przy znacznie mniejszych stratach ni¿ siê spodziewaliœmy. Flota Po³¹czona d¹¿y³a do decyduj¹cej bitwy - i dosta³a to czego chcia³a, ale wynik starcia na pewno nie ucieszy³ Japoñczyków. Marynarka Cesarska ponios³a ciê¿kie straty, których nie bêdzie w stanie ³atwo uzupe³niæ. Liczba samolotów okrêtowych równie¿ zosta³a przetrzebiona - tysi¹ce japoñskich lotników zginê³o w ci¹gu tych kilku dni walki. Zadaliœmy Marynarce Cesarskiej g³êboki cios, z którego nigdy siê nie otrz¹œnie.>
+<Marianas1DefeatDb>(*US)	<Nie doceniæ wroga to kosztowny b³¹d - tak jak ca³a operacja Forager BY£A b³êdem. Napotkaliœmy nieprzewidziany, silny opór wroga i ponieœliœmy ciê¿kie straty zarówno na ziemi jak i na morzu. Musimy wycofaæ siê na wschód i pozostawiæ wyspy w japoñskich rêkach. Flota Ruchoma pokaza³a, ¿e pomimo wczeœniejszych klêsk nie straci³a wysokiej wartoœci bojowej. Co za bolesne rozczarowanie!>
+<Marianas1Db>(*US)		<Guam, Saipan i Tinian s¹ w naszych rêkach. Bitwa na l¹dzie przebiega³a wed³ug planów - choæ nasze straty by³y wy¿sze ni¿ przewidywaliœmy - ale starcie morskie pozostawi³o uczucie niedosytu. Mimo skutecznych ataków ³odzi podwodnych i wysi³ków naszych lotników, g³ówna czêœæ si³ wroga umknê³a ponosz¹c niewielkie straty. Admira³ Spruance nie doczeka³ siê decyduj¹cego zwyciêstwa, na które liczy³. Musimy poczekaæ ³adnych parê tygodni na kolejn¹ równie dogodn¹ okazjê. Ale spisaliœcie siê dobrze - "wielkie strzelanie do kaczek na Marianach" udowodni³o, ¿e za³ogi japoñskiego lotnictwa morskiego s¹ znacznie gorzej wyszkolone ni¿ dawniej.>
+
+<Marianas2Br>(nJA)	<Wed³ug naszych prognoz, wróg mia³ uderzyæ najpierw na Palau - ale pope³niliœmy b³¹d. Amerykañskie statki wkrótce znajd¹ siê poœród archipelagu Marianów - na szczêœcie na tê ewentualnoœæ równie¿ jesteœmy przygotowani. Plan admira³a Toyody opiera siê g³ównie na wykorzystaniu naszych myœliwców startuj¹cych z l¹du do pokrzy¿owania planów wroga w pierwszych dniach bitwy. Potem przybêd¹ okrêty admira³a Ozawy, które zniszcz¹ pozosta³e amerykañskie jednostki morskie. To dobry plan i ma on szanse powodzenia, je¿eli wszyscy, zarówno Armia jak i Marynarka, dok³adnie wype³ni¹ swoje zadania.>
+<Marianas3Br>(aJA)	<Wed³ug naszych prognoz, wróg mia³ uderzyæ najpierw na Palau - ale pope³niliœmy b³¹d. Amerykañskie statki wkrótce znajd¹ siê poœród archipelagu Marianów - na szczêœcie na tê ewentualnoœæ równie¿ jesteœmy przygotowani. Liczne jednostki lotnictwa Armii s¹ rozmieszczone na wyspach Guam, Sajpan i Tinian, gdzie oczekuj¹ na pojawienie siê zachodnich diab³ów. Kiedy tylko wykryjemy wrogie samoloty, musimy je bezzw³ocznie zaatakowaæ, aby u³atwiæ zadanie lotnictwu floty, które spróbuje uderzyæ na nieprzyjacielskie grupy bojowe. S¹dzimy, ¿e jest szansa zamieniæ to starcie w now¹ "bitwê na wyniszczenie", któr¹ rozstrzygniemy na swoj¹ korzyœæ: liczymy na ciebie!>
+<Marianas3VictoryDb>(*JA)	<Gratulacje, samuraju! Atak floty Kido Butai by³ niezwykle skuteczny i te zachodnie diab³y d³ugo nie zapomn¹ tej bolesnej lekcji, jak¹ zgotowali im nasi waleczni ¿o³nierze. Zatopiliœmy wiele nieprzyjacielskich statków, a inwazja na Mariany zosta³a od³o¿ona. Admira³owie Toyoda, Ozawa, Kurita i Nagumo wkrótce zaplanuj¹ now¹ ofensywê, która pozwoli nam odzyskaæ inicjatywê na œrodkowym Pacyfiku. Ostateczne zwyciêstwo coraz bardziej siê przybli¿a!>
+<Marianas3DefeatDb>(*JA)	<S³ysza³em ju¿ o oficerach pope³niaj¹cych seppuku za hañbê nawet mniejsz¹ ni¿ ta, która nas spotka³a. Bitwa o Mariany zamiast staæ siê naszym zwyciêstwem zamieni³a siê w druzgoc¹c¹ klêskê! Flota Kido Butai chyba nigdy nie podŸwignie siê po pora¿ce, któr¹ zgotowa³y nam tutaj zaskakuj¹co sprawne lotniskowce nieprzyjaciela. Przegrupujmy si³y i przygotujmy siê na ostatni desperacki wysi³ek...>
+<Marianas3Db>(*JA)		<Nie uda³o nam siê zadaæ wrogowi powa¿niejszych strat, a sami straciliœmy du¿¹ czêœæ naszych si³ lotniczych. To ponury dzieñ dla floty Kido Butai, nawet mimo faktu, i¿ straty wœród jednostek morskich nie s¹ zbyt du¿e. Musimy pomyœleæ o nastêpnych operacjach: Flota Cesarska nadal ma szansê postawiæ zdecydowany opór wobec amerykañskiego natarcia, kiedy wrogowie napadn¹ na Filipiny. Ale je¿eli marzy nam siê jeszcze zwyciêstwo, nie mo¿emy sobie pozwoliæ na pora¿kê.>
+<Marianas3Br>(*US)		<Nasz nastêpny cel to Mariany. Celem operacji Forager jest inwazja na trzy najwa¿niejsze wyspy tego archipelagu, gdzie za³o¿ymy wysuniête bazy dla naszej marynarki i bombowców dalekiego zasiêgu. Podobnie jak przy poprzednich ofensywach tego typu, musicie dok³adnie oczyœciæ bazy lotnicze nieprzyjaciela w okolicy, a potem wspieraæ bezpoœrednio nasze si³y desantowe. Pamiêtajcie tylko, ¿e tym razem nie atakujemy jakiegoœ atoliku - nasz cel to prawdziwe, du¿e wyspy z prawdziwymi fortyfikacjami i systemem obrony. Mamy nadziejê, ¿e japoñska Flota Ruchoma spróbuje wydaæ nam bitwê w tym rejonie: b¹dŸcie przygotowani na liczne zadania patrolowe oraz poszukiwanie celów, je¿eli nie znajdziemy ich g³ównych si³. Je¿eli dojdzie do konfrontacji, bêdzie to decyduj¹ce starcie: Mariany musz¹ staæ siê grobem Floty Ruchomej.>
+<Marianas3VictoryDb>(*US)	<Dobra robota ch³opcy, Guam, Sajpan i Tinian wpad³y w nasze rêce przy znacznie mniejszych stratach ni¿ siê spodziewaliœmy. Flota Po³¹czona d¹¿y³a do decyduj¹cej bitwy - i dosta³a to czego chcia³a, ale wynik starcia na pewno nie ucieszy³ Japoñczyków. Marynarka Cesarska ponios³a ciê¿kie straty, których nie bêdzie w stanie ³atwo uzupe³niæ. Liczba samolotów okrêtowych równie¿ zosta³a przetrzebiona - tysi¹ce japoñskich lotników zginê³o w ci¹gu tych kilku dni walki. Zadaliœmy Marynarce Cesarskiej g³êboki cios, z którego nigdy siê nie otrz¹œnie.>
+<Marianas3DefeatDb>(*US)	<Nie doceniæ wroga to kosztowny b³¹d - tak jak ca³a operacja Forager BY£A b³êdem. Napotkaliœmy nieprzewidziany, silny opór wroga i ponieœliœmy ciê¿kie straty zarówno na ziemi jak i na morzu. Musimy wycofaæ siê na wschód i pozostawiæ wyspy w japoñskich rêkach. Flota Ruchoma pokaza³a, ¿e pomimo wczeœniejszych klêsk nie straci³a wysokiej wartoœci bojowej. Co za bolesne rozczarowanie!>
+<Marianas3Db>(*US)		<Guam, Saipan i Tinian s¹ w naszych rêkach. Bitwa na l¹dzie przebiega³a wed³ug planów - choæ nasze straty by³y wy¿sze ni¿ przewidywaliœmy - ale starcie morskie pozostawi³o uczucie niedosytu. Mimo skutecznych ataków ³odzi podwodnych i wysi³ków naszych lotników, g³ówna czêœæ si³ wroga umknê³a ponosz¹c niewielkie straty. Admira³ Spruance nie doczeka³ siê decyduj¹cego zwyciêstwa, na które liczy³. Musimy poczekaæ ³adnych parê tygodni na kolejn¹ równie dogodn¹ okazjê. Ale spisaliœcie siê dobrze - "wielkie strzelanie do kaczek na Marianach" udowodni³o, ¿e za³ogi japoñskiego lotnictwa morskiego s¹ znacznie gorzej wyszkolone ni¿ dawniej.>
+
+<SingaporeBr>(nJA)	<¯o³nierze Marynarki Cesarskiej, wybi³a godzina waszej chwa³y! Wszystkie za³ogi lotnictwa Marynarki stacjonuj¹ce w Indochinach zosta³y skierowane do operacji ofensywnej na Pó³wyspie Malajskim przeciwko okrutnym wojskom despotycznych Brytyjczyków. Bombowce musz¹ daæ siê we znaki nieprzyjacielskim statkom i uderzyæ w angielskie lotniska i sk³ady towarów. Myœliwce bêd¹ os³aniaæ rejony ataków przed maszynami Buffalo i Hurricane angielskiego RAF-u - doœwiadczenie i wspania³e umiejêtnoœci naszych pilotów z pewnoœci¹ zapewni¹ nam zwyciêstwo. Do samolotów i niech ¿yje Cesarstwo!>
+<SingaporeVictoryDb>(nJA)	<Nie spodziewaliœmy siê, ¿e pójdzie nam tak lekko. Genera³ Yamashita pokierowa³ wojskami z ogromn¹ bieg³oœci¹ i opanowa³ fortecê Singapur poœlednimi jednostkami. Lotnicy wspaniale zneutralizowali brytyjsk¹ flotê dalekowschodni¹ i jednostki lokalne RAF. Rz¹dy bia³ych w tym rejonie œwiata to ju¿ historia - dziêki tobie i twoim towarzyszom broni! Teraz musimy wkroczyæ do Birmy i do Indii - a potem zafundujemy sobie wakacje w Kalkucie.>
+<SingaporeDefeatDb>(nJA)	<Operacja nie przebieg³a pomyœlnie, a genera³ Yamashita nie zdo³a³ wyzyskaæ efektu zaskoczenia. Brytyjczycy czekali na nas - w powietrzu, na morzu i na l¹dzie. Nie uda³o nam siê wy³¹czyæ floty wroga, która zada³a naszej marynarce powa¿ne straty. Nie z³amaliœmy te¿ dominacji RAF w powietrzu na Pó³wyspem Malajskim. Sztab Generalny w Tokio jest g³êboko rozczarowany nasz¹ postaw¹ i opracowuje nowe plany, aby zrekompensowaæ tê pora¿kê.>
+<SingaporeDb>(nJA)		<Operacja by³a trudna, ale wreszcie uda³o nam siê wyprzeæ Brytyjczyków z Pó³wyspu Malajskiego. Straty by³y nieuniknione, ale cel uœwiêca³ wszelkie ofiary. Forteca Singapur to ju¿ historia, a nasze si³y mog¹ uderzyæ na Birmê i Holenderskie Indie Wschodnie, aby dokoñczyæ nasz¹ ekspansjê w Azji Po³udniowej.> <SingaporeBr>(aUK)		<Kilka godzin temu Japonia wypowiedzia³a wojnê Stanom Zjednoczonym atakuj¹c Flotê Pacyfiku stoj¹c¹ na kotwicy w Pearl Harbour. To dla nas jednoczeœnie dobra i z³a wiadomoœæ: dobre jest to, ¿e mo¿emy teraz liczyæ na pomoc USA w walce z pañstwami Osi. Niepokoj¹cy natomiast jest fakt, ¿e w najbli¿szych dniach bardzo prawdopodobny jest desant si³ japoñskich na Pó³wyspie Malajskim. Musimy byæ przygotowani na ka¿d¹ ewentualnoœæ. Dziœ wieczorem Marynarka Królewska wyp³ynie z Singapuru na poszukiwanie japoñskich transportowców. RAF ma za zadanie os³aniaæ statki oraz miasto Singapur, które z pewnoœci¹ nied³ugo zostanie zaatakowane z powietrza. Losy zwyciêstwa lub klêski na Malajach spoczywaj¹ w du¿ej mierze na barkach lotników RAF: nie zawiedŸcie nas i zniszczcie napastników albo Singapur bêdzie musia³ walczyæ o przetrwanie.>
+<SingaporeBr>(*U*)		<Kilka godzin temu Japonia wypowiedzia³a wojnê Stanom Zjednoczonym atakuj¹c Flotê Pacyfiku stoj¹c¹ na kotwicy w Pearl Harbour. To dla nas jednoczeœnie dobra i z³a wiadomoœæ: dobre jest to, ¿e mo¿emy teraz liczyæ na pomoc USA w walce z pañstwami Osi. Niepokoj¹cy natomiast jest fakt, ¿e w najbli¿szych dniach bardzo prawdopodobny jest desant si³ japoñskich na Pó³wyspie Malajskim. Musimy byæ przygotowani na ka¿d¹ ewentualnoœæ. Dziœ wieczorem Marynarka Królewska wyp³ynie z Singapuru na poszukiwanie japoñskich transportowców. RAF ma za zadanie os³aniaæ statki oraz miasto Singapur, które z pewnoœci¹ nied³ugo zostanie zaatakowane z powietrza. Losy zwyciêstwa lub klêski na Malajach spoczywaj¹ w du¿ej mierze na barkach lotników RAF: nie zawiedŸcie nas i zniszczcie napastników albo Singapur bêdzie musia³ walczyæ o przetrwanie.>
+<SingaporeVictoryDb>(*U*)	<Gratulacje, panowie! Japoñska oœmiornica zosta³a powstrzymana na progu Malajów. Oddzia³y Yamashity zosta³y odepchniête i musia³y siê okopaæ, aby broniæ siê przed naszymi kontratakami. Armia Cesarska dozna³a pierwszej pora¿ki, w du¿ej mierze dziêki tobie i twoim kolegom. Singapur jest bezpieczny i mo¿emy zacz¹æ planowaæ w jaki sposób na dobre usun¹æ st¹d Japoñczyków...>
+<SingaporeDefeatDb>(*U*)	<Nie byliœmy w stanie przeciwstawiæ siê przewa¿aj¹cym japoñskim si³om inwazyjnym. Nasze straty na morzu i w powietrzu uniemo¿liwi³y nam obronê wybrze¿y Pó³wyspu Malajskiego przed desantami wroga. Genera³ Yamashita, który ju¿ doczeka³ siê przydomku "Tygrys Malajów" z ³atwoœci¹ opanowa³ ca³y pó³wysep i tak zwan¹, po¿a³owania godn¹, "fortecê" Singapur. To ca³kowita klêska! Tysi¹ce ¿o³nierzy wojsk Brytyjskiej Wspólnoty Narodów musia³o poddaæ siê bez jednego wystrza³u. Czy po tak gorzkiej lekcji Brytyjczycy jeszcze kiedykolwiek bêd¹ w stanie powróciæ na Daleki Wschód?>
+<SingaporeDb>(*U*)		<Zrobiliœmy wszystko, co w naszej mocy, ale Malaje i Singapur w koñcu wpad³y w rêce wroga po wielu tygodniach zaciek³ych walk i krwawych szturmów. Dziêki dobremu dowodzeniu, nasze wojska nie zosta³y otoczone i w dobrym stanie wycofa³y siê do Birmy. Tam musimy stoczyæ prawdziw¹ bitwê o przysz³oœæ Imperium Brytyjskiego na Dalekim Wschodzie!>
+
+<Singapore2Br>(aJA)	<¯o³nierze Armii Cesarskiej, wybi³a godzina waszej chwa³y! Wszystkie za³ogi lotnictwa Armii stacjonuj¹ce w Indochinach zosta³y skierowane do operacji ofensywnej na Pó³wyspie Malajskim przeciwko okrutnym wojskom despotycznych Brytyjczyków. Bombowce musz¹ daæ siê we znaki nieprzyjacielskim statkom i uderzyæ w angielskie lotniska i sk³ady towarów. Myœliwce bêd¹ os³aniaæ rejony ataków przed maszynami Buffalo i Hurricane angielskiego RAF-u - doœwiadczenie i wspania³e umiejêtnoœci naszych pilotów z pewnoœci¹ zapewni¹ nam zwyciêstwo. Do samolotów i niech ¿yje Cesarstwo!>
+<Singapore2VictoryDb>(aJA)	<Nie spodziewaliœmy siê, ¿e pójdzie nam tak lekko. Genera³ Yamashita pokierowa³ wojskami z ogromn¹ bieg³oœci¹ i opanowa³ fortecê Singapur poœlednimi jednostkami. Lotnicy wspaniale zneutralizowali brytyjsk¹ flotê dalekowschodni¹ i jednostki lokalne RAF. Rz¹dy bia³ych w tym rejonie œwiata to ju¿ historia - dziêki tobie i twoim towarzyszom broni! Teraz musimy wkroczyæ do Birmy i do Indii - a potem zafundujemy sobie wakacje w Kalkucie.>
+<Singapore2DefeatDb>(aJA)	<Operacja nie przebieg³a pomyœlnie, a genera³ Yamashita nie zdo³a³ wyzyskaæ efektu zaskoczenia. Brytyjczycy czekali na nas - w powietrzu, na morzu i na l¹dzie. Nie uda³o nam siê wy³¹czyæ floty wroga, która zada³a naszej marynarce powa¿ne straty. Nie z³amaliœmy te¿ dominacji RAF w powietrzu na Pó³wyspem Malajskim. Sztab Generalny w Tokio jest g³êboko rozczarowany nasz¹ postaw¹ i opracowuje nowe plany, aby zrekompensowaæ tê pora¿kê.>
+<Singapore2Db>(aJA)		<Operacja by³a trudna, ale wreszcie uda³o nam siê wyprzeæ Brytyjczyków z Pó³wyspu Malajskiego. Straty by³y nieuniknione, ale cel uœwiêca³ wszelkie ofiary. Forteca Singapur to ju¿ historia, a nasze si³y mog¹ uderzyæ na Birmê i Holenderskie Indie Wschodnie, aby dokoñczyæ nasz¹ ekspansjê w Azji Po³udniowej.> <SingaporeBr>(aUK)		<Kilka godzin temu Japonia wypowiedzia³a wojnê Stanom Zjednoczonym atakuj¹c Flotê Pacyfiku stoj¹c¹ na kotwicy w Pearl Harbour. To dla nas jednoczeœnie dobra i z³a wiadomoœæ: dobre jest to, ¿e mo¿emy teraz liczyæ na pomoc USA w walce z pañstwami Osi. Niepokoj¹cy natomiast jest fakt, ¿e w najbli¿szych dniach bardzo prawdopodobny jest desant si³ japoñskich na Pó³wyspie Malajskim. Musimy byæ przygotowani na ka¿d¹ ewentualnoœæ. Dziœ wieczorem Marynarka Królewska wyp³ynie z Singapuru na poszukiwanie japoñskich transportowców. RAF ma za zadanie os³aniaæ statki oraz miasto Singapur, które z pewnoœci¹ nied³ugo zostanie zaatakowane z powietrza. Losy zwyciêstwa lub klêski na Malajach spoczywaj¹ w du¿ej mierze na barkach lotników RAF: nie zawiedŸcie nas i zniszczcie napastników albo Singapur bêdzie musia³ walczyæ o przetrwanie.>
+<Singapore2Br>(*U*)		<Kilka godzin temu Japonia wypowiedzia³a wojnê Stanom Zjednoczonym atakuj¹c Flotê Pacyfiku stoj¹c¹ na kotwicy w Pearl Harbour. To dla nas jednoczeœnie dobra i z³a wiadomoœæ: dobre jest to, ¿e mo¿emy teraz liczyæ na pomoc USA w walce z pañstwami Osi. Niepokoj¹cy natomiast jest fakt, ¿e w najbli¿szych dniach bardzo prawdopodobny jest desant si³ japoñskich na Pó³wyspie Malajskim. Musimy byæ przygotowani na ka¿d¹ ewentualnoœæ. Dziœ wieczorem Marynarka Królewska wyp³ynie z Singapuru na poszukiwanie japoñskich transportowców. RAF ma za zadanie os³aniaæ statki oraz miasto Singapur, które z pewnoœci¹ nied³ugo zostanie zaatakowane z powietrza. Losy zwyciêstwa lub klêski na Malajach spoczywaj¹ w du¿ej mierze na barkach lotników RAF: nie zawiedŸcie nas i zniszczcie napastników albo Singapur bêdzie musia³ walczyæ o przetrwanie.>
+<Singapore2VictoryDb>(*U*)	<Gratulacje, panowie! Japoñska oœmiornica zosta³a powstrzymana na progu Malajów. Oddzia³y Yamashity zosta³y odepchniête i musia³y siê okopaæ, aby broniæ siê przed naszymi kontratakami. Armia Cesarska dozna³a pierwszej pora¿ki, w du¿ej mierze dziêki tobie i twoim kolegom. Singapur jest bezpieczny i mo¿emy zacz¹æ planowaæ w jaki sposób na dobre usun¹æ st¹d Japoñczyków...>
+<Singapore2DefeatDb>(*U*)	<Nie byliœmy w stanie przeciwstawiæ siê przewa¿aj¹cym japoñskim si³om inwazyjnym. Nasze straty na morzu i w powietrzu uniemo¿liwi³y nam obronê wybrze¿y Pó³wyspu Malajskiego przed desantami wroga. Genera³ Yamashita, który ju¿ doczeka³ siê przydomku "Tygrys Malajów" z ³atwoœci¹ opanowa³ ca³y pó³wysep i tak zwan¹, po¿a³owania godn¹, "fortecê" Singapur. To ca³kowita klêska! Tysi¹ce ¿o³nierzy wojsk Brytyjskiej Wspólnoty Narodów musia³o poddaæ siê bez jednego wystrza³u. Czy po tak gorzkiej lekcji Brytyjczycy jeszcze kiedykolwiek bêd¹ w stanie powróciæ na Daleki Wschód?>
+<Singapore2Db>(*U*)		<Zrobiliœmy wszystko, co w naszej mocy, ale Malaje i Singapur w koñcu wpad³y w rêce wroga po wielu tygodniach zaciek³ych walk i krwawych szturmów. Dziêki dobremu dowodzeniu, nasze wojska nie zosta³y otoczone i w dobrym stanie wycofa³y siê do Birmy. Tam musimy stoczyæ prawdziw¹ bitwê o przysz³oœæ Imperium Brytyjskiego na Dalekim Wschodzie!>
+
+<NewGuineaBr>(*JA)			<Dziêki budowie du¿ych baz lotniczych w Lae i Salamaua uzyskaliœmy mocne podstawy do podboju pozosta³ych obszarów po³udniowej Nowej Gwinei. Zdobycie Buny to logiczna konsekwencja naszego natarcia w tym regionie. Nasz kolejny cel to aliancka warownia, Port Moresby, któr¹ musimy zdobyæ bez wzglêdu na koszty - z l¹du lub z morza. Port Moresby musi wpaœæ w nasze rêce pod po³¹czonym naciskiem Armii Cesarskiej i Marynarki Cesarskiej - wróg znajdzie siê pomiêdzy m³otem a kowad³em! Je¿eli Port Moresby padnie, ju¿ nic nie przeszkodzi naszym zwyciêskim armiom w marszu na Australiê.>
+<NewGuineaVictoryDb>(*JA)	<Droga do Port Moresby zosta³a oczyszczona z si³ l¹dowych nieprzyjaciela. Wojska amerykañskie i australijskie ANZAC nie mog¹ równaæ siê z naszymi samurajami, przywyk³ymi do walk w d¿ungli. Trudne warunki okaza³y siê naszym sprzymierzeñcem i utrudnieniem dla naszych wrogów, którzy pomimo twardego oporu musieli ulec naszej przewadze. Dobra robota, ¿o³nierzu, wojska cesarskie wkrótce wyl¹duj¹ w Australii i ostatecznie zakoñcz¹ nasz¹ walkê o panowanie na po³udniowym Pacyfiku.>	
+<NewGuineaDefeatDb>(*JA)	<Okaza³o siê, ¿e wojska alianckie znacznie lepiej radz¹ sobie w d¿ungli ni¿ siê spodziewaliœmy. B³yskawicznie przystosowali siê do nowych warunków i sprawnie powstrzymali wszystkie nasze operacje, nie daj¹c nam nawet okazji do kontrataku. Ta bitwa od pocz¹tku nie mog³a zostaæ rozstrzygniêta - zwyciêstwo wojsk cesarskich by³o ma³o prawdopodobne, wiêc cieszymy siê, ¿e uda³o siê nam wycofaæ ¿o³nierzy zanim spotka³a nas klêska. Zamiast marnowaæ si³y w tym wielkim bagnie bez widoków na sukces, teraz przynajmniej mo¿emy skierowaæ wojska w inny rejon Pacyfiku, gdzie nasi samuraje bêd¹ bardziej przydatni.>
+<NewGuineaDb>(*JA)			<Pomimo naszych wysi³ków, pasmo Wzgórz Owen i Zatoka Milne pozosta³y w rêkach aliantów. Nie uda³o nam siê wykonaæ za³o¿eñ operacji, ale zadaliœmy wojskom amerykañskim i australijskim ciê¿kie straty, co znacznie utrudni im odbijanie wyspy. Wszelkie plany dowództwa si³ Sprzymierzonych w rejonie po³udniowej Nowej Gwinei s¹ wiêc pokrzy¿owane. Walka w d¿ungli nie jest ju¿ elementem, w którym mamy przewagê. Mimo to, opuszczamy po³udniowo-wschodnie wybrze¿e Nowej Gwinei ze œwiadomoœci¹, ¿e czegoœ tu dokonaliœmy, choæ ostateczny rezultat móg³by byæ jeszcze lepszy...>
+<NewGuineaBr>(*U*)			<Zachodnia czeœæ Nowej Gwinei to dla nas kluczowy obszar podczas kampanii w tym rejonie. To bêdzie walka na l¹dzie i na morzu: musimy wspieraæ piechotê amerykañsk¹, australijsk¹ i nowozelandzk¹, która naciera przez niebezpieczne bagna i wzgórza, a jednoczeœnie musimy bez litoœci niszczyæ konwoje wojsk wroga, które bêd¹ usi³owa³y l¹dowaæ za naszymi liniami zagra¿aj¹c bazie g³ównej w Port Moresby, pomimo naturalnej os³ony jak¹ stanowi pasmo Wzgórz Owen. Musimy odrzuciæ wojska nieprzyjacielskie i opanowaæ lotnisko Buna. To bêdzie pierwszy krok w kierunku wyzwolenia baz Salamaua i Lae od okupacji japoñskiej.>
+<NewGuineaVictoryDb>(*U*)	<Nowa Gwinea to niebezpieczne pole bitwy - niemal tak niebezpieczne jak sami Japoñczycy. Ale uda³o siê! Wojska japoñskie zosta³y zepchniête na dobre. Teraz mamy pewnoœæ, ¿e Japoñczycy nie wtargn¹ ju¿ na po³udnie Nowej Gwinei i mo¿emy pomyœleæ o odzyskaniu pó³nocnej czêœci wyspy. Lae, Nowa Brytania i wybrze¿e pó³nocne nadal czekaj¹ na naszych ¿o³nierzy, wiêc dokoñczmy to, co zaczêliœmy! >
+<NewGuineaDefeatDb>(*U*)	<D¿ungle Nowej Gwinei to najbardziej niebezpieczne miejsce na kuli ziemskiej. Niezdrowe, niebezpieczne warunki, które zdusza³y nasze wysi³ki i doprowadzi³y nasze w¹t³e si³y do skrajnego wyczerpania, zabi³y tyle samo ¿o³nierzy, co japoñskie kule. Teraz musimy wycofaæ siê na po³udniowe wybrze¿e, gdy¿ nie jesteœmy w stanie d³u¿ej przeciwstawiaæ siê japoñskiemu natarciu. Miejmy nadziejê, ¿e nasza klêska nie oznacza zagro¿enia dla Australii, bo kiedy trafimy pod w³adzê Mikado, jeszcze gorzko po¿a³ujemy naszej klêski w d¿ungli...>
+<NewGuineaDb>(*U*)			<Japoñczycy wreszcie zostali wyparci z po³udniowej czêœci Nowej Gwinei - ale kosztowa³o nas to wiele krwi ¿o³nierzy amerykañskich, australijskich i nowozelandzkich wylanej w niekoñcz¹cym siê boju o ka¿dy metr niebezpiecznej d¿ungli... Czy te drzewa i bagna by³y warte ofiary ¿ycia naszych ¿o³nierzy? Je¿eli wzi¹æ pod uwagê, ¿e w praktyce obroniliœmy Australiê przed mackami japoñskiej oœmiornicy, sk³onny jestem odpowiedzieæ: "tak, warto by³o". Dobra robota!>
+
+<NewGuinea1Br>(*JA)			<Dziêki budowie du¿ych baz lotniczych w Lae i Salamaua uzyskaliœmy mocne podstawy do podboju pozosta³ych obszarów po³udniowej Nowej Gwinei. Zdobycie Buny to logiczna konsekwencja naszego natarcia w tym regionie. Nasz kolejny cel to aliancka warownia, Port Moresby, któr¹ musimy zdobyæ bez wzglêdu na koszty - z l¹du lub z morza. Port Moresby musi wpaœæ w nasze rêce pod po³¹czonym naciskiem Armii Cesarskiej i Marynarki Cesarskiej - wróg znajdzie siê pomiêdzy m³otem a kowad³em! Je¿eli Port Moresby padnie, ju¿ nic nie przeszkodzi naszym zwyciêskim armiom w marszu na Australiê.>
+<NewGuinea1VictoryDb>(*JA)	<Droga do Port Moresby zosta³a oczyszczona z si³ l¹dowych nieprzyjaciela. Wojska amerykañskie i australijskie ANZAC nie mog¹ równaæ siê z naszymi samurajami, przywyk³ymi do walk w d¿ungli. Trudne warunki okaza³y siê naszym sprzymierzeñcem i utrudnieniem dla naszych wrogów, którzy pomimo twardego oporu musieli ulec naszej przewadze. Dobra robota, ¿o³nierzu, wojska cesarskie wkrótce wyl¹duj¹ w Australii i ostatecznie zakoñcz¹ nasz¹ walkê o panowanie na po³udniowym Pacyfiku.>	
+<NewGuinea1DefeatDb>(*JA)	<Okaza³o siê, ¿e wojska alianckie znacznie lepiej radz¹ sobie w d¿ungli ni¿ siê spodziewaliœmy. B³yskawicznie przystosowali siê do nowych warunków i sprawnie powstrzymali wszystkie nasze operacje, nie daj¹c nam nawet okazji do kontrataku. Ta bitwa od pocz¹tku nie mog³a zostaæ rozstrzygniêta - zwyciêstwo wojsk cesarskich by³o ma³o prawdopodobne, wiêc cieszymy siê, ¿e uda³o siê nam wycofaæ ¿o³nierzy zanim spotka³a nas klêska. Zamiast marnowaæ si³y w tym wielkim bagnie bez widoków na sukces, teraz przynajmniej mo¿emy skierowaæ wojska w inny rejon Pacyfiku, gdzie nasi samuraje bêd¹ bardziej przydatni.>
+<NewGuinea1Db>(*JA)			<Pomimo naszych wysi³ków, pasmo Wzgórz Owen i Zatoka Milne pozosta³y w rêkach aliantów. Nie uda³o nam siê wykonaæ za³o¿eñ operacji, ale zadaliœmy wojskom amerykañskim i australijskim ciê¿kie straty, co znacznie utrudni im odbijanie wyspy. Wszelkie plany dowództwa si³ Sprzymierzonych w rejonie po³udniowej Nowej Gwinei s¹ wiêc pokrzy¿owane. Walka w d¿ungli nie jest ju¿ elementem, w którym mamy przewagê. Mimo to, opuszczamy po³udniowo-wschodnie wybrze¿e Nowej Gwinei ze œwiadomoœci¹, ¿e czegoœ tu dokonaliœmy, choæ ostateczny rezultat móg³by byæ jeszcze lepszy...>
+<NewGuinea1Br>(*U*)			<Zachodnia czeœæ Nowej Gwinei to dla nas kluczowy obszar podczas kampanii w tym rejonie. To bêdzie walka na l¹dzie i na morzu: musimy wspieraæ piechotê amerykañsk¹, australijsk¹ i nowozelandzk¹, która naciera przez niebezpieczne bagna i wzgórza, a jednoczeœnie musimy bez litoœci niszczyæ konwoje wojsk wroga, które bêd¹ usi³owa³y l¹dowaæ za naszymi liniami zagra¿aj¹c bazie g³ównej w Port Moresby, pomimo naturalnej os³ony jak¹ stanowi pasmo Wzgórz Owen. Musimy odrzuciæ wojska nieprzyjacielskie i opanowaæ lotnisko Buna. To bêdzie pierwszy krok w kierunku wyzwolenia baz Salamaua i Lae od okupacji japoñskiej.>
+<NewGuinea1VictoryDb>(*U*)	<Nowa Gwinea to niebezpieczne pole bitwy - niemal tak niebezpieczne jak sami Japoñczycy. Ale uda³o siê! Wojska japoñskie zosta³y zepchniête na dobre. Teraz mamy pewnoœæ, ¿e Japoñczycy nie wtargn¹ ju¿ na po³udnie Nowej Gwinei i mo¿emy pomyœleæ o odzyskaniu pó³nocnej czêœci wyspy. Lae, Nowa Brytania i wybrze¿e pó³nocne nadal czekaj¹ na naszych ¿o³nierzy, wiêc dokoñczmy to, co zaczêliœmy! >
+<NewGuinea1DefeatDb>(*U*)	<D¿ungle Nowej Gwinei to najbardziej niebezpieczne miejsce na kuli ziemskiej. Niezdrowe, niebezpieczne warunki, które zdusza³y nasze wysi³ki i doprowadzi³y nasze w¹t³e si³y do skrajnego wyczerpania, zabi³y tyle samo ¿o³nierzy, co japoñskie kule. Teraz musimy wycofaæ siê na po³udniowe wybrze¿e, gdy¿ nie jesteœmy w stanie d³u¿ej przeciwstawiaæ siê japoñskiemu natarciu. Miejmy nadziejê, ¿e nasza klêska nie oznacza zagro¿enia dla Australii, bo kiedy trafimy pod w³adzê Mikado, jeszcze gorzko po¿a³ujemy naszej klêski w d¿ungli...>
+<NewGuinea1Db>(*U*)			<Japoñczycy wreszcie zostali wyparci z po³udniowej czêœci Nowej Gwinei - ale kosztowa³o nas to wiele krwi ¿o³nierzy amerykañskich, australijskich i nowozelandzkich wylanej w niekoñcz¹cym siê boju o ka¿dy metr niebezpiecznej d¿ungli... Czy te drzewa i bagna by³y warte ofiary ¿ycia naszych ¿o³nierzy? Je¿eli wzi¹æ pod uwagê, ¿e w praktyce obroniliœmy Australiê przed mackami japoñskiej oœmiornicy, sk³onny jestem odpowiedzieæ: "tak, warto by³o". Dobra robota!>
+
+// A text after "special" end mission
+
+<WarIsOver>			<{FULLRANK} {FIRSTNAME} {LASTNAME}! Dla pana wojna siê skoñczy³a.>
+
+
+// Linked codes
+
+<ReconIntercept-F-Scramble>(nU*) <W³aœnie dostrzegliœmy jakiœ przeklêty samolot rozpoznawczy wroga! Obejmie pan dowództwo nad {#a}samolotami {PLANE} i wystartuje pan natychmiast. Nie mo¿na pozwoliæ mu uciec, bo œci¹gnie nam na g³owê ca³¹ flotê!>
+<ReconIntercept-F-Scramble>(*U*) <Nie uda³o siê przechwyciæ japoñskiego samolotu rozpoznawczego, w nasz¹ stronê nadlatuj¹ myœliwce Zero! Mamy do dyspozycji tylko {#a} samoloty {PLANE}. Startowaæ natychmiast!>
+<ReconIntercept-F-Scramble>(*U*) <Nieprzyjacielski samolot rozpoznawczy odkry³ nasz¹ pozycjê i wkrótce w powietrzu pojawi¹ siê bandyci! Mo¿emy poderwaæ w powietrze tylko {#a} {PLANE}. Alarm, {FULLRANK} do maszyny! Startowaæ natychmiast!>
+<ReconIntercept-F-Scramble>(*U*) <Japoñski samolot rozpoznawczy umkn¹³ naszej pogoni, lada chwila spodziewamy siê ataku nieprzyjaciela! W tym momencie mamy do dyspozycji wy³¹cznie {#a} maszyny {PLANE}. Startowaæ natychmiast, {FULLRANK} do samolotu!>
+<ReconIntercept-F-Scramble>(*U*) <Nasz poœcig nie zniszczy³ japoñskich maszyn rozpoznawczych i czeka nas uderzenie z powietrza! Zd¹¿yliœmy przygotowaæ tylko {#a} samoloty {PLANE}, tyle musi nam wystarczyæ. Uwaga, {FULLRANK} wzywany do samolotu, ma pan rozkaz startowaæ natychmiast!>
+<ReconIntercept-F-Scramble>(*U*) <Pomimo naszych wysi³ków, japoñskie samoloty rozpoznawcze umknê³y i powiadomi³y swoje dowództwo o po³o¿eniu naszego zespo³u operacyjnego. Mo¿emy spodziewaæ siê ataku lotniczego. W tej chwili do walki zdatne s¹ tylko {#a} {PLANE}. Uwaga {FULLRANK} {LASTNAME}, proszê siê przygotowaæ do natychmiastowego startu!>
+<ReconIntercept-F-Scramble>(nJA) <Obserwator pok³adowy zauwa¿y³ coœ, co mo¿e byæ nieprzyjacielskim samolotem zwiadowczym. Uwaga {FULLRANK} {LASTNAME}, pañskie zadanie to przygotowaæ {#a} samoloty {PLANE} i natychmiast startowaæ!>
+<ReconIntercept-F-Scramble>(*JA) <Nieprzyjacielski samolot rozpoznawczy odkry³ nasz¹ pozycjê i wkrótce w powietrzu pojawi¹ siê bandyci! Mo¿emy poderwaæ w powietrze tylko {#a} {PLANE}. Alarm, {FULLRANK} do maszyny! Startowaæ natychmiast!>
+<ReconIntercept-F-Scramble>(*JA) <Nie uda³o siê przechwyciæ amerykañskiego samolotu rozpoznawczego, w nasz¹ stronê nadlatuj¹ wrogie myœliwce! Mamy do dyspozycji tylko {#a} samoloty {PLANE}. Startowaæ natychmiast!>
+<ReconIntercept-F-Scramble>(*JA) <Amerykañski samolot rozpoznawczy umkn¹³ naszej pogoni, lada chwila spodziewamy siê ataku nieprzyjaciela! W tym momencie mamy do dyspozycji wy³¹cznie {#a} maszyny {PLANE}. Startowaæ natychmiast, {FULLRANK} do samolotu!>
+<ReconIntercept-F-Scramble>(*JA) <Staraliœmy siê przechwyciæ amerykañskie samoloty rozpoznawcze, ale wszystko na nic. Mo¿emy siê spodziewaæ ataku lotniczego, wiêc poderwiemy w powietrze {#a} samoloty {PLANE} jako os³onê. Szybko, {FULLRANK} jest wzywany na pok³ad startowy!>
+<Scramble-F-ReconCarrier>(*JA) <{FIRSTNAME}, koniecznie musimy wykryæ po³o¿enie nieprzyjacielskiego lotniskowca, który wczeœniej narobi³ nam tyle k³opotów! Zadanie - {LDR_RANK} {LDR_NAME} poprowadzi {#a} maszyny {PLANE} i zbada sektor {SECTOR}.>
+<Scramble-F-ReconCarrier>(nJA) <Piloci, nasz patrol bojowy zaanga¿owa³ siê w walkê z samolotami startuj¹cymi z lotniskowca! {#A} samoloty {PLANE}, nad którymi dowództwo obejmie {LDR_RANK} {LDR_NAME} wystartuj¹ i spróbuj¹ zlokalizowaæ ten okrêt, który prawdopodobnie znajduje siê gdzieœ w sektorze {SECTOR}.>
+<Scramble-F-ReconCarrier>(*JA) <{FIRSTNAME}, musimy znaleŸæ wrogi lotniskowiec, który w³aœnie nas zaatakowa³! Polec¹ {#a} maszyny {PLANE}, dowodzi {LDR_RANK} {LDR_NAME}, zbadacie sektor {SECTOR}.>
+<Scramble-F-ReconCarrier>(*JA) <{FIRSTNAME}, trzeba znaleŸæ lotniskowiec, z którego atakuje nas nieprzyjaciel! Mamy do dyspozycji {#a} maszyny {PLANE}, dowództwo nad lotem obejmuje {LDR_RANK} {LDR_NAME}. Ruszajcie do sektora {SECTOR}.>
+<Scramble-F-ReconCarrier>(*JA) <{FIRSTNAME}, niech bogowie dziœ siê do ciebie uœmiechn¹! Twoje zadanie to odnaleŸæ nieprzyjacielski lotniskowiec, który wczeœniej nas atakowa³. B³ogos³awiony dowódca, {LDR_RANK} {LDR_NAME}, poprowadzi {#a} maszyny {PLANE} do sektora {SECTOR}.>
+<Scramble-S-ReconCarrier>(*U*) <{FIRSTNAME}, koniecznie musimy wykryæ po³o¿enie nieprzyjacielskiego lotniskowca, który wczeœniej narobi³ nam tyle bigosu! Zadanie - {#a} maszyny {PLANE}, nad którymi dowództwo obejmie {LDR_RANK} {LDR_NAME} zbadaj¹ sektor {SECTOR}.>
+<Scramble-S-ReconCarrier>(nU*) <Ch³opcy, nasi piloci ciê¿ko walcz¹ z samolotami wroga startuj¹cymi z lotniskowca! Do roboty, {LDR_RANK} {LDR_NAME} zabierze {#a} maszyny {PLANE} i spróbuje wykryæ ich gniazdo w sektorze {SECTOR}. {FIRSTNAME}, lecisz z nimi!> 
+<Scramble-S-ReconCarrier>(*U*) <{FIRSTNAME}, musimy znaleŸæ wrogi lotniskowiec, który w³aœnie nas zaatakowa³! Polec¹ {#a} maszyny {PLANE}, dowodzi {LDR_RANK} {LDR_NAME}, zbadacie sektor  {SECTOR}.>
+<Scramble-S-ReconCarrier>(*U*) <{FIRSTNAME}, wsiadaj do maszyny. Zbieramy za³ogi do lotu rozpoznawczego, który ma zlokalizowaæ nieprzyjacielski lotniskowiec. Dowództwo obejmie {LDR_RANK} {LDR_NAME}, polec¹ {#a} samoloty {PLANE}, cel to sektor {SECTOR}. Powodzenia!>
+<Scramble-F-AttackCarrier>(nU*) <ZnaleŸliœmy tych ³ajdaków, którzy wczeœniej nas skaleczyli. Teraz nasza kolej! Prêdzej, {LDR_RANK} {LDR_NAME} wraz z grup¹ obejmuj¹c¹ {#a} {PLANE} poleci do sektora {SECTOR} i dam im nauczkê, któr¹ popamiêtaj¹!> 
+<Scramble-F-AttackCarrier>(*U*) <Panowie, œledziliœmy samoloty wroga i wykryliœmy lotniskowiec, z którego nas atakowali. Teraz nasza kolej! Macie zadanie - {LDR_RANK} {LDR_NAME} poprowadzi {#a} {PLANE} do ataku na nieprzyjacielski zespó³ operacyjny w sektorze {SECTOR}.>
+<Scramble-F-AttackCarrier>(*U*) <Nasi zwiadowcy wykryli wrogi lotniskowiec, który nas wczeœniej zaatakowa³, teraz to my im odp³acimy ! Oto rozkaz: {#a} samoloty {PLANE} zaatakuj¹ si³y wroga w sektorze {SECTOR}, {LDR_RANK} {LDR_NAME} stanie na czele operacji.>
+<Scramble-F-AttackCarrier>(*U*) <W porz¹dku ch³opcy, wybi³a godzina chwa³y! Si³y nieprzyjaciela zosta³y zlokalizowane, {LDR_RANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE} i skopie ty³ek temu lotniskowcowi. Cel znajduje siê w sektorze {SECTOR}. Dajcie mi powód do zadowolenia!>
+<Scramble-S-BombCarrier>(nJA) <Nasz tchórzliwy wróg wróci³ prosto na swój lotniskowiec z obawy o swoje nic nie warte ¿ycie. Ku chwale cesarza, {LDR_RANK} {LDR_NAME} poprowadzi grupê licz¹c¹ {#a} maszyny {PLANE}, które bêd¹ eskortowaæ {ESCORTED} podczas ataku na si³y wroga w sektorze {SECTOR}. Trzeba ich ca³kowicie zniszczyæ. Banzai!>
+<Scramble-S-BombCarrier>(*JA) <Dziêki niech bêd¹ bogom! Nie tylko odparliœmy atak wroga, ale te¿ w³aœnie wróci³ samolot rozpoznawczy, który wykry³ po³o¿enie nieprzyjaciela. W sektorze {SECTOR} a¿ roi siê od nieprzyjacielskich okrêtów! Poleci tam {LDR_RANK} {LDR_NAME}, zabierze {#a} samolotami {PLANE}, aby os³aniaæ nasze {ESCORTED} podczas ataku. Niech ¿yje cesarz!>
+<Scramble-S-BombCarrier>(*JA) <Wielki sukces! Nie tylko odparliœmy atak, ale te¿ œledziliœmy samoloty wroga i wykryliœmy po³o¿enie lotniskowca, z którego nas zaatakowali. Teraz nasza kolej, {LDR_RANK} {LDR_NAME} wraz z grup¹ licz¹c¹ {#a} samoloty {PLANE} bêdzie eskortowa³ maszyny {ESCORTED} do ataku na si³y wroga w sektorze {SECTOR}.>
+<Scramble-S-BombCarrier>(*U*) <Dowództwo nad dzisiejsz¹ misj¹ obejmuje {LDR_RANK} {LDR_NAME}. Nasze {#a} samoloty {PLANE} bêd¹ pilnowaæ maszyn {ESCORTED}, ¿eby znowu nie pomylili wielorybów ze statkami. Nasz cel to sektor {SECTOR}. SprowadŸcie ich z powrotem ca³o, ch³opcy. Powodzenia!>
+<Scramble-S-BombCarrier>(*U*) <Panowie, œledziliœmy wrogie samoloty i odkryliœmy po³o¿enie lotniskowca, z którego nas zaatakowali. Teraz nasza kolej! Na stanowiska, {LDR_RANK} {LDR_NAME} weŸmie {#a} samoloty {PLANE} i odeskortuje grupê {ESCORTED} do ataku na si³y nieprzyjacielskie w sektorze {SECTOR}.>
+<Scramble-S-BombCarrier>(*JA) <Nasi zwiadowcy wykryli wrogi lotniskowiec, który nas wczeœniej zaatakowa³, teraz to my im odp³acimy ! Szybciej, {#a} samoloty {PLANE} zaatakuj¹ zespó³ operacyjny wroga w sektorze {SECTOR}, {LDR_RANK} {LDR_NAME} stanie na czele operacji.>
+<Scramble-S-BombCarrier>(*U*) <Po odparciu ataku nieprzyjaciela uda³o nam siê odkryæ ich gniazdo! Dajmy im szko³ê! {ESCORTED} polec¹ do sektora {SECTOR} w eskorcie licz¹cej {#a} maszyny {PLANE}, dowodzi {LDR_RANK} {LDR_NAME}.>
+
+// These lines are generic mission description, used only if specific one was not found. Should never happen.
+
+<Generic>(*U*) <Dziewczynki! Dzisiaj dowodzi {LDR_RANK} {LDR_NAME}, jego kolej, aby poprowadziæ {#a} maszyny {PLANE} do sektora nieprzyjacielskiego {SECTOR}. Zróbcie im piek³o!>
+<Generic>(*U*) <Pos³uchajcie, ch³opaki! Dzisiaj {LDR_RANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE} do sektora {SECTOR}.>
+<Generic>(*U*) <Panowie, w dzisiejszej misji dowodzi {LDR_RANK} {LDR_NAME}, wysy³amy {#a} samoloty {PLANE} do sektora {SECTOR}.>
+<Generic>(*JA) <Samuraje! Dzielny {LDR_RANK} {LDR_NAME} poprowadzi ciebie i ca³¹ grupê licz¹c¹ {#a} samoloty {PLANE} do sektora {SECTOR}. Miejmy nadziejê, ¿e tym razem nieprzyjaciel nie umknie przed nami jak zaj¹c!>
+<Generic>(*JA) <Samuraje! Dzisiaj {LDR_RANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE} do sektora {SECTOR}.>
+<Generic>(*JA) <Samuraje! w dzisiejszej misji dowodzi {LDR_RANK} {LDR_NAME}, wysy³amy {#a} samoloty {PLANE} do sektora {SECTOR}.>
+
+// These descriptions should be normally used for all escort (*Bomb*) missions. There may be more specific texts
+// for some mission types.
+
+<GenericEscort>(*U*)	<Panowie! Dzisiaj eskortujemy {ESCORTED} do sektora {SECTOR}. Zadanie wykona grupa licz¹ca {#a} samoloty {PLANE}, dowodzi {LDR_RANK} {LDR_NAME}.>
+<GenericEscort>(*U*)	<Mam dziœ dla was zadanie os³onowe, ch³opcy. Samoloty {ESCORTED} bêd¹ pud³owaæ do wszystkich celów, jakie znajd¹ w okolicy, wy macie zadbaæ, aby nie mogli zwaliæ winy na Japoñczyków. Zadanie os³ony {ESCORTED} wykonaj¹ {#a} maszyny {PLANE}, nad którymi dowództwo obejmie {LDR_RANK} {LDR_NAME}. Powodzenia!>
+<GenericEscort>(*U*)	<Panowie!\nW tej misji bêdziecie eskortowaæ samoloty {ESCORTED}. Pilnujcie bombowców przez ca³y czas i nie wdawajcie siê w indywidualne pojedynki z japoñskimi myœliwcami.>
+<GenericEscort>(*U*)	<Panowie!\nWygl¹da na to, ¿e dzisiaj siê zabawimy. Bêdziecie eskortowaæ maszyny {ESCORTED} do sektora {SECTOR} i z powrotem. Spodziewajcie siê wielu Japoñców w powietrzu.>
+<GenericEscort>(*U*)	<Dobra, ch³opcy, pos³uchajcie! Mam dobre wieœci dla tych, którzy chc¹ sobie podkrêciæ statystykê zestrzeleñ. Jeszcze dzisiaj grupa {ESCORTED} bêdzie wykonywaæ silny atak na bardzo wa¿ny cel. Japoñczycy na pewno tam bêd¹. Jako podstawowa os³ona czeka was sporo roboty. Misjê wykonaj¹ {#A} samoloty {PLANE}, prowadzi {LDR_RANK} {LDR_NAME}.>
+<GenericEscort>(*U*)	<Panowie!\nDzisiejsz¹ misjê wykonaj¹ {#a} maszyny {PLANE}, zadanie to os³ona samolotów {ESCORTED}. Dowódca, {LDR_FULLRANK} {LDR_NAME} robi³ to ju¿ wielokrotnie, wiêc nie bêdê strzêpi³ jêzyka. Leæcie powy¿ej bombowców, zachowajcie œcis³¹ dyscyplinê radiow¹, nie anga¿ujcie siê w pojedynki indywidualne. Miejcie oczy dooko³a g³owy i postarajcie siê wróciæ ca³o do domu.>
+<GenericEscort>(*U*)    <Wiem, ¿e jesteœcie zmêczeni, ale ktoœ to musi zrobiæ! Dziœ os³aniamy samoloty {ESCORTED} podczas lotu do sektora {SECTOR}. Macie {#a} maszyny {PLANE}, lotem dowodzi {LDR_RANK} {LDR_NAME}. Niech Opatrznoœæ nad wami czuwa!>
+<GenericEscort>(*U*)    <Te panienki z {ESCORTED} strasznie siê dzisiaj mazgai³y, wiêc musimy utrzymaæ wrogów z dala od ich ty³eczków, a mamy do dyspozycji tylko {#a} maszyny {PLANE}. G³ówn¹ niañk¹ bêdzie {LDR_RANK} {LDR_NAME}, starajcie siê go trzymaæ!>
+<GenericEscort>(*U*)    <Ch³opaki, talent nawigacyjny tych os³ów z {ESCORTED} jest ju¿ tak wielki, ¿e musimy dzisiaj pokazaæ im drogê do sektora {SECTOR}, a potem zadbaæ, ¿eby nie zgubili siê podczas powrotu. Za³o¿ê siê, ¿e jutro {LDR_RANK} {LDR_NAME} bêdzie musia³ wzi¹æ te nasze biedne {#a} {PLANE}i samemu bombardowaæ wroga! >
+<GenericEscort>(*U*)	<Panowie! Nowe rozkazy: {LDR_RANK} {LDR_NAME} obejmie dowództwo nad grup¹ obejmuj¹c¹ {#a} samoloty {PLANE}, wasze zadanie to eskortowaæ samoloty {ESCORTED} do sektora {SECTOR}.>
+<GenericEscort>(*U*)	<Dziœ {ESCORTED} znowu potrzebuj¹ os³ony dla swoich leniwych ty³ków, pewnie chc¹ pobiæ rekord w marnowaniu bomb wuja Sama, {LDR_RANK} {LDR_NAME} obejmie dowództwo nad grup¹ licz¹c¹ {#a} samoloty {PLANE} i dopilnuje, aby {ESCORTED} mog³y siê przybli¿yæ do swojego rekordu.>
+<GenericEscort>(*U*)	<Panowie!n\Nasze {ESCORTED} jeszcze raz wymagaj¹ waszej pomocy. Pamiêtajcie: NIE wydawajcie siê w pojedynki indywidualne i NIE oddalajcie siê od bombowców. Musicie byæ przy nich przez ca³y czas!>
+<GenericEscort>(*U*)	<Wygl¹da na to, panowie, ¿e bêdziecie mieli okazjê napotkaæ dzisiaj paru bandytów. Macie os³aniaæ samoloty {ESCORTED} podczas lotu do sektora {SECTOR} i z powrotem! Wypatrujcie nieprzyjacielskich maszyn, na pewno siê pojawi¹.>
+<GenericEscort>(*U*)	<Pos³uchajcie, dziewczynki ! Nasi leniwi koledzy z za³óg {ESCORTED} bêd¹ dziœ robiæ piek³o ¿ó³tkom. Dla paru z was bêdzie to okazja, aby domalowaæ parê symboli zestrzeleñ na swoich maszynach. Na misjê polec¹ {#a} samoloty {PLANE}, dowodzi {LDR_RANK} {LDR_NAME}. Powodzenia, panowie!>
+<GenericEscort>(*U*)	<Dziewczynki! Dowódca, {LDR_FULLRANK} {LDR_NAME} poprowadzi grupê licz¹c¹ {#a} samoloty {PLANE} w kolejnej misji os³onowej. Dopilnujcie, aby {ESCORTED} dotar³y do celu i bezpiecznie wróci³y! Robicie to nie pierwszy raz, wiêc liczê, ¿e wkrótce znowu zobaczê wasze radosne gêby.>
+<GenericEscort>(*U*)	<Dobra, ch³opaki, parê maszyn {ESCORTED} leci do sektora {SECTOR} i poprosili nas o zabezpieczenie, chocia¿ przecie¿ gumki s¹ w armii za darmo! Wiem, ¿e niespecjalnie lubicie misje os³onowe, ale musimy sprowadziæ te œwiête krowy do domu w jednym kawa³ku. Wysy³amy tam {#a} samoloty {PLANE}, poprowadzi je {LDR_RANK} {LDR_NAME}.>
+<GenericEscort>(*U*)	<Te spasione leniuchy z {ESCORTED} lec¹ do sektora {SECTOR} i wrogie myœliwce bêd¹ tam strzelaæ do nich jak do kaczek. Jak zwykle, wzywaj¹ nas do os³ony. Dowództwo nad naszymi podopiecznymi obejmuje {LDR_RANK} {LDR_NAME}, bêdzie mia³ do dyspozycji {#a} samoloty {PLANE}.>
+<GenericEscort>(*U*)	<Znowu potrzebuj¹ naszych us³ug. Samoloty {ESCORTED} zmierzaj¹ do sektora {SECTOR} - {LDR_RANK} {LDR_NAME} poprowadzi grupê os³onow¹, licz¹c¹ {#a} maszyny {PLANE}. Miejcie oczy otwarte i sprowadŸcie swoje pud³a w jednym kawa³ku!>
+
+<GenericEscort>(*JA)	<Samuraje! Dzisiaj eskortujemy {ESCORTED} do sektora {SECTOR}. Zadanie wykona grupa obejmuj¹ca {#a} samolotów {PLANE}, dowodzi {LDR_RANK} {LDR_NAME}.>
+<GenericEscort>(*JA)	<Mam dziœ dla was zadanie os³onowe, samuraje. Samoloty {ESCORTED} bêd¹ atakowaæ cele w okolicy, wy macie zadbaæ, aby nie szatañscy Amerykanie nie przeszkodzili im w tym zadaniu. Zadanie os³ony {ESCORTED} wykonaj¹ {#a} maszyny {PLANE}, nad którymi dowództwo obejmie {LDR_RANK} {LDR_NAME}. Powodzenia!>
+<GenericEscort>(*JA)	<Samuraje!\nW tej misji bêdziecie eskortowaæ samoloty {ESCORTED}. Spodziewamy siê silnych ataków myœliwskich, pilnujcie bombowców przez ca³y czas i nie wdawajcie siê w indywidualne pojedynki z wrogimi myœliwcami.>
+<GenericEscort>(*JA)	<Samuraje!\nWygl¹da na to, ¿e wkrótce znowu czeka nas chwalebne zwyciêstwo. Bêdziecie eskortowaæ maszyny {ESCORTED} do sektora {SECTOR} i z powrotem. Spodziewajcie siê wielu samolotów amerykañskich w powietrzu.>
+<GenericEscort>(*JA)	<Piloci! Mam dobre wieœci dla tych, którzy s¹ g³odni walki jak tygrysy. Jeszcze dzisiaj grupa {ESCORTED} bêdzie wykonywaæ silny atak na bardzo wa¿ny cel. Jankesi na pewno tam bêd¹. Jako podstawowa os³ona czeka was ciê¿kie zadanie. Misjê wykonaj¹ {#a} samoloty {PLANE}, prowadzi {LDR_RANK} {LDR_NAME}.>
+<GenericEscort>(*JA)	<Uwaga!\nDzisiejsza misja dla maszyn {PLANE} to os³ona samolotów {ESCORTED}. Os³ona bêdzie liczyæ {#a} samoloty. Dowódca, {LDR_FULLRANK} {LDR_NAME} robi³ to ju¿ wielokrotnie, wiêc nie muszê mówiæ zbyt du¿o. Leæcie powy¿ej bombowców, zachowajcie œcis³¹ dyscyplinê radiow¹, nie anga¿ujcie siê w pojedynki indywidualne. Miejcie oczy dooko³a g³owy i postarajcie siê wróciæ ca³o do domu ku chwale Syna Niebios.>
+<GenericEscort>(*JA)	<Samuraje! Nasze maszyny {ESCORTED} bêd¹ atakowaæ sektor {SECTOR}. Ku chwale Syna Niebios, weŸmiecie {#a} samoloty {PLANE} i bêdziecie os³aniaæ tê grupê. Waszym dowódc¹ jest {LDR_RANK} {LDR_NAME}.>
+<GenericEscort>(*JA)	<Wojownicy! Dziœ nasze {ESCORTED} po raz kolejny zadadz¹ wrogowi bolesne straty, {#a} maszyny {PLANE}, nad którymi dowództwo obejmie {LDR_RANK} {LDR_NAME}, bêd¹ os³aniaæ naszych nieulêk³ych pilotów bombowców!>
+<GenericEscort>(*JA)	<Samuraje!\nMusicie os³aniaæ nasze samoloty {ESCORTED} podczas lotu nad cel i z powrotem! Nie wdawajcie siê w indywidualne pojedynki z wrogiem, oni bêd¹ chcieli odci¹gn¹æ was od waszego g³ównego zadania, którym jest os³ona!>
+<GenericEscort>(*JA)	<Samuraje!>\n Maszyny {ESCORTED} lec¹ do sektora {SECTOR}, rozpoznanie wskazuje, ¿e znajduje siê tam wiele samolotów amerykañskich. Zadbajcie, aby nasze bombowce ca³o powróci³y do domu!> 
+<GenericEscort>(*JA)	<Nasze {ESCORTED} zgotuj¹ Amerykanom piek³o! Wasz dowódca, {LDR_RANK} {LDR_NAME} poprowadzi grupê licz¹c¹ {#a} maszyny {PLANE}, macie os³aniaæ {ESCORTED}. Miejcie oczy szeroko otwarte, na pewno trafi siê wiele okazji, aby zestrzeliæ bandytów!>
+<GenericEscort>(*JA)	<Uwaga!\n{#A} maszyny {PLANE}, którymi dowodzi {LDR_FULLRANK} {LDR_NAME} bêd¹ os³aniaæ nasze samoloty {ESCORTED}. Robiliœcie to ju¿ tyle razy, dzielnym wojownikom cesarskim nie muszê chyba mówiæ o co chodzi. Dopilnujcie, aby bombowce bezpiecznie wróci³y do domu!>
+<GenericEscort>(*JA)	<Admira³ rozkaza³ wykonaæ uderzenie w sektorze {SECTOR}. Zadanie wykonaj¹ samoloty {ESCORTED}, os³ona obejmuje {#a} maszyny {PLANE}. Dowódca, {LDR_RANK} {LDR_NAME} poprowadzi nas do zwyciêstwa w imiê naszego ukochanego Cesarza!>
+<GenericEscort>(*JA)	< Sektor {SECTOR} to wasz cel na dziœ. Nasze samoloty {ESCORTED} bêd¹ badaæ ten rejon w poszukiwaniu ewentualnych celów, zaœ {#a} maszyny {PLANE}, które poprowadzi {LDR_RANK} {LDR_NAME}, zapewni¹ nam bezpoœrednie wsparcie i dominacjê w powietrzu.>
+<GenericEscort>(*JA)	<Dziœ atakujemy sektor {SECTOR}. Do tego celu admira³ wyznaczy³ samoloty {ESCORTED}, os³ona liczy {#a} maszyny {PLANE}. Honor dowodzenia tymi samolotami w boju otrzymuje {LDR_RANK} {LDR_NAME}. Powodzenia!>
+
+<KamikazeEscort>(*JA) <Mamy dziœ misjê specjaln¹: bêdziecie eskortowaæ maszyny {ESCORTED} ze Specjalnych Jednostek Szturmowych - oni musza dolecieæ do sektora {SECTOR} bez szwanku! W tej misji {#a} samoloty {PLANE}, które poprowadzi {LDR_RANK} {LDR_NAME}, bêd¹ os³aniaæ naszych wielkich wojowników!>
+<KamikazeEscort>(*JA) <Dziœ eskortujemy {ESCORTED} ze Specjalnych Jednostek Szturmowych lec¹ce do sektora {SECTOR}. Zadanie bêd¹ wykonywaæ {#a} samoloty {PLANE}, którymi dowodzi³ bêdzie {LDR_RANK} {LDR_NAME}. Musisz powróciæ do bazy i zdaæ raport z wyników ataku.>
+<KamikazeEscort>(*JA) <Boski Wiatr znowu przyniesie œmieræ naszym wrogom. Dowódca lotu, {LDR_RANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE} i bêdzie mia³ zaszczyt os³aniaæ maszyny {ESCORTED} ze Specjalnych Jednostek Szturmowych, które bêd¹ wykonywaæ swój œwiêty, honorowy obowi¹zek w sektorze {SECTOR}. Po powrocie z³o¿ycie admira³owi meldunek o sukcesie. Banzai! >
+
+
+// These are used by default for all intercept and naval recon missions
+// (fleets, subs). You don't know what you will see there.
+
+<GenericPatrol>(*U*) <Panowie!\n{#A} samoloty  {PLANE}, które poprowadzi {LDR_FULLRANK} {LDR_NAME} wykonaj¹ dziœ zadanie patrolowe w sektorze {SECTOR}. W tym teatrze dzia³añ mamy ogromn¹ przewagê liczebn¹, ale Japoñczycy nadal potrafi¹ poderwaæ w powietrze doœæ samolotów, aby opanowaæ przestrzeñ w wybranych punktach. Inne grupy myœliwców patroluj¹ s¹siednie sektory, wiêc staraj siê jak najszybciej rozpoznaæ dostrze¿one samoloty i upewnij siê, ¿e to na pewno ¿ó³tek zanim otworzysz ogieñ.>
+<GenericPatrol>(*U*) <Proszê o uwagê!\nDziœ musicie wykonaæ patrol w sektorze {SECTOR}, misjê tê wykonaj¹ {#A} samoloty {PLANE}, dowodzi {LDR_FULLRANK} {LDR_NAME}. Mimo, i¿ wydaje siê, ¿e Japoñczycy ponieœli ciê¿kie straty, nadal mog¹ stawiæ za¿arty opór! Miejcie oczy szeroko otwarte i wróæcie do nas w jednym kawa³ku!>
+<GenericPatrol>(*U*) <Panowie!\n{#A} maszyny {PLANE}, którymi dowodziæ bêdzie {LDR_FULLRANK} {LDR_NAME} bêd¹ dziœ patrolowaæ sektor {SECTOR}. Spodziewajcie siê niespodzianek! Japoñczycy s¹ coraz bardziej zuchwali w swoich atakach. Nie przynieœcie nam wstydu!>
+<GenericPatrol>(*U*) <{#A} samoloty {PLANE}, którymi dowodziæ bêdzie {LDR_FULLRANK} {LDR_NAME} maj¹ za zadanie zapewniæ nam dominacjê lotnicz¹ w sektorze {SECTOR}. Mamy powody s¹dziæ, ¿e jest to dla Japoñczyków sektor tranzytowy - twoja misja to przerwaæ ich aktywnoœæ w tym rejonie. Powodzenia!>
+<GenericPatrol>(*JA) <Samuraje!\nDowódca, {LDR_FULLRANK} {LDR_NAME} poprowadzi was na misjê patrolow¹, miejcie oczy szeroko otwarte, a duch wasz niech bêdzie czujny! Otrzymaliœmy liczne meldunki o aktywnoœci wroga!>
+<GenericPatrol>(*JA) <Piloci!\nDziœ grupa, na czele której stanie {LDR_FULLRANK} {LDR_NAME} bêdzie polowaæ na Jankesów w sektorze {SECTOR}. Jak wiecie, aktywnoœæ w powietrzu w ostatnich dniach by³a wyj¹tkowo silna, wiêc musicie ca³y czas uwa¿aæ!>
+<GenericPatrol>(*JA) <Piloci!\n Sektor {SECTOR} ma zasadnicze znaczenie dla naszych operacji i trzeba go oczyœciæ z samolotów nieprzyjacielskich. Dowódca misji, {LDR_FULLRANK} {LDR_NAME} poprowadzi polowanie na Jankesów. Jak wiecie, aktywnoœæ w powietrzu w ostatnich dniach by³a wyj¹tkowo silna, wiêc musicie ca³y czas uwa¿aæ!>
+<GenericPatrol>(*JA) <Piloci!\n Sektor {SECTOR} ma zasadnicze znaczenie dla naszych operacji i trzeba go oczyœciæ z samolotów nieprzyjacielskich. Dowódca misji, {LDR_FULLRANK} {LDR_NAME} poprowadzi polowanie na Jankesów. Jak wiecie, aktywnoœæ w powietrzu w ostatnich dniach by³a wyj¹tkowo silna, wiêc musicie ca³y czas uwa¿aæ!>
+
+
+// These descriptions should be normally used for all *Patrol* and *Defend* mission. There may be more specific texts
+// for some mission types.
+
+<Reinforce>(*U*) <Zamelduje siê {LDR_FULLRANK} {LDR_NAME}, nasze {ESCORTED} s¹ atakowane przez przewa¿aj¹ce si³y wroga w sektorze {SECTOR}. Startowaæ natychmiast!>
+<Reinforce>(*U*) <Nasze {ESCORTED} s¹ atakowane w sektorze {SECTOR}, natychmiast poderwaæ maszyny w powietrze, {LDR_FULLRANK} {LDR_NAME} obejmie dowództwo!>
+<Reinforce>(*U*) <Nasi ch³opcy napotkali na znaczne ugrupowanie przeciwnika w sektorze {SECTOR}. Dowódca lotu, {LDR_FULLRANK} {LDR_NAME} poprowadzi posi³ki licz¹ce {#a} samoloty {PLANE}. Twoje zadanie to wesprzeæ {ESCORTED} i odeprzeæ atak nieprzyjaciela.>
+<Reinforce>(*JA) <Dowódca {LDR_FULLRANK} {LDR_NAME} poprowadzi uderzenie wspieraj¹ce w sektorze {SECTOR}, gdzie nasze {ESCORTED} napotka³y na znaczne si³y wroga. Niech Bog nad wami czuwa!>
+<Reinforce>(*JA) <Nasze {ESCORTED} s¹ atakowane w sektorze {SECTOR}, natychmiast poderwaæ maszyny w powietrze, {LDR_FULLRANK} {LDR_NAME} obejmie dowództwo!>
+<Reinforce>(*JA) <Do samolotu zg³osi siê {LDR_FULLRANK} {LDR_NAME}, nasze {ESCORTED} s¹ atakowane przez przewa¿aj¹ce si³y wroga w sektorze {SECTOR}. Startowaæ natychmiast!>
+
+<GenericIntercept>(*U*) <Podajê rozkaz! Nasze zadanie to patrol lotniczy w sektorze {SECTOR}. Pan {LDR_RANK} {LDR_NAME} poprowadzi na patrol {#a} samoloty {PLANE}. Znacie swoje zadania. Powodzenia!>
+<GenericIntercept>(*U*) <Rejon patrolowania na dziœ to sektor {SECTOR}. Du¿e prawdopodobieñstwa napotkania samolotów nieprzyjacielskich w powietrzu. {#A} samoloty {PLANE} poprowadzi {LDR_RANK} {LDR_NAME}, start za 15 minut.> 
+<GenericIntercept>(*U*) <Dobra,{LDR_FULLRANK} {LDR_NAME} zg³osi siê na s³u¿bê! Cel podstawowy na dziœ to patrol przestrzeni powietrznej w sektorze {SECTOR}. Je¿eli wiêcej ni¿ jedna grupa wrogich samolotów pojawi siê w danym regionie, nie œcigaæ nieprzyjaciela poza wyznaczonym obszarem. Do tej misji otrzymujesz {#a} samoloty.>
+<GenericIntercept>(*U*) <Panowie!\n{#A} samoloty {PLANE}, nad którymi dowództwo obejmie {LDR_FULLRANK} {LDR_NAME}, bêdzie dziœ wykonywaæ zadania patrolowe w sektorze {SECTOR}. W tym rejonie dzia³añ mamy znaczn¹ przewagê liczebn¹, ale Japoñczycy od czasu do czasu podrywaj¹ w tej okolicy wystarczaj¹co du¿o samolotów, aby przej¹æ kontrolê nad przestrzeni¹ powietrzn¹. Inne grupy bêd¹ patrolowaæ s¹siednie sektory, wiêc jak najszybciej rozpoznaj wypatrzone samoloty i zanim poci¹gniesz za spust, upewnij siê, ¿e to na pewno Japoñczycy.>
+<GenericIntercept>(*U*) <Panowie!\nDzisiaj {LDR_FULLRANK} {LDR_NAME} wraz ze swoj¹ grup¹ bêdzie polowa³ na Japoñczyków w sektorze {SECTOR}. Jak wiecie, w ostatnich dniach walka w powietrzu bardzo siê zaostrzy³a, wiêc zachowajcie bezwzglêdn¹ czujnoœæ!>
+<GenericIntercept>(*U*) <Cel patrolowy na dzieñ dzisiejszy to sektor {SECTOR}. Szukamy samolotów nieprzyjacielskich w powietrzu i na ziemi. W ostatnich dniach walki w tym rejonie by³y szczególnie intensywne, wiêc istnieje du¿a szansa napotkania wrogich samolotów.>
+<GenericIntercept>(*U*) <Koniec leniuchowania, ch³opcy, spójrzcie na mapê, sektor {SECTOR} to wasz cel na dzisiaj. Prowadzi {LDR_FULLRANK} {LDR_NAME}. Do wykonania misji wyznaczono {#a} samoloty {PLANE}.>
+<GenericIntercept>(*U*) <Pobudka, panowie! {#a} samoloty {PLANE} wykonaj¹ patrol w sektorze {SECTOR}, {LDR_RANK} {LDR_NAME} obejmuje dowództwo nad lotem.>
+<GenericIntercept>(*U*) <Ruszcie swoje t³uste dupska, mamy robotê do zrobienia! {#A} samoloty {PLANE} wykona patrol w sektorze {SECTOR}, lot prowadzi {LDR_RANK} {LDR_NAME}.>
+<GenericIntercept>(*U*) <Czas zapracowaæ na ¿arcie! Wysy³amy patrol w sektor {SECTOR}, {LDR_FULLRANK} {LDR_NAME} poprowadzi tam {#a} samoloty {PLANE}.Miejcie oczy szeroko otwarte!>
+<GenericIntercept>(*U*) <Panowie! Zauwa¿y³em, ¿e zaczynacie siê nudziæ, wiêc za³atwi³em wam misjê patrolow¹ - {#a} samoloty {PLANE} polec¹ do sektora {SECTOR}. Dowództwo nad misj¹ obejmie {LDR_FULLRANK} {LDR_NAME}.>
+<GenericIntercept>(*U*) <Ruszaæ siê, dziewczynki! Dzisiaj macie do wykonania misjê patrolow¹ w sektorze {SECTOR}, tym razem poprowadzi was {LDR_FULLRANK} {LDR_NAME}. I pamiêtajcie... lepiej nie zamoczcie sobie ciuchów! >
+<GenericIntercept>(*U*) <Dzisiaj patrolujecie sektor {SECTOR}, dowodzi {LDR_FULLRANK} {LDR_NAME}. Rejon zbadaj¹ {#a} samoloty {PLANE}. Najprawdopodobniej napotkacie nieprzyjació³, wiêc miejcie oczy otwarte!>
+<GenericIntercept>(*U*) <Czas zapisaæ siê w historii! Mamy dzisiaj kolejn¹ misjê patrolow¹ w sektorze {SECTOR}, {LDR_FULLRANK} {LDR_NAME} poprowadzi tam {#a} samoloty {PLANE}. Dajcie mi powód do dumy: nakarmcie Japoñcami rybki!>
+
+<GenericIntercept>(*JA) <Nasze zadanie to patrol lotniczy w sektorze {SECTOR}. Do maszyn, {LDR_RANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE}. Znacie swoje zadania. Banzai!>
+<GenericIntercept>(*JA) <Nasze zadanie to patrol lotniczy w sektorze {SECTOR}. Do maszyn, {LDR_RANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE}. Znacie swoje zadania. Powodzenia!>
+<GenericIntercept>(*JA) <Rejon misji na dzieñ dzisiejszy to sektor {SECTOR}. W ostatnich dniach w tym rejonie zanotowano intensywne starcia z si³ami nieprzyjacielskimi. Macie prawie stuprocentow¹ szansê napotkania wrogich samolotów. Polec¹ {#a} maszyny {PLANE}, dowodzi {LDR_RANK} {LDR_NAME}, start za 15 minut!> 
+<GenericIntercept>(*JA) <Na s³u¿bê zamelduje siê {LDR_FULLRANK} {LDR_NAME}! Cel podstawowy na dziœ to patrol przestrzeni powietrznej w sektorze {SECTOR}. Je¿eli wiêcej ni¿ jedna grupa wrogich samolotów pojawi siê w danym regionie, nie œcigaæ nieprzyjaciela poza wyznaczonym obszarem. Do tej misji otrzymujesz {#a} samoloty.>
+<GenericIntercept>(*JA) <Samuraje!\n{#A} samoloty {PLANE}, nad którymi dowództwo obejmie {LDR_FULLRANK} {LDR_NAME}, bêdzie dziœ wykonywaæ zadania patrolowe w sektorze {SECTOR}. W tym rejonie dzia³añ mamy znaczn¹ przewagê liczebn¹, ale Amerykanie od czasu do czasu podrywaj¹ wystarczaj¹co du¿o samolotów, aby przej¹æ kontrolê nad przestrzeni¹ powietrzn¹. Inne grupy bêd¹ patrolowaæ s¹siednie sektory, wiêc jak najszybciej rozpoznaj wypatrzone samoloty i zanim poci¹gniesz za spust, upewnij siê, ¿e to na pewno nieprzyjaciel.>
+<GenericIntercept>(*JA) <Piloci!\n Dzisiaj {LDR_FULLRANK} {LDR_NAME} wraz ze swoj¹ grup¹ bêdzie polowa³ na Amerykañców w sektorze {SECTOR}. Jak wiecie, w ostatnich dniach walka w powietrzu bardzo siê zaostrzy³a, wiêc zachowajcie bezwzglêdn¹ czujnoœæ!>
+<GenericIntercept>(*JA) <Cel patrolowy na dzieñ dzisiejszy to sektor {SECTOR}. Szukamy samolotów nieprzyjacielskich w powietrzu i na ziemi. W ostatnich dniach walki w tym rejonie by³y szczególnie intensywne, wiêc istnieje du¿a szansa napotkania wrogich samolotów.>
+<GenericIntercept>(*JA) <Spójrzcie na mapê, sektor {SECTOR} to wasz cel na dzisiaj. Prowadzi {LDR_FULLRANK} {LDR_NAME}. Do wykonania misji wyznaczono {#a} samoloty {PLANE}. Banzai!>
+
+//<ReconIntercept>(*JA)	<Dziœ patrolujemy sektor {SECTOR}. Naszym najwa¿niejszym zadaniem jest przechwycenie wszelkich nieprzyjacielskich lotów rozpoznawczych. {#A} samoloty {PLANE}, które poprowadzi {LDR_RANK} {LDR_NAME} startuj¹ za 15 minut.> 
+//<ReconIntercept>(*U*)	<Dziœ patrolujemy sektor {SECTOR}. Naszym najwa¿niejszym zadaniem jest przechwycenie wszelkich nieprzyjacielskich lotów rozpoznawczych. {#A} samoloty {PLANE}, które poprowadzi {LDR_RANK} {LDR_NAME} startuj¹ za 15 minut.> 
+
+<AttackPearlHarbor>		<Piloci! Wybi³a godzina decyduj¹cej bitwy. Sukces naszej misji zale¿y od zaskoczenia. Naczelny Wódz przes³a³ nam wiadomoœæ z ¿yczeniami powodzenia. \n \nWszyscy znaj¹ swoje zadania. Pan {LDR_RANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE} nad port w Pearl Harbor. >
+<BombPearlHarbor>		<Piloci! Wybi³a godzina decyduj¹cej bitwy. Sukces naszej misji zale¿y od zaskoczenia. Naczelny Wódz przes³a³ nam wiadomoœæ z ¿yczeniami powodzenia. \n \nWszyscy znaj¹ swoje zadania. Pan {LDR_RANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE} nad port w Pearl Harbor. Macie os³aniaæ maszyny {ESCORTED} przed atakami nieprzyjacielskich myœliwców oraz niszczyæ wrogie lotniska, tak aby uniemo¿liwiæ Amerykanom atak odwetowy na nasz¹ flotê.>
+<ScramblePearlHarbor>	<Atak lotniczy na Pearl Harbor! To nie s¹ æwiczenia!>
+
+// These are defaults for ground attack missions. There should normally be more specific description
+
+<GenericAttack>(*U*)	<Pos³uchajcie! Dzisiaj uderzamy na wroga w sektorze {SECTOR}. Grupa bojowa, któr¹ poprowadzi {LDR_RANK} {LDR_NAME}, bêdzie liczyæ {#a} samoloty {PLANE}. Znacie swoje zadania. Powodzenia!>
+<GenericAttack>(*U*)	<W porz¹deczku, mamy dziœ kolejny atak na cele naziemne. Cel mieœci siê tutaj, w sektorze {SECTOR}. W ostatnich dniach zaobserwowano znaczne ruchy si³ wroga, tote¿ oprócz celu podstawowego w okolicy napotkacie wiele celów dodatkowych. Dowódca misji, {LDR_RANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE}, start za 15 minut.> 
+<GenericAttack>(*U*)	<Zg³osi siê {LDR_FULLRANK} {LDR_NAME}! Mam dziœ dla pañskich ch³opców kolejne zadania ostrza³u celów naziemnych. Wasz cel znajduje siê tu, w sektorze {SECTOR}. Tym razem nie bêdzie ³atwo. Obejmujesz dowództwo nad grup¹ licz¹c¹ {#a} samoloty {PLANE}.>
+<GenericAttack>(*U*)	<Panowie!\nSpójrzcie na mapê, celem misji jest sektor {SECTOR}. Ten rejon nie jest dok³adnie rozpoznany, nie jesteœmy pewni, co tam napotkacie, ale na pewno bêdzie tam coœ wartego uwagi. Aktywnoœæ wroga w tamtym rejonie by³a bardzo wysoka, wiêc z pewnoœci¹ celów bêdzie w bród. Zobaczymy, na co was staæ. Macie do dyspozycji {#a} samoloty {PLANE}.>
+<GenericAttack>(*U*)	<Panowie!\nCzas z³o¿yæ naszym japoñskim przyjacio³om niezapowiedzian¹ wizytê i zrobiæ im szczególny prezent w sektorze {SECTOR}. Dowódca lotu, {LDR_FULLRANK} {LDR_NAME} poprowadzi tam grupê licz¹c¹ {#a} samoloty {PLANE}.>
+<GenericAttack>(*U*)	<Panowie!\nDowództwo chyba dowiedzia³o siê, ¿e skar¿ycie siê, i¿ wszystkie misje s¹ takie same. Dziœ wiêc dla odmiany coœ zupe³nie innego! Bêdziecie atakowaæ cele naziemne w sektorze {SECTOR}.>
+<GenericAttack>(*U*)	<Panowie!\nJak ju¿ siê pewnie zorientowaliœcie po amunicji, któr¹ ³aduj¹ do maszyn mechanicy, dziœ znów bêdziecie atakowaæ cele naziemne. Wasze zadanie: sektor {SECTOR}. Polec¹ {#a} samoloty {PLANE}, dowództwo obejmuje {LDR_RANK} {LDR_NAME}. Start za 20 minut.>
+
+<GenericAttack>(*JA)	<Uwaga! Dzisiaj uderzamy na wroga w sektorze {SECTOR}. Grupa, któr¹ poprowadzi {LDR_RANK} {LDR_NAME}, bêdzie liczyæ {#a} samoloty {PLANE}. Znacie swoje zadania. Powodzenia!>
+<GenericAttack>(*JA)	<Piloci, mamy dziœ kolejny atak na cele naziemne. Cel mieœci siê tutaj w sektorze {SECTOR}. W ostatnich dniach zaobserwowano znaczne ruchy si³ wroga, tote¿ oprócz celu podstawowego w okolicy napotkacie wiele celów dodatkowych. Dowódca misji, {LDR_RANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE}, start za 15 minut.> 
+<GenericAttack>(*JA)	<Zg³osi siê {LDR_FULLRANK} {LDR_NAME}! Mam dziœ dla pañskich ch³opców kolejne zadania ostrza³u celów naziemnych. Wasz cel znajduje siê tu, w sektorze {SECTOR}. Tym razem nie bêdzie ³atwo. Obejmujesz dowództwo nad grup¹ licz¹c¹ {#a} samoloty {PLANE}.>
+<GenericAttack>(*JA)	<Samuraje!\nSpójrzcie na mapê, celem misji jest sektor {SECTOR}. Ten rejon nie jest dok³adnie rozpoznany, nie jesteœmy pewni, co tam napotkacie, ale na pewno bêdzie tam coœ wartego uwagi. Aktywnoœæ wroga w tamtym rejonie by³a bardzo wysoka, wiêc z pewnoœci¹ celów bêdzie w bród. Zobaczymy, na co was staæ. Macie do dyspozycji {#a} samoloty {PLANE}.>
+<GenericAttack>(*JA)	<Samuraje!\nCzas z³o¿yæ naszym amerykañskim przyjacio³om niezapowiedzian¹ wizytê i zrobiæ im szczególny prezent w sektorze {SECTOR}. Dowódca lotu, {LDR_FULLRANK} {LDR_NAME} poprowadzi tam grupê licz¹c¹ {#a} samoloty {PLANE}.>
+<GenericAttack>(*JA)	<Samuraje!\nDowództwo chyba dowiedzia³o siê, ¿e skar¿ycie siê, i¿ wszystkie misje s¹ takie same. Dziœ wiêc dla odmiany coœ zupe³nie innego! Bêdziecie atakowaæ cele naziemne w sektorze {SECTOR}.>
+<GenericAttack>(*JA)	<Piloci!\nJak ju¿ siê pewnie zorientowaliœcie po amunicji, któr¹ ³aduj¹ do maszyn mechanicy, dziœ znów bêdziecie atakowaæ cele naziemne. Wasze zadanie: sektor {SECTOR}. Polec¹ {#a} samoloty {PLANE}, dowództwo obejmuje {LDR_RANK} {LDR_NAME}. Start za 20 minut!>
+
+// Specific Attack type texts. Please add more variants.
+
+<AttackTrain>(*U*)		<Pos³uchajcie! Dzisiaj uderzamy na wroga w sektorze {SECTOR}. Grupa bojowa, któr¹ poprowadzi {LDR_RANK} {LDR_NAME}, bêdzie liczyæ {#a} samoloty {PLANE}. Wasz podstawowy cel to poci¹gi. Powodzenia!>
+<AttackCars>(*U*)		<W porz¹deczku, mamy dziœ dla was, ch³opcy, kolejny atak na cele naziemne. Cel mieœci siê tutaj w sektorze {SECTOR}. W ostatnich dniach zaobserwowano znaczne ruchy si³ wroga, tote¿ oprócz celu podstawowego w okolicy napotkacie wiele celów dodatkowych. Wyszukujcie i niszczcie nieprzyjacielskie pojazdy, zw³aszcza ciê¿arówki. Nie spodziewamy siê, aby wróg posiada³ w tym rejonie si³y lotnicze, wiêc mo¿ecie ca³e magazynki zu¿yæ na ostrza³ celów naziemnych i nie martwiæ siê o ewentualny atak z powietrza. Dowódca misji, {LDR_RANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE}, start za 15 minut.> 
+<AttackArmor>(*U*)		<Zg³osi siê {LDR_FULLRANK} {LDR_NAME}! Mam dziœ dla pañskich ch³opców kolejne zadania ostrza³u celów naziemnych. Wasz cel znajduje siê tu, w sektorze {SECTOR}. Cele podstawowe to czo³gi nieprzyjacielskie. Tym razem nie bêdzie ³atwo. Obejmujesz dowództwo nad grup¹ licz¹c¹ {#a} samoloty {PLANE}.>
+<AttackAF>(*U*)			<Panowie!\nSpójrzcie na mapê, celem misji jest lotnisko nieprzyjacielskie w sektorze {SECTOR}. Baza jest w pe³nej gotowoœci i z pewnoœci¹ bêdzie tam bardzo niebezpiecznie. Mo¿ecie siê spodziewaæ ciê¿kiego ognia artylerii przeciwlotniczej, wiêc zachowajcie czujnoœæ i wróæcie do nas ca³o. Poka¿cie, na co was staæ! Na misjê polec¹ {#a} {PLANE}.>
+<AttackAF:Tarawa>(*U*)	<Panowie!\nSpójrzcie na mapê, celem misji jest lotnisko nieprzyjacielskie na Tarawie. Musimy je wy³¹czyæ, aby zapewniæ sukces naszemu desantowi. Mo¿ecie siê spodziewaæ ciê¿kiego ognia artylerii przeciwlotniczej, wiêc zachowajcie czujnoœæ i wróæcie do nas ca³o. Poka¿cie, na co was staæ! Na misjê polec¹ {#a} {PLANE}.>
+<AttackAF:Palau>(*U*)	<Panowie!\nSpójrzcie na mapê, celem misji jest najwa¿niejsze lotnisko nieprzyjacielskie na wyspach Palau. Musimy je wy³¹czyæ, aby zapewniæ sukces naszemu desantowi. Mo¿ecie siê spodziewaæ ciê¿kiego ognia artylerii przeciwlotniczej, wiêc zachowajcie czujnoœæ i wróæcie do nas ca³o. Poka¿cie, na co was staæ! Na misjê polec¹ {#a} {PLANE}.>
+<AttackAF:Palau>(*U*)	<Panowie!\nSpójrzcie na mapê, celem misji jest najwa¿niejsze lotnisko nieprzyjacielskie na wyspach Palau. Musimy je wy³¹czyæ, aby zapewniæ sukces naszemu desantowi. Mo¿ecie siê spodziewaæ ciê¿kiego ognia artylerii przeciwlotniczej, wiêc zachowajcie czujnoœæ i wróæcie do nas ca³o. Poka¿cie, na co was staæ! Na misjê polec¹ {#a} {PLANE}.>
+
+<AttackBridge>(*U*)		<Panowie!\nCzas z³o¿yæ naszym japoñskim przyjacio³om niezapowiedzian¹ wizytê i zrobiæ im szczególny prezent w sektorze {SECTOR}. W celu przerwania ³añcucha zaopatrzeniowego nieprzyjaciela, {#a} samoloty {PLANE} zaatakuj¹ most, który tam siê znajduje. Na czele grupy stanie {LDR_FULLRANK} {LDR_NAME}.>
+<AttackStation>(*U*)	<Panowie!\nDowództwo chyba dowiedzia³o siê, ¿e skar¿ycie siê, i¿ wszystkie misje s¹ takie same. Dziœ wiêc dla odmiany coœ zupe³nie innego! Bêdziecie atakowaæ stacjê kolejow¹ w sektorze {SECTOR}.>
+<AttackDepot>(*U*)		<Panowie!\nJak ju¿ siê pewnie zorientowaliœcie po amunicji, któr¹ ³aduj¹ do maszyn mechanicy, dziœ znów bêdziecie atakowaæ cele naziemne. Wasze zadanie: zniszczyæ nieprzyjacielski magazyn w sektorze {SECTOR}. Polec¹ {#a} samoloty {PLANE}, dowództwo obejmuje {LDR_RANK} {LDR_NAME}. Start za 20 minut.>
+<AttackShips>(*U*)		<Pos³uchajcie! Dzisiaj uderzamy na wroga w sektorze {SECTOR}. Grupa bojowa, któr¹ poprowadzi {LDR_RANK} {LDR_NAME}, bêdzie liczyæ {#a} samoloty {PLANE}. Wasz podstawowy cel to statki nieprzyjacielskie. Powodzenia!>
+
+
+<AttackTrain>(*JA)		<Uwaga! Dzisiaj uderzamy na wroga w sektorze {SECTOR}. Grupa bojowa, któr¹ poprowadzi {LDR_RANK} {LDR_NAME}, bêdzie liczyæ {#a} samoloty {PLANE}. Wasz podstawowy cel to poci¹gi. Banzai!>
+<AttackCars>(*JA)		<Uwaga! Mamy dziœ kolejny atak na cele naziemne. Cel mieœci siê tutaj w sektorze {SECTOR}. W ostatnich dniach zaobserwowano znaczne ruchy si³ wroga, tote¿ oprócz celu podstawowego w okolicy napotkacie wiele celów dodatkowych. Wyszukujcie i niszczcie nieprzyjacielskie pojazdy, zw³aszcza ciê¿arówki. Nie spodziewamy siê, aby wróg posiada³ w tym rejonie si³y lotnicze, wiêc mo¿ecie ca³e magazynki zu¿yæ na ostrza³ celów naziemnych i nie martwiæ siê o ewentualny atak z powietrza. Dowódca misji, {LDR_RANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE}, start za 15 minut.> 
+<AttackArmor>(*JA)		<Zg³osi siê {LDR_FULLRANK} {LDR_NAME}! Mam dziœ dla pañskich ch³opców kolejne zadania ostrza³u celów naziemnych. Wasz cel znajduje siê tu, w sektorze {SECTOR}. Cele podstawowe to czo³gi nieprzyjacielskie. Tym razem nie bêdzie ³atwo. Obejmujesz dowództwo nad grup¹ licz¹c¹ {#a} samoloty {PLANE}.>
+<AttackAF>(*JA)			<Piloci!\nSpójrzcie na mapê, celem misji jest lotnisko nieprzyjacielskie w sektorze {SECTOR}. To jedna z amerykañskich baz operacyjnych w tym regionie. Mo¿ecie siê tam oczywiœcie spodziewaæ ciê¿kiego ognia artylerii przeciwlotniczej, wiêc zachowajcie czujnoœæ i wróæcie do nas ca³o. Poka¿cie, na co was staæ! Na misjê polec¹ {#a} {PLANE}.>
+<AttackAF:Wake>(*JA)	<Piloci!\nSpójrzcie na mapê, celem misji jest lotnisko nieprzyjacielskie na wyspie Wake. To jedyna amerykañska baza operacyjna w tym regionie. Mo¿ecie siê tam oczywiœcie spodziewaæ ciê¿kiego ognia artylerii przeciwlotniczej, wiêc zachowajcie czujnoœæ i wróæcie do nas ca³o. Poka¿cie, na co was staæ! Na misjê polec¹ {#a} {PLANE}.>
+<AttackBridge>(*JA)		<Samuraje!\nCzas z³o¿yæ naszym amerykañskim przyjacio³om niezapowiedzian¹ wizytê i zrobiæ im szczególny prezent w sektorze {SECTOR}. W celu przerwania ³añcucha zaopatrzeniowego nieprzyjaciela, {#a} samoloty {PLANE} zaatakuj¹ most, który tam siê znajduje. Na czele grupy stanie {LDR_FULLRANK} {LDR_NAME}.>
+<AttackStation>(*JA)	<Samuraje!\nDowództwo chyba dowiedzia³o siê, ¿e skar¿ycie siê, i¿ wszystkie misje s¹ takie same. Dziœ wiêc dla odmiany coœ zupe³nie innego! Bêdziecie atakowaæ stacjê kolejow¹ w sektorze {SECTOR}.>
+<AttackDepot>(*JA)		<Piloci!\nJak ju¿ siê pewnie zorientowaliœcie po amunicji, któr¹ ³aduj¹ do maszyn mechanicy, dziœ znów bêdziecie atakowaæ cele naziemne. Wasze zadanie: zniszczyæ nieprzyjacielski magazyn w sektorze {SECTOR}. Polec¹ {#A} samoloty {PLANE}, dowództwo obejmuje {LDR_RANK} {LDR_NAME}. Start za 20 minut.>
+<AttackShips>(*JA)		<Piloci! Dzisiaj uderzamy na wroga w sektorze {SECTOR}. Grupa bojowa, któr¹ poprowadzi {LDR_RANK} {LDR_NAME}, bêdzie liczyæ {#a} samoloty {PLANE}. Wasz podstawowy cel to statki nieprzyjacielskie. Powodzenia!>
+
+
+// These are left generic
+
+//<AttackHQ>(*U*)		<>
+//<AttackBattery>(*U*)		<>
+//<AttackTroops>(*U*)		<>
+//<AttackPort>(*U*)		<>
+
+//<AttackPort>(*JA)	<>
+//<AttackHQ>(*JA)		<>
+//<AttackBattery>(*JA)	<>
+
+
+
+//  These are defaults for Recon missions 
+
+<GenericNavalRecon>(*U*) <Panowie! Dzisiaj bêdziemy wykonywaæ loty zwiadowcze w poszukiwaniu okrêtów japoñskich. {#A} samoloty {PLANE}, nad którymi dowództwo obejmie {LDR_RANK} {LDR_NAME}, zbadaj¹ sektor {SECTOR}.>
+<GenericNavalRecon>(*JA) <Piloci! Dziœ wykonujemy loty zwiadowcze w poszukiwaniu okrêtów amerykañskich. {#A} samoloty {PLANE}, nad którymi dowództwo obejmie {LDR_RANK} {LDR_NAME}, zbadaj¹ sektor {SECTOR}.>
+
+// Specific recon targets
+
+//<ReconCarrier>(*U*) <Panowie! Dzisiaj bêdziemy wykonywaæ loty zwiadowcze w poszukiwaniu okrêtów japoñskich. {#A} samoloty {PLANE}, nad którymi dowództwo obejmie {LDR_RANK} {LDR_NAME}, zbadaj¹ sektor {SECTOR}.>
+//<ReconCarrier>(*JA) <Piloci! Dziœ wykonujemy loty zwiadowcze w poszukiwaniu okrêtów amerykañskich. {#A} samoloty {PLANE}, nad którymi dowództwo obejmie {LDR_RANK} {LDR_NAME}, zbadaj¹ sektor {SECTOR}.>
+
+//<ReconSub>(*U*) <Na stanowisko zg³osi siê {FULLRANK} {LASTNAME}! Rozkaz: przeszukaæ sektor {SECTOR} na obecnoœæ japoñskich ³odzi podwodnych.>
+//<ReconSub>(*JA) <Na stanowisko zg³osi siê {FULLRANK} {LASTNAME}! Rozkaz: przeszukaæ sektor {SECTOR} na obecnoœæ amerykañskich ³odzi podwodnych.>
+
+<AttackSub>(*U*) <Wzywany {LDR_FULLRANK} {LDR_NAME}, w sektorze {SECTOR} wykryto japoñsk¹ ³ódŸ podwodn¹. Proszê wzi¹æ {#a} samoloty {PLANE}, odszukaæ i zniszczyæ ³ódŸ!>
+<AttackSub>(*JA) <Wzywany {LDR_FULLRANK} {LDR_NAME}, w sektorze {SECTOR} wykryto amerykañsk¹ ³ódŸ podwodn¹. Proszê wzi¹æ {#a} samoloty {PLANE}, odszukaæ i zniszczyæ ³ódŸ!>
+<AttackCarrier>(*U*) <Wzywany {LDR_FULLRANK} {LDR_NAME}, w sektorze {SECTOR} wykryto japoñski lotniskowiec. Proszê wzi¹æ {#a} samoloty {PLANE}, odszukaæ i zniszczyæ lotniskowiec!>
+<BombCarrier>(*U*) <Wzywany {LDR_FULLRANK} {LDR_NAME}, w sektorze {SECTOR} wykryto japoñski lotniskowiec. Trzeba eskortowaæ w tamten rejon samoloty {ESCORTED}.>
+<AttackCarrier>(*JA) <Wzywany {LDR_FULLRANK} {LDR_NAME}, w sektorze {SECTOR} wykryto amerykañski lotniskowiec. Proszê wzi¹æ {#a} samoloty {PLANE}, odszukaæ i zniszczyæ lotniskowiec!>
+<BombCarrier>(*JA) <Wzywany {LDR_FULLRANK} {LDR_NAME}, w sektorze {SECTOR} wykryto amerykañski lotniskowiec. Trzeba eskortowaæ w tamten rejon samoloty {ESCORTED}.>
+<AttackConvoy>(*U*) <Wzywany {LDR_FULLRANK} {LDR_NAME}, w sektorze {SECTOR} wykryto japoñski konwój. Proszê wzi¹æ {#a} samoloty {PLANE}, odszukaæ i zniszczyæ konwój!>
+<BombConvoy>(*U*) <Wzywany {LDR_FULLRANK} {LDR_NAME}, w sektorze {SECTOR} wykryto japoñski konwój. Poprowadzi pan {#a} samolotów {PLANE} jako eskortê dla maszyn {ESCORTED}. >
+<AttackConvoy>(*JA) <Wzywany {LDR_FULLRANK} {LDR_NAME}, w sektorze {SECTOR} wykryto amerykañski konwój. Proszê wzi¹æ {#a} samoloty {PLANE}, odszukaæ i zniszczyæ konwój!>
+<BombConvoy>(*JA) <Wzywany {LDR_FULLRANK} {LDR_NAME}, w sektorze {SECTOR} wykryto amerykañski konwój. Poprowadzi pan {#a} samolotów {PLANE} jako eskortê dla maszyn {ESCORTED}. >
+
+<AttackAmph>(*U*) <Na stanowisku zamelduje siê {LDR_FULLRANK} {LDR_NAME}! Japoñskie si³y inwazyjne l¹duj¹ w sektorze {SECTOR}. Proszê wzi¹æ {#a} samoloty {PLANE} i zniszczyæ te oddzia³y!>
+<AttackAmph>(*JA) <Na stanowisku zamelduje siê {LDR_FULLRANK} {LDR_NAME}! Amerykañskie si³y inwazyjne l¹duj¹ w sektorze {SECTOR}. Proszê wzi¹æ {#a} samoloty {PLANE} i zniszczyæ te oddzia³y!>
+
+<PatrolAmph>(*U*) <Wzywany {LDR_FULLRANK} {LDR_NAME}, japoñskie samoloty atakuj¹ nasz¹ piechotê morsk¹ w sektorze {SECTOR}. Proszê wzi¹æ {#a} {PLANE} i os³aniaæ nasz desant morski!>
+<PatrolAmph>(*JA) Wzywany {LDR_FULLRANK} {LDR_NAME}, amerykañskie samoloty atakuj¹ nasz¹ pojazdy desantowe w sektorze {SECTOR}. Proszê wzi¹æ {#a} {PLANE} i os³aniaæ naszych ¿o³nierzy!>
+
+<Rescue>(*U*) <Do samolotu zg³osi siê {LDR_FULLRANK} {LDR_NAME}, otrzymaliœmy meldunki, ¿e w sektorze {SECTOR} zestrzelony zosta³ samolot {PLANE}. Proszê spróbowaæ odnaleŸæ pilota.>
+<Rescue>(*JA) <Do samolotu zg³osi siê {LDR_FULLRANK} {LDR_NAME}, otrzymaliœmy meldunki, ¿e w sektorze {SECTOR} zestrzelony zosta³ samolot {PLANE}. Proszê spróbowaæ odnaleŸæ pilota.>
+
+
+// Scramble missions
+
+<KamikazeIntercept>	<Samoloty nieprzyjacielskie, prawdopodobnie kamikaze nadlatuj¹ {FROM}! Startowaæ natychmiast!>
+
+<Intercept>(*U*) 	<Nieprzyjacielskie maszyny nadlatuj¹ {FROM}, prawdopodobnie planuj¹ nas zaatakowaæ! Do samolotów, {LDR_FULLRANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE} i spróbuje je przechwyciæ. Startowaæ bezzw³ocznie!>
+<Intercept>(*JA) 	<Nieprzyjacielskie maszyny nadlatuj¹ {FROM}, prawdopodobnie planuj¹ nas zaatakowaæ! Do samolotów, {LDR_FULLRANK} {LDR_NAME} poprowadzi {#a} samoloty {PLANE} i spróbuje je przechwyciæ. Startowaæ bezzw³ocznie!>
+
+<Scramble>(*U*)	<Alarm! Wrogie samoloty nadlatuj¹ {FROM}. Mamy do dyspozycji tylko {#a} samoloty {PLANE}. Startowaæ natychmiast, {FULLRANK} wzywany do samolotu!>
+<Scramble>(*U*) 	<Do maszyn, do maszyn! Mamy meldunki o zbli¿aj¹cym siê ataku lotniczym! >
+<Scramble>(*U*) 	<Atak z powietrza! To nie s¹ æwiczenia! Nieprzyjacielskie bombowce nadlatuj¹ {FROM}! Startowaæ natychmiast!>
+<Scramble>(*U*) 	<Samoloty nieprzyjaciela zbli¿aj¹ siê {FROM}! Nie wiem, czy zd¹¿ymy nawet nabraæ wysokoœci! Jazda, jazda, jazda! >
+
+<Scramble>(*JA)	<Alarm! Wrogie samoloty nadlatuj¹ {FROM}. Mamy do dyspozycji tylko {#a} samoloty {PLANE}. Startowaæ natychmiast, {FULLRANK} wzywany do samolotu!>
+<Scramble>(*JA) 	<Do maszyn, do maszyn! Mamy raporty o zbli¿aj¹cym siê ataku lotniczym! >
+<Scramble>(*JA) 	<Atak z powietrza! To nie s¹ æwiczenia! Nieprzyjacielskie bombowce nadlatuj¹ {FROM}! Startowaæ natychmiast!>
+<Scramble>(*JA) 	<Samoloty nieprzyjaciela zbli¿aj¹ siê {FROM}! Nie wiem, czy zd¹¿ymy nawet nabraæ wysokoœci! Jazda, jazda, jazda! >
+
+// All these missions are <GenericInercept>(*U*). If we need specifics, uncomment and expand them.
+
+//<DefendTrain>(*U*)		<>
+//<DefendArmor>(*U*)		<>
+//<DefendBridge>(*U*)		<>
+//<DefendStation>(*U*)		<>
+//<DefendPort>(*U*)		<>
+//<DefendDepot>(*U*)		<>
+//<DefendHQ>(*U*)			<>
+//<DefendBattery>(*U*)		<>
+//<DefendTroops>(*U*)		<>
+//<PatrolTrain>(*U*)		<>
+//<PatrolCars>(*U*)		<>
+//<PatrolTown>(*U*)		<>
+//<FreeHunt>(*U*)			<>
+//<PatrolStation>(*U*)		<>
+//<PatrolPort>(*U*)		<>
+//<PatrolDepot>(*U*)		<>
+//<PatrolHQ>(*U*)			<>
+//<PatrolBattery>(*U*)		<>
+//<PatrolTroops>(*U*)		<>
+
+// All these missions are <GenericEscort>. If we need specifics, uncomment and expand them.
+
+//<BombTown>(*U*)		<>
+//<BombTrain>(*U*)		<>
+//<BombCars>(*U*)		<>
+//<BombArmor>(*U*)		<>
+//<BombAF>(*U*)		<>
+//<BombBridge>(*U*)	<>
+//<BombShips>(*U*)		<>
+//<BombConvoy>(*U*)	<>
+//<BombStation>(*U*)	<>
+//<BombPort>(*U*)		<>
+//<BombDepot>(*U*)		<>
+//<BombHQ>(*U*)		<>
+//<BombBattery>(*U*)	<>
+//<BombTroops>(*U*)	<>
+
+//<BombStation>(*JA)		<>
+//<BombPort>(*JA)		<>
+//<BombDepot>(*JA)		<>
+//<BombHQ>(*JA)		<>
+//<BombBattery>(*JA)		<>
+//<BombTroops>(*JA)		<>
+//<BombArmor>(*JA)		<>
+//<BombAF>(*JA)		<>
+//<BombBridge>(*JA)		<>
+//<BombTrain>(*JA)		<>
+//<BombCars>(*JA)		<>
+//<BombTown>(*JA)		<>
+
+
+/////////////////////////////////////
+
+
+//<ReconAF>(*U*)		<>
+//<BDAAF>(*U*)		<>
+//<DefendTrans>(*U*)		<>
+//<TranIntercept>(*U*)		<>
+//<ParadropEscort>(*U*)		<>
+
+//<ReconEscort>(*U*)		<>
+//<ReconIntercept>(*U*)		<>
+//<Rescue>(*U*)		<>
+//<Verify>(*U*)		<>
+//<ReconHQ>(*U*)		<>
+//<ReconArty>(*U*)		<>
+//<ReconDepot>(*U*)		<>
+//
+//<Rescue>(*JA)		<>
+//<Verify>(*JA)		<>
+//<ReconHQ>(*JA)		<>
+//<ReconArty>(*JA)		<>
+//<ReconDepot>(*JA)		<>
+//<ReconAF>(*JA)		<>
+//<BDAAF>(*JA)		<>
+//<PatrolTown>(*JA)		<>
+//<TranIntercept>(*JA)		<>
+
+//<DefendTrain>(*JA)		<>
+//<DefendCars>(*JA)		<>
+//<PatrolTrain>(*JA)		<>
+//<PatrolCars>(*JA)		<>
+//<DefendArmor>(*JA)		<>
+//<PatrolArmor>(*JA)		<>
+//<DefendAF>(*JA)		<>
+//<PatrolAF>(*JA)		<>
+//<Scramble>(*JA)		<>
+//<ParadropIntercept>(*JA)		<>
+//<ParadropEscort>(*JA)		<>
+//<PatrolBridge>(*JA)		<>
+//<DefendBridge>(*JA)		<>
+//<Patrol>(*JA)		<>
+//<FreeHunt>(*JA)		<>
+//<ReconIntercept>(*JA)		<>
+//<ReconEscort>(*JA)		<>
+//<DefendShips>(*JA)		<>
+//<PatrolShips>(*JA)		<>
+//<DefendShips>(*JA)		<>
+//<DefendConvoy>(*JA)		<>
+//<AttackConvoy>(*JA)		<>
+//<PatrolConvoy>(*JA)		<>
+//<DefendConvoy>(*JA)		<>
+//<DefendStation>(*JA)		<>
+//<DefendPort>(*JA)		<>
+//<DefendDepot>(*JA)		<>
+//<DefendHQ>(*JA)		<>
+//<DefendBattery>(*JA)		<>
+//<DefendTroops>(*JA)		<>
+//<AttackTroops>(*JA)		<>
+//<PatrolStation>(*JA)		<>
+//<PatrolPort>(*JA)		<>
+//<PatrolDepot>(*JA)		<>
+//<PatrolHQ>(*JA)		<>
+//<PatrolBattery>(*JA)		<>
+//<PatrolTroops>(*JA)		<>
+//////////////////////
+
+<repHeader>			<	RAPORT BOJOWY\n>
+<repDate>			< \nDATA: {DATE}\n>
+<repTimeTO>			<GODZINA: Start: {MTIME_TAKEOFF}>
+<repTimeContact>	< Kontakt: {MTIME_CONTACT}>
+<repTimeTarget>		< Nad celem: {MTIME_TARGET}>
+<repTimeBack>		< L¹dowanie: {MTIME_LANDING}>
+<repMission>		<MISJA: >
+<repForces>			< \nZAANGA¯OWANE SI£Y:\n>
+<repOwn>			<   W£ASNE: {=#} {plane}\n>
+<repOtherFriendly>	<           {=#} {plane}\n>
+<repFirstEnemy>		<   WROGA: {~#} {plane}>
+<repOtherEnemy>		<, {~#} {plane}>
+
+<repResults>		< \nWYNIK:\n>
+<repEnemyLosses>	<    STRATY WROGA:\n>
+
+<repVictory>	<        {rank} {lastname} - 1 zestrzelenie\n>
+<repVictories>	<        {rank} {lastname} - zestrzelenia: {=#}\n>
+
+<repOurLosses>		<    STRATY W£ASNE:\n>
+<repKIA>		<        {rank} {lastname} - zabity\n>
+<repMIA>		<        {rank} {lastname} - zaginiony\n>
+<repWIA>		<        {rank} {lastname} - ranny\n>
+
+
+<repCVkill>	<Zniszczono jeden lotniskowiec wroga\n>
+<repCVkills> <Zniszczono lotniskowce wroga: {#A} \n>
+<repCAkill> <Zniszczono jeden pancernik wroga\n>>
+<repCAkills> <Zniszczono ciê¿kie okrêty wroga: {#A} \n>
+<repFleetLosses> <Nasza flota ponios³a ciê¿kie straty\n>
+
+<fileHall>		<Galeria s³awy>
+<titleHall>		<Galeria s³awy>
+<recHall>		<{FULLRANK} {FIRSTNAME} {LASTNAME}, misje: {SORTIES}, zestrzelenia {AKILLS} ({POINTS}) 
+
+<fileAirKills>	<Zestrzelenia>
+<titleAirKills>	<Samoloty zestrzelone przez: {FIRSTNAME} {LASTNAME}\n>
+<recAirKill>		<{DATE}: {plane}\n>
+
+<fileWarDiary>  <Dziennik wojenny>
+<titleWarDiary>  <DZIENNIK WOJENNY\n>
+
+<fileSummary>   <Zniszczone cele naziemne i morskie>
+<titleSummary>   <{FULLRANK} {FIRSTNAME} {LASTNAME}\n>
+
+<filePersonnel> <Odznaczenia i awanse>
+<titlePersonnel> <Odznaczenia i awanse\n\n>
+
+<YOURGROUP>	<\n \n>
+
+// Maps
+
+<Japan1> <Japonia>
+<NewGuinea> <Nowa Gwinea>
+<Guadal> <Guadalcanal>
+<Guadal1> <Guadalcanal>
+<Guadal2> <Guadalcanal>
+<CoralSea> <Morze Koralowe>
+<SantaCruz> <Santa Cruz>
+<Marianas1> <Mariany>
+<Marianas2> <Mariany>

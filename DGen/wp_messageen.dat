@@ -1,0 +1,998 @@
+<DGen:>		<*>
+	---------------------------------------------------------------------------------------------------------------------------
+
+		 Translation guidelines. 
+
+	Every line not starting with symbol < will be ignored. You may use it for comments.
+ 	Otherwise every message consists of two parts: message ID and Message text,
+	both in < > brackets.
+
+	For every ID code there may be up to 10 variants of texts - one will be picked up randomly.
+	You don't need to translate every line exactly, you just need to describe the same situation.
+
+	Symbols \n and %s must be left intact. \n means new line, %s means that some substring will be 
+	placed there - usually town name. Some lines have space in the end. Please leave it in place -
+	it means that there will be another sentence that will continue the briefing. The space separates them. 
+
+	Message texts cannot contain new lines - make them as long as you need (but not longer than 256 chars).
+	---------------------------------------------------------------------------------------------------------------------------
+
+
+
+	---------------------------------------------------------------------------------------------------------------------------
+
+	The following messages are the first part of the briefing. 
+	They describe general situation and target area	 		---------------------------------------------------------------------------------------------------------------------------
+			
+<DeTranInt>	<\nRussian transport planes are delivering supplies to %s. >
+<RuTranInt>	<\nGerman transport planes are delivering supplies to %s. >
+<RuTranIntR>	<Our task is to stop enemy air operations.\n>
+<DeTranIntD>	<Our task is to stop enemy air operations.\n>
+
+<RuCAP>		<\nIncreased Luftwaffe activity has been noted around  %s. >
+<RuCAP>		<\nToday we will cover the %s area. >
+<RuCAP>		<\nComrade Officers, we received an order to patrol airspace over %s. >
+<RuCAP>		<\nOur destination today is %s. >
+<RuCAP>		<\nWe have to protect an important strategic area of %s from German attacks. >
+<RuCAP>		<\nArmy intelligence suggests that Luftwaffe may attack %s today. >
+
+<DeCAP>	<\nIncreased VVS activity has been noted around  %s. >
+<DeCAP>	<\nToday we will cover the %s area. >
+<DeCAP>	<\nPilots, we received an order to patrol airspace over %s. >
+<DeCAP>	<\nOur destination today is %s. >
+<DeCAP>	<\nWe have to protect an important strategic area of %s from Russian attacks. >
+<DeCAP>	<\nArmy intelligence suggests that VVS may attack %s today. >
+
+<RuEsc>		<\nOur comrades are performing an attack in the %s area. >
+<RuEsc>		<\nOur strike group is heading in direction of %s. >
+<RuEsc>		<\nOur bombers are preparing a nasty surprise for Germans near %s. >
+<RuEsc>		<\nWe are helping our comrades heading to %s. >
+
+<DeEsc>		<\nOur friends from the strike group are performing attack in the %s area. >
+<DeEsc>		<\nOur strike group is heading in direction of %s. >
+<DeEsc>		<\nOur bombers are preparing a nasty surprise for the Ivans near %s. >
+<DeEsc>		<\nWe are helping our comrades heading to %s. >
+
+<RuEscP>	<\nToday the paratroopers of our Russian comrades will be dropped in the %s area. >
+<RuEscP>	<\nBy special Stavka order Russian transport planes will drop paratroopers in the %s area today. >
+
+<DeEscP>	<\nToday our paratroopers will be dropped in the %s area. >
+
+<RuEscR>	<\nToday a Russian recon plane will photograph important targets near %s. >
+<DeEscR>	<\nToday our recon plane will photograph important targets near %s. >
+
+<RuCAS>		<\nHas everyone got a map of the %s Sector? You'll need it for this mission. >
+<RuCAS>		<\nOur destination is not far from %s. >
+<RuCAS>		<\nWe will hit the %s area in this mission. >
+<RuCAS>		<\nAttention! In 20 minutes we are leaving for the %s area. >
+<RuCAS>		<\nAttention! We are going to the %s area. >
+<RuCAS>		<\nPilots! Our objective is located near %s. >
+<RuCAS>		<\nComrade Officers, we received an order to strike %s sector. >
+<RuCAS>		<\nComrade Officers, we are paying a visit to Germans around %s. >
+<RuCAS>		<\nComrades! we are heading to %s. >
+<RuCAS>		<\n%s sector is assigned as a destination of this mission. >
+
+<DeCAS>	<\nEverybody has a map of %s sector? You'll need it in this mission. >
+<DeCAS>	<\nOur destination is not far from %s. >
+<DeCAS>	<\nWe will hit the %s area in this mission. >
+<DeCAS>	<\nAttention! In 20 minutes we are leaving for the %s area. >
+<DeCAS>	<\nAttention! We are going to the %s area. >
+<DeCAS>	<\nPilots! Our objective is located near %s. >
+<DeCAS>	<\nPilots, we received an order to strike %s sector. >
+<DeCAS>	<\nPilots! we are heading to %s. >
+<DeCAS>	<\n%s sector is assigned as a destination of this mission. >
+<DeCAS>	<\nPilots, we are visiting our Russian friends around %s. >
+
+
+<DeSwp>		<\nOur destination is not far from %s. >
+<DeSwp>		<\nAttention! In 30 minutes we are leaving for the %s area. >
+<DeSwp>		<\nAttention! We are going to the %s area. >
+<DeSwp>		<\nPilots! We are heading to %s. >
+<DeSwp>		<\n%s sector is assigned as a destination of this mission. >
+<DeSwp>		<\nWe go to %s. >
+
+<RuSwp>		<\nOur destination is not far from %s. >
+<RuSwp>		<\nAttention! In 30 minutes we are leaving for the %s area. >
+<RuSwp>		<\nAttention! We are going to the %s area. >
+<RuSwp>		<\nComrades! We are heading to %s. >
+<RuSwp>		<\n%s sector is assigned as a destination of this mission. >
+<RuSwp>		<\nWe go to %s. >
+
+<RuScramSit>	<\nAlarm! Enemy planes are heading toward our airfield. >
+<RuScramSit>	<\nAlarm! Luftwaffe planes are heading this way. >
+<RuScramSit>	<\nGerman planes are approaching our airfield! >
+<RuScramSit>	<\nWe've just received a warning, that enemy planes are approaching our airfield. >
+
+<DeScramSit>	<\nAlarm! Enemy planes are heading toward our airfield. >
+<DeScramSit>	<\nAlarm! VVS planes are heading this way. >
+<DeScramSit>	<\nRussian planes are approaching our airfield! >
+<DeScramSit>	<\nWe've just received a warning, that enemy planes are approaching our airfield. >
+
+<RuScram>	<Take off immediately!>
+<RuScram>	<Intercept them!>
+<DeScram>	<Take off immediately!>
+<DeScram>	<Intercept them!>
+
+<YourAF>	<\nYou are located at %s airfield. >
+
+<RuTranRep>		<\nYou are being transferred from %s to a new airfield %s.\n>
+<RuTranRep>		<\nSay goodbye to %s. We are moving to a new airfield %s.\n>
+<RuTranRep>		<\nWe are leaving %s. Our new airfield is located near %s.\n>
+<RuTranRep>		<\nPrepare to leave %s. Our new new airfield is %s.\n>
+<DeTranRep>		<\nYou are being transferred from %s to a new airfield %s.\n>
+<DeTranRep>		<\nSay goodbye to %s. We are moving to a new airfield %s.\n>
+<DeTranRep>		<\nWe are leaving %s. Our new airfield is located near %s.\n>
+<DeTranRep>		<\nPrepare to leave %s. Our new airfield is %s.\n>
+
+		---------------------------------------------------------------------------------------------------------------------------
+	The following messages will continue the briefing. They will go after first part. 
+	Message ID is build as situation code plus side code. 
+	RuBTrainR means that Russians bomb German train, and briefing is for Russians. 
+	RuBTrainD means the same situation but briefing is for Germans.	
+	---------------------------------------------------------------------------------------------------------------------------
+
+<RuBTrainR>		<Priority targets are enemy trains. You must protect the bombers.\n>
+<RuBTrainR>		<Enemy reinforcements are arriving by trains. You must protect the bombers.\n>
+<RuBTrainR>		<Attacking railroads we can seriously disrupt enemy operations in the area. The strike group must be protected from interception by German fighters.\n>
+<RuBTrainR>		<We have information that new enemy tanks are arriving by rail. Protect the attacking aircraft.\n>
+<RuBTrainR>		<Military intelligence has information that an important officer may arrive by railroad today. Keep the bombers free from any enemy intervention.\n>
+
+<RuBTrainD>		<The most frequent targets of Russian attacks there are trains. We must inflict heavy losses to VVS bombers in order to stop them.\n>
+<RuBTrainD>		<Railway is the most important target there. We must destroy as many VVS bombers as possible to stop their attack.\n>
+<RuBTrainD>		<Our supplies there depend on railroad. The VVS bombing campaign must be stopped.\n>
+<RuBTrainD>		<Today we expect an important officer to arrive by rail. You have to protect him.\n>
+<RuBTrainD>		<Our counter-intelligence spread rumours about arrival of important officer from Berlin. We expect Russian bombers to attack the train. Don't give Soviet bombers a chance to escape!\n>
+
+<RuATrainR>		<Priority targets are German trains!\n>
+<RuATrainR>		<German reinforcements are arriving by trains. They should not reach their destination!\n>
+<RuATrainR>		<Attacking railroads we can seriously disrupt German operations in the area.\n>
+<RuATrainR>		<We have information that new German tanks are arriving by railroad. They should not reach their destination!\n>
+<RuATrainR>		<Military intelligence has information that important general from Berlin may arrive by railroad today. Destroy that train!\n>
+
+<RuATrainD>		<The most frequent targets of Russian attacks there are trains. We must protect the railroad!\n>
+<RuATrainD>		<Railroad is the most important target there. The trains must go without delays.\n>
+<RuATrainD>		<Our supplies there depend on railroad. We need every tank, every shell.\n>
+<RuATrainD>		<Artists from Berlin are arriving today by railroad. We must protect them from danger.\n>
+
+<DeBTrainR>		<The most frequent targets of German attacks there are trains. We must inflict heavy losses to Luftwaffe.\n>
+<DeBTrainR>		<Railroad is the most important target there. We must destroy as many Luftwaffe bombers as possible to stop their attack.\n>
+<DeBTrainR>		<Our supplies there depend on railroad. Luftwaffe bombing campaign must be stopped.\n>
+<DeBTrainR>		<Important officers from Moscow are arriving today by railroad. Destroy German bombers if they will attack.\n>
+<DeBTrainR>		<Russian counter-intelligence spread rumours about arrival of important Stavka officer. We expect German bombers to attack the train. Don't give Germans a chance to escape!\n>
+
+<DeBTrainD>		<Priority targets are Russian trains. You must protect the bombers.\n>
+<DeBTrainD>		<Russian reinforcements are arriving by trains. You must protect the bombers.\n>
+<DeBTrainD>		<Attacking railroads we can seriously disrupt Russian operations in the area. The strike group must be protected from any VVS actions.\n>
+<DeBTrainD>		<We have information that new Russian tanks are arriving by railroad. Attack group must have freedom of actions.\n>
+<DeBTrainD>		<Military intelligence has information that important Stavka officer may arrive by railroad today. Keep bombers free from any VVS intervention.\n>
+
+<DeATrainR>		<The most frequent targets of German attacks there are trains. We must protect the railroad!\n>
+<DeATrainR>		<Railroad is the most important target there. The trains must go without delays.\n>
+<DeATrainR>		<Our supplies there depend on railroad. We need every tank, every shell.\n>
+<DeATrainR>		<General Rola-Zymierski is arriving today by railroad. We must protect him from danger.\n>
+
+<DeATrainD>		<Priority targets are Russian trains!\n>
+<DeATrainD>		<Russian reinforcements are arriving by trains. They should not reach their destination!\n>
+<DeATrainD>		<Attacking railroads we can seriously disrupt Russian operations in the area.\n>
+<DeATrainD>		<We have information that new Russian tanks are arriving by railroad. They should not reach their destination!\n>
+<DeATrainD>		<Military intelligence has information that important Stavka officer may arrive by railroad today. Destroy that train!\n>
+
+<RuBShipR>	<Targets for today are German ships. You must protect the bombers.\n>
+<RuBShipR>	<German reinforcements are arriving by sea. You must protect the bombers.\n>
+<RuBShipR>	<German Navy creates many problems for our operations in the area. The strike group must be protected from any Luftwaffe actions.\n>
+<RuBShipR>	<We must suppress operations of German Kriegsmarine. Attack group must have freedom of actions.\n>
+<RuBShipR>	<To help Russian Marines we must destroy as many German ships as possible. Keep bombers free from any Luftwaffe intervention.\n>
+
+<RuBShipD>	<Russians often attack our ships there. We must inflict heavy losses to VVS bombers in order to stop them.\n>
+<RuBShipD>	<Naval operations are of highest importance there. We must destroy as many VVS bombers as possible to stop their attacks.\n>
+<RuBShipD>	<Our supplies there depend on sea communications. VVS bombing campaign must be stopped.\n>
+<RuBShipD>	<Our counter-intelligence spread rumours about arrival of important Navy officer. We expect Ivans to attack the ship. Don't give Soviet bombers a chance to escape!\n>
+
+<RuAShipR>	<Target for today is German ship. You must destroy it.\n>
+<RuAShipR>	<Targets for today - German ships.\n>
+<RuAShipR>	<German reinforcements are arriving by sea. Destroy the ships!\n>
+<RuAShipR>	<German Navy creates many problems for our operations in the area. We must deal a heavy blow to them!\n>
+<RuAShipR>	<We must suppress operations of German Kriegsmarine. Destroy any ship you see!\n>
+<RuAShipR>	<To help Russian Marines we must destroy as many German ships as possible!\n>
+
+<RuAShipD>	<Russians often attack our ships there. We must protect them!\n>
+<RuAShipD>	<Naval operations are of highest importance there. We must protect the ships!\n>
+<RuAShipD>	<Our supplies there depend on sea communications. Protect the ships!\n>
+
+<DeBShipR>	<Germans often attack Russian ships there. We must inflict heavy losses to Luftwaffe bombers in order to stop them.\n>
+<DeBShipR>	<Naval operations are of highest importance there. We must destroy as many Luftwaffe bombers as possible to stop their attacks.\n>
+<DeBShipR>	<Our supplies there depend on sea communications. Luftwaffe bombing campaign must be stopped.\n>
+<DeBShipR>	<Russian counter-intelligence spread rumours about arrival of important Navy officer. We hope that Germans will attack the ship. Don't give German bombers a chance to escape!\n>
+
+<DeBShipD>	<Targets for today are Russian ships. You must protect the bombers.\n>
+<DeBShipD>	<Russian reinforcements are arriving by sea. You must protect the bombers.\n>
+<DeBShipD>	<Russian Navy creates many problems for our operations in the area. The strike group must be protected from any Luftwaffe actions.\n>
+<DeBShipD>	<We must suppress operations of Russian Navy. Attack group must have freedom of actions.\n>
+<DeBShipD>	<To help our infantry we must destroy as many Russian ships as possible. Keep bombers free from any VVS intervention.\n>
+
+<DeAShipR>	<Germans often attack Russian ships there. We must protect them!\n>
+<DeAShipR>	<Naval operations are of highest importance there. We must protect the ships!\n>
+<DeAShipR>	<Our supplies there depend on sea communications. Protect the ships!\n>
+
+<DeAShipD>	<Targets for today - Russian ships.\n>
+<DeAShipD>	<Russian reinforcements are arriving by sea. Destroy the ships!\n>
+<DeAShipD>	<Russian Navy creates many problems for our operations in the area. We must deal a heavy blow to them!\n>
+<DeAShipD>	<We must suppress operations of Russian Navy. Destroy any ship you see!\n>
+<DeAShipD>	<To help our infantry we must destroy as many Russian ships as possible!\n>
+
+<RuBColR>	<Priority targets are transport columns. You must protect the bombers.\n>
+<RuBColR>	<German reinforcements are arriving by transport columns. You must protect the bombers.\n>
+<RuBColR>	<Attacking roads we can seriously disrupt German operations in the area. The strike group must be protected from any Luftwaffe actions.\n>
+<RuBColR>	<Captured Germans report that they experience lack of fuel and ammunition. Attacking transport column is a high priority task. Our bombers must have freedom of actions.\n>
+<RuBColR>	<With railroad attacked by partisans, Germans now heavily depend on supplies by transport columns. Keep bombers free from any Luftwaffe intervention.\n>
+
+<RuBColD>	<Russian favorite targets there are transport columns. We must inflict heavy losses to VVS bombers in order to stop them.\n>
+<RuBColD>	<To protect our roads there, we must destroy as many VVS bombers as possible to stop their attack.\n>
+<RuBColD>	<Our supplies there depend on transport columns. VVS bombing campaign must be stopped.\n>
+
+<RuAColR>	<Targets for today - German transport columns.\n>
+<RuAColR>	<To prevent German reinforcements from reaching the frontline, destroy any cars that you see!\n>
+<RuAColR>	<We must suppress German transport columns. Destroy any car you see!\n>
+
+<RuAColD>	<The most frequent targets of Russian attacks there are cars. We must protect our transport communications\n>
+<RuAColD>	<Our transport communications are the most vulnerable targets there. The columns must go without delays.\n>
+<RuAColD>	<Our supplies there depend on transport columns. We have to minimize our losses in cars.\n>
+
+<DeBColR>	<German favorite targets there are transport columns. We must inflict heavy losses to Luftwaffe in order to stop them.\n>
+<DeBColR>	<To protect our roads there, we must destroy as many Luftwaffe bombers as possible. Target leaders!\n>
+<DeBColR>	<Our supplies there depend on transport columns. Luftwaffe bombing campaign must be stopped.\n>
+
+<DeBColD>	<Target for today is Russian transport column. You must protect the bombers.\n>
+<DeBColD>	<Priority targets are transport columns. You must protect the bombers.\n>
+<DeBColD>	<Russian reinforcements are arriving by transport columns. You must protect the bombers.\n>
+<DeBColD>	<Attacking roads we can seriously disrupt Russian operations in the area. The strike group must be protected from any VVS actions.\n>
+<DeBColD>	<Soviet deserters report that they experience lack of food and ammunition. Attacking transport columns is a high priority task. Our bombers must have freedom of actions.\n>
+<DeBColD>	<With most of railroads destroyed, Russians now heavily depend on supplies by transport columns. Keep bombers free from any VVS intervention.\n>
+
+<DeAColR>	<The most frequent targets of German attacks there are cars. We must protect our transport communications\n>
+<DeAColR>	<Our transport communications are the most vulnerable targets there. The columns must go without delays.\n>
+<DeAColR>	<Our supplies there depend on transport columns. We have to minimize our losses in cars.\n>
+
+<DeAColD>	<Targets for today - Russian transport columns.\n>
+<DeAColD>	<To prevent Russian reinforcements from reaching the frontline, destroy any cars that you see!\n>
+<DeAColD>	<We must suppress Russian transport columns. Destroy any car you see!\n>
+
+<RuBArmR>	<The bombers will attack advancing German tanks. Don't allow Luftwaffe to intercept them.\n>
+<RuBArmR>	<You must protect the bombers, they will attack German tanks in the area.\n>
+<RuBArmR>	<Protect the bombers, German tanks that they will attack are a big threat to our infantry.\n>
+<RuBArmR>	<Our ground forces are threatened by German tanks moving to the frontline. Don't allow Luftwaffe to intercept the bombers.\n>
+<RuBArmR>	<Bombers must complete their attack run, we need these tanks to be destroyed.\n>
+
+<RuBArmD>	<We must protect our tanks from potential Russian air attacks. Target leaders, Russians do not have many experienced bomber pilots.\n>
+<RuBArmD>	<Our tanks are primary targets of Russian air attacks. Destroy the bombers if they dare to appear there.\n>
+<RuBArmD>	<We need to protect our armored forces from Russian air attacks. Destroy the bombers if they dare to appear there.\n>
+<RuBArmD>	<Our armored forces are our main assets in the area. Cover them from any air attacks.\n>
+
+<RuAArmR>	<Targets for today are German tanks.\n>
+<RuAArmR>	<We will attack advancing German tanks.\n>
+<RuAArmR>	<We will attack German tanks in the area.\n>
+<RuAArmR>	<German tanks are the biggest threat to our infantry. Destroy them!\n>
+<RuAArmR>	<Our ground forces are threatened by German tanks moving to the frontline. Destroy them!\n>
+<RuAArmR>	<We need German tanks there to be destroyed.\n>
+
+<RuAArmD>	<We must protect our tanks from potential Russian air attacks.\n>
+<RuAArmD>	<Our tanks are primary targets of Russian air attacks.\n>
+<RuAArmD>	<We need to protect our armored forces from Russian air attacks.\n>
+<RuAArmD>	<Our armored forces are our main assets in the area. Cover them from any air attacks.\n>
+
+<DeBArmD>	<Targets for today are Russian tanks. You must protect the bombers.\n>
+<DeBArmD>	<The bombers will attack advancing Russian tanks. Don't allow VVS to intercept them.\n>
+<DeBArmD>	<You must protect the bombers, they will attack Russian tanks in the area.\n>
+<DeBArmD>	<Protect the bombers, Russian tanks that they will attack are a big threat to our infantry.\n>
+<DeBArmD>	<Our ground forces are threatened by Russian tanks moving to the frontline. Don't allow VVS to intercept the bombers.\n>
+<DeBArmD>	<Bombers must complete their attack run, we need enemy tanks to be destroyed.\n>
+
+<DeBArmR>	<We must protect our tanks from potential German air attacks. Target leaders to demoralize bomber pilots.\n>
+<DeBArmR>	<Our tanks are primary targets of Luftwaffe attacks. Destroy the bombers if they dare to appear there.\n>
+<DeBArmR>	<We need to protect our armored forces Luftwaffe attacks. Destroy the bombers if they dare to appear there.\n>
+<DeBArmR>	<Our armored forces are our main assets in the area. Cover them from any air attacks.\n>
+
+<DeAArmD>	<Targets for today are Russian tanks. You must destroy them.\n>
+<DeAArmD>	<Targets for today are Russian tanks.\n>
+<DeAArmD>	<We will attack advancing Russian tanks.\n>
+<DeAArmD>	<We will attack Russian tanks in the area.\n>
+<DeAArmD>	<Russian tanks are the biggest threat to our infantry. Destroy them!\n>
+<DeAArmD>	<Our ground forces are threatened by Soviet tanks moving to the frontline. Destroy them!\n>
+<DeAArmD>	<We need Soviet tanks there to be destroyed.\n>
+
+<DeAArmR>	<We must protect our tanks from potential German air attacks.\n>
+<DeAArmR>	<Our tanks are primary targets of German air attacks.\n>
+<DeAArmR>	<We need to protect our armored forces from German air attacks.\n>
+<DeAArmR>	<Our armored forces are our main assets in the area. Cover them from any air attacks.\n>
+
+<RuBTownR>	<Targets for today are German ammunition depots in the city. You must protect the bombers.\n>
+<RuBTownR>	<Targets for today are German factories. You must protect the bombers.\n>
+<RuBTownR>	<Our bombers will target German supply depots in the city. You must protect the attack group.\n>
+<RuBTownR>	<Targets for today are railroad stations in the city. Protect the bombers.\n>
+
+<RuBTownD>	<VVS is bombing the city almost daily. Don't allow Russian bombers to reach the target!\n>
+<RuBTownD>	<Our ammunition depots in the city are regularly bombed by VVS. Destroy any Russian bomber that you see!\n>
+<RuBTownD>	<VVS is attempting to diminish our war potential by targeting our factories in the city. You must destroy the bombers.\n>
+<RuBTownD>	<Russian planes are bombing our supply depots in the city. Don't allow Russian bombers to reach the target!\n>
+
+<DeBTownD>	<Targets for today are Russian factories in the city. You must protect the bombers.\n>
+<DeBTownD>	<Targets for today are Russian ammunition depots in the city. You must protect the bombers.\n>
+<DeBTownD>	<Targets for today are Russian factories. You must protect the bombers.\n>
+<DeBTownD>	<Our bombers will target Soviet supply depots in the city. You must protect the attack group.\n>
+<DeBTownD>	<Targets for today are railroad stations in the city. Protect the bombers.\n>
+
+<DeBTownR>	<Germans are bombing the city almost daily. Don't allow Luftwaffe bombers to reach the target!\n>
+<DeBTownR>	<Our ammunition depots in the city are regularly bombed by Luftwaffe. Destroy any German bomber that you see!\n>
+<DeBTownR>	<Luftwaffe is attempting to diminish our war potential by targeting our factories in the city. You must destroy the bombers.\n>
+<DeBTownR>	<Luftwaffe is bombing our supply depots in the city. Don't allow German bombers to reach the target!\n>
+
+<RuBAFR>	<Target for today is German airfield. You must protect the bombers.\n>
+<RuBAFR>	<Today we strike German airfields in the area. Protect the bombers!\n>
+<RuBAFR>	<Our bombers will attack German airfield.\nYou must protect the bombers.\n>
+
+<RuBAFD>	<Today we will protect our airfields. If Russians will attack - destroy the leaders.\n>
+<RuBAFD>	<Our task today is patrol over the airfield. If Russians will attack - destroy the leaders.\n>
+<RuBAFD>	<We will patrol over the airfield today. Russians often attack around this time.\n>
+
+<RuAAFR>	<Target for today is German airfield. You must inflict heavy damage to it.\n>
+<RuAAFR>	<Today we attack German airfield in the area. Suppress AAA, then strike the planes!\n>
+<RuAAFR>	<It is payback time. Today we will attack German airfield.\n>
+
+<RuAAFD>	<Today we will protect our airfields around the city.\n>
+<RuAAFD>	<Our task today is patrol over the airfield.\n>
+<RuAAFD>	<We will patrol over the airfield today. Russians often attack around this time.\n>
+
+<DeBAFD>	<Target for today is Russian airfield. You must protect the bombers.\n>
+<DeBAFD>	<Today we strike Soviet airfields in the area. Protect the bombers!\n>
+<DeBAFD>	<Our bombers will attack Russian airfield. You must protect the bombers.\n>
+
+<DeBAFR>	<Today we will protect our airfields. If Germans attack - destroy the leaders.\n>
+<DeBAFR>	<Our task today is patrol over the airfield. If Germans will attack - destroy the leaders.\n>
+<DeBAFR>	<We will patrol over the airfield today. Germans often attack around this time.\n>
+
+<DeAAFR>	<Today we will protect our airfields around the city.\n>
+<DeAAFR>	<Our task today is patrol over the airfield.\n>
+<DeAAFR>	<We will patrol over the airfield today. Germans often attack around this time.\n>
+
+<DeAAFD>	<Target for today is Soviet airfield. You must inflict heavy damage to it.\n>
+<DeAAFD>	<Today we attack Russian airfield in the area. Suppress AAA, then strike the planes!\n>
+<DeAAFD>	<It is payback time. Today we will attack Russian airfield.\n>
+
+<RuBBridgeR>	<Target for today is a bridge that Germans actively use to transfer supplies. You must protect the bombers.\n>
+<RuBBridgeR>	<We are attacking bridges in the area today. Protect the bombers!\n>
+<RuBBridgeR>	<Target for today is a key bridge in the area. You must protect the bombers.\n>
+<RuBBridgeR>	<Bridges are our priority targets. Protect the bombers!\n>
+
+<RuBBridgeD>	<Pay special attention to protection of bridges, Russians are attacking them daily. If VVS appear, target leaders!\n>
+<RuBBridgeD>	<Bridges are very important for our operations there. Russians are attacking them daily. If VVS appear, target leaders!\n>
+<RuBBridgeD>	<Bridges in the area are essential for success of our operations. Destroy any VVS bomber that you see!\n>
+
+<DeBBridgeR>	<Pay special attention to protection of bridges, Luftwaffe is attacking them daily. If Germans appear, target leaders!\n>
+<DeBBridgeR>	<Bridges are very important for our operations there. Germans are attacking them daily. If they appear, target leaders!\n>
+<DeBBridgeR>	<Bridges in the area are essential for success of our operations. No German bomber should pass!\n>
+
+<DeBBridgeD>	<Target for today is a bridge that Russians actively use to transfer supplies. You must protect the bombers.\n>
+<DeBBridgeD>	<We are attacking bridges in the area today. Protect the bombers!\n>
+<DeBBridgeD>	<Target for today is a key bridge in the area. You must protect the bombers.\n>
+<DeBBridgeD>	<Bridges are our priority targets. Protect the bombers!\n>
+
+<RuABridgeR>	<Target for today is a bridge that Germans actively use to transfer supplies.\n>
+<RuABridgeR>	<We are attacking bridges in the area today.\n>
+<RuABridgeR>	<Target for today is a key bridge in the area.\n>
+<RuABridgeR>	<Bridges are our priority targets.\n>
+
+<RuABridgeD>	<Pay special attention to protection of bridges, Russians are attacking them daily.\n>
+<RuABridgeD>	<Bridges are very important for our operations there. Russians are attacking them daily.\n>
+<RuABridgeD>	<Bridges in the area are essential for success of our operations. You must protect them.\n>
+
+<DeABridgeR>	<Pay special attention to protection of bridges, Germans are attacking them daily.\n>
+<DeABridgeR>	<Bridges are very important for our operations there. Germans are attacking them daily.\n>
+<DeABridgeR>	<Bridges in the area are essential for success of our operations. You must protect them.\n>
+
+<DeABridgeD>	<Target for today is Russian bridge. You must destroy it.\n>
+<DeABridgeD>	<Target for today is a bridge that Russians actively use to transfer supplies.\n>
+<DeABridgeD>	<We are attacking bridges in the area today.\n>
+<DeABridgeD>	<Target for today is a key bridge in the area.\n>
+<DeABridgeD>	<Bridges are our priority targets.\n>
+
+<RuParaR>	<You must protect the transports.\n>
+<RuParaD>	<Destroy any Russian plane that you see.\n>
+
+<DeParaR>	<Destroy any German plane that you see.\n>
+<DeParaD>	<You must protect the transports.\n>
+
+<RuReconR>	<You must protect the recon plane.\n>
+<RuReconD>	<Be ready to destroy any Russian plane that you see.\n>
+
+<DeReconR>	<Be ready to destroy any German plane that you see.\n>
+<DeReconD>	<You must protect the recon plane.\n>
+
+<RuDeAirRD>		<The main goal for today is control over city's airspace. You must destroy enemy planes.\n>
+
+<RuBalloon>	<A German observation balloon is directing enemy artillery fire in this sector. If we could destroy it, the effectiveness of enemy artillery would be severly weakened. Locate it and shoot it down!>
+<DeBalloon>	<A balloon is guiding the fire of our artillery in this sector. The Russians have surely spotted it and will most likely try to shoot it down. Patrol over the balloon and intercept any russian fighter trying to attack it.>
+
+<Retrn>		<\nAfter rest and retraining, your unit was sent to the front again...\n>
+
+
+
+	---------------------------------------------------------------------------------------------------------------------------
+	The following messages are for pilot's logbook
+	---------------------------------------------------------------------------------------------------------------------------
+
+
+<logTransfer>			<Transfer %s-%s>
+<logAttackSoft> 			<Attack of ground targets near %s>
+<logCAP> 			<Protection of ground troops in the %s area>
+<logCAPB> 			<Protection of ground troops>
+<logPatrolTown> 			<Protection of %s from air raids>
+<logEscortBomb> 			<Escort of bombers to %s>
+<logAttackArmor> 			<Attack of armor near %s>
+<logDefendArmor> 			<Protection of armor in the %s area>
+<logAttackAF> 			<Attack of airfield near %s>
+<logDefendAF> 			<Patrol over airfield near %s>
+<logEscortPara> 			<Escort of paratroopers to %s>
+<logAttackBridge> 			<Attack of a bridge near %s>
+<logDefendBridge> 			<Protection of bridges near %s>
+<logFreeHunt> 			<Free Hunt>
+<logEscortRecon> 			<Escort of recon plane to %s>
+<logAttackShips> 			<Attack of enemy ships>
+<logDefendShips> 			<Protection of Russian ships>
+<logAttackArtillery> 		<Attack of artillery positions>
+
+<logScramble> 				<Scramble>
+<logBailed> 				<Bailed %s>			// W of Smolensk
+<logKill> 					<Shot down %s %s>		// Me-262 over Berlin
+<logCrashed> 				<Crashed %s>			// SW of Kursk
+<logLandedAF> 				<Landed at %s airfield>// Pitomnik
+<logLanded> 				<Landed in the field>
+
+<logAttackAF>				<Attacked %s airfield> // Krasnoe
+<logTank>                   <Destroyed enemy tank %s> // S of Pushkin  
+<logShip>					<Destroyed enemy ship %s>
+<logArtillery>				<Attacked enemy artillery positions %s>
+<logColumn>					<Attacked enemy transport column %s>
+<logTrain>					<Attacked enemy train %s> 
+<logBridge>					<Destroyed bridge %s>
+<logTroops>					<Attacked enemy troops %s>
+<dirIn> 					<in>
+
+<dirOver> 					<over>
+<dirW> 						<W of>
+<dirNW> 					<NW of>
+<dirN> 						<N of>
+<dirNE> 					<NE of>
+<dirE> 						<E of>
+<dirSE> 					<SE of>
+<dirS> 						<S of>
+<dirSW> 					<SW of>
+
+	---------------------------------------------------------------------------------------------------------------------------
+	The following messages are for pilot's personal files
+	---------------------------------------------------------------------------------------------------------------------------
+
+<rstJoined> 		<joined the squadron>
+<rstPromoted> 		<promoted to %s>
+<rstAwarded> 		<awarded %s>
+
+<rstTransferedDe> 		<transfered to FlightSchool>
+<rstTransferedDe> 		<transfered to Mediterranian>
+<rstTransferedDe> 		<transfered to Home Front>
+<rstTransferedDe> 		<transfered to Channel Front>
+<rstTransferedDe> 		<transfered to Fighter School>
+<rstTransferedDe> 		<transfered to Norway>
+<rstTransferedDe> 		<transfered to Luftflotte HQ>
+
+<rstTransferedRu> 		<transfered to Wojskowa Szkola Pilotów in Deblin>
+<rstTransferedRu> 		<transfered to Dowództwo Lotnictwa Wojska Polskiego>
+<rstTransferedRu> 		<transfered to Wojskowa Techniczna Szkola Lotnicza in Zamosc>
+<rstHospitalize> 		<wounded and hospitalized   >
+<rstReunitedDe> 		<returned to the squadron>
+<rstReunitedRu> 		<returned to the squadron>
+
+<rstKilled> 				<killed in combat near %s>
+<rstMissed> 				<missing in combat near %s>
+
+<awdR1> 		<Order of the Red Star>
+<awdR2> 		<Order of the Red Banner>
+<awdR3> 		<Order of Lenin>
+<awdR4> 		<Order of Lenin>
+<awdR5> 		<Order of Lenin>
+<awdR6> 		<Order of Lenin>
+<awdR7> 		<Order of Lenin>
+<awdR8> 		<Order of Lenin>
+
+<awdD1> 		<Iron Cross, 2nd class>
+<awdD2> 		<Iron Cross, 1st class>
+<awdD3> 		<German Cross in Gold>
+<awdD4> 		<Knight's Cross>
+<awdD5> 		<Oak Leaves to the Knight's Cross>
+<awdD6> 		<Swords to the Knight's Cross with Oak Leaves>
+<awdD7> 		<Diamonds to the Knight's Cross with Oak Leaves and Swords >
+<awdD8> 		<Golden Oak Leaves, Swords and Diamonds to the Knight's Cross>
+
+<Stabsfw.> 	 <Obfw.>
+
+<ml.l-t.> 	<chor.>
+<l-t.> 		<ppor.>
+<st.l-t.> 	<por.>
+<k-n.> 		<kpt.>
+<m-r.> 		<mjr>
+<p/p-k.> 	<pplk>
+<p-k.> 		<plk>
+
+<Clear>  		<Clear>
+<Good>			<Good>
+<Hazy> 			<Hazy>
+<Poor>			<Poor>
+<Blind>			<Blind>
+<Rain>			<Rain>
+<Thunderstorm>		<Thunderstorm>
+<Snowstorm>		<Snowstorm>
+
+
+	---------------------------------------------------------------------------------------------------------------------------
+	Please do not translate words Name and Description - they are used by IL2
+	---------------------------------------------------------------------------------------------------------------------------
+
+<nSHR> 		<DGen mission\n>
+<nHDR> 		<Name Mission %s\n>
+<hWthRep>	<Description %s\nDate: %s\nTime: %d:%02.2d\nWeather: %s\nClouds at %ld m\n> 
+
+<hShortRuB>	<Bomber. %s, '4%d>
+<hShortRuF>	<Fighter. %s, '4%d>
+<hShortDeB>	<Bomber. %s, '4%d>
+<hShortDeF>	<Fighter. %s, '4%d>
+
+<hLongRuB>	<Description Dynamic campaign for Polish bomber pilot. %s, 194%d>
+<hLongRuF>	<Description Dynamic campaign for Polish fighter pilot. %s, 194%d>
+<hLongDeB>	<Description Dynamic campaign for German bomber pilot. %s, 194%d>
+<hLongDeF>	<Description Dynamic campaign for German fighter pilot. %s, 194%d>
+
+<hLastRep>	<Description Description The war is over. You survived.\n> 
+
+<YOURGROUP>	<\nYour group:\n\n>
+<YOURKILLS>	<\nYour kills:\n\n>
+
+<VICTORY>	<%s %s: %d kill %s\n>
+<VICTORIES>	<%s %s: %d kills %s\n>
+
+<hROUTE>	<\nDistance to target %d km\nFlight Altitude: %d m\n>
+
+<TOWNLIB> 	<Our victorious troops have captured %s>
+<TOWNLIB> 	<We've taken %s>
+<TOWNLIB> 	<We captured %s>
+<TOWNLIB> 	<The enemy surrendered %s>
+<TOWNLIB> 	<Our troops entered %s>
+<TOWNLIB> 	<We now control %s>
+<TOWNLIB> 	<In a decisive victory, our troops have taken %s>
+<TOWNLIB> 	<Our glorious forces now control %s> 
+<AND> 		< and > 
+<TOWNLOST> 	<Under attacks of numerically superior enemy, we had to abandon %s>
+<TOWNLOST> 	<Regardless heroic resistance, we have left %s>
+<TOWNLOST> 	<Our troops have left %s>
+<TOWNLOST> 	<We left %s>
+<TOWNLOST> 	<We abandonned %s>
+<TOWNLOST> 	<The enemy have taken %s> 
+<TOWNLOST> 	<Our troops have left %s> 
+
+
+	---------------------------------------------------------------------------------------------------------------------------
+	Plane names to appear in briefings
+	---------------------------------------------------------------------------------------------------------------------------
+
+<IL_2T>		<IL-2T>
+<PE_2SERIES1>	<Pe-2>
+<PE_2SERIES84>	<Pe-2>
+<PE_2SERIES110>		<Pe-2>
+<PE_2SERIES359>		<Pe-2>
+<PE_3SERIES1>	<Pe-3>
+<PE_3BIS>	<Pe-3 bis>
+<TU_2S>		<Tu-2S>
+<SU_2>		<Su-2>
+<PE_8>	<Pe-8>
+<JU_87B2>	<Ju 87B-2>
+<JU_87D3>	<Ju 87D-3>
+<JU_87D5>	<Ju 87D-5>
+<JU_87G1>	<Ju 87G-1>
+<JU_52_3MG4E>	<Ju 52/3m g4e>
+<LI_2>	<Li-2>
+<IL_2_1940Early>	<IL-2>
+<IL_2_1940Late>		<IL-2>
+<IL_2_1941Early>	<IL-2>
+<IL_2_1941Late>		<IL-2>
+<IL_2MEarly>	<IL-2M>
+<IL_2MLate>		<IL-2M>
+<IL_2Type3>		<IL-2 Type 3>
+<IL_2Type3M>	<IL-2 Type 3M>
+<I_153_M62>		<I-153/M62>
+<I_153P>	<I-153P>
+<I_16TYPE24>	<I-16>
+<I_16TYPE18>	<I-16>
+<LA_7>	<La-7>
+<P_39N>		<P-39N>
+<P_39Q1>	<P-39Q1>
+<P_39Q10>	<P-39Q10>
+<LAGG_3SERIES4>		<LaGG-3 S4>
+<LAGG_3IT>	<LaGG-3IT>
+<LAGG_3SERIES66>	<LaGG-3 S66>
+<LA_5FN>	<La-5FN>
+<MIG_3EARLY>	<MiG-3>
+<MIG_3UD>	<MiG-3UD>
+<MIG_3U>	<MiG-3U>
+<MIG_3UB>	<MiG-3UB>
+<MIG_3AM38>		<MiG-3AM38>
+<MIG_3SHVAK>	<MiG-3 ShVAK>
+<YAK_1>		<Yak-1>
+<YAK_1B>	<Yak-1B>
+<YAK_7B>	<Yak-7B>
+<YAK_3>		<Yak-3>
+<YAK_9>		<Yak-9>
+<YAK_9D>	<Yak-9D>
+<YAK_9K>	<Yak-9K>
+<YAK_9T>	<Yak-9T>
+<YAK_9U>	<Yak-9U>
+<R_10>	<R-10>
+<U_2VS>		<Po-2VS>
+<BF_109E4>	<Bf 109E-4>
+<BF_109E4B>		<Bf 109E-4B>
+<BF_109E7>	<Bf 109E-7>
+<BF_109E7NZ>	<Bf 109E-7>
+<BF_109F2>	<Bf 109F-2>
+<BF_109F4>	<Bf 109F-4>
+<BF_109G2>	<Bf 109G-2>
+<BF_109G6>	<Bf 109G-6>
+<BF_109G6Late>	<Bf 109G-6>
+<BF_109G6AS>	<Bf 109G-6>
+<FW_189A2>	<FW 189A-2>
+<FW_190A4>	<FW 190A-4>
+<FW_190A5>	<FW 190A-5>
+<FW_190A8>	<FW 190A-8>
+<FW_190A9>  <FW-190A-9>
+<FW_190D9>	<FW 190D-9>
+<FW_190D9LATE>	<FW-190D9>
+<JU_88A4>	<Ju 88A-4>
+<HE_111H2>	<He 111H-2>
+<HE_111H6>	<He 111H-6>
+<HS_129B2>	<Hs 129B-2>
+<HS_129B3Wa>	<Hs 129B-3/Wa>
+<P_11C>		<P.11c>
+<IL_2I>		<IL-2I>
+<LA_5>		<La-5>
+<LA_5F>		<La-5F>
+<LA_7B20>	<La-7>
+<P_40E>		<P-40E>
+<P_40EM105>	<P-40E/M105>	
+<P_40M>>	<P-40M>
+<BF_110C4>	<Bf 110C-4>
+<BF_110C4B>	<Bf 110C-4B>
+<BF_110G2>	<Bf 110G-2>
+<HurricaneMkIa>	<Hurricane Mk.I>
+<HurricaneMkIIb>	<Hurricane Mk.IIb>
+<HurricaneMkIIc>	<Hurricane Mk.IIc>
+<HurricaneMkIIbMod>	<Hurricane>
+<BLENHEIM1>	<Blenheim Mk.I>
+<BLENHEIM4>	<Blenheim Mk.IV>
+<SB_2M100A>	<SB-2>
+<SB_2M103>	<SB-2>
+<TB_3_4M_17> <TB-3>
+<ME_262A1A> <Me-262>
+<ME_262A2A> <Me-262>
+
+<F2A_B239> <Brewster Buffalo>
+<MS406> <M.S.406>
+<MS410> <M.S.410>
+<G50>   <Fiat G-50>
+<P_47D10> <P-47D>
+<P_47D22> <P-47D>
+<P_47D27> <P-47D>
+<ME_210CA1> <Me 210Ca-1>
+<ME_210CA1ZSTR> <Me 210Ca-1/Zstr>
+<IL_4_DB3B>			<DB-3>
+<IL_4_DB3M>			<DB-3>
+<IL_4_DB3F>			<DB-3>
+<IL_4_IL4>			<IL-4>
+<FW_190F8>          <FW 190F-8>
+<BF_109G10>			<Bf 109G-10>
+<BF_109G14>			<Bf 109G-14>
+<BF_109K4>			<Bf 109K-4>
+<P_51D20NA>			<P-51>
+<P_51D5NT>			<P-51>
+<P_51B>				<P-51>
+<P_51C>				<P-51>
+<P_51CM>			<P-51>
+<TEMPEST5>	<Tempest V>
+<P_38J>				<P-38>
+<P_38L>				<P-38>
+<P_63C>				<P-63>
+<P_36A3>			<P-36>
+<P_36A4>			<P-36>
+<GLADIATOR1>		<Gladiator>
+<GLADIATOR2>		<Gladiator>
+<GLADIATOR1J8A>		<J8A>
+<SPITFIRE5B>		<Spitfire>
+<SPITFIRE5BCLP>		<Spitfire>
+<SPITFIRE5BLF>		<Spitfire>
+<SPITFIRE5BLFCLP>	<Spitfire>
+<B_25C25>		<B-25>
+<B_25G1>		<B-25>
+<B_25H1>		<B-25>
+<B_25J1>		<B-25>
+<SPITFIRE9C>	<Spitfire>
+<SPITFIRE9CCLP>	<Spitfire>
+<SPITFIRE9E>	<Spitfire>
+<SPITFIRE9ECLP>	<Spitfire>
+<SPITFIRE9EHF>	<Spitfire>
+<FW_190A6>	<FW-190/A6>
+<IAR_80>	<IAR-80>
+<IAR_81A>	<IAR-81A>
+<IAR_81C>	<IAR-81C>
+<LAGG_3SERIES29>	<LaGG-3>
+<LAGG_3SERIES35>	<LaGG-3>
+<YAK_7A>	<YAK-7A>
+<YAK_9B>	<YAK-9B>
+<YAK_9M>	<YAK-9M>
+<YAK_3P>	<YAK-3P>
+<YAK_9UT>	<YAK-9UT>
+<I_185M71>	<I-185>
+<I_185M82A>	<I_185>
+
+	---------------------------------------------------------------------------------------------------------------------------
+	Geographic names - if spelling is different from English
+	---------------------------------------------------------------------------------------------------------------------------
+<DeACE_KILLED> <Our intelligence reports that famous German ace %s was killed in this combat.\n>
+<RuACE_KILLED> <Russian intelligence reports that famous Russian ace %s was killed in this combat.\n>
+<DeACE_CAPTURED> <Our troops have captured famous German ace %s, who was shot down in this combat.\n>
+<RuACE_CAPTURED> <Our troops have captured famous Russian ace %s, who was shot down in this combat.\n>
+<DeACE_DOWN> <German ace %s was shot down in this combat, but escaped alive.\n>
+<RuACE_DOWN> <Russian ace %s was shot down in this combat, but escaped alive.\n>
+
+<RuAArtyR>	<Targets for today are German artillery positions. You must destroy the guns!\n>
+<RuAArtyD>	<Our main asset in the area is artillery. You must protect it.\n>
+<DeAArtyR>	<Germans often attack our artillery in the area. You must protect it.\n>
+<DeAArtyD>	<Targets for today are Russian artillery positions. Attack them!\n>
+<RuBArtyR>	<Targets for today are German artillery positions. You must protect the bombers.\n>
+<RuBArtyD>	<Our main asset in the area is artillery. Destroy the bombers if they dare to appear there.\n>
+<DeBArtyR>	<Germans often attack our artillery in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBArtyD>	<Targets for today are Russian artillery positions. You must protect the bombers.\n>
+
+<RuARailR>	<Target for today is German railroad station. Destroy everything there!\n>
+<RuARailD>	<Russians often attack our railroad station in the area. You must protect it.\n>
+<DeARailR>	<Germans often attack our railroad station in the area. You must protect it.\n>
+<DeARailD>	<Target for today is Russian railroad station. Attack them!\n>
+<RuBRailR>	<Target for today is German railroad station. You must protect the bombers.\n>
+<RuBRailD>	<Russians often attack our railroad station in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBRailR>	<Germans often attack our railroad station in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBRailD>	<Target for today is Russian railroad station. You must protect the bombers.\n>
+
+<RuADepotR>	<Target for today is German supply depot. Destroy everything there!\n>
+<RuADepotD>	<Russians often attack our supply depot in the area. You must protect it.\n>
+<DeADepotR>	<Germans often attack our supply depot in the area. You must protect it.\n>
+<DeADepotD>	<Target for today is Russian supply depot. Attack them!\n>
+<RuBDepotR>	<Target for today is German supply depot. You must protect the bombers.\n>
+<RuBDepotD>	<Russians often attack our supply depot in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBDepotR>	<Germans often attack our supply depot in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBDepotD>	<Target for today is Russian supply depot. You must protect the bombers.\n>
+
+<RuAPortR>	<Target for today is German port. Destroy everything there!\n>
+<RuAPortD>	<Russians often attack our port in the area. You must protect it.\n>
+<DeAPortR>	<Germans often attack our port in the area. You must protect it.\n>
+<DeAPortD>	<Target for today is Russian port. Attack them!\n>
+<RuBPortR>	<Target for today is German port. You must protect the bombers.\n>
+<RuBPortD>	<Russians often attack our port in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBPortR>	<Germans often attack our port in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBPortD>	<Target for today is Russian port. You must protect the bombers.\n>
+
+<RuAHQR>	<Target for today is German field HQ. Destroy everything there!\n>
+<RuAHQD>	<Russians may attack our field HQ in the area. You must protect it.\n>
+<DeAHQR>	<Germans may attack our field HQ in the area. You must protect it.\n>
+<DeAHQD>	<Target for today is Russian field HQ. Attack them!\n>
+<RuBHQR>	<Target for today is German field HQ. You must protect the bombers.\n>
+<RuBHQD>	<Russians may attack our field HQ in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBHQR>	<Germans may attack our field HQ in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBHQD>	<Target for today is Russian field HQ. You must protect the bombers.\n>
+
+<RuATroopR>	<Targets for today are German troops in the area. Destroy everything there!\n>
+<RuATroopD>	<Russians often attack our troops in the area. You must protect them.\n>
+<DeATroopR>	<Germans often attack our troops in the area. You must protect them.\n>
+<DeATroopD>	<Targets for today are Russian troops. Attack them!\n>
+<RuBTroopR>	<Targets for today are German troops. You must protect the bombers.\n>
+<RuBTroopD>	<Russians often attack our troops in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBTroopR>	<Germans often attack our troops in the area. Destroy the bombers if they dare to appear there.\n>
+<DeBTroopD>	<Targets for today are Russian troops. You must protect the bombers.\n>
+
+<dbrDeEXCELLENT>	<\nYour performance in this mission was excellent. You set an example for all of us.>
+<dbrDeEXCELLENT>	<\nYou performed exceptionally in this mission - your actions deserve to be studied by all Luftwaffe pilots.>
+<dbrDeEXCELLENT>	<\nIn this mission you demonstrated that you are an exceptional pilot. Your CO is very pleased by your actions.>
+<dbrDeGOOD>	<\nYour performance in this mission was good. We need more pilots like you.>
+<dbrDeGOOD>	<\nIt was a fine mission. You make good progress as a combat pilot.>
+<dbrDeGOOD>	<\nGood work! Your commander is pleased.>
+<dbrDeGOOD>	<\nYou've done well. Germany needs pilots like you>
+<dbrDeOK>	<\nThis day is over, time to rest and prepare for tomorrow.>
+<dbrDeOK>	<\nYou survived and can fight another day.>
+<dbrDeOK>	<\nYou need more practice. But for today, it's over. Be ready for  tomorrow's work.>
+<dbrDeOK>	<\nThis mission is over. You'll have a chance to do better tomorrow.>
+<dbrDeOK>	<\nThis day could be better. But it could be much worse.>
+<dbrDeOK>	<\nNot every day brings glory, but you have fulfilled your duty.>
+<dbrDeOK>	<\nDon't worry, not every pilot can be an ace - but you have done what you could.>
+<dbrDeOK>	<\nA mission like many others. You'll do better next time.>
+<dbrDeBAD>	<\nIt was definitely not your best day. But at least you survived.>
+<dbrDeBAD>	<\nYour performance in this mission was not remarkable.>
+<dbrDeBAD>	<\nNot a mission to write home about.>
+
+<dbrRuEXCELLENT>	<\nYour performance in this mission was excellent. You set an example for all of us and impressed our Russian allies.>
+<dbrRuEXCELLENT>	<\nYou performed exceptionally in this mission - your actions deserve to be studied by all Russian and Polish pilots.>
+<dbrRuEXCELLENT>	<\nIn this mission you demonstrated that you are an exceptional pilot. General Fiodor Polynin is very pleased by your actions.>
+<dbrRuGOOD>	<\nYour performance in this mission was good. Polish People's Army Aviation needs more pilots like you.>
+<dbrRuGOOD>	<\nIt was a fine mission. You make good progress as a combat pilot. Our Russian comrades are proud they trained you so well.>
+<dbrRuGOOD>	<\nGood work! Your commander is pleased. We'll end this bloody war really soon with such pilots like you.>
+<dbrRuGOOD>	<\nYou've done well. The Motherland needs pilots like you.>
+<dbrRuOK>	<\nThis day is over, time to rest and prepare for tomorrow. The path to liberation of Poland is still a long one.>
+<dbrRuOK>	<\nYou survived and can fight another day for our just cause.>
+<dbrRuOK>	<\nYou need more practice. But for today, it's over. Be ready for tomorrow's work.>
+<dbrRuOK>	<\nThis mission is over. You'll have a chance to do better tomorrow. All the people in Poland count on you, don't disappoint your countrymen.>
+<dbrRuOK>	<\nThis day could be better. But it could be much worse. Don't let you comrades down tomorrow.>
+<dbrRuOK>	<\nNot every day brings glory, but you have fulfilled your duty to the Motherland.>
+<dbrRuOK>	<\nDon't worry, not every pilot can be an ace - but you have done what you could.>
+<dbrRuOK>	<\nA mission like many others. You'll do better next time - the freedom of Poland is at stake!>
+<dbrRuBAD>	<\nIt was definitely not your best day. But at least you survived.>
+<dbrRuBAD>	<\nYour performance in this mission was not remarkable. Maybe you should return to training unit?>
+<dbrRuBAD>	<\nYou should have done better. Russians are starting to wonder why did they let Poles to fly their planes...>
+
+<dbrRuDEAD>	<\nYou were killed. Your fellow pilots mourn your death.>
+<dbrDeDEAD>	<\nYou were killed.>
+<dbrRuCAPTURED>	<\nYou were captured.>
+<dbrDeCAPTURED>	<\nYou were captured.>
+<dbrRuWOUNDED>	<\nYou were wounded.>
+<dbrDeWOUNDED>	<\nYou were wounded.>
+<dbrRuHWOUNDED>	<\nYou were heavily wounded.>
+<dbrDeWHOUNDED>	<\nYou were heavily wounded.>
+
+<dbrLOST1> <We lost one plane in this mission>
+<dbrLOST1> <One of our planes was shot down>
+<dbrLOST> <We lost %d planes in this mission>
+<dbrKILL1> <We shot down one enemy plane>
+<dbrKILL1> <One enemy plane was shot down>
+<dbrKILL1> <The enemy lost one plane>
+<dbrKILL> <The enemy lost %d planes>
+
+<RuSHORTAGE> <Your squadron has only %d combat ready planes left\n>
+<RuSHORTAGE> <Your squadron has %d combat ready planes\n> 
+<RuOUT> <You had to borrow planes from training unit\n> 
+<RuOUT> <You had to borrow planes from divisional reserves\n> 
+<DeSHORTAGE> <Your squadron has only %d combat ready planes left\n> 
+<DeSHORTAGE> <Your squadron has %d combat ready planes\n> 
+<DeOUT> <You had to borrow planes from training unit\n>
+<DeOUT> <You had to borrow planes from neighbouring staffel\n>
+<RESUPPLIED> <Your squadron has been resupplied.\n>
+
+<DeSQ1> <You are assigned to 1st staffel, commanded by %s\n>
+<DeSQ2> <You are assigned to 2nd staffel, commanded by %s\n>
+<DeSQ3> <You are assigned to 3rd staffel, commanded by %s\n>
+
+<RuSQ1> <You are assigned to 1. eskadra, commanded by %s\n>
+<RuSQ2> <You are assigned to 2. eskadra, commanded by %s\n>
+<RuSQ3> <You are assigned to 3. eskadra, commanded by %s\n>
+
+<DeCO1> <You are assigned  a CO of the first staffel\n>
+<DeCO2> <You are assigned  a CO of the second staffel\n>
+<DeCO3> <You are assigned  a CO of the third staffel\n>
+
+<RuCO1> <You are assigned  a CO of the first eskadra\n>
+<RuCO2> <You are assigned  a CO of the second eskadra\n>
+<RuCO3> <You are assigned  a CO of the third eskadra\n>
+
+<dbrRuSqEXCELLENT> <\nComrades! This battle is over. Our escadra has covered itself with glory. >
+<dbrDeSqEXCELLENT> <\nPilots! This battle is over. Our staffel has covered itself with glory. >
+
+<dbrRuSqGOOD> <\nComrade Officers! Our eskadra has distinguished itself in this battle. >
+<dbrDeSqGOOD> <\nPilots! Our staffel has distinguished itself in this battle. >
+
+<dbrRuSqOK> <\nComrade Officers! The battle was difficult, but everybody did what they could. >
+<dbrDeSqOK> <\nPilots! The battle was difficult, but everybody did what they could. >
+
+<dbrRuSqBAD> <\nComrade Officers! The battle was extremely difficult. Our losses were not in vain, but we have to learn from our mistakes. >
+<dbrDeSqBAD> <\nPilots! The battle was extremely difficult. Our losses were not in vain, but we have to learn from our mistakes. >
+
+<dbrRuEnemyLost> <\nIn combats with participation of our pilots the enemy lost:\n>
+<dbrDeEnemyLost> <\nIn combats with participation of our pilots the enemy lost:\n>
+
+<CUR_KILLS>		<In this mission you destroyed:>
+<CUR_KILLS>		<The following kills were confirmed for your last mission:>
+<CUR_KILLS>		<These targets were destroyed in the last sortie:>
+
+<TOT_KILLS>		<During your career you destroyed:>
+<TOT_KILLS>		<Your list of destroyed targets:>
+<TOT_KILLS>		<All targets that you destroyed:>
+
+<dbrNplanes>	<Planes: %d\n>
+<dbrNplanesG>	<Planes on the ground: %d\n>
+<dbrNtanks>		<Tanks: %d\n>
+<dbrNguns>		<Guns: %d\n>
+<dbrNcars>		<Vehicles: %d\n>
+<dbrNwagons>	<Railroad cars: %d\n>
+<dbrNbridges>	<Bridges: %d\n>
+<dbrNships>		<Ships: %d\n>
+
+<dbrRuWeLost> <\nOur side has lost %d planes.\nDismissed!>
+<dbrRuNoLoss> <\nOur losses are minimal.\nDismissed!>
+
+<dbrDeWeLost> <\nOur side has lost %d planes.\nDismissed!>
+<dbrDeNoLoss> <\nOur losses are minimal.\nDismissed!>
+
+<logRecon> 				<Air recon of the %s area>
+<logReconB> 			<Air recon>
+
+<RuRec>     <\nWe need you to perform air recon of the %s area. >
+<RuRec>     <\nWe need to you to locate an important target near %s. >
+
+<DeRec>     <\nWe need you to perform air recon of the %s area. >
+<DeRec>     <\nWe need to you to locate an important target near %s. >
+
+<RuRHQR>    <Try to locate German field HQ, that, as we suspect, should be located there.\n>
+<RuRHQR>    <Partisans report that Germans have field HQ located somewhere in the region, try to find it.\n>
+<RuRArtyR>  <Try to locate German battery, acting from there.\n>
+<RuRDepotR> <Germans should have a supply depot somewhere in the region, try to find it.\n>
+
+<DeRHQD>    <Try to find Russian field HQ, that, as we suspect, should be located there.\n>
+<DeRHQD>    <Deserters report that the Russians have field HQ located somewhere in the region, try to find it.\n>
+<DeRArtyD>  <Try to locate Russian battery, acting from there.\n>
+<DeRDepotD> <Soviets should have a supply depot somewhere in the region, try to find it.\n>
+
+<BerlinPlBr> <The first Polish aviation units in the Soviet Union commenced training in 1943 and the first sturmovik regiment was finally ready for combat in August 1944. After liberating East Prussia, Pomorze and Gdansk, the Polish People's Army, fighting along with the Red Army is ready for the final blow against hitlerists, the assault on Berlin! In late February, several Red Army fronts including 1st Polish Army will cross the Odra River in order to envelop Berlin and take it, preferably with all the German leadership in it. The role of the Polish People's Army Aviation and VVS will be close support for our troops, as well as air cover, especially for the Odra bridges. This will be the last and most important battle of all!>
+<BerlinPlDb> <Victory! The red flag has been raised over the Reichstag and Hitler is dead! The peoples of the Soviet Union along with their Polish allies have totally defeated the German aggressor! At last Poland is free! The hitlerist occupation is over. The Polish People's Army Aviation, teamed up with VVS, performed brilliantly in this huge battle. It successfully protected the Odra bridges from German raids and helped eliminate all serious resistance. Polish People's Army Aviation has made incredible progress during the war years growing from a single eskadra to a full fledged air force and proved that it was important factor in toppling the Nazi regime.>
+<BerlinDeBr> <The Russian offensive of Summer 44 had pushed us back almost to the 1937 borders of Germany. In February 1945, the Soviets attacked East Prussia. The Kriegsmarine launched an all out effort to save as many soldiers and civilians as possible, and the fighting over a small bridgehead near Pillau is still ongoing, as well as on Hela. The Soviets will soon launch their final offensive on Berlin. After the Ardennes offensive and the failed Operation Bodenplatte, most RLV fighter units have been assigned to the East front, leaving the defence against the US air raids to the Jet fighters of JG 7. Luftflotte 6 has an impressive order of battle, more units ever since Operation Barbarossa. But most units are understrenght, short on fuel and have only novice pilots. The key of success will be the Oder crossings. If we can destroy the Bridges across the Oder, the Soviets will not be able to advance. Gefechtsverband Bohrmann is tasked with that, and all fighter units will support it, as well as fly Jabo missions against Soviet troops. Air supremacy is only a secondary task, due to the huge enemy advantage in numbers. This is going to be our last stand. Especially since the treacherous murder attempt on 20th July last year, the Führer expects fanatical resistance and total devotion to duty!>
+<BerlinDeDb> <In late February, the Soviets crossed the Oder. An intense air campaign during which every possible weapon was used against the bridges began. However, it proved impossible to destroy the bridges permanently. A last major defensive battle at the Seelower Höhen didn't buy much time and Berlin was surrounded by end of March. The Luftwaffe did what it could, mostly close support missions, but was not able to make any difference. On 2nd May finally, the Führer died in his Bunker and the city surrendered. Karl Dönitz, his successor, has build a provisional government in Flensburg and tries to salvage what is possible from the East, but the war is lost. Six years of war and so many lives have been lost in vain.>
+
+<RuRescueSit> <\nWe received a report that a plane of our regiment's Chief of Staff who participated in an attack of %s made an emergency landing somewhere in the area. >
+<RuRescueSit> <\nOur neighbours just lost one of their pilots, who participated in an attack of %s. They say he crash landed somewhere in the area. >
+<RuRescueSit> <\nOne of our regiment's planes did not return from a recon mission of %s. The pilot reported that he will attempt to make an emergency landing. >
+<DeRescueSit> <\nWe received a report that our gruppe commander, who participated in an attack of %s made an emergency landing somewhere in the area. >
+<DeRescueSit> <\nOur neighbours just lost one of their pilots, who participated in an attack of %s. They say he crash landed somewhere in the area. >
+<DeRescueSit> <\nOne of our planes did not return from a recon mission of %s. The pilot reported that he will attempt to make an emergency landing. >
+
+<RuRescue> <Do your best to save him!\n>
+<RuRescue> <Try to locate the plane and report immediately!\n>
+<DeRescue> <Do your best to save him!\n>
+<DeRescue> <Try to locate the plane and report immediately!\n>
+
+<RuVerifySit> <\nOne of our young pilots reports that he downed a German bomber near %s. Ground observers cannot confirm it. >
+<DeVerifySit> <\nOne of our young pilots reports that he downed a Soviet bomber near %s. Ground observers cannot confirm it. >
+
+<RuVerify> <Try to locate the plane - it may be equipped with a new radar.\n>
+<RuVerify> <Try to find the plane - we trust the pilot, but he cannot be credited without a proof.\n>
+<RuVerify> <Search the area - the plane may be equipped with a new night sight.\n>
+
+<DeVerify> <Try to locate the plane - it may be equipped with a new radar.\n>
+<DeVerify> <Try to find the plane - we trust the pilot, but he cannot be credited without a proof.\n>
+<DeVerify> <Search the area - the plane may be equipped with a new night sight.\n>
+
+<RuIceRoadCAP> <We are covering the Road of Life. >
+<RuIceRoadCAP> <We will cover the main Leningrad supply line today - the Road of Life. >
+<RuIceRoadCAP> <Comrade Officers! Today we received and order to protect the Road of Life from German monsters. >
+<RuIceRoadCAP> <In this mission we will cover the Road of Life. >
+<RuIceRoadCAP> <We are entrusted with the defense of the Ladoga ice road against German murderers. >
+
+<DeIceRoadCAS> <We will attack the main Russian line of supplies - the ice road over Ladogasee. >
+<DeIceRoadCAS> <To help our troops we must stop Russian trucks supplying Leningrad over the Ladogasee ice. >
+<DeIceRoadCAS> <Pilots! Today we received and order to hit Soviet ice road. >
+
+<logIceRoadCAP> <Protection of the Ladoga ice road.>
+<logAttackIceRoad> <Attack of the Ladoga ice road.>
+<DeIceRoad> <Destroy everything that you see!>
+<RuIceRoad> <Remember that to save lives of Leningrad defenders we need every truck!>
+
+<RuLadogaCAP> <We are covering Ladoga ports. >
+<RuLadogaCAP> <We will cover the main Leningrad supply line today - Ladoga ports. >
+<RuLadogaCAP> <Comrade Officers! Today we received and order to protect ports on Ladoga lake from German monsters. >
+
+<DeLadogaCAS> <We will attack the main Russian line of supplies - Ladogasee. >
+<DeLadogaCAS> <To help our troops we must stop the ships supplying Leningrad over the Ladogasee. >
+<DeLadogaCAS> <Pilots! Today we received and order to hit Ladoga ports. >
+
+<logLadogaCAP> <Protection of the Ladoga ports.>
+<logAttackLadoga> <Attack of the Ladoga ports.>
+<DeLadoga> <Destroy everything that you see!>
+<RuLadoga> <Protect the ships and equipment - remember that they deliver food to Leningrad defenders and evacuate those who can not fight!>
+
+<YouAreBack> <\nYou returned to active service\n>
