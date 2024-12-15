@@ -1,0 +1,33 @@
+[_ROOT_]
+VisibilitySphere 3.67661
+CollisionObject sphere 3.36174 0.0 0.0 0.0
+[Body]
+Mesh Body
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1.2 -0.09829 0.00157 -0.82086
+CollisionObject Body
+
+
+[Head]
+Mesh Head
+Parent Body
+Attaching  0 -0.8 0 0.8 0 0 0 0 0.7 0.50 0.0 1.60
+CollisionObject Head
+
+
+[Gun]
+Mesh Gun
+Parent Body
+Attaching 0 -0.8 0 0 0 -0.8 0.8 0 0 -0.80 -1.30 0.75
+
+
+[LittleGun]
+Mesh LittleGun
+Parent Head
+Attaching 0.75 0 0 0 0 -0.75 0 0.75 0 1.101 -0.2 0.0
+
+
+[Tracks]
+Mesh Tracks
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0

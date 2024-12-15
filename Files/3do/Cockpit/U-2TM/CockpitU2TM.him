@@ -1,0 +1,133 @@
+[_ROOT_]
+VisibilitySphere 2.35196
+[Z_Z_MASK]
+Mesh Z_Z_MASK
+Parent _ROOT_
+Attaching 0 -1 0 0 0 1 -1 0 0 4.04587 -0.002 0.83253
+[Body]
+Mesh Body1
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 -1.63 -0.0023 0.28
+[Tail]
+Mesh Tail1
+Parent body
+Attaching 0 0.897 0 -1 0 0 0 0 1 -1.07327 -0.0023 -0.169
+[crank]
+Mesh crank
+Parent Body
+Attaching 0.906307 0 -0.422621 0.422621 0 0.906307 0 -1 0 0.02847 0.33228 0.01733
+[handle]
+Mesh handle
+Parent Body
+Attaching 0.866025 0 0.500001 -0.500001 0 0.866025 0 -1 0 0.02847 0.33228 0.01733
+[hand_tross]
+Mesh hand_tross
+Parent handle
+Attaching 0.500001 0.866025 0 -0.866025 0.500001 0 0.500001 0.866025 0 0.00823341 0.0373392 0.01118
+[lever]
+Mesh lever
+Parent Body
+Attaching 0.906307 0 0.422621 -0.422621 0 0.906307 0 -1 0 0.02847 0.33228 0.01733
+[Stick]
+Mesh Stick1
+Parent Body
+Attaching 0 1 0 -1 0 0 0 0 1 0.14725 0.00137 -0.58767
+[Ped_Base]
+Mesh Ped_Base
+Parent Body
+Attaching -1 0 0 0 0 1 0 1 0 0.6549 0.00248 -0.52134
+[PedalL]
+Mesh PedalL
+Parent Ped_Base
+Attaching -1 0 0 0 1 0 0 0 -1 -0.00552005 0.02266 0.19025
+[PedalR]
+Mesh PedalR
+Parent Ped_Base
+Attaching -1 0 0 0 1 0 0 0 -1 -0.00150001 0.02266 -0.19131
+[panel]
+Mesh panel
+Parent Body
+Attaching 0 -1 0 0 0 1 -1 0 0 0.34885 -0.00258 -0.025
+[zSpeed1a]
+Mesh zSpeed1a
+Parent Body
+Attaching 9.11787e-008 1.82357e-007 1 -1 0 0 1.10631e-007 -1 2.21262e-007 0.33 0.222 0.0348
+[zAlt1a]
+Mesh zAlt1a
+Parent Body
+Attaching 9.26689e-008 -4.63345e-007 1 -1 0 0 1.1832e-007 -1 -4.73279e-007 0.331 0.1585 -0.136 
+[zAlt1b]
+Mesh zAlt1b
+Parent Body
+Attaching 1.32993e-007 -5.31971e-007 1 -1 0 0 1.1832e-007 -1 -4.73279e-007 0.3305 0.1585 -0.136 
+[zClock1a]
+Mesh zClock1a
+Parent Body
+Attaching 0 2.09897e-007 1 -1 0 0 6.31542e-008 -1 1.89463e-007 0.33 -0.2768 -0.105
+[zClock1b]
+Mesh zClock1b
+Parent Body
+Attaching 0 2.29799e-007 1 -1 0 0 5.92328e-008 -1 1.77698e-007 0.33 -0.2768 -0.105
+[zRPS1a]
+Mesh zRPS1a
+Parent Body
+Attaching -8.25787e-008 0.258819 -0.965926 -1 0 0 0 0.965926 0.258819 0.335 -0.179 0.0338
+[zTurn1a]
+Mesh zTurn1a
+Parent Body
+Attaching 8.92067e-008 1.78413e-007 1 -1 0 0 7.36029e-008 -1 1.47206e-007 0.33 -0.0195 0.09
+[zSlide1a]
+Mesh zSlide1a
+Parent body
+Attaching -0.00872662 -2.39914e-007 -0.999962 0.999962 1.19957e-007 -0.00872663 1.19957e-007 -1 1.19957e-007 0.338 -0.0195 0.09
+[zAzimuth1a]
+Mesh zAzimuth1a
+Parent body
+Attaching 0 -1 0 0 0 1 -1 0 0    0.27 -0.017 -0.065
+[zAzimuth1b]
+Mesh zAzimuth1b
+Parent zAzimuth1a
+Attaching 0 0 -1 0 1 0 1 0 0 0 0 0
+[zAzimuth1c]
+Mesh COMPASS_M
+Parent zAzimuth1b
+Attaching 0 0 0.8 -0.8 0 0 0 -1 0 0 0.0178204 0 
+[panel_windows]
+Mesh windo
+Parent Body
+Attaching 0 -1 0 0 0 1 -1 0 0 0.32865 -0.00250 -0.0150 
+[Z_Holes1_D1]
+Mesh Z_Holes1_D1
+Parent body
+Hidden
+Attaching 1 0 0 0 0 1 0 -1 0 0.15998 0.00388 0.44988
+[Z_Holes2_D1]
+Mesh Z_Holes2_D1
+Parent body
+Hidden
+Attaching 1 0 0 0 0 1 0 -1 0 0.15998 0.00388 0.44988
+[Z_OilSplats_D1]
+Mesh Z_OilSplats_D1
+Parent body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.16598 0.00056 0.46186
+[Glass]
+Mesh Glass
+Parent body
+Attaching 1 0 0 0 1 0 0 0 1 0.16598 0.00056 0.46186
+[pilot2]
+Mesh pilot2
+Parent body
+Attaching 0.8417 0 0.1182 -.11820 0 0.8417 0 -0.85 0 -0.363654 -0.00362 0.18
+[Head1_D0]
+Mesh Head1_D0
+Parent pilot2
+Attaching 0.866 -0.5 0 0 0 -1 0.5 0.866 0 -0.04763 0.00891 0
+[LegsL]
+Mesh LegsL
+Parent PedalL
+Attaching 0 0 0.9    1.1456 0.1 0    -0.0871 0.9961 0  -0.52 0.259058 0.2
+[LegsR]
+Mesh LegsR
+Parent PedalR
+Attaching 0 0 0.9    1.1456 0.1 0    -0.0871 0.9961 0  -0.52 0.259058 -0.185

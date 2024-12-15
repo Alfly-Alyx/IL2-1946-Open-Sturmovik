@@ -1,0 +1,81 @@
+[_ROOT_]
+VisibilitySphere 5.52035
+[Glass]
+Mesh Glass
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 4.97993 -0.25075 0.17378
+//Attaching 0 1 0 -1 0 0 0 0 1 4.77993 -0.25075 0.17378
+[Body]
+Mesh Body
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 4.74112 0.39997 -0.09703
+//Attaching 0 1 0 -1 0 0 0 0 1 4.54112 0.39997 -0.09703
+[BlackBox]
+Mesh BlackBox
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 5.2292 0 -0.67169
+//Attaching 0 1 0 -1 0 0 0 0 1 5.0292 0 -0.67169
+[zReticle]
+Mesh zReticle
+Parent BlackBox
+Hidden
+Attaching -1 0 0 0 -1 0 0 0 1 0 0 -1
+[zAngleMark]
+Mesh zAngleMark
+Parent BlackBox
+Hidden
+Attaching -0.818657 -0.574282 0 0.574282 -0.818657 0 0 0 1 0 0 -1
+[Bombsight_D0]
+Mesh Bombsight_D0
+Parent Body
+Attaching -1 0 0 0 0 1 0 1 0 -0.27647 -0.6578 0.16619
+[Bombsight_D1]
+Mesh Bombsight_D1
+Parent Body
+Hidden
+Attaching -1 0 0 0 0 1 0 1 0 -0.27647 -0.6578 0.16619
+[zSpeed]
+Mesh zSpeed
+Parent Bombsight_D0
+Attaching -1 0 0 0 0 1 0 1 0 -0.20132 0.1919 0.28288
+[zAlt1]
+Mesh zAlt1
+Parent Bombsight_D0
+Attaching -1 0 0 0 0 1 0 1 0 -0.2022 0.03313 0.28289
+[zAlt2]
+Mesh zAlt2
+Parent Bombsight_D0
+Attaching -1 0 0 0 0 1 0 1 0 -0.20245 0.03299 0.28289
+[zCompass1]
+Mesh zCompass1
+Parent Body
+Attaching 1 0 0 0 0 1 0 -1 0 -0.07372 -0.39761 0.11874
+[Z_TurnBank1]
+Mesh Z_TurnBank1
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 -0.07464 -0.37492 0.25863
+[Z_TurnBank2]
+Mesh Z_TurnBank2
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 -0.07341 -0.37512 0.33933
+[XGlassDamage1]
+Mesh XGlassDamage1
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 4.57412 -0.41175 0.45839
+[XGlassDamage2]
+Mesh XGlassDamage2
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 4.40817 -0.47843 0.22388
+[XGlassDamage3]
+Mesh XGlassDamage3
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 4.40817 0.44583 0.46251
+[XGlassDamage4]
+Mesh XGlassDamage4
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 5.06924 0.31036 0.42684

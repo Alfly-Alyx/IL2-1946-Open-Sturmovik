@@ -1,0 +1,224 @@
+[_ROOT_]
+VisibilitySphere 2.26666
+[Body]
+Mesh Body
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -0.85424 -0.00248 0.25019
+[Stick]
+Mesh Stick
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.00329 0.26495 -0.34855
+[Column_Cam]
+Mesh Column_Cam
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.00156 -0.25213 -0.33015
+[Column_Rod]
+Mesh Column_Rod
+Parent Column_Cam
+Attaching 1 0 0 0 1 0 0 0 1 -0.11339 -0.0120201 -0.01169
+[Throttle]
+Mesh Throttle
+Parent Body
+Attaching 0.96363 0 0.26724 0.26724 0 -0.96363 0 1 0 0.1592 0.32441 0.0
+[Boost]
+Mesh Boost
+Parent Body
+Attaching 0.96363 0 0.26724 0.267201 -0.0174501 -0.963483 0.00465999 0.999848 -0.01682 0.26076 0.3258 0.02641
+[Rudder]
+Mesh Rudder
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.00296 -0.11001 -0.3061
+[RCableL]
+Mesh RCableL
+Parent Rudder
+Attaching 1 0 0 0 1 0 0 0 1 0.09141 0.01951 -0.12052
+[RCableR]
+Mesh RCableR
+Parent Rudder
+Attaching 1 0 0 0 1 0 0 0 1 -0.09241 0.01951 -0.12052
+###
+[pan24]
+Mesh pan24
+Parent Body
+Attaching  -1 0 0  0 -0.165048 0.986286  0 0.986286 0.165048  0.0015 0.076 0.236  // -9.5deg 0 180deg
+[magto]
+Mesh magto
+Parent Body
+Attaching  -1 0 0  0 -0.2588 0.965931  0 0.9659316 0.2588  0.234 0.095 0.225 
+[Yhand]
+Mesh Yhand
+Parent Body
+Attaching  -0.6 0 0  0 -0.155291 0.579555  0 0.579555 0.155291   0.18 0.095 0.355 
+[Rhand]
+Mesh Rhand
+Parent Body
+Attaching  -0.8 0 0    0 -0.207055 0.772741   0 0.772741 0.207055  -0.225 0.095 0.298 
+[compg]
+Mesh compg
+Parent Body
+Attaching  -1 0 0  0 0 1  0 1 0  0.0015 0.040 0.410  // -90deg 0 180deg
+[compc]
+Mesh compc
+Parent Body
+Attaching  -1 0 0  0 -0.165048 0.986286  0 0.986286 0.165048  -0.108 0.077 0.41
+###
+[vee24]
+Mesh vee24
+Parent Body
+Attaching  -0.94 0 0  0 -0.99863 -0.052336  0 -0.052336 0.99863  0.0023 0.27 0.21  // 3deg
+[han24]
+Mesh han24
+Parent Body
+Attaching  -1 0 0  0 0 1  0 1 0  0.002 0.25 0.42
+[Rball]
+Mesh Rball
+Parent Body
+Attaching -0.087156 -0.996195 0  0.992404 -0.086824 0.087156  -0.086824 0.007596 0.996195  0.42 0.59 0.084
+###
+[zSpeed]
+Mesh zSpeed
+Parent Body
+Attaching 0 0.267215 -0.963637 0 0.963637 0.267215 1 0 0 0.00238 0.05462 0.29681
+[zAlt]
+Mesh zAlt
+Parent Body
+Attaching 0 0.267268 -0.963622 0 0.963622 0.267268 1 0 0 -0.16099 0.07248 0.23239 // 15.5deg
+[zBoost]
+Mesh zBoost
+Parent Body
+Attaching 0 -0.267254 0.963626 0 0.963626 0.267254 -1 0 0 0.12032 0.03941 0.35165
+[zHour]
+Mesh zHour
+Parent Body
+Attaching 0 -0.267193 0.963643 0 0.963643 0.267193 -1 0 0 -0.2406 0.0752 0.22209
+[zMinute]
+Mesh zMinute
+Parent Body
+Attaching 0 -0.2588 0.965931 0 0.965931 0.2588 -1 0 0 -0.2406 0.0752 0.22038 // 15deg
+[zCompass]
+Mesh zCompass
+Parent Body
+Attaching 1 0 0 0 -0.190812 0.981627 0 -0.981627 -0.190812 0.00299 -0.02285 0.39842
+[zFuelPrs]
+Mesh zFuelPrs
+Parent Body
+Attaching 0.707082 0.188959 -0.681417 0 0.963643 0.267193 0.707082 -0.188959 0.681417 0.10847 0.0752 0.22258
+[zOilPrs]
+Mesh zOilPrs
+Parent Body
+Attaching 0.707082 0.188959 -0.681417 0 0.963643 0.267193 0.707082 -0.188959 0.681417 0.10871 0.05914 0.28051
+[zOilIn]
+Mesh zOilIn
+Parent Body
+Attaching 0 0.267193 -0.963643 0 0.963643 0.267193 1 0 0 0.16945 0.05904 0.28088
+[zOilOut]
+Mesh zOilOut
+Parent Body
+Attaching 0.707082 0.188959 -0.681417 0 0.963643 0.267193 0.707082 -0.188959 0.681417 0.16982 0.0752 0.22258
+[zPitch]
+Mesh zPitch
+Parent Body
+Attaching 0 -0.0958496 0.995396 0 0.995396 0.0958496 -1 0 0 -0.08472 0.07398 0.24454  // 5.5deg
+[zRPM]
+Mesh zRPM
+Parent Body
+Attaching 0 0.267268 -0.963622 0 0.963622 0.267268 1 0 0 -0.16099 0.05021 0.31271
+[zTurn]
+Mesh zTurn
+Parent Body
+Attaching 1 0 0 0 0.965926 0.258819 0 -0.258819 0.965926 0.00244 -0.26736 1.52696
+[zSlide]
+Mesh zSlide
+Parent Body
+Attaching 1 0 0 0 0.96363 0.26724 0 -0.26724 0.96363 0.00289 0.02913 0.41262
+[zU1]
+Mesh zU1
+Parent Body
+Attaching 0.824126 0 0.566407 0 1 0 -0.566407 0 0.824126 -0.29509 0.24062 0.10936
+[zU2]
+Mesh zU2
+Parent Body
+Attaching 0.824126 0 0.566407 0 1 0 -0.566407 0 0.824126 -0.29569 0.31294 0.11033
+[WingLIn_D0]
+Mesh WingLIn_D0
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 1.01748 -0.606 0.17839
+[WingLIn_D1]
+Mesh WingLIn_D1
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 1.01748 -0.52674 0.54097
+[WingLIn_D2]
+Mesh WingLIn_D2
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 1.01748 -0.52674 0.54097
+[WingLIn_D3]
+Mesh WingLIn_D3
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 1.01748 -0.52674 0.54097
+[WingLIn_CAP]
+Mesh WingLIn_CAP
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.26086 0.24837 0.03285
+[WingRIn_D0]
+Mesh WingRIn_D0
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 -1.00863 -0.60623 0.17845
+[WingRIn_D1]
+Mesh WingRIn_D1
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 -1.01207 -0.52687 0.54097
+[WingRIn_D2]
+Mesh WingRIn_D2
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 -1.01207 -0.52687 0.54097
+[WingRIn_D3]
+Mesh WingRIn_D3
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 -1.01207 -0.52687 0.54097
+[WingRIn_CAP]
+Mesh WingRIn_CAP
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 -0.21507 0.24837 0.05244
+[WingLOut_CAP]
+Mesh WingLOut_CAP
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 1.41755 -0.606 0.29779
+[WingROut_CAP]
+Mesh WingROut_CAP
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 -1.27669 -0.60623 0.17918
+[Front]
+Mesh Front
+Parent Body
+Attaching 0.68 0 0 0 1 0 0 0 0.8 0.00437 -0.10974 0.54
+[LegsL]
+Mesh LegsL
+Parent RCableL
+Attaching -0.9 0 0    0 -1.15 0    0 0 1  -0.12 0.35 0.4 
+[LegsR]
+Mesh LegsR
+Parent RCableR
+Attaching -0.9 0 0    0 -1.15 0    0 0 1  0.1 0.35 0.4 
+[bodyp]
+Mesh bodyp
+Parent Body
+Attaching -0.7 0 0    0 -1 0    0 0 1  0 0.75 0.28
+[map24]
+Mesh map24
+Parent LegsL
+Attaching 0.78 0 0.1   -0.055 0.78 0    0.087156 0 0.996195   -0.205 0.0415 0.022
+[fnt24]
+Mesh fnt24
+Parent Body
+//hidden
+Attaching  -1 0 0  0 -0.165048 0.986286  0 0.986286 0.165048  0.0015 0.215 0.355

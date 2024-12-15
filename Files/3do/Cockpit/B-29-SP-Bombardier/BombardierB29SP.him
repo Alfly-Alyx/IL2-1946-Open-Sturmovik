@@ -1,0 +1,31 @@
+[_ROOT_]
+VisibilitySphere 4.72274
+[BlackBox]
+Mesh BlackBox
+Parent _ROOT_
+Attaching 0 -1 0 1 0 0 0 0 1 2.06241 -0.17768 -2.72162
+[zReticle]
+Mesh zReticle
+Parent BlackBox
+Attaching -1 0 0 0 -1 0 0 0 1 0 0 -1
+Hidden
+[zMark1]
+Mesh zMark1
+Parent BlackBox
+Hidden
+Attaching -1 0 0 0 -1 0 0 0 1 0 0 -1.0005
+[zMark2]
+Mesh zMark2
+Parent BlackBox
+Hidden
+Attaching -1 0 0 0 -1 0 0 0 1 0 0 -1.001
+[zBulb]
+Mesh zBulb
+Parent BlackBox
+Attaching -1 0 0 0 -1 0 0 0 1 0 0 -0.99885
+Hidden
+[zRefraction]
+Mesh zRefraction
+Parent zBulb
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0.000689983

@@ -1,0 +1,167 @@
+[_ROOT_]
+VisibilitySphere 1.0
+#
+[Z_Z_MASK]
+Mesh Z_Z_MASK
+Parent _ROOT_
+Hidden
+Attaching 0 -1 0 0 0 1 -1 0 0 4.04587 -0.002 0.83253
+#
+[Body]
+Mesh Body1
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 -0.3 -0.0023 0.56
+[crank]
+Mesh crank
+Parent Body
+Attaching 0.906307 0 -0.422621 0.422621 0 0.906307 0 -1 0 0.02847 0.33228 0.01733
+#[cr_tross]
+#Mesh cr_tross
+#Parent crank
+#Attaching 0 0 -1 -0.906307 -0.422621 0 -0.422621 0.906307 0 0.004053 -0.0555188 -0.00231999
+[handle]
+Mesh handle
+Parent Body
+Attaching 0.866025 0 0.500001 -0.500001 0 0.866025 0 -1 0 0.02847 0.33228 0.01733
+[hand_tross]
+Mesh hand_tross
+Parent handle
+Attaching 0.500001 0.866025 0 -0.866025 0.500001 0 0.500001 0.866025 0 0.00823341 0.0373392 0.01118
+[lever]
+Mesh lever
+Parent Body
+Attaching 0.906307 0 0.422621 -0.422621 0 0.906307 0 -1 0 0.02847 0.33228 0.01733
+#[lev_tross]
+#Mesh lev_tross
+#Parent lever
+#Attaching 0 0 -1 -0.906307 0.422621 0 0.422621 0.906307 0 0.0038996 0.0557338 0.02675
+#[prop]
+#Mesh prop
+#Parent Body
+#Attaching 0.709789 0.000231428 -0.704415 0.699043 0.123026 0.704417 0.0868236 -0.992404 0.0871554 0.18095 0.29459 -0.28171
+[Stick]
+Mesh Stick1
+Parent Body
+Attaching 0 1 0 -1 0 0 0 0 1 0.14725 0.00137 -0.58767
+[Ped_Base]
+Mesh Ped_Base
+Parent Body
+Attaching -1 0 0 0 0 1 0 1 0 0.6549 0.00248 -0.52134
+[PedalL]
+Mesh PedalL
+Parent Ped_Base
+Attaching -1 0 0 0 1 0 0 0 -1 -0.00552005 0.02266 0.19025
+[PedalR]
+Mesh PedalR
+Parent Ped_Base
+Attaching -1 0 0 0 1 0 0 0 -1 -0.00150001 0.02266 -0.19131
+#[Ped_trossR]
+#Mesh Ped_trossR
+#Parent Ped_Base
+#Attaching 0 0 1 0.996194 -0.0871604 0 0.0871604 0.996194 0 0.00299996 -0.00167 -0.11794
+#[Ped_trossL]
+#Mesh Ped_trossL
+#Parent Ped_Base
+#Attaching 0 0 1 0.996194 -0.0871604 0 0.0871604 0.996194 0 0.00299996 -0.00167 0.11896
+[panel]
+Mesh panel
+Parent Body
+Attaching 0 -1 0 0 0 1 -1 0 0 0.34885 -0.00258 -0.025
+[zSpeed1a]
+Mesh zSpeed1a
+Parent Body
+Attaching 9.11787e-008 1.82357e-007 1 -1 0 0 1.10631e-007 -1 2.21262e-007 0.33 0.222 0.0348
+[zAlt1a]
+Mesh zAlt1a
+Parent Body
+Attaching 9.26689e-008 -4.63345e-007 1 -1 0 0 1.1832e-007 -1 -4.73279e-007 0.331 0.1585 -0.136 
+[zAlt1b]
+Mesh zAlt1b
+Parent Body
+Attaching 1.32993e-007 -5.31971e-007 1 -1 0 0 1.1832e-007 -1 -4.73279e-007 0.3305 0.1585 -0.136 
+[zClock1a]
+Mesh zClock1a
+Parent Body
+Attaching 0 2.09897e-007 1 -1 0 0 6.31542e-008 -1 1.89463e-007 0.33 -0.2768 -0.105
+#Attaching 0 2.09897e-007 1 -1 0 0 6.31542e-008 -1 1.89463e-007 0.33 -0.29 -0.105  # panel v6
+[zClock1b]
+Mesh zClock1b
+Parent Body
+Attaching 0 2.29799e-007 1 -1 0 0 5.92328e-008 -1 1.77698e-007 0.33 -0.2768 -0.105
+#Attaching 0 2.29799e-007 1 -1 0 0 5.92328e-008 -1 1.77698e-007 0.33 -0.29 -0.105  # panel v6
+[zRPS1a]
+Mesh zRPS1a
+Parent Body
+Attaching -8.25787e-008 0.258819 -0.965926 -1 0 0 0 0.965926 0.258819 0.335 -0.179 0.0338
+[zTurn1a]
+Mesh zTurn1a
+Parent Body
+Attaching 8.92067e-008 1.78413e-007 1 -1 0 0 7.36029e-008 -1 1.47206e-007 0.33 -0.0195 0.09
+[zSlide1a]
+Mesh zSlide1a
+Parent body
+Attaching -0.00872662 -2.39914e-007 -0.999962 0.999962 1.19957e-007 -0.00872663 1.19957e-007 -1 1.19957e-007 0.338 -0.0195 0.09
+#
+[COMPASS_M]
+Mesh COMPASS_M
+Parent Body
+Attaching -8.99605e-007 -0.8 -2.98447e-008 -0.8 -1.34216e-006 2.98447e-008 -2.98447e-008 2.98447e-008 -1 0.27 -0.017 -0.040
+#Attaching -8.99605e-007 -0.8 -2.98447e-008 -0.8 -1.34216e-006 2.98447e-008 -2.98447e-008 2.98447e-008 -1 0.27 -0.017 -0.030  # panel v6
+#
+[panel_windows]
+Mesh windo
+Parent Body
+Attaching 0 -1 0 0 0 1 -1 0 0 0.32865 -0.00250 -0.0150 
+# needs to be further away from the panel than all dials! but then perspective correction is needed
+#
+[Z_Holes1_D1]
+Mesh Z_Holes1_D1
+Parent body
+Hidden
+Attaching 1 0 0 0 0 1 0 -1 0 0.15998 0.00388 0.44988
+[Z_Holes2_D1]
+Mesh Z_Holes2_D1
+Parent body
+Hidden
+Attaching 1 0 0 0 0 1 0 -1 0 0.15998 0.00388 0.44988
+[Z_OilSplats_D1]
+Mesh Z_OilSplats_D1
+Parent body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.16598 0.00056 0.46186
+[Glass]
+Mesh Glass
+Parent body
+Attaching 1 0 0 0 1 0 0 0 1 0.16598 0.00056 0.46186
+#
+[CF_D3]
+Mesh CF_D3
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.17311 0.00202 -0.16682
+#
+#[magto]
+#Mesh magto
+#Parent Body
+#Attaching -0.146189 0.478148 0.866027 -0.253201 0.828183 -0.500002 -0.956305 -0.292371 0 0.36431 0.3 -0.13275
+#
+#[pribors1]
+#Mesh pribors1
+#Parent Body
+#Attaching 0 1 0 -0.993572 0 -0.1132 -0.1132 0 0.993572 0.44 0.04586 0.01801
+#[pribors2]
+#Mesh pribors2
+#Parent Body
+#Attaching 0 1 0 -0.993572 0 -0.1132 -0.1132 0 0.993572 0.44 0.04586 0.01801
+#[pribors1_dd]
+#Mesh pribors1_dd
+#Parent Body
+#Hidden
+#Attaching 0 1 0 -0.993572 0 -0.1132 -0.1132 0 0.993572 0.44 0.04586 0.01801
+#[pribors2_dd]
+#Mesh pribors2_dd
+#Parent Body
+#Hidden
+#Attaching 0 1 0 -0.993572 0 -0.1132 -0.1132 0 0.993572 0.44 0.04586 0.01801
+#
+

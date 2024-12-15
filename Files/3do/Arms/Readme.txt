@@ -1,0 +1,1 @@
+In order to have the Fab-50 and or the Italian 50kg bomb mesh displayed in game, disable the respective folder. This is due to the 100lbs on the US planes using these bombs's meshes as stand-ins.

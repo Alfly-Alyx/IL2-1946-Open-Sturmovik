@@ -1,0 +1,89 @@
+[_ROOT_]
+VisibilitySphere 20.76619
+[Body]
+Mesh Body
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -15.0000 0.00559 0.25942
+[Turret2E]
+Mesh Turret2E
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0 0.74987 0
+[Turret2A]
+Mesh Turret2A
+Parent Body
+Hidden
+Attaching 0 1 0 0 0 -1 -1 0 0 -0.0034 1.10323 -0.06021
+[Turret2B]
+Mesh Turret2B
+Parent Turret2A
+Attaching 1 0 0 0 0 1 0 -1 0 0 0 0
+[Turret2C]
+Mesh Turret2C
+Parent Body
+Hidden
+Attaching 0 1 0 0 0 -1 -1 0 0 -0.0034 1.10323 -0.06021
+[Turret2D]
+Mesh Turret2D
+Parent Turret2C
+Hidden
+Attaching 1 0 0 0 0 1 0 -1 0 0 0 0
+[XGlassDamage1]
+Mesh XGlassDamage1
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 -12.5203 -0.06713 0.22554
+[XGlassDamage2]
+Mesh XGlassDamage2
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 -12.5336 0.1503 0.11614
+[XGlassDamage3]
+Mesh XGlassDamage3
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 -12.2605 -0.11532 0.43021
+[XHullDamage1]
+Mesh XHullDamage1
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 -11.6972 -0.50034 0.13157
+[XHullDamage2]
+Mesh XHullDamage2
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 -11.9197 0.17943 0.36935
+[XHullDamage3]
+Mesh XHullDamage3
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 -11.942 0.42038 -0.04593
+[Keel1_D0]
+Mesh Keel1_D0
+Parent Body
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 -0.00222 -1.30352 2.03019
+[Rudder1_D0]
+Mesh Rudder1_D0
+Parent Keel1_D0
+Separable
+Attaching 1 0 0 0 0 1 0 -1 0 -0.00208 1.03899 0.0108302
+[StabL_D0]
+Mesh StabL_D0
+Parent Body
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 2.67758 -1.10405 0.55542
+[StabR_D0]
+Mesh StabR_D0
+Parent Body
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 -2.68876 -1.10405 0.55542
+[VatorL_D0]
+Mesh VatorL_D0
+Parent StabL_D0
+Separable
+Attaching 0 -1 0 1 0 0 0 0 1 0.12678 0.59458 0
+[VatorR_D0]
+Mesh VatorR_D0
+Parent StabR_D0
+Separable
+Attaching 0 -1 0 1 0 0 0 0 1 -0.12678 0.59458 0

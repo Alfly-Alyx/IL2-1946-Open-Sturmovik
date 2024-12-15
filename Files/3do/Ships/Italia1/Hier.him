@@ -1,0 +1,740 @@
+[_ROOT_]
+VisibilitySphere 110.00000
+CollisionObject sphere 110.00000 0.0 0.0 0.0
+[Hull1]
+Mesh Hull_Front
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 65 -2.8424e-006 2
+CollisionObject Impact_1
+CollisionObject Impact_2
+CollisionObject Impact_3
+CollisionObject Impact_4
+CollisionObject Impact_5
+[Hull1_dmg]
+Mesh Hull_Front_dmg
+Parent Hull1
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_1
+CollisionObject Impact_2
+CollisionObject Impact_3
+CollisionObject Impact_4
+CollisionObject Impact_5
+[Widgets_F]
+Mesh Widgets_Front
+Parent Hull1
+Attaching 1 0 0 0 1 0 0 0 1 2.459e-007 5.6 5.8
+[Widgets_F_dmg]
+Mesh Widgets_Front_dmg
+Parent Widgets_F
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+[Hull2]
+Mesh Hull_Mid
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 5.96e-008 0 2
+CollisionObject Impact_6
+CollisionObject Impact_7
+CollisionObject Impact_8
+CollisionObject Impact_9
+CollisionObject Impact_10
+CollisionObject Impact_11
+[Hull2_dmg]
+Mesh Hull_Mid_dmg
+Parent Hull2
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_6
+CollisionObject Impact_7
+CollisionObject Impact_8
+CollisionObject Impact_9
+CollisionObject Impact_10
+CollisionObject Impact_11
+[Hull3]
+Mesh Hull_Aft
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -65 2.8424e-006 2
+CollisionObject Impact_12
+CollisionObject Impact_13
+CollisionObject Impact_14
+CollisionObject Impact_15
+[Hull3_dmg]
+Mesh Hull_Aft_dmg
+Parent Hull3
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_12
+CollisionObject Impact_13
+CollisionObject Impact_14
+CollisionObject Impact_15
+[FlagFront]
+Mesh FlagFront
+Parent Hull1
+Attaching 1 0 0 0 1 0 0 0 1 -1.3113e-006 -30 11
+CollisionObject Impact_16
+CollisionObject Impact_17
+[FlagFront_dmg]
+Mesh FlagFront_dmg
+Parent FlagFront
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_104
+[FlagAft]
+Mesh FlagAft
+Parent Hull3
+Attaching -1 -1.51e-007 0 1.51e-007 -1 0 0 0 1 1.3523e-006 31 9
+CollisionObject Impact_18
+CollisionObject Impact_19
+[FlagAft_dmg]
+Mesh FlagAft_dmg
+Parent FlagAft
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 4.54747e-013 6.39488e-013 0
+CollisionObject Impact_105
+[Yawl_6Oar_L]
+Mesh Yawl_6Oared_L
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -45.3 9.8 7.5
+CollisionObject Impact_20
+[Yawl_6Oar_L_dmg]
+Mesh Yawl_6Oared_L_dmg
+Parent Yawl_6Oar_L
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_106
+[Yawl_6Oar_R]
+Mesh Yawl_6Oared_R
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -44 -9.7 7.5
+CollisionObject Impact_21
+[Yawl_6Oar_R_dmg]
+Mesh Yawl_6Oared_R_dmg
+Parent Yawl_6Oar_R
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_107
+[Crane_L]
+Mesh Crane_L
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 22 7.8 9
+CollisionObject Impact_22
+[Crane_L_dmg]
+Mesh Crane_L_dmg
+Parent Crane_L
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_108
+[Crane_R]
+Mesh Crane_R
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 22 -7.8 9
+CollisionObject Impact_23
+[Crane_R_dmg]
+Mesh Crane_R_dmg
+Parent Crane_R
+Hidden
+Attaching 0.707107 -0.707107 0 0.707107 0.707107 0 0 0 1 0 0 0
+CollisionObject Impact_109
+[MotorBoat_L]
+Mesh MotorLongboat_L
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 7.7 7.3 6
+CollisionObject Impact_24
+[MotorBoat_L_dmg]
+Mesh MotorLongboat_L_dmg
+Parent MotorBoat_L
+Hidden
+Attaching 0.951251 0.167731 0.258819 -0.173648 0.984808 -3.18e-008 -0.254887 -0.0449434 0.965926 0 0 0
+CollisionObject Impact_110
+[MotorBoat_R]
+Mesh MotorLongboat_R
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 7.7 -7.3 6
+CollisionObject Impact_25
+[MotorBoat_R_dmg]
+Mesh MotorLongboat_R_dmg
+Parent MotorBoat_R
+Hidden
+Attaching 0.892539 -0.157378 -0.422618 0.173648 0.984808 7.8e-008 0.416198 -0.0733869 0.906308 0 0 0
+CollisionObject Impact_111
+[Yawl_4Oar_L]
+Mesh Yawl_4Oared_L
+Parent Crane_L
+Attaching 1 0 0 0 1 0 0 0 1 -0.2 -1.5 -1.3
+[Yawl_4Oar_L_dmg]
+Mesh Yawl_4Oared_L_dmg
+Parent Yawl_4Oar_L
+Hidden
+Attaching 0.970189 0.169731 -0.172988 -0.174927 0.984465 -0.0151344 0.167731 0.0449435 0.984808 0 0 0
+[Yawl_4Oar_R]
+Mesh Yawl_4Oared_R
+Parent Crane_R
+Attaching 1 0 0 0 1 0 0 0 1 0.2 -1.5 -1.3
+[Yawl_4Oar_R_dmg]
+Mesh Yawl_4Oared_R_dmg
+Parent Yawl_4Oar_R
+Hidden
+Attaching 0.819152 -2.51e-008 0.573576 2.51e-008 1 7.9e-009 -0.573576 7.9e-009 0.819152 0 0 0
+[SSF]
+Mesh SSF
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 41 -1.7919e-006 12
+CollisionObject Impact_26
+CollisionObject Impact_27
+CollisionObject Impact_28
+CollisionObject Impact_29
+CollisionObject Impact_30
+CollisionObject Impact_31
+CollisionObject Impact_32
+[SSF_dmg]
+Mesh SSF_dmg
+Parent SSF
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_26
+CollisionObject Impact_27
+CollisionObject Impact_28
+CollisionObject Impact_29
+CollisionObject Impact_30
+CollisionObject Impact_112
+CollisionObject Impact_113
+[MastFront]
+Mesh MastFront
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 34 -1.4864e-006 18
+CollisionObject Impact_33
+CollisionObject Impact_34
+CollisionObject Impact_35
+CollisionObject Impact_36
+CollisionObject Impact_37
+CollisionObject Impact_38
+CollisionObject Impact_39
+[MastFront_dmg]
+Mesh MastFront_dmg
+Parent MastFront
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_33
+CollisionObject Impact_34
+CollisionObject Impact_35
+CollisionObject Impact_36
+CollisionObject Impact_114
+CollisionObject Impact_115
+CollisionObject Impact_116
+[SSR]
+Mesh SSR
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -33 1.4417e-006 7
+CollisionObject Impact_40
+CollisionObject Impact_41
+CollisionObject Impact_42
+[SSR_dmg]
+Mesh SSR_dmg
+Parent SSR
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_40
+CollisionObject Impact_41
+CollisionObject Impact_42
+[CmdBoat_L]
+Mesh CommandBoat_L
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -32 1.7 11
+CollisionObject Impact_43
+[CmdBoat_L_dmg]
+Mesh CommandBoat_L_dmg
+Parent CmdBoat_L
+Hidden
+Attaching 0.96225 -0.084186 -0.258819 0.0871557 0.996195 2.7e-008 0.257834 -0.0225576 0.965926 0 0 0
+CollisionObject Impact_117
+[CmdBoat_R]
+Mesh CommandBoat_R
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -32 -1.7 11
+CollisionObject Impact_44
+[CmdBoat_R_dmg]
+Mesh CommandBoat_R_dmg
+Parent CmdBoat_R
+Hidden
+Attaching 0.711983 0.121336 0.691634 -0.0941393 0.99256 -0.0772201 -0.695858 -0.0101305 0.718108 0 0 0
+CollisionObject Impact_118
+[MastRear]
+Mesh MastRear
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -27.5 1.2033e-006 24.7
+CollisionObject Impact_45
+CollisionObject Impact_46
+CollisionObject Impact_47
+CollisionObject Impact_48
+CollisionObject Impact_49
+CollisionObject Impact_50
+CollisionObject Impact_51
+[MastRear_dmg]
+Mesh MastRear_dmg
+Parent MastRear
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_119
+CollisionObject Impact_120
+CollisionObject Impact_121
+CollisionObject Impact_122
+CollisionObject Impact_123
+CollisionObject Impact_124
+CollisionObject Impact_125
+[MastFR_Rig_x]
+Mesh MastFR_Rigging_x
+Parent MastRear
+Attaching 1 0 0 0 1 0 0 0 1 -0.600001 -30.5 3.5
+CollisionObject Impact_52
+CollisionObject Impact_53
+CollisionObject Impact_54
+CollisionObject Impact_55
+CollisionObject Impact_56
+CollisionObject Impact_57
+CollisionObject Impact_58
+[SSF_Tiny]
+Mesh SSF_TinyBits
+Parent MastFront
+Attaching 1 0 0 0 1 0 0 0 1 5.59e-008 0.199997 2.65
+[SSF_Tiny_dmg]
+Mesh SSF_TinyBits_dmg
+Parent SSF_Tiny
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 -5.22e-008 0 0
+[SSR_Tiny]
+Mesh SSR_TinyBits
+Parent SSR
+Attaching 1 0 0 0 1 0 0 0 1 3.502e-007 8 5
+[SSR_Tiny_dmg]
+Mesh SSR_TinyBits_dmg
+Parent SSR_Tiny
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+[ChimneyF]
+Mesh ChimneyFront
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 20 -8.754e-007 15
+CollisionObject Impact_59
+[ChimneyF_dmg]
+Mesh ChimneyFront_dmg
+Parent ChimneyF
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_59
+[ChimneyR]
+Mesh ChimneyRear
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -17 7.413e-007 13
+CollisionObject Impact_60
+CollisionObject Impact_61
+[ChimneyR_dmg]
+Mesh ChimneyRear_dmg
+Parent ChimneyR
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_60
+CollisionObject Impact_61
+[ScrewProp_L_x]
+Mesh ScrewProp_L_x
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -77.9901 3.12675 -3.95369
+CollisionObject Impact_62
+[ScrewProp_R_x]
+Mesh ScrewProp_R_x
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -77.9901 -3.12674 -3.95369
+CollisionObject Impact_63
+[Rudder_x]
+Mesh Rudder_x
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -85 3.8147e-006 -3.6
+CollisionObject Impact_64
+[Kataa]
+Mesh Kataa
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -1.3 5.22e-008 9.3
+CollisionObject Impact_65
+[Kataa_dmg]
+Mesh Kataa_dmg
+Parent Kataa
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 7.4e-009 0 0
+CollisionObject Impact_126
+[Head0]
+Mesh Head0
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 59.4 -2.5965e-006 9.4
+CollisionObject Impact_66
+[Head0_dmg]
+Mesh Head0_dmg
+Parent Head0
+Hidden
+Attaching 1 0 0 0 0.996195 -0.0871557 0 0.0871557 0.996195 0 0 0
+CollisionObject Impact_127
+[Gun0]
+Mesh Gun0
+Parent Head0
+Attaching 1 0 0 0 8.94e-008 -1 0 1 5.96e-008 1.8 -7.83e-008 0
+CollisionObject Impact_67
+[Gun0_dmg]
+Mesh Gun0_dmg
+Parent Gun0
+Hidden
+Attaching 1 -1.179e-007 -6.352e-007 3.625e-007 0.996195 -0.0871556 1.286e-007 0.0871564 0.996195 0 -1.59872e-013 2.84376e-014
+CollisionObject Impact_128
+[Head1]
+Mesh Head1
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 48.9 -2.1383e-006 11.7
+CollisionObject Impact_68
+CollisionObject Impact_69
+[Head1_dmg]
+Mesh Head1_dmg
+Parent Head1
+Hidden
+Attaching 0.997564 2.59e-008 0.0697565 -0.0036508 0.99863 0.0522085 -0.0696609 -0.0523359 0.996197 0 0 0
+CollisionObject Impact_129
+CollisionObject Impact_69
+[Gun1]
+Mesh Gun1
+Parent Head1
+Attaching 1 0 0 0 8.94e-008 -1 0 1 5.96e-008 1.8 -7.81999e-008 -9.53674e-007
+CollisionObject Impact_70
+[Gun1_dmg]
+Mesh Gun1_dmg
+Parent Gun1
+Hidden
+Attaching 0.997564 -0.0697566 5.32362e-008 0.0696608 0.996197 0.0523362 -0.00365072 -0.0522082 0.99863 0 -1.3145e-013 1.42255e-014
+CollisionObject Impact_130
+[Head2]
+Mesh Head2
+Parent _ROOT_
+Attaching -1 -1.686e-007 0 1.686e-007 -1 0 0 0 1 -54.3 2.373e-006 7.6
+CollisionObject Impact_71
+[Head2_dmg]
+Mesh Head2_dmg
+Parent Head2
+Hidden
+Attaching 0.99863 0.000913308 0.052328 8.08743e-008 0.999848 -0.0174524 -0.052336 0.0174285 0.998477 -3.97904e-013 3.70216e-013 0
+CollisionObject Impact_131
+[Gun2]
+Mesh Gun2
+Parent Head2
+Attaching 1 -4.94e-008 0 2.00971e-014 1.192e-007 -1 4.94e-008 1 1.192e-007 1.8 -3.8168e-007 0
+CollisionObject Impact_72
+[Gun2_dmg]
+Mesh Gun2_dmg
+Parent Gun2
+Hidden
+Attaching 0.99863 -0.0523267 0.000913668 0.0523365 0.998477 -0.0174277 4.44683e-007 0.0174528 0.999848 -1.84741e-013 -1.08891e-012 2.0961e-013
+CollisionObject Impact_132
+[Head3_x]
+Mesh Head3
+Parent SSF
+Attaching 3.372e-007 -1 -1.49e-008 1 3.372e-007 -2.98e-008 2.98e-008 -1.49e-008 1 -2.23e-008 -0.5 5.1
+CollisionObject Impact_73
+[Gun3_x]
+Mesh Gun3
+Parent Head3_x
+Attaching 1 1.422e-007 2.857e-007 -3.527e-007 4.419e-007 -1 2.506e-007 1 3.953e-007 -0.279999 9.62281e-008 0.315001
+[Head4_x]
+Mesh Head4
+Parent SSF
+Attaching 3.372e-007 -1 -1.49e-008 1 3.372e-007 -2.98e-008 2.98e-008 -1.49e-008 1 -1.8 1.7 5.1
+CollisionObject Impact_74
+[Gun4_x]
+Mesh Gun4
+Parent Head4_x
+Attaching 1 1.422e-007 2.857e-007 -3.527e-007 4.419e-007 -1 2.506e-007 1 3.953e-007 -0.28 3.25576e-008 0.315001
+[Head5_x]
+Mesh Head5
+Parent SSF
+Attaching 3.372e-007 -1 -1.49e-008 1 3.372e-007 -2.98e-008 2.98e-008 -1.49e-008 1 1.8 1.7 5.1
+CollisionObject Impact_75
+[Gun5_x]
+Mesh Gun5
+Parent Head5_x
+Attaching 1 1.422e-007 2.857e-007 -3.527e-007 4.419e-007 -1 2.506e-007 1 3.953e-007 -0.279998 3.25576e-008 0.315001
+[Head6_x]
+Mesh Head6
+Parent SSR
+Attaching -8.43e-008 1 0 -1 -8.43e-008 0 0 0 1 5.327e-007 12.2 1.7
+CollisionObject Impact_76
+[Gun6_x]
+Mesh Gun6
+Parent Head6_x
+Attaching 1 1.541e-007 0 2.00971e-014 2.384e-007 -1 -1.541e-007 1 2.384e-007 -0.279999 3.4804e-008 0.315001
+[Head7_x]
+Mesh Head7
+Parent SSR
+Attaching -8.43e-008 1 0 -1 -8.43e-008 0 0 0 1 2 9.3 1.7
+CollisionObject Impact_77
+[Gun7_x]
+Mesh Gun7
+Parent Head7_x
+Attaching 1 1.541e-007 0 2.00971e-014 2.384e-007 -1 -1.541e-007 1 2.384e-007 -0.279999 3.39927e-008 0.315001
+[Head8_x]
+Mesh Head8
+Parent SSR
+Attaching -8.43e-008 1 0 -1 -8.43e-008 0 0 0 1 -2 9.3 1.7
+CollisionObject Impact_78
+[Gun8_x]
+Mesh Gun8
+Parent Head8_x
+Attaching 1 1.541e-007 0 2.00971e-014 2.384e-007 -1 -1.541e-007 1 2.384e-007 -0.279999 3.39927e-008 0.315001
+[Head9_x]
+Mesh Head9
+Parent SSF
+Attaching -1 -3.02e-007 0 3.02e-007 -1 0 0 0 1 -5.2 7 -1.2
+CollisionObject Impact_79
+[Gun9_x]
+Mesh Gun9
+Parent Head9_x
+Attaching 1 -4.53e-007 0 1.01834e-013 3.372e-007 -1 4.53e-007 1 3.576e-007 -2.22418e-007 -1.5704e-006 0.5
+[Head10_x]
+Mesh Head10
+Parent SSF
+Attaching -1 -3.02e-007 0 3.02e-007 -1 0 0 0 1 -5.2 9.7 -1.2
+CollisionObject Impact_80
+[Gun10_x]
+Mesh Gun10
+Parent Head10_x
+Attaching 1 -4.53e-007 0 1.01834e-013 3.372e-007 -1 4.53e-007 1 3.576e-007 -8.41431e-008 3.36948e-007 0.5
+[Head11_x]
+Mesh Head11
+Parent SSF
+Attaching 1 3.02e-007 0 -3.02e-007 1 0 0 0 1 5.2 9.7 -1.2
+CollisionObject Impact_81
+[Gun11_x]
+Mesh Gun11
+Parent Head11_x
+Attaching 1 -4.53e-007 0 5.39978e-014 1.78801e-007 -1 4.53e-007 1 1.78801e-007 8.41431e-008 3.36949e-007 0.5
+[Head12_x]
+Mesh Head12
+Parent SSF
+Attaching 1 3.02e-007 0 -3.02e-007 1 0 0 0 1 5.2 7 -1.2
+CollisionObject Impact_82
+[Gun12_x]
+Mesh Gun12
+Parent Head12_x
+Attaching 1 -4.53e-007 0 5.39978e-014 1.78801e-007 -1 4.53e-007 1 1.78801e-007 2.22418e-007 -1.5704e-006 0.5
+[Head13]
+Mesh Head13
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 -15.6 -6 9
+CollisionObject Impact_83
+[Head13_dmg]
+Mesh Head13_dmg
+Parent Head13
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_83
+[Gun13]
+Mesh Gun13
+Parent Head13
+Attaching 1 1.576e-007 2.717e-007 -8.7e-008 -8.18e-008 -1 -1.497e-007 1 4.86e-007 0 0 0.800001
+CollisionObject Impact_84
+[Gun13_dmg]
+Mesh Gun13_dmg
+Parent Gun13
+Hidden
+Attaching 1 2.5001e-009 2.093e-007 -1.338e-007 1 -2.45e-008 5.916e-007 -7.74e-008 1 1.56548e-007 4.74873e-007 2.26409e-007
+CollisionObject Impact_84
+[Head14]
+Mesh Head14
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 -22.4 -6 9
+CollisionObject Impact_85
+[Head14_dmg]
+Mesh Head14_dmg
+Parent Head14
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_85
+[Gun14]
+Mesh Gun14
+Parent Head14
+Attaching 1 1.576e-007 2.717e-007 -8.7e-008 -8.18e-008 -1 -1.497e-007 1 4.86e-007 0 0 0.8
+CollisionObject Impact_86
+[Gun14_dmg]
+Mesh Gun14_dmg
+Parent Gun14
+Hidden
+Attaching 1 -1.0999e-009 2.271e-007 -1.735e-007 1 -4.89001e-008 5.315e-007 -1.129e-007 1 1.56548e-007 -4.19013e-007 -1.32422e-007
+CollisionObject Impact_86
+[Head15]
+Mesh Head15
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 -28.8 -6 9
+CollisionObject Impact_87
+[Head15_dmg]
+Mesh Head15_dmg
+Parent Head15
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_87
+[Gun15]
+Mesh Gun15
+Parent Head15
+Attaching 1 1.576e-007 2.717e-007 -8.7e-008 -8.18e-008 -1 -1.497e-007 1 4.86e-007 0 0 0.799999
+CollisionObject Impact_88
+[Gun15_dmg]
+Mesh Gun15_dmg
+Parent Gun15
+Hidden
+Attaching 1 4.32001e-008 1.523e-007 -1.503e-007 1 8.99999e-009 4.617e-007 -9.35001e-008 1 1.56548e-007 -2.50545e-007 -7.74562e-008
+CollisionObject Impact_88
+[Head16]
+Mesh Head16
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 -28.8 6 9
+CollisionObject Impact_89
+[Head16_dmg]
+Mesh Head16_dmg
+Parent Head16
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_89
+[Gun16]
+Mesh Gun16
+Parent Head16
+Attaching 1 1.576e-007 2.717e-007 -8.7e-008 -8.18e-008 -1 -1.497e-007 1 4.86e-007 0 0 0.799999
+CollisionObject Impact_90
+[Gun16_dmg]
+Mesh Gun16_dmg
+Parent Gun16
+Hidden
+Attaching 1 9.49001e-008 6.78e-008 -8.97001e-008 1 5.3e-008 3.532e-007 8.20012e-009 1 4.56002e-008 -1.40589e-007 -7.74562e-008
+CollisionObject Impact_90
+[Head17]
+Mesh Head17
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 -22.4 6 9
+CollisionObject Impact_91
+[Head17_dmg]
+Mesh Head17_dmg
+Parent Head17
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_91
+[Gun17]
+Mesh Gun17
+Parent Head17
+Attaching 1 1.576e-007 2.717e-007 -8.7e-008 -8.18e-008 -1 -1.497e-007 1 4.86e-007 0 0 0.8
+CollisionObject Impact_92
+[Gun17_dmg]
+Mesh Gun17_dmg
+Parent Gun17
+Hidden
+Attaching 1 9.49001e-008 6.78e-008 -8.97001e-008 1 5.3e-008 3.532e-007 8.20012e-009 1 4.56002e-008 -3.09057e-007 -1.32422e-007
+CollisionObject Impact_92
+[Head18]
+Mesh Head18
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 -15.6 6 9
+CollisionObject Impact_93
+[Head18_dmg]
+Mesh Head18_dmg
+Parent Head18
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_93
+[Gun18]
+Mesh Gun18
+Parent Head18
+Attaching 1 1.576e-007 2.717e-007 -8.7e-008 -8.18e-008 -1 -1.497e-007 1 4.86e-007 0 0 0.800001
+CollisionObject Impact_94
+[Gun18_dmg]
+Mesh Gun18_dmg
+Parent Gun18
+Hidden
+Attaching 1 6.67001e-008 1.329e-007 -1.246e-007 1 6.03e-008 4.454e-007 7.20004e-009 1 4.56001e-008 -3.68846e-007 2.26409e-007
+CollisionObject Impact_94
+[Head19]
+Mesh Head19
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 -3.9 -7 6.1
+CollisionObject Impact_95
+[Head19_dmg]
+Mesh Head19_dmg
+Parent Head19
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_95
+[Gun19]
+Mesh Gun19
+Parent Head19
+Hidden
+Attaching 1 0 0 0 0 -1 0 1 0 2.38419e-007 9.53674e-007 -1.1
+[Head20]
+Mesh Head20
+Parent _ROOT_
+Attaching 1 0 0 0 1 5.96e-008 0 -5.96e-008 1 -3.9 7 6.1
+CollisionObject Impact_96
+[Head20_dmg]
+Mesh Head20_dmg
+Parent Head20
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 -1.13277e-007 5.96371e-008
+CollisionObject Impact_96
+[Gun20]
+Mesh Gun20
+Parent Head20
+Hidden
+Attaching 1 0 0 0 -5.96e-008 -1 0 1 -5.96e-008 4.76837e-007 -6.55674e-007 -1.1
+[Head21]
+Mesh Head21
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 34 -1.4864e-006 28
+CollisionObject Impact_97
+CollisionObject Impact_98
+CollisionObject Impact_99
+CollisionObject Impact_100
+CollisionObject Impact_101
+[Head21_dmg]
+Mesh Head21_dmg
+Parent Head21
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_97
+CollisionObject Impact_98
+CollisionObject Impact_99
+CollisionObject Impact_100
+CollisionObject Impact_133
+[Gun21]
+Mesh Gun21
+Parent Head21
+Hidden
+Attaching 1 -1.192e-007 0 0 1.192e-007 -1 1.192e-007 1 1.192e-007 0 1.4864e-006 0
+[Head22]
+Mesh Head22
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 27.3 -4.2 17
+CollisionObject Impact_102
+[Head22_dmg]
+Mesh Head22_dmg
+Parent Head22
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_102
+[Gun22]
+Mesh Gun22
+Parent Head22
+Hidden
+Attaching 1 -1.192e-007 0 0 1.192e-007 -1 1.192e-007 1 1.192e-007 0 9.53674e-007 -0.400002
+[Head23]
+Mesh Head23
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 27.3 4.2 17
+CollisionObject Impact_103
+[Head23_dmg]
+Mesh Head23_dmg
+Parent Head23
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject Impact_103
+[Gun23]
+Mesh Gun23
+Parent Head23
+Hidden
+Attaching 1 -1.192e-007 0 0 1.192e-007 -1 1.192e-007 1 1.192e-007 -1.90735e-006 1.90735e-006 -0.400002

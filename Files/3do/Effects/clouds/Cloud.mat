@@ -1,0 +1,44 @@
+[ClassInfo]
+  ClassName TMaterial
+[General]
+  tfDoubleSide              0
+  tfShouldSort              1
+  tfGameTimer               1
+  tfSpriteLight             1
+
+[Layer0]
+  TextureName               cloudsA.tga
+  PaletteName               
+  Frame                     0.0   // Float 0.0 - first, 1.0 - last
+  VisibleDistanceNear       0.0   
+  VisibleDistanceFar        100000.0  
+  TextureCoordScale         0.0 0.0  1.0 1.0 // Uo   Vo   kU   kV
+  ColorScale                1.0 1.0 1.0 1.0    // R G B A
+
+  // Wrap Texture Flags (0/1)
+  tfWrapX                   1
+  tfWrapY                   1
+  // Magnification / Minification (nearest on default)
+  tfMinLinear               1
+  tfMagLinear               1
+  tfMipMap                  0
+  // BlendModes
+  tfBlend                   1
+  tfBlendAdd                0
+  tfTestA                   1
+  tfTestZ                   1
+        tfNoWriteZ 1
+  tfUpDateClear             0
+  tfModulate                1
+  tfNoTexture               0
+  tfAnimatePalette          0
+  tfAnimateSkippedFrames    0
+  tfTranspBorder            1
+
+  tfCompressMajorAlpha      1
+  tfNoCompress16Bit         0
+  tfNoCompressARB           0
+
+  tfNoDegradation           0
+
+// eof

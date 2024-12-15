@@ -1,0 +1,28 @@
+[_ROOT_]
+VisibilitySphere 11.36592
+CollisionObject sphere 11.36592 0.0 0.0 0.0
+
+[Body]
+Mesh Boat
+Parent _ROOT_
+Attaching 0 0.8 0 -0.8 0 0 0 0 1 1.2881 -0.00354 0.00462
+CollisionObject Boat
+
+[Body_Dmg]
+Mesh Boat_Dmg
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 1.2881 -0.00354 0.30462
+CollisionObject Boat_Dmg
+
+
+[Live]
+Mesh Live
+Parent _ROOT_
+Attaching -1 0 0 0 -1 0 0 0 1 0.8881 -0.00354 0.10462
+
+
+[Live1]
+Mesh Live1
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 -1.7881 -0.200354 0.10462

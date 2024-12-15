@@ -1,0 +1,277 @@
+[_ROOT_]
+VisibilitySphere 3.35196
+#
+#[Z_Z_MASK]
+#Mesh Z_Z_MASK
+#Parent _ROOT_
+#Attaching 0 -1 0 0 0 1 -1 0 0 4.04587 -0.00213 0.83253
+#
+[Body]
+Mesh Body1
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 -0.75 -0.0023 0.32
+#
+[crank]
+Mesh crank
+Parent Body
+Attaching 0.906307 0 -0.422621 0.422621 0 0.906307 0 -1 0 0.02847 0.33228 0.01733  # bottom ball
+#[cr_tross]
+#Mesh cr_tross
+#Parent crank
+#Attaching 0 0 -1 -0.906307 -0.422621 0 -0.422621 0.906307 0 0.004053 -0.0555188 -0.00231999
+#
+[thrtl]
+Mesh thrtl
+Parent Body
+Attaching 0.866025 0 0.500001 -0.500001 0 0.866025 0 -1 0 0.02847 0.33228 0.01733  # bar [handle] --> throtle
+#Attaching 0.866025 0 -0.500001 0.500001 0 0.866025 0 -1 0 0.02847 0.33228 0.01733
+[thr_tross]
+Mesh thr_tross
+Parent thrtl
+Attaching 0.500001 0.866025 0 -0.866025 0.500001 0 0.500001 0.866025 0 0.00823341 0.0373392 0.01118
+#Attaching 0.500001 0.866025 0 -0.866025 -0.500001 0 -0.500001 0.866025 0 0.00823341 0.0373392 0.01118
+#
+[lever]
+Mesh lever
+Parent Body
+Attaching 0.906307 0 0.422621 -0.422621 0 0.906307 0 -1 0 0.02847 0.33228 0.01733  # top ball (throtle)
+[lev_tross]
+Mesh lev_tross
+Parent lever
+Attaching 0.422621 0.906307 0 -0.906307 0.422621 0 0.422621 0.906307 0 0.0038996 0.0557338 0.02675 # handle tross only (no knob)
+#
+[prop]
+Mesh prop
+Parent Body
+Attaching 0.709789 0.000231428 -0.704415 0.699043 0.123026 0.704417 0.0868236 -0.992404 0.0871554 0.18095 0.29459 -0.28171
+#
+[Stick]
+#Mesh Stick1
+Mesh stick_I16
+Parent Body
+Attaching 0 1 0 -1 0 0 0 0 1 0.14725 0.00137 -0.58767
+#
+[Ped_Base]
+Mesh Ped_Base
+Parent Body
+Attaching -1 0 0 0 0 1 0 1 0 0.5549 0.00248 -0.52134
+[PedalL]
+Mesh PedalL
+Parent Ped_Base
+Attaching -1 0 0 0 1 0 0 0 -1 -0.00552005 0.02266 0.19025
+[PedalR]
+Mesh PedalR
+Parent Ped_Base
+Attaching -1 0 0 0 1 0 0 0 -1 -0.00150001 0.02266 -0.19131
+#[Ped_trossR]
+#Mesh Ped_trossR
+#Parent Ped_Base
+#Attaching 0 0 1 0.996194 -0.0871604 0 0.0871604 0.996194 0 0.00299996 -0.00167 -0.11794
+#[Ped_trossL]
+#Mesh Ped_trossL
+#Parent Ped_Base
+#Attaching 0 0 1 0.996194 -0.0871604 0 0.0871604 0.996194 0 0.00299996 -0.00167 0.11896
+#
+#[Z_Green1]
+#Mesh Z_Green1
+#Parent Body
+#Attaching  0 -1 0 0 0 1 -1 0 0 0.328 -0.249 -0.162  # all +0.005
+#[Z_Red1_On]
+#Mesh Z_Red1_On
+#Parent Body
+#Attaching  0 -1 0 0 0 1 -1 0 0 0.33 -0.2875 -0.164  # derived from Z_Green1, Z_Red1 needs activation
+#[Z_Green2]
+#Mesh Z_Green2
+#Parent Body
+#Attaching  0 -1 0 0 0 1 -1 0 0 0.33 -0.3256 -0.1628  # 
+#
+#[Z_White1]
+#Mesh Z_White1
+#Parent Body
+#Attaching  0 -1 0 0 0 1 -1 0 0 0.33 -0.3636 -0.1628  # derived from Z_Green1
+#[Z_Yellow1]
+#Mesh Z_Yellow1
+#Parent Body
+#Attaching  0 -1 0 0 0 1 -1 0 0 0.33 -0.3636 -0.1628  # derived from Z_Green1
+#
+[dashb]
+Mesh dashb
+Parent Body
+Attaching 0 -1 0 0 0 1 -1 0 0 0.34885 -0.00258 -0.03 # +0.005
+[panel]
+Mesh panel
+Parent Body
+Attaching 0 -1 0 0 0 1 -1 0 0 0.34085 -0.00258 -0.03 # -0.003
+[panel_back]
+Mesh niche
+Parent Body
+Attaching 0 -1 0 0 0 1 -1 0 0 0.37085 -0.00258 -0.05
+#
+[panel_table]
+Mesh table
+Parent Body
+Attaching 0 -1 0  1 0 0  -1 0 0  0.169 0 -0.190  
+#
+#  Instruments:
+#
+#[zSpeed1a]
+#Mesh zSpeed1a
+#Parent Body
+#Attaching 9.11787e-008 1.82357e-007 1 -1 0 0 1.10631e-007 -1 2.21262e-007 0.327 0.122 -0.095 # all X-0.005
+#
+[zAlt1a]
+Mesh zAlt1a
+Parent Body
+Attaching 9.26689e-008 -4.63345e-007 1 -1 0 0 1.1832e-007 -1 -4.73279e-007 0.337 0.12 0.051 
+[zAlt1b]
+Mesh zAlt1b
+Parent Body
+Attaching 1.32993e-007 -5.31971e-007 1 -1 0 0 1.1832e-007 -1 -4.73279e-007 0.3365 0.12 0.051 
+#
+[zClock1a]
+Mesh zClock1a
+Parent Body
+Attaching 0 2.09897e-007 1 -1 0 0 6.31542e-008 -1 1.89463e-007 0.327 0.125 -0.097
+[zClock1b]
+Mesh zClock1b
+Parent Body
+Attaching 0 2.29799e-007 1 -1 0 0 5.92328e-008 -1 1.77698e-007 0.327 0.125 -0.097
+#
+#[zRPS1a]
+#Mesh zRPS1a
+#Parent Body
+#Attaching -8.25787e-008 0.258819 -0.965926 -1 0 0 0 0.965926 0.258819 0.335 -0.277 -0.083 # this one X+0.005
+#
+[zTurn1a]
+Mesh zTurn1a
+Parent Body
+Attaching 0 0 1 -1 0 0 0 -1 0 0.33 -0.127 0.018
+[zSlide1a]
+Mesh zSlide1a
+Parent body
+Attaching -0.00872662 -2.39914e-007 -0.999962 0.999962 1.19957e-007 -0.00872663 1.19957e-007 -1 1.19957e-007 0.33880 -0.1265 0.0785
+#
+#[zVariometer1a]
+#Mesh zVariometer1a
+#Parent Body
+#Attaching 0 1 -1.77157e-007 -1 0 0 1.14811e-007 1.14811e-007 1 0.327 -0.128 -0.0990
+#
+#[zAzimuth1a]
+#Mesh zAzimuth1a
+#Parent body
+#Attaching 0.993572 0 0.113199 0 -1 0 0.113199 0 -0.993572 0.37583 -0.0057 0.0425
+#[zAzimuth1b]
+#Mesh zAzimuth1b
+#Parent zAzimuth1a
+#Attaching 0.325201 -0.944919 0.037051 0.113199 0 -0.993572 0.940031 0.323838 0.107099 0.00142895 -0.00055 0.0031822
+#
+[zAzimuth1a]
+Mesh zAzimuth1a
+Parent body
+Attaching 0.95 0 -0.31225 0 -1 0 0 0 -1 0.37683 -0.0053 0.033  # corrected gimbal position
+[zAzimuth1b]
+Mesh zAzimuth1b
+Parent zAzimuth1a
+Attaching 0 -1 0 0 0 -1 1 0 0 0 0 0
+#
+[Z_Holes1_D1]
+Mesh Z_Holes1_D1
+Parent body
+Hidden
+Attaching 1 0 0 0 0 1 0 -1 0 0.15998 0.00388 0.44988
+[Z_Holes2_D1]
+Mesh Z_Holes2_D1
+Parent body
+Hidden
+Attaching 1 0 0 0 0 1 0 -1 0 0.15998 0.00388 0.44988
+[Z_OilSplats_D1]
+Mesh Z_OilSplats_D1
+Parent body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.16598 0.00056 0.46186
+#
+[Glass]
+Mesh Glass
+Parent body
+Attaching 1 0 0 0 1 0 0 0 1 0.16598 0.00056 0.46186
+#
+#  switches
+#
+#[SW_KOD]
+#Mesh SW_KOD
+#Parent body
+#Attaching -0.866025 -1.64e-008 -0.5 -0.5 0 0.866025 -2.98e-008 1 0 0.338147 0.29 0.06 # all +0.005
+#[SW_PitotHeat]
+#Mesh SW_PitotHeat
+#Parent body
+#Attaching -0.866025 -1.64e-008 -0.5 -0.5 0 0.866025 -2.98e-008 1 0 0.338147 0.29 0.055
+#[SW_Accum]
+#Mesh SW_Accum
+#Parent body
+#Attaching -0.866025 -1.64e-008 -0.5 -0.5 0 0.866025 -2.98e-008 1 0 0.338147 0.29 0.055
+#[SW_Radio]
+#Mesh SW_Radio
+#Parent body
+#Attaching -0.866025 -1.64e-008 -0.5 0.5 0 0.866025 -2.98e-008 1 0 0.338147 0.2596 0.0575  # test
+#[SW_LandGear]
+#Mesh SW_LandGear
+#Parent body
+#Attaching -0.866025 -1.64e-008 0.5 0.5 0 0.866025 -2.98e-008 1 0 0.338147 0.2316 0.0575
+#[SW_Fuel]
+#Mesh SW_Fuel
+#Parent body
+#Attaching -0.866025 -1.64e-008 0.5 0.5 0 0.866025 -2.98e-008 1 0 0.338147 0.3157 -0.022  # up
+#[SW_LandLight]
+#Mesh SW_LandLight
+#Parent body
+#Attaching -0.866025 -1.64e-008 -0.5 -0.5 0 0.866025 -2.98e-008 1 0 0.338147 0.2869 -0.021
+[SW_NavLight]
+Mesh SW_NavLight
+Parent body
+Attaching -0.866025 -1.64e-008 -0.5 -0.5 0 0.866025 -2.98e-008 1 0 0.338147 0.2583 -0.021
+[SW_UVLight]
+Mesh SW_UVLight
+Parent body
+Attaching -0.866025 -1.64e-008 -0.5 -0.5 0 0.866025 -2.98e-008 1 0 0.338147 0.2299 -0.021  # down
+#
+# hood shine
+[CF_D3]
+Mesh CF_D3
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.17311 0.00202 -0.16682
+#
+# radio
+[Z_Yellow1]
+Mesh Z_Yellow1
+Parent Body
+Attaching  0 -1 0 0 0 1 -1 0 0 0.31 0.0535 -0.042
+[Radio]
+Mesh Radio
+Parent Body
+Attaching  0 1 0  -0.996332 0 0.0855745  -0.0855745 0 0.996332  0.34 -0.0032 -0.09   # tilted up 5 deg
+#
+# combined gauge
+[zTOilOut1a]
+Mesh zTOilOut1a
+Parent Body
+Attaching 0 1 0  -1 0 0  0 0 1  0.335 -0.277 -0.080
+[zOilPrs1a]
+Mesh zOilPrs1a
+Parent Body
+Attaching 0 0.5 -0.866025 -1 0 0 0 0.866025 0.5  0.335 -0.27 -0.102
+[zGasPrs1a]
+Mesh zGasPrs1a
+Parent Body
+Attaching 0 -0.866025 -0.5 -1 0 0 0 0.5 -0.866025  0.335 -0.2841 -0.102
+#
+[zTwater1a]
+Mesh zTwater1a
+Parent Body
+Attaching 0 0.258819 0.965926  1 0 0  0 0.965926 -0.258819  0.327 -0.136 -0.116  # dummy at 15 deg
+#
+[zGasLev1a]
+Mesh zGasLev1a
+Parent Body
+Attaching 0 -0.707107 0.707107  1 0 0  0 0.707107 0.707107  0.335 -0.2545 0.025  # dummy at 45 deg
+

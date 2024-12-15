@@ -1,0 +1,73 @@
+[_ROOT_]
+VisibilitySphere 6.43847
+[CF_D0]
+Mesh CF_D0
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -1.86015 0.01041 0.28021
+[Tail1_D0]
+Mesh Tail1_D0
+Parent CF_D0
+Attaching 1 0 0 0 1 0 0 0 1 -0.00812 2.17542 -0.28533
+
+[Body]
+Mesh Body
+Parent _ROOT_
+Attaching 0 1 0 -0.848049 0 0.52992 0.52992 0 0.848049 -0.566128 0 -0.369104
+[Drum1]
+Mesh Drum1
+Parent CF_D0
+Attaching 0.906 -0.374 0.192 0.366 0.927 0.077 -0.207 0 0.978 -0.170795 -0.08808 -0.249632
+[Drum2]
+Mesh Drum1
+Parent CF_D0
+Attaching 0.906 -0.374 0.192 0.366 0.927 0.077 -0.207 0 0.978 -0.170795 -0.08808 -0.379445
+[Drum3]
+Mesh Drum1
+Parent CF_D0
+Attaching 0.906 -0.374 0.192 0.366 0.927 0.077 -0.207 0 0.978 0.162709 -0.08808 -0.249632
+[Cylinder]
+Mesh Cylinder
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -1.67372 5e-005 0.670526
+[TurretA]
+Mesh TurretA
+Parent _ROOT_
+Hidden
+Attaching -1 0 0 0 0 -1 0 -1 0 -1.68134 -0.00577 0.665606
+[TurretB]
+Mesh TurretB
+Parent TurretA
+Attaching 1 0 0 0 0 1 0 -1 0 -1.00136e-005 1.00136e-005 -2.00002e-005
+[IBone]
+Mesh IBone
+Parent TurretB
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+[CockingLever]
+Mesh CockingLever
+Parent TurretB
+Attaching -1 0 0 0 0 1 0 1 0 -0.26324 -0.04466 -4.81041
+[Pilot1_D0]
+Mesh Pilot1_D0
+Parent _ROOT_
+Attaching 0 0.793224 0 -0.907889 0 -0.002141 0.018514 0 0.948236 0.0426171 0 -0.132015
+[Head1_D0]
+Mesh Head1_D0
+Parent Pilot1_D0
+Attaching -0.078487 -0.957177 -0.311699 0.01893 0.339748 -0.931558 0.997564 -0.060665 -0.0084484 0 0.21255 0.697524
+[Panel156]
+Mesh Panel156
+Parent CF_D0
+Attaching -1 0 0 0 -0.139173 0.990269 0 0.990269 0.139173 0 -2.54985 -0.148242
+[pipeR]
+Mesh pipe
+Parent CF_D0
+Attaching 0.507489 -0.44893 -0.175835 -0.562091 -0.871752 0.60341 -0.353477 -0.172823 -0.578953 0.239478 -0.17571 0.382032
+[pipeL]
+Mesh pipe
+Parent CF_D0
+Attaching -0.456449 -0.450147 -0.281114 -0.485574 0.891464 -0.640695 0.449173 -0.130185 -0.520864 -0.25726 -0.148328 0.353997
+[kratownica]
+Mesh kratownica
+Parent  CF_D0
+Attaching 1 0 0 0 1 0 0 0 1 0 -0.130532 0.0102536

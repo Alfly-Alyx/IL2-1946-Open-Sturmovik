@@ -1,0 +1,100 @@
+[_ROOT_]
+VisibilitySphere 7.03874
+[Bodyg4m]
+Mesh Bodyg4m
+Parent _ROOT_
+Attaching 0 0.8 0 0 0 -1 -1 0 0 4.99 0.003806 0.0436607
+[Body]
+Mesh Body
+Parent _ROOT_
+hidden
+Attaching 0 1 0 -1 0 0 0 0 1 6.80817 -0.00288 0.354081
+[TurretA]
+Mesh TurretA
+Parent Body
+Attaching 0 -0.974376 -0.224928 0 0.224928 -0.974376 1 0 0 0.00295 -1.175 -0.0119
+[TurretB]
+Mesh TurretB
+Parent TurretA
+hidden
+Attaching 1 2.31509e-005 0 0 0 1 2.31509e-005 -1 0 0.00711265 -0.00777916 -7e-005
+[TurretC]
+Mesh TurretC
+Parent Body
+Hidden
+Attaching 0 -0.974376 -0.224928 0 0.224928 -0.974376 1 0 0 0.00295 -1.175 -0.0119
+[Turret1B]
+Mesh Turret1B
+Parent TurretB
+Attaching 1 0 0 0 1 0 0 0 1 -0.0237725 0 -0.00974546
+[Turret1C]
+Mesh Turret1C
+Parent Turret1B
+Attaching 0 1 0 -1 0 1.18162e-005 1.18162e-005 0 1 -0.322788 0.02245 -0.01435
+[TurretD]
+Mesh TurretD
+Parent TurretC
+Hidden
+Attaching 1 2.31509e-005 0 0 0 1 2.31509e-005 -1 0 0.02511265 0.03777916 -7e-005
+[XGlassDamage1]
+Mesh XGlassDamage1
+Parent _ROOT_
+Hidden
+Attaching 0 -1 0 1 0 0 0 0 1 6.45307 0.07272 0.29262
+[XGlassDamage2]
+Mesh XGlassDamage2
+Parent _ROOT_
+Hidden
+Attaching 0 -1 0 1 0 0 0 0 1 6.16407 -0.14471 0.3357
+[XGlassDamage3]
+Mesh XGlassDamage3
+Parent _ROOT_
+Hidden
+Attaching 0 -1 0 1 0 0 0 0 1 6.41719 0.12091 0.64977
+[XHullDamage1]
+Mesh XHullDamage1
+Parent _ROOT_
+Hidden
+Attaching 0 -1 0 1 0 0 0 0 1 5.14679 0.50593 0.35112
+[XHullDamage2]
+Mesh XHullDamage2
+Parent _ROOT_
+Hidden
+Attaching 0 -1 0 1 0 0 0 0 1 4.77774 -0.17384 0.58891
+[XHullDamage3]
+Mesh XHullDamage3
+Parent _ROOT_
+Hidden
+Attaching 0 -1 0 1 0 0 0 0 1 5.32477 -0.41479 0.17362
+[Back]
+Mesh Back
+Parent Bodyg4m
+Attaching 1 0 0 0 0 1 0 -1 0 0 -0.100792 -0.997794
+[Left]
+Mesh left
+Parent Bodyg4m
+Attaching 1.25 0 0 0 0 1 0 -1 0 0.490459 0.570185 -2.3699
+[Nose]
+Mesh nose
+Parent Bodyg4m
+Attaching 1.4 0 0 0 0 1 0 -1.39 0 0 -0.0888788 -3.08718
+[pipe]
+Mesh pipe
+Parent Bodyg4m
+Attaching 0.857 0 0.412 0 1 0 -0.643 0 0.857 0.901471 -0.261739 -2.67314
+[pipe2]
+Mesh pipe
+Parent Bodyg4m
+Attaching 0.897 0.126 0.437 -0.217 0.984 0 -0.633 -0.089 0.856 0.912374 -0.100354 -2.67314
+[pipe3]
+Mesh pipe
+Parent Bodyg4m
+Attaching -0.857 0 0.412 0 1 0 -0.643 0 -0.857 -0.901471 -0.261739 -2.67314
+[pipe4]
+Mesh pipe
+Parent Bodyg4m
+Attaching -0.897 0.126 0.437 0.217 0.984 0 -0.633 -0.089 -0.856 -0.912374 -0.100354 -2.67314
+[wallr]
+Mesh wallr
+Parent Bodyg4m
+Attaching -1.8 0 0 0 -1.492 -0.573 0 -0.357 0.933 -0.04571 0.382332 -2.89669

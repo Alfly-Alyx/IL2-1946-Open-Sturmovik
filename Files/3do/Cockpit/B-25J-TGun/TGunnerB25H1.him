@@ -1,0 +1,37 @@
+[_ROOT_]
+VisibilitySphere 1.72331
+[Body]
+Mesh Body
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 0.55138 -0.00303 -0.32245
+[TurretA]
+Mesh TurretA
+Parent Body
+Attaching 1 0 0 0 0 -1 0 1 0 0.00303 0.00759 1.29948
+[TurretB]
+Mesh TurretB
+Parent TurretA
+Attaching 0 0 1 -1 0 0 0 -1 0 0 -0.14169 0.09503
+[TurretC]
+Mesh TurretC
+Parent TurretA
+Hidden
+Attaching 0 0 1 -1 0 0 0 -1 0 0 -0.14169 0.09503
+[Z_Z_RETICLE]
+Mesh Z_Z_RETICLE
+Parent TurretB
+Attaching 0 -1 0 0 0 1 -1 0 0 3.40759 0 0.09673
+[Z_Z_MASK]
+Mesh Z_Z_MASK
+Parent TurretB
+Attaching 0 -1 0 1 0 0 0 0 1 5.16287 -0.05254 0.16075
+[XGlassDamage1]
+Mesh XGlassDamage1
+Parent TurretA
+Hidden
+Attaching 1 0 0 0 0 1 0 -1 0 0.07632 -0.46742 -0.07644
+[XGlassDamage2]
+Mesh XGlassDamage2
+Parent TurretA
+Hidden
+Attaching 1 0 0 0 0 1 0 -1 0 0.50718 -0.32742 -0.01587

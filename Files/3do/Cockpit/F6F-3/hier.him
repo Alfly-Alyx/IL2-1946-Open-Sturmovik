@@ -1,0 +1,382 @@
+[_ROOT_]
+VisibilitySphere 2.08294
+[BaseMirror]
+Mesh BaseMirror
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -0.86 0 1.33251
+[MIRROR]
+Mesh MIRROR
+Parent _ROOT_
+Attaching 0 -1 0 -0.17365 0 0.984808 -0.984808 0 -0.17365 -0.86053 0 1.33259
+[Z_Z_RETICLE]
+Mesh Z_Z_RETICLE
+Parent _ROOT_
+Attaching 0 -1 0 0 0 1 -1 0 0 9.01306 0 1.16054
+[Z_Z_MASK]
+Mesh Z_Z_MASK
+Parent _ROOT_
+Attaching 0 -1 0 0 0 1 -1 0 0 4.5323 -0.04596 1.18458
+[Pricel_D0]
+Mesh Pricel_D0
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -0.61709 -0.02333 1.08324
+[Pricel_D1]
+Mesh Pricel_D1
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 -0.61687 -0.03466 1.04391
+[Body]
+Mesh Body
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -0.87152 0 0.67052
+[Front]
+Mesh Front
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.00437 -0.30974 0.45049
+[Left1]
+Mesh Left1
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.3797 0.17131 -0.35315
+[Right]
+Mesh Right
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+[Back]
+Mesh Back
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 -0.00377 0.43273 0.09668
+[Panel_D0]
+Mesh Panel_D0
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.24845 -0.29051 0.21099
+[Panel_D1]
+Mesh Panel_D1
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.24845 -0.29051 0.21099
+[Canopy]
+Mesh Canopy
+Parent _ROOT_
+Attaching 0 1 0 -0.999114 0 -0.0420913 -0.0420913 0 0.999114 -1.15834 0.00439 1.05996
+[Z_Altimeter1]
+Mesh Z_Altimeter1
+Parent Body
+Attaching 1 0 0 0 0 1 0 -1 0 0.20233 -0.28969 0.10953
+[Z_Altimeter2]
+Mesh Z_Altimeter2
+Parent Body
+Attaching 1 0 0 0 0 1 0 -1 0 0.20233 -0.29014 0.10957
+[Z_Speedometer1]
+Mesh Z_Speedometer1
+Parent Body
+Attaching 1 0 0 0 0 1 0 -1 0 0.10327 -0.28969 0.10167
+[Z_TurnBank1]
+Mesh Z_TurnBank1
+Parent Body
+Attaching 1 0 0 0 0 1 0 -1 0 0.00328 -0.28964 0.09224
+[Z_TurnBank2]
+Mesh Z_TurnBank2
+Parent Body
+Attaching 1 0 0 0 0 -1 0 1 0 0.00349 -0.28972 0.14816
+[Z_TurnBank3]
+Mesh Z_TurnBank3
+Parent Body
+Attaching 1 0 0 0 0 1 0 -1 0 -0.12364 -0.29533 0.23639
+[Z_TurnBank4]
+Mesh Z_TurnBank4
+Parent Z_TurnBank3
+Attaching 1 0 0 0 1 0 0 0 1 -0.000189997 -0.000479996 -0.00160998
+[Z_Climb1]
+Mesh Z_Climb1
+Parent Body
+Attaching 1 0 0 0 0 1 0 -1 0 -0.09206 -0.28969 0.10367
+[Z_Compass1]
+Mesh Z_Compass1
+Parent Body
+Attaching 0 0 1 -1 0 0 0 -1 0 0.0017 -0.27268 0.22469
+[Z_Compass2]
+Mesh Z_Compass2
+Parent Body
+Attaching 0 0 1 -1 0 0 0 -1 0 0.00185 -0.2738 0.22494
+[Z_Compass3]
+Mesh Z_Compass3
+Parent Body
+Attaching 0 1 0 -1 0 0 0 0 1 0.14079 -0.33513 0.26479
+[Z_RPM1]
+Mesh Z_RPM1
+Parent Body
+Attaching 1 0 0 0 0 1 0 -1 0 -0.24297 -0.28969 0.20382
+[Z_Hour1]
+Mesh Z_Hour1
+Parent Body
+Attaching 1 0 0 0 0 1 0 -1 0 0.24453 -0.29014 0.2106
+[Z_Minute1]
+Mesh Z_Minute1
+Parent Body
+Attaching 1 0 0 0 0 1 0 -1 0 0.24454 -0.28969 0.21068
+[Z_Fuel1]
+Mesh Z_Fuel1
+Parent Body
+Attaching -0.710568 0.328349 0.622318 -0.585171 0.21539 -0.781781 -0.39074 -0.919671 0.03909 -0.2704 -0.28977 -0.07027
+[Z_Temp1]
+Mesh Z_Temp1
+Parent Body
+Attaching 0 0.0436249 0.999048 -0.898797 0.437948 -0.0191249 -0.438375 -0.897937 0.0392 -0.37281 -0.24076 -0.14102
+[Z_Manifold1]
+Mesh Z_Manifold1
+Parent Body
+Attaching 0.96363 0 0.26724 -0.26724 0 0.96363 0 -1 0 -0.21369 -0.28969 0.10029
+[Z_Oxy1]
+Mesh Z_Oxy1
+Parent Body
+Attaching 0 0.05234 0.998629 -0.887009 0.461119 -0.02417 -0.461748 -0.885796 0.0464198 -0.33176 -0.2593 -0.06479
+[Z_Coolant1]
+Mesh Z_Coolant1
+Parent Body
+Attaching -0.454979 0.252389 0.853987 -0.788051 0.332471 -0.518111 -0.414692 -0.908715 0.0476203 -0.27871 -0.28607 -0.12437
+[Z_Oilpres1]
+Mesh Z_Oilpres1
+Parent Body
+Attaching 0.748047 -0.326389 0.577838 -0.512159 0.269789 0.815418 -0.422038 -0.905916 0.0346498 -0.30041 -0.27599 -0.1737
+[Z_AmmoCtr1]
+Mesh Z_AmmoCtr1
+Parent Body
+Attaching 1 0 0 0 -0.122335 0.992489 0 -0.992489 -0.122335 0.00012 -0.31557 -0.05965
+[Z_AmmoCtr2]
+Mesh Z_AmmoCtr2
+Parent Body
+Attaching 1 0 0 0 -0.12187 0.992546 0 -0.992546 -0.12187 0.00011 -0.31602 -0.05972
+[Z_FuelPres]
+Mesh Z_FuelPres
+Parent Body
+Attaching 0.906025 -0.423181 -0.0060128 -0.0218324 -0.0325046 -0.999233 0.422648 0.905468 -0.0386948 -0.37402 -0.23985 -0.14818
+[Z_OilPres]
+Mesh Z_OilPres
+Parent Body
+Attaching 0.905342 -0.419878 0.0637006 -0.0414242 0.0619476 0.997219 -0.422648 -0.905468 0.0386948 -0.37073 -0.24154 -0.14811
+[Z_FlapInd1]
+Mesh Z_FlapInd1
+Parent Body
+Attaching 0.83867 0.54464 0 0 0 -1 -0.54464 0.83867 0 0.42913 -0.28565 -0.10417
+[Z_GearInd1]
+Mesh Z_GearInd1
+Parent Body
+Attaching 0.81915 0.57358 0 0 0 1 0.57358 -0.81915 0 0.45348 -0.26983 -0.13289
+[Z_GearInd2]
+Mesh Z_GearInd2
+Parent Body
+Attaching 0.81915 0.57358 0 0 0 1 0.57358 -0.81915 0 0.42536 -0.28446 -0.13214
+[Z_GearInd3]
+Mesh Z_GearInd3
+Parent Body
+Attaching 0.81915 0.57358 0 0 0 1 0.57358 -0.81915 0 0.43959 -0.27885 -0.15665
+[Z_Trim2]
+Mesh Z_Trim2
+Parent Body
+Attaching 0.97609 0 0.217365 0 -1 0 0.217365 0 -0.97609 0.34378 0.25959 -0.32808
+[Z_Trim3]
+Mesh Z_Trim3
+Parent Body
+Attaching 0 1 0 -0.217365 0 0.97609 0.97609 0 0.217365 0.29788 0.25881 -0.37295
+[Z_Flaps1]
+Mesh Z_Flaps1
+Parent Body
+Attaching -0.46931 0.472178 0.746188 0.185381 0.878887 -0.439536 -0.863354 -0.0679523 -0.500002 0.44155 -0.05439 -0.17176
+[Z_Gear1]
+Mesh Z_Gear1
+Parent Body
+Attaching 0 -0.84407 -0.536233 0 -0.536233 0.84407 -1 0 0 0.2929 -0.32467 -0.12904
+[Z_Throtle1]
+Mesh Z_Throtle1
+Parent Body
+Attaching -0.00221493 0.853854 -0.520508 -0.998053 -0.0343392 -0.0520627 -0.0631554 0.519647 0.852044 0.32212 -0.01429 -0.3539
+[Z_Prop1]
+Mesh Z_Prop1
+Parent Body
+Attaching 0.0620741 -0.50014 -0.863717 -0.998005 -0.0347244 -0.0527296 -0.00385682 0.865214 -0.501387 0.34914 0.05876 -0.31818
+[Z_Mixture1]
+Mesh Z_Mixture1
+Parent Body
+Attaching -0.00354678 0.856547 -0.516056 -0.998005 -0.0347244 -0.0527296 -0.0630163 0.514419 0.855221 0.27476 -0.01453 -0.35401
+[Pedal_L]
+Mesh Pedal_L
+Parent _ROOT_
+Attaching 0.996161 0 0.0875381 0 1 0 -0.0875381 0 0.996161 -0.40005 0.21063 0.60888
+[Pedal1_L]
+Mesh Pedal1_L
+Parent Pedal_L
+Attaching 0.0875381 0 0.996161 0 1 0 -0.996161 0 0.0875381 -0.040443 0.032 -0.305442
+[Pedal2_L]
+Mesh Pedal2_L
+Parent Pedal1_L
+Attaching -0.0871604 0 0.996194 0 -1 0 0.996194 0 0.0871604 -0.04249 0.09372 0.05501
+[Pedal3_L]
+Mesh Pedal3_L
+Parent Pedal2_L
+Attaching 0 -1 0 0.258825 0 -0.965924 0.965924 0 0.258825 -0.0988378 0.33635 0.34295
+[Pedal_R]
+Mesh Pedal_R
+Parent _ROOT_
+Attaching 0.996161 0 0.0875381 0 1 0 -0.0875381 0 0.996161 -0.40005 -0.21063 0.60888
+[Pedal1_R]
+Mesh Pedal1_R
+Parent Pedal_R
+Attaching 0.996161 0 -0.0875381 0 1 0 0.0875381 0 0.996161 -0.0408749 -0.032 -0.305444
+[Pedal2_R]
+Mesh Pedal2_R
+Parent Pedal1_R
+Attaching -0.99941 0 0.0343478 0 -1 0 0.0343478 0 0.99941 -0.05502 -0.09372 -0.04249
+[Pedal3_R]
+Mesh Pedal3_R
+Parent Pedal2_R
+Attaching 0 -1 0 0.139721 0 -0.990191 0.990191 0 0.139721 -0.0569372 -0.33635 0.352464
+[Z_Columnbase]
+Mesh Z_Columnbase
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -0.75953 0 0.00824
+[Z_Column]
+Mesh Z_Column
+Parent Z_Columnbase
+Attaching 0 1 0 -1 0 0 0 0 1 -0.00619 -0.00816 0.01986
+[Z_Supercharger1]
+Mesh Z_Supercharger1
+Parent _ROOT_
+Attaching -0.991805 -0.021291 -0.125972 0.0378315 -0.997631 -0.0574479 -0.124636 -0.055251 0.990663 -0.85682 0.30091 0.31676
+[Z_CowlFlap1]
+Mesh Z_CowlFlap1
+Parent _ROOT_
+Attaching 0.754701 0 0.656069 0 1 0 -0.656069 0 0.754701 -1.04131 0.39079 0.42206
+[Z_OilCooler1]
+Mesh Z_OilCooler1
+Parent _ROOT_
+Attaching 0.737683 -0.0908259 0.66901 0.121853 0.992548 0 -0.663707 0.0819939 0.743485 -1.04221 0.37621 0.41885
+[Z_OilSplats_D1]
+Mesh Z_OilSplats_D1
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 -0.60452 0.28649 1.02637
+[XGlassDamage1]
+Mesh XGlassDamage1
+Parent Canopy
+Hidden
+Attaching 1 0 0 0 0.999114 0.0420913 0 -0.0420913 0.999114 0.02014 -0.17694 0.311298
+[XGlassDamage2]
+Mesh XGlassDamage2
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 -0.70279 0.23726 1.17143
+[XGlassDamage3]
+Mesh XGlassDamage3
+Parent Canopy
+Hidden
+Attaching 1 0 0 0 0.999114 0.0420913 0 -0.0420913 0.999114 0.27545 -0.0927177 0.0267411
+[XGlassDamage4]
+Mesh XGlassDamage4
+Parent Canopy
+Hidden
+Attaching 1 0 0 0 0.999114 0.0420913 0 -0.0420913 0.999114 -0.32739 -0.225204 -0.0880472
+[XHullDamage1]
+Mesh XHullDamage1
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 -0.57211 0.34266 0.61037
+[XHullDamage2]
+Mesh XHullDamage2
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 -0.7177 0.35891 0.82677
+[XHullDamage3]
+Mesh XHullDamage3
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 -1.21341 -0.44595 0.54859
+[WingLIn_D0]
+Mesh WingLIn_D0
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 1.13612 -0.38448 -0.97869
+[WingLIn_D1]
+Mesh WingLIn_D1
+Parent WingLIn_D0
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+[WingLIn_D2]
+Mesh WingLIn_D2
+Parent WingLIn_D0
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+[WingLIn_D3]
+Mesh WingLIn_D3
+Parent WingLIn_D0
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+[WingRIn_D0]
+Mesh WingRIn_D0
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 -1.11815 -0.38714 -0.97841
+[WingRIn_D1]
+Mesh WingRIn_D1
+Parent WingRIn_D0
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+[WingRIn_D2]
+Mesh WingRIn_D2
+Parent WingRIn_D0
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+[WingRIn_D3]
+Mesh WingRIn_D3
+Parent WingRIn_D0
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+[WingLMid_D0]
+Mesh WingLMid_D0
+Parent WingLIn_D0
+Attaching 0.906307 -0.208109 -0.367829 0 0.870358 -0.492419 0.422619 0.446289 0.788809 0.96103 -0.96999 -0.11839
+[WingLMid_D1]
+Mesh WingLMid_D1
+Parent WingLMid_D0
+Hidden
+Separable
+Attaching 1 1.97648e-009 -1.32578e-008 1.08497e-009 1 -1.52768e-008 -2.72821e-009 -4.23852e-009 1 1.73006e-007 -1.49141e-008 -1.56286e-008
+[WingLMid_D2]
+Mesh WingLMid_D2
+Parent WingLMid_D0
+Attaching 1 1.97648e-009 -1.32578e-008 1.08497e-009 1 -1.52768e-008 -2.72821e-009 -4.23852e-009 1 1.73006e-007 -1.49141e-008 -1.56286e-008
+[WingLMid_D3]
+Mesh WingLMid_D3
+Parent WingLMid_D0
+Attaching 1 1.97648e-009 -1.32578e-008 1.08497e-009 1 -1.52768e-008 -2.72821e-009 -4.23852e-009 1 1.73006e-007 -1.49141e-008 -1.56286e-008
+[WingRMid_D0]
+Mesh WingRMid_D0
+Parent WingRIn_D0
+Attaching 0.906307 0.208109 0.367829 0 0.870358 -0.492419 -0.422619 0.446289 0.788809 -0.979 -0.96733 -0.11867
+[WingRMid_D1]
+Mesh WingRMid_D1
+Parent WingRMid_D0
+Attaching 1 -1.97648e-009 1.32578e-008 -1.08497e-009 1 -1.52768e-008 2.72821e-009 -4.23852e-009 1 -1.73006e-007 -1.49141e-008 -1.56286e-008
+[WingRMid_D2]
+Mesh WingRMid_D2
+Parent WingRMid_D0
+Attaching 1 -1.97648e-009 1.32578e-008 -1.08497e-009 1 -1.52768e-008 2.72821e-009 -4.23852e-009 1 -1.73006e-007 -1.49141e-008 -1.56286e-008
+[WingRMid_D3]
+Mesh WingRMid_D3
+Parent WingRMid_D0
+Attaching 1 -1.97648e-009 1.32578e-008 -1.08497e-009 1 -1.52768e-008 2.72821e-009 -4.23852e-009 1 -1.73006e-007 -1.49141e-008 -1.56286e-008
+[Z_AirPres]
+Mesh Z_AirPres
+Parent Body
+Attaching 0.939556 0 -0.342394 0 -1 0 -0.342366 0 -0.939567 -0.41115 0.40008 -0.20341
+[Z_HydroPres]
+Mesh Z_HydroPres
+Parent Body
+Attaching 0.939556 0 -0.342394 0 -1 0 -0.342366 0 -0.939567 -0.40732 0.52727 -0.20686
+[Flap01_D0]
+Mesh Flap01_D0
+Parent WingLMid_D0
+Attaching -0.0711908 0.850918 0.520446 -0.880823 0.191207 -0.433119 -0.46806 -0.489261 0.735901 0.474091 1.7608 1.28763
+[Flap02_D0]
+Mesh Flap02_D0
+Parent WingLIn_D0
+Attaching 0.15629 0.987688 0.00681998 -0.986749 0.15643 -0.04308 -0.0436199 0 0.999048 0.09236 1.31869 -0.30843
+[Flap03_D0]
+Mesh Flap03_D0
+Parent WingRIn_D0
+Attaching -0.15641 0.987688 0.00273 -0.987537 -0.15644 0.0172399 0.01745 0 0.999848 -0.10976 1.32553 -0.30907
+[Flap04_D0]
+Mesh Flap04_D0
+Parent WingRMid_D0
+Attaching 0.0782762 0.853186 0.515693 -0.884176 -0.179553 0.43127 0.460552 -0.489729 0.740314 -0.473326 1.76135 1.28792

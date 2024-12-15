@@ -1,0 +1,59 @@
+[_ROOT_]
+VisibilitySphere 22.06964
+[Body]
+Mesh Body
+Parent _ROOT_
+Attaching 0 -1 0 0 0 1 -1 0 0 -1.89 0.32271 0.55
+[Turret_Base]
+Mesh Turret_Base
+Parent Body
+Attaching 0 0 1 0 1 0 -1 0 0 0.32503 0.14 0.46728
+[MGun]
+Mesh MGun
+Parent Turret_Base
+Hidden
+Attaching 0.9 0 0 0 0 -0.9 0 0.9 0 0.38 0.14 0
+[MG17]
+Mesh MG17
+Parent MGun
+Attaching 1 0 0 0 1 0 0 0 1 -0.1 0 0.145
+[Turret_Base2]
+Mesh Turret_Base2
+Parent Body
+Hidden
+Attaching 0 0 1 0 1 0 -1 0 0 0.32503 0.20166 0.46728
+[MGun2]
+Mesh MGun2
+Parent Turret_Base2
+Hidden
+Attaching 1 0 0 0 0 -1 0 1 0 0.43118 0.17471 0
+[Trigger]
+Mesh Trigger
+Parent MGun
+Hidden
+Attaching -1 0 0 0 -1 0 0 0 1 -0.33715 0 0.00408
+[Dyrki]
+Mesh Dyrki
+Parent Body
+Attaching -1 0 0 0 0 1 0 1 0 0.32547 -0.23391 0.00623
+[Z_Altimeter1]
+Mesh Z_Altimeter1
+Parent Body
+Attaching -1 0 0 0 0 1 0 1 0 0 0 0
+[Z_Altimeter2]
+Mesh Z_Altimeter2
+Parent Body
+Attaching -1 0 0 0 0 1 0 1 0 0 0 0
+[Z_Speedometer1]
+Mesh Z_Speedometer1
+Parent Body
+Attaching -1 0 0 0 0 1 0 1 0 0.05096 0.04374 0.000200033
+[Z_Hour1]
+Mesh Z_Hour1
+Parent Body
+Attaching -1 0 0 0 0 1 0 1 0 0.05372 -0.01219 0.00048995
+[Z_Minute1]
+Mesh Z_Minute1
+Parent Body
+Attaching -1 0 0 0 0 1 0 1 0 0.05372 -0.01219 0.00048995
+

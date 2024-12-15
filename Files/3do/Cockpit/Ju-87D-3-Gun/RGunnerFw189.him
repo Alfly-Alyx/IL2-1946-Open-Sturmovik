@@ -1,0 +1,40 @@
+[_ROOT_]
+VisibilitySphere 1.89129
+[Body]
+Mesh Body
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 0.40000 0 0.60651
+[TurretA]
+Mesh TurretA
+Parent body
+Attaching 1 0 0 0 0 1 0 -1 0 0.0002 -0.36346 0.72496
+[TurretB]
+Mesh TurretB
+Parent TurretA
+Attaching 0 0 1 1 0 0 0 1 0 -0.0002 0.06936 -0.26165
+[Hose]
+Mesh Hose
+Parent body
+Attaching 0.00305002 0.178281 0.983975 -0.00101 -0.983978 0.17829 0.999995 -0.00154001 -0.00282001 0 -0.0622599 0.18128
+[PatronsL]
+Mesh PatronsL
+Parent body
+Attaching -0.861709 -0.50721 0.01397 0.50656 -0.86153 -0.03411 0.02934 -0.02232 0.99932 -0.34959 -0.23089 0.37499
+[PatronsL_add]
+Mesh PatronsL_add
+Parent PatronsL
+Attaching -0.826331 0.521453 -0.212738 -0.562712 -0.779892 0.274102 -0.0229703 0.346204 0.937876 -0.262281 -0.0021978 0.286063
+[PatronsR]
+Mesh PatronsR
+Parent body
+Attaching -0.866027 0.499998 0 -0.499998 -0.866027 0 0 0 1 0.34959 -0.23089 0.37499
+[PatronsR_add]
+Mesh PatronsR_add
+Parent PatronsR
+Attaching -0.821781 -0.569023 0.0298101 0.543539 -0.767122 0.340719 -0.17101 0.296199 0.939692 0.266305 0.00532547 0.28228
+[IBone]
+Mesh IBone
+Parent TurretB
+Hidden
+Attaching -1 0 0 0 -1 0 0 0 1 -0.0499499 -0.00575 0.02124
+

@@ -1,0 +1,546 @@
+[_ROOT_]
+VisibilitySphere 1.26666
+[Z_Z_RETICLE]
+Mesh Z_Z_RETICLE
+Parent _ROOT_
+hidden
+Attaching 0 -1 0 0 0 1 -1 0 0 9.59123 -0.04596 0.74982
+[Z_FuelRed1]
+Mesh Z_FuelRed1
+Parent _ROOT_
+Hidden
+Attaching 0 -1 0 0 0 1 -1 0 0 -0.23096 0.02709 0.33335
+[CF_D0]
+Mesh CF_D0
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -1.86015 0.01041 0.28021
+[Engine1_D0]
+Mesh Engine
+Parent CF_D0
+Attaching 1 0 0 0 1 0 0 0 1 -0.00861 -3.46077 -0.3579
+[Panel156]
+Mesh Panel156
+Parent CF_D0
+Attaching -1 0 0 0 -0.139173 0.990269 0 0.990269 0.139173 0 -2.54985 -0.122668
+[Z_Throttle3]
+Mesh Z_Throttle2
+Parent panel156
+Attaching -0.034 0.341 -0.938 -0.001 -0.939 -0.341 -0.999 -0.01 0.032 -0.310098 0.126647 -0.192032
+[WingLMid_D0]
+Mesh WingLMid_D0
+Parent CF_D0
+Attaching 1 0 0 0 1 0 0 0 1 1.94757 -1.74604 -0.01134
+[WingRMid_D0]
+Mesh WingRMid_D0
+Parent CF_D0
+Attaching 1 0 0 0 1 0 0 0 1 -1.93679 -1.74604 -0.00564998
+[GearL2_D0]
+Mesh GearL2_D0
+Parent WingLMid_D0
+Attaching 1 0 0 0 0.986285 -0.165049 0 0.165049 0.986285 -1.25591 -0.31036 0.57043
+[GearL3_D0]
+Mesh GearL3_D0
+Parent GearL2_D0
+Attaching 0.927184 -6.28658e-007 0.374607 0 1 1.66086e-006 -0.374607 -1.53568e-006 0.927184 0.47755 0.00765427 -1.21176
+[GearR2_D0]
+Mesh GearR2_D0
+Parent WingRMid_D0
+Attaching 1 0 0 0 0.986285 -0.165049 0 0.165049 0.986285 1.23978 -0.31036 0.56474
+[GearR3_D0]
+Mesh GearR3_D0
+Parent GearR2_D0
+Attaching 0.927184 7.41313e-007 -0.374607 0 1 1.92054e-006 0.374607 -1.5454e-006 0.927184 -0.47755 0.00765427 -1.21176
+[GearR4_D0]
+Mesh GearR4_D0
+Parent WingRMid_D0
+Attaching 0.996195 -0.0870704 0.00380002 0.0871597 0.995246 -0.0434498 0 0.0436199 0.999048 1.54133 -0.54791 -0.70026
+[Right]
+Mesh Right
+Parent _ROOT_
+Attaching -0.025983 -0.94534 0.371581 -0.694182 -0.396175 -1.36935 0.731804 -0.507082 -1.63939 0.111928 0.306306 -0.150283
+[Bottom]
+Mesh Bottom
+Parent _ROOT_
+Attaching 0 -1 0 1 0 0 0 0 1 0.472478 0 -0.316217
+[Z_Column]
+Mesh Z_Column
+Parent _ROOT_
+hidden
+Attaching 0 1 0 0 0 1 1 0 0 0.427771 0 -0.245289
+[Z_Column2]
+Mesh Z_Column2
+Parent Z_Column
+Attaching 0 0 -1 -1 0 0 0 1 0 0 -0.187178 -0.0392272
+
+[Z_PedalStrut]
+Mesh Z_PedalStrut
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 0.795335 0 -0.263891
+[Z_PedalStrut2]
+Mesh Z_PedalStrut2
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 0.910276 0 -0.328319
+[Z_LeftPedal]
+Mesh Z_LeftPedal
+Parent Z_PedalStrut
+Attaching -1 0 0 0 -1 0 0 0 1 0.22707 0.04209 -0.03588
+[Z_RightPedal]
+Mesh Z_RightPedal
+Parent Z_PedalStrut
+Attaching 1 0 0 0 1 0 0 0 1 -0.22707 0.04209 -0.03588
+[Z_Throttle]
+Mesh Z_Throttle
+Parent _ROOT_
+Attaching -0.677274 -0.128151 0.724484 0.735705 -0.109839 0.668336 -0.00607002 0.985654 0.168671 0.506255 0.399582 0.17
+[Z_Throttle_tube]
+Mesh Z_Throttle_tube
+Parent Z_Throttle
+Attaching 1 1.11449e-006 -9.86018e-006 -2.8437e-006 0.999049 -0.0436117 8.83878e-006 0.0436046 0.999049 -0.0635631 -0.0196115 -0.00967864
+[Z_Throttle_D1]
+Mesh Z_Throttle_D1
+Parent _ROOT_
+Hidden
+Attaching -0.302899 -0.162559 0.939056 0.953003 -0.0453902 0.299541 -0.00607002 0.985654 0.168671 -0.44334 0.37093 0.21166
+[Z_Mix]
+Mesh Z_Mix
+Parent _ROOT_
+Attaching -0.771623 -0.0940204 0.629093 0.636079 -0.11405 0.763149 0 0.989016 0.147809 0.506255 0.379767 0.17
+[Z_Mix_tros]
+Mesh Z_Mix_tros
+Parent Z_Mix
+Attaching -0.506992 -0.854152 -0.11568 0.85076 -0.517437 0.0920218 -0.138453 -0.0517687 0.989015 -0.0667663 -0.0335469 -0.0110043
+[Z_MagnetoSwitch]
+Mesh Z_MagnetoSwitch
+Parent Panel156
+Attaching 0 -1 0 0 0 1 -1 0 0 -0.225509 -0.105311 -0.0268116
+[Z_Altimeter1]
+Mesh Z_Altimeter1
+Parent Panel156
+Attaching 1 0 0 0 -1 0 0 0 1 -0.112908 0.0605375 0.00304008
+[Z_Altimeter2]
+Mesh Z_Altimeter2
+Parent Panel156
+Attaching -1 0 0 0 1 0 0 0 -1 -0.11331 0.0532272 -0.0005981
+[Z_Speedometer1]
+Mesh Z_Speedometer1
+Parent Panel156
+Attaching 1 0 0 0 -1 0 0 0 1 -0.108592 0.175894 0.000498712
+[Z_TurnBank1]
+Mesh Z_TurnBank1
+Parent Panel156
+Attaching -1 0 0 0 1 0 0 0 -1 0.008788 0.146804 0.0003205
+[Z_TurnBank2]
+Mesh Z_TurnBank2
+Parent Panel156
+Attaching -1 0 0 0 1 0 0 0 -1 0.008788 0.346893 6.05839e-005
+[Z_TurnBank_D1]
+Mesh Z_TurnBank_D1
+Parent Panel156
+Hidden
+Attaching 0.245488 -0.9659 -0.004494 -0.95125 -0.25881 0.16773 -0.17364 0 -0.9848 0.006788 0.146804 0.00098
+[Ispeedometer_D1]
+Mesh Ispeedometer_D1
+Parent _ROOT_
+Hidden
+Attaching 0 -1 0 0 0 1 -1 0 0 -0.23743 0.13428 0.45077
+[Iturnbank_D1]
+Mesh Iturnbank_D1
+Parent _ROOT_
+Hidden
+Attaching 0 -1 0 0 0 1 -1 0 0 -0.23702 0.03945 0.45145
+[Z_Azimuth1]
+Mesh Z_Azimuth1
+Parent _ROOT_
+hidden
+Attaching 0 0 1 0 -1 0 1 0 0 0.677987 0.0097878 0.717033
+[Z_Compass1]
+Mesh Z_Compass1
+Parent _ROOT_
+Hidden
+Attaching -1 0 0 0 0 1 0 1 0 0.586568 0.0101178 0.769349
+[zCompassOil3]
+Mesh zCompassOil3
+Parent Z_Compass1
+Hidden
+Attaching 0 0 -1 0 1 0 1 0 0 0 0 0
+[zCompassOil2]
+Mesh zCompassOil2
+Parent zCompassOil3
+Attaching 1 0 0 0 0 -1 0 1 0 0 0 0
+[Z_Compass]
+Mesh Z_Compass
+Parent _ROOT_
+Attaching 0 0 -1 -1 0 0 0 1 0 0.568949 0.008835 0.762779
+[Z_Compass2]
+Mesh Z_Compass2
+Parent _ROOT_
+Attaching 0 0 -1 -1 0 0 0 1 0 0.558516 0.008835 0.762779
+
+
+[Z_RPM1]
+Mesh Z_RPM1
+Parent Panel156
+Attaching 1 0 0 0 -1 0 0 0 1 0.123868 0.0582196 0.000334876
+[Z_EngTemp1]
+Mesh Z_EngTemp1
+Parent Panel156
+Attaching -0.814113 -0.580707 0 -0.580707 0.814113 0 0 0 1 -0.0446215 -0.0570626 0.000995
+[Z_FuelPress1]
+Mesh Z_FuelPress1
+Parent Panel156
+Attaching 0.906305 -0.422624 0 -0.422624 -0.906305 0 0 0 1 0.0505316 -0.0372075 0.0006234
+[Z_OilPress1]
+Mesh Z_OilPress1
+Parent Panel156
+Attaching -0.906305 -0.422624 0 0.422624 -0.906305 0 0 0 1 0.0505316 -0.0372075 0.0003434
+[Z_Hour1]
+Mesh Z_Hour1
+Parent Panel156
+Attaching -1 0 0 0 1 0 0 0 -1 0.0059415 0.0717166 0.000792338
+[Z_Minute1]
+Mesh Z_Minute1
+Parent Panel156
+Attaching -1 0 0 0 1 0 0 0 -1 0.0059415 0.0717166 0.00116233
+[Z_Second1]
+Mesh Z_Second1
+Parent Panel156
+Attaching -1 0 0 0 1 0 0 0 -1 0.0059415 0.0717166 0.00154234
+[Z_Iengtemprad1]
+Mesh Z_Iengtemprad1
+Parent _ROOT_
+Attaching 0 0.819151 -0.573578 0 0.573578 0.819151 1 0 0 -0.22474 -0.00477 0.2741
+[ZVSI]
+Mesh zVSI
+Parent Panel156
+Attaching -1 0 0 0 0.984789 -0.173757 0 -0.173757 -0.984789 0.127286 0.172 0.012306
+[Z_Flaps]
+Mesh Z_Flaps
+Parent Right
+Attaching 0.32413 0.25345 -0.608385 0.923526 0.048976 0.201327 0.131849 -0.794165 0.305897 -0.0368702 -0.217195 0.0514908
+
+[R1]
+Mesh R1
+Parent CF_D0
+Attaching -0.94427 1.13899 0.255059 -0.925359 0.46872 -0.996124 -1.28863 -1.21974 0.745305 0.003803 -2.41918 0.592992
+
+[pipe1]
+Mesh pipe
+Parent  CF_D0
+Attaching 0.970297 0 -0.241922 -0.387076 0 -1.55247 0 1 0 0.426004 -2.06469 -0.0500475
+[pipe1a]
+Mesh pipe
+Parent  pipe1
+Attaching 1 0 0 0 1 0 0 0 1 0 -0.285874 0
+[pipe1b]
+Mesh pipe
+Parent  pipe1
+Attaching 1 0 0 0 1 0 0 0 1 0 0.285874 0
+[pipe2]
+Mesh pipe
+Parent  CF_D0
+Attaching 0.970296 0 0.241923 0.387076 0 -1.55247 0 1 0 -0.43301 -2.06469 -0.0500475
+[pipe2a]
+Mesh pipe
+Parent  pipe2
+Attaching 1 0 0 0 1 0 0 0 1 0 -0.285874 0
+[pipe2b]
+Mesh pipe
+Parent  pipe2
+Attaching 1 0 0 0 1 0 0 0 1 0 0.285874 0
+[pipe4]
+Mesh pipe
+Parent CF_D0
+Attaching -0.994522 -0.104131 -0.00911 -0.18143 -1.72198 0.150448 0 0.087155 0.996195 -0.431464 -2.31852 -0.142401
+[pipe5]
+Mesh pipe
+Parent CF_D0
+Attaching -0.994523 -0.104131 -0.00911 -0.000936 -1.72439 0.150448 -0.009109 0.086678 0.996195 -0.337445 -1.80151 -0.469735
+[pipe6]
+Mesh pipe
+Parent CF_D0
+Attaching 0.967014 0.254721 0.024172 -0.086232 1.73489 -0.05935 -0.029849 0.032579 0.999025 0.413907 -2.31778 -0.143586
+[pipe7]
+Mesh pipe
+Parent CF_D0
+Attaching 0.967014 0.254721 0.024172 -0.086232 1.73489 -0.05935 -0.029849 0.032579 0.999025 0.392427 -1.78747 -0.162053
+[pipe8]
+Mesh pipe
+Parent CF_D0
+Attaching 0.943789 0.317184 -0.0393038 -0.435249 1.72328 -1.45975 -0.271017 0.581391 0.767159 0.363477 -2.32474 -0.360553
+[pipe9]
+Mesh pipe
+Parent CF_D0
+Attaching 0.967844 0.23372 0.093038 -0.283399 1.75466 -1.45975 -0.279315 0.602801 0.767159 0.359954 -1.79956 -0.385585
+[pipe10]
+Mesh pipe
+Parent CF_D0
+Attaching -0.787054 0.493369 0.360594 -0.507936 -1.58148 1.59091 0.669457 0.408884 0.620202 -0.384331 -2.31117 -0.362333
+[pipe11]
+Mesh pipe
+Parent CF_D0
+Attaching 1.4733 -0.154916 -0.235339 -0.300502 -0.844501 -1.32534 0.004108 1.26463 -0.80675 0.474437 -2.43385 0.0763674
+[pipe11a]
+Mesh pipe
+Parent pipe11
+Attaching 1 0 0 0 1 0 0 0 1 0 -0.272113 0
+[pipe12]
+Mesh pipe
+Parent CF_D0
+Attaching -0.24794 -1.25869 0.77732 0.26359 -0.866481 -1.31899 1.45858 -0.076335 0.341634 -0.510275 -2.42623 0.072329
+[pipe12a]
+Mesh pipe
+Parent pipe12
+Attaching 1 0 0 0 1 0 0 0 1 0 -0.276998 0
+[pipe13]
+Mesh pipe
+Parent CF_D0
+Attaching -0.924248 -0.249228 -0.131102 0.522487 -1.59326 -0.654628 -0.026355 -0.388205 0.92379 -0.537467 -2.30449 -0.0209054
+[pipe14]
+Mesh pipe
+Parent CF_D0
+Attaching 0.822718 -0.427921 0.281315 0.624967 1.65586 0.691056 -0.413641 -0.213319 0.885221 0.512885 -2.32187 -0.0374538
+[pipe15]
+Mesh pipe
+Parent CF_D0
+Attaching 0 -0.7 0 0.669131 0 0.743146 -0.520202 0 0.468392 0.5073 -2.05999 -0.0408067
+[pipe16]
+Mesh pipe
+Parent CF_D0
+Attaching 0 -0.7 0 0.669131 0 0.743146 -0.520202 0 0.468392 0.483079 -1.6393 -0.0602942
+[pipe17]
+Mesh pipe
+Parent CF_D0
+Attaching 0 -0.7 0 0.669131 0 0.743146 -0.520202 0 0.468392 0.463901 -1.2338 -0.0763048
+[pipe20]
+Mesh pipe
+Parent CF_D0
+Attaching 0 0.7 0 -0.642789 0 0.766046 0.536233 0 0.449952 -0.520678 -2.06241 -0.0362665
+[pipe21]
+Mesh pipe
+Parent CF_D0
+Attaching 0 0.7 0 -0.578 0 0.689 0.536233 0 0.449952 -0.50515 -1.6433 -0.0437515
+[pipe22]
+Mesh pipe
+Parent CF_D0
+Attaching 0 0.7 0 -0.017 0 0.999 -0.699 0 -0.012 0.597284 -2.05999 0.219394
+[pipelong1]
+Mesh pipelong
+Parent CF_D0
+Attaching 0.069 -0.895 0.034 0.997 0.062 -0.002 0 0.03 0.999 0.605846 -2.06639 0.0728739
+[pipelong2]
+Mesh pipelong
+Parent CF_D0
+Attaching -0.052 -0.882 0.068 0.997 -0.047 0 0.004 0.061 0.997 -0.607472 -2.06639 0.0909028
+[pipelong3]
+Mesh pipelong
+Parent CF_D0
+Attaching 0.566 0.39 0.122 -0.549 0.828 -0.101 -0.202 -0.014 0.978 0.597541 -2.05447 0.649413
+[pipelong4]
+Mesh pipelong
+Parent CF_D0
+Attaching -0.589 0.36 0.111 -0.511 -0.856 0.058 0.167 -0.032 0.985 -0.600747 -2.08539 0.63624
+[pipelongR]
+Mesh pipelong
+Parent CF_D0
+Attaching -0.55 0.634 0.543 -0.097 -0.154 0.081 0.135 -0.007 0.146 -0.600747 -2.08539 0.63624
+[pipelongL]
+Mesh pipelong
+Parent CF_D0
+Attaching 0.55 0.634 0.543 -0.097 0.154 -0.081 -0.135 -0.007 0.146 0.597541 -2.05447 0.649413
+[pipelong5]
+Mesh pipelong
+Parent CF_D0
+Attaching 0.006 -0.896 0.049 0.998 -0.007 -0.003 0.003 0.047 0.998 0.605846 -2.06639 0.632367
+[pipelong6]
+Mesh pipelong
+Parent CF_D0
+Attaching -0.052 -0.882 0.068 0.997 -0.047 0 0.004 0.061 0.997 -0.607472 -2.06639 0.627263
+[pipelong7]
+Mesh pipelong
+Parent CF_D0
+Attaching  1.1 0.019 0.019 -0.017 0.999 0 -0.017 0 0.999 0.590226 -1.18925 0.599816
+[pipelong8]
+Mesh pipelong
+Parent CF_D0
+Attaching 0.573 -0.817 0.058 0.819 0.572 -0.037 -0.002 0.069 0.997 0.597541 -2.05447 0.649413
+[pipelong9]
+Mesh pipelong
+Parent CF_D0
+Attaching -0.571 -0.818 0.042 0.818 -0.572 -0.017 0.037 0.024 0.998  -0.600747 -2.06949 0.63624
+[pipelong10]
+Mesh pipelong
+Parent CF_D0
+Attaching 0.292 0.017 0.956 -0.005 0.999 -0.016 -0.956 0 0.293 0.596642 -1.18925 0.584126
+[pipelong11]
+Mesh pipelong
+Parent CF_D0
+Attaching -0.292 -0.017 0.956 0.005 -0.999 -0.016 0.956 0 0.293 -0.54524 -1.18925 0.560361
+[pipelong12]
+Mesh pipelong
+Parent CF_D0
+Attaching 0.303 -1.057 0.336 0.961 0.275 0 -0.080 0.281 0.956 0.607334 -1.16644 0.591488
+[pipelong13]
+Mesh pipelong
+Parent CF_D0
+Attaching -0.223 -1.081 0.322 -0.028 0.29 0.956 -0.98 0.178 -0.083 -0.55394 -1.16644 0.565155
+[trim]
+Mesh trim
+Parent CF_D0
+Attaching 0 -0.7 0 1 0 0 0 0 0.7 0.312498 -1.85216 -0.379061
+[trimpipe]
+Mesh pipe
+Parent trim
+Attaching 1 0 0 0 1 0 0 0 1 0 0.145531 0
+[Pilot1_D0]
+Mesh Pilot1_D0
+Parent _ROOT_
+Attaching 0 -0.793224 0 0.907889 0 -0.002141 -0.018514 0 0.948236 -0.849685 0 -0.165021
+[Head1_D0]
+Mesh Head1_D0
+Parent Pilot1_D0
+Attaching -0.078487 -0.957177 -0.311699 0.01893 0.339748 -0.931558 0.997564 -0.060665 -0.0084484 0 0.21255 0.697524
+[Body87]
+Mesh bulaj
+Parent _ROOT_
+Attaching 0 1 0 -0.848049 0 0.52992 0.52992 0 0.848049 -0.566128 0 -0.369104
+[TurretA]
+Mesh TurretA
+Parent Body87
+Hidden
+Attaching 0 1 0 0 0 -1 -1 -0 0 -0.00365 1.48888 0.2517
+[TurretB]
+Mesh TurretB
+Parent TurretA
+Attaching 1 0 0 0 0 1 0 -1 0 -1.00136e-005 1.00136e-005 -2.00002e-005
+[CockingLever]
+Mesh CockingLever
+Parent TurretB
+Attaching -1 0 0 0 0 1 0 1 0 -0.26324 -0.04466 -4.81041
+[Cylinder]
+Mesh Cylinder
+Parent TurretA
+Attaching 0 0 -1 1 0 0 0 -1 0 -0.00761986 -0.00492001 -0.00582
+[Drum1]
+Mesh Drum1
+Parent CF_D0
+Attaching 0.906 -0.374 0.192 0.366 0.927 0.077 -0.207 0 0.978 -0.170795 -0.08808 -0.144035
+[Drum2]
+Mesh Drum1
+Parent CF_D0
+Attaching 0.906 -0.374 0.192 0.366 0.927 0.077 -0.207 0 0.978 -0.170795 -0.08808 -0.319717
+[Drum3]
+Mesh Drum1
+Parent CF_D0
+Attaching 0.906 -0.374 0.192 0.366 0.927 0.077 -0.207 0 0.978 0.162709 -0.08808 -0.144035
+[fuelgauge]
+Mesh fuell
+Parent CF_D0
+Attaching 0 1 0 0 0 1 1 0 0 -1.13974 -1.58936 0.461308
+[fuelgauge2]
+Mesh fuell2
+Parent fuelgauge
+Attaching 1 0 0 0 1 0 0 0 1 0 0 -0.00509466
+[Z_FuelQuantity1]
+Mesh Z_FuelQuantity1
+Parent fuelgauge
+hidden
+Attaching -0.34202 -0.939693 0 -0.939693 0.34202 0 0 0 -1 0.213753 0.018868 -0.00319866
+[fuelball]
+Mesh Fuelball
+Parent Z_FuelQuantity1
+Attaching -1 0 0 0 -1 0 0 0 1 0 0.0273418 0
+[fuelball2]
+Mesh Fuelball
+Parent Z_FuelQuantity1
+Attaching -1 0 0 0 -1 0 0 0 1 0 0.0363295 0
+[fuelgaugeL]
+Mesh fuell
+Parent CF_D0
+Attaching 0 -1 0 0 0 1 -1 0 0 1.13974 -1.58936 0.461308
+[fuelgauge2L]
+Mesh fuell2
+Parent fuelgaugeL
+Attaching 1 0 0 0 1 0 0 0 1 0 0 -0.00509466
+[Z_FuelQuantity1L]
+Mesh Z_FuelQuantity1
+Parent Z_FuelQuantity1
+hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 -2.28318
+[fuelballL]
+Mesh Fuelball
+Parent Z_FuelQuantity1L
+Attaching 1 0 0 0 -1 0 0 0 -1 0 0.0273418 0
+[fuelball2L]
+Mesh Fuelball
+Parent Z_FuelQuantity1L
+Attaching 1 0 0 0 -1 0 0 0 -1 0 0.0363295 0
+[RGHandle]
+Mesh RDoorHandle
+Parent CF_D0
+Attaching 1 0 0 0 1 0 0 0 1 -0.233962 -0.756412 -0.527765
+[Z_FuelLeverR]
+Mesh Z_FuelLeverR
+Parent CF_D0
+Attaching 0 0.25882 -0.965928 0 -0.965928 -0.25882 -1 0 0 -0.474881 -2.21167 -1.30643
+[Z_Throttle2]
+Mesh Z_Throttle2
+Parent CF_D0
+Attaching 0 0.325568 -0.945519 0 -0.945521 -0.325569 -1 0 0 -0.394357 -2.27946 -0.412517
+[pipepomp]
+Mesh pipe
+Parent CF_D0
+Attaching 0 -0.3 0 0.1 0 0 0 0 0.3 -0.408217 -2.4129 -0.252991
+[pipewingl1]
+Mesh pipe1
+Parent CF_D0
+Attaching 1 0 0 0 1.76 0 0 0 1 1.76849 -1.60055 -0.0369078
+[pipewingl2]
+Mesh pipe1
+Parent CF_D0
+Attaching 1 0 0 0 -0.355979 2.01886 0 -0.984808 -0.173648 1.76849 -1.90716 0.271561
+[pipewingl3]
+Mesh pipe1
+Parent CF_D0
+Attaching 1 0 0 0 0.355979 2.01886 0 -0.984808 0.173648 1.76849 -1.28609 0.271561
+Attaching 1 0 0 0 -0.355979 2.01886 0 -0.984808 -0.173648 1.76849 -1.90716 0.271561
+[pipewingl4]
+Mesh pipe1
+Parent CF_D0
+Attaching 1 0 0 0 2.12132 2.12132 0 -0.707107 0.707107 1.76849 -1.53584 0.285277
+[pipewingR1]
+Mesh pipe1
+Parent CF_D0
+Attaching 1 0 0 0 1.76 0 0 0 1 -1.76849 -1.60055 -0.0369078
+[pipewingR2]
+Mesh pipe1
+Parent CF_D0
+Attaching 1 0 0 0 -0.355979 2.01886 0 -0.984808 -0.173648 -1.76849 -1.90716 0.271561
+[pipewingR3]
+Mesh pipe1
+Parent CF_D0
+Attaching 1 0 0 0 0.355979 2.01886 0 -0.984808 0.173648 -1.76849 -1.28609 0.271561
+[pipewingR4]
+Mesh pipe1
+Parent CF_D0
+Attaching 1 0 0 0 2.12132 2.12132 0 -0.707107 0.707107 -1.76849 -1.53584 0.285277
+[floor] 
+Mesh floor
+Parent CF_D0
+Attaching 0 1 0 -1 0 0 0 0 1 0 -2.5869 -0.693359
+[floor2] 
+Mesh floor
+Parent CF_D0
+Attaching 0 -1 0 1 0 0 0 0 1 0 -1.78612 -0.693359
+[ZSwitch]
+Mesh Z_Gear
+Parent panel156
+Attaching 0.707108 0 -0.707108 -0.707108 0 -0.707108 0 1 0 0.235677 0.162795 0.000618
+[Rama]
+Mesh Rama
+Parent CF_D0
+Attaching 0.999849 -0.017452 0 0.017452 0.999849 0 0 0 1 -0.453935 -1.73167 -0.463633
+[Kaseta]
+Mesh Kaseta
+Parent CF_D0
+Attaching 0.992548 0 0.12187 0 1 0 -0.121869 0 0.992547 -0.358028 -1.87708 -0.412432
+

@@ -1,0 +1,37 @@
+[_ROOT_]
+VisibilitySphere 10.80
+
+[Body]
+Mesh Body 
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -1.747 -0.000 0.2416
+
+[CF]
+Mesh CF 
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.025060 -1.747503 -0.108508 
+
+[Tail1]
+Mesh Tail1 
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 -0.006285 0.551402 0.180713 
+
+[TurrBase]
+Mesh TurrBase 
+Parent Body
+Attaching 0 -1.000000 0 1 0 0 0 0 1 -0.01 0.51 0.383494 
+
+[TurrBase1]
+Mesh TurrBase1 
+Parent TurrBase
+Attaching 1 0 0 0 0 -1.000000 0 1 0 -0.214443 -0.000450 0.505844 
+
+[Turret1A]
+Mesh Turret1A 
+Parent TurrBase1
+Attaching 1 0 0 0 1 0 0 0 1 -0.001895 -0.000075 -0.000080 
+
+[Turret1B]
+Mesh Turret1B 
+Parent Turret1A
+Attaching -1.000000 0 0 0 0 -1.000000 0 -1.000000 0 -0.013287 -0.063928 -0.000002 

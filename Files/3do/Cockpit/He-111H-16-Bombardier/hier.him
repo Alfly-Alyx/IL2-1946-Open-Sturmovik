@@ -1,0 +1,148 @@
+[_ROOT_]
+VisibilitySphere 6.00000
+[zRed1]
+Mesh zRed1
+Parent _ROOT_
+Hidden
+Attaching 0 -1 0 0.55194 0 0.833884 -0.833884 0 0.55194 4.89089 -0.17028 -0.14269
+[zYellow1]
+Mesh zYellow1
+Parent _ROOT_
+Hidden
+Attaching 0 -1 0 0.55194 0 0.833884 -0.833884 0 0.55194 4.89089 -0.17028 -0.14269
+[Body]
+Mesh Body
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 4.81671 -0.04538 0.22516
+[BombsightCombo]
+Mesh BombsightCombo
+Parent _ROOT_
+Attaching 0 -1 0 0.551948 0 0.833878 -0.833878 0 0.551948 4.8643 -0.2434 -0.17705
+[zAltWheel]
+Mesh zAltWheel
+Parent BombsightCombo
+Attaching 0 -0.998129 -0.0611375 -1 0 0 0 0.0611375 -0.998129 -0.11226 -0.402137 0.274814
+[zAnglePointer]
+Mesh zAnglePointer
+Parent BombsightCombo
+Attaching 0 -0.469537 0.882913 -1 0 0 0 -0.882913 -0.469537 0.13802 -0.301078 0.209408
+[zAngleWheel]
+Mesh zAngleWheel
+Parent BombsightCombo
+Attaching 0 -0.551948 0.833878 -0.999961 0.0073128 0.00484038 -0.00876962 -0.833846 -0.551927 -0.08067 -0.393197 0.351353
+[zSpeedPointer]
+Mesh zSpeedPointer
+Parent BombsightCombo
+Attaching -0.861629 -0.280135 0.423226 0 0.833878 0.551948 -0.507539 0.475575 -0.718494 0.0129 -0.419754 0.452077
+[zSpeedWheel]
+Mesh zSpeedWheel
+Parent BombsightCombo
+Attaching 0 -0.551948 0.833878 1 0 0 0 0.833878 0.551948 0.10178 -0.394502 0.360227
+[zSpeed]
+Mesh zSpeed
+Parent BombsightCombo
+Attaching -0.999658 0.0261633 -1.21207e-006 0 -1.97882e-005 1 0.0262197 0.999656 2.10397e-005 0.000360012 0.00346409 0.000817667
+[zAlt1]
+Mesh zAlt1
+Parent BombsightCombo
+Attaching -1 0 0 0 -9.15838e-006 1 0 1 9.15838e-006 0.11186 0.00666518 0.00098197
+[zAlt2]
+Mesh zAlt2
+Parent BombsightCombo
+Attaching 0 1 1.39689e-005 -1 0 0 0 -1.39689e-005 1 0.11193 0.00644423 0.000428003
+[BlackBox]
+Mesh BlackBox
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 4.59678 -0.17509 -0.60153
+[zReticle]
+Mesh zReticle
+Parent BlackBox
+Hidden
+Attaching -1 0 0 0 -1 0 0 0 1 0 0 -1
+[zAngleMark]
+Mesh zAngleMark
+Parent BlackBox
+Hidden
+Attaching -0.818657 -0.574282 0 0.574282 -0.818657 0 0 0 1 0 0 -1
+[TurretA]
+Mesh TurretA
+Parent Body
+Hidden
+Attaching 0 -1 0 0 0 -1 1 0 0 -0.13623 -0.64148 -0.1087
+[TurretB]
+Mesh TurretB
+Parent TurretA
+Attaching 1 0 0 0 0 1 0 -1 0 0 0 0
+[Butona]
+Mesh Butona
+Parent TurretB
+Attaching 1 0 0 0 0 1 0 -1 0 0.43603 -0.0811 0.05664
+[CameraRodA]
+Mesh CameraRodA
+Parent Body
+Hidden
+Attaching 0 -1 0 0 0 -1 1 0 0 -0.13623 -0.64148 -0.1087
+[CameraRodB]
+Mesh CameraRodB
+Parent CameraRodA
+Hidden
+Attaching 1 0 0 0 0 1 0 -1 0 0 0 0
+[zColumn1]
+Mesh zColumn1
+Parent _ROOT_
+Attaching 0 -1 0 1 0 0 0 0 1 3.61445 0.30835 0.01285
+[zColumn2]
+Mesh zColumn2
+Parent zColumn1
+Attaching -0.001745 0.999999 0 -0.999999 -0.001745 0 0 0 1 -0.01965 0.1112 0.56395
+[zThrottle1]
+Mesh zThrottle1
+Parent Body
+Attaching 1 0 0 0 0.814115 -0.580703 0 0.580703 0.814115 0.72929 1.20155 0.03211
+[zThrottle2]
+Mesh zThrottle2
+Parent Body
+Attaching 1 0 0 0 0.814115 -0.580703 0 0.580703 0.814115 0.68318 1.20155 0.03211
+[zCompressor1]
+Mesh zCompressor1
+Parent Body
+Attaching 1 0 0 0 0.902581 -0.430521 0 0.430521 0.902581 0.77002 1.20155 0.03211
+[zCompressor2]
+Mesh zCompressor2
+Parent Body
+Attaching 1 0 0 0 0.902581 -0.430521 0 0.430521 0.902581 0.65436 1.20155 0.03211
+[zGlass]
+Mesh zGlass
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 1.65488 -0.02444 0.15935
+[zHolesR_D1]
+Mesh zHolesR_D1
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 3.37776 -0.6435 0.88906
+[zHolesR_D2]
+Mesh zHolesR_D2
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 4.19431 -0.71056 0.57245
+[zHolesL_D1]
+Mesh zHolesL_D1
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 2.87136 0.28805 1.29109
+[zHolesL_D2]
+Mesh zHolesL_D2
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 4.14631 0.62296 0.64036
+[zHolesF_D1]
+Mesh zHolesF_D1
+Parent _ROOT_
+Hidden
+Attaching -0.18827 0.963456 -0.190545 -0.981759 -0.189867 0.00997307 -0.0265438 0.188954 0.981627 5.3274 -0.47281 0.00363
+[zOil_D1]
+Mesh zOil_D1
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 3.2049 -0.03356 0.70006

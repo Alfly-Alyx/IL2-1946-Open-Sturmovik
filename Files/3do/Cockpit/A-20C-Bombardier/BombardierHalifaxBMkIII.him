@@ -1,0 +1,126 @@
+[_ROOT_]
+VisibilitySphere 16.00534
+[Bodyg4m]
+Mesh Bodyg4m
+Parent _ROOT_
+Attaching 0 0.8 0 0 0 -1 -1 0 0 5.60653 -0.040967 0.1
+[Body]
+Mesh BodyHalifax
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 7.11123 0.4 0.1
+[BlackBox]
+Mesh BlackBox
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 8.89931 -0.00285 -0.17466
+[zReticle]
+Mesh zReticle
+Parent BlackBox
+Hidden
+Attaching -1 0 0 0 -1 0 0 0 1 0 0 -1
+[zAngleMark]
+Mesh zAngleMark
+Parent BlackBox
+Hidden
+Attaching -0.818657 -0.574282 0 0.574282 -0.818657 0 0 0 1 0 0 -1
+[Bombsight_D0]
+Mesh Bombsight_D0
+Parent Body
+hidden
+Attaching -1 0 0 0 0 1 0 1 0 -0.27647 -0.6578 0.16619
+[zSpeed]
+Mesh zSpeed
+Parent Bombsight_D0
+Attaching -1 0 0 0 0 1 0 1 0 -0.20132 0.1919 0.28288
+[zAlt1]
+Mesh zAlt1
+Parent Bombsight_D0
+Attaching -1 0 0 0 0 1 0 1 0 -0.2022 0.03313 0.28289
+[zAlt2]
+Mesh zAlt2
+Parent Bombsight_D0
+Attaching -1 0 0 0 0 1 0 1 0 -0.20245 0.03299 0.28289
+[zCompass1]
+Mesh zCompass1
+Parent Body
+Attaching 1 0 0 0 0 1 0 -1 0 -0.07372 -0.39761 0.11874
+[Z_TurnBank1]
+Mesh Z_TurnBank1
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 -0.07464 -0.37492 0.25863
+[Z_TurnBank2]
+Mesh Z_TurnBank2
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 -0.07341 -0.37512 0.33933
+[XGlassDamage1]
+Mesh XGlassDamage1
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 8.44423 -0.8146 0.95542
+[XGlassDamage2]
+Mesh XGlassDamage2
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 8.27828 -0.88128 0.72091
+[XGlassDamage3]
+Mesh XGlassDamage3
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 8.27828 0.04289 0.95954
+[XGlassDamage4]
+Mesh XGlassDamage4
+Parent _ROOT_
+Hidden
+Attaching 0 1 0 -1 0 0 0 0 1 8.93935 -0.09249 0.92387
+[Back]
+Mesh Back
+Parent Bodyg4m
+Attaching 1 0 0 0 0 1 0 -1 0 0 -0.0878077 -0.997794
+[Left]
+Mesh left
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 -0.0457197 -0.865201 -0.570185
+[Right]
+Mesh Right
+Parent Bodyg4m
+Attaching -0.9 0 0 0 0 -1 0 -1 0 0.706119 -0.364938 -1.08143
+[seat]
+Mesh seat
+Parent Bodyg4m
+Attaching 1 0 0 0 0 1 0 -1 0 0.0189236 0.080794 1.50444
+[Z_Pencilrot1]
+Mesh Z_Pencilrot1
+Parent Z_TurnBank2
+Attaching 1 0 0 0 1 0 0 0 1 0 0.524084 -0.130124
+[Turret1B]
+Mesh Turret1B
+Parent Bodyg4m
+Attaching 0 0 -1 1.2 0 0 0 -1 0 0 -0.218673 -2.8
+[Nose]
+Mesh nose
+Parent Bodyg4m
+Attaching 1.4 0 0 0 0 1 0 -1.39 0 0 -0.0888788 -3.08718
+[pipe]
+Mesh pipe
+Parent Bodyg4m
+Attaching 0.857 0 0.412 0 1 0 -0.643 0 0.857 0.901471 -0.261739 -2.67314
+[pipe2]
+Mesh pipe
+Parent Bodyg4m
+Attaching 0.897 0.126 0.437 -0.217 0.984 0 -0.633 -0.089 0.856 0.912374 -0.100354 -2.67314
+[pipe3]
+Mesh pipe
+Parent Bodyg4m
+Attaching -0.857 0 0.412 0 1 0 -0.643 0 -0.857 -0.901471 -0.261739 -2.67314
+[pipe4]
+Mesh pipe
+Parent Bodyg4m
+Attaching -0.897 0.126 0.437 0.217 0.984 0 -0.633 -0.089 -0.856 -0.912374 -0.100354 -2.67314
+[wallr]
+Mesh wallr
+Parent Bodyg4m
+Attaching -1.8 0 0 0 -1.26 -0.985 0 -0.615 0.788 -0.04571 0.42602 -2.93042
+[wall2]
+Mesh wall2
+Parent Bodyg4m
+Attaching 1 0 0 0 -1 0 0 0 -1 0.499207 -0.12859 -0.820837

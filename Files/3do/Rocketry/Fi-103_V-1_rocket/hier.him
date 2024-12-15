@@ -1,0 +1,83 @@
+[_ROOT_]
+VisibilitySphere 5.51651
+CollisionObject sphere 5.51651 0.0 0.0 0.0
+[CF_D0]
+Mesh CF_D0
+Parent _ROOT_
+Attaching 0 1 0 0 0 1 1 0 0 0 0 0
+CollisionObject xcf1
+[CF_D1]
+Mesh CF_D1
+Parent CF_D0
+Hidden
+Separable
+Attaching 0.000001 0 0 0 0.000001 0 0 0 0.000001 0 0 0
+CollisionObject xcf1
+[Tail1_D0]
+Mesh Tail1_D0
+Parent CF_D0
+Separable
+Attaching 0.000001 0 0 0 0.000001 0 0 0 0.000001 0 0 1
+CollisionObject xtail1
+[Tail1_D1]
+Mesh Tail1_D1
+Parent Tail1_D0
+Hidden
+Separable
+Attaching 0.000001 0 0 0 0.000001 0 0 0 0.000001 0 0 0
+CollisionObject xtail1
+[Engine1_D0]
+Mesh Engine1_D0
+Parent Tail1_D0
+Attaching 0.000001 0 0 0 0.000001 0 0 0 0.000001 0 0 1
+CollisionObject xengine
+CollisionObject xkeel
+[Engine1_D1]
+Mesh Engine1_D1
+Parent Engine1_D0
+Hidden
+Separable
+Attaching 0.000001 0 0 0 0.000001 0 0 0 0.000001 0 0 0
+CollisionObject xengine
+CollisionObject xkeel
+[Prop1_D0]
+Mesh Prop1_D0
+Parent CF_D0
+Separable
+Attaching 0.000001 0 0 0 0.000001 0 0 0 0.000001 0 0 0
+[PropRot1_D0]
+Mesh PropRot1_D0
+Parent Prop1_D0
+Hidden
+Separable
+Attaching 0.000001 0 0 0 0.000001 0 0 0 0.000001 0 0 0
+[WingLIn_D0]
+Mesh WingLIn_D0
+Parent CF_D0
+Separable
+Attaching 0.000001 0 0 0 0.000001 0 0 0 0.000001 0 0 0
+CollisionObject xwinglin
+CollisionObject xstabl
+[WingLIn_D1]
+Mesh WingLIn_D1
+Parent WingLIn_D0
+Hidden
+Separable
+Attaching 0.000001 0 0 0 0.000001 0 0 0 0.000001 0 0 0
+CollisionObject xwinglin
+CollisionObject xstabl
+[WingRIn_D0]
+Mesh WingRIn_D0
+Parent CF_D0
+Separable
+Attaching 0.000001 0 0 0 0.000001 0 0 0 0.000001 0 0 0
+CollisionObject xwingrin
+CollisionObject xstabr
+[WingRIn_D1]
+Mesh WingRIn_D1
+Parent WingRIn_D0
+Hidden
+Separable
+Attaching 0.000001 0 0 0 0.000001 0 0 0 0.000001 0 0 0
+CollisionObject xwingrin
+CollisionObject xstabr

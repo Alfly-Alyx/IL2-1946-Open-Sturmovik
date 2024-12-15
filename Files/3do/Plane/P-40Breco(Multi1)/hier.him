@@ -1,0 +1,716 @@
+[_ROOT_]
+VisibilitySphere 6.25285
+CollisionObject sphere 6.25285 0.0 0.0 0.0
+[CF_D0]
+Mesh CF_D0
+Parent _ROOT_
+Attaching 0 1 0 -1 0 0 0 0 1 -1.01137 0.0003 0.33559
+CollisionObject xcf
+CollisionObject .xxcontrols1
+CollisionObject .xxcontrols2
+CollisionObject .xxtank1
+CollisionObject .xxtank2
+CollisionObject .xxtank3
+CollisionObject .xxeng1eqpt
+[CF_D1]
+Mesh CF_D1
+Parent CF_D0
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xcf
+CollisionObject .xxcontrols1
+CollisionObject .xxcontrols2
+CollisionObject .xxtank1
+CollisionObject .xxtank2
+CollisionObject .xxtank3
+CollisionObject .xxeng1eqpt
+[CF_D2]
+Mesh CF_D2
+Parent CF_D0
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xcf
+CollisionObject .xxcontrols1
+CollisionObject .xxcontrols2
+CollisionObject .xxtank1
+CollisionObject .xxtank2
+CollisionObject .xxtank3
+CollisionObject .xxeng1eqpt
+[CF_D3]
+Mesh CF_D3
+Parent CF_D0
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xcf
+CollisionObject .xxcontrols1
+CollisionObject .xxcontrols2
+CollisionObject .xxtank1
+CollisionObject .xxtank2
+CollisionObject .xxtank3
+CollisionObject .xxeng1eqpt
+[Cockpit_D0]
+Mesh Cockpit_D0
+Parent CF_D0
+Attaching 1 0 0 0 1 0 0 0 1 -0.0003 -1.01137 -0.33559
+CollisionObject xcockpit
+[Engine1_D0]
+Mesh Engine1_D0
+Parent CF_D0
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 -0.0003 -2.59059 -0.18893
+CollisionObject xengine1
+CollisionObject xengine2
+CollisionObject .xxeng1prp
+CollisionObject .xxeng1cas
+CollisionObject .xxeng1cyl
+CollisionObject .xxeng1sup
+CollisionObject .xxeng1oil
+[Engine1_D1]
+Mesh Engine1_D1
+Parent Engine1_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xengine1
+CollisionObject xengine2
+CollisionObject .xxeng1prp
+CollisionObject .xxeng1cas
+CollisionObject .xxeng1cyl
+CollisionObject .xxeng1sup
+CollisionObject .xxeng1oil
+[Engine1_D2]
+Mesh Engine1_D2
+Parent Engine1_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xengine1
+CollisionObject xengine2
+CollisionObject .xxeng1prp
+CollisionObject .xxeng1cas
+CollisionObject .xxeng1cyl
+CollisionObject .xxeng1sup
+CollisionObject .xxeng1oil
+[Engine1_D3]
+Mesh Engine1_D3
+Parent Engine1_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xengine1
+CollisionObject xengine2
+CollisionObject .xxeng1prp
+CollisionObject .xxeng1cas
+CollisionObject .xxeng1cyl
+CollisionObject .xxeng1sup
+CollisionObject .xxeng1oil
+[Engine1_CAP]
+Mesh Engine1_CAP
+Parent Engine1_D0
+Hidden
+Separable
+Attaching 0 1 0 0 0 1 1 0 0 0.30678 1.05365 -0.14792
+[Prop1_D0]
+Mesh Prop1_D0
+Parent Engine1_D0
+Separable
+Attaching 0 0 1 0 -1 0 1 0 0 0 -1.41415 0.06829
+[Prop1_D1]
+Mesh Prop1_D1
+Parent Prop1_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+[PropRot1_D0]
+Mesh PropRot1_D0
+Parent Prop1_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+[Blister1_D0]
+Mesh Blister1_D0
+Parent CF_D0
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 -0.0003 0.0365101 0.61686
+[Pilot1_D0]
+Mesh Pilot1_D0
+Parent CF_D0
+Attaching 1 0 0 0 0.984808 -0.173644 0 0.173644 0.984808 0.0077 -0.02687 -0.06089
+CollisionObject xpilot1a
+CollisionObject xpilot1b
+CollisionObject xhead1
+[Head1_D0]
+Mesh Head1_D0
+Parent Pilot1_D0
+Attaching 0 -0.984809 -0.173644 0 0.173644 -0.984809 1 0 0 -9.31323e-010 0.092579 0.693126
+[HMask1_D0]
+Mesh HMask1_D0
+Parent Head1_D0
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+[Pilot1_D1]
+Mesh Pilot1_D1
+Parent CF_D0
+Hidden
+Attaching 0.984807 -0.0271602 -0.171514 0 0.987688 -0.156436 0.173644 0.154059 0.972684 -0.06597 -0.0720699 -0.00830001
+[Tail1_D0]
+Mesh Tail1_D0
+Parent CF_D0
+Separable
+Attaching 0.999048 0.0436199 0 -0.0436199 0.999048 0 0 0 1 3e-005 2.33849 0.06856
+CollisionObject xtail1
+CollisionObject .xxcontrols3
+[Tail1_D1]
+Mesh Tail1_D1
+Parent Tail1_D0
+Hidden
+Separable
+Attaching 1 -1.47816e-009 0 1.47816e-009 1 0 0 0 1 -3.34638e-009 7.36521e-008 -1.83761e-008
+CollisionObject xtail1
+CollisionObject .xxcontrols3
+[Tail1_D2]
+Mesh Tail1_D2
+Parent Tail1_D0
+Hidden
+Separable
+Attaching 1 -1.47816e-009 0 1.47816e-009 1 0 0 0 1 -3.34638e-009 7.36521e-008 -1.83761e-008
+CollisionObject xtail1
+CollisionObject .xxcontrols3
+[Tail1_D3]
+Mesh Tail1_D3
+Parent Tail1_D0
+Hidden
+Separable
+Attaching 1 -1.47816e-009 0 1.47816e-009 1 0 0 0 1 -3.34638e-009 7.36521e-008 -1.83761e-008
+CollisionObject xtail1
+CollisionObject .xxcontrols3
+[Tail1_CAP]
+Mesh Tail1_CAP
+Parent CF_D0
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 -5e-005 1.6343 0.06856
+[Keel1_D0]
+Mesh Keel1_D0
+Parent Tail1_D0
+Separable
+Attaching 0.999048 -0.0436199 0 0.0436199 0.999048 0 0 0 1 0.0892988 1.63237 0.963
+CollisionObject xkeel1
+[Keel1_D1]
+Mesh Keel1_D1
+Parent Keel1_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xkeel1
+[Keel1_D2]
+Mesh Keel1_D2
+Parent Keel1_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xkeel1
+[Keel1_D3]
+Mesh Keel1_D3
+Parent Keel1_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xkeel1
+[Keel1_CAP]
+Mesh Keel1_CAP
+Parent Tail1_D0
+Hidden
+Attaching 0.999048 -0.0436199 0 0.0436199 0.999048 0 0 0 1 0.0681502 1.55469 0.28076
+[Rudder1_D0]
+Mesh Rudder1_D0
+Parent Keel1_D0
+Separable
+Attaching 1 0 0 0 0 1 0 -1 0 -0.01833 0.46772 -0.37786
+CollisionObject xrudder1
+[Rudder1_D1]
+Mesh Rudder1_D1
+Parent Rudder1_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xrudder1
+[StabL_D0]
+Mesh StabL_D0
+Parent Tail1_D0
+Separable
+Attaching 0.999048 -0.0436199 0 0.0436199 0.999048 0 0 0 1 1.08305 1.53911 0.28957
+CollisionObject xstabl
+[StabL_D1]
+Mesh StabL_D1
+Parent StabL_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xstabl
+[StabL_D2]
+Mesh StabL_D2
+Parent StabL_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xstabl
+[StabL_D3]
+Mesh StabL_D3
+Parent StabL_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xstabl
+[StabL_CAP]
+Mesh StabL_CAP
+Parent Tail1_D0
+Hidden
+Attaching 0.999048 -0.0436199 0 0.0436199 0.999048 0 0 0 1 0.278781 1.50999 0.13807
+[StabR_D0]
+Mesh StabR_D0
+Parent Tail1_D0
+Separable
+Attaching 0.999048 -0.0436199 0 0.0436199 0.999048 0 0 0 1 -0.945441 1.62768 0.28957
+CollisionObject xstabr
+[StabR_D1]
+Mesh StabR_D1
+Parent StabR_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xstabr
+[StabR_D2]
+Mesh StabR_D2
+Parent StabR_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xstabr
+[StabR_D3]
+Mesh StabR_D3
+Parent StabR_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xstabr
+[StabR_CAP]
+Mesh StabR_CAP
+Parent Tail1_D0
+Hidden
+Attaching 0.999048 -0.0436199 0 0.0436199 0.999048 0 0 0 1 -0.117978 1.52738 0.13807
+[VatorL_D0]
+Mesh VatorL_D0
+Parent StabL_D0
+Separable
+Attaching 0 -1 0 1 0 0 0 0 1 -0.00953007 0.47544 -0.01375
+CollisionObject xvatorl
+[VatorL_D1]
+Mesh VatorL_D1
+Parent VatorL_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xvatorl
+[VatorR_D0]
+Mesh VatorR_D0
+Parent StabR_D0
+Separable
+Attaching 0 -1 0 1 0 0 0 0 1 0.20512 0.47647 -0.02101
+CollisionObject xvatorr
+[VatorR_D1]
+Mesh VatorR_D1
+Parent VatorR_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xvatorr
+[GearC2_D0]
+Mesh GearC2_D0
+Parent Tail1_D0
+Separable
+Attaching 0.0121537 0.278363 0.960399 -0.999048 0.0436199 0 -0.0418925 -0.959485 0.278628 0.049864 1.08704 -0.45038
+[GearC3_D0]
+Mesh GearC3_D0
+Parent GearC2_D0
+Separable
+Attaching 0 -1 0 0.309014 0 -0.951057 0.951057 0 0.309014 0.172845 0.00253 -0.200053
+[GearC1_D0]
+Mesh GearC1_D0
+Parent GearC3_D0
+Separable
+Attaching 0 -0.121872 -0.992546 1 0 0 0 -0.992546 0.121872 0.00525 0.184476 0.0208467
+[GearC4_D0]
+Mesh GearC4_D0
+Parent Tail1_D0
+Separable
+Attaching -0.999979 -0.00639699 0 0.00638348 -0.998001 -0.0628702 0.000398117 -0.0628673 0.998022 0.154554 1.41993 -0.40917
+[GearC5_D0]
+Mesh GearC5_D0
+Parent Tail1_D0
+Separable
+Attaching 0.995617 -0.0935277 0 0.0933418 0.993647 0.0628702 -0.00587592 -0.0625934 0.998022 -0.02987 1.42798 -0.40917
+[WingLIn_D0]
+Mesh WingLIn_D0
+Parent CF_D0
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 1.68498 -0.02723 -0.5884
+CollisionObject xwinglin
+CollisionObject .xxmgun3
+CollisionObject .xxmgun4
+[WingLIn_D1]
+Mesh WingLIn_D1
+Parent WingLIn_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwinglin
+CollisionObject .xxmgun3
+CollisionObject .xxmgun4
+[WingLIn_D2]
+Mesh WingLIn_D2
+Parent WingLIn_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwinglin
+CollisionObject .xxmgun3
+CollisionObject .xxmgun4
+[WingLIn_D3]
+Mesh WingLIn_D3
+Parent WingLIn_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwinglin
+CollisionObject .xxmgun3
+CollisionObject .xxmgun4
+[WingLIn_CAP]
+Mesh WingLIn_CAP
+Parent WingLIn_D0
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 -0.95381 0.07887 0.28355
+[WingRIn_D0]
+Mesh WingRIn_D0
+Parent CF_D0
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 -1.68492 -0.02723 -0.5884
+CollisionObject xwingrin
+CollisionObject .xxmgun5
+CollisionObject .xxmgun6
+[WingRIn_D1]
+Mesh WingRIn_D1
+Parent WingRIn_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwingrin
+CollisionObject .xxmgun5
+CollisionObject .xxmgun6
+[WingRIn_D2]
+Mesh WingRIn_D2
+Parent WingRIn_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwingrin
+CollisionObject .xxmgun5
+CollisionObject .xxmgun6
+[WingRIn_D3]
+Mesh WingRIn_D3
+Parent WingRIn_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwingrin
+CollisionObject .xxmgun5
+CollisionObject .xxmgun6
+[WingRIn_CAP]
+Mesh WingRIn_CAP
+Parent WingRIn_D0
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 1.00946 0.15084 0.28355
+[WingLMid_D0]
+Mesh WingLMid_D0
+Parent WingLIn_D0
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0.99482 -0.42092 0.11042
+CollisionObject xwinglmid
+CollisionObject .xxammo1
+CollisionObject .xxammo2
+[WingLMid_D1]
+Mesh WingLMid_D1
+Parent WingLMid_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwinglmid
+CollisionObject .xxammo1
+CollisionObject .xxammo2
+[WingLMid_D2]
+Mesh WingLMid_D2
+Parent WingLMid_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwinglmid
+CollisionObject .xxammo1
+CollisionObject .xxammo2
+[WingLMid_D3]
+Mesh WingLMid_D3
+Parent WingLMid_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwinglmid
+CollisionObject .xxammo1
+CollisionObject .xxammo2
+[WingLMid_CAP]
+Mesh WingLMid_CAP
+Parent WingLIn_D0
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.99482 -0.42094 0.11042
+[WingRMid_D0]
+Mesh WingRMid_D0
+Parent WingRIn_D0
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 -0.99482 -0.42093 0.11042
+CollisionObject xwingrmid
+CollisionObject .xxammo3
+CollisionObject .xxammo4
+[WingRMid_D1]
+Mesh WingRMid_D1
+Parent WingRMid_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwingrmid
+CollisionObject .xxammo3
+CollisionObject .xxammo4
+[WingRMid_D2]
+Mesh WingRMid_D2
+Parent WingRMid_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwingrmid
+CollisionObject .xxammo3
+CollisionObject .xxammo4
+[WingRMid_D3]
+Mesh WingRMid_D3
+Parent WingRMid_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwingrmid
+CollisionObject .xxammo3
+CollisionObject .xxammo4
+[WingRMid_CAP]
+Mesh WingRMid_CAP
+Parent WingRIn_D0
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 -0.99483 -0.42093 0.11042
+[WingLOut_D0]
+Mesh WingLOut_D0
+Parent WingLMid_D0
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0.99832 -0.23874 0.07006
+CollisionObject xwinglout
+[WingLOut_D1]
+Mesh WingLOut_D1
+Parent WingLOut_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwinglout
+[WingLOut_D2]
+Mesh WingLOut_D2
+Parent WingLOut_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwinglout
+[WingLOut_D3]
+Mesh WingLOut_D3
+Parent WingLOut_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwinglout
+[WingLOut_CAP]
+Mesh WingLOut_CAP
+Parent WingLMid_D0
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.0787201 -0.01244 0.0169
+[WingROut_D0]
+Mesh WingROut_D0
+Parent WingRMid_D0
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 -0.99833 -0.23875 0.07006
+CollisionObject xwingrout
+[WingROut_D1]
+Mesh WingROut_D1
+Parent WingROut_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwingrout
+[WingROut_D2]
+Mesh WingROut_D2
+Parent WingROut_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwingrout
+[WingROut_D3]
+Mesh WingROut_D3
+Parent WingROut_D0
+Hidden
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0 0 0
+CollisionObject xwingrout
+[WingROut_CAP]
+Mesh WingROut_CAP
+Parent WingRMid_D0
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 -0.15993 0.00199997 0.06635
+[AroneL_D0]
+Mesh AroneL_D0
+Parent WingLOut_D0
+Separable
+Attaching 0.212887 0.976706 -0.0269186 -0.973203 0.209511 -0.0947658 -0.0869204 0.0463752 0.995135 0.48962 0.38426 0.12895
+CollisionObject xaronel
+[AroneL_D1]
+Mesh AroneL_D1
+Parent AroneL_D0
+Hidden
+Separable
+Attaching 1 -5.59435e-009 2.65379e-009 -7.30391e-010 1 7.9368e-010 1.34166e-009 -1.41663e-009 1 -7.82999e-008 -1.41981e-007 -5.67521e-009
+CollisionObject xaronel
+[AroneR_D0]
+Mesh AroneR_D0
+Parent WingROut_D0
+Separable
+Attaching 0.212887 -0.976706 -0.0269256 0.972116 0.214498 -0.0947659 0.0983364 -0.00600437 0.995135 -0.48986 0.38428 0.12598
+CollisionObject xaroner
+[AroneR_D1]
+Mesh AroneR_D1
+Parent AroneR_D0
+Hidden
+Attaching 1 3.67665e-009 -1.22399e-009 -6.48549e-009 1 -3.79108e-009 -9.39401e-010 3.03214e-009 1 -1.36075e-007 -1.2666e-007 3.47221e-008
+CollisionObject xaroner
+[Flap01_D0]
+Mesh Flap01_D0
+Parent WingLIn_D0
+Separable
+Attaching 0.256097 0.966486 -0.0178877 -0.960214 0.252219 -0.119893 -0.111363 0.0478816 0.992626 -0.0388299 0.1659 -0.06235
+[Flap02_D0]
+Mesh Flap02_D0
+Parent WingRIn_D0
+Separable
+Attaching -0.256099 0.966485 -0.0178899 -0.960215 -0.252219 0.119889 0.11136 0.0478798 0.992626 0.03817 0.1659 -0.06235
+[GearL2_D0]
+Mesh GearL2_D0
+Parent WingLIn_D0
+Separable
+Attaching 0 1 0 -1 0 0 0 0 1 -0.62332 -1.38402 -0.2727
+CollisionObject xgearl2
+[GearL21_D0]
+Mesh GearL21_D0
+Parent GearL2_D0
+Separable
+Attaching -0.0129433 0.999353 -0.0335647 -0.999916 -0.0129014 0.00142264 0.000990272 0.0335786 0.999436 0.74187 -0.00317001 0.04294
+[GearL1_D0]
+Mesh GearL1_D0
+Parent GearL21_D0
+Separable
+Attaching 0.9998 0.000603483 -0.0200056 0.0200079 -0.00698248 0.999776 0.000465664 -0.999975 -0.00699694 0.00765576 -0.307412 0.164487
+[GearL3_D0]
+Mesh GearL3_D0
+Parent WingLIn_D0
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 -0.90526 -1.37819 -0.22357
+[GearL4_D0]
+Mesh GearL4_D0
+Parent WingLIn_D0
+Separable
+Attaching -0.998861 0.0177202 -0.0442971 -0.0172669 -0.999794 -0.0106489 -0.0444786 -0.00986785 0.998962 -0.53428 -0.68802 -0.24874
+[GearL5_D0]
+Mesh GearL5_D0
+Parent GearL2_D0
+Separable
+Attaching 1 0 0 0 1 0 0 0 1 0.27277 -0.06512 0.05322
+[GearR2_D0]
+Mesh GearR2_D0
+Parent WingRIn_D0
+Separable
+Attaching 0.0335577 -0.999353 0.0129433 -0.999436 -0.0335716 -0.000997246 0.00142962 -0.0129014 -0.999916 0.62353 -1.38419 -0.27273
+CollisionObject xgearr2
+[GearR21_D0]
+Mesh GearR21_D0
+Parent GearR2_D0
+Separable
+Attaching 0.0466457 -0.998847 -0.0113444 0.998822 0.0464936 0.0138801 -0.0133356 -0.0119821 0.999839 -0.741139 -0.0209179 -0.0525463
+[GearR1_D0]
+Mesh GearR1_D0
+Parent GearR21_D0
+Separable
+Attaching 0.997787 0.000704515 0.0664779 -0.0664805 0.00940874 0.997744 7.35382e-005 -0.999955 0.00943715 0.0147478 -0.307752 -0.163176
+[GearR3_D0]
+Mesh GearR3_D0
+Parent WingRIn_D0
+Separable
+Attaching 1 0 0 0 -1 0 0 0 -1 0.90195 -1.38173 -0.22466
+[GearR4_D0]
+Mesh GearR4_D0
+Parent WingRIn_D0
+Separable
+Attaching 0.999735 0.0160999 -0.0164299 -0.0158299 0.999735 0.0166999 0.0166999 -0.0164299 0.999726 0.53458 -0.68806 -0.2453
+[GearR5_D0]
+Mesh GearR5_D0
+Parent GearR2_D0
+Separable
+Attaching -0.999353 -0.0335734 -0.0129025 -0.0335559 0.999436 -0.00143113 0.0129421 -0.00099575 -0.999916 -0.270436 0.0565028 -0.051631
+[Water1_D0]
+Mesh Water1_D0
+Parent Engine1_D0
+Separable
+Attaching 0 1 0 -0.689006 0 0.724756 0.724756 0 0.689006 -0.26869 0.60755 -0.77906
+[Water2_D0]
+Mesh Water2_D0
+Parent Engine1_D0
+Separable
+Attaching 0 1 0 -0.957513 0 0.288391 0.288391 0 0.957513 -9e-005 0.60756 -0.85905
+[Water3_D0]
+Mesh Water3_D0
+Parent Engine1_D0
+Separable
+Attaching 0 1 0 -0.957513 0 -0.288391 -0.288391 0 0.957513 0.26769 0.60755 -0.7782
+[Water4_D0]
+Mesh Water4_D0
+Parent Engine1_D0
+Separable
+Attaching 0 1 0 -0.689006 0 -0.724756 -0.724756 0 0.689006 0.42217 0.60755 -0.61606
+[Wire_D0]
+Mesh Wire_D0
+Parent Keel1_D0
+Separable
+Attaching 0 -1 0 1 0 0 0 0 1 -0.01728 -3.39003 -1.26166
+[GearL6_D0]
+Mesh GearL6_D0
+Parent GearL21_D0
+Separable
+Attaching 1 -4.2626e-012 -1.22148e-009 -4.23845e-010 2.84599e-011 -1 7.57804e-010 1 1.8788e-011 -0.00348642 -0.285958 0.00104037
+[GearL7_D0]
+Mesh GearL7_D0
+Parent GearL6_D0
+Separable
+Attaching 1 1.22148e-009 -4.2626e-012 4.23845e-010 -1 -2.84599e-011 -7.57804e-010 1.8788e-011 -1 0.195664 0.0139746 0.220712
+[GearR6_D0]
+Mesh GearR6_D0
+Parent GearR21_D0
+Separable
+Attaching -0.99518 -0.000373852 -0.0980657 0.0980676 -0.00699763 -0.995155 -0.000320553 -0.999975 0.00699805 -0.00353779 -0.285948 0.00077946
+[GearR7_D0]
+Mesh GearR7_D0
+Parent GearR6_D0
+Separable
+Attaching -0.997837 0.046528 0.0464301 -0.0464316 -0.998917 0.00301925 0.0465174 0.000860253 0.998917 -0.196833 -0.0124727 -0.220309
