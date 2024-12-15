@@ -1,0 +1,253 @@
+[MAIN]
+  MAP NewGuinea/load.ini
+  TIME 5.5
+  CloudType 1
+  CloudHeight 1000.0
+  army 1
+  playerNum 0
+[MDS]
+  ZutiCarrierSpawnPoints_CV2 6
+  ZutiCarrierSpawnPoints_CV9 5
+  ZutiCarrierSpawnPoints_CVE 2
+  ZutiCarrierSpawnPoints_CVL 7
+  ZutiCarrierSpawnPoints_Akagi 8
+  ZutiCarrierSpawnPoints_IJN 6
+  ZutiCarrierSpawnPoints_HMS 5
+  ZutiNextMission_RedWon
+  ZutiNextMission_BlueWon
+  ZutiNextMission_Difficulty
+  ZutiNextMission_LoadDelay 60
+  ZutiTargets_StaticIcons 0
+  ZutiTargets_MovingIcons 1
+  ZutiTargets_CheckForWinner 0
+  ZutiRadar_ShowAircraft 1
+  ZutiRadar_StaticIconsIfNoRadar 0
+  ZutiRadar_CVsAsRadars 0
+  ZutiRadar_AircraftIconsWhite 0
+  ZutiRadar_RefreshInterval 10
+  ZutiFront_EnableHomeBaseCapturing 1
+  ZutiFront_CapturedBasePlanesRed
+  ZutiFront_CapturedBasePlanesBlue
+  ZutiFront_HideUnpoplatedAirstripsFromMinimap 0
+[RespawnTime]
+  Bigship 1800
+  Ship 1800
+  Aeroanchored 1800
+  Artillery 1800
+  Searchlight 1800
+[Wing]
+  IJA_F_S_82z00
+  75SquadronRAAF00
+  75SquadronRAAF01
+  IJA_F_S_82z01
+  IJA_F_S_82z02
+  IJA_F_C_81z03
+  IJA_F_C_81z00
+  IJN_C_Akagi_FS01
+[IJA_F_S_82z00]
+  Planes 4
+  Skill 1
+  Class air.D3A1
+  Fuel 100
+  weapons 1x2502x60
+[IJA_F_S_82z00_Way]
+  NORMFLY 362738.88 77903.25 1200.00 300.00 &0
+  GATTACK 366787.11 53500.29 500.00 300.00 &0
+  LANDING 363605.09 163947.08 0 0 &0
+[75SquadronRAAF00]
+  Planes 4
+  Skill0 3
+  Skill1 2
+  Skill2 2
+  Skill3 1
+  skin0 Macwan_P40E.bmp
+  skin1 Macwan_P40E.bmp
+  skin2 Macwan_P40E_RAAF.bmp
+  skin3 Macwan_P40E.bmp
+  Class air.P_40E
+  Fuel 100
+  weapons default
+[75SquadronRAAF00_Way]
+  TAKEOFF 365558.00 53667.52 0 0 &1
+  NORMFLY 365216.02 63143.64 500.00 300.00 IJA_F_S_82z00 1 &1
+  LANDING 365604.81 53653.39 0 0 &1
+[75SquadronRAAF01]
+  Planes 4
+  Skill0 3
+  Skill1 2
+  Skill2 2
+  Skill3 1
+  skin0 Macwan_P40E.bmp
+  skin1 Macwan_P40E.bmp
+  skin2 Macwan_P40E.bmp
+  skin3 Macwan_P40E.bmp
+  Class air.P_40E
+  Fuel 100
+  weapons default
+[75SquadronRAAF01_Way]
+  TAKEOFF 369111.79 55349.52 0 0 &1
+  NORMFLY 365700.59 65068.34 500.00 300.00 &1
+  LANDING 370015.96 54069.83 0 0 &1
+[IJA_F_S_82z01]
+  Planes 4
+  Skill 1
+  Class air.D3A1
+  Fuel 100
+  weapons 1x2502x60
+[IJA_F_S_82z01_Way]
+  NORMFLY 362906.06 77745.81 1200.00 300.00 &1
+  GATTACK 376549.87 53937.89 500.00 300.00 &1
+  LANDING 364761.59 162790.08 0 0 &1
+[IJA_F_S_82z02]
+  Planes 4
+  Skill 1
+  Class air.D3A1
+  Fuel 100
+  weapons default
+[IJA_F_S_82z02_Way]
+  NORMFLY 362626.30 78070.90 1200.00 300.00 &0
+  GATTACK 367013.08 53484.88 500.00 300.00 1_Chief 0 &0
+  LANDING 365108.16 162866.78 0 0 &0
+[IJA_F_C_81z03]
+  Planes 4
+  Skill 1
+  Class air.A6M3
+  Fuel 100
+  weapons default
+[IJA_F_C_81z03_Way]
+  NORMFLY 363854.14 77598.12 1200.00 300.00 &0
+  NORMFLY 366112.07 53728.17 500.00 300.00 75SquadronRAAF00 1 &0
+  LANDING 363605.09 163947.08 0 0 &0
+[IJA_F_C_81z00]
+  Planes 4
+  Skill 1
+  Class air.A6M3
+  Fuel 100
+  weapons default
+[IJA_F_C_81z00_Way]
+  NORMFLY 364485.93 76861.03 1200.00 300.00 &0
+  NORMFLY 366275.99 53800.77 500.00 300.00 75SquadronRAAF01 1 &0
+  LANDING 363605.09 163947.08 0 0 &0
+[IJN_C_Akagi_FS01]
+  Planes 4
+  Skill 1
+  Class air.A6M2_21
+  Fuel 100
+  weapons default
+  StartTime 4
+[IJN_C_Akagi_FS01_Way]
+  TAKEOFF 356589.27 89369.27 0 0 4_Chief 0 &0
+  NORMFLY 366188.79 53696.61 500.00 300.00 &0
+  NORMFLY 359895.59 87195.80 500.00 300.00 &0
+  LANDING 356646.47 89257.96 0 0 4_Chief 0 &0
+[Chiefs]
+  0_Chief Vehicles.GAZ67 1
+  1_Chief Vehicles.Bulldozer_US 1
+  2_Chief Vehicles.GAZ_55 1
+  3_Chief Ships.IJNFishJunk 1 0 2 1.0
+  4_Chief Ships.IJNAkagiCV 2 0 2 1.0
+  5_Chief Ships.IJNYukikazeDD41 2 0 1 50.0
+[0_Chief_Road]
+  369438.66 53708.35 120.00 0 7 3.055555582046509
+  369300.00 53700.00 20.00
+  368300.00 53700.00 20.00
+  367700.00 54300.00 20.00
+  366100.00 54300.00 20.00
+  365900.00 54100.00 20.00
+  365603.13 53815.54 120.00
+[1_Chief_Road]
+  367097.84 53368.91 120.00 0 2 1.6666667461395264
+  366109.31 53714.30 120.00
+[2_Chief_Road]
+  367193.13 53493.97 120.00 0 2 3.055555582046509
+  365829.41 54000.15 120.00 0 2 3.055555582046509
+  366128.25 54322.50 120.00 0 2 3.055555582046509
+  365895.50 54510.22 120.00 0 22 3.055555582046509
+  366100.00 54300.00 20.00
+  367700.00 54300.00 20.00
+  368300.00 53700.00 20.00
+  369900.00 53700.00 20.00
+  370100.00 53900.00 20.00
+  370300.00 54100.00 -120.00
+  370500.00 54300.00 -120.00
+  370700.00 54500.00 20.00
+  370900.00 54700.00 20.00
+  371900.00 54700.00 20.00
+  372500.00 55300.00 20.00
+  373500.00 55300.00 20.00
+  373700.00 55100.00 20.00
+  373900.00 55100.00 20.00
+  374500.00 54500.00 20.00
+  374900.00 54500.00 20.00
+  375100.00 54500.00 -121.00
+  375500.00 54500.00 -121.00
+  375700.00 54500.00 20.00
+  376300.00 54500.00 20.00
+  376462.75 54344.84 120.00
+[3_Chief_Road]
+  376189.56 53553.92 120.00 0 2 2.5722224712371826
+  375821.50 51133.02 120.00 0 2 2.5722224712371826
+  376920.50 51682.52 120.00
+[4_Chief_Road]
+  356487.41 89294.07 120.00 0 2 7.973888874053955
+  404239.22 85696.95 120.00
+[5_Chief_Road]
+  353602.41 88648.09 120.00 0 2 9.131389617919922
+  406562.09 84388.06 120.00
+[NStationary]
+  0_Static vehicles.planes.Plane$C_47 1 366707.19 53501.92 360.00 0.0 rz
+  1_Static vehicles.planes.Plane$A_20G 1 366834.03 53479.27 360.00 0.0 null
+  2_Static vehicles.planes.Plane$A_20G 1 366910.13 53470.21 360.00 0.0 null
+  3_Static vehicles.planes.Plane$A_20G 1 366740.71 53502.83 360.00 0.0 null
+  4_Static vehicles.planes.Plane$P_40E 1 366698.12 53564.44 360.00 0.0 null
+  5_Static vehicles.planes.Plane$P_40E 1 366753.39 53549.94 360.00 0.0 null
+  6_Static vehicles.planes.Plane$P_40E 1 366825.87 53533.63 360.00 0.0 null
+  7_Static vehicles.planes.Plane$P_40E 1 366947.28 53501.02 360.00 0.0 null
+  8_Static vehicles.planes.Plane$PBN1 1 376385.53 53927.68 360.00 0.0 rz
+  9_Static ships.Ship$IJNFishJunk 1 376625.00 53958.27 360.00 0.0 0 2 1.0
+  10_Static ships.Ship$IJNFishJunk 1 376744.23 53937.53 360.00 0.0 0 2 1.0
+  11_Static ships.Ship$IJNFishJunk 1 376412.18 53601.15 360.00 0.0 0 2 1.0
+  12_Static ships.Ship$IJNFishJunk 1 376672.24 53664.51 360.00 0.0 0 2 1.0
+  13_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 366463.06 54022.60 360.00 0.0 0
+  14_Static vehicles.artillery.Artillery$_50calMG_water_US 1 366398.74 53358.00 360.00 0.0 0
+  15_Static vehicles.artillery.Artillery$_50calMG_water_US 1 367213.41 53936.85 360.00 0.0 0
+  16_Static vehicles.artillery.Artillery$_50calMG_water_US 1 376304.20 54019.17 360.00 0.0 0
+  17_Static vehicles.stationary.Stationary$Wagon8 1 366890.28 53588.34 360.00 0.0
+  18_Static vehicles.stationary.Stationary$Wagon8 1 376424.31 54062.57 360.00 0.0
+  19_Static vehicles.stationary.Siren$SirenCity 1 367085.43 53461.23 360.00 0.0
+  20_Static vehicles.stationary.Siren$SirenCity 1 376500.27 54070.48 360.00 0.0
+[Buildings]
+  0_bld House$46LWBoxes 1 367009.79 53501.02 360.00
+  1_bld House$46LWBoxes 1 366994.39 53445.75 360.00
+  2_bld House$46LWBoxes 1 366951.81 53537.26 360.00
+  3_bld House$46LWBoxes 1 366855.77 53557.19 360.00
+  4_bld House$46LWBoxes 1 366756.11 53581.65 360.00
+  5_bld House$AirdromeBarrelBlock1 1 366678.19 53581.65 360.00
+  6_bld House$AirdromeBarrelBlock2 1 366675.47 53565.34 360.00
+  7_bld House$AirdromeBarrelBlock2 1 366674.57 53574.40 360.00
+  8_bld House$AirdromeBarrelBlock2 1 366978.08 53488.33 360.00
+  9_bld House$CrimeaFarm 1 366594.44 53769.13 360.00
+  10_bld House$CrimeaFarm 1 366626.93 53768.52 360.00
+  11_bld House$CrimeaFarm 1 366665.76 53768.00 360.00
+  12_bld House$CrimeaFarm 1 367088.55 53730.23 360.00
+  13_bld House$CrimeaFarm 1 367149.94 53707.90 360.00
+  14_bld House$CrimeaFarm 1 367222.49 53674.42 360.00
+  15_bld House$VehicleGAZ67 1 367240.78 53440.37 360.00
+  16_bld House$VehicleGAZ67t 1 366764.36 53767.90 360.00
+[Target]
+  1 0 0 0 500 366815 53505 500
+  1 0 0 0 500 376489 53854 500
+[BornPlace]
+  1 3000 366306 53466
+  2 3000 356560 89335
+[BornPlace0]
+  BeaufighterMkX
+  P-40E
+  SpitfireMkVcFB
+  SpitfireMkVcLF
+[BornPlace1]
+  A6M2-21
+  B5N2
+  D3A1
+[Bridge]
+[House]

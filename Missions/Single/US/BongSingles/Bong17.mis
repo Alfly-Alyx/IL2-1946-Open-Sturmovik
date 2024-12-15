@@ -1,0 +1,53 @@
+[MAIN]
+  MAP Midway/load.ini
+  TIME 12.0
+  CloudType 1
+  CloudHeight 1500.0
+  player USA_FC_5z01
+  army 1
+  playerNum 0
+[Wing]
+  USA_FC_5z01
+  IJA_F_C_9z00
+[USA_FC_5z01]
+  Planes 1
+  Skill 3
+  Class air.SBD5
+  Fuel 100
+  weapons default
+[USA_FC_5z01_Way]
+  TAKEOFF 124816.20 36263.20 0 0 &0
+  NORMFLY 170137.86 34080.80 500.00 250.00 &0
+  NORMFLY 220257.80 32576.95 2500.00 250.00 IJA_F_C_9z00 2 &0
+  NORMFLY 259350.85 31073.05 2000.00 300.00 &0
+  NORMFLY 297441.40 27564.23 3000.00 300.00 &0
+  NORMFLY 316986.53 26561.03 5000.00 300.00 &0
+[IJA_F_C_9z00]
+  Planes 1
+  Skill 1
+  Class air.AR_196A3
+  Fuel 100
+  weapons default
+  StartTime 1
+[IJA_F_C_9z00_Way]
+  NORMFLY 139566.27 111768.67 2500.00 333.00 &0
+  NORMFLY 158110.84 64154.22 2500.00 333.00 &0
+  NORMFLY 181667.48 41599.99 2500.00 333.00 &0
+  NORMFLY 218255.42 36086.75 2000.00 333.00 USA_FC_5z01 2 &0
+  NORMFLY 257850.60 36086.75 2000.00 250.00 USA_FC_5z01 3 &0
+  NORMFLY 318997.59 30573.49 2500.00 250.00 &0
+[NStationary]
+[Buildings]
+[Bridge]
+[House]
+
+
+
+
+
+[WEATHER]
+WindVelocity 8
+WindDirection 67
+WindTop 931
+WindTurbulence 0
+WindGust 0

@@ -1,0 +1,233 @@
+[MAIN]
+  MAP Midway/load.ini
+  TIME 9.500001
+  CloudType 0
+  CloudHeight 500.0
+  army 1
+  playerNum 0
+[Wing]
+  RA_NN00
+  RA_NN01
+  ja0100
+  ja0101
+  ja0102
+[RA_NN00]
+  Planes 2
+  Skill 1
+  Class air.BEAU21
+  Fuel 30
+  weapons 1xtorp
+[RA_NN00_Way]
+  TAKEOFF 125021.51 35935.40 0 0 0_Static 0 0
+  NORMFLY 123656.33 45720.95 100.0 515.0 &0
+  GATTACK 123443.41 47305.62 200.0 515.0 112_Chief 0 0
+  NORMFLY 123267.71 48595.28 666.0 515.0 &0
+  GATTACK 123411.58 47316.24 666.0 515.0 110_Chief 0 0
+  NORMFLY 126378.67 36369.01 500.0 350.0 &0
+  LANDING 125016.30 35930.97 0 0 &0
+[RA_NN01]
+  Planes 2
+  Skill 1
+  Class air.BEAU21
+  Fuel 30
+  weapons 1xtorp
+[RA_NN01_Way]
+  TAKEOFF 124814.00 36258.26 0 0 7_Static 0 0
+  NORMFLY 123641.85 45747.05 100.0 515.0 &0
+  GATTACK 123420.78 47309.99 200.0 515.0 111_Chief 0 0
+  NORMFLY 123298.71 48609.51 666.0 515.0 &0
+  GATTACK 123442.06 47317.30 666.0 515.0 110_Chief 0 0
+  NORMFLY 125673.05 37296.68 500.0 350.0 &0
+  LANDING 124813.85 36256.42 0 0 &0
+[ja0100]
+  Planes 4
+  OnlyAI 1
+  Skill 1
+  Class air.A6M5C
+  Fuel 100
+  weapons 4xtype3
+  StartTime 1
+[ja0100_Way]
+  TAKEOFF 124510.83 45884.81 0 0 110_Chief 0 0
+  NORMFLY 125001.34 33246.48 555.0 299.0 &0
+  NORMFLY 125404.50 48192.65 300.0 325.0 &0
+  NORMFLY 125049.30 33198.52 555.0 299.0 &0
+  LANDING 124529.62 45884.86 0 0 110_Chief 0 0
+[ja0101]
+  Planes 4
+  OnlyAI 1
+  Skill 1
+  Class air.A6M5C
+  Fuel 100
+  weapons 4xtype3
+  StartTime 3
+[ja0101_Way]
+  NORMFLY 125480.94 48329.99 555.0 299.0 &0
+  NORMFLY 124953.38 33246.48 555.0 299.0 &0
+  NORMFLY 125065.25 33160.28 0 0 &0
+  LANDING 124514.72 45873.77 0 0 110_Chief 0 0
+[ja0102]
+  Planes 1
+  OnlyAI 1
+  Skill 1
+  Class air.A6M2N
+  Fuel 100
+  weapons default
+  StartTime 0
+[ja0102_Way]
+  NORMFLY 123716.84 43084.06 666.0 300.0 &0
+  NORMFLY 111487.09 68736.03 666.0 300.0 &0
+[Chiefs]
+  110_Chief Ships.IJNZuikakuCV 2 0 0 11.0
+  111_Chief Ships.Niobe 2 0 0 11.0
+  112_Chief Ships.IJNAkizukiDD42 2 0 0 11.0
+  113_Chief Ships.Tramp 2 0 1 100.0
+  114_Chief Ships.Tanker 2 0 1 100.0
+  115_Chief Ships.Tanker 2 0 1 100.0
+  116_Chief Ships.Tral 2 0 1 100.0
+  117_Chief Ships.PAM 2 0 0 11.0
+  0_Chief Vehicles.GAZ67t 1
+  1_Chief Vehicles.GAZ67t 1
+  2_Chief Vehicles.ZIS6_fuel 1
+  3_Chief Vehicles.ZIS6_fuel 1
+  4_Chief Vehicles.ZIS5_AA 1
+  5_Chief Vehicles.ZIS5_AA 1
+  6_Chief Vehicles.GAZ_AAA 1
+  7_Chief Vehicles.GAZ_AAA 1
+  8_Chief Vehicles.ZIS5_AA 1
+[110_Chief_Road]
+  122700.56 48733.47 120.00 0 2 2.7778
+  128793.99 39507.86 120.00
+[111_Chief_Road]
+  123491.05 47747.87 120.00 0 2 2.7778
+  128937.57 39602.32 120.00
+[112_Chief_Road]
+  122778.91 49212.29 120.00 0 2 2.7778
+  129498.14 39991.96 120.00
+[113_Chief_Road]
+  123313.82 48172.43 120.00 0 2 2.7778
+  129093.96 39714.08 120.00
+[114_Chief_Road]
+  122432.38 49498.14 120.00 0 2 2.7778
+  129316.45 39867.04 120.00
+[115_Chief_Road]
+  122134.34 49001.95 120.00 0 2 2.7778
+  128281.86 39155.76 120.00
+[116_Chief_Road]
+  122872.22 48166.79 120.00 0 2 2.7778
+  128645.27 39405.60 120.00
+[117_Chief_Road]
+  122520.88 48567.10 120.00 0 2 2.7778
+  128515.48 39316.37 120.00
+[0_Chief_Road]
+  123796.01 35504.73 120.00 0 2 3.055555582046509
+  123823.22 35513.59 120.00 0 2 3.055555582046509
+  123839.05 35474.04 120.00 0 2 3.055555582046509
+  124177.88 35594.33 120.00
+[1_Chief_Road]
+  124323.56 35635.37 120.00 0 2 3.055555582046509
+  124278.98 35692.92 120.00 0 2 3.055555582046509
+  124354.34 35782.54 120.00 0 2 3.055555582046509
+  124331.13 35822.66 120.00
+[2_Chief_Road]
+  123890.59 35490.21 120.00 0 2 3.055555582046509
+  124124.98 35575.02 120.00 0 2 3.055555582046509
+  124157.83 35555.54 120.00
+[3_Chief_Road]
+  124559.95 36031.10 120.00 0 2 3.055555582046509
+  124399.27 35844.84 120.00 0 2 3.055555582046509
+  124361.20 35851.84 120.00
+[4_Chief_Road]
+  124325.07 35650.45 120.00 0 2 2.6388890743255615
+  124482.52 35836.50 120.00 0 2 2.6388890743255615
+  124844.23 36268.16 120.00
+[5_Chief_Road]
+  124588.74 36050.17 120.00 0 2 2.6388890743255615
+  124800.52 36299.72 120.00
+[6_Chief_Road]
+  123911.46 35552.87 120.00 0 2 3.055555582046509
+  124257.23 35679.84 120.00 0 2 3.055555582046509
+  124267.40 35715.41 120.00
+[7_Chief_Road]
+  124305.32 35720.81 120.00 0 2 3.055555582046509
+  124456.04 35899.30 120.00 0 2 3.055555582046509
+  124439.75 35947.39 120.00
+[8_Chief_Road]
+  124427.11 35682.62 120.00 0 2 3.055555582046509
+  125049.68 35905.23 120.00
+[NStationary]
+  10_Static vehicles.planes.Plane$TEMPEST5 1 124843.70 36089.23 519.10 0.0 gb
+  11_Static vehicles.planes.Plane$TEMPEST5 1 124852.30 36068.18 514.10 0.0 gb
+  12_Static vehicles.planes.Plane$TEMPEST5 1 124862.10 36045.13 514.10 0.0 gb
+  13_Static vehicles.planes.Plane$TEMPEST5 1 124651.51 36010.26 215.00 0.0 gb
+  14_Static vehicles.planes.Plane$TEMPEST5 1 124630.14 35986.16 220.00 0.0 gb
+  215_Static vehicles.planes.Plane$TEMPEST5 1 124608.42 35957.93 220.00 0.0 gb
+  16_Static vehicles.planes.Plane$TEMPEST5 1 124356.75 35908.40 400.00 0.0 gb
+  17_Static vehicles.planes.Plane$TEMPEST5 1 123834.88 35523.62 400.00 0.0 gb
+  18_Static vehicles.planes.Plane$TEMPEST5 1 123786.63 35509.38 400.00 0.0 gb
+  225_Static vehicles.planes.Plane$TEMPEST5 1 123885.69 35540.88 400.00 0.0 gb
+  100_Static vehicles.planes.Plane$B_25G1 1 124458.29 35945.49 400.00 0.0 gb
+  101_Static vehicles.planes.Plane$B_25G1 1 124492.71 35981.58 405.00 0.0 gb
+  102_Static vehicles.planes.Plane$B_25G1 1 124525.69 36010.84 405.00 0.0 gb
+  103_Static vehicles.planes.Plane$B_25G1 1 124556.03 36053.51 400.00 0.0 gb
+  104_Static vehicles.planes.Plane$B_25G1 1 124400.58 35941.99 400.00 0.0 gb
+  235_Static vehicles.planes.Plane$B_25G1 1 124310.47 35801.01 400.00 0.0 gb
+  106_Static vehicles.planes.Plane$B_25G1 1 124277.20 35766.74 400.00 0.0 gb
+  107_Static vehicles.planes.Plane$B_25G1 1 124281.87 35728.31 400.00 0.0 gb
+  108_Static vehicles.planes.Plane$B_25G1 1 124315.31 35763.71 400.00 0.0 gb
+  109_Static vehicles.planes.Plane$B_25G1 1 124363.93 35826.33 400.00 0.0 gb
+  1_Static vehicles.stationary.Siren$SirenCity 1 123771.49 35498.67 700.00 0.0
+  2_Static vehicles.stationary.Siren$SirenCity 1 124210.40 35602.41 700.00 0.0
+  3_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 124236.74 35843.18 700.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 124955.92 36172.60 700.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 123638.26 35516.28 700.00 0.0 0
+  8_Static vehicles.stationary.Smoke$Smoke1 0 124878.55 36084.03 360.00 0.00
+  20_Static vehicles.planes.Plane$TEMPEST5 1 124276.94 35598.28 250.00 0.0 gb
+  21_Static vehicles.planes.Plane$TEMPEST5 1 124250.97 35571.14 250.00 0.0 gb
+  26_Static ships.Ship$RwyTransp 1 124585.41 35802.04 700.00 0.0 0 2 1.0
+  27_Static ships.Ship$RwyTransp 1 124609.01 35743.18 700.00 0.0 0 2 1.0
+  6_Static ships.Ship$RwyTransp 1 124598.36 35772.98 700.00 0.0 0 2 1.0
+  25_Static ships.Ship$RwyTransp 1 124355.79 35645.10 700.00 0.0 0 2 1.0
+  0_Static ships.Ship$RwyTransp 1 124335.74 35671.75 700.00 0.0 0 2 1.0
+  24_Static ships.Ship$RwyTransp 1 124332.89 35703.79 700.00 0.0 0 2 1.0
+  28_Static ships.Ship$RwyTransp 1 124569.52 36018.53 671.30 0.0 0 2 1.0
+  29_Static ships.Ship$RwyTransp 1 124620.75 35982.67 671.30 0.0 0 2 1.0
+  7_Static ships.Ship$RwyTransp 1 124589.53 35994.64 671.30 0.0 0 2 1.0
+  15_Static vehicles.stationary.Stationary$GAZ_AAA 1 123686.27 35474.37 430.00 0.0
+  9_Static vehicles.stationary.Stationary$GAZ_AAA 1 123734.62 35489.34 430.00 0.0
+  256_Static vehicles.stationary.Stationary$GAZ_AAA 1 123794.40 35510.01 430.00 0.0
+  267_Static vehicles.stationary.Stationary$GAZ67t 1 123828.62 35520.29 430.00 0.0
+  255_Static vehicles.stationary.Stationary$GAZ_AAA 1 123843.92 35527.05 430.00 0.0
+  254_Static vehicles.stationary.Stationary$GAZ_AAA 1 123884.68 35536.18 495.00 0.0
+  23_Static vehicles.stationary.Stationary$GAZ_AAA 1 124185.52 35501.93 580.00 0.0
+  22_Static vehicles.stationary.Stationary$GAZ_AAA 1 124216.20 35533.28 580.00 0.0
+  19_Static vehicles.stationary.Stationary$GAZ_AAA 1 124244.81 35563.33 580.00 0.0
+  263_Static vehicles.stationary.Stationary$GAZ_AA 1 124635.01 35953.86 420.00 0.0
+  266_Static vehicles.stationary.Stationary$GAZ67t 1 124657.94 35976.95 440.00 0.0
+  260_Static vehicles.stationary.Stationary$GAZ_AA 1 124689.38 35990.45 665.00 0.0
+  261_Static vehicles.stationary.Stationary$GAZ_AA 1 124699.81 35982.84 665.00 0.0
+  262_Static vehicles.stationary.Stationary$GAZ_AA 1 124704.41 35979.17 665.00 0.0
+  264_Static vehicles.stationary.Stationary$GAZ_AA 1 124530.59 36083.37 500.00 0.0
+  252_Static vehicles.stationary.Stationary$GAZ_AA 1 124524.76 36088.91 500.00 0.0
+  253_Static vehicles.stationary.Stationary$GAZ_AA 1 124519.23 36094.27 495.00 0.0
+  265_Static vehicles.stationary.Stationary$GAZ_AA 1 124514.58 36099.93 495.00 0.0
+  258_Static vehicles.stationary.Stationary$GAZ_55 1 124917.59 36099.56 695.00 0.0
+  259_Static vehicles.stationary.Stationary$GAZ_55 1 124919.05 36096.11 695.00 0.0
+  257_Static vehicles.stationary.Stationary$GAZ_55 1 124920.58 36092.35 695.00 0.0
+[Buildings]
+[Target]
+  0 0 0 0 1000 123450 47334 0 0 110_Chief 122700 48733
+  1 0 0 0 500 122966 46992 2900
+  3 1 1 30 501 124231 35525 100
+  0 1 0 0 500 123399 46078 0 3 ja0101 124514 45873
+  0 1 0 0 500 123478 45433 0 0 ja0100 124510 45884
+  3 1 1 30 501 123733 35434 100
+[Bridge]
+[House]
+
+[WEATHER]
+WindVelocity 4
+WindDirection 36
+WindTop 5508
+WindTurbulence 0
+WindGust 0

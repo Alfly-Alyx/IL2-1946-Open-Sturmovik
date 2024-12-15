@@ -1,0 +1,842 @@
+[MAIN]
+  MAP Normandy/load2.ini
+  TIME 5.1833334
+  CloudType 1
+  CloudHeight 600.0
+  player ZG1_I00
+  army 2
+  playerNum 0
+[Wing]
+  ZG1_I11
+  ZG1_I23
+  RAF_No312SQN00
+  RAF_No312SQN11
+  RAF_No134SQN22
+  gb0100
+  gb0101
+  II_JG300_11
+  II_JG300_12
+  IV_JG300_22
+  gb0120
+  gb0102
+  gb0103
+  gb0111
+  gb0110
+  gb0112
+  ZG1_I00
+  ZG1_I12
+[ZG1_I11]
+  Planes 2
+  Skill0 3
+  Skill1 2
+  Skill2 3
+  Skill3 2
+  skin0 A-5_C_26-II_Ylw02.bmp
+  skin1 A-5_C_26-II_Ylw13.bmp
+  skin2 A-5_C_26-II_Ylw04.bmp
+  skin3 A-5_C_26-II_Ylw08.bmp
+  pilot0 &_1-05_S.bmp
+  pilot1 &_3-05_S.bmp
+  pilot2 &_2-05_S.bmp
+  pilot3 &_3-15_S.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.FW_190A5
+  Fuel 100
+  weapons default
+[ZG1_I11_Way]
+  NORMFLY 112904.11 77346.94 750.00 300.00
+  NORMFLY 119928.23 90231.70 750.00 300.00
+  NORMFLY 76648.07 68108.95 500.00 300.00
+  LANDING 74611.62 62643.96 0 0
+[ZG1_I23]
+  Planes 2
+  Skill 3
+  skin0 A-5_C_26-II_Red07.bmp
+  skin1 A-5_C_26-II_Red10.bmp
+  pilot0 &_2-09_S.bmp
+  pilot1 &_3-08_S.bmp
+  numberOn0 0
+  numberOn1 0
+  Class air.FW_190A5
+  Fuel 100
+  weapons default
+[ZG1_I23_Way]
+  NORMFLY 111084.13 75160.11 750.00 300.00
+  NORMFLY 119348.26 90182.50 750.00 300.00
+  NORMFLY 76779.82 68275.64 500.00 300.00
+  LANDING 74611.62 62643.96 0 0
+[RAF_No312SQN00]
+  Planes 4
+  Skill0 2
+  Skill1 0
+  Skill2 1
+  Skill3 0
+  skin0 p39_LoadedDicebl.bmp
+  skin1 p39_LoadedDicebl.bmp
+  skin2 p39_LoadedDicebl.bmp
+  skin3 p39_LoadedDicebl.bmp
+  Class air.P_39N
+  Fuel 100
+  weapons 1xFAB250
+[RAF_No312SQN00_Way]
+  NORMFLY 85352.30 101037.61 100.00 300.00
+  NORMFLY 106693.53 98063.40 100.00 300.00
+  GATTACK 112123.28 96322.25 100.00 300.00 272_Static 0
+  GATTACK 112688.47 96083.35 100.00 300.00 277_Static 0
+  GATTACK 113142.74 95919.96 100.00 300.00 23_Static 0
+  GATTACK 113521.29 95750.93 100.00 300.00 26_Static 0
+  NORMFLY 120070.82 88815.63 100.00 300.00
+  NORMFLY 107496.10 87071.69 100.00 300.00
+  NORMFLY 81750.04 97305.86 100.00 300.00
+  NORMFLY 17393.50 99141.59 100.00 300.00
+  LANDING 4341.81 99539.94 0 0
+[RAF_No312SQN11]
+  Planes 4
+  Skill0 1
+  Skill1 0
+  Skill2 1
+  Skill3 0
+  skin0 p39_LoadedDicebl.bmp
+  skin1 p39_LoadedDicebl.bmp
+  skin2 p39_LoadedDicebl.bmp
+  skin3 p39_LoadedDicebl.bmp
+  Class air.P_39N
+  Fuel 100
+  weapons 1xFAB250
+[RAF_No312SQN11_Way]
+  NORMFLY 85962.19 99073.04 100.00 300.00
+  NORMFLY 106676.26 94894.22 100.00 300.00
+  GATTACK 115863.65 88479.50 100.00 300.00 190_Static 0
+  GATTACK 115698.79 88254.69 100.00 300.00 191_Static 0
+  GATTACK 115518.93 88104.81 100.00 300.00 192_Static 0
+  NORMFLY 81244.82 97750.54 100.00 300.00
+  NORMFLY 18872.97 98787.68 100.00 300.00
+  LANDING 4341.81 99539.94 0 0
+[RAF_No134SQN22]
+  Planes 4
+  Skill0 1
+  Skill1 1
+  Skill2 1
+  Skill3 0
+  Class air.SPITFIRE5BLF
+  Fuel 100
+  weapons default
+[RAF_No134SQN22_Way]
+  NORMFLY 82706.48 100806.23 500.00 300.00
+  NORMFLY 106087.24 98411.48 500.00 300.00
+  NORMFLY 122336.73 92679.92 300.00 300.00
+  NORMFLY 110428.85 87741.75 300.00 300.00
+  NORMFLY 107615.96 98618.23 300.00 300.00
+  NORMFLY 19846.46 98368.20 300.00 300.00
+  LANDING 4341.81 99539.94 0 0
+[gb0100]
+  Planes 3
+  Skill 0
+  Class air.BLENHEIM4
+  Fuel 100
+  weapons 2x500
+[gb0100_Way]
+  NORMFLY 85178.15 100202.03 100.00 300.00
+  NORMFLY 105518.99 96944.14 100.00 300.00
+  GATTACK 109681.59 95788.16 100.00 300.00 280_Static 0
+  GATTACK 112418.51 95034.87 100.00 300.00 276_Static 0
+  NORMFLY 120043.58 93580.53 200.00 300.00
+  NORMFLY 83154.46 96082.21 200.00 300.00
+  NORMFLY 17747.24 98359.33 200.00 300.00
+  LANDING 4341.81 99539.94 0 0
+[gb0101]
+  Planes 3
+  Skill 0
+  Class air.BLENHEIM4
+  Fuel 100
+  weapons 2x500
+[gb0101_Way]
+  NORMFLY 86091.23 99805.48 100.00 300.00
+  NORMFLY 106484.40 96111.06 100.00 300.00
+  GATTACK 112547.38 94400.82 100.00 300.00 298_Static 0
+  NORMFLY 120001.17 92690.11 200.00 300.00
+  NORMFLY 82730.44 95276.58 200.00 300.00
+  NORMFLY 18618.76 98200.88 200.00 300.00
+  LANDING 4341.81 99539.94 0 0
+[II_JG300_11]
+  Planes 2
+  Skill0 3
+  Skill1 2
+  Skill2 2
+  Skill3 1
+  skin0 A-4_AdA_TRo2.bmp
+  skin1 A-4_AdA_TRox.bmp
+  skin2 A-4_AdA_TRox.bmp
+  skin3 A-4_AdA_TRox.bmp
+  pilot0 Sk_00.bmp
+  pilot1 Sk_01.bmp
+  pilot2 Sk_02.bmp
+  pilot3 Sk_03.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.FW_190A4
+  Fuel 100
+  weapons default
+[II_JG300_11_Way]
+  NORMFLY 131295.20 75034.62 500.00 300.00
+  NORMFLY 114633.04 88935.74 500.00 300.00
+  NORMFLY 112057.52 97233.10 750.00 300.00
+  NORMFLY 118173.26 91888.81 750.00 300.00
+  NORMFLY 111572.96 89123.24 750.00 300.00
+  NORMFLY 111786.60 97134.81 750.00 300.00
+  NORMFLY 110102.63 91570.27 500.00 300.00
+  LANDING 116107.90 87282.81 0 0
+[II_JG300_12]
+  Planes 2
+  Skill0 3
+  Skill1 1
+  Skill2 2
+  Skill3 2
+  skin0 A-4_AdA_TRo5.bmp
+  skin1 A-4_AdA_TRox.bmp
+  skin2 A-4_AdA_TRox.bmp
+  skin3 A-4_AdA_TRox.bmp
+  pilot0 Sk_18.bmp
+  pilot1 Sk_19.bmp
+  pilot2 Sk_20.bmp
+  pilot3 Sk_21.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.FW_190A4
+  Fuel 100
+  weapons default
+[II_JG300_12_Way]
+  TAKEOFF 117447.45 86346.64 0 0
+  NORMFLY 119365.44 94376.63 500.00 300.00
+  NORMFLY 110429.41 100074.40 750.00 300.00
+  NORMFLY 107477.69 92948.53 750.00 300.00
+  NORMFLY 115945.25 95840.62 750.00 300.00
+  NORMFLY 112499.07 89794.67 500.00 300.00
+  LANDING 116107.53 87283.50 0 0
+[IV_JG300_22]
+  Planes 2
+  Skill0 3
+  Skill1 2
+  Skill2 2
+  Skill3 2
+  skin0 A-4_AdA_TPo3.bmp
+  skin1 A-4_AdA_TPox.bmp
+  skin2 A-4_AdA_TPox.bmp
+  skin3 A-4_AdA_TPox.bmp
+  pilot0 Sk_30.bmp
+  pilot1 Sk_31.bmp
+  pilot2 Sk_04.bmp
+  pilot3 Sk_18.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.FW_190A4
+  Fuel 100
+  weapons default
+[IV_JG300_22_Way]
+  TAKEOFF 117227.07 86354.46 0 0
+  NORMFLY 123062.92 90427.50 500.00 300.00
+  NORMFLY 111361.32 98468.66 750.00 300.00
+  NORMFLY 108652.62 92767.05 750.00 300.00
+  NORMFLY 118346.21 92895.72 750.00 300.00
+  NORMFLY 112644.17 98839.27 750.00 300.00
+  NORMFLY 111715.07 90211.76 500.00 300.00
+  LANDING 115888.90 87294.80 0 0
+[gb0120]
+  Planes 2
+  Skill 1
+  Class air.BLENHEIM4
+  Fuel 100
+  weapons 2x500
+[gb0120_Way]
+  NORMFLY 86046.51 100477.92 100.00 300.00
+  NORMFLY 106509.30 96992.98 100.00 300.00
+  GATTACK 110944.52 95889.49 100.00 300.00 275_Static 0
+  GATTACK 111872.09 95674.07 100.00 300.00 307_Static 0
+  NORMFLY 120043.58 94004.55 200.00 300.00
+  NORMFLY 83281.66 96421.42 200.00 300.00
+  NORMFLY 17509.55 98676.25 200.00 300.00
+  LANDING 4341.81 99539.94 0 0
+[gb0102]
+  Planes 2
+  Skill 0
+  Class air.BLENHEIM4
+  Fuel 100
+  weapons 2x500
+[gb0102_Way]
+  NORMFLY 87760.07 99390.57 100.00 300.00
+  NORMFLY 106616.27 95451.29 100.00 300.00
+  GATTACK 114112.93 93072.66 100.00 300.00 287_Static 0
+  GATTACK 115511.43 92575.99 100.00 300.00 286_Static 0
+  NORMFLY 119746.77 91714.88 200.00 300.00
+  NORMFLY 82306.43 94301.35 200.00 300.00
+  NORMFLY 18856.44 97725.50 200.00 300.00
+  LANDING 4341.81 99539.94 0 0
+[gb0103]
+  Planes 2
+  Skill 0
+  Class air.BLENHEIM4
+  Fuel 100
+  weapons 2x500
+[gb0103_Way]
+  NORMFLY 88948.10 98897.35 100.00 300.00
+  NORMFLY 107858.30 94938.62 100.00 300.00
+  GATTACK 114198.77 92532.49 100.00 300.00 281_Static 0
+  GATTACK 114521.70 92436.81 100.00 300.00 283_Static 0
+  NORMFLY 119771.51 91232.67 200.00 300.00
+  NORMFLY 82131.25 94140.71 200.00 300.00
+  NORMFLY 19173.36 97646.28 200.00 300.00
+  LANDING 4341.81 99539.94 0 0
+[gb0111]
+  Planes 2
+  Skill 0
+  Class air.BLENHEIM4
+  Fuel 100
+  weapons 2x500
+[gb0111_Way]
+  NORMFLY 89608.27 99282.93 100.00 300.00
+  NORMFLY 107626.41 95507.10 100.00 300.00
+  GATTACK 113352.74 93999.21 100.00 300.00 292_Static 0
+  NORMFLY 119873.97 92138.89 200.00 300.00
+  NORMFLY 82560.84 94730.94 200.00 300.00
+  NORMFLY 18381.07 97963.19 200.00 300.00
+  LANDING 4341.81 99539.94 0 0
+[gb0110]
+  Planes 2
+  Skill 0
+  Class air.BLENHEIM4
+  Fuel 100
+  weapons 2x500
+[gb0110_Way]
+  NORMFLY 86979.95 100021.15 100.00 300.00
+  NORMFLY 107412.96 96273.31 100.00 300.00
+  GATTACK 112993.84 94745.98 100.00 300.00 294_Static 0
+  GATTACK 114037.14 94457.52 100.00 300.00 296_Static 0
+  NORMFLY 120085.98 93156.52 200.00 300.00
+  NORMFLY 82942.45 95615.79 200.00 300.00
+  NORMFLY 18143.38 98280.11 200.00 300.00
+  LANDING 4341.81 99539.94 0 0
+[gb0112]
+  Planes 2
+  Skill 0
+  Class air.BLENHEIM4
+  Fuel 100
+  weapons default
+[gb0112_Way]
+  NORMFLY 89056.10 99804.10 100.00 300.00
+  NORMFLY 107527.31 97234.56 100.00 300.00
+  GATTACK 110511.20 96420.98 100.00 300.00 274_Static 0
+  GATTACK 111846.33 96055.52 100.00 300.00 273_Static 0
+  NORMFLY 120085.98 94386.16 200.00 300.00
+  NORMFLY 83408.86 96845.43 200.00 300.00
+  NORMFLY 17113.41 98913.94 200.00 300.00
+  LANDING 4341.81 99539.94 0 0
+[ZG1_I00]
+  Planes 1
+  Skill 3
+  skin0 P-38J_AdA_TMoT.bmp
+  pilot0 $_Player_C.bmp
+  numberOn0 0
+  Class air.P_38J
+  Fuel 100
+  weapons default
+[ZG1_I00_Way]
+  NORMFLY 115884.43 86997.93 0.00 0.00
+  NORMFLY 120987.01 87990.80 750.00 300.00
+  NORMFLY 113207.49 97024.31 750.00 300.00
+  NORMFLY 111009.23 90836.82 300.00 300.00
+  LANDING 116109.15 87282.65 0 0
+[ZG1_I12]
+  Planes 1
+  Skill 3
+  skin0 P-38J_AdA_TMoY.bmp
+  pilot0 Sk_00.bmp
+  numberOn0 0
+  Class air.P_38J
+  Fuel 100
+  weapons default
+[ZG1_I12_Way]
+  TAKEOFF 117447.45 86346.64 0 0
+  NORMFLY 122094.70 90543.22 750.00 300.00
+  NORMFLY 107826.60 97484.60 750.00 300.00
+  NORMFLY 111055.35 86930.95 750.00 300.00
+  NORMFLY 121849.95 94014.91 750.00 300.00
+  NORMFLY 107585.65 97147.27 750.00 300.00
+  NORMFLY 108983.17 91798.16 300.00 300.00
+  LANDING 115887.04 87294.47 0 0
+[NStationary]
+  21_Static vehicles.planes.Plane$AR_196A3 2 113195.44 94657.47 184.10 0.0
+  22_Static vehicles.planes.Plane$AR_196A3 2 113194.88 94645.14 184.10 0.0
+  23_Static vehicles.planes.Plane$AR_196A3 2 113189.53 94624.87 184.10 0.0
+  24_Static vehicles.planes.Plane$AR_196A3 2 113202.93 94600.04 484.10 0.0
+  25_Static vehicles.planes.Plane$AR_196A3 2 113224.03 94587.77 484.10 0.0
+  26_Static vehicles.planes.Plane$FW_189A2 2 113244.00 94578.93 484.10 0.0
+  109_Static vehicles.planes.Plane$FW_190A5 2 73763.80 62049.48 514.10 0.0
+  116_Static vehicles.planes.Plane$FW_190A5 2 73843.39 62220.56 514.10 0.0
+  117_Static vehicles.planes.Plane$FW_190A5 2 73851.21 62192.67 514.10 0.0
+  118_Static vehicles.planes.Plane$FW_190A5 2 73873.51 62141.59 514.10 0.0
+  119_Static vehicles.planes.Plane$FW_190A5 2 73909.53 62065.79 514.10 0.0
+  120_Static vehicles.planes.Plane$FW_190A5 2 73894.73 62121.68 514.10 0.0
+  124_Static vehicles.planes.Plane$FW_200C3U4 2 74227.91 62466.27 454.10 0.0
+  125_Static vehicles.planes.Plane$ME_323 2 74344.89 62450.17 469.10 0.0
+  126_Static vehicles.planes.Plane$JU_52_3MG4E 2 74292.83 62482.37 469.10 0.0
+  127_Static vehicles.planes.Plane$JU_52_3MG4E 2 74155.46 62460.91 379.10 0.0
+  129_Static vehicles.planes.Plane$CR_42 2 74341.19 62374.98 199.10 0.0
+  131_Static vehicles.planes.Plane$GLADIATOR1J8A 2 74189.45 62489.09 469.10 0.0
+  140_Static vehicles.artillery.Artillery$Flak18_88mm 2 74450.66 62630.63 629.10 0.0
+  141_Static vehicles.artillery.Artillery$Flak18_88mm 2 74782.69 62609.24 629.10 0.0
+  184_Static vehicles.artillery.Artillery$Flak18_88mm 2 116094.25 87479.20 630.00 0.0
+  185_Static vehicles.artillery.Artillery$Flak18_88mm 2 116356.33 87496.05 630.00 0.0
+  186_Static vehicles.artillery.Artillery$Flak18_88mm 2 116563.75 87568.09 630.00 0.0
+  187_Static vehicles.artillery.Artillery$Flak18_88mm 2 116981.64 87404.61 630.00 0.0
+  188_Static vehicles.artillery.Artillery$Flak18_88mm 2 117242.70 87540.50 630.00 0.0
+  189_Static vehicles.artillery.Artillery$Flak18_88mm 2 117390.85 87623.26 630.00 0.0
+  190_Static vehicles.artillery.Artillery$Zenit25mm_1940 2 117012.78 87178.28 630.00 0.0
+  191_Static vehicles.artillery.Artillery$Zenit25mm_1940 2 115646.13 86560.88 630.00 0.0
+  192_Static vehicles.artillery.Artillery$Zenit25mm_1940 2 116539.23 86664.72 630.00 0.0
+  193_Static vehicles.planes.Plane$FW_190A4 2 116323.86 86766.47 210.00 0.0
+  194_Static vehicles.planes.Plane$FW_190A4 2 116279.34 86700.65 210.00 0.0
+  195_Static vehicles.planes.Plane$FW_190A4 2 116256.82 86667.69 210.00 0.0
+  196_Static vehicles.planes.Plane$FW_190A4 2 116210.16 86602.75 210.00 0.0
+  197_Static vehicles.planes.Plane$FW_190A4 2 116185.35 86571.10 210.00 0.0
+  198_Static vehicles.planes.Plane$FW_190A4 2 116254.87 86790.73 210.00 0.0
+  199_Static vehicles.planes.Plane$FW_190A4 2 116232.02 86758.09 210.00 0.0
+  200_Static vehicles.planes.Plane$FW_190A4 2 116185.68 86692.82 210.00 0.0
+  201_Static vehicles.planes.Plane$FW_190A4 2 116162.84 86659.53 210.00 0.0
+  202_Static vehicles.planes.Plane$FW_190A4 2 116187.97 86666.71 395.00 0.0
+  203_Static vehicles.planes.Plane$FW_190A4 2 116256.82 86765.27 395.00 0.0
+  204_Static vehicles.planes.Plane$FW_190A4 2 116279.67 86797.91 395.00 0.0
+  205_Static vehicles.planes.Plane$FW_190A4 2 117300.48 87358.57 529.10 0.0
+  206_Static vehicles.planes.Plane$FW_190A4 2 117299.83 87317.77 529.10 0.0
+  207_Static vehicles.planes.Plane$FW_190A4 2 117317.45 87240.10 529.10 0.0
+  208_Static vehicles.planes.Plane$FW_190A4 2 117327.89 87201.27 529.10 0.0
+  209_Static vehicles.planes.Plane$FW_190A4 2 117335.07 87161.78 529.10 0.0
+  210_Static vehicles.planes.Plane$FW_190A4 2 117341.27 87081.83 529.10 0.0
+  213_Static vehicles.planes.Plane$FW_190A4 2 117282.53 87046.58 529.10 0.0
+  217_Static vehicles.planes.Plane$FW_190A4 2 117246.96 87247.94 529.10 0.0
+  219_Static vehicles.planes.Plane$FW_190A4 2 117273.39 87191.48 349.10 0.0
+  220_Static vehicles.planes.Plane$FW_190A4 2 116991.93 86235.28 305.00 0.0
+  222_Static vehicles.planes.Plane$FW_190A4 2 116860.56 86327.92 305.00 0.0
+  226_Static vehicles.planes.Plane$FW_190A4 2 116725.30 86413.21 305.00 0.0
+  227_Static vehicles.planes.Plane$FW_190A4 2 116948.09 86383.61 305.00 0.0
+  228_Static vehicles.planes.Plane$FW_190A4 2 116980.40 86360.76 305.00 0.0
+  231_Static vehicles.planes.Plane$FW_190A4 2 116852.79 86421.14 484.10 0.0
+  232_Static vehicles.planes.Plane$FW_190A4 2 116951.35 86352.28 484.10 0.0
+  233_Static vehicles.planes.Plane$C_47 2 115899.43 86933.10 350.00 0.0 it
+  234_Static vehicles.planes.Plane$C_47 2 115917.51 86859.91 349.10 0.0 it
+  235_Static vehicles.planes.Plane$C_47 2 115985.57 86922.30 529.10 0.0 it
+  236_Static vehicles.planes.Plane$C_47 2 115977.78 86969.45 529.10 0.0 it
+  237_Static vehicles.planes.Plane$GLADIATOR1J8A 2 116753.08 87355.51 439.10 0.0 it
+  238_Static vehicles.planes.Plane$GLADIATOR1J8A 2 116783.22 87355.15 439.10 0.0 it
+  239_Static vehicles.planes.Plane$GLADIATOR1J8A 2 116809.45 87367.91 439.10 0.0 it
+  240_Static vehicles.planes.Plane$GLADIATOR1J8A 2 116693.88 87334.59 439.10 0.0 it
+  241_Static vehicles.planes.Plane$GLADIATOR1J8A 2 116721.53 87340.62 439.10 0.0 it
+  242_Static vehicles.planes.Plane$U_2VS 0 116666.23 87331.75 439.10 0.0 nn
+  243_Static vehicles.planes.Plane$SB_2M100A 0 116627.23 87326.08 439.10 0.0 nn
+  244_Static vehicles.planes.Plane$SB_2M100A 0 116579.27 87316.43 439.10 0.0 nn
+  245_Static vehicles.planes.Plane$P_36A4 2 108839.38 99300.56 380.00 0.0 it
+  246_Static vehicles.planes.Plane$P_36A4 2 108838.27 99331.77 380.00 0.0 it
+  247_Static vehicles.planes.Plane$P_36A4 2 108857.78 99351.09 380.00 0.0 it
+  248_Static vehicles.planes.Plane$P_36A4 2 108875.36 99399.38 380.00 0.0 it
+  249_Static vehicles.planes.Plane$P_36A4 2 108878.07 99423.72 380.00 0.0 it
+  250_Static vehicles.planes.Plane$P_36A4 2 108892.36 99446.71 380.00 0.0 it
+  251_Static vehicles.planes.Plane$P_36A4 2 108910.33 99492.88 380.00 0.0 it
+  252_Static vehicles.planes.Plane$P_36A4 2 108927.52 99539.43 380.00 0.0 it
+  256_Static vehicles.planes.Plane$P_36A4 2 108946.06 99366.16 380.00 0.0 it
+  257_Static vehicles.planes.Plane$P_36A4 2 108938.92 99389.15 205.00 0.0 it
+  260_Static vehicles.planes.Plane$GLADIATOR1J8A 2 109081.57 98915.37 200.00 0.0 it
+  261_Static vehicles.planes.Plane$GLADIATOR1J8A 2 109067.75 98874.93 200.00 0.0 it
+  263_Static vehicles.planes.Plane$GLADIATOR1J8A 2 109045.63 98810.99 205.00 0.0 it
+  264_Static vehicles.planes.Plane$CR_42 0 109075.53 98941.81 490.00 0.0 nn
+  265_Static vehicles.planes.Plane$C_47 0 108844.61 98225.20 220.00 0.0 nn
+  266_Static vehicles.planes.Plane$C_47 0 108827.87 98181.58 205.00 0.0 nn
+  267_Static vehicles.planes.Plane$IL_4_DB3T 0 108880.70 98279.88 205.00 0.0 nn
+  268_Static vehicles.planes.Plane$SB_2M103 0 108897.75 98315.82 205.00 0.0 nn
+  269_Static vehicles.artillery.Artillery$Zenit25mm_1940 2 108496.79 98560.94 540.00 0.0
+  272_Static ships.Ship$Tramp 2 112348.01 95632.63 510.00 0.0
+  273_Static ships.Ship$Tramp 2 112548.72 95733.56 520.00 0.0
+  274_Static ships.Ship$Tanker 2 112344.96 95712.96 510.00 0.0
+  275_Static ships.Ship$Tanker 2 112304.95 95262.21 585.00 0.0
+  276_Static ships.Ship$Tramp 2 113324.36 94849.54 480.00 0.0
+  277_Static ships.Ship$Tramp 2 113395.26 94963.34 495.00 0.0
+  278_Static ships.Ship$Niobe 2 111317.83 95448.26 540.00 0.0
+  287_Static ships.Ship$Tanker 2 115579.50 92528.05 500.00 0.0
+  288_Static ships.Ship$Tanker 2 114568.76 92162.30 570.00 0.0
+  289_Static ships.Ship$Tanker 2 114665.38 92111.08 565.00 0.0
+  290_Static ships.Ship$Tanker 2 114826.80 93631.97 540.00 0.0
+  291_Static ships.Ship$Tramp 2 114941.12 93631.97 540.00 0.0
+  292_Static ships.Ship$Tramp 2 115055.45 93631.97 540.00 0.0
+  293_Static ships.Ship$Tramp 2 114432.28 94317.90 540.00 0.0
+  294_Static ships.Ship$Tramp 2 114566.78 94317.07 540.00 0.0
+  295_Static ships.Ship$Tramp 2 114682.03 94316.24 540.00 0.0
+  296_Static ships.Ship$Tramp 2 114849.22 94313.42 540.00 0.0
+  297_Static ships.Ship$Tramp 2 112827.97 94265.24 540.00 0.0
+  298_Static ships.Ship$Tramp 2 112932.89 94265.04 540.00 0.0
+  299_Static ships.Ship$Tramp 2 112959.35 94171.15 540.00 0.0
+  300_Static ships.Ship$Tramp 2 112611.10 94083.23 540.00 0.0
+  301_Static ships.Ship$Tramp 2 112777.54 94077.26 525.00 0.0
+  302_Static ships.Ship$Tanker 2 113070.31 94182.24 525.00 0.0
+  303_Static ships.Ship$Tanker 2 112634.10 94318.81 555.00 0.0
+  304_Static ships.Ship$Tanker 2 112390.03 94430.63 555.00 0.0
+  305_Static ships.Ship$Tramp 2 112491.60 94395.63 565.00 0.0
+  307_Static ships.Ship$Submarine 2 112999.14 94955.28 540.00 0.0
+  44_Static vehicles.stationary.Siren$SirenCity 2 115857.57 86955.98 629.10 0.0
+  45_Static vehicles.stationary.Siren$SirenCity 2 116785.08 86763.02 629.10 0.0
+  280_Static ships.Ship$Tramp 2 111322.46 95425.86 540.00 0.0
+  286_Static ships.Ship$Tramp 2 115615.44 92502.42 500.00 0.0
+  283_Static ships.Ship$Tramp 2 115727.38 91970.99 540.00 0.0
+  281_Static ships.Ship$Tramp 2 115392.93 91977.61 540.00 0.0
+[Buildings]
+  0_bld House$IndustrialFactoryHouse1 1 73564.34 62209.93 425.00
+  1_bld House$IndustrialFactoryHouse1 1 73591.46 62151.40 425.00
+  2_bld House$IndustrialFactoryHouse1 1 73600.34 62132.33 425.00
+  3_bld House$IndustrialFactoryHouse1 1 73664.45 61994.90 425.00
+  4_bld House$IndustrialFactoryHouse1 1 73682.21 61956.60 425.00
+  5_bld House$FinlandHangar 1 73851.75 62224.77 515.00
+  6_bld House$FinlandHangar 1 73863.80 62199.21 515.00
+  7_bld House$FinlandHangar 1 73875.42 62173.95 515.00
+  8_bld House$FinlandHangar 1 73887.61 62148.68 515.00
+  9_bld House$FinlandHangar 1 73899.23 62123.42 515.00
+  10_bld House$FinlandHangar 1 73911.28 62098.15 515.00
+  11_bld House$FinlandHangar 1 73922.75 62072.16 515.00
+  12_bld House$FinlandHangar 1 73934.66 62047.19 515.00
+  13_bld House$FurnitureTreeLine 1 74075.29 62508.35 619.10
+  14_bld House$FurnitureTreeLine 1 74398.37 62462.19 619.10
+  15_bld House$FurnitureTreeLine 1 74290.08 62529.65 649.10
+  16_bld House$FurnitureTreeLine 1 74062.86 62495.92 649.10
+  17_bld House$FurnitureTreeLine 1 74396.59 62447.99 709.10
+  18_bld House$FurnitureTreeLine 1 74059.31 62476.39 709.10
+  19_bld House$FurnitureTreeLine 1 74291.86 62549.18 709.10
+  20_bld House$Furniture88mm_Flak_Pos2 1 74450.82 62631.05 664.10
+  21_bld House$Furniture88mm_Flak_Pos2 1 74782.51 62609.90 644.10
+  22_bld House$VehicleOpelBlitz6700A_winter 1 74328.26 62496.25 469.10
+  23_bld House$VehicleOpelBlitz6700A_winter 1 74324.59 62497.63 469.10
+  24_bld House$VehicleOpelBlitz6700A_winter 1 74313.12 62501.76 469.10
+  25_bld House$VehicleOpelBlitz6700A_winter 1 74216.30 62493.50 469.10
+  26_bld House$VehicleOpelBlitz6700A_winter 1 74220.43 62492.58 469.10
+  27_bld House$VehicleOpelBlitz6700A_winter 1 74140.59 62471.48 469.10
+  28_bld House$VehicleOpelBlitz6700A_winter 1 74217.91 62474.92 559.10
+  29_bld House$VehicleOpelBlitz6700A_summer 1 73880.07 62134.47 424.10
+  30_bld House$VehicleOpelBlitz6700A_winter 1 73896.54 62110.90 694.10
+  31_bld House$VehicleOpelBlitz6700A_winter 1 73876.10 62154.53 694.10
+  32_bld House$VehicleOpelBlitz6700A_winter 1 74103.99 62395.19 649.10
+  33_bld House$VehicleOpelBlitz6700A_summer 1 74123.29 62447.53 649.10
+  34_bld House$VehicleOpelBlitz6700A_summer 1 74211.21 62491.53 649.10
+  35_bld House$VehicleOpelBlitz6700A_summer 1 74264.40 62485.38 649.10
+  36_bld House$VehicleOpelBlitz6700A_summer 1 74354.11 62486.71 379.10
+  37_bld House$Furniture88mm_Flak_Pos2 1 117242.70 87541.34 630.00
+  38_bld House$Furniture88mm_Flak_Pos2 1 117390.67 87624.04 630.00
+  39_bld House$Furniture88mm_Flak_Pos2 1 116982.21 87405.85 630.00
+  40_bld House$Furniture88mm_Flak_Pos2 1 116563.66 87568.80 630.00
+  41_bld House$Furniture88mm_Flak_Pos2 1 116356.27 87496.88 630.00
+  42_bld House$Furniture88mm_Flak_Pos2 1 116094.25 87480.26 630.00
+  43_bld House$Furniture20mm_Flak_Pos_W 1 115645.65 86560.96 630.00
+  44_bld House$Furniture20mm_Flak_Pos_W 1 116539.23 86665.18 630.00
+  45_bld House$Furniture20mm_Flak_Pos_W 1 117012.89 87178.24 630.00
+  46_bld House$Furniture20mm_Flak_Pos_W 1 116954.19 85570.73 630.00
+  47_bld House$FurnitureTreeLine 1 116373.72 86704.91 530.00
+  48_bld House$FurnitureTreeLine 1 116721.86 86520.83 530.00
+  49_bld House$FurnitureTreeLine 1 117406.10 86906.02 530.00
+  50_bld House$FurnitureTreeLine 1 117393.79 87145.99 530.00
+  51_bld House$FurnitureTreeLine 1 117367.95 87277.67 530.00
+  52_bld House$FurnitureTreeLine 1 116657.16 87377.96 530.00
+  53_bld House$FurnitureTreeLine 1 116329.58 87283.43 530.00
+  54_bld House$FurnitureTreeLine 1 116321.43 87350.26 530.00
+  55_bld House$FurnitureTreeLine 1 116365.43 87312.77 530.00
+  56_bld House$FurnitureTreeLine 1 116296.98 86626.63 530.00
+  57_bld House$FurnitureTreeLine 1 116787.55 86303.93 530.00
+  58_bld House$FurnitureTreeLine 1 116945.64 86196.36 530.00
+  59_bld House$FurnitureTreeLine 1 116709.32 86497.87 560.00
+  60_bld House$FurnitureTreeLine 1 116777.77 86286.00 560.00
+  61_bld House$FurnitureTreeLine 1 116942.38 86173.54 560.00
+  62_bld House$FurnitureTreeLine 1 116880.45 86237.11 560.00
+  63_bld House$FurnitureTreeLine 1 117027.13 86233.85 560.00
+  64_bld House$FurnitureTreeLine 1 116236.68 86551.66 560.00
+  65_bld House$FurnitureTreeLine 1 116310.02 86652.70 560.00
+  66_bld House$FurnitureTreeLine 1 116329.58 86680.41 560.00
+  67_bld House$FurnitureTreeLine 1 116386.62 86739.08 560.00
+  68_bld House$FurnitureTreeLine 1 115832.49 86921.62 560.00
+  69_bld House$FurnitureTreeLine 1 116262.75 87348.63 560.00
+  70_bld House$FurnitureTreeLine 1 116321.43 87312.77 560.00
+  71_bld House$FurnitureTreeLine 1 116644.13 87363.29 560.00
+  72_bld House$FurnitureTreeLine 1 117382.42 87214.98 560.00
+  73_bld House$FurnitureTreeLine 1 117384.05 87283.43 560.00
+  74_bld House$FurnitureTreeLine 1 117418.28 86929.77 560.00
+  75_bld House$FurnitureTreeLine 1 117416.65 87012.89 560.00
+  76_bld House$FurnitureTreeLine 1 115726.55 86980.29 560.00
+  77_bld House$FurnitureTreeLine 1 116246.46 86533.73 590.00
+  78_bld House$FurnitureTreeLine 1 116313.28 86634.78 590.00
+  79_bld House$FurnitureTreeLine 1 116388.25 86695.08 590.00
+  80_bld House$FurnitureTreeLine 1 116404.55 86750.49 590.00
+  81_bld House$FurnitureTreeLine 1 116688.13 86484.84 590.00
+  82_bld House$FurnitureTreeLine 1 116737.02 86512.54 590.00
+  83_bld House$FurnitureTreeLine 1 117045.05 86256.66 590.00
+  84_bld House$FurnitureTreeLine 1 116864.15 86245.26 590.00
+  85_bld House$FurnitureTreeLine 1 116767.99 86312.08 590.00
+  86_bld House$FurnitureTreeLine 1 116761.47 86271.33 590.00
+  87_bld House$FurnitureTreeLine 1 116926.08 86204.51 590.00
+  88_bld House$FurnitureTreeLine 1 117431.32 87011.26 590.00
+  89_bld House$FurnitureTreeLine 1 117434.58 86933.03 590.00
+  90_bld House$FurnitureTreeLine 1 117398.72 87214.98 590.00
+  91_bld House$FurnitureTreeLine 1 117387.31 87170.98 590.00
+  92_bld House$FurnitureTreeLine 1 117357.98 87335.59 590.00
+  93_bld House$FurnitureTreeLine 1 116673.46 87389.37 590.00
+  94_bld House$FurnitureTreeLine 1 116287.20 87299.73 590.00
+  95_bld House$FurnitureTreeLine 1 116362.17 87342.11 590.00
+  96_bld House$FurnitureTreeLine 1 116336.09 87265.51 590.00
+  97_bld House$FurnitureTreeLine 1 116409.44 86760.27 620.00
+  98_bld House$FurnitureTreeLine 1 116365.43 86683.67 620.00
+  99_bld House$FurnitureTreeLine 1 116334.46 86631.52 620.00
+  100_bld House$FurnitureTreeLine 1 116671.83 86468.54 620.00
+  101_bld House$FurnitureTreeLine 1 116754.95 86520.69 620.00
+  102_bld House$FurnitureTreeLine 1 117067.87 86266.44 620.00
+  103_bld House$FurnitureTreeLine 1 116842.96 86233.85 620.00
+  104_bld House$FurnitureTreeLine 1 116746.80 86325.12 620.00
+  105_bld House$FurnitureTreeLine 1 116710.95 86359.34 620.00
+  106_bld House$FurnitureTreeLine 1 117384.05 86906.95 620.00
+  107_bld House$FurnitureTreeLine 1 117426.43 86994.96 620.00
+  108_bld House$FurnitureTreeLine 1 116026.43 86429.42 620.00
+  109_bld House$FurnitureTreeLine 1 115905.83 86659.22 620.00
+  110_bld House$FurnitureTreeLine 1 115961.24 86748.86 620.00
+  111_bld House$FurnitureTreeLine 1 115808.04 86960.74 620.00
+  112_bld House$FurnitureTreeLine 1 115808.04 87001.48 620.00
+  113_bld House$FurnitureTreeLine 1 116373.58 87294.84 620.00
+  114_bld House$FurnitureTreeLine 1 116296.98 87280.17 620.00
+  115_bld House$FurnitureTreeLine 1 116619.68 87356.77 620.00
+  116_bld House$FurnitureTreeLine 1 116727.25 87392.63 620.00
+  117_bld House$FurnitureTreeLine 1 116759.84 87394.26 650.00
+  118_bld House$FurnitureTreeLine 1 117408.50 87162.83 650.00
+  119_bld House$FurnitureTreeLine 1 117406.87 87268.77 650.00
+  120_bld House$FurnitureTreeLine 1 117437.84 86985.18 650.00
+  121_bld House$FurnitureTreeLine 1 117335.16 86916.73 650.00
+  122_bld House$FurnitureTreeLine 1 117020.61 86212.66 650.00
+  123_bld House$FurnitureTreeLine 1 116882.08 86219.18 650.00
+  124_bld House$FurnitureTreeLine 1 116740.28 86272.96 650.00
+  125_bld House$FurnitureTreeLine 1 116733.76 86346.30 650.00
+  126_bld House$FurnitureTreeLine 1 116693.02 86378.90 650.00
+  127_bld House$FurnitureTreeLine 1 116657.16 86453.87 650.00
+  128_bld House$FurnitureTreeLine 1 116697.91 86525.58 650.00
+  129_bld House$FurnitureTreeLine 1 116355.65 86626.63 650.00
+  130_bld House$FurnitureTreeLine 1 116407.81 86690.19 650.00
+  131_bld House$FurnitureTreeLine 1 116420.84 86743.97 650.00
+  132_bld House$FurnitureTreeLine 1 115935.17 86654.33 650.00
+  133_bld House$FurnitureTreeLine 1 116050.88 86422.90 650.00
+  134_bld House$FurnitureTreeLine 1 115809.67 86913.47 650.00
+  135_bld House$FurnitureTreeLine 1 116781.03 87402.41 650.00
+  136_bld House$FurnitureTreeLine 1 116767.99 87420.34 680.00
+  137_bld House$FurnitureTreeLine 1 117354.72 87358.40 680.00
+  138_bld House$FurnitureTreeLine 1 117421.54 87149.79 680.00
+  139_bld House$FurnitureTreeLine 1 117033.65 86194.73 680.00
+  140_bld House$FurnitureTreeLine 1 116823.40 86228.96 680.00
+  141_bld House$FurnitureTreeLine 1 116725.62 86321.86 680.00
+  142_bld House$FurnitureTreeLine 1 116676.72 86501.13 680.00
+  143_bld House$FurnitureTreeLine 1 116256.23 86522.32 680.00
+  144_bld House$FurnitureTreeLine 1 116293.72 86607.07 680.00
+  145_bld House$FurnitureTreeLine 1 115803.15 86902.06 680.00
+  146_bld House$VehicleOpelBlitz6700A_summer 1 116324.66 86755.45 485.00
+  147_bld House$VehicleOpelBlitz6700A_summer 1 116384.04 86785.81 575.00
+  148_bld House$VehicleOpelBlitz6700A_winter 1 116386.58 86789.12 575.00
+  149_bld House$VehicleOpelBlitz6700A_winter 1 116389.12 86792.43 575.00
+  150_bld House$VehicleOpelBlitz6700A_winter 1 116188.81 86681.73 530.00
+  151_bld House$VehicleOpelBlitz6700A_winter 1 116564.60 87319.87 530.00
+  152_bld House$VehicleOpelBlitz6700A_winter 1 116704.65 87352.29 440.00
+  153_bld House$VehicleOpelBlitz6700A_summer 1 116708.79 87352.76 440.00
+  154_bld House$VehicleOpelBlitz6700A_radio 1 116763.04 86764.84 485.00
+  155_bld House$VehicleOpelBlitz6700A_medic_winter 1 116754.45 86761.57 485.00
+  156_bld House$VehicleOpelBlitz6700A_medic_winter 1 116743.61 86769.75 485.00
+  157_bld House$VehicleOpelBlitz6700A_medic_winter 1 115864.36 86984.93 710.00
+  158_bld House$VehicleOpelBlitz6700A_medic_winter 1 115863.89 86988.55 710.00
+  159_bld House$VehicleOpelBlitz6700A_winter 1 115895.66 86922.33 470.00
+  160_bld House$VehicleOpelBlitz6700A_winter 1 115890.34 86923.66 485.00
+  161_bld House$VehicleOpelBlitz6700A_winter 1 115882.06 86877.83 710.00
+  162_bld House$VehicleOpelBlitz6700A_winter 1 115882.77 86873.95 710.00
+  163_bld House$VehicleOpelBlitz6700A_winter 1 115883.59 86870.26 710.00
+  164_bld House$VehicleOpelBlitz6700A_winter 1 115885.02 86862.18 710.00
+  165_bld House$VehicleOpelBlitz6700A_summer 1 115884.41 86866.07 710.00
+  166_bld House$RussiaPiterNaber100m 1 114581.97 92175.38 660.00
+  167_bld House$RussiaPiterNaber100m 1 114668.33 92130.57 655.00
+  168_bld House$RussiaPiterNaber100m 1 114757.26 92102.63 640.00
+  169_bld House$RussiaPiterNaber100m 1 115298.14 91993.76 630.00
+  170_bld House$RussiaPiterNaber100m 1 115395.15 91994.43 630.00
+  171_bld House$RussiaPiterNaber100m 1 115493.27 91994.67 630.00
+  172_bld House$RussiaPiterNaber100m 1 115592.44 91994.12 630.00
+  173_bld House$RussiaPiterNaber100m 1 115691.62 91993.74 630.00
+  174_bld House$RussiaPiterNaber100m 1 115785.94 91990.13 635.00
+  175_bld House$RussiaPiterNaber100m 1 115776.10 92384.72 710.00
+  176_bld House$RussiaPiterNaber100m 1 115744.67 92468.74 690.00
+  177_bld House$RussiaPiterNaber100m 1 115691.51 92551.04 685.00
+  178_bld House$RussiaPiterNaber100m 1 115631.50 92628.20 680.00
+  179_bld House$RussiaPiterNaber100m 1 115632.64 92541.90 590.00
+  180_bld House$RussiaPiterNaber100m 1 115574.92 92493.32 590.00
+  181_bld House$RussiaPiterNaber100m 1 115570.92 92499.03 410.00
+  182_bld House$RussiaPiterNaber100m 1 115630.93 92547.61 410.00
+  183_bld House$RussiaPiterNaber100m 1 114937.04 93615.17 450.00
+  184_bld House$RussiaPiterNaber100m 1 114839.65 93615.17 450.00
+  185_bld House$RussiaPiterNaber100m 1 114778.77 93615.17 450.00
+  186_bld House$RussiaPiterNaber100m 1 115034.44 93614.70 450.00
+  187_bld House$RussiaPiterNaber100m 1 115092.98 93614.70 450.00
+  188_bld House$RussiaPiterNaber100m 1 115180.83 93590.60 480.00
+  189_bld House$RussiaPiterNaber100m 1 115263.07 93538.26 485.00
+  190_bld House$RussiaPiterNaber100m 1 114379.15 94334.13 630.00
+  191_bld House$RussiaPiterNaber100m 1 114475.52 94334.13 630.00
+  192_bld House$RussiaPiterNaber100m 1 114573.55 94334.13 630.00
+  193_bld House$RussiaPiterNaber100m 1 114672.41 94334.13 630.00
+  194_bld House$RussiaPiterNaber100m 1 114768.77 94333.30 630.00
+  195_bld House$RussiaPiterNaber100m 1 114867.63 94333.30 630.00
+  196_bld House$RussiaPiterNaber100m 1 114964.00 94333.30 630.00
+  197_bld House$RussiaPiterNaber100m 1 115052.89 94314.19 655.00
+  198_bld House$RussiaPiterNaber100m 1 115107.72 94287.60 655.00
+  199_bld House$IndustrialFactoryTank1 1 114356.72 94447.11 540.00
+  200_bld House$IndustrialFactoryTank1 1 112375.22 94498.50 540.00
+  201_bld House$IndustrialFactoryTank1 1 112408.20 94486.10 540.00
+  202_bld House$IndustrialFactoryTank1 1 112441.95 94477.02 540.00
+  203_bld House$IndustrialFactoryTank1 1 112461.13 94513.84 540.00
+  204_bld House$IndustrialFactoryTank1 1 112425.08 94528.42 540.00
+  205_bld House$IndustrialFactoryTank1 1 112386.73 94542.22 540.00
+  206_bld House$IndustrialFactoryTank1 1 112642.92 94427.93 540.00
+  207_bld House$IndustrialFactoryTank1 1 112685.87 94411.06 540.00
+  208_bld House$IndustrialFactoryTank1 1 112731.12 94394.19 540.00
+  209_bld House$IndustrialFactoryTank1 1 112676.66 94461.68 540.00
+  210_bld House$IndustrialFactoryTank1 1 112723.45 94444.04 540.00
+  211_bld House$IndustrialFactoryTank1 1 112711.95 94493.13 540.00
+  212_bld House$RussiaPiterNaber100m 1 112596.39 94065.77 450.00
+  213_bld House$RussiaPiterNaber100m 1 112646.16 94065.79 450.00
+  214_bld House$RussiaPiterNaber100m 1 112758.73 94054.15 435.00
+  215_bld House$RussiaPiterNaber100m 1 112831.16 94073.67 435.00
+  216_bld House$RussiaPiterNaber100m 1 112941.11 94153.22 450.00
+  217_bld House$RussiaPiterNaber100m 1 112988.01 94153.22 450.00
+  218_bld House$RussiaPiterNaber100m 1 113063.07 94162.60 435.00
+  219_bld House$RussiaPiterNaber100m 1 113117.10 94176.86 435.00
+  220_bld House$RussiaPiterNaber100m 1 113018.04 94282.31 630.00
+  221_bld House$RussiaPiterNaber100m 1 112922.72 94282.31 630.00
+  222_bld House$RussiaPiterNaber100m 1 112824.40 94282.31 630.00
+  223_bld House$RussiaPiterNaber100m 1 112680.31 94323.96 645.00
+  224_bld House$RussiaPiterNaber100m 1 112633.77 94336.72 645.00
+  225_bld House$RussiaPiterNaber100m 1 112548.59 94388.13 655.00
+  226_bld House$RussiaPiterNaber100m 1 112495.30 94412.52 655.00
+  227_bld House$RussiaPiterNaber100m 1 112414.10 94441.79 645.00
+  228_bld House$RussiaPiterNaber100m 1 112321.19 94466.56 645.00
+  229_bld House$RussiaPiterNaber100m 1 112247.26 94478.57 630.00
+  230_bld House$RussiaPiterNaber100m 1 112157.95 94470.69 620.00
+  231_bld House$RussiaPiterNaber100m 1 111082.03 95411.59 585.00
+  232_bld House$IndustrialFactoryWarenHouse1 1 111026.48 95388.20 675.00
+  233_bld House$IndustrialFactoryWarenHouse1 1 111052.21 95413.29 675.00
+  234_bld House$IndustrialFactoryWarenHouse1 1 111078.59 95439.67 675.00
+  235_bld House$IndustrialFactoryWarenHouse1 1 111256.80 95472.48 360.00
+  236_bld House$IndustrialFactoryWarenHouse1 1 111292.82 95472.48 360.00
+  237_bld House$IndustrialFactoryWarenHouse1 1 111328.21 95472.48 360.00
+  238_bld House$IndustrialFactoryWarenHouse1 1 111364.88 95471.83 360.00
+  239_bld House$IndustrialFactoryWarenHouse1 1 112292.96 95302.40 405.00
+  240_bld House$IndustrialFactoryWarenHouse1 1 112318.51 95276.85 405.00
+  241_bld House$IndustrialFactoryWarenHouse1 1 112344.06 95250.82 405.00
+  242_bld House$IndustrialFactoryWarenHouse1 1 112369.61 95225.27 405.00
+  243_bld House$IndustrialFactoryWarenHouse1 1 112350.81 95269.62 405.00
+  244_bld House$IndustrialFactoryWarenHouse1 1 112363.34 95282.15 405.00
+  245_bld House$IndustrialFactoryWarenHouse1 1 112855.53 94948.08 365.00
+  246_bld House$IndustrialFactoryWarenHouse1 1 112891.69 94944.71 365.00
+  247_bld House$IndustrialFactoryWarenHouse1 1 112928.33 94941.33 365.00
+  248_bld House$IndustrialFactoryWarenHouse1 1 112964.96 94937.96 365.00
+  249_bld House$IndustrialFactoryWarenHouse1 1 113000.15 94936.51 360.00
+  250_bld House$IndustrialFactoryWarenHouse1 1 113036.31 94936.51 360.00
+  251_bld House$IndustrialFactoryWarenHouse1 1 113072.46 94936.51 360.00
+  252_bld House$IndustrialFactoryWarenHouse1 1 113051.74 94954.83 360.00
+  253_bld House$IndustrialFactoryWarenHouse1 1 113051.74 94973.15 360.00
+  254_bld House$IndustrialFactoryWarenHouse1 1 113051.74 94991.47 360.00
+  255_bld House$IndustrialFactoryWarenHouse1 1 113051.74 95009.79 360.00
+  256_bld House$IndustrialFactoryWarenHouse1 1 113015.58 95009.79 360.00
+  257_bld House$IndustrialFactoryWarenHouse1 1 112978.94 95010.27 360.00
+  258_bld House$IndustrialFactoryWarenHouse1 1 112942.31 95010.75 360.00
+  259_bld House$IndustrialFactoryWarenHouse1 1 112906.15 95011.23 360.00
+  260_bld House$IndustrialFactoryWarenHouse1 1 112329.60 95590.60 420.00
+  261_bld House$IndustrialFactoryWarenHouse1 1 112345.35 95599.54 420.00
+  262_bld House$IndustrialFactoryWarenHouse1 1 112361.09 95608.49 420.00
+  263_bld House$IndustrialFactoryWarenHouse1 1 112376.83 95617.43 420.00
+  264_bld House$IndustrialFactoryWarenHouse1 1 112392.22 95626.38 420.00
+  265_bld House$IndustrialFactoryWarenHouse1 1 112407.96 95635.32 420.00
+  266_bld House$IndustrialFactoryWarenHouse1 1 112423.70 95644.27 420.00
+  267_bld House$IndustrialFactoryWarenHouse1 1 112440.16 95653.21 420.00
+  268_bld House$IndustrialFactoryWarenHouse1 1 112420.48 95782.73 445.00
+  269_bld House$IndustrialFactoryWarenHouse1 1 112439.45 95784.52 445.00
+  270_bld House$IndustrialFactoryWarenHouse1 1 112457.69 95786.31 445.00
+  271_bld House$IndustrialFactoryWarenHouse1 1 112474.87 95788.10 445.00
+  272_bld House$IndustrialFactoryWarenHouse1 1 112493.12 95789.53 445.00
+  273_bld House$IndustrialFactoryWarenHouse1 1 112511.36 95790.96 445.00
+  274_bld House$IndustrialFactoryWarenHouse1 1 112528.54 95792.75 445.00
+  275_bld House$IndustrialFactoryWarenHouse1 1 112530.68 95708.31 700.00
+  276_bld House$IndustrialFactoryWarenHouse1 1 112565.03 95720.48 700.00
+  277_bld House$IndustrialFactoryWarenHouse1 1 112598.66 95732.64 700.00
+  278_bld House$IndustrialFactoryWarenHouse1 1 112333.14 94498.06 645.00
+  279_bld House$IndustrialFactoryWarenHouse1 1 112301.78 94506.57 645.00
+  280_bld House$IndustrialFactoryWarenHouse1 1 112268.10 94515.48 645.00
+  281_bld House$IndustrialFactoryWarenHouse1 1 112477.54 94447.34 385.00
+  282_bld House$IndustrialFactoryWarenHouse1 1 112511.22 94431.47 385.00
+  283_bld House$IndustrialFactoryWarenHouse1 1 112544.90 94415.60 385.00
+  284_bld House$IndustrialFactoryWarenHouse1 1 112578.97 94399.72 385.00
+  285_bld House$IndustrialFactoryWarenHouse1 1 112599.87 94379.98 465.00
+  286_bld House$IndustrialFactoryWarenHouse1 1 112618.07 94374.95 465.00
+  287_bld House$IndustrialFactoryWarenHouse1 1 112636.26 94369.92 465.00
+  288_bld House$IndustrialFactoryWarenHouse1 1 112726.46 94346.69 465.00
+  289_bld House$IndustrialFactoryWarenHouse1 1 112708.65 94351.33 465.00
+  290_bld House$IndustrialFactoryWarenHouse1 1 112690.46 94355.98 465.00
+  291_bld House$IndustrialFactoryWarenHouse1 1 112565.59 94043.68 540.00
+  292_bld House$IndustrialFactoryWarenHouse1 1 112601.98 94043.29 540.00
+  293_bld House$IndustrialFactoryWarenHouse1 1 112637.98 94042.91 540.00
+  294_bld House$IndustrialFactoryWarenHouse1 1 112673.98 94042.91 540.00
+  295_bld House$IndustrialFactoryWarenHouse1 1 112699.54 94043.68 615.00
+  296_bld House$IndustrialFactoryWarenHouse1 1 112715.41 94019.29 525.00
+  297_bld House$IndustrialFactoryWarenHouse1 1 112750.25 94028.58 525.00
+  298_bld House$IndustrialFactoryWarenHouse1 1 112785.09 94037.88 525.00
+  299_bld House$IndustrialFactoryWarenHouse1 1 112820.32 94047.55 525.00
+  300_bld House$IndustrialFactoryWarenHouse1 1 112855.55 94056.84 525.00
+  301_bld House$IndustrialFactoryWarenHouse1 1 112880.32 94061.88 540.00
+  302_bld House$IndustrialFactoryWarenHouse1 1 112879.94 94080.07 540.00
+  303_bld House$IndustrialFactoryWarenHouse1 1 112880.32 94099.04 540.00
+  304_bld House$IndustrialFactoryWarenHouse1 1 112880.32 94118.40 540.00
+  305_bld House$IndustrialFactoryWarenHouse1 1 112880.32 94130.01 540.00
+  306_bld House$IndustrialFactoryWarenHouse1 1 112917.49 94129.62 540.00
+  307_bld House$IndustrialFactoryWarenHouse1 1 112954.27 94129.24 540.00
+  308_bld House$IndustrialFactoryWarenHouse1 1 112991.04 94129.24 540.00
+  309_bld House$IndustrialFactoryWarenHouse1 1 113018.92 94137.75 450.00
+  310_bld House$IndustrialFactoryWarenHouse1 1 113048.34 94131.17 450.00
+  311_bld House$IndustrialFactoryWarenHouse1 1 113084.73 94139.30 450.00
+  312_bld House$IndustrialFactoryWarenHouse1 1 113118.80 94149.37 450.00
+  313_bld House$IndustrialFactoryWarenHouse1 1 113151.70 94158.66 450.00
+  314_bld House$IndustrialFactoryWarenHouse1 1 113048.34 94305.38 360.00
+  315_bld House$IndustrialFactoryWarenHouse1 1 113011.56 94305.77 360.00
+  316_bld House$IndustrialFactoryWarenHouse1 1 112955.43 94306.15 360.00
+  317_bld House$IndustrialFactoryWarenHouse1 1 112919.04 94306.15 360.00
+  318_bld House$IndustrialFactoryWarenHouse1 1 112883.81 94306.54 360.00
+  319_bld House$IndustrialFactoryWarenHouse1 1 112846.64 94306.93 360.00
+  320_bld House$IndustrialFactoryWarenHouse1 1 112810.25 94306.93 360.00
+  321_bld House$IndustrialFactoryWarenHouse1 1 112773.86 94306.93 360.00
+  322_bld House$IndustrialFactoryWarenHouse1 1 112746.77 94316.99 450.00
+  323_bld House$IndustrialFactoryWarenHouse1 1 112735.93 94335.96 450.00
+  324_bld House$IndustrialFactoryWarenHouse1 1 114790.74 93583.17 450.00
+  325_bld House$IndustrialFactoryWarenHouse1 1 114809.52 93582.68 450.00
+  326_bld House$IndustrialFactoryWarenHouse1 1 114836.48 93591.35 360.00
+  327_bld House$IndustrialFactoryWarenHouse1 1 114948.67 93591.83 360.00
+  328_bld House$IndustrialFactoryWarenHouse1 1 114985.75 93591.35 360.00
+  329_bld House$IndustrialFactoryWarenHouse1 1 115022.83 93590.87 360.00
+  330_bld House$IndustrialFactoryWarenHouse1 1 115059.42 93590.87 360.00
+  331_bld House$IndustrialFactoryWarenHouse1 1 115629.17 92665.27 590.00
+  332_bld House$IndustrialFactoryWarenHouse1 1 115673.92 92612.05 590.00
+  333_bld House$IndustrialFactoryWarenHouse1 1 115730.16 92534.65 590.00
+[Target]
+  7 0 1 1 500 1523 92785 0 0  Bridge45 2100 92956
+[Bridge]
+[House]
+
+[WEATHER]
+WindVelocity 5
+WindDirection 280
+WindTop 4092
+WindTurbulence 0
+WindGust 1

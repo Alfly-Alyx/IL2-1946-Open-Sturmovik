@@ -1,0 +1,220 @@
+[MAIN]
+  MAP Kuban/load.ini
+  TIME 7.0
+  WEAPONSCONSTANT 1
+  CloudType 1
+  CloudHeight 1500.0
+  player ZG76_II01
+  army 2
+  playerNum 2
+[Wing]
+  I_StG77a00
+  ZG76_II01
+  I_StG77a02
+  ZG76_II02
+  17Squadron02
+  17Squadron03
+  22Squadron01
+[I_StG77a00]
+  Planes 4
+  OnlyAI 1
+  Skill 3
+  Class air.JU_87B2
+  Fuel 75
+  weapons 1xSC500
+[I_StG77a00_Way]
+  NORMFLY 49678.01 123506.81 4250.00 300.00 &0
+  NORMFLY 77277.62 89006.39 4250.00 350.00 &0
+  GATTACK 98725.15 100783.55 4250.00 350.00 0_Chief 0 &0
+  NORMFLY 32600.80 154560.64 4250.00 350.00 &0
+  NORMFLY 17416.87 174210.44 1000.00 300.00 &0
+  LANDING 10525.16 174597.25 0 0 &0
+[ZG76_II01]
+  Planes 4
+  Skill 3
+  skin0 Nacke swastika C4.bmp
+  skin1 Nacke swastika C4.bmp
+  skin2 Nacke swastika C4.bmp
+  skin3 Nacke swastika C4.bmp
+  Class air.BF_110G2
+  Fuel 100
+  weapons default
+[ZG76_II01_Way]
+  NORMFLY 50835.01 125436.54 4500.00 300.00 &0
+  NORMFLY 50865.60 124366.11 4500.00 300.00 I_StG77a00 0 &0
+  NORMFLY 58028.44 115621.14 5000.00 350.00 &0
+  NORMFLY 92220.08 87572.69 5000.00 350.00 I_StG77a00 2 &0
+  NORMFLY 32377.51 154337.35 4750.00 350.00 &0
+  NORMFLY 17640.16 173763.86 1000.00 400.00 &0
+  LANDING 10482.88 174597.25 0 0 &0
+[I_StG77a02]
+  Planes 4
+  OnlyAI 1
+  Skill 3
+  Class air.JU_87B2
+  Fuel 100
+  weapons 1xSC500
+[I_StG77a02_Way]
+  NORMFLY 48128.97 122691.55 4000.00 350.00 &0
+  NORMFLY 77706.02 86397.88 4000.00 300.00 &0
+  GATTACK 98472.29 97888.65 4000.00 350.00 4_Chief 2 &0
+  NORMFLY 30980.89 153666.07 2500.00 350.00 &0
+  NORMFLY 17313.73 173978.02 1250.00 250.00 &0
+[ZG76_II02]
+  Planes 4
+  Skill 3
+  skin0 Nacke swastika C4.bmp
+  skin1 Nacke swastika C4.bmp
+  skin2 Nacke swastika C4.bmp
+  skin3 Nacke swastika C4.bmp
+  Class air.BF_110C4
+  Fuel 100
+  weapons default
+[ZG76_II02_Way]
+  NORMFLY 45769.97 122136.47 4200.00 350.00 &0
+  NORMFLY 47014.00 121948.14 4200.00 350.00 I_StG77a02 0 &0
+  NORMFLY 77115.72 84520.46 4200.00 350.00 17Squadron02 2 &0
+  NORMFLY 97132.53 98067.47 3750.00 350.00 &0
+  NORMFLY 17416.87 174433.73 1000.00 350.00 &0
+  LANDING 10477.71 174573.53 0 0 &0
+[17Squadron02]
+  Planes 3
+  Skill 1
+  skin0 BoBHurricaneMkI.bmp
+  skin1 BoBHurricaneMkI.bmp
+  skin2 BoBHurricaneMkI.bmp
+  Class air.HurricaneMkIa
+  Fuel 75
+  weapons default
+[17Squadron02_Way]
+  NORMFLY 90167.75 119926.19 2000.00 300.00 &0
+  NORMFLY 110211.08 99976.96 2000.00 300.00 &0
+  NORMFLY 89979.55 79933.63 2000.00 300.00 I_StG77a02 1 &0
+  NORMFLY 70124.42 99882.86 2000.00 300.00 &0
+  NORMFLY 91014.65 120208.49 2000.00 300.00 &0
+  NORMFLY 111246.18 99882.86 2000.00 300.00 &0
+  NORMFLY 91391.05 80121.83 2000.00 300.00 &0
+  NORMFLY 71253.62 99976.96 2000.00 300.00 &0
+  NORMFLY 90073.65 110139.78 1000.00 300.00 &0
+  LANDING 93064.25 105758.25 0 0 &0
+[17Squadron03]
+  Planes 4
+  Skill 2
+  skin0 BoBHurricaneMkI.bmp
+  skin1 BoBHurricaneMkI.bmp
+  skin2 BoBHurricaneMkI.bmp
+  skin3 BoBHurricaneMkI.bmp
+  Class air.HurricaneMkIa
+  Fuel 75
+  weapons default
+[17Squadron03_Way]
+  NORMFLY 102464.99 118799.05 3000.00 250.00 &0
+  NORMFLY 57891.87 105762.12 3000.00 250.00 ZG76_II01 2 &0
+  NORMFLY 106374.32 155515.56 3000.00 250.00 ZG76_II01 2 &0
+  NORMFLY 70339.36 107896.66 3000.00 250.00 &0
+  NORMFLY 89325.59 109763.51 1000.00 250.00 &0
+  LANDING 93064.25 105758.25 0 0 &0
+[22Squadron01]
+  Planes 3
+  Skill 3
+  Class air.GLADIATOR2
+  Fuel 100
+  weapons default
+  StartTime 8
+[22Squadron01_Way]
+  TAKEOFF 93064.25 105758.25 0 0 &0
+  NORMFLY 104155.64 95639.65 1500.00 250.00 I_StG77a00 2 &0
+  NORMFLY 93374.92 85404.34 1500.00 250.00 ZG76_II01 3 &0
+  NORMFLY 81786.47 96849.16 1500.00 250.00 ZG76_II01 3 &0
+  NORMFLY 91747.18 105610.32 1500.00 250.00 I_StG77a00 2 &0
+  NORMFLY 102883.17 95568.99 1500.00 250.00 I_StG77a00 2 &0
+  NORMFLY 92107.61 85545.68 1500.00 250.00 &0
+  NORMFLY 80333.08 96851.11 1500.00 250.00 &0
+  NORMFLY 89781.71 110038.59 1000.00 250.00 &0
+  LANDING 93005.91 105758.25 0 0 &0
+[Chiefs]
+  0_Chief Ships.Tramp 1 0 2 1.0
+  1_Chief Ships.Tramp 1 0 2 1.0
+  2_Chief Ships.Tramp 1 0 2 1.0
+  3_Chief Ships.Tramp 1 0 2 1.0
+  4_Chief Ships.Destroyer_USSR_Type7 1 0 2 1.0
+[0_Chief_Road]
+  99588.76 105436.15 120.00 0 2 2.5722224712371826
+  97724.19 100174.06 120.00 0 2 2.5722224712371826
+  20766.27 51175.90 120.00
+[1_Chief_Road]
+  100928.52 104542.97 120.00 0 2 2.5722224712371826
+  98789.23 99258.10 120.00 0 2 2.5722224712371826
+  21436.14 49389.56 120.00
+[2_Chief_Road]
+  99588.76 103649.80 120.00 0 2 2.5722224712371826
+  97579.12 98960.64 120.00 0 2 2.5722224712371826
+  20096.38 50059.44 120.00
+[3_Chief_Road]
+  102268.27 104989.55 120.00 0 2 2.5722224712371826
+  99338.65 98628.63 120.00 0 2 2.5722224712371826
+  22999.20 48273.09 120.00
+[4_Chief_Road]
+  104277.91 103649.80 120.00 0 2 6.94444465637207
+  103173.20 97754.93 120.00 0 2 2.7777777777777777
+  93113.21 92038.52 120.00 0 2 2.7777777777777777
+  28134.94 47156.63 120.00
+[NStationary]
+  0_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 94630.87 104101.59 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 93687.99 104888.85 360.00 0.0 0
+  2_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 93233.52 106696.22 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 96815.05 108994.99 360.00 0.0 0
+  4_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 96772.08 108894.73 360.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 96270.77 110455.95 360.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Nimrod 2 10680.78 175512.89 360.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Nimrod 2 11360.24 175059.92 360.00 0.0 0
+  8_Static vehicles.artillery.Artillery$Flak30_20mm 2 9888.08 173889.74 360.00 0.0 0
+  9_Static vehicles.artillery.Artillery$Flak30_20mm 2 11209.24 174040.73 360.00 0.0 0
+  10_Static vehicles.artillery.Artillery$Flak30_20mm 2 12228.43 175135.42 360.00 0.0 0
+  11_Static vehicles.artillery.Artillery$Flak30_20mm 2 9812.58 175097.67 360.00 0.0 0
+  12_Static vehicles.artillery.Artillery$Flak30_20mm 2 10303.30 167925.61 360.00 0.0 0
+  13_Static vehicles.artillery.Artillery$Flak30_20mm 2 9699.34 167585.88 360.00 0.0 0
+  14_Static vehicles.artillery.Artillery$Flak30_20mm 2 16758.15 169624.25 360.00 0.0 0
+  15_Static vehicles.artillery.Artillery$Flak30_20mm 2 17022.39 170190.47 360.00 0.0 0
+  16_Static ships.Ship$Niobe 2 19147.33 164267.84 360.00 0.0 0 2 1.0
+  17_Static vehicles.artillery.Artillery$Flak18_88mm 2 24419.95 153563.64 360.00 0.0 0
+  18_Static vehicles.artillery.Artillery$Flak18_88mm 2 22887.32 152286.45 360.00 0.0 0
+  19_Static vehicles.artillery.Artillery$Flak18_88mm 2 21482.42 150498.39 360.00 0.0 0
+  20_Static vehicles.stationary.Siren$SirenCity 1 92053.39 106414.58 360.00 0.0
+[Buildings]
+[Target]
+  4 0 1 20 500 44344 125047 0 0 I_StG77a00 49678 123506
+[StaticCamera]
+  92123 106484 100
+  97832 101360 250
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 146926.91 187831.33 1
+  FrontMarker1 124374.30 166395.18 1
+  FrontMarker2 104277.91 140269.88 1
+  FrontMarker3 81948.59 121513.25 1
+  FrontMarker4 65201.61 102979.92 1
+  FrontMarker5 29697.99 81543.78 1
+  FrontMarker6 11164.66 82436.95 1
+  FrontMarker7 118345.38 190957.43 2
+  FrontMarker8 115665.86 174880.32 2
+  FrontMarker9 89987.15 157686.75 2
+  FrontMarker10 69890.76 133794.38 2
+  FrontMarker11 51580.72 115930.92 2
+  FrontMarker12 30367.87 109678.71 2
+  FrontMarker13 10718.07 110125.30 2
+
+
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 9
+WindDirection 180
+WindTop 6180
+WindTurbulence 0
+WindGust 0

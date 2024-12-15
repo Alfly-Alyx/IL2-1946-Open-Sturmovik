@@ -1,0 +1,177 @@
+[MAIN]
+  MAP SandsOfTime/load.ini
+  TIME 7.75
+  CloudType 1
+  CloudHeight 1400.0
+  player i0100
+  army 2
+  playerNum 0
+[Wing]
+  i0100
+  gb0100
+  i0101
+  gb0101
+[i0100]
+  Planes 4
+  Skill 2
+  skin0 MC-200-3-Desert.bmp
+  skin1 MC-200-3-Desert.bmp
+  skin2 MC-200-3-Desert.bmp
+  skin3 MC-200-3-Desert.bmp
+  Class air.MC_200_3
+  Fuel 100
+  weapons default
+[i0100_Way]
+  TAKEOFF 12842.83 26740.23 0 0 &0
+  NORMFLY 20958.06 29660.85 1000.00 300.00 &0
+  NORMFLY 25970.32 32908.20 1000.00 300.00 &0
+  NORMFLY 32297.34 33648.02 1000.00 300.00 &0
+  NORMFLY 37388.22 34892.77 1000.00 300.00 &0
+  NORMFLY 39162.56 32686.32 1000.00 300.00 &0
+  NORMFLY 37597.68 31511.44 1000.00 300.00 gb0100 3 &0
+  NORMFLY 34721.53 30812.95 1000.00 300.00 &0
+  NORMFLY 31064.70 31149.08 1000.00 300.00 &0
+  NORMFLY 29790.97 33614.36 1000.00 300.00 &0
+  NORMFLY 32420.60 35381.14 1000.00 300.00 &0
+  NORMFLY 36036.34 35052.43 1000.00 300.00 &0
+  NORMFLY 39076.85 33819.80 1000.00 300.00 &0
+  NORMFLY 39693.17 31518.87 1000.00 300.00 &0
+  NORMFLY 37803.12 30409.50 1000.00 300.00 &0
+  NORMFLY 34351.73 29957.53 1000.00 300.00 &0
+  NORMFLY 30530.55 30409.50 1000.00 300.00 &0
+  NORMFLY 28763.77 33737.62 1000.00 300.00 &0
+  NORMFLY 29914.24 35874.19 1000.00 300.00 &0
+  NORMFLY 34516.09 36901.39 1000.00 300.00 &0
+  NORMFLY 38172.91 36038.55 1000.00 300.00 &0
+  NORMFLY 41131.25 32587.16 1000.00 300.00 &0
+  NORMFLY 39775.34 29711.00 1000.00 300.00 &0
+  NORMFLY 33324.54 28930.33 1000.00 300.00 &0
+  NORMFLY 27531.13 30204.06 1000.00 300.00 &0
+  NORMFLY 20340.74 32299.54 1000.00 300.00 &0
+  NORMFLY 9493.53 27533.34 1000.00 300.00 &0
+  LANDING 12842.83 26740.23 0 0 &0
+[gb0100]
+  Planes 4
+  Skill 1
+  skin0 BlenheimMk1-Mediterranean.bmp
+  skin1 BlenheimMk1-Mediterranean.bmp
+  skin2 BlenheimMk1-Mediterranean.bmp
+  skin3 BlenheimMk1-Mediterranean.bmp
+  Class air.BLENHEIM1
+  Fuel 100
+  weapons 2x500
+  StartTime 5
+[gb0100_Way]
+  NORMFLY 36406.13 50953.47 1500.00 300.00 &0
+  NORMFLY 35091.32 48282.76 1500.00 300.00 &0
+  NORMFLY 35173.49 39654.29 1500.00 300.00 &0
+  GATTACK 35214.58 33039.12 1000.00 300.00 0_Chief 0 &0
+  NORMFLY 43637.61 31107.99 1500.00 300.00 &0
+  NORMFLY 51033.44 37024.66 1500.00 300.00 &0
+[i0101]
+  Planes 4
+  Skill 3
+  skin0 G50-Desert.bmp
+  skin1 G50-Desert.bmp
+  skin2 G50-Desert.bmp
+  skin3 G50-Desert.bmp
+  Class air.G50
+  Fuel 100
+  weapons default
+[i0101_Way]
+  TAKEOFF 4998.27 10456.93 0 0 &0
+  NORMFLY 23709.95 24159.72 1000.00 300.00 &0
+  NORMFLY 34351.73 34760.41 1500.00 300.00 &0
+  NORMFLY 37515.51 32135.19 1500.00 300.00 gb0101 3 &0
+  NORMFLY 32297.34 31888.66 1500.00 300.00 &0
+  NORMFLY 32050.81 34518.29 1500.00 300.00 &0
+  NORMFLY 36611.57 34107.41 1500.00 300.00 &0
+  NORMFLY 28188.54 23301.28 1000.00 300.00 &0
+  LANDING 4998.27 10456.93 0 0 &0
+[gb0101]
+  Planes 4
+  Skill 1
+  skin0 HurriMkI-Mediterranean.bmp
+  skin1 HurriMkI-Mediterranean.bmp
+  skin2 HurriMkI-Mediterranean.bmp
+  skin3 HurriMkI-Mediterranean.bmp
+  Class air.HurricaneMkIa
+  Fuel 100
+  weapons default
+  StartTime 5
+[gb0101_Way]
+  NORMFLY 35748.72 50994.56 1500.00 300.00 gb0100 0 &0
+  NORMFLY 34721.53 48282.76 1500.00 300.00 &0
+  NORMFLY 34762.61 39736.46 1500.00 300.00 &0
+  NORMFLY 35131.28 33019.54 1500.00 300.00 &0
+  NORMFLY 43678.70 30656.02 1500.00 300.00 &0
+  NORMFLY 50869.09 36449.42 1500.00 300.00 &0
+[Chiefs]
+  0_Chief Ships.Illmarinen 2 0 2 1.0
+  1_Chief Ships.Niobe 2 0 2 1.0
+  2_Chief Ships.Vainamoinen 2 0 2 1.0
+  3_Chief Ships.MBoat 2 0 2 1.0
+  4_Chief Ships.MFP 2 0 2 1.0
+[0_Chief_Road]
+  38083.02 33539.72 120.00 0 2 3.8583335876464844
+  31723.36 32420.42 120.00
+[1_Chief_Road]
+  37812.51 33537.38 120.00 0 2 3.8583335876464844
+  31751.28 32400.74 120.00
+[2_Chief_Road]
+  37880.12 33446.75 120.00 0 2 3.8583335876464844
+  31803.36 32386.67 120.00
+[3_Chief_Road]
+  37932.82 33531.10 120.00 0 2 6.94444465637207
+  31800.82 32397.89 120.00
+[4_Chief_Road]
+  37950.91 33490.93 120.00 0 2 6.94444465637207
+  31818.71 32374.90 120.00
+[NStationary]
+  0_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 31235.25 31643.00 360.00 0.0
+  1_Static vehicles.stationary.Stationary$OpelBlitz6700A_radio 2 31224.97 31659.74 360.00 0.0
+  2_Static vehicles.stationary.Stationary$Flak18_88mm 2 31251.22 31678.88 360.00 0.0
+  3_Static vehicles.stationary.Stationary$Flak18_88mm 2 31282.97 31671.30 360.00 0.0
+  4_Static vehicles.stationary.Stationary$Flak18_88mm 2 31289.75 31647.87 360.00 0.0
+  5_Static vehicles.stationary.Stationary$Flak18_88mm 2 31267.21 31628.86 360.00 0.0
+  6_Static vehicles.artillery.Artillery$Wirbelwind 2 31237.16 31666.66 360.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Wirbelwind 2 31247.31 31632.47 360.00 0.0 0
+[Buildings]
+  0_bld House$S_CASTLE 1 31261.79 31655.59 360.00
+  1_bld House$AirdromeBarrelBlock1 1 31276.12 31655.66 360.00
+  2_bld House$Tent_Pyramid_US 1 31242.50 31662.91 360.00
+  3_bld House$Tent_Pyramid_US 1 31246.33 31655.39 360.00
+  4_bld House$Tent_Pyramid_US 1 31242.24 31648.01 360.00
+  5_bld House$Tent_HQ_US 1 31248.04 31642.21 360.00
+  6_bld House$Tent_HQ_US 1 31234.99 31657.11 360.00
+  7_bld House$FurnitureSandbags_Round 1 31250.54 31678.73 360.00
+  8_bld House$FurnitureSandbags_Round 1 31282.31 31671.08 360.00
+  9_bld House$FurnitureSandbags_Round 1 31289.04 31647.75 360.00
+  10_bld House$FurnitureSandbags_Round 1 31266.63 31628.76 360.00
+  11_bld House$FurniturePalmAg1 1 31237.30 31630.40 360.00
+  12_bld House$FurniturePalmBg1 1 31223.65 31649.86 360.00
+  13_bld House$FurniturePalmAs1 1 31233.93 31673.72 360.00
+  14_bld House$FurniturePalmAs1 1 31242.99 31671.96 360.00
+  15_bld House$FurniturePalmAs1 1 31257.27 31634.30 360.00
+  16_bld House$FurniturePalmAs1 1 31219.43 31660.14 360.00
+  17_bld House$FurniturePalmAs1 1 31218.86 31637.63 360.00
+  18_bld House$FurniturePalmAs2 1 31228.66 31665.41 360.00
+  19_bld House$FurniturePalmAs2 1 31231.56 31636.67 360.00
+[Target]
+  0 1 0 0 500 35093 32927 0 3 gb0101 35131 33019
+  0 0 0 0 500 35291 33131 0 3 gb0100 35214 33039
+  3 2 1 90 501 13680 26751 750
+[Bridge]
+[House]
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 9
+WindDirection 40
+WindTop 4659
+WindTurbulence 0
+WindGust 1

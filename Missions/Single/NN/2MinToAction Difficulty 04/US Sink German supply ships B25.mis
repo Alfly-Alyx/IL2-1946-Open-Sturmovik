@@ -1,0 +1,211 @@
+[MAIN]
+  MAP Norway/load.ini
+  TIME 12.0
+  CloudType 6
+  CloudHeight 1500.0
+  player usa0100
+  army 1
+  playerNum 0
+[Wing]
+  usa0100
+  usa0101
+[usa0100]
+  Planes 2
+  Skill 2
+  Class air.B_25J1
+  Fuel 35
+  weapons 6x500lbs
+[usa0100_Way]
+  TAKEOFF 83853.72 57318.36 0 0 1_Static 0 0
+  GATTACK 84888.08 67915.66 300.0 350.0 110_Chief 0 0
+  NORMFLY 85160.47 70903.04 300.0 350.0 &0
+  GATTACK 84887.77 67925.01 333.0 300.0 117_Chief 0 0
+  NORMFLY 84652.02 65596.96 666.0 300.0 &0
+  NORMFLY 82121.39 57003.01 500.0 350.0 &0
+  LANDING 83851.79 57317.16 0 0 &0
+[usa0101]
+  Planes 2
+  Skill 2
+  Class air.B_25J1
+  Fuel 35
+  weapons 6x500lbs
+[usa0101_Way]
+  TAKEOFF 83852.47 57319.10 0 0 1_Static 0 0
+  GATTACK 84884.06 67919.90 300.0 350.0 115_Chief 0 0
+  NORMFLY 85158.44 70913.38 300.0 350.0 &0
+  GATTACK 84889.80 67921.61 666.0 300.0 111_Chief 0 0
+  NORMFLY 84653.93 65591.12 666.0 300.0 &0
+  NORMFLY 82104.95 56996.79 500.0 350.0 &0
+  LANDING 83849.99 57317.26 0 0 &0
+[Chiefs]
+  110_Chief Ships.Tanker 2 0 1 100.0
+  111_Chief Ships.Tramp 2 0 1 100.0
+  112_Chief Ships.Tramp 2 0 1 100.0
+  113_Chief Ships.Niobe 2 0 0 11.0
+  114_Chief Ships.Tral 2 0 1 100.0
+  115_Chief Ships.Tral 2 0 1 100.0
+  117_Chief Ships.Tral 2 0 1 100.0
+  0_Chief Ships.Niobe 2 0 0 11.0
+  1_Chief Ships.MFP 2 0 0 11.0
+  2_Chief Vehicles.Bulldozer_US 1
+  3_Chief Vehicles.WillisMBt_US 1
+  4_Chief Vehicles.Chevrolet_flatbed_US 1
+[110_Chief_Road]
+  85761.31 67691.55 120.00 0 2 7.2222
+  82748.28 64774.91 120.00
+[111_Chief_Road]
+  84480.28 67995.64 120.00 0 2 5.144444942474365
+  81003.06 64950.37 120.00
+[112_Chief_Road]
+  84870.60 67499.68 120.00 0 2 5.144444942474365
+  81129.56 64173.23 120.00
+[113_Chief_Road]
+  84654.95 69065.46 120.00 0 3 7.2222
+  81700.00 66300.00 120.00
+  79879.46 65304.38 120.00
+[114_Chief_Road]
+  85119.27 67971.63 120.00 0 2 7.2222
+  81635.29 64931.55 120.00
+[115_Chief_Road]
+  86057.35 68264.40 120.00 0 2 7.2222
+  82414.51 64838.55 120.00
+[117_Chief_Road]
+  84646.05 68638.01 120.00 0 2 7.2222
+  80567.41 65204.82 120.00
+[0_Chief_Road]
+  86357.20 68027.56 120.00 0 2 3.8583335876464844
+  82527.34 64135.88 120.00
+[1_Chief_Road]
+  85110.08 68704.04 120.00 0 2 5.555555820465088
+  81098.75 65459.74 120.00
+[2_Chief_Road]
+  84427.87 57400.44 120.00 0 2 1.6666667461395264
+  84582.09 57427.53 120.00
+[3_Chief_Road]
+  84099.55 57400.02 120.00 0 2 3.055555582046509
+  84098.55 57433.46 120.00
+[4_Chief_Road]
+  84718.65 57451.48 120.00 0 2 3.055555582046509
+  84697.01 57448.00 120.00 0 2 3.055555582046509
+  84690.67 57482.91 120.00 0 2 3.055555582046509
+  84631.04 57472.29 120.00 0 2 3.055555582046509
+  84620.97 57472.87 120.00
+[NStationary]
+  70_Static ships.Ship$Tramp 2 66110.38 132831.08 380.00 0.0 0 2 1.0
+  71_Static ships.Ship$Tramp 2 66281.17 132746.55 425.00 0.0 0 2 1.0
+  72_Static ships.Ship$Tramp 2 66414.34 132933.13 395.00 0.0 0 2 1.0
+  73_Static ships.Ship$Tramp 2 66448.28 132664.95 495.00 0.0 0 2 1.0
+  310_Static ships.Ship$Tramp 1 84111.25 57267.61 525.00 0.0 0 2 1.0
+  311_Static ships.Ship$Tramp 1 16510.65 14474.10 530.00 0.0 0 2 1.0
+  312_Static ships.Ship$Tramp 1 16589.66 14327.59 530.00 0.0 0 2 1.0
+  313_Static ships.Ship$Tramp 1 16605.57 14194.67 560.00 0.0 0 2 1.0
+  10_Static vehicles.planes.Plane$P_47D27 1 84044.94 57374.34 439.51 0.0 us
+  11_Static vehicles.planes.Plane$P_47D27 1 83989.37 57363.88 439.51 0.0 us
+  12_Static vehicles.planes.Plane$P_47D27 1 84018.08 57368.90 439.51 0.0 us
+  13_Static vehicles.planes.Plane$P_47D27 1 84075.45 57380.33 448.50 0.0 us
+  2_Static vehicles.planes.Plane$P_47D27 1 84534.65 57517.74 334.97 0.0 us
+  3_Static vehicles.planes.Plane$P_47D27 1 84553.02 57534.31 424.97 0.0 us
+  4_Static vehicles.stationary.Stationary$WillisMBt_US 1 84545.45 57529.13 394.97 0.0
+  9_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 84527.64 57521.77 364.97 0.0
+  14_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 84553.02 57527.84 664.97 0.0
+  15_Static vehicles.stationary.Stationary$ZIS6_fuel 1 84069.44 57378.01 545.00 0.0
+  16_Static vehicles.stationary.Stationary$ZIS6_fuel 1 83993.51 57361.82 515.00 0.0
+  17_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 83983.51 57360.15 560.00 0.0
+  18_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 84027.05 57369.36 440.00 0.0
+  19_Static vehicles.stationary.Stationary$DiamondT_US 1 84107.67 57299.94 615.00 0.0
+  20_Static vehicles.stationary.Stationary$DiamondT_US 1 84532.48 57530.57 560.00 0.0
+  21_Static vehicles.stationary.Stationary$GAZ_AAA 1 84542.19 57514.97 560.00 0.0
+  22_Static vehicles.stationary.Stationary$M16_US 1 83845.16 57283.40 500.00 0.0
+  23_Static vehicles.stationary.Stationary$M16_US 1 83831.92 57351.03 560.00 0.0
+  24_Static vehicles.stationary.Stationary$M3_75mm_GMC 1 84314.48 57422.40 440.00 0.0
+  25_Static vehicles.stationary.Stationary$M3_Halftrack_ppl 1 84286.72 57416.15 440.00 0.0
+  26_Static vehicles.stationary.Stationary$WillisMBtc_US 1 84013.39 57365.43 380.00 0.0
+  27_Static vehicles.stationary.Stationary$WillisMBtc_US 1 84120.74 57436.38 650.00 0.0
+  1_Static ships.Ship$RwySteelLow 1 84340.41 57403.07 530.00 0.0 0 2 1.0
+  51_Static vehicles.stationary.Stationary$M16_US 1 84823.53 57512.77 530.00 0.0
+  53_Static vehicles.stationary.Smoke$Smoke15 0 83919.04 57329.12 515.00 0.00
+  55_Static vehicles.stationary.Smoke$Smoke15 0 83965.96 57337.21 515.00 0.00
+  57_Static vehicles.stationary.Smoke$Smoke15 0 84013.64 57345.46 515.00 0.00
+  52_Static vehicles.stationary.Smoke$Smoke15 0 83871.71 57320.45 515.00 0.00
+  58_Static vehicles.stationary.Smoke$Smoke15 0 84060.89 57353.72 515.00 0.00
+  62_Static vehicles.stationary.Smoke$Smoke15 0 84108.31 57362.06 515.00 0.00
+  64_Static vehicles.stationary.Smoke$Smoke15 0 84155.48 57370.40 515.00 0.00
+  66_Static vehicles.stationary.Smoke$Smoke15 0 84202.74 57378.74 515.00 0.00
+  68_Static vehicles.stationary.Smoke$Smoke15 0 84249.99 57386.99 515.00 0.00
+  76_Static vehicles.stationary.Smoke$Smoke15 0 84344.92 57403.92 515.00 0.00
+  78_Static vehicles.stationary.Smoke$Smoke15 0 84391.92 57412.34 515.00 0.00
+  80_Static vehicles.stationary.Smoke$Smoke15 0 84439.09 57420.52 515.00 0.00
+  82_Static vehicles.stationary.Smoke$Smoke15 0 84486.60 57428.77 515.00 0.00
+  84_Static vehicles.stationary.Smoke$Smoke15 0 84533.60 57437.02 515.00 0.00
+  86_Static vehicles.stationary.Smoke$Smoke15 0 84580.77 57445.45 515.00 0.00
+  88_Static vehicles.stationary.Smoke$Smoke15 0 84628.20 57453.70 515.00 0.00
+  90_Static vehicles.stationary.Smoke$Smoke15 0 84675.62 57462.29 515.00 0.00
+  92_Static vehicles.stationary.Smoke$Smoke15 0 84722.79 57470.47 515.00 0.00
+  94_Static vehicles.stationary.Smoke$Smoke15 0 84770.04 57478.72 515.00 0.00
+  96_Static vehicles.stationary.Smoke$Smoke15 0 84816.96 57486.97 515.00 0.00
+  5_Static vehicles.planes.Plane$P_47D27 1 84625.70 57476.89 433.50 0.0 us
+  6_Static vehicles.planes.Plane$P_47D27 1 84598.49 57471.07 438.50 0.0 us
+  7_Static vehicles.planes.Plane$P_47D27 1 84673.16 57485.21 438.50 0.0 us
+  8_Static vehicles.stationary.Stationary$WillisMBt_US 1 84603.21 57474.70 394.97 0.0
+  0_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 84733.30 57498.36 439.97 0.0
+  28_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 84788.36 57507.29 439.97 0.0
+  29_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 84680.69 57488.16 439.97 0.0
+  30_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 84602.93 57469.31 709.97 0.0
+  31_Static vehicles.stationary.Stationary$DiamondT_US 1 84099.45 57297.81 615.00 0.0
+  32_Static vehicles.stationary.Stationary$ZIS6_fuel 1 84481.60 57496.24 440.00 0.0
+  33_Static ships.Ship$RwyTransp 1 84331.34 57433.95 530.00 0.0 0 2 1.0
+  34_Static ships.Ship$RwyTransp 1 84343.53 57371.30 530.00 0.0 0 2 1.0
+  35_Static vehicles.stationary.Smoke$Smoke15 0 84294.88 57394.86 515.00 0.00
+[Buildings]
+  0_bld House$GermanyCountryBarn 1 83967.78 57412.84 709.97
+  1_bld House$GermanyCountryBarn 1 84068.38 57429.63 709.97
+  2_bld House$GermanyCountryBarn 1 84157.29 57443.95 709.97
+  3_bld House$GermanyCountryBarn 1 84017.84 57420.87 709.97
+  4_bld House$GermanyCountryBarn 1 84112.04 57436.29 530.00
+  5_bld House$GermanyCountryBarn 1 84533.55 57540.78 530.00
+  6_bld House$AirdromeTank1 1 84480.21 57501.81 530.00
+  7_bld House$Henderstower 1 84387.83 57385.03 435.00
+  8_bld House$RussiaPiterNaberR 1 84107.42 57283.05 615.00
+[Target]
+  1 0 0 0 500 84669 67680 3000
+  3 1 1 30 501 84775 57478 100
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 123836.14 3534.14 1
+  FrontMarker1 114647.39 11591.97 1
+  FrontMarker2 112526.91 21487.55 1
+  FrontMarker3 111395.98 31524.50 1
+  FrontMarker4 106730.92 40995.98 1
+  FrontMarker5 99662.65 45095.58 1
+  FrontMarker6 94432.13 51881.12 1
+  FrontMarker7 91604.82 57959.84 1
+  FrontMarker8 82698.80 59514.86 1
+  FrontMarker9 73622.74 63159.42 1
+  FrontMarker10 68642.87 70134.30 1
+  FrontMarker11 67007.23 83546.99 1
+  FrontMarker12 65310.84 95421.69 1
+  FrontMarker13 67431.33 109275.50 1
+  FrontMarker14 78175.10 118181.53 1
+  FrontMarker15 76902.81 138114.06 1
+  FrontMarker16 88070.68 132742.17 2
+  FrontMarker17 84960.64 106872.29 2
+  FrontMarker18 87696.55 72907.39 2
+  FrontMarker19 102631.33 68986.35 2
+  FrontMarker20 121008.84 48912.45 2
+  FrontMarker21 137407.23 17812.05 2
+  FrontMarker22 136841.77 4947.79 2
+  FrontMarker23 126946.18 27566.27 2
+  FrontMarker24 90709.22 66003.19 2
+  FrontMarker25 87190.13 70299.23 2
+
+
+
+
+
+[WEATHER]
+WindVelocity 20
+WindDirection 320
+WindTop 9934
+WindTurbulence 0
+WindGust 1

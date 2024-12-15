@@ -1,0 +1,154 @@
+[MAIN]
+  MAP Hawaii/load.ini
+  TIME 10.0
+  CloudType 1
+  CloudHeight 1500.0
+  player UN_NN00
+  army 1
+  playerNum 0
+[Wing]
+  UN_NN00
+  UN_NN10
+  USA_BG_043z00
+  ja0100
+  ja0101
+[UN_NN00]
+  Planes 1
+  Skill 1
+  skin0 Akutan_Zero.bmp
+  numberOn0 0
+  Class air.A6M2_21
+  Fuel 75
+  weapons default
+[UN_NN00_Way]
+  TAKEOFF 286648.30 44226.27 0 0 &0
+  NORMFLY 294025.51 40456.26 1000.00 300.00 &0
+  NORMFLY 296622.11 45055.87 1500.00 330.00 &0
+  NORMFLY 289984.82 48512.72 2000.00 350.00 &0
+  NORMFLY 284196.96 51742.75 2000.00 325.00 &0
+  NORMFLY 279350.61 55394.31 2000.00 350.00 &0
+  NORMFLY 276151.02 51119.90 2000.00 350.00 &0
+  NORMFLY 281254.44 47157.61 500.00 325.00 &0
+  LANDING 285326.13 44937.24 0 0 &0
+[UN_NN10]
+  Planes 2
+  Skill 3
+  skin0 F6F3_43.bmp
+  skin1 F6F3_43.bmp
+  Class air.F6F3
+  Fuel 25
+  weapons none
+[UN_NN10_Way]
+  NORMFLY 278746.76 28585.78 2000.00 350.00 &0
+  NORMFLY 292215.66 36032.27 2000.00 350.00 &0
+  NORMFLY 292590.22 43186.64 2000.00 350.00 UN_NN00 2 &0
+  NORMFLY 285586.61 46509.54 2000.00 350.00 UN_NN00 3 &0
+  NORMFLY 283415.72 42238.97 2000.00 350.00 UN_NN00 4 &0
+  NORMFLY 290676.04 39046.71 2000.00 350.00 UN_NN00 5 &0
+  NORMFLY 294939.02 47233.18 2000.00 350.00 &0
+  NORMFLY 284457.81 52178.34 2000.00 350.00 &0
+  NORMFLY 278782.82 42057.82 2000.00 350.00 &0
+  NORMFLY 274372.40 34818.54 2000.00 350.00 &0
+  LANDING 264614.19 34787.87 0 0 &0
+[USA_BG_043z00]
+  Planes 4
+  Skill 2
+  Class air.B_17F
+  Fuel 50
+  weapons none
+[USA_BG_043z00_Way]
+  NORMFLY 319857.67 25027.28 2000.00 350.00 &0
+  NORMFLY 289124.33 48216.64 2000.00 350.00 &0
+  NORMFLY 277088.53 56970.93 2000.00 350.00 &0
+  NORMFLY 266219.72 72348.17 1000.00 350.00 &0
+  NORMFLY 247618.76 58095.41 1000.00 300.00 &0
+  LANDING 252518.25 53145.05 0 0 &0
+[ja0100]
+  Planes 1
+  Parachute 0
+  Skill 1
+  skin0 Buka_Drone.bmp
+  pilot0 CrashDummy.bmp
+  Class air.MXY_7
+  Fuel 100
+  weapons default
+  StartTime 6
+[ja0100_Way]
+  NORMFLY 289655.56 47753.08 2000.00 300.00 USA_BG_043z00 1 &0
+  NORMFLY 283133.80 52263.89 2000.00 300.00 USA_BG_043z00 2 &0
+  NORMFLY 270889.43 64787.65 2000.00 300.00 &0
+[ja0101]
+  Planes 1
+  Parachute 0
+  Skill 1
+  skin0 Buka_Drone.bmp
+  pilot0 CrashDummy.bmp
+  Class air.MXY_7
+  Fuel 100
+  weapons default
+  StartTime 6
+[ja0101_Way]
+  NORMFLY 289715.17 47811.59 2000.00 300.00 USA_BG_043z00 1 &0
+  NORMFLY 283322.20 52506.43 2000.00 300.00 USA_BG_043z00 2 &0
+  NORMFLY 272711.82 64756.55 2000.00 300.00 &0
+[NStationary]
+  0_Static vehicles.planes.Plane$PBN1 1 286441.13 45082.21 270.00 0.0 us
+  1_Static vehicles.planes.Plane$PBN1 1 286352.40 45169.33 360.00 0.0 us
+  2_Static vehicles.planes.Plane$PBN1 1 286333.41 45091.15 300.00 0.0 us
+  3_Static vehicles.planes.Plane$PBN1 1 286162.93 45099.81 390.00 0.0 us
+  4_Static vehicles.planes.Plane$F6F3 1 285568.86 44659.36 270.00 0.0 us
+  5_Static vehicles.planes.Plane$F6F3 1 285513.06 44651.53 300.00 0.0 us
+  6_Static vehicles.planes.Plane$F6F3 1 285494.11 44702.28 300.00 0.0 us
+  7_Static vehicles.planes.Plane$F6F3 1 285440.65 44690.10 300.00 0.0 us
+  8_Static vehicles.planes.Plane$F6F3 1 285425.77 44738.82 330.00 0.0 us
+  9_Static vehicles.planes.Plane$F6F3 1 285327.65 44654.91 330.00 0.0 us
+  10_Static vehicles.planes.Plane$F6F3 1 285364.87 44629.88 300.00 0.0 us
+  11_Static vehicles.planes.Plane$F6F3 1 285398.70 44610.93 300.00 0.0 us
+  12_Static vehicles.planes.Plane$F6F3 1 285433.21 44591.31 300.00 0.0 us
+  13_Static vehicles.planes.Plane$F6F3 1 285466.37 44573.04 300.00 0.0 us
+  14_Static vehicles.planes.Plane$F6F3 1 285502.91 44552.06 270.00 0.0 us
+  15_Static vehicles.planes.Plane$F4U1A 1 286410.30 44432.97 449.10 0.0 us
+  16_Static vehicles.planes.Plane$F4U1A 1 286429.17 44463.31 405.00 0.0 us
+  17_Static vehicles.planes.Plane$F4U1A 1 286447.44 44493.76 434.10 0.0 us
+  18_Static vehicles.planes.Plane$F4F4 1 286490.74 44465.34 464.10 0.0 us
+  19_Static vehicles.planes.Plane$F4F4 1 286513.07 44452.49 475.00 0.0 us
+  20_Static vehicles.planes.Plane$F4F4 1 286540.82 44439.63 474.10 0.0 us
+  21_Static vehicles.planes.Plane$F4F4 1 286565.18 44426.10 474.10 0.0 us
+  22_Static vehicles.planes.Plane$F4F4 1 286591.57 44411.21 474.10 0.0 us
+  23_Static vehicles.planes.Plane$F4F4 1 286325.64 44469.40 480.00 0.0 us
+  24_Static vehicles.planes.Plane$F4F4 1 286301.28 44483.61 480.00 0.0 us
+  25_Static vehicles.planes.Plane$F4F4 1 286274.21 44499.18 480.00 0.0 us
+  26_Static vehicles.planes.Plane$F4F4 1 286352.71 44455.87 480.00 0.0 us
+  27_Static vehicles.planes.Plane$F4F4 1 286248.84 44514.06 480.00 0.0 us
+  28_Static vehicles.planes.Plane$F4F4 1 286221.10 44530.30 480.00 0.0 us
+  29_Static vehicles.planes.Plane$F4F4 1 286194.03 44547.22 480.00 0.0 us
+  30_Static vehicles.planes.Plane$F4F4 1 286167.64 44563.46 480.00 0.0 us
+  31_Static vehicles.stationary.Stationary$WillisMB_US 1 285665.44 44612.18 420.00 0.0
+  32_Static vehicles.stationary.Stationary$WillisMB_US 1 285657.61 44615.27 480.00 0.0
+[Buildings]
+  0_bld House$Hangarmed 1 285340.84 44778.42 390.00
+  1_bld House$HangarLG 1 285672.99 44558.12 480.00
+  2_bld House$HangarLG 1 285791.81 44492.15 480.00
+  3_bld House$Hangarmed 1 285318.54 44738.10 390.00
+  4_bld House$Hangarmed 1 285296.02 44699.98 390.00
+  5_bld House$HangarLG 1 285917.65 44423.80 480.00
+  6_bld House$HangarPBY 1 286373.65 45063.85 480.00
+  7_bld House$HangarPBY 1 286331.24 45088.23 480.00
+  8_bld House$HQ_US 1 286188.83 44261.02 675.00
+[Target]
+  3 2 1 60 501 285897 44594 1100
+  0 0 0 0 1000 289709 47812 0 0 ja0101 289715 47811
+  0 0 0 0 1000 289660 47754 0 0 ja0100 289655 47753
+[Bridge]
+[House]
+
+
+
+
+
+[WEATHER]
+WindVelocity 3
+WindDirection 216
+WindTop 2540
+WindTurbulence 0
+WindGust 1

@@ -1,0 +1,168 @@
+[MAIN]
+  MAP Crimea/load.ini
+  TIME 16.0
+  CloudType 0
+  CloudHeight 1500.0
+  player 22Squadron00
+  army 1
+  playerNum 0
+[Wing]
+  RAF_No112SQN10
+  RAF_No112SQN11
+  22Squadron00
+  22Squadron01
+  Stab_JG5300
+  usa0123
+[RAF_No112SQN10]
+  Planes 4
+  Skill 2
+  skin0 !P40E-DGEN-112Sqn.bmp
+  skin1 !P40E-DGEN-112Sqn.bmp
+  skin2 !P40E-DGEN-112Sqn.bmp
+  skin3 !P40E-DGEN-112Sqn.bmp
+  Class air.P_40E
+  Fuel 100
+  weapons 500lb
+[RAF_No112SQN10_Way]
+  TAKEOFF 132068.14 105587.04 0 0 &0
+  NORMFLY 140780.30 141683.49 2000.00 300.00 &0
+  GATTACK 136836.35 148070.23 2000.00 300.00 13_Static 0 &0
+  LANDING 130532.31 105998.56 0 0 &0
+[RAF_No112SQN11]
+  Planes 4
+  Skill 2
+  skin0 !P40E-DGEN-112Sqn.bmp
+  skin1 !P40E-DGEN-112Sqn.bmp
+  skin2 !P40E-DGEN-112Sqn.bmp
+  skin3 !P40E-DGEN-112Sqn.bmp
+  Class air.P_40E
+  Fuel 100
+  weapons 500lb
+[RAF_No112SQN11_Way]
+  TAKEOFF 132068.14 105587.04 0 0 &0
+  NORMFLY 140611.03 140837.13 2000.00 300.00 &0
+  GATTACK 139256.85 147946.56 2000.00 300.00 1_Static 0 &0
+  LANDING 130532.31 105998.56 0 0 &0
+[22Squadron00]
+  Planes 4
+  Skill 2
+  skin0 QJA.bmp
+  skin1 QJB.bmp
+  skin2 QJC.bmp
+  skin3 QJD.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.SPITFIRE5C2
+  Fuel 100
+  weapons default
+[22Squadron00_Way]
+  TAKEOFF 115800.45 107047.19 0 0 &0
+  NORMFLY 139426.12 138805.87 2000.00 300.00 RAF_No112SQN11 1 &0
+  GATTACK 137985.90 146834.61 2000.00 300.00 4_Static 0 &0
+  NORMFLY 116235.85 114599.96 2000.00 300.00 &0
+  LANDING 115800.45 107047.19 0 0 &0
+[22Squadron01]
+  Planes 4
+  Skill 2
+  skin0 QJE.bmp
+  skin1 QJF.bmp
+  skin2 QJG.bmp
+  skin3 QJH.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.SPITFIRE5C2
+  Fuel 100
+  weapons default
+[22Squadron01_Way]
+  NORMFLY 115728.04 106982.72 2000.00 300.00 &0
+  NORMFLY 139256.85 138975.14 2000.00 300.00 &0
+  GATTACK 139256.85 146930.92 2000.00 300.00 2_Static 0 &0
+  NORMFLY 115220.22 115446.32 2000.00 300.00 &0
+  NORMFLY 115897.31 107659.81 2000.00 300.00 &0
+  LANDING 115800.45 107047.19 0 0 &0
+[Stab_JG5300]
+  Planes 3
+  Skill 1
+  skin0 vp_malta.bmp
+  skin1 vp_malta.bmp
+  skin2 vp_malta.bmp
+  Class air.BF_109G2
+  Fuel 100
+  weapons default
+[Stab_JG5300_Way]
+  NORMFLY 177512.33 148285.10 2000.00 300.00 &0
+  NORMFLY 141626.66 144561.11 3000.00 300.00 RAF_No112SQN10 1 &0
+  NORMFLY 230833.02 161826.86 3000.00 300.00 &0
+[usa0123]
+  Planes 4
+  Skill 1
+  skin0 tiv_generic_P-40E.bmp
+  skin1 tiv_generic_P-40E.bmp
+  skin2 tiv_generic_P-40E.bmp
+  skin3 tiv_generic_P-40E.bmp
+  noseart0 Classy_Gal.bmp
+  noseart1 All_Or_Nothing.bmp
+  noseart2 Ooga_Looga.bmp
+  noseart3 Queen_Of_Hearts.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.P_40E
+  Fuel 100
+  weapons 500lb
+[usa0123_Way]
+  TAKEOFF 73900.78 148593.61 0 0 &0
+  GATTACK 137984.96 145225.55 3000.00 300.00 9_Static 0 &0
+  LANDING 72311.84 148454.59 0 0 &0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Flak38_20mm 2 141309.80 147561.98 645.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Flak38_20mm 2 138729.33 148410.81 645.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Flak38_20mm 2 137863.51 147561.98 645.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Flak38_20mm 2 141615.38 146152.90 645.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Flak18_37mm 2 137507.00 146899.88 645.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Flak18_37mm 2 142481.20 148784.30 645.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Flak18_88mm 2 135996.07 149361.51 645.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Flak18_88mm 2 144178.87 149684.07 645.00 0.0 0
+  8_Static vehicles.artillery.Artillery$Flak18_88mm 2 144161.90 146135.93 645.00 0.0 0
+  9_Static vehicles.artillery.Artillery$Flak18_88mm 2 138270.96 145100.34 645.00 0.0 0
+  10_Static vehicles.artillery.Artillery$SdKfz251 2 139102.82 148393.84 645.00 0.0 0
+  11_Static vehicles.artillery.Artillery$PzVIB 2 136488.40 148071.28 645.00 0.0 0
+  12_Static vehicles.artillery.Artillery$PzVIB 2 136522.35 148376.86 655.00 0.0 0
+  13_Static vehicles.artillery.Artillery$PzVIB 2 136726.07 148173.14 665.00 0.0 0
+  14_Static vehicles.stationary.Smoke$Smoke5 0 136267.70 147256.39 665.00 0.00
+  15_Static vehicles.stationary.Smoke$Smoke2 0 134349.32 148020.35 665.00 4.61
+  16_Static vehicles.stationary.Smoke$Smoke8 0 136216.77 145270.11 665.00 5.73
+  19_Static ships.Ship$MAS501 2 141033.35 149925.28 635.00 0.0 0 2 1.0
+  21_Static ships.Ship$S80 2 140144.25 149606.65 485.00 0.0 0 2 1.0
+  22_Static ships.Ship$IJNFishJunk 2 139611.01 150632.11 485.00 0.0 0 2 1.0
+  23_Static ships.Ship$IJNFishJunk 2 139743.60 150684.49 485.00 0.0 0 2 1.0
+  24_Static ships.Ship$IJNFishJunk 2 139809.65 150806.24 485.00 0.0 0 2 1.0
+  25_Static ships.Ship$IJNFishJunk 2 139966.41 150756.90 515.00 0.0 0 2 1.0
+  26_Static ships.Ship$IJNFishJunk 2 139925.03 150694.04 475.00 0.0 0 2 1.0
+[Buildings]
+[Target]
+  3 2 1 90 501 115723 107660 500
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 115050.95 141852.76 1
+  FrontMarker1 146197.00 131188.62 1
+  FrontMarker2 132147.42 148623.64 2
+  FrontMarker3 146197.00 135420.42 2
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 2
+WindDirection 321
+WindTop 7859
+WindTurbulence 0
+WindGust 0

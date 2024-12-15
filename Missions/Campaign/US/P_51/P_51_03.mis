@@ -1,0 +1,109 @@
+[MAIN]
+  MAP Normandy/load.ini
+  TIME 10.25
+  CloudType 2
+  CloudHeight 1100.0
+  player usa0100
+  army 1
+  playerNum 0
+[Wing]
+  usa0112
+  usa0111
+  usa0100
+  I_JG2600
+[usa0112]
+  Planes 4
+  Skill 1
+  Class air.B_17G
+  Fuel 100
+  weapons 16x500
+[usa0112_Way]
+  NORMFLY 74653.60 100516.25 4500.00 230.00
+  NORMFLY 75609.73 77225.91 4500.00 230.00
+  NORMFLY 76207.30 67133.56 4500.00 230.00
+  GATTACK 76575.98 59100.41 4500.00 230.00
+  NORMFLY 76692.15 53661.79 4500.00 230.00
+  NORMFLY 84039.36 49055.22 4500.00 230.00
+  NORMFLY 88217.35 58696.75 4500.00 230.00
+  NORMFLY 81628.97 101676.89 4500.00 230.00
+[usa0111]
+  Planes 4
+  Skill 1
+  Class air.B_17G
+  Fuel 100
+  weapons 16x500
+[usa0111_Way]
+  NORMFLY 74653.42 100516.22 4600.00 230.00
+  NORMFLY 75609.62 77226.27 4600.00 230.00
+  NORMFLY 76208.22 67133.65 4600.00 230.00
+  GATTACK 76576.16 59098.57 4600.00 230.00
+  NORMFLY 76692.53 53665.86 4600.00 230.00
+  NORMFLY 84038.17 49057.49 4600.00 230.00
+  NORMFLY 88215.87 58697.04 4600.00 230.00
+  NORMFLY 81632.63 101680.41 4600.00 230.00
+[usa0100]
+  Planes 4
+  Skill 1
+  Class air.P_51D5NT
+  Fuel 100
+  weapons default
+[usa0100_Way]
+  NORMFLY 76130.04 100494.36 4700.00 300.00 usa0111 0
+  NORMFLY 77273.42 66764.53 4700.00 300.00 usa0111 2
+  NORMFLY 77463.99 54187.30 4700.00 300.00 usa0111 4
+  NORMFLY 83625.56 49994.89 4700.00 300.00 usa0112 5
+  NORMFLY 87309.79 58697.32 4700.00 300.00 usa0112 6
+  NORMFLY 80258.92 101383.66 4700.00 300.00 usa0112 7
+[I_JG2600]
+  Planes 3
+  Skill0 3
+  Skill1 2
+  Skill2 1
+  Skill3 1
+  Class air.FW_190A8
+  Fuel 100
+  weapons default
+  StartTime 10
+[I_JG2600_Way]
+  NORMFLY 76640.63 38307.59 4500.00 300.00
+  NORMFLY 76707.32 52122.71 4500.00 300.00 usa0112 4
+  NORMFLY 76989.06 57797.71 4500.00 300.00
+  NORMFLY 80289.41 59407.64 4500.00 300.00
+  NORMFLY 81496.86 54054.63 4500.00 300.00
+  LANDING 106459.52 16110.60 0 0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Flak18_88mm 2 74788.86 77823.26 585.00 0.0
+  1_Static vehicles.artillery.Artillery$Flak18_88mm 2 76180.59 77823.26 585.00 0.0
+  2_Static vehicles.artillery.Artillery$Flak18_88mm 2 75453.10 78013.04 585.00 0.0
+  3_Static vehicles.artillery.Artillery$Flak18_88mm 2 75706.14 71212.52 585.00 0.0
+  4_Static vehicles.artillery.Artillery$Flak18_88mm 2 76307.11 71433.94 585.00 0.0
+  5_Static vehicles.artillery.Artillery$Flak18_88mm 2 76686.68 64633.42 585.00 0.0
+  6_Static vehicles.artillery.Artillery$Flak18_88mm 2 75801.03 64506.90 585.00 0.0
+  7_Static vehicles.artillery.Artillery$Flak18_88mm 2 75611.25 58623.66 585.00 0.0
+  8_Static vehicles.artillery.Artillery$Flak18_88mm 2 78046.78 58813.45 585.00 0.0
+  9_Static vehicles.artillery.Artillery$Flak18_88mm 2 76054.07 58876.71 585.00 0.0
+  10_Static vehicles.artillery.Artillery$Flak18_88mm 2 86492.07 65835.37 585.00 0.0
+  11_Static vehicles.artillery.Artillery$Flak18_88mm 2 86840.00 64918.09 585.00 0.0
+  12_Static vehicles.artillery.Artillery$Flak18_88mm 2 87599.13 64918.09 585.00 0.0
+  13_Static vehicles.artillery.Artillery$Flak18_88mm 2 84499.36 74565.34 585.00 0.0
+  14_Static vehicles.artillery.Artillery$Flak18_88mm 2 84720.77 74122.51 585.00 0.0
+  15_Static vehicles.artillery.Artillery$Flak18_88mm 2 76472.85 59064.96 585.00 0.0
+[Buildings]
+[Target]
+  4 0 0 0 500 75685 99732 0 0 usa0100 76130 100494
+  0 1 0 0 1000 80114 59452 0 3 I_JG2600 80289 59407
+[StaticCamera]
+  76651 58648 20
+[Bridge]
+[House]
+
+
+
+
+
+[WEATHER]
+WindVelocity 8
+WindDirection 263
+WindTop 9367
+WindTurbulence 0
+WindGust 0

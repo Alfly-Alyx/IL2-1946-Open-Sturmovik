@@ -1,0 +1,392 @@
+[MAIN]
+  MAP NewGuinea/load.ini
+  TIME 9.0
+  CloudType 0
+  CloudHeight 1000.0
+  player 201FlightRAAF01
+  army 1
+  playerNum 0
+[MDS]
+  ZutiCarrierSpawnPoints_CV2 6
+  ZutiCarrierSpawnPoints_CV9 5
+  ZutiCarrierSpawnPoints_CVE 2
+  ZutiCarrierSpawnPoints_CVL 7
+  ZutiCarrierSpawnPoints_Akagi 8
+  ZutiCarrierSpawnPoints_IJN 6
+  ZutiCarrierSpawnPoints_HMS 5
+  ZutiNextMission_RedWon
+  ZutiNextMission_BlueWon
+  ZutiNextMission_Difficulty
+  ZutiNextMission_LoadDelay 60
+  ZutiTargets_StaticIcons 0
+  ZutiTargets_MovingIcons 1
+  ZutiTargets_CheckForWinner 0
+  ZutiRadar_ShowAircraft 1
+  ZutiRadar_StaticIconsIfNoRadar 0
+  ZutiRadar_CVsAsRadars 0
+  ZutiRadar_AircraftIconsWhite 0
+  ZutiRadar_RefreshInterval 10
+  ZutiFront_EnableHomeBaseCapturing 1
+  ZutiFront_CapturedBasePlanesRed
+  ZutiFront_CapturedBasePlanesBlue
+  ZutiFront_HideUnpoplatedAirstripsFromMinimap 0
+[RespawnTime]
+  Bigship 1800
+  Ship 1800
+  Aeroanchored 1800
+  Artillery 1800
+  Searchlight 1800
+[Wing]
+  201FlightRAAF01
+  93SquadronRAAF02
+  457SquadronRAAF00
+  IJN_C_Zuikaku_FS00
+  IJN_C_Zuikaku_FS01
+  IJN_C_Zuikaku_FS02
+  IJN_C_Zuikaku_FS03
+  IJN_C_Zuikaku_FS10
+  IJN_C_Zuikaku_FS11
+[201FlightRAAF01]
+  Planes 4
+  Skill0 2
+  Skill1 2
+  Skill2 1
+  Skill3 1
+  Class air.A_20C
+  Fuel 100
+  weapons 2x500
+[201FlightRAAF01_Way]
+  TAKEOFF 147331.44 218266.30 0 0 &1
+  NORMFLY 158353.93 237982.65 500.00 300.00 &1
+  NORMFLY 158040.27 238510.98 500.00 300.00 &1
+  NORMFLY 157109.09 238459.25 500.00 300.00 &1
+  LANDING 136864.32 217116.94 0 0 &1
+[93SquadronRAAF02]
+  Planes 4
+  Skill 2
+  skin0 Beau 93 Sqn RAAF Green Ghosts SK-E.bmp
+  skin1 Beau 93 Sqn RAAF Green Ghosts SK-L.bmp
+  skin2 Beau 93 Sqn RAAF Green Ghosts SK-N.bmp
+  skin3 Beau 93 Sqn RAAF Green Ghosts SK-P.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.BEAU10
+  Fuel 100
+  weapons 2xfuse2508x90rock
+[93SquadronRAAF02_Way]
+  TAKEOFF 145136.69 226571.03 0 0 &1
+  GATTACK 155407.36 232115.88 500.00 300.00 8_Chief 1 &1
+  GATTACK 157854.12 232874.09 500.00 300.00 13_Chief 0 &1
+  NORMFLY 161400.94 233561.10 500.00 300.00 IJN_C_Zuikaku_FS00 1 &1
+  NORMFLY 162385.79 233518.81 500.00 300.00 &1
+  NORMFLY 162282.32 232768.69 500.00 300.00 &1
+  LANDING 136635.45 217327.14 0 0 &1
+[457SquadronRAAF00]
+  Planes 4
+  Skill0 3
+  Skill1 2
+  Skill2 1
+  Skill3 0
+  skin0 $Spitfire_MkVc_RAAF_Hamilton.bmp
+  numberOn0 0
+  Class air.SPITFIRE5C2
+  Fuel 100
+  weapons default
+[457SquadronRAAF00_Way]
+  TAKEOFF 146771.66 219775.66 0 0 &1
+  NORMFLY 163822.37 234636.84 500.00 300.00 IJN_C_Zuikaku_FS00 2 &1
+  LANDING 136485.93 217265.58 0 0 &1
+[IJN_C_Zuikaku_FS00]
+  Planes 4
+  Skill 1
+  Class air.A6M2_21
+  Fuel 100
+  weapons default
+[IJN_C_Zuikaku_FS00_Way]
+  TAKEOFF 168892.86 240017.07 0 0 18_Chief 0 &0
+  NORMFLY 161912.56 233701.94 500.00 300.00 93SquadronRAAF02 3 &0
+  NORMFLY 151940.97 230077.88 500.00 300.00 93SquadronRAAF02 1 &0
+  LANDING 169066.77 240019.18 0 0 18_Chief 0 &0
+[IJN_C_Zuikaku_FS01]
+  Planes 4
+  Skill 1
+  Class air.A6M2_21
+  Fuel 100
+  weapons default
+  StartTime 2
+[IJN_C_Zuikaku_FS01_Way]
+  TAKEOFF 169788.82 240057.23 0 0 18_Chief 0 &0
+  NORMFLY 158627.81 237952.38 500.00 300.00 201FlightRAAF01 1 &0
+  LANDING 169722.47 240180.73 0 0 18_Chief 0 &0
+[IJN_C_Zuikaku_FS02]
+  Planes 4
+  Skill 1
+  Class air.A6M2_21
+  Fuel 100
+  weapons default
+  StartTime 6
+[IJN_C_Zuikaku_FS02_Way]
+  TAKEOFF 168590.01 239924.14 0 0 18_Chief 0 &1
+  NORMFLY 144120.27 225831.11 500.00 150.00 93SquadronRAAF02 6 &1
+  LANDING 169606.00 239981.08 0 0 18_Chief 0 &1
+[IJN_C_Zuikaku_FS03]
+  Planes 4
+  Skill 1
+  Class air.A6M2_21
+  Fuel 100
+  weapons default
+  StartTime 10
+[IJN_C_Zuikaku_FS03_Way]
+  NORMFLY 169719.10 239697.02 500.00 300.00 &0
+  NORMFLY 152498.01 229903.66 500.00 300.00 &0
+  LANDING 168389.28 240096.72 0 0 18_Chief 0 &0
+[IJN_C_Zuikaku_FS10]
+  Planes 4
+  Skill 1
+  Class air.A6M2_21
+  Fuel 100
+  weapons default
+  StartTime 15
+[IJN_C_Zuikaku_FS10_Way]
+  NORMFLY 169273.84 239828.17 500.00 300.00 &0
+  NORMFLY 157262.69 232119.40 500.00 300.00 &0
+  LANDING 169518.96 239641.92 0 0 &0
+[IJN_C_Zuikaku_FS11]
+  Planes 4
+  Skill 1
+  Class air.A6M2_21
+  Fuel 100
+  weapons default
+[IJN_C_Zuikaku_FS11_Way]
+  NORMFLY 168233.97 240344.84 500.00 300.00 &1
+  NORMFLY 141816.79 225486.91 500.00 300.00 &1
+  LANDING 167796.04 239915.68 0 0 18_Chief 0 &1
+[Chiefs]
+  0_Chief Ships.IJNYukikazeDD41 2 0 2 2.0
+  1_Chief Ships.Tramp 2 0 2 1.0
+  2_Chief Ships.Tramp 2 0 2 1.0
+  3_Chief Ships.Tramp 2 0 2 1.0
+  4_Chief Ships.IJNZuikakuCV 2 0 1 25.0
+  5_Chief Ships.DaihatsuLC 2 0 2 1.0
+  6_Chief Ships.DaihatsuLC 2 0 2 1.0
+  7_Chief Ships.DaihatsuLC 2 0 2 1.0
+  8_Chief Ships.DaihatsuLC 2 0 2 1.0
+  9_Chief Ships.DaihatsuLC 2 0 2 1.0
+  10_Chief Ships.DaihatsuLC 2 0 2 1.0
+  11_Chief Ships.DaihatsuLC 2 0 2 1.0
+  12_Chief Ships.DaihatsuLC 2 0 2 1.0
+  13_Chief Ships.DaihatsuLC 2 0 2 1.0
+  14_Chief Ships.DaihatsuLC 2 0 2 1.0
+  15_Chief Ships.DaihatsuLC 2 0 2 1.0
+  16_Chief Ships.DaihatsuLC 2 0 2 1.0
+  17_Chief Ships.IJNArashiDD41 2 0 1 10.0
+  18_Chief Ships.IJNAkagiCV 2 0 1 5.0
+  19_Chief Ships.Tramp 2 0 2 1.0
+  20_Chief Ships.Tramp 2 0 2 1.0
+  21_Chief Ships.Tramp 2 0 2 1.0
+  22_Chief Ships.IJNNowakiDD41 2 0 2 20.0
+[0_Chief_Road]
+  158254.64 237620.16 120.00 0 2 9.131389617919922
+  169139.03 224953.84 120.00
+[1_Chief_Road]
+  157412.28 236611.89 120.00 0 2 2.5722224712371826
+  156743.80 234166.22 120.00
+[2_Chief_Road]
+  158437.47 236704.00 120.00 0 2 2.5722224712371826
+  158628.53 233526.36 120.00
+[3_Chief_Road]
+  159530.94 235084.36 120.00 0 2 2.5722224712371826
+  166549.16 224181.89 120.00 0 2 2.5722224712371826
+  170028.81 223209.31 120.00
+[4_Chief_Road]
+  168994.31 239920.13 120.00 0 2 8.745555877685547
+  181631.73 229003.67 120.00 0 2 8.745555877685547
+  216417.61 238265.89 120.00
+[5_Chief_Road]
+  156554.36 233977.70 120.00 0 2 2.0577778816223145
+  155990.28 232205.83 120.00
+[6_Chief_Road]
+  156656.89 233989.13 120.00 0 2 2.0577778816223145
+  156166.89 232205.80 120.00
+[7_Chief_Road]
+  156805.02 233954.94 120.00 0 2 2.0577778816223145
+  156333.22 232012.09 120.00
+[8_Chief_Road]
+  156719.56 233972.03 120.00 0 2 2.0577778816223145
+  156201.09 232091.83 120.00
+[9_Chief_Road]
+  156850.59 233926.45 120.00 0 2 2.0577778816223145
+  156423.28 232012.09 120.00
+[10_Chief_Road]
+  158508.56 233504.84 120.00 0 2 2.0577778816223145
+  157625.45 231607.59 120.00
+[11_Chief_Road]
+  158257.92 232741.44 120.00 0 2 2.0577778816223145
+  157750.80 231601.88 120.00
+[12_Chief_Road]
+  158377.53 232711.31 120.00 0 2 2.0577778816223145
+  157802.08 231550.61 120.00
+[13_Chief_Road]
+  158330.80 232757.94 120.00 0 2 2.0577778816223145
+  157802.06 231430.95 120.00
+[14_Chief_Road]
+  158531.34 233447.88 120.00 0 2 2.0577778816223145
+  157733.73 231681.63 120.00
+[15_Chief_Road]
+  158554.14 233373.80 120.00 0 2 2.0577778816223145
+  157728.00 231613.27 120.00
+[16_Chief_Road]
+  158559.84 233282.64 120.00 0 2 2.0577778816223145
+  157802.06 231647.45 120.00
+[17_Chief_Road]
+  167679.05 239535.88 120.00 0 2 9.131389617919922
+  175480.09 232389.61 120.00 0 2 9.131389617919922
+  167907.30 239048.28 120.00 0 2 9.131389617919922
+  173701.88 233314.27 120.00 0 2 9.131389617919922
+  169035.25 238615.95 120.00 0 2 9.131389617919922
+  176179.72 232126.25 120.00 0 2 9.131389617919922
+  170112.66 237959.98 120.00 0 2 9.131389617919922
+  177822.50 231055.84 120.00 0 2 9.131389617919922
+  170401.95 237509.17 120.00
+[18_Chief_Road]
+  167839.52 240076.00 120.00 0 2 7.973888874053955
+  180188.22 229612.05 120.00
+[19_Chief_Road]
+  158970.47 237557.14 120.00 0 2 2.5722224712371826
+  159028.03 233317.36 120.00
+[20_Chief_Road]
+  159546.02 238612.30 120.00 0 2 2.5722224712371826
+  159526.83 233585.94 120.00
+[21_Chief_Road]
+  160025.63 238823.33 120.00 0 2 2.5722224712371826
+  159872.16 233643.48 120.00
+[22_Chief_Road]
+  162634.72 233010.41 120.00 0 2 9.131389617919922
+  157589.19 238439.63 120.00 0 2 9.131389617919922
+  168716.23 232127.91 120.00
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 155234.96 230909.19 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 157708.10 230909.19 360.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 156546.95 228135.26 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 153698.05 232820.95 360.00 0.0 0
+  4_Static vehicles.artillery.Artillery$HaGo 2 155459.87 231396.50 360.00 0.0 0
+  5_Static vehicles.artillery.Artillery$HaGo 2 157933.91 230496.85 360.00 0.0 0
+  6_Static vehicles.artillery.Artillery$HaGo 2 153285.71 233608.15 360.00 0.0 0
+[Buildings]
+  0_bld House$Bunker1 1 154360.81 232382.44 360.00
+  1_bld House$Bunker1 1 154446.27 231829.79 360.00
+  2_bld House$Bunker1 1 154167.09 231334.11 360.00
+  3_bld House$Bunker2 1 154273.88 230598.48 360.00
+  4_bld House$Bunker2 1 155580.06 229995.20 360.00
+  5_bld House$Bunker3 1 156189.69 229983.81 360.00
+  6_bld House$Bunker3 1 157596.97 230023.69 360.00
+  7_bld House$Bunker3 1 155899.12 229978.11 360.00
+  8_bld House$Bunker4 1 158725.07 230120.55 360.00
+  9_bld House$Bunker4 1 155046.40 231401.09 360.00
+  10_bld House$Bunker6 1 154377.90 232131.75 360.00
+  11_bld House$Bunker4 1 154538.36 230874.30 360.00
+  12_bld House$Bunker3 1 155038.80 231761.42 360.00
+  13_bld House$Bunker3 1 154839.39 231151.79 360.00
+  14_bld House$Bunker3 1 155864.94 230918.19 360.00
+  15_bld House$Bunker3 1 158166.71 230092.06 360.00
+  16_bld House$Bunker3 1 157374.77 230621.92 360.00
+  17_bld House$Bunker3 1 154731.14 230194.61 360.00
+  18_bld House$Bunker4 1 154349.41 231590.49 360.00
+  19_bld House$Bunker4 1 154451.97 230371.24 360.00
+  20_bld House$Bunker4 1 155118.57 230086.36 360.00
+  21_bld House$Bunker4 1 156237.68 226765.17 450.00
+  22_bld House$Bunker4 1 155236.39 226907.22 360.00
+  23_bld House$Bunker4 1 152953.70 229004.04 450.00
+  24_bld House$Bunker4 1 153204.76 229513.02 360.00
+  25_bld House$Bunker4 1 153616.24 230135.71 360.00
+  26_bld House$Bunker4 1 153735.54 233233.29 360.00
+  27_bld House$Bunker4 1 153210.74 232633.52 360.00
+  28_bld House$Bunker4 1 152827.49 232208.99 360.00
+  29_bld House$Bunker4 1 161161.58 224930.76 630.00
+  30_bld House$Bunker4 1 159170.70 224810.14 630.00
+  31_bld House$Bunker3 1 160017.61 224214.34 360.00
+  32_bld House$Bunker3 1 158675.14 224786.69 390.00
+  33_bld House$Bunker3 1 153209.83 226782.55 450.00
+  34_bld House$Bunker3 1 152236.12 233833.06 360.00
+  35_bld House$46LWBoxes 1 155689.75 231949.90 360.00
+  36_bld House$46LWBoxes 1 155779.32 231930.71 360.00
+  37_bld House$46LWBoxes 1 155824.11 231873.12 360.00
+  38_bld House$46LWBoxes 1 155907.29 231809.14 360.00
+  39_bld House$46LWBoxes 1 155990.46 231738.76 360.00
+  40_bld House$46LWBoxes 1 156118.42 231681.18 360.00
+  41_bld House$46LWBoxes 1 156252.79 231578.81 360.00
+  42_bld House$46LWBoxes 1 155472.21 232103.46 360.00
+  43_bld House$Bunker2 1 154742.83 231789.95 360.00
+  44_bld House$Bunker3 1 155209.89 231860.33 360.00
+  45_bld House$Bunker3 1 155433.83 231828.34 360.00
+  46_bld House$Bunker3 1 156278.38 231105.35 360.00
+  47_bld House$Bunker3 1 156399.94 231399.66 360.00
+  48_bld House$Bunker3 1 154627.66 232026.68 360.00
+  49_bld House$46Lichter1 1 155644.96 232026.68 360.00
+  50_bld House$46Lichter1 1 156489.52 231444.45 360.00
+  51_bld House$46Lichter1 1 156086.78 231732.67 360.00
+  52_bld House$46Lichter1 1 155860.15 231868.65 360.00
+[BornPlace]
+  1 3000 144543 226072
+  1 3000 146844 217925
+  2 3000 169028 239908
+  2 1550 156057 231489
+[BornPlace0]
+  A-20G
+  B-24J-100-CF
+  B-25H-1NA
+  B-25J-1NA
+  BeaufighterMkX
+  P-38J
+  P-40E
+  SpitfireMkVcFB
+  SpitfireMkVcLF
+[BornPlace1]
+  A-20G
+  B-24J-100-CF
+  B-25H-1NA
+  BeaufighterMkX
+  P-40E
+  SpitfireMkVcFB
+  SpitfireMkVcLF
+[BornPlace2]
+  A6M2-21
+[BornPlace3]
+  A6M2
+  A6M2-21
+  A6M3
+  A6M5
+  D3A1
+  Ki-43-Ia
+  Ki-43-Ib
+  Ki-43-Ic
+  Ki-43-II
+  Ki-43-II-Kai
+  Ki-61-I-Ko
+  Ki-61-I-Otsu
+  Ki-84-Ia
+  N1K1-J
+  N1K1-Ja
+[StaticCamera]
+  158718 231535 100
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 150614.12 235413.57 1
+  FrontMarker1 150458.39 232610.46 1
+  FrontMarker2 151081.30 229262.29 1
+  FrontMarker3 152794.32 225291.21 1
+  FrontMarker4 154818.79 224356.84 1
+  FrontMarker5 162138.03 223422.47 1
+  FrontMarker6 161359.39 225524.81 2
+  FrontMarker7 155441.70 225213.35 2
+  FrontMarker8 152716.45 226926.36 2
+  FrontMarker9 151859.94 229807.34 2
+  FrontMarker10 152794.32 234167.74 2
+  FrontMarker11 166031.24 223656.06 2
+  FrontMarker12 182460.61 224668.30 2
+  FrontMarker13 164629.69 217971.97 1
+  FrontMarker14 182772.07 217349.06 1
+  FrontMarker15 151237.03 227549.28 1

@@ -1,0 +1,178 @@
+[MAIN]
+  MAP Normandy/load1.ini
+  TIME 11.5
+  CloudType 2
+  CloudHeight 500.0
+  player 9AF_354FG_355FS00
+  army 1
+  playerNum 1
+[Wing]
+  9AF_354FG_355FS00
+  g0121
+  RAF_No003SQN22
+  g0122
+[9AF_354FG_355FS00]
+  Planes 4
+  Skill0 3
+  Skill1 2
+  Skill2 2
+  Skill3 2
+  skin0 354thFG_355thFS_Invasion.bmp
+  skin1 354thFG_355thFS_Invasion.bmp
+  skin2 354thFG_355thFS_Invasion.bmp
+  skin3 354thFG_355thFS_Invasion.bmp
+  pilot0 US_01.bmp
+  pilot1 US_02.bmp
+  pilot2 US_03.bmp
+  pilot3 US_04.bmp
+  Class air.P_51B
+  Fuel 75
+  weapons default
+[9AF_354FG_355FS00_Way]
+  NORMFLY 47587.47 101620.26 2000.0 400.0
+  NORMFLY 29551.30 89978.71 1250.0 350.0
+  NORMFLY 29535.21 83703.08 750.0 300.0
+  LANDING 33740.52 83381.74 0 0
+[g0121]
+  Planes 4
+  Skill
+  skin0 Generic_A8.bmp
+  skin1 Generic_A8.bmp
+  skin2 Generic_A8.bmp
+  skin3 Generic_A8.bmp
+  pilot0 De_00.bmp
+  pilot1 De_01.bmp
+  pilot2 De_02.bmp
+  pilot3 De_04.bmp
+  Class air.FW_190A8
+  Fuel 33
+  weapons default
+[g0121_Way]
+  NORMFLY 3116.60 51170.36 2000.0 400.0
+  NORMFLY 30529.35 81602.37 1000.0 300.0 9AF_354FG_355FS00 1
+  NORMFLY 24093.85 86311.27 1000.0 400.0 9AF_354FG_355FS00 2
+  NORMFLY 37435.73 83250.49 1000.0 400.0
+  NORMFLY 48761.03 33018.45 1000.0 300.0
+  LANDING 39530.43 29455.82 0 0
+[RAF_No003SQN22]
+  Planes 4
+  Skill
+  skin0 C_Sea_A_invasion.bmp
+  skin1 C_Sea_B_Invasion.bmp
+  skin2 C_Sea_A_invasion.bmp
+  skin3 C_Sea_B_Invasion.bmp
+  pilot0 GB_01.bmp
+  pilot1 GB_02.bmp
+  pilot2 GB_03.bmp
+  pilot3 GB_04.bmp
+  Class air.SPITFIRE9C
+  Fuel 100
+  weapons default
+[RAF_No003SQN22_Way]
+  NORMFLY 71422.50 75194.91 2000.0 300.0
+  NORMFLY 32409.99 80861.07 2000.0 300.0 g0121 1
+  NORMFLY 24745.33 86014.97 2000.0 300.0 g0121 2
+  NORMFLY 36805.64 83211.08 2000.0 300.0 g0121 3
+  NORMFLY 71855.93 79416.65 750.0 300.0
+  LANDING 79140.11 71286.98 0 0
+[g0122]
+  Planes 2
+  Skill
+  skin0 Generic_A8.bmp
+  skin1 Generic_A8.bmp
+  pilot0 De_05.bmp
+  pilot1 De_06.bmp
+  Class air.FW_190A8
+  Fuel 33
+  weapons default
+[g0122_Way]
+  NORMFLY 2425.47 50158.46 2050.0 400.0
+  NORMFLY 30529.35 81602.37 1050.0 300.0 9AF_354FG_355FS00 1
+  NORMFLY 24093.85 86311.27 1050.0 400.0 9AF_354FG_355FS00 2
+  NORMFLY 37435.73 83250.49 1050.0 400.0
+  NORMFLY 48761.10 33018.38 1050.0 295.0
+  LANDING 39530.43 29455.82 0 0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Flak18_88mm 2 26221.63 78823.50 465.00 0.0
+  1_Static vehicles.artillery.Artillery$Flak18_88mm 2 26990.68 78070.99 465.00 0.0
+  2_Static vehicles.artillery.Artillery$Flak18_88mm 2 25334.31 76861.79 465.00 0.0
+  3_Static vehicles.artillery.Artillery$Flak18_88mm 2 26454.67 75894.12 465.00 0.0
+  4_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 28815.61 83588.11 465.00 0.0
+  5_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 29443.54 83394.90 465.00 0.0
+  6_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 29676.58 84240.82 465.00 0.0
+  7_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 33668.50 83425.04 545.30 0.0
+  9_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 33626.16 83457.80 499.90 0.0
+  10_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 33664.56 83350.76 544.90 0.0
+  11_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 34629.85 83251.81 368.71 0.0
+  12_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 34626.45 83347.95 362.11 0.0
+  13_Static vehicles.stationary.Stationary$ZIS6_fuel 1 33821.66 83423.72 470.11 0.0
+  14_Static vehicles.stationary.Siren$SirenCity 1 33910.65 83385.48 365.61 0.0
+  8_Static vehicles.artillery.Artillery$M4A2_US 1 34040.25 83325.92 406.11 0.0
+  16_Static vehicles.artillery.Artillery$M4A2_76W_US 1 33968.94 83387.11 522.10 0.0
+  17_Static vehicles.stationary.Stationary$Chevrolet_medic_US 1 33867.28 83416.31 391.11 0.0
+  18_Static vehicles.stationary.Stationary$Chevrolet_radio_US 1 33891.96 83442.32 361.11 0.0
+  19_Static vehicles.stationary.Stationary$WillisMB_US 1 33886.33 83426.57 451.11 0.0
+  20_Static vehicles.artillery.Artillery$ZIS3 1 33937.22 83426.60 416.11 0.0
+  21_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 33837.02 83452.53 592.80 0.0
+  22_Static vehicles.lights.Searchlight$SL_ManualBlue 1 33649.46 83389.56 547.82 0.0
+  23_Static vehicles.lights.Searchlight$SL_ManualBlue 1 34638.09 83302.06 544.68 0.0
+[Buildings]
+  0_bld House$Tent_Pyramid_US 1 33889.19 83436.83 455.11
+  1_bld House$Tent_HQ_US 1 33897.70 83435.90 455.11
+  2_bld House$Tent_Pup_US 1 33905.39 83440.15 455.11
+  3_bld House$Tent_Pup_US 1 33909.33 83439.86 455.11
+  4_bld House$Tent_Pup_US 1 33913.05 83439.65 455.11
+  5_bld House$Tent_Pup_US 1 33916.71 83439.44 455.11
+  6_bld House$Tent_Pup_US 1 33904.69 83432.76 455.11
+  7_bld House$Tent_Pup_US 1 33908.77 83432.55 455.11
+  8_bld House$Tent_Pup_US 1 33912.56 83432.27 455.11
+  9_bld House$Tent_Pup_US 1 33916.22 83432.13 455.11
+  10_bld House$Tent_Pup_US 1 33920.22 83439.16 455.11
+  11_bld House$Tent_Pup_US 1 33923.81 83438.95 455.11
+  12_bld House$Tent_Pup_US 1 33919.87 83431.85 455.11
+  13_bld House$Tent_Pup_US 1 33923.53 83431.71 455.11
+  14_bld House$FurnitureSandbags_Round 1 33939.14 83424.09 596.11
+  15_bld House$FurnitureSandbags_Round 1 33835.36 83454.66 411.11
+  16_bld House$FurnitureSandbags_Round 1 33624.02 83456.25 681.21
+[Target]
+  3 0 1 120 01 34195 83341 3000
+  4 2 1 14 00 48133 101582 0 0 9AF_354FG_355FS00 47587 101620
+  0 2 0 0 1000 13720 50057 0 0 g0121 3116 51170
+  0 2 0 0 1000 6425 38550 0 0 g0122 2425 50158
+[StaticCamera]
+  33473 83358 33
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 89842.44 56616.56 2
+  FrontMarker1 22567.55 71052.69 2
+  FrontMarker2 12077.79 73362.81 2
+  FrontMarker3 73168.09 62578.68 2
+  FrontMarker4 58268.08 58278.66 2
+  FrontMarker5 8858.62 97577.15 2
+  FrontMarker6 1331.35 81875.94 2
+  FrontMarker7 36298.60 68321.08 2
+  FrontMarker8 67730.36 72486.41 2
+  FrontMarker9 113017.45 94882.75 2
+  FrontMarker10 40417.68 62488.86 2
+  FrontMarker11 16957.68 92770.02 1
+  FrontMarker12 44498.99 82144.00 1
+  FrontMarker13 59549.63 80531.25 1
+  FrontMarker14 71888.80 81401.87 1
+  FrontMarker15 86577.67 70545.46 1
+  FrontMarker16 34487.74 85145.07 1
+  FrontMarker17 97751.61 68783.42 2
+  FrontMarker18 87358.19 99392.69 1
+  FrontMarker19 86445.86 88337.11 1
+  FrontMarker20 52357.06 99218.08 1
+
+
+
+
+
+[WEATHER]
+WindVelocity 5
+WindDirection 102
+WindTop 5866
+WindTurbulence 1
+WindGust 0

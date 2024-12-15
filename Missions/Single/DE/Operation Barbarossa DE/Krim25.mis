@@ -1,0 +1,134 @@
+[MAIN]
+  MAP Crimea/load.ini
+  TIME 15.5
+  CloudType 1
+  CloudHeight 1500.0
+  player g0100
+  army 2
+  playerNum 0
+[Wing]
+  g0100
+  g0102
+  88GvIAP11
+  88GvIAP12
+  88GvIAP13
+  88GvIAP20
+  88GvIAP03
+  88GvIAP00
+[g0100]
+  Planes 4
+  Skill 0
+  Class air.BF_109G6Late
+  Fuel 100
+  weapons R3-DROPTANK
+[g0100_Way]
+  TAKEOFF 116405.92 65650.11 0 0
+  NORMFLY 148510.43 57578.76 500.0 300.0
+  NORMFLY 279262.26 91600.68 500.0 300.0
+  LANDING 117821.87 66467.61 0 0
+[g0102]
+  Planes 4
+  Skill 1
+  Class air.FW_190A5
+  Fuel 100
+  weapons u81sc5002tank
+[g0102_Way]
+  TAKEOFF 167362.72 106155.49 0 0
+  NORMFLY 158256.88 60239.6 500.0 300.0
+  GATTACK 279264.22 91549.84 500.0 300.0 0_Chief 1
+  LANDING 117821.87 66467.61 0 0
+[88GvIAP11]
+  Planes 1
+  Skill 1
+  Class air.LI_2
+  Fuel 100
+  weapons default
+[88GvIAP11_Way]
+  NORMFLY 285065.28 86830.17 2000.0 300.0
+  NORMFLY 99556.15 46527.87 2000.0 300.0
+[88GvIAP12]
+  Planes 1
+  Skill 1
+  Class air.LI_2
+  Fuel 100
+  weapons default
+[88GvIAP12_Way]
+  NORMFLY 285489.32 86564.49 2000.0 300.0
+  NORMFLY 99694.80 46303.90 2000.0 300.0
+[88GvIAP13]
+  Planes 1
+  Skill 1
+  Class air.G_11
+  Fuel 100
+  weapons default
+[88GvIAP13_Way]
+  NORMFLY 285251.34 86859.75 2000.0 300.0 88GvIAP11 0
+[88GvIAP20]
+  Planes 1
+  Skill 1
+  Class air.G_11
+  Fuel 100
+  weapons default
+[88GvIAP20_Way]
+  NORMFLY 285654.22 86573.44 2000.0 300.0 88GvIAP12 0
+[88GvIAP03]
+  Planes 4
+  Skill 1
+  Class air.LA_5FN
+  Fuel 100
+  weapons default
+[88GvIAP03_Way]
+  TAKEOFF 269794.97 107320.76 0 0
+  NORMFLY 279632.11 97625.79 3000.0 300.0
+  NORMFLY 283928.23 90537.21 3000.0 300.0
+  NORMFLY 228723.18 78293.28 3000.0 300.0
+  NORMFLY 265884.55 104499.57 3000.0 300.0
+  LANDING 269794.97 107320.76 0 0
+[88GvIAP00]
+  Planes 4
+  Skill 1
+  Class air.LA_5FN
+  Fuel 100
+  weapons default
+[88GvIAP00_Way]
+  TAKEOFF 269794.97 107320.76 0 0
+  NORMFLY 279846.92 97625.79 3000.0 300.0
+  NORMFLY 284143.30 90537.21 3000.0 300.0
+  NORMFLY 228723.18 78293.28 3000.0 300.0
+  NORMFLY 265884.55 104284.77 3000.0 300.0
+  LANDING 269794.97 107320.76 0 0
+[Chiefs]
+  0_Chief Ships.Destroyer_USSR_Type7 1
+[0_Chief_Road]
+  279500.87 79307.42 120.0 0 2 6.94444465637207
+  279195.81 92577.67 120.0 0 2 6.94444465637207
+  278331.46 90798.14 120.0 0 2 6.94444465637207
+  280009.31 90442.21 120.0 0 2 6.94444465637207
+  280619.43 92170.92 120.0 0 2 6.94444465637207
+  278178.93 93035.28 120.0 0 2 6.94444465637207
+  279958.46 89882.92 120.0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Wirbelwind 2 116351.88 65712.38 360.0 0.0
+  1_Static vehicles.artillery.Artillery$Wirbelwind 2 117687.80 66586.49 360.0 0.0
+  3_Static vehicles.artillery.Artillery$Wirbelwind 2 117216.41 65981.33 360.0 0.0
+  2_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 285851.34 95470.13 360.0 0.0
+  4_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 286050.71 93875.69 360.0 0.0
+  5_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 286449.50 92180.30 360.0 0.0
+  6_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 287247.50 90485.52 360.0 0.0
+  7_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 288543.50 89787.66 360.0 0.0
+  8_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 286748.58 94772.30 360.0 0.0
+  9_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 288443.34 91980.91 360.0 0.0
+  10_Static vehicles.planes.Plane$IL_2_1940Late 1 269772.84 107863.38 360.0 0.0
+  11_Static vehicles.planes.Plane$IL_2_1940Late 1 269819.10 107920.85 360.0 0.0
+  12_Static vehicles.planes.Plane$IL_2_1940Late 1 269876.94 107978.66 360.0 0.0
+  13_Static vehicles.planes.Plane$IL_2_1940Late 1 270536.59 108024.91 360.0 0.0
+  14_Static vehicles.planes.Plane$IL_2_1940Late 1 270570.75 108071.16 360.0 0.0
+  15_Static vehicles.stationary.Siren$SirenCity 1 269900.59 107689.58 360.0 0.0
+  16_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 269784.41 107643.33 360.0 0.0
+  17_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 270293.21 108360.27 360.0 0.0
+  18_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 270686.38 108371.83 360.0 0.0
+  19_Static vehicles.artillery.Artillery$Flak30_20mm 1 269842.22 107643.33 360.0 0.0
+  20_Static vehicles.artillery.Artillery$Flak30_20mm 1 270408.84 107909.27 360.0 0.0
+  21_Static vehicles.artillery.Artillery$Flak30_20mm 1 270547.60 108626.22 360.0 0.0
+[Bridge]
+[House]

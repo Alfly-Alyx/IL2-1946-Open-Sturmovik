@@ -1,0 +1,222 @@
+[MAIN]
+  MAP Net5Summer/load.ini
+  TIME 17.25
+  CloudType 1
+  CloudHeight 1200.0
+  player 30thSqn00
+  army 1
+  playerNum 0
+[Wing]
+  g0120
+  g0110
+  g0100
+  30thSqn00
+  30thSqn01
+[g0120]
+  Planes 2
+  OnlyAI 1
+  Skill0 0
+  Skill1 0
+  Class air.HE_111H6
+  Fuel 60
+  weapons 4xSC500
+  StartTime 3
+[g0120_Way]
+  NORMFLY 22901.17 742.47 3000.0 300.0
+  NORMFLY 12791.98 44681.90 3000.0 300.0
+  GATTACK 3453.15 90857.05 3000.0 300.0 56_Static 0
+  NORMFLY 14263.37 79879.86 3000.0 300.0
+  NORMFLY 45449.48 739.02 3000.0 300.0
+[g0110]
+  Planes 2
+  OnlyAI 1
+  Skill
+  Class air.JU_87B2
+  Fuel 50
+  weapons 1xSC250_4xSC50
+  StartTime 3
+[g0110_Way]
+  NORMFLY 24256.78 713.72 3000.0 300.0
+  NORMFLY 13005.74 44047.90 3000.0 300.0 g0120 1
+  GATTACK 3641.26 91043.78 3000.0 300.0 55_Static 0
+  NORMFLY 16447.67 74996.89 2500.0 300.0
+  NORMFLY 45745.10 385.49 3000.0 300.0
+[g0100]
+  Planes 4
+  OnlyAI 1
+  Skill
+  Class air.BF_109E7NZ
+  Fuel 50
+  weapons default
+  StartTime 11
+[g0100_Way]
+  NORMFLY 13659.76 36405.63 5000.0 350.0 g0120 1
+  NORMFLY 13675.24 62479.05 3000.0 300.0
+  NORMFLY 13620.89 79025.55 3000.0 300.0 g0120 3
+  NORMFLY 44717.12 2184.45 3000.0 300.0 g0120 4
+[30thSqn00]
+  Planes 3
+  Skill
+  skin0 HurricaneMkI_85-3-Q.bmp
+  skin1 HurricaneMkI_85-3-R.bmp
+  skin2 HurricaneMkI_85-3-S.bmp
+  pilot0 raf1.bmp
+  pilot1 raf1.bmp
+  pilot2 raf1.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  Class air.HurricaneMkIa
+  Fuel 100
+  weapons default
+  StartTime 0
+[30thSqn00_Way]
+  TAKEOFF 12253.95 90055.78 0 0
+  NORMFLY 12299.92 75125.48 1000.0 350.0
+  NORMFLY 12458.76 53608.97 3000.0 350.0 g0120 1
+  NORMFLY 16316.64 29128.94 3000.0 350.0 g0120 1
+  NORMFLY 26339.08 48232.89 3000.0 350.0 g0120 1
+  NORMFLY 14520.37 76538.94 2500.0 300.0 g0120 3
+  NORMFLY 14886.02 91738.26 500.0 250.0
+  NORMFLY 12207.42 93500.52 250.0 250.0
+  LANDING 12256.33 91595.98 0 0
+[30thSqn01]
+  Planes 3
+  Skill
+  skin0 HurricaneMkI_85-3-Q.bmp
+  skin1 HurricaneMkI_85-3-R.bmp
+  skin2 HurricaneMkI_85-3-S.bmp
+  pilot0 raf1.bmp
+  pilot1 raf1.bmp
+  pilot2 raf1.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  Class air.HurricaneMkIa
+  Fuel 100
+  weapons default
+[30thSqn01_Way]
+  TAKEOFF 12253.95 90055.78 0 0
+  NORMFLY 12464.25 75510.88 1700.0 400.0
+  NORMFLY 12467.59 53933.81 4500.0 400.0 g0100 0
+  NORMFLY 16337.77 29090.41 4000.0 400.0 g0100 0
+  NORMFLY 26360.31 48195.67 4000.0 350.0 g0120 1
+  NORMFLY 14456.13 76024.87 2500.0 250.0 g0120 3
+  NORMFLY 14880.57 91713.97 500.0 250.0
+  NORMFLY 12210.30 93533.47 250.0 250.0
+  LANDING 12256.33 91595.98 0 0
+[Chiefs]
+  0_Chief Vehicles.WillisMB 1
+[0_Chief_Road]
+  12089.29 90436.57 120.00 0 2 3.055555582046509
+  12089.29 90451.73 120.00
+[NStationary]
+  1_Static vehicles.planes.Plane$HurricaneMkIa 1 12088.66 91316.76 340.93 0.0 gb
+  2_Static vehicles.planes.Plane$HurricaneMkIa 1 12088.58 91289.51 352.22 0.0 gb
+  3_Static vehicles.planes.Plane$HurricaneMkIa 1 12092.71 91356.49 352.02 0.0 gb
+  4_Static vehicles.planes.Plane$HurricaneMkIa 1 12087.02 91390.64 351.88 0.0 gb
+  5_Static vehicles.planes.Plane$HurricaneMkIa 1 12104.97 91424.94 374.91 0.0 gb
+  6_Static vehicles.stationary.Stationary$GAZ_M1 1 12103.80 91442.22 493.10 0.0
+  7_Static vehicles.stationary.Stationary$OpelBlitz36S 0 12103.83 91413.44 703.10 0.0
+  8_Static vehicles.planes.Plane$BLENHEIM4 1 12080.03 90420.73 388.10 0.0 gb
+  9_Static vehicles.planes.Plane$BLENHEIM4 1 12105.45 90440.90 448.10 0.0 gb
+  10_Static vehicles.planes.Plane$BLENHEIM4 1 12138.20 90439.33 448.10 0.0 gb
+  11_Static vehicles.planes.Plane$HurricaneMkIa 1 12092.09 90387.18 353.14 0.0 gb
+  12_Static vehicles.planes.Plane$HurricaneMkIa 1 12097.61 90360.80 338.46 0.0 gb
+  13_Static vehicles.planes.Plane$HurricaneMkIa 1 12097.10 90335.00 352.90 0.0 gb
+  14_Static vehicles.planes.Plane$HurricaneMkIa 1 12105.70 90304.60 352.78 0.0 gb
+  15_Static vehicles.stationary.Stationary$GAZ_M1 1 12098.33 90403.14 403.52 0.0
+  16_Static vehicles.stationary.Stationary$GAZ_M1 1 12118.87 90444.37 463.52 0.0
+  17_Static vehicles.stationary.Stationary$GAZ_M1 1 12098.32 90323.92 493.52 0.0
+  18_Static vehicles.stationary.Stationary$OpelBlitz36S 0 12144.12 90447.27 448.52 0.0
+  19_Static vehicles.stationary.Stationary$OpelBlitz36S 0 12148.21 90454.35 418.52 0.0
+  0_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 19378.39 87225.27 360.00 0.0
+  20_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 19175.54 87642.57 360.00 0.0
+  21_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 18746.12 87013.31 360.00 0.0
+  22_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 16964.60 84966.17 360.00 0.0
+  23_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 17163.17 84664.44 360.00 0.0
+  24_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 17171.17 84133.81 360.00 0.0
+  25_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 16751.65 83635.54 360.00 0.0
+  26_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 16258.80 83380.21 360.00 0.0
+  27_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 1 17275.83 84398.02 360.00 0.0
+  28_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 1 16977.90 83773.29 360.00 0.0
+  29_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 28888.81 88461.20 360.00 0.0
+  30_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 29214.35 88365.46 360.00 0.0
+  31_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 29520.69 88199.46 360.00 0.0
+  32_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 29744.05 87867.61 360.00 0.0
+  33_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 29954.68 87835.69 360.00 0.0
+  34_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 30210.10 87637.80 360.00 0.0
+  35_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 30478.18 87503.75 360.00 0.0
+  36_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 30873.12 87472.10 360.00 0.0
+  37_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1200m 1 31231.38 87344.18 360.00 0.0
+  38_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 1 29010.09 88314.39 360.00 0.0
+  39_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 1 29316.48 88237.80 360.00 0.0
+  40_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 1 29527.11 88014.39 360.00 0.0
+  41_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 1 29814.35 87739.92 360.00 0.0
+  42_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 1 30056.90 87701.63 360.00 0.0
+  43_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 1 30376.05 87663.33 360.00 0.0
+  44_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 1 30695.20 87484.60 360.00 0.0
+  45_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 1 31059.03 87408.01 360.00 0.0
+  46_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 29288.45 88314.37 360.00 0.0
+  47_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 29733.85 87967.34 360.00 0.0
+  48_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 30134.66 87829.86 360.00 0.0
+  49_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 30611.47 87487.49 360.00 0.0
+  50_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 30964.78 87453.98 360.00 0.0
+  51_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 29130.97 88438.01 360.00 0.0
+  52_Static vehicles.stationary.Stationary$ZIS5_radio 1 16334.15 30369.08 360.00 0.0
+  53_Static vehicles.stationary.Siren$SirenCity 1 16271.33 30339.87 360.00 0.0
+  54_Static vehicles.stationary.Siren$SirenCity 1 12160.97 90176.37 360.00 0.0
+  55_Static vehicles.stationary.Stationary$WillisMBt 1 3641.11 91042.50 360.00 0.0
+  56_Static vehicles.stationary.Stationary$WillisMBt 1 3454.41 90854.92 360.00 0.0
+  57_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 12042.32 90179.68 360.00 0.0
+  58_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 12064.63 90453.67 499.20 0.0
+[Buildings]
+  0_bld House$AirdromeBarrelBlock1 1 12064.46 91416.38 703.10
+  1_bld House$AirdromeTank1 1 12079.29 91461.84 628.10
+  2_bld House$AirdromeTank1 1 12089.40 91462.11 628.10
+  3_bld House$IndustrialFactoryWarenHouse1 1 12050.66 91435.32 628.10
+  4_bld House$IndustrialFactoryWarenHouse1 1 12049.66 91381.79 628.10
+  5_bld House$GermanyCountryHouse3 1 11925.30 91414.68 628.10
+  6_bld House$GermanyCountryHouse3 1 11937.75 91389.65 628.10
+  7_bld House$AirdromeControlTowerSmall 1 12219.92 91172.11 628.10
+  8_bld House$AirdromeHangar2 1 12078.07 90470.23 448.52
+  9_bld House$AirdromeHangar2 1 12112.93 90469.19 448.52
+  10_bld House$AirdromeBarrelBlock2 1 12130.71 90462.04 448.52
+  11_bld House$AirdromeBarrelBlock2 1 12140.14 90459.94 448.52
+  12_bld House$CrimeaBarnStucco 1 29784.89 88770.20 405.00
+  13_bld House$CrimeaBarnStucco 1 29719.83 88499.12 405.00
+  14_bld House$CrimeaBarnStucco 1 30043.82 88685.26 360.00
+  15_bld House$CrimeaFarm 1 29860.51 88700.47 405.00
+  16_bld House$GermanyCityHouse3 1 29851.41 88708.40 405.00
+  17_bld House$GermanyCityHouse4 1 29949.81 88760.85 405.00
+  18_bld House$FurnitureGermanyCountryFenceVert 1 29944.14 88821.65 495.00
+  19_bld House$FurnitureGermanyCountryFenceVert 1 29949.11 88816.70 495.00
+  20_bld House$FurnitureGermanyCountryFenceVert 1 29954.11 88811.64 495.00
+  21_bld House$FurnitureGermanyCountryFenceVert 1 29959.10 88806.66 495.00
+  22_bld House$FurnitureGermanyCountryFenceVert 1 29963.99 88801.64 495.00
+  23_bld House$FurnitureGermanyCountryFenceVert 1 29968.89 88796.65 495.00
+  24_bld House$FurnitureGermanyCountryFenceVert 1 29973.88 88791.67 495.00
+  25_bld House$FurnitureGermanyCountryFenceVert 1 29978.78 88786.68 495.00
+  26_bld House$FurnitureGermanyCountryFenceVert 1 29983.68 88781.70 495.00
+  27_bld House$FurnitureGermanyCountryFenceVert 1 29988.58 88776.70 495.00
+  28_bld House$FurnitureGermanyCountryFenceVert 1 29993.58 88771.71 495.00
+[Target]
+  3 2 1 30 501 12259 90960 500
+  0 0 0 0 500 11942 42752 0 1 g0120 12791 44681
+  0 2 0 0 1000 11667 35797 0 0 g0100 13659 36405
+  0 2 0 0 500 14988 47463 0 1 g0110 13005 44047
+  7 2 1 22 500 3455 90958 0 0  Bridge2 3552 90952
+[Bridge]
+[House]
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 5
+WindDirection 129
+WindTop 3945
+WindTurbulence 0
+WindGust 1

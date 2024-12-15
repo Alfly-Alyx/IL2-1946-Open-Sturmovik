@@ -1,0 +1,109 @@
+[MAIN]
+  MAP Net1Winter/load.ini
+  TIME 16.0
+  CloudType 2
+  CloudHeight 1500.0
+  player III_JG5401
+  army 2
+  playerNum 0
+[Wing]
+  III_JG5400
+  III_JG5401
+  r0101
+  r0102
+[III_JG5400]
+  Planes 2
+  Skill0 2
+  Skill1 1
+  Skill2 2
+  Skill3 2
+  Class air.FW_190A4
+  Fuel 100
+  weapons default
+[III_JG5400_Way]
+  TAKEOFF 18703.60 17239.73 0 0 &0
+  NORMFLY 17394.15 17049.30 500.00 300.00 &0
+  NORMFLY 17408.36 14911.11 500.00 300.00 &0
+  NORMFLY 22670.68 15237.85 500.00 300.00 &0
+  NORMFLY 21846.11 17715.48 500.00 300.00 &0
+  LANDING 20216.13 17645.10 0 0 &0
+[III_JG5401]
+  Planes 2
+  Skill0 2
+  Skill1 1
+  Skill2 2
+  Skill3 2
+  Class air.FW_190A4
+  Fuel 100
+  weapons default
+[III_JG5401_Way]
+  TAKEOFF 18703.60 17239.73 0 0 &0
+  NORMFLY 17409.60 17019.17 500.00 300.00 &0
+  NORMFLY 17392.76 14985.36 500.00 300.00 &0
+  NORMFLY 22685.88 15298.66 500.00 300.00 &0
+  NORMFLY 21892.19 17715.55 500.00 300.00 &0
+  LANDING 20216.13 17645.10 0 0 &0
+[r0101]
+  Planes 3
+  Skill0 2
+  Skill1 1
+  Skill2 2
+  Skill3 2
+  Class air.IL_2_1941Early
+  Fuel 100
+  weapons 4xFAB50_8xRS82
+[r0101_Way]
+  NORMFLY 15275.30 7807.98 500.00 300.00 &0
+  GATTACK 18559.74 16372.35 500.00 300.00 12_Static 0 &0
+  GATTACK 18641.90 16559.15 500.00 300.00 11_Static 0 &0
+  GATTACK 18722.44 16758.00 500.00 300.00 14_Static 0 &0
+  GATTACK 18797.76 16965.14 500.00 300.00 4_Static 0 &0
+  GATTACK 18858.20 17134.62 500.00 300.00 13_Static 0 &0
+  NORMFLY 40958.10 39699.59 500.00 300.00 &0
+  NORMFLY 43742.96 39699.59 500.00 300.00 &0
+  LANDING 42188.74 41369.63 0 0 &0
+[r0102]
+  Planes 2
+  Skill0 3
+  Skill1 2
+  Skill2 3
+  Skill3 3
+  Class air.IL_2MEarly
+  Fuel 100
+  weapons 4xFAB50_4xRS82
+[r0102_Way]
+  NORMFLY 42154.46 711.69 500.00 300.00 &0
+  NORMFLY 15048.71 500.59 500.00 300.00 &0
+  GATTACK 19192.70 16471.12 500.00 300.00 5_Static 0 &0
+  GATTACK 19239.50 16595.44 500.00 300.00 8_Static 0 &0
+  GATTACK 19283.55 16766.58 500.00 300.00 16_Static 0 &0
+  GATTACK 19303.71 16894.84 500.00 300.00 2_Static 0 &0
+  NORMFLY 43863.81 38201.12 500.00 300.00 &0
+  NORMFLY 43832.52 39796.74 500.00 300.00 &0
+  LANDING 42188.74 41369.63 0 0 &0
+[NStationary]
+  0_Static vehicles.stationary.Stationary$OpelBlitz6700A_radio 2 20099.63 17647.34 510.00 0.0
+  1_Static vehicles.stationary.Stationary$OpelBlitzMaultierAA 2 20074.49 17637.25 435.00 0.0
+  2_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 20089.81 17640.34 615.00 0.0
+  3_Static vehicles.stationary.Stationary$OpelKadett 2 20135.29 17589.50 570.00 0.0
+  4_Static vehicles.artillery.Artillery$Flak18_88mm 2 20125.47 17591.59 480.00 0.0 0
+  5_Static vehicles.planes.Plane$FW_190A4 2 18825.25 17364.93 434.94 0.0 null
+  6_Static vehicles.planes.Plane$FW_190A4 2 18842.40 17378.43 434.94 0.0 null
+  7_Static vehicles.planes.Plane$FW_190A4 2 18861.88 17383.70 434.94 0.0 null
+  8_Static vehicles.planes.Plane$FW_190A4 2 18880.43 17389.18 434.94 0.0 null
+  9_Static vehicles.planes.Plane$FW_190A4 2 18902.93 17385.95 434.94 0.0 null
+  10_Static vehicles.planes.Plane$FW_190A4 2 18922.83 17390.45 434.94 0.0 null
+  11_Static vehicles.artillery.Artillery$Flak18_88mm 2 18964.27 17343.70 434.98 0.0 0
+  12_Static vehicles.artillery.Artillery$Flak18_88mm 2 18812.61 17304.90 435.00 0.0 0
+  13_Static vehicles.artillery.Artillery$Flak18_88mm 2 20045.31 17632.93 435.00 0.0 0
+  14_Static vehicles.artillery.Artillery$Flak18_88mm 2 19504.79 17260.83 435.00 0.0 0
+  15_Static vehicles.stationary.Stationary$OpelBlitz6700A_radio 2 19487.95 17264.43 630.00 0.0
+  16_Static vehicles.planes.Plane$HS_129B2 2 20037.58 17549.70 255.00 0.0 null
+  17_Static vehicles.planes.Plane$HS_129B2 2 20055.81 17555.22 255.00 0.0 null
+  18_Static vehicles.planes.Plane$HS_129B2 2 20017.88 17543.79 255.00 0.0 null
+[Buildings]
+[Target]
+  0 0 0 0 1000 18856 17124 0 5 r0101 18858 17134
+  0 0 0 0 500 19302 16900 0 5 r0102 19303 16894
+[Bridge]
+[House]

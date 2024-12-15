@@ -1,0 +1,122 @@
+[MAIN]
+  MAP Kuban/load.ini
+  TIME 8.0
+  CloudType 4
+  CloudHeight 500.0
+  player i0120
+  army 2
+  playerNum 2
+[Wing]
+  5Squadron01
+  RAF_No112SQN02
+  i0120
+  i0121
+[5Squadron01]
+  Planes 4
+  Skill 1
+  skin0 -Desert-early.bmp
+  skin1 -Desert-early.bmp
+  skin2 -Desert-early.bmp
+  skin3 -Desert-early.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.BLENHEIM1
+  Fuel 100
+  weapons 4x250
+[5Squadron01_Way]
+  NORMFLY 170724.66 120557.84 3000.00 300.00 &0
+  NORMFLY 149303.68 119232.83 3000.00 300.00 &0
+  GATTACK 124791.02 127403.72 2000.00 300.00 9_Static 0 &0
+  NORMFLY 141353.63 143082.99 3000.00 300.00 &0
+  NORMFLY 207162.40 115920.31 3000.00 300.00 &0
+  LANDING 218012.19 134957.48 0 0 &0
+[RAF_No112SQN02]
+  Planes 4
+  Skill 1
+  skin0 FlgOff Dean No33 Sqn Egypt 1940.bmp
+  skin1 FlgOff Dean No33 Sqn Egypt 1940.bmp
+  skin2 FlgOff Dean No33 Sqn Egypt 1940.bmp
+  skin3 FlgOff Dean No33 Sqn Egypt 1940.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.GLADIATOR1J8A
+  Fuel 100
+  weapons default
+[RAF_No112SQN02_Way]
+  NORMFLY 170503.82 120337.00 3000.00 300.00 &0
+  NORMFLY 149524.52 119453.67 3000.00 300.00 5Squadron01 1 &0
+  NORMFLY 124791.02 126520.38 3000.00 300.00 &0
+  NORMFLY 140470.29 142641.32 3000.00 300.00 &0
+  NORMFLY 206941.56 115257.80 3000.00 300.00 &0
+  LANDING 218012.19 134957.48 0 0 &0
+[i0120]
+  Planes 4
+  Skill 2
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.G50
+  Fuel 100
+  weapons default
+[i0120_Way]
+  TAKEOFF 124679.42 128545.93 0 0 &0
+  NORMFLY 140470.29 122324.52 3000.00 300.00 &0
+  NORMFLY 154382.88 137562.12 3000.00 300.00 &0
+  NORMFLY 142457.80 142641.32 3000.00 300.00 &0
+  LANDING 124679.42 128545.93 0 0 &0
+[i0121]
+  Planes 1
+  Skill 1
+  skin0 Ju-52 to S-81 albania 2.bmp
+  Class air.JU_52_3MG4E
+  Fuel 30
+  weapons default
+[i0121_Way]
+  NORMFLY 33717.27 138239.36 2000.00 295.00 &0
+  LANDING 124679.42 128545.93 0 0 &0
+[Chiefs]
+  0_Chief Vehicles.Kurogane 2
+[0_Chief_Road]
+  126003.86 128068.77 120.00 0 2 3.055555582046509
+  125922.12 128148.40 120.00 0 2 3.055555582046509
+  126236.98 128087.25 120.00
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Twin25mm_JA 2 126220.34 128060.21 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$BunkerA_gun 2 125843.12 128497.81 360.00 0.0 0
+  2_Static vehicles.planes.Plane$CR_42 2 125933.19 128439.59 360.00 0.0 it
+  3_Static vehicles.planes.Plane$CR_42 2 125917.55 128405.70 390.00 0.0 it
+  4_Static vehicles.planes.Plane$CR_42 2 125914.71 128420.68 405.00 0.0 it
+  5_Static vehicles.planes.Plane$JU_87B2 2 124829.83 127993.16 340.00 0.0 it
+  6_Static vehicles.planes.Plane$JU_87B2 2 124838.07 127963.40 340.00 0.0 it
+  7_Static vehicles.planes.Plane$JU_87B2 2 124862.56 127942.35 340.00 0.0 it
+  8_Static vehicles.planes.Plane$JU_87B2 2 124884.76 127917.48 340.00 0.0 it
+  9_Static vehicles.planes.Plane$JU_87B2 2 124881.15 127884.41 340.00 0.0 it
+  10_Static vehicles.planes.Plane$JU_87B2 2 124896.46 127858.39 340.00 0.0 it
+  11_Static vehicles.planes.Plane$JU_87B2 2 124911.38 127831.22 340.00 0.0 it
+  12_Static vehicles.planes.Plane$G50 2 124925.93 127806.34 340.00 0.0 it
+  13_Static vehicles.planes.Plane$G50 2 125068.85 127786.46 280.00 0.0 it
+  14_Static vehicles.planes.Plane$G50 2 125083.39 127791.82 250.00 0.0 it
+[Buildings]
+[StaticCamera]
+  125672 128283 2
+  124866 128045 2
+  125590 128567 100
+[Bridge]
+[House]
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 10
+WindDirection 147
+WindTop 3145
+WindTurbulence 1
+WindGust 0

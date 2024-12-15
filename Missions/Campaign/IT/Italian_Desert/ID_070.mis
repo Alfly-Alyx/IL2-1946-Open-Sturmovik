@@ -1,0 +1,727 @@
+[MAIN]
+  MAP SandsOfTime/load.ini
+  TIME 17.5
+  CloudType 1
+  CloudHeight 1500.0
+  player i0100
+  army 2
+  playerNum 0
+[Wing]
+  g0110
+  g0100
+  i0130
+  g0120
+  g0112
+  i0100
+  gb0100
+[g0110]
+  Planes 2
+  Skill 2
+  skin0 Ju-52-Desert.bmp
+  skin1 Ju-52-Desert.bmp
+  Class air.JU_52_3MG4E
+  Fuel 100
+  weapons default
+[g0110_Way]
+  TAKEOFF 3821.03 9469.12 0 0 &0
+  NORMFLY 7519.74 11711.08 500.00 295.00 &0
+  NORMFLY 7930.66 18943.18 500.00 295.00 g0100 2 &0
+  NORMFLY 11094.70 24367.26 500.00 295.00 &0
+  NORMFLY 18203.53 38297.27 500.00 295.00 &0
+  NORMFLY 23750.88 50624.72 500.00 295.00 &0
+[g0100]
+  Planes 1
+  Skill 2
+  skin0 Ju52-Kommodore.bmp
+  numberOn0 0
+  Class air.JU_52_3MG4E
+  Fuel 100
+  weapons default
+[g0100_Way]
+  TAKEOFF 14379.60 26740.23 0 0 &0
+  NORMFLY 12368.54 24120.71 500.00 295.00 &0
+  NORMFLY 4684.43 13026.00 500.00 295.00 &0
+  NORMFLY 9944.14 24326.16 500.00 295.00 &0
+  NORMFLY 17669.34 38461.64 500.00 295.00 &0
+  NORMFLY 23093.42 50665.81 500.00 295.00 &0
+[i0130]
+  Planes 3
+  Skill 2
+  skin0 Bf-109F4-Afrika.bmp
+  skin1 Bf-109F4-Afrika.bmp
+  skin2 Bf-109F4-Afrika.bmp
+  Class air.BF_109F4
+  Fuel 100
+  weapons default
+[i0130_Way]
+  TAKEOFF 3821.03 9469.12 0 0 &0
+  NORMFLY 6204.82 11998.72 500.00 300.00 &0
+  NORMFLY 6697.91 19189.73 500.00 300.00 g0112 2 &0
+  NORMFLY 9409.95 24490.53 500.00 300.00 &0
+  NORMFLY 16929.70 38831.46 500.00 300.00 &0
+  NORMFLY 22312.68 50789.09 500.00 300.00 &0
+[g0120]
+  Planes 2
+  Skill 2
+  skin0 FW190-Desert.bmp
+  skin1 FW190-Desert.bmp
+  Class air.FW_190A6
+  Fuel 100
+  weapons default
+[g0120_Way]
+  TAKEOFF 3821.03 9469.12 0 0 &0
+  NORMFLY 5629.53 12163.08 500.00 300.00 &0
+  NORMFLY 6122.63 19436.28 500.00 300.00 i0130 2 &0
+  NORMFLY 8752.49 24490.53 500.00 300.00 &0
+  NORMFLY 16190.05 39036.92 500.00 300.00 &0
+  NORMFLY 21614.13 50789.09 500.00 300.00 &0
+[g0112]
+  Planes 2
+  Skill 2
+  skin0 Bf-110C4B-Desert.bmp
+  skin1 Bf-110C4B-Desert.bmp
+  Class air.BF_110C4B
+  Fuel 100
+  weapons default
+[g0112_Way]
+  TAKEOFF 3821.03 9469.12 0 0 &0
+  NORMFLY 6862.28 11834.35 500.00 300.00 &0
+  NORMFLY 7273.19 18984.27 500.00 300.00 g0110 2 &0
+  NORMFLY 11669.98 23956.34 500.00 300.00 &0
+  NORMFLY 18860.10 38050.72 500.00 300.00 &0
+  NORMFLY 24531.62 50624.72 500.00 300.00 &0
+[i0100]
+  Planes 4
+  Skill 2
+  skin0 MC205-Arrow.bmp
+  skin1 MC205-Arrow.bmp
+  skin2 MC205-Arrow.bmp
+  skin3 MC205-Arrow.bmp
+  Class air.MC_205_3
+  Fuel 100
+  weapons default
+[i0100_Way]
+  TAKEOFF 14379.60 26740.23 0 0 &0
+  NORMFLY 12943.82 23915.25 500.00 300.00 &0
+  NORMFLY 5259.71 12902.73 500.00 300.00 g0100 2 &0
+  NORMFLY 10396.15 24202.89 500.00 300.00 &0
+  NORMFLY 17176.24 38420.55 500.00 300.00 &0
+  NORMFLY 22600.32 50542.54 500.00 300.00 &0
+[gb0100]
+  Planes 4
+  Skill 1
+  skin0 SpitMkVIII-Desert.bmp
+  skin1 SpitMkVIII-Desert.bmp
+  skin2 SpitMkVIII-Desert.bmp
+  skin3 SpitMkVIII-Desert.bmp
+  Class air.SPITFIRE8
+  Fuel 100
+  weapons default
+  StartTime 3
+[gb0100_Way]
+  TAKEOFF 43297.07 14359.86 0 0 &0
+  NORMFLY 38624.88 21431.78 500.00 300.00 &0
+  NORMFLY 33283.45 32936.40 500.00 300.00 &0
+  NORMFLY 20546.18 37661.52 500.00 300.00 i0130 4 &0
+  NORMFLY 26462.85 39757.00 500.00 300.00 &0
+  NORMFLY 38830.32 35072.98 500.00 300.00 &0
+  LANDING 42210.41 15446.52 0 0 &0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$OpelBlitzMaultierAA 1 5816.65 46999.59 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Flak30_20mm 1 6828.95 47364.95 360.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Flak30_20mm 1 5336.12 47371.84 360.00 0.0 0
+  16_Static vehicles.artillery.Artillery$Flak30_20mm 2 13840.69 26911.25 360.00 0.0 0
+  17_Static vehicles.artillery.Artillery$Flak30_20mm 2 14116.97 26518.47 360.00 0.0 0
+  18_Static vehicles.artillery.Artillery$Flak30_20mm 2 13284.80 26511.81 360.00 0.0 0
+  19_Static vehicles.artillery.Artillery$Flak30_20mm 2 12811.01 26520.69 360.00 0.0 0
+  20_Static vehicles.artillery.Artillery$OpelBlitzMaultierRocket 2 13124.20 26975.26 360.00 0.0 0
+  21_Static vehicles.artillery.Artillery$OpelBlitzMaultierRocket 2 14132.50 27133.16 360.00 0.0 0
+  22_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 14013.90 27154.68 360.00 0.0
+  23_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 14014.85 27160.95 360.00 0.0
+  24_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 14013.71 27167.03 360.00 0.0
+  25_Static vehicles.stationary.Stationary$VW82t 2 13940.93 27080.38 360.00 0.0
+  26_Static vehicles.stationary.Stationary$VW82t 2 13942.08 27172.54 360.00 0.0
+  27_Static vehicles.artillery.Artillery$OpelBlitzMaultierAA 2 4303.94 9636.37 360.00 0.0 0
+  28_Static vehicles.artillery.Artillery$OpelBlitzMaultierAA 2 4520.50 10254.57 360.00 0.0 0
+  29_Static vehicles.artillery.Artillery$Flak30_20mm 2 4868.00 10560.52 360.00 0.0 0
+  30_Static vehicles.artillery.Artillery$Flak30_20mm 2 4948.58 10151.33 360.00 0.0 0
+  31_Static vehicles.artillery.Artillery$Flak30_20mm 2 3942.58 9253.61 360.00 0.0 0
+  32_Static vehicles.artillery.Artillery$Flak30_20mm 2 3859.49 9862.10 360.00 0.0 0
+  33_Static vehicles.stationary.Stationary$VW82 2 4417.69 9416.37 360.00 0.0
+  34_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 4344.10 9407.26 360.00 0.0
+  35_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 4341.52 9398.32 360.00 0.0
+  36_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 4347.20 9393.51 360.00 0.0
+  37_Static vehicles.stationary.Stationary$OpelBlitz6700A_radio 2 4364.22 9469.33 360.00 0.0
+  46_Static vehicles.artillery.Artillery$Flak30_20mm 1 33041.96 3848.03 360.00 0.0 0
+  58_Static vehicles.artillery.Artillery$Flak18_88mm 1 28893.83 31131.82 360.00 0.0 0
+  59_Static vehicles.artillery.Artillery$Flak18_88mm 1 28910.81 31347.46 360.00 0.0 0
+  60_Static vehicles.artillery.Artillery$Flak18_88mm 1 29070.59 31345.65 360.00 0.0 0
+  61_Static vehicles.artillery.Artillery$Flak18_88mm 1 29063.19 31125.64 360.00 0.0 0
+  62_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 1 29052.66 31293.29 360.00 0.0
+  63_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 1 29052.80 31287.54 360.00 0.0
+  64_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 1 29052.95 31282.07 360.00 0.0
+  65_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 1 29052.95 31276.18 360.00 0.0
+  66_Static vehicles.artillery.Artillery$Flak30_20mm 1 28873.10 31383.66 360.00 0.0 0
+  67_Static vehicles.artillery.Artillery$Flak30_20mm 1 28942.99 31445.27 360.00 0.0 0
+  88_Static vehicles.artillery.Artillery$Flak30_20mm 2 9201.31 26153.12 645.00 0.0 0
+  86_Static vehicles.artillery.Artillery$Flak30_20mm 2 9188.00 26150.29 585.00 0.0 0
+  87_Static vehicles.artillery.Artillery$Flak30_20mm 2 9130.33 26132.07 585.00 0.0 0
+  89_Static vehicles.artillery.Artillery$Flak30_20mm 2 9146.46 26136.96 645.00 0.0 0
+  90_Static vehicles.artillery.Artillery$Flak18_88mm 2 9318.79 26053.81 360.00 0.0 0
+  91_Static vehicles.artillery.Artillery$Flak18_88mm 2 9277.48 26125.45 670.00 0.0 0
+  92_Static vehicles.artillery.Artillery$Flak18_88mm 2 9146.71 26085.77 540.00 0.0 0
+  93_Static vehicles.artillery.Artillery$Flak18_88mm 2 9253.04 26041.17 435.00 0.0 0
+  94_Static vehicles.artillery.Artillery$Flak18_88mm 2 9159.11 26025.44 465.00 0.0 0
+  95_Static vehicles.stationary.Stationary$VW82 2 9268.44 26106.29 450.00 0.0
+  96_Static vehicles.stationary.Stationary$VW82 2 9236.23 26146.96 470.00 0.0
+  97_Static vehicles.stationary.Stationary$VW82 2 9232.15 26148.41 470.00 0.0
+  98_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 9156.12 26038.35 680.00 0.0
+  99_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 9171.94 26033.98 680.00 0.0
+  100_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 9166.91 26035.40 680.00 0.0
+  101_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 9161.87 26036.81 680.00 0.0
+  102_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 9155.51 26105.47 665.00 0.0
+  103_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 9157.70 26099.24 665.00 0.0
+  104_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 9159.43 26092.09 665.00 0.0
+  105_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 9255.31 26054.92 635.00 0.0
+  106_Static vehicles.stationary.Stationary$OpelBlitz6700A_medic 2 9259.97 26104.99 450.00 0.0
+  107_Static vehicles.stationary.Stationary$OpelBlitz6700A_radio 2 9217.33 26104.56 525.00 0.0
+  108_Static vehicles.stationary.Stationary$RSO 2 9249.77 26054.06 635.00 0.0
+  109_Static vehicles.stationary.Stationary$RSO 2 9245.25 26052.10 635.00 0.0
+  110_Static vehicles.stationary.Stationary$RSO 2 9156.63 26069.69 710.00 0.0
+  111_Static vehicles.stationary.Stationary$RSO 2 9158.08 26075.34 710.00 0.0
+  112_Static vehicles.stationary.Stationary$OpelBlitzMaultierAA 2 9295.13 26073.68 555.00 0.0
+  113_Static vehicles.stationary.Stationary$OpelBlitzMaultierAA 2 9204.11 26118.61 485.00 0.0
+  114_Static vehicles.stationary.Siren$SirenCity 2 9214.82 26121.74 470.00 0.0
+  115_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_600m 2 9198.60 26028.19 450.00 0.0
+  116_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_600m 2 9303.57 26049.44 405.00 0.0
+  117_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_600m 2 9220.16 26123.58 535.00 0.0
+  118_Static vehicles.lights.Searchlight$SL_ManualBlue 2 9150.25 26128.83 535.00 0.0
+  119_Static vehicles.lights.Searchlight$SL_ManualBlue 2 9143.02 26042.54 535.00 0.0
+  120_Static vehicles.lights.Searchlight$SL_ManualBlue 2 9309.57 26082.61 535.00 0.0
+  121_Static vehicles.stationary.Siren$SirenCity 2 13980.31 27026.17 535.00 0.0
+  122_Static vehicles.stationary.Siren$SirenCity 1 28966.26 31151.92 470.00 0.0
+  123_Static vehicles.stationary.Siren$SirenCity 1 42627.86 19857.83 470.00 0.0
+  124_Static vehicles.stationary.Siren$SirenCity 1 42245.76 14932.56 470.00 0.0
+  125_Static vehicles.stationary.Siren$SirenCity 1 33429.70 4004.02 470.00 0.0
+  126_Static vehicles.stationary.Siren$SirenCity 2 4337.54 9459.57 470.00 0.0
+  127_Static vehicles.stationary.Siren$SirenCity 1 5841.98 46982.14 470.00 0.0
+  128_Static vehicles.stationary.Siren$SirenCity 1 46117.67 45680.08 470.00 0.0
+  161_Static vehicles.stationary.Siren$SirenCity 1 32399.02 16192.38 600.00 0.0
+  160_Static vehicles.stationary.Siren$SirenCity 1 32589.53 16549.25 600.00 0.0
+  163_Static vehicles.stationary.Siren$SirenCity 1 31344.14 15974.58 600.00 0.0
+  182_Static vehicles.stationary.Siren$SirenCity 1 31737.77 16184.72 425.00 0.0
+  207_Static vehicles.stationary.Stationary$Trip25mm_JA 1 32237.57 16534.29 400.00 0.0
+  208_Static vehicles.stationary.Stationary$Trip25mm_JA 1 32627.43 16559.64 420.00 0.0
+  209_Static vehicles.stationary.Stationary$Trip25mm_JA 1 31958.91 16338.17 495.00 0.0
+  210_Static vehicles.stationary.Stationary$Trip25mm_JA 1 31686.78 16082.45 495.00 0.0
+  211_Static vehicles.stationary.Stationary$Trip25mm_JA 1 31824.97 16085.10 390.00 0.0
+  212_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_600m 1 31671.42 16110.62 380.00 0.0
+  213_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_600m 1 31885.88 16161.03 380.00 0.0
+  214_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_600m 1 31759.70 16233.86 380.00 0.0
+  215_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_600m 1 31964.41 16361.32 380.00 0.0
+  216_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_600m 1 32246.62 16541.81 380.00 0.0
+  217_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_600m 1 32416.06 16551.16 380.00 0.0
+  218_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_600m 1 32429.38 16230.13 380.00 0.0
+  219_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_600m 1 32281.76 16320.24 380.00 0.0
+  49_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 42317.74 15574.85 360.00 0.0 0
+  48_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 41990.89 15338.97 360.00 0.0 0
+  51_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 43112.58 14244.97 360.00 0.0 0
+  50_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 43509.69 14534.69 360.00 0.0 0
+  52_Static vehicles.stationary.Stationary$WillisMB 1 42262.38 14924.99 360.00 0.0
+  53_Static vehicles.stationary.Stationary$WillisMBt 1 42212.21 14845.79 360.00 0.0
+  57_Static vehicles.stationary.Stationary$ZIS5_radio 1 42148.77 14852.42 360.00 0.0
+  54_Static vehicles.stationary.Stationary$StudebeckerTruck 1 42264.04 14842.06 360.00 0.0
+  55_Static vehicles.stationary.Stationary$StudebeckerTruck 1 42257.41 14836.67 360.00 0.0
+  56_Static vehicles.stationary.Stationary$StudebeckerTruck 1 42251.19 14830.86 360.00 0.0
+  7_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 45857.42 44458.97 495.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 45548.67 44678.37 540.00 0.0 0
+  8_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 46697.64 45675.12 360.00 0.0 0
+  9_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 46132.68 45824.85 660.00 0.0 0
+  5_Static vehicles.artillery.Artillery$M8_Greyhound 1 45993.73 45350.85 360.00 0.0 0
+  15_Static vehicles.artillery.Artillery$M8_Greyhound 1 46475.02 45117.19 360.00 0.0 0
+  14_Static vehicles.stationary.Stationary$ZIS5_radio 1 46054.81 45644.68 360.00 0.0
+  13_Static vehicles.stationary.Stationary$StudebeckerTruck 1 46027.31 45702.96 360.00 0.0
+  12_Static vehicles.stationary.Stationary$StudebeckerTruck 1 46021.33 45693.09 360.00 0.0
+  11_Static vehicles.stationary.Stationary$StudebeckerTruck 1 46027.61 45733.14 360.00 0.0
+  10_Static vehicles.stationary.Stationary$WillisMB 1 46068.35 45716.98 480.00 0.0
+  220_Static vehicles.stationary.Stationary$WillisMBt 1 46027.77 45719.49 405.00 0.0
+  82_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 42615.82 19756.84 465.00 0.0 0
+  81_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 42704.00 19754.55 405.00 0.0 0
+  80_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 42745.80 19836.10 690.00 0.0 0
+  79_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 42675.66 19887.38 630.00 0.0 0
+  78_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 42573.81 19823.17 570.00 0.0 0
+  84_Static vehicles.stationary.Stationary$WillisMBt 1 42639.49 19828.46 630.00 0.0
+  85_Static vehicles.stationary.Stationary$StudebeckerTruck 1 42654.44 19857.21 690.00 0.0
+  83_Static vehicles.stationary.Stationary$WillisMB 1 42660.37 19827.94 600.00 0.0
+  75_Static vehicles.stationary.Stationary$StudebeckerTruck 1 42658.89 19819.33 390.00 0.0
+  76_Static vehicles.stationary.Stationary$StudebeckerTruck 1 42664.19 19822.03 390.00 0.0
+  73_Static vehicles.stationary.Stationary$WillisMBt 1 42669.70 19825.87 390.00 0.0
+  74_Static vehicles.stationary.Stationary$WillisMB 1 42713.90 19817.34 540.00 0.0
+  72_Static vehicles.stationary.Stationary$ZIS5_radio 1 42714.06 19812.03 540.00 0.0
+  71_Static vehicles.stationary.Stationary$ZIS5_medic 1 42684.57 19795.90 630.00 0.0
+  70_Static vehicles.stationary.Stationary$ZIS5_medic 1 42679.49 19793.14 630.00 0.0
+  68_Static vehicles.stationary.Stationary$ZIS5_medic 1 42674.35 19789.83 630.00 0.0
+  69_Static vehicles.stationary.Stationary$ZIS5_medic 1 42668.66 19786.67 630.00 0.0
+  137_Static vehicles.stationary.Stationary$Twin25mm_JA 1 32719.12 16049.35 700.00 0.0
+  138_Static vehicles.stationary.Stationary$Trip25mm_JA 1 32514.75 15999.64 400.00 0.0
+  139_Static vehicles.stationary.Stationary$Trip25mm_JA 1 32314.84 15913.74 400.00 0.0
+  140_Static vehicles.stationary.Stationary$Twin25mm_JA 1 32188.65 15748.51 415.00 0.0
+  131_Static vehicles.stationary.Stationary$Twin25mm_JA 1 31911.28 15742.49 445.00 0.0
+  129_Static vehicles.stationary.Stationary$Trip25mm_JA 1 31371.96 15884.37 490.00 0.0
+  132_Static vehicles.stationary.Stationary$Twin25mm_JA 1 31360.86 16216.88 565.00 0.0
+  133_Static vehicles.stationary.Stationary$Trip25mm_JA 1 31546.66 16456.64 565.00 0.0
+  134_Static vehicles.stationary.Stationary$Twin25mm_JA 1 31925.64 16662.98 595.00 0.0
+  135_Static vehicles.stationary.Stationary$Trip25mm_JA 1 32135.68 16768.51 610.00 0.0
+  186_Static vehicles.stationary.Stationary$WillisMB 1 32654.25 16560.91 470.00 0.0
+  187_Static vehicles.stationary.Stationary$WillisMBt 1 32596.88 16554.03 380.00 0.0
+  184_Static vehicles.stationary.Stationary$ZIS5_radio 1 32579.61 16541.78 385.00 0.0
+  198_Static vehicles.stationary.Stationary$StudebeckerTruck 1 32405.63 16544.17 485.00 0.0
+  199_Static vehicles.stationary.Stationary$StudebeckerTruck 1 32408.78 16538.66 485.00 0.0
+  159_Static vehicles.stationary.Stationary$MatildaMkII_UK 1 32377.53 16561.74 460.00 0.0
+  158_Static vehicles.stationary.Stationary$MatildaMkII_AU 1 32371.01 16562.57 460.00 0.0
+  157_Static vehicles.stationary.Stationary$MatildaMkII_UK 1 32347.77 16564.45 450.00 0.0
+  156_Static vehicles.stationary.Stationary$MatildaMkII_UK 1 32342.71 16564.62 450.00 0.0
+  154_Static vehicles.stationary.Stationary$MatildaMkII_AU 1 32312.90 16563.05 445.00 0.0
+  155_Static vehicles.stationary.Stationary$MatildaMkII_AU 1 32318.75 16563.67 445.00 0.0
+  197_Static vehicles.stationary.Stationary$StudebeckerTruck 1 32288.52 16560.81 425.00 0.0
+  188_Static vehicles.stationary.Stationary$WillisMB 1 32265.24 16551.99 455.00 0.0
+  196_Static vehicles.stationary.Stationary$StudebeckerTruck 1 32216.54 16515.47 415.00 0.0
+  195_Static vehicles.stationary.Stationary$StudebeckerTruck 1 32197.09 16508.16 415.00 0.0
+  189_Static vehicles.stationary.Stationary$WillisMBt 1 32122.62 16440.72 390.00 0.0
+  194_Static vehicles.stationary.Stationary$StudebeckerTruck 1 32107.63 16421.73 415.00 0.0
+  193_Static vehicles.stationary.Stationary$StudebeckerTruck 1 32102.12 16420.61 415.00 0.0
+  146_Static vehicles.stationary.Stationary$ValentineII 1 32074.68 16408.49 420.00 0.0
+  144_Static vehicles.stationary.Stationary$ValentineII 1 32051.08 16395.56 420.00 0.0
+  142_Static vehicles.stationary.Stationary$ValentineII 1 32028.54 16384.30 420.00 0.0
+  141_Static vehicles.stationary.Stationary$ValentineII 1 32007.20 16372.31 420.00 0.0
+  190_Static vehicles.stationary.Stationary$WillisMBt 1 31993.72 16353.92 375.00 0.0
+  191_Static vehicles.stationary.Stationary$StudebeckerTruck 1 31976.35 16349.35 400.00 0.0
+  192_Static vehicles.stationary.Stationary$StudebeckerTruck 1 31969.94 16347.78 400.00 0.0
+  172_Static vehicles.stationary.Stationary$StudebeckerTruck 1 31856.58 16143.53 500.00 0.0
+  171_Static vehicles.stationary.Stationary$StudebeckerTruck 1 31849.25 16145.65 500.00 0.0
+  177_Static vehicles.stationary.Stationary$ZIS6_fuel 1 31812.61 16178.59 500.00 0.0
+  176_Static vehicles.stationary.Stationary$ZIS6_fuel 1 31793.82 16178.56 450.00 0.0
+  162_Static vehicles.stationary.Stationary$ZIS6_fuel 1 31748.33 16179.66 450.00 0.0
+  175_Static vehicles.stationary.Stationary$ZIS6_fuel 1 31740.97 16177.92 425.00 0.0
+  174_Static vehicles.stationary.Stationary$ZIS6_fuel 1 31734.38 16174.93 410.00 0.0
+  183_Static vehicles.stationary.Stationary$ZIS5_radio 1 31763.82 16215.30 625.00 0.0
+  173_Static vehicles.stationary.Stationary$Bulldozer_US 1 31699.59 16138.48 410.00 0.0
+  170_Static vehicles.stationary.Stationary$Bulldozer_US 1 31692.07 16137.79 410.00 0.0
+  180_Static vehicles.stationary.Stationary$ZIS6_fuel 1 31783.90 16142.46 410.00 0.0
+  181_Static vehicles.stationary.Stationary$ZIS6_fuel 1 31776.40 16141.04 410.00 0.0
+  179_Static vehicles.stationary.Stationary$ZIS6_fuel 1 31768.30 16140.11 410.00 0.0
+  178_Static vehicles.stationary.Stationary$ZIS6_fuel 1 31760.09 16138.73 410.00 0.0
+  169_Static vehicles.stationary.Stationary$WillisMBt 1 32476.93 16243.62 600.00 0.0
+  200_Static vehicles.stationary.Stationary$ZIS5_AA 1 32425.54 16296.46 605.00 0.0
+  167_Static vehicles.stationary.Stationary$WillisMB 1 32394.10 16345.04 395.00 0.0
+  166_Static vehicles.stationary.Stationary$WillisMBt 1 32325.90 16364.97 405.00 0.0
+  165_Static vehicles.stationary.Stationary$WillisMBt 1 32294.15 16276.67 450.00 0.0
+  201_Static vehicles.stationary.Stationary$ZIS5_AA 1 32233.35 16259.23 650.00 0.0
+  164_Static vehicles.stationary.Stationary$WillisMBt 1 32260.83 16234.49 690.00 0.0
+  206_Static vehicles.stationary.Stationary$StudebeckerTruck 1 32265.26 16206.77 365.00 0.0
+  205_Static vehicles.stationary.Stationary$RSO 1 32353.58 16225.44 535.00 0.0
+  185_Static vehicles.stationary.Stationary$ZIS5_radio 1 32376.21 16235.32 365.00 0.0
+  168_Static vehicles.stationary.Stationary$StudebeckerRocket 1 32369.81 16189.90 570.00 0.0
+  77_Static vehicles.stationary.Stationary$StudebeckerRocket 1 32754.59 16413.31 685.00 0.0
+  45_Static vehicles.artillery.Artillery$Trip25mm_JA 1 34256.07 4955.12 360.00 0.0 0
+  47_Static vehicles.artillery.Artillery$Trip25mm_JA 1 33833.24 5142.85 360.00 0.0 0
+  43_Static vehicles.stationary.Stationary$Zenit85mm_1939 1 33563.04 4804.24 360.00 0.0
+  44_Static vehicles.artillery.Artillery$Trip25mm_JA 1 32848.96 4176.13 360.00 0.0 0
+  38_Static vehicles.stationary.Stationary$ZIS5_radio 1 33527.13 4008.38 360.00 0.0
+  39_Static vehicles.stationary.Stationary$StudebeckerTruck 1 33433.89 3948.64 360.00 0.0
+  40_Static vehicles.stationary.Stationary$StudebeckerTruck 1 33438.85 3940.75 360.00 0.0
+  41_Static vehicles.stationary.Stationary$StudebeckerTruck 1 33432.22 3932.72 360.00 0.0
+  42_Static vehicles.stationary.Stationary$Trip25mm_JA 1 33778.33 4372.10 360.00 0.0
+  1_Static ships.Ship$HMSKingGeorgeVBB 1 6697.86 30079.01 690.00 0.0 0 0 1.0
+  2_Static ships.Ship$HMSKingGeorgeVBB 1 9209.77 31014.64 690.00 0.0 0 0 1.0
+[Buildings]
+  0_bld House$VehicleOpelBlitz6700A_radio 1 5891.26 46905.42 360.00
+  1_bld House$FurnitureSandbags_Round 1 5335.80 47371.64 360.00
+  2_bld House$FurnitureSandbags_Round 1 6828.76 47364.51 360.00
+  3_bld House$FurnitureSandbags_Round 1 45856.75 44458.77 360.00
+  4_bld House$FurnitureSandbags_Round 1 45547.98 44678.38 365.00
+  5_bld House$FurnitureSandbags_Round 1 46697.25 45674.96 360.00
+  6_bld House$FurnitureSandbags_Round 1 46132.38 45824.70 360.00
+  7_bld House$FurniturePalmAg2 1 46043.26 45644.95 360.00
+  8_bld House$FurniturePalmAg1 1 46056.97 45636.46 360.00
+  9_bld House$FurnitureSandbags_Round 1 13840.28 26911.07 360.00
+  10_bld House$FurnitureSandbags_Round 1 14117.04 26518.17 360.00
+  11_bld House$FurnitureSandbags_Round 1 13284.65 26511.63 360.00
+  12_bld House$FurnitureSandbags_Round 1 12810.37 26520.55 360.00
+  13_bld House$FurniturePalmBg1 1 13936.54 27091.02 360.00
+  14_bld House$FurniturePalmBg2 1 13949.13 27071.24 360.00
+  15_bld House$FurniturePalmBs1 1 13938.34 27076.69 360.00
+  16_bld House$FurniturePalmBs1 1 13935.53 27070.06 360.00
+  17_bld House$FurniturePalmBs1 1 13948.56 27092.14 360.00
+  18_bld House$FurniturePalmBs1 1 13933.67 27083.26 360.00
+  19_bld House$FurniturePalmBs1 1 4369.80 9460.14 360.00
+  20_bld House$FurnitureSandbags_Round 1 3859.25 9862.72 360.00
+  21_bld House$FurnitureSandbags_Round 1 3942.52 9253.39 360.00
+  22_bld House$FurnitureSandbags_Round 1 4948.27 10151.24 360.00
+  23_bld House$FurnitureSandbags_Round 1 4867.67 10560.27 360.00
+  24_bld House$FurniturePalmAg1 1 4356.31 9460.22 360.00
+  25_bld House$FurniturePalmAg2 1 4359.06 9476.55 360.00
+  26_bld House$FurniturePalmAs1 1 4367.31 9475.69 360.00
+  27_bld House$FurniturePalmAs1 1 4374.19 9463.66 360.00
+  28_bld House$FurnitureSandbags_Round 1 32848.71 4176.01 360.00
+  29_bld House$FurnitureSandbags_Round 1 33041.76 3847.85 360.00
+  30_bld House$FurnitureSandbags_Round 1 33832.51 5142.57 360.00
+  31_bld House$FurnitureSandbags_Round 1 34256.01 4954.94 360.00
+  32_bld House$FurnitureSandbags_Round 1 41990.42 15338.88 360.00
+  33_bld House$FurnitureSandbags_Round 1 42317.11 15574.71 360.00
+  34_bld House$FurnitureSandbags_Round 1 43509.01 14534.65 360.00
+  35_bld House$FurnitureSandbags_Round 1 43111.96 14244.73 360.00
+  36_bld House$FurniturePalmBg1 1 42157.89 14843.36 360.00
+  37_bld House$FurniturePalmBg2 1 42137.27 14848.91 360.00
+  38_bld House$FurniturePalmBs1 1 42145.77 14846.30 360.00
+  39_bld House$FurniturePalmBs1 1 42148.60 14838.71 360.00
+  40_bld House$FurniturePalmBs2 1 42142.26 14859.79 360.00
+  41_bld House$FurniturePalmBs1 1 42150.53 14858.77 360.00
+  42_bld House$FurnitureSandbags_Round 1 28910.71 31347.38 360.00
+  43_bld House$FurnitureSandbags_Round 1 29070.43 31345.58 360.00
+  44_bld House$FurnitureSandbags_Round 1 28893.73 31131.67 360.00
+  45_bld House$FurnitureSandbags_Round 1 29062.95 31125.48 360.00
+  46_bld House$Tent_Pyramid_US 1 28908.14 31405.31 360.00
+  47_bld House$Tent_Pyramid_US 1 28907.87 31415.89 360.00
+  48_bld House$Tent_Pyramid_US 1 28907.89 31425.72 360.00
+  49_bld House$Tent_Pyramid_US 1 28921.01 31405.01 360.00
+  50_bld House$Tent_Pyramid_US 1 28933.59 31405.20 360.00
+  51_bld House$Tent_Pyramid_US 1 28947.11 31405.08 360.00
+  52_bld House$FurnitureSandbags_Round 1 28872.71 31383.28 360.00
+  53_bld House$FurnitureSandbags_Round 1 28942.57 31444.71 360.00
+  54_bld House$FurniturePalmAg1 1 28898.89 31437.03 360.00
+  55_bld House$FurniturePalmAg1 1 28893.77 31415.31 360.00
+  56_bld House$FurniturePalmAg1 1 28919.86 31397.73 360.00
+  57_bld House$FurniturePalmAg1 1 28926.55 31420.43 360.00
+  58_bld House$FurniturePalmAg2 1 28918.04 31436.37 360.00
+  59_bld House$FurniturePalmAg2 1 28939.35 31393.02 360.00
+  60_bld House$FurniturePalmAg2 1 28896.66 31399.54 360.00
+  61_bld House$FurniturePalmAs1 1 28944.96 31415.23 360.00
+  62_bld House$FurniturePalmAs1 1 28959.74 31392.85 360.00
+  63_bld House$FurniturePalmAs1 1 28904.67 31389.22 360.00
+  64_bld House$FurniturePalmAs1 1 28894.84 31427.29 360.00
+  65_bld House$FurniturePalmAs2 1 28919.61 31424.23 360.00
+  66_bld House$SudakFortressTower 1 42652.60 19817.91 420.00
+  67_bld House$SudakFortressWall 1 42663.23 19825.26 600.00
+  68_bld House$SudakFortressGates 1 42646.82 19789.26 420.00
+  69_bld House$SudakFortressGates 1 42687.12 19846.46 510.00
+  70_bld House$SudakFortressTower 1 42684.28 19852.59 690.00
+  71_bld House$SudakFortressWall 1 42640.85 19812.56 600.00
+  72_bld House$SudakFortressTower 1 42674.39 19830.93 570.00
+  73_bld House$SudakFortressWall 1 42636.41 19793.18 690.00
+  74_bld House$SudakFortressTower 1 42630.62 19804.59 420.00
+  75_bld House$SudakFortressTower 1 42661.75 19777.99 420.00
+  76_bld House$SudakFortressWall 1 42673.28 19783.65 420.00
+  77_bld House$SudakFortressWall 1 42690.63 19793.70 420.00
+  78_bld House$SudakFortressTower 1 42701.51 19800.75 420.00
+  79_bld House$SudakFortressWall 1 42712.92 19806.62 420.00
+  80_bld House$SudakFortressWall 1 42698.81 19837.16 495.00
+  81_bld House$SudakFortressWall 1 42712.75 19823.17 495.00
+  82_bld House$SudakFortressTower 1 42721.63 19813.79 405.00
+  83_bld House$SudakFortressTower 1 42704.95 19828.23 495.00
+  84_bld House$SudakFortressTower 1 42640.86 19785.82 510.00
+  85_bld House$FurniturePalmBg2 1 42645.70 19801.05 390.00
+  86_bld House$FurniturePalmAs1 1 42667.02 19835.36 420.00
+  87_bld House$FurniturePalmAs1 1 42686.81 19860.24 420.00
+  88_bld House$FurniturePalmAs1 1 42699.47 19845.08 420.00
+  89_bld House$FurniturePalmAs1 1 42672.11 19855.15 690.00
+  90_bld House$FurniturePalmAg2 1 42663.63 19844.75 690.00
+  91_bld House$FurniturePalmAg1 1 42716.44 19829.30 615.00
+  92_bld House$FurniturePalmAg1 1 42707.75 19842.89 645.00
+  93_bld House$FurniturePalmAg1 1 42729.92 19813.17 435.00
+  94_bld House$FurniturePalmAg2 1 42720.43 19802.51 390.00
+  95_bld House$FurniturePalmBs1 1 42652.00 19777.73 390.00
+  96_bld House$FurniturePalmBs2 1 42690.35 19837.47 390.00
+  97_bld House$FurniturePalmBs2 1 42693.69 19799.09 390.00
+  98_bld House$AirdromeBarrelBlock1 1 42594.90 19840.12 600.00
+  99_bld House$Tent_Pyramid_US 1 42644.99 19865.28 540.00
+  100_bld House$Tent_Pyramid_US 1 42629.96 19850.54 540.00
+  101_bld House$Tent_Pyramid_US 1 42634.96 19860.35 585.00
+  102_bld House$Tent_Pyramid_US 1 42634.74 19838.36 600.00
+  103_bld House$Tent_HQ_US 1 42587.00 19851.50 375.00
+  104_bld House$FurniturePalmAg2 1 42623.21 19854.96 540.00
+  105_bld House$FurniturePalmAg2 1 42628.53 19839.89 540.00
+  106_bld House$FurniturePalmAg2 1 42634.31 19865.73 420.00
+  107_bld House$FurniturePalmAg2 1 42650.17 19868.22 495.00
+  108_bld House$FurniturePalmAg2 1 42646.32 19828.45 540.00
+  109_bld House$FurniturePalmAg1 1 42635.42 19829.03 495.00
+  110_bld House$FurniturePalmAg1 1 42585.68 19853.73 495.00
+  111_bld House$FurnitureSandbags_Round 1 42573.43 19823.30 375.00
+  112_bld House$FurnitureSandbags_Round 1 42675.68 19887.25 480.00
+  113_bld House$FurnitureSandbags_Round 1 42746.11 19836.94 510.00
+  114_bld House$FurnitureSandbags_Round 1 42615.57 19756.16 645.00
+  115_bld House$FurnitureSandbags_Round 1 42704.22 19754.16 585.00
+  116_bld House$SudakFortressGates 1 9140.38 26127.67 435.00
+  117_bld House$SudakFortressWall 1 9153.86 26098.14 705.00
+  118_bld House$SudakFortressTower 1 9134.29 26124.37 615.00
+  119_bld House$SudakFortressTower 1 9151.41 26110.82 525.00
+  120_bld House$SudakFortressWall 1 9153.29 26073.80 375.00
+  121_bld House$SudakFortressWall 1 9153.46 26134.04 615.00
+  122_bld House$SudakFortressTower 1 9150.42 26061.26 375.00
+  123_bld House$SudakFortressTower 1 9157.05 26085.77 365.00
+  124_bld House$SudakFortressGates 1 9148.57 26054.71 465.00
+  125_bld House$SudakFortressTower 1 9141.05 26052.82 375.00
+  126_bld House$SudakFortressTower 1 9149.74 26034.93 645.00
+  127_bld House$SudakFortressWall 1 9162.46 26032.73 645.00
+  128_bld House$SudakFortressTower 1 9174.42 26028.39 645.00
+  129_bld House$SudakFortressWall 1 9186.88 26025.10 645.00
+  130_bld House$SudakFortressTower 1 9199.09 26022.85 630.00
+  131_bld House$SudakFortressWall 1 9211.50 26026.03 615.00
+  132_bld House$SudakFortressGates 1 9222.52 26036.53 705.00
+  133_bld House$SudakFortressTower 1 9219.93 26028.84 435.00
+  134_bld House$SudakFortressTower 1 9224.24 26030.02 435.00
+  135_bld House$SudakFortressTower 1 9239.91 26047.71 525.00
+  136_bld House$SudakFortressWall 1 9251.92 26049.61 615.00
+  137_bld House$SudakFortressGates 1 9270.62 26055.29 435.00
+  138_bld House$SudakFortressTower 1 9263.93 26054.25 525.00
+  139_bld House$SudakFortressTower 1 9166.18 26136.99 615.00
+  140_bld House$SudakFortressWall 1 9177.94 26140.99 615.00
+  141_bld House$SudakFortressGates 1 9197.39 26143.80 435.00
+  142_bld House$SudakFortressWall 1 9210.18 26149.94 435.00
+  143_bld House$SudakFortressTower 1 9222.55 26152.16 450.00
+  144_bld House$SudakFortressWall 1 9234.86 26150.33 465.00
+  145_bld House$SudakFortressTower 1 9246.40 26145.48 480.00
+  146_bld House$SudakFortressTower 1 9263.57 26127.83 510.00
+  147_bld House$SudakFortressWall 1 9256.02 26137.71 495.00
+  148_bld House$SudakFortressGates 1 9252.15 26114.53 690.00
+  149_bld House$SudakFortressTower 1 9282.24 26039.05 435.00
+  150_bld House$SudakFortressTower 1 9269.41 26117.89 555.00
+  151_bld House$SudakFortressTower 1 9190.49 26143.66 615.00
+  152_bld House$SudakFortressWall 1 9281.19 26113.40 465.00
+  153_bld House$SudakFortressGates 1 9295.34 26091.37 645.00
+  154_bld House$SudakFortressWall 1 9294.64 26042.78 615.00
+  155_bld House$SudakFortressTower 1 9255.54 26108.71 600.00
+  156_bld House$SudakFortressTower 1 9293.66 26111.49 645.00
+  157_bld House$SudakFortressTower 1 9301.77 26089.02 555.00
+  158_bld House$SudakFortressTower 1 9306.88 26046.49 585.00
+  159_bld House$SudakFortressWall 1 9310.47 26058.89 555.00
+  160_bld House$SudakFortressGates 1 9304.53 26071.85 645.00
+  161_bld House$SudakFortressTower 1 9311.89 26073.37 555.00
+  162_bld House$SudakFortressTower 1 9313.51 26068.14 555.00
+  163_bld House$SudakFortressTower 1 9204.77 26125.73 435.00
+  164_bld House$SudakFortressTower 1 9210.56 26122.69 705.00
+  165_bld House$SudakFortressTower 1 9209.38 26126.96 435.00
+  166_bld House$SudakFortressGates 1 9225.10 26108.92 600.00
+  167_bld House$SudakFortressTower 1 9230.32 26111.96 600.00
+  168_bld House$FurnitureSandbag_Wall 1 9129.69 26131.94 405.00
+  169_bld House$FurnitureSandbag_Wall 1 9146.69 26137.02 465.00
+  170_bld House$FurnitureSandbag_Wall 1 9187.57 26150.19 405.00
+  171_bld House$FurnitureSandbag_Wall 1 9201.49 26153.25 465.00
+  172_bld House$FurnitureSandbags_Round 1 9145.63 26085.70 360.00
+  173_bld House$FurnitureSandbags_Round 1 9158.82 26024.32 645.00
+  174_bld House$FurnitureSandbags_Round 1 9253.34 26040.10 615.00
+  175_bld House$FurnitureSandbags_Round 1 9319.41 26053.59 555.00
+  176_bld House$FurniturePalmAg1 1 9219.99 26104.03 440.00
+  177_bld House$FurniturePalmAg1 1 9218.56 26045.27 695.00
+  178_bld House$FurniturePalmAg2 1 9275.11 26107.01 555.00
+  179_bld House$FurniturePalmAg2 1 9266.29 26107.74 395.00
+  180_bld House$FurniturePalmAs1 1 9167.90 26026.64 360.00
+  181_bld House$FurniturePalmAs1 1 9151.14 26091.57 360.00
+  182_bld House$FurniturePalmAs1 1 9154.53 26030.26 360.00
+  183_bld House$FurniturePalmAs1 1 9275.40 26040.46 360.00
+  184_bld House$FurniturePalmAs2 1 9132.68 26129.69 465.00
+  185_bld House$FurniturePalmAs2 1 9145.59 26135.80 550.00
+  186_bld House$FurniturePalmAs2 1 9202.84 26151.38 555.00
+  187_bld House$FurniturePalmAs2 1 9183.96 26145.36 435.00
+  188_bld House$FurniturePalmAs2 1 9149.10 26082.33 455.00
+  189_bld House$FurniturePalmAs2 1 9243.72 26040.35 650.00
+  190_bld House$FurniturePalmAs2 1 9260.98 26046.86 375.00
+  191_bld House$FurniturePalmAs2 1 9315.25 26061.50 670.00
+  192_bld House$FurniturePalmAs2 1 9313.85 26050.21 590.00
+  193_bld House$FurnitureSandbags_Round 1 9278.04 26126.30 490.00
+  194_bld House$FurniturePalmAs2 1 9288.70 26116.63 490.00
+  195_bld House$FurniturePalmAs2 1 9272.26 26124.70 565.00
+  196_bld House$FurniturePalmAs2 1 9275.90 26120.57 565.00
+  197_bld House$FurniturePalmAg1 1 9157.13 26054.62 665.00
+  198_bld House$AirdromeMaskingnet 1 32074.88 16408.12 600.00
+  199_bld House$AirdromeMaskingnet 1 32051.28 16395.26 420.00
+  200_bld House$AirdromeMaskingnet 1 32007.54 16371.66 420.00
+  201_bld House$AirdromeMaskingnet 1 32316.13 16562.35 625.00
+  202_bld House$AirdromeMaskingnet 1 32345.10 16563.64 450.00
+  203_bld House$AirdromeMaskingnet 1 32373.67 16561.53 640.00
+  204_bld House$AirdromeMaskingnet 1 32028.98 16383.66 420.00
+  205_bld House$Tent_Pyramid_US 1 32202.19 16513.94 690.00
+  206_bld House$Tent_Pyramid_US 1 32113.19 16431.75 390.00
+  207_bld House$Tent_Pyramid_US 1 31989.70 16360.21 420.00
+  208_bld House$Tent_Pyramid_US 1 32093.54 16416.90 420.00
+  209_bld House$Tent_Pyramid_US 1 32274.56 16556.14 375.00
+  210_bld House$Tent_Pyramid_US 1 32395.20 16554.37 375.00
+  211_bld House$FurnitureSandbags_Round 1 31911.08 15741.83 645.00
+  212_bld House$FurniturePalmAg1 1 32301.18 16294.87 420.00
+  213_bld House$FurniturePalmAg2 1 32282.86 16287.20 420.00
+  214_bld House$FurniturePalmAs1 1 32280.73 16273.62 420.00
+  215_bld House$FurniturePalmAs2 1 32300.85 16279.23 420.00
+  216_bld House$FurnitureSandbag_Wall 1 32310.17 16570.77 445.00
+  217_bld House$FurnitureSandbag_Wall 1 32319.84 16571.78 445.00
+  218_bld House$FurnitureSandbag_Wall 1 32340.46 16573.08 450.00
+  219_bld House$FurnitureSandbag_Wall 1 32350.07 16573.08 450.00
+  220_bld House$FurnitureSandbag_Wall 1 32371.09 16571.73 460.00
+  221_bld House$FurnitureSandbag_Wall 1 32380.36 16570.04 460.00
+  222_bld House$FurnitureSandbag_Wall 1 32066.51 16414.27 420.00
+  223_bld House$FurnitureSandbag_Wall 1 32073.75 16418.26 420.00
+  224_bld House$FurnitureSandbag_Wall 1 32042.51 16401.57 420.00
+  225_bld House$FurnitureSandbag_Wall 1 32050.15 16405.56 420.00
+  226_bld House$FurnitureSandbag_Wall 1 32020.42 16389.60 420.00
+  227_bld House$FurnitureSandbag_Wall 1 32027.90 16393.81 420.00
+  228_bld House$FurnitureSandbag_Wall 1 32006.60 16381.78 420.00
+  229_bld House$FurnitureSandbag_Wall 1 31998.73 16377.63 420.00
+  230_bld House$BlastPen 1 31771.71 16189.40 540.00
+  231_bld House$BlastPen 1 31836.42 16169.37 585.00
+  232_bld House$BlastPen 1 31709.38 16165.10 495.00
+  233_bld House$AirdromeTank1 1 31831.62 16173.80 675.00
+  234_bld House$AirdromeTank1 1 31765.66 16187.79 450.00
+  235_bld House$AirdromeTank1 1 31706.95 16160.96 585.00
+  236_bld House$AirdromeBarrelBlock2 1 31716.77 16158.04 540.00
+  237_bld House$AirdromeBarrelBlock1 1 31770.90 16178.62 540.00
+  238_bld House$AirdromeTank1 1 31777.13 16187.41 450.00
+  239_bld House$AirdromeTank1 1 31714.97 16167.91 585.00
+  240_bld House$AirdromeTank1 1 31839.78 16165.23 675.00
+  241_bld House$AirdromeBarrelBlock1 1 31829.23 16163.68 585.00
+  242_bld House$FurniturePalmAg1 1 31803.15 16183.07 510.00
+  243_bld House$FurniturePalmAg1 1 31748.30 16204.04 645.00
+  244_bld House$FurniturePalmAg1 1 31703.69 16186.73 525.00
+  245_bld House$FurniturePalmAg1 1 31731.48 16187.22 480.00
+  246_bld House$FurniturePalmAg2 1 31682.78 16165.08 510.00
+  247_bld House$FurniturePalmAg2 1 31779.32 16209.45 450.00
+  248_bld House$FurniturePalmAg2 1 31804.43 16198.72 390.00
+  249_bld House$FurniturePalmAg2 1 31815.40 16191.90 510.00
+  250_bld House$FurniturePalmAg2 1 32200.44 16521.95 420.00
+  251_bld House$FurniturePalmAg2 1 32272.81 16558.85 420.00
+  252_bld House$FurniturePalmAg2 1 32211.37 16519.19 510.00
+  253_bld House$FurniturePalmAg2 1 32110.73 16436.46 405.00
+  254_bld House$FurniturePalmAg2 1 32091.89 16428.97 555.00
+  255_bld House$FurniturePalmAg2 1 32104.24 16426.74 450.00
+  256_bld House$FurniturePalmAg2 1 32401.14 16552.12 555.00
+  257_bld House$FurniturePalmAg2 1 32392.58 16560.71 420.00
+  258_bld House$FurniturePalmAg2 1 31988.35 16351.05 450.00
+  259_bld House$FurniturePalmAg2 1 31980.79 16359.10 525.00
+  260_bld House$FurniturePalmAg2 1 31987.62 16371.53 420.00
+  261_bld House$FurniturePalmAg2 1 32272.18 16216.39 555.00
+  262_bld House$FurniturePalmAg2 1 32421.56 16200.39 435.00
+  263_bld House$FurniturePalmAg2 1 32372.65 16242.22 555.00
+  264_bld House$FurniturePalmAs2 1 32342.15 16291.03 555.00
+  265_bld House$FurniturePalmAs2 1 32414.28 16297.46 555.00
+  266_bld House$FurniturePalmAs2 1 32353.04 16279.81 555.00
+  267_bld House$FurniturePalmAs2 1 32420.63 16258.26 555.00
+  268_bld House$FurniturePalmAs2 1 32472.68 16241.67 555.00
+  269_bld House$FurniturePalmAs2 1 32410.18 16203.88 555.00
+  270_bld House$FurniturePalmAs2 1 32387.11 16180.43 555.00
+  271_bld House$FurniturePalmAs2 1 32422.81 16191.25 555.00
+  272_bld House$FurniturePalmAg1 1 32361.83 16244.38 555.00
+  273_bld House$FurniturePalmAg1 1 32403.38 16184.45 600.00
+  274_bld House$FurniturePalmAg1 1 32395.15 16178.05 555.00
+  275_bld House$FurniturePalmAg1 1 32372.30 16186.06 525.00
+  276_bld House$FurniturePalmAg1 1 32377.52 16176.41 465.00
+  277_bld House$FurniturePalmAg2 1 32244.29 16255.62 555.00
+  278_bld House$FurniturePalmAg2 1 32361.47 16234.08 585.00
+  279_bld House$FurniturePalmAg2 1 32352.56 16292.52 555.00
+  280_bld House$FurniturePalmAg2 1 32365.68 16283.40 495.00
+  281_bld House$FurniturePalmAg2 1 32455.25 16266.95 555.00
+  282_bld House$FurniturePalmAg2 1 32411.67 16192.01 500.00
+  283_bld House$FurniturePalmAg2 1 32491.86 16262.59 555.00
+  284_bld House$FurniturePalmAs2 1 32414.61 16182.38 435.00
+  285_bld House$FurniturePalmAs2 1 32370.70 16194.46 435.00
+  286_bld House$FurniturePalmAg2 1 32258.33 16227.31 555.00
+  287_bld House$FurniturePalmAs1 1 32246.94 16247.86 555.00
+  288_bld House$FurniturePalmAs1 1 32262.05 16212.71 555.00
+  289_bld House$FurniturePalmAs1 1 32273.26 16225.95 555.00
+  290_bld House$FurniturePalmAs1 1 32371.43 16230.54 555.00
+  291_bld House$FurniturePalmAg2 1 32416.27 16289.64 600.00
+  292_bld House$FurniturePalmAg2 1 32426.29 16254.83 555.00
+  293_bld House$FurniturePalmAg2 1 32399.46 16349.36 660.00
+  294_bld House$FurniturePalmAg2 1 32391.67 16359.36 600.00
+  295_bld House$FurniturePalmAg2 1 32451.79 16344.53 495.00
+  296_bld House$FurniturePalmAg2 1 32316.41 16364.41 600.00
+  297_bld House$FurniturePalmAg2 1 32313.88 16350.77 600.00
+  298_bld House$FurniturePalmAs2 1 32448.66 16352.51 600.00
+  299_bld House$FurniturePalmAs2 1 32408.56 16344.61 600.00
+  300_bld House$FurniturePalmAs2 1 32311.45 16357.80 600.00
+  301_bld House$FurnitureSandbags_Round 1 32314.91 15913.60 585.00
+  302_bld House$FurnitureSandbags_Round 1 32514.96 15999.43 600.00
+  303_bld House$FurnitureSandbags_Round 1 32188.69 15748.04 615.00
+  304_bld House$FurnitureSandbags_Round 1 32719.31 16049.29 525.00
+  305_bld House$FurnitureSandbags_Round 1 32135.52 16768.80 435.00
+  306_bld House$FurnitureSandbags_Round 1 31925.29 16663.30 420.00
+  307_bld House$FurnitureSandbags_Round 1 31546.19 16456.77 405.00
+  308_bld House$FurnitureSandbags_Round 1 31360.41 16216.91 370.00
+  309_bld House$FurnitureSandbags_Round 1 31371.56 15884.00 675.00
+  310_bld House$AirdromeControlTowerSmall 1 32658.49 16561.50 645.00
+  311_bld House$AirdromeControlTowerSmall 1 32745.85 16425.39 645.00
+  312_bld House$AirdromeControlTowerSmall 1 31343.49 15976.71 645.00
+  313_bld House$AirdromeControlTowerSmall 1 31525.88 15795.51 645.00
+  314_bld House$AirdromeRadar1 1 32596.87 16541.20 390.00
+  315_bld House$Tent_HQ_US 1 32574.28 16530.90 360.00
+  316_bld House$Tent_HQ_US 1 32578.43 16555.10 390.00
+  317_bld House$Tent_HQ_US 1 32601.19 16562.54 450.00
+  318_bld House$Tent_Pyramid_US 1 32382.01 16185.97 390.00
+  319_bld House$Tent_Pyramid_US 1 32390.79 16194.11 515.00
+  320_bld House$Tent_Pyramid_US 1 32399.69 16200.69 515.00
+  321_bld House$Tent_Pyramid_US 1 32451.09 16268.65 620.00
+  322_bld House$Tent_Pyramid_US 1 32487.78 16265.05 610.00
+  323_bld House$Tent_Pyramid_US 1 32446.39 16341.68 545.00
+  324_bld House$Tent_Pyramid_US 1 32389.76 16351.25 545.00
+  325_bld House$Tent_Pyramid_US 1 32406.01 16289.18 575.00
+  326_bld House$Tent_Pyramid_US 1 32346.74 16283.79 575.00
+  327_bld House$Tent_Pyramid_US 1 32299.96 16284.68 575.00
+  328_bld House$Tent_Pyramid_US 1 32250.18 16252.61 575.00
+  329_bld House$Tent_Pyramid_US 1 32259.97 16218.92 500.00
+  330_bld House$Tent_Pyramid_US 1 32365.30 16225.64 605.00
+  331_bld House$Tent_Pyramid_US 1 32353.91 16237.18 580.00
+  332_bld House$Tent_Pyramid_US 1 32318.49 16359.08 590.00
+  333_bld House$Tent_Pyramid_US 1 32418.59 16251.84 620.00
+  334_bld House$Tent_Pyramid_US 1 32354.28 16246.58 610.00
+  335_bld House$Tent_Pyramid_US 1 32285.32 16278.81 610.00
+  336_bld House$Tent_Pyramid_US 1 32293.42 16293.08 610.00
+  337_bld House$Tent_Pyramid_US 1 32266.96 16226.49 565.00
+  338_bld House$AirdromeControlTowerSmall 1 31675.19 16142.38 460.00
+  339_bld House$AirdromeControlTowerSmall 1 31862.86 16194.91 505.00
+  340_bld House$FurniturePalmAg1 1 31742.04 16191.41 440.00
+  341_bld House$FurnitureSandbags_Round 1 31685.87 16081.49 670.00
+  342_bld House$FurnitureSandbags_Round 1 31825.18 16084.86 565.00
+  343_bld House$FurnitureSandbags_Round 1 31958.13 16337.44 660.00
+  344_bld House$FurnitureSandbags_Round 1 32237.57 16534.12 585.00
+  345_bld House$FurnitureSandbags_Round 1 32627.40 16559.00 605.00
+  346_bld House$FurnitureSandbags_Round 1 33562.57 4804.08 360.00
+  347_bld House$FurnitureSandbags_Round 1 33778.52 4371.85 360.00
+[Target]
+  3 0 1 30 500 22888 49803 2950
+  0 1 0 0 1000 20998 35196 0 3 gb0100 20546 37661
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 10991.15 22023.35 2
+  FrontMarker1 1069.64 7437.59 2
+  FrontMarker2 10562.12 20536.41 1
+  FrontMarker3 4849.10 2876.50 1
+  FrontMarker4 8923.38 14834.74 2
+  FrontMarker5 13959.95 10140.16 2
+  FrontMarker6 10778.43 6370.30 2
+  FrontMarker7 15410.12 10149.79 1
+  FrontMarker8 8828.61 16080.80 1
+  FrontMarker9 11689.38 5173.16 1
+  FrontMarker10 3191.74 13133.87 2
+  FrontMarker11 2462.10 14382.67 1
+  FrontMarker12 16435.96 24204.49 2
+  FrontMarker13 19271.36 26710.51 2
+  FrontMarker14 16476.91 22889.65 1
+  FrontMarker15 20668.33 26463.95 1
+  FrontMarker16 15985.59 29298.43 2
+  FrontMarker17 9247.14 27408.40 2
+  FrontMarker18 4768.59 24779.10 2
+  FrontMarker19 15697.90 30490.04 1
+  FrontMarker20 4727.79 26134.42 1
+  FrontMarker21 8794.86 28477.24 1
+  FrontMarker22 4849.73 4848.89 2
+  FrontMarker23 370.75 6451.48 1
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 2
+WindDirection 139
+WindTop 2869
+WindTurbulence 0
+WindGust 1

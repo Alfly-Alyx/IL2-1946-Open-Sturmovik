@@ -1,0 +1,6 @@
+[all]
+0:02  The body of Sqn.Ldr. Hugo Armstrong has been washed ashore a few days later
+0:10  He died just like so many others
+0:14  too many...
+0:19  ...and the war went on...
+0:24

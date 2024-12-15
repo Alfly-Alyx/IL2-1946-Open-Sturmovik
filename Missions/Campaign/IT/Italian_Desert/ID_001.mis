@@ -1,0 +1,61 @@
+[MAIN]
+  MAP SandsOfTime/load.ini
+  TIME 7.75
+  CloudType 1
+  CloudHeight 1400.0
+  player i0100
+  army 2
+  playerNum 0
+[Wing]
+  i0100
+  gb0100
+[i0100]
+  Planes 1
+  Skill 2
+  skin0 CR-42-Desert.bmp
+  Class air.CR_42
+  Fuel 100
+  weapons default
+[i0100_Way]
+  TAKEOFF 5399.28 47247.83 0 0 &0
+  NORMFLY 2878.34 43837.83 1000.00 300.00 &0
+  NORMFLY 17999.30 41955.52 1500.00 250.00 &0
+  NORMFLY 32215.76 39531.71 1500.00 250.00 gb0100 2 &0
+  NORMFLY 39775.34 26547.23 1500.00 300.00 &0
+  NORMFLY 26913.89 28888.55 1500.00 300.00 &0
+  NORMFLY 12409.88 50091.05 1000.00 300.00 &0
+  LANDING 6912.71 47514.69 0 0 &0
+[gb0100]
+  Planes 1
+  Skill 1
+  skin0 PBN-1-Mediterranean.bmp
+  numberOn0 0
+  Class air.PBN1
+  Fuel 100
+  weapons default
+  StartTime 3
+[gb0100_Way]
+  NORMFLY 50992.38 50953.49 1500.00 250.00 &0
+  NORMFLY 32420.60 48857.99 1500.00 250.00 &0
+  NORMFLY 28804.86 35586.58 1500.00 250.00 &0
+  NORMFLY 37351.15 29587.74 1500.00 250.00 &0
+  NORMFLY 50992.36 33367.83 1500.00 250.00 &0
+[NStationary]
+[Buildings]
+[Target]
+  3 2 1 90 500 6247 47337 1450
+  0 0 0 0 1000 28270 35379 0 2 gb0100 28804 35586
+[Bridge]
+[House]
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 9
+WindDirection 229
+WindTop 4164
+WindTurbulence 0
+WindGust 0

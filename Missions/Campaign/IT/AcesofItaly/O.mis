@@ -1,0 +1,139 @@
+[MAIN]
+  MAP Balaton/load.ini
+  TIME 17.0
+  CloudType 3
+  CloudHeight 1000.0
+  player i0111
+  army 2
+  playerNum 0
+[Wing]
+  i0111
+  89Squadron20
+  89Squadron21
+  89Squadron22
+[i0111]
+  Planes 4
+  Skill 2
+  skin0 MC-205V_Sgt_Maggiore_Alberto_ZavattiANR_1944bl1.bmp
+  skin1 MC-205V_Sgt_Maggiore_Alberto_ZavattiANR_1944bl1.bmp
+  skin2 MC-205V_Sgt_Maggiore_Alberto_ZavattiANR_1944bl1.bmp
+  skin3 MC-205V_Sgt_Maggiore_Alberto_ZavattiANR_1944bl1.bmp
+  Class air.MC_205_1
+  Fuel 60
+  weapons default
+[i0111_Way]
+  TAKEOFF 153272.61 34155.05 0 0 &0
+  NORMFLY 82631.95 45800.54 4000.00 300.00 &0
+  NORMFLY 50003.44 27839.39 4000.00 300.00 &0
+  NORMFLY 112796.57 18737.59 4000.00 300.00 &0
+  LANDING 153272.61 34155.05 0 0 &0
+[89Squadron20]
+  Planes 4
+  Skill 1
+  Class air.SPITFIRE8
+  Fuel 50
+  weapons default
+  StartTime 14
+[89Squadron20_Way]
+  GATTACK 77623.66 43218.70 1000.00 300.00 2_Chief 0 &0
+  NORMFLY 1696.63 1540.90 1000.00 300.00 &0
+[89Squadron21]
+  Planes 4
+  Skill 1
+  Class air.SPITFIRE8
+  Fuel 50
+  weapons default
+  StartTime 14
+[89Squadron21_Way]
+  GATTACK 77765.42 43181.26 1000.00 300.00 2_Chief 1 &0
+  NORMFLY 848.82 4702.60 1000.00 300.00 &0
+[89Squadron22]
+  Planes 2
+  Skill 1
+  skin1 vp_desert_campaign.bmp
+  Class air.A_20G
+  Fuel 100
+  weapons 2x500
+[89Squadron22_Way]
+  NORMFLY 187603.38 123487.60 1000.00 300.00 &0
+  NORMFLY 144592.10 104180.71 1000.00 300.00 &0
+  GATTACK 146837.75 85992.37 1000.00 300.00 13_Static 0 &0
+  NORMFLY 2945.46 69007.78 1000.00 300.00 &0
+[Chiefs]
+  0_Chief Vehicles.GermanyCarsColumnC 2
+  1_Chief Vehicles.GermanyCarsColumnA 2
+  2_Chief Vehicles.GermanyCarsColumnE 2
+[0_Chief_Road]
+  78046.95 42910.59 120.00 15 8 2.3611111640930176
+  77900.00 42900.00 20.00
+  77700.00 42900.00 20.00
+  77500.00 42900.00 -704.00
+  77100.00 42900.00 -704.00
+  76900.00 42900.00 20.00
+  76100.00 42900.00 20.00
+  75930.14 42919.34 120.00
+[1_Chief_Road]
+  77690.78 42897.24 120.00 15 6 2.6388890743255615
+  77500.00 42900.00 -704.00
+  77100.00 42900.00 -704.00
+  76900.00 42900.00 20.00
+  75500.00 42900.00 20.00
+  75210.02 42811.61 120.00
+[2_Chief_Road]
+  77891.13 42910.59 120.00 15 9 2.6388890743255615
+  77700.00 42900.00 20.00
+  77500.00 42900.00 -704.00
+  77100.00 42900.00 -704.00
+  76900.00 42900.00 20.00
+  75300.00 42900.00 20.00
+  75100.00 43100.00 20.00
+  75100.00 43300.00 20.00
+  75096.13 43490.64 120.00
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Flak18_88mm 2 153442.99 34638.61 420.00 0.0 0
+  1_Static vehicles.planes.Plane$JU_52_3MG4E 2 153700.79 34303.13 539.10 0.0 null
+  2_Static vehicles.planes.Plane$JU_87D3 2 153682.77 34259.22 205.00 0.0 null
+  3_Static vehicles.planes.Plane$JU_87D3 2 153654.61 34244.86 205.00 0.0 null
+  4_Static vehicles.planes.Plane$JU_87D3 2 153639.98 34225.72 225.00 0.0 null
+  5_Static vehicles.planes.Plane$MC_202 2 153628.98 34175.00 225.00 0.0 it
+  6_Static vehicles.planes.Plane$MC_202 2 153610.97 34156.99 225.00 0.0 it
+  7_Static vehicles.planes.Plane$MC_202 2 153592.96 34140.10 225.00 0.0 it
+  8_Static vehicles.planes.Plane$MC_202 2 153576.07 34122.09 225.00 0.0 it
+  9_Static vehicles.planes.Plane$MC_202 2 153559.18 34104.08 225.00 0.0 it
+  10_Static vehicles.planes.Plane$MC_202 2 153541.17 34086.07 225.00 0.0 it
+  11_Static vehicles.planes.Plane$MC_205_3 2 154143.25 35300.04 434.10 0.0 it
+  12_Static vehicles.stationary.Stationary$OpelBlitz6700A_medic 2 154318.12 35143.37 525.00 0.0
+  13_Static ships.Ship$MAS501 2 146886.88 85829.62 360.00 0.0 0 2 1.0
+  14_Static ships.Ship$MAS501 2 147078.04 85294.15 715.00 0.0 0 2 1.0
+  15_Static ships.Ship$MAS501 2 146284.24 88131.56 655.00 0.0 0 2 1.0
+  16_Static ships.Ship$MAS501 2 146554.47 87726.22 625.00 0.0 0 2 1.0
+  17_Static ships.Ship$MAS501 2 146182.90 87844.44 580.00 0.0 0 2 1.0
+  18_Static vehicles.stationary.Stationary$VW82 2 146709.09 85833.77 580.00 0.0
+  19_Static vehicles.stationary.Stationary$VW82t 2 146712.19 85829.99 550.00 0.0
+  20_Static vehicles.stationary.Stationary$OpelKadett 2 146707.12 85841.81 490.00 0.0
+  21_Static vehicles.stationary.Stationary$OpelBlitz36S 2 146699.02 85841.97 370.00 0.0
+  22_Static vehicles.stationary.Stationary$SdKfz251 2 146696.72 85834.32 670.00 0.0
+  23_Static vehicles.stationary.Stationary$Flak18_88mm 2 146690.01 85853.12 670.00 0.0
+  24_Static vehicles.stationary.Stationary$BunkerD_gun 2 146699.81 85846.79 370.00 0.0
+[Buildings]
+  0_bld House$CrimeaHouse1 1 146652.32 85881.82 640.00
+  1_bld House$CrimeaHouse3 1 146633.37 85857.21 640.00
+  2_bld House$Bunker5 1 146654.52 85829.02 400.00
+[Target]
+  3 0 1 30 500 112782 18924 500
+[StaticCamera]
+  146672 85826 2
+[Bridge]
+[House]
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 11
+WindDirection 139
+WindTop 8051
+WindTurbulence 0
+WindGust 0

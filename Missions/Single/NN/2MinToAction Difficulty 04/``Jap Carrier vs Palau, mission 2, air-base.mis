@@ -1,0 +1,218 @@
+[MAIN]
+  MAP Palau/load.ini
+  TIME 10.5
+  CloudType 0
+  CloudHeight 500.0
+  army 2
+  player IN_NN00
+  playerNum 0
+[Wing]
+  IN_NN00
+  IN_NN01
+  RA_NN00
+  RA_NN01
+  RA_NN02
+[IN_NN00]
+  Planes 2
+  Skill 2
+  Class air.A6M5
+  Fuel 25
+  weapons 1x250
+[IN_NN00_Way]
+  TAKEOFF 40636.18 16068.83 0 0 100_Chief 0 0 0 &0
+  GATTACK 35396.18 15258.05 300.0 350.0 0_Static 0 0 0 &0
+  NORMFLY 29958.86 15157.27 300.0 350.0 &0
+  GATTACK 32825.53 15204.67 300.0 350.0 56_Static 0 0 0 &0
+  NORMFLY 35405.89 15255.91 300.0 300.0 &0
+  NORMFLY 29956.59 15153.04 300.0 300.0 &0
+  LANDING 40793.22 16006.01 0 0 100_Chief 0 0 0 &0
+[IN_NN01]
+  Planes 2
+  Skill 2
+  Class air.A6M5
+  Fuel 25
+  weapons 1x250
+[IN_NN01_Way]
+  TAKEOFF 40714.70 16218.02 0 0 100_Chief 0 0 0 &0
+  GATTACK 35556.55 16110.79 350.0 350.0 101_Static 0 0 0 &0
+  NORMFLY 30005.08 16008.67 350.0 350.0 &0
+  GATTACK 33212.95 16051.57 300.0 300.0 51_Static 0 0 0 &0
+  NORMFLY 35520.36 16109.41 300.0 300.0 &0
+  NORMFLY 30011.80 16007.43 300.0 300.0 &0
+  LANDING 40887.45 16194.46 0 0 100_Chief 0 0 0 &0
+[RA_NN00]
+  Planes 1
+  OnlyAI 1
+  Skill 0
+  Class air.SEAFIRE3F
+  Fuel 100
+  weapons default
+  StartTime 2
+[RA_NN00_Way]
+  TAKEOFF 33114.82 15019.48 0 0 &0
+  NORMFLY 32972.32 15880.19 500.0 300.0 &0
+  NORMFLY 34459.40 15866.20 500.0 300.0 &0
+  NORMFLY 33684.54 14787.81 500.0 300.0 &0
+  LANDING 33015.59 15617.97 0 0 &0
+[RA_NN01]
+  Planes 1
+  OnlyAI 1
+  Skill 0
+  Class air.SEAFIRE3F
+  Fuel 100
+  weapons default
+  StartTime 2
+[RA_NN01_Way]
+  TAKEOFF 33136.08 15042.76 0 0 &0
+  NORMFLY 33352.28 14594.68 500.0 300.0 &0
+  NORMFLY 34436.89 15308.75 500.0 300.0 &0
+  NORMFLY 33735.54 16169.03 500.0 300.0 &0
+  LANDING 33022.88 15618.84 0 0 &0
+[RA_NN02]
+  Planes 4
+  OnlyAI 1
+  Skill 0
+  Class air.SEAFIRE3F
+  Fuel 1
+  weapons default
+  StartTime 0
+[RA_NN02_Way]
+  NORMFLY 34200.47 18651.27 300.0 333.0 &0
+  NORMFLY 32465.45 16336.42 600.0 300.0 &0
+  NORMFLY 32325.47 15956.98 333.0 300.0 &0
+  LANDING 33022.59 15610.09 0 0 &0
+[Chiefs]
+  100_Chief Ships.IJNAkagiCV 2 0 1 33.0
+  101_Chief Ships.IJNKageroDD41 2 0 1 33.0
+  102_Chief Ships.Tanker 2 0 1 33.0
+  103_Chief Ships.IJNArashiDD41 2 0 1 33.0
+  104_Chief Ships.IJNAkizukiDD42 2 0 1 33.0
+  105_Chief Ships.Tramp 2 0 1 33.0
+  110_Chief Ships.Niobe 1 0 1 100.0
+  111_Chief Ships.Tral 1 0 1 100.0
+  112_Chief Ships.IJNYukikazeDD41 1 0 1 100.0
+  0_Chief Vehicles.M16 1
+  1_Chief Vehicles.M16 1
+[100_Chief_Road]
+  41399.64 17329.97 120.00 0 2 15.94777774810791
+  31883.22 1677.87 120.00
+[101_Chief_Road]
+  40467.93 15311.89 120.00 0 2 8.6111
+  32305.45 1596.66 120.00
+[102_Chief_Road]
+  39915.53 15336.75 120.00 0 2 7.459444522857666
+  31819.29 1875.59 120.00
+[103_Chief_Road]
+  40877.07 15868.90 120.00 0 2 8.6111
+  32371.94 1545.94 120.00
+[104_Chief_Road]
+  40264.32 16237.42 120.00 0 2 8.6111
+  31711.08 1940.14 120.00
+[105_Chief_Road]
+  40497.61 15638.76 120.00 0 2 5.144444942474365
+  32167.11 1668.12 120.00
+[110_Chief_Road]
+  49027.95 24007.61 120.00 0 2 2.7778
+  39776.10 10254.86 120.00
+[111_Chief_Road]
+  49703.14 23634.28 120.00 0 2 2.7778
+  40444.03 9805.53 120.00
+[112_Chief_Road]
+  50272.02 24108.35 120.00 0 2 2.7778
+  40585.91 9710.08 120.00
+[0_Chief_Road]
+  33124.16 15110.25 120.00 0 2 3.055555582046509
+  34047.48 15952.42 120.00 0 2 3.055555582046509
+  34122.89 15893.74 120.00 0 2 3.055555582046509
+  33234.76 15060.94 120.00
+[1_Chief_Road]
+  33941.91 16032.87 120.00 0 2 3.055555582046509
+  33566.55 15642.43 120.00 0 2 3.055555582046509
+  33015.24 15644.10 120.00 0 2 3.055555582046509
+  32985.08 15540.20 120.00 0 2 3.055555582046509
+  33353.73 15313.98 120.00 0 2 3.055555582046509
+  33008.54 14995.60 120.00 0 2 3.055555582046509
+  33062.16 14921.86 120.00 0 2 3.055555582046509
+  33439.20 15273.77 120.00
+[NStationary]
+  0_Static vehicles.stationary.Stationary$Flak30_20mm 1 33774.90 15505.91 360.00 0.0
+  11_Static vehicles.planes.Plane$SPITFIRE9EHF 1 33757.02 15849.09 405.00 0.0 gb
+  13_Static vehicles.planes.Plane$SPITFIRE9EHF 1 33663.51 15632.11 405.00 0.0 gb
+  14_Static vehicles.planes.Plane$SPITFIRE9EHF 1 33680.70 15650.42 405.00 0.0 gb
+  15_Static vehicles.planes.Plane$SPITFIRE9EHF 1 33699.70 15667.16 405.00 0.0 gb
+  16_Static vehicles.planes.Plane$SPITFIRE9EHF 1 33716.43 15683.89 405.00 0.0 gb
+  17_Static vehicles.planes.Plane$SPITFIRE9EHF 1 33734.50 15702.49 405.00 0.0 gb
+  100_Static vehicles.planes.Plane$B_25G1 1 34031.50 15754.04 225.00 0.0 rz
+  101_Static vehicles.planes.Plane$B_25G1 1 34001.16 15722.03 225.00 0.0 gb
+  102_Static vehicles.planes.Plane$B_25G1 1 33965.77 15687.11 225.00 0.0 gb
+  103_Static vehicles.planes.Plane$B_25G1 1 33933.53 15653.93 225.00 0.0 gb
+  104_Static vehicles.planes.Plane$B_25G1 1 33900.37 15622.27 225.00 0.0 gb
+  105_Static vehicles.planes.Plane$B_25G1 1 33865.70 15588.88 225.00 0.0 gb
+  106_Static vehicles.planes.Plane$B_25G1 1 33832.74 15555.47 225.00 0.0 gb
+  107_Static vehicles.planes.Plane$B_25G1 1 33797.23 15519.96 225.00 0.0 gb
+  108_Static vehicles.planes.Plane$B_25G1 1 33758.77 15482.73 225.00 0.0 gb
+  109_Static vehicles.planes.Plane$B_25G1 1 33719.44 15446.37 225.00 0.0 gb
+  51_Static vehicles.artillery.Artillery$Type98_20mm_JA 0 33978.35 15994.66 630.00 0.0 0
+  56_Static vehicles.artillery.Artillery$Type98_20mm_JA 1 33221.62 15031.52 630.00 0.0 0
+  320_Static vehicles.stationary.Siren$SirenCity 1 33049.92 15088.89 360.00 0.0
+  58_Static vehicles.lights.Searchlight$SL_ManualBlue 1 33151.91 14972.72 360.00 0.0
+  59_Static vehicles.lights.Searchlight$SL_ManualBlue 1 32938.63 15454.82 360.00 0.0
+  60_Static vehicles.lights.Searchlight$SL_ManualBlue 0 34343.98 15814.91 360.00 0.0
+  61_Static vehicles.lights.Searchlight$SL_ManualBlue 1 34033.77 16047.34 360.00 0.0
+  1_Static vehicles.stationary.Smoke$Smoke11 0 33221.44 15031.27 360.00 0.00
+  2_Static vehicles.stationary.Smoke$Smoke11 0 33978.21 15994.26 360.00 0.00
+  269_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 33496.56 15524.51 680.00 0.0
+  268_Static vehicles.stationary.Stationary$GAZ67t 1 33731.30 15448.21 675.00 0.0
+  264_Static vehicles.stationary.Stationary$GAZ_AAA 1 33706.24 15447.62 560.00 0.0
+  261_Static vehicles.stationary.Stationary$GAZ_AAA 1 33818.01 15556.94 560.00 0.0
+  253_Static vehicles.stationary.Stationary$GAZ67t 1 33848.70 15559.55 690.00 0.0
+  255_Static vehicles.stationary.Stationary$GAZ67t 1 33863.83 15575.48 475.00 0.0
+  266_Static vehicles.stationary.Stationary$GAZ_AAA 1 33864.86 15603.30 620.00 0.0
+  263_Static vehicles.stationary.Stationary$GAZ_AAA 1 33903.90 15646.13 650.00 0.0
+  258_Static vehicles.stationary.Stationary$GAZ_AAA 1 33952.99 15685.32 435.00 0.0
+  262_Static vehicles.stationary.Stationary$GAZ_AAA 1 33985.71 15706.24 495.00 0.0
+  259_Static vehicles.stationary.Stationary$GAZ_AAA 1 34018.81 15739.60 435.00 0.0
+  265_Static vehicles.stationary.Stationary$GAZ_AAA 1 33745.70 15689.15 495.00 0.0
+  270_Static vehicles.stationary.Stationary$GAZ_AAA 1 33720.66 15659.17 415.00 0.0
+  254_Static vehicles.stationary.Stationary$GAZ67t 1 33924.97 15626.13 690.00 0.0
+  256_Static vehicles.stationary.Stationary$GAZ67t 1 33961.05 15658.68 530.00 0.0
+[Buildings]
+[Target]
+  1 0 0 0 500 33563 15447 800
+  3 0 1 30 501 41857 17910 500 0 100_Chief 41399 17329
+[StaticCamera]
+  33592 15469 30
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 38414.98 18813.91 1
+  FrontMarker1 41417.45 17449.90 2
+  FrontMarker2 39793.32 15072.53 2
+  FrontMarker3 38350.59 12584.39 2
+  FrontMarker4 37042.96 16633.91 1
+  FrontMarker5 28397.83 3568.00 1
+  FrontMarker6 32173.57 1482.97 2
+  FrontMarker7 34105.14 5183.04 2
+  FrontMarker8 36370.29 9140.82 2
+  FrontMarker9 35454.25 13908.93 1
+  FrontMarker10 33924.91 10989.29 1
+  FrontMarker11 31236.98 7513.52 1
+  FrontMarker12 29383.24 -1291.77 1
+  FrontMarker13 35825.00 -550.27 1
+  FrontMarker14 38188.53 3157.21 1
+  FrontMarker15 40598.39 7235.45 1
+  FrontMarker16 42174.08 10618.54 1
+  FrontMarker17 43888.79 13630.87 1
+  FrontMarker18 45603.50 16318.80 1
+  FrontMarker19 43239.98 20906.82 1
+
+
+
+
+
+[WEATHER]
+WindVelocity 0
+WindDirection 341
+WindTop 1360
+WindTurbulence 0
+WindGust 0

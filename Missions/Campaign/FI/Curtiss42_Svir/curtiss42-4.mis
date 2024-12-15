@@ -1,0 +1,1825 @@
+[MAIN]
+  MAP Kt_svir/load.ini
+  TIME 9.0
+  CloudType 1
+  CloudHeight 1500.0
+  player f0100
+  army 2
+  playerNum 0
+[Wing]
+  f0100
+  r0101
+  f0123
+  r0102
+[f0100]
+  Planes 2
+  Skill 2
+  skin0 cu582_44.bmp
+  skin1 cu582_44.bmp
+  numberOn0 0
+  numberOn1 0
+  Class air.P_36A4
+  Fuel 100
+  weapons default
+  StartTime 0
+[f0100_Way]
+  TAKEOFF 7339.27 13754.83 0 0 &0
+  NORMFLY 7640.46 13250.29 150.0 300.0 &0
+  NORMFLY 10204.47 8212.66 1000.0 300.0 &0
+  NORMFLY 20720.07 14409.29 1000.0 300.0 &0
+  NORMFLY 33223.96 26637.16 500.0 300.0 &0
+  NORMFLY 45830.33 34621.17 500.0 300.0 &0
+  NORMFLY 48511.73 39398.91 2000.0 300.0 &0
+  NORMFLY 46000.64 40499.98 2000.0 300.0 &0
+  NORMFLY 43731.81 33646.91 2000.0 300.0 &0
+  NORMFLY 35948.30 29555.80 2000.0 300.0 &0
+  NORMFLY 11778.44 13691.66 700.0 300.0 &0
+  LANDING 6544.27 15131.81 0 0 &0
+[r0101]
+  Planes 4
+  Skill 1
+  Class air.LAGG_3SERIES4
+  Fuel 100
+  weapons default
+[r0101_Way]
+  NORMFLY 7609.28 12988.38 300.0 300.0 &0
+  GATTACK 6805.42 14350.42 300.0 300.0 5_Static 0 0
+  NORMFLY 6184.86 15419.76 300.0 300.0 &0
+  NORMFLY 7361.85 15918.76 300.0 300.0 &0
+  NORMFLY 6544.38 14819.31 300.0 300.0 &0
+  GATTACK 6544.38 14819.31 300.0 300.0 23_Static 0 0
+  NORMFLY 6037.01 14236.07 300.0 300.0 &0
+  NORMFLY 6786.21 12917.84 300.0 300.0 &0
+  NORMFLY 8222.98 13458.41 300.0 300.0 &0
+  GATTACK 6814.66 14311.94 300.0 300.0 8_Static 0 0
+  NORMFLY 6037.01 14776.63 300.0 300.0 &0
+  NORMFLY 7682.42 15383.59 300.0 300.0 &0
+  NORMFLY 13920.83 5797.78 300.0 300.0 &0
+  LANDING 27701.25 6734.56 0 0 &0
+[f0123]
+  Planes 2
+  Skill 2
+  skin0 CU575_44.bmp
+  skin1 CU575_44.bmp
+  numberOn0 0
+  numberOn1 0
+  Class air.P_36A4
+  Fuel 100
+  weapons default
+  StartTime 1
+[f0123_Way]
+  TAKEOFF 6544.27 15131.81 0 0 &0
+  NORMFLY 8250.83 13269.13 300.0 300.0 r0101 8 0
+  NORMFLY 5616.72 12874.55 300.0 300.0 &0
+  NORMFLY 5757.23 15991.33 300.0 300.0 &0
+  NORMFLY 8950.65 15774.17 300.0 300.0 &0
+  NORMFLY 7609.42 12657.40 300.0 300.0 &0
+  LANDING 7339.27 13754.83 0 0 &0
+[r0102]
+  Planes 2
+  Skill 2
+  Class air.R_10
+  Fuel 100
+  weapons 6xFAB50
+[r0102_Way]
+  NORMFLY 8567.70 11264.05 300.0 300.0 &0
+  GATTACK 6794.00 14295.62 300.0 300.0 &0
+  NORMFLY 6137.06 15382.93 300.0 300.0 &0
+  NORMFLY 6560.50 16114.32 300.0 300.0 &0
+  NORMFLY 8705.18 14964.99 300.0 300.0 &0
+  NORMFLY 13896.13 5858.79 300.0 300.0 &0
+  LANDING 27701.25 6734.56 0 0 &0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Zenit3K 1 43113.40 17199.39 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Zenit3K 1 22024.12 7687.52 360.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Zenit3K 1 32058.17 13068.32 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Zenit3K 1 46271.65 20511.34 360.00 0.0 0
+  4_Static vehicles.planes.Plane$P_36A4 2 6781.77 14395.24 330.00 0.0 fi
+  5_Static vehicles.planes.Plane$P_36A4 2 6798.65 14376.56 329.10 0.0 fi
+  6_Static vehicles.planes.Plane$P_36A4 2 6801.96 14350.03 329.10 0.0 fi
+  7_Static vehicles.planes.Plane$P_36A4 2 6828.49 14309.63 329.10 0.0 fi
+  8_Static vehicles.planes.Plane$P_36A4 2 6841.75 14290.04 329.10 0.0 fi
+  9_Static vehicles.planes.Plane$P_36A4 2 6515.59 14785.92 329.10 0.0 fi
+  10_Static vehicles.planes.Plane$P_36A4 2 6536.39 14768.73 329.10 0.0 fi
+  11_Static vehicles.planes.Plane$P_36A4 2 6809.50 14450.11 414.10 0.0 fi
+  12_Static vehicles.planes.Plane$GLADIATOR1J8A 2 6465.25 14969.80 414.10 0.0 fi
+  13_Static vehicles.planes.Plane$GLADIATOR1J8A 2 6486.05 14974.92 420.00 0.0 fi
+  14_Static vehicles.planes.Plane$GLADIATOR1J8A 2 6498.41 14992.41 420.00 0.0 fi
+  15_Static vehicles.planes.Plane$U_2VS 2 6465.25 14885.09 330.00 0.0 fi
+  16_Static vehicles.planes.Plane$U_2VS 2 6472.48 14860.98 329.10 0.0 fi
+  17_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 7337.95 13812.11 425.00 0.0 0
+  18_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 6762.42 14432.89 425.00 0.0 0
+  19_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 6540.58 15063.51 425.00 0.0 0
+  20_Static vehicles.stationary.Stationary$GAZ_M1 2 6862.10 14222.69 375.00 0.0
+  21_Static vehicles.stationary.Stationary$GAZ_M1 2 6773.36 14425.07 495.00 0.0
+  22_Static vehicles.stationary.Stationary$ZIS5_PC 2 6790.02 14385.74 495.00 0.0
+  23_Static vehicles.stationary.Stationary$ZIS5_PC 2 6525.60 14798.73 495.00 0.0
+  24_Static vehicles.stationary.Stationary$ZIS5_PC 2 6470.58 14888.22 615.00 0.0
+  25_Static vehicles.stationary.Stationary$ZIS5_PC 2 6935.04 14229.26 615.00 0.0
+  26_Static vehicles.stationary.Stationary$GAZ_AAA 2 6905.28 14257.02 705.00 0.0
+  27_Static vehicles.stationary.Stationary$GAZ_AAA 2 6911.28 14256.27 645.00 0.0
+  28_Static vehicles.stationary.Stationary$GAZ_AAA 2 6828.25 14320.54 555.00 0.0
+  29_Static vehicles.stationary.Stationary$GAZ_AAA 2 6396.93 14917.72 555.00 0.0
+  30_Static vehicles.stationary.Stationary$OpelBlitz36S 2 6764.45 14401.94 405.00 0.0
+  31_Static vehicles.stationary.Stationary$OpelBlitz36S 2 6732.80 14370.61 585.00 0.0
+  32_Static vehicles.stationary.Stationary$OpelBlitz36S 2 6918.63 14256.66 705.00 0.0
+  33_Static vehicles.planes.Plane$C_47 2 6926.95 14259.67 285.00 0.0 fi
+  35_Static vehicles.artillery.Artillery$Maxime 1 28102.37 19356.95 495.00 0.0 0
+  36_Static vehicles.artillery.Artillery$Zenit3K 1 49245.98 30754.23 360.00 0.0 0
+  37_Static vehicles.artillery.Artillery$Zenit3K 1 35166.02 6785.82 360.00 0.0 0
+  38_Static vehicles.stationary.Stationary$BunkerA2_gun 2 20056.34 14207.46 390.00 0.0
+  39_Static vehicles.stationary.Stationary$BunkerR2_gun 2 27386.04 20463.59 400.00 0.0
+  40_Static vehicles.stationary.Stationary$BunkerR2_gun 1 28228.72 19538.29 590.00 0.0
+  41_Static vehicles.stationary.Stationary$BunkerR2_gun 1 12866.01 9244.01 630.00 0.0
+  42_Static vehicles.stationary.Stationary$BunkerR2_gun 1 11947.14 8048.28 510.00 0.0
+  43_Static vehicles.stationary.Stationary$BunkerR2_gun 1 11921.03 6104.54 575.00 0.0
+  44_Static vehicles.stationary.Stationary$BunkerR2_gun 1 17772.72 9226.32 585.00 0.0
+  45_Static vehicles.stationary.Stationary$BunkerR2_gun 1 34757.11 26213.19 645.00 0.0
+  46_Static vehicles.stationary.Stationary$BunkerR2_gun 1 40325.00 26820.48 620.00 0.0
+  47_Static vehicles.stationary.Stationary$BunkerR2_gun 1 46068.26 31937.27 560.00 0.0
+  48_Static vehicles.stationary.Stationary$BunkerR2_gun 1 48413.01 35657.03 575.00 0.0
+  49_Static vehicles.stationary.Stationary$BunkerR2_gun 2 42950.36 29842.40 395.00 0.0
+  50_Static vehicles.stationary.Stationary$BunkerR2_gun 2 40888.83 27055.84 485.00 0.0
+  51_Static vehicles.stationary.Stationary$BunkerR2_gun 2 34534.10 26858.26 425.00 0.0
+  53_Static vehicles.stationary.Stationary$BunkerG1_gun 2 21427.85 16434.34 375.00 0.0
+  54_Static vehicles.stationary.Stationary$BunkerG1_gun 2 27450.09 20579.18 380.00 0.0
+  55_Static vehicles.stationary.Stationary$BunkerG1_gun 2 30585.70 23375.26 395.00 0.0
+  56_Static vehicles.stationary.Stationary$BunkerG1_gun 2 32937.91 26770.76 410.00 0.0
+  57_Static vehicles.stationary.Stationary$BunkerG1_gun 2 33213.89 26915.35 380.00 0.0
+  58_Static vehicles.stationary.Stationary$BunkerG1_gun 2 35289.80 27086.70 470.00 0.0
+  59_Static vehicles.stationary.Stationary$BunkerG1_gun 2 42661.00 31216.84 380.00 0.0
+  60_Static vehicles.stationary.Stationary$BunkerG1_gun 2 42283.85 35137.83 380.00 0.0
+  61_Static vehicles.stationary.Stationary$BunkerG1_gun 2 46296.31 37363.91 380.00 0.0
+  62_Static vehicles.stationary.Stationary$BunkerG1_gun 2 45761.64 36267.19 380.00 0.0
+  63_Static vehicles.stationary.Stationary$BunkerA2_gun 1 28069.95 19338.46 570.00 0.0
+  64_Static vehicles.stationary.Stationary$BunkerA2_gun 1 26251.33 18064.42 560.00 0.0
+  65_Static vehicles.stationary.Stationary$BunkerA2_gun 1 11938.95 8263.59 500.00 0.0
+  66_Static vehicles.stationary.Stationary$BunkerA2_gun 1 11810.94 6041.81 560.00 0.0
+  67_Static vehicles.stationary.Stationary$BunkerA2_gun 2 10478.18 6555.23 380.00 0.0
+  68_Static vehicles.stationary.Stationary$BunkerA2_gun 2 11057.09 8226.10 380.00 0.0
+  69_Static vehicles.stationary.Stationary$BunkerA2_gun 2 9970.83 8124.52 380.00 0.0
+  71_Static vehicles.stationary.Stationary$BunkerA2_gun 2 10455.34 9160.89 380.00 0.0
+  72_Static vehicles.stationary.Stationary$BunkerA2_gun 2 11831.63 10524.24 440.00 0.0
+  73_Static vehicles.stationary.Stationary$BunkerA2_gun 2 11976.45 10457.62 440.00 0.0
+  74_Static vehicles.stationary.Stationary$BunkerA2_gun 2 12766.42 10441.77 440.00 0.0
+  75_Static vehicles.stationary.Stationary$BunkerA2_gun 2 12417.64 10384.41 440.00 0.0
+  76_Static vehicles.stationary.Stationary$BunkerA2_gun 2 15164.26 9845.18 440.00 0.0
+  77_Static vehicles.stationary.Stationary$BunkerR2_gun 2 20012.88 14128.43 370.00 0.0
+  52_Static vehicles.stationary.Stationary$BunkerA2_gun 2 11544.33 7586.10 360.00 0.0
+  78_Static vehicles.stationary.Stationary$BunkerA2_gun 1 12944.13 9333.18 605.00 0.0
+  70_Static vehicles.stationary.Stationary$BunkerA2_gun 2 10685.88 9523.99 380.00 0.0
+  79_Static vehicles.stationary.Stationary$BunkerR2_gun 2 35201.51 27076.44 445.00 0.0
+  80_Static vehicles.stationary.Stationary$BunkerR2_gun 2 32907.36 26749.15 445.00 0.0
+  34_Static vehicles.artillery.Artillery$Maxime 1 12013.53 8110.78 495.00 0.0 0
+  81_Static vehicles.stationary.Stationary$BunkerR2_gun 2 27428.28 20532.88 410.00 0.0
+  82_Static vehicles.planes.Plane$I_16TYPE24 1 27559.92 6437.64 240.00 0.0 null
+  83_Static vehicles.planes.Plane$I_16TYPE24 1 27579.84 6455.78 240.00 0.0 null
+  84_Static vehicles.planes.Plane$I_16TYPE24 1 27627.67 6473.41 240.00 0.0 null
+  85_Static vehicles.planes.Plane$I_16TYPE24 1 27641.99 6497.73 240.00 0.0 null
+  86_Static vehicles.planes.Plane$I_16TYPE24 1 27487.31 6411.40 330.00 0.0 null
+  87_Static vehicles.planes.Plane$I_153_M62 1 27452.50 6469.49 330.00 0.0 null
+  88_Static vehicles.planes.Plane$I_153_M62 1 27447.32 6478.54 330.00 0.0 null
+  89_Static vehicles.planes.Plane$SB_2M103 1 27431.62 6802.18 449.10 0.0 null
+  90_Static vehicles.planes.Plane$SB_2M103 1 27390.35 6787.23 449.10 0.0 null
+  91_Static vehicles.planes.Plane$SB_2M103 1 27347.18 6762.80 449.10 0.0 null
+  92_Static vehicles.planes.Plane$SB_2M103 1 27308.86 6740.06 449.10 0.0 null
+  93_Static vehicles.planes.Plane$BLENHEIM1 2 41199.74 42291.85 480.00 0.0 fi
+  94_Static vehicles.planes.Plane$BLENHEIM1 2 41248.21 42269.94 480.00 0.0 fi
+  95_Static vehicles.planes.Plane$BLENHEIM1 2 41316.53 42221.73 480.00 0.0 fi
+  96_Static vehicles.planes.Plane$JU_52_3MG4E 2 41708.34 41972.53 480.00 0.0 null
+  97_Static vehicles.planes.Plane$JU_52_3MG4E 2 41747.27 41884.60 539.10 0.0 null
+  98_Static vehicles.artillery.Artillery$Zenit61K 1 27291.75 6605.96 539.10 0.0 0
+  99_Static vehicles.artillery.Artillery$Zenit61K 1 27485.60 6884.23 600.00 0.0 0
+  100_Static vehicles.artillery.Artillery$Zenit61K 1 27504.13 6573.93 520.00 0.0 0
+  101_Static vehicles.stationary.Stationary$ZIS6_fuel 1 27379.15 6780.73 539.10 0.0
+  102_Static vehicles.stationary.Stationary$ZIS6_fuel 1 27260.11 6712.38 600.00 0.0
+  103_Static vehicles.stationary.Stationary$ZIS6_fuel 1 27265.99 6697.34 660.00 0.0
+  104_Static vehicles.stationary.Stationary$ZIS6_fuel 1 27566.16 6453.22 660.00 0.0
+  105_Static vehicles.stationary.Stationary$ZIS6_fuel 1 27639.35 6480.67 390.00 0.0
+  106_Static vehicles.stationary.Stationary$ZIS5_PC 1 27545.34 6443.44 390.00 0.0
+  107_Static vehicles.stationary.Stationary$ZIS5_PC 1 27441.24 6470.89 450.00 0.0
+  108_Static vehicles.stationary.Stationary$ZIS5_PC 1 27520.59 6798.83 450.00 0.0
+  109_Static vehicles.stationary.Stationary$ZIS5_PC 1 27513.84 6796.86 480.00 0.0
+  110_Static vehicles.stationary.Stationary$GAZ_M1 1 27499.02 6810.86 420.00 0.0
+  111_Static vehicles.artillery.Artillery$Maxime 1 12828.91 9236.65 615.00 0.0 0
+  112_Static vehicles.artillery.Artillery$Maxime 1 34700.63 26200.99 615.00 0.0 0
+  115_Static ships.Ship$IJNFishJunk 1 49541.99 35907.17 525.00 0.0 0 2 1.0
+  117_Static vehicles.stationary.Stationary$ZIS5_PC 1 49545.20 35893.29 630.00 0.0
+  118_Static vehicles.stationary.Stationary$ZIS5_PC 1 49539.48 35893.30 630.00 0.0
+  120_Static vehicles.stationary.Stationary$ZIS5_PC 1 49509.14 35706.37 630.00 0.0
+  121_Static vehicles.stationary.Stationary$ZIS5_PC 1 49508.04 35682.97 630.00 0.0
+  122_Static vehicles.stationary.Stationary$ZIS5_PC 1 49435.63 35643.82 630.00 0.0
+  126_Static ships.Ship$G5 1 49501.18 35900.57 450.00 0.0 0 2 1.0
+  113_Static vehicles.stationary.Smoke$Smoke4 0 49484.60 35869.26 540.00 0.42
+  114_Static vehicles.stationary.Smoke$Smoke4 0 49485.24 35849.40 540.00 0.43
+  116_Static vehicles.stationary.Smoke$Smoke4 0 49477.91 35642.18 540.00 0.57
+  119_Static vehicles.stationary.Smoke$Smoke4 0 49457.09 35605.99 540.00 0.54
+  123_Static vehicles.stationary.Smoke$Smoke4 0 46260.71 41305.45 540.00 22.81
+  124_Static vehicles.stationary.Smoke$Smoke4 0 46265.26 41290.99 540.00 22.98
+[Buildings]
+  0_bld House$AirdromeMaskingnet 1 6776.18 14392.03 690.00
+  1_bld House$AirdromeMaskingnet 1 6788.81 14370.65 690.00
+  2_bld House$AirdromeMaskingnet 1 6799.99 14350.24 690.00
+  3_bld House$AirdromeMaskingnet 1 6814.56 14330.32 690.00
+  4_bld House$AirdromeMaskingnet 1 6827.20 14308.94 690.00
+  5_bld House$AirdromeMaskingnet 1 6839.83 14288.05 690.00
+  6_bld House$AirdromeMaskingnet 1 6852.03 14266.67 690.00
+  7_bld House$AirdromeMaskingnet 1 6942.84 14245.77 420.00
+  8_bld House$AirdromeMaskingnet 1 6808.25 14452.28 420.00
+  9_bld House$AirdromeMaskingnet 1 6453.05 14877.93 510.00
+  10_bld House$AirdromeMaskingnet 1 6465.20 14856.06 510.00
+  11_bld House$AirdromeMaskingnet 1 6476.86 14834.19 510.00
+  12_bld House$AirdromeMaskingnet 1 6488.04 14814.27 510.00
+  13_bld House$AirdromeMaskingnet 1 6520.59 14759.85 510.00
+  14_bld House$AirdromeMaskingnet 1 6508.45 14781.23 510.00
+  15_bld House$AirdromeMaskingnet 1 6495.81 14998.43 600.00
+  16_bld House$AirdromeMaskingnet 1 6477.83 14988.71 600.00
+  17_bld House$AirdromeMaskingnet 1 6460.83 14979.48 600.00
+  18_bld House$AirdromeBarrelBlock1 1 6440.37 14896.06 600.00
+  19_bld House$AirdromeBarrelBlock1 1 6467.38 14842.03 600.00
+  20_bld House$AirdromeBarrelBlock1 1 6524.38 14745.84 600.00
+  21_bld House$AirdromeBarrelBlock1 1 6899.18 14245.64 600.00
+  22_bld House$AirdromeBarrelBlock1 1 6889.82 14240.96 510.00
+  23_bld House$AirdromeBarrelBlock1 1 6790.64 14357.92 510.00
+  24_bld House$AirdromeBarrelBlock1 1 6795.94 14456.79 510.00
+  25_bld House$AirdromeBarrelBlock1 1 6830.25 14296.48 510.00
+  26_bld House$Urban_04 1 6422.37 14677.99 600.00
+  27_bld House$Urban_04 1 7384.06 14596.30 600.00
+  28_bld House$Urban_04 1 6830.32 14115.02 630.00
+  29_bld House$RuralS_09 1 6803.39 14117.18 600.00
+  30_bld House$RuralS_09 1 6420.13 14699.11 690.00
+  31_bld House$RuralS_09 1 6447.20 14678.27 510.00
+  32_bld House$RuralS_09 1 7364.45 14615.94 510.00
+  33_bld House$RuralS_09 1 7363.20 14587.78 600.00
+  34_bld House$RuralS_06 1 6386.70 14976.64 510.00
+  35_bld House$RuralS_06 1 6408.06 14682.35 420.00
+  36_bld House$RuralS_06 1 6816.22 14133.39 540.00
+  37_bld House$RuralS_06 1 7387.07 14615.61 570.00
+  38_bld House$RuralS_05 1 6397.62 14993.20 510.00
+  39_bld House$RuralS_05 1 6612.83 14274.26 450.00
+  40_bld House$Urban_04 1 6629.85 14263.68 420.00
+  41_bld House$RuralS_05 1 6855.78 14211.41 690.00
+  42_bld House$RuralS_06 1 6843.07 14223.85 420.00
+  43_bld House$Misc_04 1 6831.54 14229.60 420.00
+  44_bld House$Misc_04 1 6803.46 14133.03 450.00
+  45_bld House$Misc_04 1 6616.19 14261.76 480.00
+  46_bld House$Misc_04 1 6399.51 14702.15 480.00
+  47_bld House$Misc_04 1 6412.39 14993.79 570.00
+  48_bld House$Misc_04 1 7387.15 14588.58 600.00
+  49_bld House$WellS_03 1 6855.21 14223.71 690.00
+  50_bld House$WellS_03 1 6813.87 14121.31 360.00
+  51_bld House$WellS_03 1 6626.80 14286.33 360.00
+  52_bld House$WellS_03 1 6447.84 14690.86 420.00
+  53_bld House$WellS_03 1 7371.03 14629.32 420.00
+  54_bld House$WellS_03 1 6414.14 15007.21 420.00
+  55_bld House$Tent_Pyramid_US 1 6383.86 14922.17 420.00
+  56_bld House$Tent_Pyramid_US 1 6388.68 14914.94 420.00
+  57_bld House$Tent_Pyramid_US 1 6394.11 14907.40 420.00
+  58_bld House$Tent_Pyramid_US 1 6375.42 14917.65 420.00
+  59_bld House$Tent_Pyramid_US 1 6381.45 14909.81 420.00
+  60_bld House$Tent_Pyramid_US 1 6388.08 14901.97 420.00
+  61_bld House$Tent_Pyramid_US 1 6553.27 14731.96 420.00
+  62_bld House$Tent_Pyramid_US 1 6562.01 14737.99 420.00
+  63_bld House$Tent_Pyramid_US 1 6572.56 14744.32 420.00
+  64_bld House$Tent_Pyramid_US 1 6918.92 14217.09 420.00
+  65_bld House$Tent_Pyramid_US 1 6929.47 14222.82 420.00
+  66_bld House$Tent_Pyramid_US 1 6924.05 14208.65 420.00
+  67_bld House$Tent_Pyramid_US 1 6933.69 14215.28 420.00
+  68_bld House$Tent_Pyramid_US 1 6722.38 14396.15 420.00
+  69_bld House$Tent_Pyramid_US 1 6729.01 14384.10 420.00
+  70_bld House$Tent_Pyramid_US 1 6735.04 14375.95 420.00
+  71_bld House$Tent_Pyramid_US 1 6713.94 14391.02 420.00
+  72_bld House$Tent_Pyramid_US 1 6720.57 14379.87 420.00
+  73_bld House$Tent_Pyramid_US 1 6726.90 14370.23 420.00
+  74_bld House$Tent_Pyramid_US 1 6766.39 14326.52 390.00
+  75_bld House$Tent_Pyramid_US 1 6773.93 14320.49 390.00
+  76_bld House$AirdromeControlTowerSmall 1 6749.02 14420.26 695.00
+  77_bld House$AirdromeControlTowerSmall 1 6871.28 14203.91 695.00
+  78_bld House$AirdromeControlTowerSmall 1 6436.39 14996.03 695.00
+  79_bld House$Bunker7 1 6540.51 15063.43 395.00
+  80_bld House$Bunker7 1 6762.52 14432.94 395.00
+  81_bld House$Bunker7 1 7338.20 13812.13 605.00
+  82_bld House$FurnitureTreeLine 1 7086.11 14905.72 645.00
+  83_bld House$FurnitureTreeLine 1 7356.30 14870.63 645.00
+  84_bld House$FurnitureTreeLine 1 7163.30 15161.88 645.00
+  85_bld House$FurnitureTreeLine 1 7047.51 15354.87 645.00
+  86_bld House$FurnitureTreeLine 1 7100.14 15102.22 645.00
+  87_bld House$FurnitureTreeLine 1 7226.46 14796.94 645.00
+  88_bld House$FurnitureTreeLine 1 7507.18 14796.94 645.00
+  89_bld House$FurnitureTreeLine 1 7615.96 14839.05 645.00
+  90_bld House$FurnitureTreeLine 1 7549.29 14554.83 645.00
+  91_bld House$FurnitureTreeLine 1 7352.79 14726.77 645.00
+  92_bld House$FurnitureTreeLine 1 7149.27 14702.20 645.00
+  93_bld House$FurnitureTreeLine 1 7124.70 14796.94 645.00
+  94_bld House$FurnitureTreeLine 1 7587.89 14656.59 645.00
+  95_bld House$FurnitureTreeLine 1 7591.40 14365.34 645.00
+  96_bld House$FurnitureTreeLine 1 7472.09 14263.58 645.00
+  97_bld House$FurnitureTreeLine 1 7777.37 14221.48 645.00
+  98_bld House$FurnitureTreeLine 1 7886.15 14309.20 645.00
+  99_bld House$FurnitureTreeLine 1 7629.99 14505.70 645.00
+  100_bld House$FurnitureTreeLine 1 7584.38 14649.57 645.00
+  101_bld House$FurnitureTreeLine 1 6991.36 15235.56 645.00
+  102_bld House$FurnitureTreeLine 1 6093.07 14705.71 645.00
+  103_bld House$FurnitureTreeLine 1 5896.57 14881.16 645.00
+  104_bld House$FurnitureTreeLine 1 5829.90 14758.35 645.00
+  105_bld House$FurnitureTreeLine 1 6121.14 14617.99 645.00
+  106_bld House$FurnitureTreeLine 1 6089.56 14902.21 645.00
+  107_bld House$FurnitureTreeLine 1 5959.73 15042.57 645.00
+  108_bld House$FurnitureTreeLine 1 6054.47 15263.64 645.00
+  109_bld House$FurnitureTreeLine 1 6114.13 14909.23 645.00
+  110_bld House$FurnitureTreeLine 1 6093.07 14533.77 645.00
+  111_bld House$FurnitureTreeLine 1 6012.37 14477.63 645.00
+  112_bld House$FurnitureTreeLine 1 6349.23 14488.16 645.00
+  113_bld House$FurnitureTreeLine 1 6570.29 14491.67 645.00
+  114_bld House$FurnitureTreeLine 1 6229.92 14509.21 645.00
+  115_bld House$FurnitureTreeLine 1 6180.80 14379.38 645.00
+  116_bld House$FurnitureTreeLine 1 6412.39 14281.13 645.00
+  117_bld House$FurnitureTreeLine 1 6580.82 14491.67 645.00
+  118_bld House$FurnitureTreeLine 1 6654.50 14547.81 645.00
+  119_bld House$FurnitureTreeLine 1 6472.04 14582.90 645.00
+  120_bld House$FurnitureTreeLine 1 6493.09 14263.58 645.00
+  121_bld House$FurnitureTreeLine 1 6366.77 14165.33 645.00
+  122_bld House$FurnitureTreeLine 1 6079.04 14060.06 645.00
+  123_bld House$FurnitureTreeLine 1 6289.57 13898.65 645.00
+  124_bld House$FurnitureTreeLine 1 6429.93 13828.47 645.00
+  125_bld House$FurnitureTreeLine 1 6594.85 13877.60 645.00
+  126_bld House$FurnitureTreeLine 1 6794.86 13856.55 645.00
+  127_bld House$FurnitureTreeLine 1 6482.57 14003.92 645.00
+  128_bld House$FurnitureTreeLine 1 6405.37 13705.66 645.00
+  129_bld House$FurnitureTreeLine 1 6710.65 13547.76 645.00
+  130_bld House$FurnitureTreeLine 1 6963.29 13463.54 645.00
+  131_bld House$FurnitureTreeLine 1 6963.29 13638.99 645.00
+  132_bld House$FurnitureTreeLine 1 6566.78 13895.14 645.00
+  133_bld House$FurnitureTreeLine 1 6461.51 14200.42 645.00
+  134_bld House$FurnitureTreeLine 1 6243.96 14386.40 645.00
+  135_bld House$FurnitureTreeLine 1 6250.97 14596.93 645.00
+  136_bld House$FurnitureTreeLine 1 6142.20 14796.94 645.00
+  137_bld House$FurnitureTreeLine 1 6128.16 15137.31 645.00
+  138_bld House$FurnitureTreeLine 1 6145.71 15295.22 645.00
+  139_bld House$FurnitureTreeLine 1 6910.66 15302.23 645.00
+  140_bld House$FurnitureTreeLine 1 6826.44 15568.91 645.00
+  141_bld House$FurnitureTreeLine 1 6742.23 15425.05 645.00
+  142_bld House$FurnitureTreeLine 1 6956.27 15070.64 645.00
+  143_bld House$FurnitureTreeLine 1 7008.91 14856.60 645.00
+  144_bld House$FurnitureTreeLine 1 6998.38 14751.33 645.00
+  145_bld House$FurnitureTreeLine 1 7005.40 14667.11 645.00
+  146_bld House$FurnitureTreeLine 1 7359.80 14632.02 645.00
+  147_bld House$FurnitureTreeLine 1 7447.53 14716.24 645.00
+  148_bld House$FurnitureTreeLine 1 7265.06 14358.33 645.00
+  149_bld House$FurnitureTreeLine 1 7310.68 14253.06 645.00
+  150_bld House$FurnitureTreeLine 1 7454.55 14193.40 645.00
+  151_bld House$FurnitureTreeLine 1 7486.13 14396.92 645.00
+  152_bld House$FurnitureTreeLine 1 7521.22 14600.44 645.00
+  153_bld House$FurnitureTreeLine 1 7742.28 14347.80 645.00
+  154_bld House$FurnitureTreeLine 1 7844.04 14210.95 645.00
+  155_bld House$FurnitureTreeLine 1 7580.87 14112.70 645.00
+  156_bld House$FurnitureTreeLine 1 7549.29 13902.16 645.00
+  157_bld House$FurnitureTreeLine 1 7479.11 14031.99 645.00
+  158_bld House$FurnitureTreeLine 1 7805.44 14119.72 645.00
+  159_bld House$FurnitureTreeLine 1 7914.22 14147.79 645.00
+  160_bld House$FurnitureTreeLine 1 8001.94 14193.40 645.00
+  161_bld House$FurnitureTreeLine 1 7924.75 14326.74 645.00
+  162_bld House$FurnitureTreeLine 1 7447.53 14565.35 645.00
+  163_bld House$FurnitureTreeLine 1 7110.67 14803.96 645.00
+  164_bld House$FurnitureTreeLine 1 7128.21 14996.96 705.00
+  165_bld House$FurnitureTreeLine 1 7625.34 14416.20 705.00
+  166_bld House$FurnitureTreeLine 1 7435.10 14709.95 705.00
+  167_bld House$FurnitureTreeLine 1 7228.07 14768.70 705.00
+  168_bld House$FurnitureTreeLine 1 7107.78 14712.75 705.00
+  169_bld House$FurnitureTreeLine 1 6948.31 14877.81 705.00
+  170_bld House$FurnitureTreeLine 1 7077.00 14852.63 705.00
+  171_bld House$FurnitureTreeLine 1 7387.54 14511.32 705.00
+  172_bld House$FurnitureTreeLine 1 7415.52 14273.52 705.00
+  173_bld House$FurnitureTreeLine 1 7365.16 14206.38 705.00
+  174_bld House$FurnitureTreeLine 1 7776.41 14326.68 705.00
+  175_bld House$FurnitureTreeLine 1 7706.47 14472.15 705.00
+  176_bld House$FurnitureTreeLine 1 7896.71 14293.10 705.00
+  177_bld House$FurnitureTreeLine 1 7507.84 14239.95 705.00
+  178_bld House$FurnitureTreeLine 1 7465.87 14086.08 705.00
+  179_bld House$FurnitureTreeLine 1 7381.95 14153.22 705.00
+  180_bld House$FurnitureTreeLine 1 7065.81 13641.25 705.00
+  181_bld House$FurnitureTreeLine 1 6419.55 13772.74 705.00
+  182_bld House$FurnitureTreeLine 1 6721.70 13789.53 705.00
+  183_bld House$FurnitureTreeLine 1 6648.96 13811.91 705.00
+  184_bld House$FurnitureTreeLine 1 6369.20 13803.52 705.00
+  185_bld House$FurnitureTreeLine 1 6218.12 13907.03 705.00
+  186_bld House$FurnitureTreeLine 1 6226.52 14046.91 705.00
+  187_bld House$FurnitureTreeLine 1 6358.01 14108.46 705.00
+  188_bld House$FurnitureTreeLine 1 6234.91 14270.72 705.00
+  189_bld House$FurnitureTreeLine 1 6355.21 14405.01 705.00
+  190_bld House$FurnitureTreeLine 1 6534.26 14371.44 705.00
+  191_bld House$FurnitureTreeLine 1 6646.16 14242.75 705.00
+  192_bld House$FurnitureTreeLine 1 6464.32 14181.20 705.00
+  193_bld House$FurnitureTreeLine 1 6302.05 14377.03 705.00
+  194_bld House$FurnitureTreeLine 1 6164.97 14578.46 705.00
+  195_bld House$FurnitureTreeLine 1 6170.56 14721.14 705.00
+  196_bld House$FurnitureTreeLine 1 6109.02 14365.84 705.00
+  197_bld House$FurnitureTreeLine 1 6019.49 14424.59 705.00
+  198_bld House$FurnitureTreeLine 1 6030.68 14631.62 705.00
+  199_bld House$FurnitureTreeLine 1 5952.35 14729.54 705.00
+  200_bld House$FurnitureTreeLine 1 5921.57 14875.02 705.00
+  201_bld House$FurnitureTreeLine 1 6103.42 15028.89 705.00
+  202_bld House$FurnitureTreeLine 1 6150.98 15163.17 705.00
+  203_bld House$FurnitureTreeLine 1 6041.87 15171.57 705.00
+  204_bld House$FurnitureTreeLine 1 5983.12 15121.21 705.00
+  205_bld House$FurnitureTreeLine 1 5778.89 14902.99 705.00
+  206_bld House$FurnitureTreeLine 1 5829.25 14768.70 705.00
+  207_bld House$FurnitureTreeLine 1 6083.84 14782.69 705.00
+  208_bld House$FurnitureTreeLine 1 6257.29 14835.85 705.00
+  209_bld House$FurnitureTreeLine 1 6268.48 14768.70 705.00
+  210_bld House$FurnitureTreeLine 1 6240.50 14648.41 705.00
+  211_bld House$FurnitureTreeLine 1 6397.17 14586.86 705.00
+  212_bld House$FurnitureTreeLine 1 6441.94 14483.34 705.00
+  213_bld House$FurnitureTreeLine 1 6313.24 14427.39 705.00
+  214_bld House$FurnitureTreeLine 1 6542.65 14405.01 705.00
+  215_bld House$FurnitureTreeLine 1 6565.03 14500.13 705.00
+  216_bld House$FurnitureTreeLine 1 6590.21 14505.73 705.00
+  217_bld House$FurnitureTreeLine 1 6366.40 14505.73 705.00
+  218_bld House$FurnitureTreeLine 1 6271.28 14430.19 705.00
+  219_bld House$FurnitureTreeLine 1 6145.38 14253.94 705.00
+  220_bld House$FurnitureTreeLine 1 6164.97 14337.87 705.00
+  221_bld House$FurnitureTreeLine 1 6176.16 14399.42 705.00
+  222_bld House$FurnitureTreeLine 1 6103.42 14418.10 705.00
+  223_bld House$FurnitureTreeLine 1 6136.99 14449.77 705.00
+  224_bld House$FurnitureTreeLine 1 6394.38 14256.74 705.00
+  225_bld House$FurnitureTreeLine 1 6453.13 14125.25 705.00
+  226_bld House$FurnitureTreeLine 1 6615.39 14024.53 705.00
+  227_bld House$FurnitureTreeLine 1 6738.49 13965.78 705.00
+  228_bld House$FurnitureTreeLine 1 6886.76 13907.03 705.00
+  229_bld House$FurnitureTreeLine 1 6724.50 13837.09 705.00
+  230_bld House$FurnitureTreeLine 1 6704.91 13792.33 705.00
+  231_bld House$FurnitureTreeLine 1 6909.14 13711.19 705.00
+  232_bld House$FurnitureTreeLine 1 7007.06 13649.65 705.00
+  233_bld House$FurnitureTreeLine 1 6738.49 13618.87 705.00
+  234_bld House$FurnitureTreeLine 1 6565.03 13666.43 705.00
+  235_bld House$FurnitureTreeLine 1 6453.13 13870.66 705.00
+  236_bld House$FurnitureTreeLine 1 6660.15 13767.15 705.00
+  237_bld House$FurnitureTreeLine 1 6917.54 13613.28 705.00
+  238_bld House$FurnitureTreeLine 1 7118.97 13576.91 705.00
+  239_bld House$FurnitureTreeLine 1 6970.69 13548.93 705.00
+  240_bld House$FurnitureTreeLine 1 6648.96 13638.46 705.00
+  241_bld House$FurnitureTreeLine 1 6478.31 13750.36 585.00
+  242_bld House$FurnitureTreeLine 1 6305.01 14541.27 585.00
+  243_bld House$FurnitureTreeLine 1 6214.53 14450.79 585.00
+  244_bld House$FurnitureTreeLine 1 6708.49 14403.33 585.00
+  245_bld House$FurnitureTreeLine 1 7289.25 14870.94 585.00
+  246_bld House$FurnitureTreeLine 1 7177.29 15058.88 585.00
+  247_bld House$FurnitureTreeLine 1 7181.28 15218.83 585.00
+  248_bld House$FurnitureTreeLine 1 7201.28 15286.81 585.00
+  249_bld House$FurnitureTreeLine 1 7065.32 15370.78 585.00
+  250_bld House$FurnitureTreeLine 1 6901.37 15402.77 585.00
+  251_bld House$FurnitureTreeLine 1 6849.39 15430.76 585.00
+  252_bld House$FurnitureTreeLine 1 7017.34 15446.75 585.00
+  253_bld House$FurnitureTreeLine 1 6849.39 15446.75 585.00
+  254_bld House$FurnitureTreeLine 1 6661.45 15482.74 585.00
+  255_bld House$FurnitureTreeLine 1 6637.46 15598.71 585.00
+  256_bld House$FurnitureTreeLine 1 6929.36 15226.82 585.00
+  257_bld House$FurnitureTreeLine 1 7081.32 15058.88 585.00
+  258_bld House$FurnitureTreeLine 1 7261.26 14862.94 585.00
+  259_bld House$FurnitureTreeLine 1 7353.23 14738.98 585.00
+  260_bld House$FurnitureTreeLine 1 7409.21 14535.05 585.00
+  261_bld House$FurnitureTreeLine 1 7537.17 14507.05 585.00
+  262_bld House$FurnitureTreeLine 1 7386.12 14565.62 585.00
+  263_bld House$FurnitureTreeLine 1 7221.27 14595.03 585.00
+  264_bld House$FurnitureTreeLine 1 7713.12 14435.08 585.00
+  265_bld House$FurnitureTreeLine 1 7805.09 14359.10 585.00
+  266_bld House$FurnitureTreeLine 1 7513.18 14243.14 585.00
+  267_bld House$FurnitureTreeLine 1 7609.15 14091.19 585.00
+  268_bld House$FurnitureTreeLine 1 7861.07 14035.20 585.00
+  269_bld House$FurnitureTreeLine 1 6749.42 13495.38 585.00
+  270_bld House$FurnitureTreeLine 1 7009.34 13351.42 585.00
+  271_bld House$FurnitureTreeLine 1 6925.37 13375.41 585.00
+  272_bld House$FurnitureTreeLine 1 6749.42 13503.37 585.00
+  273_bld House$FurnitureTreeLine 1 6405.53 13559.36 585.00
+  274_bld House$FurnitureTreeLine 1 6389.54 13575.35 585.00
+  275_bld House$FurnitureTreeLine 1 6489.50 13551.36 585.00
+  276_bld House$FurnitureTreeLine 1 6405.53 13615.34 585.00
+  277_bld House$FurnitureTreeLine 1 6369.54 13919.24 585.00
+  278_bld House$FurnitureTreeLine 1 6305.56 14075.19 585.00
+  279_bld House$FurnitureTreeLine 1 6281.57 14163.16 585.00
+  280_bld House$FurnitureTreeLine 1 6241.58 14251.14 585.00
+  281_bld House$FurnitureTreeLine 1 6477.51 14195.15 585.00
+  282_bld House$FurnitureTreeLine 1 6757.42 14063.67 585.00
+  283_bld House$FurnitureTreeLine 1 6637.46 14139.17 585.00
+  284_bld House$FurnitureTreeLine 1 6505.50 14239.14 585.00
+  285_bld House$FurnitureTreeLine 1 6373.54 14587.03 585.00
+  286_bld House$FurnitureTreeLine 1 6333.55 14710.99 585.00
+  287_bld House$FurnitureTreeLine 1 6233.59 14902.93 585.00
+  288_bld House$FurnitureTreeLine 1 6213.59 15022.89 585.00
+  289_bld House$FurnitureTreeLine 1 6385.54 14555.04 585.00
+  290_bld House$FurnitureTreeLine 1 6378.02 14702.06 525.00
+  291_bld House$FurnitureTreeLine 1 6420.79 14652.71 465.00
+  292_bld House$FurnitureTreeLine 1 6456.51 14663.99 405.00
+  293_bld House$FurnitureTreeLine 1 6390.24 14671.98 495.00
+  294_bld House$FurnitureTreeLine 1 6578.25 14272.45 495.00
+  295_bld House$FurnitureTreeLine 1 6597.52 14252.71 495.00
+  296_bld House$FurnitureTreeLine 1 6627.60 14246.13 435.00
+  297_bld House$FurnitureTreeLine 1 6584.83 14302.53 405.00
+  298_bld House$FurnitureTreeLine 1 6780.13 14247.10 465.00
+  299_bld House$FurnitureTreeLine 1 6720.44 14249.88 465.00
+  300_bld House$FurnitureTreeLine 1 6746.93 14269.14 465.00
+  301_bld House$FurnitureTreeLine 1 6581.88 14326.70 555.00
+  302_bld House$FurnitureTreeLine 1 6685.18 14523.44 555.00
+  303_bld House$FurnitureTreeLine 1 6644.29 14506.99 555.00
+  304_bld House$FurnitureTreeLine 1 6648.99 14446.82 555.00
+  305_bld House$FurnitureTreeLine 1 6617.03 14427.55 555.00
+  306_bld House$FurnitureTreeLine 1 6638.18 14393.24 525.00
+  307_bld House$FurnitureTreeLine 1 6591.65 14391.36 615.00
+  308_bld House$FurnitureTreeLine 1 6657.92 14493.82 615.00
+  309_bld House$FurnitureTreeLine 1 6601.52 14448.70 615.00
+  310_bld House$FurnitureTreeLine 1 6651.81 14388.54 615.00
+  311_bld House$FurnitureTreeLine 1 6735.58 14339.51 615.00
+  312_bld House$FurnitureTreeLine 1 6780.60 14268.21 555.00
+  313_bld House$FurnitureTreeLine 1 6726.08 14228.73 555.00
+  314_bld House$FurnitureTreeLine 1 6757.57 14230.61 555.00
+  315_bld House$FurnitureTreeLine 1 6752.87 14240.01 615.00
+  316_bld House$FurnitureTreeLine 1 6813.03 14248.94 675.00
+  317_bld House$FurnitureTreeLine 1 6760.39 14313.33 675.00
+  318_bld House$FurnitureTreeLine 1 6740.50 14434.42 705.00
+  319_bld House$FurnitureTreeLine 1 7197.84 14430.19 705.00
+  320_bld House$FurnitureTreeLine 1 7217.58 14389.77 375.00
+  321_bld House$FurnitureTreeLine 1 7129.22 14467.79 645.00
+  322_bld House$FurnitureTreeLine 1 7032.86 14583.89 645.00
+  323_bld House$FurnitureTreeLine 1 7185.62 14562.27 405.00
+  324_bld House$FurnitureTreeLine 1 7375.04 14646.87 405.00
+  325_bld House$FurnitureTreeLine 1 7400.42 14639.82 675.00
+  326_bld House$FurnitureTreeLine 1 7357.18 14652.98 705.00
+  327_bld House$FurnitureTreeLine 1 7344.49 14672.72 645.00
+  328_bld House$KitchenDE 1 6734.59 14410.12 390.00
+  329_bld House$KitchenDE 1 6737.72 14411.38 390.00
+  330_bld House$Human_02 1 6742.33 14408.85 585.00
+  331_bld House$Human_02 1 6742.10 14407.94 585.00
+  332_bld House$Human_02 1 6743.81 14407.63 555.00
+  333_bld House$Human_02 1 6743.69 14406.75 585.00
+  334_bld House$Human_02 1 6744.19 14406.19 585.00
+  335_bld House$Human_02 1 6744.50 14405.50 585.00
+  336_bld House$Human_02 1 6744.62 14405.13 555.00
+  337_bld House$Human_02 1 6746.12 14404.07 585.00
+  338_bld House$Human_02 1 6746.50 14403.44 580.00
+  339_bld House$Human_02 1 6746.69 14402.69 585.00
+  340_bld House$Human_10 1 6747.50 14402.17 600.00
+  341_bld House$Human_10 1 6745.25 14404.82 585.00
+  342_bld House$Human_10 1 6745.50 14404.19 585.00
+  343_bld House$Human_10 1 6742.81 14408.44 585.00
+  344_bld House$Human_02 1 6740.90 14409.73 390.00
+  345_bld House$Human_02 1 6741.25 14410.37 420.00
+  346_bld House$46Furniture 1 6741.49 14413.72 420.00
+  347_bld House$46Furniture 1 6776.09 14402.46 570.00
+  348_bld House$46Furniture 1 6785.90 14380.83 540.00
+  349_bld House$46Furniture 1 6801.03 14445.47 450.00
+  350_bld House$46Furniture 1 6751.08 14422.21 660.00
+  351_bld House$46Radio 1 6752.92 14421.36 510.00
+  352_bld House$46SteeLadder 1 6809.56 14447.24 470.00
+  353_bld House$46SteeLadder 1 6782.31 14397.19 620.00
+  354_bld House$46SteeLadder 1 6798.76 14367.24 620.00
+  355_bld House$46SteeLadder 1 6812.30 14345.56 680.00
+  356_bld House$Hay_01 1 6652.58 14304.55 680.00
+  357_bld House$Hay_01 1 6651.46 14284.44 680.00
+  358_bld House$Hay_01 1 6674.92 14303.81 680.00
+  359_bld House$Hay_01 1 6674.92 14281.84 680.00
+  360_bld House$Hay_01 1 6650.90 14334.16 680.00
+  361_bld House$Hay_01 1 6676.04 14332.67 680.00
+  362_bld House$Hay_01 1 7288.21 14620.90 555.00
+  363_bld House$Hay_01 1 7313.25 14622.21 555.00
+  364_bld House$Hay_01 1 7334.78 14621.77 555.00
+  365_bld House$Hay_01 1 7288.65 14598.49 555.00
+  366_bld House$Hay_01 1 7315.01 14601.13 555.00
+  367_bld House$Hay_01 1 7335.66 14601.56 555.00
+  368_bld House$Hay_01 1 7289.09 14580.04 555.00
+  369_bld House$Hay_01 1 7318.09 14581.79 555.00
+  370_bld House$Hay_01 1 7334.78 14584.43 555.00
+  371_bld House$Hay_01 1 6368.02 15029.03 555.00
+  372_bld House$Hay_01 1 6352.75 15017.57 555.00
+  373_bld House$Hay_01 1 6337.33 15003.92 555.00
+  374_bld House$Hay_01 1 6319.71 14993.05 555.00
+  375_bld House$Hay_01 1 6355.39 15042.98 555.00
+  376_bld House$Hay_01 1 6343.20 15028.88 555.00
+  377_bld House$Hay_01 1 6328.22 15014.93 555.00
+  378_bld House$Hay_01 1 6311.05 15000.69 555.00
+  379_bld House$Hay_01 1 6345.70 15054.58 555.00
+  380_bld House$Hay_01 1 6333.36 15040.19 555.00
+  381_bld House$Human_02 1 6773.96 14424.50 555.00
+  382_bld House$Human_02 1 6811.30 14448.97 525.00
+  383_bld House$Human_02 1 6783.49 14395.41 555.00
+  384_bld House$Human_02 1 6788.53 14385.89 405.00
+  385_bld House$Human_02 1 6800.39 14376.18 515.00
+  386_bld House$Human_02 1 6787.01 14381.73 555.00
+  387_bld House$Human_02 1 6804.15 14350.69 555.00
+  388_bld House$Human_01 1 6810.73 14449.86 560.00
+  389_bld House$Human_01 1 6811.11 14450.30 465.00
+  390_bld House$Human_01 1 6782.09 14398.32 555.00
+  391_bld House$Human_01 1 6800.71 14375.61 545.00
+  392_bld House$Human_01 1 6809.41 14349.68 375.00
+  393_bld House$Human_05 1 6778.16 14401.57 555.00
+  394_bld House$Human_05 1 6763.04 14433.33 555.00
+  395_bld House$Human_05 1 6751.94 14422.23 555.00
+  396_bld House$Human_05 1 6742.23 14414.22 555.00
+  397_bld House$Human_05 1 6810.42 14447.08 555.00
+  398_bld House$Human_05 1 6828.58 14321.80 435.00
+  399_bld House$Human_04 1 6803.68 14351.33 465.00
+  400_bld House$Human_04 1 6783.49 14396.37 535.00
+  401_bld House$Human_04 1 6810.86 14448.41 555.00
+  402_bld House$Human_04 1 6750.49 14420.34 565.00
+  403_bld House$46GRBoxes 1 6781.12 14399.17 690.00
+  404_bld House$Bunker2 1 12696.78 9266.99 705.00
+  405_bld House$Bunker2 1 13041.58 9366.83 360.00
+  406_bld House$Bunker2 1 11926.63 8306.42 630.00
+  407_bld House$Bunker2 1 11983.61 8155.09 630.00
+  408_bld House$Bunker2 1 12052.64 7951.75 600.00
+  409_bld House$Bunker2 1 12120.59 7722.43 600.00
+  410_bld House$Bunker2 1 12154.98 7624.88 600.00
+  411_bld House$Bunker2 1 12209.40 7567.18 570.00
+  412_bld House$Bunker2 1 11956.82 6106.64 660.00
+  413_bld House$Bunker2 1 11878.24 6031.46 630.00
+  414_bld House$Bunker2 1 14041.97 9219.96 360.00
+  415_bld House$Bunker2 1 14875.28 9216.26 360.00
+  416_bld House$Bunker2 1 10248.81 8136.57 360.00
+  417_bld House$Bunker2 1 15966.40 9160.10 360.00
+  418_bld House$Bunker2 1 17426.58 9216.26 360.00
+  419_bld House$Bunker2 1 17863.83 9388.75 360.00
+  420_bld House$Bunker2 1 18108.53 9212.25 360.00
+  421_bld House$Bunker2 1 18906.81 9862.10 690.00
+  422_bld House$Bunker2 1 28052.66 19257.77 670.00
+  423_bld House$Bunker2 1 28391.40 19538.43 695.00
+  424_bld House$Bunker2 1 28199.96 19514.50 670.00
+  425_bld House$Bunker2 1 28116.63 19475.13 670.00
+  426_bld House$Bunker2 1 34168.33 25921.68 670.00
+  427_bld House$Bunker2 1 34926.29 26019.92 400.00
+  428_bld House$Bunker2 1 46095.36 31856.54 640.00
+  429_bld House$Bunker2 1 38763.04 26121.65 645.00
+  430_bld House$Bunker2 1 39190.07 26466.03 705.00
+  431_bld House$Bunker2 1 34410.29 26725.73 495.00
+  432_bld House$Bunker2 1 34091.61 26535.40 525.00
+  433_bld House$Bunker2 1 33001.54 26790.81 525.00
+  434_bld House$Bunker2 1 32851.12 26715.49 510.00
+  435_bld House$Bunker2 1 27383.67 20526.21 495.00
+  436_bld House$Bunker2 1 27278.01 20416.34 480.00
+  437_bld House$Bunker2 1 10696.57 9738.21 465.00
+  438_bld House$Bunker2 1 10537.25 9322.08 465.00
+  439_bld House$Bunker2 1 10514.69 9270.13 465.00
+  440_bld House$Bunker2 1 10913.04 7721.64 465.00
+  441_bld House$Bunker2 1 10446.40 6415.05 465.00
+  442_bld House$Bunker2 1 9088.91 5685.40 465.00
+  443_bld House$Bunker2 1 8876.80 5396.93 465.00
+  444_bld House$Bunker2 1 7256.29 1807.67 465.00
+  445_bld House$Bunker2 1 7188.41 1366.48 465.00
+  446_bld House$Bunker1 1 8851.35 1425.87 645.00
+  447_bld House$Bunker1 1 9230.98 2409.86 645.00
+  448_bld House$Bunker1 1 10729.88 3886.56 645.00
+  449_bld House$Bunker1 1 11157.20 5546.12 645.00
+  450_bld House$Bunker1 1 11974.74 6170.51 645.00
+  451_bld House$Bunker1 1 12059.19 7385.83 645.00
+  452_bld House$Bunker1 1 12200.17 7891.48 645.00
+  453_bld House$Bunker1 1 12780.02 9224.13 695.00
+  454_bld House$Bunker1 1 14762.50 9174.18 375.00
+  455_bld House$Bunker1 1 16723.68 9352.79 375.00
+  456_bld House$Bunker1 1 17941.82 9763.60 375.00
+  457_bld House$Bunker1 1 18556.01 10467.18 375.00
+  458_bld House$Bunker1 1 20677.06 12259.48 645.00
+  459_bld House$Bunker1 1 23863.70 16845.42 645.00
+  460_bld House$Bunker1 1 26978.38 18890.25 645.00
+  461_bld House$Bunker1 1 28448.77 19579.96 670.00
+  462_bld House$Bunker1 1 32513.51 24852.02 645.00
+  463_bld House$Bunker1 1 34552.19 26153.78 670.00
+  464_bld House$Bunker1 1 35813.04 25406.54 360.00
+  465_bld House$Bunker1 1 37333.54 24116.51 360.00
+  466_bld House$Bunker1 1 38293.85 24943.64 360.00
+  467_bld House$Bunker1 1 38831.97 26158.90 675.00
+  468_bld House$Bunker1 1 40379.70 26847.60 710.00
+  469_bld House$Bunker1 1 42723.92 29184.45 360.00
+  470_bld House$Bunker1 1 44056.47 30564.42 675.00
+  471_bld House$Bunker1 1 44118.83 30565.34 360.00
+  472_bld House$Bunker1 1 46158.76 32748.60 630.00
+  473_bld House$Bunker1 1 46604.50 33322.91 630.00
+  474_bld House$Bunker1 1 47009.90 34779.78 630.00
+  475_bld House$Bunker1 1 47978.46 35467.93 630.00
+  476_bld House$Bunker1 1 45528.47 35388.90 450.00
+  477_bld House$Bunker1 1 45702.29 36226.50 450.00
+  478_bld House$Bunker1 1 45195.07 35155.11 450.00
+  479_bld House$Bunker1 1 44945.72 33397.03 450.00
+  480_bld House$Bunker1 1 44307.28 32443.97 450.00
+  481_bld House$Bunker1 1 42816.44 31062.43 450.00
+  482_bld House$Bunker1 1 42671.24 30038.23 450.00
+  483_bld House$Bunker1 1 41299.37 28893.93 450.00
+  484_bld House$Bunker1 1 41233.79 28093.86 450.00
+  485_bld House$Bunker1 1 40374.95 27702.82 490.00
+  486_bld House$Bunker1 1 39599.69 27018.70 540.00
+  487_bld House$Bunker1 1 36153.75 26639.89 540.00
+  488_bld House$Bunker1 1 35377.80 27085.91 540.00
+  489_bld House$Bunker1 1 35023.43 27342.52 540.00
+  490_bld House$Bunker1 1 33642.61 27428.06 540.00
+  491_bld House$Bunker1 1 34406.34 27733.55 540.00
+  492_bld House$Bunker1 1 33142.17 26814.31 505.00
+  493_bld House$Bunker1 1 32810.95 26635.25 480.00
+  494_bld House$Bunker1 1 31009.51 24800.73 495.00
+  495_bld House$Bunker1 1 27448.31 20576.54 480.00
+  496_bld House$Bunker1 1 26586.81 19375.08 480.00
+  497_bld House$Bunker1 1 22949.56 17591.10 480.00
+  498_bld House$Bunker1 1 20058.91 14174.88 480.00
+  499_bld House$Bunker1 1 15599.48 10297.65 540.00
+  500_bld House$Bunker1 1 14242.37 9940.02 540.00
+  501_bld House$Bunker1 1 14108.10 10346.05 540.00
+  502_bld House$Bunker1 1 12676.21 10428.42 540.00
+  503_bld House$Bunker1 1 11697.95 10632.31 540.00
+  504_bld House$Bunker1 1 12157.00 10379.83 540.00
+  505_bld House$Bunker1 1 10392.18 9052.99 450.00
+  506_bld House$Bunker1 1 11133.27 8087.44 450.00
+  507_bld House$Bunker1 1 11433.60 7715.74 435.00
+  508_bld House$Bunker1 1 11179.67 6701.37 450.00
+  509_bld House$Bunker1 1 9223.53 5856.98 450.00
+  510_bld House$Bunker1 1 9212.84 5593.33 450.00
+  511_bld House$Bunker1 1 8471.75 3694.29 450.00
+  512_bld House$Bunker1 1 7278.17 1677.68 450.00
+  513_bld House$Bunker1 1 7082.21 1492.41 450.00
+  514_bld House$Bunker1 1 8375.55 2810.69 450.00
+  515_bld House$Bunker4 1 10662.30 9435.86 570.00
+  516_bld House$Bunker4 1 10442.56 7500.35 570.00
+  517_bld House$Bunker4 1 8336.38 4039.44 570.00
+  518_bld House$Bunker4 1 7177.66 2172.61 570.00
+  519_bld House$Bunker4 1 20041.54 14151.72 570.00
+  520_bld House$Bunker4 1 21265.68 15205.65 570.00
+  521_bld House$Bunker4 1 22790.49 16807.67 570.00
+  522_bld House$Bunker4 1 24903.10 18665.43 570.00
+  523_bld House$Bunker4 1 31737.11 25580.44 570.00
+  524_bld House$Bunker4 1 29681.10 22216.89 570.00
+  525_bld House$Bunker4 1 30585.59 23348.21 590.00
+  526_bld House$Bunker4 1 31036.80 24432.52 495.00
+  527_bld House$Bunker4 1 33113.78 26896.43 585.00
+  528_bld House$Bunker4 1 34030.65 27661.00 585.00
+  529_bld House$Bunker4 1 34554.69 27763.95 615.00
+  530_bld House$Bunker4 1 35097.50 27084.75 705.00
+  531_bld House$Bunker4 1 37176.92 24808.75 645.00
+  532_bld House$Bunker4 1 40302.60 27603.88 630.00
+  533_bld House$Bunker4 1 42097.97 29460.17 585.00
+  534_bld House$Bunker4 1 42679.12 30231.78 525.00
+  535_bld House$Bunker4 1 43000.17 31503.77 585.00
+  536_bld House$Bunker4 1 43058.92 31537.34 585.00
+  537_bld House$Bunker4 1 45161.19 34496.11 585.00
+  538_bld House$Bunker4 1 45929.34 35868.71 585.00
+  539_bld House$Bunker4 1 45761.44 36317.85 585.00
+  540_bld House$Bunker4 1 46449.79 38672.19 585.00
+  541_bld House$Bunker4 1 46756.70 34263.61 375.00
+  542_bld House$Bunker4 1 46416.88 33357.85 375.00
+  543_bld House$Bunker4 1 45938.63 32265.98 375.00
+  544_bld House$Bunker4 1 44711.82 30881.38 375.00
+  545_bld House$Bunker4 1 43484.93 30177.72 375.00
+  546_bld House$Bunker4 1 42357.29 28878.67 375.00
+  547_bld House$Bunker4 1 41761.90 27579.60 375.00
+  548_bld House$Bunker4 1 41775.42 26600.79 375.00
+  549_bld House$Bunker4 1 40809.73 26199.06 450.00
+  550_bld House$Bunker4 1 39619.78 26223.25 450.00
+  551_bld House$Bunker4 1 38638.25 25296.56 390.00
+  552_bld House$Bunker4 1 32030.77 24512.43 390.00
+  553_bld House$Bunker4 1 35479.82 25784.58 450.00
+  554_bld House$Bunker4 1 31696.85 23768.60 390.00
+  555_bld House$Bunker4 1 30217.09 21754.67 390.00
+  556_bld House$Bunker4 1 28312.99 19575.39 390.00
+  557_bld House$Bunker4 1 28139.56 19407.29 390.00
+  558_bld House$Bunker4 1 25758.59 17887.41 390.00
+  559_bld House$Bunker4 1 23719.57 16579.51 390.00
+  560_bld House$Bunker4 1 21209.37 13947.45 390.00
+  561_bld House$Bunker4 1 18154.69 9501.35 390.00
+  562_bld House$Bunker4 1 11943.90 8213.62 360.00
+  563_bld House$Bunker4 1 11902.30 6073.25 400.00
+  564_bld House$Bunker4 1 10974.88 3983.95 400.00
+  565_bld House$Bunker4 1 10213.44 3146.36 400.00
+  566_bld House$Bunker4 1 8893.61 1674.24 400.00
+  567_bld House$Bunker4 1 8690.64 1256.88 400.00
+  568_bld House$46Trench6 1 20047.24 14209.81 630.00
+  569_bld House$46Trench6 1 20035.05 14209.95 630.00
+  570_bld House$46Trench6 1 20022.99 14209.81 630.00
+  571_bld House$46Trench6 1 20010.80 14209.68 630.00
+  572_bld House$46Trench6 1 19998.61 14209.61 630.00
+  573_bld House$46Trench6 1 19986.42 14209.48 630.00
+  574_bld House$46Trench6 1 19974.23 14209.95 450.00
+  575_bld House$46Trench6 1 19962.11 14209.95 450.00
+  576_bld House$46Trench6 1 19949.78 14209.68 630.00
+  577_bld House$46Trench6 1 19937.80 14209.53 630.00
+  578_bld House$46Trench6 1 20054.59 14215.90 585.00
+  579_bld House$46Trench6 1 20064.07 14221.59 615.00
+  580_bld House$46Trench6 1 20075.85 14224.57 615.00
+  581_bld House$46Trench6 1 20087.63 14228.09 615.00
+  582_bld House$46Trench6 1 19996.51 14133.67 480.00
+  583_bld House$46Trench6 1 19986.68 14140.53 490.00
+  584_bld House$46Trench6 1 19980.33 14149.61 520.00
+  585_bld House$46Trench6 1 19975.87 14160.96 700.00
+  586_bld House$46Trench6 1 19969.02 14166.86 640.00
+  587_bld House$46Trench6 1 10676.53 9525.55 475.00
+  588_bld House$46Trench6 1 10665.45 9530.73 475.00
+  589_bld House$46Trench6 1 10654.18 9535.92 475.00
+  590_bld House$46Trench6 1 10643.09 9541.46 475.00
+  591_bld House$46Trench6 1 10631.83 9546.47 655.00
+  592_bld House$46Trench6 1 10620.74 9551.47 655.00
+  593_bld House$46Trench6 1 10609.66 9556.84 655.00
+  594_bld House$46Trench6 1 10598.57 9561.84 655.00
+  595_bld House$46Trench6 1 10588.92 9561.13 595.00
+  596_bld House$46Trench6 1 10578.72 9553.98 595.00
+  597_bld House$46Trench6 1 10568.71 9547.00 595.00
+  598_bld House$46Trench6 1 10533.82 9313.12 565.00
+  599_bld House$46Trench6 1 10528.60 9301.10 565.00
+  600_bld House$46Trench6 1 10523.54 9290.87 565.00
+  601_bld House$46Trench6 1 10518.32 9279.92 565.00
+  602_bld House$46Trench6 1 10450.10 9166.20 500.00
+  603_bld House$46Trench6 1 10442.59 9174.58 680.00
+  604_bld House$46Trench6 1 10433.34 9181.04 650.00
+  605_bld House$46Trench6 1 10421.81 9185.06 650.00
+  606_bld House$46Trench6 1 10410.46 9189.07 470.00
+  607_bld House$46Trench6 1 10399.12 9193.44 470.00
+  608_bld House$46Trench6 1 10387.59 9197.63 470.00
+  609_bld House$46Trench6 1 10376.07 9201.82 470.00
+  610_bld House$46Trench6 1 10364.72 9205.83 470.00
+  611_bld House$46Trench6 1 10353.37 9210.03 470.00
+  612_bld House$46Trench6 1 10342.38 9215.44 480.00
+  613_bld House$46Trench6 1 10385.54 9055.16 465.00
+  614_bld House$46Trench6 1 10373.79 9058.54 465.00
+  615_bld House$46Trench6 1 10362.10 9061.73 465.00
+  616_bld House$46Trench6 1 10350.34 9064.92 465.00
+  617_bld House$46Trench6 1 10338.40 9068.04 465.00
+  618_bld House$46Trench6 1 10703.62 9746.29 580.00
+  619_bld House$46Trench6 1 10711.65 9755.55 580.00
+  620_bld House$46Trench6 1 10719.68 9764.61 580.00
+  621_bld House$46Trench6 1 10727.72 9773.47 580.00
+  622_bld House$46Trench6 1 10735.75 9782.53 580.00
+  623_bld House$46Trench6 1 10743.78 9792.00 580.00
+  624_bld House$Bunker2 1 10751.12 9798.97 505.00
+  625_bld House$46Trench6 1 11842.73 10524.27 640.00
+  626_bld House$46Trench6 1 11854.65 10522.15 640.00
+  627_bld House$46Trench6 1 11865.49 10517.15 490.00
+  628_bld House$46Trench6 1 11874.66 10509.85 490.00
+  629_bld House$46Trench6 1 11884.05 10502.14 490.00
+  630_bld House$46Trench6 1 11893.22 10494.42 490.00
+  631_bld House$46Trench6 1 11901.98 10486.29 490.00
+  632_bld House$46Trench6 1 11910.52 10479.82 490.00
+  633_bld House$46Trench6 1 11920.32 10470.66 490.00
+  634_bld House$46Trench6 1 11930.95 10465.65 460.00
+  635_bld House$46Trench6 1 11942.42 10463.36 460.00
+  636_bld House$46Trench6 1 11954.10 10461.07 460.00
+  637_bld House$46Trench6 1 11965.98 10458.98 460.00
+  638_bld House$46Trench6 1 12419.06 10394.16 560.00
+  639_bld House$46Trench6 1 12423.31 10405.44 560.00
+  640_bld House$46Trench6 1 12427.68 10416.72 560.00
+  641_bld House$46Trench6 1 12431.93 10427.86 560.00
+  642_bld House$46Trench6 1 12435.78 10438.87 560.00
+  643_bld House$46Trench6 1 12439.89 10450.28 560.00
+  644_bld House$46Trench6 1 12443.74 10461.56 380.00
+  645_bld House$46Trench6 1 12447.85 10473.10 380.00
+  646_bld House$46Trench6 1 12451.83 10484.38 380.00
+  647_bld House$46Trench6 1 12456.21 10496.19 380.00
+  648_bld House$46Trench6 1 12755.55 10440.55 440.00
+  649_bld House$46Trench6 1 12744.23 10438.85 440.00
+  650_bld House$46Trench6 1 12731.71 10436.61 440.00
+  651_bld House$46Trench6 1 12720.03 10434.60 440.00
+  652_bld House$46Trench6 1 12708.09 10432.60 440.00
+  653_bld House$46Trench6 1 12696.09 10430.66 440.00
+  654_bld House$46Trench6 1 12683.96 10428.66 440.00
+  655_bld House$46Trench6 1 11047.31 8228.24 635.00
+  656_bld House$46Trench6 1 11035.18 8229.25 635.00
+  657_bld House$46Trench6 1 11023.05 8230.25 635.00
+  658_bld House$46Trench6 1 11010.86 8231.06 635.00
+  659_bld House$46Trench6 1 10998.67 8232.06 635.00
+  660_bld House$46Trench6 1 10986.29 8233.00 635.00
+  661_bld House$46Trench6 1 10974.03 8233.94 635.00
+  662_bld House$46Trench6 1 10961.91 8234.94 635.00
+  663_bld House$46Trench6 1 10953.47 8231.00 575.00
+  664_bld House$46Trench6 1 10946.40 8220.10 575.00
+  665_bld House$46Trench6 1 10939.34 8210.81 575.00
+  666_bld House$46Trench6 1 10932.27 8200.68 575.00
+  667_bld House$46Trench6 1 11438.29 7709.80 680.00
+  668_bld House$46Trench6 1 11446.22 7700.43 680.00
+  669_bld House$46Trench6 1 11454.15 7691.42 680.00
+  670_bld House$46Trench6 1 11462.08 7681.69 680.00
+  671_bld House$46Trench6 1 11470.37 7671.96 680.00
+  672_bld House$46Trench6 1 11478.30 7662.23 680.00
+  673_bld House$46Trench6 1 11486.23 7651.78 680.00
+  674_bld House$46Trench6 1 11494.15 7642.41 680.00
+  675_bld House$46Trench6 1 11503.88 7632.68 680.00
+  676_bld House$46Trench6 1 11512.17 7623.31 680.00
+  677_bld House$46Trench6 1 11520.10 7614.30 680.00
+  678_bld House$46Trench6 1 11528.03 7604.93 680.00
+  679_bld House$46Trench6 1 11537.40 7595.20 680.00
+  680_bld House$46Trench3 1 12459.91 10504.73 390.00
+  681_bld House$46Trench6 1 12470.05 10499.21 480.00
+  682_bld House$46Trench6 1 12480.49 10493.25 480.00
+  683_bld House$46Trench6 1 12491.07 10486.99 480.00
+  684_bld House$46Trench6 1 12501.66 10480.87 480.00
+  685_bld House$46Trench6 1 12512.10 10474.76 480.00
+  686_bld House$46Trench6 1 12522.83 10468.80 480.00
+  687_bld House$46Trench6 1 12461.25 10513.38 360.00
+  688_bld House$46Trench6 1 12457.37 10522.92 675.00
+  689_bld House$46Trench6 1 12448.58 10531.27 675.00
+  690_bld House$46Trench6 1 12439.93 10540.07 675.00
+  691_bld House$46Trench6 1 12430.83 10548.72 675.00
+  692_bld House$46Trench6 1 12422.33 10557.36 675.00
+  693_bld House$46Trench6 1 12413.84 10565.86 675.00
+  694_bld House$46Trench6 1 12405.19 10574.21 675.00
+  695_bld House$Bunker1 1 12528.96 10465.89 525.00
+  696_bld House$46Trench6 1 12850.33 9237.05 630.00
+  697_bld House$46Trench6 1 12807.43 9237.08 630.00
+  698_bld House$46Trench6 1 12819.21 9236.86 630.00
+  699_bld House$46Trench6 1 12838.19 9237.05 630.00
+  700_bld House$46Trench3 1 12828.70 9237.11 450.00
+  701_bld House$46Trench6 1 12796.49 9234.21 600.00
+  702_bld House$46Trench6 1 12786.03 9228.39 600.00
+  703_bld House$46Trench6 1 12721.71 9191.39 695.00
+  704_bld House$46Trench6 1 12726.94 9180.54 695.00
+  705_bld House$46Trench6 1 12732.36 9169.31 695.00
+  706_bld House$46Trench6 1 12737.60 9158.07 695.00
+  707_bld House$46Trench6 1 12742.63 9147.22 695.00
+  708_bld House$46Trench6 1 12748.06 9136.38 695.00
+  709_bld House$46Trench6 1 12657.01 9175.70 575.00
+  710_bld House$46Trench6 1 12665.74 9182.96 605.00
+  711_bld House$46Trench6 1 12677.16 9186.82 620.00
+  712_bld House$46Trench6 1 12689.04 9188.82 620.00
+  713_bld House$46Trench6 1 12701.03 9190.89 620.00
+  714_bld House$46Trench6 1 12712.97 9192.90 620.00
+  715_bld House$Bunker2 1 12718.94 9199.09 695.00
+  716_bld House$46Trench6 1 12828.16 9225.78 365.00
+  717_bld House$46Trench6 1 12827.24 9214.05 365.00
+  718_bld House$46Trench6 1 12826.59 9201.69 365.00
+  719_bld House$46Trench6 1 12825.29 9189.66 365.00
+  720_bld House$46Trench6 1 12824.63 9178.27 545.00
+  721_bld House$46Trench6 1 12823.66 9166.23 545.00
+  722_bld House$46Trench6 1 12822.68 9153.55 545.00
+  723_bld House$46Trench6 1 12823.98 9141.84 525.00
+  724_bld House$46Trench6 1 12698.71 9258.29 525.00
+  725_bld House$46Trench6 1 12702.61 9246.25 525.00
+  726_bld House$46Trench6 1 12706.19 9233.57 525.00
+  727_bld House$46Trench6 1 12709.77 9221.86 525.00
+  728_bld House$46Trench6 1 12713.02 9209.82 525.00
+  729_bld House$46Trench6 1 12951.79 9340.76 585.00
+  730_bld House$46Trench6 1 12961.57 9346.43 615.00
+  731_bld House$46Trench6 1 12973.22 9349.44 615.00
+  732_bld House$46Trench6 1 12984.88 9352.68 615.00
+  733_bld House$46Trench6 1 12996.53 9355.93 615.00
+  734_bld House$46Trench6 1 13008.07 9359.17 615.00
+  735_bld House$46Trench6 1 13019.96 9362.29 615.00
+  736_bld House$46Trench6 1 13031.74 9365.42 615.00
+  737_bld House$Bunker2 1 10723.53 9608.62 485.00
+  738_bld House$Bunker1 1 10217.96 8924.81 470.00
+  739_bld House$Bunker1 1 20127.95 14259.24 470.00
+  740_bld House$Bunker2 1 20095.25 14229.37 450.00
+  741_bld House$46Trench6 1 11963.89 8039.56 480.00
+  742_bld House$46Trench6 1 11975.00 8035.80 455.00
+  743_bld House$46Trench6 1 11985.46 8037.93 420.00
+  744_bld House$46Trench6 1 11993.80 8045.93 390.00
+  745_bld House$46Trench6 1 11999.03 8056.72 380.00
+  746_bld House$46Trench6 1 12003.28 8067.10 380.00
+  747_bld House$46Trench6 1 12007.53 8079.44 560.00
+  748_bld House$46Trench6 1 12011.78 8090.88 560.00
+  749_bld House$46Trench6 1 12014.23 8102.32 365.00
+  750_bld House$46Trench6 1 11986.71 8145.76 515.00
+  751_bld House$46Trench6 1 11991.63 8134.80 515.00
+  752_bld House$46Trench6 1 11998.28 8125.13 495.00
+  753_bld House$46Trench6 1 12007.55 8117.26 665.00
+  754_bld House$46Trench3 1 12013.64 8110.94 695.00
+  755_bld House$46Trench6 1 12024.30 8114.92 615.00
+  756_bld House$46Trench6 1 12036.07 8118.26 615.00
+  757_bld House$46Trench6 1 12047.99 8121.28 615.00
+  758_bld House$46Trench6 1 12059.92 8124.46 615.00
+  759_bld House$46Trench6 1 12071.69 8127.64 615.00
+  760_bld House$46Trench6 1 12083.46 8130.66 615.00
+  761_bld House$46Trench6 1 11928.46 8296.40 705.00
+  762_bld House$46Trench6 1 11931.45 8284.74 705.00
+  763_bld House$46Trench6 1 11934.50 8272.96 705.00
+  764_bld House$46Trench6 1 11950.75 8211.30 455.00
+  765_bld House$46Trench6 1 11962.95 8210.32 455.00
+  766_bld House$46Trench6 1 11975.15 8209.25 455.00
+  767_bld House$46Trench6 1 11987.18 8208.01 455.00
+  768_bld House$46Trench6 1 11999.29 8206.94 455.00
+  769_bld House$46Trench6 1 12011.23 8205.87 455.00
+  770_bld House$46Trench6 1 12023.25 8204.71 455.00
+  771_bld House$Bunker1 1 11807.16 8039.16 575.00
+  772_bld House$Bunker1 1 11838.18 8009.07 575.00
+  773_bld House$46Trench6 1 12060.08 7954.24 610.00
+  774_bld House$46Trench6 1 12071.43 7958.44 610.00
+  775_bld House$46Trench6 1 12083.09 7962.48 610.00
+  776_bld House$46Trench6 1 12094.59 7966.68 610.00
+  777_bld House$46Trench6 1 12105.95 7970.88 610.00
+  778_bld House$46Trench6 1 12117.30 7974.92 610.00
+  779_bld House$46Trench6 1 12128.65 7978.97 610.00
+  780_bld House$46Trench6 1 12139.10 7983.16 610.00
+  781_bld House$46Trench6 1 12124.33 7713.81 700.00
+  782_bld House$46Trench6 1 12128.07 7702.60 700.00
+  783_bld House$46Trench6 1 12131.40 7691.80 700.00
+  784_bld House$46Trench6 1 12134.72 7681.01 700.00
+  785_bld House$46Trench6 1 12138.49 7669.32 700.00
+  786_bld House$46Trench6 1 12142.23 7657.28 700.00
+  787_bld House$46Trench6 1 12145.97 7646.07 700.00
+  788_bld House$46Trench6 1 12150.45 7634.60 700.00
+  789_bld House$46Trench6 1 12158.03 7616.70 675.00
+  790_bld House$46Trench6 1 12166.58 7608.05 675.00
+  791_bld House$46Trench6 1 12175.59 7599.61 675.00
+  792_bld House$46Trench6 1 12184.57 7591.18 675.00
+  793_bld House$46Trench6 1 12193.27 7582.67 675.00
+  794_bld House$46Trench6 1 12201.89 7574.05 675.00
+  795_bld House$46Trench6 1 17974.01 10911.02 675.00
+  796_bld House$46Trench6 1 17965.32 10919.64 675.00
+  797_bld House$46Trench6 1 17956.70 10928.18 675.00
+  798_bld House$46Trench6 1 17947.68 10936.55 675.00
+  799_bld House$46Trench6 1 17938.74 10945.17 675.00
+  800_bld House$46Trench6 1 17930.13 10953.86 675.00
+  801_bld House$46Trench6 1 17921.27 10962.40 675.00
+  802_bld House$46Trench6 1 17912.33 10970.86 675.00
+  803_bld House$46Trench6 1 17903.79 10979.47 675.00
+  804_bld House$46Trench6 1 17894.86 10988.17 675.00
+  805_bld House$46Trench6 1 17886.16 10996.87 675.00
+  806_bld House$46Trench6 1 17876.98 11005.40 675.00
+  807_bld House$46Trench6 1 17868.36 11014.18 675.00
+  808_bld House$46Trench6 1 17859.58 11022.55 675.00
+  809_bld House$46Trench6 1 17851.21 11031.01 675.00
+  810_bld House$46Trench6 1 17842.27 11039.79 675.00
+  811_bld House$46Trench6 1 17839.89 11049.13 555.00
+  812_bld House$46Trench6 1 17843.06 11060.90 555.00
+  813_bld House$46Trench6 1 17846.34 11072.78 555.00
+  814_bld House$46Trench6 1 17849.51 11084.32 555.00
+  815_bld House$46Trench6 1 17852.68 11095.98 555.00
+  816_bld House$Bunker2 1 17979.67 10906.19 495.00
+  817_bld House$46Trench6 1 15777.64 9219.01 540.00
+  818_bld House$46Trench6 1 15777.82 9207.32 540.00
+  819_bld House$46Trench6 1 15777.82 9195.29 540.00
+  820_bld House$46Trench6 1 15777.82 9183.43 540.00
+  821_bld House$46Trench6 1 15777.99 9171.05 540.00
+  822_bld House$46Trench6 1 15777.99 9158.67 540.00
+  823_bld House$46Trench6 1 15777.64 9146.46 540.00
+  824_bld House$46Trench6 1 15777.82 9133.74 540.00
+  825_bld House$46Trench6 1 15777.64 9121.88 540.00
+  826_bld House$46Trench6 1 15777.82 9110.19 540.00
+  827_bld House$46Trench6 1 15776.39 9099.56 540.00
+  828_bld House$46Trench6 1 15777.08 9087.18 540.00
+  829_bld House$46Trench6 1 15777.42 9072.57 540.00
+  830_bld House$46Trench6 1 15777.77 9060.54 540.00
+  831_bld House$46Trench6 1 15777.77 9048.33 540.00
+  832_bld House$46Trench6 1 15777.77 9036.47 540.00
+  833_bld House$46Trench6 1 15966.12 9152.10 540.00
+  834_bld House$46Trench6 1 15966.47 9140.62 540.00
+  835_bld House$46Trench6 1 15966.81 9128.41 540.00
+  836_bld House$46Trench6 1 15966.98 9116.21 540.00
+  837_bld House$46Trench6 1 15967.16 9103.66 540.00
+  838_bld House$46Trench6 1 15947.58 9092.83 540.00
+  839_bld House$46Trench6 1 15965.09 9081.99 540.00
+  840_bld House$46Trench6 1 15965.09 9069.44 540.00
+  841_bld House$46Trench6 1 15964.92 9053.80 540.00
+  842_bld House$46Trench6 1 15963.72 9043.31 540.00
+  843_bld House$46Trench6 1 15976.78 9159.36 630.00
+  844_bld House$46Trench6 1 15989.16 9159.36 630.00
+  845_bld House$46Trench6 1 16001.19 9159.19 630.00
+  846_bld House$46Trench6 1 16013.57 9158.84 630.00
+  847_bld House$46Trench6 1 16026.47 9158.67 630.00
+  848_bld House$46Trench6 1 16038.84 9158.67 630.00
+  849_bld House$46Trench6 1 16051.22 9158.50 630.00
+  850_bld House$Bunker2 1 16058.62 9158.50 375.00
+  851_bld House$46Trench6 1 17769.97 9206.23 360.00
+  852_bld House$46Trench6 1 17769.87 9194.11 360.00
+  853_bld House$46Trench6 1 17769.57 9181.93 360.00
+  854_bld House$46Trench6 1 17769.60 9169.60 360.00
+  855_bld House$46Trench6 1 17769.43 9157.51 360.00
+  856_bld House$46Trench6 1 17769.43 9145.24 360.00
+  857_bld House$46Trench6 1 17769.01 9133.07 360.00
+  858_bld House$46Trench6 1 17768.92 9120.97 360.00
+  859_bld House$46Trench6 1 17768.66 9108.71 360.00
+  860_bld House$46Trench6 1 17768.32 9096.44 360.00
+  861_bld House$46Trench6 1 17766.28 9085.46 360.00
+  862_bld House$46Trench6 1 17766.11 9073.19 360.00
+  863_bld House$46Trench6 1 20683.40 12255.82 660.00
+  864_bld House$46Trench6 1 20694.16 12249.89 660.00
+  865_bld House$46Trench6 1 20705.06 12244.13 660.00
+  866_bld House$46Trench6 1 20715.79 12238.23 660.00
+  867_bld House$46Trench6 1 20726.05 12232.49 660.00
+  868_bld House$46Trench6 1 20736.59 12226.45 660.00
+  869_bld House$46Trench6 1 20747.27 12220.27 660.00
+  870_bld House$46Trench6 1 20757.95 12214.25 660.00
+  871_bld House$46Trench6 1 20768.30 12208.08 660.00
+  872_bld House$AirdromeMaskingnet 1 10333.97 9220.10 390.00
+  873_bld House$AirdromeMaskingnet 1 10332.23 9070.81 390.00
+  874_bld House$AirdromeMaskingnet 1 10557.76 9537.36 365.00
+  875_bld House$AirdromeMaskingnet 1 12398.41 10579.62 390.00
+  876_bld House$AirdromeMaskingnet 1 12093.48 8133.03 360.00
+  877_bld House$AirdromeMaskingnet 1 12031.50 8203.59 360.00
+  878_bld House$AirdromeMaskingnet 1 12146.05 7985.83 360.00
+  879_bld House$AirdromeMaskingnet 1 11934.93 8307.35 360.00
+  880_bld House$AirdromeMaskingnet 1 12752.07 9127.91 440.00
+  881_bld House$AirdromeMaskingnet 1 12826.53 9137.24 420.00
+  882_bld House$AirdromeMaskingnet 1 13042.37 9356.86 450.00
+  883_bld House$AirdromeMaskingnet 1 12156.37 10385.69 450.00
+  884_bld House$AirdromeMaskingnet 1 12462.12 10505.44 450.00
+  885_bld House$AirdromeMaskingnet 1 15778.66 9029.10 440.00
+  886_bld House$AirdromeMaskingnet 1 15965.02 9042.56 440.00
+  887_bld House$AirdromeMaskingnet 1 17766.89 9063.54 440.00
+  888_bld House$AirdromeMaskingnet 1 17853.59 11099.18 470.00
+  889_bld House$AirdromeMaskingnet 1 20771.43 12206.22 400.00
+  890_bld House$AirdromeMaskingnet 1 19931.04 14208.33 715.00
+  891_bld House$AirdromeMaskingnet 1 19960.77 14167.63 365.00
+  892_bld House$AirdromeMaskingnet 1 20046.70 14213.53 395.00
+  893_bld House$46Trench6 1 20054.43 14168.86 395.00
+  894_bld House$46Trench6 1 20047.49 14159.04 395.00
+  895_bld House$46Trench6 1 20125.07 14266.70 695.00
+  896_bld House$46Trench6 1 20123.32 14277.93 545.00
+  897_bld House$46Trench6 1 20124.10 14289.94 545.00
+  898_bld House$46Trench6 1 20125.26 14302.33 545.00
+  899_bld House$AirdromeMaskingnet 1 20127.00 14309.10 635.00
+  900_bld House$46Trench6 1 21428.16 16442.12 365.00
+  901_bld House$46Trench6 1 21429.08 16454.35 365.00
+  902_bld House$46Trench6 1 21430.23 16466.59 365.00
+  903_bld House$46Trench6 1 21431.39 16478.82 365.00
+  904_bld House$46Trench6 1 21432.43 16490.94 365.00
+  905_bld House$46Trench6 1 27444.63 20570.01 385.00
+  906_bld House$46Trench6 1 27439.74 20558.91 565.00
+  907_bld House$46Trench6 1 27434.85 20547.99 380.00
+  908_bld House$46Trench6 1 27375.94 20521.83 590.00
+  909_bld House$46Trench6 1 27366.53 20513.92 590.00
+  910_bld House$46Trench6 1 27357.11 20506.21 590.00
+  911_bld House$46Trench6 1 27354.48 20491.62 680.00
+  912_bld House$46Trench3 1 27348.32 20498.80 680.00
+  913_bld House$46Trench6 1 27363.21 20483.05 490.00
+  914_bld House$46Trench6 1 27372.49 20475.03 490.00
+  915_bld House$46Trench6 1 27341.44 20505.32 670.00
+  916_bld House$46Trench6 1 27331.15 20510.06 640.00
+  917_bld House$46Trench6 1 27319.72 20508.99 610.00
+  918_bld House$46Trench6 1 27308.23 20505.01 430.00
+  919_bld House$46Trench6 1 27296.99 20500.59 610.00
+  920_bld House$46Trench6 1 27286.04 20495.47 600.00
+  921_bld House$46Trench6 1 27275.01 20489.36 600.00
+  922_bld House$46Trench6 1 27264.43 20483.44 600.00
+  923_bld House$46Trench6 1 27253.37 20477.03 600.00
+  924_bld House$46Trench6 1 27242.63 20471.10 600.00
+  925_bld House$46Trench3 1 27234.26 20464.36 670.00
+  926_bld House$46Trench6 1 27241.77 20458.54 490.00
+  927_bld House$46Trench6 1 27251.09 20450.51 670.00
+  928_bld House$46Trench6 1 27259.27 20441.54 685.00
+  929_bld House$46Trench6 1 27266.19 20431.58 685.00
+  930_bld House$46Trench6 1 27273.43 20421.77 505.00
+  931_bld House$46Trench6 1 27227.55 20471.02 495.00
+  932_bld House$46Trench6 1 27218.90 20479.84 495.00
+  933_bld House$46Trench6 1 27210.42 20488.18 675.00
+  934_bld House$46Trench6 1 27201.62 20496.99 675.00
+  935_bld House$AirdromeMaskingnet 1 27196.15 20502.50 405.00
+  936_bld House$AirdromeMaskingnet 1 27296.95 20502.07 405.00
+  937_bld House$AirdromeMaskingnet 1 27441.39 20558.77 480.00
+  938_bld House$Bunker1 1 27770.11 20084.83 480.00
+  939_bld House$Bunker1 1 27712.23 20049.52 480.00
+  940_bld House$46Trench6 1 27719.74 20054.30 600.00
+  941_bld House$46Trench6 1 27730.19 20060.21 600.00
+  942_bld House$46Trench6 1 27742.61 20069.28 600.00
+  943_bld House$46Trench6 1 27752.67 20075.20 600.00
+  944_bld House$46Trench6 1 27763.31 20081.31 600.00
+  945_bld House$46Trench6 1 28219.96 19524.01 600.00
+  946_bld House$46Trench6 1 28210.10 19518.25 600.00
+  947_bld House$46Trench6 1 28191.80 19510.98 435.00
+  948_bld House$46Trench6 1 28180.31 19507.98 435.00
+  949_bld House$46Trench6 1 28168.48 19504.98 615.00
+  950_bld House$46Trench6 1 28156.98 19500.15 600.00
+  951_bld House$46Trench6 1 28146.49 19494.16 600.00
+  952_bld House$46Trench6 1 28135.99 19488.16 600.00
+  953_bld House$46Trench6 1 28125.16 19481.99 600.00
+  954_bld House$46Trench6 1 28141.49 19401.84 690.00
+  955_bld House$46Trench6 1 28144.46 19390.92 360.00
+  956_bld House$46Trench6 1 28140.69 19382.40 410.00
+  957_bld House$46Trench6 1 28130.89 19375.49 420.00
+  958_bld House$46Trench6 1 28120.28 19369.38 420.00
+  959_bld House$46Trench6 1 28110.16 19363.60 420.00
+  960_bld House$46Trench6 1 28099.61 19357.38 420.00
+  961_bld House$46Trench6 1 28089.32 19351.27 420.00
+  962_bld House$46Trench6 1 28078.24 19345.33 420.00
+  963_bld House$46Trench6 1 28075.88 19333.84 660.00
+  964_bld House$46Trench6 1 28083.72 19325.78 690.00
+  965_bld House$46Trench6 1 28088.14 19315.18 705.00
+  966_bld House$46Trench6 1 28086.94 19305.48 390.00
+  967_bld House$46Trench6 1 28080.49 19295.36 395.00
+  968_bld House$46Trench6 1 28073.54 19285.45 395.00
+  969_bld House$46Trench6 1 28066.31 19275.75 395.00
+  970_bld House$46Trench6 1 28059.28 19265.95 395.00
+  971_bld House$46Trench6 1 28318.16 19571.17 475.00
+  972_bld House$46Trench6 1 28329.22 19565.86 475.00
+  973_bld House$46Trench6 1 28340.06 19560.55 475.00
+  974_bld House$46Trench6 1 28350.90 19555.47 475.00
+  975_bld House$46Trench6 1 28360.85 19550.38 475.00
+  976_bld House$46Trench6 1 28371.91 19545.29 475.00
+  977_bld House$46Trench6 1 28383.19 19539.98 475.00
+  978_bld House$46Trench6 1 28392.83 19540.61 415.00
+  979_bld House$46Trench6 1 28402.91 19547.79 415.00
+  980_bld House$46Trench6 1 28412.81 19554.97 415.00
+  981_bld House$46Trench6 1 28422.90 19561.76 595.00
+  982_bld House$46Trench6 1 28432.60 19568.55 595.00
+  983_bld House$46Trench6 1 28442.49 19575.34 595.00
+  984_bld House$AirdromeMaskingnet 1 28164.56 19504.77 695.00
+  985_bld House$AirdromeMaskingnet 1 28425.34 19564.15 410.00
+  986_bld House$AirdromeMaskingnet 1 28130.39 19373.68 410.00
+  987_bld House$46Trench6 1 28239.05 19527.06 470.00
+  988_bld House$46Trench6 1 28250.62 19522.91 650.00
+  989_bld House$46Trench6 1 28260.93 19517.39 665.00
+  990_bld House$46Trench6 1 28270.68 19510.21 670.00
+  991_bld House$46Trench6 1 28280.25 19501.74 670.00
+  992_bld House$46Trench6 1 28289.64 19493.27 670.00
+  993_bld House$46Trench6 1 28298.84 19485.54 670.00
+  994_bld House$46Trench6 1 28308.23 19477.81 490.00
+  995_bld House$46Trench6 1 28317.62 19469.90 670.00
+  996_bld House$46Trench6 1 28326.45 19462.53 670.00
+  997_bld House$46Trench6 1 28335.84 19454.80 670.00
+  998_bld House$46Trench6 1 28345.23 19447.26 490.00
+  999_bld House$46Trench6 1 28355.35 19442.10 465.00
+  1000_bld House$46Trench6 1 28367.13 19441.18 445.00
+  1001_bld House$AirdromeMaskingnet 1 28375.97 19442.84 505.00
+  1002_bld House$46Trench6 1 30514.06 23456.25 505.00
+  1003_bld House$46Trench6 1 30520.78 23446.02 505.00
+  1004_bld House$46Trench6 1 30527.73 23435.81 505.00
+  1005_bld House$46Trench6 1 30534.66 23425.72 505.00
+  1006_bld House$46Trench6 1 30541.28 23415.49 685.00
+  1007_bld House$46Trench6 1 30548.64 23404.95 685.00
+  1008_bld House$46Trench6 1 30555.47 23394.99 685.00
+  1009_bld House$46Trench6 1 30562.54 23384.84 685.00
+  1010_bld House$46Trench6 1 30569.40 23374.90 685.00
+  1011_bld House$46Trench6 1 30576.27 23364.85 685.00
+  1012_bld House$46Trench6 1 30582.94 23354.70 685.00
+  1013_bld House$AirdromeMaskingnet 1 30510.85 23465.38 615.00
+  1014_bld House$AirdromeMaskingnet 1 30548.11 23406.15 615.00
+  1015_bld House$AirdromeMaskingnet 1 30577.16 23375.11 615.00
+  1016_bld House$46Trench6 1 31704.20 23767.64 650.00
+  1017_bld House$46Trench6 1 31715.69 23763.81 650.00
+  1018_bld House$46Trench6 1 31727.35 23759.82 650.00
+  1019_bld House$46Trench6 1 31738.68 23755.82 470.00
+  1020_bld House$46Trench6 1 31750.00 23751.49 470.00
+  1021_bld House$46Trench6 1 31761.49 23747.16 470.00
+  1022_bld House$46Trench6 1 31772.65 23742.10 470.00
+  1023_bld House$46Trench6 1 31783.80 23738.59 650.00
+  1024_bld House$46Trench6 1 31795.12 23734.59 650.00
+  1025_bld House$46Trench6 1 31806.44 23730.59 650.00
+  1026_bld House$46Trench6 1 31817.77 23726.60 650.00
+  1027_bld House$46Trench6 1 31829.09 23722.43 650.00
+  1028_bld House$AirdromeMaskingnet 1 31835.86 23720.32 380.00
+  1029_bld House$46Trench6 1 32990.23 26789.72 620.00
+  1030_bld House$46Trench6 1 32978.37 26786.57 610.00
+  1031_bld House$46Trench6 1 32966.89 26782.31 610.00
+  1032_bld House$46Trench6 1 32955.41 26778.23 610.00
+  1033_bld House$46Trench6 1 32943.93 26774.16 610.00
+  1034_bld House$46Trench6 1 32931.15 26765.83 410.00
+  1035_bld House$46Trench6 1 32921.89 26758.05 410.00
+  1036_bld House$46Trench6 1 33010.29 26795.69 410.00
+  1037_bld House$46Trench6 1 33019.18 26803.09 410.00
+  1038_bld House$46Trench6 1 33028.47 26810.85 410.00
+  1039_bld House$46Trench6 1 33037.69 26818.60 410.00
+  1040_bld House$46Trench6 1 33046.82 26826.51 410.00
+  1041_bld House$46Trench6 1 33056.21 26834.35 410.00
+  1042_bld House$46Trench6 1 33065.59 26842.18 410.00
+  1043_bld House$46Trench6 1 33074.89 26849.85 410.00
+  1044_bld House$46Trench6 1 33084.27 26857.76 410.00
+  1045_bld House$Bunker2 1 33092.44 26863.77 500.00
+  1046_bld House$46Trench6 1 33088.88 26872.80 530.00
+  1047_bld House$46Trench6 1 33089.84 26883.74 560.00
+  1048_bld House$46Trench6 1 33096.41 26892.91 590.00
+  1049_bld House$46Trench6 1 33106.13 26895.92 635.00
+  1050_bld House$46Trench6 1 23726.20 16577.54 665.00
+  1051_bld House$46Trench6 1 23736.06 16570.66 665.00
+  1052_bld House$46Trench6 1 23745.93 16563.62 665.00
+  1053_bld House$46Trench6 1 23756.24 16556.66 665.00
+  1054_bld House$46Trench6 1 23766.02 16549.70 665.00
+  1055_bld House$46Trench6 1 23775.89 16542.74 665.00
+  1056_bld House$46Trench6 1 23785.58 16535.34 490.00
+  1057_bld House$46Trench6 1 23794.83 16527.49 490.00
+  1058_bld House$46Trench6 1 23804.26 16519.74 490.00
+  1059_bld House$46Trench6 1 23813.59 16511.99 490.00
+  1060_bld House$AirdromeMaskingnet 1 23812.66 16513.91 580.00
+  1061_bld House$AirdromeMaskingnet 1 21432.16 16498.55 610.00
+  1062_bld House$46Trench6 1 33209.38 26909.83 575.00
+  1063_bld House$46Trench6 1 33202.39 26899.79 575.00
+  1064_bld House$46Trench6 1 33195.40 26889.76 575.00
+  1065_bld House$46Trench6 1 33188.41 26879.95 575.00
+  1066_bld House$46Trench6 1 33181.53 26870.03 575.00
+  1067_bld House$46Trench6 1 33174.66 26859.10 575.00
+  1068_bld House$46Trench6 1 33167.78 26850.08 575.00
+  1069_bld House$46Trench6 1 33160.79 26840.15 575.00
+  1070_bld House$46Trench6 1 33153.91 26830.12 575.00
+  1071_bld House$46Trench6 1 33146.92 26820.31 575.00
+  1072_bld House$46Trench6 1 32845.32 26708.36 565.00
+  1073_bld House$46Trench6 1 32840.13 26697.11 565.00
+  1074_bld House$46Trench6 1 32834.81 26686.03 565.00
+  1075_bld House$46Trench6 1 32829.60 26675.06 565.00
+  1076_bld House$46Trench6 1 32824.40 26664.20 565.00
+  1077_bld House$46Trench6 1 32819.30 26653.33 565.00
+  1078_bld House$46Trench6 1 32814.09 26642.25 565.00
+  1079_bld House$AirdromeMaskingnet 1 32821.82 26680.25 560.00
+  1080_bld House$AirdromeMaskingnet 1 32999.17 26799.72 615.00
+  1081_bld House$AirdromeMaskingnet 1 33083.96 26894.42 660.00
+  1082_bld House$46Trench6 1 35370.07 27085.79 630.00
+  1083_bld House$46Trench6 1 35357.93 27085.72 630.00
+  1084_bld House$46Trench6 1 35346.12 27085.72 630.00
+  1085_bld House$46Trench6 1 35334.16 27085.10 450.00
+  1086_bld House$46Trench6 1 35321.93 27086.14 450.00
+  1087_bld House$46Trench6 1 35309.83 27086.14 450.00
+  1088_bld House$46Trench6 1 35297.74 27086.28 450.00
+  1089_bld House$46Trench6 1 35184.82 27072.92 445.00
+  1090_bld House$46Trench6 1 35172.65 27071.90 445.00
+  1091_bld House$46Trench6 1 35160.47 27070.94 445.00
+  1092_bld House$46Trench6 1 35148.45 27069.76 625.00
+  1093_bld House$46Trench6 1 35136.43 27068.58 625.00
+  1094_bld House$46Trench6 1 35125.69 27070.83 475.00
+  1095_bld House$46Trench6 1 35115.06 27075.88 475.00
+  1096_bld House$46Trench6 1 35104.11 27081.14 475.00
+  1097_bld House$FurnitureBunker_Omaha_W 1 34497.75 26765.92 420.00
+  1098_bld House$FurnitureBunker_Omaha_W 1 31634.18 25786.28 405.00
+  1099_bld House$FurnitureBunker_Omaha_W 1 30134.76 22914.62 405.00
+  1100_bld House$FurnitureBunker_Omaha_W 1 30557.34 23339.75 405.00
+  1101_bld House$FurnitureBunker_Omaha_W 1 29918.58 22736.03 405.00
+  1102_bld House$FurnitureBunker_Omaha_W 1 28782.47 21579.41 405.00
+  1103_bld House$FurnitureBunker_Omaha_W 1 27395.23 20581.21 405.00
+  1104_bld House$AirdromeMaskingnet 1 27387.37 20585.94 405.00
+  1105_bld House$FurnitureBunker_Omaha_W 1 25032.37 18974.98 405.00
+  1106_bld House$FurnitureBunker_Omaha_W 1 22971.74 17785.13 405.00
+  1107_bld House$FurnitureBunker_Omaha_W 1 20638.56 15405.42 405.00
+  1108_bld House$FurnitureBunker_Omaha_W 1 19894.08 13949.68 405.00
+  1109_bld House$FurnitureBunker_Omaha_W 1 18983.41 11789.34 405.00
+  1110_bld House$FurnitureBunker_Omaha_W 1 18012.91 11131.26 405.00
+  1111_bld House$FurnitureBunker_Omaha_W 1 16183.09 10338.36 450.00
+  1112_bld House$FurnitureBunker_Omaha_W 1 15562.27 10282.77 450.00
+  1113_bld House$FurnitureBunker_Omaha_W 1 14228.21 10387.08 450.00
+  1114_bld House$FurnitureBunker_Omaha_W 1 10566.66 9537.28 405.00
+  1115_bld House$FurnitureBunker_Omaha_W 1 10441.75 7563.25 365.00
+  1116_bld House$FurnitureBunker_Omaha_W 1 9183.87 5976.70 365.00
+  1117_bld House$FurnitureObserv_Bunker_W 1 8372.91 3766.48 365.00
+  1118_bld House$FurnitureObserv_Bunker_W 1 48474.01 35705.27 605.00
+  1119_bld House$FurnitureObserv_Bunker_W 1 46220.83 32222.75 605.00
+  1120_bld House$FurnitureObserv_Bunker_W 1 45003.42 30818.66 605.00
+  1121_bld House$FurnitureObserv_Bunker_W 1 44961.74 30772.35 605.00
+  1122_bld House$FurnitureObserv_Bunker_W 1 36708.10 24265.50 635.00
+  1123_bld House$FurnitureObserv_Bunker_W 1 35332.86 24837.68 635.00
+  1124_bld House$FurnitureObserv_Bunker_W 1 34696.86 25476.49 635.00
+  1125_bld House$FurnitureObserv_Bunker_W 1 34659.64 26203.69 635.00
+  1126_bld House$FurnitureObserv_Bunker_W 1 32625.51 24836.04 635.00
+  1127_bld House$FurnitureObserv_Bunker_W 1 32138.98 24164.46 555.00
+  1128_bld House$FurnitureObserv_Bunker_W 1 30785.73 20984.68 555.00
+  1129_bld House$FurnitureObserv_Bunker_W 1 28011.67 19170.31 555.00
+  1130_bld House$FurnitureObserv_Bunker_W 1 26576.37 18165.66 600.00
+  1131_bld House$FurnitureObserv_Bunker_W 1 25720.72 17687.45 600.00
+  1132_bld House$FurnitureObserv_Bunker_W 1 21334.25 13476.73 540.00
+  1133_bld House$FurnitureObserv_Bunker_W 1 21114.47 12117.10 540.00
+  1134_bld House$FurnitureObserv_Bunker_W 1 14835.16 9088.78 615.00
+  1135_bld House$FurnitureObserv_Bunker_W 1 13078.35 9265.34 615.00
+  1136_bld House$FurnitureObserv_Bunker_W 1 12069.90 8501.55 525.00
+  1137_bld House$FurnitureObserv_Bunker_W 1 12334.65 6676.33 525.00
+  1138_bld House$FurnitureObserv_Bunker_W 1 11768.66 5945.86 525.00
+  1139_bld House$FurnitureObserv_Bunker_W 1 11366.90 3900.81 525.00
+  1140_bld House$FurnitureObserv_Bunker_W 1 9766.13 1831.38 525.00
+  1141_bld House$FurnitureObserv_Bunker_W 1 8652.29 1362.72 525.00
+  1142_bld House$46Trench6 1 15562.12 10293.88 555.00
+  1143_bld House$46Trench6 1 15565.25 10305.84 555.00
+  1144_bld House$46Trench6 1 15568.34 10317.28 555.00
+  1145_bld House$46Trench6 1 15571.43 10328.88 555.00
+  1146_bld House$46Trench6 1 15574.68 10340.48 555.00
+  1147_bld House$46Trench6 1 15577.77 10352.38 555.00
+  1148_bld House$46Trench6 1 15581.17 10364.13 555.00
+  1149_bld House$46Trench6 1 15584.11 10375.58 555.00
+  1150_bld House$46Trench6 1 15587.36 10387.02 555.00
+  1151_bld House$46Trench6 1 15590.61 10398.77 555.00
+  1152_bld House$46Trench6 1 15593.74 10410.36 555.00
+  1153_bld House$46Trench6 1 15596.93 10422.20 555.00
+  1154_bld House$46Trench6 1 15600.16 10433.95 555.00
+  1155_bld House$46Trench6 1 15603.70 10445.60 380.00
+  1156_bld House$46Trench6 1 15607.89 10456.93 380.00
+  1157_bld House$46Trench6 1 15612.02 10468.32 380.00
+  1158_bld House$46Trench6 1 15616.15 10479.81 380.00
+  1159_bld House$46Trench6 1 15620.28 10491.30 380.00
+  1160_bld House$AirdromeMaskingnet 1 15621.53 10491.35 380.00
+  1161_bld House$Bunker1 1 15498.30 10296.59 560.00
+  1162_bld House$46Trench6 1 34498.58 26779.78 560.00
+  1163_bld House$46Trench6 1 34502.78 26789.81 560.00
+  1164_bld House$46Trench6 1 34506.97 26801.16 560.00
+  1165_bld House$46Trench6 1 34511.16 26812.66 560.00
+  1166_bld House$46Trench6 1 34515.29 26824.00 560.00
+  1167_bld House$46Trench6 1 34519.47 26835.35 560.00
+  1168_bld House$46Trench6 1 34523.65 26846.79 560.00
+  1169_bld House$46Trench6 1 34484.55 26762.03 425.00
+  1170_bld House$46Trench6 1 34473.53 26756.98 425.00
+  1171_bld House$46Trench6 1 34462.39 26751.79 425.00
+  1172_bld House$46Trench6 1 34451.24 26746.74 425.00
+  1173_bld House$46Trench6 1 34440.35 26741.69 425.00
+  1174_bld House$46Trench6 1 34429.34 26736.50 425.00
+  1175_bld House$46Trench6 1 34418.20 26731.32 425.00
+  1176_bld House$46Trench6 1 34668.31 26203.01 635.00
+  1177_bld House$46Trench6 1 34680.46 26202.08 635.00
+  1178_bld House$46Trench6 1 34692.60 26201.04 635.00
+  1179_bld House$46Trench6 1 34704.28 26202.31 435.00
+  1180_bld House$46Trench6 1 34715.84 26205.43 435.00
+  1181_bld House$46Trench6 1 34727.41 26208.44 435.00
+  1182_bld House$46Trench6 1 34739.43 26210.87 620.00
+  1183_bld House$46Trench6 1 34653.20 26204.24 645.00
+  1184_bld House$46Trench6 1 34641.49 26207.35 645.00
+  1185_bld House$46Trench6 1 34629.73 26210.41 645.00
+  1186_bld House$46Trench6 1 34617.86 26213.59 645.00
+  1187_bld House$46Trench6 1 34608.61 26211.16 585.00
+  1188_bld House$46Trench6 1 34599.98 26202.57 585.00
+  1189_bld House$46Trench6 1 34591.42 26194.00 585.00
+  1190_bld House$46Trench6 1 34582.84 26185.31 585.00
+  1191_bld House$46Trench6 1 34574.39 26176.86 585.00
+  1192_bld House$46Trench6 1 34565.82 26168.17 585.00
+  1193_bld House$46Trench6 1 34557.25 26159.47 585.00
+  1194_bld House$AirdromeMaskingnet 1 34498.04 26758.06 520.00
+  1195_bld House$AirdromeMaskingnet 1 34508.93 26761.69 520.00
+  1196_bld House$AirdromeMaskingnet 1 34660.29 26196.54 445.00
+  1197_bld House$46Trench6 1 32520.66 24850.59 460.00
+  1198_bld House$46Trench6 1 32532.62 24848.37 460.00
+  1199_bld House$46Trench6 1 32544.69 24846.11 460.00
+  1200_bld House$46Trench6 1 32556.59 24843.81 460.00
+  1201_bld House$46Trench6 1 32568.52 24841.47 640.00
+  1202_bld House$46Trench6 1 32580.63 24839.45 640.00
+  1203_bld House$46Trench6 1 32592.65 24837.44 640.00
+  1204_bld House$46Trench6 1 32604.75 24834.10 640.00
+  1205_bld House$46Trench6 1 32616.69 24833.91 640.00
+  1206_bld House$46Trench6 1 37183.68 24809.65 620.00
+  1207_bld House$46Trench6 1 37195.52 24811.62 620.00
+  1208_bld House$46Trench6 1 37207.50 24813.86 620.00
+  1209_bld House$46Trench6 1 37219.48 24815.93 620.00
+  1210_bld House$46Trench6 1 37231.53 24818.23 440.00
+  1211_bld House$46Trench6 1 37243.57 24820.37 440.00
+  1212_bld House$46Trench6 1 37255.40 24822.59 440.00
+  1213_bld House$46Trench6 1 37267.30 24824.73 440.00
+  1214_bld House$46Trench6 1 37279.27 24826.87 440.00
+  1215_bld House$Bunker2 1 37287.59 24830.72 585.00
+  1216_bld House$Bunker2 1 38193.19 26701.02 480.00
+  1217_bld House$Bunker2 1 37589.95 25845.65 480.00
+  1218_bld House$46Trench6 1 38773.89 26126.59 420.00
+  1219_bld House$46Trench6 1 38784.31 26132.66 420.00
+  1220_bld House$46Trench6 1 38794.84 26138.86 420.00
+  1221_bld House$46Trench6 1 38805.31 26144.78 420.00
+  1222_bld House$46Trench6 1 38815.92 26150.84 420.00
+  1223_bld House$46Trench6 1 38826.11 26156.63 420.00
+  1224_bld House$46Trench6 1 38836.72 26162.83 420.00
+  1225_bld House$46Trench6 1 38857.39 26174.68 420.00
+  1226_bld House$46Trench6 1 38847.33 26168.76 600.00
+  1227_bld House$46Trench6 1 38868.00 26180.74 600.00
+  1228_bld House$46Trench6 1 38878.20 26186.53 600.00
+  1229_bld House$Bunker2 1 38885.78 26190.53 690.00
+  1230_bld House$AirdromeMaskingnet 1 35102.86 27085.84 705.00
+  1231_bld House$AirdromeMaskingnet 1 35335.61 27085.46 630.00
+  1232_bld House$AirdromeMaskingnet 1 37259.16 24822.16 360.00
+  1233_bld House$AirdromeMaskingnet 1 37179.10 24815.12 465.00
+  1234_bld House$AirdromeMaskingnet 1 38806.64 26143.65 525.00
+  1235_bld House$46Trench6 1 40334.68 26806.48 690.00
+  1236_bld House$46Trench6 1 40340.81 26796.04 690.00
+  1237_bld House$46Trench6 1 40340.55 26826.68 420.00
+  1238_bld House$46Trench6 1 40350.99 26832.72 420.00
+  1239_bld House$46Trench6 1 40361.69 26838.85 420.00
+  1240_bld House$46Trench6 1 40372.31 26844.98 420.00
+  1241_bld House$46Trench6 1 40344.88 26785.08 710.00
+  1242_bld House$46Trench6 1 40347.07 26773.01 710.00
+  1243_bld House$46Trench6 1 40349.26 26760.94 710.00
+  1244_bld House$46Trench6 1 40351.54 26748.97 710.00
+  1245_bld House$46Trench6 1 40353.63 26736.10 710.00
+  1246_bld House$46Trench6 1 40355.72 26724.93 710.00
+  1247_bld House$46Trench6 1 40357.71 26713.15 710.00
+  1248_bld House$46Trench6 1 40359.99 26701.27 530.00
+  1249_bld House$46Trench6 1 40362.18 26689.30 530.00
+  1250_bld House$46Trench6 1 40364.36 26677.23 530.00
+  1251_bld House$46Trench6 1 40366.55 26665.17 530.00
+  1252_bld House$46Trench6 1 40368.73 26653.10 530.00
+  1253_bld House$46Trench6 1 40370.82 26641.13 530.00
+  1254_bld House$46Trench6 1 40372.92 26629.15 530.00
+  1255_bld House$46Trench6 1 40375.01 26617.28 530.00
+  1256_bld House$46Trench6 1 40377.00 26605.21 710.00
+  1257_bld House$46Trench3 1 40378.73 26595.92 530.00
+  1258_bld House$46Trench6 1 40380.46 26586.54 530.00
+  1259_bld House$46Trench6 1 40382.69 26574.60 530.00
+  1260_bld House$46Trench6 1 40384.86 26562.61 530.00
+  1261_bld House$46Trench6 1 40386.91 26550.67 530.00
+  1262_bld House$46Trench6 1 40389.03 26538.78 530.00
+  1263_bld House$46Trench6 1 40391.03 26526.67 530.00
+  1264_bld House$46Trench6 1 40393.14 26514.68 530.00
+  1265_bld House$46Trench6 1 40395.25 26502.57 530.00
+  1266_bld House$46Trench6 1 40397.25 26490.57 530.00
+  1267_bld House$46Trench6 1 40399.37 26478.63 530.00
+  1268_bld House$46Trench6 1 40367.76 26593.76 620.00
+  1269_bld House$46Trench6 1 40356.05 26591.69 620.00
+  1270_bld House$46Trench6 1 40344.35 26591.42 455.00
+  1271_bld House$46Trench6 1 40332.37 26592.52 455.00
+  1272_bld House$46Trench6 1 40320.25 26593.48 455.00
+  1273_bld House$46Trench6 1 40308.13 26594.45 455.00
+  1274_bld House$46Trench6 1 40295.88 26595.69 455.00
+  1275_bld House$Bunker2 1 40927.75 26856.59 540.00
+  1276_bld House$Bunker2 1 40286.10 26595.36 695.00
+  1277_bld House$AirdromeMaskingnet 1 40401.28 26471.19 425.00
+  1278_bld House$AirdromeMaskingnet 1 40406.21 26461.49 425.00
+  1279_bld House$AirdromeMaskingnet 1 40410.82 26452.10 425.00
+  1280_bld House$46Trench6 1 40369.87 27697.56 395.00
+  1281_bld House$46Trench6 1 40362.88 27687.71 395.00
+  1282_bld House$46Trench6 1 40355.91 27684.09 395.00
+  1283_bld House$46Trench6 1 40349.08 27667.89 395.00
+  1284_bld House$46Trench6 1 40342.11 27657.92 395.00
+  1285_bld House$46Trench6 1 40335.14 27648.21 395.00
+  1286_bld House$46Trench6 1 40328.30 27638.51 395.00
+  1287_bld House$46Trench6 1 40331.71 27618.16 395.00
+  1288_bld House$46Trench6 1 40313.82 27618.83 395.00
+  1289_bld House$46Trench6 1 40306.85 27608.99 395.00
+  1290_bld House$46Trench6 1 40898.10 27068.81 560.00
+  1291_bld House$46Trench6 1 40902.23 27080.35 560.00
+  1292_bld House$46Trench6 1 40906.40 27091.73 560.00
+  1293_bld House$46Trench6 1 40910.56 27103.04 560.00
+  1294_bld House$46Trench6 1 40914.54 27114.42 560.00
+  1295_bld House$46Trench6 1 40918.65 27125.67 560.00
+  1296_bld House$46Trench6 1 40922.62 27137.18 380.00
+  1297_bld House$46Trench6 1 40926.85 27148.62 380.00
+  1298_bld House$46Trench6 1 40930.96 27160.18 380.00
+  1299_bld House$46Trench6 1 40935.18 27171.62 380.00
+  1300_bld House$Bunker2 1 40939.66 27180.81 485.00
+  1301_bld House$Bunker2 1 41400.63 28696.40 485.00
+  1302_bld House$Bunker2 1 42954.35 29894.58 460.00
+  1303_bld House$Bunker2 1 42652.14 30189.39 485.00
+  1304_bld House$Bunker2 1 42661.42 30092.17 455.00
+  1305_bld House$46Trench6 1 42951.53 29884.31 365.00
+  1306_bld House$46Trench6 1 42950.65 29872.13 365.00
+  1307_bld House$46Trench6 1 42949.77 29860.30 365.00
+  1308_bld House$46Trench6 1 42933.18 29839.82 445.00
+  1309_bld House$46Trench6 1 42921.17 29838.76 445.00
+  1310_bld House$46Trench6 1 42908.99 29837.88 445.00
+  1311_bld House$46Trench6 1 42896.64 29836.82 445.00
+  1312_bld House$46Trench6 1 42884.46 29836.12 445.00
+  1313_bld House$46Trench6 1 42872.42 29835.05 445.00
+  1314_bld House$46Trench6 1 42860.33 29834.18 445.00
+  1315_bld House$46Trench6 1 42848.24 29833.26 445.00
+  1316_bld House$GunPos_1 1 13007.80 9240.53 605.00
+  1317_bld House$GunPos_1 1 13073.29 8940.39 590.00
+  1318_bld House$GunPos_1 1 11850.21 8514.07 540.00
+  1319_bld House$GunPos_1 1 12423.30 8074.30 540.00
+  1320_bld House$GunPos_1 1 12011.73 6187.76 540.00
+  1321_bld House$GunPos_1 1 9156.24 5906.90 390.00
+  1322_bld House$GunPos_1 1 9908.09 9668.44 390.00
+  1323_bld House$GunPos_1 1 10362.65 10324.09 390.00
+  1324_bld House$AirdromeMaskingnet 1 9900.58 9673.28 390.00
+  1325_bld House$AirdromeMaskingnet 1 10355.59 10327.75 390.00
+  1326_bld House$GunPos_1 1 11411.20 10813.15 390.00
+  1327_bld House$GunPos_1 1 13214.36 10574.63 495.00
+  1328_bld House$GunPos_1 1 19911.11 14328.68 405.00
+  1329_bld House$GunPos_1 1 19565.33 14272.53 375.00
+  1330_bld House$GunPos_1 1 27307.89 20701.64 405.00
+  1331_bld House$GunPos_1 1 26965.85 20672.80 375.00
+  1332_bld House$GunPos_1 1 28487.58 19541.90 585.00
+  1333_bld House$GunPos_1 1 28227.28 19091.54 585.00
+  1334_bld House$GunPos_1 1 32712.24 26854.89 375.00
+  1335_bld House$GunPos_1 1 34640.19 25488.90 615.00
+  1336_bld House$GunPos_1 1 35348.81 27213.62 465.00
+  1337_bld House$GunPos_1 1 40448.59 26087.83 615.00
+  1338_bld House$GunPos_1 1 40496.15 26068.70 645.00
+  1339_bld House$GunPos_1 1 40637.18 27891.34 435.00
+  1340_bld House$Bunker2 1 42838.27 29833.13 525.00
+  1341_bld House$GunPos_1 1 42383.29 30369.80 405.00
+  1342_bld House$GunPos_1 1 42401.14 30396.99 405.00
+  1343_bld House$GunPos_1 1 44971.95 30776.77 615.00
+  1344_bld House$GunPos_1 1 46876.42 33522.29 555.00
+  1345_bld House$46Trench6 1 42663.15 30082.27 710.00
+  1346_bld House$46Trench6 1 42665.20 30070.27 710.00
+  1347_bld House$46Trench6 1 42667.20 30058.20 710.00
+  1348_bld House$46Trench6 1 42669.33 30046.20 710.00
+  1349_bld House$46Trench6 1 42657.07 30198.88 570.00
+  1350_bld House$46Trench6 1 42663.07 30209.39 570.00
+  1351_bld House$46Trench6 1 42669.20 30219.95 570.00
+  1352_bld House$46Trench6 1 42675.26 30230.52 570.00
+  1353_bld House$46Trench6 1 44063.11 30565.24 630.00
+  1354_bld House$46Trench6 1 44074.86 30565.24 630.00
+  1355_bld House$46Trench6 1 44086.61 30565.05 630.00
+  1356_bld House$46Trench6 1 44099.10 30564.87 630.00
+  1357_bld House$46Trench6 1 44111.03 30564.87 630.00
+  1358_bld House$46Trench6 1 44051.73 30557.52 570.00
+  1359_bld House$46Trench6 1 44045.49 30547.06 570.00
+  1360_bld House$46Trench6 1 44038.88 30536.41 570.00
+  1361_bld House$46Trench6 1 44032.63 30525.94 570.00
+  1362_bld House$Bunker1 1 44029.70 30520.44 630.00
+  1363_bld House$46Trench6 1 40460.05 26087.90 630.00
+  1364_bld House$46Trench6 1 40472.17 26087.96 630.00
+  1365_bld House$46Trench6 1 40481.49 26084.27 675.00
+  1366_bld House$46Trench6 1 40489.99 26075.83 675.00
+  1367_bld House$46Trench6 1 37331.53 24109.55 375.00
+  1368_bld House$46Trench6 1 37328.42 24097.97 375.00
+  1369_bld House$46Trench6 1 37325.18 24086.26 375.00
+  1370_bld House$46Trench6 1 37322.07 24074.40 375.00
+  1371_bld House$46Trench6 1 37318.82 24062.54 375.00
+  1372_bld House$46Trench6 1 37315.58 24050.82 375.00
+  1373_bld House$46Trench6 1 37312.33 24038.96 375.00
+  1374_bld House$46Trench6 1 37309.22 24027.10 375.00
+  1375_bld House$46Trench6 1 37305.98 24015.38 375.00
+  1376_bld House$46Trench6 1 37302.87 24003.81 375.00
+  1377_bld House$46Trench6 1 37299.48 23991.95 375.00
+  1378_bld House$46Trench6 1 37295.67 23980.09 375.00
+  1379_bld House$46Trench6 1 37292.56 23968.23 375.00
+  1380_bld House$AirdromeMaskingnet 1 37289.46 23959.68 465.00
+  1381_bld House$46Trench6 1 34652.34 25487.88 645.00
+  1382_bld House$46Trench6 1 34664.27 25484.37 645.00
+  1383_bld House$46Trench6 1 34676.19 25481.28 645.00
+  1384_bld House$46Trench6 1 34688.01 25478.19 645.00
+  1385_bld House$46Trench6 1 33519.27 25673.25 585.00
+  1386_bld House$Bunker2 1 33512.89 25665.63 645.00
+  1387_bld House$46Trench6 1 33527.97 25681.90 585.00
+  1388_bld House$46Trench6 1 33536.55 25690.44 585.00
+  1389_bld House$46Trench6 1 33545.11 25699.26 405.00
+  1390_bld House$46Trench6 1 33553.68 25707.76 405.00
+  1391_bld House$46Trench6 1 33562.24 25716.26 405.00
+  1392_bld House$46Trench6 1 33570.87 25724.83 405.00
+  1393_bld House$Bunker2 1 33577.36 25730.52 675.00
+  1394_bld House$46Trench6 1 33587.63 25731.35 630.00
+  1395_bld House$46Trench6 1 33599.90 25731.46 630.00
+  1396_bld House$46Trench6 1 33611.94 25731.35 630.00
+  1397_bld House$46Trench6 1 33624.22 25731.46 630.00
+  1398_bld House$Bunker2 1 33632.95 25731.94 360.00
+  1399_bld House$46Trench6 1 30920.74 24776.08 435.00
+  1400_bld House$46Trench6 1 30932.43 24779.26 435.00
+  1401_bld House$46Trench6 1 30944.28 24782.48 435.00
+  1402_bld House$46Trench6 1 30956.01 24785.70 435.00
+  1403_bld House$46Trench6 1 30967.73 24788.79 435.00
+  1404_bld House$46Trench6 1 30979.20 24792.27 435.00
+  1405_bld House$46Trench6 1 30990.92 24795.49 435.00
+  1406_bld House$46Trench6 1 31002.67 24798.59 435.00
+  1407_bld House$Bunker2 1 30911.67 24771.98 495.00
+  1408_bld House$AirdromeBarrack 1 41079.75 42291.93 660.00
+  1409_bld House$AirdromeBarrack 1 41068.13 42298.54 660.00
+  1410_bld House$AirdromeBarrack 1 27579.25 6826.91 420.00
+  1411_bld House$AirdromeBarrack 1 27591.38 6833.31 420.00
+  1412_bld House$AirdromeControlTowerBig 1 27563.43 6761.24 420.00
+  1413_bld House$AirdromeControlTowerBig 1 41240.80 41976.87 480.00
+  1414_bld House$AirdromeControlTowerSmall 1 41849.19 41842.80 480.00
+  1415_bld House$AirdromeControlTowerSmall 1 27690.01 6766.52 480.00
+  1416_bld House$AirdromeControlTowerSmall 1 26354.51 5916.19 480.00
+  1417_bld House$Bunker8 1 27502.62 6574.28 690.00
+  1418_bld House$Bunker8 1 27293.54 6604.70 520.00
+  1419_bld House$Bunker8 1 27486.75 6883.35 520.00
+  1420_bld House$AirdromeMaskingnet 1 34610.98 26213.97 615.00
+  1421_bld House$AirdromeBarrelBlock1 1 49472.85 35868.77 570.00
+  1422_bld House$AirdromeBarrelBlock1 1 49473.04 35859.76 630.00
+  1423_bld House$AirdromeBarrelBlock1 1 49554.24 35896.01 690.00
+  1424_bld House$46TankCover1 1 49461.33 35846.00 390.00
+  1425_bld House$46TankCover1 1 49516.16 35693.21 390.00
+  1426_bld House$46TankCover1 1 49517.38 35684.26 360.00
+  1427_bld House$46TankCover1 1 49515.65 35677.66 360.00
+[Target]
+  3 2 1 330 501 7001 14501 800
+  0 2 0 0 500 7645 13252 0 8 r0101 8222 13458
+  0 2 0 0 750 7655 13247 0 4 r0102 8705 14964
+[StaticCamera]
+  6429 14871 75
+  6764 14356 100
+  6883 14383 65
+[Bridge]
+  3 +
+  8 +
+  9 +
+[House]
+  x1wi ++++++1
+  w1wi +++++7
+  v1wi +++++
+  u1wi +++3
+  t1wi +f
+  d3MP v
+  x1gi +f
+  w1gi ++f
+  v1gi ++1
+  u1gi +++
+  t1gi +3
+  53gy 3
+  43gy 1
+  33gy +++
+  23gy ++++f
+  D3wP +
+  c3MQ 7
+  b3MQ 1
+  x1gj +f
+  w1gj +++
+  v1gj v
+  330y ++++++++++++3
+  230y ++++++++3
+  130y ++7
+  e3wQ +++v
+  d3wQ ++7
+  x10j +++1
+  w10j ++++v
+  v10j +++++3
+  u10j +++f
+  t10j v
+  z1Mh 1
+  23Mx ++++++++7
+  13Mx ++++++1
+  h3gQ v
+  g3gQ +++1
+  e3gQ +7
+  T3MI +7
+  x1Mi +++f
+  w1Mi +++++3
+  v1Mi ++++3
+  u1Mi ++++v
+  t1Mi +0
+  h30Q f
+  T3wI +++++
+[FrontMarker]
+  FrontMarker0 9155.19 1892.13 1
+  FrontMarker1 11398.71 4205.76 1
+  FrontMarker2 12241.85 6547.04 1
+  FrontMarker3 13046.30 8529.73 1
+  FrontMarker4 15691.14 8739.64 1
+  FrontMarker5 18339.61 9919.73 1
+  FrontMarker6 20127.42 11090.27 1
+  FrontMarker7 21459.51 13214.90 1
+  FrontMarker8 22896.76 15598.64 1
+  FrontMarker9 24369.07 16858.35 1
+  FrontMarker10 27365.48 17989.57 1
+  FrontMarker11 29056.68 19308.96 1
+  FrontMarker12 30872.41 21480.08 1
+  FrontMarker13 32075.92 22872.06 1
+  FrontMarker14 32752.47 24512.27 1
+  FrontMarker15 34535.03 25939.87 1
+  FrontMarker16 35972.28 25133.61 1
+  FrontMarker17 37409.54 24467.56 1
+  FrontMarker18 38531.30 25519.21 1
+  FrontMarker19 39407.68 26150.20 1
+  FrontMarker20 41405.81 26711.08 1
+  FrontMarker21 42282.19 28498.89 1
+  FrontMarker22 43824.61 30041.31 1
+  FrontMarker23 45402.09 31618.79 1
+  FrontMarker24 46222.19 33266.37 1
+  FrontMarker25 46783.07 35054.18 1
+  FrontMarker26 47614.14 35569.86 1
+  FrontMarker27 48605.93 39085.51 1
+  FrontMarker28 49412.19 41539.36 1
+  FrontMarker29 49938.02 43011.67 1
+  FrontMarker30 10376.29 3645.72 1
+  FrontMarker31 8588.48 1402.20 1
+  FrontMarker32 7466.72 1892.97 2
+  FrontMarker33 8763.76 3400.34 2
+  FrontMarker34 10130.90 5573.75 2
+  FrontMarker35 11079.42 7756.27 2
+  FrontMarker36 12023.87 9850.46 2
+  FrontMarker37 13916.84 10516.51 2
+  FrontMarker38 16955.98 10832.00 2
+  FrontMarker39 19095.89 12060.48 2
+  FrontMarker40 20261.80 13776.62 2
+  FrontMarker41 21558.84 16125.31 2
+  FrontMarker42 23346.64 17702.79 2
+  FrontMarker43 25104.23 19331.07 2
+  FrontMarker44 26993.64 20366.97 2
+  FrontMarker45 28569.84 21979.50 2
+  FrontMarker46 30205.36 22947.42 2
+  FrontMarker47 31304.13 25449.95 2
+  FrontMarker48 33126.10 26922.26 2
+  FrontMarker49 36022.63 27709.80 2
+  FrontMarker50 37473.82 26080.94 2
+  FrontMarker51 39016.24 27693.47 2
+  FrontMarker52 40998.05 27868.74 2
+  FrontMarker53 41855.70 30042.15 2
+  FrontMarker54 42802.18 30778.31 2
+  FrontMarker55 44134.27 32075.34 2
+  FrontMarker56 45256.03 34111.59 2
+  FrontMarker57 46237.57 36071.62 2
+  FrontMarker58 46718.40 37770.59 2
+  FrontMarker59 46993.40 40383.38 2
+  FrontMarker60 47764.61 42556.80 2
+  FrontMarker61 49061.64 44134.27 2
+  FrontMarker62 15565.02 10502.75 2
+  FrontMarker63 10928.08 6439.02 2
+  FrontMarker64 11501.30 5620.14 1
+  FrontMarker65 34220.95 26682.68 2
+  FrontMarker66 35293.25 26573.82 2
+  FrontMarker67 36332.89 26083.94 2
+  FrontMarker68 37231.01 24810.24 2
+  FrontMarker69 38107.36 25599.50 2
+  FrontMarker70 36490.74 24695.93 1
+  FrontMarker71 38308.75 25022.52 1
+  FrontMarker72 38716.99 27063.70 2
+  FrontMarker73 39789.29 26982.06 2
+  FrontMarker74 39582.45 26671.80 2
+  FrontMarker75 40306.39 26562.93 1
+  FrontMarker76 40888.81 26699.01 2
+  FrontMarker77 41237.32 26388.79 1
+  FrontMarker78 40627.54 26263.56 1
+  FrontMarker79 41950.33 27782.30 1
+  FrontMarker80 41814.17 28925.28 2
+  FrontMarker81 41422.27 28255.77 2
+  FrontMarker82 42608.88 29915.93 2
+  FrontMarker83 43496.11 29306.30 1
+  FrontMarker84 45755.12 35234.19 2
+  FrontMarker85 47464.27 36306.53 1
+  FrontMarker86 47861.62 39468.10 2
+  FrontMarker87 48585.60 41319.75 2
+  FrontMarker88 14735.25 8613.16 1
+  FrontMarker89 14735.25 9845.59 2
+  FrontMarker90 15223.34 9650.36 2
+  FrontMarker91 16101.91 9674.76 2
+  FrontMarker92 17273.33 9686.96 2
+  FrontMarker93 17956.64 9613.75 1
+  FrontMarker94 17297.73 8698.58 1
+  FrontMarker95 16565.59 8613.16 1
+  FrontMarker96 15235.54 8783.99 1
+  FrontMarker97 13966.50 10065.23 2
+  FrontMarker98 13319.78 9931.01 2
+  FrontMarker99 12734.07 9723.57 2
+  FrontMarker100 11721.28 8735.18 2
+  FrontMarker101 13771.27 8417.92 1
+  FrontMarker102 12917.11 8881.61 1
+  FrontMarker103 12465.62 8735.18 1
+  FrontMarker104 12134.75 8115.90 1
+  FrontMarker105 17834.63 10650.94 2
+  FrontMarker106 18823.02 10882.79 2
+  FrontMarker107 19616.17 11797.96 2
+  FrontMarker108 20714.37 12505.69 1
+  FrontMarker109 19784.41 10467.25 1
+  FrontMarker110 20128.66 13164.62 2
+  FrontMarker111 11843.89 7862.23 1
+  FrontMarker112 22549.23 17015.16 2
+  FrontMarker113 28079.08 18713.68 1
+  FrontMarker114 24908.58 18453.20 2
+  FrontMarker115 25994.58 17102.79 1
+  FrontMarker116 23934.22 17850.23 2
+  FrontMarker117 23953.52 16137.24 1
+  FrontMarker118 30737.98 24195.69 2

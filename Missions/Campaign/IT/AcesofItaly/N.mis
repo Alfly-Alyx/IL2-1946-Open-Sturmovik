@@ -1,0 +1,201 @@
+[MAIN]
+  MAP Kuban/load.ini
+  TIME 12.0
+  CloudType 2
+  CloudHeight 900.0
+  player i0110
+  army 2
+  playerNum 0
+[Wing]
+  i0110
+  usa0120
+  usa0121
+  usa0122
+  i0111
+  22Squadron23
+[i0110]
+  Planes 4
+  Skill 2
+  Class air.MC_202_12
+  Fuel 60
+  weapons default
+[i0110_Way]
+  TAKEOFF 153338.22 153056.48 0 0 &0
+  NORMFLY 88297.03 113402.09 1000.00 300.00 &0
+  NORMFLY 95420.37 91143.05 1000.00 300.00 &0
+  NORMFLY 123028.02 92932.05 2000.00 300.00 &0
+  LANDING 153338.22 153056.48 0 0 &0
+[usa0120]
+  Planes 4
+  Skill 1
+  skin0 vp_P47D22_generic.BMP
+  skin1 vp_P47D22_generic.BMP
+  skin2 vp_P47D22_generic.BMP
+  skin3 vp_P47D22_generic.BMP
+  Class air.P_47D22
+  Fuel 100
+  weapons 1x10002x5006x45
+  StartTime 20
+[usa0120_Way]
+  NORMFLY 148786.16 122119.60 2000.00 300.00 &0
+  GATTACK 154120.50 153236.56 2000.00 300.00 97_Static 0 &0
+  NORMFLY 131210.06 107705.33 500.00 300.00 &0
+  NORMFLY 117669.20 37837.09 1000.00 300.00 &0
+[usa0121]
+  Planes 4
+  Skill 1
+  skin0 vp_P47D22_generic.BMP
+  skin1 vp_P47D22_generic.BMP
+  skin2 vp_P47D22_generic.BMP
+  skin3 vp_P47D22_generic.BMP
+  Class air.P_47D22
+  Fuel 100
+  weapons 2x5006x45
+  StartTime 20
+[usa0121_Way]
+  NORMFLY 148786.16 121941.79 500.00 300.00 &0
+  GATTACK 154653.29 153212.06 500.00 300.00 103_Static 0 &0
+  NORMFLY 130139.11 108061.64 500.00 300.00 &0
+  NORMFLY 117313.58 40364.92 500.00 300.00 &0
+[usa0122]
+  Planes 4
+  Skill 1
+  skin0 vp_P47D22_generic.BMP
+  skin1 vp_P47D22_generic.BMP
+  skin2 vp_P47D22_generic.BMP
+  skin3 vp_P47D22_generic.BMP
+  Class air.P_47D22
+  Fuel 100
+  weapons tank2x5006x45
+  StartTime 20
+[usa0122_Way]
+  NORMFLY 148430.54 122119.60 500.00 300.00 &0
+  GATTACK 153587.07 152784.37 500.00 300.00 100_Static 0 &0
+  NORMFLY 131389.23 107703.97 500.00 300.00 &0
+  NORMFLY 114963.56 38716.19 500.00 300.00 &0
+[i0111]
+  Planes 1
+  Skill 2
+  skin0 Ju-52 to Cant Z-506B.bmp
+  numberOn0 0
+  Class air.JU_52_3MG5E
+  Fuel 100
+  weapons default
+  StartTime 10
+[i0111_Way]
+  TAKEOFF 68263.95 170130.20 0 0 &0
+  NORMFLY 43224.43 189356.42 1500.00 295.00 &0
+  NORMFLY 68624.97 169649.88 500.00 295.00 &0
+[22Squadron23]
+  Planes 4
+  Skill 1
+  skin0 SPIT MkVIII BUGLORDS 92 SQN CLEAN.bmp
+  skin1 SPIT MkVIII BUGLORDS 92 SQN CLEAN.bmp
+  skin3 SPIT MkVIII BUGLORDS 92 SQN CLEAN.bmp
+  Class air.SPITFIRE8
+  Fuel 100
+  weapons default
+  StartTime 14
+[22Squadron23_Way]
+  NORMFLY 5135.74 192073.90 500.00 295.00 &0
+  GATTACK 67657.83 169744.58 500.00 295.00 14_Static 0 &0
+  NORMFLY 95122.89 89582.33 2000.00 295.00 &0
+  NORMFLY 107180.72 2679.52 2000.00 295.00 &0
+[NStationary]
+  89_Static vehicles.artillery.Artillery$Flak30_20mm 2 153401.47 152956.74 510.00 0.0 0
+  90_Static vehicles.artillery.Artillery$Flak30_20mm 2 154354.02 153239.29 510.00 0.0 0
+  91_Static vehicles.artillery.Artillery$Flak30_20mm 2 154838.71 153226.64 510.00 0.0 0
+  92_Static vehicles.artillery.Artillery$Flak30_20mm 2 154148.08 152867.17 510.00 0.0 0
+  93_Static vehicles.artillery.Artillery$Flak18_88mm 2 153366.66 152684.91 510.00 0.0 0
+  94_Static vehicles.artillery.Artillery$Flak18_88mm 2 154721.25 152918.63 510.00 0.0 0
+  95_Static vehicles.artillery.Artillery$Flak18_88mm 2 154748.17 153321.93 510.00 0.0 0
+  96_Static vehicles.artillery.Artillery$Flak18_88mm 2 154004.82 153217.64 510.00 0.0 0
+  97_Static vehicles.planes.Plane$MC_202 2 153627.24 152927.82 509.10 0.0 it
+  98_Static vehicles.planes.Plane$MC_202 2 153617.35 152878.37 509.10 0.0 it
+  99_Static vehicles.planes.Plane$MC_202 2 153607.46 152814.10 509.10 0.0 it
+  100_Static vehicles.planes.Plane$MC_202 2 153617.35 152779.49 509.10 0.0 it
+  101_Static vehicles.planes.Plane$MC_202 2 153617.35 152730.05 509.10 0.0 it
+  102_Static vehicles.planes.Plane$MC_202 2 153508.58 152695.44 509.10 0.0 it
+  103_Static vehicles.planes.Plane$MC_202 2 154536.96 153189.85 509.10 0.0 it
+  104_Static vehicles.planes.Plane$MC_202 2 154586.40 153234.35 509.10 0.0 it
+  105_Static vehicles.planes.Plane$MC_202 2 154749.55 153160.19 420.00 0.0 it
+  106_Static vehicles.planes.Plane$JU_52_3MG4E 2 153548.13 152927.82 420.00 0.0 null
+  0_Static vehicles.artillery.Artillery$Flak18_88mm 2 125713.69 86682.24 660.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Flak18_88mm 2 129956.16 97176.76 660.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Flak18_88mm 2 133305.47 115709.62 660.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Flak18_88mm 2 148265.74 126874.00 660.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Flak18_88mm 2 144916.42 123078.11 660.00 0.0 0
+  5_Static vehicles.artillery.Artillery$SdKfz251 2 138275.72 122304.37 660.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Flak18_88mm 2 154121.09 152557.76 510.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Flak18_88mm 2 153744.04 153301.39 510.00 0.0 0
+  8_Static vehicles.artillery.Artillery$Flak18_88mm 2 153817.36 152505.39 510.00 0.0 0
+  9_Static vehicles.artillery.Artillery$Flak30_20mm 2 153607.88 152557.76 510.00 0.0 0
+  10_Static vehicles.artillery.Artillery$Flak18_88mm 2 68667.80 169498.43 510.00 0.0 0
+  11_Static vehicles.artillery.Artillery$SdKfz251 2 68674.37 169495.07 660.00 0.0 0
+  12_Static vehicles.artillery.Artillery$PzVIE 2 68381.83 169343.98 420.00 0.0 0
+  13_Static vehicles.stationary.Stationary$BunkerA2_gun 2 68472.30 169461.57 600.00 0.0
+  14_Static vehicles.planes.Plane$JU_52_3MG5E 2 68568.87 169573.13 420.00 0.0 null
+  15_Static vehicles.planes.Plane$AR_196A3 2 68595.74 169576.86 539.10 0.0 null
+  16_Static ships.Ship$MAS501 2 68591.73 169598.95 510.00 0.0 0 2 1.0
+  17_Static ships.Ship$MAS501 2 68618.38 169601.82 485.00 0.0 0 2 1.0
+  18_Static ships.Ship$MAS501 2 68622.42 169598.66 490.00 0.0 0 2 1.0
+  19_Static ships.Ship$RwyTransp 2 68623.54 169649.40 510.00 0.0 0 2 1.0
+[Buildings]
+  0_bld House$Norwaystorehouse_02 1 68686.99 169568.78 510.00
+  1_bld House$Norwaystorehouse_01 1 68711.49 169560.18 655.00
+  2_bld House$NorwaySlotteroy_lighths 1 69123.23 169698.97 655.00
+  3_bld House$NorwayQuay_02 1 68667.61 169556.58 595.00
+  4_bld House$Norwaynorw_house_04 1 68717.71 169532.55 540.00
+  5_bld House$Norwaynorw_house_03 1 68745.89 169476.59 540.00
+  6_bld House$Norwaynorw_house_02 1 68763.18 169477.46 540.00
+  7_bld House$Norwaynorw_house_01 1 68729.91 169478.30 540.00
+  8_bld House$Norwaynorw_barn_03 1 68791.02 169473.87 540.00
+  9_bld House$Norwaynorw_barn_02 1 68757.99 169529.84 385.00
+  10_bld House$NorwayHerdla_church 1 68587.19 169330.57 360.00
+  11_bld House$NorwayBoat_house_02 1 68755.85 169510.33 690.00
+  12_bld House$CrimeaBarnStucco 1 68631.95 169363.73 600.00
+  13_bld House$CrimeaBarnWood 1 68614.85 169360.97 600.00
+  14_bld House$CrimeaHouse1 1 68648.73 169384.62 570.00
+  15_bld House$CrimeaHouse3 1 68600.14 169385.26 540.00
+  16_bld House$CrimeaHouseBig 1 68539.41 169343.07 510.00
+  17_bld House$GermanyCountryBarn 1 68504.25 169457.50 510.00
+  18_bld House$GermanyFarm 1 68566.73 169348.33 630.00
+  19_bld House$RussiaClutterMoscow3 1 68445.05 169293.42 630.00
+  20_bld House$RussiaClutterMoscow3 1 68465.45 169291.94 630.00
+  21_bld House$RussiaClutterMoscow3 1 68485.88 169290.66 630.00
+  22_bld House$RussiaClutterMoscow4 1 68422.68 169294.49 630.00
+  23_bld House$PacifHouse6 1 68652.96 169288.95 620.00
+  24_bld House$Housepacif2 1 68700.94 169288.88 450.00
+  25_bld House$Housepacif1 1 68758.66 169289.66 570.00
+  26_bld House$Bunker8 1 68668.64 169497.49 570.00
+  27_bld House$Bunker5 1 68501.23 169405.75 660.00
+  28_bld House$AirdromeBarrelBlock1 1 68686.55 169548.35 660.00
+  29_bld House$AirdromeBarrelBlock1 1 68684.38 169551.98 630.00
+  30_bld House$AirdromeBarrelBlock2 1 68667.77 169539.66 420.00
+  31_bld House$Tent_Pyramid_US 1 68469.97 169344.04 420.00
+  32_bld House$Tent_HQ_US 1 68480.84 169346.21 420.00
+  33_bld House$Tent_Pup_US 1 68473.60 169354.18 420.00
+  34_bld House$RussiaRailStation 1 68696.02 169514.30 600.00
+  35_bld House$FurniturePole_no_wire 1 68696.07 169538.20 600.00
+  36_bld House$FurniturePole_no_wire 1 68709.84 169519.37 600.00
+  37_bld House$FurniturePole_no_wire 1 68767.08 169489.66 600.00
+  38_bld House$FurnitureTreeLine 1 68690.85 169307.47 600.00
+[StaticCamera]
+  153418 152668 2
+  153699 152906 2
+  154784 153145 2
+  68722 169418 2
+[Bridge]
+[House]
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 9
+WindDirection 139
+WindTop 8051
+WindTurbulence 0
+WindGust 0

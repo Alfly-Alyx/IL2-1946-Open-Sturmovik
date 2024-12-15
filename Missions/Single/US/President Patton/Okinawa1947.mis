@@ -1,0 +1,451 @@
+[MAIN]
+  MAP LAL_Okinawa/load.ini
+  TIME 6.0
+  CloudType 0
+  CloudHeight 1000.0
+  army 1
+  playerNum 0
+[MDS]
+  ZutiCarrierSpawnPoints_CV2 6
+  ZutiCarrierSpawnPoints_CV9 5
+  ZutiCarrierSpawnPoints_CVE 2
+  ZutiCarrierSpawnPoints_CVL 7
+  ZutiCarrierSpawnPoints_Akagi 8
+  ZutiCarrierSpawnPoints_IJN 6
+  ZutiCarrierSpawnPoints_HMS 5
+  ZutiNextMission_RedWon
+  ZutiNextMission_BlueWon
+  ZutiNextMission_Difficulty
+  ZutiNextMission_LoadDelay 60
+  ZutiTargets_StaticIcons 0
+  ZutiTargets_MovingIcons 1
+  ZutiTargets_CheckForWinner 0
+  ZutiRadar_ShowAircraft 1
+  ZutiRadar_StaticIconsIfNoRadar 0
+  ZutiRadar_CVsAsRadars 0
+  ZutiRadar_AircraftIconsWhite 0
+  ZutiRadar_RefreshInterval 10
+  ZutiFront_EnableHomeBaseCapturing 1
+  ZutiFront_CapturedBasePlanesRed
+  ZutiFront_CapturedBasePlanesBlue
+  ZutiFront_HideUnpoplatedAirstripsFromMinimap 0
+[RespawnTime]
+  Bigship 1800
+  Ship 1800
+  Aeroanchored 1800
+  Artillery 1800
+  Searchlight 1800
+[Wing]
+  r0101
+  r0102
+  r0103
+  g0102
+  g0103
+  g0100
+  g0101
+  g0110
+  r0100
+  r0110
+  r0111
+  g0111
+  g0112
+  g0113
+  r0112
+  r0113
+[r0101]
+  Planes 4
+  Skill 1
+  Class air.IL_10
+  Fuel 100
+  weapons 2xFAB1004BRS132
+[r0101_Way]
+  TAKEOFF 111527.80 80337.88 0 0 &0
+  GATTACK 113343.56 47713.61 500.00 300.00 0_Static 0 &0
+  GATTACK 113364.39 47470.21 500.00 300.00 1_Static 0 &0
+  GATTACK 113355.64 47324.41 500.00 300.00 3_Static 0 &0
+  GATTACK 113381.88 47199.02 500.00 300.00 6_Static 0 &0
+  GATTACK 113390.63 47024.05 500.00 300.00 9_Static 0 &0
+  NORMFLY 115866.84 46923.60 500.00 300.00 &0
+  NORMFLY 118849.86 49492.31 500.00 300.00 &0
+  LANDING 113508.24 81473.82 0 0 &0
+[r0102]
+  Planes 4
+  Skill 1
+  Class air.IL_10
+  Fuel 100
+  weapons 2xFAB1004BRS132
+[r0102_Way]
+  TAKEOFF 111518.56 80319.35 0 0 &0
+  GATTACK 112672.65 47772.90 500.00 300.00 18_Static 0 &0
+  GATTACK 112620.78 47528.54 500.00 300.00 15_Static 0 &0
+  NORMFLY 115949.70 46343.57 500.00 300.00 &0
+  NORMFLY 119429.89 48912.28 500.00 300.00 &0
+  LANDING 113508.24 81473.82 0 0 &0
+[r0103]
+  Planes 4
+  Skill 1
+  Class air.LA_7R
+  Fuel 100
+  weapons default
+[r0103_Way]
+  NORMFLY 110895.15 82388.35 500.00 300.00 &0
+  NORMFLY 112883.82 46840.74 500.00 300.00 &0
+  NORMFLY 118684.13 49160.86 500.00 300.00 &0
+  LANDING 113511.52 81434.57 0 0 &0
+[g0102]
+  Planes 4
+  Skill 1
+  skin0 F-84_8th-FBS_49th-FBW_Kunsan-1953_bl00.bmp
+  skin1 F-84_8th-FBS_49th-FBW_Kunsan-1953_bl00.bmp
+  skin2 F-84_8th-FBS_49th-FBW_Kunsan-1953_bl00.bmp
+  skin3 F-84_8th-FBS_49th-FBW_Kunsan-1953_bl00.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.F84G1
+  Fuel 100
+  weapons default
+[g0102_Way]
+  NORMFLY 112386.66 46177.84 500.00 300.00 &0
+  NORMFLY 111723.76 69379.08 500.00 300.00 &0
+  NORMFLY 112966.69 47089.32 500.00 300.00 &0
+  NORMFLY 119015.58 49160.86 500.00 300.00 &0
+  NORMFLY 113463.86 77333.79 500.00 300.00 &0
+  NORMFLY 112718.10 46923.60 500.00 300.00 &0
+[g0103]
+  Planes 4
+  Skill 1
+  Class air.F9F2
+  Fuel 100
+  weapons default
+[g0103_Way]
+  TAKEOFF 107693.86 43615.69 0 0 0_Chief 0 &0
+  NORMFLY 112718.10 54132.55 500.00 300.00 &0
+  NORMFLY 111723.76 68053.30 500.00 300.00 &0
+  NORMFLY 114043.89 47669.35 500.00 300.00 &0
+  NORMFLY 118932.72 50320.92 500.00 300.00 &0
+  NORMFLY 114126.75 76090.87 500.00 300.00 &0
+  LANDING 109076.22 53998.37 0 0 0_Chief 1 &0
+[g0100]
+  Planes 2
+  Skill 1
+  numberOn0 0
+  numberOn1 0
+  Class air.XP_86
+  Fuel 100
+  weapons default
+[g0100_Way]
+  NORMFLY 113214.87 43147.99 500.00 300.00 &0
+  NORMFLY 112411.91 55543.72 500.00 300.00 &0
+  NORMFLY 113440.70 47313.36 500.00 300.00 &0
+  NORMFLY 118785.42 49345.86 500.00 300.00 &0
+  NORMFLY 116100.52 64025.02 500.00 300.00 &0
+  NORMFLY 113465.79 43173.08 500.00 300.00 &0
+[g0101]
+  Planes 4
+  Skill 1
+  skin0 RRG_313 BW 6 BS Late.bmp
+  skin1 RRG_313 BW 6 BS Late.bmp
+  skin2 RRG_313 BW 6 BS Late.bmp
+  skin3 RRG_313 BW 6 BS Late.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.B_29
+  Fuel 100
+  weapons 4x1000
+  StartTime 20
+[g0101_Way]
+  TAKEOFF 112360.39 46691.09 0 0 &0
+  GATTACK 111526.42 80807.35 5000.00 300.00 25_Static 0 &0
+  NORMFLY 114335.60 83141.99 5000.00 300.00 &0
+  NORMFLY 117905.19 82318.23 3500.00 300.00 &0
+  NORMFLY 119003.53 79480.86 3000.00 300.00 &0
+  NORMFLY 114884.77 47262.96 1000.00 300.00 &0
+  LANDING 112311.87 46583.49 0 0 &0
+[g0110]
+  Planes 4
+  Skill 1
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.B_29
+  Fuel 100
+  weapons 12x1600
+  StartTime 24
+[g0110_Way]
+  TAKEOFF 112292.00 46475.15 0 0 &0
+  GATTACK 111638.07 81449.12 5000.00 300.00 21_Static 0 &0
+  NORMFLY 114793.24 83416.57 5000.00 300.00 &0
+  NORMFLY 118637.42 82043.65 3500.00 300.00 &0
+  NORMFLY 119278.12 79023.22 3000.00 300.00 &0
+  NORMFLY 113776.12 45144.07 1000.00 300.00 &0
+  NORMFLY 113062.85 44682.10 500.00 300.00 &0
+  NORMFLY 112437.46 45165.36 500.00 300.00 &0
+  LANDING 112301.57 46429.55 0 0 &0
+[r0100]
+  Planes 3
+  Skill 1
+  Class air.MIG_15
+  Fuel 100
+  weapons default
+  StartTime 16
+[r0100_Way]
+  TAKEOFF 111532.46 80310.09 0 0 &0
+  NORMFLY 112753.18 55131.13 3000.00 300.00 &0
+  NORMFLY 112753.18 81292.40 2500.00 300.00 &0
+  NORMFLY 118782.12 77739.63 3500.00 300.00 &0
+  NORMFLY 116790.41 60783.25 2000.00 300.00 &0
+  NORMFLY 112699.35 80000.48 1000.00 300.00 &0
+  LANDING 113514.28 81423.51 0 0 &0
+[r0110]
+  Planes 4
+  Skill 1
+  Class air.HE_LERCHE3
+  Fuel 100
+  weapons 3x4
+  StartTime 18
+[r0110_Way]
+  TAKEOFF 96021.39 67449.42 0 0 2_Chief 0 &0
+  NORMFLY 112399.96 53594.26 2500.00 300.00 &0
+  NORMFLY 111470.94 81426.07 3000.00 300.00 &0
+  NORMFLY 118554.70 81967.99 3000.00 300.00 &0
+  NORMFLY 116928.92 61723.16 2500.00 300.00 &0
+  NORMFLY 96142.16 67955.32 500.00 300.00 &0
+  LANDING 96022.70 67444.76 0 0 2_Chief 0 &0
+[r0111]
+  Planes 2
+  Skill 1
+  Class air.ME_163B1A
+  Fuel 100
+  weapons default
+  StartTime 28
+[r0111_Way]
+  TAKEOFF 96009.02 67461.54 0 0 &0
+  NORMFLY 119212.75 78793.85 500.00 300.00 &0
+  NORMFLY 115032.18 49142.72 500.00 300.00 &0
+  LANDING 96025.55 67426.17 0 0 2_Chief 0 &0
+[g0111]
+  Planes 4
+  Skill 1
+  skin0 RRG_313 BW 505 BS Late.bmp
+  skin1 RRG_313 BW 505 BS Late.bmp
+  skin2 RRG_313 BW 505 BS Late.bmp
+  skin3 RRG_313 BW 505 BS Late.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.B_29
+  Fuel 100
+  weapons 4x1000
+  StartTime 30
+[g0111_Way]
+  TAKEOFF 101965.91 26509.01 0 0 &0
+  NORMFLY 111593.12 80962.77 1500.00 300.00 &0
+  NORMFLY 113569.10 82579.47 3000.00 300.00 &0
+  NORMFLY 116263.61 82818.99 3000.00 300.00 &0
+  NORMFLY 118299.46 80902.89 3000.00 300.00 &0
+  NORMFLY 102671.29 27791.04 500.00 300.00 &0
+  LANDING 100974.07 25330.67 0 0 &0
+[g0112]
+  Planes 4
+  Skill 1
+  skin0 RRG_313 BW 504 BS Late.bmp
+  skin1 RRG_313 BW 504 BS Late.bmp
+  skin2 RRG_313 BW 504 BS Late.bmp
+  skin3 RRG_313 BW 504 BS Late.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.B_29
+  Fuel 100
+  weapons 4x1000
+  StartTime 30
+[g0112_Way]
+  TAKEOFF 102750.42 23021.30 0 0 &0
+  NORMFLY 111233.85 80723.25 1500.00 300.00 &0
+  NORMFLY 114167.88 83058.50 3000.00 300.00 &0
+  NORMFLY 118359.34 82459.72 3000.00 300.00 &0
+  NORMFLY 118898.24 79765.21 3000.00 300.00 &0
+  NORMFLY 106383.73 22461.90 1500.00 300.00 &0
+  NORMFLY 103210.19 21623.60 500.00 300.00 &0
+  LANDING 102750.42 23021.30 0 0 &0
+[g0113]
+  Planes 4
+  Skill 1
+  skin0 F-84_8th-FBS_49th-FBW_Kunsan-1953.bmp
+  skin1 F-84_8th-FBS_49th-FBW_Kunsan-1953_bl00.bmp
+  skin2 F-84_8th-FBS_49th-FBW_Kunsan-1953_bl00.bmp
+  skin3 F-84_8th-FBS_49th-FBW_Kunsan-1953_bl00.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.F84G1
+  Fuel 100
+  weapons default
+  StartTime 34
+[g0113_Way]
+  NORMFLY 112491.29 46473.00 3000.00 300.00 &0
+  NORMFLY 112551.17 82818.99 3000.00 300.00 &0
+  NORMFLY 119676.66 81202.28 3000.00 300.00 &0
+  NORMFLY 109916.53 67909.35 3000.00 300.00 &0
+  LANDING 112247.90 46357.91 0 0 &0
+[r0112]
+  Planes 2
+  Skill 1
+  Class air.GO_229A1
+  Fuel 100
+  weapons default
+  StartTime 38
+[r0112_Way]
+  TAKEOFF 112357.81 80219.75 0 0 &0
+  NORMFLY 107820.80 59765.93 3000.00 300.00 &0
+  NORMFLY 112910.44 81022.64 3000.00 300.00 &0
+  NORMFLY 119377.27 79705.33 3000.00 300.00 &0
+  NORMFLY 112670.92 46892.15 3000.00 300.00 &0
+  LANDING 113513.55 81412.83 0 0 &0
+[r0113]
+  Planes 2
+  Skill 1
+  Class air.TA_183
+  Fuel 100
+  weapons default
+  StartTime 40
+[r0113_Way]
+  TAKEOFF 112294.79 81699.51 0 0 &0
+  NORMFLY 108299.83 59227.03 3000.00 300.00 &0
+  NORMFLY 112611.05 82040.57 3000.00 300.00 &0
+  NORMFLY 118359.34 82280.08 3000.00 300.00 &0
+  NORMFLY 102671.29 25755.19 3000.00 300.00 &0
+  LANDING 113501.33 81421.94 0 0 &0
+[Chiefs]
+  0_Chief Ships.USSIntrepidCV11 2 0 1 50.0
+  1_Chief Ships.HMSIllustriousCV 1 0 2 1.0
+  2_Chief Ships.HMSIllustriousCV 1 0 2 1.0
+[0_Chief_Road]
+  107746.41 43692.00 120.00 0 4 7.716667175292969
+  107300.00 52100.00 120.00
+  107500.00 52300.00 120.00
+  109237.91 54132.55 120.00 0 2 7.716667175292969
+  121335.70 61507.20 120.00 0 2 7.716667175292969
+  121750.02 63910.22 120.00 0 2 7.716667175292969
+  118104.10 64241.66 120.00 0 2 7.716667175292969
+  106254.90 55044.03 120.00 0 2 7.716667175292969
+  106420.63 42946.24 120.00
+[1_Chief_Road]
+  95105.70 67364.84 120.00 0 2 7.845277786254883
+  94716.58 47176.11 120.00 0 2 7.845277786254883
+  91453.22 37682.72 120.00
+[2_Chief_Road]
+  96020.51 67443.56 120.00 0 2 7.845277786254883
+  95484.10 47710.48 120.00 0 2 7.845277786254883
+  90180.96 34510.70 120.00
+[NStationary]
+  0_Static vehicles.planes.Plane$B_29 0 113352.72 47522.70 360.00 0.0 nn
+  1_Static vehicles.planes.Plane$B_29 0 113364.39 47443.97 360.00 0.0 nn
+  2_Static vehicles.planes.Plane$B_29 0 113378.99 47365.23 360.00 0.0 nn
+  3_Static vehicles.planes.Plane$B_29 0 113373.14 47295.25 360.00 0.0 nn
+  4_Static vehicles.planes.Plane$B_29 0 113376.05 47219.43 360.00 0.0 nn
+  5_Static vehicles.planes.Plane$B_29 0 113378.98 47161.10 360.00 0.0 nn
+  6_Static vehicles.planes.Plane$B_29 0 113376.05 47091.12 360.00 0.0 nn
+  7_Static vehicles.planes.Plane$B_29 0 113376.05 47000.72 360.00 0.0 nn
+  8_Static vehicles.planes.Plane$B_29 0 113387.72 46936.57 360.00 0.0 nn
+  9_Static vehicles.planes.Plane$B_29 0 113387.72 46857.83 360.00 0.0 nn
+  10_Static vehicles.planes.Plane$B_29 0 113393.55 46773.27 360.00 0.0 nn
+  11_Static vehicles.planes.Plane$P_51D20NA 0 112845.32 47738.50 360.00 0.0 nn
+  12_Static vehicles.planes.Plane$P_51D20NA 0 112792.83 47697.67 360.00 0.0 nn
+  13_Static vehicles.planes.Plane$P_51D20NA 0 112749.09 47636.43 360.00 0.0 nn
+  14_Static vehicles.planes.Plane$P_51D20NA 0 112705.35 47572.28 360.00 0.0 nn
+  15_Static vehicles.planes.Plane$P_51D20NA 0 112670.36 47516.87 360.00 0.0 nn
+  16_Static vehicles.planes.Plane$P_51D20NA 0 112542.05 47546.03 360.00 0.0 nn
+  17_Static vehicles.planes.Plane$P_51D20NA 0 112591.62 47618.94 360.00 0.0 nn
+  18_Static vehicles.planes.Plane$P_51D20NA 0 112629.53 47688.92 360.00 0.0 nn
+  19_Static vehicles.planes.Plane$P_51D20NA 0 112673.27 47758.91 360.00 0.0 nn
+  20_Static vehicles.planes.Plane$P_51D20NA 0 112740.05 47819.23 381.74 0.0 nn
+  21_Static vehicles.planes.Plane$IL_10 1 111745.71 81475.55 360.00 0.0 null
+  22_Static vehicles.planes.Plane$IL_10 1 111643.71 81455.15 360.00 0.0 null
+  23_Static vehicles.planes.Plane$IL_10 1 111577.41 81434.76 360.00 0.0 null
+  24_Static vehicles.planes.Plane$IL_10 1 111500.92 81419.46 360.00 0.0 null
+  25_Static vehicles.planes.Plane$ME_262HGII 1 111398.92 80909.48 360.00 0.0 ru
+  26_Static vehicles.planes.Plane$ME_262HGII 1 111388.72 80817.68 360.00 0.0 ru
+  27_Static vehicles.planes.Plane$ME_262HGII 1 111409.12 80741.19 360.00 0.0 ru
+  28_Static vehicles.planes.Plane$ME_262HGII 1 111393.82 81031.87 360.00 0.0 ru
+  29_Static vehicles.planes.Plane$ME_262HGII 1 111409.12 81149.17 360.00 0.0 ru
+  30_Static vehicles.planes.Plane$ME_262HGII 1 111271.43 81057.37 360.00 0.0 ru
+  31_Static vehicles.planes.Plane$ME_262HGII 1 111251.03 80996.18 360.00 0.0 ru
+  32_Static vehicles.planes.Plane$ME_262HGII 1 111266.33 80873.78 360.00 0.0 ru
+  33_Static vehicles.artillery.Artillery$StBofors_40mm_US 2 112796.37 47936.79 360.00 0.0 0
+  34_Static vehicles.artillery.Artillery$StBofors_40mm_US 2 113023.36 46625.12 360.00 0.0 0
+  35_Static vehicles.artillery.Artillery$StBofors_40mm_US 1 112067.38 80100.07 360.00 0.0 0
+  36_Static vehicles.artillery.Artillery$StBofors_40mm_US 1 112537.53 81337.93 360.00 0.0 0
+[Buildings]
+[BornPlace]
+  1 3000 112358 80952
+  2 3000 112654 47059
+  2 3000 107739 43694
+  1 3000 95111 67351
+[BornPlace0]
+  Ar-234B-2
+  Ar-234B-2NJ
+  Bf-109K-14
+  Bf-109K-4C3
+  Fw-190D-11
+  Fw-190D-13
+  Fw-190D-9_Late
+  Go-229A-1
+  He-162B
+  He-162C
+  He-L-IIIB2
+  I-250
+  Il-10
+  La-73xB20
+  La-7R
+  LaGG-3RD
+  Me-262A-1aU4
+  Me-262HG-II
+  ME-410-D
+  MiG-9FS
+  MiG-9protoF-2
+  MiG-15
+  Ta-183
+  Yak-15
+  Yak-3P
+  Yak-3VK-107
+  Yak-9UT
+[BornPlace1]
+  A6M7_Model62
+  A6M7_Model63
+  B-29
+  F84G1_ThunderJet
+  F9F2_Panther
+  Ki-100-I-Ko
+  Ki-46-Otsu-Hei
+  Ki-84-Ic
+  P-39Q-10
+  P-47D-27
+  P-51D-20NA
+  P-51D-5NT
+  P-63C
+  P-80A
+  SABRE
+[BornPlace2]
+  A6M7_Model62
+  A6M7_Model63
+  B6N2
+  F6F-5
+  F9F2_Panther
+  SBD-5
+  TBM-3
+[BornPlace3]
+  He-L-IIIB2
+  I-250
+  Me-163B-1a
+  Ta-183
+[Bridge]
+[House]

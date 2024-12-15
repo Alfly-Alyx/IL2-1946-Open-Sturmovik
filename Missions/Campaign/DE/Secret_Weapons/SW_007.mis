@@ -1,0 +1,96 @@
+[MAIN]
+  MAP Ardennes/wload.ini
+  TIME 8.5
+  CloudType 5
+  CloudHeight 1500.0
+  player II_KG200_00
+  army 2
+  playerNum 0
+[Wing]
+  II_KG200_00
+  I_KG200_00
+  usa0100
+[II_KG200_00]
+  Planes 4
+  Skill 2
+  skin0 Do335A-KG200_winter.bmp
+  skin1 Do335A-KG200_winter.bmp
+  skin2 Do335A-KG200_winter.bmp
+  skin3 Do335A-KG200_winter.bmp
+  Class air.DO_335A0
+  Fuel 100
+  weapons 2sc250
+[II_KG200_00_Way]
+  TAKEOFF 25508.76 37541.00 0 0 &0
+  NORMFLY 28138.52 32462.36 500.00 300.00 &0
+  NORMFLY 26336.70 24714.51 500.00 300.00 &0
+  NORMFLY 14835.04 21411.16 500.00 300.00 &0
+  GATTACK 15119.52 27945.44 500.00 300.00 &0
+  NORMFLY 16516.74 34174.09 500.00 300.00 &0
+  LANDING 25508.76 37541.00 0 0 &0
+[I_KG200_00]
+  Planes 4
+  Skill 2
+  skin0 Fw190D9_KG200_winter.bmp
+  skin1 Fw190D9_KG200_winter.bmp
+  skin2 Fw190D9_KG200_winter.bmp
+  skin3 Fw190D9_KG200_winter.bmp
+  Class air.FW_190D9LATE
+  Fuel 100
+  weapons default
+[I_KG200_00_Way]
+  TAKEOFF 25508.76 37541.00 0 0 &0
+  NORMFLY 28709.10 32462.36 500.00 300.00 II_KG200_00 1 &0
+  NORMFLY 26757.12 24534.32 500.00 300.00 &0
+  NORMFLY 14534.73 21080.82 500.00 300.00 &0
+  NORMFLY 14564.76 27837.67 500.00 300.00 usa0100 4 &0
+  NORMFLY 15946.16 34264.19 500.00 300.00 &0
+  LANDING 25508.76 37541.00 0 0 &0
+[usa0100]
+  Planes 3
+  Skill 1
+  Class air.P_38L
+  Fuel 100
+  weapons default
+[usa0100_Way]
+  TAKEOFF 8139.73 38301.25 0 0 &0
+  NORMFLY 13781.35 37071.17 500.00 300.00 &0
+  NORMFLY 19682.07 38105.04 500.00 300.00 &0
+  NORMFLY 17215.94 32623.33 500.00 300.00 &0
+  NORMFLY 13693.88 25315.11 500.00 300.00 &0
+  NORMFLY 12192.36 29849.71 500.00 300.00 &0
+  NORMFLY 16847.08 28888.74 500.00 300.00 &0
+  NORMFLY 13904.09 25134.93 500.00 300.00 &0
+  NORMFLY 14444.64 29339.19 500.00 300.00 &0
+  LANDING 8725.82 36572.16 0 0 &0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 15253.64 27830.41 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 14961.54 27929.74 360.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 15036.07 28140.45 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 15217.99 27933.48 360.00 0.0 0
+[Buildings]
+  0_bld House$FurnitureSandbags_Round 1 15252.77 27830.58 360.00
+  1_bld House$FurnitureSandbags_Round 1 15217.23 27933.51 360.00
+  2_bld House$FurnitureSandbags_Round 1 14960.43 27929.84 360.00
+  3_bld House$FurnitureSandbags_Round 1 15035.13 28140.51 360.00
+[Target]
+  1 0 0 0 250 15123 27952 300
+  0 1 0 0 750 11007 24239 0 4 usa0100 13693 25315
+  3 2 1 90 501 26260 37017 700
+[StaticCamera]
+  15116 27896 100
+[Bridge]
+[House]
+
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 18
+WindDirection 255
+WindTop 7392
+WindTurbulence 0
+WindGust 2

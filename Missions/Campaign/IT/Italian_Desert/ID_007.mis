@@ -1,0 +1,131 @@
+[MAIN]
+  MAP SandsOfTime/load.ini
+  TIME 8.0
+  CloudType 3
+  CloudHeight 1500.0
+  player i0100
+  army 2
+  playerNum 0
+[Wing]
+  i0100
+  gb0100
+  i0101
+  gb0101
+[i0100]
+  Planes 4
+  Skill 2
+  skin0 G50-Desert.bmp
+  skin1 G50-Desert.bmp
+  skin2 G50-Desert.bmp
+  skin3 G50-Desert.bmp
+  Class air.G50
+  Fuel 100
+  weapons default
+[i0100_Way]
+  TAKEOFF 6912.71 47514.69 0 0 &0
+  NORMFLY 24654.98 38421.65 1000.00 300.00 &0
+  NORMFLY 30941.43 37969.68 1000.00 300.00 gb0100 2 &0
+  NORMFLY 28229.63 44790.28 1000.00 300.00 &0
+  NORMFLY 24449.54 37928.59 1000.00 300.00 &0
+  NORMFLY 31105.79 37558.80 1000.00 300.00 &0
+  NORMFLY 28928.12 44913.54 1000.00 300.00 &0
+  NORMFLY 19206.02 30071.59 500.00 0.00 &0
+  LANDING 12842.83 26740.23 0 0 &0
+[gb0100]
+  Planes 4
+  Skill 1
+  skin0 BlenheimMk1-Mediterranean.bmp
+  skin1 BlenheimMk1-Mediterranean.bmp
+  skin2 BlenheimMk1-Mediterranean.bmp
+  skin3 BlenheimMk1-Mediterranean.bmp
+  Class air.BLENHEIM1
+  Fuel 100
+  weapons 2x500
+  StartTime 3
+[gb0100_Way]
+  NORMFLY 50910.18 38010.77 1000.00 300.00 &0
+  NORMFLY 46595.94 33203.48 1000.00 300.00 &0
+  NORMFLY 31393.40 38996.88 1000.00 300.00 &0
+  GATTACK 28106.37 42366.09 1000.00 300.00 2_Chief 0 &0
+  NORMFLY 30777.08 45653.13 1000.00 300.00 &0
+  NORMFLY 37679.86 50912.38 1000.00 300.00 &0
+[i0101]
+  Planes 4
+  Skill 2
+  skin0 G50-Desert.bmp
+  skin1 G50-Desert.bmp
+  skin2 G50-Desert.bmp
+  skin3 G50-Desert.bmp
+  Class air.G50
+  Fuel 100
+  weapons default
+[i0101_Way]
+  TAKEOFF 6912.71 47514.69 0 0 &0
+  NORMFLY 23751.04 38298.38 1000.00 300.00 i0100 1 &0
+  NORMFLY 31434.49 38010.77 1000.00 300.00 gb0101 2 &0
+  NORMFLY 27777.66 44667.02 1000.00 300.00 &0
+  NORMFLY 24367.36 37682.06 1000.00 300.00 &0
+  NORMFLY 31023.61 37230.10 1000.00 300.00 &0
+  NORMFLY 29215.74 45201.16 1000.00 300.00 &0
+  NORMFLY 19781.30 29907.22 500.00 0.00 &0
+  LANDING 12842.83 26740.23 0 0 &0
+[gb0101]
+  Planes 4
+  Skill 1
+  skin0 RoyalNAVY.bmp
+  skin1 RoyalNAVY.bmp
+  skin2 RoyalNAVY.bmp
+  skin3 RoyalNAVY.bmp
+  Class air.GLADIATOR2
+  Fuel 100
+  weapons default
+  StartTime 3
+[gb0101_Way]
+  NORMFLY 50786.92 38175.12 1000.00 300.00 gb0100 0 &0
+  NORMFLY 46472.68 33491.09 1000.00 300.00 &0
+  NORMFLY 31845.37 39284.49 1000.00 300.00 &0
+  GATTACK 28281.66 42400.58 1000.00 300.00 1_Chief 0 &0
+  NORMFLY 30941.43 45283.33 1000.00 300.00 &0
+  NORMFLY 37967.47 50706.94 1000.00 300.00 &0
+[Chiefs]
+  0_Chief Ships.MFP 2 0 2 1.0
+  1_Chief Ships.MBoat 2 0 2 1.0
+  2_Chief Ships.MFP 2 0 2 1.0
+  3_Chief Ships.MFP 2 0 2 1.0
+  4_Chief Ships.MBoat 2 0 2 1.0
+[0_Chief_Road]
+  27630.68 42682.75 120.00 0 2 5.555555820465088
+  29220.39 33805.13 120.00
+[1_Chief_Road]
+  27696.15 42846.78 120.00 0 2 6.94444465637207
+  29206.70 33825.36 120.00
+[2_Chief_Road]
+  27722.36 42682.03 120.00 0 2 6.94444465637207
+  29227.01 33822.82 120.00
+[3_Chief_Road]
+  27841.16 42694.70 120.00 0 2 5.555555820465088
+  29238.60 33809.25 120.00
+[4_Chief_Road]
+  27748.73 42543.00 120.00 0 2 6.94444465637207
+  29244.41 33822.31 120.00
+[NStationary]
+  0_Static ships.Ship$Submarine 2 49860.86 37005.72 360.00 0.0 0 2 1.0
+[Buildings]
+[Target]
+  3 2 1 90 501 13726 26626 1350
+  0 0 0 0 750 31388 39279 0 2 gb0100 31393 38996
+  0 1 0 0 750 31855 39547 0 2 gb0101 31845 39284
+[Bridge]
+[House]
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 7
+WindDirection 49
+WindTop 8577
+WindTurbulence 0
+WindGust 1

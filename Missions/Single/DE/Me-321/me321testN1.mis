@@ -1,0 +1,45 @@
+[MAIN]
+  MAP SandsOfTime/load.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 1000.0
+  player g0100
+  army 2
+  playerNum 0
+[Wing]
+  g0100
+  g0101
+[g0100]
+  Planes 1
+  Skill 1
+  Class air.ME_321
+  Fuel 100
+  weapons default
+[g0100_Way]
+  NORMFLY 27193.58 43386.34 500.00 220.00 g0101 0 &0
+[g0101]
+  Planes 1
+  Skill 1
+  Class air.HE_111Z
+  Fuel 100
+  weapons default
+[g0101_Way]
+  NORMFLY 27423.55 41808.66 500.00 220.00 &0
+  NORMFLY 28632.93 35161.45 500.00 220.00 &0
+  GATTACK 28787.15 32899.60 500.00 220.00 &0
+  NORMFLY 19020.08 35367.07 500.00 220.00 &0
+  NORMFLY 3289.96 42563.86 500.00 220.00 &0
+  LANDING 5399.28 47247.83 0 0 &0
+[NStationary]
+  0_Static vehicles.stationary.Stationary$DiamondT_US 1 28951.72 31333.85 660.00 0.0
+  1_Static vehicles.stationary.Stationary$DiamondT_US 1 28952.67 31349.31 660.00 0.0
+  2_Static vehicles.stationary.Stationary$DiamondT_US 1 28961.95 31356.69 660.00 0.0
+  3_Static vehicles.stationary.Stationary$DiamondT_US 1 28969.80 31364.78 660.00 0.0
+  4_Static vehicles.stationary.Stationary$DiamondT_US 1 28970.51 31377.63 660.00 0.0
+  5_Static vehicles.stationary.Stationary$DiamondT_US 1 28965.76 31388.57 660.00 0.0
+[Buildings]
+[Target]
+  3 0 1 510 501 29180 31202 1600
+  1 1 0 0 500 28938 31361 150
+[Bridge]
+[House]

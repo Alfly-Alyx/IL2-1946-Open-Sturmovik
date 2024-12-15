@@ -1,0 +1,128 @@
+[MAIN]
+  MAP SandsOfTime/load.ini
+  TIME 15.0
+  WEAPONSCONSTANT 1
+  CloudType 0
+  CloudHeight 1500.0
+  player ZG76_II03
+  army 2
+  playerNum 0
+[Wing]
+  ZG76_II03
+  Stab_KG3_000
+  RAF_No501SQN11
+[ZG76_II03]
+  Planes 2
+  Skill 3
+  skin0 10172-Bf-110EIraq.bmp
+  skin1 10172-Bf-110EIraq.bmp
+  numberOn0 0
+  numberOn1 0
+  Class air.BF_110G2
+  Fuel 100
+  weapons default
+[ZG76_II03_Way]
+  NORMFLY 13159.84 13108.43 2500.00 300.00 &0
+  NORMFLY 13468.27 12440.16 2500.00 300.00 Stab_KG3_000 0 &0
+  NORMFLY 17015.26 5603.21 2500.00 300.00 &0
+  NORMFLY 34030.52 5603.21 2500.00 300.00 &0
+  NORMFLY 2467.47 1233.73 2500.00 300.00 &0
+  NORMFLY 2416.06 14393.57 2500.00 300.00 &0
+  LANDING 3821.03 9469.12 0 0 &0
+[Stab_KG3_000]
+  Planes 3
+  OnlyAI 1
+  Skill 3
+  skin0 MD_He111_BOP_KG51_NoMarkings.bmp
+  skin1 MD_He111_BOP_KG51_NoMarkings.bmp
+  skin2 MD_He111_BOP_KG51_NoMarkings.bmp
+  Class air.HE_111H2
+  Fuel 75
+  weapons 2SC250B
+[Stab_KG3_000_Way]
+  NORMFLY 12645.78 12799.10 2000.00 300.00 &0
+  NORMFLY 16398.39 5551.81 2000.00 300.00 &0
+  GATTACK 33410.53 4000.94 2000.00 300.00 &0
+  NORMFLY 3032.93 1542.17 2000.00 300.00 &0
+  NORMFLY 2981.53 14290.76 2000.00 300.00 &0
+  LANDING 3821.03 9469.12 0 0 &0
+[RAF_No501SQN11]
+  Planes 3
+  Skill 2
+  Class air.GLADIATOR2
+  Fuel 100
+  weapons default
+  StartTime 2
+[RAF_No501SQN11_Way]
+  TAKEOFF 34090.59 5000.34 0 0 &0
+  NORMFLY 35014.85 10983.40 1500.00 300.00 ZG76_II03 3 &0
+  NORMFLY 39023.93 10986.10 1500.00 300.00 ZG76_II03 3 &0
+  NORMFLY 38998.70 3004.34 1500.00 300.00 ZG76_II03 3 &0
+  NORMFLY 32039.66 3034.10 1500.00 300.00 ZG76_II03 3 &0
+  NORMFLY 32039.66 10024.69 1500.00 300.00 ZG76_II03 3 &0
+  NORMFLY 37987.03 9994.03 1500.00 300.00 ZG76_II03 3 &0
+  NORMFLY 37987.03 2023.33 1500.00 300.00 ZG76_II03 3 &0
+  NORMFLY 30997.34 1992.68 1500.00 300.00 ZG76_II03 3 &0
+  NORMFLY 30997.34 8982.37 1000.00 300.00 ZG76_II03 3 &0
+  LANDING 32913.36 4012.52 0 0 &0
+[NStationary]
+  0_Static vehicles.planes.Plane$U_2VS 1 33356.78 4026.66 240.00 0.0 null
+  1_Static vehicles.planes.Plane$U_2VS 1 33329.88 4006.12 210.00 0.0 null
+  2_Static vehicles.planes.Plane$SB_2M100A 1 33402.36 4057.67 270.00 0.0 du
+  3_Static vehicles.planes.Plane$LI_2 0 33547.67 4053.56 210.00 0.0 nn
+  4_Static vehicles.stationary.Stationary$ZIS6_fuel 1 33359.40 4033.01 620.00 0.0
+  5_Static vehicles.stationary.Stationary$ZIS6_fuel 1 33548.80 4061.03 620.00 0.0
+  6_Static vehicles.stationary.Stationary$ZIS5_PC 1 33550.29 4043.47 455.00 0.0
+  7_Static vehicles.stationary.Stationary$Bus_US 1 33389.77 4047.53 515.00 0.0
+  8_Static vehicles.stationary.Siren$SirenCity 1 33208.22 4074.35 515.00 0.0
+  10_Static vehicles.artillery.Artillery$Maxime 1 34017.40 5186.55 515.00 0.0 0
+  12_Static vehicles.artillery.Artillery$Flak30_20mm 2 4294.80 9110.34 515.00 0.0 0
+  13_Static vehicles.artillery.Artillery$Flak30_20mm 2 4200.52 9118.20 515.00 0.0 0
+  14_Static vehicles.artillery.Artillery$Flak30_20mm 2 4451.93 9621.02 515.00 0.0 0
+  15_Static vehicles.artillery.Artillery$Flak30_20mm 2 4420.51 9479.60 515.00 0.0 0
+  16_Static vehicles.artillery.Artillery$Flak30_20mm 2 4679.77 9518.88 515.00 0.0 0
+  17_Static vehicles.artillery.Artillery$Flak18_88mm 2 4766.20 10587.38 515.00 0.0 0
+  18_Static vehicles.artillery.Artillery$Flak18_88mm 2 4695.49 10540.24 515.00 0.0 0
+  19_Static vehicles.artillery.Artillery$Flak18_88mm 2 3870.54 9935.28 515.00 0.0 0
+  20_Static vehicles.artillery.Artillery$Flak18_88mm 2 3815.55 9856.72 515.00 0.0 0
+  9_Static vehicles.stationary.Stationary$ZIS6_fuel 1 33493.68 3984.22 620.00 0.0
+  11_Static vehicles.stationary.Stationary$ZIS6_fuel 1 33504.85 3977.80 680.00 0.0
+  21_Static vehicles.stationary.Stationary$ZIS5_PC 1 33512.84 3973.68 455.00 0.0
+  22_Static vehicles.stationary.Stationary$GAZ_M1 1 33482.25 4004.70 620.00 0.0
+  23_Static vehicles.stationary.Stationary$GAZ_M1 1 33485.45 3993.68 380.00 0.0
+  24_Static vehicles.stationary.Stationary$GAZ_M1 1 33484.81 3997.19 380.00 0.0
+  25_Static vehicles.stationary.Smoke$Smoke6 0 33518.37 3946.09 620.00 0.00
+[Buildings]
+[Target]
+  0 0 0 0 1000 31024 9218 0 9 RAF_No501SQN11 30997 8982
+[StaticCamera]
+  33208 4077 100
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 4163.86 25497.19 2
+  FrontMarker1 15061.85 18403.21 2
+  FrontMarker2 18763.05 13776.71 2
+  FrontMarker3 24006.42 8070.69 2
+  FrontMarker4 24469.08 359.84 2
+  FrontMarker5 4163.86 28632.93 1
+  FrontMarker6 18608.84 22567.07 1
+  FrontMarker7 23955.02 18351.81 1
+  FrontMarker8 28889.96 7813.65 1
+  FrontMarker9 32899.60 462.65 1
+  FrontMarker10 16809.64 26216.87 1
+  FrontMarker11 11309.24 20562.25 2
+
+
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 2
+WindDirection 181
+WindTop 5506
+WindTurbulence 0
+WindGust 0

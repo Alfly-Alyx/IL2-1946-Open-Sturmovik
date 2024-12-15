@@ -1,0 +1,1046 @@
+[MAIN]
+  MAP Kuban/load.ini
+  TIME 16.5
+  CloudType 1
+  CloudHeight 1500.0
+  player 32IAP00
+  army 1
+  playerNum 0
+[Wing]
+  r0100
+  31IAP20
+  III_JG7701
+  32IAP00
+  III_JG7702
+  r0101
+  32IAP11
+[r0100]
+  Planes 1
+  Skill 3
+  Class air.TB_3_4M_34R_SPB
+  Fuel 75
+  weapons default
+[r0100_Way]
+  NORMFLY 42279.54 146049.41 1200.00 190.00
+  NORMFLY 20996.66 156955.89 1200.00 190.00
+  GATTACK 16719.46 159347.89 1200.00 190.00 2_Chief 1
+  NORMFLY 28473.24 151218.64 1200.00 190.00
+  NORMFLY 64138.50 126444.37 1200.00 190.00
+  LANDING 70297.85 126374.80 0 0
+[31IAP20]
+  Planes 3
+  OnlyAI 1
+  Skill0 2
+  Skill1 1
+  Skill2 0
+  Skill3 2
+  Class air.LAGG_3SERIES4
+  Fuel 75
+  weapons default
+[31IAP20_Way]
+  NORMFLY 42867.64 145651.84 1240.00 400.00
+  NORMFLY 14363.37 160674.77 1240.00 400.00
+  NORMFLY 26742.05 151874.40 1240.00 400.00 r0100 3
+  NORMFLY 63968.69 126411.49 600.00 400.00
+  LANDING 70297.85 126374.80 0 0
+[III_JG7701]
+  Planes 4
+  OnlyAI 1
+  Skill0 2
+  Skill1 1
+  Skill2 2
+  Skill3 0
+  Class air.BF_109F4
+  Fuel 60
+  weapons default
+  StartTime 8
+[III_JG7701_Way]
+  TAKEOFF 10525.16 174597.25 0 0
+  NORMFLY 6521.07 167637.55 1000.00 400.00
+  NORMFLY 10440.90 159543.83 1000.00 600.00
+  NORMFLY 29578.92 148923.35 1500.00 628.00
+  NORMFLY 23658.65 178054.68 1000.00 400.00
+  NORMFLY 16303.97 181744.50 600.00 628.00
+  LANDING 11550.41 175819.09 0 0
+[32IAP00]
+  Planes 2
+  Skill0 3
+  Skill1 2
+  Skill2 3
+  Skill3 3
+  Class air.I_16TYPE24DRONE
+  Fuel 100
+  weapons 2fab250
+[32IAP00_Way]
+  NORMFLY 43276.65 144530.60 2000.00 300.00 r0100 0
+[III_JG7702]
+  Planes 2
+  OnlyAI 1
+  Skill0 2
+  Skill1 0
+  Skill2 2
+  Skill3 2
+  Class air.BF_109F4
+  Fuel 100
+  weapons default
+[III_JG7702_Way]
+  NORMFLY 12402.93 158876.46 1000.00 400.00
+  NORMFLY 20349.68 154366.95 1000.00 400.00
+  NORMFLY 29976.02 175895.83 1000.00 400.00
+  NORMFLY 16861.51 182284.95 1000.00 400.00
+  LANDING 11550.41 175819.09 0 0
+[r0101]
+  Planes 1
+  OnlyAI 1
+  Skill 3
+  Class air.TB_3_4M_34R_SPB
+  Fuel 75
+  weapons default
+[r0101_Way]
+  NORMFLY 42197.76 146009.50 1190.00 190.00
+  NORMFLY 21081.15 156814.50 1190.00 190.00
+  GATTACK 16790.55 159177.17 1190.00 190.00 3_Chief 1
+  NORMFLY 64487.60 126408.33 1190.00 190.00
+  LANDING 70297.85 126374.80 0 0
+[32IAP11]
+  Planes 2
+  OnlyAI 1
+  Skill0 2
+  Skill1 1
+  Skill2 1
+  Skill3 1
+  Class air.I_16TYPE24DRONE
+  Fuel 100
+  weapons 2fab250
+[32IAP11_Way]
+  NORMFLY 43159.28 144465.21 980.00 190.00 r0101 0
+[Chiefs]
+  0_Chief Ships.Tramp 2
+  1_Chief Ships.Tramp 2
+  2_Chief Ships.Tanker 2
+  3_Chief Ships.Tanker 2
+  5_Chief Ships.MBoat 2
+  7_Chief Trains.USSR_FuelTrain/AA 1
+  8_Chief Trains.USSR_FuelTrain/AA 1
+  12_Chief Vehicles.GAZ67 1
+  14_Chief Vehicles.GAZ67 1
+  15_Chief Vehicles.RussiaCarsColumnA 1
+  16_Chief Vehicles.RussiaCarsColumnA 1
+  4_Chief Ships.MO4 1
+  6_Chief Ships.S80 2
+[0_Chief_Road]
+  10768.61 160159.44 120.00 0 2 5.144444942474365
+  8410.62 164790.92 120.00
+[1_Chief_Road]
+  10637.43 159609.67 120.00 0 2 5.144444942474365
+  8254.53 164588.22 120.00
+[2_Chief_Road]
+  11395.64 159424.39 120.00 0 2 5.144444942474365
+  9998.87 162233.33 120.00 0 2 5.277777777777778
+  8698.39 164859.23 120.00
+[3_Chief_Road]
+  11444.32 158838.39 120.00 0 2 5.277777777777778
+  9797.10 162053.97 120.00 0 2 5.277777777777778
+  8481.65 164685.30 120.00 0 2 5.277777777777778
+  8913.09 164891.81 120.00 0 2 5.277777777777778
+  8947.86 164961.36 120.00
+[5_Chief_Road]
+  10343.80 161018.52 120.00 0 2 5.277777777777778
+  8509.33 164597.67 120.00
+[7_Chief_Road]
+  113700.00 131300.00 20.00 0 25 5.555555820465088
+  113700.00 134700.00 20.00
+  113500.00 134900.00 20.00
+  113700.00 135100.00 20.00
+  113700.00 136500.00 20.00
+  114500.00 137300.00 20.00
+  114500.00 138900.00 20.00
+  115500.00 139900.00 20.00
+  115700.00 140100.00 -49.00
+  116100.00 140500.00 -49.00
+  116300.00 140700.00 20.00
+  116900.00 141300.00 20.00
+  116900.00 147700.00 20.00
+  118500.00 149300.00 20.00
+  118500.00 150100.00 20.00
+  118900.00 150500.00 20.00
+  119100.00 150700.00 -44.00
+  119700.00 151300.00 -44.00
+  119900.00 151500.00 20.00
+  120100.00 151700.00 20.00
+  120100.00 154100.00 20.00
+  120100.00 154300.00 -41.00
+  120100.00 154900.00 -41.00
+  120100.00 155100.00 20.00
+  120100.00 156100.00 20.00
+[8_Chief_Road]
+  143300.00 123700.00 20.00 0 26 5.555555820465088
+  148100.00 123700.00 20.00
+  148300.00 123500.00 20.00
+  148500.00 123700.00 20.00
+  149300.00 123700.00 20.00
+  149500.00 123500.00 20.00
+  149700.00 123700.00 20.00
+  150300.00 123700.00 20.00
+  150500.00 123700.00 -83.00
+  150700.00 123700.00 -83.00
+  150900.00 123700.00 20.00
+  157500.00 123700.00 20.00
+  157700.00 123700.00 -58.00
+  158300.00 123700.00 -58.00
+  158500.00 123700.00 20.00
+  164100.00 123700.00 20.00
+  165700.00 125300.00 20.00
+  167700.00 125300.00 20.00
+  167900.00 125300.00 -57.00
+  168700.00 125300.00 -57.00
+  168900.00 125300.00 20.00
+  169100.00 125300.00 20.00
+  170100.00 126300.00 20.00
+  170100.00 126500.00 20.00
+  175300.00 131700.00 20.00
+  175300.00 133300.00 20.00
+[12_Chief_Road]
+  138638.97 174158.59 120.00 0 30 3.055555582046509
+  138700.00 173900.00 120.00
+  139300.00 173300.00 20.00
+  140100.00 173300.00 20.00
+  140300.00 173300.00 -71.00
+  140700.00 173300.00 -71.00
+  140900.00 173300.00 20.00
+  141300.00 173300.00 20.00
+  141500.00 173300.00 -19.00
+  142100.00 173300.00 -19.00
+  142300.00 173100.00 120.00
+  145700.00 169300.00 20.00
+  145700.00 166100.00 20.00
+  144900.00 165300.00 20.00
+  144900.00 165100.00 20.00
+  144300.00 164500.00 20.00
+  144100.00 164300.00 -73.00
+  143700.00 163900.00 -73.00
+  143500.00 163700.00 20.00
+  143300.00 163500.00 20.00
+  142700.00 163500.00 20.00
+  142500.00 163500.00 -74.00
+  142300.00 163500.00 -74.00
+  142100.00 163300.00 120.00
+  142100.00 160900.00 20.00
+  142500.00 160500.00 20.00
+  143300.00 160500.00 20.00
+  144100.00 159700.00 20.00
+  144100.00 158900.00 20.00
+  143513.59 153927.83 120.00
+[14_Chief_Road]
+  159498.98 74923.84 120.00 0 17 3.055555582046509
+  160100.00 75500.00 20.00
+  160100.00 75700.00 20.00
+  160900.00 76500.00 20.00
+  160900.00 78100.00 20.00
+  161700.00 78900.00 20.00
+  161700.00 79700.00 20.00
+  165700.00 83700.00 20.00
+  165700.00 84500.00 20.00
+  166500.00 85300.00 20.00
+  170500.00 85300.00 20.00
+  172900.00 87700.00 20.00
+  172900.00 89300.00 20.00
+  173700.00 90100.00 20.00
+  174500.00 90100.00 20.00
+  175100.00 90700.00 20.00
+  175488.77 90796.05 120.00
+[15_Chief_Road]
+  68137.29 121782.96 120.00 0 7 3.055555582046509
+  68100.00 121900.00 20.00
+  68100.00 122900.00 20.00
+  66700.00 124300.00 20.00
+  66500.00 124300.00 20.00
+  66300.00 124500.00 20.00
+  66346.78 125513.08 120.00 0 8 3.055555582046509
+  66500.00 125300.00 20.00
+  68900.00 125300.00 20.00
+  69700.00 124500.00 20.00
+  71300.00 124500.00 20.00
+  72100.00 123700.00 20.00
+  75700.00 123700.00 20.00
+  75858.78 123871.80 120.00 0 7 3.055555582046509
+  76100.00 123700.00 20.00
+  76900.00 122900.00 20.00
+  77700.00 122900.00 20.00
+  79300.00 121300.00 20.00
+  80100.00 121300.00 20.00
+  80297.67 121559.07 120.00 0 6 3.055555582046509
+  80500.00 121700.00 20.00
+  80900.00 122100.00 20.00
+  80900.00 126100.00 20.00
+  81300.00 126500.00 20.00
+  81379.47 126837.31 120.00
+[16_Chief_Road]
+  45760.97 143250.27 120.00 0 24 3.055555582046509
+  45900.00 143100.00 20.00
+  46100.00 143100.00 20.00
+  46300.00 142900.00 20.00
+  48100.00 142900.00 20.00
+  48900.00 142100.00 20.00
+  58500.00 142100.00 20.00
+  59300.00 142900.00 20.00
+  64100.00 142900.00 20.00
+  65700.00 141300.00 20.00
+  65700.00 140500.00 20.00
+  65700.00 140300.00 -50.00
+  65700.00 139700.00 -50.00
+  65700.00 139500.00 20.00
+  65700.00 138900.00 20.00
+  62500.00 135700.00 20.00
+  62500.00 134900.00 20.00
+  64100.00 133300.00 20.00
+  64100.00 132500.00 20.00
+  65700.00 130900.00 20.00
+  65700.00 130700.00 120.00
+  65700.00 130500.00 20.00
+  65700.00 128500.00 20.00
+  65627.79 127967.10 120.00
+[4_Chief_Road]
+  30844.95 147177.63 120.00 0 25 16.666667938232422
+  37300.00 145500.00 120.00
+  38300.00 145300.00 120.00
+  39300.00 145100.00 120.00
+  39900.00 144700.00 120.00
+  40700.00 144300.00 120.00
+  41700.00 143700.00 120.00
+  43100.00 143100.00 120.00
+  45900.00 142300.00 120.00
+  46500.00 142100.00 120.00
+  47700.00 141700.00 120.00
+  48700.00 141100.00 120.00
+  49900.00 140700.00 120.00
+  50700.00 140300.00 120.00
+  52100.00 139700.00 120.00
+  52700.00 139500.00 120.00
+  53300.00 139100.00 120.00
+  54300.00 138500.00 120.00
+  55300.00 137900.00 120.00
+  55900.00 137500.00 120.00
+  56900.00 136900.00 120.00
+  57700.00 136300.00 120.00
+  58500.00 135700.00 120.00
+  62002.00 132398.00 120.00
+  62071.68 132384.63 120.00 0 2 16.666666666666668
+  63493.02 127192.27 120.00 0 2 16.666666666666668
+  63754.29 126803.86 120.00
+[6_Chief_Road]
+  20317.25 161420.00 120.00 0 2 15.555556297302246
+  12209.16 159044.41 120.00 0 2 15.555556297302246
+  9235.13 164992.14 120.00
+[NStationary]
+  8_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 70799.40 126194.23 360.00 0.0
+  12_Static vehicles.planes.Plane$U_2VS 1 174343.80 145352.00 360.07 0.0
+  14_Static vehicles.planes.Plane$U_2VS 1 185061.79 53933.93 360.07 0.0
+  15_Static vehicles.planes.Plane$U_2VS 1 101231.68 164288.27 360.07 0.0
+  16_Static vehicles.planes.Plane$U_2VS 1 131960.13 146739.22 360.07 0.0
+  19_Static vehicles.planes.Plane$U_2VS 1 177966.88 167907.03 360.07 0.0
+  21_Static vehicles.planes.Plane$U_2VS 1 65601.79 135928.98 360.07 0.0
+  23_Static ships.Ship$MO4 1 64260.35 126851.67 405.79 0.0
+  24_Static ships.Ship$MO4 1 64265.73 126864.24 405.79 0.0
+  25_Static ships.Ship$MO4 1 64297.10 126831.20 405.79 0.0
+  26_Static ships.Ship$Tral 1 64175.51 126812.88 415.79 0.0
+  27_Static ships.Ship$Tral 1 64221.18 126776.35 415.79 0.0
+  28_Static ships.Ship$Tral 1 64015.31 126781.78 430.79 0.0
+  29_Static ships.Ship$Tanker 1 64004.69 126746.97 430.79 0.0
+  30_Static ships.Ship$Tral 1 63799.56 126599.36 425.79 0.0
+  31_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 71098.00 126194.52 360.00 0.0
+  32_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 71396.52 126196.95 360.00 0.0
+  33_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 71695.03 126196.95 360.00 0.0
+  34_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 70899.40 126600.25 360.00 0.0
+  35_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 71099.22 126605.12 360.00 0.0
+  36_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 71301.48 126603.90 360.00 0.0
+  7_Static vehicles.planes.Plane$LI_2 1 70436.89 126514.59 449.10 0.0
+  37_Static vehicles.planes.Plane$LI_2 1 70509.38 126512.72 449.10 0.0
+  38_Static vehicles.planes.Plane$LI_2 1 70578.55 126513.50 449.10 0.0
+  39_Static vehicles.planes.Plane$LI_2 1 70650.60 126512.30 449.10 0.0
+  40_Static vehicles.planes.Plane$I_16TYPE24 1 70614.51 126255.12 539.10 0.0
+  41_Static vehicles.planes.Plane$I_16TYPE24 1 70617.25 126225.03 539.10 0.0
+  42_Static vehicles.planes.Plane$I_16TYPE24 1 70613.81 126129.35 539.10 0.0
+  43_Static vehicles.planes.Plane$I_16TYPE24 1 70616.48 126099.68 539.10 0.0
+  44_Static vehicles.planes.Plane$I_16TYPE24 1 70616.06 126069.87 539.10 0.0
+  45_Static vehicles.planes.Plane$I_16TYPE24 1 70616.27 126040.27 539.10 0.0
+  46_Static vehicles.planes.Plane$I_16TYPE24 1 70617.74 126010.47 539.10 0.0
+  47_Static vehicles.planes.Plane$I_16TYPE24 1 70595.95 125990.29 270.00 0.0
+  48_Static vehicles.planes.Plane$I_16TYPE24 1 70569.66 125990.22 270.00 0.0
+  49_Static vehicles.planes.Plane$I_16TYPE24 1 70543.86 125990.22 270.00 0.0
+  50_Static vehicles.planes.Plane$I_16TYPE24 1 70495.84 125990.57 270.00 0.0
+  51_Static vehicles.planes.Plane$I_16TYPE24 1 70471.80 125990.29 270.00 0.0
+  52_Static vehicles.planes.Plane$I_16TYPE24 1 70449.16 125990.71 270.00 0.0
+  53_Static vehicles.planes.Plane$I_16TYPE24 1 70432.78 126069.94 360.00 0.0
+  58_Static vehicles.stationary.Stationary$ZIS6_fuel 1 70392.08 126196.07 630.00 0.0
+  59_Static vehicles.stationary.Stationary$ZIS6_fuel 1 70379.28 126225.51 600.00 0.0
+  60_Static vehicles.stationary.Stationary$ZIS6_fuel 1 70390.11 126243.89 600.00 0.0
+  61_Static vehicles.stationary.Stationary$ZIS6_fuel 1 70455.21 126271.25 660.00 0.0
+  62_Static vehicles.stationary.Stationary$ZIS6_fuel 1 70461.80 126208.65 360.00 0.0
+  63_Static vehicles.stationary.Stationary$ZIS6_fuel 1 70608.77 126249.14 540.00 0.0
+  64_Static vehicles.planes.Plane$MBR_2AM34 1 64443.24 126873.00 420.00 0.0
+  65_Static vehicles.planes.Plane$MBR_2AM34 1 64419.70 126857.88 425.00 0.0
+  66_Static vehicles.planes.Plane$BF_109F4 2 10696.83 174636.11 310.00 0.0
+  67_Static vehicles.planes.Plane$BF_109F4 2 10711.73 174623.76 310.00 0.0
+  68_Static vehicles.planes.Plane$BF_109F4 2 10729.72 174609.63 309.10 0.0
+  69_Static vehicles.planes.Plane$BF_109F4 2 10749.97 174594.24 309.10 0.0
+  70_Static vehicles.planes.Plane$BF_109F4 2 10502.22 174797.44 400.00 0.0
+  72_Static vehicles.planes.Plane$BF_109F4 2 10532.24 174833.01 400.00 0.0
+  73_Static vehicles.planes.Plane$BF_109F4 2 10546.93 174850.38 400.00 0.0
+  74_Static vehicles.planes.Plane$BF_109F4 2 10575.05 174882.08 400.00 0.0
+  75_Static vehicles.planes.Plane$BF_109F4 2 10590.73 174899.94 400.00 0.0
+  76_Static vehicles.planes.Plane$BF_109F4 2 10607.46 174918.57 400.00 0.0
+  78_Static vehicles.planes.Plane$JU_52_3MG4E 2 10669.46 174963.39 490.00 0.0
+  79_Static vehicles.planes.Plane$JU_52_3MG4E 2 11188.38 175659.65 400.00 0.0
+  80_Static vehicles.planes.Plane$JU_52_3MG4E 2 11237.75 175716.15 400.00 0.0
+  81_Static vehicles.planes.Plane$JU_52_3MG4E 2 11283.14 175769.71 400.00 0.0
+  83_Static vehicles.stationary.Stationary$ZIS6_fuel 1 71540.24 126539.13 405.00 0.0
+  84_Static vehicles.stationary.Stationary$ZIS5_PC 1 71632.40 126556.77 360.00 0.0
+  85_Static vehicles.stationary.Stationary$ZIS5_PC 1 71630.23 126538.99 600.00 0.0
+  86_Static vehicles.stationary.Stationary$ZIS5_PC 1 71673.11 126557.12 555.00 0.0
+  87_Static vehicles.planes.Plane$U_2VS 1 71089.91 126339.09 270.00 0.0
+  88_Static vehicles.planes.Plane$U_2VS 1 71109.80 126338.96 270.00 0.0
+  57_Static vehicles.planes.Plane$TB_3_4M_34R 1 70448.49 126122.75 360.00 0.0
+  56_Static vehicles.planes.Plane$TB_3_4M_34R 1 70449.91 126190.83 360.00 0.0
+  55_Static vehicles.planes.Plane$TB_3_4M_34R 1 70447.86 126257.51 360.00 0.0
+  54_Static vehicles.planes.Plane$TB_3_4M_34R 1 71531.81 126548.52 449.10 0.0
+  77_Static vehicles.planes.Plane$TB_3_4M_34R 1 71614.01 126548.11 449.10 0.0
+  82_Static vehicles.planes.Plane$TB_3_4M_34R 1 71689.78 126548.11 449.10 0.0
+  71_Static vehicles.artillery.Artillery$Flak30_20mm 2 10907.82 174807.41 449.10 0.0
+  89_Static vehicles.artillery.Artillery$Flak30_20mm 2 11165.03 175112.64 449.10 0.0
+  90_Static vehicles.artillery.Artillery$Flak30_20mm 2 11411.96 175445.29 449.10 0.0
+  91_Static vehicles.artillery.Artillery$Flak18_88mm 2 10876.96 175356.13 449.10 0.0
+  92_Static vehicles.artillery.Artillery$Flak18_88mm 2 11003.85 175510.45 449.10 0.0
+  93_Static vehicles.artillery.Artillery$Flak30_20mm 2 8175.17 165259.57 449.10 0.0
+  94_Static vehicles.artillery.Artillery$Flak30_20mm 2 8487.03 165346.98 449.10 0.0
+  95_Static vehicles.artillery.Artillery$Flak30_20mm 2 8748.48 165473.77 449.10 0.0
+  96_Static ships.Ship$Tramp 2 8568.51 164993.99 604.10 0.0
+  98_Static ships.Ship$S80 2 8743.08 165108.13 609.10 0.0
+  99_Static ships.Ship$S80 2 8754.34 165114.88 609.10 0.0
+  0_Static vehicles.planes.Plane$U_2VS 1 109332.79 100570.87 360.07 0.0
+  1_Static vehicles.planes.Plane$U_2VS 1 93631.35 106169.90 360.07 0.0
+  2_Static vehicles.planes.Plane$U_2VS 1 172858.18 133645.92 360.07 0.0
+  3_Static ships.Ship$MBoat 2 8566.72 164948.66 604.10 0.0
+  97_Static ships.Ship$Tanker 2 8453.94 164936.34 594.10 0.0
+[Buildings]
+  0_bld House$AirdromeBarrelBlock1 1 70405.22 126245.63 360.00
+  1_bld House$AirdromeBarrelBlock1 1 70401.68 126238.55 360.00
+  2_bld House$AirdromeBarrelBlock1 1 70397.19 126245.67 360.00
+  3_bld House$AirdromeBarrelBlock1 1 70395.55 126214.80 360.00
+  4_bld House$AirdromeBarrelBlock1 1 70407.59 126215.57 360.00
+  5_bld House$AirdromeBarrelBlock1 1 70400.26 126205.06 360.00
+  6_bld House$AirdromeBarrelBlock1 1 70405.07 126226.84 360.00
+  7_bld House$AirdromeBarrelBlock1 1 70408.79 126177.27 660.00
+  8_bld House$AirdromeBarrelBlock1 1 70405.62 126185.58 660.00
+  9_bld House$AirdromeBarrelBlock1 1 70387.13 126222.03 660.00
+  10_bld House$AirdromeBarrelBlock1 1 70401.35 126194.89 660.00
+  11_bld House$FinlandHangar 1 64449.49 126861.89 600.00
+  12_bld House$FinlandHangar 1 64424.19 126848.66 605.00
+  13_bld House$FinlandHangar 1 64395.23 126836.02 605.00
+  14_bld House$FurnitureTreeLine 1 11150.34 175660.53 585.00
+  15_bld House$FurnitureTreeLine 1 11157.21 175680.31 585.00
+  16_bld House$FurnitureTreeLine 1 11184.34 175717.99 585.00
+  17_bld House$FurnitureTreeLine 1 11203.40 175723.89 585.00
+  18_bld House$FurnitureTreeLine 1 11216.68 175754.68 585.00
+  19_bld House$FurnitureTreeLine 1 70383.99 126176.22 705.00
+  20_bld House$FurnitureTreeLine 1 70400.46 126059.72 360.00
+  21_bld House$FurnitureTreeLine 1 70405.10 126031.03 360.00
+  22_bld House$FurnitureTreeLine 1 70410.02 126054.02 360.00
+  23_bld House$FurnitureTreeLine 1 70399.12 126001.66 360.00
+  24_bld House$FurnitureTreeLine 1 70446.77 125968.78 705.00
+  25_bld House$FurnitureTreeLine 1 70463.72 125965.08 630.00
+  26_bld House$FurnitureTreeLine 1 70487.04 125968.11 705.00
+  27_bld House$FurnitureTreeLine 1 70613.39 125961.73 705.00
+  28_bld House$FurnitureTreeLine 1 70632.85 125971.63 405.00
+  29_bld House$FurnitureTreeLine 1 70645.10 125993.61 405.00
+  30_bld House$FurnitureTreeLine 1 70629.10 125995.79 405.00
+  31_bld House$FurnitureTreeLine 1 70632.18 126024.65 630.00
+  32_bld House$FurnitureTreeLine 1 70635.70 126044.79 705.00
+  33_bld House$FurnitureTreeLine 1 70642.92 126074.15 705.00
+  34_bld House$FurnitureTreeLine 1 70658.86 126095.63 705.00
+  35_bld House$FurnitureTreeLine 1 70647.28 126116.43 705.00
+  36_bld House$FurnitureTreeLine 1 70642.08 126092.10 705.00
+  37_bld House$FurnitureTreeLine 1 70633.02 126142.44 645.00
+  38_bld House$FurnitureTreeLine 1 70647.79 126166.94 705.00
+  39_bld House$FurnitureTreeLine 1 70660.20 126142.27 705.00
+  40_bld House$FurnitureTreeLine 1 70638.56 126194.63 705.00
+  41_bld House$FurnitureTreeLine 1 70648.79 126261.41 705.00
+  42_bld House$FurnitureTreeLine 1 70643.09 126242.62 705.00
+  43_bld House$FurnitureTreeLine 1 70658.36 126243.12 705.00
+  44_bld House$FurnitureTreeLine 1 70498.92 126541.76 630.00
+  45_bld House$FurnitureTreeLine 1 70467.32 126556.47 630.00
+  46_bld House$FurnitureTreeLine 1 70477.33 126545.24 630.00
+  47_bld House$FurnitureTreeLine 1 70592.59 126549.15 630.00
+  48_bld House$FurnitureTreeLine 1 70585.75 126559.65 630.00
+  49_bld House$FurnitureTreeLine 1 70576.47 126549.64 630.00
+  50_bld House$FurnitureTreeLine 1 70565.73 126534.98 630.00
+  51_bld House$FurnitureTreeLine 1 70532.90 126555.95 630.00
+  52_bld House$FurnitureTreeLine 1 70628.37 126541.78 630.00
+  53_bld House$FurnitureTreeLine 1 70661.83 126552.28 630.00
+  54_bld House$FurnitureTreeLine 1 70671.35 126536.41 615.00
+  55_bld House$FurnitureTreeLine 1 70694.55 126525.91 675.00
+  56_bld House$FurnitureTreeLine 1 71533.75 126576.52 449.10
+  57_bld House$FurnitureTreeLine 1 71501.55 126575.57 600.00
+  58_bld House$FurnitureTreeLine 1 71559.56 126587.17 600.00
+  59_bld House$FurnitureTreeLine 1 71587.50 126598.54 600.00
+  60_bld House$FurnitureTreeLine 1 71589.15 126579.60 645.00
+  61_bld House$FurnitureTreeLine 1 71631.77 126591.67 645.00
+  62_bld House$FurnitureTreeLine 1 71638.88 126576.99 645.00
+  63_bld House$FurnitureTreeLine 1 71667.10 126588.12 615.00
+  64_bld House$FurnitureTreeLine 1 71675.81 126578.18 615.00
+  65_bld House$FurnitureTreeLine 1 71724.11 126580.78 390.00
+  66_bld House$FurnitureTreeLine 1 71701.15 126590.25 390.00
+  67_bld House$FurnitureTreeLine 1 71732.40 126554.03 705.00
+[Target]
+  3 0 1 330 501 71075 126379 3000
+  0 1 0 0 1000 10805 162592 0 1 2_Chief 9998 162233
+  0 1 0 0 1000 8945 161695 0 1 3_Chief 9797 162053
+[Bridge]
+[House]
+  R1g13 v0
+  Q1g13 v0
+  o3ge3 ++1
+  n3ge3 +++3
+  m3ge3 ++f
+  l3ge3 +1
+  k3ge3 ++++7
+  j3ge3 +++7
+  g1wj3 3
+  f1wj3 +++3
+  e1wj3 +0
+  -0wj3 +0
+  Z0wj3 7
+  X0wj3 +++7
+  W0wj3 v0
+  I0ge3 1
+  H0ge3 ++3
+  G0ge3 0-+++30
+  F0ge3 ++++7
+  E0ge3 f0
+  D0ge3 +0
+  C0ge3 ++7
+  B0ge3 ++1
+  A0ge3 ++++3
+  z0ge3 ++++1
+  y0ge3 +++v
+  x0ge3 ++++7
+  w0ge3 ++++f
+  v0ge3 +++7
+  u0ge3 ++++
+  t0ge3 +++v
+  s0ge3 ++++3
+  r0ge3 +++1
+  q0ge3 3
+  b3gr3 v0
+  a3gr3 -++++3
+  93gr3 f0
+  E0Mg3 f
+  D0Mg3 ++7
+  C0Mg3 ++v
+  B0Mg3 +++f
+  A0Mg3 ++++v
+  z0Mg3 +++7
+  y0Mg3 ++++7
+  x0Mg3 +++v
+  w0Mg3 +++v
+  u0Mg3 Y++++3
+  t0Mg3 -++++3
+  s0Mg3 +++++1
+  r0Mg3 f
+  k3013 v0
+  j3013 +0
+  i3013 v0
+  C1013 +0
+  B1013 ++7
+  A1013 1
+  o30e3 U++++3
+  n30e3 1000040000
+  m30e3 w++++30
+  l30e3 ++++f
+  k30e3 +0000Y30000
+  j30e3 ++v
+  i30e3 +++++3
+  g1gj3 +1
+  f1gj3 -++++3
+  e1gj3 w++++30
+  d1gj3 +0
+  -0gj3 +0
+  Z0gj3 ++++7
+  Y0gj3 ++f
+  X0gj3 +++++3
+  W0gj3 +++++
+  T0gj3 +0
+  S0gj3 ++++3
+  R0gj3 +0
+  G00e3 +++1
+  F00e3 +++7
+  B00e3 7
+  A00e3 +0
+  z00e3 +++3
+  y00e3 ++++
+  x00e3 ++++v
+  w00e3 ++++
+  v00e3 +++++
+  u00e3 ++++f
+  t00e3 +++
+  s00e3 ++3
+  r00e3 f0
+  b30r3 ++v
+  930r3 ++1
+  830r3 ++7
+  730r3 v0
+  Z3wg3 +0
+  Y3wg3 +++v
+  X3wg3 w++++30
+  W3wg3 ++++3
+  M0wg3 f0
+  L0wg3 +1
+  K0wg3 3
+  J0wg3 7
+  I0wg3 +0
+  H0wg3 +0
+  G0wg3 ++1
+  F0wg3 +0
+  E0wg3 +++
+  D0wg3 ++++3
+  C0wg3 +++1
+  B0wg3 +++v
+  A0wg3 ++v
+  z0wg3 +++f
+  y0wg3 +++v
+  x0wg3 +++v
+  w0wg3 ++++3
+  v0wg3 M++++3
+  u0wg3 +++3
+  t0wg3 +++
+  s0wg3 ++v
+  r0wg3 +1
+  D1M03 1
+  C1M03 +++++
+  B1M03 ++1
+  A1M03 3
+  o3Md3 ++++
+  k3Md3 +++f
+  j3Md3 +0
+  i3Md3 ++++3
+  h10j3 v0
+  g10j3 +++1
+  f10j3 30000c0000
+  d10j3 v0
+  Y00j3 w++++30
+  X00j3 ++++7
+  W00j3 +++++3
+  V00j3 v0
+  U00j3 ++7
+  R00j3 v0
+  z0Md3 f
+  y0Md3 ++1
+  x0Md3 +++1
+  w0Md3 ++++
+  v0Md3 +++3
+  u0Md3 +++7
+  t0Md3 ++++f
+  s0Md3 +0
+  h0Md3 1
+  g0Md3 ++f
+  f0Md3 +1
+  b3Mq3 ++1
+  a3Mq3 U++++3
+  93Mq3 0++++30
+  83Mq3 +++++
+  73Mq3 f
+  63Mq3 v0
+  53Mq3 v0
+  Z3gg3 v0
+  Y3gg3 +++3
+  X3gg3 f0000Y00000
+  V3gg3 f
+  M0gg3 +++1
+  L0gg3 +++++1
+  K0gg3 +++1
+  J0gg3 +++
+  I0gg3 ++++3
+  H0gg3 ++++
+  G0gg3 +++3
+  F0gg3 ++++
+  E0gg3 -++++3
+  D0gg3 +++++1
+  C0gg3 ++++f
+  B0gg3 +++v
+  A0gg3 ++++3
+  z0gg3 ++++
+  y0gg3 +++3
+  x0gg3 ++++
+  w0gg3 -++++3
+  v0gg3 0-+++30
+  u0gg3 ++++v
+  t0gg3 ++++f
+  s0gg3 ++++3
+  r0gg3 ++v
+  q0gg3 3
+  G20o3 ++v
+  F20o3 ++v
+  E20o3 +++3
+  D1w03 f0
+  C1w03 +0
+  B1w03 1
+  y1w03 f0
+  x1w03 7
+  o3wd3 1
+  n3wd3 +++f
+  m3wd3 v0
+  l3wd3 3
+  h1Mi3 +1
+  g1Mi3 ++v
+  f1Mi3 +1
+  e1Mi3 +0
+  Z0Mi3 ++++f
+  Y0Mi3 0-+++30
+  X0Mi3 v0000Y10000
+  W0Mi3 M++++3
+  V0Mi3 +++++
+  U0Mi3 +++++
+  T0Mi3 ++++
+  S0Mi3 +++f
+  x0wd3 7
+  w0wd3 ++++
+  v0wd3 +++++1
+  u0wd3 U++++3
+  s0wd3 +++3
+  h0wd3 +0
+  g0wd3 ++7
+  f0wd3 w++++30
+  e0wd3 +++++3
+  d0wd3 7
+  a3wq3 +++3
+  93wq3 70000s0000
+  83wq3 +++++1
+  73wq3 ++v
+  63wq3 +++++1
+  43wq3 ++3
+  S0wq3 +0
+  R0wq3 ++++7
+  Q0wq3 v0
+  N0wq3 f0
+  Y30g3 +++++1
+  W30g3 0++++3Y+++f0
+  V30g3 +++
+  M00g3 ++7
+  L00g3 ++++f
+  K00g3 ++++v
+  J00g3 +++
+  I00g3 +++3
+  H00g3 ++++
+  G00g3 ++++1
+  F00g3 ++++1
+  E00g3 ++++3
+  D00g3 ++++f
+  C00g3 ++++3
+  B00g3 +++3
+  A00g3 ++++
+  z00g3 ++++7
+  y00g3 ++++
+  x00g3 ++++1
+  w00g3 ++++3
+  v00g3 ++++f
+  t00g3 ++++7
+  s00g3 +++3
+  r00g3 ++++
+  q00g3 +0
+  G2Mn3 ++++1
+  E2Mn3 v0
+  E1g03 f0
+  D1g03 f0
+  C1g03 7
+  y1g03 f
+  x1g03 v0
+  w1g03 f0
+  Z0wi3 +0
+  Y0wi3 +++1
+  U0wi3 +++++1
+  T0wi3 ++++f
+  S0wi3 ++++3
+  R0wi3 +0
+  w0gd3 v0
+  v0gd3 ++++
+  u0gd3 -++++3
+  t0gd3 ++++1
+  s0gd3 v0
+  i0gd3 v0
+  h0gd3 +++++
+  g0gd3 ++++f
+  f0gd3 f0000Y00000
+  d0gd3 w++++30
+  93gq3 w++++30
+  83gq3 -++++3
+  73gq3 ++++f
+  53gq3 +++
+  43gq3 1
+  T0gq3 1
+  S0gq3 +++v
+  R0gq3 ++++1
+  Q0gq3 ++1
+  Y3Mf3 v0
+  X3Mf3 ++++
+  V3Mf3 +0
+  M0Mf3 +0
+  L0Mf3 ++v
+  K0Mf3 +++7
+  J0Mf3 ++++f
+  I0Mf3 +++v
+  H0Mf3 +++
+  G0Mf3 ++++
+  F0Mf3 +++1
+  E0Mf3 +++1
+  D0Mf3 ++++
+  C0Mf3 +++v
+  B0Mf3 ++++3
+  A0Mf3 ++++
+  z0Mf3 +++++1
+  y0Mf3 ++++f
+  x0Mf3 ++++
+  w0Mf3 +++7
+  v0Mf3 +++7
+  u0Mf3 +++++
+  s0Mf3 +++v
+  r0Mf3 +++
+  q0Mf3 +++
+  G2wn3 3
+  F2wn3 1
+  G1003 f0
+  F1003 ++3
+  E1003 +0
+  C1003 7
+  y1003 f
+  x1003 ++7
+  w1003 f0
+  n0wn3 +0
+  m0wn3 v0
+  o30d3 1
+  X0gi3 ++3
+  W0gi3 0++++30
+  V0gi3 70000s0000
+  U0gi3 -++++3
+  T0gi3 ++++f
+  S0gi3 v0000Y10000
+  R0gi3 +0
+  v00d3 f
+  u00d3 +0
+  t00d3 +++
+  s00d3 3
+  i00d3 +0
+  h00d3 ++f
+  g00d3 ++3
+  e00d3 +0000Y30000
+  d00d3 +++
+  930q3 +++v
+  830q3 +++7
+  730q3 ++7
+  530q3 U++++3
+  T00q3 7
+  S00q3 +++v
+  R00q3 3
+  Q00q3 3
+  X3wf3 1
+  W3wf3 1
+  L0wf3 +0
+  K0wf3 ++++7
+  I0wf3 U++++3
+  H0wf3 +++++1
+  G0wf3 ++++3
+  F0wf3 +++f
+  E0wf3 -++++3
+  D0wf3 ++++f
+  C0wf3 +++f
+  B0wf3 ++++f
+  A0wf3 ++++7
+  z0wf3 ++++
+  y0wf3 +++++
+  x0wf3 +++f
+  w0wf3 ++++3
+  v0wf3 +++++1
+  r0wf3 +++++1
+  q0wf3 +++7
+  p0wf3 7
+  G1M+2 ++3
+  F1M+2 +1
+  C1M+2 7
+  B1M+2 ++f
+  A1M+2 +++
+  y1M+2 f
+  x1M+2 3
+  n0gn3 ++7
+  m0gn3 ++1
+  W00i3 3
+  V00i3 +++v
+  U00i3 +++7
+  T00i3 ++7
+  S00i3 -++++3
+  R00i3 +1
+  A00i3 f
+  z00i3 3
+  u0Mc3 v0
+  t0Mc3 +1
+  s0Mc3 f0
+  f0Mc3 +0
+  e0Mc3 +0
+  63Mp3 ++++7
+  53Mp3 +0
+  R1g23 +1
+  Q1g23 +++++
+  O1g23 +++1
+  K0gf3 v0
+  J0gf3 ++++
+  H0gf3 U++++3
+  G0gf3 ++++7
+  F0gf3 +++f
+  E0gf3 ++++f
+  D0gf3 +++3
+  C0gf3 ++++1
+  B0gf3 ++++3
+  A0gf3 ++++3
+  z0gf3 +++v
+  y0gf3 +++f
+  x0gf3 ++v
+  w0gf3 ++++f
+  v0gf3 +++++
+  u0gf3 ++++
+  s0gf3 30000c0000
+  r0gf3 w++++30
+  q0gf3 +0
+  G1w+2 v0
+  F1w+2 7
+  E1w+2 7
+  D1w+2 7
+  C1w+2 v0
+  B1w+2 ++1
+  A1w+2 ++1
+  W0Mh3 +++++1
+  A0Mh3 +1
+  z0Mh3 +1
+  y0Mh3 v0
+  R1023 ++v
+  P1023 70000s0000
+  J00f3 v0
+  I00f3 v0
+  H00f3 +++1
+  G00f3 +++7
+  F00f3 +++f
+  E00f3 +++f
+  D00f3 ++++3
+  C00f3 ++++v
+  B00f3 +++++
+  A00f3 +++
+  z00f3 ++++f
+  y00f3 +++f
+  x00f3 ++++1
+  w00f3 +++f
+  v00f3 ++++3
+  u00f3 ++++f
+  t00f3 +++3
+  s00f3 ++++3
+  r00f3 ++++7
+  V0wh3 1
+  C0wh3 v0
+  B0wh3 +0
+  A0wh3 ++7
+  z0wh3 +++++1
+  y0wh3 ++1
+  j3M13 +0
+  i3M13 +++++
+  h3M13 +0
+  S1M13 v0
+  R1M13 +++++1
+  O1M13 ++++
+  K0Me3 7
+  J0Me3 3
+  I0Me3 7
+  H0Me3 7
+  G0Me3 +0
+  F0Me3 +++1
+  E0Me3 +++1
+  D0Me3 +++++1
+  C0Me3 +++1
+  B0Me3 +++v
+  A0Me3 ++++1
+  z0Me3 ++++
+  y0Me3 +++v
+  x0Me3 ++++v
+  w0Me3 +++++
+  v0Me3 Y++++3
+  u0Me3 +++1
+  t0Me3 ++++
+  s0Me3 ++++v
+  r0Me3 +++
+  q0Me3 7
+  C0gh3 ++v
+  B0gh3 +++f
+  A0gh3 +++++3
+  z0gh3 U++++3
+  y0gh3 ++++f
+  x0gh3 ++f
+  w0gh3 +1
+  v0gh3 3
+  u0gh3 ++7
+  t0gh3 ++7
+  s0gh3 +0
+  k3w13 +1
+  j3w13 +++++1
+  i3w13 +++1
+  h3w13 +0
+  S1w13 7
+  R1w13 +++
+  Q1w13 +++f
+  P1w13 f
+  O1w13 1
+  o3we3 1
+  I0we3 ++++3
+  H0we3 ++++f
+  G0we3 f0
+  F0we3 f0
+  E0we3 v0
+  D0we3 +++1
+  C0we3 +++3
+  B0we3 ++++
+  A0we3 +++7
+  z0we3 ++++3
+  y0we3 ++++3
+  x0we3 ++++3
+  w0we3 ++++
+  v0we3 ++++1
+  u0we3 ++++3
+  t0we3 +++v
+  s0we3 ++v
+  r0we3 +++f
+  q0we3 v0
+  C00h3 f0
+  B00h3 ++++
+  A00h3 ++v
+  z00h3 ++++7
+  y00h3 ++++f
+  x00h3 +++++1
+  w00h3 ++v
+  v00h3 ++7
+  u00h3 +++3
+  t00h3 w++++30
+  s00h3 +0
+  k3g13 ++f
+  j3g13 0++++30
+  h3g13 v0
+[FrontMarker]
+  FrontMarker0 25970.44 192463.97 1
+  FrontMarker1 24472.32 179344.78 1
+  FrontMarker2 19363.54 164252.27 1
+  FrontMarker3 12468.93 143465.62 1
+  FrontMarker4 4271.02 115912.94 1
+  FrontMarker5 1106.66 116821.44 2
+  FrontMarker6 9382.02 144483.65 2
+  FrontMarker7 17314.07 165918.08 2
+  FrontMarker8 22236.69 179605.71 2
+  FrontMarker9 23470.87 192842.07 2
+  FrontMarker10 11664.29 155755.97 2
+  FrontMarker11 14443.19 155243.65 1
+  FrontMarker12 10533.68 150256.33 2
+  FrontMarker13 13693.23 149649.89 1
+  FrontMarker14 21185.59 171504.12 2
+  FrontMarker15 22646.18 171002.24 1

@@ -1,0 +1,206 @@
+[MAIN]
+  MAP Prokhorovka/load.ini
+  TIME 7.0
+  CloudType 4
+  CloudHeight 1300.0
+  player r0102
+  army 1
+  playerNum 0
+[Wing]
+  g0110
+  g0111
+  r0102
+  r0103
+  g0112
+  r0130
+[g0110]
+  Planes 4
+  Skill 3
+  Class air.HS_129B2
+  Fuel 100
+  weapons R2-1xMk101
+[g0110_Way]
+  NORMFLY 42523.75 60699.20 500.0 280.0
+  NORMFLY 48938.22 57953.10 500.0 280.0
+  GATTACK 62485.72 48289.90 500.0 280.0
+  NORMFLY 55717.53 47536.24 400.0 280.0
+  NORMFLY 44701.70 54460.15 400.0 280.0
+  NORMFLY 36304.28 58579.43 300.0 250.0
+  LANDING 37056.25 60015.10 0 0
+[g0111]
+  Planes 4
+  Skill 3
+  Class air.HS_129B2
+  Fuel 100
+  weapons R2-1xMk101
+[g0111_Way]
+  NORMFLY 43299.40 61299.68 500.0 280.0
+  NORMFLY 49318.15 58734.43 500.0 280.0 g0110 1
+[r0102]
+  Planes 4
+  Skill 2
+  Class air.LA_5F
+  Fuel 100
+  weapons default
+[r0102_Way]
+  TAKEOFF 85236.24 37406.49 0 0
+  NORMFLY 65995.50 45799.61 1024.0 320.0
+  NORMFLY 62571.85 49181.30 1024.0 320.0 g0110 2
+  NORMFLY 69400.62 47500.51 1024.0 320.0
+  NORMFLY 87270.87 41924.85 256.0 256.0
+  LANDING 86258.27 38624.50 0 0
+[r0103]
+  Planes 2
+  Skill 2
+  Class air.LA_5F
+  Fuel 100
+  weapons default
+[r0103_Way]
+  TAKEOFF 85236.24 37406.49 0 0
+  NORMFLY 65560.91 44949.81 1024.0 320.0 r0102 1
+[g0112]
+  Planes 4
+  Skill 2
+  Class air.FW_190A5
+  Fuel 100
+  weapons default
+  StartTime 2
+[g0112_Way]
+  TAKEOFF 53274.40 79624.44 0 0
+  NORMFLY 57700.20 54900.20 1500.0 300.0
+  NORMFLY 62802.40 49799.81 1500.0 300.0 r0102 2
+  NORMFLY 66574.15 51836.75 1500.0 300.0
+  NORMFLY 65410.60 56779.37 1500.0 300.0
+  NORMFLY 50854.66 79676.19 500.0 280.0
+  LANDING 53274.40 79624.44 0 0
+[r0130]
+  Planes 1
+  Skill 3
+  Class air.U_2VS
+  Fuel 100
+  weapons default
+[r0130_Way]
+  NORMFLY 88218.10 36602.58 200.0 134.0
+  NORMFLY 84016.15 40006.21 100.0 134.0
+  NORMFLY 87476.80 40445.69 100.0 134.0
+  LANDING 86258.27 38624.50 0 0
+[Chiefs]
+  0_Chief Vehicles.RussiaCarsColumnA 1
+  1_Chief Vehicles.RussiaCarsColumnA 1
+  2_Chief Vehicles.RussiaCarsColumnB 1
+  3_Chief Vehicles.RussiaCarsColumnC 1
+  4_Chief Vehicles.RussiaCarsColumnC 1
+  5_Chief Vehicles.GAZ_M1 1
+[0_Chief_Road]
+  62431.14 48149.60 120.0 0 2 3.055555582046509
+  62409.26 48318.51 120.0 0 2 3.055555582046509
+  62356.10 48442.92 120.0 0 2 3.055555582046509
+  62323.32 48479.91 120.0
+[1_Chief_Road]
+  62491.0 48009.44 120.0 0 2 3.055555582046509
+  62553.60 48199.25 120.0 0 2 3.055555582046509
+  62554.89 48274.42 120.0 0 2 3.055555582046509
+  62535.91 48351.39 120.0 0 2 3.055555582046509
+  62488.10 48420.44 120.0
+[2_Chief_Road]
+  62763.78 48011.62 120.0 0 2 3.055555582046509
+  62680.82 48164.94 120.0 0 2 3.055555582046509
+  62652.35 48249.60 120.0 0 2 3.055555582046509
+  62654.60 48335.60 120.0 0 2 3.055555582046509
+  62679.66 48395.64 120.0
+[3_Chief_Road]
+  62173.55 48504.17 120.0 0 2 3.055555582046509
+  62361.10 48501.28 120.0 0 2 3.055555582046509
+  62496.41 48448.91 120.0 0 2 3.055555582046509
+  62600.80 48432.12 120.0 0 2 3.055555582046509
+  62663.57 48432.85 120.0 0 2 3.055555582046509
+  62715.42 48454.19 120.0
+[4_Chief_Road]
+  62058.42 48490.35 120.0 0 2 3.055555582046509
+  62129.19 48477.23 120.0 0 2 3.055555582046509
+  62196.37 48429.23 120.0 0 2 3.055555582046509
+  62227.85 48367.73 120.0
+[5_Chief_Road]
+  86254.89 38361.46 120.0 0 2 3.055555582046509
+  86228.99 38374.85 120.0 0 2 3.055555582046509
+  86209.50 38380.50 120.0 0 2 3.055555582046509
+  86187.89 38380.92 120.0 0 2 3.055555582046509
+  86164.14 38377.89 120.0 0 2 3.055555582046509
+  86141.67 38369.23 120.0 0 2 3.055555582046509
+  86124.82 38357.12 120.0 0 2 3.055555582046509
+  85314.96 37392.62 120.0 0 2 3.055555582046509
+  85284.32 37370.19 120.0 0 2 3.055555582046509
+  85249.60 37358.64 120.0 0 2 3.055555582046509
+  85214.89 37358.64 120.0 0 2 3.055555582046509
+  85186.21 37377.60 120.0 0 2 3.055555582046509
+  85167.60 37407.0 120.0 0 2 3.055555582046509
+  85155.82 37446.51 120.0 0 2 3.055555582046509
+  85141.39 37727.64 120.0 0 2 3.055555582046509
+  85133.10 37775.19 120.0 0 2 3.055555582046509
+  85125.10 37825.75 120.0 0 2 3.055555582046509
+  85121.42 37869.37 120.0 0 2 3.055555582046509
+  85122.60 37913.66 120.0 0 2 3.055555582046509
+  85128.0 37956.21 120.0 0 2 3.055555582046509
+  85139.10 37986.85 120.0 0 2 3.055555582046509
+  85152.14 38008.0 120.0 0 2 3.055555582046509
+  85170.78 38026.19 120.0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$SU76M 1 62234.19 48452.83 525.0 0.0
+  1_Static vehicles.artillery.Artillery$SU76M 1 62239.50 48444.19 510.0 0.0
+  2_Static vehicles.artillery.Artillery$SU76M 1 62244.97 48435.55 525.0 0.0
+  3_Static vehicles.artillery.Artillery$SU76M 1 62248.12 48427.66 510.0 0.0
+  4_Static vehicles.artillery.Artillery$SU76M 1 62252.25 48418.80 525.0 0.0
+  5_Static vehicles.artillery.Artillery$SU76M 1 62256.79 48410.66 510.0 0.0
+  6_Static vehicles.artillery.Artillery$SU76M 1 62261.51 48402.87 495.0 0.0
+  7_Static vehicles.artillery.Artillery$SU76M 1 62266.12 48394.16 525.0 0.0
+  8_Static vehicles.artillery.Artillery$SU76M 1 62271.18 48385.73 510.0 0.0
+  9_Static vehicles.artillery.Artillery$SU76M 1 62276.55 48377.76 510.0 0.0
+  10_Static vehicles.artillery.Artillery$SU76M 1 62253.55 48438.94 495.0 0.0
+  11_Static vehicles.artillery.Artillery$SU76M 1 62287.26 48382.37 510.0 0.0
+  12_Static vehicles.artillery.Artillery$SU76M 1 62281.29 48390.94 495.0 0.0
+  13_Static vehicles.artillery.Artillery$SU76M 1 62275.76 48400.91 540.0 0.0
+  14_Static vehicles.artillery.Artillery$SU76M 1 62270.55 48407.76 525.0 0.0
+  15_Static vehicles.artillery.Artillery$SU76M 1 62263.69 48422.83 495.0 0.0
+  16_Static vehicles.artillery.Artillery$SU76M 1 62257.44 48431.94 495.0 0.0
+  17_Static vehicles.artillery.Artillery$SU76M 1 62267.90 48415.80 510.0 0.0
+  18_Static vehicles.artillery.Artillery$SU76M 1 62249.51 48448.12 525.0 0.0
+  19_Static vehicles.artillery.Artillery$SU76M 1 62245.58 48456.58 510.0 0.0
+  20_Static vehicles.artillery.Artillery$SU76M 1 62752.90 48458.54 495.0 0.0
+  21_Static vehicles.artillery.Artillery$SU76M 1 62757.87 48450.29 510.0 0.0
+  22_Static vehicles.artillery.Artillery$SU76M 1 62761.76 48439.94 525.0 0.0
+  23_Static vehicles.artillery.Artillery$SU76M 1 62763.76 48429.83 540.0 0.0
+  24_Static vehicles.artillery.Artillery$SU76M 1 62761.87 48419.29 555.0 0.0
+  25_Static vehicles.artillery.Artillery$SU76M 1 62760.19 48408.73 570.0 0.0
+  26_Static vehicles.artillery.Artillery$SU76M 1 62754.43 48399.62 585.0 0.0
+  27_Static vehicles.artillery.Artillery$SU76M 1 62747.19 48392.40 585.0 0.0
+  28_Static vehicles.artillery.Artillery$SU76M 1 62737.76 48387.15 600.0 0.0
+  29_Static vehicles.artillery.Artillery$T34 1 62734.48 48425.19 360.0 0.0
+  30_Static vehicles.artillery.Artillery$Flak30_20mm 2 53967.91 80328.50 435.0 0.0
+  31_Static vehicles.artillery.Artillery$Flak30_20mm 2 54427.0 79939.58 510.0 0.0
+  32_Static vehicles.artillery.Artillery$Flak30_20mm 2 53756.44 79525.63 585.0 0.0
+  33_Static vehicles.artillery.Artillery$Flak30_20mm 2 36664.69 60677.44 660.0 0.0
+  34_Static vehicles.artillery.Artillery$Flak30_20mm 2 36448.73 60156.30 375.0 0.0
+  35_Static vehicles.artillery.Artillery$Flak30_20mm 2 35871.80 60414.62 450.0 0.0
+  36_Static vehicles.planes.Plane$LA_5F 1 84980.91 37835.87 400.0 0.0
+  37_Static vehicles.planes.Plane$LA_5F 1 84999.72 37859.97 400.0 0.0
+  38_Static vehicles.planes.Plane$LA_5F 1 85019.41 37883.69 400.0 0.0
+  39_Static vehicles.planes.Plane$LA_5F 1 85038.63 37906.33 400.0 0.0
+  40_Static vehicles.planes.Plane$LA_5F 1 85057.72 37928.33 385.0 0.0
+  41_Static vehicles.planes.Plane$U_2VS 1 85165.13 38033.41 430.0 0.0
+  42_Static vehicles.planes.Plane$U_2VS 1 85148.25 38012.68 414.97 0.0
+  43_Static vehicles.planes.Plane$LI_2 1 86282.61 38409.19 519.97 0.0
+  44_Static vehicles.planes.Plane$LI_2 1 86268.35 38378.75 235.0 0.0
+  45_Static vehicles.planes.Plane$LI_2 1 86238.52 38349.76 205.0 0.0
+  46_Static vehicles.stationary.Stationary$ZIS6_fuel 1 85011.80 37790.87 655.0 0.0
+  47_Static vehicles.stationary.Stationary$ZIS6_fuel 1 85005.30 37795.80 700.0 0.0
+  48_Static vehicles.stationary.Stationary$ZIS6_fuel 1 85000.94 37799.72 670.0 0.0
+  49_Static vehicles.stationary.Stationary$ZIS6_fuel 1 85143.41 38007.44 550.0 0.0
+  50_Static vehicles.stationary.Stationary$ZIS5_radio 1 85329.63 37958.73 540.0 0.0
+  51_Static vehicles.stationary.Stationary$ZIS5_PC 1 86277.22 38395.48 450.0 0.0
+  52_Static vehicles.stationary.Stationary$ZIS5_PC 1 86255.64 38378.30 540.0 0.0
+[Buildings]
+[Target]
+  0 0 0 0 500 48914 56527 0 1 g0110 48938 57953
+  0 0 0 0 500 50825 59426 0 1 g0111 49318 58734
+[Bridge]
+[House]

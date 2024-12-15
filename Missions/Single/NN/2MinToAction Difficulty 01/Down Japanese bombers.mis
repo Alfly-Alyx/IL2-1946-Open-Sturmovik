@@ -1,0 +1,188 @@
+[MAIN]
+  MAP NewGuinea/load.ini
+  TIME 8.5
+  CloudType 1
+  CloudHeight 800.0
+  player UM_NN00
+  army 1
+  playerNum 0
+[Wing]
+  UM_NN00
+  ja0100
+  ja0101
+  ja0102
+  ja0103
+  UM_NN01
+[UM_NN00]
+  Planes 2
+  Skill 0
+  Class air.F4U1C
+  Fuel 45
+  weapons default
+[UM_NN00_Way]
+  NORMFLY 37030.81 162431.10 2000.0 400.0 &0
+  NORMFLY 38580.49 163529.11 2000.0 400.0 &0
+[ja0100]
+  Planes 2
+  Parachute 0
+  Skill 0
+  Class air.G4M2E
+  Fuel 100
+  weapons none
+[ja0100_Way]
+  NORMFLY 41416.35 165226.90 1500.0 311.0 &0
+  NORMFLY 31402.80 157672.80 1500.0 311.0 UM_NN00 0 0
+  GATTACK 22548.49 150696.33 1500.0 311.0 210_Static 0 0
+  NORMFLY 62272.17 174237.52 500.0 300.0 &0
+  LANDING 155463.81 231987.17 0 0 &0
+[ja0101]
+  Planes 3
+  Parachute 0
+  Skill 0
+  Class air.KI_21_I
+  Fuel 100
+  weapons none
+[ja0101_Way]
+  NORMFLY 41887.63 164341.33 1500.0 311.0 &0
+  NORMFLY 32005.63 156874.93 1500.0 311.0 &0
+  GATTACK 23508.64 150328.34 1500.0 311.0 269_Static 0 0
+  NORMFLY 62992.07 172437.77 500.0 300.0 &0
+  LANDING 155463.81 231987.17 0 0 &0
+[ja0102]
+  Planes 3
+  Parachute 0
+  Skill 0
+  Class air.KI_21_II
+  Fuel 100
+  weapons none
+[ja0102_Way]
+  NORMFLY 40681.97 165937.07 1500.0 311.0 &0
+  NORMFLY 30799.97 158470.67 1500.0 311.0 &0
+  GATTACK 22386.20 151529.73 1500.0 311.0 236_Static 0 0
+  NORMFLY 61432.29 176517.20 500.0 300.0 &0
+  LANDING 155463.81 231987.17 0 0 &0
+[ja0103]
+  Planes 2
+  Parachute 0
+  Skill 0
+  Class air.G4M2E
+  Fuel 100
+  weapons none
+[ja0103_Way]
+  NORMFLY 41236.36 165139.20 2000.0 311.0 &0
+  NORMFLY 31402.80 157721.26 2000.0 311.0 &0
+[UM_NN01]
+  Planes 2
+  Skill 0
+  Class air.F4U1D
+  Fuel 45
+  weapons default
+[UM_NN01_Way]
+  NORMFLY 37497.92 161632.40 2000.0 400.0 &0
+  NORMFLY 39003.44 162727.51 2000.0 400.0 &0
+[Chiefs]
+  100_Chief Ships.USSCVGeneric 1 0 1 33.0
+  110_Chief Ships.IJNCVGeneric 2 0 1 100.0
+[100_Chief_Road]
+  17568.00 67197.60 120.00 0 2 8.6111
+  175680.00 23277.60 120.00
+[110_Chief_Road]
+  204960.00 219453.59 120.00 0 2 8.6111
+  380640.00 207741.59 120.00
+[NStationary]
+  210_Static vehicles.planes.Plane$P_51B 1 21537.50 150744.91 509.10 0.0 us
+  211_Static vehicles.planes.Plane$P_51B 1 21552.50 150719.58 509.10 0.0 us
+  212_Static vehicles.planes.Plane$P_51B 1 21567.61 150692.80 509.10 0.0 us
+  213_Static vehicles.planes.Plane$P_51B 1 21581.46 150666.55 509.10 0.0 us
+  214_Static vehicles.planes.Plane$P_51B 1 21597.50 150640.62 509.10 0.0 us
+  215_Static vehicles.planes.Plane$P_51B 1 21612.85 150613.66 509.10 0.0 us
+  216_Static vehicles.planes.Plane$P_51B 1 21662.32 150638.23 509.10 0.0 us
+  217_Static vehicles.planes.Plane$P_51B 1 21646.97 150663.82 509.10 0.0 us
+  218_Static vehicles.planes.Plane$P_51B 1 21631.95 150689.41 509.10 0.0 us
+  219_Static vehicles.planes.Plane$P_51B 1 21618.31 150714.99 509.10 0.0 us
+  220_Static vehicles.planes.Plane$P_38J 1 21953.07 150034.28 420.00 0.0 us
+  221_Static vehicles.planes.Plane$P_38J 1 21983.52 150052.09 420.00 0.0 us
+  222_Static vehicles.planes.Plane$P_38J 1 22012.68 150068.34 420.00 0.0 us
+  223_Static vehicles.planes.Plane$P_38J 1 22043.40 150086.37 420.00 0.0 us
+  224_Static vehicles.planes.Plane$P_38J 1 22073.68 150104.18 420.00 0.0 us
+  225_Static vehicles.planes.Plane$P_38J 1 22102.18 150120.21 420.00 0.0 us
+  226_Static vehicles.planes.Plane$P_38J 1 21975.66 149992.35 420.00 0.0 us
+  227_Static vehicles.planes.Plane$P_38J 1 22006.28 150010.53 420.00 0.0 us
+  228_Static vehicles.planes.Plane$P_38J 1 22034.02 150026.31 420.00 0.0 us
+  229_Static vehicles.planes.Plane$P_38J 1 22066.54 150044.49 420.00 0.0 us
+  230_Static vehicles.planes.Plane$B_17G 1 20993.20 150277.93 375.00 0.0 us
+  231_Static vehicles.planes.Plane$B_17G 1 20955.35 149904.79 375.00 0.0 us
+  232_Static vehicles.planes.Plane$B_17G 1 21093.43 150208.23 375.00 0.0 us
+  233_Static vehicles.planes.Plane$B_17G 1 21072.58 150136.99 375.00 0.0 us
+  234_Static vehicles.planes.Plane$B_17G 1 21054.07 150063.28 375.00 0.0 us
+  235_Static vehicles.planes.Plane$B_17G 1 21035.20 149984.97 375.00 0.0 us
+  236_Static vehicles.planes.Plane$B_17G 1 20973.74 150199.06 375.00 0.0 us
+  237_Static vehicles.planes.Plane$B_17G 1 20953.25 150121.21 375.00 0.0 us
+  238_Static vehicles.planes.Plane$B_17G 1 20933.79 150044.38 375.00 0.0 us
+  239_Static vehicles.planes.Plane$B_17G 1 20912.79 149970.11 375.00 0.0 us
+  252_Static vehicles.stationary.Stationary$DiamondT_US 1 21049.52 150074.67 645.00 0.0
+  253_Static vehicles.stationary.Stationary$DiamondT_US 1 20929.46 150055.16 640.00 0.0
+  254_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 22010.74 150018.37 680.00 0.0
+  255_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 22293.19 149603.86 465.00 0.0
+  256_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 21983.50 149989.89 700.00 0.0
+  257_Static vehicles.stationary.Stationary$Chevrolet_medic_US 1 22298.47 149602.94 460.00 0.0
+  258_Static vehicles.stationary.Stationary$Chevrolet_medic_US 1 21759.22 150472.11 405.00 0.0
+  259_Static vehicles.stationary.Stationary$Chevrolet_medic_US 1 20898.96 149897.74 465.00 0.0
+  260_Static vehicles.stationary.Stationary$DiamondT_US 1 20890.52 149900.20 465.00 0.0
+  261_Static vehicles.stationary.Stationary$DiamondT_US 1 21068.67 150149.85 645.00 0.0
+  262_Static vehicles.stationary.Stationary$DiamondT_US 1 20949.63 149921.08 620.00 0.0
+  263_Static vehicles.stationary.Stationary$DiamondT_US 1 21771.82 150487.14 420.00 0.0
+  264_Static vehicles.stationary.Stationary$DiamondT_US 1 20884.88 149901.86 465.00 0.0
+  265_Static vehicles.stationary.Stationary$DiamondT_US 1 21778.42 150491.23 420.00 0.0
+  266_Static vehicles.stationary.Stationary$WillisMBt_US 1 22264.16 149609.88 460.00 0.0
+  267_Static vehicles.stationary.Stationary$WillisMBt_US 1 22260.60 149611.12 465.00 0.0
+  268_Static vehicles.stationary.Stationary$WillisMBt_US 1 22015.52 150007.75 520.00 0.0
+  269_Static vehicles.stationary.Stationary$WillisMBt_US 1 22256.10 149611.86 465.00 0.0
+  270_Static vehicles.stationary.Stationary$WillisMBt_US 1 21974.25 149983.76 625.00 0.0
+[Buildings]
+[Target]
+  0 0 0 0 500 62992 178256 0 3 ja0102 61432 176517
+  0 0 0 0 500 64191 174357 0 3 ja0100 62272 174237
+  0 0 0 0 500 64611 172137 0 3 ja0101 62992 172437
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 1723.15 155387.51 1
+  FrontMarker1 9261.95 160880.06 1
+  FrontMarker2 18200.81 162280.12 1
+  FrontMarker3 23935.48 155251.40 1
+  FrontMarker4 44276.21 150633.56 1
+  FrontMarker5 55033.23 154849.02 1
+  FrontMarker6 64187.48 150864.23 1
+  FrontMarker7 75926.47 143325.43 1
+  FrontMarker8 86157.69 137294.39 1
+  FrontMarker9 91865.64 128032.44 1
+  FrontMarker10 91327.16 116401.15 1
+  FrontMarker11 83788.36 110370.11 1
+  FrontMarker12 72803.25 104015.98 1
+  FrontMarker13 65587.55 97661.85 1
+  FrontMarker14 75435.46 45919.76 1
+  FrontMarker15 174298.62 64985.58 2
+  FrontMarker16 81742.11 98523.43 2
+  FrontMarker17 98004.38 114462.60 2
+  FrontMarker18 100373.71 134063.48 2
+  FrontMarker19 85511.51 150218.04 2
+  FrontMarker20 64725.97 161418.55 2
+  FrontMarker21 33576.73 167352.45 2
+  FrontMarker22 10015.83 171111.29 2
+  FrontMarker23 51479.22 168849.65 2
+  FrontMarker24 22077.91 175311.47 2
+  FrontMarker25 126407.77 25076.68 1
+  FrontMarker26 161101.20 8245.21 1
+  FrontMarker27 48390.99 160181.95 2
+
+
+
+
+
+[WEATHER]
+WindVelocity 9
+WindDirection 27
+WindTop 1480
+WindTurbulence 0
+WindGust 1

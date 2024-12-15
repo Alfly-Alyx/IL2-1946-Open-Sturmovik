@@ -1,0 +1,204 @@
+[MAIN]
+  MAP Net2Summer/load.ini
+  TIME 14.0
+  WEAPONSCONSTANT 1
+  CloudType 2
+  CloudHeight 1100.0
+  player g0100
+  army 2
+  playerNum 0
+[Wing]
+  g0100
+  usa0101
+  usa0102
+  usa0103
+  II_JG101
+  usa0110
+  usa0121
+[g0100]
+  Planes 3
+  Skill0 3
+  Skill1 2
+  Skill2 1
+  Skill3 1
+  Class air.HE_LERCHE3
+  Fuel 100
+  weapons 3x4
+[g0100_Way]
+  TAKEOFF 20714.62 34047.13 0 0 &0
+  NORMFLY 12148.91 15336.77 3000.00 300.00 &0
+  NORMFLY 31456.71 15473.90 3000.00 300.00 &0
+  NORMFLY 25268.25 30609.39 500.00 300.00 &0
+  LANDING 20905.31 34035.45 0 0 &0
+[usa0101]
+  Planes 3
+  Skill 1
+  Class air.B_25J1
+  Fuel 100
+  weapons 12x100lbs
+[usa0101_Way]
+  NORMFLY 9518.35 15355.94 3000.00 300.00 &0
+  NORMFLY 51401.18 16261.30 3000.00 280.00 &0
+[usa0102]
+  Planes 3
+  Skill 1
+  Class air.B_25J1
+  Fuel 100
+  weapons 12x100lbs
+[usa0102_Way]
+  NORMFLY 8592.94 15626.09 3000.00 300.00 usa0101 0 &0
+[usa0103]
+  Planes 3
+  Skill 1
+  Class air.B_25J1
+  Fuel 100
+  weapons 12x100lbs
+[usa0103_Way]
+  NORMFLY 8712.03 14938.24 3000.00 300.00 usa0101 0 &0
+[II_JG101]
+  Planes 1
+  Skill 1
+  Class air.HE_LERCHE3
+  Fuel 2
+  weapons 3x4
+[II_JG101_Way]
+  TAKEOFF 20775.46 33895.29 0 0 &0
+  NORMFLY 13499.42 16789.48 3500.00 280.00 &0
+[usa0110]
+  Planes 1
+  Skill 1
+  Class air.B_29
+  Fuel 100
+  weapons default
+  StartTime 9
+[usa0110_Way]
+  NORMFLY 51074.12 29307.45 5250.00 300.00 &0
+[usa0121]
+  Planes 2
+  Skill0 2
+  Skill1 1
+  Skill2 2
+  Skill3 1
+  Class air.P_47D27
+  Fuel 100
+  weapons tank
+[usa0121_Way]
+  NORMFLY 10445.94 14275.12 3500.00 300.00 &0
+  NORMFLY 51127.77 15305.07 3500.00 300.00 &0
+[Chiefs]
+  0_Chief Vehicles.DemagD7 2
+  1_Chief Vehicles.BikeBMW 2
+[0_Chief_Road]
+  20705.69 34040.27 120.00 0 2 3.055555582046509
+  20597.87 33950.39 120.00 0 2 3.055555582046509
+  20518.59 33725.94 120.00
+[1_Chief_Road]
+  20613.76 33995.43 120.00 0 2 3.055555582046509
+  20773.24 34099.79 120.00 0 2 3.055555582046509
+  20897.80 34101.17 120.00
+[NStationary]
+  0_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 35633.67 26593.60 360.00 0.0
+  1_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 35654.12 26565.11 360.00 0.0
+  2_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 35653.20 26571.61 390.00 0.0
+  3_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 35638.14 26578.87 660.00 0.0
+  4_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 35625.41 26531.46 420.00 0.0
+  6_Static vehicles.stationary.Stationary$Kettenkrad 2 35620.24 26529.87 450.00 0.0
+  5_Static vehicles.stationary.Stationary$Flak38_20mm 2 35739.24 26535.56 360.00 0.0
+  10_Static vehicles.stationary.Stationary$Flak38_20mm 2 35545.18 26680.52 360.00 0.0
+  12_Static vehicles.stationary.Stationary$Flak38_20mm 2 35900.76 26314.65 360.00 0.0
+  13_Static vehicles.stationary.Stationary$SdKfz6Flak37 2 20870.22 34105.30 390.00 0.0
+  14_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 20889.10 34118.47 660.00 0.0
+  15_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 20552.11 33713.50 600.00 0.0
+  16_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 20555.50 33709.72 690.00 0.0
+  20_Static vehicles.stationary.Stationary$Kettenkrad 2 20475.13 33736.15 570.00 0.0
+  21_Static vehicles.stationary.Stationary$Kettenkrad 2 20387.02 33716.45 660.00 0.0
+  22_Static vehicles.stationary.Stationary$Kettenkrad 2 20478.01 33741.29 570.00 0.0
+  17_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 20572.56 33646.32 660.00 0.0
+  23_Static vehicles.stationary.Stationary$RSO 2 20561.41 33668.59 630.00 0.0
+  24_Static vehicles.stationary.Stationary$RSO 2 20499.72 33710.10 630.00 0.0
+  25_Static vehicles.stationary.Stationary$OpelBlitzMaultier 2 20500.66 33704.64 660.00 0.0
+  27_Static vehicles.stationary.Stationary$OpelBlitzMaultier 2 20446.63 33687.60 630.00 0.0
+  28_Static vehicles.stationary.Stationary$Wirbelwind 2 20516.61 33718.93 360.00 0.0
+  29_Static vehicles.stationary.Stationary$OpelBlitzMaultierAA 2 20372.07 33717.31 360.00 0.0
+  30_Static vehicles.stationary.Stationary$SdKfz251 2 20451.49 33688.24 630.00 0.0
+  31_Static vehicles.stationary.Stationary$SdKfz251 2 20509.83 33688.75 660.00 0.0
+  32_Static vehicles.stationary.Stationary$VW82t 2 20491.09 33742.75 630.00 0.0
+  33_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 21356.36 34224.32 570.00 0.0
+  34_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 21348.16 34228.78 480.00 0.0
+  35_Static vehicles.stationary.Stationary$Flak38_20mm 2 21272.78 34278.71 570.00 0.0
+  37_Static vehicles.lights.Searchlight$SL_ManualBlue 2 21377.49 34218.93 570.00 0.0
+  36_Static vehicles.stationary.Stationary$Flak18_37mm 2 21373.16 34220.02 570.00 0.0
+  38_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 20570.22 33650.87 660.00 0.0
+  18_Static vehicles.planes.Plane$HE_LERCHE3 2 20384.47 33712.28 213.69 0.0 null
+  39_Static vehicles.planes.Plane$HE_LERCHE3 2 20477.13 33719.83 213.69 0.0 null
+  40_Static vehicles.planes.Plane$HE_LERCHE3 2 20387.98 33687.66 213.69 0.0 null
+  41_Static vehicles.planes.Plane$HE_LERCHE3 2 20412.79 33665.42 213.69 0.0 null
+  42_Static vehicles.planes.Plane$HE_LERCHE3 2 20339.69 33721.68 213.69 0.0 null
+  43_Static vehicles.stationary.Stationary$Kettenkrad 2 20388.77 33690.52 360.00 0.0
+  26_Static vehicles.stationary.Stationary$OpelBlitz6700A_medic 2 20442.47 33688.50 630.00 0.0
+  19_Static vehicles.stationary.Stationary$OpelBlitzMaultier 2 20469.44 33728.93 660.00 0.0
+  44_Static vehicles.lights.Searchlight$SL_ManualBlue 2 20373.88 33723.45 570.00 0.0
+  45_Static vehicles.lights.Searchlight$SL_ManualBlue 2 20585.64 33750.12 570.00 0.0
+  11_Static vehicles.planes.Plane$BF_109G10 2 24804.73 27746.29 390.00 0.0 null
+  46_Static vehicles.planes.Plane$BF_109G10 2 24920.24 27735.58 360.00 0.0 null
+  47_Static vehicles.planes.Plane$BF_109G10 2 24827.76 27753.53 420.00 0.0 null
+  48_Static vehicles.planes.Plane$BF_109G10 2 24772.03 27595.62 270.00 0.0 null
+  49_Static vehicles.planes.Plane$BF_109G10 2 24985.51 27783.45 300.00 0.0 null
+  50_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 24784.79 27687.16 660.00 0.0
+  51_Static vehicles.stationary.Stationary$OpelBlitz6700A_radio 2 24976.81 27816.63 600.00 0.0
+  52_Static vehicles.stationary.Stationary$Kettenkrad 2 24913.71 27815.54 450.00 0.0
+  53_Static vehicles.stationary.Stationary$Kettenkrad 2 24921.87 27758.97 390.00 0.0
+  54_Static vehicles.stationary.Stationary$OpelBlitzMaultierAA 2 24823.96 27747.54 600.00 0.0
+  55_Static vehicles.stationary.Stationary$OpelBlitzMaultierAA 2 24810.36 27718.71 540.00 0.0
+  7_Static vehicles.planes.Plane$FI_156 2 20367.83 33668.72 330.99 0.0 null
+[Buildings]
+  0_bld House$AirdromeMaskingnet 1 21285.48 34282.92 570.00
+  1_bld House$AirdromeMaskingnet 1 21337.42 34245.58 480.00
+  2_bld House$AirdromeMaskingnet 1 20367.92 33710.69 480.00
+  3_bld House$AirdromeMaskingnet 1 20506.84 33687.97 480.00
+  4_bld House$AirdromeMaskingnet 1 20446.41 33691.36 450.00
+  5_bld House$FurnitureSandbag_Wall 1 20467.13 33731.64 570.00
+  6_bld House$FurnitureSandbag_Wall 1 20577.18 33644.51 390.00
+  7_bld House$FurnitureSandbag_Wall 1 20578.52 33650.02 360.00
+  8_bld House$FurnitureSandbag_Wall 1 20558.24 33706.08 450.00
+  9_bld House$FurnitureSandbag_Wall 1 20563.31 33709.12 390.00
+  10_bld House$FurnitureSandbag_Wall 1 20553.68 33716.47 510.00
+  11_bld House$AirdromeMaskingnet 1 20469.52 33655.46 510.00
+  12_bld House$AirdromeMaskingnet 1 20555.93 33712.10 510.00
+  13_bld House$AirdromeMaskingnet 1 20572.45 33649.89 480.00
+  14_bld House$FurnitureSandbags_Round 1 35901.23 26313.96 600.00
+  15_bld House$FurnitureSandbags_Round 1 35738.87 26535.39 450.00
+  16_bld House$FurnitureSandbags_Round 1 35545.01 26680.14 660.00
+  17_bld House$FurnitureSandbags_Round 1 21373.19 34219.10 660.00
+  18_bld House$RussiaKievRural_02 0 24929.48 27838.38 600.00
+  19_bld House$RussiaKievRural_02 1 24952.87 27851.44 600.00
+  20_bld House$RussiaKievRural_02 0 24975.18 27861.78 600.00
+  21_bld House$RussiaKievRural_02 0 25001.83 27854.16 690.00
+  22_bld House$AirdromeBarrack 0 25174.81 27782.36 690.00
+  23_bld House$AirdromeMaskingnet 1 20366.35 33667.88 693.49
+[Target]
+  3 2 1 90 501 20437 34042 1950
+  0 0 0 0 250 9250 16277 0 0 usa0101 9518 15355
+  0 2 0 0 500 7529 13874 0 0 usa0103 8712 14938
+  0 2 0 0 500 7247 16851 0 0 usa0102 8592 15626
+[StaticCamera]
+  20526 33818 2
+  21143 34309 10
+[Bridge]
+[House]
+  Y1My 1
+  Y1wy Y0
+  X1wy 1
+
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 5
+WindDirection 343
+WindTop 8219
+WindTurbulence 0
+WindGust 1

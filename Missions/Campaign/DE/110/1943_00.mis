@@ -1,0 +1,290 @@
+[MAIN]
+  MAP SandsOfTime/load.ini
+  TIME 10.0
+  WEAPONSCONSTANT 1
+  CloudType 0
+  CloudHeight 1500.0
+  player 7_ZG26_22
+  army 2
+  playerNum 0
+[Wing]
+  gb0100
+  7_ZG26_22
+  g0101
+  gb0101
+  RAF_No003SQN02
+  g0102
+  i0102
+  RAF_No001SQN03
+  g0103
+[gb0100]
+  Planes 3
+  Skill 2
+  skin0 Beauf-Generic MidEast_Azure_41.bmp
+  skin1 Beauf-Generic MidEast_Azure_41.bmp
+  skin2 Beauf-Generic MidEast_Azure_41.bmp
+  skin3 Beauf-Generic MidEast_Azure_41.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.BEAU21
+  Fuel 100
+  weapons 8xrock
+[gb0100_Way]
+  TAKEOFF 14379.60 26740.23 0 0 &0
+  GATTACK 18567.39 43202.86 500.00 400.00 1_Chief 0 &0
+  GATTACK 15561.73 47672.10 500.00 400.00 2_Chief 0 &0
+  NORMFLY 10846.59 29969.48 1000.00 400.00 &0
+  NORMFLY 10383.94 27707.63 1000.00 250.00 &0
+  LANDING 12842.83 26740.23 0 0 &0
+[7_ZG26_22]
+  Planes 4
+  Skill 2
+  skin0 BF-110_3U+FR_Alfred_Wehmeyer_7-ZG26_1942_bl.bmp
+  skin1 BF-110_3U+FR_Alfred_Wehmeyer_7-ZG26_1942_bl.bmp
+  skin2 BF-110_3U+FR_Alfred_Wehmeyer_7-ZG26_1942_bl.bmp
+  skin3 BF-110_3U+FR_Alfred_Wehmeyer_7-ZG26_1942_bl.bmp
+  Class air.BF_110G2
+  Fuel 75
+  weapons default
+[7_ZG26_22_Way]
+  TAKEOFF 45736.57 44546.46 0 0 &0
+  NORMFLY 44568.67 43026.51 500.00 300.00 gb0100 1 &0
+  NORMFLY 13211.24 44157.43 1000.00 450.00 gb0100 2 &0
+  NORMFLY 12800.00 39685.14 1000.00 450.00 &0
+  NORMFLY 43849.31 41169.29 1500.00 400.00 &0
+  NORMFLY 46367.87 43591.97 1000.00 300.00 &0
+  LANDING 46618.03 45805.30 0 0 &0
+[g0101]
+  Planes 2
+  OnlyAI 1
+  Skill0 3
+  Skill1 2
+  Skill2 2
+  Skill3 2
+  skin0 Bf109F4 Marseille.bmp
+  skin1 Bf109F4 Marseille unmarked.bmp
+  skin2 $109F4-JG27-NM.bmp
+  skin3 $109F4-JG27-NM.bmp
+  numberOn0 0
+  Class air.BF_109F4
+  Fuel 75
+  weapons default
+[g0101_Way]
+  NORMFLY 42255.43 26833.73 1000.00 450.00 gb0101 0 &0
+  NORMFLY 13776.71 45956.62 1000.00 450.00 &0
+  NORMFLY 41227.31 22926.91 1000.00 450.00 &0
+  NORMFLY 38965.46 15832.93 1000.00 250.00 &0
+  LANDING 43297.07 14359.86 0 0 &0
+[gb0101]
+  Planes 2
+  Skill 1
+  skin0 RAF desert Jul 42.bmp
+  skin1 RAF desert Jul 42.bmp
+  skin2 RAF desert Jul 42.bmp
+  skin3 RAF desert Jul 42.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.B_25C25
+  Fuel 75
+  weapons 2x1000lbs
+[gb0101_Way]
+  NORMFLY 7813.66 10075.51 1000.00 400.00 &0
+  GATTACK 18957.30 43266.47 500.00 400.00 0_Chief 0 &0
+  GATTACK 15497.78 47637.58 500.00 400.00 4_Chief 0 &0
+  NORMFLY 10743.78 30020.88 1000.00 400.00 &0
+  NORMFLY 10229.72 27656.22 1000.00 300.00 &0
+  LANDING 12842.83 26740.23 0 0 &0
+[RAF_No003SQN02]
+  Planes 4
+  Skill0 2
+  Skill1 1
+  Skill2 1
+  Skill3 1
+  skin0 10366-desertredspinner.bmp
+  skin1 10366-desertredspinner.bmp
+  skin2 10366-desertredspinner.bmp
+  skin3 10366-desertredspinner.bmp
+  Class air.HurricaneMkIIc
+  Fuel 75
+  weapons default
+[RAF_No003SQN02_Way]
+  NORMFLY 7813.66 8636.14 2000.00 400.00 gb0101 0 &0
+  NORMFLY 18989.60 44704.16 1000.00 450.00 &0
+  NORMFLY 14856.22 47395.98 1000.00 400.00 &0
+  NORMFLY 9715.66 29969.48 1000.00 400.00 &0
+  NORMFLY 10332.53 27707.63 1000.00 250.00 &0
+  LANDING 12842.83 26740.23 0 0 &0
+[g0102]
+  Planes 4
+  OnlyAI 1
+  Skill 3
+  skin0 $109F4-JG3-NM.bmp
+  skin1 $109F4-JG3-NM.bmp
+  skin2 $109F4-JG3-NM.bmp
+  skin3 $109F4-JG3-NM.bmp
+  Class air.BF_109F4
+  Fuel 100
+  weapons default
+[g0102_Way]
+  TAKEOFF 45736.57 44546.46 0 0 &0
+  NORMFLY 44620.08 43026.51 500.00 300.00 gb0101 1 &0
+  NORMFLY 12851.41 44106.02 1000.00 450.00 gb0101 2 &0
+  NORMFLY 12748.59 39633.73 1000.00 450.00 &0
+  NORMFLY 44025.60 41191.36 1000.00 400.00 &0
+  NORMFLY 46316.47 43540.56 1000.00 250.00 &0
+  LANDING 46618.03 45805.30 0 0 &0
+[i0102]
+  Planes 2
+  Skill0 3
+  Skill1 1
+  Skill2 3
+  Skill3 3
+  skin0 5112-MrclPasqualeBartolucci360aSquadrigliaMalta1942.bmp
+  skin1 5895-MagVittorioMinguzzi359aSquadrigliaNaples1943.bmp
+  skin2 MACCHI  C.202        MM 7842   378-11.bmp
+  skin3 mc-202-sargente-maggiore-teresio.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.MC_202
+  Fuel 50
+  weapons default
+[i0102_Way]
+  NORMFLY 42563.86 27399.20 1000.00 450.00 &0
+  NORMFLY 13982.33 46162.25 1000.00 450.00 &0
+  NORMFLY 41587.15 23081.12 1000.00 450.00 &0
+  NORMFLY 39222.49 15884.34 1000.00 250.00 &0
+  LANDING 43297.07 14359.86 0 0 &0
+[RAF_No001SQN03]
+  Planes 4
+  Skill 1
+  skin0 10366-desertredspinner.bmp
+  skin1 10366-desertredspinner.bmp
+  skin2 10366-desertredspinner.bmp
+  skin3 10366-desertredspinner.bmp
+  Class air.HurricaneMkIIc
+  Fuel 50
+  weapons default
+[RAF_No001SQN03_Way]
+  TAKEOFF 4998.27 10456.93 0 0 &0
+  NORMFLY 18381.26 44476.97 1000.00 450.00 &0
+  NORMFLY 15987.15 46419.28 1000.00 450.00 &0
+  NORMFLY 2313.25 13211.24 1000.00 400.00 &0
+  NORMFLY 976.71 9715.66 1000.00 250.00 &0
+  LANDING 3821.03 9469.12 0 0 &0
+[g0103]
+  Planes 1
+  Skill 1
+  skin0 Ju-52KGzbV9Desert.bmp
+  numberOn0 0
+  Class air.JU_52_3MG4E
+  Fuel 100
+  weapons default
+[g0103_Way]
+  NORMFLY 44671.49 34595.98 1500.00 295.00 &0
+  NORMFLY 39376.71 18300.40 1000.00 295.00 &0
+  LANDING 42210.41 15446.52 0 0 &0
+[Chiefs]
+  0_Chief Ships.Tanker 2 0 2 1.0
+  1_Chief Ships.Tanker 2 0 2 1.0
+  2_Chief Ships.Tanker 2 0 2 1.0
+  3_Chief Ships.Tramp 2 0 2 1.0
+  4_Chief Ships.MBoat 2 0 2 1.0
+  5_Chief Ships.Tramp 2 0 2 1.0
+  6_Chief Ships.MBoat 2 0 2 1.0
+  7_Chief Ships.MBoat 2 0 2 1.0
+[0_Chief_Road]
+  13783.50 49798.06 120.00 0 2 3.729722261428833
+  30946.19 38142.97 120.00
+[1_Chief_Road]
+  13301.92 49872.05 120.00 0 2 3.729722261428833
+  31008.04 38012.18 120.00
+[2_Chief_Road]
+  12865.36 49936.59 120.00 0 2 3.729722261428833
+  30965.53 37896.04 120.00
+[3_Chief_Road]
+  13420.83 49356.63 120.00 0 2 2.5722224712371826
+  31007.24 37784.61 120.00
+[4_Chief_Road]
+  12602.80 50515.88 120.00 0 2 6.94444465637207
+  20845.58 45076.25 120.00
+[5_Chief_Road]
+  14724.62 48844.54 120.00 0 2 2.5722224712371826
+  22107.17 43912.30 120.00
+[6_Chief_Road]
+  10630.23 50488.62 120.00 0 2 6.94444465637207
+  14700.91 45888.35 120.00 0 2 6.94444465637207
+  14013.24 44347.02 120.00
+[7_Chief_Road]
+  16752.68 49289.21 120.00 0 2 6.94444465637207
+  14264.22 41068.41 120.00
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 14702.01 25651.41 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 13159.84 27810.44 360.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 12131.73 25651.41 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 16038.55 27604.82 360.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 6065.86 11155.02 360.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 3906.83 11771.89 360.00 0.0 0
+  10_Static vehicles.artillery.Artillery$Flak30_20mm 2 45922.69 44329.91 360.00 0.0 0
+  11_Static vehicles.artillery.Artillery$Flak30_20mm 2 38811.24 15010.44 360.00 0.0 0
+  12_Static vehicles.artillery.Artillery$Flak30_20mm 2 40764.66 16758.23 360.00 0.0 0
+  13_Static vehicles.artillery.Artillery$Flak30_20mm 2 42409.64 17683.53 360.00 0.0 0
+  14_Static vehicles.artillery.Artillery$Flak30_20mm 2 38759.84 17375.10 360.00 0.0 0
+  15_Static vehicles.artillery.Artillery$Flak30_20mm 2 41998.39 13159.84 360.00 0.0 0
+  16_Static vehicles.artillery.Artillery$Flak30_20mm 2 32796.79 5397.59 360.00 0.0 0
+  17_Static vehicles.artillery.Artillery$Flak30_20mm 2 34338.96 5911.65 360.00 0.0 0
+  18_Static vehicles.artillery.Artillery$Flak18_88mm 2 40918.88 14393.57 360.00 0.0 0
+  19_Static vehicles.artillery.Artillery$Flak18_88mm 2 35572.69 4883.53 360.00 0.0 0
+  20_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 15832.93 26679.52 360.00 0.0 0
+  21_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 16552.61 25651.41 360.00 0.0 0
+  32_Static vehicles.artillery.Artillery$Flak18_88mm 2 42409.64 18917.27 360.00 0.0 0
+  33_Static vehicles.artillery.Artillery$Flak18_88mm 2 41587.15 18300.40 360.00 0.0 0
+  34_Static vehicles.artillery.Artillery$Flak18_88mm 2 40970.28 17991.97 360.00 0.0 0
+  36_Static vehicles.artillery.Artillery$Flak18_88mm 2 37834.54 16963.86 360.00 0.0 0
+  37_Static vehicles.artillery.Artillery$Flak18_88mm 2 40199.20 17786.35 360.00 0.0 0
+  6_Static vehicles.planes.Plane$BF_110C4 2 46013.74 44754.82 205.00 0.0 null
+  7_Static vehicles.planes.Plane$BF_110C4 2 45990.34 44727.01 205.00 0.0 null
+  8_Static vehicles.planes.Plane$BF_110C4 2 46322.51 45568.20 385.00 0.0 null
+  9_Static vehicles.planes.Plane$BF_110C4 2 46231.62 45691.77 384.10 0.0 null
+  22_Static vehicles.planes.Plane$BF_110C4 2 45621.10 45033.58 384.10 0.0 null
+  23_Static vehicles.planes.Plane$JU_88A4 2 45891.04 44568.05 205.00 0.0 null
+  24_Static vehicles.planes.Plane$JU_88A4 2 46071.11 44735.25 205.00 0.0 null
+[Buildings]
+[Target]
+  0 0 0 0 750 15572 47678 0 2 gb0100 15561 47672
+  0 0 0 0 750 15507 47633 0 2 gb0101 15497 47637
+[StaticCamera]
+  13430 49050 100
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 1336.55 37269.08 1
+  FrontMarker1 12285.94 33362.25 1
+  FrontMarker2 22258.63 26319.68 1
+  FrontMarker3 21847.39 10538.15 1
+  FrontMarker4 17375.10 1542.17 1
+  FrontMarker5 20767.87 2107.63 2
+  FrontMarker6 25908.43 12542.97 2
+  FrontMarker7 26114.06 24520.48 2
+  FrontMarker8 24674.70 33773.49 2
+  FrontMarker9 13057.03 38245.78 2
+  FrontMarker10 1490.76 40507.63 2
+
+
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 4
+WindDirection 162
+WindTop 7168
+WindTurbulence 0
+WindGust 0

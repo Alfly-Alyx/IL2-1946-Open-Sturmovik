@@ -1,0 +1,207 @@
+[MAIN]
+  MAP SandsOfTime/load.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 1000.0
+  player i0100
+  army 2
+  playerNum 0
+[Wing]
+  89Squadron00
+  i0100
+  g0101
+  I_SG3_02
+[89Squadron00]
+  Planes 4
+  Skill 1
+  skin0 !P40E-DGEN-RAF.bmp
+  skin1 !P40E-DGEN-RAF.bmp
+  skin2 !P40E-DGEN-RAF.bmp
+  skin3 !P40E-DGEN-RAF.bmp
+  Class air.P_40E
+  Fuel 100
+  weapons 1000lb
+[89Squadron00_Way]
+  NORMFLY 37813.37 19717.10 500.00 300.00 &0
+  NORMFLY 28426.13 32310.82 500.00 300.00 &0
+  GATTACK 27741.86 32766.98 500.00 300.00 10_Chief 0 &0
+  NORMFLY 29815.09 31468.38 500.00 300.00 &0
+  LANDING 42210.41 15446.52 0 0 &0
+[i0100]
+  Planes 2
+  Skill 1
+  skin0 01-Malta MC-202_IIILucchini.bmp
+  numberOn0 0
+  Class air.MC_202_3
+  Fuel 100
+  weapons default
+[i0100_Way]
+  TAKEOFF 14379.60 26740.23 0 0 &0
+  NORMFLY 27825.47 32371.01 500.00 300.00 89Squadron00 2 &0
+  NORMFLY 33946.31 26117.10 500.00 300.00 &0
+  NORMFLY 28623.84 33479.86 500.00 300.00 &0
+  LANDING 14379.60 26740.23 0 0 &0
+[g0101]
+  Planes 3
+  Skill 2
+  skin0 vpmedia_Bf109F4_desert_nm.BMP
+  skin1 vpmedia_Bf109F4_desert_nm.BMP
+  skin2 vpmedia_Bf109F4_desert_nm.BMP
+  Class air.BF_109F4
+  Fuel 100
+  weapons default
+[g0101_Way]
+  NORMFLY 16338.66 27655.36 50.00 300.00 &0
+  NORMFLY 307.13 19914.79 500.00 300.00 &0
+  LANDING 3821.03 9469.12 0 0 &0
+[I_SG3_02]
+  Planes 4
+  Skill 1
+  skin0 vp_desert_campaign.bmp
+  skin1 vp_desert_campaign.bmp
+  skin2 vp_desert_campaign.bmp
+  skin3 vp_desert_campaign.bmp
+  Class air.JU_87D3
+  Fuel 60
+  weapons 1xSC500_2xSC250
+[I_SG3_02_Way]
+  NORMFLY 10386.30 36824.14 2000.00 300.00 &0
+  NORMFLY 18128.81 32905.67 2500.00 300.00 &0
+  NORMFLY 25493.64 30592.36 3000.00 300.00 &0
+  GATTACK 30073.05 31253.31 3000.00 300.00 17_Static 0 &0
+  NORMFLY 22708.22 37768.35 1000.00 300.00 &0
+  NORMFLY 2690.99 26862.74 1000.00 300.00 &0
+  LANDING 3821.03 9469.12 0 0 &0
+[Chiefs]
+  0_Chief Armor.1-M3A1Stuart 1
+  1_Chief Armor.1-ValentineII 1
+  2_Chief Armor.1-MatildaMkII_UK 1
+  3_Chief Armor.1-PzVIE 2
+  4_Chief Armor.1-PzVIB 2
+  5_Chief Vehicles.WillisMB 1
+  6_Chief Vehicles.WillisMBt 1
+  7_Chief Vehicles.VW82t 2
+  8_Chief Vehicles.SdKfz251 2
+  9_Chief Vehicles.GermanyCarsColumnA 2
+  10_Chief Vehicles.GermanyCarsColumnB 2
+  11_Chief Vehicles.GermanyCarsColumnC 2
+  12_Chief Vehicles.GermanyCarsColumnE 2
+[0_Chief_Road]
+  29833.10 31631.15 120.00 0 2 4.1666669845581055
+  29510.94 31761.74 120.00
+[1_Chief_Road]
+  29833.10 31606.91 120.00 0 2 2.3611111640930176
+  29594.62 31706.10 120.00 0 2 2.3611111640930176
+  29527.38 31710.13 120.00 0 2 2.3611111640930176
+  29484.38 31772.68 120.00
+[2_Chief_Road]
+  29862.03 31641.32 120.00 0 2 2.0833334922790527
+  29520.35 31795.36 120.00
+[3_Chief_Road]
+  29341.29 31950.95 120.00 0 2 1.9444445371627808
+  29573.51 31739.84 120.00
+[4_Chief_Road]
+  29302.19 31940.79 120.00 0 2 1.9444445371627808
+  29550.05 31678.07 120.00
+[5_Chief_Road]
+  29778.37 31481.03 120.00 0 2 3.055555582046509
+  29610.20 31725.80 120.00 0 2 3.055555582046509
+  29455.45 31721.85 120.00
+[6_Chief_Road]
+  29503.92 31415.35 120.00 0 2 3.055555582046509
+  29417.91 31526.38 120.00 0 2 3.055555582046509
+  29412.44 31706.22 120.00
+[7_Chief_Road]
+  29141.12 31807.08 120.00 0 2 3.055555582046509
+  29338.94 31662.43 120.00 0 2 3.055555582046509
+  29499.23 31684.32 120.00 0 2 3.055555582046509
+  29645.45 31886.84 120.00
+[8_Chief_Road]
+  29176.87 31642.89 120.00 0 2 2.6388890743255615
+  29339.72 31666.34 120.00 0 2 2.6388890743255615
+  29502.36 31671.81 120.00 0 2 2.6388890743255615
+  29634.50 31891.53 120.00 0 2 2.6388890743255615
+  29219.31 32015.07 120.00
+[9_Chief_Road]
+  28066.26 32551.33 120.00 0 2 2.6388890743255615
+  29207.96 31890.71 120.00
+[10_Chief_Road]
+  27986.90 32601.30 120.00 0 2 2.6388890743255615
+  29125.14 31932.12 120.00
+[11_Chief_Road]
+  27913.85 32648.17 120.00 0 2 2.3611111640930176
+  29042.32 31952.82 120.00
+[12_Chief_Road]
+  27825.12 32695.98 120.00 0 2 2.6388890743255615
+  28966.41 32001.13 120.00
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Maxime 1 29656.85 31645.78 570.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Maxime 1 29614.28 31598.77 570.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Maxime 1 29618.38 31739.13 510.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Katyusha 1 30219.65 31048.57 570.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Katyusha 1 30269.79 31080.01 570.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Katyusha 1 29455.87 31142.41 570.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Katyusha 1 30324.95 31144.36 570.00 0.0 0
+  7_Static vehicles.artillery.Artillery$_50calMG_water_US 1 29310.34 31626.68 635.00 0.0 0
+  8_Static vehicles.artillery.Artillery$_50calMG_water_US 1 29208.54 31664.54 635.00 0.0 0
+  9_Static vehicles.artillery.Artillery$_50calMG_water_US 1 29246.48 31545.97 635.00 0.0 0
+  10_Static vehicles.artillery.Artillery$_50calMG_water_US 2 29040.16 31819.88 395.00 0.0 0
+  11_Static vehicles.artillery.Artillery$_50calMG_water_US 1 29242.59 31907.75 395.00 0.0 0
+  12_Static vehicles.artillery.Artillery$_50calMG_water_US 1 29345.75 31919.61 395.00 0.0 0
+  13_Static vehicles.artillery.Artillery$_50calMG_water_US 1 29023.16 31761.07 395.00 0.0 0
+  14_Static vehicles.artillery.Artillery$_50calMG_water_US 1 28958.02 31758.35 395.00 0.0 0
+  15_Static vehicles.artillery.Artillery$Katyusha 2 28545.87 32094.24 395.00 0.0 0
+  16_Static vehicles.artillery.Artillery$Katyusha 2 28795.94 32311.06 395.00 0.0 0
+  17_Static vehicles.artillery.Artillery$M3A1Stuart 1 29056.80 31592.50 635.00 0.0 0
+  18_Static vehicles.artillery.Artillery$ValentineII 1 29074.59 31601.99 605.00 0.0 0
+  19_Static vehicles.artillery.Artillery$MatildaMkII_UK 1 29081.70 31616.22 605.00 0.0 0
+  20_Static vehicles.artillery.Artillery$PzVIE 2 28761.55 32040.72 365.00 0.0 0
+  21_Static vehicles.artillery.Artillery$PzVIB 2 28803.08 32056.85 695.00 0.0 0
+  22_Static vehicles.stationary.Stationary$GAZ_M1 1 29130.58 31425.96 695.00 0.0
+  23_Static vehicles.stationary.Stationary$WillisMB 1 29040.47 31233.87 665.00 0.0
+  24_Static vehicles.stationary.Stationary$StudebeckerTruck 1 29041.65 31181.70 605.00 0.0
+  25_Static vehicles.stationary.Stationary$ZIS5_PC 1 29042.84 31191.18 545.00 0.0
+  26_Static vehicles.stationary.Stationary$ZIS5_medic 1 29382.84 30948.74 515.00 0.0
+  27_Static vehicles.stationary.Stationary$ZIS5_radio 1 29231.06 31114.74 485.00 0.0
+  28_Static vehicles.stationary.Stationary$ValentineII 1 28940.56 31166.92 575.00 0.0
+  29_Static vehicles.stationary.Stationary$MatildaMkII_UK 1 28958.49 31256.64 545.00 0.0
+  30_Static vehicles.stationary.Stationary$SdKfz251 2 28877.86 31953.85 665.00 0.0
+  31_Static vehicles.stationary.Stationary$PzVIE 2 29440.26 32025.55 365.00 0.0
+  32_Static vehicles.artillery.Artillery$Flak18_88mm 2 13275.98 26565.34 395.00 0.0 0
+  33_Static vehicles.stationary.Stationary$VW82 2 12865.94 26776.00 365.00 0.0
+  34_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 13970.91 26890.71 665.00 0.0
+  35_Static vehicles.planes.Plane$MC_202 2 14029.65 27019.55 449.10 0.0 it
+  36_Static vehicles.planes.Plane$MC_202 2 14063.10 27020.24 449.10 0.0 it
+  37_Static vehicles.planes.Plane$MC_202 2 14094.53 27020.70 449.10 0.0 it
+  38_Static vehicles.planes.Plane$MC_200_7FB 2 13204.66 26611.75 539.10 0.0 it
+  39_Static vehicles.planes.Plane$MC_200_7FB 2 13206.94 26596.06 210.00 0.0 it
+[Buildings]
+[StaticCamera]
+  29021 31131 2
+  29115 31589 2
+  29549 31599 2
+  29028 31980 2
+  29631 31936 2
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 44517.27 43591.97 1
+  FrontMarker1 28478.71 32128.51 1
+  FrontMarker2 26011.24 16706.83 1
+  FrontMarker3 26628.11 462.65 1
+  FrontMarker4 27810.44 411.24 2
+  FrontMarker5 27090.76 16552.61 2
+  FrontMarker6 29095.58 31768.67 2
+  FrontMarker7 44774.30 42923.69 2
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 0
+WindDirection 137
+WindTop 8725
+WindTurbulence 0
+WindGust 0

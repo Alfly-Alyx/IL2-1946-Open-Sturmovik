@@ -1,0 +1,291 @@
+[MAIN]
+  MAP dlv_Philippines/load.ini
+  TIME 11.5
+  CloudType 4
+  CloudHeight 1200.0
+  player usa0100
+  army 1
+  playerNum 0
+[Wing]
+  usa0100
+  IN_NN02
+  IN_NN00
+  usa0121
+  IN_NN03
+  IN_NN01
+  IN_NN10
+  usa0101
+[usa0100]
+  Planes 4
+  Skill 1
+  skin0 p26_philippineaac_67ps.bmp
+  skin1 p26_philippineaac_67ps.bmp
+  skin2 p26_philippineaac_67ps.bmp
+  skin3 p26_philippineaac_67ps.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.P_26
+  Fuel 100
+  weapons default
+[usa0100_Way]
+  TAKEOFF 268484.00 476350.03 0 0 &0
+  NORMFLY 269171.43 476504.26 200.00 300.00 &0
+  NORMFLY 274108.02 475507.25 1500.00 300.00 &0
+  NORMFLY 295081.17 473247.06 500.00 300.00 &0
+  NORMFLY 295729.10 467971.59 500.00 300.00 &0
+  NORMFLY 283390.52 463605.99 1500.00 300.00 IN_NN10 1 &0
+  NORMFLY 267426.46 474245.35 300.00 300.00 &0
+  LANDING 267631.31 475364.38 0 0 &0
+[IN_NN02]
+  Planes 3
+  Skill 1
+  skin0 g4m1-buglords takao kokutai philippines march 1942.bmp
+  skin1 g4m1-buglords takao kokutai philippines march 1942.bmp
+  skin2 g4m1-buglords takao kokutai philippines march 1942.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  Class air.G4M1_11
+  Fuel 100
+  weapons default
+[IN_NN02_Way]
+  NORMFLY 313656.22 425314.68 1500.00 300.00 &0
+  NORMFLY 283064.10 463048.26 1500.00 300.00 &0
+  NORMFLY 271922.20 545286.67 1500.00 300.00 &0
+  NORMFLY 195428.98 698302.43 1500.00 300.00 &0
+[IN_NN00]
+  Planes 4
+  OnlyAI 1
+  Skill 1
+  skin0 Graf_A6M2_Sakai_3-183_nn.bmp
+  skin1 Graf_A6M2_Sakai_3-183_nn.bmp
+  skin2 Graf_A6M2_Sakai_3-183_nn.bmp
+  skin3 Graf_A6M2_Sakai_3-183_nn.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.A6M2_21
+  Fuel 100
+  weapons default
+[IN_NN00_Way]
+  NORMFLY 314034.95 425363.97 1600.00 300.00 IN_NN10 0 &0
+  NORMFLY 283188.80 463110.71 1600.00 300.00 IN_NN02 1 &0
+  NORMFLY 271972.20 545336.67 1600.00 300.00 &0
+  NORMFLY 195479.00 698352.43 1600.00 300.00 &0
+[usa0121]
+  Planes 3
+  OnlyAI 1
+  Skill 1
+  Class air.P_40SUKAISVOLOCHC
+  Fuel 100
+  weapons default
+[usa0121_Way]
+  NORMFLY 313759.22 472375.17 1500.00 300.00 &0
+  NORMFLY 318111.66 463973.95 1500.00 300.00 &0
+  NORMFLY 283434.93 463201.24 1500.00 300.00 IN_NN00 1 &0
+  NORMFLY 278812.64 465060.25 1500.00 300.00 &0
+  LANDING 272647.75 482277.28 0 0 &0
+[IN_NN03]
+  Planes 3
+  Skill 1
+  skin0 g4m1-buglords takao kokutai philippines march 1942.bmp
+  skin1 g4m1-buglords takao kokutai philippines march 1942.bmp
+  skin2 g4m1-buglords takao kokutai philippines march 1942.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  Class air.G4M1_11
+  Fuel 100
+  weapons default
+[IN_NN03_Way]
+  NORMFLY 315937.94 422614.33 1550.00 300.00 &0
+  NORMFLY 283134.07 463108.26 1550.00 300.00 &0
+  NORMFLY 271982.20 545346.67 1550.00 300.00 &0
+  NORMFLY 195489.00 698362.43 1550.00 300.00 &0
+[IN_NN01]
+  Planes 3
+  OnlyAI 1
+  Skill 1
+  skin0 Graf_A6M2_Sakai_3-183_nn.bmp
+  skin1 Graf_A6M2_Sakai_3-183_nn.bmp
+  skin2 Graf_A6M2_Sakai_3-183_nn.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  Class air.A6M2_21
+  Fuel 100
+  weapons default
+[IN_NN01_Way]
+  NORMFLY 313810.90 425419.06 1500.00 300.00 IN_NN02 0 &0
+  NORMFLY 283003.03 462948.88 1500.00 300.00 IN_NN02 1 &0
+  NORMFLY 271872.20 545236.67 1500.00 300.00 &0
+  NORMFLY 195379.00 698252.43 1500.00 300.00 &0
+[IN_NN10]
+  Planes 2
+  Skill 1
+  skin0 g4m1-buglords takao kokutai philippines march 1942.bmp
+  skin1 g4m1-buglords takao kokutai philippines march 1942.bmp
+  numberOn0 0
+  numberOn1 0
+  Class air.G4M1_11
+  Fuel 100
+  weapons default
+[IN_NN10_Way]
+  NORMFLY 313616.20 425274.68 1560.00 300.00 &0
+  NORMFLY 283024.10 463008.26 1560.00 300.00 &0
+  NORMFLY 271882.20 545246.67 1560.00 300.00 &0
+  NORMFLY 195389.00 698262.43 1560.00 300.00 &0
+[usa0101]
+  Planes 3
+  Skill 1
+  skin0 p26_philippineaac_67ps.bmp
+  skin1 p26_philippineaac_67ps.bmp
+  skin2 p26_philippineaac_67ps.bmp
+  Class air.P_26
+  Fuel 100
+  weapons default
+[usa0101_Way]
+  TAKEOFF 268484.00 476350.03 0 0 &0
+  NORMFLY 269217.65 476481.38 500.00 300.00 &0
+  NORMFLY 274155.25 475532.84 500.00 300.00 &0
+  NORMFLY 295075.91 473244.60 500.00 300.00 &0
+  NORMFLY 295853.74 468026.87 500.00 300.00 &0
+  NORMFLY 283617.07 463876.39 1500.00 300.00 IN_NN03 1 &0
+  NORMFLY 267540.79 473736.09 1500.00 300.00 &0
+  LANDING 267631.31 475364.38 0 0 &0
+[Chiefs]
+  0_Chief Ships.IJNFishJunk 1 0 2 1.0
+  1_Chief Ships.IJNFishJunk 1 0 2 1.0
+  2_Chief Ships.IJNFishJunk 1 0 2 1.0
+  3_Chief Ships.IJNFishJunk 1 0 2 1.0
+[0_Chief_Road]
+  275032.66 473953.09 120.00 0 4 2.5722224712371826
+  276300.00 473700.00 120.00
+  277500.00 472900.00 120.00
+  277600.53 472960.66 120.00
+[1_Chief_Road]
+  284286.97 470951.03 120.00 0 4 2.5722224712371826
+  278900.00 471500.00 120.00
+  278500.00 471900.00 120.00
+  278444.09 472067.50 120.00
+[2_Chief_Road]
+  280441.34 471782.16 120.00 0 3 2.5722224712371826
+  281300.00 471500.00 120.00
+  283728.75 469462.38 120.00
+[3_Chief_Road]
+  292065.09 466509.94 120.00 0 2 2.5722224712371826
+  290564.03 466336.22 120.00 0 2 2.5722224712371826
+  287462.44 464798.00 120.00
+[NStationary]
+  0_Static ships.Ship$Tramp 1 262040.07 474462.34 360.00 0.0 0 2 1.0
+  1_Static ships.Ship$Tramp 1 261510.27 474338.42 420.00 0.0 0 2 1.0
+  2_Static ships.Ship$Tramp 1 261278.22 474393.50 420.00 0.0 0 2 1.0
+  3_Static ships.Ship$Tramp 1 261308.60 474457.33 420.00 0.0 0 2 1.0
+  4_Static ships.Ship$Tramp 1 261454.92 474003.39 360.00 0.0 0 2 1.0
+  5_Static ships.Ship$Tramp 1 261351.65 474081.41 390.00 0.0 0 2 1.0
+  6_Static ships.Ship$USSDentDD116 1 261811.46 474063.27 390.00 0.0 0 2 1.0
+  7_Static ships.Ship$USSDentDD116 1 262056.14 474313.18 420.00 0.0 0 2 1.0
+  8_Static ships.Ship$USSDentDD116 1 260787.15 474666.57 420.00 0.0 0 2 1.0
+  9_Static ships.Ship$USSDentDD116 1 261174.96 474489.88 390.00 0.0 0 2 1.0
+  41_Static vehicles.planes.Plane$C_47 1 268269.27 475596.61 434.10 0.0 us
+  42_Static vehicles.planes.Plane$C_47 1 268300.92 475621.66 434.10 0.0 us
+  43_Static vehicles.stationary.Stationary$DiamondT_US 1 268270.39 475620.38 485.00 0.0
+  44_Static vehicles.stationary.Stationary$DiamondT_US 1 268205.04 475810.55 485.00 0.0
+  45_Static vehicles.stationary.Stationary$DiamondT_US 1 268316.90 475870.60 485.00 0.0
+  46_Static vehicles.stationary.Stationary$DiamondT_US 1 268386.38 475673.96 425.00 0.0
+  47_Static vehicles.stationary.Stationary$DiamondT_US 1 268471.74 475831.74 425.00 0.0
+  48_Static vehicles.planes.Plane$U_2VS 1 268492.69 475783.86 500.00 0.0 us
+  49_Static vehicles.planes.Plane$U_2VS 1 268501.61 475803.27 500.00 0.0 us
+  50_Static vehicles.planes.Plane$U_2VS 1 268542.42 475796.93 500.00 0.0 us
+  51_Static vehicles.planes.Plane$U_2VS 1 268227.47 475610.33 529.10 0.0 us
+  52_Static vehicles.planes.Plane$RWD_8 1 268250.44 475928.85 290.00 0.0 us
+  10_Static ships.Ship$Tramp 1 294388.82 462395.18 495.00 0.0 0 2 1.0
+  11_Static ships.Ship$Tramp 1 294708.65 462295.39 495.00 0.0 0 2 1.0
+  12_Static ships.Ship$Tramp 1 294718.88 462144.43 495.00 0.0 0 2 1.0
+  13_Static ships.Ship$Tramp 1 294204.60 461538.05 450.00 0.0 0 2 1.0
+  14_Static ships.Ship$Tramp 1 294053.65 460888.17 450.00 0.0 0 2 1.0
+  15_Static ships.Ship$Tramp 1 293452.38 461246.37 510.00 0.0 0 2 1.0
+  16_Static ships.Ship$Tramp 1 293828.49 462057.44 480.00 0.0 0 2 1.0
+  17_Static ships.Ship$Tramp 1 293698.00 461970.45 450.00 0.0 0 2 1.0
+  18_Static ships.Ship$Tral 1 294285.21 460160.98 450.00 0.0 0 2 1.0
+  19_Static ships.Ship$Tral 1 294336.11 460043.08 360.00 0.0 0 2 1.0
+  20_Static ships.Ship$Tral 1 294283.93 459762.21 360.00 0.0 0 2 1.0
+  21_Static ships.Ship$IJNFishJunk 1 275485.92 475608.99 360.00 0.0 0 2 1.0
+  22_Static ships.Ship$IJNFishJunk 1 277699.35 474448.17 420.00 0.0 0 2 1.0
+  23_Static ships.Ship$IJNFishJunk 1 276007.31 474615.40 420.00 0.0 0 2 1.0
+  24_Static ships.Ship$IJNFishJunk 1 276046.66 474536.70 480.00 0.0 0 2 1.0
+  25_Static ships.Ship$IJNFishJunk 1 280308.61 474792.75 480.00 0.0 0 2 1.0
+  26_Static ships.Ship$IJNFishJunk 1 280299.44 474742.75 450.00 0.0 0 2 1.0
+  27_Static vehicles.stationary.Smoke$Smoke2 0 272020.26 482850.78 450.00 0.00
+  28_Static vehicles.stationary.Smoke$Smoke2 0 272425.27 482891.28 450.00 0.00
+  29_Static vehicles.stationary.Smoke$Smoke2 0 272318.95 483043.16 450.00 0.00
+  30_Static vehicles.stationary.Smoke$Smoke2 0 272177.20 484202.50 450.00 0.00
+[Buildings]
+  0_bld House$Longbarrack 1 268226.60 475823.02 485.00
+  1_bld House$RHouse1 1 268207.63 475795.57 485.00
+  2_bld House$Longbarrack 1 268238.08 475814.04 485.00
+  3_bld House$Longbarrack 1 268378.32 475879.92 440.00
+  4_bld House$Longbarrack 1 268397.29 475882.41 440.00
+  5_bld House$HQ_JP01 1 268370.34 475681.78 440.00
+  6_bld House$HQ_JP01 1 268415.25 475855.96 440.00
+  7_bld House$VehicleM1Black 1 268219.61 475914.85 440.00
+  8_bld House$VehicleM1Black 1 268220.61 475908.37 680.00
+  9_bld House$VehicleM1Black 1 268384.31 475853.47 680.00
+  10_bld House$VehicleM1Black 1 268222.11 475672.30 680.00
+  11_bld House$RAF_Bus 1 268380.32 475644.85 620.00
+  12_bld House$RAF_Bus 1 268205.64 475823.52 620.00
+  13_bld House$RAF_Bus 1 268213.12 475668.80 560.00
+  14_bld House$RAF_Bus 1 268275.03 475866.44 470.00
+  15_bld House$Hangar_briq_bois 1 268379.32 475791.58 530.00
+  16_bld House$Hangar_briq_bois 1 268411.76 475796.57 530.00
+  17_bld House$Hangar_briq_bois 1 268442.21 475801.14 620.00
+  18_bld House$Hangar_briq_bois 1 268464.60 475805.09 620.00
+  19_bld House$Water_Tower 1 268229.19 475792.81 425.00
+  20_bld House$FlagUS 1 268205.53 475860.69 380.00
+  21_bld House$GuyOtterBl 1 268210.10 475910.81 360.00
+  22_bld House$GuyOtterBl 1 268371.45 475642.52 420.00
+  23_bld House$GuyOtterBl 1 268387.08 475859.24 420.00
+  24_bld House$sockstrong 1 268228.19 475933.73 385.00
+[Target]
+  0 0 0 0 500 283395 463613 0 1 IN_NN02 283064 463048
+  0 0 0 0 500 283393 463609 0 1 IN_NN03 283134 463108
+  0 2 0 0 500 283391 463607 0 1 IN_NN10 283024 463008
+  0 1 0 0 500 283393 463601 0 1 IN_NN01 283003 462948
+  0 1 0 0 500 283397 463611 0 1 IN_NN00 283188 463110
+[Bridge]
+[House]
+  gjMR9 d
+[FrontMarker]
+  FrontMarker0 227571.43 707785.71 1
+  FrontMarker1 227571.43 668571.43 1
+  FrontMarker2 218571.43 636428.57 1
+  FrontMarker3 207000.00 598500.00 1
+  FrontMarker4 199928.57 568285.71 1
+  FrontMarker5 197357.14 516214.29 1
+  FrontMarker6 196714.29 467357.14 1
+  FrontMarker7 196714.29 416571.43 1
+  FrontMarker8 182571.43 367714.29 1
+  FrontMarker9 148500.00 345214.29 1
+  FrontMarker10 103500.00 334285.71 1
+  FrontMarker11 64285.71 331071.43 1
+  FrontMarker12 27642.86 325928.57 1
+  FrontMarker13 214071.43 711642.86 2
+  FrontMarker14 212785.71 684642.86 2
+  FrontMarker15 199285.71 650571.43 2
+  FrontMarker16 197357.14 617785.71 2
+  FrontMarker17 192214.29 579857.14 2
+  FrontMarker18 190928.57 552857.14 2
+  FrontMarker19 192857.14 514285.71 2
+  FrontMarker20 190285.71 485357.14 2
+  FrontMarker21 186428.57 445500.00 2
+  FrontMarker22 183214.29 419785.71 2
+  FrontMarker23 164571.43 385714.29 2
+  FrontMarker24 121500.00 366428.57 2
+  FrontMarker25 73928.57 362571.43 2
+  FrontMarker26 21214.29 356142.86 2
+  FrontMarker27 203785.71 489857.14 1
+  FrontMarker28 204428.57 547071.43 1
+  FrontMarker29 199285.71 446785.71 1

@@ -1,0 +1,128 @@
+[MAIN]
+  MAP Hawaii/load.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 1000.0
+  player ja0101
+  army 2
+  playerNum 0
+[Wing]
+  ja0100
+  ja0101
+  UM_NN00
+  UM_NN01
+  UM_NN02
+  ja0102
+  UM_NN10
+  ja0103
+  ja0110
+[ja0100]
+  Planes 4
+  Skill 1
+  Class air.G4M2E
+  Fuel 100
+  weapons default
+[ja0100_Way]
+  NORMFLY 279922.56 55328.58 3000.00 330.00 &0
+  NORMFLY 279943.58 27239.97 3000.00 330.00 &0
+[ja0101]
+  Planes 4
+  Skill 1
+  Class air.MXY_7
+  Fuel 100
+  weapons default
+[ja0101_Way]
+  NORMFLY 280124.48 55319.40 3000.00 330.00 ja0100 0 &0
+  NORMFLY 280134.20 27251.53 3000.00 330.00 ja0100 1 &0
+[UM_NN00]
+  Planes 2
+  OnlyAI 1
+  Skill 0
+  Class air.P_40SUKAISVOLOCHC
+  Fuel 100
+  weapons default
+[UM_NN00_Way]
+  NORMFLY 299820.75 60108.52 2900.00 480.00 ja0101 0 &0
+  NORMFLY 282862.15 40331.63 2900.00 480.00 ja0101 0 &0
+[UM_NN01]
+  Planes 1
+  OnlyAI 1
+  Skill 0
+  Class air.P_40SUKAISVOLOCHC
+  Fuel 100
+  weapons default
+[UM_NN01_Way]
+  NORMFLY 279879.98 58821.20 3300.00 480.00 ja0102 0 &0
+  NORMFLY 280028.35 50801.64 2900.00 480.00 ja0101 0 &0
+[UM_NN02]
+  Planes 1
+  OnlyAI 1
+  Skill 0
+  Class air.P_40SUKAISVOLOCHC
+  Fuel 100
+  weapons default
+[UM_NN02_Way]
+  NORMFLY 280192.45 9987.10 3000.00 330.00 ja0101 0 &0
+  NORMFLY 280499.27 61109.19 2900.00 480.00 ja0100 0 &0
+[ja0102]
+  Planes 2
+  OnlyAI 1
+  Skill 1
+  Class air.A6M3
+  Fuel 100
+  weapons default
+[ja0102_Way]
+  NORMFLY 280004.87 55468.44 3050.00 480.00 ja0101 1 &0
+  NORMFLY 280039.07 27448.30 3050.00 480.00 &0
+[UM_NN10]
+  Planes 1
+  Skill 1
+  Class air.P_40SUKAISVOLOCHC
+  Fuel 100
+  weapons default
+[UM_NN10_Way]
+  NORMFLY 279745.99 58790.37 3350.00 480.00 UM_NN01 0 &0
+  NORMFLY 279849.50 50763.30 3350.00 480.00 UM_NN01 1 &0
+[ja0103]
+  Planes 1
+  Skill 1
+  Class air.A6M3
+  Fuel 100
+  weapons default
+[ja0103_Way]
+  NORMFLY 279425.95 54294.63 3400.00 480.00 ja0100 0 &0
+  NORMFLY 278541.83 57587.31 3400.00 480.00 UM_NN10 0 &0
+[ja0110]
+  Planes 1
+  Skill 1
+  Class air.A6M3
+  Fuel 100
+  weapons default
+[ja0110_Way]
+  NORMFLY 279356.83 54063.53 3400.00 480.00 ja0103 0 &0
+  NORMFLY 278494.91 57293.37 3400.00 480.00 ja0103 1 &0
+[Chiefs]
+  0_Chief Ships.Tramp 1 0 2 1.0
+  1_Chief Ships.Tramp 1 0 2 1.0
+  2_Chief Ships.Tramp 1 0 2 1.0
+  3_Chief Ships.Tramp 1 0 2 1.0
+  4_Chief Ships.BBK_1942 1 0 2 50.0
+[0_Chief_Road]
+  283830.81 43373.90 120.00 0 2 2.5722224712371826
+  283517.56 41881.63 120.00
+[1_Chief_Road]
+  283871.53 42950.01 120.00 0 2 2.5722224712371826
+  283575.63 41568.10 120.00
+[2_Chief_Road]
+  283633.66 43124.14 120.00 0 2 2.5722224712371826
+  283384.00 41550.68 120.00
+[3_Chief_Road]
+  283987.84 43153.15 120.00 0 2 2.5722224712371826
+  283674.28 41637.77 120.00
+[4_Chief_Road]
+  283674.31 43042.84 120.00 0 2 2.5
+  283465.28 41771.31 120.00
+[NStationary]
+[Buildings]
+[Bridge]
+[House]

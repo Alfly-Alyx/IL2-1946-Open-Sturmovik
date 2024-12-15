@@ -1,0 +1,481 @@
+[MAIN]
+  MAP Net8Islands/load.ini
+  TIME 17.333334
+  CloudType 1
+  CloudHeight 1300.0
+  army 1
+  playerNum 0
+[Wing]
+  ja0100
+  ja0101
+  688ShAP00
+  688ShAP11
+  270IAP01
+  270IAP02
+[ja0100]
+  Planes 4
+  Skill 2
+  Class air.KI_84_IB
+  Fuel 50
+  weapons default
+[ja0100_Way]
+  TAKEOFF 35588.05 43974.55 0 0
+  NORMFLY 34557.54 43977.05 600.00 400.00
+  NORMFLY 33507.62 38514.56 1000.00 687.00
+  NORMFLY 24301.29 29804.71 1500.00 320.00
+  NORMFLY 41520.02 39290.79 1000.00 687.00
+  NORMFLY 41539.30 43989.92 800.00 687.00
+  LANDING 37213.29 43985.25 0 0
+[ja0101]
+  Planes 4
+  Skill 2
+  Class air.KI_84_IB
+  Fuel 50
+  weapons default
+[ja0101_Way]
+  TAKEOFF 35409.81 43849.37 0 0
+  NORMFLY 34602.29 43848.81 800.00 400.00
+  NORMFLY 33579.27 38408.67 1500.00 320.00
+  NORMFLY 24495.92 29790.43 1000.00 687.00
+  NORMFLY 41503.16 39310.19 1000.00 687.00
+  NORMFLY 41476.54 43852.90 800.00 687.00
+  LANDING 37077.11 43854.33 0 0
+[688ShAP00]
+  Planes 3
+  Skill 2
+  Skill3 0
+  Class air.IL_2Type3
+  Fuel 50
+  weapons 6xFAB100
+[688ShAP00_Way]
+  TAKEOFF 10500.62 11871.08 0 0
+  NORMFLY 9860.00 15968.18 1500.00 320.00
+  GATTACK 33239.76 38036.00 600.00 320.00 36_Static 0
+  NORMFLY 35218.31 40172.73 600.00 320.00
+  NORMFLY 23452.79 9907.03 600.00 320.00
+  NORMFLY 12187.12 3760.07 500.00 320.00
+  LANDING 10925.72 10296.21 0 0
+[688ShAP11]
+  Planes 3
+  Skill 2
+  Skill3 0
+  Class air.IL_2Type3
+  Fuel 50
+  weapons 6xFAB100
+[688ShAP11_Way]
+  TAKEOFF 10505.10 11865.43 0 0
+  NORMFLY 9928.08 15959.82 1500.00 320.00
+  GATTACK 33022.92 38145.10 600.00 320.00 35_Static 0
+  NORMFLY 35002.76 40187.67 600.00 320.00
+  NORMFLY 23364.07 9965.09 600.00 320.00
+  NORMFLY 12231.94 3577.03 600.00 320.00
+  LANDING 10924.48 10299.92 0 0
+[270IAP01]
+  Planes 4
+  Skill 2
+  Class air.YAK_9U
+  Fuel 50
+  weapons default
+[270IAP01_Way]
+  TAKEOFF 10665.45 11728.56 0 0
+  NORMFLY 10030.92 15953.30 1500.00 320.00
+  NORMFLY 33591.35 37607.94 1500.00 320.00
+  NORMFLY 23326.67 9827.42 1500.00 320.00
+  NORMFLY 12221.96 3620.57 900.00 320.00
+  LANDING 11087.87 10152.05 0 0
+[270IAP02]
+  Planes 2
+  Skill 2
+  Class air.YAK_9U
+  Fuel 50
+  weapons default
+[270IAP02_Way]
+  TAKEOFF 10667.87 11728.06 0 0
+  NORMFLY 9988.32 15947.81 1500.00 320.00
+  NORMFLY 33678.12 37794.66 1500.00 320.00
+  NORMFLY 23536.09 9865.09 1500.00 320.00
+  NORMFLY 12234.98 3412.08 900.00 320.00
+  LANDING 11088.92 10140.42 0 0
+[Chiefs]
+  0_Chief Ships.Tramp 2
+  1_Chief Ships.Destroyer_USSR_Type7_44 2
+  3_Chief Ships.Destroyer_USSR_Type7_44 1
+[0_Chief_Road]
+  38289.96 37956.51 120.00 0 2 2.5722224712371826
+  37213.84 40550.73 120.00 0 2 2.5722224712371826
+  35284.00 40550.72 120.00 0 2 2.5722224712371826
+  35039.47 40246.70 120.00
+[1_Chief_Road]
+  38188.86 38442.89 120.00 0 2 2.5
+  37272.16 40588.83 120.00 0 2 2.5
+  35538.26 40596.22 120.00
+[3_Chief_Road]
+  17886.58 23893.63 120.00 0 2 6.94444465637207
+  13286.05 19410.31 120.00
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Flak18_88mm 2 37177.31 44003.73 450.00 0.0
+  1_Static vehicles.artillery.Artillery$Flak18_88mm 2 37242.53 44003.53 450.00 0.0
+  2_Static vehicles.artillery.Artillery$Flak30_20mm 2 36754.28 43905.20 450.00 0.0
+  3_Static vehicles.artillery.Artillery$Flak30_20mm 2 36874.56 43904.96 450.00 0.0
+  13_Static vehicles.planes.Plane$KI_84_IA 2 37061.72 44148.64 449.10 0.0 ja
+  14_Static vehicles.planes.Plane$KI_84_IA 2 37037.75 44149.13 449.10 0.0 ja
+  19_Static vehicles.planes.Plane$A6M5A 2 37000.45 43648.45 180.00 0.0 ja
+  20_Static vehicles.planes.Plane$A6M5A 2 37000.02 43626.94 180.00 0.0 ja
+  35_Static ships.Ship$Tramp 2 34915.83 40031.77 450.00 0.0
+  36_Static ships.Ship$Tramp 2 35048.65 40073.75 450.00 0.0
+  37_Static ships.Ship$Tramp 2 35081.30 40014.68 450.00 0.0
+  38_Static vehicles.stationary.Stationary$StudebeckerTruck 2 34957.13 39631.55 615.00 0.0
+  39_Static vehicles.stationary.Stationary$StudebeckerTruck 2 34964.87 39630.10 615.00 0.0
+  40_Static vehicles.stationary.Stationary$StudebeckerTruck 2 34973.99 39631.27 615.00 0.0
+  41_Static vehicles.stationary.Stationary$StudebeckerTruck 2 35139.92 39679.42 570.00 0.0
+  42_Static vehicles.stationary.Stationary$StudebeckerTruck 2 35138.87 39666.98 570.00 0.0
+  43_Static vehicles.stationary.Stationary$StudebeckerTruck 2 35137.96 39653.90 570.00 0.0
+  44_Static vehicles.stationary.Stationary$StudebeckerTruck 2 35164.32 39696.58 540.00 0.0
+  46_Static vehicles.artillery.Artillery$Flak18_88mm 2 34786.40 39709.64 585.00 0.0
+  47_Static vehicles.artillery.Artillery$Flak18_88mm 2 34760.57 39709.79 585.00 0.0
+  50_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 10422.64 11193.94 585.00 0.0
+  51_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 10454.87 11018.14 585.00 0.0
+  73_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 11084.07 11064.55 585.00 0.0
+  74_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 11116.25 10951.94 585.00 0.0
+  81_Static vehicles.planes.Plane$LI_2 1 11265.87 10472.33 210.00 0.0 ru
+  82_Static vehicles.planes.Plane$LI_2 1 11288.27 10512.90 210.00 0.0 ru
+  80_Static vehicles.planes.Plane$LI_2 1 11242.98 10431.55 210.00 0.0 ru
+  68_Static vehicles.planes.Plane$LI_2 1 11039.41 11352.15 255.00 0.0 ru
+  69_Static vehicles.planes.Plane$LI_2 1 10986.41 11337.80 255.00 0.0 ru
+  70_Static vehicles.planes.Plane$LI_2 1 10932.02 11322.26 255.00 0.0 ru
+  71_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 10921.61 11326.37 615.00 0.0
+  84_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 10912.22 11319.48 570.00 0.0
+  85_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 10979.08 11328.27 510.00 0.0
+  65_Static vehicles.planes.Plane$IL_2Type3 1 11060.86 10650.50 254.10 0.0
+  66_Static vehicles.planes.Plane$IL_2Type3 1 11088.16 10658.28 254.10 0.0
+  86_Static vehicles.planes.Plane$IL_2Type3 1 11118.98 10666.21 254.10 0.0
+  87_Static vehicles.planes.Plane$IL_2Type3 1 11147.49 10674.35 254.10 0.0
+  90_Static vehicles.planes.Plane$IL_2Type3 1 11291.37 10712.70 254.10 0.0
+  91_Static vehicles.planes.Plane$IL_2Type3 1 11322.10 10720.63 254.10 0.0
+  92_Static vehicles.planes.Plane$IL_2Type3 1 11352.61 10728.56 254.10 0.0
+  33_Static ships.Ship$Destroyer_USSR_Type7_44 2 36749.61 38191.24 540.00 0.0
+  32_Static vehicles.planes.Plane$IL_2Type3 1 11060.08 10863.09 434.10 0.0
+  93_Static vehicles.planes.Plane$IL_2Type3 1 11098.68 10872.30 434.10 0.0
+  94_Static vehicles.planes.Plane$IL_2Type3 1 11137.67 10882.69 434.10 0.0
+  95_Static vehicles.planes.Plane$IL_2Type3 1 11176.47 10893.07 434.10 0.0
+  96_Static vehicles.planes.Plane$IL_2Type3 1 11214.68 10903.26 434.10 0.0
+  97_Static vehicles.planes.Plane$IL_2Type3 1 11253.67 10912.47 434.10 0.0
+  98_Static vehicles.planes.Plane$IL_2Type3 1 11291.68 10923.44 434.10 0.0
+  15_Static vehicles.planes.Plane$KI_84_IB 2 37000.27 43736.44 180.00 0.0 ja
+  16_Static vehicles.planes.Plane$KI_84_IB 2 37000.09 43715.87 180.00 0.0 ja
+  17_Static vehicles.planes.Plane$KI_84_IB 2 37000.67 43693.14 180.00 0.0 ja
+  18_Static vehicles.planes.Plane$KI_84_IB 2 37000.73 43671.30 180.00 0.0 ja
+  8_Static vehicles.planes.Plane$KI_84_IB 2 37087.85 44148.89 449.10 0.0 ja
+  9_Static vehicles.planes.Plane$KI_84_IB 2 37112.06 44148.78 449.10 0.0 ja
+  10_Static vehicles.planes.Plane$KI_84_IB 2 37136.48 44142.25 480.00 0.0 ja
+  11_Static vehicles.planes.Plane$KI_84_IB 2 37162.11 44147.80 449.10 0.0 ja
+  12_Static vehicles.planes.Plane$KI_84_IB 2 37187.41 44146.47 449.10 0.0 ja
+  31_Static vehicles.planes.Plane$KI_84_IB 2 35175.32 43669.21 315.00 0.0 ja
+  30_Static vehicles.planes.Plane$KI_84_IB 2 35191.07 43623.44 315.00 0.0 ja
+  27_Static vehicles.planes.Plane$KI_84_IB 2 35341.12 43515.03 315.00 0.0 ja
+  22_Static vehicles.planes.Plane$KI_84_IB 2 35389.14 43429.13 315.00 0.0 ja
+  23_Static vehicles.planes.Plane$KI_84_IB 2 35407.19 43405.45 300.00 0.0 ja
+  26_Static vehicles.planes.Plane$KI_84_IA 2 35473.97 43350.42 300.00 0.0 ja
+  25_Static vehicles.planes.Plane$KI_84_IA 2 35448.41 43379.98 285.00 0.0 ja
+  34_Static vehicles.planes.Plane$YAK_9U 1 11062.88 11416.56 524.10 0.0
+  45_Static vehicles.planes.Plane$YAK_9U 1 11052.72 11455.31 524.10 0.0
+  60_Static vehicles.planes.Plane$YAK_9U 1 11031.73 11532.12 524.10 0.0
+  61_Static vehicles.planes.Plane$YAK_9U 1 11020.99 11570.97 524.10 0.0
+  62_Static vehicles.planes.Plane$YAK_9U 1 11010.95 11609.63 524.10 0.0
+  63_Static vehicles.planes.Plane$YAK_9U 1 11000.64 11647.78 524.10 0.0
+  64_Static vehicles.planes.Plane$YAK_9U 1 10989.87 11686.63 524.10 0.0
+  55_Static vehicles.planes.Plane$YAK_9U 1 10876.88 11685.06 434.10 0.0
+  54_Static vehicles.planes.Plane$YAK_9U 1 10850.80 11677.96 434.10 0.0
+  53_Static vehicles.planes.Plane$YAK_9U 1 10824.23 11670.79 434.10 0.0
+  52_Static vehicles.planes.Plane$YAK_9U 1 10799.59 11663.73 434.10 0.0
+[Buildings]
+  0_bld House$FurnitureSandbags_Round 1 37177.18 44002.67 630.00
+  1_bld House$FurnitureSandbags_Round 1 37242.56 44002.52 630.00
+  2_bld House$FurnitureSandbags_Round 1 36754.18 43905.17 630.00
+  3_bld House$FurnitureSandbags_Round 1 36874.86 43904.98 630.00
+  4_bld House$Tent_HQ_US 1 37235.66 44158.45 450.00
+  5_bld House$Tent_HQ_US 1 37229.64 44158.41 450.00
+  6_bld House$Tent_HQ_US 1 37224.02 44158.48 450.00
+  7_bld House$Tent_HQ_US 1 37242.44 44158.41 540.00
+  8_bld House$Tent_HQ_US 1 37242.65 44151.45 540.00
+  9_bld House$Tent_HQ_US 1 37242.51 44144.28 540.00
+  10_bld House$AirdromeMaskingnet 1 37188.05 44155.74 630.00
+  11_bld House$AirdromeMaskingnet 1 37162.09 44155.62 630.00
+  12_bld House$AirdromeMaskingnet 1 37138.16 44155.49 630.00
+  13_bld House$AirdromeMaskingnet 1 37111.95 44155.36 630.00
+  14_bld House$AirdromeMaskingnet 1 37088.02 44155.49 630.00
+  15_bld House$AirdromeMaskingnet 1 37061.81 44155.49 630.00
+  16_bld House$AirdromeMaskingnet 1 37037.10 44155.74 630.00
+  17_bld House$FurniturePalmAg2 1 37177.86 44162.77 525.00
+  18_bld House$FurniturePalmAg2 1 37199.51 44158.55 705.00
+  19_bld House$FurniturePalmAg2 1 37190.23 44169.30 705.00
+  20_bld House$FurniturePalmAg2 1 37155.71 44165.93 420.00
+  21_bld House$FurniturePalmAg2 1 37151.71 44152.29 360.00
+  22_bld House$FurniturePalmAg2 1 37125.62 44164.93 360.00
+  23_bld House$FurniturePalmAg2 1 37075.16 44156.95 360.00
+  24_bld House$FurniturePalmAg2 1 37049.83 44167.33 360.00
+  25_bld House$FurniturePalmAg2 1 37068.58 44174.31 420.00
+  26_bld House$FurniturePalmAg2 1 37086.13 44165.53 420.00
+  27_bld House$FurniturePalmAg2 1 37084.33 44184.08 420.00
+  28_bld House$FurniturePalmAg2 1 37048.43 44193.05 420.00
+  29_bld House$FurniturePalmAg2 1 37024.10 44169.92 420.00
+  30_bld House$FurniturePalmAg2 1 37033.67 44166.93 465.00
+  31_bld House$FurniturePalmAg2 1 37020.51 44153.17 465.00
+  32_bld House$FurniturePalmAg1 1 37245.40 44165.50 465.00
+  33_bld House$FurniturePalmAg1 1 37230.24 44164.10 570.00
+  34_bld House$FurniturePalmAg1 1 37251.78 44150.34 570.00
+  35_bld House$FurniturePalmAg1 1 37113.43 44190.36 570.00
+  36_bld House$FurniturePalmAg1 1 37004.93 44193.56 570.00
+  37_bld House$FurniturePalmAg1 1 37221.53 44103.01 570.00
+  38_bld House$FurniturePalmAg1 1 37268.99 44112.18 570.00
+  39_bld House$FurniturePalmAg1 1 37310.88 44144.29 570.00
+  40_bld House$FurniturePalmAg1 1 37253.44 44200.93 570.00
+  41_bld House$FurniturePalmAg1 1 37192.21 44236.44 570.00
+  42_bld House$AirdromeBarrelBlock1 1 37204.04 44149.50 570.00
+  43_bld House$AirdromeBarrelBlock1 1 37206.29 44159.24 600.00
+  44_bld House$AirdromeBarrelBlock1 1 37014.86 44145.53 600.00
+  45_bld House$AirdromeBarrelBlock1 1 37008.88 44152.77 570.00
+  46_bld House$AirdromeBarrelBlock1 1 37006.07 44143.35 570.00
+  47_bld House$FurniturePalmAg1 1 37010.06 43725.74 540.00
+  48_bld House$FurniturePalmAg1 1 37006.78 43747.73 540.00
+  49_bld House$FurniturePalmAg1 1 37008.19 43705.83 480.00
+  50_bld House$FurniturePalmAg1 1 37009.59 43682.84 540.00
+  51_bld House$FurniturePalmAg1 1 37006.57 43660.98 375.00
+  52_bld House$FurniturePalmAg1 1 37005.02 43639.11 375.00
+  53_bld House$FurniturePalmAg1 1 37006.64 43615.14 420.00
+  54_bld House$PortBaseSegment 1 34904.13 39834.49 450.00
+  55_bld House$PortBaseSegment 1 34904.18 39843.13 630.00
+  56_bld House$PortBaseSegment 1 34904.18 39851.83 450.00
+  57_bld House$PortBaseSegment 1 34904.11 39860.51 450.00
+  58_bld House$PortBaseSegment 1 34904.11 39869.19 450.00
+  59_bld House$PortBaseSegment 1 34904.11 39877.88 450.00
+  60_bld House$PortBaseSegment 1 34904.11 39886.51 450.00
+  61_bld House$PortBaseSegment 1 34904.11 39895.05 450.00
+  62_bld House$PortBaseSegment 1 34904.11 39903.60 450.00
+  63_bld House$PortBaseSegment 1 34904.11 39912.07 450.00
+  64_bld House$PortBaseSegment 1 34904.14 39920.73 450.00
+  65_bld House$PortBaseSegment 1 34904.14 39929.45 450.00
+  66_bld House$PortBaseSegment 1 34904.14 39938.24 450.00
+  67_bld House$PortBaseSegment 1 34904.14 39946.88 450.00
+  68_bld House$PortBaseSegment 1 34904.07 39955.60 450.00
+  69_bld House$PortBaseSegment 1 34904.07 39964.39 450.00
+  70_bld House$PortBaseSegment 1 34904.07 39972.90 450.00
+  71_bld House$PortBaseSegment 1 34904.00 39998.56 450.00
+  72_bld House$PortBaseSegment 1 34904.00 40007.34 450.00
+  73_bld House$PortBaseSegment 1 34903.97 40015.92 450.00
+  74_bld House$PortBaseSegment 1 34903.97 40024.60 450.00
+  75_bld House$PortBaseSegment 1 34903.97 40033.34 450.00
+  76_bld House$PortBaseSegment 1 34903.97 40041.94 450.00
+  77_bld House$PortBaseSegment 1 34903.97 40050.62 450.00
+  78_bld House$PortBaseSegment 1 34904.04 40059.37 450.00
+  79_bld House$PortBaseSegment 1 35067.98 39834.36 450.00
+  80_bld House$PortBaseSegment 1 35068.02 39842.98 450.00
+  81_bld House$PortBaseSegment 1 35068.02 39851.70 450.00
+  82_bld House$PortBaseSegment 1 35068.09 39860.42 450.00
+  83_bld House$PortBaseSegment 1 35068.02 39869.21 450.00
+  84_bld House$PortBaseSegment 1 35068.02 39877.99 450.00
+  85_bld House$PortBaseSegment 1 35068.02 39886.71 450.00
+  86_bld House$PortBaseSegment 1 35068.02 39895.36 450.00
+  87_bld House$PortBaseSegment 1 35068.09 39904.15 450.00
+  88_bld House$PortBaseSegment 1 35068.09 39912.79 450.00
+  89_bld House$PortBaseSegment 1 35068.09 39921.51 450.00
+  90_bld House$PortBaseSegment 1 35068.09 39930.30 450.00
+  91_bld House$PortBaseSegment 1 35068.09 39939.09 450.00
+  92_bld House$PortBaseSegment 1 35068.09 39947.87 450.00
+  93_bld House$PortBaseSegment 1 35068.09 39956.66 450.00
+  94_bld House$PortBaseSegment 1 35068.02 39965.38 450.00
+  95_bld House$PortBaseSegment 1 35068.02 39974.17 450.00
+  96_bld House$PortBaseSegment 1 35068.09 39982.88 450.00
+  97_bld House$PortBaseSegment 1 35068.09 39991.67 450.00
+  98_bld House$PortBaseSegment 1 35068.09 40000.46 450.00
+  99_bld House$PortBaseSegment 1 35068.09 40009.18 450.00
+  100_bld House$PortBaseSegment 1 35068.09 40017.82 450.00
+  101_bld House$PortBaseSegment 1 35068.09 40026.61 450.00
+  102_bld House$PortBaseSegment 1 35068.09 40035.33 450.00
+  103_bld House$PortBaseSegment 1 35068.09 40043.98 450.00
+  104_bld House$PortBaseSegment 1 35068.06 40052.61 450.00
+  105_bld House$PortBaseSegment 1 35068.05 40061.22 450.00
+  106_bld House$PortBaseSegment 1 35068.05 40069.93 450.00
+  107_bld House$PortBaseSegment 1 35068.05 40078.58 450.00
+  108_bld House$PortBaseSegment 1 35068.05 40087.37 450.00
+  109_bld House$PortBaseSegment 1 35068.05 40096.09 450.00
+  110_bld House$PortBaseSegment 1 35067.98 40104.87 450.00
+  111_bld House$PortFloor 1 35061.02 39835.76 630.00
+  112_bld House$PortFloor 1 35050.97 39835.76 630.00
+  113_bld House$PortFloor 1 35040.91 39835.76 630.00
+  114_bld House$PortFloor 1 35030.93 39835.76 630.00
+  115_bld House$PortFloor 1 35020.88 39835.76 630.00
+  116_bld House$PortFloor 1 35010.83 39835.76 630.00
+  117_bld House$PortFloor 1 35000.91 39835.76 630.00
+  118_bld House$PortFloor 1 34990.86 39835.76 630.00
+  119_bld House$PortFloor 1 34980.88 39835.76 630.00
+  120_bld House$PortFloor 1 34970.96 39835.76 630.00
+  121_bld House$PortFloor 1 34961.05 39835.76 630.00
+  122_bld House$PortFloor 1 34951.28 39835.76 630.00
+  123_bld House$PortFloor 1 34941.37 39835.83 630.00
+  124_bld House$PortFloor 1 34931.53 39835.83 630.00
+  125_bld House$PortFloor 1 34921.47 39835.90 630.00
+  126_bld House$PortFloor 1 34911.28 39835.90 630.00
+  127_bld House$PortBaseSegment 1 34904.04 39981.35 450.00
+  128_bld House$PortBaseSegment 1 34904.04 39989.86 450.00
+  129_bld House$Tent_Pyramid_US 1 35154.60 39677.58 450.00
+  130_bld House$Tent_Pyramid_US 1 35154.58 39669.89 450.00
+  131_bld House$Tent_Pyramid_US 1 35154.62 39685.67 450.00
+  132_bld House$IndustrialFactoryWarenHouse1 1 34857.95 39615.40 360.00
+  133_bld House$IndustrialFactoryWarenHouse1 1 34909.95 39615.30 360.00
+  134_bld House$IndustrialFactoryWarenHouse1 1 34962.26 39615.30 360.00
+  135_bld House$IndustrialFactoryWarenHouse1 1 35114.56 39616.07 360.00
+  136_bld House$IndustrialFactoryWarenHouse1 1 35165.33 39616.07 360.00
+  137_bld House$IndustrialFactoryWarenHouse1 1 35216.87 39616.07 360.00
+  138_bld House$IndustrialFactoryWarenHouse1 1 35124.07 39520.83 360.00
+  139_bld House$IndustrialFactoryWarenHouse1 1 35074.84 39520.83 360.00
+  140_bld House$Tent_Pyramid_US 1 35154.70 39661.77 360.00
+  141_bld House$Tent_Pyramid_US 1 35154.70 39653.36 360.00
+  142_bld House$Tent_Pyramid_US 1 35154.85 39644.66 360.00
+  143_bld House$Tent_Pyramid_US 1 35143.87 39644.58 360.00
+  144_bld House$Tent_Pyramid_US 1 35133.50 39644.81 360.00
+  145_bld House$Tent_Pyramid_US 1 34775.70 39640.53 360.00
+  146_bld House$Tent_Pyramid_US 1 34783.42 39640.55 360.00
+  147_bld House$Tent_Pyramid_US 1 34791.37 39640.62 360.00
+  148_bld House$Tent_Pyramid_US 1 34799.10 39640.55 360.00
+  149_bld House$Tent_Pyramid_US 1 34807.12 39640.62 360.00
+  150_bld House$Tent_Pyramid_US 1 34815.83 39640.55 360.00
+  151_bld House$Tent_Pyramid_US 1 34824.27 39640.41 360.00
+  152_bld House$FurniturePalmAg2 1 34848.67 39644.70 360.00
+  153_bld House$FurniturePalmAg2 1 34811.71 39624.46 360.00
+  154_bld House$FurniturePalmAg2 1 34884.41 39620.85 360.00
+  155_bld House$FurniturePalmAg2 1 34904.15 39596.29 360.00
+  156_bld House$FurniturePalmAg2 1 34935.34 39598.02 360.00
+  157_bld House$FurniturePalmAg2 1 34937.58 39614.66 360.00
+  158_bld House$FurniturePalmAg2 1 34937.51 39631.95 405.00
+  159_bld House$FurniturePalmAg2 1 34964.67 39598.45 405.00
+  160_bld House$FurniturePalmAg2 1 34981.17 39593.26 405.00
+  161_bld House$FurniturePalmAg2 1 35037.29 39601.62 405.00
+  162_bld House$FurniturePalmAg2 1 35047.02 39613.65 405.00
+  163_bld House$FurniturePalmAg2 1 35014.16 39614.51 405.00
+  164_bld House$FurniturePalmAg2 1 35042.33 39587.50 405.00
+  165_bld House$FurniturePalmAg2 1 35060.99 39598.23 405.00
+  166_bld House$FurniturePalmAg2 1 35085.92 39609.54 405.00
+  167_bld House$FurniturePalmAg2 1 35087.00 39623.38 405.00
+  168_bld House$FurniturePalmAg2 1 35128.21 39633.75 405.00
+  169_bld House$FurniturePalmAg2 1 35140.89 39612.14 705.00
+  170_bld House$FurniturePalmAg2 1 35190.03 39598.09 705.00
+  171_bld House$FurniturePalmAg2 1 35191.25 39612.43 705.00
+  172_bld House$FurniturePalmAg2 1 35193.13 39632.74 705.00
+  173_bld House$FurniturePalmAg2 1 35213.23 39637.28 705.00
+  174_bld House$FurniturePalmAg2 1 35247.81 39607.53 705.00
+  175_bld House$FurniturePalmAg2 1 35234.19 39592.90 705.00
+  176_bld House$FurniturePalmAg2 1 35146.88 39539.75 705.00
+  177_bld House$FurniturePalmAg2 1 35146.56 39501.05 705.00
+  178_bld House$FurniturePalmAg2 1 35111.10 39498.77 645.00
+  179_bld House$FurniturePalmAg2 1 35101.34 39538.45 645.00
+  180_bld House$FurniturePalmAg2 1 35099.72 39523.49 690.00
+  181_bld House$FurniturePalmAg2 1 35068.17 39539.10 690.00
+  182_bld House$FurniturePalmAg2 1 35038.89 39517.31 690.00
+  183_bld House$FurniturePalmAg2 1 35059.06 39493.89 690.00
+  184_bld House$FurniturePalmAg2 1 35078.58 39502.10 615.00
+  185_bld House$FurniturePalmAg2 1 35128.67 39491.29 615.00
+  186_bld House$FurniturePalmAg2 1 35157.62 39471.45 615.00
+  187_bld House$FurniturePalmAg2 1 35157.29 39506.58 615.00
+  188_bld House$FurniturePalmAg2 1 35160.55 39538.13 615.00
+  189_bld House$FurniturePalmAg2 1 34974.16 39707.99 615.00
+  190_bld House$FurniturePalmAg2 1 35002.03 39696.54 615.00
+  191_bld House$FurniturePalmAg2 1 34986.03 39679.59 615.00
+  192_bld House$FurniturePalmAg2 1 34791.26 39673.74 615.00
+  193_bld House$FurniturePalmAg2 1 34887.58 39665.88 615.00
+  194_bld House$FurniturePalmAg2 1 35095.94 39685.53 615.00
+  195_bld House$FurniturePalmAg2 1 35217.81 39658.02 615.00
+  196_bld House$FurniturePalmAg2 1 35259.09 39553.84 615.00
+  197_bld House$FurniturePalmAg2 1 35166.70 39567.60 615.00
+  198_bld House$FurniturePalmAg2 1 34960.31 39545.97 615.00
+  199_bld House$FurniturePalmAg2 1 34867.92 39549.90 615.00
+  200_bld House$FurniturePalmAg2 1 34883.65 39483.07 615.00
+  201_bld House$FurniturePalmAg2 1 34913.13 39561.70 615.00
+  202_bld House$FurnitureSandbags_Round 1 34760.43 39711.79 450.00
+  203_bld House$FurnitureSandbags_Round 1 34786.16 39711.72 450.00
+[Target]
+  1 0 1 20 500 35010 40085 150
+[StaticCamera]
+  34998 39773 25
+[Bridge]
+[House]
+  V2gS ++++1
+  U2gS ++++v
+  T2gS ++++3
+  S2gS ++f
+  R2gS +10
+  Q2gS f0000Y0
+  P2gS +++f
+  O2gS Y++++3
+  N2gS 1
+  W2MS 3
+  V2MS ++f
+  U2MS v0
+  T2MS +10
+  S2MS v0
+  R2MS +10
+  Q2MS v0
+  P2MS +10
+  O2MS +10
+  N2MS 70
+  U2gT +++v
+  T2gT v0
+  R2gT f0
+  Q2gT 0-+++30
+  P2gT +++++1
+  O2gT 1
+  T2MT +++3
+  S2MT +++++
+  R2MT v0
+  Q20S +++1
+  P20S 70
+  V2wS +10
+  U2wS ++++1
+  T2wS 0-+++30
+  S2wS +++v
+  R2wS ++++
+  Q2wS +++++1
+  P2wS +10
+  N2wS 7
+  V20T v0
+  U20T f0
+  T20T 7
+  S20T 3
+  R20T v0
+  Q20T v0
+  P20T ++++f
+  O20T +++7
+  U2wT ++++
+  T2wT ++++v
+  S2wT +00
+  R2wT +++1
+  Q2wT +++v
+[FrontMarker]
+  FrontMarker0 21641.77 49195.18 2
+  FrontMarker1 18330.09 40960.62 2
+  FrontMarker2 23034.20 36541.82 2
+  FrontMarker3 18655.06 45256.27 2
+  FrontMarker4 29198.39 34171.99 2
+  FrontMarker5 35011.02 31853.55 2
+  FrontMarker6 39235.94 30712.27 2
+  FrontMarker7 45964.90 32019.83 2
+  FrontMarker8 48833.65 34810.57 2
+  FrontMarker9 29404.02 50737.35 2
+  FrontMarker10 39171.08 50942.97 2
+  FrontMarker11 45910.40 48158.80 2
+  FrontMarker12 48296.48 44012.18 2
+  FrontMarker13 49648.86 39512.29 2
+  FrontMarker14 20903.46 50151.86 1
+  FrontMarker15 17500.33 45897.65 1
+  FrontMarker16 16439.14 40273.72 1
+  FrontMarker17 22385.95 34629.15 1
+  FrontMarker18 28158.23 31731.11 1
+  FrontMarker19 34484.21 29717.33 1
+  FrontMarker20 39367.04 29167.01 1
+  FrontMarker21 46507.25 29734.56 1
+  FrontMarker22 50350.61 34431.41 1
+  FrontMarker23 50834.98 39362.56 1
+  FrontMarker24 50797.02 44790.84 1
+  FrontMarker25 47388.71 49515.67 1
+  FrontMarker26 16511.55 43822.68 1
+  FrontMarker27 17890.14 43505.97 2

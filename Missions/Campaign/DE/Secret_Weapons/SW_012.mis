@@ -1,0 +1,191 @@
+[MAIN]
+  MAP Ardennes/wload.ini
+  TIME 16.0
+  CloudType 5
+  CloudHeight 1200.0
+  player II_KG200_01
+  army 2
+  playerNum 0
+[Wing]
+  II_KG200_00
+  II_KG200_01
+  I_KG200_10
+  usa0100
+[II_KG200_00]
+  Planes 1
+  Skill 2
+  skin0 mistel_KG200-winter.bmp
+  Class air.JU_88MSTL
+  Fuel 100
+  weapons default
+[II_KG200_00_Way]
+  TAKEOFF 25508.76 37541.00 0 0 &0
+  NORMFLY 30895.03 33594.90 0.00 198.00 &0
+  NORMFLY 36116.00 27448.11 0.00 198.00 &0
+  NORMFLY 35543.51 22063.49 0.00 198.00 &0
+  NORMFLY 30622.44 20307.84 0.00 198.00 &0
+  NORMFLY 28967.14 25882.84 0.00 198.00 &0
+  NORMFLY 27232.59 35612.36 0.00 198.00 &0
+[II_KG200_01]
+  Planes 1
+  Skill 2
+  skin0 mistel_KG200-winter.bmp
+  Class air.FW_190A8MSTL
+  Fuel 100
+  weapons default
+[II_KG200_01_Way]
+  NORMFLY 25510.05 37545.16 0.00 0.00 II_KG200_00 0 &0
+  NORMFLY 30894.68 33595.20 500.00 300.00 &0
+  NORMFLY 36117.85 27450.42 500.00 300.00 &0
+  NORMFLY 35551.10 22061.33 500.00 300.00 &0
+  GATTACK 30625.83 20313.19 500.00 300.00 &0
+  NORMFLY 28963.32 25883.15 500.00 300.00 &0
+  LANDING 26664.88 36384.88 0 0 &0
+[I_KG200_10]
+  Planes 3
+  Skill 2
+  skin0 Fw190D9_KG200_winter2.bmp
+  skin1 Fw190D9_KG200_winter2.bmp
+  skin2 Fw190D9_KG200_winter2.bmp
+  Class air.FW_190D9LATE
+  Fuel 100
+  weapons default
+[I_KG200_10_Way]
+  NORMFLY 44023.29 38208.29 500.00 300.00 &0
+  NORMFLY 37259.57 31982.08 500.00 300.00 &0
+  NORMFLY 26957.22 24232.92 500.00 300.00 usa0100 2 &0
+  NORMFLY 25031.13 19888.02 500.00 300.00 &0
+  NORMFLY 19028.89 21410.97 500.00 300.00 &0
+  NORMFLY 19028.89 29563.27 500.00 300.00 &0
+  LANDING 26664.88 36384.88 0 0 &0
+[usa0100]
+  Planes 3
+  Skill 1
+  Class air.P_38L
+  Fuel 100
+  weapons default
+[usa0100_Way]
+  NORMFLY 5232.70 5106.38 500.00 300.00 &0
+  NORMFLY 16968.42 7793.95 500.00 300.00 &0
+  NORMFLY 23239.42 14244.12 500.00 300.00 I_KG200_10 3 &0
+  NORMFLY 26150.95 22217.25 500.00 300.00 &0
+  NORMFLY 16117.36 26562.15 500.00 300.00 &0
+  NORMFLY 7525.20 13975.36 500.00 300.00 &0
+  LANDING 7200.05 2762.37 0 0 &0
+[Chiefs]
+  0_Chief Vehicles.WillisMB_US 1
+  1_Chief Vehicles.Bulldozer_US 1
+  2_Chief Vehicles.Bulldozer_US 1
+[0_Chief_Road]
+  30007.31 20415.58 120.00 0 2 3.055555582046509
+  30101.53 20501.56 120.00 0 2 3.055555582046509
+  30345.92 20498.03 120.00 0 2 3.055555582046509
+  30483.71 20443.26 120.00 0 2 3.055555582046509
+  30499.03 20420.29 120.00 0 2 3.055555582046509
+  30399.50 20350.80 120.00 0 2 3.055555582046509
+  30307.05 20344.33 120.00 0 2 3.055555582046509
+  30314.71 20244.80 120.00 0 2 3.055555582046509
+  30318.24 20102.29 120.00 0 2 3.055555582046509
+  30497.85 20099.35 120.00 0 2 3.055555582046509
+  30703.96 20094.05 120.00 0 2 3.055555582046509
+  30704.55 20287.79 120.00 0 2 3.055555582046509
+  30695.13 20421.47 120.00 0 2 3.055555582046509
+  30643.89 20353.16 120.00 0 2 3.055555582046509
+  30625.64 20360.23 120.00 0 2 3.055555582046509
+  30500.78 20390.85 120.00
+[1_Chief_Road]
+  30367.71 20227.14 120.00 0 2 1.6666667461395264
+  30442.49 20266.01 120.00 0 2 1.6666667461395264
+  30489.60 20230.67 120.00 0 2 1.6666667461395264
+  30622.70 20330.19 120.00 0 2 1.6666667461395264
+  30619.75 20367.88 120.00 0 2 1.6666667461395264
+  30540.84 20447.38 120.00 0 2 1.6666667461395264
+  30394.21 20347.27 120.00 0 2 1.6666667461395264
+  30480.77 20240.09 120.00 0 2 1.6666667461395264
+  30496.67 20262.47 120.00
+[2_Chief_Road]
+  30367.71 20208.88 120.00 0 2 1.6666667461395264
+  30385.37 20107.01 120.00 0 2 1.6666667461395264
+  30507.86 20104.65 120.00 0 2 1.6666667461395264
+  30498.44 20225.37 120.00 0 2 1.6666667461395264
+  30559.68 20275.43 120.00 0 2 1.6666667461395264
+  30608.56 20184.15 120.00 0 2 1.6666667461395264
+  30698.66 20245.98 120.00 0 2 1.6666667461395264
+  30701.60 20280.14 120.00 0 2 1.6666667461395264
+  30816.44 20171.20 120.00 0 2 1.6666667461395264
+  30939.51 20299.57 120.00 0 2 1.6666667461395264
+  30899.47 20394.38 120.00 0 2 1.6666667461395264
+  30871.79 20426.18 120.00 0 2 1.6666667461395264
+  30870.62 20490.96 120.00 0 2 1.6666667461395264
+  30772.86 20470.35 120.00 0 2 1.6666667461395264
+  30619.16 20544.55 120.00 0 2 1.6666667461395264
+  30544.37 20453.86 120.00 0 2 1.6666667461395264
+  30627.40 20355.52 120.00 0 2 1.6666667461395264
+  30516.69 20364.94 120.00
+[NStationary]
+  10_Static vehicles.stationary.Smoke$Smoke7 0 30550.12 20162.86 480.00 71.00
+  11_Static vehicles.stationary.Smoke$Smoke7 0 30576.74 20163.02 480.00 73.20
+  12_Static vehicles.stationary.Smoke$Smoke7 0 30525.05 20164.05 480.00 70.20
+  13_Static vehicles.stationary.Smoke$Smoke7 0 30524.25 20122.94 480.00 73.20
+  14_Static vehicles.stationary.Smoke$Smoke7 0 30551.01 20121.81 480.00 72.20
+  15_Static vehicles.stationary.Smoke$Smoke7 0 30577.21 20120.44 480.00 71.20
+  16_Static vehicles.stationary.Smoke$Smoke7 0 30670.16 20485.61 480.00 72.20
+  17_Static vehicles.stationary.Smoke$Smoke7 0 30624.64 20484.29 480.00 72.20
+  18_Static vehicles.stationary.Smoke$Smoke7 0 30444.01 20425.91 480.00 73.20
+  19_Static vehicles.stationary.Stationary$StudebeckerTruck 1 30490.72 20338.08 690.00 0.0
+  20_Static vehicles.stationary.Stationary$StudebeckerTruck 1 30493.98 20332.43 690.00 0.0
+  21_Static vehicles.stationary.Stationary$StudebeckerTruck 1 30497.25 20326.33 690.00 0.0
+  22_Static vehicles.stationary.Stationary$StudebeckerTruck 1 30500.94 20320.40 690.00 0.0
+  23_Static vehicles.stationary.Stationary$StudebeckerTruck 1 30486.76 20343.34 690.00 0.0
+  24_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 30675.13 20463.73 450.00 0.0
+  25_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 30669.11 20463.43 450.00 0.0
+  26_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 30663.61 20463.43 450.00 0.0
+  27_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 30658.44 20463.43 450.00 0.0
+  28_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 30652.82 20463.54 450.00 0.0
+  29_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 30647.20 20463.71 450.00 0.0
+  30_Static vehicles.stationary.Stationary$DiamondT_US 1 30404.98 20168.78 630.00 0.0
+  31_Static vehicles.stationary.Stationary$DiamondT_US 1 30412.81 20168.59 630.00 0.0
+  32_Static vehicles.stationary.Stationary$DiamondT_US 1 30420.54 20168.59 630.00 0.0
+  33_Static vehicles.stationary.Stationary$DiamondT_US 1 30429.05 20168.97 630.00 0.0
+  34_Static vehicles.stationary.Stationary$DiamondT_US 1 30437.75 20169.17 630.00 0.0
+  35_Static vehicles.stationary.Stationary$M16_US 1 30338.04 20215.73 630.00 0.0
+  36_Static vehicles.stationary.Stationary$M16_US 1 30729.04 20181.25 630.00 0.0
+  37_Static vehicles.stationary.Stationary$M16_US 1 30786.96 20328.82 630.00 0.0
+  38_Static vehicles.stationary.Stationary$M16_US 1 30374.59 20462.61 630.00 0.0
+  39_Static vehicles.stationary.Stationary$M16_US 1 30766.28 20501.22 630.00 0.0
+  0_Static vehicles.stationary.Smoke$Smoke7 0 30650.84 20300.73 630.00 71.20
+  1_Static vehicles.stationary.Smoke$Smoke7 0 30627.34 20284.78 630.00 71.20
+  2_Static vehicles.stationary.Smoke$Smoke7 0 30642.61 20258.93 630.00 70.20
+[Buildings]
+  0_bld House$IndustrialFactoryChimney1 1 30577.77 20120.60 480.00
+  1_bld House$IndustrialFactoryChimney1 1 30550.38 20122.11 480.00
+  2_bld House$IndustrialFactoryChimney1 1 30524.41 20122.63 480.00
+  3_bld House$IndustrialFactoryChimney1 1 30525.23 20164.03 480.00
+  4_bld House$IndustrialFactoryChimney1 1 30550.02 20162.86 480.00
+  5_bld House$IndustrialFactoryChimney1 1 30577.25 20163.02 480.00
+  6_bld House$IndustrialFactoryChimney1 1 30624.62 20483.91 480.00
+  7_bld House$IndustrialFactoryChimney1 1 30670.66 20485.93 480.00
+  8_bld House$IndustrialFactoryChimney1 1 30444.41 20426.19 480.00
+  9_bld House$IndustrialFactoryChimney1 1 30627.01 20284.63 630.00
+  10_bld House$IndustrialFactoryChimney1 1 30650.52 20300.83 630.00
+  11_bld House$IndustrialFactoryChimney1 1 30642.01 20258.70 630.00
+[Target]
+  1 0 0 0 500 30619 20303 250
+  3 2 1 90 501 26098 36972 800
+[StaticCamera]
+  30593 20330 100
+[Bridge]
+[House]
+
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 7
+WindDirection 76
+WindTop 2305
+WindTurbulence 0
+WindGust 0

@@ -1,0 +1,47 @@
+[MAIN]
+  MAP SandsOfTime/load.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 1000.0
+  player g0100
+  army 2
+  playerNum 0
+[Wing]
+  g0100
+  g0101
+[g0100]
+  Planes 1
+  Skill 1
+  Class air.ME_321
+  Fuel 100
+  weapons default
+[g0100_Way]
+  NORMFLY 2978.63 8724.87 500.00 220.00 g0101 0 &0
+[g0101]
+  Planes 1
+  Skill 1
+  Class air.HE_111Z
+  Fuel 100
+  weapons default
+[g0101_Way]
+  TAKEOFF 4998.27 10456.93 0 0 &0
+  NORMFLY 22772.54 27755.40 700.00 200.00 &0
+  NORMFLY 22116.90 32082.62 1000.00 200.00 &0
+  NORMFLY 16259.86 32388.59 1000.00 200.00 &0
+  NORMFLY 10140.56 29853.45 1000.00 200.00 &0
+  NORMFLY 4464.89 20418.49 500.00 220.00 &0
+  NORMFLY 2678.03 14152.82 500.00 220.00 &0
+  LANDING 3821.03 9469.12 0 0 &0
+[NStationary]
+  0_Static vehicles.planes.Plane$ME_321 2 13565.56 26908.85 300.00 0.0 null
+  1_Static vehicles.planes.Plane$ME_321 2 13444.54 26921.88 390.00 0.0 null
+  2_Static vehicles.planes.Plane$ME_321 2 13649.35 26998.21 390.00 0.0 null
+  3_Static vehicles.planes.Plane$ME_321 2 3868.52 9666.49 350.00 0.0 null
+  4_Static vehicles.planes.Plane$ME_321 2 3934.66 9727.17 350.00 0.0 null
+  5_Static vehicles.planes.Plane$HE_111Z 2 3945.57 9625.58 410.00 0.0 null
+  6_Static vehicles.planes.Plane$HE_111Z 2 4021.25 9691.03 410.00 0.0 null
+[Buildings]
+[Target]
+  3 0 1 510 501 13553 26627 1600
+[Bridge]
+[House]

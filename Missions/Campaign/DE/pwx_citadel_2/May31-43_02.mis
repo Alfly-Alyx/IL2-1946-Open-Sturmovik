@@ -1,0 +1,147 @@
+[MAIN]
+  MAP Smolensk/load.ini
+  TIME 15.5
+  CloudType 1
+  CloudHeight 600.0
+  player g0100
+  army 2
+  playerNum 0
+[Wing]
+  g0100
+  g0110
+[g0100]
+  Planes 4
+  Skill0 3
+  Skill1 2
+  Skill2 2
+  Skill3 2
+  skin0 $10a-PWX-Citadel_190A6_A_N-01.bmp
+  skin1 $10a-PWX-Citadel_190A6_A_N-02.bmp
+  skin2 $10a-PWX-Citadel_190A6_A_N-03.bmp
+  skin3 $10a-PWX-Citadel_190A6_A_N-04.bmp
+  pilot0 pwx_player_German.bmp
+  pilot1 pwx_Sebastian.bmp
+  pilot2 pwx_Rainer.bmp
+  pilot3 De_08.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.FW_190A6
+  Fuel 100
+  weapons u22tank
+[g0100_Way]
+  TAKEOFF 12689.50 56017.00 0 0 &0
+  NORMFLY 22146.81 58581.92 550.00 300.00 g0110 0 &0
+  NORMFLY 30003.24 61050.76 550.00 300.00 g0110 1 &0
+  NORMFLY 41944.53 61067.66 550.00 300.00 g0110 2 &0
+  NORMFLY 57356.21 61008.61 550.00 300.00 g0110 2 &0
+  NORMFLY 67016.21 60992.85 550.00 300.00 g0110 3 &0
+  NORMFLY 80415.36 59281.75 550.00 300.00 g0110 3 &0
+  NORMFLY 99426.60 56932.69 550.00 300.00 g0110 3 &0
+  NORMFLY 110298.18 55555.26 550.00 300.00 g0110 4 &0
+  NORMFLY 116080.65 47338.15 550.00 300.00 g0110 4 &0
+  NORMFLY 123044.43 37455.72 550.00 300.00 g0110 4 &0
+  NORMFLY 131328.95 25716.72 550.00 300.00 g0110 4 &0
+  NORMFLY 139871.49 13589.48 550.00 300.00 g0110 4 &0
+  NORMFLY 146960.26 3507.62 550.00 300.00 g0110 5 &0
+[g0110]
+  Planes 4
+  Skill 3
+  skin0 $10a-PWX-Citadel_Ju-52_C_N-01.bmp
+  skin1 $10a-PWX-Citadel_Ju-52_C_N-02.bmp
+  skin2 $10a-PWX-Citadel_Ju-52_C_N-03.bmp
+  skin3 $10a-PWX-Citadel_Ju-52_C_N-04.bmp
+  pilot0 De_04.bmp
+  pilot1 De_14.bmp
+  pilot2 De_10.bmp
+  pilot3 De_08.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.JU_52_3MG4E
+  Fuel 100
+  weapons default
+[g0110_Way]
+  TAKEOFF 12689.50 56017.00 0 0 &0
+  NORMFLY 22263.69 58024.36 550.00 295.00 &0
+  NORMFLY 30054.26 60610.24 550.00 295.00 &0
+  NORMFLY 67079.85 60636.77 550.00 295.00 &0
+  NORMFLY 110045.39 55239.47 550.00 295.00 &0
+  NORMFLY 146731.72 3299.83 550.00 295.00 &0
+[NStationary]
+  689_BlueStatic vehicles.artillery.Artillery$Flak30_20mm 2 11342.87 55324.22 360.00 0.0 0
+  735_BlueStatic vehicles.planes.Plane$BF_109F2 2 11504.47 55437.47 420.00 0.0 null
+  767_BlueStatic vehicles.artillery.Artillery$Flak30_20mm 2 12617.62 56034.62 360.00 0.0 0
+  770_BlueStatic vehicles.artillery.Artillery$Flak18_88mm 2 12279.70 55670.33 360.00 0.0 0
+  771_BlueStatic vehicles.artillery.Artillery$Flak18_88mm 2 11947.42 55771.90 360.00 0.0 0
+  1167_BlueStatic vehicles.planes.Plane$BF_109F2 2 11473.09 55411.30 420.00 0.0 null
+  1168_BlueStatic vehicles.planes.Plane$BF_109F2 2 11487.97 55428.15 414.10 0.0 null
+  1169_BlueStatic vehicles.planes.Plane$BF_109F2 2 11452.81 55406.81 414.10 0.0 null
+  1170_BlueStatic vehicles.planes.Plane$BF_109F2 2 11437.72 55393.48 414.10 0.0 null
+  1171_BlueStatic vehicles.planes.Plane$BF_109F2 2 11419.44 55385.72 414.10 0.0 null
+  1205_BlueStatic vehicles.planes.Plane$JU_87B2 2 11500.99 55194.66 269.10 0.0 null
+  1206_BlueStatic vehicles.planes.Plane$JU_87B2 2 11540.33 55201.04 249.41 0.0 null
+  1207_BlueStatic vehicles.planes.Plane$JU_87B2 2 11574.72 55214.03 234.82 0.0 null
+  1208_BlueStatic vehicles.planes.Plane$JU_52_3MG4E 2 11774.41 55290.72 220.73 0.0 null
+  1209_BlueStatic vehicles.planes.Plane$JU_52_3MG4E 2 11743.23 55259.63 235.29 0.0 null
+  707_StaticL vehicles.lights.Searchlight$SL_ManualBlue 2 12747.80 56016.02 360.00 0.0
+  709_StaticL vehicles.lights.Searchlight$SL_ManualBlue 2 12717.80 56067.98 360.00 0.0
+  712_StaticL vehicles.lights.Searchlight$SL_ManualBlue 2 11275.13 55234.95 360.00 0.0
+  714_StaticL vehicles.lights.Searchlight$SL_ManualBlue 2 11305.13 55182.99 360.00 0.0
+  715_StaticL vehicles.stationary.Siren$SirenCity 2 11290.13 55208.97 360.00 0.0
+[Buildings]
+  0_bld House$FurnitureTreeLine 1 11391.98 55398.85 585.00
+  1_bld House$FurnitureTreeLine 1 11401.77 55420.80 540.00
+  2_bld House$FurnitureTreeLine 1 11420.44 55423.95 450.00
+  3_bld House$FurnitureTreeLine 1 11438.83 55440.15 390.00
+  4_bld House$FurnitureTreeLine 1 11425.62 55448.58 705.00
+  5_bld House$FurnitureTreeLine 1 11449.81 55458.92 660.00
+  6_bld House$FurnitureTreeLine 1 11457.07 55437.42 615.00
+  7_bld House$FurnitureTreeLine 1 11476.51 55461.15 570.00
+  8_bld House$FurnitureTreeLine 1 11510.27 55462.19 495.00
+  9_bld House$FurnitureTreeLine 1 11491.23 55470.65 375.00
+  10_bld House$FurnitureTreeLine 1 11533.00 55459.82 660.00
+  11_bld House$FurnitureTreeLine 1 11387.53 55375.33 570.00
+  12_bld House$FurnitureTreeLine 1 11452.60 55153.97 450.00
+  13_bld House$FurnitureTreeLine 1 11502.70 55168.49 450.00
+  14_bld House$FurnitureTreeLine 1 11488.16 55148.08 450.00
+  15_bld House$FurnitureTreeLine 1 11440.57 55132.17 450.00
+  16_bld House$FurnitureTreeLine 1 11513.64 55124.73 450.00
+  17_bld House$FurnitureTreeLine 1 11544.38 55143.96 450.00
+  18_bld House$FurnitureTreeLine 1 11569.02 55183.22 450.00
+  19_bld House$FurnitureTreeLine 1 11556.26 55175.02 450.00
+  20_bld House$FurnitureTreeLine 1 11576.06 55158.79 450.00
+  21_bld House$FurnitureTreeLine 1 11624.93 55194.29 450.00
+  22_bld House$CrimeaFarm 1 11559.05 55449.25 690.00
+  23_bld House$CrimeaFarm 1 11573.12 55457.39 690.00
+  24_bld House$RussiaCountryHouse1 1 11392.01 55359.89 540.00
+  25_bld House$RussiaCountryHouse1 1 11392.26 55351.97 540.00
+  26_bld House$RussiaCountryHouse3 1 11666.34 55240.54 420.00
+  27_bld House$RussiaCountryBigHouse 1 11658.81 55238.06 600.00
+  28_bld House$RussiaCountryBigHouse 1 11672.45 55245.93 510.00
+  29_bld House$AirdromeMaskingnet 1 11502.87 55178.35 624.92
+  30_bld House$AirdromeMaskingnet 1 11545.42 55188.41 609.92
+  31_bld House$AirdromeMaskingnet 1 11582.38 55202.93 594.92
+  32_bld House$AirdromeMaskingnet 1 11610.01 55223.79 594.92
+  33_bld House$AirdromeMaskingnet 1 11456.75 55179.32 639.92
+[Target]
+  3 0 1 120 00 12169 55716 3000
+[StaticCamera]
+  11593 55611 20
+[Bridge]
+[House]
+
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 4
+WindDirection 82
+WindTop 7672
+WindTurbulence 0
+WindGust 1

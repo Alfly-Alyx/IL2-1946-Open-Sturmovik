@@ -1,0 +1,162 @@
+[MAIN]
+  MAP Crimea/load.ini
+  TIME 8.8330555
+  CloudType 2
+  CloudHeight 900.0
+  player I_KG100a00
+  army 2
+  playerNum 0
+[Wing]
+  I_KG100a00
+  I_KG100a01
+  r0123
+  g0112
+[I_KG100a00]
+  Planes 2
+  Skill 3
+  Class air.HE_111H6
+  Fuel 100
+  weapons 2xTorp
+[I_KG100a00_Way]
+  TAKEOFF 189704.77 90406.50 0 0
+  NORMFLY 233470.10 103279.60 500.0 240.0
+  GATTACK 277538.72 109948.54 500.0 240.0 7_Static 0
+  NORMFLY 279052.17 104014.22 500.0 240.0
+  NORMFLY 202570.33 87790.70 500.0 240.0
+  NORMFLY 190007.13 87847.40 400.0 220.0
+  LANDING 189704.77 90406.50 0 0
+[I_KG100a01]
+  Planes 2
+  Skill 3
+  Class air.HE_111H6
+  Fuel 100
+  weapons 2xTorp
+[I_KG100a01_Way]
+  TAKEOFF 189704.77 90406.50 0 0
+  NORMFLY 233364.14 103744.77 500.0 240.0
+  GATTACK 277552.55 110418.46 300.0 240.0 6_Static 0
+  NORMFLY 277770.80 102459.54 300.0 240.0
+  NORMFLY 202682.22 86687.51 400.0 240.0
+  NORMFLY 189195.99 86630.37 200.0 220.0
+  LANDING 189704.77 90406.50 0 0
+[r0123]
+  Planes 3
+  Skill 2
+  Class air.YAK_1
+  Fuel 100
+  weapons default
+  StartTime 20
+[r0123_Way]
+  TAKEOFF 286807.69 93371.86 0 0
+  NORMFLY 276970.39 104460.85 1200.0 320.0 I_KG100a01 3
+  NORMFLY 280727.30 107047.58 1200.0 320.0
+  NORMFLY 286886.18 99472.17 800.0 280.0
+  LANDING 286807.69 93371.86 0 0
+[g0112]
+  Planes 2
+  Skill 3
+  Class air.BF_109E7NZ
+  Fuel 100
+  weapons default
+  StartTime 7
+[g0112_Way]
+  TAKEOFF 189704.77 90406.50 0 0
+  NORMFLY 212471.32 98651.65 2500.0 280.0
+  NORMFLY 235636.26 104912.80 2500.0 280.0
+  NORMFLY 275990.14 109999.72 2500.0 320.0
+  NORMFLY 276993.52 106020.80 2500.0 320.0 r0123 1
+  NORMFLY 267898.90 101701.11 2500.0 320.0
+  NORMFLY 239017.91 99349.51 2500.0 320.0
+  NORMFLY 188399.17 87933.19 500.0 280.0
+  LANDING 189704.77 90406.50 0 0
+[Chiefs]
+  0_Chief Vehicles.GermanyCarsColumnD 2
+[0_Chief_Road]
+  188420.23 91228.49 120.0 0 2 2.3611111640930176
+  189483.90 90614.64 120.0 0 2 2.3611111640930176
+  189508.34 90608.46 120.0 0 2 2.3611111640930176
+  189536.81 90613.60 120.0 0 2 2.3611111640930176
+  189552.95 90626.92 120.0 0 2 2.3611111640930176
+  189562.51 90648.42 120.0 0 2 2.3611111640930176
+  189564.90 90676.28 120.0 0 2 2.3611111640930176
+  189554.29 90702.92 120.0 0 2 2.3611111640930176
+  189536.53 90719.96 120.0 0 2 2.3611111640930176
+  189511.59 90728.52 120.0 0 2 2.3611111640930176
+  189485.31 90725.56 120.0 0 2 2.3611111640930176
+  189463.18 90710.64 120.0 0 2 2.3611111640930176
+  189450.42 90689.85 120.0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 275426.64 109589.88 360.0 0.0
+  1_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 275874.78 110336.30 360.0 0.0
+  3_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 277212.15 110585.10 360.0 0.0
+  5_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 276354.84 110542.44 360.0 0.0
+  6_Static ships.Ship$Tramp 1 277947.28 110481.30 405.57 0.0
+  7_Static ships.Ship$Tramp 1 278308.59 110039.36 430.0 0.0
+  14_Static vehicles.artillery.Artillery$T40S 1 239452.57 106462.69 485.0 8.0
+  15_Static vehicles.artillery.Artillery$T40S 1 239546.32 106261.52 470.0 8.0
+  16_Static vehicles.artillery.Artillery$T40S 1 239842.35 106244.91 470.0 8.0
+  17_Static vehicles.artillery.Artillery$T40S 1 240060.79 106052.61 500.0 8.0
+  18_Static vehicles.artillery.Artillery$T40S 1 240244.98 105924.91 500.0 8.0
+  19_Static vehicles.artillery.Artillery$PzIIF 2 239103.57 106154.69 680.0 8.0
+  20_Static vehicles.artillery.Artillery$PzIIF 2 239310.39 105838.36 680.0 8.0
+  21_Static vehicles.artillery.Artillery$PzIIF 2 239728.79 105676.25 665.0 8.0
+  22_Static vehicles.artillery.Artillery$PzIIF 2 240142.60 105545.41 650.0 8.0
+  23_Static vehicles.artillery.Artillery$PzIIF 2 236373.64 102240.52 680.0 8.0
+  24_Static vehicles.artillery.Artillery$PzIIF 2 236557.26 102144.47 680.0 8.0
+  25_Static vehicles.artillery.Artillery$PzIIF 2 236654.39 101835.75 695.0 8.0
+  26_Static vehicles.artillery.Artillery$PzIIF 2 236866.0 101644.52 380.0 8.0
+  27_Static vehicles.artillery.Artillery$PzIIF 2 237059.54 101437.16 665.0 8.0
+  28_Static vehicles.artillery.Artillery$T60 1 237149.89 102648.74 500.0 8.0
+  29_Static vehicles.artillery.Artillery$T60 1 237176.67 102352.77 500.0 8.0
+  30_Static vehicles.artillery.Artillery$T60 1 237470.35 102239.69 515.0 8.0
+  31_Static vehicles.artillery.Artillery$T60 1 237640.82 102046.50 485.0 8.0
+  32_Static vehicles.artillery.Artillery$T60 1 237635.60 101763.96 470.0 8.0
+  2_Static vehicles.planes.Plane$HE_111H6 2 188343.67 90634.16 360.0 0.0
+  4_Static vehicles.planes.Plane$HE_111H6 2 188350.54 90606.83 345.0 0.0
+  8_Static vehicles.planes.Plane$HE_111H6 2 188362.42 90579.66 345.0 0.0
+  9_Static vehicles.planes.Plane$HE_111H6 2 188369.89 90549.33 330.0 0.0
+  10_Static vehicles.planes.Plane$HE_111H6 2 188379.98 90519.91 345.0 0.0
+  11_Static vehicles.planes.Plane$BF_109E7NZ 2 189480.45 90307.41 300.0 0.0
+  12_Static vehicles.planes.Plane$BF_109E7NZ 2 189458.85 90319.85 300.0 0.0
+  13_Static vehicles.planes.Plane$BF_109E7NZ 2 189437.32 90332.58 300.0 0.0
+  33_Static vehicles.planes.Plane$BF_109E7NZ 2 189421.91 90360.36 300.0 0.0
+  34_Static vehicles.planes.Plane$BF_109E7NZ 2 189402.67 90370.25 285.0 0.0
+  35_Static vehicles.stationary.Stationary$VW82 2 189400.98 90375.74 705.0 0.0
+  36_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 189415.63 90376.36 495.0 0.0
+  37_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 188354.85 90614.85 675.0 0.0
+  38_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 188362.45 90606.52 705.0 0.0
+  39_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 188387.91 90512.74 360.0 0.0
+  40_Static vehicles.stationary.Stationary$OpelBlitz6700A_radio 2 189225.66 90717.58 450.0 0.0
+  41_Static vehicles.stationary.Stationary$OpelBlitz6700A 2 189217.79 90718.16 510.0 0.0
+  43_Static vehicles.stationary.Stationary$OpelBlitz36S 2 189308.32 90421.71 675.0 0.0
+  42_Static vehicles.stationary.Stationary$OpelBlitz36S 2 189311.85 90416.58 705.0 0.0
+  44_Static vehicles.stationary.Stationary$OpelBlitz36S 2 188385.85 90534.50 630.0 0.0
+  45_Static vehicles.stationary.Stationary$OpelBlitz36S 2 188374.17 90523.41 600.0 0.0
+  46_Static vehicles.stationary.Stationary$OpelBlitz36S 2 188360.29 90600.25 360.0 0.0
+  47_Static vehicles.artillery.Artillery$PzIIIG 2 189443.14 90682.80 705.0 0.0
+  48_Static vehicles.artillery.Artillery$PzIIIG 2 189443.79 90662.96 540.0 0.0
+  49_Static vehicles.artillery.Artillery$PzIIIG 2 189454.47 90672.58 360.0 0.0
+[Buildings]
+[Target]
+  1 0 0 0 500 277931 110459 100
+  1 0 0 0 500 278281 110038 100
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 265948.83 105171.38 1
+  FrontMarker1 221138.23 98058.58 2
+  FrontMarker2 134351.61 119158.10 2
+  FrontMarker3 199280.63 132802.83 1
+  FrontMarker4 165374.21 94480.94 2
+  FrontMarker5 244810.85 45126.81 2
+  FrontMarker6 234940.30 125503.54 1
+  FrontMarker7 202037.27 81084.82 1
+  FrontMarker8 192070.17 84423.23 2
+  FrontMarker9 203073.62 95837.26 2
+  FrontMarker10 196107.68 44989.87 2
+  FrontMarker11 77716.30 37946.74 1
+  FrontMarker12 64394.32 67963.89 2
+  FrontMarker13 126105.55 64777.71 2
+  FrontMarker14 116211.63 14086.26 2
+  FrontMarker15 44271.10 44438.79 2
+  FrontMarker16 66574.34 13750.87 2

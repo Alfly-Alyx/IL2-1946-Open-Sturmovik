@@ -1,0 +1,159 @@
+[MAIN]
+  MAP Balaton/load.ini
+  TIME 9.0
+  CloudType 2
+  CloudHeight 1200.0
+  army 1
+  playerNum 0
+[Wing]
+  hu101VOhu00
+  usa0100
+  usa0111
+  hu101VOhu11
+  usa0122
+  hu101VOhu22
+[hu101VOhu00]
+  Planes 4
+  Skill 2
+  Class air.BF_109G6
+  Fuel 75
+  weapons default
+[hu101VOhu00_Way]
+  TAKEOFF 59250.25 121399.59 0 0
+  NORMFLY 54036.11 128747.99 1100.0 270.0
+  NORMFLY 65696.38 135549.82 2200.0 270.0 usa0111 1
+  NORMFLY 82700.94 116925.78 3300.0 270.0
+  NORMFLY 79461.97 91499.91 4000.0 290.0
+  NORMFLY 52578.57 103160.18 2000.0 240.0
+  NORMFLY 64400.79 114334.61 800.0 240.0
+  LANDING 60402.83 120247.0 0 0
+[usa0100]
+  Planes 4
+  Skill 2
+  Class air.P_47D27
+  Fuel 75
+  weapons tank
+[usa0100_Way]
+  NORMFLY 89314.40 90629.86 4000.0 430.0
+  NORMFLY 62728.73 128492.28 4000.0 420.0 hu101VOhu00 2
+  NORMFLY 14915.67 7199.88 4000.0 400.0
+[usa0111]
+  Planes 4
+  Skill 1
+  Class air.P_47D27
+  Fuel 75
+  weapons tank
+[usa0111_Way]
+  NORMFLY 89755.66 90255.75 4000.0 430.0
+  NORMFLY 62850.94 128428.84 4000.0 420.0 hu101VOhu11 2
+  NORMFLY 16772.30 5439.66 4000.0 400.0
+[hu101VOhu11]
+  Planes 4
+  Skill 1
+  Class air.BF_109G6
+  Fuel 75
+  weapons default
+[hu101VOhu11_Way]
+  TAKEOFF 59250.25 121399.59 0 0
+  NORMFLY 53648.19 128426.90 1100.0 270.0
+  NORMFLY 65019.26 135724.90 2200.0 270.0 usa0122 1
+  NORMFLY 82299.71 116608.15 3300.0 270.0
+  NORMFLY 79210.72 91806.67 3300.0 270.0
+  NORMFLY 52777.89 101923.31 1800.0 270.0
+  NORMFLY 65476.84 112610.54 600.0 230.0
+  LANDING 60402.83 120247.0 0 0
+[usa0122]
+  Planes 4
+  Skill 2
+  Class air.P_47D27
+  Fuel 75
+  weapons tank
+[usa0122_Way]
+  NORMFLY 90362.31 89650.17 4000.0 430.0
+  NORMFLY 63067.55 128280.23 4000.0 420.0 hu101VOhu22 2
+  NORMFLY 19715.59 4114.22 4000.0 430.0
+[hu101VOhu22]
+  Planes 4
+  Skill 2
+  Class air.BF_109G6
+  Fuel 75
+  weapons default
+[hu101VOhu22_Way]
+  TAKEOFF 59250.25 121399.59 0 0
+  NORMFLY 53130.53 129096.57 1600.0 270.0
+  NORMFLY 64382.11 136180.91 3200.0 270.0 usa0100 1
+  NORMFLY 81801.24 116761.50 3200.0 270.0
+  NORMFLY 79134.19 92424.74 3200.0 270.0
+  NORMFLY 54297.36 102009.42 1700.0 270.0
+  NORMFLY 64548.80 112594.25 650.0 230.0
+  LANDING 60402.83 120247.0 0 0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Flak18_88mm 2 59267.69 121149.49 450.0 0.0
+  1_Static vehicles.artillery.Artillery$Flak18_88mm 2 59287.30 121166.16 450.0 0.0
+  2_Static vehicles.artillery.Artillery$Flak18_88mm 2 59251.43 121172.60 450.0 0.0
+  3_Static vehicles.artillery.Artillery$Flak18_88mm 2 60164.80 120906.77 450.0 0.0
+  4_Static vehicles.artillery.Artillery$Flak18_88mm 2 60198.90 120945.38 450.0 0.0
+  5_Static vehicles.artillery.Artillery$Flak18_88mm 2 60141.54 120961.36 450.0 0.0
+  6_Static vehicles.artillery.Artillery$Flak30_20mm 2 60133.37 120242.35 450.0 0.0
+  7_Static vehicles.artillery.Artillery$Flak30_20mm 2 60153.66 120683.44 450.0 0.0
+  8_Static vehicles.artillery.Artillery$Flak30_20mm 2 59197.94 121193.61 450.0 0.0
+  9_Static vehicles.artillery.Artillery$Flak30_20mm 2 59671.47 121124.86 450.0 0.0
+  10_Static vehicles.artillery.Artillery$Flak30_20mm 2 59332.66 121492.58 660.0 0.0
+  11_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 60121.90 120367.86 375.0 0.0
+  12_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 60118.69 120370.0 690.0 0.0
+  13_Static vehicles.stationary.Siren$SirenCity 2 59827.83 120872.94 690.0 0.0
+  14_Static vehicles.planes.Plane$BF_110G2 2 59860.18 121345.75 495.0 0.0
+  15_Static vehicles.planes.Plane$BF_110G2 2 59874.41 121266.52 495.0 0.0
+  16_Static vehicles.planes.Plane$BF_110G2 2 59892.48 121247.30 495.0 0.0
+  17_Static vehicles.planes.Plane$BF_110G2 2 59914.19 121225.38 495.0 0.0
+  18_Static vehicles.planes.Plane$BF_110G2 2 59962.83 121180.38 495.0 0.0
+  19_Static vehicles.planes.Plane$BF_110G2 2 59910.94 121133.49 315.0 0.0
+  20_Static vehicles.planes.Plane$BF_110G2 2 59865.55 121174.63 315.0 0.0
+  21_Static vehicles.planes.Plane$BF_110G2 2 59888.62 121153.86 315.0 0.0
+  22_Static vehicles.planes.Plane$BF_110G2 2 59746.75 121296.13 495.0 0.0
+  23_Static vehicles.planes.Plane$BF_110G2 2 59766.36 121275.38 495.0 0.0
+  24_Static vehicles.planes.Plane$BF_110G2 2 59802.51 121340.75 495.0 0.0
+  25_Static vehicles.planes.Plane$FI_156 2 59661.37 121252.94 405.0 0.0
+  26_Static vehicles.planes.Plane$ME_210CA1 2 59500.12 120819.63 360.0 0.0
+  27_Static vehicles.planes.Plane$ME_210CA1 2 59500.87 120794.50 360.0 0.0
+  28_Static vehicles.planes.Plane$BF_109G6 2 59733.51 120563.60 405.0 0.0
+  29_Static vehicles.planes.Plane$BF_109G6 2 59746.73 120524.27 405.0 0.0
+  30_Static vehicles.planes.Plane$BF_109G6 2 59757.47 120536.19 405.0 0.0
+  31_Static vehicles.planes.Plane$ME_210CA1 2 59459.87 120728.97 360.0 0.0
+  32_Static vehicles.planes.Plane$FW_190A8 2 59465.22 120860.38 360.0 0.0
+  33_Static vehicles.planes.Plane$FW_190A8 2 59464.12 120881.47 360.0 0.0
+[Buildings]
+  0_bld House$FurnitureTreeLine 1 59830.83 120880.44 615.0
+  1_bld House$FurnitureTreeLine 1 60065.48 120410.97 600.0
+  2_bld House$FurnitureTreeLine 1 60054.93 120394.66 420.0
+  3_bld House$FurnitureTreeLine 1 59712.25 120564.11 405.0
+  4_bld House$FurnitureTreeLine 1 59706.33 120543.97 525.0
+  5_bld House$FurnitureTreeLine 1 59709.40 120570.41 585.0
+  6_bld House$FurnitureTreeLine 1 59536.19 120611.21 420.0
+  7_bld House$CrimeaBarnWood 1 59540.40 120625.16 615.0
+  8_bld House$CrimeaBarnWood 1 60131.51 120361.44 525.0
+  9_bld House$AirdromeBarrelBlock2 1 59718.0 120551.57 525.0
+  10_bld House$VehicleOpelBlitz6700A_winter 1 59716.44 120548.88 405.0
+  11_bld House$FurnitureTreeLine 1 59753.12 120605.77 675.0
+  12_bld House$FurnitureTreeLine 1 59721.86 120583.88 525.0
+  13_bld House$FurnitureTreeLine 1 59729.76 120593.75 570.0
+  14_bld House$AirdromeControlTowerSmall 1 60180.90 120530.71 480.0
+  15_bld House$VehicleGAZ67t 1 60177.80 120532.33 450.0
+  16_bld House$AirdromeRadar1 1 59985.30 120613.69 405.0
+  17_bld House$VehicleM1Black 1 59986.79 120610.16 645.0
+  18_bld House$VehicleOpelBlitz6700A_winter 1 59833.90 120859.83 585.0
+  19_bld House$VehicleOpelBlitz6700A_winter 1 59829.12 120864.21 585.0
+  20_bld House$FurnitureTreeLine 1 59684.50 121028.74 555.0
+  21_bld House$FurnitureTreeLine 1 59696.98 121026.52 675.0
+  22_bld House$FurnitureTreeLine 1 59705.30 121013.88 450.0
+[Target]
+  0 0 1 25 500 65850 135616 0 2 hu101VOhu00 65696 135549
+  0 0 1 25 500 65198 135808 0 2 hu101VOhu11 65019 135724
+  0 0 1 25 500 64579 136255 0 2 hu101VOhu22 64382 136180
+[StaticCamera]
+  59705 120550 2
+  59472 120809 4
+  59745 121272 2
+  60019 120462 12
+[Bridge]
+[House]

@@ -1,0 +1,389 @@
+[MAIN]
+  MAP Okinawa/load.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 1000.0
+  player usa0100
+  army 1
+  playerNum 0
+[Wing]
+  usa0100
+  usa0101
+  usa0102
+  usa0103
+  ja0100
+  ja0101
+  ja0102
+  ja0103
+[usa0100]
+  Planes 4
+  Skill 2
+  Class air.P_51D20NA
+  Fuel 100
+  weapons default
+[usa0100_Way]
+  NORMFLY 111501.23 32633.12 500.00 300.00 &0
+  NORMFLY 112655.87 35252.03 500.00 300.00 &0
+  GATTACK 113332.19 36844.76 500.00 300.00 0_Chief 0 &0
+  GATTACK 113121.66 36863.71 500.00 300.00 5_Chief 0 &0
+  NORMFLY 108843.34 34224.52 500.00 300.00 &0
+  NORMFLY 104938.04 27834.46 500.00 300.00 &0
+  NORMFLY 100981.98 23587.90 500.00 300.00 &0
+  NORMFLY 99936.94 24369.78 500.00 300.00 &0
+  LANDING 100974.07 25330.67 0 0 &0
+[usa0101]
+  Planes 4
+  Skill 1
+  Class air.F4U1D
+  Fuel 100
+  weapons 2x500
+[usa0101_Way]
+  NORMFLY 112395.28 31899.97 500.00 300.00 &0
+  GATTACK 114906.77 35838.60 500.00 300.00 2_Chief 0 &0
+  GATTACK 114598.32 36520.33 500.00 300.00 4_Chief 0 &0
+  NORMFLY 109552.20 34016.11 500.00 300.00 &0
+  NORMFLY 107923.62 30204.53 500.00 300.00 &0
+  NORMFLY 106191.08 23759.50 500.00 300.00 &0
+  NORMFLY 105428.76 21992.31 500.00 300.00 &0
+  NORMFLY 103904.13 21472.55 500.00 300.00 &0
+  LANDING 102750.42 23021.30 0 0 &0
+[usa0102]
+  Planes 4
+  Skill 1
+  Class air.B_25H1
+  Fuel 100
+  weapons 3x250lbs1x1000lbs
+[usa0102_Way]
+  NORMFLY 113435.34 31329.80 500.00 300.00 &0
+  NORMFLY 115094.02 34935.39 500.00 300.00 &0
+  GATTACK 115576.52 36058.61 500.00 300.00 1_Chief 0 &0
+  NORMFLY 110903.58 32387.53 500.00 300.00 &0
+  NORMFLY 108685.93 27813.63 500.00 300.00 &0
+  NORMFLY 104354.59 27293.87 500.00 300.00 &0
+  NORMFLY 100508.36 27432.47 500.00 300.00 &0
+  NORMFLY 99746.04 25041.57 500.00 300.00 &0
+  NORMFLY 101409.28 24902.97 500.00 300.00 &0
+  LANDING 101975.41 24363.64 0 0 &0
+[usa0103]
+  Planes 4
+  Skill 1
+  Class air.F6F3
+  Fuel 100
+  weapons 2x1006xhvargp1x150dt
+[usa0103_Way]
+  NORMFLY 110123.69 32899.24 500.00 300.00 &0
+  NORMFLY 111294.31 35347.02 500.00 300.00 &0
+  GATTACK 112359.93 37019.25 500.00 300.00 3_Chief 0 &0
+  GATTACK 112429.88 37177.92 500.00 300.00 6_Chief 0 &0
+  GATTACK 112260.47 37184.69 500.00 300.00 3_Chief 0 &0
+  NORMFLY 108720.58 35783.30 500.00 300.00 &0
+  NORMFLY 105857.25 30391.21 500.00 300.00 &0
+  NORMFLY 105670.95 29978.98 500.00 300.00 &0
+  NORMFLY 104978.30 29095.71 500.00 300.00 &0
+  NORMFLY 104077.39 27917.58 500.00 300.00 &0
+  LANDING 101965.91 26509.01 0 0 &0
+[ja0100]
+  Planes 4
+  Skill 1
+  Class air.A6M3
+  Fuel 100
+  weapons 1x250
+[ja0100_Way]
+  NORMFLY 115879.26 42759.25 500.00 300.00 &0
+  NORMFLY 115274.02 35954.61 500.00 300.00 usa0102 1 &0
+  NORMFLY 113216.11 76031.12 500.00 300.00 &0
+  NORMFLY 115769.19 83749.60 500.00 300.00 &0
+  NORMFLY 114638.27 84089.32 500.00 300.00 &0
+  NORMFLY 114325.86 83124.88 500.00 300.00 &0
+  LANDING 113508.24 81473.82 0 0 &0
+[ja0101]
+  Planes 4
+  Skill 1
+  Class air.A6M3
+  Fuel 100
+  weapons 1x250
+[ja0101_Way]
+  NORMFLY 113795.99 42694.69 500.00 300.00 &0
+  NORMFLY 114614.44 35174.61 500.00 300.00 usa0101 1 &0
+  NORMFLY 111717.04 76377.06 500.00 300.00 &0
+  NORMFLY 111108.43 77712.67 500.00 300.00 &0
+  NORMFLY 111683.43 78608.38 500.00 300.00 &0
+  LANDING 112733.24 80131.48 0 0 &0
+[ja0102]
+  Planes 4
+  Skill 1
+  Class air.A6M3
+  Fuel 100
+  weapons default
+[ja0102_Way]
+  NORMFLY 110603.66 42092.36 500.00 300.00 &0
+  NORMFLY 112179.81 36892.48 500.00 300.00 usa0103 2 &0
+  NORMFLY 109837.74 77460.59 500.00 300.00 &0
+  NORMFLY 110301.17 78231.53 500.00 300.00 &0
+  LANDING 111514.67 80112.72 0 0 &0
+[ja0103]
+  Planes 4
+  Skill 1
+  Class air.KI_84_IB
+  Fuel 100
+  weapons 2x250
+[ja0103_Way]
+  NORMFLY 112343.26 42216.67 500.00 300.00 &0
+  NORMFLY 113078.12 35599.01 500.00 300.00 usa0100 1 &0
+  NORMFLY 111505.91 75934.42 500.00 300.00 &0
+  NORMFLY 110993.36 77153.04 500.00 300.00 &0
+  NORMFLY 111717.04 78222.07 500.00 300.00 &0
+  NORMFLY 115246.89 82807.40 500.00 300.00 &0
+  NORMFLY 114267.33 83702.75 500.00 300.00 &0
+  NORMFLY 113126.01 83314.28 500.00 300.00 &0
+  LANDING 112322.90 81749.80 0 0 &0
+[Chiefs]
+  0_Chief Vehicles.JapanCarsColumnB 2
+  1_Chief Vehicles.JapanCarsColumnC 2
+  2_Chief Vehicles.JapanCarsColumnA 2
+  3_Chief Vehicles.JapanCarsColumnA 2
+  4_Chief Vehicles.JapanCarsColumnB 2
+  5_Chief Vehicles.JapanCarsColumnB 2
+  6_Chief Vehicles.JapanCarsColumnB 2
+[0_Chief_Road]
+  113099.96 37429.57 120.00 0 4 3.055555582046509
+  113100.00 37300.00 20.00
+  112900.00 37100.00 20.00
+  112900.74 36829.57 120.00 0 5 3.055555582046509
+  112900.00 36700.00 -46.00
+  112900.00 36300.00 -46.00
+  112900.00 36100.00 20.00
+  112901.20 35918.00 120.00 0 6 3.055555582046509
+  112900.00 35700.00 20.00
+  111900.00 34700.00 20.00
+  111900.00 34300.00 20.00
+  111500.00 33900.00 20.00
+  111272.77 33673.75 120.00 0 2 3.055555582046509
+  110872.87 33274.55 120.00
+[1_Chief_Road]
+  115503.65 36376.94 120.00 0 9 3.055555582046509
+  115500.00 36100.00 20.00
+  115300.00 35900.00 -47.00
+  115100.00 35700.00 -47.00
+  114900.00 35500.00 20.00
+  114700.00 35300.00 20.00
+  114500.00 35300.00 20.00
+  112900.00 33700.00 20.00
+  112705.29 33501.83 120.00 0 4 3.055555582046509
+  112500.00 33700.00 20.00
+  112100.00 34100.00 20.00
+  111897.98 34302.52 120.00
+[2_Chief_Road]
+  115500.96 36566.11 120.00 0 9 3.055555582046509
+  115500.00 36100.00 20.00
+  115300.00 35900.00 -47.00
+  115100.00 35700.00 -47.00
+  114900.00 35500.00 20.00
+  114700.00 35300.00 20.00
+  114500.00 35300.00 20.00
+  112900.00 33700.00 20.00
+  112699.23 33500.72 120.00 0 4 3.055555582046509
+  112500.00 33700.00 20.00
+  112100.00 34100.00 20.00
+  111899.04 34296.91 120.00 0 4 3.055555582046509
+  111700.00 34100.00 20.00
+  111100.00 33500.00 20.00
+  110852.61 33254.64 120.00
+[3_Chief_Road]
+  113099.18 37299.78 120.00 0 11 3.055555582046509
+  112900.00 37100.00 20.00
+  112900.00 36900.00 20.00
+  112900.00 36700.00 -46.00
+  112900.00 36300.00 -46.00
+  112900.00 36100.00 20.00
+  112900.00 35700.00 20.00
+  111900.00 34700.00 20.00
+  111900.00 34300.00 20.00
+  111500.00 33900.00 20.00
+  111215.80 33619.82 120.00
+[4_Chief_Road]
+  115500.41 36464.86 120.00 0 9 3.055555582046509
+  115500.00 36100.00 20.00
+  115300.00 35900.00 -47.00
+  115100.00 35700.00 -47.00
+  114900.00 35500.00 20.00
+  114700.00 35300.00 20.00
+  114500.00 35300.00 20.00
+  112900.00 33700.00 20.00
+  112700.67 33500.49 120.00 0 4 3.055555582046509
+  112500.00 33700.00 20.00
+  112100.00 34100.00 20.00
+  111903.77 34298.02 120.00 0 4 3.055555582046509
+  111700.00 34100.00 20.00
+  111100.00 33500.00 20.00
+  110904.06 33308.41 120.00
+[5_Chief_Road]
+  113042.65 37243.34 120.00 0 11 3.055555582046509
+  112900.00 37100.00 20.00
+  112900.00 36900.00 20.00
+  112900.00 36700.00 -46.00
+  112900.00 36300.00 -46.00
+  112900.00 36100.00 20.00
+  112900.00 35700.00 20.00
+  111900.00 34700.00 20.00
+  111900.00 34300.00 20.00
+  111300.00 33700.00 20.00
+  111158.97 33561.94 120.00
+[6_Chief_Road]
+  113099.17 37542.95 120.00 0 12 3.055555582046509
+  113100.00 37300.00 20.00
+  112900.00 37100.00 20.00
+  112900.00 36900.00 20.00
+  112900.00 36700.00 -46.00
+  112900.00 36300.00 -46.00
+  112900.00 36100.00 20.00
+  112900.00 35700.00 20.00
+  111900.00 34700.00 20.00
+  111900.00 34300.00 20.00
+  111300.00 33700.00 20.00
+  111095.86 33492.38 120.00
+[NStationary]
+  67_Static vehicles.artillery.Artillery$Type88_75mm_JA 2 111550.99 80925.75 360.00 0.0 0
+  68_Static vehicles.artillery.Artillery$Type88_75mm_JA 2 111445.57 81347.43 360.00 0.0 0
+  69_Static vehicles.artillery.Artillery$Twin25mm_JA 2 111319.06 81537.18 360.00 0.0 0
+  70_Static vehicles.artillery.Artillery$Twin25mm_JA 2 112315.27 81421.22 360.00 0.0 0
+  71_Static vehicles.artillery.Artillery$Twin25mm_JA 2 113390.55 81463.39 360.00 0.0 0
+  72_Static vehicles.artillery.Artillery$Twin25mm_JA 2 113095.37 80846.69 360.00 0.0 0
+  73_Static vehicles.artillery.Artillery$Twin25mm_JA 2 112847.64 80409.20 360.00 0.0 0
+  74_Static vehicles.planes.Plane$A6M5A 2 112209.44 80493.44 509.10 0.0 ja
+  75_Static vehicles.planes.Plane$A6M5A 2 112153.30 80529.12 420.00 0.0 ja
+  76_Static vehicles.planes.Plane$A6M5A 2 112166.79 80522.59 420.00 0.0 ja
+  77_Static vehicles.planes.Plane$A6M5A 2 112088.89 80568.72 509.10 0.0 ja
+  78_Static vehicles.planes.Plane$A6M5A 2 112102.38 80560.89 509.10 0.0 ja
+  79_Static vehicles.planes.Plane$A6M5A 2 112049.73 80597.88 509.10 0.0 ja
+  80_Static vehicles.planes.Plane$A6M5A 2 112061.48 80590.92 509.10 0.0 ja
+  81_Static vehicles.planes.Plane$A6M5A 2 112013.61 80603.54 509.10 0.0 ja
+  82_Static vehicles.planes.Plane$A6M5A 2 113003.21 80812.61 420.00 0.0 ja
+  83_Static vehicles.planes.Plane$A6M5A 2 113011.14 80826.60 420.00 0.0 ja
+  84_Static vehicles.planes.Plane$A6M5A 2 113023.25 80840.11 420.00 0.0 ja
+  85_Static vehicles.planes.Plane$A6M5A 2 113035.37 80854.56 420.00 0.0 ja
+  86_Static vehicles.planes.Plane$A6M5A 2 113045.16 80870.40 420.00 0.0 ja
+  87_Static vehicles.planes.Plane$A6M5A 2 113056.81 80886.71 420.00 0.0 ja
+  88_Static vehicles.stationary.Stationary$Kurogane 2 111999.12 80603.69 420.00 0.0
+  89_Static vehicles.stationary.Stationary$Kurogane 2 112055.14 80586.46 635.00 0.0
+  90_Static vehicles.stationary.Stationary$Truck_Type94 2 112118.13 80535.14 635.00 0.0
+  91_Static vehicles.stationary.Stationary$Truck_Type94 2 112123.19 80534.15 635.00 0.0
+  92_Static vehicles.stationary.Stationary$Truck_Type94 2 112128.54 80530.43 635.00 0.0
+  93_Static vehicles.stationary.Stationary$Truck_Type94 2 112095.78 80552.64 575.00 0.0
+  94_Static vehicles.stationary.Stationary$Truck_Type94 2 112002.28 80604.88 575.00 0.0
+  95_Static vehicles.stationary.Stationary$HoHa 2 112294.93 81022.37 635.00 0.0
+  96_Static vehicles.stationary.Stationary$HoHa 2 112287.35 81026.86 635.00 0.0
+  97_Static vehicles.stationary.Stationary$HoHa 2 112277.25 81032.34 635.00 0.0
+  98_Static vehicles.stationary.Stationary$HaGo 2 112267.70 81037.81 635.00 0.0
+  99_Static vehicles.stationary.Stationary$HaGo 2 112260.12 81042.87 635.00 0.0
+  100_Static vehicles.stationary.Stationary$HaGoRadio 2 112254.65 81046.52 645.00 0.0
+  101_Static vehicles.stationary.Stationary$ChiHa_alt 2 112249.45 81048.48 635.00 0.0
+  102_Static vehicles.stationary.Stationary$ChiHa_alt 2 112243.14 81052.41 635.00 0.0
+  103_Static vehicles.stationary.Stationary$ChiHa_alt 2 112238.51 81055.50 635.00 0.0
+  104_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 128662.43 70856.01 635.00 0.0 200
+  105_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 129711.48 70877.96 635.00 0.0 300
+  106_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 131261.33 70272.76 635.00 0.0 200
+  107_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 133439.61 69719.11 635.00 0.0 200
+  108_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 133694.49 69455.80 635.00 0.0 200
+  0_Static vehicles.artillery.Artillery$Twin25mm_JA 2 115520.26 36238.75 360.00 0.0 200
+  1_Static vehicles.artillery.Artillery$Twin25mm_JA 2 115414.25 36120.37 360.00 0.0 200
+  2_Static vehicles.artillery.Artillery$Twin25mm_JA 2 115521.32 36101.75 360.00 0.0 200
+  3_Static vehicles.artillery.Artillery$Twin25mm_JA 2 112918.40 36715.52 360.00 0.0 200
+  4_Static vehicles.artillery.Artillery$Twin25mm_JA 2 113085.25 37260.78 360.00 0.0 200
+  5_Static vehicles.artillery.Artillery$Twin25mm_JA 2 112909.19 37095.16 360.00 0.0 200
+  6_Static vehicles.artillery.Artillery$_50calMG_water_US 1 101639.90 26436.28 360.00 0.0 0
+  7_Static vehicles.planes.Plane$A_20G 1 102026.89 25244.06 480.00 0.0 us
+  8_Static vehicles.planes.Plane$A_20G 1 102085.54 25202.64 480.00 0.0 us
+  9_Static vehicles.planes.Plane$B_25J1 1 101913.52 25349.05 390.00 0.0 us
+  10_Static vehicles.planes.Plane$F6F3 1 101405.56 25417.10 390.00 0.0 us
+  11_Static vehicles.planes.Plane$P_47D10 1 101439.78 25384.56 300.00 0.0 us
+  12_Static vehicles.planes.Plane$P_38J 1 101477.73 25364.69 300.00 0.0 us
+  13_Static vehicles.planes.Plane$P_38J 1 101515.85 25346.28 300.00 0.0 us
+  14_Static vehicles.planes.Plane$B_17E 1 101147.34 25784.93 300.00 0.0 us
+  15_Static vehicles.planes.Plane$B_17E 1 101180.88 25754.34 300.00 0.0 us
+  16_Static vehicles.planes.Plane$B_17E 1 101107.34 25815.53 300.00 0.0 us
+  17_Static vehicles.planes.Plane$B_17E 1 100979.67 25667.85 300.00 0.0 us
+  18_Static vehicles.planes.Plane$B_17E 1 100947.34 25627.60 300.00 0.0 us
+  19_Static vehicles.planes.Plane$B_17E 1 100917.08 25588.86 300.00 0.0 us
+  20_Static vehicles.planes.Plane$B_17E 1 101015.24 25708.42 300.00 0.0 us
+  21_Static vehicles.planes.Plane$B_17E 1 101052.14 25747.16 300.00 0.0 us
+  24_Static vehicles.planes.Plane$B_25J1 1 101753.53 25695.67 449.10 0.0 us
+  22_Static vehicles.planes.Plane$B_25J1 1 101781.81 25696.71 449.10 0.0 us
+  23_Static vehicles.planes.Plane$B_25J1 1 101807.80 25697.30 449.10 0.0 us
+  25_Static vehicles.planes.Plane$B_25J1 1 101836.35 25699.27 449.10 0.0 us
+  26_Static vehicles.planes.Plane$B_25J1 1 101723.72 25694.74 449.10 0.0 us
+  27_Static vehicles.planes.Plane$B_25J1 1 102809.41 23307.87 509.10 0.0 us
+  28_Static vehicles.planes.Plane$B_25J1 1 102824.03 23284.21 509.10 0.0 us
+  29_Static vehicles.planes.Plane$B_25J1 1 102838.29 23260.20 509.10 0.0 us
+  30_Static vehicles.planes.Plane$B_25J1 1 102787.14 23345.11 509.10 0.0 us
+  31_Static vehicles.planes.Plane$B_25J1 1 102776.00 23369.82 509.10 0.0 us
+  32_Static vehicles.planes.Plane$B_25J1 1 102761.39 23393.83 509.10 0.0 us
+  33_Static vehicles.planes.Plane$B_25J1 1 102740.16 23432.81 509.10 0.0 us
+  34_Static vehicles.planes.Plane$B_25J1 1 102726.59 23456.47 509.10 0.0 us
+  35_Static vehicles.planes.Plane$B_25J1 1 102711.27 23479.79 509.10 0.0 us
+  36_Static vehicles.artillery.Artillery$M16_US 1 101154.57 25757.42 509.10 0.0 0
+  37_Static vehicles.artillery.Artillery$M16_US 1 101026.60 25325.91 509.10 0.0 0
+  38_Static vehicles.artillery.Artillery$StBofors_40mm_US 1 101980.44 25260.97 510.00 0.0 0
+  39_Static vehicles.artillery.Artillery$StBofors_40mm_US 1 102084.49 25270.35 510.00 0.0 0
+  40_Static vehicles.artillery.Artillery$StBofors_40mm_US 1 101085.46 25752.20 510.00 0.0 0
+  41_Static vehicles.artillery.Artillery$StBofors_40mm_US 1 101561.20 25618.82 510.00 0.0 0
+  42_Static vehicles.artillery.Artillery$StBofors_40mm_US 1 101891.50 25785.37 510.00 0.0 0
+  43_Static vehicles.artillery.Artillery$StBofors_40mm_US 1 101811.73 26480.96 510.00 0.0 0
+  44_Static vehicles.planes.Plane$B5N2 2 111362.07 81519.10 420.00 0.0 ja
+  45_Static vehicles.planes.Plane$G4M1_11 2 111388.94 81530.46 420.00 0.0 ja
+  46_Static vehicles.planes.Plane$G4M1_11 2 111457.17 81556.96 434.10 0.0 ja
+  47_Static vehicles.planes.Plane$G4M1_11 2 111446.21 81596.63 434.10 0.0 ja
+  48_Static vehicles.planes.Plane$G4M1_11 2 111521.41 81620.79 434.10 0.0 ja
+  49_Static vehicles.planes.Plane$G4M1_11 2 111607.91 81628.97 434.10 0.0 ja
+  50_Static vehicles.planes.Plane$G4M1_11 2 111699.47 81608.32 434.10 0.0 ja
+  51_Static vehicles.planes.Plane$B5N2 2 111533.42 81584.61 420.00 0.0 ja
+  52_Static vehicles.planes.Plane$KI_84_IB 2 112004.60 80617.92 509.10 0.0 ja
+  53_Static vehicles.planes.Plane$KI_84_IB 2 111980.24 80633.20 509.10 0.0 ja
+  54_Static vehicles.planes.Plane$KI_84_IB 2 111968.78 80642.28 509.10 0.0 ja
+  55_Static vehicles.planes.Plane$A_20G 1 101884.51 24225.38 344.10 0.0 us
+  56_Static vehicles.planes.Plane$A_20G 1 101889.35 24176.10 344.10 0.0 us
+  57_Static vehicles.planes.Plane$A_20G 1 101915.61 24142.45 344.10 0.0 us
+  58_Static vehicles.planes.Plane$A_20G 1 101902.48 24075.41 344.10 0.0 us
+  59_Static vehicles.planes.Plane$A_20G 1 101998.54 24033.95 254.10 0.0 us
+  60_Static vehicles.planes.Plane$A_20G 1 101943.25 24036.02 254.10 0.0 us
+  61_Static vehicles.planes.Plane$PBN1 1 102400.26 23306.94 344.10 0.0 us
+  62_Static vehicles.planes.Plane$PBN1 1 102419.39 23273.91 344.10 0.0 us
+  63_Static vehicles.planes.Plane$PBN1 1 102435.96 23237.32 344.10 0.0 us
+  64_Static vehicles.planes.Plane$PBN1 1 100859.13 25477.68 344.10 0.0 us
+  65_Static vehicles.planes.Plane$PBN1 1 100860.90 25440.62 344.10 0.0 us
+  66_Static vehicles.planes.Plane$PBN1 1 100861.78 25403.56 374.10 0.0 us
+  109_Static vehicles.stationary.Siren$SirenCity 1 101741.52 25892.84 360.00 0.0
+  110_Static vehicles.lights.Searchlight$SL_ManualBlue 1 101076.72 25278.78 360.00 0.0
+  111_Static vehicles.lights.Searchlight$SL_ManualBlue 1 101629.88 25598.50 360.00 0.0
+  112_Static vehicles.lights.Searchlight$SL_ManualBlue 1 101822.72 25771.04 360.00 0.0
+  113_Static vehicles.lights.Searchlight$SL_ManualBlue 1 101792.27 26552.57 360.00 0.0
+  114_Static vehicles.lights.Searchlight$SL_ManualBlue 1 101584.20 26395.25 360.00 0.0
+  115_Static vehicles.lights.Searchlight$SL_ManualBlue 1 102132.29 25243.26 360.00 0.0
+  116_Static vehicles.lights.Searchlight$SL_ManualBlue 1 101974.97 24091.26 360.00 0.0
+  117_Static vehicles.lights.Searchlight$SL_ManualBlue 1 102660.07 23538.10 360.00 0.0
+  118_Static vehicles.lights.Searchlight$SL_ManualBlue 1 101371.06 23467.06 360.00 0.0
+  119_Static vehicles.lights.Searchlight$SL_ManualBlue 2 112876.53 36710.86 360.00 0.0
+  120_Static vehicles.lights.Searchlight$SL_ManualBlue 2 115407.60 36141.37 360.00 0.0
+  121_Static vehicles.lights.Searchlight$SL_ManualBlue 2 115592.00 36031.09 360.00 0.0
+  122_Static vehicles.lights.Searchlight$SL_ManualBlue 2 113088.06 37231.54 360.00 0.0
+  123_Static vehicles.lights.Searchlight$SL_ManualBlue 2 112382.23 81408.21 360.00 0.0
+  124_Static vehicles.lights.Searchlight$SL_ManualBlue 2 111494.02 81351.41 360.00 0.0
+  125_Static vehicles.lights.Searchlight$SL_ManualBlue 2 111581.81 80907.30 360.00 0.0
+  126_Static vehicles.lights.Searchlight$SL_ManualBlue 2 112769.53 80447.71 360.00 0.0
+  127_Static vehicles.lights.Searchlight$SL_ManualBlue 2 113022.57 80958.94 360.00 0.0
+  128_Static vehicles.lights.Searchlight$SL_ManualBlue 2 113337.57 81470.18 360.00 0.0
+  129_Static vehicles.stationary.Siren$SirenCity 2 111721.24 81263.62 360.00 0.0
+[Buildings]
+  0_bld House$Water_Tower 1 101578.17 26456.40 360.00
+  1_bld House$Henderstower 1 101629.94 26432.97 390.00
+  2_bld House$FlagUS 1 101892.69 25720.11 704.10
+  3_bld House$FlagUS 1 102342.13 25539.43 704.10
+  4_bld House$FlagUS 1 102676.38 23522.64 704.10
+  5_bld House$Henderstower 1 102170.48 24290.51 704.10
+  6_bld House$FlagUS 1 101502.36 25674.71 704.10
+  7_bld House$Henderstower 1 101518.67 25675.65 704.10
+  8_bld House$FlagJarmy 1 111725.74 80226.55 360.00
+  9_bld House$FlagJarmy 1 111761.45 81591.50 360.00
+  10_bld House$Water_Tower 1 101930.25 25801.61 360.00
+[Bridge]
+[House]

@@ -1,0 +1,684 @@
+[MAIN]
+  MAP Balaton/load.ini
+  TIME 13.25
+  CloudType 4
+  CloudHeight 700.0
+  player r0102
+  army 1
+  playerNum 0
+[Wing]
+  r0101
+  r0102
+  r0103
+  r0100
+  g0103
+  g0100
+  g0101
+[r0101]
+  Planes 2
+  Skill 1
+  skin0 TLD_A20G_Bright.bmp
+  skin1 TLD_A20G_Bright.bmp
+  skin2 TLD_A20G_Bright.bmp
+  skin3 TLD_A20G_Bright.bmp
+  Class air.A_20G
+  Fuel 100
+  weapons 1xmk13
+[r0101_Way]
+  TAKEOFF 152755.41 48088.43 0 0 &0
+  NORMFLY 140443.60 76785.66 500.00 300.00 &0
+  GATTACK 142191.26 82579.75 500.00 300.00 9_Chief 0 &0
+  GATTACK 143518.67 83526.03 500.00 300.00 11_Chief 0 &0
+  GATTACK 146028.93 83171.18 500.00 300.00 10_Chief 0 &0
+  LANDING 152755.41 48088.43 0 0 &0
+[r0102]
+  Planes 2
+  Skill 1
+  skin0 TLD_A20G_Bright.bmp
+  skin1 TLD_A20G_Bright.bmp
+  Class air.A_20G
+  Fuel 100
+  weapons 1xmk13
+[r0102_Way]
+  TAKEOFF 152755.41 48088.43 0 0 &0
+  NORMFLY 140101.12 76629.16 500.00 300.00 &0
+  GATTACK 141663.37 81836.64 500.00 300.00 11_Chief 0 &0
+  NORMFLY 144869.42 82772.77 500.00 300.00 &0
+  LANDING 152755.41 48088.43 0 0 &0
+[r0103]
+  Planes 2
+  Skill 1
+  skin0 TLD_A20G_Bright.bmp
+  skin1 TLD_A20G_Bright.bmp
+  Class air.A_20G
+  Fuel 100
+  weapons 1xmk13
+[r0103_Way]
+  TAKEOFF 152755.41 48088.43 0 0 &0
+  NORMFLY 139843.06 76305.74 500.00 300.00 &0
+  NORMFLY 141307.83 81767.15 500.00 300.00 &0
+  GATTACK 145796.41 83332.06 500.00 300.00 10_Chief 0 &0
+  LANDING 152755.41 48088.43 0 0 &0
+[r0100]
+  Planes 4
+  Skill 1
+  Class air.P_63C
+  Fuel 100
+  weapons default
+[r0100_Way]
+  NORMFLY 155803.16 40613.10 500.00 300.00 &0
+  NORMFLY 142511.39 73759.73 500.00 300.00 r0102 1 &0
+  NORMFLY 139424.78 80293.04 500.00 300.00 &0
+  NORMFLY 144517.69 86620.59 500.00 300.00 &0
+  NORMFLY 147964.40 86672.03 500.00 300.00 &0
+  NORMFLY 151256.78 79212.73 500.00 300.00 &0
+  LANDING 152755.41 48088.43 0 0 &0
+[g0103]
+  Planes 4
+  Skill 3
+  skin0 TLD_FW_190A_F_unmarked.bmp
+  skin1 TLD_FW_190A_F_unmarked.bmp
+  skin2 TLD_FW_190A_F_unmarked.bmp
+  skin3 TLD_FW_190A_F_unmarked.bmp
+  Class air.FW_190A8
+  Fuel 100
+  weapons default
+[g0103_Way]
+  NORMFLY 130973.03 124923.66 500.00 300.00 &0
+  NORMFLY 146221.80 86858.04 500.00 300.00 r0100 4 &0
+  NORMFLY 142574.84 78190.92 500.00 300.00 &0
+  NORMFLY 134082.83 75566.12 500.00 300.00 &0
+  NORMFLY 132384.43 76389.59 500.00 300.00 &0
+  NORMFLY 124767.35 92756.02 500.00 300.00 &0
+  LANDING 119016.67 122255.61 0 0 &0
+[g0100]
+  Planes 4
+  Skill 3
+  skin0 TLD_FW_190A_F_unmarked.bmp
+  skin1 TLD_FW_190A_F_unmarked.bmp
+  skin2 TLD_FW_190A_F_unmarked.bmp
+  skin3 TLD_FW_190A_F_unmarked.bmp
+  Class air.FW_190A8
+  Fuel 100
+  weapons default
+[g0100_Way]
+  NORMFLY 127034.11 126040.52 500.00 500.00 &0
+  NORMFLY 147207.61 69468.57 500.00 500.00 &0
+  NORMFLY 148808.00 58908.27 500.00 500.00 &0
+  NORMFLY 134200.03 73790.14 500.00 500.00 &0
+  LANDING 119016.67 122255.61 0 0 &0
+[g0101]
+  Planes 4
+  Skill 3
+  skin0 TLD_FW_190A_F_unmarked.bmp
+  skin1 TLD_FW_190A_F_unmarked.bmp
+  skin2 TLD_FW_190A_F_unmarked.bmp
+  skin3 TLD_FW_190A_F_unmarked.bmp
+  Class air.FW_190A8
+  Fuel 100
+  weapons default
+[g0101_Way]
+  NORMFLY 124339.65 124370.24 500.00 500.00 &0
+  NORMFLY 147529.80 61190.76 500.00 500.00 &0
+  NORMFLY 143603.91 59364.77 500.00 500.00 &0
+  LANDING 119016.67 122255.61 0 0 &0
+[Chiefs]
+  19_Chief Vehicles.GAZ67 1
+  20_Chief Vehicles.RussiaCarsColumnB 1
+  21_Chief Vehicles.ZIS5_AA 1
+  22_Chief Vehicles.ZIS5_AA 1
+  9_Chief Ships.Tanker 2 0 2 1.0
+  10_Chief Ships.Tanker 2 0 2 1.0
+  11_Chief Ships.Tramp 2 0 2 1.0
+[19_Chief_Road]
+  153006.66 47719.37 120.00 0 2 3.055555582046509
+  153512.86 47207.05 120.00
+[20_Chief_Road]
+  151373.00 48779.49 120.00 0 6 3.055555582046509
+  151500.00 48700.00 20.00
+  151900.00 48300.00 20.00
+  152700.00 48300.00 20.00
+  153100.00 47900.00 20.00
+  153240.48 47804.45 120.00
+[21_Chief_Road]
+  152787.19 47998.04 120.00 0 2 3.055555582046509
+  153391.58 47360.59 120.00
+[22_Chief_Road]
+  153897.94 47048.60 120.00 0 2 3.055555582046509
+  153373.03 47563.06 120.00
+[9_Chief_Road]
+  146332.44 84079.61 120.00 0 4 3.729722261428833
+  137100.00 83300.00 120.00
+  134900.00 82900.00 120.00
+  134538.91 82963.88 120.00
+[10_Chief_Road]
+  147170.08 83850.08 120.00 0 2 3.729722261428833
+  133867.59 82730.77 120.00
+[11_Chief_Road]
+  147202.36 84076.09 120.00 0 4 2.5722224712371826
+  136900.00 83300.00 120.00
+  134900.00 82900.00 120.00
+  134158.19 82407.90 120.00
+[NStationary]
+  118_Static vehicles.planes.Plane$A_20G 1 153592.97 47396.19 490.00 0.0 null
+  119_Static vehicles.planes.Plane$A_20G 1 153617.74 47383.34 490.00 0.0 null
+  120_Static vehicles.planes.Plane$A_20G 1 153636.46 47367.02 490.00 0.0 null
+  121_Static vehicles.planes.Plane$A_20G 1 153656.82 47349.95 490.00 0.0 null
+  122_Static vehicles.planes.Plane$A_20G 1 153679.03 47330.50 490.00 0.0 null
+  123_Static vehicles.planes.Plane$A_20G 1 153701.59 47311.24 490.00 0.0 null
+  124_Static vehicles.planes.Plane$A_20G 1 153723.06 47293.07 490.00 0.0 null
+  125_Static vehicles.planes.Plane$A_20G 1 153744.71 47273.81 490.00 0.0 null
+  126_Static vehicles.planes.Plane$LA_5FN 1 153623.15 47095.82 315.00 0.0 null
+  127_Static vehicles.planes.Plane$LA_5FN 1 153693.89 47025.12 315.00 0.0 null
+  128_Static vehicles.planes.Plane$LA_5FN 1 153677.47 47037.31 315.00 0.0 null
+  129_Static vehicles.planes.Plane$LA_5FN 1 153668.16 47055.81 315.00 0.0 null
+  130_Static vehicles.planes.Plane$LA_5FN 1 153652.20 47068.11 315.00 0.0 null
+  131_Static vehicles.planes.Plane$LA_5FN 1 153634.91 47078.79 315.00 0.0 null
+  132_Static vehicles.planes.Plane$IL_4_IL4 1 153335.23 47695.11 495.00 0.0 null
+  133_Static vehicles.planes.Plane$IL_4_IL4 1 153355.77 47675.60 495.00 0.0 null
+  134_Static vehicles.planes.Plane$IL_4_IL4 1 153376.49 47656.61 495.00 0.0 null
+  135_Static vehicles.planes.Plane$IL_4_IL4 1 153396.35 47636.75 495.00 0.0 null
+  136_Static vehicles.planes.Plane$IL_4_IL4 1 153419.65 47616.03 495.00 0.0 null
+  137_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 152922.58 47708.83 525.00 0.0 0
+  138_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 153218.29 47729.63 615.00 0.0 0
+  139_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 152683.30 48070.19 540.00 0.0 0
+  140_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 152619.84 48237.91 585.00 0.0 0
+  141_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 153793.55 46953.40 465.00 0.0 0
+  142_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 153947.56 47019.25 390.00 0.0 0
+  143_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 153109.28 47991.11 480.00 0.0 0
+  144_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 153120.82 47983.06 480.00 0.0 0
+  145_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 153139.71 47969.09 480.00 0.0 0
+  146_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 153161.65 47937.13 480.00 0.0 0
+  147_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 153181.22 47918.10 480.00 0.0 0
+  148_Static vehicles.stationary.Stationary$ZIS6_fuel 1 153715.38 47293.36 375.00 0.0
+  149_Static vehicles.stationary.Campfire$CampfireAirfield 0 153837.74 47168.28 705.00 0.0
+  150_Static vehicles.stationary.Smoke$Smoke6 0 153837.68 47168.17 705.00 63.34
+  72_Static vehicles.planes.Plane$P_80A 1 153030.68 48043.72 495.00 0.0 us
+  73_Static vehicles.planes.Plane$P_80A 1 153042.87 48032.29 495.00 0.0 us
+  74_Static vehicles.planes.Plane$P_80A 1 153055.83 48018.56 495.00 0.0 us
+  75_Static vehicles.planes.Plane$P_80A 1 153068.92 48006.63 495.00 0.0 us
+  76_Static vehicles.planes.Plane$P_80A 1 153082.91 47992.89 495.00 0.0 us
+  0_Static vehicles.artillery.Artillery$SdKfz251 2 145973.92 84906.71 435.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Nimrod 2 145993.64 84899.96 390.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Nimrod 2 146013.74 84899.47 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Wirbelwind 2 144465.17 85679.49 495.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Wirbelwind 2 144692.16 85710.72 480.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Wirbelwind 2 142022.76 86671.73 405.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Wirbelwind 2 141977.83 86628.23 405.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Wirbelwind 2 141660.01 86391.16 405.00 0.0 0
+  8_Static vehicles.artillery.Artillery$OpelBlitzMaultierAA 2 141478.14 86296.58 405.00 0.0 0
+  9_Static vehicles.artillery.Artillery$OpelBlitzMaultierAA 2 145064.32 85279.29 495.00 0.0 0
+  10_Static vehicles.artillery.Artillery$OpelBlitzMaultierAA 2 145143.15 85158.72 495.00 0.0 0
+  11_Static vehicles.artillery.Artillery$OpelBlitzMaultierAA 2 145275.55 85033.10 495.00 0.0 0
+  12_Static vehicles.artillery.Artillery$OpelBlitzMaultierAA 2 145441.77 84952.52 495.00 0.0 0
+[Buildings]
+  0_bld House$FurnitureTreeLine 1 153712.35 47002.78 435.00
+  1_bld House$FurnitureTreeLine 1 153729.41 46999.48 435.00
+  2_bld House$FurnitureTreeLine 1 153751.98 46991.96 435.00
+  3_bld House$FinlandHangar 1 153678.10 47008.69 675.00
+  4_bld House$FinlandHangar 1 153663.83 47022.91 675.00
+  5_bld House$FinlandHangar 1 153649.64 47036.86 675.00
+  6_bld House$FinlandHangar 1 153635.63 47051.14 675.00
+  7_bld House$FinlandHangar 1 153621.41 47065.21 675.00
+  8_bld House$FinlandHangar 1 153606.85 47078.84 675.00
+  9_bld House$FinlandCountryHouse3 1 153738.59 47022.34 675.00
+  10_bld House$FinlandCountryBigHouse 1 153587.23 47180.32 675.00
+  11_bld House$FinlandCountryHouse1 1 153591.08 47161.60 585.00
+  12_bld House$FinlandCountryFarm 1 153751.38 47031.24 495.00
+  13_bld House$FinlandCountryFarm 1 153758.52 47038.35 495.00
+  14_bld House$FurnitureTreeLine 1 153590.20 47069.82 510.00
+  15_bld House$FurnitureTreeLine 1 153607.04 47056.87 510.00
+  16_bld House$FurnitureTreeLine 1 153624.73 47038.31 510.00
+  17_bld House$FurnitureTreeLine 1 153641.57 47024.06 510.00
+  18_bld House$FurnitureTreeLine 1 153657.10 47004.64 510.00
+  19_bld House$FurnitureTreeLine 1 153674.80 46991.69 510.00
+  20_bld House$FurnitureTreeLine 1 153695.52 46991.69 510.00
+  21_bld House$FurnitureTreeLine 1 153689.91 46976.59 510.00
+  22_bld House$FurnitureTreeLine 1 153712.35 46986.08 510.00
+  23_bld House$FurnitureTreeLine 1 153619.98 46986.08 510.00
+  24_bld House$FurnitureTreeLine 1 153635.52 47012.84 510.00
+  25_bld House$FurnitureTreeLine 1 153613.94 47027.09 510.00
+  26_bld House$FurnitureTreeLine 1 153590.63 47035.29 510.00
+  27_bld House$FurnitureTreeLine 1 153598.40 47047.80 510.00
+  28_bld House$FurnitureTreeLine 1 153579.84 47104.78 510.00
+  29_bld House$FurnitureTreeLine 1 153596.25 47096.58 510.00
+  30_bld House$FurnitureTreeLine 1 153604.88 47109.52 510.00
+  31_bld House$FurnitureTreeLine 1 153589.77 47121.61 510.00
+  32_bld House$FurnitureTreeLine 1 153572.94 47131.10 510.00
+  33_bld House$FurnitureTreeLine 1 153584.16 47150.53 510.00
+  34_bld House$FurnitureTreeLine 1 153572.08 47150.96 510.00
+  35_bld House$FurnitureTreeLine 1 153572.51 47175.99 510.00
+  36_bld House$FurnitureTreeLine 1 153572.51 47197.57 510.00
+  37_bld House$FurnitureTreeLine 1 153582.00 47207.93 510.00
+  38_bld House$FurnitureTreeLine 1 153563.87 47221.31 510.00
+  39_bld House$FurnitureTreeLine 1 153558.70 47196.71 510.00
+  40_bld House$FurnitureTreeLine 1 153559.99 47172.54 510.00
+  41_bld House$FurnitureGermanyCountryFenceVert 1 153740.39 47012.88 405.00
+  42_bld House$FurnitureGermanyCountryFenceVert 1 153745.30 47017.78 405.00
+  43_bld House$FurnitureGermanyCountryFenceVert 1 153750.23 47022.72 405.00
+  44_bld House$FurnitureGermanyCountryFenceVert 1 153755.16 47027.65 405.00
+  45_bld House$FurnitureGermanyCountryFenceVert 1 153760.06 47032.58 405.00
+  46_bld House$FurnitureGermanyCountryFenceVert 1 153764.99 47037.54 405.00
+  47_bld House$FurnitureGermanyCountryFenceVert 1 153764.96 47042.33 675.00
+  48_bld House$FurnitureGermanyCountryFenceVert 1 153760.06 47047.26 675.00
+  49_bld House$FurnitureGermanyCountryFenceVert 1 153735.42 47012.76 675.00
+  50_bld House$FurnitureGermanyCountryFenceVert 1 153730.54 47017.69 675.00
+  51_bld House$FurnitureTreeLine 1 153587.47 47434.32 675.00
+  52_bld House$FurnitureTreeLine 1 153609.92 47414.04 675.00
+  53_bld House$FurnitureTreeLine 1 153636.68 47395.04 675.00
+  54_bld House$FurnitureTreeLine 1 153656.96 47376.48 675.00
+  55_bld House$FurnitureTreeLine 1 153674.23 47360.95 675.00
+  56_bld House$FurnitureTreeLine 1 153696.67 47341.96 675.00
+  57_bld House$FurnitureTreeLine 1 153721.70 47322.10 675.00
+  58_bld House$FurnitureTreeLine 1 153741.99 47302.25 675.00
+  59_bld House$FurnitureTreeLine 1 153760.98 47289.30 675.00
+  60_bld House$FurnitureTreeLine 1 152931.76 47663.12 630.00
+  61_bld House$FurnitureTreeLine 1 152955.88 47634.41 600.00
+  62_bld House$FurnitureTreeLine 1 153080.98 47531.87 540.00
+  63_bld House$FurnitureTreeLine 1 153684.19 47587.28 540.00
+  64_bld House$FurnitureTreeLine 1 153629.65 47599.18 480.00
+  65_bld House$FurnitureTreeLine 1 153610.11 47687.61 435.00
+  66_bld House$FurnitureTreeLine 1 153442.88 47655.41 375.00
+  67_bld House$FurnitureTreeLine 1 153530.25 47716.15 690.00
+  68_bld House$FurnitureTreeLine 1 153091.67 48009.23 675.00
+  69_bld House$FurnitureTreeLine 1 153071.49 48033.22 675.00
+  70_bld House$FurnitureTreeLine 1 153055.39 48051.18 675.00
+  71_bld House$FurnitureTreeLine 1 153033.29 48072.87 675.00
+  72_bld House$FurnitureTreeLine 1 153005.30 48096.89 675.00
+  73_bld House$FurnitureTreeLine 1 152973.88 48127.71 675.00
+  74_bld House$FurnitureTreeLine 1 152811.28 47642.95 620.00
+  75_bld House$FurnitureTreeLine 1 153254.39 47403.80 575.00
+  76_bld House$FurnitureTreeLine 1 153160.16 47427.34 555.00
+  77_bld House$FurnitureTreeLine 1 153319.65 47723.87 450.00
+  78_bld House$FurnitureTreeLine 1 153346.99 47709.56 690.00
+  79_bld House$FurnitureTreeLine 1 153333.60 47716.35 570.00
+  80_bld House$FurnitureTreeLine 1 153358.92 47695.98 570.00
+  81_bld House$FurnitureTreeLine 1 153373.78 47692.50 645.00
+  82_bld House$FurnitureTreeLine 1 153373.78 47677.82 540.00
+  83_bld House$FurnitureTreeLine 1 153388.82 47677.64 465.00
+  84_bld House$FurnitureTreeLine 1 153392.31 47660.02 360.00
+  85_bld House$FurnitureTreeLine 1 153408.64 47653.78 645.00
+  86_bld House$FurnitureTreeLine 1 153420.20 47638.56 645.00
+  87_bld House$FurnitureTreeLine 1 153437.26 47623.51 375.00
+  88_bld House$FurnitureTreeLine 1 153437.08 47603.51 570.00
+  89_bld House$AirdromeControlTowerSmall 1 153575.61 47421.76 675.00
+  90_bld House$AirdromeBarrelBlock2 1 153591.80 47405.38 630.00
+  91_bld House$AirdromeBarrelBlock1 1 153629.65 47377.40 630.00
+  92_bld House$AirdromeBarrelBlock1 1 153609.74 47388.52 570.00
+  93_bld House$AirdromeBarrelBlock1 1 153653.33 47359.28 540.00
+  94_bld House$AirdromeBarrelBlock1 1 153697.47 47322.33 540.00
+  95_bld House$AirdromeBarrelBlock1 1 153675.12 47340.07 465.00
+  96_bld House$Tent_Pup_US 1 153835.63 47175.98 435.00
+  97_bld House$Tent_Pup_US 1 153839.63 47176.25 465.00
+  98_bld House$Tent_Pup_US 1 153843.35 47174.21 495.00
+  99_bld House$Tent_Pup_US 1 153845.82 47170.22 525.00
+  100_bld House$Tent_Pup_US 1 153846.09 47165.84 555.00
+  101_bld House$Tent_Pup_US 1 153843.70 47161.91 405.00
+  102_bld House$Tent_Pup_US 1 153839.39 47160.03 630.00
+  103_bld House$Tent_Pyramid_US 1 153833.86 47181.22 615.00
+  104_bld House$Tent_Pyramid_US 1 153839.54 47182.84 615.00
+  105_bld House$Tent_Pyramid_US 1 153832.30 47186.87 615.00
+  106_bld House$Tent_Pyramid_US 1 153837.79 47188.54 615.00
+  107_bld House$Tent_HQ_US 1 153828.11 47170.43 705.00
+  108_bld House$Tent_HQ_US 1 153829.23 47166.21 705.00
+  109_bld House$Tent_HQ_US 1 153830.50 47161.93 705.00
+  110_bld House$AirdromeControlTowerSmall 0 153837.90 47167.53 585.00
+[Target]
+  0 0 0 0 500 146343 83951 0 0 9_Chief 146332 84079
+  0 0 0 0 500 147406 83943 0 0 11_Chief 147202 84076
+  0 0 0 0 500 147234 83743 0 0 10_Chief 147170 83850
+[StaticCamera]
+  144846 83978 100
+[Bridge]
+[House]
+  x4ga1 Y++++3
+  w4ga1 ++++3
+  v4ga1 +++++1
+  u4ga1 100004000
+  t4ga1 30000c0000
+  m4ga1 +1000Y70000
+  l4ga1 +1
+  05wc1 3
+  +4wc1 +++3
+  -4wc1 +++++3
+  Z4wc1 0-+++30
+  X4wc1 70000s0000
+  U4wc1 ++v
+  I4Me1 +++
+  H4Me1 +1000Y70000
+  F4Me1 0++++30
+  E4Me1 ++f
+  v4g91 ++f
+  p4g91 0++++30
+  o4g91 ++++7
+  n4g91 +++++
+  m4g91 +++v
+  v4wb1 +++++1
+  u4wb1 ++++7
+  t4wb1 +++7
+  s4wb1 +++++1
+  r4wb1 -++++3
+  q4wb1 +++
+  p4wb1 ++1
+  o4wb1 f
+  -4Md1 U++++3
+  Y4Md1 +++3
+  X4Md1 +0
+  W4Md1 f
+  H4Md1 +1
+  E4Md1 ++7
+  x4wa1 +1
+  w4wa1 ++f
+  v4wa1 +++1
+  t4wa1 30000c0000
+  p4wa1 f0000Y0000
+  n4wa1 w++++30
+  m4wa1 +++++3
+  l4wa1 +1
+  05Mc1 ++1
+  +4Mc1 +++7
+  Y4Mc1 0++++30
+  X4Mc1 +1000Y70000
+  V4Mc1 0++++30
+  U4Mc1 ++1
+  I40f1 ++f
+  H40f1 ++++7
+  F40f1 ++++v
+  E40f1 +++
+  w4w91 1
+  v4w91 -++++3
+  u4w91 ++++
+  t4w91 +1
+  s4w91 -++++X++++f
+  q4w91 0++++30
+  p4w91 ++f
+  o4w91 f0
+  n4w91 +++++
+  m4w91 ++v
+  l4w91 1
+  v4Mb1 f
+  u4Mb1 +0
+  t4Mb1 f
+  s4Mb1 3
+  r4Mb1 +0
+  q4Mb1 ++7
+  p4Mb1 3
+  -40e1 +0
+  Z40e1 +++3
+  Y40e1 +0
+  I40e1 +++f
+  H40e1 M++++3
+  G40e1 w++++3-+++f0
+  E40e1 0-+++30
+  D40e1 1
+  w4Ma1 ++1
+  v4Ma1 ++v
+  s4Ma1 70000s0000
+  q4Ma1 30000c0000
+  p4Ma1 0-+++30
+  o4Ma1 ++++v
+  n4Ma1 +++
+  m4Ma1 Y++++3
+  l4Ma1 +++7
+  050d1 v0
+  +40d1 30000c0000
+  -40d1 70000s0000
+  Z40d1 100004000
+  Y40d1 M++++3
+  X40d1 ++++7
+  V40d1 +++7
+  U40d1 f0
+  I4gf1 v0
+  H4gf1 +++++3
+  F4gf1 +++++
+  E4gf1 +0
+  x4M91 ++++
+  w4M91 ++7
+  u4M91 ++++3
+  t4M91 +++++1
+  s4M91 ++++v
+  p4M91 +++v
+  o4M91 ++++1
+  l4M91 ++v
+  Z40c1 f0
+  X40c1 +++++
+  W40c1 +++f
+  I4ge1 +++1
+  H4ge1 v0000Y10000
+  F4ge1 +0000Y30000
+  E4ge1 +++++
+  D4ge1 +0
+  w40b1 7
+  v40b1 +++++3
+  u40b1 -++++X++++f
+  r40b1 U++++3
+  p40b1 ++++v
+  o40b1 +++1
+  n40b1 30000c0000
+  l40b1 +0
+  05gd1 +1
+  +4gd1 +++++
+  Y4gd1 -++++3
+  X4gd1 0++++30
+  V4gd1 +++3
+  F4gd1 v0
+  E4gd1 f
+  H4wf1 +++7
+  G4wf1 ++f
+  F4wf1 +0
+  x40a1 Y++++3
+  t40a1 0-+++30
+  q40a1 Y++++3
+  p40a1 0++++30
+  o40a1 M++++3
+  n40a1 Y++++P++++f
+  l40a1 +++v
+  +4gc1 +0
+  -4gc1 +++f
+  Z4gc1 ++++f
+  Y4gc1 M++++3
+  X4gc1 v0000Y10000
+  W4gc1 30000c0000
+  V4gc1 +++++1
+  U4gc1 +0
+  I4we1 +++1
+  H4we1 70000s0000
+  E4we1 ++++1
+  D4we1 f
+  v4091 ++++7
+  u4091 M++++3
+  t4091 ++++3
+  s4091 +++1
+  r4091 +1
+  q4091 +++3
+  p4091 ++f
+  o4091 +1
+  n4091 M++++3
+  m4091 +++1
+  v4gb1 +++7
+  u4gb1 0-+++30
+  s4gb1 -++++3
+  r4gb1 0++++30
+  p4gb1 0++++30
+  o4gb1 +++3
+  n4gb1 ++7
+  m4gb1 ++1
+  05wd1 3
+  +4wd1 +++3
+  -4wd1 ++++3
+  Z4wd1 +++7
+  Y4wd1 +++++1
+  X4wd1 M++++3
+  W4wd1 ++v
+  V4wd1 +0
+  H4wd1 1
+  G4wd1 7
+  F4wd1 +1
+  E4wd1 f
+[FrontMarker]
+  FrontMarker0 3441.27 22122.43 1
+  FrontMarker1 20319.86 30479.79 1
+  FrontMarker2 29496.57 42442.29 1
+  FrontMarker3 38724.52 52251.60 1
+  FrontMarker4 50635.78 45719.69 1
+  FrontMarker5 68825.33 89964.54 1
+  FrontMarker6 65071.98 71108.69 1
+  FrontMarker7 99305.12 59648.62 1
+  FrontMarker8 65622.71 59601.14 1
+  FrontMarker9 48059.61 55255.28 1
+  FrontMarker10 59320.88 54896.40 1
+  FrontMarker11 44501.19 58607.76 1
+  FrontMarker12 38017.80 45064.21 1
+  FrontMarker13 34390.70 50617.49 1
+  FrontMarker14 24908.22 35559.76 1
+  FrontMarker15 19664.38 29168.83 1
+  FrontMarker16 10487.67 26055.30 1
+  FrontMarker17 78929.81 90128.41 1
+  FrontMarker18 77291.11 92586.46 1
+  FrontMarker19 57753.20 76576.98 1
+  FrontMarker20 59757.04 58173.79 1
+  FrontMarker21 87287.17 94389.03 1
+  FrontMarker22 95152.92 87834.23 1
+  FrontMarker23 99741.28 73249.82 1
+  FrontMarker24 99905.15 67514.37 1
+  FrontMarker25 102854.81 62106.67 1
+  FrontMarker26 121372.10 68005.98 1
+  FrontMarker27 121535.97 68989.20 1
+  FrontMarker28 131642.29 74614.47 1
+  FrontMarker29 145297.10 77182.69 1
+  FrontMarker30 159553.77 90128.41 1
+  FrontMarker31 157259.59 93569.68 1
+  FrontMarker32 162995.04 103565.74 1
+  FrontMarker33 155784.77 102582.52 1
+  FrontMarker34 151471.35 84064.19 1
+  FrontMarker35 139288.80 80349.83 1
+  FrontMarker36 135629.26 76908.07 1
+  FrontMarker37 137486.15 79093.10 1
+  FrontMarker38 157915.07 101763.17 1
+  FrontMarker39 160864.73 108481.83 1
+  FrontMarker40 165289.22 109956.66 1
+  FrontMarker41 175613.02 112906.32 1
+  FrontMarker42 180037.50 118314.02 1
+  FrontMarker43 181020.72 122246.90 1
+  FrontMarker44 185281.34 131095.87 1
+  FrontMarker45 184461.99 139453.23 1
+  FrontMarker46 189378.08 143222.24 1
+  FrontMarker47 191836.13 145844.16 1
+  FrontMarker48 3605.14 32610.10 2
+  FrontMarker49 5407.70 30971.40 2
+  FrontMarker50 15895.37 37526.19 2
+  FrontMarker51 20483.73 42933.90 2
+  FrontMarker52 27202.39 48341.60 2
+  FrontMarker53 41546.04 60521.99 2
+  FrontMarker54 50963.52 58993.14 2
+  FrontMarker55 54077.05 61287.32 2
+  FrontMarker56 61475.56 64880.27 2
+  FrontMarker57 53913.18 78165.91 2
+  FrontMarker58 56364.98 85838.72 2
+  FrontMarker59 59157.01 91439.37 2
+  FrontMarker60 69153.07 100124.47 2
+  FrontMarker61 78985.26 100124.47 2
+  FrontMarker62 84884.58 99468.99 2
+  FrontMarker63 94389.03 95536.12 2
+  FrontMarker64 99960.60 90292.28 2
+  FrontMarker65 100943.82 83082.01 2
+  FrontMarker66 109465.05 80787.83 2
+  FrontMarker67 121481.64 76577.68 2
+  FrontMarker68 139944.84 90783.89 2
+  FrontMarker69 140928.06 100452.21 2
+  FrontMarker70 140928.06 104876.70 2
+  FrontMarker71 144369.33 112086.97 2
+  FrontMarker72 151415.73 117822.42 2
+  FrontMarker73 151415.73 117986.28 2
+  FrontMarker74 156823.44 120280.46 2
+  FrontMarker75 161411.79 119461.11 2
+  FrontMarker76 169769.15 121755.29 2
+  FrontMarker77 160592.44 118641.76 2
+  FrontMarker78 155348.61 114872.76 2
+  FrontMarker79 155676.35 107662.49 2
+  FrontMarker80 178562.67 124868.82 2
+  FrontMarker81 179382.02 133390.05 2
+  FrontMarker82 178726.54 140436.45 2
+  FrontMarker83 181512.33 147155.12 2
+  FrontMarker84 185117.47 150760.25 2
+  FrontMarker85 185609.08 151087.99 2
+  FrontMarker86 49323.41 61867.14 2
+  FrontMarker87 47884.04 63114.60 2
+  FrontMarker88 45996.86 64010.21 2
+  FrontMarker89 44685.42 62762.75 2
+  FrontMarker90 57319.95 54158.48 1
+  FrontMarker91 55592.70 53774.64 1
+  FrontMarker92 53065.79 53422.80 1
+  FrontMarker93 51914.29 53710.67 1
+  FrontMarker94 50698.82 54158.48 1
+  FrontMarker95 63181.78 66666.43 1
+  FrontMarker96 65587.23 63659.61 1
+  FrontMarker97 61636.93 63469.86 2
+  FrontMarker98 61807.52 63153.04 2
+  FrontMarker99 63166.71 61907.71 2
+  FrontMarker100 65584.98 60082.33 1
+  FrontMarker101 65444.54 60618.49 1
+  FrontMarker102 65390.02 61239.94 1
+  FrontMarker103 64951.34 64383.76 1
+  FrontMarker104 64987.57 63514.71 1
+  FrontMarker105 64860.78 63520.34 1
+  FrontMarker106 64958.80 62920.74 1
+  FrontMarker107 64958.80 62684.36 1
+  FrontMarker108 64993.43 62332.74 1
+  FrontMarker109 64987.79 62050.56 1
+  FrontMarker110 64855.43 61797.40 1
+  FrontMarker111 64745.62 62229.04 1
+  FrontMarker112 64538.26 62528.81 1
+  FrontMarker113 64446.08 62713.23 1
+  FrontMarker114 64336.59 62690.18 1
+  FrontMarker115 64181.23 62719.01 1
+  FrontMarker116 63841.19 63076.39 1
+  FrontMarker117 63529.90 63306.99 1
+  FrontMarker118 63426.27 63468.21 1
+  FrontMarker119 64117.85 62753.60 1
+  FrontMarker120 64227.28 62598.01 1
+  FrontMarker121 64325.31 62338.65 1
+  FrontMarker122 65271.24 60406.50 1
+  FrontMarker123 64749.26 60025.32 1
+  FrontMarker124 64042.68 59843.51 1
+  FrontMarker125 63915.90 59774.64 1
+  FrontMarker126 62694.20 59698.79 1
+  FrontMarker127 62354.13 59733.37 1
+  FrontMarker128 62118.81 60045.05 1
+  FrontMarker129 61587.81 60436.60 1
+  FrontMarker130 61454.80 60615.23 1
+  FrontMarker131 61686.79 60240.90 1
+  FrontMarker132 62279.37 59837.23 1
+  FrontMarker133 62734.55 59595.04 1
+  FrontMarker134 63173.35 59481.63 1
+  FrontMarker135 63858.26 59619.50 1
+  FrontMarker136 63973.49 59722.79 1
+  FrontMarker137 64692.39 59903.19 1
+  FrontMarker138 65049.85 60325.91 1
+  FrontMarker139 65040.88 60695.92 1
+  FrontMarker140 65289.91 61115.77 1
+  FrontMarker141 62223.04 61651.07 2
+  FrontMarker142 125482.35 82598.85 2
+  FrontMarker143 127285.80 81724.45 2
+  FrontMarker144 129690.41 80030.29 2
+  FrontMarker145 127777.65 78281.49 2
+  FrontMarker146 131657.81 81943.05 2
+  FrontMarker147 133024.06 82708.15 2
+  FrontMarker148 133953.11 83363.95 2
+  FrontMarker149 136521.67 84019.75 2
+  FrontMarker150 138106.52 84238.35 2
+  FrontMarker151 139909.98 84511.60 2
+  FrontMarker152 141768.08 85222.05 2
+  FrontMarker153 146030.79 86205.76 2
+  FrontMarker154 146741.24 89047.56 2
+  FrontMarker155 147069.14 89594.06 2
+  FrontMarker156 148544.69 87790.61 2
+  FrontMarker157 146467.99 84839.50 2
+  FrontMarker158 147233.09 85003.45 2
+
+[WEATHER]
+WindVelocity 7
+WindDirection 39
+WindTop 3184
+WindTurbulence 0
+WindGust 0

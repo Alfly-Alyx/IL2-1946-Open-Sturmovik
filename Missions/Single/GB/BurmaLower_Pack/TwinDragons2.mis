@@ -1,0 +1,60 @@
+[MAIN]
+  MAP cztx_BurmaLower/load.ini
+  TIME 16.0
+  CloudType 0
+  CloudHeight 1000.0
+  player USA_FG_080_FS_459z00
+  army 1
+  playerNum 0
+[Wing]
+  USA_FG_080_FS_459z00
+  ja0100
+  ja0101
+  ja0102
+[USA_FG_080_FS_459z00]
+  Planes 4
+  Skill 1
+  skin0 P-38_Halealaka.bmp
+  skin1 P-38_Halealaka_bl00.bmp
+  skin2 P-38_Halealaka_bl00.bmp
+  skin3 P-38_Halealaka_bl00.bmp
+  Class air.P_38J
+  Fuel 100
+  weapons default
+[USA_FG_080_FS_459z00_Way]
+  TAKEOFF 46411.92 533689.56 0 0 &0
+  NORMFLY 45169.10 530096.79 500.00 400.00 &0
+  NORMFLY 47958.08 524773.72 500.00 400.00 ja0101 0 &0
+  LANDING 46411.92 533689.56 0 0 &0
+[ja0100]
+  Planes 3
+  Skill 1
+  Class air.KI_21_II
+  Fuel 100
+  weapons 9x100
+[ja0100_Way]
+  NORMFLY 50517.25 517977.64 1000.00 350.00 &0
+  GATTACK 45869.18 534406.11 1000.00 350.00 &0
+  NORMFLY 44890.63 537915.45 1000.00 350.00 &0
+  NORMFLY 48893.84 540678.90 1000.00 350.00 &0
+  NORMFLY 69965.78 529108.56 1000.00 350.00 &0
+[ja0101]
+  Planes 3
+  Skill 1
+  Class air.KI_21_II
+  Fuel 100
+  weapons 9x100
+[ja0101_Way]
+  NORMFLY 52352.02 517733.01 1000.00 350.00 ja0100 0 &0
+[ja0102]
+  Planes 3
+  Skill 1
+  Class air.KI_21_II
+  Fuel 100
+  weapons 9x100
+[ja0102_Way]
+  NORMFLY 49726.61 516461.20 1000.00 350.00 ja0100 0 &0
+[NStationary]
+[Buildings]
+[Bridge]
+[House]

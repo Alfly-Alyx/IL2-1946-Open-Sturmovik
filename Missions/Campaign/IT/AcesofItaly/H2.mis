@@ -1,0 +1,113 @@
+[MAIN]
+  MAP SandsOfTime/load.ini
+  TIME 14.0
+  CloudType 3
+  CloudHeight 1500.0
+  player i0102
+  army 2
+  playerNum 0
+[Wing]
+  usa0113
+  usa0110
+  i0102
+[usa0113]
+  Planes 4
+  Skill 1
+  skin0 vp_desert_campaign.bmp
+  skin1 vp_desert_campaign.bmp
+  skin2 vp_desert_campaign.bmp
+  skin3 vp_desert_campaign.bmp
+  Class air.P_39Q1
+  Fuel 100
+  weapons 1xFAB250
+[usa0113_Way]
+  NORMFLY 253.68 2739.78 2000.00 300.00 &0
+  NORMFLY 6646.50 20142.45 2000.00 300.00 &0
+  GATTACK 17910.04 24607.27 2000.00 300.00 1_Chief 0 &0
+  NORMFLY 13140.79 30239.04 2000.00 300.00 &0
+  NORMFLY 913.26 27955.89 2000.00 300.00 &0
+  NORMFLY 152.21 202.95 2000.00 300.00 &0
+[usa0110]
+  Planes 4
+  Skill 1
+  skin0 tiv_generic_P-40E.bmp
+  skin1 tiv_generic_P-40E.bmp
+  skin2 tiv_generic_P-40E.bmp
+  skin3 tiv_generic_P-40E.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.P_40E
+  Fuel 100
+  weapons default
+[usa0110_Way]
+  NORMFLY 152.21 2790.52 2000.00 300.00 &0
+  NORMFLY 6646.50 20243.92 2000.00 300.00 usa0113 1 &0
+  NORMFLY 17910.04 24455.06 2000.00 300.00 &0
+  NORMFLY 13039.32 30441.99 2000.00 300.00 &0
+  NORMFLY 1268.42 28006.63 2000.00 300.00 &0
+  NORMFLY 202.95 202.95 2000.00 300.00 &0
+[i0102]
+  Planes 4
+  Skill 2
+  Class air.MC_202_7
+  Fuel 100
+  weapons default
+[i0102_Way]
+  TAKEOFF 42210.41 15446.52 0 0 &0
+  NORMFLY 31304.51 31964.09 2000.00 300.00 &0
+  NORMFLY 4109.67 27397.79 2000.00 300.00 &0
+  NORMFLY 1572.84 18265.19 2000.00 300.00 &0
+  NORMFLY 30949.35 31456.72 2000.00 300.00 &0
+  LANDING 42210.41 15446.52 0 0 &0
+[Chiefs]
+  0_Chief Armor.4-PzIIIJ 2
+  1_Chief Armor.3-PzIIIM 2
+  2_Chief Armor.4-PzIIIN 2
+  3_Chief Armor.2-PzVA 2
+  4_Chief Vehicles.Kurogane 2
+[0_Chief_Road]
+  17707.09 24455.07 120.00 0 2 2.222222328186035
+  8574.49 20751.29 120.00
+[1_Chief_Road]
+  17199.72 24302.85 120.00 0 2 2.222222328186035
+  8067.13 20649.81 120.00
+[2_Chief_Road]
+  16743.09 24049.17 120.00 0 2 2.222222328186035
+  7610.50 20497.60 120.00
+[3_Chief_Road]
+  16235.73 23896.96 120.00 0 2 1.9444445371627808
+  7001.66 20294.66 120.00
+[4_Chief_Road]
+  43241.44 14355.70 120.00 0 2 3.055555582046509
+  42217.64 15371.41 120.00 0 2 3.055555582046509
+  42128.61 15177.17 120.00
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Flak18_88mm 2 42962.22 14970.79 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$SdKfz251 2 42944.82 14971.72 570.00 0.0 0
+  2_Static vehicles.stationary.Stationary$VW82t 2 42959.02 14960.73 510.00 0.0
+  3_Static vehicles.planes.Plane$BF_110G2 2 42318.36 15031.40 180.00 0.0 null
+  4_Static vehicles.planes.Plane$BF_110G2 2 42351.91 15064.55 509.10 0.0 null
+  5_Static vehicles.planes.Plane$BF_110G2 2 42291.45 15020.48 330.00 0.0 null
+  6_Static vehicles.artillery.Artillery$Flak18_88mm 2 13252.98 26329.55 690.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Flak18_88mm 2 3969.15 9233.10 690.00 0.0 0
+  8_Static vehicles.stationary.Smoke$Smoke7 0 13989.91 27062.60 690.00 0.00
+[Buildings]
+[StaticCamera]
+  42297 15000 2
+  42974 14972 2
+[Bridge]
+[House]
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 6
+WindDirection 137
+WindTop 8725
+WindTurbulence 2
+WindGust 1

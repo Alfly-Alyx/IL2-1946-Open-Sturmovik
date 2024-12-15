@@ -1,0 +1,287 @@
+[MAIN]
+  MAP Net1Summer/load.ini
+  TIME 14.0
+  CloudType 0
+  CloudHeight 1500.0
+  player USN_VF_9A00
+  army 1
+  playerNum 0
+[Wing]
+  USN_VF_9A00
+  USN_VF_17Az10
+  g0100
+  USN_VF_17Az11
+[USN_VF_9A00]
+  Planes 2
+  Skill 2
+  skin0 F4F3_USN.bmp
+  skin1 F4F3_USN.bmp
+  pilot0 US_22.bmp
+  pilot1 US_20.bmp
+  pilot2 US_03.bmp
+  pilot3 US_04.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.F4F3
+  Fuel 75
+  weapons default
+[USN_VF_9A00_Way]
+  TAKEOFF 16559.68 27570.95 0 0 &0
+  NORMFLY 18938.13 30962.98 500.00 275.00 &0
+  NORMFLY 27718.77 31103.77 1000.00 300.00 &0
+  NORMFLY 37474.07 31231.92 2000.00 300.00 &0
+  NORMFLY 37427.80 35058.10 2000.00 325.00 g0100 2 &0
+  NORMFLY 15989.67 35201.83 2000.00 325.00 &0
+  NORMFLY 10568.27 31428.47 2000.00 325.00 &0
+  NORMFLY 3951.86 19648.73 1500.00 325.00 &0
+  GATTACK 6326.01 15299.40 1000.00 350.00 &0
+  NORMFLY 13365.46 16861.04 1500.00 325.00 &0
+  NORMFLY 14524.06 24057.42 500.00 300.00 &0
+  LANDING 15810.69 26275.41 0 0 &0
+[USN_VF_17Az10]
+  Planes 1
+  Skill 1
+  Class air.L2D
+  Fuel 100
+  weapons 5xCargoA
+[USN_VF_17Az10_Way]
+  NORMFLY 44926.73 10381.19 2000.00 300.00 &0
+  NORMFLY 44875.45 33359.38 2000.00 300.00 &0
+  NORMFLY 34903.29 35332.58 2000.00 300.00 &0
+  NORMFLY 4011.50 34751.62 2000.00 300.00 &0
+  NORMFLY 4062.90 38863.71 2000.00 300.00 &0
+  NORMFLY 29609.29 38658.11 1500.00 250.00 &0
+  GATTACK 34492.41 43387.02 1000.00 250.00 &0
+  LANDING 40768.46 42189.63 0 0 &0
+[g0100]
+  Planes 1
+  Parachute 0
+  Skill 1
+  skin0 G11_Target.bmp
+  pilot0 US_00.bmp
+  numberOn0 0
+  Class air.G_11
+  Fuel 100
+  weapons default
+[g0100_Way]
+  NORMFLY 44874.48 7932.20 2000.00 300.00 USN_VF_17Az10 0 &0
+  NORMFLY 45025.75 32956.73 2000.00 300.00 USN_VF_17Az10 1 &0
+  NORMFLY 35463.52 35293.23 2000.00 300.00 USN_VF_17Az10 2 &0
+  NORMFLY 4799.72 34617.71 2000.00 300.00 USN_VF_17Az10 3 &0
+  NORMFLY 3701.27 38629.42 2000.00 300.00 USN_VF_17Az10 4 &0
+  NORMFLY 28917.70 38724.94 2000.00 300.00 USN_VF_17Az10 5 &0
+[USN_VF_17Az11]
+  Planes 1
+  Skill 1
+  Class air.A_20G
+  Fuel 100
+  weapons default
+[USN_VF_17Az11_Way]
+  NORMFLY 3616.05 43906.26 500.00 300.00 &0
+[Chiefs]
+  0_Chief Vehicles.USACarsColumnA 1
+[0_Chief_Road]
+  16150.25 26536.66 120.00 0 2 2.6388890743255615
+  16099.74 26565.91 120.00 0 2 2.6388890743255615
+  16091.76 26597.81 120.00 0 2 2.6388890743255615
+  16097.08 26632.38 120.00 0 2 2.6388890743255615
+  16339.03 27052.46 120.00 0 2 2.6388890743255615
+  16650.11 27584.23 120.00 0 2 2.6388890743255615
+  16650.11 27605.50 120.00 0 2 2.6388890743255615
+  16599.60 27640.06 120.00 0 2 2.6388890743255615
+  16565.03 27661.33 120.00 0 2 2.6388890743255615
+  16541.10 27658.67 120.00 0 2 2.6388890743255615
+  16519.81 27634.74 120.00 0 2 2.6388890743255615
+  16469.31 27560.29 120.00 0 2 2.6388890743255615
+  16451.99 27543.65 120.00 0 2 2.6388890743255615
+  16425.50 27538.65 120.00 0 2 2.6388890743255615
+  16406.29 27540.16 120.00 0 2 2.6388890743255615
+  16384.64 27536.04 120.00 0 2 2.6388890743255615
+  16363.98 27520.70 120.00 0 2 2.6388890743255615
+  16315.23 27444.60 120.00
+[NStationary]
+  26_Static vehicles.stationary.Stationary$ZIS6_fuel 2 7371.40 14012.99 505.00 0.0
+  27_Static vehicles.stationary.Stationary$ZIS6_fuel 2 7343.14 14065.57 505.00 0.0
+  25_Static vehicles.stationary.Stationary$ZIS6_fuel 2 7309.87 14121.04 505.00 0.0
+  24_Static vehicles.stationary.Stationary$ZIS6_fuel 2 7282.71 14166.65 505.00 0.0
+  4_Static vehicles.stationary.Stationary$ZIS6_fuel 2 6558.45 14825.69 695.00 0.0
+  28_Static vehicles.stationary.Stationary$ZIS6_fuel 2 6534.81 14873.77 690.00 0.0
+  29_Static vehicles.stationary.Stationary$ZIS6_fuel 2 6511.21 14915.18 690.00 0.0
+  30_Static vehicles.stationary.Stationary$ZIS6_fuel 2 6488.54 14959.47 690.00 0.0
+  31_Static vehicles.stationary.Stationary$StudebeckerTruck 1 16464.09 26921.53 645.00 0.0
+  32_Static vehicles.stationary.Stationary$StudebeckerTruck 1 16455.70 26924.33 645.00 0.0
+  33_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 16180.04 26505.58 510.00 0.0
+  34_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 16004.15 26345.30 390.00 0.0
+  35_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 16119.25 26395.80 510.00 0.0
+  36_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 16290.51 26827.96 510.00 0.0
+  37_Static vehicles.stationary.Stationary$WillisMBt_US 1 16276.27 26826.48 635.00 0.0
+  38_Static vehicles.stationary.Stationary$WillisMBt_US 1 16281.66 26823.90 635.00 0.0
+  39_Static vehicles.stationary.Stationary$Chevrolet_medic_US 1 16473.31 26996.48 635.00 0.0
+  40_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 16359.27 26628.44 510.00 0.0
+  41_Static vehicles.stationary.Stationary$WillisMB 1 16346.35 26634.96 420.00 0.0
+  43_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 16340.64 26620.55 510.00 0.0
+  44_Static vehicles.stationary.Stationary$WillisMB 1 16064.19 26310.51 480.00 0.0
+  45_Static vehicles.stationary.Stationary$WillisMB 1 16067.37 26308.59 480.00 0.0
+  16_Static vehicles.planes.Plane$F4F4 1 16049.98 26346.82 300.00 0.0 us
+  0_Static vehicles.planes.Plane$F4F4 1 16087.32 26313.61 300.00 0.0 us
+  1_Static vehicles.planes.Plane$F4F4 1 16133.13 26291.17 210.00 0.0 us
+  2_Static vehicles.planes.Plane$F4F4 1 16154.54 26314.88 210.00 0.0 us
+  3_Static vehicles.planes.Plane$F4F4 1 16169.68 26341.22 210.00 0.0 us
+  5_Static vehicles.planes.Plane$F4F4 1 16171.33 26377.12 180.00 0.0 us
+  6_Static vehicles.planes.Plane$F4F4 1 16199.32 26392.92 210.00 0.0 us
+  7_Static vehicles.planes.Plane$F4F4 1 16134.45 26428.16 200.00 0.0 us
+  8_Static vehicles.planes.Plane$F4F4 1 16104.15 26386.99 210.00 0.0 us
+  10_Static vehicles.planes.Plane$F4F4 1 16197.04 26502.62 519.10 0.0 us
+  15_Static vehicles.planes.Plane$F4F4 1 16218.75 26452.19 210.00 0.0 us
+  18_Static vehicles.planes.Plane$F4F4 1 16235.87 26482.16 210.00 0.0 us
+  9_Static vehicles.planes.Plane$F4F4 1 16161.12 26662.78 210.00 0.0 us
+  11_Static vehicles.planes.Plane$F4F4 1 16176.93 26697.02 210.00 0.0 us
+  12_Static vehicles.planes.Plane$F4F4 1 16196.03 26727.65 210.00 0.0 us
+  13_Static vehicles.planes.Plane$F4F4 1 16214.14 26756.63 210.00 0.0 us
+  14_Static vehicles.planes.Plane$F2A2 1 16217.51 27238.02 390.00 0.0 us
+  17_Static vehicles.planes.Plane$F2A2 1 16202.71 27210.79 390.00 0.0 us
+  19_Static vehicles.planes.Plane$F2A2 1 16189.03 27186.59 390.00 0.0 us
+  20_Static vehicles.planes.Plane$F2A2 1 16173.25 27159.76 390.00 0.0 us
+  21_Static vehicles.planes.Plane$F2A2 1 16118.73 27143.82 460.00 0.0 us
+  22_Static vehicles.planes.Plane$F2A2 1 16132.74 27084.53 390.00 0.0 us
+  23_Static vehicles.planes.Plane$F2A2 1 16115.38 27054.54 390.00 0.0 us
+  42_Static vehicles.planes.Plane$F2A2 1 16098.02 27024.03 390.00 0.0 us
+  46_Static vehicles.planes.Plane$F2A2 1 16081.18 26994.05 390.00 0.0 us
+  47_Static vehicles.stationary.Stationary$StudebeckerTruck 1 16050.25 27143.37 645.00 0.0
+  48_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 16042.32 27126.28 540.00 0.0
+  49_Static vehicles.planes.Plane$F2A2 1 16308.16 26921.82 210.00 0.0 us
+  50_Static vehicles.planes.Plane$F2A2 1 16323.58 26947.14 210.00 0.0 us
+  51_Static vehicles.planes.Plane$F2A2 1 16336.79 26973.57 210.00 0.0 us
+  52_Static vehicles.planes.Plane$F2A2 1 16348.90 27002.20 210.00 0.0 us
+  53_Static vehicles.planes.Plane$SBD3 1 16383.56 27580.20 449.10 0.0 us
+  54_Static vehicles.planes.Plane$SBD3 1 16370.24 27557.26 390.00 0.0 us
+  55_Static vehicles.planes.Plane$SBD3 1 16412.68 27567.87 449.10 0.0 us
+  56_Static vehicles.planes.Plane$SBD3 1 16332.89 27534.34 390.00 0.0 us
+  57_Static vehicles.planes.Plane$SBD3 1 16333.31 27508.45 390.00 0.0 us
+  58_Static vehicles.planes.Plane$SBD3 1 16313.37 27484.26 390.00 0.0 us
+  59_Static vehicles.planes.Plane$SBD3 1 16352.84 27444.36 390.00 0.0 us
+  60_Static vehicles.planes.Plane$SBD3 1 16285.78 27437.57 390.00 0.0 us
+[Buildings]
+  0_bld House$DummyPlane3 1 7282.03 14166.38 505.00
+  1_bld House$DummyPlane3 1 7309.43 14120.96 505.00
+  2_bld House$DummyPlane3 1 7342.59 14065.43 505.00
+  3_bld House$DummyPlane3 1 7370.95 14012.95 505.00
+  4_bld House$DummyPlane3 1 6558.99 14825.67 695.00
+  5_bld House$DummyPlane3 1 6535.15 14873.77 690.00
+  6_bld House$DummyPlane3 1 6511.52 14915.13 690.00
+  7_bld House$DummyPlane3 1 6488.87 14959.43 690.00
+  8_bld House$BannerLR 1 19764.02 17535.82 615.00
+  9_bld House$BannerLR 1 19769.89 17512.43 615.00
+  10_bld House$BannerLW 1 20232.17 17660.45 615.00
+  11_bld House$BannerLW 1 20237.91 17639.65 615.00
+  12_bld House$BannerLW 1 20235.05 17650.03 615.00
+  13_bld House$BannerLW 1 19985.26 17600.13 705.00
+  14_bld House$BannerLW 1 19993.47 17567.53 705.00
+  15_bld House$Control_tower 1 16281.96 26831.99 390.00
+  16_bld House$IndustrialFactoryHouse1 1 16463.17 26938.40 390.00
+  17_bld House$IndustrialFactoryHouse1 1 16488.71 26987.72 390.00
+  18_bld House$AirdromeHangarT1S1 1 16248.18 27460.04 390.00
+  19_bld House$AirdromeHangarT1S1 1 16273.33 27504.74 390.00
+  20_bld House$AirdromeHangarT1S1 1 16301.52 27550.83 390.00
+  21_bld House$AirdromeHangarT1S1 1 16329.20 27601.12 390.00
+  22_bld House$Hangar_Med2 1 16002.25 26314.20 660.00
+  23_bld House$Hangar_Med2 1 16064.49 26278.64 660.00
+  24_bld House$AirdromeFuelTank 1 16377.54 26621.56 660.00
+  25_bld House$AirdromeFuelTank 1 16397.50 26609.11 660.00
+  26_bld House$AirdromeFuelTank 1 16364.90 26601.63 660.00
+  27_bld House$AirdromeFuelTank 1 16386.67 26590.53 660.00
+  28_bld House$AirdromeBarrelBlock2 1 16359.29 26619.78 480.00
+  29_bld House$AirdromeBarrelBlock2 1 16357.10 26616.23 480.00
+  30_bld House$AirdromeBarrelBlock2 1 16354.94 26613.14 660.00
+  31_bld House$AirdromeBarrelBlock2 1 16356.36 26607.10 570.00
+  32_bld House$AirdromeBarrelBlock1 1 16347.53 26602.87 570.00
+  33_bld House$AirdromeBarrelBlock1 1 16367.65 26634.12 570.00
+  34_bld House$FurnitureFenceShortVert 1 16362.14 26642.01 660.00
+  35_bld House$FurnitureFenceShortVert 1 16357.19 26633.56 660.00
+  36_bld House$FurnitureFenceShortVert 1 16368.85 26643.76 390.00
+  37_bld House$FurnitureFenceShortVert 1 16377.34 26638.80 390.00
+  38_bld House$FurnitureFenceShortVert 1 16385.77 26633.85 390.00
+  39_bld House$FurnitureFenceShortVert 1 16394.20 26628.91 390.00
+  40_bld House$FurnitureFenceShortVert 1 16402.71 26623.93 390.00
+  41_bld House$FurnitureFenceShortVert 1 16411.14 26619.10 390.00
+  42_bld House$FurnitureFenceShortVert 1 16412.86 26612.42 480.00
+  43_bld House$FurnitureFenceShortVert 1 16408.02 26603.77 480.00
+  44_bld House$FurnitureFenceShortVert 1 16403.08 26595.23 480.00
+  45_bld House$FurnitureFenceShortVert 1 16398.02 26586.57 480.00
+  46_bld House$FurnitureFenceShortVert 1 16392.96 26578.03 480.00
+  47_bld House$FurnitureFenceShortVert 1 16386.11 26576.23 570.00
+  48_bld House$FurnitureFenceShortVert 1 16377.59 26581.14 570.00
+  49_bld House$FurnitureFenceShortVert 1 16368.93 26586.19 570.00
+  50_bld House$FurnitureFenceShortVert 1 16360.28 26591.25 570.00
+  51_bld House$FurnitureFenceShortVert 1 16351.67 26596.26 570.00
+  52_bld House$FurnitureFenceShortVert 1 16343.02 26601.20 570.00
+  53_bld House$FurnitureFenceShortVert 1 16341.24 26607.95 660.00
+  54_bld House$FurnitureFenceShortVert 1 16346.10 26616.32 660.00
+  55_bld House$FurnitureFenceShortVert 1 16346.10 26616.43 480.00
+  56_bld House$IndustrialFactoryWarenHouse1 1 16610.01 26938.49 480.00
+  57_bld House$IndustrialFactoryWarenHouse1 1 16556.39 26968.31 480.00
+  58_bld House$IndustrialFactoryWarenHouse1 1 16517.86 26893.25 480.00
+  59_bld House$IndustrialFactoryWarenHouse1 1 16566.66 26866.04 480.00
+  60_bld House$IndustrialFactoryHouse1 1 16656.84 26897.11 570.00
+  61_bld House$IndustrialFactoryHouse1 1 16631.56 26845.44 570.00
+  62_bld House$FlagUS 1 16497.38 26950.93 565.00
+  63_bld House$AirdromeBarrelBlock1 1 16192.53 26514.89 510.00
+  64_bld House$AirdromeBarrelBlock1 1 16153.39 26332.80 510.00
+  65_bld House$AirdromeBarrelBlock1 1 16231.79 26464.98 510.00
+  66_bld House$DBmbTargetRing 1 7501.61 13788.45 555.00
+  67_bld House$DBmbTargetRing 1 6382.72 15156.01 375.00
+  68_bld House$AirdromeBarrelBlock1 1 16145.96 26433.08 519.10
+  69_bld House$AirdromeBarrelBlock1 1 16095.33 27055.75 390.00
+  70_bld House$AirdromeBarrelBlock1 1 16175.65 27174.77 390.00
+  71_bld House$AirdromeBarrelBlock1 1 16080.94 27100.81 390.00
+  72_bld House$RussiaCountryBigHouse 1 16030.37 27122.76 660.00
+  73_bld House$FinlandHangar 1 16009.52 27144.43 390.00
+  74_bld House$FinlandHangar 1 16120.78 27152.42 460.00
+  75_bld House$FinlandHangar 1 16067.48 27105.55 640.00
+  76_bld House$RussiaCountryHouse3 1 16042.15 27150.47 445.00
+  77_bld House$AirdromeBarrelBlock2 1 16131.51 27156.21 550.00
+  78_bld House$FurnitureTreeLine 1 16049.52 27175.66 520.00
+  79_bld House$FurnitureTreeLine 1 16071.55 27160.24 460.00
+  80_bld House$FurnitureTreeLine 1 16078.15 27184.47 460.00
+  81_bld House$FurnitureTreeLine 1 16038.51 27095.28 490.00
+  82_bld House$FurnitureTreeLine 1 16023.10 27080.96 520.00
+  83_bld House$FurnitureTreeLine 1 15980.15 27134.92 520.00
+  84_bld House$FurnitureTreeLine 1 15987.86 27170.15 490.00
+  85_bld House$FurnitureTreeLine 1 15966.94 27162.45 490.00
+  86_bld House$FurnitureTreeLine 1 16663.94 26963.14 520.00
+  87_bld House$FurnitureTreeLine 1 16670.55 26988.47 520.00
+  88_bld House$FurnitureTreeLine 1 16646.32 26996.18 475.00
+  89_bld House$FurnitureTreeLine 1 16645.22 26978.56 445.00
+  90_bld House$FinlandHangar 1 16404.64 27613.97 480.00
+  91_bld House$FinlandHangar 1 16438.62 27595.73 480.00
+  92_bld House$AirdromeBarrelBlock1 1 16338.56 27438.10 480.00
+  93_bld House$AirdromeBarrelBlock1 1 16420.10 27614.92 480.00
+  94_bld House$AirdromeBarrelBlock1 1 16428.55 27611.77 480.00
+  95_bld House$AirdromeBarrelBlock1 1 16420.37 27606.74 480.00
+  96_bld House$FurnitureTreeLine 1 16109.01 26193.67 480.00
+  97_bld House$FurnitureTreeLine 1 16113.85 26214.64 540.00
+  98_bld House$FurnitureTreeLine 1 16147.72 26225.93 480.00
+  99_bld House$FurnitureTreeLine 1 16209.02 26287.22 420.00
+  100_bld House$FurnitureTreeLine 1 16262.24 26424.32 420.00
+  101_bld House$FurnitureTreeLine 1 16252.57 26396.90 360.00
+  102_bld House$FurnitureTreeLine 1 16270.31 26393.68 690.00
+[Target]
+  3 2 1 60 501 16257 27018 1000
+  0 0 0 0 500 35463 35287 0 2 g0100 35463 35293
+  1 0 0 0 500 7323 14088 150
+  1 0 0 0 500 6518 14894 150
+[Bridge]
+[House]
+
+
+
+
+
+[WEATHER]
+WindVelocity 3
+WindDirection 83
+WindTop 8894
+WindTurbulence 0
+WindGust 0

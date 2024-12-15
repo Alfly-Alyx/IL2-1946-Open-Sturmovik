@@ -1,0 +1,124 @@
+[MAIN]
+  briefSound samples/sounds/bulse.wav
+  MAP ag_Bulgaria/load.ini
+  TIME 16.0
+  CloudType 1
+  CloudHeight 1000.0
+  player bg0100
+  army 2
+  playerNum 2
+[Wing]
+  bg0100
+  bg0111
+  yu0100
+  bg0112
+[bg0100]
+  Planes 3
+  Skill 1
+  skin0 B-534 Bulgarian Black 1.bmp
+  skin1 B-534 Bulgarian Black 2.bmp
+  skin2 B-534 Bulgarian Black 4.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  Class air.AVIA_B534
+  Fuel 100
+  weapons default
+[bg0100_Way]
+  TAKEOFF 36256.71 43077.89 0 0 &0
+  NORMFLY 30250.38 44931.27 1000.00 300.00 &0
+  NORMFLY 24687.61 67982.10 1000.00 300.00 bg0111 3 &0
+  NORMFLY 7053.60 75036.60 1000.00 300.00 &0
+  NORMFLY 5668.07 59795.78 1000.00 300.00 &0
+  NORMFLY 2773.51 29413.95 1000.00 300.00 &0
+  NORMFLY 2294.36 10741.89 1000.00 300.00 &0
+  NORMFLY 20717.76 12012.29 1000.00 300.00 &0
+  NORMFLY 42079.14 13179.16 1000.00 300.00 &0
+  NORMFLY 55608.14 18301.31 1000.00 300.00 &0
+  NORMFLY 57956.73 33535.45 1000.00 300.00 &0
+  NORMFLY 48371.93 38232.64 1000.00 300.00 &0
+  NORMFLY 39406.83 39899.80 500.00 300.00 &0
+  LANDING 36256.71 43077.89 0 0 &0
+[bg0111]
+  Planes 1
+  Skill 1
+  skin0 S-328 Bulgarian White 23.bmp
+  numberOn0 0
+  Class air.LetovS_328
+  Fuel 100
+  weapons 2*ParaFlare
+[bg0111_Way]
+  TAKEOFF 35527.84 43577.32 0 0 &0
+  NORMFLY 30022.94 45163.83 500.00 300.00 &0
+  NORMFLY 24322.22 68647.89 500.00 300.00 &0
+  NORMFLY 24322.22 68647.89 1000.00 300.00 &0
+  NORMFLY 5976.97 75065.10 1000.00 300.00 &0
+  NORMFLY 4434.84 59643.81 1000.00 300.00 &0
+  NORMFLY 2025.26 28801.21 1000.00 300.00 &0
+  GATTACK 1881.89 19310.51 500.00 300.00 &0
+  NORMFLY 1736.11 10584.81 1000.00 300.00 &0
+  NORMFLY 20627.20 10488.43 1000.00 300.00 &0
+  NORMFLY 42506.16 12126.94 1000.00 300.00 &0
+  NORMFLY 55325.12 19259.29 1000.00 300.00 &0
+  NORMFLY 58120.23 34487.82 1000.00 300.00 &0
+  NORMFLY 48867.45 39017.82 1000.00 300.00 &0
+  NORMFLY 39688.51 41259.70 500.00 300.00 &0
+  LANDING 35065.15 42940.17 0 0 &0
+[yu0100]
+  Planes 2
+  Skill 1
+  skin0 Me-109E-3a YRAF cammo.bmp
+  skin1 Me-109E-3a YRAF No2513 .bmp
+  numberOn0 0
+  numberOn1 0
+  Class air.BF_109E4
+  Fuel 100
+  weapons default
+  StartTime 10
+[yu0100_Way]
+  NORMFLY 1985.62 33801.29 2000.00 300.00 &0
+  NORMFLY 1990.37 67872.35 2000.00 300.00 &0
+  NORMFLY 848.73 1201.37 2000.00 300.00 &0
+  NORMFLY 94801.19 1398.61 2000.00 300.00 &0
+  NORMFLY 1591.78 1935.33 2000.00 300.00 &0
+[bg0112]
+  Planes 2
+  Skill 1
+  skin0 Bf109-E7_Bulgaria_1941_noCode.bmp
+  skin1 Bf109-E7_Bulgaria_1941_noCode.bmp
+  pilot0 BUL_Spisarevski.bmp
+  pilot1 BUL_Bontchev.bmp
+  numberOn0 0
+  numberOn1 0
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+  StartTime 15
+[bg0112_Way]
+  TAKEOFF 2407.31 18849.69 0 0 &0
+  NORMFLY 2126.61 15287.14 500.00 300.00 &0
+  NORMFLY 3675.65 10324.22 1000.00 300.00 &0
+  NORMFLY 607.80 67924.37 1500.00 300.00 &0
+  NORMFLY 2293.18 39065.08 2000.00 300.00 &0
+  NORMFLY 12701.53 958.73 2000.00 300.00 &0
+  NORMFLY 41255.98 32532.78 2000.00 300.00 &0
+  NORMFLY 43388.87 43997.03 1000.00 300.00 &0
+  NORMFLY 38068.77 44414.60 500.00 300.00 &0
+  LANDING 35719.69 44222.23 0 0 &0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Flak38_20mm 2 36644.28 43619.14 540.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Flak38_20mm 2 36597.17 43249.89 465.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Flak38_20mm 2 36245.85 43338.58 465.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Flak38_20mm 2 28374.42 43402.63 465.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Flak38_20mm 2 28303.75 43498.51 630.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Flak38_20mm 2 28478.67 43656.13 630.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Flak38_20mm 2 29022.29 43645.05 630.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Flak38_20mm 2 2490.73 19920.99 540.00 0.0 0
+  8_Static vehicles.artillery.Artillery$Flak38_20mm 2 2535.93 19761.60 540.00 0.0 0
+  9_Static vehicles.artillery.Artillery$Flak38_20mm 2 2286.90 19914.62 630.00 0.0 0
+[Buildings]
+[Target]
+  4 1 0 0 500 23904 69185 0 3 bg0111 24322 68647
+  3 0 1 55 500 2120 17040 3000
+[Bridge]
+[House]

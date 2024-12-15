@@ -1,0 +1,231 @@
+[MAIN]
+  MAP Normandy/load1.ini
+  TIME 11.5
+  CloudType 0
+  CloudHeight 1500.0
+  player 9AF_354FG_355FS00
+  army 1
+  playerNum 1
+[Wing]
+  9AF_354FG_355FS00
+  g0100
+  g0101
+  9AF_354FG_355FS01
+[9AF_354FG_355FS00]
+  Planes 4
+  Skill0 3
+  Skill1 2
+  Skill2 2
+  Skill3 2
+  skin0 354thFG_355thFS_Invasion_Aged.bmp
+  skin1 354thFG_355thFS_Invasion_Aged.bmp
+  skin2 354thFG_355thFS_Invasion_Aged.bmp
+  skin3 354thFG_355thFS_Invasion_Aged.bmp
+  pilot0 US_01.bmp
+  pilot1 US_02.bmp
+  pilot2 US_03.bmp
+  pilot3 US_04.bmp
+  Class air.P_51B
+  Fuel 100
+  weapons 2x1000
+[9AF_354FG_355FS00_Way]
+  TAKEOFF 33740.52 83381.74 0 0
+  NORMFLY 17813.75 84534.94 1500.0 300.0
+  GATTACK 3401.62 99934.27 2500.0 300.0
+  NORMFLY 80.09 102149.18 2500.0 300.0
+  NORMFLY 7000.99 101668.55 2500.0 300.0 g0100 5
+  NORMFLY 41879.32 87621.98 1000.0 300.0
+  NORMFLY 39794.76 82931.72 500.0 300.0
+  LANDING 34571.87 83309.82 0 0
+[g0100]
+  Planes 4
+  Skill 2
+  pilot0 De_01.bmp
+  pilot1 De_02.bmp
+  pilot2 De_03.bmp
+  pilot3 De_04.bmp
+  Class air.BF_109G2
+  Fuel 66
+  weapons default
+  StartTime 6
+[g0100_Way]
+  TAKEOFF 4341.81 99539.94 0 0
+  NORMFLY 8579.25 98694.76 1000.0 300.0
+  NORMFLY 4666.96 95341.94 1500.0 300.0
+  NORMFLY 1469.23 100239.37 2000.0 300.0
+  NORMFLY 5704.07 101967.87 2500.0 300.0
+  NORMFLY 8584.91 98683.71 2500.0 300.0
+  NORMFLY 4695.77 95370.75 2500.0 300.0
+  NORMFLY 1382.80 100296.99 2500.0 300.0
+  NORMFLY 5617.64 101967.87 2500.0 300.0
+  NORMFLY 8613.72 98827.76 2500.0 300.0
+  NORMFLY 4811.01 95313.13 2500.0 300.0
+  NORMFLY 87.55 100438.27 750.0 300.0
+  LANDING 2731.65 99823.86 0 0
+[g0101]
+  Planes 1
+  Skill 1
+  pilot0 De_05.bmp
+  Class air.BF_109G2
+  Fuel 100
+  weapons default
+  StartTime 0
+[g0101_Way]
+  NORMFLY 153023.69 453.42 750.0 300.0
+  NORMFLY 287.31 744.67 750.0 300.0
+  NORMFLY 152900.20 251.09 750.0 300.0
+  NORMFLY 492.53 792.76 750.0 300.0
+[9AF_354FG_355FS01]
+  Planes 4
+  Skill
+  skin0 354thFG_355thFS_Invasion_Aged.bmp
+  skin1 354thFG_355thFS_Invasion_Aged.bmp
+  skin2 354thFG_355thFS_Invasion_Aged.bmp
+  skin3 354thFG_355thFS_Invasion_Aged.bmp
+  pilot0 US_05.bmp
+  pilot1 US_06.bmp
+  pilot2 US_07.bmp
+  pilot3 US_08.bmp
+  Class air.P_51B
+  Fuel 100
+  weapons default
+[9AF_354FG_355FS01_Way]
+  TAKEOFF 33740.52 83382.11 0 0
+  NORMFLY 24020.47 84001.40 1000.0 340.0
+  NORMFLY 17924.32 84524.10 1500.0 340.0 9AF_354FG_355FS00 1
+  NORMFLY 3524.28 99867.38 2500.0 340.0 g0100 0
+  NORMFLY 72.61 102096.39 2500.0 300.0
+  NORMFLY 6980.09 101574.50 2500.0 300.0 g0100 5
+  NORMFLY 41919.32 87661.98 1000.0 300.0
+  NORMFLY 39834.76 82971.72 500.0 300.0
+  LANDING 34571.87 83309.82 0 0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Flak18_88mm 2 26221.63 78823.50 465.00 0.0
+  1_Static vehicles.artillery.Artillery$Flak18_88mm 2 26990.68 78070.99 465.00 0.0
+  2_Static vehicles.artillery.Artillery$Flak18_88mm 2 25334.31 76861.79 465.00 0.0
+  3_Static vehicles.artillery.Artillery$Flak18_88mm 2 26454.67 75894.12 465.00 0.0
+  4_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 28815.61 83588.11 465.00 0.0
+  5_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 29443.54 83394.90 465.00 0.0
+  6_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 29676.58 84240.82 465.00 0.0
+  7_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 33668.50 83425.04 545.30 0.0
+  9_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 33626.16 83457.80 499.90 0.0
+  10_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 33664.56 83350.76 544.90 0.0
+  11_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 34629.85 83251.81 368.71 0.0
+  12_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 34626.45 83347.95 362.11 0.0
+  13_Static vehicles.stationary.Stationary$ZIS6_fuel 1 33821.66 83423.72 470.11 0.0
+  14_Static vehicles.stationary.Siren$SirenCity 1 33910.65 83385.48 365.61 0.0
+  8_Static vehicles.artillery.Artillery$M4A2_US 1 34040.25 83325.92 406.11 0.0
+  16_Static vehicles.artillery.Artillery$M4A2_76W_US 1 33968.94 83387.11 522.10 0.0
+  17_Static vehicles.stationary.Stationary$Chevrolet_medic_US 1 33867.28 83416.31 391.11 0.0
+  18_Static vehicles.stationary.Stationary$Chevrolet_radio_US 1 33891.96 83442.32 361.11 0.0
+  19_Static vehicles.stationary.Stationary$WillisMB_US 1 33886.33 83426.57 451.11 0.0
+  20_Static vehicles.artillery.Artillery$ZIS3 1 33937.22 83426.60 416.11 0.0
+  21_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 33837.02 83452.53 592.80 0.0
+  22_Static vehicles.lights.Searchlight$SL_ManualBlue 1 33661.08 83425.78 547.82 0.0
+  23_Static vehicles.lights.Searchlight$SL_ManualBlue 1 34637.31 83249.86 544.68 0.0
+  15_Static vehicles.planes.Plane$P_51B 1 34174.43 83379.56 454.10 0.0 us
+  24_Static vehicles.planes.Plane$P_51B 1 34211.33 83375.01 454.10 0.0 us
+  25_Static vehicles.planes.Plane$P_51B 1 34241.90 83372.13 454.10 0.0 us
+  26_Static vehicles.planes.Plane$P_51B 1 34174.97 83297.56 454.10 0.0 us
+  27_Static vehicles.planes.Plane$P_51B 1 34199.93 83294.76 454.10 0.0 us
+  28_Static vehicles.planes.Plane$P_47D27 1 34573.24 83270.12 425.00 0.0 us
+  29_Static vehicles.planes.Plane$P_47D27 1 34542.20 83265.48 453.70 0.0 us
+  30_Static vehicles.planes.Plane$P_47D27 1 33886.73 83338.59 273.60 0.0 us
+  31_Static vehicles.planes.Plane$P_47D27 1 33920.12 83334.25 275.60 0.0 us
+  32_Static vehicles.planes.Plane$P_47D27 1 33955.57 83330.78 274.00 0.0 us
+  33_Static vehicles.planes.Plane$P_51B 1 34340.95 83406.76 189.90 0.0 us
+  34_Static vehicles.planes.Plane$P_51B 1 34369.36 83439.58 189.90 0.0 us
+  35_Static vehicles.planes.Plane$P_51B 1 34397.61 83467.83 189.90 0.0 us
+  36_Static vehicles.planes.Plane$P_51B 1 34486.38 83393.85 189.90 0.0 us
+  37_Static vehicles.planes.Plane$P_51B 1 34509.25 83427.48 189.90 0.0 us
+  38_Static vehicles.artillery.Artillery$Flak30_20mm 2 7071.33 95966.29 549.90 0.0
+  39_Static vehicles.artillery.Artillery$Flak30_20mm 2 8010.03 96886.25 549.90 0.0
+  44_Static vehicles.artillery.Artillery$Flak18_88mm 2 3614.08 99570.84 549.90 0.0
+  45_Static vehicles.artillery.Artillery$Flak30_20mm 2 3945.94 99760.72 549.90 0.0
+  46_Static vehicles.artillery.Artillery$Flak18_88mm 2 13281.60 98554.59 549.90 0.0
+  47_Static vehicles.artillery.Artillery$Flak18_88mm 2 12455.67 98265.16 549.90 0.0
+  48_Static vehicles.artillery.Artillery$Flak18_88mm 2 13759.65 98125.33 549.90 0.0
+  49_Static vehicles.planes.Plane$BF_109G2 2 3866.82 99462.60 280.10 0.0
+  50_Static vehicles.planes.Plane$BF_109G2 2 3826.87 99467.61 189.90 0.0
+  51_Static vehicles.planes.Plane$BF_109G2 2 3789.02 99473.79 189.90 0.0
+  52_Static vehicles.planes.Plane$BF_109G2 2 3749.71 99479.98 189.90 0.0
+  53_Static vehicles.planes.Plane$BF_109G2 2 3710.04 99489.08 189.90 0.0
+  54_Static vehicles.planes.Plane$BF_109G2 2 3670.73 99495.63 189.90 0.0
+  55_Static vehicles.planes.Plane$BF_109G2 2 3631.78 99502.91 189.90 0.0
+  56_Static vehicles.planes.Plane$HS_129B2 2 4115.70 99969.69 460.10 0.0
+  57_Static vehicles.planes.Plane$HS_129B2 2 4085.90 99976.52 459.90 0.0
+  58_Static vehicles.planes.Plane$JU_52_3MG4E 2 4055.10 99963.10 414.90 0.0
+  59_Static vehicles.planes.Plane$JU_52_3MG4E 2 4020.64 99968.52 414.90 0.0
+  60_Static vehicles.planes.Plane$FW_190A4 2 4137.88 99782.29 189.90 0.0
+  61_Static vehicles.planes.Plane$FW_190A4 2 4135.21 99762.77 189.90 0.0
+  62_Static vehicles.planes.Plane$FW_190A4 2 4132.33 99742.87 189.90 0.0
+  63_Static vehicles.lights.Searchlight$SL_ManualBlue 1 33655.88 83350.14 547.82 0.0
+  64_Static vehicles.lights.Searchlight$SL_ManualBlue 1 34634.13 83349.13 544.68 0.0
+  65_Static vehicles.planes.Plane$BF_109G2 2 3749.63 100459.68 414.90 0.0
+  66_Static vehicles.planes.Plane$BF_109G2 2 3713.39 100438.28 414.90 0.0
+  67_Static vehicles.planes.Plane$BF_109G2 2 3679.71 100415.73 414.90 0.0
+  68_Static vehicles.planes.Plane$BF_109G2 2 3646.90 100392.90 414.90 0.0
+  42_Static vehicles.artillery.Artillery$Flak30_20mm 2 1626.35 98034.65 549.90 0.0
+  43_Static vehicles.artillery.Artillery$Flak30_20mm 2 3738.16 100531.06 549.90 0.0
+  40_Static vehicles.planes.Plane$BF_109G2 2 2997.80 99850.15 189.90 0.0
+  41_Static vehicles.planes.Plane$BF_109G2 2 3223.47 99886.08 504.90 0.0
+[Buildings]
+  0_bld House$Tent_Pyramid_US 1 33889.19 83436.83 455.11
+  1_bld House$Tent_HQ_US 1 33897.70 83435.90 455.11
+  2_bld House$Tent_Pup_US 1 33905.39 83440.15 455.11
+  3_bld House$Tent_Pup_US 1 33909.33 83439.86 455.11
+  4_bld House$Tent_Pup_US 1 33913.05 83439.65 455.11
+  5_bld House$Tent_Pup_US 1 33916.71 83439.44 455.11
+  6_bld House$Tent_Pup_US 1 33904.69 83432.76 455.11
+  7_bld House$Tent_Pup_US 1 33908.77 83432.55 455.11
+  8_bld House$Tent_Pup_US 1 33912.56 83432.27 455.11
+  9_bld House$Tent_Pup_US 1 33916.22 83432.13 455.11
+  10_bld House$Tent_Pup_US 1 33920.22 83439.16 455.11
+  11_bld House$Tent_Pup_US 1 33923.81 83438.95 455.11
+  12_bld House$Tent_Pup_US 1 33919.87 83431.85 455.11
+  13_bld House$Tent_Pup_US 1 33923.53 83431.71 455.11
+  14_bld House$FurnitureSandbags_Round 1 33939.14 83424.09 596.11
+  15_bld House$FurnitureSandbags_Round 1 33835.36 83454.66 411.11
+  16_bld House$FurnitureSandbags_Round 1 33624.02 83456.25 681.21
+[Target]
+  1 1 0 0 750 3892 99979 650
+  0 2 0 0 1000 9229 99155 0 9 g0100 8613 98827
+  4 0 0 0 750 33748 83365 0 0 9AF_354FG_355FS00 33740 83381
+[StaticCamera]
+  33604 83363 33
+  2636 99816 33
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 89842.44 56616.56 2
+  FrontMarker1 22567.55 71052.69 2
+  FrontMarker2 12077.79 73362.81 2
+  FrontMarker3 73168.09 62578.68 2
+  FrontMarker4 58268.08 58278.66 2
+  FrontMarker5 8858.62 97577.15 2
+  FrontMarker6 1331.35 81875.94 2
+  FrontMarker7 36298.60 68321.08 2
+  FrontMarker8 67730.36 72486.41 2
+  FrontMarker9 113017.45 94882.75 2
+  FrontMarker10 40417.68 62488.86 2
+  FrontMarker11 16957.68 92770.02 1
+  FrontMarker12 44498.99 82144.00 1
+  FrontMarker13 59549.63 80531.25 1
+  FrontMarker14 71888.80 81401.87 1
+  FrontMarker15 86577.67 70545.46 1
+  FrontMarker16 34487.74 85145.07 1
+  FrontMarker17 97751.61 68783.42 2
+  FrontMarker18 87358.19 99392.69 1
+  FrontMarker19 86445.86 88337.11 1
+  FrontMarker20 52357.06 99218.08 1
+
+
+
+
+
+[WEATHER]
+WindVelocity 4
+WindDirection 80
+WindTop 8802
+WindTurbulence 0
+WindGust 0

@@ -1,0 +1,153 @@
+[MAIN]
+  MAP Hawaii/load.ini
+  TIME 8.0
+  CloudType 2
+  CloudHeight 1000.0
+  player USN_VF_9A00
+  army 1
+  playerNum 0
+[Wing]
+  UN_NN10
+  USN_VF_9A00
+  UN_NN20
+[UN_NN10]
+  Planes 1
+  Skill 3
+  numberOn0 0
+  Class air.F6F3
+  Fuel 25
+  weapons none
+[UN_NN10_Way]
+  NORMFLY 282277.81 43715.95 500.00 350.00 &0
+  NORMFLY 292696.88 42127.76 500.00 350.00 &0
+  NORMFLY 293199.77 45432.35 500.00 350.00 &0
+  NORMFLY 285944.74 46330.48 500.00 350.00 &0
+  NORMFLY 283505.25 41657.02 500.00 350.00 &0
+  NORMFLY 290317.91 38464.76 500.00 350.00 &0
+  NORMFLY 294939.02 47233.18 1000.00 350.00 &0
+  NORMFLY 284457.81 52178.34 2000.00 350.00 &0
+  NORMFLY 278782.82 42057.82 2000.00 350.00 &0
+  NORMFLY 274372.40 34818.54 2000.00 350.00 &0
+  LANDING 264614.19 34787.87 0 0 &0
+[USN_VF_9A00]
+  Planes 2
+  Skill 2
+  skin0 F6F3_43.bmp
+  skin1 F6F3_43.bmp
+  pilot0 US_01.bmp
+  pilot1 US_01.bmp
+  Class air.F6F3
+  Fuel 75
+  weapons 6xhvargp
+[USN_VF_9A00_Way]
+  TAKEOFF 286657.03 44168.86 0 0 &0
+  NORMFLY 290741.23 43336.33 500.00 325.00 &0
+  NORMFLY 291275.42 46767.66 1000.00 350.00 &0
+  NORMFLY 278311.51 54119.41 2000.00 350.00 &0
+  GATTACK 268619.59 68231.85 1000.00 350.00 33_Static 0 &0
+  NORMFLY 272030.55 71010.05 1000.00 350.00 &0
+  NORMFLY 281086.20 71017.30 1000.00 275.00 &0
+  LANDING 283085.23 71009.16 0 0 0_Chief 0 &0
+[UN_NN20]
+  Planes 1
+  Skill 1
+  Class air.FI_156
+  Fuel 100
+  weapons default
+[UN_NN20_Way]
+  NORMFLY 290084.78 48023.21 500.00 175.00 &0
+  NORMFLY 284149.69 41574.82 500.00 175.00 &0
+  NORMFLY 280716.97 44013.01 500.00 175.00 &0
+  NORMFLY 282160.64 46002.07 500.00 175.00 &0
+  LANDING 285326.13 44937.24 0 0 &0
+[Chiefs]
+  0_Chief Ships.USSEssexCV9 1 0 2 1.0
+  1_Chief Ships.USSFletcherDD445 1 0 2 1.0
+[0_Chief_Road]
+  283262.91 70999.40 120.00 0 2 7.716667175292969
+  302802.44 70999.33 120.00 0 2 7.716667175292969
+  315224.00 64697.90 120.00
+[1_Chief_Road]
+  282786.22 71180.66 120.00 0 2 7.777777777777778
+  303008.38 71198.95 120.00 0 2 7.777777777777778
+  315249.94 65059.84 120.00
+[NStationary]
+  0_Static vehicles.planes.Plane$PBN1 1 286441.13 45082.21 270.00 0.0 us
+  1_Static vehicles.planes.Plane$PBN1 1 286352.40 45169.33 360.00 0.0 us
+  2_Static vehicles.planes.Plane$PBN1 1 286333.41 45091.15 300.00 0.0 us
+  3_Static vehicles.planes.Plane$PBN1 1 286162.93 45099.81 390.00 0.0 us
+  4_Static vehicles.planes.Plane$F6F3 1 285568.86 44659.36 270.00 0.0 us
+  5_Static vehicles.planes.Plane$F6F3 1 285513.06 44651.53 300.00 0.0 us
+  6_Static vehicles.planes.Plane$F6F3 1 285494.11 44702.28 300.00 0.0 us
+  7_Static vehicles.planes.Plane$F6F3 1 285440.65 44690.10 300.00 0.0 us
+  8_Static vehicles.planes.Plane$F6F3 1 285425.77 44738.82 330.00 0.0 us
+  9_Static vehicles.planes.Plane$F6F3 1 285327.65 44654.91 330.00 0.0 us
+  10_Static vehicles.planes.Plane$F6F3 1 285364.87 44629.88 300.00 0.0 us
+  11_Static vehicles.planes.Plane$F6F3 1 285398.70 44610.93 300.00 0.0 us
+  12_Static vehicles.planes.Plane$F6F3 1 285433.21 44591.31 300.00 0.0 us
+  13_Static vehicles.planes.Plane$F6F3 1 285466.37 44573.04 300.00 0.0 us
+  14_Static vehicles.planes.Plane$F6F3 1 285502.91 44552.06 270.00 0.0 us
+  15_Static vehicles.planes.Plane$F4U1A 1 286410.30 44432.97 449.10 0.0 us
+  16_Static vehicles.planes.Plane$F4U1A 1 286429.17 44463.31 405.00 0.0 us
+  17_Static vehicles.planes.Plane$F4U1A 1 286447.44 44493.76 434.10 0.0 us
+  18_Static vehicles.planes.Plane$F4F4 1 286490.74 44465.34 464.10 0.0 us
+  19_Static vehicles.planes.Plane$F4F4 1 286513.07 44452.49 475.00 0.0 us
+  20_Static vehicles.planes.Plane$F4F4 1 286540.82 44439.63 474.10 0.0 us
+  21_Static vehicles.planes.Plane$F4F4 1 286565.18 44426.10 474.10 0.0 us
+  22_Static vehicles.planes.Plane$F4F4 1 286591.57 44411.21 474.10 0.0 us
+  23_Static vehicles.planes.Plane$F4F4 1 286325.64 44469.40 480.00 0.0 us
+  24_Static vehicles.planes.Plane$F4F4 1 286301.28 44483.61 480.00 0.0 us
+  25_Static vehicles.planes.Plane$F4F4 1 286274.21 44499.18 480.00 0.0 us
+  26_Static vehicles.planes.Plane$F4F4 1 286352.71 44455.87 480.00 0.0 us
+  27_Static vehicles.planes.Plane$F4F4 1 286248.84 44514.06 480.00 0.0 us
+  28_Static vehicles.planes.Plane$F4F4 1 286221.10 44530.30 480.00 0.0 us
+  29_Static vehicles.planes.Plane$F4F4 1 286194.03 44547.22 480.00 0.0 us
+  30_Static vehicles.planes.Plane$F4F4 1 286167.64 44563.46 480.00 0.0 us
+  31_Static vehicles.stationary.Stationary$WillisMB_US 1 285665.44 44612.18 420.00 0.0
+  32_Static vehicles.stationary.Stationary$WillisMB_US 1 285657.61 44615.27 480.00 0.0
+  33_Static ships.Ship$Tramp 0 268225.41 68799.46 525.00 0.0 0 0 100.0
+  34_Static vehicles.stationary.Stationary$Wagon8 2 268208.93 68794.93 525.00 0.0
+  35_Static vehicles.stationary.Stationary$Wagon8 2 268241.97 68803.96 525.00 0.0
+  36_Static ships.Ship$USSEssexCV9 1 264585.88 33788.97 360.00 0.0 0 2 1.0
+[Buildings]
+  0_bld House$Hangarmed 1 285340.84 44778.42 390.00
+  1_bld House$HangarLG 1 285672.99 44558.12 480.00
+  2_bld House$HangarLG 1 285791.81 44492.15 480.00
+  3_bld House$Hangarmed 1 285318.54 44738.10 390.00
+  4_bld House$Hangarmed 1 285296.02 44699.98 390.00
+  5_bld House$HangarLG 1 285917.65 44423.80 480.00
+  6_bld House$HangarPBY 1 286373.65 45063.85 480.00
+  7_bld House$HangarPBY 1 286331.24 45088.23 480.00
+  8_bld House$HQ_US 1 286188.83 44261.02 675.00
+  9_bld House$PortLightHouse 1 267976.08 68770.44 540.00
+  10_bld House$Furniture88mm_Flak_Pos2 1 267977.31 68770.47 360.00
+  11_bld House$FurniturePalmAg2 1 286163.36 44286.68 525.00
+  12_bld House$FurniturePalmAg2 1 286146.21 44293.35 495.00
+  13_bld House$FurniturePalmAg2 1 286154.61 44304.84 495.00
+  14_bld House$FurniturePalmAg2 1 267973.29 68816.19 495.00
+  15_bld House$FurniturePalmAg2 1 267988.85 68795.76 495.00
+  16_bld House$FurniturePalmAg2 1 267964.53 68795.76 495.00
+  17_bld House$FurniturePalmAg2 1 267943.13 68781.17 465.00
+  18_bld House$FurniturePalmAg2 1 267949.94 68759.77 465.00
+  19_bld House$FurniturePalmAg2 1 267986.90 68808.41 465.00
+  20_bld House$FurniturePalmAg2 1 268005.39 68763.66 465.00
+  21_bld House$FurniturePalmAg2 1 268002.47 68751.01 495.00
+  22_bld House$FurniturePalmAg2 1 268019.98 68751.99 615.00
+[Target]
+  3 0 1 45 501 285083 71001 500 0 0_Chief 283262 70999
+  1 0 0 0 500 268209 68819 100
+[StaticCamera]
+  267793 68933 50
+[Bridge]
+[House]
+
+
+
+
+
+[WEATHER]
+WindVelocity 10
+WindDirection 47
+WindTop 1372
+WindTurbulence 0
+WindGust 1

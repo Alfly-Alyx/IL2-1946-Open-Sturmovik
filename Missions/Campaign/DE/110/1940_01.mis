@@ -1,0 +1,270 @@
+[MAIN]
+  MAP Normandy/load1.ini
+  TIME 5.0
+  WEAPONSCONSTANT 1
+  CloudType 1
+  CloudHeight 1500.0
+  player ZG26_III02
+  army 2
+  playerNum 0
+[Wing]
+  DU_NN00
+  III_StG201
+  DU_NN01
+  ZG26_III02
+  II_StG210
+  II_StG211
+  DU_NN02
+  II_KGrzbV1a12
+[DU_NN00]
+  Planes 4
+  Skill0 2
+  Skill1 1
+  Skill2 2
+  Skill3 1
+  skin0 9998-ColBoxman1VLDLMadioen1941.bmp
+  skin1 9998-ColBoxman1VLDLMadioen1941.bmp
+  skin2 9998-ColBoxman1VLDLMadioen1941.bmp
+  skin3 9998-ColBoxman1VLDLMadioen1941.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.P_36A3
+  Fuel 100
+  weapons default
+[DU_NN00_Way]
+  TAKEOFF 142330.77 96503.56 0 0 &0
+  NORMFLY 111676.05 95870.69 2500.00 300.00 &0
+  NORMFLY 142613.03 86763.07 2500.00 350.00 &0
+  NORMFLY 142582.14 96686.21 2500.00 350.00 &0
+  NORMFLY 111676.05 96738.08 2500.00 350.00 &0
+  NORMFLY 111676.05 86618.51 2500.00 350.00 &0
+  NORMFLY 142757.60 86618.51 2500.00 300.00 &0
+  NORMFLY 146489.07 91539.66 2000.00 300.00 &0
+  LANDING 142330.77 96489.74 0 0 &0
+[III_StG201]
+  Planes 2
+  OnlyAI 1
+  Skill 3
+  Class air.JU_87B2
+  Fuel 50
+  weapons 1xSD500
+[III_StG201_Way]
+  NORMFLY 150146.21 88741.00 3000.00 350.00 &0
+  GATTACK 138397.41 94874.68 3000.00 350.00 8_Static 0 &0
+  NORMFLY 144334.83 84834.68 2500.00 300.00 &0
+  NORMFLY 139911.66 62278.97 1750.00 300.00 &0
+  NORMFLY 144592.96 48916.55 1000.00 300.00 &0
+  LANDING 147240.41 52138.87 0 0 &0
+[DU_NN01]
+  Planes 2
+  Skill 3
+  skin2 4407-FokkerC5.bmp
+  numberOn2 0
+  Class air.U_2VS
+  Fuel 50
+  weapons 2x4
+[DU_NN01_Way]
+  NORMFLY 114297.31 81657.51 500.00 134.00 &0
+  GATTACK 111453.31 84523.21 500.00 134.00 15_Static 0 &0
+  NORMFLY 139970.91 99020.12 50.00 134.00 &0
+  LANDING 142599.92 98030.02 0 0 &0
+[ZG26_III02]
+  Planes 4
+  Skill 3
+  skin0 Bf110C-5 Unmarked.bmp
+  skin1 Bf110C-5 Unmarked.bmp
+  skin2 Bf110C-5 Unmarked.bmp
+  skin3 Bf110C-5 Unmarked.bmp
+  Class air.BF_110G2
+  Fuel 50
+  weapons default
+[ZG26_III02_Way]
+  NORMFLY 151606.25 101084.80 2000.00 350.00 &0
+  NORMFLY 142538.83 101435.25 2000.00 350.00 DU_NN00 0 &0
+  NORMFLY 125661.65 95657.85 2000.00 350.00 &0
+  NORMFLY 135008.04 91925.03 2000.00 350.00 &0
+  NORMFLY 134967.41 51979.17 2000.00 350.00 &0
+  NORMFLY 144878.62 48009.18 2000.00 280.00 &0
+  LANDING 147145.90 52022.23 0 0 &0
+[II_StG210]
+  Planes 2
+  OnlyAI 1
+  Skill 3
+  skin0 Ju87B2_BOB_SLG77_unmarked.bmp
+  skin1 Ju87B2_BOB_SLG77_unmarked.bmp
+  Class air.JU_87B2
+  Fuel 50
+  weapons 1xSC250_4xSC50
+[II_StG210_Way]
+  NORMFLY 150646.86 89467.81 3000.00 300.00 &0
+  GATTACK 144604.25 96886.96 3000.00 300.00 10_Static 0 &0
+  NORMFLY 146564.01 66150.76 1500.00 300.00 &0
+  LANDING 145706.27 52275.48 0 0 &0
+[II_StG211]
+  Planes 2
+  OnlyAI 1
+  Skill 3
+  skin0 Ju87B2_BOB_SLG77.bmp
+  skin1 Ju87B2_BOB_SLG77_unmarked.bmp
+  numberOn0 0
+  Class air.JU_87B2
+  Fuel 50
+  weapons 1xSC250_4xSC50
+[II_StG211_Way]
+  NORMFLY 150440.22 89110.05 3000.00 300.00 &0
+  GATTACK 140335.23 97968.07 3000.00 300.00 53_Static 0 &0
+  NORMFLY 145794.27 66097.01 1000.00 300.00 &0
+  LANDING 145706.27 52275.48 0 0 &0
+[DU_NN02]
+  Planes 1
+  Skill 3
+  skin0 9998-ColBoxman1VLDLMadioen1941.bmp
+  numberOn0 0
+  numberOn1 0
+  Class air.P_36A3
+  Fuel 50
+  weapons default
+[DU_NN02_Way]
+  NORMFLY 136463.37 95391.40 3000.00 300.00 &0
+  NORMFLY 149180.97 95962.40 3000.00 300.00 III_StG201 0 &0
+  NORMFLY 141813.84 97302.58 500.00 406.00 ZG26_III02 1 &0
+  NORMFLY 133959.88 100326.88 2500.00 300.00 ZG26_III02 1 &0
+  NORMFLY 137124.12 90725.04 2000.00 300.00 &0
+  NORMFLY 146562.29 96998.97 1500.00 300.00 &0
+  NORMFLY 137942.46 100872.43 1500.00 300.00 &0
+  NORMFLY 139906.47 95525.96 1000.00 300.00 &0
+  LANDING 142330.77 96503.56 0 0 &0
+[II_KGrzbV1a12]
+  Planes 4
+  Skill 3
+  skin0 RLM_SE+HZ_0.bmp
+  skin1 RLM_SE+HZ_0.bmp
+  skin2 RLM_SE+HZ_0.bmp
+  skin3 RLM_SE+HZ_0.bmp
+  Class air.JU_52_3MG4E
+  Fuel 50
+  weapons 18xPara
+[II_KGrzbV1a12_Way]
+  NORMFLY 148956.80 68737.50 1500.00 295.00 &0
+  GATTACK 144096.87 93537.95 150.00 295.00 &0
+  NORMFLY 143712.81 97777.75 150.00 295.00 &0
+  NORMFLY 136378.47 97790.76 350.00 295.00 &0
+  LANDING 142330.77 96503.56 0 0 &0
+[NStationary]
+  2_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 115640.08 97778.70 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 115227.46 95523.07 360.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 110733.53 95891.18 360.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 110070.49 96152.85 360.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 110072.27 96124.36 360.00 0.0 0
+  8_Static ships.Ship$Destroyer_USSR_Type7 1 134718.09 93298.77 690.00 0.0 0 3 1.0
+  13_Static vehicles.planes.Plane$JU_52_3MG4E 2 110516.82 84663.77 360.00 0.0 null
+  14_Static vehicles.planes.Plane$JU_52_3MG4E 2 110632.51 84811.12 300.00 0.0 null
+  15_Static vehicles.planes.Plane$JU_52_3MG4E 2 110764.63 84864.66 485.00 0.0 null
+  31_Static vehicles.artillery.Artillery$ML20 1 135793.62 99159.88 380.00 0.0 0
+  38_Static vehicles.artillery.Artillery$ML20 1 135710.88 98986.87 380.00 0.0 0
+  39_Static vehicles.artillery.Artillery$ML20 1 135584.95 98863.57 380.00 0.0 0
+  40_Static vehicles.artillery.Artillery$ML20 1 135556.92 98704.89 380.00 0.0 0
+  32_Static vehicles.artillery.Artillery$ML20 1 135956.53 99029.21 380.00 0.0 0
+  33_Static vehicles.artillery.Artillery$ML20 1 135679.02 98719.00 380.00 0.0 0
+  34_Static vehicles.artillery.Artillery$ML20 1 135895.09 98926.47 380.00 0.0 0
+  41_Static vehicles.artillery.Artillery$ML20 1 135736.42 98813.21 380.00 0.0 0
+  37_Static vehicles.artillery.Artillery$M2A1_105mm 1 115471.72 97444.43 365.00 0.0 0
+  42_Static vehicles.artillery.Artillery$M2A1_105mm 1 115476.65 97467.83 365.00 0.0 0
+  43_Static vehicles.artillery.Artillery$M2A1_105mm 1 115442.53 97410.25 365.00 0.0 0
+  44_Static vehicles.artillery.Artillery$M2A1_105mm 1 115409.74 97374.63 365.00 0.0 0
+  45_Static vehicles.artillery.Artillery$M2A1_105mm 1 115357.74 97328.55 365.00 0.0 0
+  46_Static vehicles.artillery.Artillery$M2A1_105mm 1 115524.80 97517.43 365.00 0.0 0
+  47_Static vehicles.artillery.Artillery$M2A1_105mm 1 115559.86 97560.12 365.00 0.0 0
+  48_Static vehicles.artillery.Artillery$M2A1_105mm 1 115604.52 97613.27 365.00 0.0 0
+  49_Static vehicles.artillery.Artillery$M2A1_105mm 1 115660.63 97646.62 365.00 0.0 0
+  50_Static vehicles.artillery.Artillery$M2A1_105mm 1 115705.39 97677.39 365.00 0.0 0
+  51_Static vehicles.artillery.Artillery$M2A1_105mm 1 115750.68 97699.41 365.00 0.0 0
+  30_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 117909.71 86813.02 485.00 0.0 0
+  56_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 109836.90 97668.74 485.00 0.0 0
+  57_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 109239.21 98715.49 485.00 0.0 0
+  21_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 143259.82 98285.95 360.00 120.0 800
+  58_Static vehicles.artillery.Artillery$M2A1_105mm 1 135347.01 98473.98 365.00 0.0 0
+  59_Static vehicles.artillery.Artillery$M2A1_105mm 1 135205.54 98791.95 365.00 0.0 0
+  60_Static vehicles.artillery.Artillery$M2A1_105mm 1 135277.75 98459.15 365.00 0.0 0
+  61_Static vehicles.artillery.Artillery$M2A1_105mm 1 135181.61 98627.21 365.00 0.0 0
+  62_Static vehicles.artillery.Artillery$M5_75mm 1 142466.67 99163.63 390.00 0.0 0
+  19_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 143672.94 91969.39 485.00 0.0 0
+  55_Static vehicles.artillery.Artillery$Flak30_20mm 1 144440.42 93011.48 360.00 0.0 0
+  9_Static vehicles.artillery.Artillery$Flak30_20mm 1 144193.88 95386.32 360.00 0.0 800
+  10_Static vehicles.artillery.Artillery$Flak30_20mm 1 144234.49 94965.15 360.00 0.0 0
+  52_Static vehicles.artillery.Artillery$Flak30_20mm 1 140186.05 98433.23 360.00 0.0 0
+  18_Static vehicles.artillery.Artillery$Flak30_20mm 1 121966.78 88706.06 485.00 0.0 800
+  29_Static vehicles.artillery.Artillery$Flak30_20mm 1 118596.16 87384.25 485.00 0.0 800
+  35_Static vehicles.artillery.Artillery$_50calMG_water_US 1 116315.03 85212.44 485.00 0.0 0
+  36_Static vehicles.artillery.Artillery$_50calMG_water_US 1 114709.57 86820.02 485.00 0.0 0
+  54_Static vehicles.artillery.Artillery$_50calMG_water_US 1 143892.45 94952.82 360.00 120.0 800
+  12_Static vehicles.artillery.Artillery$BunkerA2_gun 1 143409.11 98387.14 420.00 0.0 0
+  63_Static vehicles.artillery.Artillery$BunkerA2_gun 1 143348.97 98352.38 420.00 0.0 0
+  64_Static vehicles.artillery.Artillery$ZIS3 1 140289.16 96429.58 495.00 0.0 0
+  65_Static vehicles.artillery.Artillery$BunkerA_gun 1 140273.00 96459.83 495.00 0.0 0
+  66_Static vehicles.artillery.Artillery$BunkerA_gun 1 140084.96 96394.46 495.00 0.0 0
+  67_Static vehicles.artillery.Artillery$BunkerA_gun 1 139955.14 96382.83 495.00 0.0 0
+  68_Static vehicles.artillery.Artillery$_50calMG_water_US 1 140285.49 96434.14 495.00 0.0 0
+  69_Static vehicles.stationary.Stationary$ZIS5_PC 1 140292.57 96446.03 645.00 0.0
+  53_Static vehicles.artillery.Artillery$Flak30_20mm 1 140046.99 98279.31 360.00 0.0 0
+[Buildings]
+  0_bld House$AirdromeMaskingnet 1 142467.10 99164.09 390.00
+  1_bld House$FurnitureSandbags_Round 1 142468.00 99163.27 570.00
+  2_bld House$AirdromeMaskingnet 1 140287.41 96432.60 495.00
+  3_bld House$FurnitureSandbags_Round 1 140285.41 96433.94 675.00
+  4_bld House$FurnitureSandbags_Round 1 140288.83 96429.53 675.00
+  5_bld House$FurnitureSandbags_Round 1 140185.66 98432.71 690.00
+[Target]
+  0 0 0 0 1000 142414 96324 0 8 DU_NN00 142330 96489
+  0 2 0 0 500 111438 84474 0 1 DU_NN01 111453 84523
+[StaticCamera]
+  110161 84558 100
+  142326 97912 75
+  134569 93292 50
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 149524.85 101884.16 1
+  FrontMarker1 148802.67 98789.11 1
+  FrontMarker2 146842.47 93424.36 1
+  FrontMarker3 144366.43 91464.16 1
+  FrontMarker4 142354.65 93940.20 1
+  FrontMarker5 137918.41 95694.06 1
+  FrontMarker6 133533.76 94146.53 1
+  FrontMarker7 129510.19 92495.84 1
+  FrontMarker8 131883.07 88317.52 1
+  FrontMarker9 136938.31 81921.09 1
+  FrontMarker10 134565.44 55664.75 1
+  FrontMarker11 138692.18 54994.15 2
+  FrontMarker12 140446.04 83623.36 2
+  FrontMarker13 137093.07 88214.35 2
+  FrontMarker14 136164.55 92341.09 2
+  FrontMarker15 140703.96 92341.09 2
+  FrontMarker16 143953.76 89761.88 2
+  FrontMarker17 138279.50 94043.37 2
+  FrontMarker18 142199.90 90948.32 2
+  FrontMarker19 134359.11 90535.64 2
+  FrontMarker20 135442.37 95487.72 1
+  FrontMarker21 137041.48 75679.40 1
+  FrontMarker22 135803.46 66187.92 1
+  FrontMarker23 139208.02 65568.91 2
+  FrontMarker24 141941.98 74905.64 2
+  FrontMarker25 148723.09 91855.32 2
+  FrontMarker26 151227.45 98050.32 2
+  FrontMarker27 151886.49 102004.57 2
+
+
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 3
+WindDirection 189
+WindTop 599
+WindTurbulence 0
+WindGust 1

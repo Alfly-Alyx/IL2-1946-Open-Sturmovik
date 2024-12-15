@@ -1,0 +1,233 @@
+[MAIN]
+  MAP cztx_BurmaLower/load.ini
+  TIME 9.0
+  CloudType 0
+  CloudHeight 1500.0
+  player AVG_FS_1z00
+  army 1
+  playerNum 0
+[Wing]
+  113Squadron32
+  67Squadron20
+  AVG_FS_1z00
+  IJA_F_S_77z00
+  IJA_F_S_77z01
+[113Squadron32]
+  Planes 3
+  Skill 1
+  Class air.BLENHEIM1
+  Fuel 100
+  weapons default
+[113Squadron32_Way]
+  NORMFLY 348324.93 134550.63 500.00 320.00 &0
+  NORMFLY 461989.74 16080.96 500.00 320.00 &0
+  NORMFLY 464945.70 16031.84 500.00 320.00 &0
+  NORMFLY 465985.11 19018.43 500.00 320.00 &0
+  NORMFLY 463494.74 20868.01 500.00 320.00 &0
+  NORMFLY 460935.95 19044.16 500.00 320.00 &0
+  NORMFLY 461984.41 15887.05 500.00 320.00 &0
+  NORMFLY 464973.61 15742.83 500.00 320.00 &0
+  NORMFLY 466058.63 18887.36 500.00 320.00 &0
+  NORMFLY 463691.59 20928.05 500.00 320.00 &0
+  NORMFLY 461133.50 18983.37 500.00 320.00 &0
+  LANDING 345396.53 137666.81 0 0 &0
+[67Squadron20]
+  Planes 4
+  Skill0 2
+  Skill1 1
+  Skill2 1
+  Skill3 1
+  Class air.F2A_B339
+  Fuel 100
+  weapons default
+[67Squadron20_Way]
+  TAKEOFF 345396.53 137666.81 0 0 &0
+  NORMFLY 348100.16 135210.36 800.00 350.00 113Squadron32 0 &0
+  NORMFLY 460096.35 16031.26 800.00 350.00 113Squadron32 1 &0
+  NORMFLY 466984.69 16049.06 800.00 350.00 &0
+  NORMFLY 466984.69 21940.64 800.00 350.00 &0
+  NORMFLY 460078.55 22029.64 800.00 350.00 &0
+  NORMFLY 460025.15 15799.87 800.00 350.00 &0
+  NORMFLY 466949.09 15746.47 800.00 350.00 &0
+  NORMFLY 466966.89 21691.45 800.00 350.00 &0
+  NORMFLY 460042.95 21816.04 800.00 350.00 113Squadron32 10 &0
+  LANDING 345396.53 137666.81 0 0 &0
+[AVG_FS_1z00]
+  Planes 4
+  Skill0 2
+  Skill1 2
+  Skill2 2
+  Skill3 1
+  pilot0 Du_21.bmp
+  pilot1 Du_22.bmp
+  pilot2 Du_23.bmp
+  pilot3 Du_24.bmp
+  Class air.P_40SUKAISVOLOCHHAWKA2
+  Fuel 100
+  weapons default
+[AVG_FS_1z00_Way]
+  TAKEOFF 345496.41 138216.41 0 0 &0
+  NORMFLY 347954.63 135492.95 1500.00 350.00 67Squadron20 1 &0
+  NORMFLY 459451.97 16234.99 1500.00 350.00 67Squadron20 6 &0
+  NORMFLY 467313.35 15288.72 1500.00 350.00 &0
+  NORMFLY 467531.72 21839.86 1500.00 350.00 &0
+  NORMFLY 460325.46 22422.19 1500.00 350.00 &0
+  LANDING 345496.41 138216.41 0 0 &0
+[IJA_F_S_77z00]
+  Planes 4
+  Skill0 2
+  Skill1 1
+  Skill2 2
+  Skill3 1
+  skin0 RRG_77 Sentai - 1 Chutai.bmp
+  skin1 RRG_77 Sentai - 1 Chutai.bmp
+  skin2 RRG_77 Sentai - 1 Chutai.bmp
+  skin3 RRG_77 Sentai - 1 Chutai.bmp
+  Class air.KI_27_OTSU
+  Fuel 100
+  weapons default
+[IJA_F_S_77z00_Way]
+  NORMFLY 554411.76 136411.58 500.00 300.00 &0
+  NORMFLY 461783.40 20653.33 2000.00 300.00 113Squadron32 1 &0
+  NORMFLY 462120.17 15522.33 2000.00 300.00 &0
+  NORMFLY 467555.77 14976.17 2000.00 300.00 &0
+  NORMFLY 467945.88 21582.11 2000.00 300.00 &0
+  NORMFLY 461704.05 21998.23 2000.00 300.00 &0
+  LANDING 553286.88 135175.78 0 0 &0
+[IJA_F_S_77z01]
+  Planes 3
+  Skill0 2
+  Skill1 1
+  Skill2 1
+  Skill3 1
+  skin0 RRG_77 Sentai - 2 Chutai.bmp
+  skin1 RRG_77 Sentai - 2 Chutai.bmp
+  skin2 RRG_77 Sentai - 2 Chutai.bmp
+  Class air.KI_27_OTSU
+  Fuel 100
+  weapons default
+[IJA_F_S_77z01_Way]
+  NORMFLY 554624.76 136216.87 500.00 300.00 &0
+  NORMFLY 460560.15 21703.92 2000.00 300.00 67Squadron20 2 &0
+  NORMFLY 461209.90 15158.22 2000.00 300.00 &0
+  NORMFLY 467191.66 14456.02 2000.00 300.00 &0
+  NORMFLY 468414.02 21165.99 2000.00 300.00 &0
+  NORMFLY 460611.72 22700.44 2000.00 300.00 &0
+  LANDING 553286.88 135175.78 0 0 &0
+[NStationary]
+  0_Static vehicles.stationary.Stationary$WillisMB 1 345330.71 138500.91 545.00 0.0
+  1_Static vehicles.stationary.Stationary$WillisMB 1 344941.52 137961.00 545.00 0.0
+  2_Static vehicles.stationary.Stationary$ZIS5_medic 1 345330.29 138512.32 365.00 0.0
+  3_Static vehicles.stationary.Stationary$ZIS5_medic 1 344558.34 138407.83 665.00 0.0
+  4_Static vehicles.stationary.Stationary$GAZ_M1 1 344545.89 138384.73 605.00 0.0
+  5_Static vehicles.stationary.Stationary$GAZ_M1 1 345330.58 138493.45 500.00 0.0
+  6_Static vehicles.stationary.Stationary$Motorcycle 1 345329.68 138489.13 615.00 0.0
+  7_Static vehicles.stationary.Stationary$Bulldozer_US 1 345347.06 138564.77 540.00 0.0
+  8_Static vehicles.stationary.Stationary$Bulldozer_US 1 344639.02 138274.02 540.00 0.0
+  9_Static vehicles.stationary.Stationary$Bus_US 1 345199.62 139163.35 450.00 0.0
+  10_Static vehicles.stationary.Stationary$WillisMB 1 345198.92 139194.67 545.00 0.0
+  11_Static vehicles.stationary.Stationary$Motorcycle 1 345190.93 139123.15 615.00 0.0
+  12_Static vehicles.stationary.Stationary$Motorcycle 1 345197.58 139191.83 615.00 0.0
+  13_Static vehicles.stationary.Stationary$GAZ_Bus 1 344587.15 138386.69 615.00 0.0
+  14_Static vehicles.stationary.Stationary$GAZ_AAA 1 344903.59 138016.02 615.00 0.0
+  15_Static vehicles.stationary.Stationary$GAZ_AAA 1 344619.88 138361.40 615.00 0.0
+  16_Static vehicles.stationary.Stationary$GAZ_AAA 1 344624.54 138360.79 630.00 0.0
+  17_Static vehicles.stationary.Stationary$GAZ_AAA 1 344631.07 138360.55 630.00 0.0
+  18_Static vehicles.stationary.Stationary$GAZ_AAA 1 345189.66 139104.71 555.00 0.0
+  19_Static vehicles.stationary.Stationary$GAZ_AAA 1 345183.86 139122.43 615.00 0.0
+  20_Static vehicles.artillery.Artillery$_50calMG_water_US 1 345341.87 137859.99 435.00 0.0 0
+  21_Static vehicles.artillery.Artillery$_50calMG_water_US 1 345326.84 138993.39 405.00 0.0 0
+  22_Static vehicles.stationary.Stationary$Wagon4 1 345100.11 139013.13 630.00 0.0
+  23_Static vehicles.stationary.Stationary$Wagon6 1 345100.11 138998.51 630.00 0.0
+  24_Static vehicles.stationary.Stationary$Wagon6 1 345099.97 138983.95 630.00 0.0
+  25_Static vehicles.stationary.Stationary$Wagon2 1 345099.41 139027.47 630.00 0.0
+  26_Static vehicles.stationary.Stationary$Wagon2 1 345099.48 139040.69 630.00 0.0
+  27_Static vehicles.stationary.Stationary$Wagon12 1 345099.79 139051.80 630.00 0.0
+  39_Static vehicles.planes.Plane$F2A_B339 1 345319.39 138702.82 340.00 0.0 gb
+  40_Static vehicles.planes.Plane$BLENHEIM1 1 344968.06 138501.82 504.10 0.0 gb
+  41_Static vehicles.planes.Plane$BLENHEIM1 1 344932.97 138564.89 504.10 0.0 gb
+  42_Static vehicles.planes.Plane$BLENHEIM1 1 344879.85 138611.88 504.10 0.0 gb
+  43_Static vehicles.planes.Plane$BLENHEIM1 1 344817.51 138688.47 504.10 0.0 gb
+  44_Static vehicles.planes.Plane$BLENHEIM1 1 344751.94 138769.07 504.10 0.0 gb
+  45_Static vehicles.planes.Plane$BLENHEIM1 1 344658.59 138883.62 475.00 0.0 gb
+  46_Static vehicles.planes.Plane$BLENHEIM1 1 344542.16 138904.16 444.10 0.0 gb
+  47_Static vehicles.planes.Plane$BLENHEIM1 1 344957.78 137955.17 220.00 0.0 gb
+  48_Static vehicles.planes.Plane$C_47 1 345362.08 138445.79 370.00 0.0 gb
+  49_Static vehicles.planes.Plane$C_47 1 344938.25 138040.29 414.100 0.0 gb
+  28_Static vehicles.planes.Plane$F2A_B339 1 345323.67 138728.84 370.00 0.0 gb
+  29_Static vehicles.planes.Plane$F2A_B339 1 345346.37 138830.90 355.00 0.0 gb
+  30_Static vehicles.planes.Plane$F2A_B339 1 345353.30 138854.92 385.00 0.0 gb
+  33_Static vehicles.planes.Plane$F2A_B339 1 345191.11 139076.67 355.00 0.0 gb
+  34_Static vehicles.planes.Plane$F2A_B339 1 345189.84 139093.03 360.00 0.0 gb
+  35_Static vehicles.planes.Plane$F2A_B339 1 345191.63 139133.48 360.00 0.0 gb
+  36_Static vehicles.planes.Plane$F2A_B339 1 345191.10 139148.96 360.00 0.0 gb
+  51_Static vehicles.stationary.Stationary$Motorcycle 1 344383.45 137984.61 540.00 0.0
+  52_Static vehicles.stationary.Stationary$GAZ_AAA 1 344610.25 138038.18 705.00 0.0
+  56_Static vehicles.stationary.Stationary$GAZ_AAA 1 344172.47 138024.70 450.00 0.0
+  57_Static vehicles.stationary.Stationary$WillisMB 1 344264.34 137973.47 440.00 0.0
+  58_Static vehicles.planes.Plane$F2A_B339 1 345031.35 138415.05 504.10 0.0 gb
+  59_Static vehicles.planes.Plane$F2A_B339 1 345048.35 138395.03 504.10 0.0 gb
+  60_Static vehicles.planes.Plane$F2A_B339 1 345067.46 138374.28 504.10 0.0 gb
+  61_Static vehicles.planes.Plane$F2A_B339 1 345095.53 138344.08 490.00 0.0 gb
+  62_Static vehicles.planes.Plane$F2A_B339 1 345119.10 138329.39 490.00 0.0 gb
+  63_Static vehicles.planes.Plane$F2A_B339 1 345145.02 138313.86 490.00 0.0 gb
+  64_Static vehicles.planes.Plane$BLENHEIM1 1 345150.27 138383.88 504.10 0.0 gb
+  65_Static vehicles.planes.Plane$BLENHEIM1 1 344738.29 138332.47 309.10 0.0 gb
+  66_Static vehicles.planes.Plane$BLENHEIM1 1 344753.47 138300.40 325.00 0.0 gb
+  67_Static vehicles.planes.Plane$BLENHEIM1 1 344771.20 138280.37 340.00 0.0 gb
+  68_Static vehicles.planes.Plane$P_40SUKAISVOLOCHHAWKA2 1 344162.84 138026.59 305.00 0.0 us
+  37_Static vehicles.planes.Plane$P_40SUKAISVOLOCHHAWKA2 1 344194.12 137997.86 290.00 0.0 us
+  38_Static vehicles.planes.Plane$P_40SUKAISVOLOCHHAWKA2 1 344274.07 137970.92 275.00 0.0 us
+  50_Static vehicles.planes.Plane$P_40SUKAISVOLOCHHAWKA2 1 344369.44 137983.07 260.00 0.0 us
+  53_Static vehicles.planes.Plane$P_40SUKAISVOLOCHHAWKA2 1 344637.16 138021.76 260.00 0.0 us
+  54_Static vehicles.planes.Plane$P_40SUKAISVOLOCHHAWKA2 1 344581.33 138021.04 260.00 0.0 us
+  55_Static vehicles.planes.Plane$F2A_B339 1 347942.81 147304.46 414.10 0.0 gb
+  69_Static vehicles.planes.Plane$F2A_B339 1 347920.00 147300.32 414.10 0.0 gb
+  70_Static vehicles.planes.Plane$F2A_B339 1 347900.05 147294.82 430.00 0.0 gb
+  71_Static vehicles.planes.Plane$F2A_B339 1 347878.93 147288.65 430.00 0.0 gb
+  72_Static vehicles.planes.Plane$F2A_B339 1 347911.91 147249.13 270.00 0.0 gb
+  73_Static vehicles.planes.Plane$F2A_B339 1 347930.21 147258.95 270.00 0.0 gb
+  74_Static vehicles.planes.Plane$F2A_B339 1 347953.21 147266.13 270.00 0.0 gb
+  75_Static vehicles.planes.Plane$F2A_B339 1 347887.85 147237.88 255.00 0.0 gb
+  76_Static vehicles.planes.Plane$BLENHEIM1 1 348778.86 148336.40 490.00 0.0 gb
+  77_Static vehicles.planes.Plane$BLENHEIM1 1 348812.47 148296.85 504.10 0.0 gb
+  78_Static vehicles.planes.Plane$BLENHEIM1 1 348845.42 148258.04 504.10 0.0 gb
+  79_Static vehicles.planes.Plane$F2A_B339 1 338763.10 155658.05 414.10 0.0 gb
+  80_Static vehicles.planes.Plane$F2A_B339 1 338788.46 155672.15 414.10 0.0 gb
+  81_Static vehicles.planes.Plane$F2A_B339 1 338811.55 155684.29 414.10 0.0 gb
+  82_Static vehicles.planes.Plane$F2A_B339 1 338837.28 155684.19 430.00 0.0 gb
+  83_Static vehicles.planes.Plane$F2A_B339 1 338723.52 155531.96 385.00 0.0 gb
+  84_Static vehicles.planes.Plane$F2A_B339 1 338714.50 155512.42 385.00 0.0 gb
+  85_Static vehicles.planes.Plane$F2A_B339 1 338714.43 155479.47 370.00 0.0 gb
+  86_Static vehicles.planes.Plane$F2A_B339 1 338715.87 155460.63 370.00 0.0 gb
+  87_Static vehicles.planes.Plane$F2A_B339 1 450288.98 105346.98 189.10 0.0 gb
+  88_Static vehicles.planes.Plane$F2A_B339 1 450301.57 105367.23 204.10 0.0 gb
+  89_Static vehicles.planes.Plane$F2A_B339 1 450314.15 105387.48 204.10 0.0 gb
+  90_Static vehicles.planes.Plane$F2A_B339 1 450325.51 105409.31 204.10 0.0 gb
+[Buildings]
+  0_bld House$FlagUKJack 1 345335.22 138559.00 545.00
+  1_bld House$FlagUKJack 1 344595.37 138420.41 545.00
+  2_bld House$FurnitureSandbags_Round 1 345327.91 138992.34 585.00
+  3_bld House$FurnitureSandbags_Round 1 345324.38 138995.76 405.00
+  4_bld House$FurnitureSandbags_Round 1 345341.15 137863.80 435.00
+  5_bld House$FurnitureSandbags_Round 1 345342.40 137859.08 615.00
+  6_bld House$AirdromeBarrelBlock1 1 344186.48 137990.24 440.00
+  7_bld House$AirdromeBarrelBlock1 1 344281.40 137958.94 440.00
+  8_bld House$AirdromeBarrelBlock1 1 344271.35 137957.12 500.00
+  9_bld House$AirdromeBarrelBlock1 1 344367.01 137963.65 500.00
+  10_bld House$AirdromeBarrelBlock1 1 344474.53 137964.83 500.00
+  11_bld House$AirdromeBarrelBlock1 1 344891.77 138007.46 500.00
+  12_bld House$AirdromeBarrelBlock1 1 345142.57 138325.61 500.00
+  13_bld House$AirdromeBarrelBlock1 1 345121.22 138341.79 500.00
+  14_bld House$AirdromeBarrelBlock1 1 345097.88 138356.95 500.00
+  15_bld House$AirdromeBarrelBlock1 1 345325.16 138431.19 500.00
+  16_bld House$AirdromeBarrelBlock1 1 345175.84 139110.93 500.00
+  17_bld House$AirdromeBarrelBlock1 1 345187.44 139163.50 590.00
+  18_bld House$AirdromeBarrelBlock1 1 345195.54 139219.95 590.00
+  19_bld House$AirdromeBarrelBlock1 1 345193.29 139227.23 545.00
+  20_bld House$AirdromeBarrelBlock1 1 345176.34 139118.91 560.00
+  21_bld House$FlagUKJack 1 348735.99 148326.06 715.00
+  22_bld House$FlagUKJack 1 338972.67 155345.10 640.00
+  23_bld House$FlagUKJack 1 450278.47 105297.52 655.00
+[Bridge]
+[House]

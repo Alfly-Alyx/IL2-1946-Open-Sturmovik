@@ -1,0 +1,99 @@
+[MAIN]
+  MAP SandsOfTime/load.ini
+  TIME 8.0
+  CloudType 1
+  CloudHeight 1500.0
+  player i0100
+  army 2
+  playerNum 0
+[Wing]
+  i0100
+  i0101
+  g0100
+  gb0100
+[i0100]
+  Planes 1
+  Skill 2
+  skin0 CR-42-Desert.bmp
+  Class air.CR_42
+  Fuel 100
+  weapons default
+[i0100_Way]
+  TAKEOFF 6912.71 47514.69 0 0 &0
+  NORMFLY 17463.88 48035.96 1000.00 300.00 &0
+  NORMFLY 31681.54 45036.28 1000.00 300.00 g0100 1 &0
+  NORMFLY 17422.79 37516.53 1000.00 300.00 &0
+  NORMFLY 17135.15 31147.35 1000.00 300.00 &0
+  NORMFLY 14053.29 29133.87 1000.00 300.00 &0
+  LANDING 12842.83 26740.23 0 0 &0
+[i0101]
+  Planes 3
+  Skill 2
+  skin0 CR-42-Desert.bmp
+  skin1 CR-42-Desert.bmp
+  skin2 CR-42-Desert.bmp
+  Class air.CR_42
+  Fuel 100
+  weapons default
+  StartTime 3
+[i0101_Way]
+  NORMFLY 40639.49 50706.91 1000.00 300.00 g0100 0 &0
+  NORMFLY 32339.00 44132.26 1000.00 300.00 &0
+  NORMFLY 24531.62 41296.95 1000.00 300.00 gb0100 2 &0
+  NORMFLY 18902.08 36941.25 1000.00 300.00 &0
+  NORMFLY 18696.63 30654.26 1000.00 300.00 &0
+  NORMFLY 15286.03 27983.31 1000.00 300.00 &0
+  LANDING 12842.83 26740.23 0 0 &0
+[g0100]
+  Planes 4
+  Skill 2
+  skin0 Ju-52-Desert.bmp
+  skin1 Ju-52-Desert.bmp
+  skin2 Ju-52-Desert.bmp
+  skin3 Ju-52-Desert.bmp
+  Class air.JU_52_3MG4E
+  Fuel 100
+  weapons default
+  StartTime 3
+[g0100_Way]
+  NORMFLY 40105.30 50912.36 1000.00 250.00 &0
+  NORMFLY 32010.27 44666.45 1000.00 250.00 &0
+  NORMFLY 24367.26 41790.05 1000.00 250.00 &0
+  NORMFLY 18162.44 37269.99 1000.00 250.00 &0
+  NORMFLY 18039.16 31065.17 1000.00 250.00 &0
+  NORMFLY 14669.66 28435.31 500.00 250.00 &0
+  LANDING 12842.83 26740.23 0 0 &0
+[gb0100]
+  Planes 4
+  Skill 1
+  skin0 RoyalNAVY.bmp
+  Class air.GLADIATOR2
+  Fuel 100
+  weapons default
+  StartTime 2
+[gb0100_Way]
+  NORMFLY 51035.64 34188.12 1000.00 300.00 &0
+  NORMFLY 36982.35 35297.59 1000.00 300.00 &0
+  NORMFLY 24737.08 39036.92 1000.00 300.00 g0100 2 &0
+  NORMFLY 23093.42 44008.99 1000.00 300.00 &0
+  NORMFLY 28846.23 46967.58 1000.00 300.00 &0
+  NORMFLY 50871.27 40392.94 1000.00 300.00 &0
+[NStationary]
+[Buildings]
+[Target]
+  3 2 1 90 501 13686 26729 1400
+  0 0 0 0 750 25147 39324 0 2 gb0100 24737 39036
+[Bridge]
+[House]
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 3
+WindDirection 49
+WindTop 8577
+WindTurbulence 0
+WindGust 1

@@ -1,0 +1,192 @@
+[MAIN]
+  MAP Net8Islands/load.ini
+  TIME 12.0
+  CloudType 6
+  CloudHeight 500.0
+  player IN_NN00
+  army 2
+  playerNum 0
+[Wing]
+  usa0100
+  IN_NN00
+  IN_NN01
+  IN_NN02
+  IN_NN03
+[usa0100]
+  Planes 2
+  Skill 1
+  Class air.B_17E
+  Fuel 20
+  weapons default
+[usa0100_Way]
+  NORMFLY 9589.50 15071.43 600.00 300.00 &0
+  NORMFLY 9664.96 14488.35 500.00 250.00 &0
+  LANDING 10504.08 11875.70 0 0 &0
+[IN_NN00]
+  Planes 4
+  Skill 1
+  skin0 bRz - Saburo Sakai.bmp
+  skin1 vp_A6M2_Tainan2.bmp
+  skin2 vp_A6M2_Tainan2.bmp
+  skin3 vp_A6M2_Tainan2.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.A6M2_21
+  Fuel 50
+  weapons default
+[IN_NN00_Way]
+  TAKEOFF 37270.30 43966.32 0 0 &0
+  NORMFLY 41335.96 43681.36 1500.00 300.00 &0
+  NORMFLY 7793.35 43825.12 1000.00 300.00 &0
+  NORMFLY 7636.18 22101.09 500.00 300.00 &0
+  GATTACK 10438.95 10612.17 500.00 300.00 &0
+  NORMFLY 32980.35 10986.54 500.00 300.00 &0
+  NORMFLY 41601.20 42439.14 500.00 300.00 &0
+  NORMFLY 39245.94 43905.63 500.00 250.00 &0
+  LANDING 37085.30 43846.32 0 0 &0
+[IN_NN01]
+  Planes 4
+  Parachute 0
+  Skill 1
+  skin0 vp_A6M2_Tainan2.bmp
+  skin1 vp_A6M2_Tainan2.bmp
+  skin2 vp_A6M2_Tainan2.bmp
+  skin3 vp_A6M2_Tainan2.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.A6M2_21
+  Fuel 50
+  weapons default
+[IN_NN01_Way]
+  TAKEOFF 37270.30 43966.32 0 0 &0
+  NORMFLY 41470.21 43665.34 1500.00 300.00 &0
+  NORMFLY 7771.90 43872.99 1000.00 300.00 IN_NN00 2 &0
+  NORMFLY 7645.79 22097.84 550.00 300.00 &0
+  GATTACK 10171.20 11214.40 550.00 300.00 &0
+  NORMFLY 32978.56 10988.94 550.00 300.00 &0
+  NORMFLY 41601.20 42401.10 550.00 300.00 &0
+  NORMFLY 39245.94 43867.58 500.00 250.00 &0
+  LANDING 37270.30 43966.32 0 0 &0
+[IN_NN02]
+  Planes 4
+  Parachute 0
+  Skill 1
+  skin0 vp_A6M2_Tainan.bmp
+  skin1 vp_A6M2_Tainan.bmp
+  skin2 vp_A6M2_Tainan.bmp
+  skin3 vp_A6M2_Tainan.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.A6M2_21
+  Fuel 50
+  weapons default
+[IN_NN02_Way]
+  TAKEOFF 37270.30 43966.32 0 0 &0
+  NORMFLY 41262.56 43665.34 1500.00 300.00 &0
+  NORMFLY 7758.09 44108.28 1000.00 300.00 IN_NN01 2 &0
+  NORMFLY 7708.51 22155.39 600.00 300.00 &0
+  GATTACK 11137.47 10671.79 600.00 300.00 &0
+  NORMFLY 33003.77 11009.66 600.00 300.00 &0
+  NORMFLY 41639.24 42445.54 600.00 300.00 &0
+  NORMFLY 39283.98 43823.14 500.00 250.00 &0
+  LANDING 37270.30 43966.32 0 0 &0
+[IN_NN03]
+  Planes 4
+  Parachute 0
+  Skill 1
+  skin0 vp_A6M2_Tainan.bmp
+  skin1 vp_A6M2_Tainan.bmp
+  skin2 vp_A6M2_Tainan.bmp
+  skin3 vp_A6M2_Tainan.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.A6M2_21
+  Fuel 50
+  weapons default
+[IN_NN03_Way]
+  TAKEOFF 37270.30 43966.32 0 0 &0
+  NORMFLY 41381.22 43724.67 1500.00 300.00 &0
+  NORMFLY 7860.90 44021.31 1000.00 300.00 IN_NN02 2 &0
+  NORMFLY 7667.16 22096.78 650.00 250.00 &0
+  GATTACK 10715.15 11675.11 650.00 300.00 &0
+  NORMFLY 33001.37 10991.48 650.00 300.00 &0
+  NORMFLY 41594.80 42312.22 650.00 300.00 &0
+  NORMFLY 39417.30 43823.14 500.00 250.00 &0
+  LANDING 37270.30 43966.32 0 0 &0
+[Chiefs]
+  0_Chief Ships.IJNAmatsukazeDD41 2 0 2 1.0
+[0_Chief_Road]
+  36162.58 17960.48 120.00 0 2 9.131389617919922
+  37849.09 28738.93 120.00 0 2 9.131389617919922
+  35593.81 23411.17 120.00
+[NStationary]
+  2_Static vehicles.planes.Plane$B_17E 1 10121.39 11160.54 404.10 0.0 us
+  3_Static vehicles.planes.Plane$P_40SUKAISVOLOCHB 1 10322.36 10650.36 300.00 0.0 us
+  4_Static vehicles.planes.Plane$P_40SUKAISVOLOCHB 1 10369.12 10622.40 300.00 0.0 us
+  5_Static vehicles.planes.Plane$P_40SUKAISVOLOCHB 1 10455.03 10569.73 300.00 0.0 us
+  6_Static vehicles.planes.Plane$P_40SUKAISVOLOCHB 1 10498.68 10545.34 270.00 0.0 us
+  7_Static vehicles.planes.Plane$C_47 1 11220.86 10424.93 210.00 0.0 null
+  8_Static vehicles.stationary.Smoke$Smoke1 0 10756.13 10409.58 570.00 68.00
+  9_Static vehicles.stationary.Smoke$Smoke8 0 10752.80 10407.57 570.00 68.00
+  10_Static vehicles.stationary.Smoke$Smoke8 0 10118.05 11159.61 570.00 68.00
+  11_Static vehicles.stationary.Smoke$Smoke1 0 10123.75 11163.09 570.00 68.00
+  14_Static vehicles.stationary.Smoke$Smoke15 0 36483.09 43908.36 360.00 0.00
+  15_Static vehicles.planes.Plane$A6M2 2 35913.84 44237.88 405.00 0.0 ja
+  16_Static vehicles.planes.Plane$A6M2 2 35953.46 44276.04 405.00 0.0 ja
+  17_Static vehicles.planes.Plane$A6M2 2 35988.93 44313.54 405.00 0.0 ja
+  18_Static vehicles.planes.Plane$A6M2 2 36023.39 44349.68 405.00 0.0 ja
+  19_Static vehicles.planes.Plane$A6M2 2 36060.54 44384.14 405.00 0.0 ja
+  20_Static vehicles.planes.Plane$A6M2 2 36095.34 44417.58 405.00 0.0 ja
+  21_Static vehicles.planes.Plane$A6M2 2 36136.21 44456.42 405.00 0.0 ja
+  22_Static vehicles.planes.Plane$G4M1_11 2 36549.21 44718.67 480.00 0.0 ja
+  23_Static vehicles.planes.Plane$G4M1_11 2 36573.45 44691.54 495.00 0.0 ja
+  24_Static vehicles.planes.Plane$G4M1_11 2 36574.73 44626.09 495.00 0.0 ja
+  25_Static vehicles.planes.Plane$G4M1_11 2 36636.14 44575.85 495.00 0.0 ja
+  26_Static vehicles.planes.Plane$G4M1_11 2 36597.99 44530.25 495.00 0.0 ja
+  27_Static vehicles.planes.Plane$G4M1_11 2 36703.13 44520.95 509.10 0.0 ja
+  28_Static vehicles.planes.Plane$G4M1_11 2 36697.08 44471.63 480.00 0.0 ja
+  29_Static vehicles.planes.Plane$G4M1_11 2 36813.39 44436.74 480.00 0.0 ja
+  30_Static vehicles.planes.Plane$G4M1_11 2 36796.17 44405.57 480.00 0.0 ja
+  31_Static ships.Ship$Tramp 2 36779.18 40478.52 480.00 0.0 0 2 1.0
+  32_Static ships.Ship$Tramp 2 36910.55 40470.10 480.00 0.0 0 2 1.0
+  33_Static ships.Ship$Tramp 2 37078.55 40375.01 480.00 0.0 0 2 1.0
+  1_Static vehicles.stationary.Smoke$Smoke13 0 37398.73 43966.55 360.00 0.00
+  0_Static vehicles.stationary.Smoke$Smoke13 0 37169.87 43845.96 360.00 0.00
+  12_Static vehicles.stationary.Smoke$Smoke14 0 35528.21 43967.74 360.00 0.00
+  13_Static vehicles.stationary.Smoke$Smoke14 0 35338.21 43846.84 360.00 0.00
+[Buildings]
+[Target]
+  3 0 1 59 501 36578 43890 3000
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 873.90 21950.20 1
+  FrontMarker1 7402.41 20767.87 1
+  FrontMarker2 17169.48 17529.32 1
+  FrontMarker3 24212.05 9972.69 1
+  FrontMarker4 26628.11 3546.99 1
+  FrontMarker5 925.30 23235.34 2
+  FrontMarker6 8430.52 22207.23 2
+  FrontMarker7 18403.21 18454.62 2
+  FrontMarker8 25754.22 10949.40 2
+  FrontMarker9 28581.53 4112.45 2
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 16
+WindDirection 271
+WindTop 9375
+WindTurbulence 3
+WindGust 1

@@ -1,0 +1,216 @@
+[MAIN]
+  MAP Moscow/load.ini
+  TIME 6.166667
+  CloudType 2
+  CloudHeight 1400.0
+  army 1
+  playerNum 0
+[Wing]
+  r0100
+  116IAP01
+  III_JG5_330
+  Stab_KG3_021
+  131IAP02
+[r0100]
+  Planes 3
+  Skill 1
+  Class air.TB_3_4M_17
+  Fuel 50
+  weapons 2fab10002fab500
+[r0100_Way]
+  TAKEOFF 128091.30 44601.58 0 0
+  NORMFLY 131634.12 36031.64 500.0 140.0
+  NORMFLY 122964.89 24183.69 1000.0 140.0
+  NORMFLY 109816.56 17338.46 1400.0 140.0
+  NORMFLY 88432.46 14159.74 1900.0 140.0
+  NORMFLY 77740.41 21384.10 2050.0 160.0
+  GATTACK 69656.57 27363.19 2050.0 160.0
+  NORMFLY 71149.50 42796.43 1900.0 160.0
+  NORMFLY 97844.90 55835.43 1400.0 160.0
+  NORMFLY 118833.32 53797.64 900.0 140.0
+  LANDING 126967.0 45725.88 0 0
+[116IAP01]
+  Planes 4
+  Skill 1
+  Class air.I_153_M62
+  Fuel 100
+  weapons default
+[116IAP01_Way]
+  TAKEOFF 128091.30 44601.58 0 0
+  NORMFLY 133040.67 36124.31 500.0 240.0 r0100 1
+  NORMFLY 123589.80 23628.98 1100.0 240.0 r0100 2
+  NORMFLY 110452.97 16580.34 1500.0 240.0 r0100 3
+  NORMFLY 88826.44 12895.82 2000.0 240.0 r0100 4
+  NORMFLY 77452.49 20745.45 2300.0 240.0 r0100 5
+  NORMFLY 69206.63 26998.47 2300.0 240.0 r0100 6
+  NORMFLY 70650.57 42594.26 2300.0 240.0 r0100 7
+  NORMFLY 96980.19 56315.33 2300.0 240.0 r0100 8
+  NORMFLY 109465.12 60394.56 1200.0 240.0
+  NORMFLY 117623.59 54831.97 500.0 220.0
+  LANDING 126967.0 45725.88 0 0
+[III_JG5_330]
+  Planes 4
+  Skill 2
+  Class air.BF_109F2
+  Fuel 100
+  weapons default
+[III_JG5_330_Way]
+  TAKEOFF 32041.88 23993.30 0 0
+  NORMFLY 25950.60 13553.53 800.0 240.0
+  NORMFLY 60990.91 11239.52 1800.0 290.0
+  NORMFLY 87795.15 13801.47 3400.0 290.0
+  NORMFLY 106075.20 16496.50 3400.0 360.0 r0100 3
+  NORMFLY 95027.44 38062.60 3200.0 360.0
+  NORMFLY 65979.61 36212.32 2400.0 360.0
+  NORMFLY 38086.36 33162.65 800.0 260.0
+  LANDING 33418.87 24788.30 0 0
+[Stab_KG3_021]
+  Planes 2
+  Skill 1
+  Class air.BF_110C4B
+  Fuel 75
+  weapons default
+[Stab_KG3_021_Way]
+  NORMFLY 60171.45 108229.80 1300.0 300.0
+  NORMFLY 33090.18 54853.25 1300.0 300.0
+  NORMFLY 43718.0 40454.27 400.0 260.0
+  LANDING 33418.87 24788.30 0 0
+[131IAP02]
+  Planes 2
+  OnlyAI 1
+  Skill 1
+  Class air.MIG_3AM38
+  Fuel 100
+  weapons default
+[131IAP02_Way]
+  NORMFLY 178794.12 94964.68 4000.0 380.0
+  NORMFLY 181536.78 62395.57 4000.0 380.0
+  NORMFLY 137311.35 49025.90 4000.0 380.0
+  NORMFLY 173651.63 122048.47 4000.0 380.0
+  NORMFLY 158566.98 140218.61 2000.0 380.0
+  NORMFLY 150338.10 129590.79 800.0 270.0
+  LANDING 126691.84 129376.28 0 0
+[NStationary]
+  0_Static vehicles.stationary.Stationary$Wagon8 2 69669.61 27368.0 360.0 0.0
+  1_Static vehicles.stationary.Stationary$Wagon8 2 69650.25 27349.20 360.0 0.0
+  2_Static vehicles.stationary.Stationary$Wagon8 2 69641.52 27418.38 360.0 0.0
+  3_Static vehicles.stationary.Stationary$Wagon8 2 69607.60 27400.90 360.0 0.0
+  4_Static vehicles.stationary.Stationary$Wagon8 2 69625.69 27396.65 360.0 0.0
+  5_Static vehicles.stationary.Siren$SirenCity 2 69669.25 27285.24 360.0 0.0
+  6_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 2 69831.88 27003.88 360.0 0.0
+  7_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 2 69929.69 27359.90 360.0 0.0
+  8_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 2 70028.21 27069.47 360.0 0.0
+  9_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 2 69583.60 27069.90 360.0 0.0
+  10_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 2 69758.66 27526.31 360.0 0.0
+  11_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 2 69511.52 27475.88 360.0 0.0
+  12_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 2 69300.60 27447.11 360.0 0.0
+  13_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 2 69277.10 27739.31 360.0 0.0
+  14_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 2 69368.47 27104.52 360.0 0.0
+  15_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 2 70953.50 28515.20 360.0 0.0
+  16_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 2 71068.77 28385.52 360.0 0.0
+  17_Static vehicles.aeronautics.Aeronautics$BarrageBalloon_1800m 2 71168.33 28051.50 360.0 0.0
+  18_Static vehicles.artillery.Artillery$Flak18_88mm 2 69322.61 27212.24 360.0 0.0
+  19_Static vehicles.artillery.Artillery$Flak18_88mm 2 69343.11 27259.59 390.0 0.0
+  20_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 119012.10 37397.51 525.0 0.0
+  21_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 91577.50 42980.98 525.0 0.0
+  22_Static vehicles.artillery.Artillery$Flak30_20mm 2 32687.40 24090.56 375.0 0.0
+  23_Static vehicles.artillery.Artillery$Flak30_20mm 2 32962.23 24745.70 375.0 0.0
+  24_Static vehicles.artillery.Artillery$Flak30_20mm 2 69397.24 27353.50 375.0 0.0
+  26_Static vehicles.artillery.Artillery$Flak30_20mm 2 87629.69 23158.38 375.0 0.0
+  27_Static vehicles.planes.Plane$TB_3_4M_17 1 127407.66 45866.65 464.94 0.0
+  28_Static vehicles.planes.Plane$U_2VS 1 127764.88 44729.50 389.98 0.0
+  29_Static vehicles.planes.Plane$U_2VS 1 127760.63 44713.79 344.98 0.0
+  30_Static vehicles.planes.Plane$I_153_M62 1 127904.61 44612.94 314.98 0.0
+  31_Static vehicles.planes.Plane$I_153_M62 1 127888.27 44627.19 314.98 0.0
+  32_Static vehicles.planes.Plane$I_153_M62 1 127845.25 44667.90 314.98 0.0
+  33_Static vehicles.planes.Plane$I_153_M62 1 127810.66 44648.62 314.98 0.0
+  34_Static vehicles.planes.Plane$I_153_M62 1 127794.66 44663.19 314.98 0.0
+  35_Static vehicles.planes.Plane$I_153_M62 1 127781.80 44675.19 314.98 0.0
+  36_Static vehicles.planes.Plane$I_16TYPE18 1 127857.38 44655.83 314.98 0.0
+  37_Static vehicles.planes.Plane$I_16TYPE18 1 127873.38 44642.23 314.98 0.0
+  38_Static vehicles.planes.Plane$I_16TYPE18 1 127882.63 44582.26 314.98 0.0
+  39_Static vehicles.planes.Plane$BF_109F4 2 32321.22 23879.18 240.0 0.0
+  40_Static vehicles.planes.Plane$BF_109F4 2 32365.11 23903.31 240.0 0.0
+  41_Static vehicles.planes.Plane$BF_109F4 2 32386.50 23916.56 240.0 0.0
+  42_Static vehicles.planes.Plane$BF_109F4 2 32409.0 23928.31 240.0 0.0
+  43_Static vehicles.planes.Plane$BF_109F4 2 32495.15 23977.70 240.0 0.0
+  44_Static vehicles.planes.Plane$BF_109F4 2 32520.54 23993.47 240.0 0.0
+  45_Static vehicles.planes.Plane$BF_109F4 2 32458.90 24038.86 240.0 0.0
+  46_Static vehicles.planes.Plane$BF_109F4 2 32444.47 24032.24 245.0 0.0
+  47_Static vehicles.planes.Plane$BF_109F4 2 32329.65 23952.22 245.0 0.0
+  48_Static vehicles.planes.Plane$BF_109F4 2 32308.72 23944.90 245.0 0.0
+  49_Static vehicles.planes.Plane$BF_109F4 2 32286.61 23933.61 245.0 0.0
+  50_Static vehicles.planes.Plane$BF_110C4 2 32718.36 24518.97 485.0 0.0
+  51_Static vehicles.planes.Plane$BF_110C4 2 32623.58 24476.31 425.0 0.0
+  52_Static vehicles.planes.Plane$BF_110C4 2 32600.40 24464.90 420.0 0.0
+  53_Static vehicles.planes.Plane$BF_110C4 2 33223.76 24866.13 420.0 0.0
+  54_Static vehicles.planes.Plane$BF_110C4 2 33198.30 24854.43 420.0 0.0
+  55_Static vehicles.planes.Plane$BF_110C4 2 33129.83 24767.74 420.0 0.0
+  56_Static vehicles.planes.Plane$BF_110C4 2 33254.41 24820.29 240.0 0.0
+  57_Static vehicles.planes.Plane$BF_110C4 2 33192.80 24789.70 240.0 0.0
+  58_Static vehicles.stationary.Stationary$PzIVE 2 69589.63 27374.36 510.0 0.0
+  59_Static vehicles.stationary.Stationary$PzIVE 2 69587.22 27377.79 510.0 0.0
+  60_Static vehicles.stationary.Stationary$PzIVE 2 69585.33 27380.83 510.0 0.0
+  61_Static vehicles.stationary.Stationary$SdKfz251 2 69583.63 27383.97 510.0 0.0
+  62_Static vehicles.stationary.Stationary$SdKfz251 2 69566.22 27365.52 510.0 0.0
+  63_Static vehicles.stationary.Stationary$SdKfz251 2 69564.50 27367.93 510.0 0.0
+[Buildings]
+  0_bld House$FurnitureTreeLineW 1 127182.30 45641.47 674.96
+  1_bld House$FurnitureTreeLineW 1 127192.66 45635.94 554.96
+  2_bld House$IndustrialFactoryHouse1W 1 127323.10 45892.90 494.98
+  3_bld House$AirdromeControlTowerBigW 1 127277.52 45472.75 495.0
+  4_bld House$FurnitureTreeLineW 1 127273.50 45480.19 615.0
+  5_bld House$FurnitureTreeLineW 1 127272.38 45485.26 615.0
+  6_bld House$VehicleOpelBlitz6700A_medic_winter 1 127274.19 45472.69 495.0
+  7_bld House$FurnitureTreeLineW 1 33202.87 24907.34 630.0
+  8_bld House$FurnitureTreeLineW 1 33180.11 24894.15 390.0
+  9_bld House$FurnitureTreeLineW 1 32410.47 23917.59 435.0
+  10_bld House$FurnitureTreeLineW 1 32422.47 23930.13 675.0
+  11_bld House$FurnitureTreeLineW 1 32499.27 23965.81 600.0
+[Target]
+  1 0 1 50 500 69644 27379 50
+[StaticCamera]
+  127257 45471 2
+  127752 44676 3
+  69520 27371 2
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 97199.98 131997.75 1
+  FrontMarker1 99257.90 120683.66 1
+  FrontMarker2 107485.52 111769.52 1
+  FrontMarker3 117085.36 105941.50 1
+  FrontMarker4 126342.34 98398.32 1
+  FrontMarker5 130456.56 91541.30 1
+  FrontMarker6 130113.70 84341.42 1
+  FrontMarker7 118456.76 79541.50 1
+  FrontMarker8 108171.22 74741.58 1
+  FrontMarker9 97542.83 67884.56 1
+  FrontMarker10 90685.80 60341.83 1
+  FrontMarker11 84857.33 51427.70 1
+  FrontMarker12 87257.29 39085.50 1
+  FrontMarker13 95485.72 31542.32 1
+  FrontMarker14 106114.11 29828.60 1
+  FrontMarker15 118456.76 22628.19 1
+  FrontMarker16 132856.51 19885.38 1
+  FrontMarker17 142113.50 12342.65 1
+  FrontMarker18 145542.10 6171.32 1
+  FrontMarker19 92057.21 131654.90 2
+  FrontMarker20 95485.72 119997.96 2
+  FrontMarker21 102342.75 111426.67 2
+  FrontMarker22 111942.59 103883.94 2
+  FrontMarker23 120513.87 94284.11 2
+  FrontMarker24 115713.95 81255.76 2
+  FrontMarker25 122228.12 86741.38 2
+  FrontMarker26 98033.20 75126.58 2
+  FrontMarker27 85885.89 65141.75 2
+  FrontMarker28 80743.12 54513.36 2
+  FrontMarker29 82457.37 44570.67 2
+  FrontMarker30 83828.78 33942.28 2
+  FrontMarker31 95142.87 27085.25 2
+  FrontMarker32 107485.52 23656.74 2
+  FrontMarker33 119142.46 14742.61 2
+  FrontMarker34 134913.62 13714.50 2
+  FrontMarker35 137999.28 6171.32 2
+  FrontMarker36 0.0 0.0 2
+  FrontMarker37 104057.10 82627.16 2

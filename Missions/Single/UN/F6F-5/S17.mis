@@ -1,0 +1,40 @@
+[MAIN]
+  MAP Wake/load.ini
+  TIME 17.0
+  CloudType 2
+  CloudHeight 1000.0
+  player USMC_VMF_351z01
+  army 1
+  playerNum 0
+[Wing]
+  USN_VT_9B00
+  USMC_VMF_351z01
+[USN_VT_9B00]
+  Planes 3
+  Skill 1
+  Class air.TBM3
+  Fuel 100
+  weapons default
+[USN_VT_9B00_Way]
+  NORMFLY 7429.48 4808.06 70.00 444.00 &0
+  NORMFLY 17073.21 12472.56 70.00 444.00 &0
+  NORMFLY 6689.97 16343.20 70.00 444.00 &0
+  NORMFLY -2442.30 10298.52 500.00 300.00 &0
+  LANDING 7389.01 4500.31 0 0 &0
+[USMC_VMF_351z01]
+  Planes 4
+  Skill 3
+  Class air.F6F5
+  Fuel 50
+  weapons default
+[USMC_VMF_351z01_Way]
+  TAKEOFF 7969.01 4994.69 0 0 0_Static 0 &0
+  NORMFLY 6673.01 5937.10 500.00 300.00 &0
+  NORMFLY 2220.01 3675.36 500.00 300.00 &0
+  NORMFLY 4533.94 104.48 500.00 300.00 &0
+  LANDING 8830.37 4031.01 0 0 &0
+[NStationary]
+  0_Static ships.Ship$USSKitkunBayCVE71 1 8015.45 4946.58 580.00 0.0 0 2
+[Buildings]
+[Bridge]
+[House]

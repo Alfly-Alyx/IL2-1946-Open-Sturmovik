@@ -1,0 +1,168 @@
+[MAIN]
+  MAP Moscow/load.ini
+  TIME 10.0
+  CloudType 2
+  CloudHeight 1500.0
+  player NN00
+  army 1
+  playerNum 0
+[Wing]
+  NN00
+  g0100
+  g0101
+  I_JG100
+  NN01
+[NN00]
+  Planes 4
+  Skill0 3
+  Skill1 2
+  Skill2 2
+  Skill3 1
+  Class air.YAK_1B
+  Fuel 100
+  weapons default
+[NN00_Way]
+  TAKEOFF 120811.63 75094.65 0 0 &0
+  NORMFLY 109128.30 68664.53 3000.00 400.00 &0
+  NORMFLY 77889.73 48381.58 3000.00 400.00 &0
+  NORMFLY 118198.84 73380.73 3000.00 400.00 &0
+  LANDING 122390.92 74671.48 0 0 &0
+[g0100]
+  Planes 4
+  Skill0 2
+  Skill1 0
+  Skill2 0
+  Skill3 0
+  Class air.HE_111H6
+  Fuel 100
+  weapons 4xSC500
+[g0100_Way]
+  NORMFLY 103218.15 65532.42 2000.00 300.00 &0
+  GATTACK 121380.35 74369.93 2000.00 400.00 &0
+  NORMFLY 123813.50 71879.48 2000.00 300.00 &0
+  NORMFLY 121876.22 68629.43 2000.00 300.00 &0
+  NORMFLY 75962.78 47276.60 500.00 400.00 &0
+  NORMFLY 31587.86 27515.45 2000.00 300.00 &0
+  LANDING 32041.88 23993.30 0 0 &0
+[g0101]
+  Planes 4
+  Skill 0
+  Class air.HE_111H6
+  Fuel 100
+  weapons 4xSC500
+[g0101_Way]
+  NORMFLY 102427.53 65405.35 2000.00 300.00 &0
+  NORMFLY 102985.99 65685.41 2000.00 300.00 g0100 0 &0
+[I_JG100]
+  Planes 2
+  Skill0 2
+  Skill1 1
+  Skill2 2
+  Skill3 2
+  Class air.BF_109G2
+  Fuel 100
+  weapons default
+[I_JG100_Way]
+  NORMFLY 91559.60 61608.63 3000.00 400.00 &0
+  NORMFLY 118956.90 75305.96 3000.00 400.00 &0
+  NORMFLY 124361.41 70901.63 3000.00 400.00 &0
+  NORMFLY 32431.91 27458.89 3000.00 400.00 &0
+  LANDING 32041.88 23993.30 0 0 &0
+[NN01]
+  Planes 2
+  Skill0 3
+  Skill1 2
+  Skill2 3
+  Skill3 3
+  Class air.YAK_1B
+  Fuel 100
+  weapons default
+[NN01_Way]
+  TAKEOFF 120811.63 75094.65 0 0 &0
+  NORMFLY 109139.20 68737.52 3000.00 400.00 &0
+  NORMFLY 77835.40 48291.41 3000.00 400.00 &0
+  NORMFLY 118182.63 72864.17 3000.00 400.00 &0
+  LANDING 122390.92 74671.48 0 0 &0
+[Chiefs]
+  2_Chief Vehicles.ZIS6_fuel 1
+  0_Chief Vehicles.RussiaCarsColumnA 1
+[2_Chief_Road]
+  122236.75 74642.35 120.00 0 2 3.055555582046509
+  121980.45 74711.50 120.00 0 2 3.055555582046509
+  121975.92 74711.85 120.00 0 2 3.055555582046509
+  121972.78 74710.57 120.00 0 2 3.055555582046509
+  121970.70 74709.45 120.00 0 2 3.055555582046509
+  121968.00 74707.50 120.00 0 2 3.055555582046509
+  121966.38 74705.70 120.00 0 2 3.055555582046509
+  121964.82 74702.57 120.00 0 2 3.055555582046509
+  121961.45 74696.38 120.00 0 2 3.055555582046509
+  121955.38 74688.32 120.00 0 2 3.055555582046509
+  121943.60 74680.00 120.00 0 2 3.055555582046509
+  121527.96 74441.60 120.00 0 2 3.055555582046509
+  121363.67 74353.96 120.00
+[0_Chief_Road]
+  121339.82 74213.14 120.00 0 2 3.055555582046509
+  121534.78 74312.85 120.00 0 2 3.055555582046509
+  121545.53 74326.96 120.00 0 2 3.055555582046509
+  121548.42 74342.21 120.00 0 2 3.055555582046509
+  121544.38 74355.67 120.00 0 2 3.055555582046509
+  121534.35 74367.14 120.00 0 2 3.055555582046509
+  121519.75 74373.82 120.00 0 2 3.055555582046509
+  121502.64 74372.64 120.00 0 2 3.055555582046509
+  121313.53 74278.81 120.00
+[NStationary]
+  0_Static vehicles.planes.Plane$YAK_1B 1 121297.41 75141.38 360.00 0.0 null
+  1_Static vehicles.planes.Plane$YAK_1B 1 121384.66 75050.19 285.00 0.0 null
+  2_Static vehicles.planes.Plane$YAK_1B 1 121428.63 75038.97 285.00 0.0 null
+  3_Static vehicles.planes.Plane$YAK_1B 1 121541.52 75006.75 285.00 0.0 null
+  4_Static vehicles.planes.Plane$YAK_1B 1 121557.11 75074.47 464.94 0.0 null
+  5_Static vehicles.planes.Plane$YAK_1B 1 121523.55 75082.32 464.94 0.0 null
+  6_Static vehicles.stationary.Stationary$ZIS5_PC 1 121246.32 75144.88 360.00 0.0
+  7_Static vehicles.stationary.Stationary$ZIS5_PC 1 121253.00 74300.97 360.00 0.0
+  8_Static vehicles.planes.Plane$LI_2 1 121476.41 74435.61 420.00 0.0 null
+  9_Static vehicles.stationary.Stationary$ZIS5_PC 1 121233.60 74288.63 405.00 0.0
+  10_Static vehicles.stationary.Stationary$ZIS5_PC 1 121244.27 74255.55 705.00 0.0
+  11_Static vehicles.stationary.Stationary$ZIS5_PC 1 121245.27 74245.71 690.00 0.0
+  12_Static vehicles.planes.Plane$LI_2 1 121424.85 74413.38 420.00 0.0 null
+  13_Static vehicles.planes.Plane$LI_2 1 121347.55 74369.66 449.95 0.0 null
+  14_Static vehicles.planes.Plane$YAK_1B 1 121493.30 75090.38 464.94 0.0 null
+  16_Static vehicles.planes.Plane$YAK_1B 1 121460.35 75099.80 464.94 0.0 null
+  17_Static vehicles.stationary.Stationary$ZIS5_PC 1 121336.66 75130.72 450.00 0.0
+  18_Static vehicles.planes.Plane$YAK_1B 1 121592.88 74298.36 240.00 0.0 null
+  19_Static vehicles.planes.Plane$YAK_1B 1 121523.50 74264.27 240.00 0.0 null
+  20_Static vehicles.planes.Plane$YAK_1B 1 121487.36 74243.74 240.00 0.0 null
+  21_Static vehicles.planes.Plane$YAK_1B 1 121454.52 74226.49 240.00 0.0 null
+  22_Static vehicles.planes.Plane$YAK_1B 1 121352.69 74163.25 240.00 0.0 null
+  23_Static vehicles.stationary.Stationary$ZIS6_fuel 1 122047.94 74642.88 600.00 0.0
+  24_Static vehicles.stationary.Stationary$ZIS6_fuel 1 122060.36 74648.71 630.00 0.0
+  25_Static vehicles.stationary.Stationary$ZIS5_PC 1 121360.10 74394.63 360.00 0.0
+  26_Static vehicles.stationary.Stationary$ZIS5_PC 1 121360.30 74382.19 405.00 0.0
+  27_Static vehicles.stationary.Stationary$ZIS5_PC 1 121406.58 74415.41 525.00 0.0
+  28_Static vehicles.stationary.Stationary$ZIS5_PC 1 121414.94 74429.58 525.00 0.0
+  29_Static vehicles.stationary.Stationary$ZIS5_PC 1 121493.19 74477.91 525.00 0.0
+  30_Static vehicles.stationary.Stationary$ZIS5_PC 1 121501.69 74467.86 480.00 0.0
+  31_Static vehicles.stationary.Stationary$ZIS5_PC 1 121440.60 74446.44 420.00 0.0
+  32_Static vehicles.stationary.Stationary$ZIS5_PC 1 121322.97 75150.41 480.00 0.0
+  33_Static vehicles.stationary.Stationary$ZIS5_PC 1 121249.36 75098.52 375.00 0.0
+  34_Static vehicles.stationary.Stationary$ZIS5_PC 1 121241.60 75082.33 405.00 0.0
+  36_Static vehicles.planes.Plane$U_2VS 1 121001.66 74835.91 374.98 0.0 null
+  37_Static vehicles.planes.Plane$U_2VS 1 121063.27 74760.41 284.98 0.0 null
+  38_Static vehicles.stationary.Stationary$GAZ67t 1 120991.91 74825.58 644.96 0.0
+  39_Static vehicles.stationary.Stationary$GAZ67t 1 121003.44 74828.13 704.96 0.0
+  40_Static vehicles.stationary.Stationary$ZIS5_PC 1 121538.16 74257.71 645.00 0.0
+  41_Static vehicles.stationary.Stationary$ZIS5_PC 1 121422.88 74191.77 525.00 0.0
+  42_Static vehicles.stationary.Stationary$ZIS5_PC 1 121316.11 74141.63 675.00 0.0
+  43_Static vehicles.stationary.Stationary$ZIS5_PC 1 121308.30 74152.30 615.00 0.0
+  44_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 121727.88 75014.63 645.00 0.0 0
+  45_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 121434.13 74633.86 645.00 0.0 0
+  46_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 121064.25 75183.25 645.00 0.0 0
+  47_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 121760.52 74412.66 645.00 0.0 0
+  48_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 121988.97 74958.41 645.00 0.0 0
+  49_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 121029.80 74439.86 645.00 0.0 0
+  15_Static vehicles.stationary.Stationary$ZIS5_radio 1 122140.33 74848.86 360.00 0.0
+[Buildings]
+[Target]
+  0 0 0 0 500 107815 69151 0 0 g0101 102427 65405
+  0 1 0 0 500 107387 70312 0 1 I_JG100 118956 75305
+[Bridge]
+[House]

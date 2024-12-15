@@ -1,0 +1,296 @@
+[MAIN]
+  MAP NWEurope/load.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 1000.0
+  player g0100
+  army 2
+  playerNum 0
+[MDS]
+  ZutiCarrierSpawnPoints_CV2 6
+  ZutiCarrierSpawnPoints_CV9 5
+  ZutiCarrierSpawnPoints_CVE 2
+  ZutiCarrierSpawnPoints_CVL 7
+  ZutiCarrierSpawnPoints_Akagi 8
+  ZutiCarrierSpawnPoints_IJN 6
+  ZutiCarrierSpawnPoints_HMS 5
+  ZutiNextMission_RedWon
+  ZutiNextMission_BlueWon
+  ZutiNextMission_Difficulty
+  ZutiNextMission_LoadDelay 60
+  ZutiShips_EnableResync 1
+  ZutiTargets_StaticIcons 1
+  ZutiTargets_MovingIcons 0
+  ZutiTargets_CheckForWinner 0
+  ZutiTargets_ShowTargets 1
+  ZutiIcons_IconsSize 4
+  ZutiIcons_ShowNeutralHB 0
+  ZutiRadar_SetRadarToAdvanceMode 0
+  ZutiRadar_ShowAircraft 0
+  ZutiRadar_ShowGroundUnits 0
+  ZutiRadar_ShowRockets 0
+  ZutiRadar_StaticIconsIfNoRadar 0
+  ZutiRadar_AircraftIconsWhite 0
+  ZutiRadar_RefreshInterval 0
+  ZutiRadar_EnableTowerCommunications 1
+  ZutiRadar_ShipsAsRadar 0
+  ZutiRadar_ShipRadar_MaxRange 100
+  ZutiRadar_ShipRadar_MinHeight 100
+  ZutiRadar_ShipRadar_MaxHeight 5000
+  ZutiRadar_ShipSmallRadar_MaxRange 25
+  ZutiRadar_ShipSmallRadar_MinHeight 0
+  ZutiRadar_ShipSmallRadar_MaxHeight 2000
+  ZutiRadar_ScoutsAsRadar 0
+  ZutiRadar_ScoutRadar_MaxRange 2
+  ZutiRadar_ScoutRadar_DeltaHeight 1500
+  ZutiRadar_ScoutRadarType_Red
+  ZutiRadar_ScoutRadarType_Blue
+  ZutiRadar_HideUnpopulatedAirstripsFromMinimap 0
+  ZutiRadar_ScoutGroundObjects_Alpha 5
+  ZutiRadar_ShowPlayerAircraft 1
+  ZutiHud_DisableHudStatistics 0
+  ZutiHud_ShowPilotNumber 0
+  ZutiHud_ShowPilotPing 1
+  ZutiHud_ShowPilotName 1
+  ZutiHud_ShowPilotScore 1
+  ZutiHud_ShowPilotArmy 1
+  ZutiHud_ShowPilotACDesignation 0
+  ZutiHud_ShowPilotACType 1
+  ZutiMisc_DisableAIRadioChatter 0
+  ZutiMisc_DespawnAIPlanesAfterLanding 1
+  ZutiMisc_HidePlayersCountOnHomeBase 0
+  ZutiMisc_EnableReflyOnlyIfBailedOrDied 0
+  ZutiMisc_DisableReflyForMissionDuration 0
+  ZutiMisc_ReflyKIADelay 15
+  ZutiMisc_MaxAllowedKIA 10
+  ZutiMisc_ReflyKIADelayMultiplier 2.0
+  ZutiMisc_BombsCat1_CratersVisibilityMultiplier 1.0
+  ZutiMisc_BombsCat2_CratersVisibilityMultiplier 1.0
+  ZutiMisc_BombsCat3_CratersVisibilityMultiplier 1.0
+  ZutiMisc_BombsCat4_CratersVisibilityMultiplier 1.0
+  ZutiReload_OneMgCannonRearmSecond 10
+  ZutiReload_OneBombFTankTorpedoeRearmSeconds 25
+  ZutiReload_OneRocketRearmSeconds 20
+  ZutiReload_GallonsLitersPerSecond 3
+  ZutiReload_OneWeaponRepairSeconds 3
+  ZutiReload_FlapsRepairSeconds 30
+  ZutiReload_EngineRepairSeconds 90
+  ZutiReload_OneControlCableRepairSeconds 15
+  ZutiReload_OneFuelOilTankRepairSeconds 20
+  ZutiReload_LoadoutChangePenaltySeconds 30
+  ZutiReload_CockpitRepairSeconds 30
+  ZutiReload_ReloadOnlyIfFuelTanksExist 0
+  ZutiReload_ReloadOnlyIfAmmoBoxesExist 0
+  ZutiReload_RepairOnlyIfWorkshopExist 0
+  ZutiReload_OnlyHomeBaseSpecificLoadouts 1
+  ZutiDrop_OverFriendlyHomeBase 0
+  ZutiDrop_OverEnemyHomeBase 0
+  ZutiDrop_OverNeutralHomeBase 0
+  ZutiDrop_OverFriendlyFrictionArea 0
+  ZutiDrop_OverEnemyFrictionArea 1
+  ZutiDrop_OverDestroyGroundArea 1
+  ZutiDrop_OverDefenceGroundArea 1
+  ZutiFront_EnableHomeBaseCapturing 0
+[RespawnTime]
+  Bigship 1800
+  Ship 1800
+  Aeroanchored 1800
+  Artillery 1800
+  Searchlight 1800
+[Wing]
+  r0100
+  r0101
+  r0102
+  r0103
+  g0100
+  g0101
+  g0102
+  g0103
+[r0100]
+  Planes 4
+  Skill 3
+  Class air.LAGG_3SERIES4
+  Fuel 100
+  weapons default
+[r0100_Way]
+  NORMFLY 46835.79 53600.90 500.00 300.00 &0
+  NORMFLY 82484.68 44182.40 500.00 300.00 &0
+  NORMFLY 67767.06 31220.89 500.00 300.00 &0
+  NORMFLY 11885.50 40512.89 500.00 300.00 &0
+  LANDING 7274.21 58909.61 0 0 &0
+[r0101]
+  Planes 4
+  Skill 3
+  Class air.LAGG_3SERIES4
+  Fuel 100
+  weapons default
+[r0101_Way]
+  NORMFLY 46171.10 52875.61 500.00 300.00 &0
+  NORMFLY 84473.26 45483.11 500.00 300.00 &0
+  NORMFLY 63331.92 67397.30 500.00 300.00 &0
+  NORMFLY 18481.92 74658.64 500.00 300.00 &0
+  LANDING 6898.76 58515.74 0 0 &0
+[r0102]
+  Planes 4
+  Skill 3
+  Class air.MIG_3U
+  Fuel 100
+  weapons default
+[r0102_Way]
+  NORMFLY 47284.44 54261.22 500.00 300.00 &0
+  NORMFLY 82093.74 45732.79 500.00 300.00 &0
+  NORMFLY 67662.65 32995.99 500.00 300.00 &0
+  NORMFLY 13596.84 40572.89 500.00 300.00 &0
+  LANDING 7195.45 58827.85 0 0 &0
+[r0103]
+  Planes 4
+  Skill 3
+  Class air.LA_5FN
+  Fuel 100
+  weapons default
+[r0103_Way]
+  NORMFLY 47845.77 54876.24 500.00 300.00 &0
+  NORMFLY 83681.88 45826.95 500.00 300.00 &0
+  NORMFLY 63156.87 69322.21 500.00 300.00 &0
+  NORMFLY 20048.19 75493.98 500.00 300.00 &0
+  LANDING 7148.42 58790.29 0 0 &0
+[g0100]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0100_Way]
+  NORMFLY 70745.41 46842.18 500.00 0.00 &0
+  GATTACK 61073.57 49063.10 500.00 300.00 &0
+  NORMFLY 29372.51 56367.69 500.00 300.00 &0
+  NORMFLY 42768.57 70543.10 500.00 300.00 &0
+  NORMFLY 95812.26 37842.63 500.00 300.00 &0
+  LANDING 85118.73 18831.45 0 0 &0
+[g0101]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0101_Way]
+  NORMFLY 71337.90 47666.03 500.00 0.00 &0
+  GATTACK 62885.55 49388.33 500.00 300.00 &0
+  NORMFLY 30821.43 56073.37 500.00 300.00 &0
+  NORMFLY 38248.68 71065.74 500.00 300.00 &0
+  NORMFLY 89928.76 42910.49 500.00 300.00 &0
+  NORMFLY 96315.34 33892.47 500.00 300.00 &0
+  LANDING 84895.65 19043.98 0 0 &0
+[g0102]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0102_Way]
+  NORMFLY 71845.45 49254.96 500.00 0.00 &0
+  GATTACK 63675.39 50503.40 500.00 300.00 &0
+  NORMFLY 31646.32 55730.22 500.00 300.00 &0
+  NORMFLY 41874.61 72706.22 500.00 300.00 &0
+  NORMFLY 92580.30 34924.79 500.00 300.00 &0
+  LANDING 85049.69 18964.90 0 0 &0
+[g0103]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0103_Way]
+  NORMFLY 71346.36 48408.12 500.00 0.00 &0
+  GATTACK 63489.54 49852.94 500.00 300.00 &0
+  NORMFLY 32921.15 57142.86 500.00 300.00 &0
+  NORMFLY 39520.08 72072.49 500.00 300.00 &0
+  NORMFLY 94184.74 34666.67 500.00 300.00 &0
+  LANDING 85430.90 18777.12 0 0 &0
+[Chiefs]
+  0_Chief Armor.4-M4A2_76W_US 1
+  1_Chief Armor.4-M4A2_76W_US 1
+  2_Chief Armor.4-M4A2_76W_US 1
+[0_Chief_Road]
+  55257.14 54104.60 120.00 0 11 1.9444445371627808
+  55300.00 53700.00 20.00
+  56100.00 52900.00 20.00
+  57300.00 52900.00 20.00
+  58700.00 51500.00 20.00
+  58700.00 50300.00 20.00
+  58900.00 50100.00 20.00
+  58900.00 49900.00 20.00
+  59100.00 49700.00 20.00
+  59700.00 49700.00 20.00
+  59995.10 49574.11 120.00
+[1_Chief_Road]
+  51872.23 46137.05 120.00 0 6 1.9444445371627808
+  51900.00 46300.00 20.00
+  51900.00 46500.00 20.00
+  55500.00 50100.00 20.00
+  56700.00 50100.00 20.00
+  56819.41 50355.16 120.00 0 9 1.9444445371627808
+  57100.00 50300.00 20.00
+  57500.00 50700.00 20.00
+  58300.00 50700.00 20.00
+  58900.00 50100.00 20.00
+  58900.00 49900.00 20.00
+  59100.00 49700.00 20.00
+  59700.00 49700.00 20.00
+  59943.93 49730.26 120.00 0 10 1.9444445371627808
+  60100.00 49700.00 20.00
+  60300.00 49700.00 -33.00
+  60700.00 49700.00 -33.00
+  60900.00 49700.00 20.00
+  61100.00 49500.00 120.00
+  61300.00 49700.00 20.00
+  61300.00 49900.00 20.00
+  62300.00 50900.00 20.00
+  62443.55 51084.22 120.00
+[2_Chief_Road]
+  54632.23 54729.51 120.00 0 6 1.9444445371627808
+  54700.00 54500.00 20.00
+  54700.00 54300.00 20.00
+  56100.00 52900.00 20.00
+  56700.00 52900.00 20.00
+  56975.63 52906.86 120.00 0 6 1.9444445371627808
+  57100.00 52900.00 20.00
+  57300.00 52900.00 20.00
+  58700.00 51500.00 20.00
+  58700.00 50500.00 20.00
+  58642.05 50303.09 120.00 0 14 1.9444445371627808
+  58900.00 50100.00 20.00
+  58900.00 49900.00 20.00
+  59100.00 49700.00 20.00
+  60100.00 49700.00 20.00
+  60300.00 49700.00 -33.00
+  60700.00 49700.00 -33.00
+  60900.00 49700.00 20.00
+  61100.00 49500.00 120.00
+  61300.00 49700.00 20.00
+  61300.00 49900.00 20.00
+  61900.00 50500.00 20.00
+  62002.00 50602.00 120.00
+  62079.03 50771.77 120.00
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Flak30_20mm 2 87405.74 20299.87 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Flak30_20mm 2 84780.21 20288.06 360.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Flak30_20mm 2 86574.99 17703.68 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Flak30_20mm 2 83688.02 18541.60 360.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Flak30_20mm 1 7359.45 59835.65 360.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Flak30_20mm 1 5933.56 58725.46 360.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Flak30_20mm 1 8153.38 59053.93 360.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Flak30_20mm 1 6713.54 57554.36 360.00 0.0 0
+  8_Static vehicles.artillery.Artillery$M4A2 1 59911.34 50634.53 360.00 0.0 0
+  9_Static vehicles.artillery.Artillery$M4A2 1 60000.11 50644.98 360.00 0.0 0
+  10_Static vehicles.artillery.Artillery$M4A2 1 60097.61 50656.71 360.00 0.0 0
+  11_Static vehicles.artillery.Artillery$M4A2 1 60095.40 50668.96 360.00 0.0 0
+  12_Static vehicles.artillery.Artillery$M4A2 1 60105.14 50687.07 360.00 0.0 0
+  13_Static vehicles.artillery.Artillery$M4A2 1 59966.68 50576.14 387.20 0.0 0
+  14_Static vehicles.artillery.Artillery$M4A2 1 59963.05 50566.91 382.30 0.0 0
+  15_Static vehicles.artillery.Artillery$M4A2 1 59958.24 50555.76 386.90 0.0 0
+  16_Static vehicles.artillery.Artillery$M4A2 1 59951.91 50544.06 374.49 0.0 0
+  17_Static vehicles.artillery.Artillery$M4A2 1 59946.72 50531.93 374.49 0.0 0
+[Buildings]
+[Bridge]
+[House]

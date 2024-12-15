@@ -1,0 +1,986 @@
+[MAIN]
+  MAP Net8Islands/load.ini
+  TIME 7.500001
+  CloudType 1
+  CloudHeight 700.0
+  army 2
+  playerNum 0
+[Wing]
+  IN_NN00
+  IN_NN01
+  IN_NN02
+  IN_NN03
+  RA_NN00
+  RA_NN01
+  RA_NN02
+  IN_NN12
+  IN_NN13
+[IN_NN00]
+  Planes 2
+  Skill 1
+  Class air.KI_84_IC
+  Fuel 30
+  weapons 2x250
+[IN_NN00_Way]
+  TAKEOFF 27771.06 18620.11 0 0 2_Chief 0 &0
+  NORMFLY 12207.23 12584.18 500.00 555.00 &0
+  GATTACK 11262.30 12032.64 100.00 555.00 6_Static 0 &0
+  NORMFLY 9574.84 10994.89 400.00 555.00 &0
+  GATTACK 10581.22 10463.35 100.00 555.00 7_Static 0 &0
+  NORMFLY 11453.55 10114.55 300.00 555.00 &0
+  NORMFLY 10267.42 16930.40 300.00 555.00 &0
+  NORMFLY 26280.80 16514.19 300.00 555.00 RA_NN00 3 &0
+  LANDING 29609.11 18948.25 0 0 2_Chief 0 &0
+[IN_NN01]
+  Planes 2
+  Skill 1
+  Class air.KI_84_IC
+  Fuel 30
+  weapons 2x250
+[IN_NN01_Way]
+  TAKEOFF 27619.45 18679.89 0 0 2_Chief 0 &0
+  NORMFLY 12421.62 21533.85 500.00 555.00 &0
+  GATTACK 11256.59 20389.69 111.00 555.00 94_Static 0 &0
+  GATTACK 10122.02 19260.90 111.00 555.00 88_Static 0 &0
+  GATTACK 9600.63 18718.63 222.00 555.00 74_Static 0 &0
+  GATTACK 9130.51 18180.36 222.00 555.00 89_Static 0 &0
+  NORMFLY 7594.63 16654.12 555.00 555.00 &0
+  GATTACK 8871.82 17593.74 222.00 555.00 128_Static 0 &0
+  GATTACK 9430.80 18118.89 222.00 555.00 77_Static 0 &0
+  NORMFLY 10406.59 18921.26 555.00 555.00 &0
+  NORMFLY 26186.59 16174.23 555.00 555.00 RA_NN00 3 &0
+  LANDING 29215.67 18990.58 0 0 2_Chief 0 &0
+[IN_NN02]
+  Planes 2
+  Parachute 0
+  Skill 1
+  Class air.H8K1
+  Fuel 100
+  weapons 8x250
+[IN_NN02_Way]
+  NORMFLY 39033.59 18322.82 1222.00 344.00 &0
+  NORMFLY 15067.53 23970.85 1222.00 344.00 &0
+  GATTACK 9677.88 18729.23 1222.00 344.00 42_Static 0 &0
+  NORMFLY 8295.67 17357.02 1222.00 344.00 &0
+  NORMFLY 23711.46 16665.41 1222.00 344.00 &0
+  NORMFLY 43967.33 14288.55 1222.00 344.00 &0
+[IN_NN03]
+  Planes 2
+  Parachute 0
+  Skill 1
+  Class air.H8K1
+  Fuel 100
+  weapons 8x250
+[IN_NN03_Way]
+  NORMFLY 38429.31 17962.94 1222.00 344.00 &0
+  NORMFLY 15278.28 23779.36 1222.00 344.00 &0
+  GATTACK 9874.51 18524.27 1222.00 344.00 34_Static 0 &0
+  NORMFLY 8393.05 17152.90 1222.00 344.00 &0
+  NORMFLY 23416.35 16459.33 1222.00 344.00 &0
+  NORMFLY 43811.18 13875.39 1222.00 344.00 &0
+[RA_NN00]
+  Planes 3
+  OnlyAI 1
+  Parachute 0
+  Skill 1
+  Class air.SPITFIRE5C2
+  Fuel 100
+  weapons default
+  StartTime 3
+[RA_NN00_Way]
+  NORMFLY 10294.25 11573.33 100.00 344.00 &0
+  NORMFLY 10798.20 9993.19 300.00 344.00 &0
+  NORMFLY 9033.21 16835.23 100.00 400.00 &0
+  NORMFLY 25843.91 16522.22 500.00 400.00 &0
+[RA_NN01]
+  Planes 4
+  OnlyAI 1
+  Parachute 0
+  Skill0 0
+  Skill1 1
+  Skill2 1
+  Skill3 1
+  Class air.SPITFIRE5C2
+  Fuel 100
+  weapons default
+  StartTime 3
+[RA_NN01_Way]
+  TAKEOFF 11115.88 10110.23 0 0 &0
+  NORMFLY 9575.18 17061.38 500.00 400.00 &0
+  NORMFLY 25437.71 16530.92 100.00 400.00 &0
+[RA_NN02]
+  Planes 4
+  OnlyAI 1
+  Parachute 0
+  Skill0 0
+  Skill1 1
+  Skill2 1
+  Skill3 1
+  Class air.SPITFIRE5C2
+  Fuel 100
+  weapons default
+  StartTime 3
+[RA_NN02_Way]
+  TAKEOFF 10513.07 11845.77 0 0 &0
+  NORMFLY 9306.44 16896.60 300.00 344.00 &0
+  NORMFLY 25117.44 16560.04 100.00 400.00 &0
+[IN_NN12]
+  Planes 2
+  Parachute 0
+  Skill 1
+  Class air.H8K1
+  Fuel 100
+  weapons 8x250
+[IN_NN12_Way]
+  NORMFLY 39395.19 17681.74 1222.00 344.00 &0
+  NORMFLY 15410.79 24282.06 1222.00 344.00 &0
+  GATTACK 9561.72 18610.48 1222.00 344.00 43_Static 0 &0
+  NORMFLY 8257.41 17317.20 1222.00 344.00 &0
+  NORMFLY 23246.54 16701.97 1222.00 344.00 &0
+  NORMFLY 43409.94 14366.81 1222.00 344.00 &0
+[IN_NN13]
+  Planes 2
+  Parachute 0
+  Skill 1
+  Class air.H8K1
+  Fuel 100
+  weapons 8x250
+[IN_NN13_Way]
+  NORMFLY 39961.04 18081.24 1222.00 344.00 &0
+  NORMFLY 15667.51 24153.85 1222.00 344.00 &0
+  GATTACK 9729.05 18377.67 1222.00 344.00 51_Static 0 &0
+  NORMFLY 8421.12 17181.40 1222.00 344.00 &0
+  NORMFLY 23071.25 16500.55 1222.00 344.00 &0
+  NORMFLY 43188.91 13954.64 1222.00 344.00 &0
+[Chiefs]
+  0_Chief Ships.Tramp 2 0 2 1.0
+  1_Chief Ships.Tanker 2 0 2 1.0
+  2_Chief Ships.IJNAkagiCV 2 0 0 1.0
+  3_Chief Ships.IJNYukikazeDD45 2 0 2 1.0
+  4_Chief Ships.IJNAkizukiDD42 2 0 2 1.0
+  5_Chief Ships.USSGreenlingSS213_Srf 2 0 2 1.0
+[0_Chief_Road]
+  26645.84 19329.51 120.00 0 2 5.144444942474365
+  14689.95 23737.42 120.00
+[1_Chief_Road]
+  27213.80 19006.03 120.00 0 2 7.459444522857666
+  14519.71 23587.61 120.00
+[2_Chief_Road]
+  28018.96 18507.11 120.00 0 2 15.94777774810791
+  25424.39 19502.78 120.00 0 2 15.94777774810791
+  25362.86 19521.63 120.00 0 2 6.944444444444445
+  14504.06 23449.53 120.00
+[3_Chief_Road]
+  27359.57 18558.02 120.00 0 2 12.222222222222221
+  14458.84 23311.82 120.00
+[4_Chief_Road]
+  27732.93 19016.96 120.00 0 2 12.222222222222221
+  15001.61 23804.76 120.00
+[5_Chief_Road]
+  25577.23 18567.33 120.00 0 2 10.417499542236328
+  14818.68 22770.84 120.00
+[NStationary]
+  49_Static vehicles.stationary.Siren$SirenCity 1 10666.68 11627.07 510.00 0.0
+  159_Static vehicles.planes.Plane$AR_196A3 1 9436.18 17575.50 195.00 0.0 gb
+  160_Static vehicles.planes.Plane$AR_196A3 1 9338.95 17662.67 315.00 0.0 gb
+  164_Static ships.Ship$Tanker 1 8979.87 18057.19 495.00 0.0 0 2 1.0
+  187_Static vehicles.planes.Plane$AR_196A3 1 9538.73 17768.41 240.00 0.0 gb
+  188_Static vehicles.planes.Plane$AR_196A3 1 9578.78 17680.39 360.00 0.0 gb
+  189_Static vehicles.planes.Plane$AR_196A3 1 9437.85 17774.00 360.00 0.0 gb
+  191_Static ships.Ship$Tramp 1 9054.81 18131.52 495.00 0.0 0 2 1.0
+  168_Static ships.Ship$Tramp 1 9173.26 17828.28 495.00 0.0 0 2 1.0
+  169_Static ships.Ship$Tramp 1 9246.79 17901.91 495.00 0.0 0 2 1.0
+  190_Static ships.Ship$Tanker 1 9005.11 18058.23 495.00 0.0 0 2 1.0
+  171_Static ships.Ship$Tanker 1 9124.81 18203.03 495.00 0.0 0 2 1.0
+  29_Static ships.Ship$Tanker 1 9319.91 17974.49 495.00 0.0 0 2 1.0
+  31_Static ships.Ship$Tanker 1 9391.95 18047.85 495.00 0.0 0 2 1.0
+  34_Static ships.Ship$Tanker 1 9462.65 18117.43 495.00 0.0 0 2 1.0
+  40_Static ships.Ship$Tramp 1 9534.24 18190.33 495.00 0.0 0 2 1.0
+  41_Static ships.Ship$Tramp 1 9196.32 18275.57 495.00 0.0 0 2 1.0
+  42_Static ships.Ship$Tramp 1 9271.26 18348.48 495.00 0.0 0 2 1.0
+  43_Static ships.Ship$Tramp 1 9082.04 18133.89 495.00 0.0 0 2 1.0
+  44_Static ships.Ship$Tramp 1 9156.58 18210.40 495.00 0.0 0 2 1.0
+  47_Static ships.Ship$Tanker 1 9228.69 18280.93 495.00 0.0 0 2 1.0
+  48_Static ships.Ship$Tramp 1 9181.14 17860.15 495.00 0.0 0 2 1.0
+  50_Static ships.Ship$Tanker 1 9260.39 17938.60 495.00 0.0 0 2 1.0
+  51_Static ships.Ship$Tanker 1 9336.46 18013.09 495.00 0.0 0 2 1.0
+  52_Static ships.Ship$Tramp 1 9409.36 18089.16 495.00 0.0 0 2 1.0
+  53_Static ships.Ship$Tramp 1 9483.06 18163.65 495.00 0.0 0 2 1.0
+  72_Static ships.Ship$Tanker 1 9785.83 19603.26 665.00 0.0 0 2 1.0
+  73_Static ships.Ship$Tanker 1 8918.31 19758.65 650.00 0.0 0 2 1.0
+  75_Static ships.Ship$Tramp 1 8318.09 20642.02 605.00 0.0 0 2 1.0
+  76_Static ships.Ship$Tramp 1 8713.03 19441.78 650.00 0.0 0 2 1.0
+  78_Static ships.Ship$Tramp 1 13006.73 17968.89 665.00 0.0 0 2 1.0
+  79_Static ships.Ship$Tanker 1 14374.42 17746.66 605.00 0.0 0 2 1.0
+  80_Static ships.Ship$Tanker 1 12419.92 16555.61 605.00 0.0 0 2 1.0
+  87_Static ships.Ship$Tramp 1 9417.77 19056.99 635.00 0.0 0 2 1.0
+  95_Static ships.Ship$IJNFishJunk 1 8635.57 18225.30 495.00 0.0 0 2 1.0
+  96_Static ships.Ship$IJNFishJunk 1 8658.76 18249.04 495.00 0.0 0 2 1.0
+  98_Static ships.Ship$IJNFishJunk 1 8680.72 18270.73 495.00 0.0 0 2 1.0
+  102_Static ships.Ship$IJNFishJunk 1 8702.14 18292.96 495.00 0.0 0 2 1.0
+  104_Static ships.Ship$IJNFishJunk 1 8724.38 18315.61 495.00 0.0 0 2 1.0
+  105_Static ships.Ship$IJNFishJunk 1 8637.48 18238.94 495.00 0.0 0 2 1.0
+  108_Static ships.Ship$IJNFishJunk 1 8659.85 18260.77 495.00 0.0 0 2 1.0
+  109_Static ships.Ship$IJNFishJunk 1 8681.68 18283.14 495.00 0.0 0 2 1.0
+  110_Static ships.Ship$IJNFishJunk 1 8702.42 18304.01 495.00 0.0 0 2 1.0
+  111_Static ships.Ship$IJNFishJunk 1 8744.84 18336.48 495.00 0.0 0 2 1.0
+  113_Static ships.Ship$IJNFishJunk 1 8723.42 18326.25 495.00 0.0 0 2 1.0
+  114_Static ships.Ship$IJNFishJunk 1 8744.30 18347.26 495.00 0.0 0 2 1.0
+  130_Static ships.Ship$Tanker 1 13226.32 19013.99 710.00 0.0 0 2 1.0
+  136_Static ships.Ship$Tanker 1 10411.16 20051.62 710.00 0.0 0 2 1.0
+  137_Static ships.Ship$Tanker 1 8732.40 18849.21 710.00 0.0 0 2 1.0
+  5_Static ships.Ship$Tramp 1 10960.60 19510.79 665.00 0.0 0 2 1.0
+  59_Static vehicles.planes.Plane$B_25G1 1 9986.53 10965.04 390.00 0.0 gb
+  60_Static vehicles.planes.Plane$B_25G1 1 10007.75 10993.11 390.00 0.0 gb
+  61_Static vehicles.planes.Plane$B_25G1 1 10090.63 11147.28 390.00 0.0 gb
+  62_Static vehicles.planes.Plane$B_25G1 1 10108.52 11172.91 390.00 0.0 gb
+  63_Static vehicles.planes.Plane$B_25G1 1 10127.03 11201.35 390.00 0.0 gb
+  64_Static vehicles.planes.Plane$B_25G1 1 10193.97 11310.97 390.00 0.0 gb
+  65_Static vehicles.planes.Plane$SPITFIRE9EHF 1 10325.50 10655.58 300.00 0.0 gb
+  66_Static vehicles.planes.Plane$SPITFIRE9EHF 1 10371.01 10626.63 300.00 0.0 gb
+  67_Static vehicles.planes.Plane$SPITFIRE9EHF 1 10415.25 10598.98 300.00 0.0 gb
+  68_Static vehicles.planes.Plane$SPITFIRE9EHF 1 10591.32 10494.41 300.00 0.0 gb
+  69_Static vehicles.planes.Plane$SPITFIRE9EHF 1 10543.89 10521.51 300.00 0.0 gb
+  70_Static vehicles.planes.Plane$SPITFIRE9EHF 1 10500.12 10547.52 300.00 0.0 gb
+  71_Static vehicles.planes.Plane$SPITFIRE9EHF 1 11213.26 10371.75 255.00 0.0 gb
+  81_Static vehicles.planes.Plane$SPITFIRE9EHF 1 11316.19 10549.45 210.00 0.0 gb
+  83_Static vehicles.stationary.Stationary$ZIS6_fuel 1 11301.76 10536.23 540.00 0.0
+  84_Static vehicles.stationary.Stationary$ZIS6_fuel 1 10408.93 10611.38 600.00 0.0
+  85_Static vehicles.stationary.Stationary$ZIS6_fuel 1 10608.98 10496.28 675.00 0.0
+  86_Static vehicles.stationary.Stationary$ZIS6_fuel 1 10005.80 10986.88 675.00 0.0
+  90_Static vehicles.planes.Plane$B_25G1 1 10524.88 11278.14 345.00 0.0 gb
+  91_Static vehicles.planes.Plane$B_25G1 1 10515.62 11313.34 345.00 0.0 gb
+  92_Static vehicles.planes.Plane$B_25G1 1 10505.43 11345.76 345.00 0.0 gb
+  93_Static vehicles.planes.Plane$B_25G1 1 10494.31 11379.11 345.00 0.0 gb
+  74_Static vehicles.artillery.Artillery$Twin25mm_JA 1 9363.70 18461.12 360.00 0.0 0
+  77_Static vehicles.artillery.Artillery$Twin25mm_JA 1 9635.66 18280.55 360.00 0.0 0
+  89_Static vehicles.artillery.Artillery$Twin25mm_JA 1 8832.50 17932.53 360.00 0.0 0
+  128_Static vehicles.artillery.Artillery$Twin25mm_JA 1 9071.47 17710.60 360.00 0.0 0
+  112_Static ships.Ship$IJNFishJunkA 1 8766.80 18357.90 495.00 0.0 0 0 11.0
+  133_Static ships.Ship$Tanker 1 9344.59 18415.44 495.00 0.0 0 2 1.0
+  131_Static vehicles.stationary.Smoke$Smoke11 0 8832.91 17932.63 360.00 1.70
+  132_Static vehicles.stationary.Smoke$Smoke11 0 9071.41 17710.54 360.00 1.04
+  134_Static vehicles.stationary.Smoke$Smoke11 0 9635.63 18280.65 360.00 0.00
+  135_Static vehicles.stationary.Smoke$Smoke11 0 9363.70 18461.09 360.00 0.00
+  138_Static vehicles.stationary.Smoke$Smoke11 0 8758.44 18352.16 360.00 0.00
+  139_Static vehicles.stationary.Smoke$Smoke11 0 8759.92 18349.14 360.00 0.00
+  0_Static vehicles.artillery.Artillery$Twin25mm_JA 1 11293.76 11176.36 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Twin25mm_JA 1 10169.25 10958.31 360.00 0.0 0
+  2_Static vehicles.stationary.Smoke$Smoke11 0 10169.67 10958.44 510.00 68.00
+  3_Static vehicles.stationary.Smoke$Smoke11 0 11293.85 11176.53 510.00 68.00
+  4_Static vehicles.stationary.Siren$SirenCity 1 10949.54 10359.94 510.00 0.0
+  6_Static vehicles.artillery.Artillery$MG42 1 10687.69 11679.83 690.00 0.0 0
+  7_Static vehicles.artillery.Artillery$MG42 1 10919.82 10305.17 510.00 0.0 0
+  8_Static vehicles.planes.Plane$SPITFIRE9EHF 1 11314.30 10860.39 300.00 0.0 gb
+  9_Static vehicles.planes.Plane$B_25G1 1 11052.79 11413.26 345.00 0.0 gb
+  10_Static vehicles.planes.Plane$B_25G1 1 11015.73 11569.02 345.00 0.0 gb
+  11_Static vehicles.stationary.Stationary$GAZ_AAA 1 10989.53 11539.84 675.00 0.0
+  12_Static vehicles.stationary.Stationary$GAZ_AAA 1 10519.09 11319.67 675.00 0.0
+  13_Static vehicles.stationary.Stationary$GAZ_AAA 1 10095.89 11150.37 645.00 0.0
+  88_Static ships.Ship$USSKiddDD661 1 9796.96 18937.21 615.00 0.0 0 1 22.0
+  94_Static ships.Ship$USSOBannonDD450 1 10843.74 20000.26 620.00 0.0 0 1 22.0
+[Buildings]
+  0_bld House$PortFloor 1 9302.98 17542.77 495.00
+  1_bld House$PortBaseSmallSegment 1 9322.12 17562.06 495.00
+  2_bld House$PortBaseSmallSegment 1 9328.08 17568.05 495.00
+  3_bld House$PortBaseSmallSegment 1 9334.19 17574.31 495.00
+  4_bld House$PortBaseSmallSegment 1 9340.30 17580.42 495.00
+  5_bld House$PortBaseSmallSegment 1 9346.56 17586.69 495.00
+  6_bld House$PortBaseSmallSegment 1 9352.67 17592.79 495.00
+  7_bld House$PortBaseSmallSegment 1 9358.77 17598.90 495.00
+  8_bld House$PortBaseSmallSegment 1 9364.88 17605.16 495.00
+  9_bld House$PortBaseSmallSegment 1 9369.06 17609.82 405.00
+  10_bld House$PortBaseSmallSegment 1 9362.95 17615.93 405.00
+  11_bld House$PortBaseSmallSegment 1 9356.85 17622.04 405.00
+  12_bld House$PortBaseSmallSegment 1 9375.16 17603.72 405.00
+  13_bld House$PortBaseSmallSegment 1 9381.27 17597.61 405.00
+  14_bld House$PortBaseSmallSegment 1 9387.37 17591.67 405.00
+  15_bld House$PortBaseSmallSegment 1 9350.58 17628.14 405.00
+  16_bld House$PortFloor 1 9339.83 17643.37 585.00
+  17_bld House$PortFloor 1 9416.02 17574.25 675.00
+  18_bld House$PortFloor 1 8851.24 17940.61 495.00
+  19_bld House$PortBaseSmallSegment 1 8885.46 17978.39 495.00
+  20_bld House$PortBaseSmallSegment 1 8867.42 17960.36 495.00
+  21_bld House$PortBaseSmallSegment 1 8873.49 17966.43 495.00
+  22_bld House$PortBaseSmallSegment 1 8879.56 17972.49 495.00
+  23_bld House$PortBaseSmallSegment 1 8891.36 17984.30 495.00
+  24_bld House$PortBaseSmallSegment 1 8897.60 17990.53 495.00
+  25_bld House$PortBaseSmallSegment 1 8903.67 17996.60 495.00
+  26_bld House$PortBaseSmallSegment 1 8909.74 18002.84 495.00
+  27_bld House$PortBaseSmallSegment 1 8915.81 18009.08 495.00
+  28_bld House$PortBaseSmallSegment 1 8921.71 18014.98 495.00
+  29_bld House$PortBaseSmallSegment 1 8927.78 18021.05 495.00
+  30_bld House$PortBaseSmallSegment 1 8934.02 18027.12 495.00
+  31_bld House$PortBaseSmallSegment 1 8940.08 18033.35 495.00
+  32_bld House$PortBaseSmallSegment 1 8946.15 18039.25 495.00
+  33_bld House$PortBaseSmallSegment 1 8952.05 18045.16 495.00
+  34_bld House$PortBaseSmallSegment 1 8958.12 18051.06 675.00
+  35_bld House$PortBaseSmallSegment 1 8964.19 18057.13 675.00
+  36_bld House$PortBaseSmallSegment 1 8970.09 18063.36 675.00
+  37_bld House$PortBaseSmallSegment 1 8976.16 18069.43 675.00
+  38_bld House$PortBaseSmallSegment 1 8982.23 18075.67 675.00
+  39_bld House$PortBaseSmallSegment 1 8988.30 18081.74 675.00
+  40_bld House$PortBaseSmallSegment 1 8994.54 18087.98 675.00
+  41_bld House$PortBaseSmallSegment 1 9000.61 18094.05 675.00
+  42_bld House$PortBaseSmallSegment 1 9006.68 18100.12 675.00
+  43_bld House$PortBaseSmallSegment 1 9012.58 18106.02 675.00
+  44_bld House$PortBaseSmallSegment 1 9018.48 18111.92 675.00
+  45_bld House$PortBaseSmallSegment 1 9024.55 18118.15 675.00
+  46_bld House$AirdromeBarrack 1 8778.51 17621.21 675.00
+  47_bld House$IndustrialFactoryHouse1 1 8808.27 17657.09 675.00
+  48_bld House$IndustrialFactoryHouse1 1 8973.71 17610.84 675.00
+  49_bld House$IndustrialFactoryHouse1 1 9087.87 17507.67 675.00
+  50_bld House$IndustrialFactoryHouse1 1 9067.94 17489.39 675.00
+  51_bld House$IndustrialFactoryHouse1 1 8955.24 17593.17 675.00
+  52_bld House$PortFloor 1 9095.77 17734.34 495.00
+  53_bld House$PortBaseSmallSegment 1 9112.53 17752.34 495.00
+  54_bld House$PortBaseSmallSegment 1 9118.52 17758.33 495.00
+  55_bld House$PortBaseSmallSegment 1 9124.51 17764.32 495.00
+  56_bld House$PortBaseSmallSegment 1 9130.50 17770.31 495.00
+  57_bld House$PortBaseSmallSegment 1 9136.48 17776.29 495.00
+  58_bld House$PortBaseSmallSegment 1 9142.76 17782.57 495.00
+  59_bld House$PortBaseSmallSegment 1 9149.03 17788.84 495.00
+  60_bld House$PortBaseSmallSegment 1 9155.02 17794.83 495.00
+  61_bld House$PortBaseSmallSegment 1 9161.29 17800.81 495.00
+  62_bld House$PortBaseSmallSegment 1 9167.28 17806.80 495.00
+  63_bld House$PortBaseSmallSegment 1 9173.26 17812.79 495.00
+  64_bld House$PortBaseSmallSegment 1 9179.54 17819.06 495.00
+  65_bld House$PortBaseSmallSegment 1 9185.81 17825.05 495.00
+  66_bld House$PortBaseSmallSegment 1 9191.51 17830.75 495.00
+  67_bld House$PortBaseSmallSegment 1 9197.50 17836.74 495.00
+  68_bld House$PortBaseSmallSegment 1 9203.49 17842.73 495.00
+  69_bld House$PortBaseSmallSegment 1 9209.53 17848.90 675.00
+  70_bld House$AirdromeBarrelBlock2 0 9156.34 17850.87 585.00
+  71_bld House$AirdromeBarrack 1 8789.38 17611.35 495.00
+  72_bld House$AirdromeTank1 1 9090.82 17724.99 495.00
+  73_bld House$AirdromeHangarT1S1 1 9099.03 17447.95 405.00
+  74_bld House$AirdromeHangarT1S1 1 9123.76 17472.29 405.00
+  75_bld House$IndustrialFactoryWarenHouse1 1 8927.87 17584.81 405.00
+  76_bld House$IndustrialFactoryWarenHouse1 1 8951.81 17633.76 405.00
+  77_bld House$IndustrialFactoryTank1 1 9205.87 17325.94 675.00
+  78_bld House$IndustrialFactoryTank1 1 9184.36 17305.20 405.00
+  79_bld House$IndustrialFactoryTank1 1 9165.74 17285.29 405.00
+  80_bld House$IndustrialFactoryTank1 1 9181.38 17343.15 405.00
+  81_bld House$IndustrialFactoryTank1 1 9161.35 17323.54 405.00
+  82_bld House$IndustrialFactoryTank1 1 9142.79 17304.19 480.00
+  83_bld House$IndustrialFactoryWarenHouse1 1 8922.32 17663.31 585.00
+  84_bld House$IndustrialFactoryWarenHouse1 1 8892.10 17692.99 585.00
+  85_bld House$IndustrialFactoryWarenHouse1 1 8861.91 17722.59 585.00
+  86_bld House$IndustrialFactoryWarenHouse1 1 8831.75 17751.67 585.00
+  87_bld House$IndustrialFactoryHouse1 1 8810.68 17777.85 405.00
+  88_bld House$IndustrialFactoryHouse1 1 8792.13 17795.87 405.00
+  89_bld House$AirdromeBarrack 1 8771.16 17787.07 675.00
+  90_bld House$IndustrialFactoryWarenHouse1 1 8754.16 17759.23 495.00
+  91_bld House$IndustrialFactoryWarenHouse1 1 8724.05 17730.15 495.00
+  92_bld House$IndustrialFactoryTank1 1 8385.85 17999.82 495.00
+  93_bld House$IndustrialFactoryTank1 1 8386.63 17975.18 495.00
+  94_bld House$IndustrialFactoryTank1 1 8385.16 18024.08 495.00
+  95_bld House$IndustrialFactoryTank1 1 8411.85 18023.29 495.00
+  96_bld House$IndustrialFactoryTank1 1 8412.67 17999.30 495.00
+  97_bld House$IndustrialFactoryTank1 1 8414.15 17975.30 495.00
+  98_bld House$AirdromeControlTowerSmall 1 8289.58 17963.01 495.00
+  99_bld House$PortBaseSmallSegment 1 9373.59 17614.07 495.00
+  100_bld House$PortBaseSmallSegment 1 9379.58 17620.24 495.00
+  101_bld House$PortBaseSmallSegment 1 9385.56 17626.40 495.00
+  102_bld House$PortBaseSmallSegment 1 9391.55 17632.38 495.00
+  103_bld House$PortBaseSmallSegment 1 9397.71 17638.55 495.00
+  104_bld House$PortBaseSmallSegment 1 9403.70 17644.71 495.00
+  105_bld House$PortBaseSmallSegment 1 9409.86 17650.87 495.00
+  106_bld House$PortBaseSmallSegment 1 9416.02 17657.03 495.00
+  107_bld House$PortBaseSmallSegment 1 9422.18 17663.19 495.00
+  108_bld House$PortBaseSmallSegment 1 9428.35 17669.36 495.00
+  109_bld House$PortBaseSmallSegment 1 9464.94 17714.53 585.00
+  110_bld House$PortBaseSmallSegment 1 9434.51 17675.52 495.00
+  111_bld House$PortBaseSmallSegment 1 9440.49 17681.50 495.00
+  112_bld House$PortBaseSmallSegment 1 9446.66 17687.67 495.00
+  113_bld House$PortBaseSmallSegment 1 9452.82 17693.83 495.00
+  114_bld House$PortBaseSmallSegment 1 9458.98 17699.99 495.00
+  115_bld House$PortBaseSmallSegment 1 9465.14 17706.15 495.00
+  116_bld House$PortBaseSmallSegment 1 9471.30 17712.31 495.00
+  117_bld House$PortBaseSmallSegment 1 9477.47 17718.48 495.00
+  118_bld House$PortBaseSmallSegment 1 9483.45 17724.46 495.00
+  119_bld House$PortBaseSmallSegment 1 9489.44 17730.45 495.00
+  120_bld House$PortFloor 1 9525.51 17762.37 675.00
+  121_bld House$PortBaseSmallSegment 1 9316.02 17555.80 675.00
+  122_bld House$PortBaseSmallSegment 1 9495.50 17733.15 585.00
+  123_bld House$PortBaseSmallSegment 1 9499.65 17728.86 585.00
+  124_bld House$PortBaseSmallSegment 1 9505.81 17722.70 585.00
+  125_bld House$PortBaseSmallSegment 1 9511.97 17716.54 585.00
+  126_bld House$PortBaseSmallSegment 1 9518.14 17710.38 585.00
+  127_bld House$PortBaseSmallSegment 1 9524.12 17704.39 585.00
+  128_bld House$PortBaseSmallSegment 1 9458.83 17720.66 585.00
+  129_bld House$PortBaseSmallSegment 1 9452.76 17726.68 585.00
+  130_bld House$PortBaseSmallSegment 1 9447.14 17732.27 585.00
+  131_bld House$PortBaseSmallSegment 1 9440.88 17738.35 585.00
+  132_bld House$PortBaseSmallSegment 1 9434.72 17744.46 585.00
+  133_bld House$PortFloor 1 9433.62 17756.57 675.00
+  134_bld House$PortFloor 1 9571.34 17667.91 675.00
+  135_bld House$PortBaseSmallSegment 1 9030.65 18124.39 675.00
+  136_bld House$PortBaseSmallSegment 1 9036.71 18130.61 675.00
+  137_bld House$PortBaseSmallSegment 1 9042.77 18136.83 675.00
+  138_bld House$PortBaseSmallSegment 1 9048.83 18142.89 675.00
+  139_bld House$PortBaseSmallSegment 1 9054.89 18148.95 675.00
+  140_bld House$PortBaseSmallSegment 1 9060.95 18155.01 675.00
+  141_bld House$PortBaseSmallSegment 1 9067.01 18161.07 675.00
+  142_bld House$PortBaseSmallSegment 1 9072.91 18167.13 675.00
+  143_bld House$PortBaseSmallSegment 1 9078.97 18173.19 675.00
+  144_bld House$PortBaseSmallSegment 1 9085.03 18179.41 675.00
+  145_bld House$PortBaseSmallSegment 1 9091.25 18185.63 675.00
+  146_bld House$PortBaseSmallSegment 1 9097.15 18191.85 675.00
+  147_bld House$PortBaseSmallSegment 1 9103.21 18198.07 675.00
+  148_bld House$PortBaseSmallSegment 1 9109.27 18203.97 675.00
+  149_bld House$PortBaseSmallSegment 1 9215.78 17855.16 675.00
+  150_bld House$PortBaseSmallSegment 1 9221.91 17861.29 675.00
+  151_bld House$PortBaseSmallSegment 1 9227.83 17867.41 675.00
+  152_bld House$PortBaseSmallSegment 1 9233.96 17873.54 675.00
+  153_bld House$PortBaseSmallSegment 1 9239.88 17879.46 675.00
+  154_bld House$PortBaseSmallSegment 1 9246.22 17885.59 675.00
+  155_bld House$PortBaseSmallSegment 1 9252.13 17891.72 675.00
+  156_bld House$PortBaseSmallSegment 1 9258.26 17898.06 675.00
+  157_bld House$PortBaseSmallSegment 1 9264.18 17904.19 675.00
+  158_bld House$PortBaseSmallSegment 1 9270.52 17910.32 675.00
+  159_bld House$PortBaseSmallSegment 1 9276.65 17916.45 675.00
+  160_bld House$PortBaseSmallSegment 1 9115.27 18210.02 495.00
+  161_bld House$PortBaseSmallSegment 1 9121.24 18215.99 495.00
+  162_bld House$PortBaseSmallSegment 1 9127.22 18222.14 495.00
+  163_bld House$PortBaseSmallSegment 1 9133.02 18228.12 495.00
+  164_bld House$PortBaseSmallSegment 1 9139.17 18234.27 495.00
+  165_bld House$PortBaseSmallSegment 1 9145.14 18240.42 495.00
+  166_bld House$PortBaseSmallSegment 1 9151.29 18246.57 495.00
+  167_bld House$PortBaseSmallSegment 1 9157.27 18252.72 495.00
+  168_bld House$IndustrialFactoryWarenHouse1 1 8676.81 17766.61 495.00
+  169_bld House$IndustrialFactoryWarenHouse1 1 8707.24 17798.03 495.00
+  170_bld House$IndustrialFactoryWarenHouse1 1 8737.15 17827.41 495.00
+  171_bld House$AirdromeHangar2 1 8718.96 17851.42 495.00
+  172_bld House$AirdromeHangar2 1 8701.64 17868.10 495.00
+  173_bld House$AirdromeHangar2 1 8684.58 17884.14 495.00
+  174_bld House$AirdromeHangar2 1 8667.51 17899.87 495.00
+  175_bld House$AirdromeBarrack 1 8693.84 17708.39 495.00
+  176_bld House$IndustrialFactoryHouse1 1 8674.18 17688.24 495.00
+  177_bld House$AirdromeHangarT1S1 1 8890.88 17530.35 675.00
+  178_bld House$AirdromeHangarT1S1 1 9023.38 17438.61 675.00
+  179_bld House$AirdromeHangarT1S1 1 8642.37 17910.15 675.00
+  180_bld House$AirdromeHangarT1S1 1 8620.84 17930.02 675.00
+  181_bld House$AirdromeHangarT1S1 1 8599.85 17949.98 675.00
+  182_bld House$VehicleOpelBlitz6700A_radio 1 8687.02 17915.90 405.00
+  183_bld House$PortBaseSmallSegment 1 8861.18 17954.07 495.00
+  184_bld House$PortBaseSmallSegment 1 8855.27 17948.16 495.00
+  185_bld House$PortBaseSmallSegment 1 9106.51 17746.31 495.00
+  186_bld House$PortBaseSmallSegment 1 9101.41 17741.21 495.00
+  187_bld House$PortBaseSmallSegment 1 9308.03 17551.92 495.00
+  188_bld House$PortBaseSmallSegment 1 9282.51 17922.29 495.00
+  189_bld House$PortBaseSmallSegment 1 9288.62 17928.35 495.00
+  190_bld House$PortBaseSmallSegment 1 9294.81 17934.61 495.00
+  191_bld House$PortBaseSmallSegment 1 9300.71 17940.65 495.00
+  192_bld House$PortBaseSmallSegment 1 9306.83 17946.77 495.00
+  193_bld House$PortBaseSmallSegment 1 9312.74 17952.74 495.00
+  194_bld House$PortBaseSmallSegment 1 9318.85 17958.86 495.00
+  195_bld House$PortBaseSmallSegment 1 9325.04 17965.05 495.00
+  196_bld House$PortBaseSmallSegment 1 9331.01 17971.02 495.00
+  197_bld House$PortBaseSmallSegment 1 9337.06 17977.14 495.00
+  198_bld House$PortBaseSmallSegment 1 9343.18 17983.18 495.00
+  199_bld House$PortBaseSmallSegment 1 9349.29 17989.23 495.00
+  200_bld House$PortBaseSmallSegment 1 9355.34 17995.28 495.00
+  201_bld House$PortBaseSmallSegment 1 9361.60 18001.46 495.00
+  202_bld House$PortBaseSmallSegment 1 9367.64 18007.51 495.00
+  203_bld House$PortBaseSmallSegment 1 9373.76 18013.70 495.00
+  204_bld House$PortBaseSmallSegment 1 9379.80 18019.74 495.00
+  205_bld House$PortBaseSmallSegment 1 9385.99 18025.93 495.00
+  206_bld House$PortBaseSmallSegment 1 9392.18 18032.04 495.00
+  207_bld House$PortBaseSmallSegment 1 9398.29 18038.23 495.00
+  208_bld House$PortBaseSmallSegment 1 9404.55 18044.42 495.00
+  209_bld House$PortBaseSmallSegment 1 9410.67 18050.53 495.00
+  210_bld House$PortBaseSmallSegment 1 9416.85 18056.72 495.00
+  211_bld House$PortBaseSmallSegment 1 9422.90 18062.70 495.00
+  212_bld House$PortBaseSmallSegment 1 9429.02 18068.81 495.00
+  213_bld House$PortBaseSmallSegment 1 9435.06 18074.93 495.00
+  214_bld House$PortBaseSmallSegment 1 9441.18 18081.04 495.00
+  215_bld House$PortBaseSmallSegment 1 9447.29 18087.16 495.00
+  216_bld House$PortBaseSmallSegment 1 9453.48 18093.35 495.00
+  217_bld House$PortBaseSmallSegment 1 9459.60 18099.53 495.00
+  218_bld House$PortBaseSmallSegment 1 9465.64 18105.58 495.00
+  219_bld House$PortBaseSmallSegment 1 9471.76 18111.70 495.00
+  220_bld House$PortBaseSmallSegment 1 9477.81 18117.74 495.00
+  221_bld House$PortBaseSmallSegment 1 9483.92 18123.86 495.00
+  222_bld House$PortBaseSmallSegment 1 9490.04 18130.04 495.00
+  223_bld House$PortBaseSmallSegment 1 9496.15 18136.23 495.00
+  224_bld House$PortBaseSmallSegment 1 9502.20 18142.28 495.00
+  225_bld House$PortBaseSmallSegment 1 9508.32 18148.46 495.00
+  226_bld House$PortBaseSmallSegment 1 9514.36 18154.51 495.00
+  227_bld House$PortBaseSmallSegment 1 9520.55 18160.63 495.00
+  228_bld House$PortBaseSmallSegment 1 9526.66 18166.81 495.00
+  229_bld House$PortBaseSmallSegment 1 9532.71 18172.93 495.00
+  230_bld House$PortBaseSmallSegment 1 9538.90 18179.12 495.00
+  231_bld House$PortBaseSmallSegment 1 9544.87 18185.02 495.00
+  232_bld House$PortBaseSmallSegment 1 9551.06 18191.21 495.00
+  233_bld House$PortBaseSmallSegment 1 9557.32 18197.39 495.00
+  234_bld House$PortBaseSmallSegment 1 9563.50 18203.58 495.00
+  235_bld House$PortBaseSmallSegment 1 9569.50 18209.66 495.00
+  236_bld House$PortBaseSmallSegment 1 9575.43 18215.70 495.00
+  237_bld House$PortBaseSmallSegment 1 9581.47 18221.63 495.00
+  238_bld House$PortBaseSmallSegment 1 9587.50 18227.67 495.00
+  239_bld House$PortBaseSmallSegment 1 9593.54 18233.71 495.00
+  240_bld House$PortBaseSmallSegment 1 9599.69 18239.75 495.00
+  241_bld House$PortBaseSmallSegment 1 9605.83 18245.78 495.00
+  242_bld House$PortBaseSmallSegment 1 9611.98 18251.93 495.00
+  243_bld House$PortBaseSmallSegment 1 9618.12 18257.97 495.00
+  244_bld House$PortBaseSmallSegment 1 9624.37 18264.00 495.00
+  245_bld House$PortFloor 1 9625.75 18276.82 675.00
+  246_bld House$PortFloor 1 9632.02 18270.60 675.00
+  247_bld House$PortBaseSmallSegment 1 9621.72 18266.65 675.00
+  248_bld House$PortBaseSmallSegment 1 9619.18 18269.51 675.00
+  249_bld House$PortBaseSmallSegment 1 9104.55 17738.78 675.00
+  250_bld House$PortBaseSmallSegment 1 9110.48 17744.93 675.00
+  251_bld House$PortBaseSmallSegment 1 9116.63 17750.86 675.00
+  252_bld House$PortBaseSmallSegment 1 9122.66 17756.90 675.00
+  253_bld House$PortBaseSmallSegment 1 9128.70 17762.93 675.00
+  254_bld House$PortBaseSmallSegment 1 9134.85 17769.18 675.00
+  255_bld House$PortBaseSmallSegment 1 9141.10 17775.33 675.00
+  256_bld House$PortBaseSmallSegment 1 9147.14 17781.47 675.00
+  257_bld House$PortBaseSmallSegment 1 9167.73 17796.67 675.00
+  258_bld House$PortBaseSmallSegment 1 9153.17 17787.51 675.00
+  259_bld House$PortBaseSmallSegment 1 9155.82 17784.76 675.00
+  260_bld House$PortBaseSmallSegment 1 9159.11 17793.44 675.00
+  261_bld House$PortBaseSmallSegment 1 9161.75 17790.69 675.00
+  262_bld House$PortBaseSmallSegment 1 9165.46 17799.38 675.00
+  263_bld House$PortBaseSmallSegment 1 9171.50 17805.52 675.00
+  264_bld House$PortBaseSmallSegment 1 9177.64 17811.66 675.00
+  265_bld House$PortBaseSmallSegment 1 9183.68 17817.70 675.00
+  266_bld House$PortBaseSmallSegment 1 9189.83 17823.74 675.00
+  267_bld House$PortBaseSmallSegment 1 9195.97 17829.67 675.00
+  268_bld House$PortBaseSmallSegment 1 9202.01 17835.82 675.00
+  269_bld House$PortBaseSmallSegment 1 9208.15 17841.96 675.00
+  270_bld House$PortBaseSmallSegment 1 9214.19 17848.11 675.00
+  271_bld House$PortBaseSmallSegment 1 9220.34 17854.25 675.00
+  272_bld House$PortBaseSmallSegment 1 9226.06 17860.18 675.00
+  273_bld House$PortBaseSmallSegment 1 9246.63 17875.92 675.00
+  274_bld House$PortBaseSmallSegment 1 9231.57 17866.22 675.00
+  275_bld House$PortBaseSmallSegment 1 9234.43 17863.57 675.00
+  276_bld House$PortBaseSmallSegment 1 9237.82 17872.36 675.00
+  277_bld House$PortBaseSmallSegment 1 9240.46 17869.72 675.00
+  278_bld House$PortBaseSmallSegment 1 9243.75 17878.30 675.00
+  279_bld House$PortBaseSmallSegment 1 9249.89 17884.34 675.00
+  280_bld House$PortBaseSmallSegment 1 9256.04 17890.37 675.00
+  281_bld House$PortBaseSmallSegment 1 9261.97 17896.41 675.00
+  282_bld House$PortBaseSmallSegment 1 9268.01 17902.45 675.00
+  283_bld House$PortBaseSmallSegment 1 9274.05 17908.49 675.00
+  284_bld House$PortBaseSmallSegment 1 9280.19 17914.53 675.00
+  285_bld House$PortBaseSmallSegment 1 9286.44 17920.67 675.00
+  286_bld House$PortBaseSmallSegment 1 9292.58 17926.81 675.00
+  287_bld House$PortBaseSmallSegment 1 9298.73 17932.96 675.00
+  288_bld House$PortBaseSmallSegment 1 9304.77 17939.10 675.00
+  289_bld House$PortBaseSmallSegment 1 9325.44 17954.56 675.00
+  290_bld House$PortBaseSmallSegment 1 9310.70 17945.25 675.00
+  291_bld House$PortBaseSmallSegment 1 9313.45 17942.49 675.00
+  292_bld House$PortBaseSmallSegment 1 9316.74 17951.18 675.00
+  293_bld House$PortBaseSmallSegment 1 9319.39 17948.43 675.00
+  294_bld House$PortBaseSmallSegment 1 9322.88 17957.32 675.00
+  295_bld House$PortBaseSmallSegment 1 9328.81 17963.26 675.00
+  296_bld House$PortBaseSmallSegment 1 9334.85 17969.40 675.00
+  297_bld House$PortBaseSmallSegment 1 9340.10 17975.54 675.00
+  298_bld House$PortBaseSmallSegment 1 9346.53 17981.56 675.00
+  299_bld House$PortBaseSmallSegment 1 9353.07 17987.62 675.00
+  300_bld House$PortBaseSmallSegment 1 9359.22 17993.55 675.00
+  301_bld House$PortBaseSmallSegment 1 9365.25 17999.59 675.00
+  302_bld House$PortBaseSmallSegment 1 9371.40 18005.74 675.00
+  303_bld House$PortBaseSmallSegment 1 9398.19 18027.38 675.00
+  304_bld House$PortBaseSmallSegment 1 9377.44 18011.88 675.00
+  305_bld House$PortBaseSmallSegment 1 9392.21 18021.33 675.00
+  306_bld House$PortBaseSmallSegment 1 9383.58 18017.92 675.00
+  307_bld House$PortBaseSmallSegment 1 9386.12 18015.16 675.00
+  308_bld House$PortBaseSmallSegment 1 9389.62 18024.06 675.00
+  309_bld House$PortBaseSmallSegment 1 9395.87 18030.21 675.00
+  310_bld House$PortBaseSmallSegment 1 9401.80 18036.25 675.00
+  311_bld House$PortBaseSmallSegment 1 9407.95 18042.28 675.00
+  312_bld House$PortBaseSmallSegment 1 9414.09 18048.53 675.00
+  313_bld House$PortBaseSmallSegment 1 9420.23 18054.68 675.00
+  314_bld House$PortBaseSmallSegment 1 9426.48 18060.82 675.00
+  315_bld House$PortBaseSmallSegment 1 9432.63 18066.97 675.00
+  316_bld House$PortBaseSmallSegment 1 9438.77 18073.11 675.00
+  317_bld House$PortBaseSmallSegment 1 9444.81 18079.15 675.00
+  318_bld House$PortBaseSmallSegment 1 9451.06 18085.40 675.00
+  319_bld House$PortBaseSmallSegment 1 9457.10 18091.44 675.00
+  320_bld House$PortBaseSmallSegment 1 9463.14 18097.58 675.00
+  321_bld House$PortBaseSmallSegment 1 9469.28 18103.73 675.00
+  322_bld House$PortBaseSmallSegment 1 9465.56 18094.92 675.00
+  323_bld House$PortBaseSmallSegment 1 9471.60 18101.25 675.00
+  324_bld House$PortBaseSmallSegment 1 9459.32 18088.89 675.00
+  325_bld House$PortBaseSmallSegment 1 9475.32 18109.76 675.00
+  326_bld House$PortBaseSmallSegment 1 9481.46 18115.91 675.00
+  327_bld House$PortBaseSmallSegment 1 9487.40 18121.95 675.00
+  328_bld House$PortBaseSmallSegment 1 9493.44 18127.88 675.00
+  329_bld House$PortBaseSmallSegment 1 9499.37 18134.02 675.00
+  330_bld House$PortBaseSmallSegment 1 9505.30 18139.95 675.00
+  331_bld House$PortBaseSmallSegment 1 9511.34 18145.99 675.00
+  332_bld House$PortBaseSmallSegment 1 9538.39 18167.49 675.00
+  333_bld House$PortBaseSmallSegment 1 9517.27 18152.14 675.00
+  334_bld House$PortBaseSmallSegment 1 9532.38 18161.40 675.00
+  335_bld House$PortBaseSmallSegment 1 9523.41 18158.07 675.00
+  336_bld House$PortBaseSmallSegment 1 9526.17 18155.53 675.00
+  337_bld House$PortBaseSmallSegment 1 9529.66 18164.21 675.00
+  338_bld House$PortBaseSmallSegment 1 9535.81 18170.46 675.00
+  339_bld House$PortBaseSmallSegment 1 9541.85 18176.50 675.00
+  340_bld House$PortBaseSmallSegment 1 9547.99 18182.65 675.00
+  341_bld House$PortBaseSmallSegment 1 9554.14 18188.79 675.00
+  342_bld House$PortBaseSmallSegment 1 9560.28 18194.93 675.00
+  343_bld House$PortBaseSmallSegment 1 9566.53 18201.08 675.00
+  344_bld House$PortBaseSmallSegment 1 9572.67 18207.33 675.00
+  345_bld House$PortBaseSmallSegment 1 9578.61 18213.37 675.00
+  346_bld House$PortBaseSmallSegment 1 9584.86 18219.41 675.00
+  347_bld House$PortBaseSmallSegment 1 9590.79 18225.44 675.00
+  348_bld House$PortBaseSmallSegment 1 9596.83 18231.48 675.00
+  349_bld House$PortBaseSmallSegment 1 9603.08 18237.63 675.00
+  350_bld House$PortBaseSmallSegment 1 9609.22 18243.66 675.00
+  351_bld House$PortBaseSmallSegment 1 9615.37 18249.81 675.00
+  352_bld House$PortBaseSmallSegment 1 9621.30 18255.74 675.00
+  353_bld House$PortBaseSmallSegment 1 9627.44 18261.67 675.00
+  354_bld House$PortBaseSmallSegment 1 9616.74 18272.16 675.00
+  355_bld House$IndustrialFactoryHouse1 1 8820.78 17644.79 495.00
+  356_bld House$IndustrialFactoryHouse1 1 8834.21 17632.39 495.00
+  357_bld House$IndustrialFactoryWarenHouse1 1 8785.66 17668.08 495.00
+  358_bld House$IndustrialFactoryWarenHouse1 1 8750.37 17634.37 495.00
+  359_bld House$IndustrialFactoryWarenHouse1 1 8847.65 17607.58 495.00
+  360_bld House$IndustrialFactoryWarenHouse1 1 8814.01 17572.98 495.00
+  361_bld House$AirdromeBarrack 1 8801.67 17599.51 495.00
+  362_bld House$LargeCrane1 1 9099.91 17664.91 495.00
+  363_bld House$LargeCrane1 1 8858.62 17879.85 495.00
+  364_bld House$IndustrialFactoryTank1 1 8438.23 18021.96 495.00
+  365_bld House$IndustrialFactoryTank1 1 8436.68 17998.70 495.00
+  366_bld House$IndustrialFactoryTank1 1 8438.23 17974.42 495.00
+  367_bld House$IndustrialFactoryHouse1 1 9048.79 17469.91 675.00
+  368_bld House$IndustrialFactoryWarenHouse1 1 8989.75 17407.46 675.00
+  369_bld House$IndustrialFactoryWarenHouse1 1 8959.50 17378.06 675.00
+  370_bld House$AirdromeHangarT1S1 1 9075.42 17423.74 405.00
+  371_bld House$AirdromeHangarT1S1 1 9053.87 17400.99 405.00
+  372_bld House$IndustrialFactoryWarenHouse1 1 8644.77 17735.14 675.00
+  373_bld House$AirdromeBarrack 1 8566.48 17927.56 675.00
+  374_bld House$AirdromeBarrack 1 8548.00 17909.80 675.00
+  375_bld House$LargeCrane1 1 8781.77 17953.14 675.00
+  376_bld House$LargeCrane1 1 9025.49 17742.82 675.00
+  377_bld House$IndustrialFactoryTank1 1 9185.99 17263.24 510.00
+  378_bld House$IndustrialFactoryTank1 1 9207.39 17281.68 510.00
+  379_bld House$IndustrialFactoryTank1 1 9225.44 17300.99 510.00
+  380_bld House$Water_Tower 1 9455.04 17358.94 490.00
+  381_bld House$Metal_hut 1 9142.81 17633.31 490.00
+  382_bld House$Metal_hut 1 9148.92 17628.54 490.00
+  383_bld House$Metal_hut 1 9155.93 17623.03 490.00
+  384_bld House$AirdromeTank1 1 9084.51 17718.58 495.00
+  385_bld House$SmallCrane 1 9161.00 17793.51 495.00
+  386_bld House$SmallCrane 1 9240.25 17873.15 495.00
+  387_bld House$SmallCrane 1 9318.73 17951.05 495.00
+  388_bld House$SmallCrane 1 9390.86 18023.59 495.00
+  389_bld House$SmallCrane 1 9464.74 18097.23 495.00
+  390_bld House$SmallCrane 1 9531.27 18163.76 495.00
+  391_bld House$SmallCrane 1 9624.47 18271.33 495.00
+  392_bld House$PortFloor 1 8844.12 17947.36 495.00
+  393_bld House$PortBaseSmallSegment 1 8853.39 17951.60 495.00
+  394_bld House$PortBaseSmallSegment 1 8850.88 17954.12 495.00
+  395_bld House$PortBaseSmallSegment 1 8848.84 17956.32 495.00
+  396_bld House$PortBaseSmallSegment 1 8858.42 17946.42 495.00
+  397_bld House$PortBaseSmallSegment 1 8860.15 17944.69 495.00
+  398_bld House$PortFloor 1 9089.34 17740.95 495.00
+  399_bld House$PortBaseSmallSegment 1 9099.24 17744.56 495.00
+  400_bld House$PortBaseSmallSegment 1 9096.57 17747.07 495.00
+  401_bld House$PortBaseSmallSegment 1 9083.48 17744.89 495.00
+  402_bld House$PortBaseSmallSegment 1 8859.67 17957.76 495.00
+  403_bld House$PortBaseSmallSegment 1 8865.74 17963.74 495.00
+  404_bld House$PortBaseSmallSegment 1 8871.63 17969.81 495.00
+  405_bld House$PortBaseSmallSegment 1 8877.79 17975.98 495.00
+  406_bld House$PortBaseSmallSegment 1 8883.86 17982.23 495.00
+  407_bld House$PortBaseSmallSegment 1 8890.03 17988.30 495.00
+  408_bld House$PortBaseSmallSegment 1 8896.19 17994.37 495.00
+  409_bld House$PortBaseSmallSegment 1 8902.35 18000.35 495.00
+  410_bld House$PortBaseSmallSegment 1 8908.42 18006.33 495.00
+  411_bld House$PortBaseSmallSegment 1 8914.49 18012.59 495.00
+  412_bld House$PortBaseSmallSegment 1 8920.28 18018.84 495.00
+  413_bld House$PortBaseSmallSegment 1 8926.54 18025.01 495.00
+  414_bld House$PortBaseSmallSegment 1 8932.71 18031.26 495.00
+  415_bld House$PortBaseSmallSegment 1 8938.87 18037.24 495.00
+  416_bld House$PortBaseSmallSegment 1 8945.03 18043.22 495.00
+  417_bld House$PortBaseSmallSegment 1 8951.20 18049.29 495.00
+  418_bld House$PortBaseSmallSegment 1 8957.27 18055.64 495.00
+  419_bld House$PortBaseSmallSegment 1 8963.24 18061.71 495.00
+  420_bld House$PortBaseSmallSegment 1 8954.56 18058.35 495.00
+  421_bld House$PortBaseSmallSegment 1 8960.63 18064.23 495.00
+  422_bld House$PortBaseSmallSegment 1 8969.32 18068.06 495.00
+  423_bld House$PortBaseSmallSegment 1 8966.89 18070.40 495.00
+  424_bld House$PortBaseSmallSegment 1 8975.48 18074.22 495.00
+  425_bld House$PortBaseSmallSegment 1 8981.64 18080.30 495.00
+  426_bld House$PortBaseSmallSegment 1 8987.81 18086.37 495.00
+  427_bld House$PortBaseSmallSegment 1 8993.88 18092.34 495.00
+  428_bld House$PortBaseSmallSegment 1 8999.95 18098.51 495.00
+  429_bld House$PortBaseSmallSegment 1 9006.11 18104.67 495.00
+  430_bld House$PortBaseSmallSegment 1 9012.37 18110.74 495.00
+  431_bld House$PortBaseSmallSegment 1 9018.35 18116.81 495.00
+  432_bld House$PortBaseSmallSegment 1 9024.42 18122.88 495.00
+  433_bld House$PortBaseSmallSegment 1 9021.62 18125.59 495.00
+  434_bld House$PortBaseSmallSegment 1 9030.21 18129.33 495.00
+  435_bld House$PortBaseSmallSegment 1 9027.78 18131.66 495.00
+  436_bld House$PortBaseSmallSegment 1 9036.46 18135.40 495.00
+  437_bld House$PortBaseSmallSegment 1 9033.94 18137.73 495.00
+  438_bld House$PortBaseSmallSegment 1 9042.35 18141.75 495.00
+  439_bld House$PortBaseSmallSegment 1 9048.51 18148.01 495.00
+  440_bld House$PortBaseSmallSegment 1 9054.77 18154.08 495.00
+  441_bld House$PortBaseSmallSegment 1 9060.84 18160.33 495.00
+  442_bld House$PortBaseSmallSegment 1 9066.91 18166.31 495.00
+  443_bld House$PortBaseSmallSegment 1 9073.07 18172.38 495.00
+  444_bld House$PortBaseSmallSegment 1 9079.24 18178.54 495.00
+  445_bld House$PortBaseSmallSegment 1 9085.31 18184.71 495.00
+  446_bld House$PortBaseSmallSegment 1 9091.47 18190.97 495.00
+  447_bld House$PortBaseSmallSegment 1 9097.64 18197.13 495.00
+  448_bld House$PortBaseSmallSegment 1 9103.71 18203.29 495.00
+  449_bld House$PortBaseSmallSegment 1 9101.19 18205.91 495.00
+  450_bld House$PortBaseSmallSegment 1 9109.27 18209.82 495.00
+  451_bld House$PortBaseSmallSegment 1 9107.35 18211.98 495.00
+  452_bld House$PortBaseSmallSegment 1 9116.13 18215.25 495.00
+  453_bld House$PortBaseSmallSegment 1 9113.33 18217.86 495.00
+  454_bld House$PortBaseSmallSegment 1 9122.01 18221.60 495.00
+  455_bld House$PortBaseSmallSegment 1 9128.08 18227.86 495.00
+  456_bld House$PortBaseSmallSegment 1 9134.25 18234.11 495.00
+  457_bld House$PortBaseSmallSegment 1 9140.32 18240.46 495.00
+  458_bld House$PortBaseSmallSegment 1 9146.48 18246.72 495.00
+  459_bld House$PortBaseSmallSegment 1 9152.55 18252.79 495.00
+  460_bld House$PortBaseSmallSegment 1 9158.72 18259.05 495.00
+  461_bld House$PortBaseSmallSegment 1 9164.88 18265.21 495.00
+  462_bld House$PortBaseSmallSegment 1 9171.04 18271.28 495.00
+  463_bld House$PortBaseSmallSegment 1 9177.21 18277.45 495.00
+  464_bld House$PortBaseSmallSegment 1 9183.46 18283.42 495.00
+  465_bld House$PortBaseSmallSegment 1 9163.57 18258.86 495.00
+  466_bld House$PortBaseSmallSegment 1 9169.92 18265.03 495.00
+  467_bld House$PortBaseSmallSegment 1 9175.99 18271.10 495.00
+  468_bld House$PortBaseSmallSegment 1 9182.16 18277.17 495.00
+  469_bld House$PortBaseSmallSegment 1 9189.54 18289.49 495.00
+  470_bld House$PortBaseSmallSegment 1 9195.70 18295.57 495.00
+  471_bld House$PortBaseSmallSegment 1 9201.96 18301.73 495.00
+  472_bld House$PortBaseSmallSegment 1 9208.03 18307.89 495.00
+  473_bld House$PortBaseSmallSegment 1 9214.00 18313.96 495.00
+  474_bld House$PortBaseSmallSegment 1 9220.17 18320.13 495.00
+  475_bld House$PortBaseSmallSegment 1 9188.32 18283.24 495.00
+  476_bld House$PortBaseSmallSegment 1 9194.49 18289.31 495.00
+  477_bld House$PortBaseSmallSegment 1 9200.74 18295.29 495.00
+  478_bld House$PortBaseSmallSegment 1 9206.91 18301.26 495.00
+  479_bld House$PortBaseSmallSegment 1 9212.88 18307.33 495.00
+  480_bld House$PortBaseSmallSegment 1 9218.86 18313.40 495.00
+  481_bld House$PortBaseSmallSegment 1 9224.84 18319.47 495.00
+  482_bld House$PortBaseSmallSegment 1 9226.15 18326.20 495.00
+  483_bld House$PortBaseSmallSegment 1 9232.31 18332.36 495.00
+  484_bld House$PortBaseSmallSegment 1 9238.47 18338.53 495.00
+  485_bld House$PortBaseSmallSegment 1 9244.64 18344.60 495.00
+  486_bld House$PortBaseSmallSegment 1 9250.89 18350.76 495.00
+  487_bld House$PortBaseSmallSegment 1 9257.06 18356.92 495.00
+  488_bld House$PortBaseSmallSegment 1 9263.13 18363.09 495.00
+  489_bld House$PortBaseSmallSegment 1 9230.81 18325.36 495.00
+  490_bld House$PortBaseSmallSegment 1 9236.89 18331.33 495.00
+  491_bld House$PortBaseSmallSegment 1 9242.96 18337.41 495.00
+  492_bld House$PortBaseSmallSegment 1 9248.93 18343.48 495.00
+  493_bld House$PortBaseSmallSegment 1 9255.10 18349.45 495.00
+  494_bld House$PortBaseSmallSegment 1 9260.98 18355.43 495.00
+  495_bld House$PortBaseSmallSegment 1 9266.96 18361.41 495.00
+  496_bld House$PortBaseSmallSegment 1 9269.39 18369.25 495.00
+  497_bld House$PortBaseSmallSegment 1 9275.46 18375.32 495.00
+  498_bld House$PortBaseSmallSegment 1 9281.53 18381.39 495.00
+  499_bld House$PortBaseSmallSegment 1 9287.60 18387.46 495.00
+  500_bld House$PortBaseSmallSegment 1 9293.67 18393.63 495.00
+  501_bld House$PortBaseSmallSegment 1 9273.12 18367.48 495.00
+  502_bld House$PortBaseSmallSegment 1 9278.91 18373.36 495.00
+  503_bld House$PortBaseSmallSegment 1 9284.98 18379.53 495.00
+  504_bld House$PortBaseSmallSegment 1 9291.15 18385.50 495.00
+  505_bld House$PortBaseSmallSegment 1 9297.03 18391.48 495.00
+  506_bld House$PortBaseSmallSegment 1 9299.93 18399.70 495.00
+  507_bld House$PortBaseSmallSegment 1 9306.09 18405.77 495.00
+  508_bld House$PortBaseSmallSegment 1 9312.16 18411.93 495.00
+  509_bld House$PortBaseSmallSegment 1 9318.32 18418.00 495.00
+  510_bld House$PortBaseSmallSegment 1 9324.39 18424.17 495.00
+  511_bld House$PortBaseSmallSegment 1 9303.19 18397.64 495.00
+  512_bld House$PortBaseSmallSegment 1 9309.36 18403.71 495.00
+  513_bld House$PortBaseSmallSegment 1 9315.62 18409.88 495.00
+  514_bld House$PortBaseSmallSegment 1 9321.69 18415.86 495.00
+  515_bld House$PortBaseSmallSegment 1 9327.66 18422.02 495.00
+  516_bld House$PortBaseSmallSegment 1 9330.52 18429.97 495.00
+  517_bld House$PortBaseSmallSegment 1 9336.56 18436.01 495.00
+  518_bld House$PortBaseSmallSegment 1 9342.46 18442.05 495.00
+  519_bld House$PortBaseSmallSegment 1 9348.50 18448.09 495.00
+  520_bld House$PortBaseSmallSegment 1 9333.61 18428.09 495.00
+  521_bld House$PortBaseSmallSegment 1 9339.78 18433.99 495.00
+  522_bld House$PortBaseSmallSegment 1 9345.82 18439.90 495.00
+  523_bld House$PortBaseSmallSegment 1 9351.32 18445.27 495.00
+  524_bld House$PortFloor 1 9353.33 18457.21 675.00
+  525_bld House$PortFloor 1 9360.31 18450.23 675.00
+  526_bld House$PortBaseSmallSegment 1 9345.68 18450.77 675.00
+  527_bld House$PortBaseSmallSegment 1 9354.41 18443.12 675.00
+  528_bld House$PortBaseSmallSegment 1 9241.94 18347.29 675.00
+  529_bld House$PortBaseSmallSegment 1 9248.11 18353.33 675.00
+  530_bld House$PortBaseSmallSegment 1 9254.15 18359.24 675.00
+  531_bld House$PortBaseSmallSegment 1 9162.49 18267.84 675.00
+  532_bld House$PortBaseSmallSegment 1 9168.66 18274.02 675.00
+  533_bld House$PortBaseSmallSegment 1 9174.83 18280.06 675.00
+  534_bld House$SmallCrane 1 9170.14 18271.73 675.00
+  535_bld House$SmallCrane 1 9249.99 18351.05 675.00
+  536_bld House$SmallCrane 1 9352.13 18449.83 675.00
+  537_bld House$SmallCrane 1 9109.21 18210.53 675.00
+  538_bld House$SmallCrane 1 9029.89 18130.28 675.00
+  539_bld House$SmallCrane 1 8962.51 18062.50 675.00
+  540_bld House$PortBaseSmallSegment 1 9310.66 17548.99 675.00
+  541_bld House$PortFloor 1 9309.32 17536.37 495.00
+  542_bld House$PortBaseSmallSegment 1 9313.07 17546.31 495.00
+  543_bld House$PortBaseSmallSegment 1 9315.76 17543.49 495.00
+  544_bld House$PortBaseSmallSegment 1 9318.17 17540.80 495.00
+  545_bld House$PortBaseSmallSegment 1 9318.71 17552.88 495.00
+  546_bld House$PortBaseSmallSegment 1 9324.48 17558.92 495.00
+  547_bld House$PortBaseSmallSegment 1 9330.52 17565.09 495.00
+  548_bld House$PortBaseSmallSegment 1 9336.56 17571.13 495.00
+  549_bld House$PortBaseSmallSegment 1 9342.60 17577.17 495.00
+  550_bld House$PortBaseSmallSegment 1 9348.64 17583.35 495.00
+  551_bld House$PortBaseSmallSegment 1 9354.68 17589.25 495.00
+  552_bld House$PortBaseSmallSegment 1 9360.59 17595.29 495.00
+  553_bld House$PortBaseSmallSegment 1 9366.62 17601.33 495.00
+  554_bld House$PortBaseSmallSegment 1 9369.17 17603.88 495.00
+  555_bld House$PortFloor 1 9345.96 17649.78 585.00
+  556_bld House$PortBaseSmallSegment 1 9344.75 17634.08 585.00
+  557_bld House$PortBaseSmallSegment 1 9346.90 17637.17 585.00
+  558_bld House$PortBaseSmallSegment 1 9349.58 17639.72 585.00
+  559_bld House$PortBaseSmallSegment 1 9352.40 17642.27 585.00
+  560_bld House$PortBaseSmallSegment 1 9355.08 17645.08 585.00
+  561_bld House$PortBaseSmallSegment 1 9393.60 17585.49 585.00
+  562_bld House$PortBaseSmallSegment 1 9399.64 17579.46 585.00
+  563_bld House$PortFloor 1 9423.26 17567.24 675.00
+  564_bld House$PortBaseSmallSegment 1 9405.81 17573.28 585.00
+  565_bld House$PortBaseSmallSegment 1 9411.99 17567.38 585.00
+  566_bld House$PortBaseSmallSegment 1 9418.30 17561.34 585.00
+  567_bld House$PortBaseSmallSegment 1 9407.83 17566.44 585.00
+  568_bld House$PortBaseSmallSegment 1 9414.00 17560.67 585.00
+  569_bld House$PortBaseSmallSegment 1 9416.01 17559.06 585.00
+  570_bld House$PortFloor 1 9426.62 17763.59 675.00
+  571_bld House$PortBaseSmallSegment 1 9428.90 17750.44 585.00
+  572_bld House$PortBaseSmallSegment 1 9422.72 17756.61 585.00
+  573_bld House$PortBaseSmallSegment 1 9420.71 17758.63 585.00
+  574_bld House$PortBaseSmallSegment 1 9425.95 17748.16 585.00
+  575_bld House$PortBaseSmallSegment 1 9419.91 17754.33 585.00
+  576_bld House$PortBaseSmallSegment 1 9418.16 17755.94 585.00
+  577_bld House$PortBaseSmallSegment 1 9498.02 17739.17 495.00
+  578_bld House$PortBaseSmallSegment 1 9503.92 17745.34 495.00
+  579_bld House$PortBaseSmallSegment 1 9510.10 17751.51 495.00
+  580_bld House$PortBaseSmallSegment 1 9516.14 17757.42 495.00
+  581_bld House$PortFloor 1 9531.97 17755.81 675.00
+  582_bld House$PortBaseSmallSegment 1 9519.09 17754.87 675.00
+  583_bld House$PortBaseSmallSegment 1 9521.77 17752.18 675.00
+  584_bld House$PortBaseSmallSegment 1 9524.59 17749.50 675.00
+  585_bld House$PortBaseSmallSegment 1 9527.41 17746.82 675.00
+  586_bld House$PortBaseSmallSegment 1 9530.09 17698.50 585.00
+  587_bld House$PortBaseSmallSegment 1 9535.10 17692.46 585.00
+  588_bld House$PortBaseSmallSegment 1 9542.04 17686.29 585.00
+  589_bld House$PortBaseSmallSegment 1 9548.21 17680.25 585.00
+  590_bld House$PortBaseSmallSegment 1 9554.25 17674.21 585.00
+  591_bld House$PortBaseSmallSegment 1 9560.42 17668.17 585.00
+  592_bld House$PortBaseSmallSegment 1 9566.33 17662.26 585.00
+  593_bld House$PortFloor 1 9564.45 17674.61 675.00
+  594_bld House$PortBaseSmallSegment 1 9552.64 17667.09 675.00
+  595_bld House$PortBaseSmallSegment 1 9555.32 17664.28 675.00
+  596_bld House$PortBaseSmallSegment 1 9558.14 17661.59 675.00
+  597_bld House$PortBaseSmallSegment 1 9560.96 17658.91 675.00
+  598_bld House$PortBaseSmallSegment 1 9563.65 17656.36 675.00
+  599_bld House$SmallCrane 1 9563.91 17668.17 405.00
+  600_bld House$SmallCrane 1 9525.13 17756.61 405.00
+  601_bld House$SmallCrane 1 9424.60 17759.70 405.00
+  602_bld House$SmallCrane 1 9346.49 17643.47 405.00
+  603_bld House$SmallCrane 1 9416.69 17568.18 405.00
+  604_bld House$SmallCrane 1 9314.01 17540.80 405.00
+  605_bld House$Hangarmed 1 9340.61 17440.44 495.00
+  606_bld House$Hangarmed 1 9315.08 17463.90 495.00
+  607_bld House$HangarPBY 1 9237.07 17360.57 495.00
+  608_bld House$shacks 1 8790.62 17539.05 495.00
+  609_bld House$shacks 1 8716.34 17610.13 495.00
+  610_bld House$shacks 1 8689.98 17582.81 495.00
+  611_bld House$Bridge_Prim 1 8608.70 18191.61 675.00
+  612_bld House$Bridge_Prim 1 8612.65 18195.56 675.00
+  613_bld House$Bridge_Prim 1 8616.47 18199.25 675.00
+  614_bld House$Bridge_Prim 1 8620.29 18202.93 675.00
+  615_bld House$Bridge_Prim 1 8624.11 18206.75 675.00
+  616_bld House$Bridge_Prim 1 8627.93 18210.57 675.00
+  617_bld House$Bridge_Prim 1 8631.61 18214.11 675.00
+  618_bld House$Bridge_Prim 1 8635.43 18217.93 675.00
+  619_bld House$Bridge_Prim 1 8639.39 18221.89 675.00
+  620_bld House$Bridge_Prim 1 8643.21 18225.71 675.00
+  621_bld House$Bridge_Prim 1 8647.03 18229.67 675.00
+  622_bld House$Bridge_Prim 1 8650.99 18233.76 675.00
+  623_bld House$Bridge_Prim 1 8654.67 18237.58 675.00
+  624_bld House$Bridge_Prim 1 8658.49 18241.40 675.00
+  625_bld House$Bridge_Prim 1 8662.44 18245.35 675.00
+  626_bld House$Bridge_Prim 1 8666.26 18249.31 675.00
+  627_bld House$Bridge_Prim 1 8669.95 18253.13 675.00
+  628_bld House$Bridge_Prim 1 8673.77 18256.95 675.00
+  629_bld House$Bridge_Prim 1 8677.59 18260.91 675.00
+  630_bld House$Bridge_Prim 1 8681.41 18264.86 675.00
+  631_bld House$Bridge_Prim 1 8685.23 18268.68 675.00
+  632_bld House$Bridge_Prim 1 8688.91 18272.36 675.00
+  633_bld House$Bridge_Prim 1 8700.64 18284.23 675.00
+  634_bld House$Bridge_Prim 1 8696.55 18280.14 675.00
+  635_bld House$Bridge_Prim 1 8692.73 18276.18 675.00
+  636_bld House$Bridge_Prim 1 8704.46 18288.05 675.00
+  637_bld House$Bridge_Prim 1 8708.28 18292.15 675.00
+  638_bld House$Bridge_Prim 1 8712.10 18295.97 675.00
+  639_bld House$Bridge_Prim 1 8715.92 18299.92 675.00
+  640_bld House$Bridge_Prim 1 8719.74 18303.74 675.00
+  641_bld House$Bridge_Prim 1 8723.56 18307.56 675.00
+  642_bld House$Bridge_Prim 1 8727.38 18311.52 675.00
+  643_bld House$Bridge_Prim 1 8731.34 18315.34 675.00
+  644_bld House$Bridge_Prim 1 8735.29 18319.29 675.00
+  645_bld House$Bridge_Prim 1 8739.11 18323.11 675.00
+  646_bld House$Bridge_Prim 1 8746.61 18330.62 675.00
+  647_bld House$Bridge_Prim 1 8750.43 18334.43 675.00
+  648_bld House$Bridge_Prim 1 8742.79 18326.80 675.00
+  649_bld House$Bridge_Prim 1 8754.39 18338.39 675.00
+  650_bld House$Bridge_Prim 1 8758.21 18342.21 675.00
+  651_bld House$Bridge_Prim 1 8762.17 18346.30 495.00
+  652_bld House$Bridge_Prim 1 8765.99 18350.12 495.00
+  653_bld House$Bridge_Prim 1 8770.08 18354.08 495.00
+  654_bld House$Bridge_Prim 1 8773.90 18358.04 495.00
+  655_bld House$Bridge_Prim 1 8777.85 18361.99 495.00
+  656_bld House$Bridge_Prim 1 8781.67 18365.81 495.00
+  657_bld House$Bridge_Prim 1 8785.63 18369.77 495.00
+  658_bld House$Bridge_Prim 1 8789.72 18373.86 495.00
+  659_bld House$Bridge_Prim 1 8793.54 18377.82 495.00
+  660_bld House$Bridge_Prim 1 8797.36 18381.50 495.00
+  661_bld House$Furniture20mm_Flak_Pos 1 9363.62 18460.62 675.00
+  662_bld House$Furniture20mm_Flak_Pos 1 9635.10 18280.23 675.00
+[Target]
+  3 1 1 30 501 28698 19078 150 0 2_Chief 28018 18507
+  1 2 0 0 500 10873 20005 150
+  1 2 0 0 500 9856 18960 150
+  1 2 0 0 500 9363 18461 2
+  1 2 0 0 500 9635 18280 2
+  1 2 0 0 500 8831 17932 2
+  1 2 0 0 500 9071 17710 2
+  1 2 0 0 500 8804 18357 50
+  4 0 0 0 750 26510 15544 0 4 IN_NN13 23071 16500
+  4 0 0 0 750 27143 15544 0 4 IN_NN03 23416 16459
+  4 0 0 0 750 26972 17085 0 4 IN_NN12 23246 16701
+  4 0 0 0 750 27622 17034 0 4 IN_NN02 23711 16665
+  0 1 0 0 500 24541 16126 0 2 RA_NN02 25117 16560
+  0 1 0 0 500 25568 16999 0 2 RA_NN01 25437 16530
+  0 1 0 0 500 25910 16897 0 3 RA_NN00 25843 16522
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 29550.26 22795.59 1
+  FrontMarker1 17829.13 28342.92 1
+  FrontMarker2 22445.10 26476.74 1
+  FrontMarker3 25546.62 25030.42 1
+  FrontMarker4 19945.38 21641.77 2
+  FrontMarker5 23543.78 20356.63 2
+  FrontMarker6 27347.79 19020.08 2
+  FrontMarker7 16005.75 23267.81 2
+  FrontMarker8 10178.31 26114.06 1
+  FrontMarker9 14295.50 19613.61 1
+  FrontMarker10 18660.24 18197.59 1
+  FrontMarker11 22464.26 16861.04 1
+  FrontMarker12 25466.36 15547.18 1
+  FrontMarker13 28235.76 14313.77 1
+  FrontMarker14 31158.06 17523.93 1
+
+[WEATHER]
+WindVelocity 3
+WindDirection 90
+WindTop 1102
+WindTurbulence 0
+WindGust 0

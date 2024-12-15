@@ -1,0 +1,299 @@
+[MAIN]
+  MAP NTL_Darwin_Small/NTL_Darwin_Small_load.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 1000.0
+  army 1
+  playerNum 0
+[MDS]
+  ZutiCarrierSpawnPoints_CV2 6
+  ZutiCarrierSpawnPoints_CV9 5
+  ZutiCarrierSpawnPoints_CVE 2
+  ZutiCarrierSpawnPoints_CVL 7
+  ZutiCarrierSpawnPoints_Akagi 8
+  ZutiCarrierSpawnPoints_IJN 6
+  ZutiCarrierSpawnPoints_HMS 5
+  ZutiNextMission_RedWon
+  ZutiNextMission_BlueWon
+  ZutiNextMission_Difficulty
+  ZutiNextMission_LoadDelay 60
+  ZutiShips_EnableResync 1
+  ZutiTargets_StaticIcons 1
+  ZutiTargets_MovingIcons 0
+  ZutiTargets_CheckForWinner 0
+  ZutiTargets_ShowTargets 1
+  ZutiIcons_IconsSize 4
+  ZutiIcons_ShowNeutralHB 0
+  ZutiRadar_SetRadarToAdvanceMode 0
+  ZutiRadar_ShowAircraft 0
+  ZutiRadar_ShowGroundUnits 0
+  ZutiRadar_ShowRockets 0
+  ZutiRadar_StaticIconsIfNoRadar 0
+  ZutiRadar_AircraftIconsWhite 0
+  ZutiRadar_RefreshInterval 0
+  ZutiRadar_EnableTowerCommunications 1
+  ZutiRadar_ShipsAsRadar 0
+  ZutiRadar_ShipRadar_MaxRange 100
+  ZutiRadar_ShipRadar_MinHeight 100
+  ZutiRadar_ShipRadar_MaxHeight 5000
+  ZutiRadar_ShipSmallRadar_MaxRange 25
+  ZutiRadar_ShipSmallRadar_MinHeight 0
+  ZutiRadar_ShipSmallRadar_MaxHeight 2000
+  ZutiRadar_ScoutsAsRadar 0
+  ZutiRadar_ScoutRadar_MaxRange 2
+  ZutiRadar_ScoutRadar_DeltaHeight 1500
+  ZutiRadar_ScoutRadarType_Red
+  ZutiRadar_ScoutRadarType_Blue
+  ZutiRadar_HideUnpopulatedAirstripsFromMinimap 0
+  ZutiRadar_ScoutGroundObjects_Alpha 5
+  ZutiRadar_ShowPlayerAircraft 1
+  ZutiHud_DisableHudStatistics 0
+  ZutiHud_ShowPilotNumber 0
+  ZutiHud_ShowPilotPing 1
+  ZutiHud_ShowPilotName 1
+  ZutiHud_ShowPilotScore 1
+  ZutiHud_ShowPilotArmy 1
+  ZutiHud_ShowPilotACDesignation 0
+  ZutiHud_ShowPilotACType 1
+  ZutiMisc_DisableAIRadioChatter 0
+  ZutiMisc_DespawnAIPlanesAfterLanding 1
+  ZutiMisc_HidePlayersCountOnHomeBase 0
+  ZutiMisc_EnableReflyOnlyIfBailedOrDied 0
+  ZutiMisc_DisableReflyForMissionDuration 0
+  ZutiMisc_ReflyKIADelay 15
+  ZutiMisc_MaxAllowedKIA 10
+  ZutiMisc_ReflyKIADelayMultiplier 2.0
+  ZutiMisc_BombsCat1_CratersVisibilityMultiplier 1.0
+  ZutiMisc_BombsCat2_CratersVisibilityMultiplier 1.0
+  ZutiMisc_BombsCat3_CratersVisibilityMultiplier 1.0
+  ZutiMisc_BombsCat4_CratersVisibilityMultiplier 1.0
+  ZutiReload_OneMgCannonRearmSecond 10
+  ZutiReload_OneBombFTankTorpedoeRearmSeconds 25
+  ZutiReload_OneRocketRearmSeconds 20
+  ZutiReload_GallonsLitersPerSecond 3
+  ZutiReload_OneWeaponRepairSeconds 3
+  ZutiReload_FlapsRepairSeconds 30
+  ZutiReload_EngineRepairSeconds 90
+  ZutiReload_OneControlCableRepairSeconds 15
+  ZutiReload_OneFuelOilTankRepairSeconds 20
+  ZutiReload_LoadoutChangePenaltySeconds 30
+  ZutiReload_CockpitRepairSeconds 30
+  ZutiReload_ReloadOnlyIfFuelTanksExist 0
+  ZutiReload_ReloadOnlyIfAmmoBoxesExist 0
+  ZutiReload_RepairOnlyIfWorkshopExist 0
+  ZutiReload_OnlyHomeBaseSpecificLoadouts 1
+  ZutiDrop_OverFriendlyHomeBase 0
+  ZutiDrop_OverEnemyHomeBase 0
+  ZutiDrop_OverNeutralHomeBase 0
+  ZutiDrop_OverFriendlyFrictionArea 0
+  ZutiDrop_OverEnemyFrictionArea 1
+  ZutiDrop_OverDestroyGroundArea 1
+  ZutiDrop_OverDefenceGroundArea 1
+  ZutiFront_EnableHomeBaseCapturing 0
+[RespawnTime]
+  Bigship 1800
+  Ship 1800
+  Aeroanchored 1800
+  Artillery 1800
+  Searchlight 1800
+[Wing]
+  g0103
+  g0100
+  g0101
+  g0102
+  r0103
+  r0100
+  r0101
+  r0102
+[g0103]
+  Planes 4
+  Skill 1
+  Class air.A_20B
+  Fuel 100
+  weapons default
+[g0103_Way]
+  NORMFLY 62734.14 44595.56 500.00 300.00 &0
+  NORMFLY 67698.60 42743.27 500.00 300.00 &0
+  GATTACK 68705.71 40597.03 500.00 300.00 &0
+  NORMFLY 66971.31 37668.59 500.00 300.00 &0
+  NORMFLY 63884.42 35176.51 500.00 300.00 &0
+  NORMFLY 60821.40 41110.58 500.00 300.00 &0
+  LANDING 58772.33 55990.73 0 0 0_Chief 1 &0
+[g0100]
+  Planes 4
+  Skill 1
+  Class air.A_20B
+  Fuel 100
+  weapons default
+[g0100_Way]
+  NORMFLY 62754.16 44435.34 500.00 300.00 &0
+  NORMFLY 67440.87 42612.73 500.00 300.00 &0
+  GATTACK 67158.90 38007.96 500.00 300.00 &0
+  NORMFLY 63905.81 34741.47 500.00 300.00 &0
+  NORMFLY 56351.01 50132.99 500.00 300.00 &0
+  LANDING 58812.62 56513.64 0 0 0_Chief 1 &0
+[g0101]
+  Planes 4
+  Skill 1
+  Class air.A_20B
+  Fuel 100
+  weapons default
+[g0101_Way]
+  NORMFLY 62974.48 44805.87 500.00 300.00 &0
+  NORMFLY 67819.23 43213.37 500.00 300.00 &0
+  GATTACK 68876.29 39955.89 500.00 300.00 &0
+  NORMFLY 66943.78 37178.83 500.00 300.00 &0
+  NORMFLY 64477.08 34494.30 500.00 300.00 &0
+  NORMFLY 55023.56 48253.98 500.00 300.00 &0
+  NORMFLY 55701.52 56156.63 500.00 300.00 &0
+  LANDING 57537.58 56564.64 0 0 0_Chief 1 &0
+[g0102]
+  Planes 4
+  Skill 1
+  Class air.A_20B
+  Fuel 100
+  weapons default
+[g0102_Way]
+  NORMFLY 62394.10 44718.93 500.00 300.00 &0
+  NORMFLY 67461.35 43006.48 500.00 300.00 &0
+  GATTACK 67900.43 40394.40 500.00 300.00 &0
+  NORMFLY 66050.57 33760.55 500.00 300.00 &0
+  NORMFLY 55926.09 48211.22 500.00 300.00 &0
+  NORMFLY 59628.64 54371.57 500.00 300.00 &0
+  LANDING 58649.09 56267.91 0 0 0_Chief 1 &0
+[r0103]
+  Planes 4
+  Skill 1
+  Class air.A_20B
+  Fuel 100
+  weapons default
+[r0103_Way]
+  NORMFLY 68308.23 38141.53 500.00 300.00 &0
+  NORMFLY 67539.99 42196.09 500.00 300.00 &0
+  NORMFLY 66618.67 42897.09 500.00 300.00 &0
+  NORMFLY 67209.52 43628.14 500.00 300.00 &0
+  NORMFLY 68301.28 43050.86 500.00 300.00 &0
+  NORMFLY 63528.13 40402.83 500.00 300.00 &0
+  NORMFLY 66283.03 38314.23 500.00 300.00 &0
+  NORMFLY 63924.82 35847.01 500.00 300.00 &0
+  NORMFLY 60980.61 41284.79 500.00 300.00 &0
+  LANDING 68086.61 40890.23 0 0 &0
+[r0100]
+  Planes 4
+  Skill 1
+  Class air.A_20B
+  Fuel 100
+  weapons default
+[r0100_Way]
+  NORMFLY 68619.03 38320.69 500.00 300.00 &0
+  NORMFLY 67780.29 42024.58 500.00 300.00 &0
+  NORMFLY 66438.37 43296.40 500.00 300.00 &0
+  NORMFLY 66127.93 44037.46 500.00 300.00 &0
+  NORMFLY 67710.19 44347.91 500.00 300.00 &0
+  NORMFLY 68350.17 43536.12 500.00 300.00 &0
+  NORMFLY 67069.27 41704.13 500.00 300.00 &0
+  NORMFLY 66765.98 38921.61 500.00 300.00 &0
+  NORMFLY 64275.28 36096.10 500.00 300.00 &0
+  NORMFLY 61401.17 39270.65 500.00 300.00 &0
+  LANDING 68086.61 40890.23 0 0 &0
+[r0101]
+  Planes 4
+  Skill 1
+  Class air.A_20B
+  Fuel 100
+  weapons default
+[r0101_Way]
+  NORMFLY 68992.02 38489.53 500.00 300.00 &0
+  NORMFLY 68030.65 41724.15 500.00 300.00 &0
+  NORMFLY 67319.63 42935.89 500.00 300.00 &0
+  NORMFLY 65617.20 43606.85 500.00 300.00 &0
+  NORMFLY 67193.30 38643.01 500.00 300.00 &0
+  NORMFLY 67352.32 37744.03 500.00 300.00 &0
+  NORMFLY 65664.99 36271.35 500.00 300.00 &0
+  NORMFLY 64012.85 34941.58 500.00 300.00 &0
+  NORMFLY 65968.08 34134.07 500.00 300.00 &0
+  NORMFLY 62062.50 40092.59 500.00 300.00 &0
+  LANDING 68086.61 40890.23 0 0 &0
+[r0102]
+  Planes 4
+  Skill 1
+  Class air.A_20B
+  Fuel 100
+  weapons default
+[r0102_Way]
+  NORMFLY 69361.22 38560.35 500.00 300.00 &0
+  NORMFLY 68489.03 42409.73 500.00 300.00 &0
+  NORMFLY 66619.11 43234.09 500.00 300.00 &0
+  NORMFLY 67800.80 41351.40 500.00 300.00 &0
+  NORMFLY 68431.70 40079.58 500.00 300.00 &0
+  NORMFLY 66840.80 37582.88 500.00 300.00 &0
+  NORMFLY 66122.60 34399.61 500.00 300.00 &0
+  NORMFLY 61932.53 39040.27 500.00 300.00 &0
+  LANDING 68086.61 40890.23 0 0 &0
+[Chiefs]
+  0_Chief Ships.IJNShokakuCV 2 0 2 1.0
+  1_Chief Ships.IJNArashiDD41 2 0 2 1.0
+  2_Chief Ships.IJNBBGeneric 2 0 2 1.0
+  3_Chief Ships.IJNYukikazeDD41 2 0 2 1.0
+[0_Chief_Road]
+  53456.76 55040.20 120.00 0 2 8.745555877685547
+  58270.40 56243.61 120.00 0 2 8.745555877685547
+  64160.78 56496.95 120.00 0 2 8.745555877685547
+  66567.60 64097.44 120.00
+[1_Chief_Road]
+  52569.57 55247.47 120.00 0 2 9.131389617919922
+  58166.82 56472.90 120.00 0 2 9.131389617919922
+  63802.69 56732.34 120.00 0 2 9.131389617919922
+  66314.27 64107.00 120.00
+[2_Chief_Road]
+  53988.20 54579.56 120.00 0 2 7.330833911895752
+  58332.41 55876.75 120.00 0 2 7.330833911895752
+  64310.52 56230.02 120.00 0 2 7.330833911895752
+  66899.38 63991.09 120.00
+[3_Chief_Road]
+  53022.21 54640.28 120.00 0 2 9.131389617919922
+  58166.82 55992.67 120.00 0 2 9.131389617919922
+  63802.69 56323.86 120.00 0 2 9.131389617919922
+  66617.89 63764.75 120.00
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 63544.92 39619.18 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 66702.76 37999.08 360.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 67232.70 37309.49 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 67800.93 40522.36 360.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 68521.96 41003.04 360.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 69253.01 40221.93 360.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 66589.20 34383.58 360.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 65657.86 34183.29 360.00 0.0 0
+  8_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 64035.54 34553.82 360.00 0.0 0
+  9_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 63805.18 35084.62 360.00 0.0 0
+  10_Static vehicles.planes.Plane$P_40E 1 68220.51 40115.46 420.00 0.0 gb
+  11_Static vehicles.planes.Plane$P_40E 1 68206.33 40047.41 315.00 0.0 gb
+  12_Static vehicles.planes.Plane$P_40E 1 68383.43 40032.71 225.00 0.0 gb
+  13_Static vehicles.planes.Plane$P_40E 1 68880.72 39846.15 315.00 0.0 gb
+  14_Static vehicles.planes.Plane$P_40E 1 69018.01 39706.97 314.85 0.0 gb
+  15_Static vehicles.planes.Plane$C_47A 1 67907.79 40376.77 389.95 0.0 us
+  16_Static vehicles.planes.Plane$C_47A 1 67902.13 40275.34 299.95 0.0 us
+  17_Static vehicles.planes.Plane$C_47A 1 68064.90 40133.32 299.95 0.0 us
+  18_Static vehicles.planes.Plane$C_47A 1 67933.27 40163.52 329.95 0.0 us
+  19_Static vehicles.stationary.Stationary$Bulldozer_US 1 67895.53 40193.24 689.95 0.0
+  20_Static vehicles.stationary.Stationary$Bus_US 1 68394.22 40896.22 689.95 0.0
+  21_Static vehicles.stationary.Stationary$Citerne_POMP 1 68571.62 40908.49 614.95 0.0
+  22_Static vehicles.stationary.Stationary$GuyOtterBr 1 68574.45 40742.89 584.95 0.0
+  23_Static vehicles.stationary.Stationary$MatildaMkII_AU 1 68499.90 40954.26 584.95 0.0
+  24_Static vehicles.stationary.Stationary$MatildaMkII_AU 1 68741.94 40899.10 584.95 0.0
+  25_Static vehicles.stationary.Stationary$_50calMG_water_US 1 68786.28 40889.15 584.95 0.0
+  26_Static vehicles.stationary.Stationary$_50calMG_water_US 1 68840.54 40260.71 584.95 0.0
+  27_Static vehicles.stationary.Stationary$_50calMG_water_US 1 68380.54 40835.36 584.95 0.0
+  28_Static ships.Ship$Tanker0 1 64958.48 34791.34 584.95 0.0 0 2 1.0
+  29_Static ships.Ship$Transport2 1 63448.97 34430.12 584.95 0.0 0 2 1.0
+  30_Static ships.Ship$Transport2 1 63083.95 35087.92 599.95 0.0 0 2 1.0
+  31_Static ships.Ship$Transport2 1 64034.52 33707.68 554.95 0.0 0 2 1.0
+  32_Static ships.Ship$HMSFiji 1 64274.07 33650.65 554.95 0.0 0 2 1.0
+  33_Static ships.Ship$DestroyerRN 1 62775.96 33133.53 494.95 0.0 0 2 1.0
+  34_Static ships.Ship$DestroyerRN 1 62779.76 36312.26 524.95 0.0 0 2 1.0
+  35_Static vehicles.planes.Plane$PBY 1 65959.40 41796.73 524.95 0.0 gb
+  36_Static vehicles.planes.Plane$PBY 1 65962.05 41762.30 524.95 0.0 gb
+  37_Static vehicles.planes.Plane$PBY 1 65874.67 42426.93 359.95 0.0 gb
+[Buildings]
+[Bridge]
+[House]

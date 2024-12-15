@@ -1,0 +1,157 @@
+[MAIN]
+  MAP NWEurope/load.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 1000.0
+  player g0100
+  army 2
+  playerNum 0
+[Wing]
+  r0100
+  r0101
+  r0102
+  r0103
+  g0100
+  g0101
+  g0102
+  g0103
+[r0100]
+  Planes 4
+  Skill 3
+  Class air.LAGG_3SERIES4
+  Fuel 100
+  weapons default
+[r0100_Way]
+  NORMFLY 69572.82 45044.58 500.00 300.00 &0
+  NORMFLY 82411.15 41119.35 500.00 300.00 g0101 0 &0
+  NORMFLY 97456.67 35522.95 500.00 300.00 &0
+  NORMFLY 67975.90 13991.97 500.00 300.00 &0
+  NORMFLY 13451.77 32472.73 500.00 300.00 &0
+  LANDING 7274.21 58909.61 0 0 &0
+[r0101]
+  Planes 4
+  Skill 3
+  Class air.LAGG_3SERIES4
+  Fuel 100
+  weapons default
+[r0101_Way]
+  NORMFLY 69198.13 41801.19 500.00 300.00 &0
+  GATTACK 82213.28 38843.89 500.00 300.00 &0
+  NORMFLY 96339.73 37373.59 500.00 300.00 &0
+  NORMFLY 88531.15 61421.68 500.00 300.00 &0
+  NORMFLY 18481.92 74658.64 500.00 300.00 &0
+  LANDING 6898.76 58515.74 0 0 &0
+[r0102]
+  Planes 4
+  Skill 3
+  Class air.MIG_3U
+  Fuel 100
+  weapons default
+[r0102_Way]
+  NORMFLY 72011.31 47236.36 500.00 300.00 &0
+  NORMFLY 82905.81 42603.34 500.00 300.00 g0101 0 &0
+  NORMFLY 98873.74 32253.26 500.00 300.00 &0
+  NORMFLY 67975.90 15453.82 500.00 300.00 &0
+  NORMFLY 16207.28 33159.24 500.00 300.00 &0
+  LANDING 7195.45 58827.85 0 0 &0
+[r0103]
+  Planes 4
+  Skill 3
+  Class air.LA_5FN
+  Fuel 100
+  weapons default
+[r0103_Way]
+  NORMFLY 69090.11 43928.50 500.00 300.00 &0
+  GATTACK 81839.02 40426.82 500.00 300.00 &0
+  NORMFLY 100522.42 35172.81 500.00 300.00 &0
+  NORMFLY 89065.08 59142.05 500.00 300.00 &0
+  NORMFLY 20048.19 75493.98 500.00 300.00 &0
+  LANDING 7148.42 58790.29 0 0 &0
+[g0100]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0100_Way]
+  TAKEOFF 85584.21 39324.11 0 0 &0
+  NORMFLY 16946.81 56785.36 500.00 300.00 &0
+  NORMFLY 39427.20 73154.44 500.00 300.00 &0
+  NORMFLY 95812.26 37842.63 500.00 300.00 &0
+  LANDING 85118.73 18831.45 0 0 &0
+[g0101]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0101_Way]
+  TAKEOFF 85584.21 39324.11 0 0 &0
+  NORMFLY 17351.55 57744.05 500.00 300.00 &0
+  NORMFLY 35847.07 72109.92 500.00 300.00 &0
+  NORMFLY 89928.76 42910.49 500.00 300.00 &0
+  NORMFLY 96315.34 33892.47 500.00 300.00 &0
+  LANDING 84895.65 19043.98 0 0 &0
+[g0102]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0102_Way]
+  NORMFLY 99652.72 37353.93 500.00 0.00 &0
+  NORMFLY 16923.43 59071.59 500.00 300.00 &0
+  NORMFLY 34043.28 72079.71 500.00 300.00 &0
+  NORMFLY 92580.30 34924.79 500.00 300.00 &0
+  LANDING 85049.69 18964.90 0 0 &0
+[g0103]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0103_Way]
+  NORMFLY 99726.14 35214.07 500.00 0.00 &0
+  NORMFLY 17154.08 60484.23 500.00 300.00 &0
+  NORMFLY 32837.35 72281.33 500.00 300.00 &0
+  NORMFLY 94184.74 34666.67 500.00 300.00 &0
+  LANDING 85430.90 18777.12 0 0 &0
+[Chiefs]
+  0_Chief Vehicles.GermanyCarsColumnB 2
+[0_Chief_Road]
+  84504.00 38240.96 120.00 0 2 2.6388890743255615
+  84786.72 38440.23 120.00 0 2 2.6388890743255615
+  85015.66 38607.61 120.00 0 2 2.6388890743255615
+  85100.51 38844.24 120.00 0 2 2.6388890743255615
+  85096.55 39160.78 120.00 0 2 2.6388890743255615
+  85098.82 39395.33 120.00 0 2 2.6388890743255615
+  85099.48 39494.71 120.00 0 2 2.6388890743255615
+  85100.03 39696.89 120.00
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Flak30_20mm 2 87405.74 20299.87 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Flak30_20mm 2 84780.21 20288.06 360.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Flak30_20mm 2 86574.99 17703.68 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Flak30_20mm 2 83688.02 18541.60 360.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Flak30_20mm 1 7359.45 59835.65 360.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Flak30_20mm 1 5933.56 58725.46 360.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Flak30_20mm 1 8153.38 59053.93 360.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Flak30_20mm 1 6713.54 57554.36 360.00 0.0 0
+  8_Static vehicles.artillery.Artillery$Flak30_20mm 2 84596.74 39709.43 360.00 0.0 0
+  9_Static vehicles.artillery.Artillery$Flak30_20mm 2 85180.02 40399.49 360.00 0.0 0
+  10_Static vehicles.artillery.Artillery$Flak30_20mm 2 84861.92 41016.61 360.00 0.0 0
+  11_Static vehicles.artillery.Artillery$Flak30_20mm 2 83477.77 40336.50 360.00 0.0 0
+  12_Static vehicles.planes.Plane$ME_262A1A 2 85412.93 39147.49 270.00 0.0 null
+  13_Static vehicles.planes.Plane$ME_262A1A 2 85464.07 39150.00 270.00 0.0 null
+  14_Static vehicles.planes.Plane$ME_262A1A 2 85493.56 39148.11 270.00 0.0 null
+  15_Static vehicles.planes.Plane$ME_262A1A 2 85516.53 39150.57 270.00 0.0 null
+  16_Static vehicles.planes.Plane$JU_88A4 2 85133.41 39660.05 330.00 0.0 null
+  17_Static vehicles.planes.Plane$JU_88A4 2 85139.88 39610.27 340.00 0.0 null
+  18_Static vehicles.planes.Plane$JU_88A4 2 85144.52 39533.24 370.00 0.0 null
+  19_Static vehicles.planes.Plane$JU_88A4 2 85147.60 39501.42 360.00 0.0 null
+  20_Static vehicles.planes.Plane$JU_88A4 2 85144.10 39461.07 360.00 0.0 null
+  21_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 85352.40 39152.39 360.00 0.0
+  22_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 85352.52 39162.57 360.00 0.0
+  23_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 85352.08 39157.92 360.00 0.0
+[Buildings]
+[Bridge]
+[House]

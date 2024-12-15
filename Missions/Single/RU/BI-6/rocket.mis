@@ -1,0 +1,56 @@
+[MAIN]
+  MAP Kurland/load.ini
+  TIME 10.366667
+  CloudType 1
+  CloudHeight 1000.0
+  player r0100
+  army 1
+  playerNum 0
+[Wing]
+  r0100
+  g0110
+[r0100]
+  Planes 2
+  Skill 1
+  Class air.BI_6
+  Fuel 100
+  weapons default
+[r0100_Way]
+  TAKEOFF 225387.13 231421.04 0 0 &0
+  NORMFLY 208044.06 247014.55 6000.00 700.00 &0
+  NORMFLY 187724.84 243442.97 6000.00 700.00 &0
+  NORMFLY 215284.21 240371.93 2500.00 300.00 &0
+  NORMFLY 221204.16 235331.12 1000.00 300.00 &0
+  LANDING 225379.50 231434.39 0 0 &0
+[g0110]
+  Planes 4
+  Skill0 1
+  Skill1 2
+  Skill2 1
+  Skill3 1
+  Class air.ME_323
+  Fuel 50
+  weapons 32xPara
+[g0110_Way]
+  NORMFLY 181317.23 254595.57 5500.00 200.00 &0
+  NORMFLY 191233.45 239618.31 4750.00 200.00 &0
+  GATTACK 232242.71 205118.28 4000.00 200.00 &0
+  NORMFLY 208282.63 264461.98 4750.00 300.00 &0
+  NORMFLY 181184.80 297897.21 5500.00 300.00 &0
+[NStationary]
+[Buildings]
+[Target]
+  0 0 0 0 500 188928 240189 0 1 g0110 191233 239618
+[Bridge]
+[House]
+
+
+
+
+
+[WEATHER]
+WindVelocity 6
+WindDirection 209
+WindTop 4352
+WindTurbulence 0
+WindGust 0

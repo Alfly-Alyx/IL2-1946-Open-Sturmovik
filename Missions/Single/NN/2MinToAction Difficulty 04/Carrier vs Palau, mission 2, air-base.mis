@@ -1,0 +1,217 @@
+[MAIN]
+  MAP Palau/load.ini
+  TIME 10.500001
+  CloudType 0
+  CloudHeight 500.0
+  player USMC_VMF_112z00
+  army 1
+  playerNum 0
+[Wing]
+  USMC_VMF_112z00
+  USMC_VMF_112z01
+  ja0103
+  ja0101
+  ja0102
+  ja0100
+[USMC_VMF_112z00]
+  Planes 2
+  Skill 1
+  Class air.F4U1C
+  Fuel 25
+  weapons 1x10002x5008xhvargp
+[USMC_VMF_112z00_Way]
+  TAKEOFF 45150.86 16533.73 0 0 100_Chief 0 &0
+  GATTACK 34800.35 15580.12 300.00 444.00 0_Static 0 &0
+  NORMFLY 31392.41 15168.56 300.00 444.00 &0
+  GATTACK 32811.77 15092.75 300.00 444.00 56_Static 0 &0
+  NORMFLY 34800.73 15579.90 300.00 444.00 &0
+  NORMFLY 31392.55 15167.72 300.00 444.00 &0
+  LANDING 46302.11 17710.14 0 0 100_Chief 0 &0
+[USMC_VMF_112z01]
+  Planes 2
+  Skill 1
+  Class air.F4U1D
+  Fuel 25
+  weapons 1x10002x5008xhvargp
+[USMC_VMF_112z01_Way]
+  TAKEOFF 44904.51 16296.97 0 0 100_Chief 0 &0
+  GATTACK 34932.19 15945.92 350.00 444.00 101_Static 0 &0
+  NORMFLY 31969.16 15583.50 350.00 444.00 &0
+  GATTACK 33433.36 15864.26 300.00 444.00 51_Static 0 &0
+  NORMFLY 34931.71 15945.15 300.00 444.00 &0
+  NORMFLY 31969.03 15583.31 300.00 444.00 &0
+  LANDING 46065.68 17505.93 0 0 100_Chief 0 &0
+[ja0103]
+  Planes 1
+  OnlyAI 1
+  Skill 1
+  Class air.A6M5C
+  Fuel 100
+  weapons 4xtype3
+  StartTime 2
+[ja0103_Way]
+  TAKEOFF 33114.82 15019.48 0 0 &0
+  NORMFLY 32972.32 15880.19 500.00 300.00 USMC_VMF_112z00 2 &0
+  NORMFLY 34459.40 15866.20 500.00 300.00 &0
+  NORMFLY 33684.54 14787.81 500.00 300.00 &0
+  LANDING 33015.59 15617.97 0 0 &0
+[ja0101]
+  Planes 2
+  OnlyAI 1
+  Skill 1
+  Class air.A6M5C
+  Fuel 100
+  weapons 4xtype3
+  StartTime 2
+[ja0101_Way]
+  TAKEOFF 33070.40 14986.09 0 0 &0
+  NORMFLY 33324.48 16170.37 500.00 300.00 USMC_VMF_112z01 2 &0
+  NORMFLY 34403.84 15811.10 500.00 300.00 &0
+  NORMFLY 33730.68 14810.89 500.00 300.00 &0
+  LANDING 33014.13 15612.13 0 0 &0
+[ja0102]
+  Planes 1
+  OnlyAI 1
+  Skill 1
+  Class air.A6M5C
+  Fuel 100
+  weapons 4xtype3
+  StartTime 2
+[ja0102_Way]
+  TAKEOFF 33136.08 15042.76 0 0 &0
+  NORMFLY 33352.28 14594.68 500.00 300.00 USMC_VMF_112z00 2 &0
+  NORMFLY 34436.89 15308.75 500.00 300.00 &0
+  NORMFLY 33735.54 16169.03 500.00 300.00 &0
+  LANDING 33022.88 15618.84 0 0 &0
+[ja0100]
+  Planes 4
+  OnlyAI 1
+  Skill 1
+  Class air.A6M5C
+  Fuel 5
+  weapons 4xtype3
+[ja0100_Way]
+  NORMFLY 32669.93 45314.01 300.00 333.00 &0
+  NORMFLY 31858.79 16793.20 600.00 300.00 USMC_VMF_112z00 2 &0
+  NORMFLY 32325.47 15956.98 333.00 300.00 &0
+  LANDING 33022.59 15610.09 0 0 &0
+[Chiefs]
+  100_Chief Ships.USSCVGeneric 1 0 1 33.0
+  101_Chief Ships.Tashkent 1 0 1 33.0
+  102_Chief Ships.Tanker 1 0 1 33.0
+  103_Chief Ships.Destroyer_USSR_Type7 1 0 1 33.0
+  104_Chief Ships.Aurora 1 0 1 33.0
+  105_Chief Ships.Tramp 1 0 1 33.0
+  0_Chief Vehicles.DemagFlak 2
+  1_Chief Vehicles.DemagFlak 2
+[100_Chief_Road]
+  45665.14 17096.44 120.00 0 2 17.61944580078125
+  44524.20 15882.56 120.00 0 2 17.61944580078125
+  43940.84 15231.79 120.00 0 2 6.944444444444445
+  31883.22 1677.87 120.00
+[101_Chief_Road]
+  44866.60 16793.01 120.00 0 2 6.944444444444445
+  31641.97 1886.51 120.00
+[102_Chief_Road]
+  44712.81 16383.63 120.00 0 2 6.944444444444445
+  31819.29 1875.59 120.00
+[103_Chief_Road]
+  45323.94 16236.52 120.00 0 2 6.944444444444445
+  32284.98 1589.41 120.00
+[104_Chief_Road]
+  44142.03 16278.72 120.00 0 2 6.944444444444445
+  31558.90 1990.86 120.00
+[105_Chief_Road]
+  44465.19 15561.15 120.00 0 2 5.144444942474365
+  32167.11 1668.12 120.00
+[0_Chief_Road]
+  33124.16 15109.58 120.00 0 2 3.055555582046509
+  34047.48 15952.42 120.00 0 2 3.055555582046509
+  34122.89 15893.74 120.00 0 2 3.055555582046509
+  33234.76 15060.94 120.00
+[1_Chief_Road]
+  33941.91 16032.87 120.00 0 2 3.055555582046509
+  33566.55 15642.43 120.00 0 2 3.055555582046509
+  33015.24 15644.10 120.00 0 2 3.055555582046509
+  32985.08 15540.20 120.00 0 2 3.055555582046509
+  33353.73 15313.98 120.00 0 2 3.055555582046509
+  33008.54 14995.60 120.00 0 2 3.055555582046509
+  33062.16 14921.86 120.00 0 2 3.055555582046509
+  33439.20 15273.77 120.00
+[NStationary]
+  0_Static vehicles.stationary.Stationary$Flak30_20mm 2 33774.90 15505.91 360.00 0.0
+  11_Static vehicles.planes.Plane$N1K1J 2 33757.02 15849.09 405.00 0.0 ja
+  13_Static vehicles.planes.Plane$N1K1J 2 33663.51 15632.11 405.00 0.0 ja
+  14_Static vehicles.planes.Plane$N1K1J 2 33681.37 15650.42 405.00 0.0 ja
+  15_Static vehicles.planes.Plane$N1K1J 2 33699.70 15667.16 405.00 0.0 ja
+  16_Static vehicles.planes.Plane$N1K1J 2 33716.43 15683.89 405.00 0.0 ja
+  17_Static vehicles.planes.Plane$N1K1J 2 33734.50 15702.49 405.00 0.0 ja
+  100_Static vehicles.planes.Plane$G4M1_11 2 34031.50 15754.04 225.00 0.0 ja
+  101_Static vehicles.planes.Plane$G4M1_11 2 34001.16 15722.03 225.00 0.0 ja
+  102_Static vehicles.planes.Plane$G4M1_11 2 33965.77 15687.11 225.00 0.0 ja
+  103_Static vehicles.planes.Plane$G4M1_11 2 33933.53 15653.93 225.00 0.0 ja
+  104_Static vehicles.planes.Plane$G4M1_11 2 33900.37 15622.27 225.00 0.0 ja
+  105_Static vehicles.planes.Plane$G4M1_11 2 33865.70 15588.88 225.00 0.0 ja
+  106_Static vehicles.planes.Plane$G4M1_11 2 33832.74 15555.47 225.00 0.0 ja
+  107_Static vehicles.planes.Plane$G4M1_11 2 33797.23 15519.96 225.00 0.0 ja
+  108_Static vehicles.planes.Plane$G4M1_11 2 33758.77 15482.73 225.00 0.0 ja
+  109_Static vehicles.planes.Plane$G4M1_11 2 33719.44 15446.37 225.00 0.0 ja
+  253_Static vehicles.stationary.Stationary$Kurogane 2 33848.70 15559.55 690.00 0.0
+  254_Static vehicles.stationary.Stationary$Kurogane 2 33924.97 15626.13 690.00 0.0
+  255_Static vehicles.stationary.Stationary$Kurogane 2 33863.83 15575.48 475.00 0.0
+  256_Static vehicles.stationary.Stationary$Kurogane 2 33961.05 15658.68 530.00 0.0
+  258_Static vehicles.stationary.Stationary$Truck_Type94 2 33952.99 15685.32 435.00 0.0
+  259_Static vehicles.stationary.Stationary$Truck_Type94 2 34018.81 15739.60 435.00 0.0
+  261_Static vehicles.stationary.Stationary$Truck_Type94 2 33818.01 15556.94 560.00 0.0
+  262_Static vehicles.stationary.Stationary$Truck_Type94 2 33985.71 15706.24 495.00 0.0
+  263_Static vehicles.stationary.Stationary$Truck_Type94 2 33903.90 15646.13 650.00 0.0
+  264_Static vehicles.stationary.Stationary$Truck_Type94 2 33706.24 15447.62 560.00 0.0
+  265_Static vehicles.stationary.Stationary$Truck_Type94 2 33745.70 15689.15 495.00 0.0
+  266_Static vehicles.stationary.Stationary$Truck_Type94 2 33864.86 15602.63 620.00 0.0
+  268_Static vehicles.stationary.Stationary$Kurogane 2 33731.30 15448.21 675.00 0.0
+  269_Static vehicles.stationary.Stationary$Truck_Type94 2 33496.56 15524.51 680.00 0.0
+  270_Static vehicles.stationary.Stationary$Truck_Type94 2 33719.99 15659.17 415.00 0.0
+  51_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 33978.35 15994.66 630.00 0.0 0
+  56_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 33221.62 15031.52 630.00 0.0 0
+  320_Static vehicles.stationary.Siren$SirenCity 2 33049.92 15088.89 360.00 0.0
+  58_Static vehicles.lights.Searchlight$SL_ManualBlue 2 33151.91 14972.72 360.00 0.0
+  59_Static vehicles.lights.Searchlight$SL_ManualBlue 2 32938.63 15454.82 360.00 0.0
+  60_Static vehicles.lights.Searchlight$SL_ManualBlue 2 34343.98 15814.91 360.00 0.0
+  61_Static vehicles.lights.Searchlight$SL_ManualBlue 2 34033.77 16047.34 360.00 0.0
+  1_Static vehicles.stationary.Smoke$Smoke11 0 33221.44 15031.27 360.00 0.00
+  2_Static vehicles.stationary.Smoke$Smoke11 0 33978.21 15994.26 360.00 0.00
+[Buildings]
+[Target]
+  1 0 0 0 500 33563 15447 800
+  3 1 1 30 501 42475 13635 2 0 100_Chief 45665 17096
+[StaticCamera]
+  33592 15469 30
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 44074.86 16477.38 1
+  FrontMarker1 42071.39 19429.24 2
+  FrontMarker2 53795.21 23127.38 2
+  FrontMarker3 43874.51 7152.72 2
+  FrontMarker4 37973.77 17950.66 2
+  FrontMarker5 36436.94 14193.65 2
+  FrontMarker6 49061.37 11182.05 2
+  FrontMarker7 53670.74 28517.20 2
+  FrontMarker8 39575.73 11551.49 1
+  FrontMarker9 32800.47 2780.16 1
+  FrontMarker10 35855.53 -13.36 2
+  FrontMarker11 30026.90 -1953.88 2
+  FrontMarker12 29418.75 5247.96 2
+  FrontMarker13 46369.02 24413.14 2
+  FrontMarker14 54250.76 16779.90 2
+
+
+
+
+
+[WEATHER]
+WindVelocity 1
+WindDirection 270
+WindTop 6080
+WindTurbulence 0
+WindGust 0

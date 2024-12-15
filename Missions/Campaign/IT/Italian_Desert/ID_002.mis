@@ -1,0 +1,95 @@
+[MAIN]
+  MAP SandsOfTime/load.ini
+  TIME 9.0
+  CloudType 2
+  CloudHeight 1000.0
+  player i0100
+  army 2
+  playerNum 0
+[Wing]
+  i0100
+  sk0101
+  gb0102
+[i0100]
+  Planes 1
+  Skill 1
+  skin0 CR-42-Desert.bmp
+  Class air.CR_42
+  Fuel 100
+  weapons default
+[i0100_Way]
+  TAKEOFF 6912.71 47514.69 0 0 &0
+  NORMFLY 21531.94 43063.88 1000.00 300.00 sk0101 1 &0
+  NORMFLY 16395.51 34270.30 1000.00 300.00 &0
+  NORMFLY 9204.49 26339.65 1000.00 300.00 &0
+  NORMFLY 13765.65 25476.73 1000.00 300.00 &0
+  NORMFLY 14176.57 28928.41 1000.00 300.00 &0
+  NORMFLY 8957.94 26093.10 1000.00 300.00 &0
+  LANDING 12842.83 26740.23 0 0 &0
+[sk0101]
+  Planes 4
+  Skill 1
+  skin0 MS406-Croatia.bmp
+  skin1 MS406-Croatia.bmp
+  skin2 MS406-Croatia.bmp
+  skin3 MS406-Croatia.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.MS406
+  Fuel 100
+  weapons default
+  StartTime 3
+[sk0101_Way]
+  NORMFLY 24614.22 51036.70 1000.00 250.00 &0
+  NORMFLY 22682.50 42673.52 1000.00 250.00 &0
+  NORMFLY 17011.88 34105.94 1000.00 250.00 gb0102 3 &0
+  NORMFLY 10231.78 26914.93 1000.00 250.00 &0
+  LANDING 12842.83 26740.23 0 0 &0
+[gb0102]
+  Planes 2
+  Skill 1
+  skin0 BlenheimMk1-Mediterranean.bmp
+  skin1 BlenheimMk1-Mediterranean.bmp
+  Class air.BLENHEIM1
+  Fuel 100
+  weapons 4x250
+  StartTime 3
+[gb0102_Way]
+  NORMFLY 50786.92 36860.30 1000.00 300.00 &0
+  NORMFLY 40309.49 34888.08 1000.00 300.00 &0
+  NORMFLY 31393.40 32956.95 1000.00 300.00 &0
+  NORMFLY 21409.03 30943.64 800.00 300.00 &0
+  GATTACK 14429.15 27219.01 500.00 300.00 3_Static 0 &0
+  NORMFLY 17382.41 25437.85 800.00 300.00 &0
+  NORMFLY 34105.21 22274.08 1000.00 300.00 &0
+  NORMFLY 50951.27 21945.38 1000.00 300.00 &0
+[NStationary]
+  1_Static vehicles.stationary.Stationary$VW82 2 13968.71 27146.73 360.00 0.0
+  0_Static vehicles.stationary.Stationary$OpelBlitz36S 2 13955.76 27158.50 360.00 0.0
+  2_Static vehicles.stationary.Stationary$OpelBlitz36S 2 13946.74 27167.52 360.00 0.0
+  3_Static vehicles.stationary.Stationary$OpelBlitz36S 2 13950.27 27162.81 360.00 0.0
+  4_Static vehicles.artillery.Artillery$OpelBlitzMaultierAA 2 13952.51 27153.57 360.00 0.0 0
+  5_Static vehicles.artillery.Artillery$OpelBlitzMaultierAA 2 13899.65 27171.45 360.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Flak30_20mm 2 13967.14 27048.24 360.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Flak30_20mm 2 12834.72 26869.31 360.00 0.0 0
+  8_Static vehicles.artillery.Artillery$Flak30_20mm 2 14224.54 27080.81 360.00 0.0 0
+[Buildings]
+[Target]
+  4 0 0 0 00 12846 26441 0 4 sk0101 12842 26740
+  3 2 1 90 500 13513 26735 300
+[Bridge]
+[House]
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 11
+WindDirection 229
+WindTop 4164
+WindTurbulence 1
+WindGust 0

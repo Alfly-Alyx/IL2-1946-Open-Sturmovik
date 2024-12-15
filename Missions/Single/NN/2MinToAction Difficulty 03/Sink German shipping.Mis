@@ -1,0 +1,140 @@
+[MAIN]
+  MAP Norway/load.ini
+  TIME 16.0
+  CloudType 0
+  CloudHeight 1300.0
+  player usa0100
+  army 1
+  playerNum 0
+[Wing]
+  g0100
+  g0103
+  g0101
+  usa0100
+  usa0101
+[g0100]
+  Planes 1
+  OnlyAI 1
+  Skill 0
+  Class air.BF_109E7NZ
+  Fuel 100
+  weapons default
+  StartTime 0
+[g0100_Way]
+  NORMFLY 78587.49 75449.84 1000.0 350.0 &0
+  NORMFLY 78681.67 58334.40 1000.0 350.0 &0
+  LANDING 67506.22 134354.63 0 0 &0
+[g0103]
+  Planes 1
+  OnlyAI 1
+  Skill 0
+  Class air.BF_109E7NZ
+  Fuel 100
+  weapons default
+[g0103_Way]
+  NORMFLY 78079.87 75520.79 1000.0 350.0 &0
+  NORMFLY 78411.05 58077.19 1000.0 350.0 &0
+  LANDING 67506.22 134354.63 0 0 &0
+[g0101]
+  Planes 1
+  OnlyAI 1
+  Skill 0
+  Class air.BF_109E7NZ
+  Fuel 100
+  weapons default
+[g0101_Way]
+  NORMFLY 79025.04 75504.53 1000.0 350.0 &0
+  NORMFLY 79064.53 58662.56 1000.0 350.0 &0
+  LANDING 67506.22 134354.63 0 0 &0
+[usa0100]
+  Planes 2
+  Skill 0
+  Class air.F4U1C
+  Fuel 45
+  weapons 3x10008xhvarap
+[usa0100_Way]
+  NORMFLY 74291.93 51015.19 1000.0 350.0 &0
+  NORMFLY 78003.34 58572.52 1000.0 350.0 &0
+  GATTACK 78631.42 59842.19 1000.0 350.0 111_Chief 0 0
+  NORMFLY 81256.26 64469.84 1000.0 350.0 &0
+[usa0101]
+  Planes 2
+  Skill 0
+  Class air.F4U1D
+  Fuel 45
+  weapons 3x10008xhvarap
+[usa0101_Way]
+  NORMFLY 75065.80 50760.79 1000.0 350.0 &0
+  NORMFLY 78837.54 58197.91 1000.0 350.0 &0
+  GATTACK 79397.45 59389.87 1000.0 350.0 118_Chief 0 0
+  NORMFLY 81764.67 64224.44 1000.0 350.0 &0
+[Chiefs]
+  110_Chief Ships.Tanker 2 0 1 100.0
+  111_Chief Ships.Niobe 2 0 0 11.0
+  112_Chief Ships.Submarine 2 0 0 11.0
+  113_Chief Ships.Tral 2 0 1 100.0
+  114_Chief Ships.Tramp 2 0 1 100.0
+  115_Chief Ships.Tramp 2 0 1 100.0
+  116_Chief Ships.MFP2 2 0 0 11.0
+  117_Chief Ships.Tral 2 0 1 100.0
+  118_Chief Ships.MBoat 2 0 0 11.0
+[110_Chief_Road]
+  80327.10 62005.18 120.00 0 2 1.0
+  75252.60 51856.18 120.00
+[111_Chief_Road]
+  78955.59 60556.95 120.00 0 2 1.0
+  74724.89 52120.04 120.00
+[112_Chief_Road]
+  80927.63 61738.26 120.00 0 2 1.0
+  75839.79 51562.58 120.00
+[113_Chief_Road]
+  79487.23 61815.79 120.00 0 2 1.0
+  74656.46 52154.25 120.00
+[114_Chief_Road]
+  79614.02 60811.57 120.00 0 2 1.0
+  75159.58 51902.69 120.00
+[115_Chief_Road]
+  80610.18 63699.45 120.00 0 2 1.0
+  74801.36 52081.80 120.00
+[116_Chief_Road]
+  80368.69 62924.65 120.00 0 2 1.0
+  74918.08 52023.44 120.00
+[117_Chief_Road]
+  80982.49 62723.41 120.00 0 2 1.0
+  75489.62 51737.67 120.00
+[118_Chief_Road]
+  79772.84 60278.83 120.00 0 2 1.0
+  75509.75 51727.61 120.00
+[NStationary]
+  5_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 310.00 210.00 360.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 210.00 -315.00 360.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 -305.00 215.00 360.00 0.0 0
+  8_Static vehicles.artillery.Artillery$Zenit25mm_1940 1 -205.00 -310.00 360.00 0.0 0
+  70_Static ships.Ship$Tramp 2 66110.38 132831.08 380.00 0.0 0 2 1.0
+  71_Static ships.Ship$Tramp 2 66281.17 132746.55 425.00 0.0 0 2 1.0
+  72_Static ships.Ship$Tramp 2 66414.34 132933.13 395.00 0.0 0 2 1.0
+  73_Static ships.Ship$Tramp 2 66448.28 132664.95 495.00 0.0 0 2 1.0
+  310_Static ships.Ship$Tramp 1 16554.56 14642.02 500.00 0.0 0 2 1.0
+  311_Static ships.Ship$Tramp 1 16510.65 14474.10 530.00 0.0 0 2 1.0
+  312_Static ships.Ship$Tramp 1 16589.66 14327.59 530.00 0.0 0 2 1.0
+  313_Static ships.Ship$Tramp 1 16605.57 14194.67 560.00 0.0 0 2 1.0
+  0_Static ships.Ship$RwyCon 1 81882.21 56829.53 680.00 0.0 0 2 1.0
+  1_Static vehicles.stationary.Stationary$M3_Halftrack_ppl 1 81514.65 56475.49 620.00 0.0
+  2_Static vehicles.stationary.Stationary$M3_Halftrack_ppl 1 81798.72 56728.55 620.00 0.0
+  3_Static vehicles.stationary.Stationary$M3_Halftrack_ppl 1 82136.17 57006.28 530.00 0.0
+[Buildings]
+[Target]
+  1 0 0 0 500 80255 60896 3000
+[Bridge]
+[House]
+
+
+
+
+
+[WEATHER]
+WindVelocity 4
+WindDirection 86
+WindTop 9253
+WindTurbulence 0
+WindGust 0

@@ -1,0 +1,292 @@
+[MAIN]
+  MAP Ardennes/sload.ini
+  TIME 16.0
+  WEAPONSCONSTANT 1
+  CloudType 1
+  CloudHeight 1500.0
+  player ZG76_II01
+  army 2
+  playerNum 2
+[Wing]
+  ZG76_II02
+  fr0102
+  ZG76_II01
+  fr0100
+  II_JG5_203
+  AufklGr10a00
+[ZG76_II02]
+  Planes 4
+  Skill 3
+  skin0 MD_BF110_BoB_II_ZG76_NoMarkings.bmp
+  skin1 MD_BF110_BoB_II_ZG76_NoMarkings.bmp
+  skin2 MD_BF110_BoB_II_ZG76_NoMarkings.bmp
+  skin3 MD_BF110_BoB_II_ZG76_NoMarkings.bmp
+  Class air.BF_110C4B
+  Fuel 50
+  weapons 2sc250
+[ZG76_II02_Way]
+  NORMFLY 55691.64 34875.73 1000.00 300.00 &0
+  NORMFLY 54568.48 12888.77 1250.00 350.00 &0
+  NORMFLY 39769.49 17740.11 700.00 400.00 &0
+  GATTACK 26813.58 36750.44 600.00 450.00 19_Static 0 &0
+  GATTACK 25829.06 36718.38 700.00 350.00 16_Static 0 &0
+  GATTACK 25876.59 23782.00 1500.00 350.00 4_Chief 0 &0
+  NORMFLY 46327.38 23365.70 2500.00 300.00 &0
+  LANDING 54924.94 23442.92 0 0 &0
+[fr0102]
+  Planes 3
+  Skill0 1
+  Skill1 0
+  Skill2 1
+  Skill3 1
+  skin0 dr_h75_gcII5_monraisse.bmp
+  skin1 dr_h75_gcII5_delannoy.bmp
+  skin2 dr_h75_gcII5_dugoujon.bmp
+  skin3 dr_h75_gcII5_monraisse.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  numberOn3 0
+  Class air.P_36A4
+  Fuel 100
+  weapons default
+[fr0102_Way]
+  TAKEOFF 2505.35 30669.41 0 0 &0
+  NORMFLY 6072.04 15960.87 1000.00 300.00 &0
+  NORMFLY 35019.27 16060.16 2000.00 300.00 ZG76_II02 3 &0
+  NORMFLY 35065.65 35042.55 2000.00 300.00 ZG76_II02 3 &0
+  NORMFLY 23024.38 34974.57 2000.00 300.00 ZG76_II01 3 &0
+  NORMFLY 22959.91 17004.85 2000.00 300.00 ZG76_II01 6 &0
+  NORMFLY 34049.59 17060.87 2000.00 300.00 &0
+  NORMFLY 33984.88 34068.57 2000.00 300.00 &0
+  NORMFLY 18972.66 34151.81 2000.00 300.00 &0
+  NORMFLY 5157.14 34088.58 1000.00 230.00 &0
+  LANDING 2505.35 30669.41 0 0 &0
+[ZG76_II01]
+  Planes 4
+  Skill 3
+  skin0 ZG76 unmk.bmp
+  skin1 ZG76 unmk.bmp
+  skin2 ZG76 unmk.bmp
+  skin3 ZG76 unmk.bmp
+  Class air.BF_110G2
+  Fuel 75
+  weapons 2sc250
+[ZG76_II01_Way]
+  TAKEOFF 55766.88 22255.07 0 0 &0
+  NORMFLY 54991.24 12035.27 1000.00 275.00 &0
+  NORMFLY 39543.50 17231.64 700.00 400.00 &0
+  GATTACK 26730.72 36365.85 700.00 450.00 52_Static 0 &0
+  GATTACK 26537.81 36977.99 700.00 300.00 48_Static 0 &0
+  GATTACK 26422.09 37397.02 700.00 300.00 46_Static 0 &0
+  GATTACK 26529.58 24326.79 2000.00 350.00 4_Chief 0 &0
+  NORMFLY 45174.63 24217.39 1000.00 250.00 &0
+  LANDING 54877.84 23524.76 0 0 &0
+[fr0100]
+  Planes 2
+  Skill 1
+  skin0 II G.C. belgian.bmp
+  skin1 II G.C. belgian.bmp
+  skin2 II G.C. belgian.bmp
+  numberOn0 0
+  numberOn1 0
+  numberOn2 0
+  Class air.CR_42
+  Fuel 100
+  weapons default
+[fr0100_Way]
+  NORMFLY 36438.95 14094.71 500.00 250.00 &0
+  NORMFLY 25936.98 38415.11 1500.00 300.00 &0
+  NORMFLY 34305.84 38827.98 1500.00 300.00 &0
+  NORMFLY 44998.63 16217.71 1500.00 300.00 &0
+  NORMFLY 36399.66 13778.45 1500.00 350.00 &0
+  NORMFLY 26018.10 38327.89 1500.00 300.00 &0
+  NORMFLY 34266.16 38799.12 1500.00 300.00 &0
+  NORMFLY 44892.71 16192.37 1500.00 300.00 &0
+  NORMFLY 36416.38 13644.17 1500.00 300.00 &0
+  NORMFLY 27611.64 34222.31 1500.00 300.00 &0
+  LANDING 25508.76 37541.00 0 0 &0
+[II_JG5_203]
+  Planes 2
+  OnlyAI 1
+  Skill 3
+  skin0 Bf-109E4_JG52_BOB_unmarked.bmp
+  skin1 Bf-109E4_JG52_BOB_unmarked.bmp
+  Class air.BF_109E4
+  Fuel 100
+  weapons default
+[II_JG5_203_Way]
+  NORMFLY 46820.03 36799.42 2000.00 350.00 &0
+  NORMFLY 55358.19 5706.21 2000.00 350.00 &0
+  NORMFLY 47611.25 36874.92 2000.00 350.00 &0
+  NORMFLY 56149.15 6214.69 2000.00 350.00 &0
+  NORMFLY 48402.21 36817.92 2000.00 350.00 &0
+  NORMFLY 53550.28 14124.29 1000.00 300.00 &0
+  LANDING 56073.66 14181.37 0 0 &0
+[AufklGr10a00]
+  Planes 1
+  Skill 3
+  Skill1 1
+  Skill2 1
+  Skill3 1
+  Class air.FI_156
+  Fuel 66
+  weapons default
+[AufklGr10a00_Way]
+  NORMFLY 45640.68 18022.60 700.00 175.00 &0
+  NORMFLY 35471.19 36610.17 700.00 175.00 &0
+  NORMFLY 53606.78 33107.34 700.00 175.00 &0
+  LANDING 55454.32 36743.61 0 0 &0
+[Chiefs]
+  3_Chief Trains.USSR_CargoTrain/AA 1
+  4_Chief Vehicles.RussiaCarsColumnA 1
+[3_Chief_Road]
+  31100.00 36700.00 20.00 0 23 5.555555820465088
+  30300.00 35900.00 20.00
+  27500.00 35900.00 20.00
+  27100.00 35500.00 20.00
+  27100.00 33900.00 20.00
+  26900.00 33700.00 20.00
+  26900.00 32900.00 20.00
+  25300.00 31300.00 20.00
+  25300.00 29900.00 20.00
+  24500.00 29100.00 20.00
+  24500.00 27900.00 20.00
+  24100.00 27500.00 20.00
+  24100.00 26500.00 20.00
+  23700.00 26100.00 20.00
+  23700.00 24900.00 20.00
+  23300.00 24500.00 20.00
+  23300.00 22500.00 20.00
+  23300.00 22300.00 -9.00
+  23300.00 21900.00 -9.00
+  23300.00 21700.00 20.00
+  23300.00 20700.00 20.00
+  23900.00 20100.00 20.00
+  23900.00 18500.00 20.00
+[4_Chief_Road]
+  34418.70 26915.37 120.00 0 18 3.055555582046509
+  34300.00 26900.00 20.00
+  30900.00 23500.00 20.00
+  30100.00 23500.00 20.00
+  29900.00 23300.00 20.00
+  29900.00 22500.00 20.00
+  29500.00 22100.00 20.00
+  29500.00 21900.00 -41.00
+  29500.00 21700.00 -41.00
+  29500.00 21500.00 20.00
+  29500.00 21300.00 20.00
+  29300.00 21100.00 20.00
+  29100.00 21100.00 120.00
+  28900.00 21100.00 20.00
+  27700.00 21100.00 20.00
+  27100.00 21700.00 20.00
+  25700.00 21700.00 20.00
+  25485.57 21855.73 120.00
+[NStationary]
+  0_Static vehicles.artillery.Artillery$OpelBlitzMaultierAA 2 55344.28 38231.15 360.00 0.0 0
+  30_Static vehicles.artillery.Artillery$Flak30_20mm 2 56000.18 35967.53 360.00 0.0 0
+  31_Static vehicles.artillery.Artillery$Flak30_20mm 2 56505.78 35799.12 360.00 0.0 0
+  32_Static vehicles.artillery.Artillery$Flak30_20mm 2 54512.55 22747.23 360.00 0.0 0
+  33_Static vehicles.artillery.Artillery$Flak30_20mm 2 54737.10 23084.06 360.00 0.0 0
+  34_Static vehicles.artillery.Artillery$Flak30_20mm 2 55523.02 13933.70 360.00 0.0 0
+  35_Static vehicles.artillery.Artillery$Flak30_20mm 2 55466.88 14551.21 360.00 0.0 0
+  1_Static vehicles.planes.Plane$BLENHEIM1 1 26537.14 37238.38 270.00 0.0 gb
+  2_Static vehicles.planes.Plane$BLENHEIM1 1 26351.10 37428.30 359.10 0.0 gb
+  16_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 25978.77 36843.65 360.00 12.0 0
+  36_Static vehicles.artillery.Artillery$Flak30_20mm 2 53859.39 27956.00 360.00 0.0 0
+  19_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 25752.55 36082.32 360.00 733.0 1000
+  17_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 29407.40 21942.21 360.00 0.0 0
+  28_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 13220.34 26949.15 360.00 0.0 0
+  29_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 14576.27 28757.06 360.00 0.0 0
+  23_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 9322.20 4126.80 360.00 0.0 0
+  24_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 10000.06 36553.54 360.00 0.0 0
+  26_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 4858.76 30564.97 360.00 0.0 0
+  27_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 2033.90 31807.91 360.00 0.0 0
+  38_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 9721.22 37340.73 360.00 0.0 0
+  39_Static vehicles.stationary.Siren$SirenCity 1 26675.46 33912.66 360.00 0.0
+  40_Static vehicles.stationary.Siren$SirenCity 1 26313.84 37238.10 360.00 0.0
+  12_Static vehicles.planes.Plane$HurricaneMkIa 1 26376.21 37244.92 270.00 0.0 gb
+  41_Static vehicles.planes.Plane$HurricaneMkIa 1 26422.61 37248.48 270.00 0.0 gb
+  42_Static vehicles.planes.Plane$HurricaneMkIa 1 26463.80 37240.54 270.00 0.0 gb
+  43_Static vehicles.planes.Plane$HurricaneMkIa 1 26479.98 37242.80 480.00 0.0 gb
+  44_Static vehicles.planes.Plane$HurricaneMkIa 1 26355.35 37364.35 360.00 0.0 gb
+  45_Static vehicles.planes.Plane$HurricaneMkIa 1 26365.88 37378.13 360.00 0.0 gb
+  46_Static vehicles.stationary.Stationary$ZIS6_fuel 1 26365.07 37367.10 690.00 0.0
+  47_Static vehicles.stationary.Stationary$ZIS6_fuel 1 26526.28 37232.71 690.00 0.0
+  48_Static vehicles.stationary.Stationary$ZIS6_fuel 1 26474.03 37238.38 690.00 0.0
+  49_Static vehicles.planes.Plane$HurricaneMkIa 1 26634.84 36708.17 240.00 0.0 gb
+  50_Static vehicles.planes.Plane$HurricaneMkIa 1 26619.45 36691.56 225.00 0.0 gb
+  51_Static vehicles.planes.Plane$HurricaneMkIa 1 26606.89 36675.36 225.00 0.0 gb
+  52_Static vehicles.planes.Plane$HurricaneMkIa 1 26580.97 36964.57 420.00 0.0 gb
+  53_Static vehicles.planes.Plane$HurricaneMkIa 1 26574.49 36950.39 420.00 0.0 gb
+  54_Static vehicles.planes.Plane$HurricaneMkIa 1 26602.03 36969.83 390.00 0.0 gb
+  55_Static vehicles.artillery.Artillery$OpelBlitzMaultierAA 2 39687.19 36292.10 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 9942.71 3447.65 360.00 0.0 0
+  4_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 10394.65 3052.20 360.00 0.0 0
+  5_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 8925.84 4521.01 360.00 0.0 0
+  6_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 26608.05 6611.24 360.00 0.0 0
+  7_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 25817.15 8193.03 360.00 0.0 0
+  8_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 24291.85 8306.02 360.00 0.0 0
+  9_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 22201.62 8419.00 360.00 0.0 0
+  11_Static vehicles.artillery.Artillery$StBofors_40mm_UK 1 26382.08 4238.54 360.00 0.0 0
+  18_Static vehicles.planes.Plane$BF_110C4 2 54836.12 23358.82 420.00 0.0 null
+  20_Static vehicles.planes.Plane$BF_110C4 2 54814.22 23337.88 420.00 0.0 null
+  56_Static vehicles.planes.Plane$BF_110C4 2 55033.26 23113.82 210.00 0.0 null
+  57_Static vehicles.planes.Plane$BF_110C4 2 54879.57 23165.52 330.00 0.0 null
+  58_Static vehicles.artillery.Artillery$Flak30_20mm 2 55080.00 23547.52 570.00 0.0 0
+  59_Static vehicles.artillery.Artillery$Flak30_20mm 2 55084.55 23497.76 570.00 0.0 0
+  60_Static vehicles.stationary.Stationary$OpelBlitz6700A_radio 2 55048.77 23517.56 510.00 0.0
+  63_Static vehicles.stationary.Smoke$Smoke6 0 26706.32 37520.95 620.00 240.00
+  61_Static vehicles.stationary.Smoke$Smoke2 0 27096.87 33834.06 620.00 151.19
+  62_Static vehicles.stationary.Smoke$Smoke1 0 45341.11 13767.96 620.00 20.89
+[Buildings]
+  0_bld House$FurnitureSandbags_Round 1 55083.34 23498.06 390.00
+  1_bld House$FurnitureSandbags_Round 1 55078.45 23547.66 360.00
+[Target]
+  0 2 1 30 500 32044 35985 0 0 3_Chief 31100 36700
+  1 0 0 0 500 26219 36911 600
+  3 0 1 120 501 55426 22865 1150
+[StaticCamera]
+  26648 33946 50
+  26316 37237 50
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 36009.51 38142.88 1
+  FrontMarker1 37615.89 32935.18 1
+  FrontMarker2 41400.32 29454.20 1
+  FrontMarker3 39102.08 32613.94 1
+  FrontMarker4 32476.84 24519.78 1
+  FrontMarker5 42866.67 23322.98 1
+  FrontMarker6 43542.29 26821.70 1
+  FrontMarker7 43437.29 21016.95 1
+  FrontMarker8 45923.16 16779.66 1
+  FrontMarker9 48861.02 13615.82 1
+  FrontMarker10 51685.88 8305.08 1
+  FrontMarker11 53041.81 1129.94 1
+  FrontMarker12 56431.64 2203.39 2
+  FrontMarker13 54284.75 9774.01 2
+  FrontMarker14 50838.42 15423.73 2
+  FrontMarker15 46262.15 22033.90 2
+  FrontMarker16 44002.26 29774.01 2
+  FrontMarker17 45414.69 27853.10 2
+  FrontMarker18 40760.40 33680.72 2
+  FrontMarker19 38014.97 36469.85 2
+  FrontMarker20 47283.62 19661.02 2
+  FrontMarker21 33441.81 28418.08 1
+  FrontMarker22 36871.83 38800.85 1
+
+
+
+
+
+
+
+
+[WEATHER]
+WindVelocity 3
+WindDirection 189
+WindTop 599
+WindTurbulence 0
+WindGust 1

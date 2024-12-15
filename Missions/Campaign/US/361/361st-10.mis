@@ -1,0 +1,553 @@
+[MAIN]
+  MAP Normandy/load.ini
+  TIME 9.5
+  CloudType 1
+  CloudHeight 1000.0
+  player 8AF_361FG_374FS00
+  army 1
+  playerNum 1
+[Wing]
+  usa0133
+  usa0122
+  8AF_361FG_374FS00
+  usa0103
+  g0100
+  g0101
+  usa0111
+  g0103
+[usa0133]
+  Planes 4
+  Skill 2
+  skin0 361st Blank.bmp
+  skin1 361st Blank.bmp
+  skin2 361st Blank.bmp
+  skin3 361st Blank.bmp
+  Class air.P_51D20NA
+  Fuel 100
+  weapons default
+[usa0133_Way]
+  TAKEOFF 72810.97 97946.95 0 0 &0
+  NORMFLY 56949.99 78215.09 3000.00 300.00 g0100 2 &0
+  NORMFLY 77146.04 78084.95 3000.00 300.00 &0
+  LANDING 71395.02 98764.46 0 0 &0
+[usa0122]
+  Planes 4
+  Skill 2
+  skin0 361st Blank.bmp
+  skin1 361st Blank.bmp
+  skin2 361st Blank.bmp
+  skin3 361st Blank.bmp
+  Class air.P_51D20NA
+  Fuel 100
+  weapons default
+[usa0122_Way]
+  TAKEOFF 72810.97 97946.95 0 0 &0
+  NORMFLY 56829.57 78800.71 3000.00 300.00 g0101 2 &0
+  NORMFLY 76570.23 78631.35 3000.00 300.00 &0
+  LANDING 71395.02 98764.46 0 0 &0
+[8AF_361FG_374FS00]
+  Planes 2
+  Skill 2
+  skin0 361st Blank.bmp
+  skin1 361st Blank.bmp
+  Class air.P_47D27
+  Fuel 100
+  weapons 2x500
+[8AF_361FG_374FS00_Way]
+  TAKEOFF 74340.20 98092.42 0 0 129_Static 0 &0
+  NORMFLY 55353.46 80170.09 1000.00 300.00 &0
+  GATTACK 53976.22 73191.16 1000.00 300.00 4_Chief 1 &0
+  GATTACK 35989.14 76299.86 1000.00 300.00 4_Chief 0 &0
+  GATTACK 41887.80 82722.71 1000.00 300.00 9_Chief 0 &0
+  LANDING 71395.02 98764.46 0 0 &0
+[usa0103]
+  Planes 2
+  Skill 2
+  skin0 361st Blank.bmp
+  skin1 361st Blank.bmp
+  Class air.P_47D27
+  Fuel 100
+  weapons 2x500
+[usa0103_Way]
+  TAKEOFF 74340.20 98092.42 0 0 129_Static 0 &0
+  NORMFLY 56015.19 80064.07 1000.00 300.00 &0
+  GATTACK 61181.42 68187.99 1000.00 300.00 6_Chief 1 &0
+  GATTACK 76126.53 63433.03 1000.00 300.00 6_Chief 0 &0
+  GATTACK 56965.12 61700.81 1000.00 300.00 7_Chief 0 &0
+  NORMFLY 56154.21 71044.10 1000.00 300.00 &0
+  NORMFLY 50936.16 80442.65 1000.00 300.00 &0
+  LANDING 74383.27 98105.11 0 0 144_Static 0 &0
+[g0100]
+  Planes 3
+  Skill 2
+  Class air.BF_109G10
+  Fuel 100
+  weapons default
+[g0100_Way]
+  TAKEOFF 74611.62 62643.96 0 0 &0
+  NORMFLY 79898.79 78276.95 2500.00 300.00 &0
+  NORMFLY 74678.90 80947.59 2500.00 300.00 usa0133 1 &0
+  NORMFLY 50720.12 80808.24 2500.00 300.00 &0
+  NORMFLY 43035.48 62306.56 2500.00 300.00 &0
+  LANDING 74052.41 61107.64 0 0 &0
+[g0101]
+  Planes 3
+  Skill 1
+  Class air.BF_109G10
+  Fuel 100
+  weapons default
+[g0101_Way]
+  TAKEOFF 74611.62 62643.96 0 0 &0
+  NORMFLY 79981.83 77937.40 2500.00 300.00 &0
+  NORMFLY 74920.44 80817.16 2500.00 300.00 usa0122 1 &0
+  NORMFLY 51202.64 80353.52 2500.00 300.00 &0
+  NORMFLY 42982.04 62009.48 2500.00 300.00 &0
+  LANDING 74052.41 61107.64 0 0 &0
+[usa0111]
+  Planes 2
+  Skill 2
+  skin0 361st Blank.bmp
+  skin1 361st Blank.bmp
+  Class air.P_47D27
+  Fuel 100
+  weapons 2x500
+[usa0111_Way]
+  TAKEOFF 74340.20 98092.42 0 0 129_Static 0 &0
+  NORMFLY 55914.42 80383.08 1000.00 300.00 &0
+  GATTACK 24780.15 61839.89 1000.00 300.00 1_Chief 0 &0
+  GATTACK 24840.41 75412.82 1000.00 300.00 2_Chief 0 &0
+  NORMFLY 38981.48 83923.49 1000.00 300.00 &0
+  LANDING 74386.45 98111.46 0 0 144_Static 0 &0
+[g0103]
+  Planes 2
+  Skill 1
+  Class air.FW_190A9
+  Fuel 100
+  weapons default
+  StartTime 20
+[g0103_Way]
+  NORMFLY 34316.14 88638.83 2000.00 300.00 &0
+  NORMFLY 66693.05 87879.10 2000.00 300.00 &0
+  LANDING 74611.62 62643.96 0 0 &0
+[Chiefs]
+  0_Chief Vehicles.OpelBlitz6700A_fuel 2
+  4_Chief Trains.Germany_CargoTrainA/AA 2
+  6_Chief Trains.Germany_CargoTrainA/AA 2
+  7_Chief Vehicles.GermanyCarsColumnE 2
+  9_Chief Vehicles.GermanyCarsColumnE 2
+  10_Chief Ships.Tramp 1 0 2 1.0
+  11_Chief Ships.Tramp 1 0 2 1.0
+  12_Chief Ships.Tramp 1 0 2 1.0
+  13_Chief Ships.Tramp 1 0 2 1.0
+  14_Chief Ships.Tramp 1 0 2 1.0
+  15_Chief Ships.Tramp 1 0 2 1.0
+  16_Chief Ships.LCVP 1 3599 2 1.0
+  17_Chief Ships.LCVP 1 3599 2 1.0
+  18_Chief Ships.LCVP 1 3599 2 1.0
+  19_Chief Ships.LCVP 1 3599 2 1.0
+  20_Chief Ships.LCVP 1 3599 2 1.0
+  21_Chief Ships.LCVP 1 3599 2 1.0
+  1_Chief Trains.Germany_CargoTrainA/AA 2
+  2_Chief Vehicles.GermanyCarsColumnE 2
+[0_Chief_Road]
+  74029.45 61258.92 120.00 0 2 3.055555582046509
+  74389.84 62251.07 120.00 0 2 3.055555582046509
+  74281.30 62292.17 120.00 0 2 3.055555582046509
+  74350.66 62476.96 120.00
+[4_Chief_Road]
+  36300.00 77500.00 20.00 0 27 5.555555820465088
+  36500.00 77300.00 20.00
+  36700.00 77100.00 -127.00
+  37100.00 76700.00 -127.00
+  37300.00 76500.00 20.00
+  37700.00 76100.00 20.00
+  37900.00 76100.00 20.00
+  38700.00 75300.00 20.00
+  39900.00 75300.00 20.00
+  40700.00 74500.00 20.00
+  40700.00 73900.00 20.00
+  41700.00 72900.00 20.00
+  42500.00 72900.00 20.00
+  43100.00 72300.00 20.00
+  44500.00 72300.00 20.00
+  44900.00 71900.00 20.00
+  46900.00 71900.00 20.00
+  48500.00 73500.00 20.00
+  49100.00 73500.00 20.00
+  49300.00 73700.00 20.00
+  51100.00 73700.00 20.00
+  51300.00 73500.00 20.00
+  51900.00 73500.00 20.00
+  52100.00 73500.00 -142.00
+  52300.00 73500.00 -142.00
+  52500.00 73500.00 20.00
+  54500.00 73500.00 20.00
+[6_Chief_Road]
+  77900.00 63500.00 20.00 0 37 5.555555820465088
+  77100.00 62700.00 20.00
+  76900.00 62900.00 20.00
+  75100.00 62900.00 20.00
+  74900.00 63100.00 20.00
+  74300.00 63100.00 20.00
+  73900.00 63500.00 20.00
+  72900.00 63500.00 20.00
+  72300.00 64100.00 20.00
+  71300.00 64100.00 20.00
+  71100.00 63900.00 20.00
+  70500.00 63900.00 20.00
+  69900.00 64500.00 20.00
+  69700.00 64700.00 -187.00
+  69300.00 65100.00 -187.00
+  69100.00 65300.00 20.00
+  68700.00 65700.00 20.00
+  67500.00 65700.00 20.00
+  66900.00 66300.00 20.00
+  65900.00 66300.00 20.00
+  65500.00 66700.00 20.00
+  64100.00 66700.00 20.00
+  63900.00 66900.00 20.00
+  62900.00 66900.00 20.00
+  62700.00 66700.00 20.00
+  61500.00 66700.00 20.00
+  60700.00 67500.00 20.00
+  60500.00 67500.00 20.00
+  60300.00 67500.00 -271.00
+  59900.00 67500.00 -271.00
+  59700.00 67500.00 20.00
+  59500.00 67500.00 20.00
+  58900.00 68100.00 20.00
+  58900.00 68500.00 20.00
+  58100.00 69300.00 20.00
+  58100.00 70100.00 20.00
+  57300.00 70900.00 20.00
+[7_Chief_Road]
+  56700.61 62125.05 120.00 0 19 2.6388890743255615
+  56700.00 62300.00 20.00
+  56700.00 62900.00 20.00
+  57300.00 63500.00 20.00
+  57300.00 64500.00 20.00
+  57700.00 64900.00 20.00
+  57700.00 65700.00 20.00
+  58500.00 66500.00 20.00
+  58500.00 66900.00 20.00
+  58500.00 67100.00 120.00
+  58500.00 67500.00 20.00
+  58100.00 67900.00 20.00
+  58100.00 68300.00 20.00
+  57700.00 68700.00 20.00
+  57700.00 68900.00 20.00
+  56700.00 69900.00 20.00
+  56700.00 70500.00 20.00
+  56300.00 70900.00 20.00
+  56107.20 71094.40 120.00
+[9_Chief_Road]
+  42092.42 82299.77 120.00 0 22 2.6388890743255615
+  41900.00 82300.00 20.00
+  41700.00 82300.00 20.00
+  41500.00 82100.00 20.00
+  41500.00 81700.00 20.00
+  39700.00 79900.00 20.00
+  39500.00 79700.00 -126.00
+  39300.00 79500.00 -126.00
+  39100.00 79300.00 20.00
+  38900.00 79100.00 20.00
+  38900.00 77900.00 120.00
+  38900.00 77700.00 20.00
+  38900.00 77300.00 20.00
+  38900.00 77100.00 -128.00
+  38900.00 76700.00 -128.00
+  38900.00 76500.00 20.00
+  38900.00 75900.00 20.00
+  39300.00 75500.00 20.00
+  39300.00 74300.00 20.00
+  39700.00 73900.00 20.00
+  39700.00 73500.00 20.00
+  39699.62 73200.19 120.00
+[10_Chief_Road]
+  65507.98 87016.56 120.00 0 2 2.5722224712371826
+  65532.85 82405.35 120.00
+[11_Chief_Road]
+  63505.09 86966.15 120.00 0 2 2.5722224712371826
+  63489.04 81605.90 120.00
+[12_Chief_Road]
+  61350.72 86949.28 120.00 0 2 2.5722224712371826
+  61398.85 81007.23 120.00
+[13_Chief_Road]
+  58977.53 87016.64 120.00 0 2 2.5722224712371826
+  59010.40 81407.25 120.00
+[14_Chief_Road]
+  56991.47 86999.81 120.00 0 2 2.5722224712371826
+  57065.24 81602.95 120.00
+[15_Chief_Road]
+  55022.23 87016.64 120.00 0 2 2.5722224712371826
+  54996.59 81607.84 120.00
+[16_Chief_Road]
+  55564.21 87006.16 120.00 0 2 2.315000057220459
+  55580.23 81405.81 120.00
+[17_Chief_Road]
+  56534.10 87038.18 120.00 0 2 2.315000057220459
+  56711.53 81405.81 120.00
+[18_Chief_Road]
+  57979.19 87030.16 120.00 0 2 2.315000057220459
+  58019.30 81614.42 120.00
+[19_Chief_Road]
+  60177.57 86998.04 120.00 0 2 2.315000057220459
+  60225.72 81405.81 120.00
+[20_Chief_Road]
+  62962.00 87022.03 120.00 0 2 2.315000057220459
+  62978.05 81622.38 120.00
+[21_Chief_Road]
+  64638.87 86997.96 120.00 0 2 2.315000057220459
+  64662.92 82200.05 120.00
+[1_Chief_Road]
+  24500.00 62100.00 20.00 0 33 5.555555820465088
+  25300.00 62900.00 20.00
+  25300.00 63900.00 20.00
+  26700.00 65300.00 20.00
+  26900.00 65500.00 -84.00
+  27100.00 65700.00 -84.00
+  27300.00 65900.00 20.00
+  27700.00 66300.00 20.00
+  27700.00 66900.00 20.00
+  27700.00 67100.00 -83.00
+  27700.00 67500.00 -83.00
+  27700.00 67700.00 20.00
+  27700.00 68100.00 20.00
+  27700.00 68300.00 -81.00
+  27700.00 68500.00 -81.00
+  27700.00 68700.00 20.00
+  27700.00 70100.00 20.00
+  26900.00 70900.00 20.00
+  26900.00 71900.00 20.00
+  26300.00 72500.00 20.00
+  26300.00 73100.00 20.00
+  25300.00 74100.00 20.00
+  24500.00 74100.00 20.00
+  24300.00 74100.00 -79.00
+  23900.00 74100.00 -79.00
+  23700.00 74100.00 20.00
+  23100.00 74100.00 20.00
+  22700.00 74500.00 20.00
+  21700.00 74500.00 20.00
+  21300.00 74900.00 20.00
+  19300.00 74900.00 20.00
+  18900.00 75300.00 20.00
+  18700.00 75300.00 20.00
+[2_Chief_Road]
+  22699.98 61920.56 120.00 0 26 2.6388890743255615
+  22700.00 62100.00 20.00
+  22700.00 63700.00 20.00
+  22700.00 63900.00 -57.00
+  22700.00 64100.00 -57.00
+  22700.00 64300.00 20.00
+  22700.00 67100.00 20.00
+  23300.00 67700.00 20.00
+  23300.00 68300.00 20.00
+  23300.00 68500.00 -80.00
+  23300.00 68900.00 -80.00
+  23300.00 69100.00 20.00
+  23300.00 69700.00 20.00
+  22700.00 70300.00 20.00
+  22700.00 71100.00 20.00
+  23100.00 71500.00 20.00
+  23100.00 71900.00 20.00
+  22100.00 72900.00 20.00
+  22100.00 73500.00 20.00
+  20900.00 74700.00 20.00
+  20900.00 75300.00 20.00
+  19500.00 76700.00 20.00
+  19100.00 76700.00 20.00
+  18500.00 76100.00 20.00
+  17700.00 76100.00 20.00
+  17404.88 76099.29 120.00
+[NStationary]
+  0_Static vehicles.planes.Plane$HE_111H6 2 73756.40 61982.08 300.00 0.0 null
+  1_Static vehicles.planes.Plane$HE_111H6 2 73734.34 62018.46 300.00 0.0 null
+  2_Static vehicles.planes.Plane$HE_111H6 2 73718.47 62053.29 300.00 0.0 null
+  3_Static vehicles.planes.Plane$HE_111H6 2 73700.67 62090.44 300.00 0.0 null
+  4_Static vehicles.planes.Plane$HE_111H6 2 73683.64 62125.27 300.00 0.0 null
+  5_Static vehicles.planes.Plane$HE_111H6 2 73668.55 62159.71 300.00 0.0 null
+  6_Static vehicles.planes.Plane$HE_111H6 2 73652.29 62194.16 300.00 0.0 null
+  7_Static vehicles.planes.Plane$HE_111H6 2 73703.38 62198.80 300.00 0.0 null
+  8_Static vehicles.planes.Plane$HE_111H6 2 73721.18 62159.33 300.00 0.0 null
+  9_Static vehicles.planes.Plane$HE_111H6 2 73739.37 62121.40 300.00 0.0 null
+  10_Static vehicles.planes.Plane$HE_111H6 2 73754.46 62088.51 300.00 0.0 null
+  11_Static vehicles.planes.Plane$HE_111H6 2 73771.10 62053.29 300.00 0.0 null
+  12_Static vehicles.planes.Plane$HE_111H6 2 73787.36 62020.78 300.00 0.0 null
+  13_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 73688.93 62176.92 375.00 0.0
+  14_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 73714.09 62131.38 675.00 0.0
+  15_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 73705.70 62070.80 690.00 0.0
+  16_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 73770.91 62072.39 690.00 0.0
+  17_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 73762.52 62005.88 600.00 0.0
+  18_Static vehicles.planes.Plane$FI_156 2 74334.30 62477.68 464.10 0.0 null
+  19_Static vehicles.planes.Plane$FI_156 2 74362.51 62468.12 464.10 0.0 null
+  20_Static vehicles.planes.Plane$JU_52_3MG4E 2 74138.73 62402.13 374.10 0.0 null
+  21_Static vehicles.planes.Plane$JU_52_3MG4E 2 74150.68 62441.34 374.10 0.0 null
+  22_Static vehicles.planes.Plane$JU_52_3MG4E 2 74164.07 62481.03 374.10 0.0 null
+  23_Static vehicles.planes.Plane$FW_190A9 2 74605.29 62163.80 194.10 0.0 null
+  24_Static vehicles.planes.Plane$FW_190A9 2 74591.61 62127.48 194.10 0.0 null
+  25_Static vehicles.planes.Plane$FW_190A9 2 74577.69 62088.56 194.10 0.0 null
+  26_Static vehicles.planes.Plane$BF_109G10 2 74564.48 62050.11 194.10 0.0 null
+  27_Static vehicles.planes.Plane$BF_109G10 2 74550.80 62012.36 194.10 0.0 null
+  28_Static vehicles.planes.Plane$BF_109G10 2 74536.88 61975.57 194.10 0.0 null
+  29_Static vehicles.planes.Plane$BF_110G2 2 74522.97 61936.88 194.10 0.0 null
+  30_Static vehicles.planes.Plane$C_47 1 72281.74 98921.49 404.10 0.0 us
+  31_Static vehicles.planes.Plane$C_47 1 72335.63 98936.65 404.10 0.0 us
+  32_Static vehicles.planes.Plane$C_47 1 72386.14 98950.12 404.10 0.0 us
+  33_Static vehicles.planes.Plane$C_47 1 72435.54 98964.15 404.10 0.0 us
+  34_Static vehicles.planes.Plane$C_47 1 72486.62 98978.18 404.10 0.0 us
+  35_Static vehicles.planes.Plane$C_47 1 72534.89 98992.22 404.10 0.0 us
+  36_Static vehicles.planes.Plane$B_17G 1 72322.72 98870.98 464.10 0.0 us
+  37_Static vehicles.planes.Plane$B_17G 1 72388.95 98888.71 464.10 0.0 us
+  38_Static vehicles.planes.Plane$B_17G 1 72451.82 98904.66 464.10 0.0 us
+  39_Static vehicles.planes.Plane$B_17G 1 72515.80 98920.93 464.10 0.0 us
+  40_Static vehicles.stationary.Stationary$DiamondT_US 1 72283.63 98936.08 660.00 0.0
+  41_Static vehicles.stationary.Stationary$DiamondT_US 1 72435.52 98974.25 660.00 0.0
+  42_Static vehicles.stationary.Stationary$DiamondT_US 1 72487.16 98989.94 660.00 0.0
+  43_Static vehicles.stationary.Stationary$M3A1_APC 1 72467.83 98914.19 435.00 0.0
+  44_Static vehicles.stationary.Stationary$M3A1_APC 1 72336.79 98878.24 435.00 0.0
+  45_Static vehicles.planes.Plane$SPITFIRE9EHF 1 72660.12 98466.70 479.10 0.0 gb
+  47_Static vehicles.planes.Plane$SPITFIRE9EHF 1 72716.76 98437.16 479.10 0.0 gb
+  53_Static vehicles.stationary.Stationary$WillisMB_US 1 72285.14 98064.56 689.10 0.0
+  54_Static vehicles.stationary.Stationary$WillisMB_US 1 72251.90 98082.70 599.10 0.0
+  55_Static vehicles.stationary.Stationary$WillisMB_US 1 72328.20 98039.33 644.10 0.0
+  56_Static vehicles.artillery.Artillery$M16_US 1 71939.70 98612.97 644.10 0.0 0
+  57_Static vehicles.artillery.Artillery$M16_US 1 72533.09 98715.51 644.10 0.0 0
+  58_Static vehicles.artillery.Artillery$M16_US 1 72448.01 98307.55 644.10 0.0 0
+  59_Static vehicles.stationary.Smoke$Smoke15 0 71364.62 98783.69 644.10 0.00
+  60_Static vehicles.stationary.Smoke$Smoke15 0 71368.68 98791.25 644.10 0.00
+  61_Static vehicles.stationary.Smoke$Smoke15 0 71372.81 98798.13 644.10 0.00
+  62_Static vehicles.stationary.Smoke$Smoke15 0 71360.43 98777.50 644.10 0.00
+  63_Static vehicles.stationary.Smoke$Smoke15 0 71356.31 98770.82 644.10 0.00
+  65_Static vehicles.stationary.Smoke$Smoke15 0 71449.03 98735.86 644.10 0.00
+  67_Static vehicles.stationary.Smoke$Smoke15 0 71567.48 98667.10 644.10 0.00
+  69_Static vehicles.stationary.Smoke$Smoke15 0 71691.63 98595.60 644.10 0.00
+  71_Static vehicles.stationary.Smoke$Smoke15 0 71830.32 98515.45 644.10 0.00
+  73_Static vehicles.stationary.Smoke$Smoke15 0 71996.51 98418.10 644.10 0.00
+  75_Static vehicles.stationary.Smoke$Smoke15 0 72156.02 98327.26 644.10 0.00
+  77_Static vehicles.stationary.Smoke$Smoke15 0 72329.28 98227.47 644.10 0.00
+  79_Static vehicles.stationary.Smoke$Smoke15 0 72516.09 98119.82 644.10 0.00
+  81_Static vehicles.stationary.Smoke$Smoke15 0 72696.43 98015.51 644.10 0.00
+  83_Static vehicles.stationary.Smoke$Smoke15 0 72850.44 97927.11 644.10 0.00
+  84_Static vehicles.stationary.Smoke$Smoke15 0 72854.17 97933.59 644.10 0.00
+  85_Static vehicles.stationary.Smoke$Smoke15 0 72858.29 97940.66 644.10 0.00
+  86_Static vehicles.stationary.Smoke$Smoke15 0 72846.31 97919.45 644.10 0.00
+  87_Static vehicles.stationary.Smoke$Smoke15 0 72842.19 97912.96 644.10 0.00
+  88_Static vehicles.stationary.Smoke$Smoke15 0 74038.04 61073.93 644.10 7.00
+  89_Static vehicles.stationary.Smoke$Smoke15 0 74045.62 61070.93 644.10 7.00
+  90_Static vehicles.stationary.Smoke$Smoke15 0 74053.19 61068.40 644.10 7.00
+  91_Static vehicles.stationary.Smoke$Smoke15 0 74030.78 61076.92 644.10 7.00
+  92_Static vehicles.stationary.Smoke$Smoke15 0 74022.89 61079.45 644.10 7.00
+  93_Static vehicles.stationary.Smoke$Smoke15 0 74080.56 61191.15 644.10 7.00
+  95_Static vehicles.stationary.Smoke$Smoke15 0 74144.51 61360.16 644.10 7.00
+  97_Static vehicles.stationary.Smoke$Smoke15 0 74200.28 61519.46 644.10 7.00
+  99_Static vehicles.stationary.Smoke$Smoke15 0 74266.09 61699.54 644.10 7.00
+  101_Static vehicles.stationary.Smoke$Smoke15 0 74331.12 61879.30 644.10 7.00
+  103_Static vehicles.stationary.Smoke$Smoke15 0 74397.09 62060.95 644.10 7.00
+  105_Static vehicles.stationary.Smoke$Smoke15 0 74462.90 62241.03 644.10 7.00
+  107_Static vehicles.stationary.Smoke$Smoke15 0 74528.55 62421.58 644.10 7.00
+  109_Static vehicles.stationary.Smoke$Smoke15 0 74599.26 62616.63 644.10 7.08
+  110_Static vehicles.stationary.Smoke$Smoke15 0 74624.65 62686.43 644.10 7.43
+  111_Static vehicles.stationary.Smoke$Smoke15 0 74632.51 62683.76 644.10 7.42
+  112_Static vehicles.stationary.Smoke$Smoke15 0 74639.90 62681.09 644.10 7.41
+  113_Static vehicles.stationary.Smoke$Smoke15 0 74617.10 62689.26 644.10 7.45
+  114_Static vehicles.stationary.Smoke$Smoke15 0 74609.71 62691.93 644.10 7.46
+  115_Static vehicles.artillery.Artillery$Flak30_20mm 2 74295.06 62213.16 660.00 0.0 0
+  116_Static vehicles.artillery.Artillery$Flak30_20mm 2 74115.87 61675.03 660.00 0.0 0
+  117_Static vehicles.artillery.Artillery$Flak30_20mm 2 73920.45 62229.69 660.00 0.0 0
+  118_Static vehicles.stationary.Stationary$OpelBlitz36S 2 74106.54 61668.35 660.00 0.0
+  119_Static vehicles.stationary.Stationary$OpelBlitz36S 2 74301.85 62221.33 630.00 0.0
+  120_Static vehicles.stationary.Stationary$OpelBlitz36S 2 73907.99 62224.36 630.00 0.0
+  121_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 74021.47 61423.75 630.00 0.0
+  122_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 74027.82 61423.75 630.00 0.0
+  123_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 74012.89 61395.26 630.00 0.0
+  124_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 2 74018.55 61395.09 630.00 0.0
+  125_Static vehicles.artillery.Artillery$Flak18_88mm 2 76446.71 80466.59 630.00 0.0 0
+  126_Static vehicles.artillery.Artillery$Flak18_88mm 2 72608.96 80393.08 630.00 0.0 0
+  127_Static vehicles.stationary.Siren$SirenCity 2 74302.97 62610.03 630.00 0.0
+  128_Static vehicles.stationary.Siren$SirenCity 2 74701.39 61862.30 630.00 0.0
+  130_Static vehicles.stationary.Siren$SirenCity 2 73533.40 62135.20 630.00 0.0
+  131_Static ships.Ship$Tramp 1 72922.85 96922.39 390.00 0.0 0 2 1.0
+  132_Static ships.Ship$Tramp 1 72562.76 96842.83 390.00 0.0 0 2 1.0
+  133_Static ships.Ship$Tramp 1 73069.28 96556.24 390.00 0.0 0 2 1.0
+  134_Static ships.Ship$Tanker 1 73401.19 96702.87 390.00 0.0 0 2 1.0
+  135_Static ships.Ship$Tanker 1 73650.45 96329.64 390.00 0.0 0 2 1.0
+  136_Static ships.Ship$USSIndianapolisCA35 1 73175.11 96664.50 390.00 0.0 0 2 1.0
+  137_Static vehicles.artillery.Artillery$Flak18_88mm 2 66800.12 81649.41 630.00 0.0 0
+  48_Static vehicles.planes.Plane$P_51D20NA 1 72338.41 98034.45 299.10 0.0 us
+  50_Static vehicles.planes.Plane$P_51D20NA 1 72303.36 98053.68 299.10 0.0 us
+  138_Static vehicles.planes.Plane$P_51D20NA 1 72268.31 98074.03 299.10 0.0 us
+  139_Static vehicles.artillery.Artillery$Flak18_88mm 2 56627.11 81058.13 630.00 0.0 0
+  140_Static vehicles.artillery.Artillery$Flak18_88mm 2 42415.70 82986.80 630.00 0.0 0
+  141_Static vehicles.artillery.Artillery$Flak18_88mm 2 51219.04 81293.35 630.00 0.0 0
+  142_Static ships.Ship$USSFletcherDD445 1 63952.91 86014.07 450.00 0.0 0 2 10.0
+  143_Static ships.Ship$USSFletcherDD445 1 57547.79 85976.96 450.00 0.0 0 2 13.0
+  129_Static ships.Ship$RwySteelLow 1 74347.74 97612.48 449.10 0.0 0 2 1.0
+  144_Static ships.Ship$RwySteelLow 1 74378.12 97612.48 449.10 0.0 0 2 1.0
+  145_Static vehicles.planes.Plane$P_47D27 1 74295.00 97837.64 359.10 0.0 us
+  146_Static vehicles.planes.Plane$P_47D27 1 74294.63 97811.74 359.10 0.0 us
+  147_Static vehicles.planes.Plane$P_47D27 1 74294.46 97786.99 359.10 0.0 us
+  148_Static vehicles.planes.Plane$P_47D27 1 74294.66 97762.33 359.10 0.0 us
+  149_Static vehicles.stationary.Stationary$WillisMB_US 1 74293.70 97851.80 404.10 0.0
+  150_Static vehicles.stationary.Stationary$Chevrolet_medic_US 1 74289.32 97867.65 419.10 0.0
+  151_Static vehicles.stationary.Stationary$Chevrolet_radio_US 1 74295.90 97870.91 419.10 0.0
+  152_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 74296.81 97825.36 719.10 0.0
+  153_Static vehicles.stationary.Stationary$Chevrolet_flatbed_US 1 74299.95 97751.59 689.10 0.0
+  154_Static vehicles.stationary.Stationary$OpelBlitz6700A_fuel 1 74308.16 97854.80 449.10 0.0
+  155_Static vehicles.artillery.Artillery$M16_US 1 74313.49 97148.98 449.10 0.0 0
+  156_Static vehicles.artillery.Artillery$M16_US 1 74299.36 97903.34 449.10 0.0 0
+  46_Static vehicles.stationary.Smoke$Smoke15 0 74353.41 98108.13 629.10 0.00
+  49_Static vehicles.stationary.Smoke$Smoke15 0 74367.94 98108.13 629.10 0.00
+  51_Static vehicles.stationary.Smoke$Smoke15 0 74382.47 98107.01 629.10 0.00
+  52_Static vehicles.stationary.Smoke$Smoke15 0 74341.12 98108.13 629.10 0.00
+  64_Static vehicles.stationary.Smoke$Smoke15 0 74328.82 98108.13 629.10 0.00
+  66_Static vehicles.stationary.Smoke$Smoke15 0 74357.88 97951.63 629.10 0.00
+  68_Static vehicles.stationary.Smoke$Smoke15 0 74359.00 97800.73 629.10 0.00
+  70_Static vehicles.stationary.Smoke$Smoke15 0 74362.35 97650.94 629.10 0.00
+  72_Static vehicles.stationary.Smoke$Smoke15 0 74364.59 97478.09 629.10 0.00
+  74_Static vehicles.stationary.Smoke$Smoke15 0 74366.83 97306.36 629.10 0.00
+  76_Static vehicles.stationary.Smoke$Smoke15 0 74369.06 97117.83 629.10 0.00
+  78_Static vehicles.stationary.Smoke$Smoke15 0 74381.36 97117.11 629.10 0.00
+  80_Static vehicles.stationary.Smoke$Smoke15 0 74394.54 97116.94 629.10 0.00
+  82_Static vehicles.stationary.Smoke$Smoke15 0 74354.53 97118.86 629.10 0.00
+  94_Static vehicles.stationary.Smoke$Smoke15 0 74342.23 97118.86 629.10 0.00
+[Buildings]
+  0_bld House$Furniture20mm_Flak_Pos_W 1 73920.62 62229.62 690.00
+  1_bld House$Furniture20mm_Flak_Pos_W 1 74295.33 62212.75 480.00
+  2_bld House$Furniture20mm_Flak_Pos_W 1 74115.92 61674.74 690.00
+  3_bld House$Furniture20mm_Flak_Pos_W 1 72609.25 80392.97 630.00
+  4_bld House$Furniture20mm_Flak_Pos_W 1 76446.72 80466.24 630.00
+  5_bld House$Furniture20mm_Flak_Pos_W 1 66800.22 81649.38 630.00
+  6_bld House$Furniture20mm_Flak_Pos_W 1 56627.14 81058.63 630.00
+  7_bld House$Furniture20mm_Flak_Pos_W 1 51219.30 81293.49 630.00
+  8_bld House$Furniture20mm_Flak_Pos_W 1 42415.72 82986.64 675.00
+  9_bld House$AirdromeMaskingnet 1 74285.81 97838.01 719.10
+  10_bld House$AirdromeMaskingnet 1 74286.04 97812.01 719.10
+  11_bld House$AirdromeMaskingnet 1 74285.70 97787.92 719.10
+  12_bld House$AirdromeMaskingnet 1 74285.90 97762.20 719.10
+[Target]
+  0 1 0 0 500 54415 72470 0 1 4_Chief 54500 73500
+  3 0 1 720 501 72080 98364 750
+  0 1 0 0 500 42266 81884 0 0 9_Chief 42092 82299
+[StaticCamera]
+  61173 84093 100
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 39208.38 89909.38 2
+  FrontMarker1 70808.59 89482.35 2
+  FrontMarker2 105398.01 96955.37 2
+  FrontMarker3 39528.65 91083.71 1
+  FrontMarker4 70595.07 91083.71 1
+  FrontMarker5 104970.98 98343.22 1
+
+
+
+
+
+[WEATHER]
+WindVelocity 7
+WindDirection 16
+WindTop 7849
+WindTurbulence 0
+WindGust 1
