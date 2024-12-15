@@ -1,0 +1,80 @@
+[common]
+mode         relobj pos
+type         mixer
+infinite     1
+EAXMix       0.95
+occlusion   -9 
+occllf       0.25
+eaxroom      0.5
+obstruction -7
+obstrlf      0
+
+mutable      1
+
+[spl]
+110
+
+[samples]
+engine_3_71a.wav
+engine_3_71b.wav
+engine_3_72a.wav
+engine_3_65.wav
+
+[sample.engine_3_71a.wav]
+infinite 1
+env      0 
+controls rpm
+
+[sample.engine_3_71a.wav.rpm]
+minlo 800.0
+minhi 1000.0
+maxlo 2000.0
+maxhi 2200.0
+value 1.0
+pmin  0.7
+pmax  1.3
+
+[sample.engine_3_71b.wav]
+infinite 1
+env      0 
+controls rpm
+
+[sample.engine_3_71b.wav.rpm]
+minlo 900.0
+minhi 1100.0
+maxlo 2000.0
+maxhi 2200.0
+value 1.0
+pmin  0.8
+pmax  1.2
+
+[sample.engine_3_72a.wav]
+infinite 1
+env      0 
+controls rpm
+
+[sample.engine_3_72a.wav.rpm]
+minlo 900.0
+minhi 1100.0
+maxlo 2000.0
+maxhi 2200.0
+value 0.3
+pmin  0.8
+pmax  1.2
+
+[sample.engine_3_65.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.engine_3_65.wav.rpm]
+minlo 900.0
+minhi 1100.0
+maxlo 2000.0
+maxhi 2200.0
+value 1.0
+pmin  0.7
+pmax  1.3
+
+
+

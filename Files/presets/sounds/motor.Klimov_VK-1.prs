@@ -1,0 +1,236 @@
+[common]
+mode         relobj pos
+type         mixer
+infinite     1
+EAXMix       0.95
+occlusion   -9 
+occllf       0.25
+eaxroom      0.5
+obstruction -7
+obstrlf      0
+
+mutable      1
+
+[spl]
+107
+
+[samples]
+pre_start.wav
+Klimov_VK-1.1000.wav
+Klimov_VK-1.2000.wav
+Klimov_VK-1.3000.wav
+Klimov_VK-1.3500.wav
+xKlimov_VK-1.1000.wav
+xKlimov_VK-1.2000.wav
+xKlimov_VK-1.3000.wav
+xKlimov_VK-1.3500.wav
+xKlimov_VK-1.4000.wav
+J47cockpitnoise.wav
+
+
+
+[sample.pre_start.wav]
+infinite 1
+controls rpm start  
+
+[sample.pre_start.wav.rpm]
+minlo 1
+minhi 3
+maxlo 30
+maxhi 50
+value 1.0
+pmin  0.8
+pmax  1.4
+
+[sample.pre_start.wav.start]
+minlo 0
+minhi 10
+maxlo 100
+maxhi 200
+value 1.0
+pmin  1.0
+pmax  1.0
+
+
+[sample.Klimov_VK-1.1000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.Klimov_VK-1.1000.wav.rpm]
+minlo 100
+minhi 1000
+maxlo 3000
+maxhi 3500
+value 5.0
+pmin  -1.0
+pmax  1000
+
+[sample.Klimov_VK-1.1000.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 2.0
+pmin  1.0
+pmax  1.0
+
+
+
+[sample.Klimov_VK-1.2000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.Klimov_VK-1.2000.wav.rpm]
+minlo 1000
+minhi 1500
+maxlo 5000
+maxhi 5500
+value 5.0
+pmin  -1.0
+pmax  1500
+
+
+
+[sample.Klimov_VK-1.3000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.Klimov_VK-1.3000.wav.rpm]
+minlo 500
+minhi 1200
+maxlo 6000
+maxhi 6500
+value 6.0
+pmin  -1.0
+pmax  2700
+
+
+[sample.Klimov_VK-1.3500.wav]
+infinite 1
+env      8
+controls rpm
+
+
+[sample.Klimov_VK-1.3500.wav.rpm]
+
+minlo 1000 
+minhi 2000 
+maxlo 6000
+maxhi 6500
+value 6.0 
+pmin -1.0 
+pmax  2700
+
+
+
+[sample.xKlimov_VK-1.1000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xKlimov_VK-1.1000.wav.rpm]
+minlo 100
+minhi 300
+maxlo 1000
+maxhi 1700
+value 2.0
+pmin  -1.0
+pmax  1000
+
+[sample.xKlimov_VK-1.1000.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 4.0
+value 2.0
+pmin  1.0
+pmax  1.0
+
+[sample.xKlimov_VK-1.2000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xKlimov_VK-1.2000.wav.rpm]
+minlo 1000
+minhi 1700
+maxlo 2000
+maxhi 2900
+value 3.0
+pmin  -1.0
+pmax  2000
+
+[sample.xKlimov_VK-1.3000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xKlimov_VK-1.3000.wav.rpm]
+minlo 2300
+minhi 3000
+maxlo 6000
+maxhi 6500
+value 7.0
+pmin  -1.0
+pmax  2700
+
+[sample.xKlimov_VK-1.3500.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xKlimov_VK-1.3500.wav.rpm]
+minlo 1500
+minhi 2200
+maxlo 6000
+maxhi 6500
+value 2.5
+pmin  -1.0
+pmax  2700
+
+
+[sample.xKlimov_VK-1.4000.wav]
+infinite 1
+env      0 2
+controls rpm dist
+
+
+[sample.xKlimov_VK-1.4000.wav.rpm]
+minlo 1800 
+minhi 3500 
+maxlo 6000 
+maxhi 6500
+value 10.0 
+pmin -1.0 
+pmax  3000
+
+[sample.xKlimov_VK-1.4000.wav.dist]
+minlo 0
+minhi 0.3
+maxlo 20
+maxhi 300
+value 1.0
+pmin  1.0
+pmax  1.0
+
+[sample.J47cockpitnoise.wav]
+infinite 1
+env      8
+controls speed
+
+
+[sample.J47cockpitnoise.wav.speed]
+
+minlo 25
+minhi 125 
+maxlo 125 
+maxhi 600 
+value 1.0 
+pmin -0.5
+pmax  250
+
+
+

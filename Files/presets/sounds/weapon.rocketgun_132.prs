@@ -1,0 +1,33 @@
+[common]
+mode relobj pos
+
+[spl]
+105
+
+[samples]
+gun_00.wav
+gun_01i.wav
+
+[sample.gun_00.wav]
+env 0 2
+
+[sample.gun_01i.wav]
+env 8
+
+
+;sample ( gun_00 )
+;{
+;  dist ( 25 )
+;  env ( 0 2 )
+;  flags ( rewind )
+;}
+
+;sample ( gun_01s )
+;{
+;  dist ( 10 )
+;  env ( 8 )
+;  eng ( stereo )
+;  mode ( no3d )
+;  flags ( rewind )
+;}
+

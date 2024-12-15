@@ -1,0 +1,131 @@
+[MAIN]
+  MAP ardennes/GW_winload.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 1000.0
+  player r0100
+  army 1
+  playerNum 0
+[Wing]
+  r0100
+  r0101
+  r0102
+  r0103
+  g0100
+  g0101
+  g0102
+  g0103
+[r0100]
+  Planes 4
+  Skill 3
+  Class air.LAGG_3SERIES4
+  Fuel 100
+  weapons default
+[r0100_Way]
+  NORMFLY 18574.54 13313.21 500.00 300.00 &0
+  GATTACK 24517.69 20856.27 500.00 300.00  Bridge39 0 &0
+  NORMFLY 36244.87 28201.32 500.00 300.00 &0
+  NORMFLY 37343.16 18700.62 500.00 300.00 &0
+  LANDING 7775.31 2932.50 0 0 &0
+[r0101]
+  Planes 4
+  Skill 3
+  Class air.LAGG_3SERIES4
+  Fuel 100
+  weapons default
+[r0101_Way]
+  NORMFLY 15618.01 16100.23 500.00 300.00 &0
+  GATTACK 21096.79 21925.94 500.00 300.00  Bridge8 0 &0
+  NORMFLY 35097.10 30244.85 500.00 300.00 &0
+  NORMFLY 37738.62 16327.83 500.00 300.00 &0
+  LANDING 8156.81 3048.40 0 0 &0
+[r0102]
+  Planes 4
+  Skill 3
+  Class air.MIG_3U
+  Fuel 100
+  weapons default
+[r0102_Way]
+  NORMFLY 17836.79 14270.01 500.00 300.00 &0
+  GATTACK 24066.73 21122.87 500.00 300.00  Bridge39 0 &0
+  NORMFLY 37684.25 26223.10 500.00 300.00 &0
+  NORMFLY 38303.57 15706.38 500.00 300.00 &0
+  LANDING 7910.42 2757.23 0 0 &0
+[r0103]
+  Planes 4
+  Skill 3
+  Class air.LA_5FN
+  Fuel 100
+  weapons default
+[r0103_Way]
+  NORMFLY 16510.71 15208.11 500.00 300.00 &0
+  GATTACK 21397.51 20973.91 500.00 300.00  Bridge8 0 &0
+  NORMFLY 35920.26 30151.55 500.00 300.00 &0
+  NORMFLY 37795.12 17514.22 500.00 300.00 &0
+  LANDING 7879.34 2822.42 0 0 &0
+[g0100]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0100_Way]
+  NORMFLY 21310.75 34208.83 500.00 300.00 &0
+  NORMFLY 22261.99 30518.47 500.00 300.00 r0102 1 &0
+  NORMFLY 24583.97 12606.97 500.00 300.00 &0
+  NORMFLY 32499.72 20843.20 500.00 300.00 &0
+  LANDING 26402.60 36815.47 0 0 &0
+[g0101]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0101_Way]
+  NORMFLY 19608.05 34127.96 500.00 300.00 &0
+  NORMFLY 20187.97 29898.82 500.00 300.00 r0101 1 &0
+  NORMFLY 23436.23 13572.10 500.00 300.00 &0
+  NORMFLY 27984.18 12099.85 500.00 300.00 &0
+  NORMFLY 31316.52 22110.42 500.00 300.00 &0
+  LANDING 26156.10 36905.16 0 0 &0
+[g0102]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0102_Way]
+  NORMFLY 20325.34 34302.80 500.00 300.00 &0
+  NORMFLY 21151.57 30225.05 500.00 300.00 r0103 1 &0
+  NORMFLY 25367.71 13567.60 500.00 300.00 &0
+  NORMFLY 29943.74 13694.86 500.00 300.00 &0
+  LANDING 25954.28 37120.14 0 0 &0
+[g0103]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0103_Way]
+  NORMFLY 22256.52 34313.74 500.00 300.00 &0
+  NORMFLY 23025.64 30314.55 500.00 300.00 r0100 1 &0
+  NORMFLY 26732.88 13272.85 500.00 300.00 &0
+  NORMFLY 31761.36 18821.24 500.00 300.00 &0
+  LANDING 26459.10 36984.95 0 0 &0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Flak30_20mm 2 23495.20 37343.95 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Flak30_20mm 2 25020.56 35423.12 360.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Flak30_20mm 2 24453.11 22163.53 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Flak30_20mm 2 26319.94 38247.87 360.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Flak30_20mm 1 6885.68 3616.47 360.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Flak30_20mm 1 7168.16 1752.13 360.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Flak30_20mm 1 9653.94 2034.61 360.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Flak30_20mm 1 9032.49 3842.45 360.00 0.0 0
+  8_Static vehicles.artillery.Artillery$Flak30_20mm 2 25380.51 21953.20 360.00 0.0 0
+  9_Static vehicles.artillery.Artillery$Flak30_20mm 2 23047.10 22358.22 360.00 0.0 0
+  10_Static vehicles.artillery.Artillery$Flak30_20mm 2 23060.93 21649.59 360.00 0.0 0
+[Buildings]
+[Target]
+  2 0 0 0 500 24990 21875 0 0  Bridge39 24876 22124
+[Bridge]
+[House]

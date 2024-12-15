@@ -1,0 +1,32 @@
+[common]
+
+envnum       8
+EAXMix       0.6
+occlusion   -8 
+occllf       0.66
+eaxroom      0.66
+obstruction -8
+obstrlf      0.66
+
+[eax1]
+
+type         PADDEDCELL
+room         0.3
+decay        0.8
+decayhf      0.5 
+
+[eax2]
+
+type         PADDEDCELL
+room         -4
+roomhf       -18
+decay        0.8
+decayhf      0.1
+early        4
+earlydelay   0.05
+reverb       0
+reverbdelay  0.1
+size         2.0
+diffusion    1.0
+absorption   -5
+

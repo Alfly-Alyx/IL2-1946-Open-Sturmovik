@@ -1,0 +1,240 @@
+[common]
+mode         relobj pos
+type         mixer
+infinite     1
+EAXMix       0.95
+occlusion   -9 
+occllf       0.25
+eaxroom      0.5
+obstruction -7
+obstrlf      0
+
+mutable      1
+
+[spl]
+110
+
+[samples]
+jstarter.wav
+jet_1000.wav
+jet_1000t.wav
+jet_2000.wav
+jet_2000t.wav
+jet_3000.wav
+jet_3000t.wav
+jet_3500.wav
+jet_3500t.wav
+xjet_1000.wav
+xjet_2000.wav
+xjet_3000.wav
+xjet_3500.wav
+
+
+[sample.jstarter.wav]
+infinite 1
+controls rpm start
+
+[sample.jstarter.wav.rpm]
+minlo 1
+minhi 3
+maxlo 30
+maxhi 50
+value 1.0
+pmin  0.8
+pmax  1.4
+
+[sample.jstarter.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 1.0
+pmin  1.0
+pmax  1.0
+
+
+[sample.jet_1000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.jet_1000.wav.rpm]
+minlo 100
+minhi 300
+maxlo 1000
+maxhi 1300
+value 2.0
+pmin  -1.0
+pmax  1000
+
+[sample.jet_1000.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 2.0
+pmin  1.0
+pmax  1.0
+
+[sample.jet_1000t.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.jet_1000t.wav.rpm]
+minlo 100
+minhi 300
+maxlo 1000
+maxhi 1300
+value 3.0
+pmin  -1.0
+pmax  1500
+
+[sample.jet_2000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.jet_2000.wav.rpm]
+minlo 700
+minhi 1000
+maxlo 2000
+maxhi 2300
+value 3.0
+pmin  -1.0
+pmax  1500
+
+[sample.jet_2000t.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.jet_2000t.wav.rpm]
+minlo 700
+minhi 1000
+maxlo 2000
+maxhi 2300
+value 3.0
+pmin  -1.0
+pmax  1500
+
+[sample.jet_3000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.jet_3000.wav.rpm]
+minlo 1700
+minhi 2000
+maxlo 3000
+maxhi 3300
+value 4.0
+pmin  -1.0
+pmax  2000
+
+[sample.jet_3000t.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.jet_3000t.wav.rpm]
+minlo 1700
+minhi 2000
+maxlo 3000
+maxhi 3300
+value 4.0
+pmin  -1.0
+pmax  2000
+
+[sample.jet_3500.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.jet_3500.wav.rpm]
+minlo 2700
+minhi 3000
+maxlo 6000
+maxhi 6500
+value 5.0
+pmin  -1.0
+pmax  2700
+
+[sample.jet_3500t.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.jet_3500t.wav.rpm]
+minlo 2700
+minhi 3000
+maxlo 6000
+maxhi 6500
+value 5.0
+pmin  -1.0
+pmax  2700
+
+[sample.xjet_1000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xjet_1000.wav.rpm]
+minlo 100
+minhi 300
+maxlo 1000
+maxhi 1300
+value 2.0
+pmin  -1.0
+pmax  1000
+
+[sample.xjet_1000.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 4.0
+value 2.0
+pmin  1.0
+pmax  1.0
+
+[sample.xjet_2000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xjet_2000.wav.rpm]
+minlo 700
+minhi 1000
+maxlo 2000
+maxhi 2300
+value 3.0
+pmin  -1.0
+pmax  1500
+
+[sample.xjet_3000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xjet_3000.wav.rpm]
+minlo 1700
+minhi 2000
+maxlo 3000
+maxhi 4000
+value 4.0
+pmin  -1.0
+pmax  2000
+
+[sample.xjet_3500.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xjet_3500.wav.rpm]
+minlo 2000
+minhi 3000
+maxlo 6000
+maxhi 6500
+value 5.0
+pmin  -1.0
+pmax  2700

@@ -1,0 +1,77 @@
+[common]
+mode     relobj pos
+type     mixer
+infinite 1
+
+mutable      1
+
+[spl]
+110
+
+[samples]
+prop5.wav
+fan_09.wav
+propbuzz_low.WAV
+
+[sample.propbuzz_low.WAV]
+infinite 1
+env      0 2
+controls rpm angle
+
+[sample.propbuzz_low.WAV.rpm]
+minlo 1000
+minhi 1500
+maxlo 2500
+maxhi 3000
+value 20.0
+pmin  -1.0
+pmax  2100
+
+[sample.propbuzz_low.WAV.angle]
+value 1.0
+pmin  0.1
+pmax  1.0
+
+
+[sample.prop5.wav]
+infinite 1
+env      0 2
+controls rpm angle
+
+
+[sample.prop5.wav.rpm]
+minlo 1000
+minhi 1500
+maxlo 2500
+maxhi 3000
+value 15.0
+pmin  -1.0
+pmax  2450
+
+[sample.prop5.wav.angle]
+value 1.0
+pmin  0.1
+pmax  1.0
+
+
+[sample.fan_09.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.fan_09.wav.rpm]
+minlo 300
+minhi 500
+maxlo 1300
+maxhi 2000
+value 20.0
+pmin  -1.0
+pmax  2500
+
+
+
+
+
+
+
+

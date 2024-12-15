@@ -1,0 +1,264 @@
+[common]
+mode         relobj pos
+type         mixer
+infinite     1
+EAXMix       0.95
+occlusion   -50 
+occllf       0.25
+eaxroom      10.0
+obstruction -100
+obstrlf      0.0
+
+mutable      1
+
+[spl]
+110
+
+[samples]
+xGRIFFON_Starter.wav
+GRIFFON_Starter.wav
+Griffon_1000.wav
+griffon_1500.wav
+Griffon_2000.wav
+Griffon_2700.wav
+Griffon_2701.wav
+xgriffon_1000.wav
+xgriffon_1500.wav
+xgriffon_2000.wav
+xgriffon_2700.wav
+xgriffon_2701.wav
+dmg_86_0m.wav
+
+
+[sample.GRIFFON_Starter.wav]
+infinite 1
+env      8
+controls rpm start
+
+[sample.GRIFFON_Starter.wav.rpm]
+minlo 30
+minhi 30
+maxlo 50
+maxhi 150
+value 3.0
+pmin  1.0
+pmax  1.0
+
+[sample.GRIFFON_Starter.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 3.0
+pmin  1.0
+pmax  1.0
+
+[sample.griffon_1000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.griffon_1000.wav.rpm]
+minlo 80
+minhi 700
+maxlo 1400
+maxhi 1900
+value 4.0
+pmin  1.0
+pmax  1.0
+
+[sample.griffon_1500.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.griffon_1500.wav.rpm]
+minlo 800
+minhi 1100
+maxlo 1800
+maxhi 2200
+value 8.0
+pmin  -1.0
+pmax  1600
+
+[sample.griffon_2000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.griffon_2000.wav.rpm]
+minlo 1300
+minhi 1800
+maxlo 2200
+maxhi 2400
+value 9.0
+pmin  -0.2
+pmax  1900
+
+[sample.griffon_2700.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.griffon_2700.wav.rpm]
+minlo 1700
+minhi 2700
+maxlo 3500
+maxhi 4000
+value 12.0
+pmin  -1.0
+pmax  2200
+
+[sample.griffon_2701.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.griffon_2701.wav.rpm]
+minlo 1900
+minhi 2700
+maxlo 3500
+maxhi 4000
+value 11.0
+pmin  -1.0
+pmax  2500
+
+[sample.xGRIFFON_Starter.wav]
+infinite 1
+env 0 2
+controls rpm start
+
+[sample.xGRIFFON_Starter.wav.rpm]
+minlo 30
+minhi 30
+maxlo 50
+maxhi 150
+value 3.0
+pmin  1.0
+pmax  1.0
+
+[sample.xGRIFFON_Starter.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 3.0
+pmin  1.0
+pmax  1.0
+
+[sample.xgriffon_1000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xgriffon_1000.wav.rpm]
+minlo 80
+minhi 700
+maxlo 1400
+maxhi 1900
+value 3.0
+pmin  1.0
+pmax  1.0
+
+[sample.xgriffon_1000.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 3.0
+pmin  1.0
+pmax  1.0
+
+[sample.xgriffon_1500.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xgriffon_1500.wav.rpm]
+minlo 800
+minhi 1100
+maxlo 1800
+maxhi 2200
+value 6.0
+pmin  -1.0
+pmax  1900
+
+[sample.xgriffon_2000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xgriffon_2000.wav.rpm]
+minlo 1300
+minhi 1800
+maxlo 2200
+maxhi 2400
+value 9.0
+pmin  -1.0
+pmax  2000
+
+[sample.xgriffon_2700.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xgriffon_2700.wav.rpm]
+minlo 1700
+minhi 2700
+maxlo 3500
+maxhi 4000
+value 8.5
+pmin  -1.0
+pmax  2300
+
+[sample.xgriffon_2701.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xgriffon_2701.wav.rpm]
+minlo 2100
+minhi 2700
+maxlo 3500
+maxhi 4000
+value 12.0
+pmin  -1.0
+pmax  2550
+
+[sample.dmg_86_0m.wav]
+infinite 1
+controls rpm damage
+
+[sample.dmg_86_0m.wav.rpm]
+minlo 500
+minhi 2000
+maxlo 4000
+maxhi 6000
+value 2.0
+pmin  0.4
+pmax  2.2
+
+[sample.dmg_86_0m.wav.damage]
+minlo 0.1
+minhi 0.6
+maxlo 1.0
+maxhi 2.0
+value 2.0
+pmin  1.0
+pmax  1.0
+
+[emit]
+start
+
+[emit.start]
+speed 5
+srand 0.15
+vrand 0.1
+prand 0.06
+spl   65
+
+num   3
+
+sample0 an2_cyl_00.wav
+sample1 an2_cyl_01.wav
+sample2 an2_cyl_02.wav

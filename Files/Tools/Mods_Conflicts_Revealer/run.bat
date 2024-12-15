@@ -1,0 +1,1 @@
+java -jar IL2_ModsConflictsRevealer.jar

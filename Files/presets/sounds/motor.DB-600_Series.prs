@@ -1,0 +1,238 @@
+[common]
+mode         relobj pos
+type         mixer
+infinite     1
+EAXMix       0
+occlusion   -200 
+occllf       0.25
+eaxroom      10
+obstruction -200
+obstrlf      0.25
+
+mutable      1
+
+[spl]
+110
+
+[samples]
+DB605_starter.wav
+DB605_starter.wav
+DB605_1000.wav
+DB605_1500.wav
+DB605_2000.wav
+DB605_2700.wav
+DB605_2701.wav
+xDB605_1000.wav
+xDB605_1500.wav
+xDB605_2000.wav
+xDB605_2700.wav
+DB605_dmg.wav
+1.wav
+x2.wav
+
+[sample.DB605_starter.wav]
+infinite 1
+controls rpm start
+
+[sample.DB605_starter.wav.rpm]
+minlo 20
+minhi 30
+maxlo 150
+maxhi 250
+value 1.5
+pmin  0.6
+pmax  1.8
+
+[sample.DB605_starter.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 1.0
+pmin  1.0
+pmax  1.0
+
+[sample.DB605_1000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.DB605_1000.wav.rpm]
+minlo 200
+minhi 500
+maxlo 1300
+maxhi 1900
+value 3.0
+pmin  -1.0
+pmax  500
+
+[sample.DB605_1500.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.DB605_1500.wav.rpm]
+minlo 600
+minhi 1200
+maxlo 1500
+maxhi 2100
+value 4.0
+pmin  -1.0
+pmax  1500
+
+[sample.DB605_2000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.DB605_2000.wav.rpm]
+minlo 1200
+minhi 2000
+maxlo 2000
+maxhi 2500
+value 5.0
+pmin  -1.0
+pmax  2000
+
+[sample.DB605_2700.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.DB605_2700.wav.rpm]
+minlo 1900
+minhi 2400
+maxlo 6000
+maxhi 6500
+value 6.0
+pmin  -1.0
+pmax  2700
+
+[sample.DB605_2701.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.DB605_2701.wav.rpm]
+minlo 1900
+minhi 2400
+maxlo 6000
+maxhi 6500
+value 6.0
+pmin  -1.0
+pmax  2700
+
+[sample.xDB605_1000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xDB605_1000.wav.rpm]
+minlo 200
+minhi 500
+maxlo 1300
+maxhi 1900
+value 3.0
+pmin  -1.0
+pmax  500
+
+[sample.xDB605_1000.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 3.0
+pmin  1.0
+pmax  1.0
+
+[sample.xDB605_1500.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xDB605_1500.wav.rpm]
+minlo 600
+minhi 1200
+maxlo 1500
+maxhi 2100
+value 4.0
+pmin  -1.0
+pmax  1500
+
+[sample.xDB605_2000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xDB605_2000.wav.rpm]
+minlo 1200
+minhi 2000
+maxlo 2000
+maxhi 2500
+value 5.0
+pmin  -1.0
+pmax  2000
+
+[sample.xDB605_2700.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xDB605_2700.wav.rpm]
+minlo 1900
+minhi 2400
+maxlo 6000
+maxhi 6500
+value 6.0
+pmin  -1.0
+pmax  2700
+
+[sample.DB605_dmg.wav]
+infinite 1
+controls rpm damage
+
+[sample.DB605_dmg.wav.rpm]
+minlo 500
+minhi 2000
+maxlo 4000
+maxhi 6000
+value 2.0
+pmin  0.4
+pmax  2.2
+
+[sample.DB605_dmg.wav.damage]
+minlo 0.1
+minhi 0.6
+maxlo 1.0
+maxhi 2.0
+value 2.0
+pmin  1.0
+pmax  1.0
+
+[sample.1.wav]
+infinite 1
+env      8
+controls speed
+
+[sample.1.wav.speed]
+minlo 188
+minhi 220
+maxlo 500
+maxhi 610
+value 5.0
+pmin  -1.0
+pmax  220
+
+[sample.x2.wav]
+infinite 1
+env      0 2
+controls speed
+
+[sample.x2.wav.speed]
+minlo 188
+minhi 220
+maxlo 500
+maxhi 610
+value 7.0
+pmin  -1.0
+pmax  220

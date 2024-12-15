@@ -1,0 +1,180 @@
+[MAIN]
+  MAP Manchuria/load.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 1000.0
+  player r0100
+  army 1
+  playerNum 0
+[Wing]
+  r0103
+  r0100
+  r0101
+  r0102
+  g0101
+  g0102
+  g0103
+  g0100
+  usa0110
+[r0103]
+  Planes 1
+  Skill 1
+  Class air.LA_7B20
+  Fuel 100
+  weapons default
+[r0103_Way]
+  NORMFLY 86361.45 75330.40 1300.00 300.00 &0
+  NORMFLY 68369.48 57574.30 1300.00 300.00 &0
+  NORMFLY 115662.65 74795.18 1300.00 300.00 &0
+  NORMFLY 144192.77 120289.16 400.00 300.00 &0
+  LANDING 137937.47 124709.97 0 0 &0
+[r0100]
+  Planes 1
+  Skill 1
+  Class air.LA_7B20
+  Fuel 100
+  weapons default
+[r0100_Way]
+  NORMFLY 82144.94 76851.41 400.00 300.00 &0
+  NORMFLY 64771.08 58088.35 1200.00 300.00 &0
+  NORMFLY 114377.51 71967.87 1000.00 300.00 &0
+  NORMFLY 144963.86 117204.82 400.00 300.00 &0
+  LANDING 137898.34 124668.00 0 0 &0
+[r0101]
+  Planes 1
+  Skill 1
+  Class air.LA_7B20
+  Fuel 100
+  weapons default
+[r0101_Way]
+  NORMFLY 82925.89 76650.64 1200.00 300.00 &0
+  NORMFLY 65682.30 57703.84 1200.00 300.00 &0
+  NORMFLY 116152.97 71697.68 1200.00 300.00 &0
+  NORMFLY 146918.25 119839.09 500.00 300.00 &0
+  LANDING 137845.35 124618.84 0 0 &0
+[r0102]
+  Planes 1
+  Skill 1
+  Class air.LA_7B20
+  Fuel 100
+  weapons default
+[r0102_Way]
+  NORMFLY 84252.32 76406.51 1200.00 300.00 &0
+  NORMFLY 66743.44 57040.63 1200.00 300.00 &0
+  NORMFLY 116484.57 73753.65 1200.00 300.00 &0
+  NORMFLY 148142.00 117085.64 500.00 300.00 &0
+  LANDING 137859.40 124647.10 0 0 &0
+[g0101]
+  Planes 1
+  Skill 1
+  Class air.A6M7_62
+  Fuel 100
+  weapons default
+[g0101_Way]
+  NORMFLY 68015.09 52947.13 1200.00 300.00 &0
+  NORMFLY 83083.04 71782.07 1300.00 300.00 &0
+  NORMFLY 55458.45 64248.10 1000.00 300.00 &0
+  NORMFLY 39134.83 48761.58 500.00 300.00 &0
+  LANDING 42534.79 42975.76 0 0 &0
+[g0102]
+  Planes 1
+  Skill 1
+  Class air.A6M7_62
+  Fuel 100
+  weapons default
+[g0102_Way]
+  NORMFLY 66725.38 53498.48 1200.00 300.00 &0
+  NORMFLY 82137.51 72061.53 1200.00 300.00 &0
+  NORMFLY 54464.18 65280.19 1200.00 300.00 &0
+  NORMFLY 38161.57 48977.59 450.00 300.00 &0
+  LANDING 42531.57 42976.38 0 0 &0
+[g0103]
+  Planes 1
+  Skill 1
+  Class air.A6M7_63
+  Fuel 100
+  weapons default
+[g0103_Way]
+  NORMFLY 65697.91 53909.47 1250.00 300.00 &0
+  NORMFLY 81268.19 72541.02 1300.00 300.00 &0
+  NORMFLY 54121.69 65828.18 950.00 300.00 &0
+  NORMFLY 37339.59 49251.58 450.00 300.00 &0
+  LANDING 42531.57 42976.38 0 0 &0
+[g0100]
+  Planes 1
+  Skill 1
+  Class air.A6M7_62
+  Fuel 100
+  weapons default
+[g0100_Way]
+  NORMFLY 64396.44 54388.96 1250.00 300.00 &0
+  NORMFLY 80562.05 73157.50 1250.00 300.00 &0
+  NORMFLY 53436.70 66102.17 1250.00 300.00 &0
+  NORMFLY 36586.11 49183.08 500.00 300.00 &0
+  LANDING 42531.57 42976.38 0 0 &0
+[usa0110]
+  Planes 4
+  Skill 1
+  Class air.TBF1
+  Fuel 100
+  weapons 1xmk13
+[usa0110_Way]
+  TAKEOFF 73651.55 28724.10 0 0 0_Chief 0 &0
+  NORMFLY 70141.84 29552.56 500.00 300.00 &0
+  NORMFLY 54462.09 34003.58 500.00 300.00 &0
+  NORMFLY 49449.39 43644.83 500.00 300.00 &0
+  GATTACK 49574.11 45723.82 50.00 300.00 28_Static 0 &0
+  NORMFLY 50066.31 47207.21 150.00 300.00 &0
+  NORMFLY 59621.23 35520.98 500.00 300.00 &0
+  NORMFLY 68826.76 25101.53 500.00 300.00 &0
+  LANDING 71206.86 26153.55 0 0 0_Chief 1 &0
+[Chiefs]
+  0_Chief Ships.USSCVGeneric 1 0 2 1.0
+  1_Chief Ships.USSOBannonDD450 1 0 2 1.0
+[0_Chief_Road]
+  73682.42 28743.29 120.00 0 2 8.809722900390625
+  71153.43 26214.28 120.00 0 2 8.809722900390625
+  71153.43 20650.51 120.00 0 2 8.809722900390625
+  82179.84 13265.84 120.00 0 2 8.809722900390625
+  98668.86 8309.03 120.00 0 2 8.809722900390625
+  110302.22 7803.22 120.00
+[1_Chief_Road]
+  72266.19 29451.39 120.00 0 2 9.774444580078125
+  70040.68 25910.82 120.00 0 2 9.774444580078125
+  69939.52 21459.79 120.00 0 2 9.774444580078125
+  80864.76 12153.10 120.00 0 2 9.774444580078125
+  98365.38 6791.63 120.00 0 2 9.774444580078125
+  109594.10 6184.67 120.00
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 137645.74 124868.91 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 136326.40 124026.24 360.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 136837.11 123226.12 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Zenit85mm_1939 1 138088.35 124260.31 360.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Flak18_37mm 2 42365.38 43403.22 360.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Flak18_37mm 2 43353.55 44325.93 360.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Flak18_37mm 2 43948.04 43814.40 360.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Flak18_37mm 2 42914.89 42796.30 360.00 0.0 0
+  8_Static vehicles.artillery.Artillery$Flak18_37mm 2 43742.99 43095.95 360.00 0.0 0
+  9_Static vehicles.artillery.Artillery$Flak18_37mm 2 42797.68 44000.34 360.00 0.0 0
+  10_Static vehicles.planes.Plane$B5N2 2 42684.57 42927.34 359.10 0.0 ja
+  11_Static vehicles.planes.Plane$B5N2 2 42727.59 42947.32 359.10 0.0 ja
+  12_Static vehicles.planes.Plane$B5N2 2 42755.95 42984.05 359.10 0.0 ja
+  13_Static vehicles.planes.Plane$A_20G 1 95291.62 81512.66 359.10 0.0 null
+  14_Static vehicles.planes.Plane$A_20G 1 95267.19 81471.24 359.10 0.0 null
+  15_Static vehicles.planes.Plane$A_20G 1 95237.46 81385.22 359.10 0.0 null
+  16_Static vehicles.planes.Plane$PE_2SERIES359 1 95221.53 81344.87 359.10 0.0 null
+  17_Static vehicles.planes.Plane$PE_2SERIES359 1 95155.69 81206.82 359.10 0.0 null
+  18_Static vehicles.planes.Plane$PE_2SERIES359 1 95142.94 81166.46 359.10 0.0 null
+  19_Static vehicles.planes.Plane$PE_2SERIES359 1 95062.24 81001.86 359.10 0.0 null
+  20_Static vehicles.planes.Plane$PE_2SERIES359 1 95035.69 80962.57 359.10 0.0 null
+  21_Static vehicles.artillery.Artillery$Zenit3K 1 94982.59 81417.08 719.10 0.0 0
+  22_Static vehicles.artillery.Artillery$Zenit3K 1 95153.56 81736.73 719.10 0.0 0
+  23_Static vehicles.artillery.Artillery$Zenit3K 1 95688.79 81477.61 360.00 0.0 0
+  24_Static vehicles.artillery.Artillery$Zenit3K 1 94930.55 80791.59 360.00 0.0 0
+  25_Static vehicles.planes.Plane$H8K1 2 48021.43 46608.10 359.10 0.0 ja
+  26_Static vehicles.planes.Plane$H8K1 2 48186.41 46360.62 359.10 0.0 ja
+  27_Static vehicles.planes.Plane$H8K1 2 48563.52 46077.79 359.10 0.0 ja
+  28_Static ships.Ship$IJNBBGeneric 2 49615.62 46168.25 719.10 0.0 0 2 0.5
+[Buildings]
+[Bridge]
+[House]

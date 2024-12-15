@@ -1,0 +1,291 @@
+[common]
+mode         relobj pos
+type         mixer
+infinite     1
+EAXMix       0
+occlusion   -300 
+occllf       0.25
+eaxroom      10
+obstruction -300
+obstrlf      0.25
+
+mutable      1
+
+[spl]
+110
+
+[samples]
+herc_starter.wav
+xherc_starter.wav
+Hercules_1000.wav
+Hercules_1500.wav
+Hercules_2000.wav
+Hercules_2001.wav
+Hercules_2700.wav
+Hercules_2701.wav
+xhercules_1000.wav
+xhercules_1500.wav
+xhercules_2000.wav
+xhercules_2700.wav
+xhercules_2701.wav
+M82_dmg.wav
+
+[sample.herc_starter.wav]
+infinite 1
+env      8
+controls rpm start
+
+[sample.herc_starter.wav.rpm]
+minlo 30
+minhi 30
+maxlo 50
+maxhi 150
+value 3.0
+pmin  1.0
+pmax  1.0
+
+[sample.herc_starter.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 3.0
+pmin  1.0
+pmax  1.0
+
+[sample.hercules_1000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.hercules_1000.wav.rpm]
+minlo 100
+minhi 500
+maxlo 950
+maxhi 1300
+value 4.5
+pmin  0.92
+pmax  1.08
+
+[sample.hercules_1000.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 3.0
+pmin  1.0
+pmax  1.0
+
+[sample.hercules_1500.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.hercules_1500.wav.rpm]
+minlo 600
+minhi 1100
+maxlo 1500
+maxhi 2000
+value 6.0
+pmin  -1.0
+pmax  1300
+
+[sample.hercules_2000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.hercules_2000.wav.rpm]
+minlo 1100
+minhi 1600
+maxlo 1900
+maxhi 2400
+value 10.0
+pmin  -1.0
+pmax  1800
+
+[sample.hercules_2001.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.hercules_2001.wav.rpm]
+minlo 1100
+minhi 1600
+maxlo 1900
+maxhi 2400
+value 10.0
+pmin  -1.0
+pmax  1800
+
+
+[sample.hercules_2700.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.hercules_2700.wav.rpm]
+minlo 1700
+minhi 2700
+maxlo 4000
+maxhi 6000
+value 12.0
+pmin  -1.0
+pmax  2500
+
+[sample.hercules_2701.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.hercules_2701.wav.rpm]
+minlo 1700
+minhi 2700
+maxlo 4000
+maxhi 6000
+value 12.0
+pmin  -1
+pmax  2500
+
+[sample.xherc_starter.wav]
+infinite 1
+env      0 2
+controls rpm start
+
+[sample.xherc_starter.wav.rpm]
+minlo 30
+minhi 30
+maxlo 50
+maxhi 150
+value 3.0
+pmin  1.0
+pmax  1.0
+
+[sample.xherc_starter.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 3.0
+pmin  1.0
+pmax  1.0
+
+[sample.xhercules_1000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xhercules_1000.wav.rpm]
+minlo 100
+minhi 500
+maxlo 950
+maxhi 1300
+value 4.5
+pmin  0.92
+pmax  1.08
+
+[sample.xhercules_1000.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 3.0
+pmin  1.0
+pmax  1.0
+
+[sample.xhercules_1500.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xhercules_1500.wav.rpm]
+minlo 600
+minhi 1100
+maxlo 1500
+maxhi 2000
+value 6.0
+pmin  -1.0
+pmax  1300
+
+[sample.xhercules_2000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xhercules_2000.wav.rpm]
+minlo 1100
+minhi 1600
+maxlo 1900
+maxhi 2400
+value 10.0
+pmin  -1.0
+pmax  1800
+
+[sample.xhercules_2700.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xhercules_2700.wav.rpm]
+minlo 1700
+minhi 2700
+maxlo 4000
+maxhi 6000
+value 12.0
+pmin  -1.0
+pmax  2500
+
+[sample.xhercules_2701.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xhercules_2701.wav.rpm]
+minlo 1700
+minhi 2700
+maxlo 4000
+maxhi 6000
+value 12.0
+pmin  -1
+pmax  2500
+
+
+
+[sample.M82_dmg.wav]
+infinite 1
+controls rpm damage
+
+[sample.M82_dmg.wav.rpm]
+minlo 500
+minhi 2000
+maxlo 4000
+maxhi 6000
+value 2.0
+pmin  0.4
+pmax  2.2
+
+[sample.M82_dmg.wav.damage]
+minlo 0.1
+minhi 0.6
+maxlo 1.0
+maxhi 2.0
+value 2.0
+pmin  1.0
+pmax  1.0
+
+[emit]
+start
+
+[emit.start]
+speed 90
+srand 0.15
+vrand 0.1
+prand 0.06
+spl   85
+
+num   3
+
+sample0 herc_cyl_00.wav
+sample1 herc_cyl_01.wav
+sample2 herc_cyl_02.wav
+

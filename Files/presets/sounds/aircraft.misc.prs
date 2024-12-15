@@ -1,0 +1,47 @@
+[air_brake]
+file vilga_key11m.wav
+infinite 0
+
+[p_gear]
+file     p_dev_02.wav
+controls env
+
+[p_gear.env]
+gain0    0.85
+gain1    1.0
+
+[p_flaps]
+file     p_dev_00.wav
+infinite 1
+controls env
+
+[p_flaps.env]
+gain0    0.25
+gain1    1.25
+
+[e_gear]
+file     e_dev_05_2.wav
+controls env
+
+[e_gear.env]
+gain0    1.0
+gain1    1.5
+
+[e_flaps]
+file     e_dev_05_21.wav
+infinite 1
+controls env
+
+[e_flaps.env]
+gain0    0.25
+gain1    1.0
+
+[m_flaps]
+file     wd_56_01a.wav
+infinite 1
+controls env
+
+[m_flaps.env]
+gain0    0.25
+gain1    1.0
+

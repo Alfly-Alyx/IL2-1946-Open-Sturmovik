@@ -1,0 +1,42 @@
+[ClassInfo]
+  ClassName TMaterial
+[General]
+  tfDoubleSide              1
+  tfShouldSort              0
+  tfGameTimer               1
+[Layer0]
+  TextureName               ToolsKYA2.TGA //Tools.TGA //FireA1.TGA
+  PaletteName            
+//   fire1.pal
+  Frame                     0.0   // Float 0.0 - first, 1.0 - last
+  VisibleDistanceNear       0.0   // Float 0.0 - near,  1.0 - far
+  VisibleDistanceFar        30000.0   // Float 0.0 - near,  1.0 - far
+//  TextureCoordScale         0.0 0.0  0.333333 0.333333 // Uo   Vo   kU   kV
+  TextureCoordScale         0.0 0.0  1 1 // Uo   Vo   kU   kV
+  ColorScale                1.0 1.0 1.0 1.0    // R G B A
+
+  // Wrap Texture Flags (0/1)
+  tfWrapX                   1
+  tfWrapY                   1
+  // Magnification / Minification (nearest on default)
+  tfMinLinear               1
+  tfMagLinear               1
+  tfMipMap                  0
+  /// BlendModes
+  tfBlend                   1
+  tfBlendAdd                0
+  tfTestA                   1
+  tfTestZ                   1
+  tfUpDateClear             0
+  tfModulate                1
+  tfNoTexture               0
+  tfAnimatePalette          1
+  tfAnimateSkippedFrames    0
+[LightParams]
+  Ambient 0.00
+  Diffuse 0.00
+  Specular 0.0
+  SpecularPow 16
+  Shine 1.0
+
+// eof

@@ -1,0 +1,201 @@
+[common]
+mode         relobj pos
+type         mixer
+infinite     1
+EAXMix       0.95
+occlusion   -9 
+occllf       0.25
+eaxroom      0.5
+obstruction -7
+obstrlf      0
+
+mutable      1
+
+[spl]
+100
+
+[samples]
+DB605_starter.wav
+packard_merlin_1000.wav
+packard_merlin_1001.wav
+packard_merlin_3000.wav
+packard_merlin_3001.wav
+xpackard_merlin_1000.wav
+xpackard_merlin_2000.wav
+xpackard_merlin_3000.wav
+xpackard_merlin_3001.wav
+xpackard_merlin_3002.wav
+DB605_dmg.wav
+
+
+[sample.DB605_starter.wav]
+infinite 1
+controls rpm start
+
+[sample.DB605_starter.wav.rpm]
+minlo 20
+minhi 30
+maxlo 150
+maxhi 250
+value 1.5
+pmin  0.6
+pmax  1.8
+
+[sample.DB605_starter.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 1.5
+pmin  1.0
+pmax  1.0
+
+[sample.packard_merlin_1000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.packard_merlin_1000.wav.rpm]
+minlo 300
+minhi 500
+maxlo 1000
+maxhi 2000
+value 12.0
+pmin  -1.0
+pmax  1000
+
+[sample.packard_merlin_1001.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.packard_merlin_1001.wav.rpm]
+minlo 300
+minhi 500
+maxlo 1000
+maxhi 2000
+value 12.0
+pmin  -1.0
+pmax  1000
+
+[sample.packard_merlin_3000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.packard_merlin_3000.wav.rpm]
+minlo 500
+minhi 1000
+maxlo 6000
+maxhi 6500
+value 12.0
+pmin  -1.0
+pmax  3000
+
+[sample.packard_merlin_3001.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.packard_merlin_3001.wav.rpm]
+minlo 500
+minhi 1000
+maxlo 6000
+maxhi 6500
+value 12.0
+pmin  -1.0
+pmax  3000
+
+[sample.xpackard_merlin_1000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xpackard_merlin_1000.wav.rpm]
+minlo 300
+minhi 500
+maxlo 1000
+maxhi 2000
+value 4.0
+pmin  -1.0
+pmax  1000
+
+[sample.xpackard_merlin_2000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xpackard_merlin_2000.wav.rpm]
+minlo 500
+minhi 1000
+maxlo 1500
+maxhi 2500
+value 8.0
+pmin  -1.0
+pmax  1500
+
+[sample.xpackard_merlin_3000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xpackard_merlin_3000.wav.rpm]
+minlo 1500
+minhi 2500
+maxlo 6000
+maxhi 6500
+value 12.0
+pmin  -1.0
+pmax  3000
+
+[sample.xpackard_merlin_3001.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xpackard_merlin_3001.wav.rpm]
+minlo 2000
+minhi 3000
+maxlo 6000
+maxhi 6500
+value 12.0
+pmin  -1.0
+pmax  3000
+
+[sample.xpackard_merlin_3002.wav]
+infinite 1
+env      0 2
+controls speed
+
+[sample.xpackard_merlin_3002.wav.speed]
+minlo 110
+minhi 210
+maxlo 500
+maxhi 610
+value 6.0
+pmin  -1.0
+pmax  210
+
+[sample.DB605_dmg.wav]
+infinite 1
+controls rpm damage
+
+[sample.DB605_dmg.wav.rpm]
+minlo 500
+minhi 2000
+maxlo 4000
+maxhi 6000
+value 3.0
+pmin  0.4
+pmax  2.2
+
+[sample.DB605_dmg.wav.damage]
+minlo 0.1
+minhi 0.6
+maxlo 1.0
+maxhi 2.0
+value 3.0
+pmin  1.0
+pmax  1.0
+
+

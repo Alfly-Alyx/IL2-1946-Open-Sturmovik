@@ -1,0 +1,224 @@
+[common]
+mode     normal all
+type     mixer
+infinite 1
+forcectrl 1
+
+[spl]
+120
+
+[samples]
+metal_noise_02m.wav
+metal_noise_04m.wav
+Stress.wav
+diving_17_81a.wav
+vilga_land_00m.wav
+vilga_land_01m.wav
+air_clock_00.wav
+brake_00_1.wav
+wind_rear_00m.wav
+wind_rear_01m.wav
+
+[sample.metal_noise_02m.wav]
+infinite 1
+controls flatter
+env 2 8
+
+[sample.metal_noise_02m.wav.flatter]
+minlo 0
+minhi 0.6
+maxlo 2.0
+maxhi 3.0
+value 0.70
+pmin  0.9
+pmax  1.1
+
+[sample.metal_noise_04m.wav]
+infinite 1
+controls flatter
+env 2 8
+
+[sample.metal_noise_04m.wav.flatter]
+minlo 0
+minhi 0.4
+maxlo 2.0
+maxhi 3.0
+value 0.70
+pmin  0.95
+pmax  1.05
+
+[sample.stress.wav]
+infinite 1
+controls flatter
+env 2 8
+
+[sample.stress.wav.flatter]
+minlo 0
+minhi 3.0
+maxlo 4.0
+maxhi 5.0
+value 10.0
+pmin  0.95  
+pmax  1.00
+
+[sample.diving_17_81a.wav]
+infinite 1
+controls diving speed
+
+[sample.diving_17_81a.wav.diving]
+minlo 0
+minhi 0.7
+maxlo 2.0
+maxhi 4.0
+value 6.0
+pmin  0.7
+pmax  2.0
+
+[sample.diving_17_81a.wav.speed]
+minlo 30.0
+minhi 60.0
+maxlo 300.0
+maxhi 500.0
+value 1.0
+pmin  0.9
+pmax  1.1
+
+
+[sample.vilga_land_00m.wav]
+infinite 1
+controls relspeed gear
+
+[sample.vilga_land_00m.wav.relspeed]
+minlo 2
+minhi 6
+maxlo 100
+maxhi 200
+value 1.0
+pmin  0.8
+pmax  1.1
+
+
+[sample.vilga_land_00m.wav.gear]
+minlo 0.0
+minhi 1.0
+maxlo 1.2
+maxhi 1.5
+value 1.0
+pmin  1.0
+pmax  1.0
+
+[sample.vilga_land_01m.wav]
+infinite 1
+controls relspeed gear
+
+[sample.vilga_land_01m.wav.relspeed]
+minlo 2
+minhi 6
+maxlo 100
+maxhi 200
+value 1.0
+pmin  0.9
+pmax  1.05
+
+
+[sample.vilga_land_01m.wav.gear]
+minlo 0.0
+minhi 1.0
+maxlo 1.2
+maxhi 1.5
+value 1.0
+pmin  1.0
+pmax  1.0
+
+[sample.air_clock_00.wav]
+infinite 1
+env 8
+controls rpm
+spl 70
+
+[sample.air_clock_00.wav.rpm]
+minlo 0.0
+minhi 0.0
+maxlo 300
+maxhi 400
+value 0.12
+pmin  1.0
+pmax  1.0
+
+[sample.brake_00_1.wav]
+infinite 1
+env 2 8
+controls relspeed gear brake
+
+[sample.brake_00_1.wav.relspeed]
+minlo 0.8
+minhi 1.5
+maxlo 10
+maxhi 200
+value 1.0
+pmin  0.7
+pmax  1.5
+
+[sample.brake_00_1.wav.gear]
+minlo 0
+minhi 0.5
+maxlo 1.0
+maxhi 1.2
+value 1.0
+pmin  1.0
+pmax  1.0
+
+[sample.brake_00_1.wav.brake]
+minlo 0
+minhi 0.5
+maxlo 1.0
+maxhi 1.2
+value 1.0
+pmin  1.0
+pmax  1.0
+
+[sample.wind_rear_00m.wav]
+infinite 1
+env 2 8
+controls speed door
+
+[sample.wind_rear_00m.wav.speed]
+minlo 20
+minhi 80
+maxlo 150
+maxhi 200
+value 1.0
+pmin  0.8
+pmax  1.4
+
+[sample.wind_rear_00m.wav.door]
+minlo 0.1
+minhi 1.0
+maxlo 1.5
+maxhi 2.0
+value 10.0
+pmin  0.9
+pmax  1.1
+
+[sample.wind_rear_01m.wav]
+infinite 1
+env 2 8
+controls speed door
+
+[sample.wind_rear_01m.wav.speed]
+minlo 20
+minhi 80
+maxlo 150
+maxhi 200
+value 1.0
+pmin  0.8
+pmax  1.3
+
+[sample.wind_rear_01m.wav.door]
+minlo 0.1
+minhi 1.0
+maxlo 1.5
+maxhi 2.0
+value 10.0
+pmin  0.9
+pmax  1.1

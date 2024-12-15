@@ -1,0 +1,178 @@
+[MAIN]
+  MAP Net8Islands/load_v2.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 1000.0
+  army 2
+  playerNum 0
+[MDS]
+  ZutiCarrierSpawnPoints_CV2 6
+  ZutiCarrierSpawnPoints_CV9 5
+  ZutiCarrierSpawnPoints_CVE 2
+  ZutiCarrierSpawnPoints_CVL 7
+  ZutiCarrierSpawnPoints_Akagi 8
+  ZutiCarrierSpawnPoints_IJN 6
+  ZutiCarrierSpawnPoints_HMS 5
+  ZutiNextMission_RedWon
+  ZutiNextMission_BlueWon
+  ZutiNextMission_Difficulty
+  ZutiNextMission_LoadDelay 60
+  ZutiShips_EnableResync 1
+  ZutiTargets_StaticIcons 0
+  ZutiTargets_MovingIcons 1
+  ZutiTargets_CheckForWinner 0
+  ZutiTargets_ShowTargets 1
+  ZutiIcons_IconsSize 2
+  ZutiIcons_ShowNeutralHB 0
+  ZutiRadar_SetRadarToAdvanceMode 1
+  ZutiRadar_ShowAircraft 1
+  ZutiRadar_ShowGroundUnits 1
+  ZutiRadar_ShowRockets 1
+  ZutiRadar_StaticIconsIfNoRadar 0
+  ZutiRadar_AircraftIconsWhite 0
+  ZutiRadar_RefreshInterval 0
+  ZutiRadar_EnableTowerCommunications 1
+  ZutiRadar_ShipsAsRadar 1
+  ZutiRadar_ShipRadar_MaxRange 10
+  ZutiRadar_ShipRadar_MinHeight 100
+  ZutiRadar_ShipRadar_MaxHeight 5000
+  ZutiRadar_ShipSmallRadar_MaxRange 5
+  ZutiRadar_ShipSmallRadar_MinHeight 0
+  ZutiRadar_ShipSmallRadar_MaxHeight 2000
+  ZutiRadar_ScoutsAsRadar 1
+  ZutiRadar_ScoutRadar_MaxRange 4
+  ZutiRadar_ScoutRadar_DeltaHeight 2500
+  ZutiRadar_ScoutRadarType_Red
+  ZutiRadar_ScoutRadarType_Blue Ar-234B-2
+  ZutiRadar_HideUnpopulatedAirstripsFromMinimap 0
+  ZutiRadar_ScoutGroundObjects_Alpha 7
+  ZutiRadar_ShowPlayerAircraft 1
+  ZutiHud_DisableHudStatistics 0
+  ZutiHud_ShowPilotNumber 0
+  ZutiHud_ShowPilotPing 1
+  ZutiHud_ShowPilotName 1
+  ZutiHud_ShowPilotScore 1
+  ZutiHud_ShowPilotArmy 1
+  ZutiHud_ShowPilotACDesignation 0
+  ZutiHud_ShowPilotACType 1
+  ZutiMisc_DisableAIRadioChatter 0
+  ZutiMisc_DespawnAIPlanesAfterLanding 1
+  ZutiMisc_HidePlayersCountOnHomeBase 0
+  ZutiMisc_EnableReflyOnlyIfBailedOrDied 0
+  ZutiMisc_DisableReflyForMissionDuration 0
+  ZutiMisc_ReflyKIADelay 15
+  ZutiMisc_MaxAllowedKIA 10
+  ZutiMisc_ReflyKIADelayMultiplier 2.0
+  ZutiMisc_BombsCat1_CratersVisibilityMultiplier 1.0
+  ZutiMisc_BombsCat2_CratersVisibilityMultiplier 1.0
+  ZutiMisc_BombsCat3_CratersVisibilityMultiplier 1.0
+  ZutiMisc_BombsCat4_CratersVisibilityMultiplier 1.0
+  ZutiReload_OneMgCannonRearmSecond 10
+  ZutiReload_OneBombFTankTorpedoeRearmSeconds 25
+  ZutiReload_OneRocketRearmSeconds 20
+  ZutiReload_GallonsLitersPerSecond 3
+  ZutiReload_OneWeaponRepairSeconds 3
+  ZutiReload_FlapsRepairSeconds 30
+  ZutiReload_EngineRepairSeconds 90
+  ZutiReload_OneControlCableRepairSeconds 15
+  ZutiReload_OneFuelOilTankRepairSeconds 20
+  ZutiReload_LoadoutChangePenaltySeconds 30
+  ZutiReload_CockpitRepairSeconds 30
+  ZutiReload_ReloadOnlyIfFuelTanksExist 0
+  ZutiReload_ReloadOnlyIfAmmoBoxesExist 0
+  ZutiReload_RepairOnlyIfWorkshopExist 0
+  ZutiReload_OnlyHomeBaseSpecificLoadouts 1
+  ZutiDrop_OverFriendlyHomeBase 0
+  ZutiDrop_OverEnemyHomeBase 0
+  ZutiDrop_OverNeutralHomeBase 0
+  ZutiDrop_OverFriendlyFrictionArea 0
+  ZutiDrop_OverEnemyFrictionArea 1
+  ZutiDrop_OverDestroyGroundArea 1
+  ZutiDrop_OverDefenceGroundArea 1
+  ZutiFront_EnableHomeBaseCapturing 0
+[RespawnTime]
+  Bigship 1800
+  Ship 1800
+  Aeroanchored 1800
+  Artillery 1800
+  Searchlight 1800
+[Wing]
+  r0100
+  g0100
+[r0100]
+  Planes 4
+  Parachute 0
+  Skill 3
+  Class air.B_29
+  Fuel 50
+  weapons 10x2000
+[r0100_Way]
+  NORMFLY 50853.51 47867.80 5000.00 576.00 &0
+  GATTACK 43250.04 43225.04 4000.00 576.00 &0
+  NORMFLY 38650.07 40525.06 3000.00 576.00 &0
+  NORMFLY 25919.97 31087.45 2000.00 576.00 &0
+  NORMFLY 21668.91 18014.29 2000.00 576.00 &0
+  NORMFLY 23268.77 7135.22 1500.00 576.00 &0
+  NORMFLY 19657.65 4712.58 1500.00 300.00 &0
+  NORMFLY 13623.89 7226.64 1000.00 250.00 &0
+  LANDING 11090.16 10146.60 0 0 &0
+[g0100]
+  Planes 2
+  Skill 1
+  Class air.AR_234B2
+  Fuel 75
+  weapons 3xsd500
+[g0100_Way]
+  NORMFLY 7564.29 1202.86 1500.00 700.00 &0
+  NORMFLY 8938.57 6425.71 1500.00 700.00 &0
+  NORMFLY 10102.86 10697.14 1500.00 700.00 &0
+  GATTACK 11009.25 14154.12 1500.00 700.00 &0
+  NORMFLY 13220.00 22640.00 2000.00 700.00 &0
+  NORMFLY 17421.71 24236.94 3000.00 300.00 &0
+  NORMFLY 28335.24 28315.88 1500.00 700.00 &0
+  NORMFLY 44449.21 32781.93 1500.00 700.00 &0
+  NORMFLY 47225.40 37821.32 1500.00 700.00 &0
+  NORMFLY 45110.00 44250.00 1500.00 400.00 &0
+  LANDING 37270.30 43966.32 0 0 &0
+[Chiefs]
+  0_Chief Ships.USSLexingtonCV2 1 0 0 15.0
+[0_Chief_Road]
+  24137.27 29208.91 120.00 0 2 17.61944580078125
+  23771.59 25232.11 120.00 0 2 17.61944580078125
+  26468.50 21666.71 120.00 0 2 17.61944580078125
+  30719.56 23723.67 120.00 0 2 17.61944580078125
+  30765.27 27883.31 120.00 0 2 17.61944580078125
+  27976.94 30397.38 120.00 0 2 17.61944580078125
+  20983.25 25323.53 120.00 0 7 17.61944580078125
+  13300.00 18500.00 120.00
+  13100.00 18300.00 120.00
+  12900.00 18100.00 120.00
+  12700.00 17900.00 120.00
+  12500.00 17100.00 120.00
+  12481.13 15952.91 120.00
+[NStationary]
+  0_Static vehicles.stationary.Stationary$Wagon1 1 12600.00 20400.00 360.00 0.0
+  1_Static vehicles.stationary.Stationary$Wagon1 1 12650.00 20400.00 360.00 0.0
+  2_Static vehicles.stationary.Stationary$Wagon1 1 12700.00 20400.00 360.00 0.0
+  3_Static vehicles.stationary.Stationary$Wagon1 1 12701.40 20355.92 450.00 0.0
+  4_Static vehicles.stationary.Stationary$Wagon1 1 12699.29 20301.61 450.00 0.0
+  5_Static vehicles.stationary.Stationary$Wagon1 1 12652.89 20299.50 540.00 0.0
+  6_Static vehicles.stationary.Stationary$Wagon1 1 12599.11 20300.03 540.00 0.0
+  7_Static vehicles.stationary.Stationary$Wagon1 1 12600.00 20350.00 630.00 0.0
+  8_Static vehicles.artillery.Artillery$Bofors_40mm_US 1 12630.00 20370.00 630.00 0.0 0
+  9_Static vehicles.artillery.Artillery$Flak18_88mm 1 12656.58 20335.36 630.00 0.0 0
+[Buildings]
+  0_bld House$AirdromeRadar1 1 43233.69 43192.60 660.00
+  1_bld House$AirdromeRadar1 1 43215.98 43191.93 570.00
+  2_bld House$AirdromeRadar1 1 43227.41 43174.80 450.00
+  3_bld House$AirdromeRadar1 1 11028.64 14192.53 660.00
+[Target]
+  1 0 0 0 750 12650 20350 100
+  0 0 0 0 750 50009 48548 0 0 r0100 50853 47867
+[BornPlace]
+  2 8000 36452 43966 1 1000 200 0 0 1 2000 5000 5 0 0 0 0 0 3.8 0
+  1 3950 10715 11085 1 1000 200 0 0 1 500 2500 5 0 0 0 0 0 3.8 0
+[BornPlace0]
+  Fw-190D-9 0
+[Bridge]
+[House]

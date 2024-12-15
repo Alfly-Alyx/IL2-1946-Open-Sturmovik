@@ -1,0 +1,130 @@
+[MAIN]
+  MAP Kurland/load_online.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 1000.0
+  player r0100
+  army 1
+  playerNum 0
+[Wing]
+  r0100
+  r0101
+  r0102
+  r0103
+  g0100
+  g0101
+  g0102
+  g0103
+[r0100]
+  Planes 4
+  Skill 3
+  Class air.LAGG_3SERIES4
+  Fuel 100
+  weapons default
+[r0100_Way]
+  NORMFLY 49390.06 177288.18 500.00 300.00 &0
+  GATTACK 54281.17 180385.14 500.00 300.00 16_Static 0 &0
+  NORMFLY 63145.28 165152.13 500.00 300.00 &0
+  NORMFLY 56190.01 128238.71 500.00 300.00 &0
+  NORMFLY 52247.71 120205.10 500.00 300.00 &0
+  LANDING 51395.88 111820.64 0 0 &0
+[r0101]
+  Planes 4
+  Skill 3
+  Class air.LAGG_3SERIES4
+  Fuel 100
+  weapons default
+[r0101_Way]
+  NORMFLY 47682.04 177031.14 500.00 300.00 &0
+  GATTACK 53979.16 179155.48 500.00 300.00 0_Static 0 &0
+  GATTACK 54945.92 179648.36 500.00 300.00 2_Static 0 &0
+  NORMFLY 62407.95 166735.01 500.00 300.00 &0
+  NORMFLY 52557.96 125033.95 500.00 300.00 &0
+  LANDING 51228.76 111356.70 0 0 &0
+[r0102]
+  Planes 4
+  Skill 3
+  Class air.MIG_3U
+  Fuel 100
+  weapons default
+[r0102_Way]
+  NORMFLY 49754.19 176173.33 500.00 300.00 &0
+  GATTACK 54480.14 180245.70 500.00 300.00 17_Static 0 &0
+  NORMFLY 63694.52 165841.08 500.00 300.00 &0
+  NORMFLY 52557.96 127811.41 500.00 300.00 &0
+  LANDING 51264.42 111621.82 0 0 &0
+[r0103]
+  Planes 4
+  Skill 3
+  Class air.LA_5FN
+  Fuel 100
+  weapons default
+[r0103_Way]
+  NORMFLY 49002.58 175626.46 500.00 300.00 &0
+  GATTACK 54438.23 179881.37 500.00 300.00 18_Static 0 &0
+  NORMFLY 62489.18 167978.84 500.00 300.00 &0
+  NORMFLY 52771.61 122256.50 500.00 300.00 &0
+  LANDING 51352.97 111418.48 0 0 &0
+[g0100]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0100_Way]
+  TAKEOFF 55233.74 179796.00 0 0 &0
+  NORMFLY 64308.72 169473.20 500.00 300.00 &0
+  LANDING 54589.92 180159.87 0 0 &0
+[g0101]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0101_Way]
+  TAKEOFF 54458.74 181138.33 0 0 &0
+  NORMFLY 63456.02 167867.45 500.00 300.00 &0
+  LANDING 54887.29 176075.95 0 0 &0
+[g0102]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0102_Way]
+  TAKEOFF 54458.74 181138.33 0 0 &0
+  NORMFLY 65376.97 167977.65 500.00 300.00 &0
+  LANDING 54703.22 180380.82 0 0 &0
+[g0103]
+  Planes 4
+  Skill 3
+  Class air.BF_109E7
+  Fuel 100
+  weapons default
+[g0103_Way]
+  TAKEOFF 54458.74 181138.33 0 0 &0
+  NORMFLY 60343.38 167880.03 500.00 300.00 &0
+  LANDING 54907.46 175608.59 0 0 &0
+[NStationary]
+  0_Static vehicles.artillery.Artillery$Flak30_20mm 2 54122.49 179093.24 360.00 0.0 0
+  1_Static vehicles.artillery.Artillery$Flak30_20mm 2 55574.92 177085.53 360.00 0.0 0
+  2_Static vehicles.artillery.Artillery$Flak30_20mm 2 54880.52 181552.45 360.00 0.0 0
+  3_Static vehicles.artillery.Artillery$Flak30_20mm 2 54001.47 174275.72 360.00 0.0 0
+  4_Static vehicles.artillery.Artillery$Flak30_20mm 1 50075.68 110841.61 360.00 0.0 0
+  5_Static vehicles.artillery.Artillery$Flak30_20mm 1 52601.93 112829.08 360.00 0.0 0
+  6_Static vehicles.artillery.Artillery$Flak30_20mm 1 53212.48 110229.45 360.00 0.0 0
+  7_Static vehicles.artillery.Artillery$Flak30_20mm 1 49941.10 112767.47 360.00 0.0 0
+  8_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 63024.61 155851.31 495.00 0.0 0
+  9_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 57164.39 140390.34 495.00 0.0 0
+  10_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 66660.32 141939.53 495.00 0.0 0
+  11_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 61929.57 142943.27 495.00 0.0 0
+  12_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 52770.07 159210.43 495.00 0.0 0
+  13_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 62511.61 151202.71 495.00 0.0 0
+  14_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 54275.28 162284.49 495.00 0.0 0
+  15_Static vehicles.artillery.Artillery$Bofors_40mm_UK 1 67887.01 158862.78 495.00 0.0 0
+  16_Static vehicles.artillery.Artillery$Flak18_37mm 2 54353.88 180645.73 495.00 0.0 0
+  17_Static vehicles.artillery.Artillery$Flak18_37mm 2 55278.38 180331.49 495.00 0.0 0
+  18_Static vehicles.artillery.Artillery$Flak18_37mm 2 54850.28 179926.17 495.00 0.0 0
+[Buildings]
+[Bridge]
+[House]

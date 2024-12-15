@@ -1,0 +1,44 @@
+[common]
+mode normal all
+type mixer
+
+
+[spl]
+
+
+[samples]
+metal_noise_02m.wav
+crack_07.wav
+wind_ext.wav
+
+[sample.crack_07.wav]
+infinite 0
+env  8
+
+
+[sample.wind_ext.wav]
+infinite 1
+env  8
+controls speed 
+
+[sample.wind_ext.wav.speed]
+minlo 20
+minhi 100
+maxlo 500
+maxhi 600
+value 0.5
+pmin  0.6
+pmax  1.8
+
+[sample.metal_noise_02m.wav]
+infinite 0
+env  8
+value 3.5
+
+
+
+
+
+
+
+

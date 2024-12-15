@@ -1,0 +1,51 @@
+[ClassInfo]
+  ClassName TMaterial
+[General]
+  tfDoubleSide              1
+  tfShouldSort              1
+  tfGameTimer               1
+
+[LightParams]//Shine only for sprites
+  Ambient 1.0
+  Diffuse 0.0
+  Specular 0.0
+  SpecularPow 0
+  Shine 1.0
+
+[Layer0]
+  TextureName               Flak.tga 
+
+//fire0.txa
+//fireA0.tga
+//fire0.txa
+  PaletteName
+//fire1.pal
+  Frame                     0.0   // Float 0.0 - first, 1.0 - last
+  VisibleDistanceNear       0.0   // Float 0.0 - near,  1.0 - far
+  VisibleDistanceFar        50000.0   // Float 0.0 - near,  1.0 - far
+  TextureCoordScale         0.0 0.0  1.0 1.0 // Uo   Vo   kU   kV
+  ColorScale                0.75 0.5 0.5 1.0    // R G B A
+
+  // Wrap Texture Flags (0/1)
+  tfWrapX                   1
+  tfWrapY                   1
+  // Magnification / Minification (nearest on default)
+  tfMinLinear               1
+  tfMagLinear               1
+  tfMipMap                  0
+  /// BlendModes
+  tfBlend                   1
+  tfBlendAdd                1
+  tfTestA                   1
+  tfTestZ                   1
+  tfNoWriteZ                1
+  tfUpDateClear             0
+  tfModulate                1
+  tfNoTexture               0
+  tfAnimatePalette          0
+  tfAnimateSkippedFrames    0
+
+  tfCompressMajorAlpha      1
+  tfNoCompress16Bit         1
+
+// eof

@@ -1,0 +1,296 @@
+[common]
+mode         relobj pos
+type         mixer
+infinite     1
+EAXMix       0.95
+occlusion   -9 
+occllf       0.25
+eaxroom      0.5
+obstruction -7
+obstrlf      0
+
+mutable      1
+
+[spl]
+110
+
+[samples]
+db605_starter.wav
+BMW801_1000.wav
+BMW801_1001.wav
+BMW801_1500.wav
+BMW801_2000.wav
+BMW801_2700.wav
+BMW801_2701.wav
+xBMW801_1000.wav
+xBMW801_1001.wav
+xBMW801_1500.wav
+xBMW801_2000.wav
+xBMW801_2700.wav
+xBMW801_2701.wav
+xBMW801_2702.wav
+M82_dmg.wav
+
+
+[sample.db605_starter.wav]
+infinite 1
+controls rpm start
+
+[sample.db605_starter.wav.rpm]
+minlo 20
+minhi 30
+maxlo 50
+maxhi 150
+value 1.0
+pmin  0.6
+pmax  1.8
+
+[sample.db605_starter.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 1.0
+pmin  1.0
+pmax  1.0
+
+[sample.BMW801_1000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.BMW801_1000.wav.rpm]
+minlo 100
+minhi 700
+maxlo 1300
+maxhi 1900
+value 2.0
+pmin  -1.0
+pmax  1000
+
+[sample.BMW801_1000.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 2.0
+pmin  1.0
+pmax  1.0
+
+[sample.BMW801_1001.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.BMW801_1001.wav.rpm]
+minlo 100
+minhi 700
+maxlo 1300
+maxhi 1900
+value 2.0
+pmin  -1.0
+pmax  1000
+
+[sample.BMW801_1500.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.BMW801_1500.wav.rpm]
+minlo 600
+minhi 1200
+maxlo 1500
+maxhi 2100
+value 3.0
+pmin  -1.0
+pmax  1500
+
+[sample.BMW801_2000.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.BMW801_2000.wav.rpm]
+minlo 1200
+minhi 2000
+maxlo 2200
+maxhi 2700
+value 4.0
+pmin  -1.0
+pmax  2000
+
+[sample.BMW801_2700.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.BMW801_2700.wav.rpm]
+minlo 1900
+minhi 2400
+maxlo 6000
+maxhi 6500
+value 5.0
+pmin  -1.0
+pmax  2700
+
+[sample.BMW801_2701.wav]
+infinite 1
+env      8
+controls rpm
+
+[sample.BMW801_2701.wav.rpm]
+minlo 1000
+minhi 1800
+maxlo 6000
+maxhi 6500
+value 5.0
+pmin  -1.0
+pmax  2700
+
+
+[sample.xBMW801_1000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xBMW801_1000.wav.rpm]
+minlo 100
+minhi 700
+maxlo 1300
+maxhi 1900
+value 2.0
+pmin  -1.0
+pmax  1000
+
+[sample.xBMW801_1000.wav.start]
+minlo 0
+minhi 0.5
+maxlo 1.5
+maxhi 2.0
+value 2.0
+pmin  1.0
+pmax  1.0
+
+[sample.BMW801_1001.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.BMW801_1001.wav.rpm]
+minlo 100
+minhi 700
+maxlo 1600
+maxhi 2200
+value 2.0
+pmin  -1.0
+pmax  1000
+
+[sample.xBMW801_1500.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xBMW801_1500.wav.rpm]
+minlo 600
+minhi 1200
+maxlo 1700
+maxhi 2300
+value 3.0
+pmin  -1.0
+pmax  1500
+
+[sample.xBMW801_2000.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xBMW801_2000.wav.rpm]
+minlo 900
+minhi 1900
+maxlo 2200
+maxhi 2400
+value 5.0
+pmin  -1.0
+pmax  2000
+
+[sample.xBMW801_2700.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xBMW801_2700.wav.rpm]
+minlo 1800
+minhi 2400
+maxlo 6000
+maxhi 6500
+value 6.0
+pmin  -1.0
+pmax  2700
+
+[sample.xBMW801_2701.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xBMW801_2701.wav.rpm]
+minlo 1900
+minhi 2400
+maxlo 6000
+maxhi 6500
+value 6.0
+pmin  -1.0
+pmax  2700
+
+[sample.xBMW801_2702.wav]
+infinite 1
+env      0 2
+controls rpm
+
+[sample.xBMW801_2702.wav.rpm]
+minlo 2200
+minhi 2400
+maxlo 6000
+maxhi 6500
+value 6.0
+pmin  -1.0
+pmax  2700
+
+
+[sample.M82_dmg.wav]
+infinite 1
+controls rpm damage
+
+[sample.M82_dmg.wav.rpm]
+minlo 500
+minhi 2000
+maxlo 4000
+maxhi 6000
+value 2.0
+pmin  0.4
+pmax  2.2
+
+[sample.M82_dmg.wav.damage]
+minlo 0.1
+minhi 0.6
+maxlo 1.0
+maxhi 2.0
+value 2.0
+pmin  1.0
+pmax  1.0
+
+[emit]
+start
+
+[emit.start]
+speed 5
+srand 0.15
+vrand 0.1
+prand 0.06
+spl   85
+
+num   3
+
+sample0 an2_cyl_00.wav
+sample1 an2_cyl_01.wav
+sample2 an2_cyl_02.wav
+

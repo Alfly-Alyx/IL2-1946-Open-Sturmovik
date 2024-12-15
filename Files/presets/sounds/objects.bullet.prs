@@ -1,0 +1,37 @@
+[common]
+mode normal
+
+[spl]
+140
+
+[samples]
+rico2_86.wav
+shell_60_01.wav
+
+
+[sample.rico2_86.wav]
+usr 0
+controls massa
+
+[sample.shell_60_01.wav]
+usr 1
+controls massa
+
+[sample.rico2_86.wav.massa]
+minlo 0
+minhi 0.1
+maxlo 0.4
+maxhi 0.5
+value 1.0
+pmin  1.4
+pmax  0.7
+
+[sample.shell_60_01.wav.massa]
+minlo 0.3
+minhi 0.4
+maxlo 4.0
+maxhi 5.0
+value 1.0
+pmin  1.5
+pmax  0.5
+
