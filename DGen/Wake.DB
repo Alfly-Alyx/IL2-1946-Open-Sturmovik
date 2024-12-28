@@ -1,0 +1,46 @@
+Wake
+[Towns]
+10 Sea
+10 Wake
+[Schedule]
+11221 15 2
+11222 0  2
+11223 15 2
+[OOB]
+=IJN_C_Akagi_FS=IJN_C_Akagi_FS_VB=IJN_C_Akagi_FS_VT=IJN_C_Hiryu_FS=IJN_C_Hiryu_FS_VB=IJN_C_Hiryu_FS_VT=IJN_C_Hiyo_FS=IJN_C_Hiyo_FS_VB=IJN_C_Hiyo_FS_VT=IJN_C_Hosho_FS=IJN_C_Hosho_FS_VB=IJN_C_Hosho_FS_VT=IJN_C_Junyo_FS=IJN_C_Junyo_FS=IJN_C_Junyo_FS_VT=IJN_C_Kaga_FS=IJN_C_Kaga_FS_VB=IJN_C_Kaga_FS_VT=IJN_C_Ryuho_FS=IJN_C_Ryuho_FS_VB=IJN_C_Ryuho_FS_VT=IJN_C_Ryujo_FS=IJN_C_Ryujo_FS_VB=IJN_C_Ryujo_FS_VT=IJN_C_Shoho_FS=IJN_C_Shoho_FS_VB=IJN_C_Shoho_FS_VT=IJN_C_Shokaku_FS=IJN_C_Shokaku_FS_VB=IJN_C_Shokaku_FS_VT=IJN_C_Soryu_FS=IJN_C_Soryu_FS_VB=IJN_C_Soryu_FS_VT=IJN_C_Zuiho_FS=IJN_C_Zuiho_FS_VB=IJN_C_Zuiho_FS_VT=IJN_C_Zuikaku_FS=IJN_C_Zuikaku_FS_VB=IJN_C_Zuikaku_FS_VT=
+=USMC_VMB_413z=USMC_VMB_423z=USMC_VMB_433z=USMC_VMB_443z=USMC_VMB_611z=USMC_VMB_612z=USMC_VMB_613z=USMC_VMB_614z=USMC_VMF_111z=USMC_VMF_112z=USMC_VMF_121z=USMC_VMF_122z=USMC_VMF_123z=USMC_VMF_124z=USMC_VMF_155z=USMC_VMF_211z=USMC_VMF_212z=USMC_VMF_213z=USMC_VMF_214z=USMC_VMF_215z=USMC_VMF_216z=USMC_VMF_217z=USMC_VMF_218z=USMC_VMF_221z=USMC_VMF_222z=USMC_VMF_223z=USMC_VMF_225z=USMC_VMF_311z=USMC_VMF_312z=USMC_VMF_314z=USMC_VMF_321z=USMC_VMF_322z=USMC_VMF_323z=USMC_VMF_324z=USMC_VMF_351z=USMC_VMF_422z=USMC_VMF_441z=USMC_VMF_461z=USMC_VMF_462z=USMC_VMF_471z=USMC_VMF_481z=USMC_VMF_511z=USMC_VMF_512z=USMC_VMF_513z=USMC_VMF_521z=USMC_VMF_522z=USMC_VMF_523z=USMC_VMF_524z=USMC_VMO_155z=USMC_VMO_251z=USMC_VMSB_121z=USMC_VMSB_131z=USMC_VMSB_132z=USMC_VMSB_133z=USMC_VMSB_141z=USMC_VMSB_142z=USMC_VMSB_143z=USMC_VMSB_144z=USMC_VMSB_144z=USMC_VMSB_151z=USMC_VMSB_224z=USMC_VMSB_231z=USMC_VMSB_232z=USMC_VMSB_233z=USMC_VMSB_234z=USMC_VMSB_236z=USMC_VMSB_241z=USMC_VMSB_243z=USMC_VMSB_244z=USMC_VMSB_331z=USMC_VMSB_341z=USMC_VMSB_343z=USMC_VMTB_131z=USMC_VMTB_132z=USMC_VMTB_134z=USMC_VMTB_141z=USMC_VMTB_143z=USMC_VMTB_144z=USMC_VMTB_151z=USMC_VMTB_231z=USMC_VMTB_232z=USMC_VMTB_233z=USMC_VMTB_234z=USMC_VMTB_242z=USMC_VMTB_332z=USMC_VMTB_341z=USMC_VMTB_453z=USMC_VMTB_454z=USMC_VMTB_463z=USMC_VMTB_464z=USMC_VMTB_473z=USMC_VMTB_621z=USMC_VMTB_622z=USMC_VMTB_623z=USMC_VMTB_624z=
+[Planes]
+1 PBN1
+2 F4F3
+36 D3A1
+36 B5N2
+36 A6M2_21
+[Skill]
+Blue:A5,V40,N5
+Red:A1,V10,N50
+[Links]
+oUsReconCarrier oUsAttackCarrier 1 oUsReconIntercept 0
+oUsReconConvoy  oUsAttackConvoy 1 oNone 0
+oUsReconConvoy  oUsBombConvoy 1 oNone 0
+oUsReconCarrier oUsAttackCarrier 1 oUsIntercept 0
+oUsReconCarrier oUsAttackCarrier 1 oUsRescue 0
+oUsReconCarrier oUsAttackCarrier 1 oUsReconSub 0
+oUsReconCarrier oUsBombCarrier 1 oUsReconIntercept 0
+oUsReconCarrier oNone 1 oNone 0
+oUsReconIntercept oUsReconCarrier 0 oUsScramble 1
+oUsScramble oUsReconCarrier 0 oUsReconSub 1
+oUsScramble oUsReconCarrier 0 oUsRescue 1
+oUsScramble oUsReconCarrier 0 oUsAttackSub 1
+oUsScramble oUsReconCarrier 1 oUsReconCarrier 1
+oUsScramble oUsBombCarrier 0 oUsBombCarrier 0
+oJpReconIntercept oJpReconCarrier 0 oJpScramble 1
+oJpReconAF oJpBombAF 1 oJpScramble 0
+oJpAttackAF oJpBDAAF 1 oJpScramble 0
+oJpBombAF oJpBDAAF 1 oJpScramble 0
+oJpReconCarrier oJpAttackCarrier 1 oJpReconIntercept 0
+oJpReconCarrier oJpBombCarrier 1 oJpReconIntercept 0
+oJpReconIntercept oJpReconCarrier 0 oJpScramble 1
+oJpScramble oJpReconCarrier 0 oJpBombCarrier 1
+oJpScramble oJpBombDepot 0 oJpBombDepot 1
+oJpScramble oJpBombCarrier 0 oJpBombCarrier 1
+[Operations] <<opsWake.dat

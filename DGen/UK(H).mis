@@ -1,0 +1,85 @@
+[MAIN]
+  BriefSound samples/sounds/Siren1Navy.mp3
+  MAP CoralSea/Online_load.ini
+  TIME 14.0
+  CloudType 3
+  CloudHeight 1500.0
+  player RN_NN00
+  army 1
+  playerNum 0
+[Wing]
+  RN_NN00
+  ja0101
+  ja0102
+  ja0103
+[RN_NN00]
+  Planes 4
+  Skill 3
+  Class air.SEAFIRE3
+  Fuel 100
+  weapons default
+[RN_NN00_Way]
+  TAKEOFF 50375.01 30124.94 0 0 1_Chief 0 &0
+  NORMFLY 42984.99 36890.05 2500.00 400.00 &0
+  NORMFLY 35882.76 43584.75 2500.00 400.00 &0
+  NORMFLY 43016.16 36861.69 500.00 300.00 &0
+  LANDING 44652.20 35288.69 0 0 1_Chief 1 &0
+[ja0101]
+  Planes 3
+  Parachute 0
+  Skill0 1
+  Skill1 1
+  Skill2 0
+  Skill3 1
+  Class air.D3A1
+  Fuel 50
+  weapons 1x2502x60
+[ja0101_Way]
+  NORMFLY 28665.55 50610.28 1550.00 300.00 &0
+  GATTACK 48078.79 31993.09 1550.00 300.00 0_Chief 0 &0
+[ja0102]
+  Planes 3
+  Parachute 0
+  Skill0 3
+  Skill1 3
+  Skill2 1
+  Skill3 3
+  Class air.D3A1
+  Fuel 50
+  weapons 1x2502x60
+[ja0102_Way]
+  NORMFLY 28635.42 50614.91 1500.00 300.00 &0
+  GATTACK 48087.06 31996.76 1500.00 300.00 0_Chief 0 &0
+[ja0103]
+  Planes 3
+  Skill0 1
+  Skill1 0
+  Skill2 0
+  Skill3 0
+  Class air.A6M3
+  Fuel 50
+  weapons default
+[ja0103_Way]
+  NORMFLY 27935.32 49936.49 1500.00 300.00 &0
+  NORMFLY 28458.80 50852.38 1500.00 300.00 ja0101 0 &0
+  NORMFLY 49593.52 30501.11 1500.00 300.00 &0
+[Chiefs]
+  0_Chief Ships.USSIndianapolisCA35 1 0 0
+  1_Chief Ships.HMSIllustriousCV 1 0 0
+[0_Chief_Road]
+  48216.55 31873.15 120.00 0 2 13.88888888888889
+  35964.97 43426.26 120.00 0 2 13.88888888888889
+  28811.68 50583.77 120.00
+[1_Chief_Road]
+  50375.38 30125.51 120.00 0 2 13.055555555555555
+  44652.71 35288.39 120.00 0 2 13.055555555555555
+  31556.54 48047.34 120.00
+[NStationary]
+[Buildings]
+[Target]
+  3 2 1 90 501 44650 35291 500 1 1_Chief 44652 35288
+  5 0 1 17 500 48117 31624 0 0 0_Chief 48216 31873
+[StaticCamera]
+  42932 36021 33
+[Bridge]
+[House]

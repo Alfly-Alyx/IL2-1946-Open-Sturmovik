@@ -1,0 +1,121 @@
+[MAIN]
+  MAP Japan1/load.ini
+  TIME 16.75
+  CloudType 1
+  CloudHeight 1500.0
+  player UM_NN00
+  army 1
+  playerNum 0
+[Wing]
+  USA_BG_380z00
+  UM_NN00
+  ja0102
+  ja0130
+[USA_BG_380z00]
+  Planes 1
+  Skill 3
+  Class air.B_29
+  Fuel 66
+  weapons default
+[USA_BG_380z00_Way]
+  NORMFLY 292147.10 176173.26 3000.00 300.00 &0
+  NORMFLY 187642.82 187675.36 3000.00 350.00 &0
+  NORMFLY 139478.09 191779.98 3000.00 325.00 &0
+  NORMFLY 68533.31 199119.54 3000.00 300.00 &0
+  NORMFLY 66393.13 176312.33 3000.00 350.00 &0
+  NORMFLY 73432.75 159134.51 3000.00 325.00 &0
+  NORMFLY 403216.88 123875.81 3000.00 325.00 &0
+[UM_NN00]
+  Planes 4
+  Skill0 3
+  Skill1 2
+  Skill2 2
+  Skill3 1
+  Class air.P_47D22
+  Fuel 50
+  weapons tank
+[UM_NN00_Way]
+  NORMFLY 293380.90 175995.60 4070.00 360.00 &0
+  NORMFLY 64350.98 199785.09 4070.00 360.00 USA_BG_380z00 3 &0
+  NORMFLY 64349.60 199796.76 4070.00 360.00 USA_BG_380z00 3 &0
+  NORMFLY 73537.34 159068.16 4070.00 360.00 ja0102 3 &0
+  NORMFLY 401443.40 125326.23 4070.00 360.00 &0
+[ja0102]
+  Planes 2
+  Skill 1
+  Skill2 2
+  Class air.A6M5A
+  Fuel 100
+  weapons default
+[ja0102_Way]
+  NORMFLY 124927.28 125561.91 850.00 350.00 &0
+  NORMFLY 156541.79 156096.65 1850.00 350.00 &0
+  NORMFLY 187867.92 187772.93 3950.00 400.00 USA_BG_380z00 1 &0
+  NORMFLY 77253.51 157798.10 3950.00 400.00 &0
+  NORMFLY 139675.48 99529.07 2520.00 350.00 &0
+  NORMFLY 124229.25 74432.88 1020.00 300.00 &0
+  LANDING 110051.16 90881.22 0 0 &0
+[ja0130]
+  Planes 4
+  Skill0 1
+  Skill1 1
+  Skill2 0
+  Skill3 0
+  Class air.A6M3
+  Fuel 100
+  weapons default
+[ja0130_Way]
+  TAKEOFF 108875.04 92007.34 0 0 &0
+  NORMFLY 94965.60 107519.72 1000.00 350.00 &0
+  NORMFLY 1670.61 107158.34 4000.00 350.00 &0
+  NORMFLY 90199.93 139357.33 4000.00 350.00 &0
+  NORMFLY 66577.14 173377.19 4000.00 350.00 USA_BG_380z00 4 &0
+  NORMFLY 67759.74 198527.15 4000.00 350.00 USA_BG_380z00 3 &0
+  NORMFLY 95444.21 151845.20 4000.00 350.00 &0
+  NORMFLY 139736.12 101491.61 1250.00 350.00 &0
+  NORMFLY 124295.91 74339.92 750.00 300.00 &0
+  LANDING 110031.16 90851.22 0 0 &0
+[Chiefs]
+  0_Chief Ships.IJNAmatsukazeDD43 2 0 2
+[0_Chief_Road]
+  51791.05 163973.63 120.00 0 2 9.131389617919922
+  75914.42 183073.13 120.00 0 2 9.131389617919922
+  109311.90 180527.50 120.00 0 2 9.131389617919922
+  118717.06 197827.28 120.00 0 2 9.131389617919922
+  117068.80 225679.42 120.00 0 3 9.131389617919922
+  118700.00 226300.00 120.00
+  119172.22 226451.73 120.00
+[NStationary]
+  42_Static vehicles.stationary.Siren$SirenCity 2 63503.32 200792.47 426.61 0.0
+  43_Static vehicles.stationary.Siren$SirenCity 2 62118.02 200952.78 426.61 0.0
+  44_Static vehicles.artillery.Artillery$Type88_75mm_JA 2 144125.29 190930.11 408.61 0.0 0
+  45_Static vehicles.artillery.Artillery$Twin25mm_JA 2 156400.25 190596.73 426.61 0.0 0
+  46_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 152204.12 189885.30 426.61 0.0 0
+  47_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 163197.54 188194.14 688.81 0.0 0
+  48_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 142442.50 191037.81 426.61 0.0 0
+  49_Static vehicles.artillery.Artillery$Type88_75mm_JA 2 146164.54 190007.83 408.61 0.0 0
+  50_Static vehicles.artillery.Artillery$Type88_75mm_JA 2 115048.72 202850.34 423.71 0.0 0
+  51_Static vehicles.artillery.Artillery$Type88_75mm_JA 2 64873.94 200186.75 408.61 0.0 0
+  52_Static vehicles.artillery.Artillery$Type88_75mm_JA 2 62153.96 201532.21 408.61 0.0 0
+  54_Static vehicles.artillery.Artillery$Twin25mm_JA 2 61691.37 200749.34 408.61 0.0 0
+  55_Static vehicles.artillery.Artillery$Twin25mm_JA 2 60808.94 199004.36 408.61 0.0 0
+  56_Static vehicles.artillery.Artillery$Twin25mm_JA 2 64639.42 198279.65 408.61 0.0 0
+  57_Static vehicles.artillery.Artillery$Twin25mm_JA 2 63809.39 202897.76 408.61 0.0 0
+  58_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 63773.26 202727.46 408.61 0.0 0
+  59_Static vehicles.artillery.Artillery$Twin25mm_JA 2 62149.41 205135.75 408.61 0.0 0
+  60_Static vehicles.artillery.Artillery$Twin25mm_JA 2 248903.58 181258.65 426.61 0.0 0
+  61_Static vehicles.artillery.Artillery$Twin25mm_JA 2 248927.18 184297.31 413.91 0.0 0
+  62_Static vehicles.artillery.Artillery$Type98_20mm_JA 2 245328.73 181360.83 426.61 0.0 0
+  63_Static vehicles.artillery.Artillery$Type88_75mm_JA 2 247753.35 183932.26 381.51 0.0 0
+  64_Static vehicles.artillery.Artillery$Type88_75mm_JA 2 152486.40 190188.35 380.21 0.0 0
+  5_Static ships.Ship$IJNYukikazeDD43 2 62346.29 200417.25 429.40 0.0 0 2
+[Buildings]
+[Target]
+  3 2 1 90 500 293101 134188 3000
+  4 1 1 45 250 292054 175231 0 0 USA_BG_380z00 292147 176173
+  4 2 1 45 00 293851 175135 0 0 UM_NN00 293380 175995
+  3 2 1 38 500 64435 199469 3000
+[StaticCamera]
+  62092 200405 66
+[Bridge]
+[House]

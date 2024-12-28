@@ -1,0 +1,1399 @@
+<DGen:> 		<*>
+	--------------------------------------------------------------------------------------------
+		 Translation guidelines. 
+
+	Every line not starting with symbol < will be ignored. You may use it for comments.
+ 	Otherwise every message consists of two parts: message ID and Message text,
+	both in < > brackets.
+
+	For every ID code there may be up to 10 variants of texts - one will be picked up randomly.
+	You don't need to translate every line exactly, you just need to describe the same situation.
+
+	Symbols \n ans %s must be left intact. \n means new line, %s means that some substring will be 
+	placed there - usually town name. Some lines have space in the end. Please leave it in place -
+	it means that there will be another sentence that will continue the briefing. The space separates them. 
+
+	Message texts cannot contain new lines - make them as long as you need (but not longer than 256 chars).
+	--------------------------------------------------------------------------------------------
+	--------------------------------------------------------------------------------------------
+
+	The following messages are the first part of the briefing. 
+	They describe general situation and target area	 		
+	--------------------------------------------------------------------------------------------
+
+<DeCAP>		<\nKameraden!\nHeute jagen wir die Amis in der Gegend von %s. Wie Ihr wißt, ist die Luftüberlegenheit der Feinde groß, also seid auf der Hut!\n>
+<DeCAP>		<\nZiel für heute ist %s. Dort fanden in den letzten Tagen heftige Gefechte statt, daher ist 100%%ig mit Feindkontakt zu rechnen.\n>
+<DeCAP>		<\nHergehört! Heutiges Primärziel ist freie Jagd im Luftraum über %s. Dort ist eigene Flak stationiert, daher wird die feindliche Aktivität dort nicht sehr hoch sein. Verlaßt nicht den zugewiesenen Abschnitt, solange nicht größere Konzentrationen feindlicher Flieger passieren. \n>
+<DeCAP>		<\nKameraden, heute werden wir statt der üblichen Jabo- oder Bomber-Abfang-Einsätze mal wieder freie Jagd fliegen! %s ist in letzter Zeit ein Hauptziel der Anglo-Amerikaner, hoffentlich holen wir jeder ein, zwei 'runter! \n>
+<DeCAP>		<\nKameraden!\nHeute haben wir Befehle erhalten, die Gegend um %s anzufliegen. Die Amis sind wie immer in vielfacher zahlenmäßiger Überlegenheit, aber in diesem Bereich sollten wir heute die Luftüberlegenheit herstellen können. Überraschen wir sie und zeigen wir ihnen, zu was die deutsche Jagdwaffe imstande ist! Wieder wollen Sie hier angreifen, aber wir werden sie zurückwerfen. Kämpfen Sie bis zur letzten Patrone, um die amerikanischen Luftpiraten aufzuhalten. Konzentrieren Sie sich dabei auf die Bomber, und halten Sie sich fern vom Begleitschutz.>
+<DeCAP>		<\nKameraden!\nIch muß Euch wohl nicht erst sagen, wie wichtig die Anstrengungen jedes Einzelnen von Euch für den Endsieg sind. Wir haben nicht genug Flugzeuge, und jeder Einsatz den wir fliegen muß soviel Wirkung wie möglich zeigen! Unsere Staffel soll heute über %s patroullieren.\n>
+<DeCAP>		<\nSpäter am heutigen Tag werden Jabos der Luftwaffe eingesetzt. Sie werden die Gegend von %s auf Ihrem Weg zum Ziel passieren. Dort sind sehr häufig amerikanische Jäger anzutreffen. Decken Sie große Bereiche und suchen sie den Kampf mit dem Gegner, um so zu verhindern, dass die Amis unsere Kameraden von der Schlachtgruppe abfangen. \n>
+<DeCAS>		<\nKameraden! Unser heutiges Ziel liegt bei %s. Es ist wohl nicht notwendig, Euch auf die Not hinzuweisen, in der unser Heer dort steht! Eine Schwächung der gegnerischen Truppenteile dort würde unserer Verteidigung sehr helfen.\n>
+<DeCAS>		<\nKameraden!\nWir greifen heute bei %s an. Das Ziel ist taktisch wie auch strategisch wichtig! Der Amerikaner weiß das auch, die Sache wird also kein Spaziergang.\n>
+<DeCAS>		<\nIch bitte um Eure Aufmerksamkeit! Heute werden wir eine weitere Bodenangriffsmission fliegen. Ziel ist %s. Dort wurden massive gegnerische Truppenbewegungen beobachtet. Das heißt, neben dem Primärziel sollten auch genügend Gelegenheitsziele vorhanden sein. \n>
+<DeCAS>		<\nJungs, mal wieder ein Bombenangriff für Euch. Ziel: %s. Dieses mal wird's nicht leicht, in der Gegend wimmelt es nur so von Mustangs und Konsorten. Außerdem kann man von starker Flak ausgehen.\n>
+<DeCAS>		<\nKameraden!\nUnser heutiges Ziel ist %s. Die Aufklärung ist recht ungenau, also kennen wir die genaue Lage nicht. Aber sicher gibt es genug amerikanisches Militär in der Gegend. Aufgrund der schnellen Entwicklung der letzten Tage rechnen wir mit massig Bodenzielen, die nur darauf warten, unter Euren Schlägen zerstört zu werden!\n>
+<DeCAS>		<\nKameraden!\nEs ist mal wieder an der Zeit, unseren Jazz-hörenden, Neger-liebenden und Zivilisten-mordenden amerikanischen Freunden einen weiteren Besuch abzustatten. Sie werden sich bestimmt über unsere Speziallieferung im Abschnitt %s freuen.\n>
+<DeCAS>		<\nKameraden!\nWie Ihr sicher schon anhand der Arbeiten der Waffenwarte festgestellt habt, wird heute ein weiterer Bodenangriff stattfinden. Ziel: %s.\n>
+
+<DeEsc>		<\nKameraden!\nHeute fliegen wir Begleitschutz für unsere Schlächter nach %s. Wir rechnen mit heftiger Gegenwehr auch in der Luft, also bleibt eng bei den Schlachtfliegern und laßt Euch nicht von den Amis abdrängen.\n>
+<DeEsc>		<\nKameraden!\nEs ist Zeit für einen weiteren Begleit-Einsatz. Eine Jabo-Gruppe wird in %s zuschlagen. Letztes mal wurden sie dort von Mustangs angegriffen und stark dezimiert. Macht Eure Arbeit gut und bringt sie wieder nach Hause!\n>
+<DeEsc>		<\nKameraden!\nEs ist Zeit für einen weiteren Begleit-Einsatz. Eine Jabo-Gruppe wird in %s zuschlagen. Letztes mal wurden sie dort von Thunderbolts angegriffen und stark dezimiert. Macht eure Arbeit gut und bringt sie wieder nach Hause!.\n>
+<DeEsc>		<\nKameraden!\nEs ist Zeit für einen weiteren Begleit-Einsatz. Eine Jabo-Gruppe wird in %s zuschlagen. Letztes mal wurden sie dort von amerikanischen Jägern angegriffen und ziemlich gefleddert. Erfüllt Eure Pflicht und bringt sie alle wieder nach Hause!.\n>
+<DeEsc>		<\nMal wieder Begleitschutz heute... Vielleicht erinnert Ihr Euch noch an %s, unser Ziel für heute. Damals ein sehr erfolgreicher Einsatz! Wir überraschten die Amerikaner total, unsere Bomber kamen ohne Verluste heim und wir konnten einige Abschüsse erzielen. Vielleicht wird's heute ebenso!\n>
+<DeEsc>		<\nKameraden!\nHeute wird's lustig! Ihr eskortiert Bomber nach %s und zurück. Rechnet mit Flak in Hülle und Fülle und mit mehr als genug Fliegern in der Luft.\n>
+<DeEsc>		<\nAlso Jungs, hört mal her! Gute Neuigkeiten für diejenigen unter Euch mit Halsschmerzen, die noch ein paar Abschüsse brauchen. Später heute werden unsere Jabos ein lohnendes Ziel bei %s angreifen. Ami-Jäger treiben sich sicher dort rum. Als Begleitschutz gibt es also einiges für Euch zu tun. \n>
+<DeEsc>		<\nKameraden!\nUnsere Jabos greifen weiterhin erfolgreich die  Anglo-Amerikanischen Bodentruppen an, und wieder ist es unsere Pflicht, Ihnen über einem wichtigen Ziel den Rücken freizuhalten. Heute geht's nach %s.\n>
+<DeEsc>		<\nPiloten!\nIn Eurer heutigen Mission geht es darum, Jabos nach %s zu begleiten. Die Meisten kennen die Randbedingungen, also halte ich mich kurz. Bleibt über den Bombern, bewahrt Funkstille und laßt Euch nicht durch Luftkämpfe von den Kameraden trennen. Haltet Eure Umgebung stets im Auge und kommt sicher wieder nach Hause!\n>
+
+<DeEscP>	<\nKameraden!\nHeute ein Spezialauftrag: Tante Ju's werden Fallschirmjäger über %s absetzen. Paßt gut auf unsere Jungs auf! Das Kommandounternehmen ist äußerst wichtig! Verhindert, daß amerikanische Jäger bis zu den Truppentransportern durchdringen, bevor diese am Ziel sind!\n>
+<DeEscR>	<\nKameraden!\nHeute wird ein Hochgeschwindigkeits-Aufklärer über %s fotografieren. >
+<DeRecAF>	<\nStaffelkameraden!\nEs gibt Berichte über starke Aktivitäten auf unserem alten Flughafen in %s. Unsere Aufklärung benötigt dringend Information über die dort stationierten feindlichen Flugzeugtypen und deren Anzahl.\n>
+
+<DeRecAFD> < Bringt Fotos mit. Wir müssen wissen, wie die Lage dort ist! >
+<DeRecAFD> <Wir wissen nicht, was Sie dort unternehmen. >
+
+<DeScramSit>	<\nFeindalarm! Dies ist keine Übung! Feindliche Bomber sind gemeldet! >
+<DeScramSit>	<\nAlarm, Alarm! Feindliche Einflüge in Richtung auf unseren Flugplatz sind gemeldet! >
+<DeScramSit>	<\nFeindliche Einflüge! Wir haben gerade noch Zeit, um auf Abfanghöhe zu kommen! Schnell, schnell, schnell!!! >
+<DeScram>	<Startet sofort, bewegt Eure Hintern! >
+<DeScram>	<Ein komplettes Geschwader ist ungetarnt abgestellt, laßt Sie nicht unsere Flugzeuge am Boden zerstören! >
+<DeSwp>		<\nKameraden!\nHeute geht's nach %s. >
+<DeSwp>		<\nJungs, heutiges Ziel ist %s. >
+<DeSwp>		<\nJungs, heute geht's nach %s. >
+<DeTranInt>	<\nKameraden!\n%s ist ein wichtiger strategischer Punkt für uns und den Gegner. Seine Truppen dort werden zum großen Teil aus der Luft versorgt, also könnt Ihr die Lage dort stark zu unseren Gunsten verändern, wenn Ihr die feindlichen Transporter abschießt.\n>
+<DeTranRep>	<\nKameraden!\nWir verlegen unter dem Druck der näherrückenden Front. %s wird wohl von einem anderen Geschwader genutzt, wir werden nach %s verlegen.\n>
+<DeTranRep>	<\nPiloten! Wir müssen %s kurzfristig verlassen. Ihr habt nur noch wenige Stunden, um Eure Sachen zu packen. Unser gesamtes Geschwader muß ab morgen von %s aus einsatzbereit sein.\n>
+<DeTranRep>	<\nKameraden!\nWie Ihr wißt, rücken die Amerikaner schnell vor. Wir müssen %s verlassen und ziehen weiter nach %s, unserem neuen Einsatzfluhafen.\n>
+
+<RuCAPCaen>		<\nGentlemen!\nHeute zeigen wir's den Jerries über Caen. Wie Ihr alle wißt, ist Caen die größte Stadt der Normandie, ein wichtiger Knotenpunkt für Nachrichten und Nachschublinien, sowie Schlüssel zu der Straße, die direkt nach Paris führt.\nWie Ihr auch wißt, war die Luftaktivität der Gegner sehr hoch, also seid auf der Hut!\n>
+<RuCAPCaen>		<\nGentlemen!\nHeute jagen wir Jerry über Caen. Wie Ihr wißt, war die Luftaktivität der Gegner sehr hoch, also seid immer auf der Hut! \n>
+<RuCAPCaen>		<\nZiel für heute ist Caen. Wir suchen weiterhin die Luftwaffe in der Luft und am Boden. Da in dieser Gegend heftige Gefechte stattfanden in letzter Zeit, ist die Chance, auf den Gegner zu treffen, sehr hoch! \n>
+<RuCAPCaen>		<\nAll right Chaps, Euer Primärziel heute ist der Luftraum über Caen. Die Gegend ist sehr wichtig, da unsere Bomber sie oft passieren auf Ihrem Weg zurück vom Ziel. Daher hängen die Deutschen dort gerne herum und suchen Nachzügler.\n>
+<RuCAPBastogne>		<\nHeutiges Ziel ist Bastogne. Jerry will uns diese Stadt unbedingt wieder abknüpfen, und unsere GI's dort sterben dafür, ihn aufzuhalten. Ihr könnt Euren Arsch verwetten, dass die Luftwaffe dort auftauchen wird und Ärger macht. Unsere Jungs am Boden verlassen sich drauf, dass wir dafür sorgen, dass keine Luftwaffenbomben dort vom Himmel fallen. \n>
+<RuCAPBastogne>		<\nGentlemen!\nIhr seid abkommandiert, über Bastogne zu patroullieren. Wir sind in absoluter numerischer Überlegenheit im gesamten Operationsgebiet, aber der Jerry ist noch in der Lage, lokale Luftüberlegenheit herzustellen. Andere Fighter Groups patroullieren in den benachbarten Sektoren, also paßt auf, bevor Ihr schießt, dass Ihr einen Deutschen vor Euch habt...\n>
+<RuCAPFalaise>		<\nAll right Chaps, Euer Primärziel heute ist der Luftraum über Falaise. Ich muß nicht erst hervorheben, wie wichtig Falaise für unsere Pläne ist. Die Wehrmacht hat riesige Mengen an Mensch und Material in der Gegend konzentriert, und die Kontrolle über die Luft dort gibt uns die Chance, Hitler wirklich hart zu treffen, ohne zu viele unserer Männer am Boden zu opfern. \n>
+<RuCAPPointe_Du_Hoc>		<\nGentlemen, als kleine Abwechslung zu den üblichen Begleitschutz- und Bodenangriffs-Missionen fliegen wir heute mal einen der guten, alten Jagdeinsätze! Wir werden den Deutschen die Luftherrschaft über dieser Gegend entreißen, die man "Pointe Du Hoc" nennt. Dies ist der höchste Punkt am ganzen Strand, und die Deutschen haben dort Festungsanlagen errichtet, die mit links eine komplette Invasionsarmee abwehren könnten. Das Gebot der Stunde lautet, diese Anlagen aus der Luft zu zerstören, bevor sie uns am Boden Ärger machen. \n>
+
+<RuCAP>		<\nGentlemen!\nHeute jagt Ihr den Jerry in der Gegend von %s. Wir Ihr wißt, war dort in den letzten Tagen sehr viel los, also seid immer auf der Hut.\n>
+<RuCAP>		<\nZiel für heute ist %s. Wir suchen die Luftwaffe in der Luft wie auch am Boden, und da dort einiges los war in den letzten Tagen, ist die Wahrscheinlichkeit, auf den Feind zu treffen, sehr hoch.\n>
+<RuCAP>		<\nChaps, Euer Primärziel für heute ist der Luftraum über %s. Die Gegend ist sehr wichtig, da unsere Bomber sie oft passieren auf Ihrem Weg zurück vom Ziel. Unsere Flak dort ist noch im Aufbau begriffen, so dass die Jerries gern dort herumhängen um Nachzügler abzufangen. \n>
+<RuCAP>		<\nGentlemen, , als kleine Abwechslung zu den üblichen Begleitschutz- und Bodenagriffs-Missionen fliegen wir heute mal einen der guten, alten Jagdeinsätze! In der Gegend um %s wimmelte es in den letzten Tagen nur so von Luftwaffenflugzeugen, also könnt Ihr alle auf den einen oder anderen Luftsieg hoffen.\n>
+<RuCAP>		<\nGentlemen!\nEuer Auftrag lautet heute "Patrouille über %s". Wir sind in absoluter numerischer Überlegenheit im gesamten Operationsgebiet, aber der Jerry ist noch in der Lage, lokal den Luftraum zu kontrollieren. Andere Fighter Groups patroullieren in den Nachbarsektoren, also paßt auf, bevor Ihr schießt, dass es wirklich ein Deutscher ist... \n>
+<RuCAP>		<\nEs gibt einige Objekte von hoher Priorität in der Gegend, und mit unseren teilweise limitierten Kräften müssen wir Schwerpunkte setzen. Heute wird der Fokus auf den Schutz unseres eigenen Luftraumes gelegt, nicht auf Angriffe. Ihr werdet über %s patroullieren. Folgen Sie niemandem aus dem Ihnen zugewiesenen Sektor; bleiben Sie dort auch, wenn der Gegner in mehreren Gruppen angreift. \n>
+<RuCAS>		<\nAll right, Zeit für Bodenangriffe! Ihr seid sicher sehr glücklich, wenn ich Euch erzähle, dass die Genies in der Führung Euch zu dem kleinen Ort namens %s schicken. Vielleicht hab Ihr schon gehört, dass es sich bei der Gegend um eine Flakhölle handelt, aber das sollen unsere Jungs kürzlich geändert haben.\n>
+<RuCAS>		<\nGentlemen! Unser Ziel für heute liegt bei %s. Ich muß Euch wohl nicht extra sagen, wie wichtig diese Gegend im Bodenkrieg ist, und Ihr helft unseren Jungs wirklich sehr, indem Ihr den Deutschen heftige Schläge versetzt.\n>
+<RuCAS>		<\nGentlemen!\nHeute greifen wir die Gegend um %s an. Sie ist taktisch wie strategisch wichtig. Die Deutschen wissen das auch, also erwartet keinen Spaziergang.\n>
+<RuCAS>		<\nAll right, dies ist eine weitere Bodenangriffsmission für Euch, Chaps. Das Ziel liegt in %s. Dort gab es massive Truppenbewegungen in den letzten Tagen, also könnt Ihr neben dem Primärziel auch mit vielen Gelegenheitszielen rechnen. \n>
+<RuCAS>		<\nNoch ein bischen mehr Bodenziele-Jagen für Euch, Jungs. Ziel: %s. Diesmal wird's nicht einfach, in der Gegend wimmelt es nur so von Deutschen mit dem Daumen am Knöpfchen. Außerdem könnt Ihr mit starker Flakabwehr rechnen.\n>
+<RuCAS>		<\nGentlemen!\nUnser heutiges Ziel ist %s. Die Aufklärung ist recht ungenau, also kennen wir die genaue Lage nicht. Aber sicher gibt es genug Bodenziele in der Gegend. Aufgrund der schnellen Entwicklung der letzten Tage rechnen wir mit massig Bodenzielen, die nur darauf warten, unter Euren Schlägen zerstört zu werden!\n>
+<RuCAS>		<\nGentlemen!\nEs wird Zeit, unseren Freunden von der Wehrmacht mal wieder einen Besuch abzustatten, unsere Sonderlieferung im Sektor %s ist überfällig.\n>
+<RuCAS>		<\nGentlemen!\nEs wird Zeit, unseren Freunden von der Waffen-SS mal wieder einen Besuch abzustatten, unsere Sonderlieferung im Sektor %s ist überfällig.\n>
+<RuCAS>		<\nGentlemen!\nDas Oberkommando hat von Klagen unserer Piloten über sich ständig wiederholende Missionen gehört. Also gibt es heute mal was besonderes: Ihr greift Bodenziele im Sektor %s an.\n>
+<RuCAS>		<\nGentlemen!\ nWie Ihr sicher schon anhand der Arbeiten der WaffenChaps festgestellt habt, wird heute ein weiterer Bodenangriff stattfinden. Ziel: %s.\n>
+
+<RuEsc>		<\nHeute gibt's Begleitschutz, Jungs. Unsere Bomberwerden mal wieder alle möglichen Ziele in %s verfehlen, und Ihr müßt dafür sorgen, dass sie es nicht auf die Luftwaffe schieben können.\n>
+<RuEsc>		<\nGentlemen!\nIn dieser Mission werdet Ihr Bomber bei Ihrem Einsatz nach %s eskortieren. Wir rechnen mit starker feindlicher Jägerpräsenz, also bleibt immer nah bei den Bombern und laßt Euch nicht auf längere Dogfights mit den Deutschen ein.\n>
+<RuEsc>		<\nGentlemen!\nEs ist Zeit für eine weitere Eskorte. Bomber bombardieren wieder %s. Letztes mal erlitten sie heftige Verluste auf Ihrem Rückweg. Erledigt diesen Job und stellt sicher, dass es dieses mal besser läuft.\n>
+<RuEsc>		<\nEine weitere Begleitschutzmission heute. Vielleicht könnt Ihr Euch von früher an %s erinnern, unser Ziel für heute. Es war eine gute Mission, wir verloren keinen Bomber und konnten einige Kills erzielen. Auf das es heute ebenso wird!\n>
+<RuEsc>		<\nGentlemen!\nHeute sieht's für uns nach Spaß aus. Ihr werdet einige Bomber auf dem Weg nach %s und zurück begleiten. Rechnet mit starker Flak und vielen Flugzeugen der Luftwaffe.\n>
+<RuEsc>		<\nAll right Chaps, hergehört! Gute News für die unter Euch, die scharf auf Kills sind. Nachher werden unsere fliegenden Festungen einen größeren Angriff auf äußerst lohnende Ziele in %s fliegen. Die Luftwaffe ist sicher da. Als Haupteskorte werdet Ihr sicher genug Action sehen.\n>
+<RuEsc>		<\nGentlemen!\nUnsere Bomber sind weiterhin sehr erfolgreich in Ihren Bemühungen, Hitlers Kriegsmaschine zu zerstören, und es ist wieder unsere Pflicht, sie zu einem wichtigen Ziel zu eskortieren. Dieses mal geht's nach %s.\n>
+<RuEsc>		<\nChaps, listen please! Gerade kam der Tagesbefehl herein. Es geht sofort los, uns bleibt nicht viel Zeit zum Planen. Anscheinend kam soeben ein britischer Aufklärer mit Fotos aus %s zurück, und es ist wichtig genug, um einen Pulk Bomber hinzuschicken. Ihr begleitet sie hin und zurück.\n>
+<RuEsc>		<\nGentlemen!\nEure heutige Mission beinhaltet Begleitschutz für einige Festungen nach %s. Die meisten von Euch kennen das, also halte ich mich kurz. Bleibt bei den Bombern, haltet Funkdisziplin ein und laßt Euch nicht in Dogfights verwickeln. Bleibt auf der Hut und kommt sicher nach Hause.\n>
+<RuEsc>		<\nAll right. Ihr eskortiert Bomber nach %s, danach könnt Ihr Euch, wenn noch Gelegenheit ist, auf die Jagd nach Bodenzielen machen.\n>
+
+<UsDDayPara> <\nGentlemen!\nHeute nacht werden Fallschirmjäger der 1st Airborne Division über %s abspringen, um die deutschen Truppen dort auszuschalten und wichtige Objekte zu sichern. Wir erwarten keine deutschen Jäger, aber Eure Hilfe wird benötigt um Scheinwerfer und Flak auszuschalten, falls die C47 unter Feuer kommen sollten.\n>
+<UsDDayPara> <\nGentlemen!\ nHeute nacht werden Fallschirmjäger der 1st Airborne Division über %s abspringen, um die deutschen Truppen dort auszuschalten und wichtige Objekte zu sichern. Wir erwarten keine deutschen Jäger, aber Eure Hilfe wird benötigt um Scheinwerfer und Flak auszuschalten, falls die C47 unter Feuer kommen sollten.\n>
+<UsDDayCAS>	<\nGentlemen! Die Invasion hat begonnen! Ich muß Euch nicht erzählen, wie wichtig es ist, dass unsere Truppen sich am Strand behaupten, und Ihr werdet unseren Jungs da unten eine große Hilfe sein, wenn Ihr den Deutschen um die Landungsstellen herum mächtig einheizt.\n>
+<UsDDayCAS>	<\nGentlemen!\nUm genau 4:30 heute morgen sind die ersten unserer Invasionsstreitkräfte in der Normandie an Land gegangen. Bis jetzt ist ihr Erfolg bemerkenswert. Alle Strände sind mehr oder weniger fest in unserer Hand. Trotzdem, die Deutschen haben noch die Kraft, uns wieder in den Kanal zurückzuwerfen. Euer Auftrag ist, dies zu verhindern. Der Auftrag lautet "Search and Destroy": Alles, was deutsch ist, und sich in der Nähe der Strände bewegt, muß zerstört werden. Spezielles Augenmerk solltet Ihr dabei auf Panzer und befestigte Stellungen richten.\n>
+
+<RuEscP>	<\nGentlemen!\nHeute werden wir eine Fallschirmjägeraktion über %s decken. Ich möchte nochmal erwähnen, wie wichtig diese Mission ist, und das in jeder C-47 doppelt so viele Männer sind wie in einer Bomber. Deren Überleben am Boden können wir nicht beeinflussen, aber stellt zumindest sicher, dass sie nicht schon in den C-47 auf dem Weg zum Ziel sterben!\n>
+<RuEscP>	<\nGentlemen!\nIn der nächsten Mission eskortiert Ihr Dakotas, die Fallschirmjäger über %s absetzen werden. Tut euren Job gut, Gentlemen, verhindert dass die Deutschen mit Fallschirmjägern beladene Flugzeuge abschießen! \n>
+<RuEscR>	<\nGentlemen!\nHeute wird ein Aufklärer wichtige Ziele bei %s fotografieren. >
+<RuRecAF>	<Gentlemen!\nWir müssen den Zustand der Luftwaffenbasis in %s feststellen.\n>
+<RuRecAFR>	<Bringt gute Fotos mit, wir müssen wissen, was dort los ist. >
+<RuScramSit>	<\nAuf Auf Auf!!! Ein einfliegender deutscher Verband ist gemeldet! >
+<RuScramSit>	<\nLuftangriff! Dies ist keine Übung! Feindliche Bomber sind im Anflug! >
+<RuScramSit>	<\nAlarm, Alarm! Feindlichen Flugzeuge mit Kurs auf unseren Flugplatz sind unterwegs! >
+<RuScramSit>	<\nFeindverband im Anflug! Vielleicht reicht die Zeit noch, auf Höhe zu kommen! Let's go, let's go, let's go! >
+<RuScram>	< Startet sofort, bewegt Eure Hintern! >
+<RuScram>	< Ein komplettes Squadron ist ungetarnt abgestellt, laßt Sie nicht unsere Flugzeuge am Boden zerstören! >
+<RuSwp>		<\nGentlemen!\nHeute geht's nach %s. >
+<RuTranInt>	<\nGentlemen!\n%s ist ein wichtiges strategisches Ziel für uns und die Deutschen. Wehrmacht und SS werden hier aus der Luft versorgt, also könnt Ihr das Kräfteverhältnis dort zu unseren Gunsten verschieben, indem Ihr feindliche Transporter vernichtet. \n>
+<RuTranIntR>	<Gentlemen!\nHeute gibt es leichte Beute, deutsche Transporter. Haltet Eure Geschwindigkeit hoch, bleibt von den Eskorten fern und kümmert Euch nicht um Bodenziele! \n>
+<RuTranRep>	<\nGentlemen!\nUnser Squadron wird näher an die Front verlegt, %s wird von einer anderen Fighter Group genutzt, %s wird unsere neue Heimat.\n>
+<RuTranRep>	<\nAll right chaps, packt Eure Sachen und verabschiedet Euch von Euren Mädels. Wir verlassen %s und verlegen nach %s.\n>
+<RuTranRep>	<\nGentlemen, wir müssen %s kurzfristig verlassen. Ihr habt nur wenige Stunden, um Eure Sachen zu packen. Unsere gesamte FG muß bis morgen früh von %s aus einsatzbereit sein.\n>
+<RuTranRep>	<\nGentlemen!\nWir Ihr wißt, bewegt sich die Front schnell in Richtung Berlin, und daher verlassen wir ohne viel Aufhebens %s und ziehen nach %s, unserer neuen Heimat.\n>
+<YourAF>	<\nIhr werdet in %s stationiert. >
+
+		--------------------------------------------------------------------------------------------
+	The following messages will continue the briefing. They will go after first part. 
+	Message ID is build as situation code plus side code. 
+	RuBTrainR means that Russians bomb Deutsch train, and briefing is for Russians. 
+	RuBTrainD means the same situation but briefing is for Germans.	
+	--------------------------------------------------------------------------------------------
+
+<RuBTrainR>	<Die Bomber werden den Bahnknotenpunkt angreifen. Ihr wißt, wie wichtig die Schienenwege für den Nachschub sind. Wir hoffen, die deutschen Operationen in diesem Gebiet wesentlich beeinträchtigen zu können, wenn wir diesen Bahnhof ausschalten.\n>
+<RuBTrainR>	<Die Bomber greifen den Bahnhof dort an. Hoffentlich schlagen sie zwei Fliegen mit einer Klappe, indem Sie die dorthin gelieferten Panzer und Halbkettenfahrzeuge zerstören und die Gleisanlagen ausschalten, so dass kein weiteres deutsches Material mehr dort transportiert werden kann.\n>
+<RuBTrainR>	< Die Bomber greifen den dortigen Bahnhof an. Falls es keine gegnerische Jägerabwehr gibt, ist es Euch gestattet, die Bomber nach dem Abwurf zu verlassen, um eigene Bodenangriffe zu fliegen. \n>
+<RuBTrainR>	<Unsere Bomber greifen die Bahnstation in der Stadt an. Es ist nicht der größte Bahnhof in der Gegend, aber die wichtigsten Ziele sind schon bombardiert und das Oberkommando will alle Ziele auf seiner Liste abhaken. Leichte bis mittlere Flakabwehr wird erwartet, Jagdabwehr ist wohl ebenfalls eher leicht bis nicht vorhanden. In anderen Worten: Dies wird kein zweites Schweinfurt, Ihr könnt Euch entspannen.\n>
+
+<RuBTrainD>	<Amerikanische Jabos stören ständig unsere Nachschubzüge in dieser Gegend. Eure Patrouillenzone ist in dem Bereich, wo die Amis am häufigsten angreifen. Rechnet mit kleineren Gruppen feindlicher Jabos, die sehr schnell und sehr niedrig einfliegen.\n>
+<RuBTrainD>	<Das Eisenbahnnetz liegt unter ständigen Angriffen feindlicher Jabos und Bomber. Eure heutige Aufgabe ist, diese zu unterbinden. Viel Erfolg, meine Freunde, und bringt ein paar Luftsiege mit nach Hause! \n>
+<RuBTrainD>	<Die Reichsbahn beschwert sich über unsere offensichtliche Unfähigkeit, die Angriffe auf Ihre Züge zu stoppen. Der Fliegerführer West hat angeordnet, alle Jäger auf Patrouille über unseren rückwärtigen Gebieten zu schicken.\n>
+<RuBTrainD>	<Unser Hauptziel für heute ist der Schutz der Reichsbahn vor feindlichen Jabos. Wir verlieren zur Zeit täglich komplette Züge durch Tieffliegerangriffe, und die Anglo-Amerikaner fühlen sich über unserem Gebiet einfach zu sicher. Wir wollen Ihnen das Leben ein bißchen schwer machen heute, ja?\n>
+
+<RuATrainR>	<Euer heutiges Hauptziel ist der Eisenbahnverkehr. Seid vorsichtig, es gibt immer noch zivilen Verkehr in der Gegend. Bei nichtmilitärischen Zügen ist befohlen, nur die Lokomotiven zu zerstören.\n>
+<RuATrainR>	<Die Schiene ist immer noch der schnellste Nachschubweg der deutschen Fronttruppen. Fliegt die Schienenwege in Euerem zugewiesenen Sektor ab, sucht und zerstört alle Züge, die Ihr ortet.\n>
+<RuATrainR>	<Die Wichtigkeit der Eisenbahnen für die Kampfkraft der Wehrmacht kann nicht genug betont werden. Greift alle Züge an, die Ihr seht, zerstört deutsche Truppen und Material bevor es überhaupt die Front erreicht und dort eine Gefahr für unsere Jungs am Boden wird!\n>
+<RuATrainR>	<Wir haben von der Resistance die Information erhalten, daß in den letzten Tagen eine komplette Panzerdivision der Waffen-SS per Zug eingetroffen ist. Züge, die Ihr in der Gegend antrefft, sind entweder mit neuen Tiger-Panzern oder mit erfahrenen Mannschaften von der Ostfront beladen. Zerstört alles, was Euch ins Visier kommt.\n>
+<RuATrainR>	<Wir haben von der Resistance die Information erhalten, daß in den letzten Tagen eine komplette Panzerdivision der Wehrmacht per Zug eingetroffen ist. Züge, die Ihr in der Gegend antrefft, sind entweder mit neuen Panther-Panzern oder mit erfahrenen Mannschaften von der Ostfront beladen. Zerstört alles, was Euch ins Visier kommt.\n>
+<RuATrainR>	<Wir haben von der Resistance die Information erhalten, daß in den letzten Tagen eine komplette Panzerdivision der Wehrmacht per Zug eingetroffen ist. Züge, die Ihr in der Gegend antrefft, sind entweder mit neuen Tiger-Panzern oder mit frischen Mannschaften beladen. Zerstört alles, was Euch ins Visier kommt.\n>
+
+<RuATrainD>	<Die Reichsbahn berichtet, dass ständige Luftangriffe den Verkehr lahmlegen. Die Front hängt von den Schienenwegen ab, also müssen wir über einer wichtigen Eisenbahnlinie patroullieren und sie vor Jabo-Angriffen schützen.\n>
+<RuATrainD>	<Unsere Bodentruppen leider unter Nachschubmangel. Feindliche Luftangriffe zerstören unsere Züge, und die so verursachten Verzögerungen sind tagelang nicht aufzuholen. Das muß ein Ende haben! Heuet fliegt Ihr Patrouille über unseren Nachschubrouten. Schießt alle feindlichen Jabos ab, auf die Ihr in der Gegend trefft!\n>
+<RuATrainD>	<Unsere Landser an allen Fronten kämpfen heroisch, und sie benötigen Nachschub, um ihre Kämpfe fortsetzen zu können. Die feindlichen Jabo-Einflüge gegen die Reichsbahn müssen gestoppt werden! Auch wir selbst hängen vom Schienenverkehr ab. Stoppt die feindlichen Luftangriffen, oder uns gehen Ersatzteile und Sprit aus.\n>
+<RuATrainD>	<Da in den vergangenen Monaten die meisten Straßenbrücken zerstört wurden, sind wir nachschubmäßig hauptsächlich von der Schiene abhängig. Gruppen alliierter Jabos kommen jeden Tag mehrfach über die Front und zerstören alarmierend viele unserer Züge. Spürt sie heute auf, Kameraden, und haltet sie davon ab!\n>
+
+<DeBTrainR>	<Gestern wurden nicht mehr als sieben Nachschubzüge im auf Euren Karten markierten Bereich angegriffen. In Anbetracht des Zustands der Luftwaffe kann dies auch nur ein kurzes Aufbäumen des Gegners sein, aber wir müssen hier etwas unternehmen. Wir gehen davon aus, dass die Angriffe wieder stattfinden werden, daher seid Ihr eingeteilt, entlang der Schienenwege zu patroullieren. Rechnet mit Focke-Wulfs, die niedrig und in kleinen Gruppen einfliegen werden.\n>
+<DeBTrainR>	<Da in den vergangenen Monaten die meisten Straßenbrücken zerstört wurden, sind wir nachschubmäßig hauptsächlich von der Schiene abhängig. Gruppen deutscher Jabos kommen jeden Tag mehrfach über die Front und zerstören alarmierend viele unserer Züge. Spürt sie heute auf, Gentlemen, und haltet sie davon ab!\n>
+<DeBTrainR>	<Trotz unserer Anstrengungen gelingt es den Deutschen hier und da, einen Erfolg gegen unsere Nachschubzüge zu erzielen. Diese Angriffe werden immer besser organisiert, die Jerries lassen sich von unserer Untätigkeit motivieren. Heute werden wir einen Schwerpunkt auf den Schutz unserer Eisenbahnlinien legen. Hoffentlich überraschen wir die Luftwaffe, und Ihr trefft auf eine Menge Feindflieger! \n>
+<DeBTrainR>	<Der Widerstand der Deutschen in der Luft ist an der gesamten Front eher sporadisch, Tendenz fallend. Die Luftwaffe ist einfach nicht mehr das, was sie noch vor einem Jahr war. Ihr beschützt heute unsere Nachschubzüge, die von den Deutschen ab und zu angegriffen werden. Am Ende eures Einsatzes könnt Ihr noch die Front überqueren und den Konvois der Krauts dort ein wenig einheizen.\n>
+<DeBTrainR>	<Da der Großteil unserer Luftstreitkräfte für großangelegte Angriffe abgeordnet sind, mangelt es uns an Kapazität zum Schutz unseres eigenen Luftraumes. Wir erwarten, dass die Luftwaffe auch Ihr Hauptaugenmerk auf unsere Angriffe legt, aber man kann nicht ausschließen, dass sie unsere Positionen angreifen. Ihr seid eingeteilt, im markierten Sektor zu patrouillieren, achtet besonders auf Nachschubrouten! Viel Glück \n>
+
+<DeBTrainD>	<Unsere Jabos greifen den Bahnhof dort an. Hoffentlich schlagen sie zwei Fliegen mit einer Klappe, indem Sie die dorthin gelieferten Panzer und Halbkettenfahrzeuge zerstören und die Gleisanlagen ausschalten, so dass kein weiteres alliiertes Material mehr dort transportiert werden kann.\n>
+<DeBTrainD>	<Die Amerikaner haben begonnen, das von ihnen selbst zerstörte Schienennetz wieder aufzubauen und nutzen es für Ihren Nachschub. Unsere Jabos werden versuchen, es wieder kurz und klein zu bomben. Die Alliierten wissen allerdings genau, dass ihre Linien verwundbar sind, also rechnet mit Feindberührung.\n>
+<DeBTrainD>	<Eine Jabo-Staffel wird den Bahnhof dort angreifen. Im unwahrscheinlichen Fall von nur leichter feindlicher Luftaktivität ist es Euch freigestellt, sie nach dem Bombenabwurf zu verlassen, um selbst nach Bodenzielen zu suchen. \n>
+<DeBTrainD>	<Der Feind hängt stark vom Nachschub per Schiene ab. Aufgrund seiner Luftüberlegenheit sind Angriffe sehr schwierig; Rechnet mit einer regelrechten Flakhölle und Jagdfliegern. Gegen Flak könnt Ihr nicht viel tun, wohl aber die Jabos vor den Mustangs schützen. Horridoh!> 
+<DeBTrainD>	<Der Feind hängt stark vom Nachschub per Schiene ab. Aufgrund seiner Luftüberlegenheit sind Angriffe sehr schwierig; Rechnet mit einer regelrechten Flakhölle und Jagdfliegern. Gegen Flak könnt Ihr nicht viel tun, wohl aber die Jabos vor den Thunderbolts schützen. Horridoh!>
+<DeBTrainD>	<Unsere Jabo-Staffel wird den Bahnhof dort angreifen. Wir erwarten leichte bis mittlere Flak, jedoch eine starke Jagdabwehr. Ihr habt wahrscheinlich heute mehr zu tun als die Jabos. Schützt sie, kostet es was es wolle, und laßt nicht eine Mustang an sie herankommen! Viel Glück!\n>
+<DeBTrainD>	<Unsere Jabo-Staffel wird den Bahnhof dort angreifen. Wir erwarten leichte bis mittlere Flak, jedoch eine starke Jagdabwehr. Ihr habt wahrscheinlich heute mehr zu tun als die Jabos. Schützt sie, kostet es was es wolle, und laßt nicht eine Thunderbolt an sie herankommen! Viel Glück!\n>
+
+
+<DeATrainR>	<Den Krauts geht es wirklich zu gut über unserem Sektor! Erst gestern kam es zu zwei Angriffen auf Nachschubzüge. Alle Augen sind auf diese Sache gerichtet, vom Kommodore bis ganz oben im Air Force HQ. Nehmt die Sache Ernst, Männer! Wenn heute noch ein Zug dran glauben muß, hat mich der Group CO am Arsch. \n>
+<DeATrainR>	<Trotz unserer Anstrengungen gelingt es den Deutschen hier und da, einen Erfolg gegen unsere Nachschubzüge zu erzielen. Diese Angriffe werden immer besser organisiert, die Jerrys lassen sich von unserer Untätigkeit motivieren. Heute werden wir einen Schwerpunkt auf den Schutz unserer Eisenbahnlinien legen. Ein Erfolg hier ist auch in Eurem Interesse, denn der nächste Angriff auf einen Zug in unserem Sektor, gefährdet den Ruf unseres gesamten Squadrons.\n>
+<DeATrainR>	<Der Widerstand der Deutschen in der Luft ist an der gesamten Front eher sporadisch, Tendenz fallend. Die Luftwaffe ist einfach nicht mehr das, was sie noch vor einem Jahr war. Ihr beschützt heute unsere Nachschubzüge, die von den Deutschen ab und zu angegriffen werden. Bleibt aber bei Euren Schützlingen. Best of luck, Gentlemen!\n>
+<DeATrainR>	<Euer Ziel ist der Schutz der Eisenbahnstrecken. Euch juckt es in den Fingern, die Front zu überqueren und die Deutschen da anzugreifen, wo es ihnen am meisten weh tut. Aber jemand muß zurück bleiben und unsere Hinterland bewachen. Diesmal sind wir damit dran. Erledigt diesen Job gut, und nutzt die Gelegenheit eines ruhigen Einsatzes. Es werden auch wieder andere Zeiten kommen.\n>
+
+<DeATrainD>	<Heute werden wir dort Züge jagen gehen. Die Schiene ist der schnellste Nachschubweg für die Amerikaner und ihre Einsatztruppen. Fliegt die Eisenbahnlinien ab, sucht nach Transporten und zerstört sie. Seid dabei immer auf der Hut vor Indianern! \n>
+<DeATrainD>	< Die Amerikaner haben begonnen, das von ihnen selbst zerstörte Schienennetz wieder aufzubauen und nutzen es für Ihren Nachschub. Heute werdet Ihr dort Züge jagen. Greift alles an, was Ihr seht! Gebt Obacht, Feindflieger sind unter Garantie unterwegs!\n>
+<DeATrainD>	<. Heute werdet Ihr Züge jagen. Bleibt niedrig und schnell, so daß Ihr hoffentlich der Flak und den Ami-Jägern entgeht. ES wimmelt dort nur so von Indianern, also erledigt die Sache so schnell wie möglich. Viel Glück!\n>
+<DeATrainD>	<Die Wichtigkeit der Eisenbahnen für die Kampfkraft der Alliierten Invasionstruppen kann nicht genug betont werden. Greift alle Züge an, die Ihr seht, zerstört ihre Truppen und Material bevor es überhaupt die Front erreicht und dort eine Gefahr für unsere Landser am Boden wird.\n>
+<DeATrainD>	<Wir haben zuverlässige Information erhalten, daß in den letzten Tagen eine komplette amerikanische Panzerdivision per Zug eingetroffen ist. Zerstört alles, was Euch an Waggons und Loks ins Visier kommt.\n>
+
+<RuBShipR>	<Die Bomber werden Seeziele angreifen. Die meisten Kopfschmerzen wird Euch die Flak bereiten, aber es könnten sich zufällig auch ein paar Jäger herumtreiben. Bleibt bei den Bombern, und sucht nach deren Angriff ruhig Ziele für eigene Tiefangriffe.\n>
+<RuBShipR>	<Die fliegenden Festungen werden mal wieder Schiffe und maritime Anlagen angreifen. Ihr kennt den Job: Bleibt bei den Bombern, verscheucht feindliche Jäger und kehrt sofort auf Eure Positionen zurück, wenn sie die Szene verlassen haben.\n>
+
+<RuBShipD>	<Kameraden, unsere Küstenschiffe liegen unter ständiger alliierter Bombardierung aus der Luft. Wir werden über unseren Schiffen patroullieren und die alliierten Bomber abfangen.\n>
+<RuBShipD>	<Unsere Kameraden von der S-Boot-Flottille Le Havre greifen ständig die alliierten Landungsköpfe an. Heute werden wir einen ihrer zurückkehrenden Verbände aus der Luft decken.\n>
+<RuBShipD>	<Ein wichtiger Konvoi mit neuen, geheimen Kleinst-U-Booten ist für heute angekündigt. Wir müssen ihm Deckung geben, so daß der K-Verband die Invasionsflotte angreifen kann! \n>
+
+<RuAShipR>	<Gerade wenn Ihr denkt, die Deutschen haben nur Armee und Luftwaffe, werden wir Euch an Ihre Kriegsmarine erinnern. Zurückkehrende Bomber haben die Schaumstreifen eines feindlichen Schiffsverbandes entdeckt. Findet ihn und versenkt die deutschen Schiffe.\n>
+<RuAShipR>	<Die Deutschen dort erhalten per Schiff Nachschub und Verstärkung. Euch ist das Vergnügen gegönnt, diese Schiffe heute zu beschießen und zu bombardieren.\n>
+
+<RuAShipD>	<Unsere Wachboote in der Bucht werden ständig angegriffen. Wir können uns weitere Verluste in dieser Größenordnung nicht leisten! Beschützt sie!\n>
+<RuAShipD>	<Kameraden, die Matrosen leiden sehr unter den alliierten Luftangriffen. Heute werden wir ihnen beistehen und sie beschützen.\n>
+<RuAShipD>	<Die Kriegsmarine evakuiert das Seine Gebiet! Wir müssen Ihren Rückzug decken, so daß Ihre Einheiten kampfbereit bleiben!\n>
+
+<DeBShipR>	<Die Luftwaffe hat unsere Schiffe in der Gegend seit einiger Zeit im Auge, und in Anbetracht der komplexen Gesamtlage hatten wir einfach nicht genügend Kräfte, um hier adäquat einzugreifen. Heute ändert sich das, und wir hoffen die Luftwaffe durch unsere Präsenz zu überraschen. Schützt unsere Schiffe und laßt sie nicht Opfer der Luftwaffe werden.\n>
+<DeBShipR>	<Die meisten unserer Truppen auf dem neuen, westeuropäischen Kriegsschauplatz werden über See versorgt. Daher ist es von äußerster Wichtigkeit, die absolute Luftherrschaft über dem Kanal zu sichern. Ihr werdet eine der am stärksten frequentierten Gegenden patroullieren. Die Chance, dass die Krauts dort einen Jabo-Angriff starten, ist also relativ hoch. Achtet auch auf Hochgeschwindigkeits-Aufklärer.\n>
+<DeBShipR>	<Tausende Tonnen von Gütern werden täglich zwischen Großbritannien und Europa bewegt, und dabei stellt der Kanal natürlich ein verlockendes Ziel für die Krauts dar. Heute stellt Ihr sicher, dass unsere Seemänner ihren Job in Ruhe erledigen können und nicht von der Luftwaffe gestört werden.\n>
+
+<DeBShipD>	<Kampfflieger greifen die Invasionsflotte an. Ein harter Job. Wir müssen ihnen den Rücken von Jägern freihalten so dass sie ihre Angriffe durchführen können. Nach dem Angriff müßt Ihr auch den Rückflug decken! Unsere Bomberverluste sind zu hoch, wir müssen sie schützen!\n>
+<DeBShipD>	<Kampfflieger greifen erneut die Invasionsflotte an. Alle bisherigen Versuche wurden unter schweren Verlusten abgewiesen. Dieses mal brauchen wir den Erfolg!\n>
+<DeBShipD>	<Unsere Bomber greifen die Invasionsflotte an! Ihr könnt mit großen Mengen feindlicher Jäger rechnen. Tut Euer Bestes, um die Bomber zum Ziel durchzubringen, Kameraden! Denkt daran, dass der Schutz der Bomber wichtiger ist als das Erzielen von Abschüssen.\n>
+<DeBShipD>	<In den letzten Tagen wurden alle unsere Bombergruppen, die feindliche Schiffe in der Seine-Bucht angreifen wollten, stark dezimiert. Die Kameraden brauchen starken Begleitschutz, um agieren zu können. Wir werden den nächsten Angriff decken.\n>
+<DeBShipD>	<Die alliierte Invasion findet unter einem starken Luftschirm statt! Alle Versuche, die Schiffe zu bombardieren, schlugen bisher fehl. Diesmal müssen die Bomber durchkommen!\n>
+
+<DeAShipR>	<Die Luftwaffe greift seit einiger Zeit unsere Schiffe in der Gegend an, und vor dem Hintergrund anderer Objekte hoher Priorität und der sich schnell ändernden Situation waren wir bisher nicht in der Lage, unsere Schiffe ausreichend zu schützen. Heute ist sich das anders, und wir hoffen, die Luftwaffe mit einer großen Zahl unserer Jäger in der Luft überraschen zu können. Schützt unsere Schiffe, laßt die Luftwaffe nicht bis zu ihnen vorstoßen.\n>
+<DeAShipR>	<Die meisten unserer Truppen auf dem neuen, westeuropäischen Kriegsschauplatz werden über See versorgt. Daher ist es von äußerster Wichtigkeit, die absolute Luftherrschaft über dem Kanal zu sichern. Ihr werdet eine der am stärksten frequentierten Gegenden patroullieren. Die Chance, dass die Krauts dort einen Jabo-Angriff starten, ist also relativ hoch. Achtet auch auf Hochgeschwindigkeits-Aufklärer.\n>
+<DeAShipR>	<Tausende Tonnen von Gütern werden täglich zwischen Großbritannien und Europa bewegt, und dabei stellt der Kanal natürlich ein verlockendes Ziel für die Krauts dar. Heute stellt Ihr sicher, dass unsere Seemänner Ihren Job in Ruhe erledigen können und nicht von der Luftwaffe gestört werden.\n>
+
+<DeAShipD>	<Kameraden, dies ist der große Tag. Wir werden die alliierte Invasionsflotte angreifen. Möge das Glück uns hold sein. Hals- und Beinbruch!\n>
+<DeAShipD>	<Die Amis und die Briten bringen Nachschub an Ihre Landeköpfe. Wir müssen ihren Schiffsverkehr unterbinden. Seid vorsichtig, die früheren Angriffe erlitten schwere Verluste. Bleibt in enger Formation, fliegt schnell und rettet Euren Arsch nach dem Bombenangriff!\n>
+<DeAShipD>	<Wir werden einen weiteren Angriff auf die feindlichen Invasionskräfte fliegen. Schwere Flak und Jagdschutz werden erwartet. Das wird kein Kinderspiel, Kameraden. Viel Glück!!\n>
+<DeAShipD>	<Der Feind wirft mehr und mehr Männer und Material in seinen Brückenkopf. Wir können ihn nur stoppen, wenn wir diesen Fluß unterbrechen. Wir müssen ihre Transportschiffe angreifen!\n>
+<DeAShipD>	<Wir werden einen Angriff auf feindliche Schiffe durchführen. Üblicherweise sind ihre Konvois unter einem starken Jagdschirm, also erwartet einen schwierigen Einsatz!\n>
+
+<RuBColR>	<Die fliegenden Festungen werden sich auf deutsche Verkehrswege und Nachschubdepots konzentrieren. Ich muß Euch nicht sagen, wie wichtig dies für die Gesamtlage an der Front ist. Wir hoffen, die gesamten deutschen Operationen in der Gegend zu unterbrechen, indem wir ihren Truppen die Versorgung mit Nachschub versagen.\n>
+<RuBColR>	<Die Bomber werden feindliche Nachschubrouten angreifen. Da nur leichte Gegenwehr in der Luft zu erwarten ist, ist es gestattet, sie nach dem Bombenabwurf zu verlassen um am Boden nach Gelegenheitszielen zu suchen und diese anzugreifen.\n>
+<RuBColR>	<Da die meisten Schienenwege ausgeschaltet sind, ist der Feind immer stärker von der Straße abhängig, um seinen Nachschub an die Front zu bringen. Durch den insgesamt traurigen Zustand ihrer Luftwaffe sind diese Versorgungswege meist ohne Luftdeckung. Ihr werdet die Bomber begleiten, falls der Gegner angreift. Nachdem die Bomben abgeworfen sind, ist es Euch freigestellt, im Tiefflug die restlichen Ziele zu erledigen.\n>
+
+<RuBColD>	<Feindliche Jabos jagen unsere Nachschubkolonnen nach Belieben. Wir werden in dieser Gegend patroullieren, um ihnen eine Lektion zu erteilen!\n>
+<RuBColD>	<Ständige alliierte Luftangriffe machen sämtliche Fahrzeugbewegungen bei Tageslicht zu einem Albtraum. Heute werden wir versuchen, die Situation zu verbessern, indem wir über einigen Hauptstraßen die amerikanischen Jabos davon abhalten, unseren Verkehr anzugreifen.\n>
+<RuBColD>	<Feindliche Jabos greifen unsere Nachschubkolonnen in der Gegend fast ohne Gefahr an. Wir werden dort freie Jagd fliegen und weitere Jabo-Angriffe unterbinden. Greift alle feindlichen Flugzeuge an, die Ihr seht!\n>
+
+<RuAColR>	<Sucht und zerstört feindliche Fahrzeuge, speziell Nachschub-Lkw. Wir erwarten keinerlei feindlichen Widerstand in der Luft, also hebt keine Patrone dafür auf, nutzt sie alle für Bodenziele!\n>
+<RuAColR>	<Monatelange Anstrengungen zahlen sie jetzt letztlich aus, die Nachschubsituation ist ein riesiges Problem für die Deutschen. Wir müssen den Druck jetzt halten, sucht alle Versorgungskolonnen die Ihr findet. Sie sind meist klein und gut geschützt. Falls Ihr nicht auf Kolonnen stoßt, sind Züge ein Sekundärziel.\n>
+<RuAColR>	<Wir haben den Deutschen genau da, wo wir ihn wollen: hungrig, elend und ohne Munition. Unsere Luftüberlegenheit ist so groß, daß den Jerries keine noch so guten Tricks mehr helfen, um Nachschub zu bekommen. Sie versuchen es weiterhin in kleinen Kolonnen, die sie Richtung Front schicken, und hoffen auf Ihr Glück. Findet diese Kolonnen und sorgt dafür, daß der Kraut leidet. Wie gesagt, nur ein saurer Kraut ist ein guter Kraut.\n>
+
+<RuAColD>	<Die Wehrmacht leidet heftig unter feindlichen Jabo-Angriffen. Wütende Frontkommandeure rufen hier täglich an und verlangen Schutz aus der Luft. Wir können nicht viel tun mit so wenig Flugzeugen, aber wir müssen es versuchen! Freie Jagd auf Jabos!\n>
+<RuAColD>	<Heute werden wir Jabos hinter unseren Linien jagen. Paßt auf und geht kein zu hohes Risiko ein, aber denkt daran: Mit jedem Indianer, den Ihr runterholt, rette Ihr einige Leben am Boden.\n>
+<RuAColD>	<Unsere Versorgungskolonnen sind unter ständigem Angriff aus der Luft. Der Fliegerführer hat befohlen, alle Anstrengungen zu unternehmen, um dies zu stoppen. Also fliegen wir freie Jagd gegen Jabos. Paßt auf, sobald sie Euch sehen, werden sie Euch angreifen.\n>
+
+<DeBColR>	<Deutsche Jagdbomber sind wild darauf, unsere Transportkolonnen anzugreifen. Ihr könnt das sicher verstehen als Jagdpiloten, da Ihr alle wißt, was für einen Spaß das Angreifen von Bodenzielen für einen Spaß macht. Wie auch immer: Da wir im Kriegszustand mit den Deutschen sind, ist es unsere Pflicht, dafür zu sorgen, daß sie nicht zuviel Spaß haben, vor allem nicht, wenn es auf unsere Kosten geht. Raus mit Euch, Männer, und habt Spaß auf Eure Weise.\n>
+<DeBColR>	<Früh heute am Morgen wurde unser CO von einem Besucher aus der 84.ID geweckt. Anscheinend wurden einige ihrer Verwundeten-Transporte gestern abend von Focke-Wulfs angegriffen. Die geschah auch noch in dem Sektor, für dessen Schutz wir zuständig sind. Da unser CO nicht gerne so geweckt wird, und die 84.ID Ihre Verwundeten nicht gerne auf dem Weg ins Lazarett verliert, denke ich, er ist in Eurem Interesse, Gentlemen, den zugewiesenen Bereich zu verteidigen. Das ist alles. Viel Glück!\n>
+<DeBColR>	<Heute schützt Ihr den Luftraum über dem in der Karte markierten Sektor, speziell diese Straße hier. Es ist eine der wichtigsten Hauptstraßen im gesamten Operationsgebiet, und natürlich zieht der Verkehr dort Aufmerksamkeit auf sich. Deutsche Flugzeuge halten sich ständig in der Gegend auf, und jeden Tag müssen aufs neue ausgebrannte Lkw in den Graben geschoben werden. Das bedeutet Munition, das bedeutet Nahrungsmittel, das bedeutet Leben. Tut Euren Job gut heute, Gentlemen. Auf das Leben der Bodentruppen zu achten ist eine schwere Aufgabe für einen Jägerpiloten, aber es ist der einzige Grund, warum Onkel Sam überhaupt Schwachköpfe wie Euch auf seiner Soldliste hat.\n>
+
+<DeBColD>	<Die Schlachtstaffeln versuchen, feindliche Nachschubkolonnen zu treffen. Schützt sie unter allen Umständen! Erwartet ständige Angriffe durch feindliche Jäger, die Luft dort ist voll davon.\n>
+<DeBColD>	<Letztens erlitten unsere Jabos schwere Verluste bei Ihren Angriffen auf feindlichen Nachschubverkehr. Eure Ziele liegen in direkter Nähe eines alliierten Flughafens, also könnt Ihr mit entsprechendem Widerstand rechnen. Viel Glück! Jungs, ich hoffe Euch alle wiederzusehen bei unserer Rückkehr.\n>
+<DeBColD>	<Die Jabos suchen die Straßen dort nach Zielen ab. Wir werden sie vor feindlichen Jägern schützen. Die Jabo-Verluste in der letzten Zeit waren hoch, versucht möglichst viele von ihnen wieder heimzubringen. Viel Glück Euch allen!\n>
+<DeBColD>	<Unsere Jabo- und Schlacht-Gruppen werden heute versuchen, die feindlichen Nachschublinien hinter der Front zu unterbrechen. Wir werden sie eskortieren. Sollten sich keine gegnerischen Jäger zeigen, könnt Ihr auch nach Bodenzielen Ausschau halten.\n>
+<DeBColD>	<Nachdem die meisten Eisenbahnlinien in dieser Gegend ausgeschaltet sind, nutzen die Amerikaner hauptsächlich die Straßen für Transporte. Dort werden die Jabos heute zuschlagen. Erwartet starke gegnerische Kräfte in der Luft. Sie werden wohl nicht mit so großem Begleitschutz rechnen, und mit ein bißchen Glück halten sie Euch auch für Schlachtflugzeuge und gehen nicht von harten Luftkämpfen mit Jägern aus. Viel Glück! Bringt ein paar Luftsiege mit nach Hause!\n>
+
+<DeAColR>	<Den Job, die Straßen im alliierten Gebiet zu schützen, machen wir einfach schlecht. Unsere Truppen erleiden fast täglich Verluste durch Bodenangriffe der Luftwaffe. Die Deutschen fliegen meist in kleinen Gruppen, manchmal sogar alleine. Dadurch sind sie nur schwer zu entdecken und abzufangen, aber bitte gebt Euer Bestes und schützt unsere Nachschubkolonnen.\n>
+<DeAColR>	<Da wir selbst in den letzten Monaten die meisten Schienenwege in der Gegend bombardiert haben, ist der Nachschub im von den Alliierten kontrollierten Gebiet fast ausschließlich von der Straße abhängig. Kleine Gruppen deutscher Flugzeuge durchbrechen fast täglich unsere Verteidigung und greifen unsere Kolonnen mit Bomben und Bordwaffen an. Ihr werdet heute im zugewiesenen Sektor patroullieren, und Eure Hauptaufgabe ist der Schutz des Straßenverkehrs.\n>
+<DeAColR>	<Euer Hauptziel heute ist der Schutz unserer Nachschubkolonnen hinter der Front. Nach Ende Eurer Patroullezeit könnt Ihr die Hauptkampflinie überqueren und noch ein bißchen Krauts jagen gehen.\n>
+
+<DeAColD>	<Sucht und zerstört feindliche Fahrzeuge, speziell Nachschub und Lkw. Heftiger feindlicher Widerstand in der Luft wird erwartet, also bleibt im Parterre und schnell, um möglichst nicht gesehen zu werden. Viel Glück!!\n>
+<DeAColD>	<Der amerikanische Nachschub scheint mit ihrem Vormarschtempo nicht mithalten zu können, und dies ist eine Gelegenheit für uns, die Probleme der Amis noch zu verschlimmern. Haltet den Druck auf ihre Nachschublinien aufrecht, sucht und zerstört alle Nachschubkolonnen die Ihr finden könnt. Sie sind meist klein und gut geschützt. Falls Ihr keine Kolonnen findet, kann Schienenverkehr als Ausweichziel dienen.\n>
+<DeAColD>	<Feindlicher Straßenverkehr findet zur Zeit ohne die geringsten Sicherungsmaßnahmen gegen Luftangriffe statt aufgrund ihrer Luftüberlegenheit. Heute werden wir ihnen zeigen, wie arrogant das ist!\n>
+
+<RuBArmR>	<Die Bomber werden vorrückende feindliche Panzer angreifen. Verhindert, dass feindliche Jäger sie abfangen. In dieser Mission werdet Ihr ohne Bodenangriffsausrüstung fliegen. Wie auch immer, auf dem Rückweg könnt Ihr mit Bordwaffen Weichziele angreifen, wenn sich die Gelegenheit ergibt.\n>
+<RuBArmR>	<Die Bomber legen einen Bombenteppich auf eine SS-Panzerdivision die in der Gegend entdeckt wurde. Erwartet heftige Flak über dem Ziel, bleibt also über den Bombern um Verluste zu vermeiden. Wir haben nur beschränktes Know-how über die feindliche Luftwaffenstärke in der Gegend, können also nicht viel sagen über das was Euch in der Luft erwartet. Aber der Widerstand wird nicht zu groß werden. Viel Glück!!\n>
+<RuBArmR>	<Die Bomber werden deutsche Panzerkonzentrationen dort angreifen. Wie man sieht, sind einige deutsche Flughäfen in kurzer Entfernung, also rechnet mit dem ständigen Auftreten von kleinen Formationen deutscher Jäger. Die deutsche Taktik ist der Angriff auf die Bomber von vorn in einem Hochgeschwindigkeitsanflug, also bleibt vor den Bombern und fangt die Jerries ab, bevor sie unsere Bomber abschlachten.\n>
+<RuBArmR>	<Deutsche Panzer sind eine große Bedrohung für unsere Jungs am Boden, und die Bomber werden eine große Konzentration feindlicher Panzer angreifen, die dort gemeldet ist. Nachdem die Bomber ihre Last angeworfen haben und die Situation es erlaubt, könnt Ihr sie verlassen und Bodenziele angreifen. \n>
+
+<RuBArmD>	<Unsere Panzer sind den lächerlichen Shermans total überlegen, aber sie sind verletzlich durch Luftangriffe. Heute werdet Ihr über den Panzergruppen Sperre fliegen und versuchen, feindliche Jabos von ihren Operationen dort abhalten.\n>
+<RuBArmD>	< Unsere Panzer werden ständig aus der Luft angegriffen. Die Verluste durch diese Angriffe nehmen horrende Ausmaße an. Wir wurden angewiesen, über den Panzerverbänden freie Jagd zu fliegen und alle feindlichen Flugzeuge anzugreifen, die sich dort zeigen.\n>
+<RuBArmD>	<Die Panzerwaffe beschwert sich über fehlende Deckung aus der Luft. Die Führung zeigt mal wieder blanken Aktionismus, jetzt sollen alle Jäger über individuellen Panzerverbänden patroullieren. Naja, vielleicht können wir ein paar Abschüsse erzielen.\n>
+
+<RuAArmR>	<Feindliche Panzer sind Euer Primärziel für heute. Ihr sucht und zerstört Alles im auf den Karten eingezeichneten Areal. Sucht aus niedriger Höhe aktiv alle deutschen Panzer, und laßt Euch nicht von anderen Zielen ablenken, solange nicht unbedingt nötig.\n>
+<RuAArmR>	<Die Deutschen konzentrieren Ihre Tanks in dieser Gegend und Ihr habt wahrscheinlich Gelegenheit, einige lohnende Ziele auf engem Raum vorzufinden.\n>
+<RuAArmR>	<Berichte sprechen von einer kompletten verdammten Panzerdivision, die neu von der Ostfront kommt und sich durch diesen Bereich bewegt. Hoffen wir, dass die deutschen Ihren Schrott nach unserem Angriff auch wegräumen.\n>
+<RuAArmR>	<Eine SS-Panzerdivision mit den neuesten Tiger-Panzern droht, unsere Kräfte in der Gegend zu dezimieren. Denkt daran, jeder Tiger den Ihr ausschaltet, bedeutet zwei zerstörte Shermans und deren Crews weniger für uns.\n>
+<RuAArmR>	<Deutsche sind Euer Primärziel für heute. Während wir in der Luft in Europa die totale Luftüberlegenheit halten, haben die Deutschen am Boden mit Ihren Tigern und Panthern immer noch große Vorteile gegen unsere Panzer. Wir wollen unsere Luftüberlegenheit gut nutzen und den Deutschen so die Initiative am Boden verwehren.\n>
+<RuAArmR>	<Ihr konzentriert Euch auf deutsche Panzer. Denkt daran, die neuesten Modelle sind sehr stark gepanzert. Greift sie im Sturzflug an und zielt immer auf den hinteren Teil, so dass Eure Raketen und Bomben auch wirksam treffen. Wenn dies erledigt ist, könnt Ihr Euch um weitere Ziele kümmern, dann ist Flak am wichtigsten.\n>
+
+<RuAArmD>	<Da die amerikanischen Panzer den unseren unterlegen sind, ist für den Feind der sicherste weg, unsere aus der Luft auszuschalten. Daher sind wir angewiesen, eine im Anmarsch befindliche Panzerkolonne vor Tieffliegern zu schützen.\n>
+<RuAArmD>	<Es hat sich herausgestellt, dass unsere Panzer verletzlich gegen Luftangriffe sind. Sie können zwar mit MG nicht geknackt werden, die schiere Anzahl an Bomben und Raketen ist aber einfach zu viel. Wir müssen die Kameraden von der Panzertruppe schützen!\n>
+<RuAArmD>	<Eine Panzereinheit geht in Position für einen lokalen Gegenangriff. Es ist notwendig, dass sie nicht aus der Luft entdeckt und angegriffen wird. Fliegt Patrouille über ihnen und verhindert, dass der Feind unseren Angriff stoppt, bevor er begonnen hat.\n>
+<RuAArmD>	<Die Kameraden von den Panzern hatten in letzter Zeit riesige Verluste durch Luftangriffe. Um dies zu beenden, patrouilliert ihr über einer Panzereinheit. Der Feind weiß inzwischen sicher, dass die Kolonne in Marsch ist, also rechnet mit einem starken Jabo-Angriff. Hoffentlich rechnen sie nicht mit Euch, dann könntet Ihr leicht einige der schwer beladenen Thunderbolts herunterholen.\n>
+
+<DeBArmD>	<Die Jabos werden vorgehende feindliche Panzer angreifen. Erlaubt feindlichen Jägern nicht, sie abzufangen. Ihr werdet ohne Bomben starten, aber falls kein oder nur schwacher Widerstand in der Luft anzutreffen ist, unterstützt die Jabos und greift weiche Bodenziele an.\n>
+<DeBArmD>	<Unsere Jabos werden mit Bomben eine große feindliche Panzereinheit angreifen, die in der Gegend liegt. Das Ziel ist durch starke Flak geschützt. Die Informationen über die lokale Stärke des Feindes in der Gegend ist nicht sehr genau, aber seid sicher: zumindest eine Handvoll feindlicher Jäger wird sicher auftauchen. Mit ein bißchen Glück könnt Ihr größeren Feindkontakt vermeiden, indem Ihr tief fliegt und nicht länger als nötig im Zielgebiet bleibt. Viel Glück!!\n>
+<DeBArmD>	<Wir werden eine Angriffsgruppe begleiten, die Straßen nach feindlichen gepanzerten Einheiten absucht. Seid vorsichtig, die Gegend ist dafür bekannt, dass feindliche Flugzeuge dort patrouillieren. Schützt den Angriffsflug unter allen Umständen!\n>
+<DeBArmD>	<Eine Jabo-Staffel wir heute auf Sherman-Jagd gehen. Diese Einheit hat in letzter Zeit viele Flugzeugführer verloren, und der heutige Flug ist alles, was sie noch in die Luft bringen. Steht ihnen bei und beschützt sie.\n>
+<DeBArmD>	<Amerikanische Panzer sind ein schwere Bedrohung für unser Heer, und unsere Jabos schlagen heute zu gegen Feindpanzer, die soeben in dem Abschnitt gemeldet wurden. Der feindliche Jagdschutz dort ist noch nicht gut organisiert, so dass Ihr nicht auf allzu großen Widerstand in der Luft treffen solltet. Viel Glück!!\n>
+
+<DeBArmR>	<Gestern kam es zu einigen Scharmützeln zwischen unseren und deutschen Panzern hier, und da die Deutschen wissen, wie wichtig die Ecke ist, werden sie sicher weitere Kräfte in die Kämpfe werfen. Ihr werdet den Sektor absichern und Euer Bestes tun, um den Jungs am Boden zu helfen. Euer Primärziel ist, die Army vor der Luftwaffe zu schützen. Sekundärziel ist, es den Deutschen am Boden möglichst schwer zu machen. Am wichtigsten jedoch bleibt, Ersteres nicht zu vergessen, während Ihr Euch dem zweiten widmet. Ich wäre enttäuscht, Euch deutsche Autos jagen zu sehen, während die Luftwaffe ungestört durch den Himmel in Eurem Sektor braust.\n>
+<DeBArmR>	<Heute schützen wir unsere Bodentruppen im auf Euren Karten markierten Sektor. Die meisten von Euch haben das schon mal gemacht, daher vertrauen ich Euch, Chaps. Verdient Euch noch einen oder zwei Dankesbriefen von den Panzerkommandanten da unten.\n>
+<DeBArmR>	<Wir müssen unsere Panzereinheiten vor feindlichen Angriffen schützen. Ihr könnt mit kleinen bis mittleren Gruppen deutscher Flugzeuge rechnen, meist FW190, die von Bomberpiloten gesteuert werden. Werdet aber nicht übermütig, es kann sich auch um Jäger handeln. Viel Glück da draußen, und kommt mit ein paar Kills zurück!\n>
+
+<DeAArmD>	<Unser Hauptziel heute sind feindliche Shermans. Ja, miese Panzer, aber es gibt einfach zu viele davon, als dass unsere überlegene deutsche Waffentechnik am Boden damit fertig würde. Die Shermans sind nur schlecht gegen Luftangriffe geschützt, und vielleicht könnt Ihr den einen oder anderen sogar mit Euren Bordwaffen zeitweise außer Gefecht setzen. Viel Glück!!\n>
+<DeAArmD>	<Wir haben glaubhafte Berichte über große feindliche Panzerkräfte, die sich dort bewegen. Macht sie aus und zerstört so viele wie möglich von ihnen. Hals- und Beinbruch!\n>
+<DeAArmD>	<Euer Ziel für heute ist die Zerstörung von feindlichen Panzerfahrzeugen in der Gegend. Wie Ihr seht, ist das Operationsgebiet in direkter Nähe von alliierten Flughäfen, auf denen Thunderbolts und Mustangs stationiert sind, also macht nicht mehr als ein, zwei Anflüge auf das Ziel und zieht Euch dann zurück. Eure Erfahrung und Eure Flugzeuge sind zu wertvoll, als dass wir sie für ein paar zerstörte Shermans mehr aufs Spiel setzen dürfen. Viel Glück!!\n>
+<DeAArmD>	<Feindliche Panzer rücken zur Front vor. Es sind einfach zu viele, als dass das Heer alleine damit fertig werden könnte, also müssen wir ihnen zur Seite stehen. Denkt an eine Zeitverzögerung beim Einstellen Eurer Bombenzünder, oder Ihr könntet früher für Führer, Volk und Vaterland sterben als Euch Recht ist!\n>
+<DeAArmD>	<Die Sherman Panzer sind vielleicht nicht so gut wie unsere Panther oder Tiger, aber sie sind in großer zahlenmäßiger Überlegenheit. Heute greifen wir eine Panzerkolonne an, die sich auf die Front zubewegt. Fliegt tief und trefft Sie hart!\n>
+<DeAArmD>	<Die Wehrmacht tut sich schwer mit der riesigen Anzahl von Shermans, welche die Amis in diesem Sektor einsetzen. Hoffentlich könnt Ihr den Landsern das Leben ein bißchen leichter machen, indem Ihr diese Werke amerikanischer Ingenieurskunst in Grund und Boden stampft. Denkt daran: Der Angriff von hinten mit mindestens 30 Grad Neigungswinkel erhöht die Chancen auf einen tödlichen Treffer enorm.\n>
+
+<DeAArmR>	<Euer Hauptziel heute ist Deckung aus der Luft für unsere vorrückenden Shermans und Ihr Schutz vor Luftangriffen. Die feindliche Aktivität in der Luft war recht hoch in letzter Zeit, und es wurde einige Fälle von Luftwaffentieffliegern gemeldet, die unsere Truppen mit Bomben und Bordwaffen angriffen. Macht nicht den Fehler, unaufmerksam zu werden. Seid auf der Hut und behaltet den Luftraum um Euch herum stets im Auge! \n>
+<DeAArmR>	<Ihr werdet unsere Panzer am Boden unterstützen. Es gibt auch die Möglichkeit, dass der Feind sie angreift, aber Ihr solltet ihnen auch am Boden helfen, indem Ihr feindliche Bodentruppen angreift, die Widerstand leisten.\n>
+<DeAArmR>	<Unsere Panzerbesatzungen haben genug Sorgen mit den Tigers und Panthers. Sie könnten sich sicher gut schlagen, ohne die Luftwaffe über ihren Köpfen. Euer Hauptziel ist heute, dass der Luftraum über unseren Panzern mit nichts als alliierten Flugzeugen gefüllt ist.\n>
+<DeAArmR>	<Wie Ihr wohl wißt, beziehen unsere Panzer am Boden ziemlich Prügel, und in der heutigen Situation ist jeder einzelne Panzer wichtig für die Kriegsanstrengungen. Tut Euren Teil, und paßt auf, dass keine Panzer aus der Luft zerstört werden.\n>
+
+<RuBTownR>	<Die Bomber werden dort industrielle Ziele angreifen, die Teile für die Focke-Wulf-Jäger herstellen. Ihr sollte reichlich Gelegenheit haben, auch einige fertiggestellte Exemplare zu sehen während des Einsatzes. Zerlegt sie wieder zurück in die Einzelteile.\n>
+<RuBTownR>	<Die Bomber werden einen Warteraum deutscher Truppen auf dem Weg zur Front angreifen sowie nahegelegene Lagerhäuser mit Waffen und anderem Material. Es ist ein Objekt von hoher Wichtigkeit für die Deutschen, also haltet immer ein Auge auf feindliche Jäger und achtet auf möglichst geringe eigene Verluste.\n>
+<RuBTownR>	<Die Bomber bombardieren deutsche Kasernen, die laut unserer Aufklärung zur Ausbildung von Flak-Einheiten verwendet werden. Wollen wir hoffen, dass sie Ihr Diplom noch nicht bekommen haben, Ihr werdet sowieso schon reichlich Ärger bekommen mit der Luftwaffe.\n>
+<RuBTownR>	<Ziel für heute sind Bahnanlagen in der Stadt. Schützt die Bomber.\n>
+
+<RuBTownD>	<Die Amerikaner bombardieren diese Stadt fast täglich. Die Zustände dort sind schrecklich und die Verluste unter der Zivilbevölkerung noch schlimmer als die Auswirkungen auf unser Rüstungsmaschinerie. Denkt daran, jeder abgeschossene Bomber rettet eine große Zahl unschuldiger Leben am Boden!!\n>
+<RuBTownD>	<Die Amis versuchen wieder, die Stadt anzugreifen! Nicht, dass es noch viel zu holen gäbe, sie kommen einfach immer wieder. Bleibt im Verband, koordiniert Eure Angriffe und achtet auf den Begleitschutz! \n>
+<RuBTownD>	<Die Fabriken dort werden ständig von den Amis bombardiert. Heute wird der Bomberstrom wohl wieder einfliegen. Ich weiß, es verlangt viel Mut, eine fliegende Festung anzugreifen, aber es ist unsere Pflicht. Last uns heute einige dieser streunernden Mörder erwischen, und die Tode unserer Frauen und Kinder rächen!\n>
+<RuBTownD>	<Die Amerikaner kommen wieder zu dieser Stadt zurück. Haltet enge Formation und greift geschlossen an! Und achtet auf die Eskorte! Denkt daran, die besten Aussichten hat ein Angriff von 12 oder 1 Uhr tief. Viel Glück!!\n>
+
+<DeBTownD>	<Die Kampfflieger machen einen Ihrer seltenen Tageseinsätze. Sie greifen ein großes amerikanisches Hauptquartier in der Stadt. Rechnet mit Flak und auch Widerstand in der Luft. Viel Glück!!\n>
+<DeBTownD>	<Für heute hat der Fliegerführer einen massiven Bombenangriff auf diese Stadt vorbereitet. Wie in alten Zeiten! Zeigen wir diesen Hunden, dass wir noch die Kraft zum kämpfen haben, dass unsere geliebte Luftwaffe immer noch die beste Luftwaffe der Welt ist. Sollen die Amerikaner den gleichen Terror verspüren, den unsere Frauen und Kinder jeden Tag spüren, wenn sie in den Himmel sehen.\n>
+<DeBTownD>	<Die Kampfflieger werden das amerikanische Nachschubdepot dort bombardieren. Unsere Aufklärung über die Feindstärke dort ist ungenau. Wir werden uns de facto auf Eure Berichte stützen, um so Informationen zu bekommen. Achtet auf Flakpositionen auf dem Weg und notiert euch die Tarnschemen feindlicher Flugzeuge, auf die Ihr unterwegs trefft. Viel Glück!!\n>
+<DeBTownD>	<Unsere Bomber werden den Lagerkomplex dort angreifen, und einige Häuser dort, die Etappentruppen beherbergen. Widerstand durch Jäger könnte sehr stark sein, also paßt auf! Viel Glück!.\n>
+
+<DeBTownR>	<Die Deutschen greifen die Stadt fast täglich an. Dort befindet sich das HQ einer Infanteriedivision, und sie ist Ausgangspunkt ihrer Operationen. Eine Menge GIs kommen und gehen durch die Stadt, und viele von ihnen fallen, noch bevor sie die Front sehen. Ihr werdet den Luftraum über dem Stadtgebiet decken. Die Chance, die Luftwaffe zu treffen, ist sehr hoch! \n>
+<DeBTownR>	<In letzter Zeit gab es einiges an Gerüchten über neue deutsche Jäger, die in diesem Sektor gesichtet wurden. Bomber berichten von schnellen Objekten in großer Entfernung. Euer Hauptziel ist, den Luftraum über der Stadt von der Luftwaffe freizuhalten. Darüber hinaus nimmt das HQ diese Berichte so Ernst, dass Euer Sekundärauftrag lautet, alle nicht identifizierten Jäger zu untersuchen, die in Eurem Sektor auftauchen. Nehmt Bilder mit Euren Schießkameras auf, wenn möglich. Ich hoffe, dass dies zu den normalen Deutschen kommt, die Ihr heute abschießen werdet. Viel Glück!.\n>
+<DeBTownR>	<Wir haben soeben Berichte erhalten über eine deutsche Bomberformation, die sich der Stadt nähert. Startet sofort, Ihr schafft es wahrscheinlich noch, zu verhindern, dass Bomben auf die Köpfe unserer Truppen herunterregnen.\n>
+
+<RuBAFR>	<Die Bomber werden einen Flughafen angreifen. Er ist ein wichtiges Ziel für die Deutschen, Ihr könnt also dieses mal mit heftigem Widerstand in der Luft rechnenden>
+<RuBAFR>	<Feindlicher Widerstand wird diesmal nur leicht sein. Eine deutsch Luftbasis ist heute das Primärziel. Nachdem die Bomber Ihre Ladung abgeworfen haben, geht bitte runter und erledigt alles, was auf dem Platz noch übrig geblieben ist.\n>
+<RuBAFR>	<Die Bomber werden den Flughafen angreifen, auf dem das berühmte  JG26 stationiert ist. Ihr könnt sicher sein, die Deutschen mögen das gar nicht. Im wahrscheinlichen Fall von schwerer deutscher Gegenwehr, bleibt immer bei den  Bombern. Wenn die Gegenwehr leichter als erwartet ist, könnt Ihr runtergehen und den Flughafen beschießen.\n>
+
+<RuBAFD>	<Dieser Flugplatz wurde diese Woche schon zweimal mit Bombenteppichen belegt. Die Rollbahnen sind einfach zu reparieren, aber wenn wir haben bald keine Möglichkeiten mehr, unsere Flugzeuge unterzustellen, und wir können es uns nicht leisten, noch mehr von Ihnen am Boden zu verlieren. Patroulliert in den Einflugkorridoren der Bomber, und holt zumindest ein paar herunter, bevor die durchbrechen!\n>
+<RuBAFD>	<Dieser Flughafen hat letztens wiederholte Bombenangriffe gesehen. Wir müssen weitere Versuche verhindern. Erinnert Euch: Geschwindigkeit immer hoch halten! Keine abrupten Manöver, und nie langsamer werden, um besser zielen zu können! Beschießt den Bomberstrom, wie wir es in den Übungsfilmen gezeigt haben, greift in Formation an und kombiniert Eure Feuerkraft so, daß Ihr einige Bomber herunterholt. Viel Glück!!\n>
+<RuBAFD>	<Wir werden über dem dortigen Flughafen patrouillieren. Die Amerikaner haben dort schon länger nicht mehr angegriffen, also wäre es nur natürlich, wenn sie dort wieder auftauchen. Bereiten wir ihnen einen heißen Empfang!\n>
+
+<RuAAFR>	<Euer Ziel ist der feindliche Flughafen. Er ist eine der wenigen noch voll einsatzbereiten Basen der Luftwaffe in der Region. Entsprechend könnt Ihr mit heftiger Flak auf dem Weg dahin rechnen, also paßt auf und kommt sicher wieder heim.\n>
+<RuAAFR>	<Wir greifen die Luftwaffenbasis in der Gegend an. Aufklärungsberichte deuten an, dass Ihr alle möglichen Typen dort finden werdet, von veralteten Bombern bis zu den neusten Jagdflugzeugen. Wir rechnen nicht mit feindlichem Widerstand in der Luft, also nehmt Euch die Zeit, um sie auszuradieren.\n>
+<RuAAFR>	<Euer Primärziel ist der Luftwaffenflughafen, der auf der Karte markiert ist. Man spricht von schwerer Flak, also identifiziert zuerst diese Kanonen und zerstört sie, so dass Ihr dann in Ruhe die abgestellten Flugzeuge angreifen könnt. \n>
+
+<DeBAFD>	<Heute wird eine Angriffsgruppe einen feindlichen Flughafen attackieren. Extrem starke Flak und Jägerabwehr wird im Zielgebiet erwartet. Seid sehr vorsichtig und versucht, die Flakstellungen auszuschalten, wenn die Situation es erlaubt.\n>
+<DeBAFD>	<Als Vergeltung für unsere letzten Verluste an Flugzeugen am Boden greifen wir feindliche Flughäfen an. Euer Ziel ist der größte Jabo-Absprungplatz weit und breit. Unsere Bomber benötigen sicher starke Begleitschutz, wenn sie diesen Einsatz überleben sollen. Tut also Euer Bestes, um sie zu beschützen, und falls nicht zu viele Mustangs unterwegs sind, macht den Jabos das Leben leichter und greift feindliche Flakstellungen an. Viel Glück!!\n>
+<DeBAFD>	<Heute wird eine Gruppe unserer Bomber einen feindlichen Flughafen angreifen. ES handelt sich hier um ein Hornissennest, als bereitet Euch auf das schlimmste vor. Seid extrem vorsichtig, haltet Eure Augen offen und denkt daran, das der Schutz der Bomber wichtiger ist als Abschüsse zu erzielen.\n>
+
+<DeBAFR>	<Unsere heutige Mission ist von höchster Wichtigkeit. Wir schützen unsere Flughäfen. Wie Ihr alle wißt, ist es einfacher, ein Flugzeug am Boden zu zerstören als in der Luft. Nachdem heutzutage die meisten Luftwaffenpiloten zu schlecht ausgebildet sind, um einen Abschuß im Luftkampf zu erzielen, ist der Angriff auf Flugzeuge am Boden Ihre beste Chance, unsere Luftüberlegenheit zu bekämpfen. Nehmt dies aber nicht auf die leichte Schulter, bleibt wachsam! Noch gibt es viele deutsche Asse, also nehmt Euch in Acht, bis der Gegner zu Boden geht. Viel Glück!.\n>
+<DeBAFR>	<Ich weiß, viel von Euch  sind Bodenangriffs- und Begleitschutzmissionen leid, und heute werdet Ihr zu guter letzt eine Chance bekommen, die Luftwaffe unter Euren Bedingungen in der Luft zu treffen. Unsere Flughäfen hier sind natürlich ein Top-Ziel für die Krauts. Sie denken, einige leichte Punkte erzielen zu können, indem sie unsere Flieger am Boden zerstören. Aber wir werden das Blatt wenden und treten ihnen in großer Zahl in der Luft entgegen, bevor sie auch nur Ihre Bomben abwerfen können. Jetzt raus mit Euch, und bringt ein paar Abschüsse mit, Gentlemen!\n>
+<DeBAFR>	<Wie diejenigen von Euch, die gestern nicht freihatten, sicher wissen, bekam unser Flughafen gestern abend Besuch von einem mutigen kleinen Kraut. Er knipste den Platz aus seiner Focke und besuchte offensichtlich auch noch ein paar andere Basen in der Nähe. Wir gehen davon aus, dass es sich um einen Aufklärer handelte, und rechnen daher für heute mit mehr von seinen Kollegen von der Luftwaffe. Ihr werdet sofort losfliegen und den Luftraum in den markierten Bereichen auf Euren Karten schützen, konzentriert Euch besonders auf diesen Flughafen hier. Versucht sicherzustellen, dass wir noch einen Flughafen hier besitzen, wenn Euer Sprit zu Neige geht, Gentlemen.\n>
+
+<DeAAFD>	<Es ist Zeit, es Ihnen heimzuzahlen! Euer Ziel ist der feindliche Flughafen. ES ist einer der wichtigsten amerikanischen Jäger-Absprungplätze im ganzen Gebiet. Mit heftigen Flak-Grüßen auf dem Weg ist zu rechnen, also seid auf der Hut. Greift zuerst die Flakstellungen an, danach abgestellte Flugzeuge und Spritlager.\n> 
+<DeAAFD>	<Wir greifen heute die amerikanische Luftwaffenbasis dort an! Luftaufklärung zeigt, dass dort alle möglichen Typen an Flugzeugen herumstehen, vom Transportflieger bis zu Thunderbolts und Mustangs. Abgestellte Jäger sind Euer Primärziel, weiter Ziele sind Flughafen Infrastruktur wie Kontrolltürme und Spritlager.\n>
+<DeAAFD>	<Euer Hauptziel ist der amerikanische Flughafen, der auf Euren Karten markiert ist. ES gibt dort schwere Flak, also identifiziert und zerstört zuerst diese, bevor Ihr Euch dann in Ruhe den abgestellten Fliegern zuwenden könnt. \n>
+<DeAAFD>	<Heute haben wir einen ganz besondere Aufgabe: Wir werden einen Flughafen angreifen! Flak und Jagdabwehr werden stark sein, aber wir werden das Ziel vernichtend treffen. Greift zuerst Flakstellungen an, und geht dann auf geparkte Flugzeuge los.\n>
+
+<RuBBridgeR>	<Das Hauptziel der Bombers ist heute die wichtige Brücke, welche dem Nachschub an die Front dient. Nachdem die Bomber Ihre Last abgeworfen haben, checkt die Situation! Falls die Bomber nicht von der Luftwaffe abgegriffen werden, geht nach unten und sucht Euch Gelegenheitsziele in der Gegend. Viel Glück!!\n>
+<RuBBridgeR>	<Die Bomber werden eine sehr wichtige Brücke angreifen Unser Aufklärer heute morgen hat eine Gruppe von vier Focke-Wulf 190 dort patroullieren gesehen, also können wir davon ausgehen, dass die Deutschen von der Wichtigkeit dieses Zieles wissen und festen Schutz aus der Luft installiert haben. Bleibt eng bei den Bombern, und begebt Euch in eine Position, von der aus Ihr einen schnell geflogenen Angriff von vorn oben abwehren könnt, die ist die übliche Taktik der Deutschen. Viel Glück!!\n>
+<RuBBridgeR>	<Das Ziel für die Bomber ist diese Brücke. Die meisten anderen Brücken dort sind schon zerstört, also wird eine Mengen Verkehr hier durchgehen. Die Zerstörung der Brücke würde ein Verkehrschaos erster Güte verursachen, was Euch wiederum viele Ziele westlich der Brücke beschert. Viel Glück, Gentlemen!\n>
+
+<RuBBridgeD>	<Der Feind wird wahrscheinlich diese Brücke bombardieren, da sie einen wichtigen Knotenpunkt in unserem Nachschubsystem darstellt. Wenn der Gegner angreift, achtet auf Begleitschutz, aber konzentriert Eure Angriffe auf die Bomber!\n>
+<RuBBridgeD>	<Die Amerikaner haben gestern erfolglos versucht, diese Brücke zu bombardieren. ES ist wahrscheinlich, dass sie es noch mal versuchen. Wir werden auf sie warten!\n>
+<RuBBridgeD>	<Brücken in der Gegend sind von äußerster Wichtigkeit für unser Operationen. Zerstört alle USAAF-Bomber, die Ihr seht!\n>
+
+<DeBBridgeR>	<In einem verzweifelten Versuch, unseren Vormarsch aufzuhalten, konzentrieren die Deutschen verständlicherweise alle Ihre Kräfte darauf, unsere offensiven Fähigkeiten einzuschränken. Eine der einfachsten Sachen dabei ist, Brücken anzugreifen. Eine einzelne Bombe, abgeworfen bei nur einem Einsatz, kann sich sehr stark auf die gesamte Nachschubsituation auswirken und so unsere Kriegsanstrengungen für einige Tage behindern. Eure Aufgabe ist daher, die Brücken im markierten Sektor zu schützen. Laßt nicht zu, dass die Deutschen sie zerstören.\n>
+<DeBBridgeR>	<Der Großteil Westeuropas ist mit einem Netz mehr oder weniger kleiner Flüsse überspannt, und daher sind Brücken äußerst wichtig für unseren Erfolg. Jede einzelne Brücke ist sowohl taktisch als auch strategisch ein Ziel für die Deutschen. Heute werden wir den Luftraum im markierten Sektor von der deutschen Luftwaffe freihalten. Laßt die Krauts nicht durchbrechen. Viel Glück!.\n>
+<DeBBridgeR>	<Alle Brücken in dem Sektor sind von wesentlicher Bedeutung für alle hier Kämpfenden, sowohl am Boden als auch in der Luft. Die Deutschen haben diese Woche einige sporadische Angriffe geflogen, wobei sie ein paar gute Treffer auf Brücken erzielt haben. Also, wenn Ihr nicht wollt, dass ein ganzes Bataillon Pioniere Euch zu hassen lernt, beschützt die restlichen Brücken vor der Luftwaffe.\n>
+
+<DeBBridgeD>	<Die Amerikaner haben es überraschend schnell geschafft, diese Brücke zu reparieren. Unsere Bomber werden sie wieder zerstören, wir fliegen Eskorte!\n>
+<DeBBridgeD>	<Um das feindliche Nachschubsystem lahmzulegen, 
+werden unsere Bomber diese Brücke angreifen. Da der Feind von Ihrer Bedeutung weiß, ist Jagdabwehr recht wahrscheinlich. Viel Glück!!\n>
+<DeBBridgeD>	<Diese Schlüsselbrücke wird heute von unseren Bombern angegriffen. Im Anbetracht der feindlichen Luftüberlegenheit brauchen sie starken Begleitschutz. Unsere Aufgabe ist, die Bomber sicher hin und auch zurück zu bringen!\n>
+
+<RuABridgeR>	<Ihr greift die Brücke im markierten Bereich auf Eurer Karte an. Sie gehört zu einer der Hauptrouten für die Verstärkungen, welche die Deutschen an die Front werfen. Indem wir diese Brücke zerstören, können wir Ihre Logistik durcheinanderbringen und wahrscheinlich die Ankunft ganzer Divisionen um entscheidende Tage verzögern.\n>
+<RuABridgeR>	<Euer Ziel ist die auf der Karte markierte Brücke. Nachdem Ihr Eure Bomben abgeworfen habt bleibt tief und jagt aggressiv nach Schienen und Straßenverkehr in der Umgebung.\n>
+<RuABridgeR>	<Ihr müßt die auf der Karte markierte Brücke zerstören. Es ist absolut entscheidend für die Nachschubsituation, da die Deutschen Streitkräfte praktisch entzwei gerissen werden, so daß ein großer Teil Ihrer Frontkräfte mehrere Tage ohne Nachschub sein wird.\n>
+
+<RuABridgeD>	<Die Brücke dort wurde in den letzten Tagen ohne Unterbrechung angegriffen. Sie wird sofort wieder zerstört, sobald wenn wir sie repariert haben, und die Straßen darum sind voller Staus. Stört die Bomber auf dem gesamten Weg zu und vom Ziel, so daß sei nicht mehr zielen können. Viel Glück!! \n>
+<RuABridgeD>	<Diese Brücke ist absolut unersetzlich für unseren Frontnachschub dort. Sie muß geschützt werden, koste es was es wolle! Wir erwarten dort in kürze eine feindliche Einheit, also rechnet mit einem harten Kampf. Viel Glück, Kameraden!\n>
+<RuABridgeD>	<Die Brücke dort wurde bereits zweimal angegriffen in den letzten fünf Tagen. Dieses mal werden wir weitere Schäden verhindern! Achtet auf Begleitschutz und kümmert euch nach dem Auftrennen der Formation um die bombentragenden Flugzeuge!
+
+<DeABridgeR>	<Unsere Bomber haben die meisten Brücken in der Gegend vor unserem Einmarsch zerstört, also sind die noch vorhandenen wirklich heiß gehandelt auf dem Immobiliensektor. Patroulliert über den Brücken und stellt sicher, dass die Krauts nicht zu einer von ihnen durchkommen.\n>
+<DeABridgeR>	<Der Feind versucht seit mehreren Tagen, diese Brücke zu treffen, Es handelt sich um eine der wenigen noch intakten Brücken in der Gegend, also müssen wir sie unter allen Umständen schützen.\n>
+<DeABridgeR>	<Brücken in dieser Gegend sind unerläßlich für unseren Nachschub. Die Krauts wissen das, daher schicken sie jeden Tag Flugzeuge vorbei, um sie zu bombardieren. Wir erwarten nicht, dass sie heute aufhören, also seid auf der Hut und stoppt  Die Deutschen bevor sie eine Chance haben, die Brücke zu treffen.\n>
+
+<DeABridgeD>	<Diese Brücke fiel intakt in feindliche Hände. Sie steht auf einer Hauptstraße, welche die Amerikaner für eine Großoffensive nutzen können. Wenn wir diese Brücke zerstören, machen wir es Ihnen ein bißchen schwerer und ermöglichen es unseren rückwärtigen Verbänden, Abwehrstellungen auszubauen, um einen weiteren Vormarsch zu verhindern.\n>
+<DeABridgeD>	<Euer Ziel ist die auf der Karte markierte Brücke. Sie ist von großer Bedeutung für den Nachschub und Ihre Zerstörung würde die amerikanischen Kräfte quasi zweiteilen, wodurch ein großer Teil von ihnen tagelang ohne Nachschub wäre.\n>
+<DeABridgeD>	<Unsere Truppen haben beim Rückzug diese Brücke gesprengt, aber der Feind hat sie offensichtlich wieder repariert. Wir müssen sie wieder in die Luft jagen. Achtet auf Jäger und Flak! Hals- und Beinbruch!\n>
+
+<RuParaR>	<Das ist alles, Viel Glück!!\n>
+<RuParaD>	< Wir werden dort freie Jagd fliegen, zerstört alle Amis, die sich dort in der Luft zeigen.\n>
+<DeParaR>	<Wir haben keine genauen Angaben über die derzeitige feindliche Stärke in diesem Sektor. Jedoch glauben wir, genug Flugzeuge einzusetzen, um alles, was die Luftwaffe einsetzt, abwehren zu können.\n>
+<DeParaD>	<Unsere Fallschirmjäger starten dort ein Kommandounternehmen auf dieses Ziel. Schützt sie vor Jägern!\n>
+
+<RuReconR>	<Das ist alles, Viel Glück!!\n>
+<RuReconD>	<Wir werden dort freie Jagd fliegen, zerstört alle Amis, die sich dort in der Luft zeigen.\n>
+<DeReconR>	<Wieder einmal treffen wir auf hektischen Widerstand durch die Luftwaffe. Ihr könntet auf alles treffen, vom einzelnen Hochgeschwindigkeitsaufklärer bis zu nennenswerten Verbänden von Jabos, die auch mit Jagdschutz fliegen könnten. Selbst wenn Ihr auf größere Einheiten treffen solltet - denkt daran, Ihr habt die besseren Flugzeuge und eine überlegene Ausbildung. Viel Glück Euch allen!\n>
+<DeReconD>	<Ein Aufklärer kreist über dem Ziel. In letzter Zeit haben wir zu viele davon verloren, also werden wir diesen eskortieren.\n>
+
+<RuDeAirRD>	<Das Hauptziel für heute ist es, den Luftraum über der Stadt zu kontrollieren. Wir haben kaum Informationen über die aktuelle Stärke des Feindes, auf die Ihr treffen werdet. Dennoch glauben wir, daß wir genügend Flugzeuge einsetzen, um dem Feind entgegen treten zu können.\n>
+<RuDeAirRD>	<Eure heutige Aufgabe ist einfach: Haltet den Feind aus diesem Luftraum. Gute Sicht ist vorausgesagt in der angegebenen Höhe, also achtet auf Eure Geschwindigkeit und fügt dem Feind Schaden zu.\n>
+<RuDeAirRD>	<Dieser Bereich ist nur einer von vielen, die der Gegner angreifen könnte, aber in Betracht der Aktivitäten der letzten Tage ist es sehr wahrscheinlich, daß Ihr einige feindliche Flugzeuge zu Gesicht bekommt. Ob Jäger, Jabos oder Bomber, ist hingegen ungewiß. Viel Glück!!\n>
+<RuDeAirRD>	<Ihr werdet im zugewiesenen Sektor patroullieren und sicherstellen, dass Der Feind nicht durchbrechen kann, um unter Euch oder im Hinterland anzugreifen. Viel Glück heute!\n>
+<RuDeAirRD>	<Wir haben einige wichtige Objekte in der direkten Nähe da, und der Feind könnte jederzeit eines davon angreifen. Leider kann ich keine genaueren Informationen geben. Bleibt einfach über dem Zielgebiet und Last den Feind nicht durch.\n>
+<RuDeAirRD>	<Wir beobachten hektische Feindaktiviät. Ihr könntet auf alles treffen, vom Hochgeschwindigkeitsaufklärer bis zu großen Formationen aus Jabos und Jägern. Selbst wenn Ihr auf einen zahlenmäßig überlegenen Feind trefft - denkt an folgendes: Ihr habt die besseren Maschinen und eine wesentlich bessere Ausbildung. Viel Glück Euch allen!\n>
+
+<RuBalloon>	<Ein deutscher Beobachtungsballon leitet das feindliche Artilleriefeuer in der Gegend. Wenn wir Ihn zerstören, wird dieser Beschuß wesentlich uneffektiver. Macht ihn aus und zerstört ihn!\n>
+<DeBalloon>	<Ein Beobachtungsballon leitet unser in der Gegend. Die Amis werden versuchen, Ihn zu zerstören. Fangt alle amerikanischen Jäger ab, die dort einfliegen und schützt den Ballon.\n>
+
+//<Retrn>		<Nach der dringend notwendigen Erholungspause ist Ihre Einheit wieder zurück im operativen Einsatz...\n>
+
+<Retrn>		< >
+
+
+
+
+	--------------------------------------------------------------------------------------------
+	The following messages are for pilot's logbook
+	--------------------------------------------------------------------------------------------
+
+<logTransfer>			<Verlegt von %s nach %s>
+<logAttackSoft> 			<Bodenangriff bei %s>
+<logCAP> 			<Sperre über %s
+<logCAPB> 			<Patrouille>
+<logDDayCAS>		<Unterstützung der Invasion>
+<logAttackCon> 			<Angriff auf im Bau befindlichen Flughafen>
+<logDefendCon> 			<Schutz eines im Bau befindlichen Flughafens>
+<logPatrolTown> 			<Schutz des Luftraums über %s>
+<logEscortBomb> 			<Bomberbegleitschutz nach %s>
+<logAttackArmor> 			<Angriff auf feindliche Panzerkräfte bei %s>
+<logDefendArmor> 			<Luftnahunterstützung im Sektor %s>
+<logAttackAF> 			<Angriff auf den Flughafen von %s>
+<logDefendAF> 			<Verteidigung des Flughafens von %s>
+<logEscortPara> 			<Absetzen von Fallschirmjägern bei %s>
+<logAttackBridge> 			<Angriff auf Brücken bei %s>
+<logDefendBridge> 			<Schutz von Brücken bei %s>
+<logFreeHunt> 			<Freie Jagd>
+<logEscortRecon> 			<Begleitschutz für einen Aufklärer nach %s>
+<logAttackShips> 			<Angriff feindlicher Schiffe>
+<logDefendShips> 			<Schutz von Schiffen>
+<logAttackArtillery> 			<Angriff von feindlichen Artilleriestellungen>
+<logScramble> 				<Alarm>
+<logBailed> 				<Abgesprungen %s>			// W of Smolensk
+<logKill> 					<Abschuß von %s gemeldet über %s>		// Me-262 over Berlin
+<logCrashed> 				<%s abgestürzt>			// SW of Kursk
+<logLandedAF> 				<gelandet auf dem Flughafen %s>// Pitomnik
+<logLanded> 				<im Feld notgelandet>
+
+<logAttackAF>				<Angriff auf den Flughafen von %s> // Krasnoe
+<logTank>                   <%s feindliche Panzer zerstört> // S of Pushkin  
+<logShip>					<%s feindliches Schiff versenkt>
+<logArtillery>				<Angriff von feindlichen Artilleriestellungen %s>
+<logColumn>					<Angriff von feindlichen Transportkolonnen %s>
+<logTrain>					<Angriff von feindlichen Zügen %s> 
+<logBridge>					<Zerstörung einer Brücke %s>
+<logTroops>					<Angriff von feindlichen Truppen %s>
+<dirIn> 					<in>
+
+<dirOver> 					<über>
+<dirW> 						<W von>
+<dirNW> 					<NW von>
+<dirN> 						<N von>
+<dirNE> 					<NE von>
+<dirE> 						<E von>
+<dirSE> 					<SE von>
+<dirS> 						<S von>
+<dirSW> 					<SW von>
+
+	--------------------------------------------------------------------------------------------
+	The following messages are for pilot's personal files
+	--------------------------------------------------------------------------------------------
+
+<rstJoined> 		<zur Gruppe gestoßen>
+<rstPromoted> 		<zum %s befördert>
+<rstAwarded> 		<mit %s ausgezeichnet>
+
+<rstTransferedDe> 		<versetzt zur Flugschule>
+<rstTransferedDe> 		<versetzt nach Norwegen>
+<rstTransferedDe> 		<versetzt an die Ostfront>
+<rstTransferedDe> 		<versetzt zur Erprobungsstelle Rechlin>
+
+
+<rstTransferedRu> 		<versetzt zur Marine>
+<rstTransferedRu> 		<versetzt zur Flugschule>
+
+<rstHospitalize> 		<verletzt und ins Lazarett eingewiesen   >
+<rstReunitedDe> 		<zur Gruppe zurückgekehrt>
+<rstReunitedRu> 		<zur Squadron zurückgekehrt>
+
+<rstKilled> 				<Im Luftkampf gefallen bei %s>
+<rstMissed> 				<Vermißt bei %s>
+
+<awdR1> 		<Bronze Star>
+<awdR2> 		<American Campaign Medal>
+<awdR3> 		<Air Medal>
+<awdR4> 		<Distinguished Flying Cross>
+<awdR5> 		<Silver Star>
+<awdR6> 		<Distinguished Service Cross>
+<awdR7> 		<Congressional Medal of Honor>
+<awdR8> 		<Congressional Medal of Honor>
+
+<awdD1> 		<Eisernes Kreuz, II.Klasse>
+<awdD2> 		<Eisernes Kreuz, I.Klasse >
+<awdD3> 		<Deutsches Kreuz in Gold>
+<awdD4> 		<Ritterkreuz>
+<awdD5> 		<Eichenlaub zum Ritterkreuz>
+<awdD6> 		<Schwerter zum Ritterkreuz mit Eichenlaub>
+<awdD7> 		<Brillanten zum Ritterkreuz mit Schwertern und Eichenlaub >
+<awdD8> 		<Goldenes Eichenlaub, Schwerter und Brillanten zum Ritterkreuz>
+
+<Clear>  		<Klar>
+<Good>			<3/10>
+<Hazy> 			<7/10>
+<Poor>			<10/10>
+<Blind>			<Null Sicht, 10/10>
+<Rain>			<Regen, 10/10>
+<Thunderstorm>	<Gewitter, 10/10>
+<Snow> 			<Schneefall, 10/10>
+<Snowstorm>		<Schneesturm, 10/10>
+
+	--------------------------------------------------------------------------------------------
+	Please do not translate words Name and Description - they are used by IL2
+	--------------------------------------------------------------------------------------------
+<nSHR> 		<DGen Mission\n>
+<nHDR> 		<Name Mission %s\n>
+<hWthRep>	<Description %s\n%s %02.2d%02.2d Uhrzeit\nWetter: %s Bewölkung in %ld m\n> 
+<hWthRepi>	<Description %s\n%s %02.2d%02.2d Uhrzeit\nWetter: %s Bewölkung in %ld,%03ld ft\n> 
+<hShortRuB>	<Bomber. %s, '4%d>
+<hShortRuF>	<Jäger. %s, '4%d>
+<hShortDeB>	<Jäger. %s, '4%d>
+<hShortDeF>	<Jäger. %s, '4%d>
+
+<hLongRuB>	<Description Dynamische Kampagne für amerikanischen Bomberpilot. %s, 194%d>
+<hLongRuF>	<Description Dynamische Kampagne für amerikanischen Jägerpilot. %s, 194%d>
+<hLongDeB>	<Description Dynamische Kampagne für deutschen Bomberpilot. %s, 194%d>
+<hLongDeF>	<Description Dynamische Kampagne für deutschen Jägerpilot. %s, 194%d>
+
+<hLastRep>	<Description Der Krieg ist vorbei. Sie haben überlebt.\n> 
+
+<YOURGROUP>	<\nIhre Gruppe:\n\n>
+<YOURKILLS>	<\nIhre Abschüsse:\n\n>
+
+<VICTORY>	<%s %s: %d Abschuß %s\n>
+<VICTORIES>	<%s %s: %d Abschüsse %s\n>
+
+<hROUTEi>	<\nEntfernung zum Ziel: %d NM\nFlughöhe: %ld,%03ld ft\n>
+<hROUTE>	<\nEntfernung zum Ziel: %d km\nFlughöhe: %d m\n>
+
+<TOWNLIB> 	<Nachrichtenmeldung:\n\nUnsere Streitkräfte haben %s eingenommen!>
+<TOWNLIB> 	<Nachricht von der Front:\n\nUnsere Panzer haben soeben %s erobert!>
+<TOWNLIB> 	<Die neuesten Nachrichten:\n\nGerade kam im Radio die Meldung, daß unsere Truppen jetzt %s kontrollieren!> 
+<AND> 		< und > 
+<TOWNLOST> 	<Schlechte Nachrichten von der Front:\n\n%s wurde heute eingenommen >
+<TOWNLOST> 	<Nachrichtenmeldung:\n\nDer Gegner hat %s eingenommen> 
+<TOWNLOST> 	<Die neuesten Nachrichten:\n\nNach heftigen Gefechten haben unsere Truppen sich aus %s zurückgezogen> 
+
+
+	--------------------------------------------------------------------------------------------
+	Plane names to appear in briefings
+	--------------------------------------------------------------------------------------------
+<IL_2T>		<IL-2T>
+<PE_2SERIES1>	<Pe-2>
+<PE_2SERIES84>	<Pe-2>
+<PE_2SERIES110>		<Pe-2>
+<PE_2SERIES359>		<Pe-2>
+<PE_3SERIES1>	<Pe-3>
+<PE_3BIS>	<Pe-3 bis>
+<TU_2S>		<Tu-2S>
+<PE_8>	<TB-7>
+<JU_87B2>	<Ju-87B2>
+<JU_87D3>	<Ju-87D3>
+<JU_87D5>	<Ju-87D5>
+<JU_87G1>	<Ju-87G1>
+<JU_52_3MG4E>	<Ju-52>
+<LI_2>	<Li-2>
+<IL_2_1940Early>	<IL-2>
+<IL_2_1940Late>		<IL-2>
+<IL_2_1941Early>	<IL-2>
+<IL_2_1941Late>		<IL-2>
+<IL_2MEarly>	<IL-2M>
+<IL_2MLate>		<IL-2M>
+<IL_2Type3>		<IL-2 Type 3>
+<IL_2Type3M>	<IL-2 Type 3M>
+<I_153_M62>		<I-153/M62>
+<I_153P>	<I-153P>
+<I_16TYPE24>	<I-16>
+<I_16TYPE18>	<I-16>
+<LA_7>	<LA-7>
+<P_39N>		<P-39N>
+<P_39Q1>	<P-39Q1>
+<P_39Q10>	<P-39Q10>
+<LAGG_3SERIES4>		<LaGG-3 S4>
+<LAGG_3IT>	<LaGG-3IT>
+<LAGG_3SERIES66>	<LaGG-3 S66>
+<LA_5FN>	<La-5FN>
+<MIG_3EARLY>	<MiG-3>
+<MIG_3UD>	<MiG-3UD>
+<MIG_3U>	<MiG-3U>
+<MIG_3UB>	<MiG-3UB>
+<MIG_3AM38>		<MiG-3AM38>
+<MIG_3SHVAK>	<MiG-3 ShVAK>
+<YAK_1>		<Yak-1>
+<YAK_1B>	<Yak-1B>
+<YAK_7B>	<Yak-7B>
+<YAK_3>		<Yak-3>
+<YAK_9>		<Yak-9>
+<YAK_9D>	<Yak-9D>
+<YAK_9K>	<Yak-9K>
+<YAK_9T>	<Yak-9T>
+<YAK_9U>	<Yak-9U>
+<R_10>	<R-10>
+<U_2VS>		<U-2VS>
+<BF_109E4>	<BF-109E4>
+<BF_109E4B>		<BF-109E4B>
+<BF_109E7>	<BF-109E7>
+<BF_109E7NZ>	<BF-109E7>
+<BF_109F2>	<BF-109F2>
+<BF_109F4>	<BF-109F4>
+<BF_109G2>	<BF-109G2>
+<BF_109G6>	<BF-109G6>
+<BF_109G6Late>	<BF-109G6>
+<BF_109G6AS>	<BF-109G6>
+<FW_189A2>	<FW-189A2>
+<FW_190A4>	<FW-190A4>
+<FW_190A5>	<FW-190A5>
+<FW_190A8>	<FW-190A8>
+<FW_190A9>	<FW-190A9>
+<FW_190D9>	<FW-190D9>
+<FW_190D9LATE>		<FW-190D-9>
+<JU_88A4>	<Ju-88A4>
+<HE_111H2>	<He-111H2>
+<HE_111H6>	<He-111H6>
+<HS_129B2>	<Hs-129B2>
+<HS_129B3Wa>	<Hs-129B3Wa>
+<P_11C>		<P-11C>
+<IL_2I>		<IL-2I>
+<LA_5>		<LA-5>
+<LA_5F>		<LA-5F>
+<LA_7B20>	<LA-7>
+<P_40E>		<P-40>
+<P_40EM105>	<P-40>	
+<P_40M>>	<P-40M>
+<BF_110C4>	<BF-110C4>
+<BF_110C4B>	<BF-110C4B>
+<BF_110G2>	<BF-110G2>
+<HurricaneMkIa>	<Hurricane>
+<HurricaneMkIIb>	<Hurricane>
+<HurricaneMkIIc>	<Hurricane>
+<HurricaneMkIIbMod>	<Hurricane>
+<BLENHEIM1>	<Blenheim>
+<BLENHEIM4>	<Blenheim>
+<SB_2M100A>	<SB-2>
+<SB_2M103>	<SB-2>
+<TB_3_4M_17> <TB-3>
+<TB_3_4M_34R> 	<TB-3>
+
+<F2A_B239> <Brewster>
+<MS406> <M.S.406>
+<MS410> <M.S.410>
+<G50>   <Fiat G-50>
+<P_47D10> <P-47>
+<P_47D22> <P-47>
+<P_47D27> <P-47>
+<ME_210CA1> <Me-210>
+<ME_210CA1ZSTR> <Me-210>
+<IL_4_DB3B>			<DB-3>
+<IL_4_DB3M>			<DB-3>
+<IL_4_DB3F>			<DB-3>
+<IL_4_IL4>			<IL-4>
+<FW_190F8>          <FW-190 F8>
+<BF_109G10>			<BF-109 G10>
+<BF_109G14>			<BF-109 G14>
+<BF_109K4>			<BF-109 K4>
+<P_51D20NA>			<P-51>
+<P_51D5NT>			<P-51>
+<P_51B>				<P-51>
+<P_51C>				<P-51>
+<P_51CM>			<P-51>
+<TEMPEST5>	<Tempest V>
+<P_38J>				<P-38>
+<P_38L>				<P-38>
+<P_63C>				<P-63>
+<P_36A3>			<P-36>
+<P_36A4>			<P-36>
+<GLADIATOR1>		<Gladiator>
+<GLADIATOR2>		<Gladiator>
+<GLADIATOR1J8A>		<J8A>
+<SPITFIRE5B>		<Spitfire>
+<SPITFIRE5BCLP>		<Spitfire>
+<SPITFIRE5BLF>		<Spitfire>
+<SPITFIRE5BLFCLP>	<Spitfire>
+<IAR_80> <IAR-80>
+<IAR_81A> <IAR-81>
+<TA_152H1>			<Ta-152>
+<ME_262A1A> <Me-262>
+<ME_262A2A> <Me-262>
+<SU_2> 			<Su-2>
+<B_25C25>		<B-25>
+<B_25G1>		<B-25>
+<B_25H1>		<B-25>
+<B_25J1>		<B-25>
+<SPITFIRE9C>	<Spitfire>
+<SPITFIRE9CCLP>	<Spitfire>
+<SPITFIRE9E>	<Spitfire>
+<SPITFIRE9ECLP>	<Spitfire>
+<SPITFIRE9EHF>	<Spitfire>
+<FW_190A6>	<FW-190A-6>
+<IAR_80>	<IAR-80>
+<IAR_81A>	<IAR-81A>
+<IAR_81C>	<IAR-81C>
+<LAGG_3SERIES29>	<LaGG-3>
+<LAGG_3SERIES35>	<LaGG-3>
+<YAK_7A>	<YAK-7A>
+<YAK_9B>	<YAK-9B>
+<YAK_9M>	<YAK-9M>
+<YAK_3P>	<YAK-3P>
+<YAK_9UT>	<YAK-9UT>
+<I_185M71>	<I-185>
+<I_185M82A>	<I_185>
+<YAK_7BPF> <YAK-7B>
+<MC_200_1> <Mc 200>
+<MC_200_3> <Mc 200>
+<MC_200_7> <Mc 200>
+<MC_200_7FB> <Mc 200> 
+<MC_202> <Mc 202>
+<MC_202_3> <Mc 202>
+<MC_202_7> <Mc 202>
+<MC_202_12> <Mc 202> 
+<MC_205_1> <Mc 205> 
+<MC_205_3> <Mc 205> 
+<FW_190A5165ATA> <Fw-190A-5>
+<P_40SUKAISVOLOCHHAWKA2> <Hawk 81>
+<P_40SUKAISVOLOCHB> <P-40B>
+<P_40SUKAISVOLOCHC> <P-40C>
+<P_40SUKAISVOLOCH2A> <Tomahawk IIA>
+<P_40SUKAISVOLOCH2B> <Tomahawk IIB>
+<P_47D> <P-47>
+<A_20G> <A-20G>
+<BF_109K4C3> <Bf-109K-4>
+<DO_335A0> <Do-335>
+<ME_163B1A> <Me-163 Komet>
+<HE_162A2> <Heinkel 162>
+<P_38LLate> <P-38>
+<SPITFIRE8> <Spitfire VIII>
+<SPITFIRE8CLP> <Spitfire VIII>
+<SPITFIRE925LBS> <Spitfire IX>
+<MOSQUITO4> <Mosquito Mk.IV>
+<MOSQUITO6> <Mosquito Mk.VI>
+
+<A_20C> <A-20C Boston>
+<IL_10> <IL-10 Shturmovik>
+
+<KI_100_IKO> 	<MB-152>
+<SBD5> 		<Douglas A-24>
+<GO_229A1> 	<Horten Ho-IX>
+<SPITFIRE5C4> 	<Spitfire Mk Vc>
+<SPITFIRE5C2> 	<Spitfire Mk Vc>
+
+<BI_6>			<BI-6>
+<LAGG_3RD>		<LAGG-3RD>
+<I_250>			<I-250>
+<LA_7R>			<LA-7R>
+<MIG_9_I_300>		<MIG-9>
+<MIG_9FS>		<MIG-9FS>
+<YAK_3VK107>		<YAK-3 VK107>
+<YAK_3R>		<YAK-3R>
+<YAK_15>		<YAK-15>
+<DO_335V13>		<Do-335 V13>
+<AR_234B2>		<AR-234B2>
+<TA_152C>		<Ta-152C>
+<HE_162C>		<He-162C>
+<HE_162B>		<He-162D>
+<HE_LERCHE3>		<Lerche>
+<ME_262HGII>		<Me-262 HGII>
+<TA_183>		<Ta-183>
+<KI_27_KO>		<Ki-27 Ko>
+<KI_27_OTSU>		<Ki-27 Otsu>
+<A5M4>			<A5M>
+
+
+	--------------------------------------------------------------------------------------------
+	Geographic names - if spelling is different from English
+	<Moscow>	<Moskau>
+	<Crimea>		<Krim>
+	--------------------------------------------------------------------------------------------
+<DeACE_KILLED> <Deutsches Radio meldete heute, das bekannte Ass /s sei heute im Einsatz gefallen. Wir haben Grund anzunehmen, es ist in Ihrem Einsatz passiert.\n>
+<RuACE_KILLED> <Unser Geheimdienst meldet, daß der recht bekannte amerikanische Jagdpilot %s in diesem Einsatz abgeschossen wurde und starb.\n>
+<RuACE_KILLED> <Im letzten Einsatz habt Ihr nach abgehörten Funknachrichten %s abgeschossen. Es war ein sehr erfahrener Pilot und sein Verlust ist auch ein moralischer Rückschlag.\n>
+<DeACE_CAPTURED> <Wir verhören gerade %s, ein bekanntes deutsches Ass, das von unseren Truppen heute festgenommen wurde. Er wurde offensichtlich von unserem Squadron abgeschossen.\n>
+<RuACE_CAPTURED> <Unsere Truppen haben %s gefangen genommen, der behauptet, ein bekanntes Ass zu sein und der Euch treffen will.\n>
+<DeACE_DOWN> <Basierend auf dem Bericht, in dem unser Squadron abgeliefert hat, sagt das  HQ, daß %s, ein bekannter deutscher Jagdpilot, heute abgeschossen wurde. Über seinen Verbleib ist bisher noch nichts bekannt.\n>
+<RuACE_DOWN> <Ein Kerl namens %s, anscheinend einer der Experten, wurde in diesem Kampf abgeschossen. Er entkam, hat sich aber sicher kräftig in die Hosen gemacht.\n>
+
+<RuAArtyR>	<Heute geht es gegen eine feindliche Artilleriestellung. Sie ist schon seit ein paar Tagen auf unserer Liste, aber erst jetzt ist Zeit dafür. In der Zwischenzeit haben Die Deutschen Geschütze unseren Bodentruppen eine Menge Kopfzerbrechen bereitet. Seid vorsichtig, die Deutschen nutzen Ihre 88 oft als Artillerie. Die Jungs könnte Euch damit ganz schön einheizen. Viel Glück!!\n>
+<RuAArtyD>	<Unsere Artilleriebatterie dort verursacht große Verluste unter den feindlichen Truppen. Es ist wohl so, daß der Feind sie schon ausgemacht hat und sicher einige Jabos hinschicken wird. Wir werden dort patroullieren für diesen Fall.\n>
+<DeAArtyR>	<Unsere Artillerie in der Gegend ist fast ständig Luftangriffen ausgesetzt. Sie müssen ständig verlegen. Ihr sollt dort Sperre fliegen und potentielle Angreifer verscheuchen. Viel Glück!!\n>
+<DeAArtyD>	<Diese feindlich Artilleriebatterie dort bereitet unseren Bodentruppen viel Ärger. Sie wollen die Batterie loswerden und das ist jetzt unsere Aufgabe. Artilleriegeschütze sind Euer Hauptziel, danach der Rest.\n>
+<RuBArtyR>	<Die Bomber greifen deutsche Artilleriestellungen an. Die Bodentruppen sind schon mehrfach beim Versuch, diese Stellung einzunehmen, zurückgeschlagen worden. Ein paar hundert Mann sind dabei schon draufgegangen. Also, zeigt es den Krauts so richtig heute, sie haben es verdient.\n>
+<RuBArtyD>	<Die Artillerie dort hat eine exzellentes Schußfeld bis weit hinter die feindlichen Linien. Deshalb bombardiert der Feind sie häufig. Heute werden wir einen solchen Einflug abfangen und ihnen die eine oder andere Lektion erteilen!\n>
+<DeBArtyR>	<Gestern wurde eine Artilleriestellung in diesem Abschnitt von Focke-Wulfs angegriffen, wir verloren 4 Geschütze und fast 50 Mann. Das ist nicht das erste mal, daß die Deutschen unsere Artillerie angreifen. Die Gegend dort ist die Schnittstelle zwischen unserem Bereich und jenem der RAF, daher ist dort die Luftüberwachung nicht so gut. Die Deutschen müssen das bemerkt haben. Ihr werdet dort patroullieren, und hoffentlich auf ein paar Deutsche treffen.\n>
+<DeBArtyD>	<Unsere Jabos werden alliierte Artilleriestellungen dort angreifen. Sie sind weit hinter der Front und bewegen sich mit dieser, wobei sie ständig außerhalb der Reichweite unserer Truppen. Gestern starben ein paar hundert Männer im Sperrfeuer. Also, zeigt es den Amis so richtig heute, sie haben es verdient.\n>
+
+<RuARailR>	<Wir greifen einen deutschen Bahnhof an. Es handelt sich um ein lohnendes Ziel. Ihr werdet mit einiger Flak konfrontiert, und die Chance, daß die Luftwaffe Euch entgegenkommt, ist groß. Paßt auf, Gentlemen, und Gott wird Euch beistehen. Ich wünsche mir, dass wir uns alle heute abend hier wiedersehen.\n>
+<RuARailD>	<Die Amerikaner bombardieren täglich diese Stadt. Ich will, daß Ihr alle sehr vorsichtig seid und einen guten Angriff auf die Bomber fliegt. Denkt daran, es ist unsere Pflicht, ihnen jede Bombe heimzuzahlen, die sie auf unsere Städte abwerfen.\n>
+<DeARailR>	<Die Krauts fliegen einen konzentrierten Angriff auf unsere Nachschublinien. In den letzten Tagen haben sie fast jeden größeren Bahnhof angegriffen bis auf diesen einen. Das macht es uns einfach, ihren nächsten Schritt vorherzusagen. Patrouilliert in der Gegend, und Ihr werdet fast sicher auf deutsche Jagdbomber treffen. Viel Glück!!\n>
+<DeARailD>	<Heute werden wir ein wichtiges Ziel angreifen: Der Bahnhof ist sehr wichtig für das feindliche Nachschubsystem. Starke Flak wie auch Jagdabwehr wird erwartet. Paßt auf und kommt lebendig zurück!\n>
+<RuBRailR>	<Die Bomber greifen einen deutschen Eisenbahnknotenpunkt an. Es ist ein wichtiger Nachschubpunkt für ihre dort stationierten Truppenteile. Ihr könnt mir heftiger Abwehr durch die Luftwaffe rechnen, und wahrscheinlich mehr Flak als Euch lieb ist. Bleibt eng bei den Bombern. Greift die Deutschen im Sturzflug an, vertreibt sie und kehrt sofort wieder auf Eure Position zurück. Keine langen Luftkämpfe! Wenn ich in einer der Guncameras irgendwelche wilden Manöver sehen,  darf derjenige die Latrinen schrubben und acht Dutzend Liegestütz machen.\n>
+<RuBRailD>	<Die Stadt wird oft bombardiert, da sie wichtige industrielle Ziele enthält. Die Amerikaner und speziell nachts die Briten verfehlen oft ihr Ziel, und es kommt zu vielen Opfern unter der Zivilbevölkerung. Heute versuchen es die Amis erneut und wir werden sie abfangen! Achtet auf die Eskorte, aber Euer Hauptziel sind die Bomber!\n>
+<DeBRailR>	<Ein Luftwaffenangriff wurde soeben gemeldet. In der Zukunft waren diese Meldungen oft ein wenig unglaubwürdig, trotzdem müssen wir reagieren. Patrouilliert über der Stadt, und fangt alle deutschen Flugzeuge ab, die Ihr seht.\n>
+<DeBRailD>	<Unser Bomberpiloten werden einen weiteren der selten gewordenen Tagangriffe fliegen und diesen Bahnhof bombardieren. Paßt auf sie auf, und auch aufeinander.\n>
+
+<RuADepotR>	<Wir gehen gegen ein Ziel vor, welches wir für ein Nachschubdepot halten. Es wurde nicht erwähnt, was dort gelagert wird. Jedoch spricht man von leichter Flak und fehlender Jagdabwehr. Also los mit Euch, werft Eure Bomben ab und dann müßt Ihr nicht noch mal hin; ein Einsatz näher am Rückweg nach Hause. Alles Gute Euch allen.\n>
+<RuADepotD>	<Offensichtlich ein weiterer Angriff auf diese Stadt. Wir werden sofort den amerikanischen Luftterroristen entgegeneilen. Greift an, bis die Munition verbraucht ist und vermeidet soweit es geht die Begleitjäger!\n>
+<DeADepotR>	<Euer Hauptaugenmerk solltet Ihr auf unser Nachschubdepot richten. Es handelt sich um den einzigen großen Lagerkomplex im weiteren Umfeld, also sollten selbst die Deutschen kapieren, daß wir es als Lager benutzen. Patrouilliert in der Gegend und zerstört alle Luftwaffenflugzeuge die Ihr seht.\n>
+<DeADepotD>	<Ziel ist für heute ist ein amerikanisches Nachschubdepot. Ein sehr wichtiges Ziel, also wird wohl heftiger Widerstand geleistet, sowohl Flak als auch Jäger. Ich erwarte einige Treffer, Kameraden!\n>
+<RuBDepotR>	<Die Bomber bombardieren dort ein zentrales Nachschublager. Die Verluste, welche die Bomber letztes mal ohne Begleitschutz erlitten, waren unakzeptabel. Gentlemen, bitte denkt an die zehn Mann, die in jedem Bomber sind. Jedes mal, wenn Ihr einen Deutschen zu den Bombern durchlaßt, gefährdet Ihr mindestens zehn Leben. Ihr seid die einzige Hoffnung für diese Männer, dass sie überleben! Tut Euer bestes, sie sicher nach Hause zu bringen.\n>
+<RuBDepotD>	<Das Nachschubdepot dort zieht feindliche Bomber an wie ein Magnet. Das gibt uns Gelegenheit, sie abzuschießen. Viel Glück!!\n>
+<DeBDepotR>	<Das HQ hat entschieden, uns auf den Schutz der Nachschubdepots im Hinterland. Wir treffen dort wahrscheinlich auf kleine deutsche Gruppen, und werden dort sowohl Truppen als auch die Nachschubdepots sichern. Bleibt tief genug, damit unsere Flak Eure Markierung sehen kann, oder hoch genug, damit sie  Euch nicht treffen. Konzentriert Euch, seid auf der Hut! Und erzielt ein paar Kills, Gentlemen. Viel Glück!.\n>
+<DeBDepotD>	<Unsere Bomber greifen das dortige Lager an. Da wir mit Jägern rechnen, werden wir sie eskortieren.\n>
+
+<RuAPortR>	<Wir werden eine deutsche Marinebasis angreifen. Sie wird für zivile wie militärische Zwecke genutzt, wobei militärische überwiegen. Euer Primärziel sind Schiffe und Lagerhäuser, die auf der Karte eingezeichnet sind. Viel Glück!!\n>
+<RuAPortD>	<Die ist eine wichtige Basis für unsere S-Boote und Kleinst-U-Boote, welche die Invasionsflotte angreifen. Wir müssen sie decken!\n>
+<DeAPortR>	<Ich muß es wohl nicht weiter erwähnen, unsere dort Häfen von extremer Bedeutung. Die Deutschen fliegen sie fast täglich an. Hunderte von Matrosen dort benötigen unseren Schutz dort, und weitere Tausende hängen von diesen Hafenanlagen ab. Schützt unsere Häfen, Gentlemen!\n>
+<DeAPortD>	<Heute versuchen wir, einen der Häfen anzugreifen, welche die feindliche Invasionflotte benutzt! Es wird eine gefährliche Mission. Laßt uns versuchen durchzustoßen, möglichst viel Schaden anzurichten und dann schnell zu verschwinden.\n>
+<RuBPortR>	<Die Bomber greifen eine deutsch Marinebasis an. Sie wird für zivile wie militärische Zwecke genutzt, wobei militärische überwiegen. Rechnet mit starker Präsenz der Luftwaffe dort, weiterhin ist viel Flak in diesem Gebiet stationiert. Bleibt bei den Bombern und greift  die Deutschen nur an, wenn sie selbst den Bombern zu nahe kommen. Viel Glück Euch allen!\n>
+<RuBPortD>	<Der Hafen wurde in den letzten Tagen zehn mal angegriffen. Der Schaden war bisher beschränkt, aber das kann sich schnell ändern. Also sollten wir versuchen, den nächsten Angriff abzufangen.\n>
+<DeBPortR>	< Ich muß es wohl nicht weiter erwähnen, unsere dort Häfen von extremer Bedeutung. Die Deutschen fliegen sie fast täglich an. Hunderte von Matrosen dort benötigen unseren Schutz dort, und weitere Tausende hängen von diesen Hafenanlagen ab. Schützt unsere Häfen, Gentlemen!\n>
+<DeBPortD>	<Die Bomber versuchen, einen der Häfen anzugreifen, welche die feindliche Invasionflotte benutzt. Wir werden sie in diese Hölle hinein eskortieren. Viel Glück!!\n>
+
+<RuAHQR>	<Wir haben verläßliche Informationen, dass dort soeben ein deutsches Feld-HQ aufgebaut wurde! eine der seltenen Gelegenheiten, die Bestie beim Schopfe zu packen. Bleibt dort solange wie nötig und macht reinen Tisch. Die Deutschen werden so früh nicht mit uns rechnen, also stehen Eure Chancen gut, ein paar wichtige Offizieren und sogar Generäle zu erledigen. Tut Euer Bestes, und zeigt es Ihnen diesmal so richtig, Gentlemen! Viel Glück! all of you.\n>
+<RuAHQD>	<Offensichtlich hat ein amerikanischer Aufklärer unser Feld-HQ dort entdeckt. Während es verlegt wird, werden wir diesen Rückzug decken.\n>
+<DeAHQR>	<Heute schützen wir das wichtigste Ziel überhaupt, ein Armee-Hauptquartier. Ich kann den Namen des Vier-Sterne-Generals dort nicht nennen, aber eins ist klar: Hitler persönlich würde uns alle küssen, wenn er sterben würde. Nehmt diese Sache Ernst, dies ist die wohl wichtigste Mission in Eurer Laufbahn. Wenn Ihr hier versagt, werden Eure Namen wohl in den Geschichtsbüchern der nächsten Generationen erscheinen. Löscht alles Deutsche aus, was sich dem HQ nähert.\n>
+<DeAHQD>	<Unsere Aufklärung berichtet starke Aktivitäten bei einem feindlichen Stabsquartier! Eine schöne Gelegenheit, richtigen Schaden anzurichten! Seid vorsichtig und achtet auf Jäger!\n>
+<RuBHQR>	<Die Bomberare greifen ein deutsche HQ an. Wir rechnen nicht mit Jägern, jedoch mit viel Flak. Falls sich die Luftwaffe nicht zeigt, könnt Ihr Euch nach dem Bombenangriff selbst noch um Bodenziele kümmern.\n>
+<RuBHQD>	<Feindliche Aufklärer haben unseren AK-Stab dort entdeckt. Wir müssen dessen Evakuierung decken. Schießt alle feindlichen Flugzeuge in der Umgebung ab!\n>
+<DeBHQR>	<Ihr schützt den Luftraum über dem Stabsquartier einer Armee-Aufklärungseinheit. Sie wurde erst kürzlich dorthin verlegt, also sind die Chancen, das die Deutschen dort auftauchen, recht niedrig. Wie auch immer, es gibt immer das Risiko, daß ein deutsches Flugzeug zufällig vorbeikommt und es entdeckt - und genau das müssen wir verhindern. Schützt das Stabsquartier und zerstört alle deutschen Flieger in der Gegend.\n>
+<DeBHQD>	<Die Bomber werden ein wichtiges Ziel dort angreifen: das feindliche Oberkommando für diesen Frontabschnitt! Da es gut bewacht sein wird, sorgen wir für den Begleitschutz.\n>
+
+<RuATroopR>	<Heute werden wir von Angesicht zu Angesicht kämpfen. Wir bekämpfen deutsche Truppenansammlungen, die im offenen Feld stehen. Wir denken, daß es sich um eine SS-Division handelt, alles Veteranen von der russischen Front. Kümmert Euch erst um die Flak, danach sollte es noch genug Gelegenheit geben, die Wirkung von Bomben und MG auf Soldaten zu beobachten.\n>
+<RuATroopD>	<Ein Panzerbatallion ist in Angriffsposition gegangen. Wahrscheinlich werden die Amerikaner die Panzer noch vor dem Vorstoß aus der Luft angreifen. Wir gehen auf freie Jagd über den Panzern und fangen alle Feindbomber ab.\n>
+<DeATroopR>	<In der Gegend sind intakte Unterkünfte rar, viele unserer Truppen kampieren im Freien. Diese Lager sind leichte Ziele für die Luftwaffe. Ihr fliegt heute Patrouille über so einem Objekt. Die Jungs dort wurden schon zweimal bombardiert und beschossen, was Ihnen wirklich an die Moral geht. Wenn Ihr über ihnen fliegt, wird das real und psychologisch helfen.\n>
+<DeATroopD>	<Aufklärer haben eine amerikanische Panzereinheit in Angriffsposition entdeckt. Greift sie an, bevor sie sich in Bewegung setzen.!\n>
+<RuBTroopR>	<Die Bomber legen einen Bombenteppich über ein Areal, wo deutsche Truppen sich sammeln und restrukturieren. Bleibt oben bei den Bombern, bis sie ihre Bomben abwerfen, , danach entscheidet, ob Ihr noch nach unten gehen könnt, um die Deutschen noch ein bißchen zu ärgern. Viel Glück Euch allen, heute wird es ein bißchen leichter als letzten mal.\n>
+<RuBTroopD>	<Die Reparatureinrichtung einer Panzereinheit ist seit ein paar Tagen Luftangriffen ausgesetzt. Der Kommandant verlangt Deckung aus der Luft, sonst kann kein Gegenangriff durchgeführt werden. Wir werden also dort freie Jagd fliegen. Viel Glück!!\n>
+<DeBTroopR>	<In der Gegend sind intakte Unterkünfte rar, viele unserer Truppen kampieren im Freien. Diese Lager sind leichte Ziele für die Luftwaffe. Ihr fliegt heute Patrouille über so einem Objekt. Die Jungs dort wurden schon zweimal bombardiert und beschossen, was Ihnen wirklich an die Moral geht. Wenn Ihr über ihnen fliegt, wird das real und psychologisch helfen.\n>
+<DeBTroopD>	<Unsere Bomber greifen eine feindlich Reparatureinrichtung an. Wir werden sie decken. Kümmert Euch um die Bomber und achte auf feindliche Jäger. Priorität hat, daß die Bomber ungestört den Angriff fliegen können.\n>
+
+<dbrDeEXCELLENT>	<Hervorragende Leistung, Kamerad. Du bist ein leuchtendes Beispiel für die gesamte Gruppe. Mach so weiter und Du wirst einen Orden erhalten!>
+<dbrDeEXCELLENT>	<Gute Arbeit. Wieder wird klar, Du bist einer der besten Piloten der Einheit. Du bist ein leuchtendes Beispiel für die gesamte Gruppe.>
+<dbrDeEXCELLENT>	<Der Fliegerführer hat uns soeben zu diesem hervorragenden Einsatz gratuliert. Alle Missionen sollten so gut laufen wie diese!>
+<dbrDeGOOD>	<Deine Leistung in dieser Mission war gut. Wenn wir nur mehr Piloten wie Dich hätten.>
+<dbrDeGOOD>	<Guter Auftritt, Du wirst ein richtig guter Pilot.>
+<dbrDeGOOD>	<Gute Arbeit! Der Kommodore ist sehr zufrieden mit Deinen Leistungen.>
+<dbrDeGOOD>	<Du hast Dich gut geschlagen. In Zeiten wie diesen braucht Deutschland mehr Piloten wie Dich.>
+<dbrDeOK>	<Eine weitere Mission erfüllt. Erhol Dich jetzt, morgen wird wieder ein anstrengender Tag.>
+<dbrDeOK>	<Du hast wieder eine Mission erfüllt! Es sieht so aus, als ob Du richtig gut wirst.>
+<dbrDeOK>	<Eine Mission wie viele andere. Morgen gibt es vielleicht aufregenderes.>
+<dbrDeBAD>	<Es war wohl nicht Dein bester Tag, aber immerhin bist Du wieder heimgekehrt.>
+<dbrDeBAD>	<Zumindest hast Du überlebt. Wenn auch die Mission schiefgegangen ist.>
+<dbrDeBAD>	<Sie haben uns richtig in die Mangel genommen, aber wenigstens haben wir überlebt und können wieder kämpfen.>
+
+<dbrDeEXCELLENT(L)>	<Super Arbeit, Kamerad. Du bist ein Beispiel für den Rest der Staffel, während um uns herum die Piloten fallen wie die Fliegen. Das ist Kampfgeist!>
+<dbrDeEXCELLENT(L)>	<Gegen alle Aussichten hast Du Großes geleistet. Leider kehrten viele Kameraden nicht zurück.>
+<dbrDeEXCELLENT(L)>	<Der Wehrmachtsbericht wird Deine hervorragende Leistung heute erwähnen! Von unseren großen Verlusten werden sie hingegen nicht sprechen...>
+<dbrDeGOOD(L)>	<Deine Leistung in dieser Mission war gut, wenn wir auch insgesamt ein Desaster erlebt haben..>
+<dbrDeGOOD(L)>	< Guter Auftritt, Du wirst ein richtig guter Pilot. Offensichtlich hast Du mehr Glück als die Kameraden, die nicht zurückgekehrt sind...>
+<dbrDeGOOD(L)>	<Gute Arbeit! Der Kommodore ist sehr zufrieden mit Deinen Leistungen, macht sich aber Sorgen wegen der Verluste der Staffel.>
+<dbrDeGOOD(L)>	<Du hast Dich trotz der Verluste der Staffel gut geschlagen. In diesen Zeiten braucht Deutschland mehr Piloten wie Dich.>
+<dbrDeOK(L)>	<Wir haben sehr viel Federn gelassen, aber unsere Mission erfüllt. Eure restlichen Piloten sollen sich für einen neuen Einsatz morgen bereithalten.>
+<dbrDeOK(L)>	<Nach der Landung wurde klar, wieviele gute Kameraden gefallen sind, ein trauriger Tag für die Staffel.>
+<dbrDeOK(L)>	<Der letzte Einsatz führte wieder zu schweren Verlusten, wie so oft in den letzten Tagen. Der Luftkrieg hat sein Gesicht geändert.>
+<dbrDeBAD(L)>	<Das war eine Katastrophe! Wir erlitten heftige Verlusten und haben wenig erreicht. Die Staffel existiert fast nicht mehr.>
+<dbrDeBAD(L)>	<Die Staffel wurde wieder stark dezimiert für nichts und wieder nichts. Du bist einer der wenigen Überlebenden. Zeit, Geburtstag zu feiern.>
+<dbrDeBAD(L)>	<Sie haben uns richtig in die Mangel genommen, aber wenigstens hast Du überlebt. Viele Deiner Kameraden fielen.>
+
+<dbrDeEXCELLENT(V)>	<Hervorragende Leistung, Kamerad. Du bist ein leuchtendes Beispiel für die gesamte Gruppe. Mach so weiter und Du wirst einen Orden erhalten!>
+<dbrDeEXCELLENT(V)>	<Gute Arbeit. Wieder wird klar, Du bist einer der besten Piloten der Einheit. Du bist ein leuchtendes Beispiel für die gesamte.>
+<dbrDeEXCELLENT(V)>	<Der Fliegerführer hat uns soeben zu diesem hervorragenden Einsatz gratuliert. Alle Missionen sollten so gut laufen wie diese!>
+<dbrDeGOOD(V)>	<Deine Leistung in dieser Mission war gut. Wenn wir nur mehr Piloten wie Dich hätten.>
+<dbrDeGOOD(V)>	< Guter Auftritt, Du wirst ein richtig guter Pilot und paßt auch in diese Einheit.>
+<dbrDeGOOD(V)>	< Gute Arbeit! Der Kommodore ist sehr zufrieden mit den Leistungen der Staffel.>
+<dbrDeGOOD(V)>	< Gute Arbeit. In diesen Zeiten braucht Deutschland mehr Piloten wie Euch.>
+<dbrDeOK(V)>	<Eine weitere Mission erfüllt. Erhol Dich jetzt, morgen wird wieder ein anstrengender Tag.>
+<dbrDeOK(V)>	<Du hast wieder eine Mission erfüllt! Es sieht so aus, als ob Du richtig gut wirst...>
+<dbrDeOK(V)>	<Eine Mission wie viele andere. Morgen gibt es vielleicht aufregenderes.>
+<dbrDeBAD(V)>	<Es war wohl nicht Dein bester Tag, aber immerhin hat die Staffel gutes geleistet.>
+<dbrDeBAD(V)>	<Zumindest hast Du überlebt. Frage Deine Kameraden, wie man erfolgreich fliegt, Sie können Dir sicher viel erzählen. Sie haben sich nämlich gut geschlagen heute.>
+<dbrDeBAD(V)>	<Obwohl Du versagt hast, schlug sich die Staffel heute gut.>
+
+<dbrDeEXCELLENT(A)>	<Großartige Leistung, Kamerad! Mach weiter so und Du wirst ausgezeichnet, vielleicht gibt es sogar Urlaub...>
+<dbrDeEXCELLENT(A)>	<Der Wehrmachtsbericht hat soeben unseren letzten Eissatz erwähnt! Wir können wirklich stolz sein!>
+<dbrDeEXCELLENT(A)>	<Der Fliegerführer hat uns soeben zu diesem Erfolg gratuliert. Leider erwartet er jetzt immer solche Ergebnisse...>
+<dbrDeGOOD(A)>	<Die Staffel hat den Amis gezeigt, daß wir noch kämpfen können! Du paßt wunderbar in diese Mannschaft!>
+<dbrDeGOOD(A)>	< Guter Auftritt, Du wirst ein richtig guter Pilot. Aber werde nicht zum Einzelgänger. Nur gemeinsam können wir überleben!>
+<dbrDeGOOD(A)>	<Gute Arbeit! Der Kommodore ist sehr zufrieden mit Deinen Leistungen. Er schickt uns einige Flaschen Champagner, die auf dem Rückzug gerettet wurden.>
+<dbrDeGOOD(A)>	<Du hast Dich gut geschlagen. Ein Kriegsberichterstatter wartet im Gefechtsstand, um mit unseren heldenhaften Piloten zu sprechen. Bitte trinkt erst, nachdem Ihr Ihm berichtet habt!>
+<dbrDeOK(A)>	<Ein weiterer Einsatz erfolgreich beendet. In diesen Zeiten sind solche Glücksfälle selten geworden.>
+<dbrDeOK(A)>	<Du hast einen weiteren Einsatz hinter Dich gebracht, das geschieht immer öfter. Vielleicht gibt es noch Hoffnung.>
+<dbrDeOK(A)>	<Ein weiterer Einsatz wie viele andere. Wenn wir so weitermachen, schaffen wir es vielleicht durch dieses Chaos.>
+<dbrDeBAD(A)>	<Es war wohl nicht Dein bester Tag, aber immerhin habt Ihr überlebt.>
+<dbrDeBAD(A)>	<Immerhin habt Ihr überlebt. Erhol Dich jetzt, morgen wird wieder ein anstrengender Tag.>
+<dbrDeBAD(A)>	<Der Adler wird keinen Artikel darüber schreiben, befürchte ich.>
+
+<dbrRuEXCELLENT(L)>	<Der Einsatz war schwierig und wir haben viele Freunde verloren. Aber mache Dir keine Vorwürfe - Deine Leistungen waren einwandfrei. Du warst uns allen ein Beispiel .>
+<dbrRuEXCELLENT(L)>	<Du hast hervorragendes geleistet in diesem Einsatz. Du solltest darüber nachdenken, in der Army zu bleiben und unsere Piloten zu trainieren, wenn es zurück nach Hause geht. Leider können selbst die hervorragenden Siege die Piloten nicht zum Leben erwecken, die unser Squadron heute verloren hat. >
+<dbrRuEXCELLENT(L)>	<Hervorragend! Einfach hervorragend. Es ist leider die einzige gute Nachricht heute, da Euer Geschwader heftige Verluste erlitt.>
+<dbrRuGOOD(L)>	<Unabhängig von den Schwierigkeiten, welche die Mission mit sich brachte: Du hast echten Kampfgeist und den Willen zum Sieg gezeigt. Erhalte das aufrecht! >
+<dbrRuGOOD(L)>	<Nicht schlecht, wirklich nicht schlecht. Bleib so, und Du wirst berühmt! Leider haben wir heute viele gute Freunde verloren.>
+<dbrRuGOOD(L)>	<Gute Arbeit! Der CO sieht gerade die Missionsberichte durch und will Dich in seinem Büro sehen. Er ist jedoch nicht in der besten Laune wegen der heutigen Verluste.>
+<dbrRuOK(L)>	< Zumindest sie haben es geschaft, das ist mal etwas.>
+<dbrRuOK(L)>	<Ein Schritt weiter auf dem Weg nach Hause. Aber nicht alle in der Squadron werden es schaffen - heute haben wir einige verloren.>
+<dbrRuOK(L)>	<Nächstes mal wirst Du mehr Erfolg haben. Zumindest hast Du die Chance dazu im Gegensatz zu den Jungs, die wir heute verloren haben.>
+<dbrRuBAD(L)>	<Was war das den, verdammt noch mal? Hast Du die gesamte Ausbildung über nur gepennt und bist erst jetzt aufgewacht?? Naja, immerhin hast Du es nach Hause geschafft. Deine Freunde nicht.>
+<dbrRuBAD(L)>	<Ich wette die BBC wird heute nichts über unsere Verluste sagen....>
+
+<dbrRuEXCELLENT(V)>	<Ein toller Tag für Dich und das Squadron! Deine Leistung in dieser Mission war hervorragend. Du bist ein Beispiel für uns alle.>
+<dbrRuEXCELLENT(V)>	<Du hast Dich hervorragend geschlagen in dieser Mission. Du solltest darüber nachdenken, in der Army zu bleiben und unsere Piloten zu trainieren, wenn es zurück nach Hause geht. Und der Rest des Geschwaders war auch Spitze!>
+<dbrRuGOOD(V)>	<Das Squadron hat heute einen außergewöhnlichen Sieg errungen - und Du hast den wahren Kampfgeist gezeigt, sowie den Willen zum Sieg. So soll es ein!>
+<dbrRuGOOD(V)>	<Nicht schlecht, wirklich: nicht schlecht. Bleib so, und Du wirst berühmt! Das gesamte Squadron hat sich hervorragend geschlagen.>
+<dbrRuGOOD(V)>	<Gute Arbeit! Der CO sieht gerade die Missionsberichte durch und will Dich in seinem Büro sehen. Er zählt gerade all die Abschüsse, die das Suqadron heute erzielt hat.>
+<dbrRuGOOD(V)>	<Also das war nicht von schlechten Eltern! Ein feiner Sieg für die USAAF!>
+<dbrRuOK(V)>	<Wer kann dir einen Vorwurf machen, daß Du halt nur Deine Pflicht erfüllst? Erhol Dich gut, Flieger, vielleicht läuft es morgen besser. Zum Glück haben wir noch bessere Piloten in der Squad, und die waren heute sehr erfolgreich!>
+<dbrRuOK(V)>	<Das Squad war heute nicht gut. Und Du? Nichts besonderes, aber Du bist einen Schritt weiter auf dem Weg nach Hause.>
+<dbrRuOK(V)>	<Nächstes mal wirst Du mehr Erfolg haben. Deine Freunde waren recht erfolgreich heute.>
+<dbrRuBAD(V)>	<Das Squad erzielte heute einen großen Sieg, unabhängig von Deiner heutigen Leistung.>
+<dbrRuBAD(V)>	<Kein "Stars und Stripes"-Artikel über diesen Einsatz, was? Deine Squad hätte das aber schon verdient.>
+
+
+<dbrRuEXCELLENT(A)>	<Deine Leistung in dieser Mission war hervorragend. Du bist ein Beispiel für uns alle . Wir haben ein paar Flugzeuge verloren, aber alle leben noch und das wollen wir feiern.>
+<dbrRuEXCELLENT(A)>	<Ein Tag, an dem wir keinen Piloten verlieren, ist ein guter Tag - und Du hast Dich hervorragend geschlagen in dieser Mission. Du solltest darüber nachdenken, in der Army zu bleiben und unsere Piloten zu trainieren, wenn Du zurück nach Hause gehst.>
+<dbrRuEXCELLENT(A)>	<Hervorragend! Einfach hervorragend. Wir haben ein paar Flugzeuge verloren, aber alle leben noch.>
+<dbrRuGOOD(A)>	<Nicht schlecht, wirklich: nicht schlecht. Wir haben Flugzeuge verloren, aber keinen Mann. Bleib so, und Du wirst berühmt!>
+<dbrRuGOOD(A)>	<Also das war nicht von schlechten Eltern! Ein paar Deiner Freunde mußten abspringen, aber ich bin froh zu sagen, dass sie alle wohlauf sind.>
+<dbrRuOK(A)>	<Wer kann dir einen Vorwurf machen, daß Du halt nur Deine Pflicht erfüllst? Erhol Dich gut, Flieger, vielleicht läuft es morgen besser.>
+<dbrRuOK(A)>	<Nichts besonderes heute - nur ein Schritt weiter auf dem Weg nach Hause.>
+<dbrRuOK(A)>	<Ein Einsatz wie viele andere. Nächstes mal wirst Du mehr Erfolg haben.>
+<dbrRuBAD(A)>	<Was war das denn, verdammt noch mal? Hast Du die gesamte Ausbildung über nur gepennt und bist erst jetzt aufgewacht? Immerhin hast heute Du keinen Schaden angerichtet.>
+<dbrRuBAD(A)>	<Zumindest leben alle noch.>
+
+<dbrRuEXCELLENT>	<Deine Leistung in dieser Mission war hervorragend. Du bist ein Beispiel für uns alle .>
+<dbrRuEXCELLENT>	<Du hast Dich hervorragend geschlagen in dieser Mission. Du solltest darüber nachdenken, in der Army zu bleiben und unsere Piloten zu trainieren, wenn es zurück nach Hause geht.>
+<dbrRuEXCELLENT>	<Hervorragend! Einfach hervorragend. >
+<dbrRuGOOD>	<Du hast den wahren Kampfgeist gezeigt, sowie den Willen zum Sieg. So soll es ein!>
+<dbrRuGOOD>	<Nicht schlecht, wirklich: nicht schlecht. Bleib so, und Du wirst berühmt!>
+<dbrRuGOOD>	<Gute Arbeit! Der CO sieht gerade die Missionsberichte durch und will Dich in seinem Büro sehen.>
+<dbrRuGOOD>	<Also das war nicht von schlechten Eltern! >
+<dbrRuOK>	<Wer kann dir einen Vorwurf machen, daß Du halt nur Deine Pflicht erfüllst? Erhol Dich gut, Flieger, vielleicht läuft es morgen besser.>
+<dbrRuOK>	<Nichts besonderes heute - ein Schritt weiter auf dem Weg nach Hause.>
+<dbrRuOK>	< Ein Einsatz wie viele andere. Nächstes mal wirst Du mehr Erfolg haben.>
+<dbrRuBAD>	<Was war das denn, verdammt noch mal? Hast Du die gesamte Ausbildung über nur gepennt und bist erst jetzt aufgewacht??>
+<dbrRuBAD>	<Nicht gerade einer deiner besten Tage, oder?.>
+<dbrRuBAD>	<Diesen Einsatz legen wir besser zu den Akten, oder?>
+
+<dbrRuDEAD>	<Du bist tot.>
+<dbrDeDEAD>	<Du bist tot, deine Staffel trauert um einen gefallenen Kameraden.>
+<dbrRuCAPTURED>	<\nDu bist in Gefangenschaft geraten.>
+<dbrDeCAPTURED>	<\nDu bist in Gefangenschaft geraten und als POW nach Kanada geschickt worden.>
+<dbrRuWOUNDED>	<\nDu bist verletzt.>
+<dbrDeWOUNDED>	<\nDu bist verletzt und in Lazarett versandt worden.>
+<dbrRuHWOUNDED>	<\nDu bist schwer verletzt.>
+<dbrDeWHOUNDED>	<\nDu bist schwer verletzt und nach Bayern ins Jagdfliegerheim geschickt worden.>
+
+
+<dbrLOST1> <Wir haben in dieser Mission ein Flugzeug verloren>
+<dbrLOST1> <Eins unserer Flugzeuge wurde bei dieser Mission abgeschossen>
+<dbrLOST> <Wir haben in diesem Einsatz %d Flugzeuge verloren>
+<dbrKILL1> <Wir konnten einen Abschuß erzielen
+<dbrKILL1> <Ein feindliches Flugzeug wurde als abgeschossen gemeldet>
+<dbrKILL> <%d feindliche Flugzeuge wurden in dieser Mission abgeschossen>
+<dbrKILL> <%d feindlich Flugzeuge wurden in dieser Mission als Luftsieg angemeldet>
+
+<RuSHORTAGE> <Deine Squadron hat nur %d einsatzbereite Flugzeuge übrig>
+<RuOUT> <Ihr mußtet Euch Flugzeuge von einer Trainingseinheit leihen> 
+<DeSHORTAGE> <Deine Staffel hat nur %d einsatzbereite Flugzeuge übrig > 
+<DeOUT> <Ihr mußtet Euch Flugzeuge von einer Trainingseinheit leihen. Immerhin fliegen die noch>
+<RESUPPLIED> <Ihr seid mit neuen Flugzeugen ausgestattet worden.>
+
+<DeSQ1> <Du bist der ersten Staffel zugeteilt, ihr Kapitän ist %s\n>
+<DeSQ2> <Du bist der zweiten Staffel zugeteilt, ihr Kapitän ist %s\n>
+<DeSQ3> <Du bist der dritten Staffel zugeteilt, ihr Kapitän ist %s\n>
+
+<RuSQ1> <Dein Squadron Leader ist %s\n>
+<RuSQ2> <Dein Squadron Leader %s\n>
+<RuSQ3> <Dein Squadron Leader ist %s\n>
+
+<DeCO1> <Du bist zum Kapitän der ersten Staffel ernannt worden!\n>
+<DeCO2> <Du bist zum Kapitän der zweiten Staffel ernannt worden!\n>
+<DeCO3> <Du bist zum Kapitän der dritten Staffel ernannt worden!\n>
+
+<RuCO1> <Du bist zum CO Deiner Squadron ernannt worden!\n>
+<RuCO2> <Du bist zum CO Deiner Squadron ernannt worden!\n>
+<RuCO3> <Du bist zum CO Deiner Squadron ernannt worden!\n>
+
+
+<St_Hubert>	<St. Hubert>
+
+<dbrRuSqEXCELLENT> <\nGentlemen! Diese Schlacht ist vorbei. Unsere Squadron ist berühmt geworden. >
+<dbrDeSqEXCELLENT> <\nKameraden! Dieser Kampf ist vorbei und unsere Staffel hat sich exzellent geschlagen. Wir wurden im Radio erwähnt. >
+
+<dbrRuSqGOOD> <\nGentlemen! Unser Squadron hat sich in dieser Schlacht ausgezeichnet. >
+<dbrDeSqGOOD> <\nDie Staffel hat eine gute Leistung gezeigt und wurde vom Chef unserer Luftflotte ausgezeichnet. >
+
+<dbrRuSqOK> <\nGentlemen! Die Schlacht war schwierig, aber wir haben alles getan, was wir können. >
+<dbrDeSqOK> <\nDer Kampf war hart dieses mal, aber wir haben mehr ausgeteilt als selber eingesteckt haben, was an sich schon mal eine Leistung darstellt. >
+
+<dbrRuSqBAD> <\nGentlemen! Die Schlacht war extrem hart. Unsere Verluste waren nicht vergebens, aber wir müssen aus unseren Fehlern lernen. >
+<dbrDeSqBAD> <\nKameraden, die letzten Kämpfe brachten uns viele Sorgen und bittere Verluste. Aber wir kämpfen weiter, damit die Opfer unserer Kameraden nicht umsonst waren. >
+
+<dbrRuEnemyLost> <\nIn Luftkämpfen mit Beteiligung unserer Piloten verlor der Feind:\n>
+<dbrDeEnemyLost> <\nIn Luftkämpfen mit Beteiligung unserer Piloten verlor der Feind:\n>
+
+<CUR_KILLS>		<In dieser Mission hast du folgende Erfolge erzielt:>
+<CUR_KILLS>		<Du hast die folgenden Abschüsse aus der folgenden Mission beansprucht: >
+<CUR_KILLS>		<Die folgenden Ziele wurden beim letzten Einsatz zerstört:>
+
+<TOT_KILLS>		<Während Deiner Einsatzzeit hast du folgende Erfolge erzielt:>
+<TOT_KILLS>		<Deine komplette Abschußliste:>
+<TOT_KILLS>		<Bis jetzt hast Du folgendes abgeschossen:>
+
+<dbrNplanes>	<Flugzeuge: %d\n>
+<dbrNplanesG>	<Flugzeuge am Boden: %d\n>
+<dbrNtanks>		<Panzer: %d\n>
+<dbrNguns>		<Geschütze: %d\n>
+<dbrNcars>		<Fahrzeuge: %d\n>
+<dbrNwagons>	<Schienenfahrzeuge: %d\n>
+<dbrNbridges>	<Brücken: %d\n>
+<dbrNships>		<Schiffe: %d\n>
+
+<dbrRuWeLost> <\nWir haben %d Flugzeuge verloren.\nWegtreten!>
+<dbrRuNoLoss> <\nUnsere Verluste waren vernachlässigbar.\nWegtreten!>
+
+<dbrDeWeLost> <\nUnsere Verluste betragen %d Flugzeuge.\nWegtreten!>
+<dbrDeNoLoss> <\nUnsere Verluste waren vernachlässigbar.\nWegtreten!>
+
+<logRecon> 				<Luftaufklärung des Bereichs %s>
+<logReconB> 			<Luftaufklärung>
+
+<RuRec>     <\nWir müssen bei %s aufklären. >
+<RuRec>     <\nWir müssen den Standort eines wichtigen Ziels bei %s genau feststellen. >
+
+<DeRec>     <\nWir müssen bei %s aufklären. Der letzte Aufklärer dort ging verloren, paßt also auf >
+<DeRec>     <\nWir müssen den Standort eines wichtigen Ziels bei %s feststellen. Zu wissen, was dort vorgeht, kann wichtig sein >
+
+<RuRHQR>    <Versucht ein feindliches Feld-HQ auszumachen, daß, wie wir vermuten, dort ist. \n>
+<RuRArtyR>  <Findet die feindliche Batterie, die von dort feuert.\n>
+<RuRDepotR> <Die Feinde haben dort ein Nachschubdepot, versucht es zu finden.\n>
+
+<DeRHQD>    <Nach abgefangenen Funksprüchen vermutet die Armee dort ein feindliches Feld-HQ. Da keine regulären Aufklärer zur Verfügung stehen, müßt Ihr es ausmachen.\n>
+<DeRHQD>    <Nach Aussagen verhörter Kriegsgefangener, befindet sich ein feindliches Feld-HQ in diesem Bereich. Findet es!\n>
+<DeRArtyD>  <Eine feindliche Batterie feuert von dort und macht uns Sorgen. Sie sind hervorragend getarnt und wechseln Ihre Feuerstellung, daher konnten wir sie bis jetzt nicht festnageln. Fliegt Aufklärung und macht diese Batterie aus!\n>
+<DeRDepotD> <Die Amis sollen ein Nachschubdepot irgendwo da haben, versucht es auszumachen. Achtet auf Flak und Jäger. Der letzte Aufklärer dort ging verloren, paßt also auf.\n>
+
+<NormandyRAFGbBr> <Die Operation Overlord, die Invasion Frankreichs, ist angelaufen! Nach der Vereinigung der 5 Landestreifen und dem Aufbau eines stabilen Brückenkopfes über 50 Meilen Kanalküste setzen wir unsere Offensive fort. Während wir in Richtung Caen vorgehen und so die deutschen Panzereinheiten um die Hauptstadt herum binden, brechen die amerikanischen Kräfte von Utah Beach aus in Richtung Barneville aus, um die Halbinsel Cotentin abzuschneiden. Deine Einheit ist eine der ersten, die auf einem der "Advanced Landing Ground" - Flugplätze in der Normandie stationiert wird. Eure Hauptaufgaben sind taktische Luftunterstützung der Bodentruppen und die Schutz der Army und der Häfen vor deutschen Angriffen. Starke Luftwaffenangriffe werden erwartet.>
+<NormandyRAFGbDb> <Nachdem sie mehrere Wochen in der Bocage festhangen, konnten die US-Truppen im Rahmen der Operation Cobra ausbrechen. Nach fehlgeschlagenen Gegenangriffen der Deutschen bei Mortain, kesselte General Patton's Einkreisungsmanöver bei Falaise große deutsche Truppenteile ein. Taktische Luftunterstützung half uns, die Truppen dort zu vernichten; auch wenn hunderte von deutschen Soldaten entkamen, so war doch deren gesamte Ausrüstung und Bewaffnung verloren. Die Deutsche Wehrmacht ist über ganz Frankreich im Rückzug begriffen und Paris wird bald befreit sein. Taktische Luftunterstützung trug wesentlich zu diesem Erfolg bei. Den alliierten Luftstreitkräften gelang es, die Luftwaffe über der Normandie quasi auszuschalten. Noch wichtiger war die Nahunterstützung für unsere Truppen, die sich als wichtiges Instrument für die erfolgreiche Operation bei Falaise erwies.>
+<ArdennesRAFGbBr> <Heute haben wir den 16.Dezember 1944. Die 5. und 6. deutsche Panzerarmee stoßen durch die Loshein Lücke gegen unsere dortigen Divisionen vor. Der Angriff der 6. Panzerarmee auf unser V Corps auf dem Elsborn-Rücken hatte wenig Erfolg. Gleichzeitig stieß die 5. Panzerarmee gegen unser VII Corps vor, nutzte dessen Unerfahrenheit aus und macht schnelle Fortschritte. Wir müssen die Deutschen bremsen, um unsere Verteidigung bei Bastogne zu organisieren und einen Gegenangriff vorzubereiten. Aufgabe der alliierten taktischen Luftkräfte wird sein, ständig die gegnerischen Nachschubräume anzugreifen und die Lufthohheit zu sichern.>
+<ArdennesRAFGbDb> <Dem Feind ist es nicht gelungen, Bastogne einzunehmen und er wurde durch pausenlose Luftangriffe und heroischen Widerstand gestoppt. Die alliierten taktischen Luftstreitkräfte haben die Luftwaffe vom Himmel gefegt und effektiv unseren Gegenangriff unterstützt. Die Luftwaffe versuchte einen Überraschungsangriff zu Neujahr, aber unsere Verluste waren schnell ersetzt. Danach war der Feind quasi aus der Luft verschwunden. Der Sieh ist zum Greifen nahe! >
+
+<Channel44GbBr> <After almost two years of planning the invasion of Europe is approaching. In order to prepare for the invasion the 2nd Tactical Air Force will attack targets in the area of the potential invasion beaches.>
+<Invasion44GbBr> <Operation Overlord started today! Your main task is to fly tactical support missions defending the troops landing on Utah, Omaha, Gold, Juno and Sword beach.>
+<AirStart44GbBr> < >
+<Bocage44GbBr> <After establishing a firm bridgehead along the Channel coastline we continue the invasion. Your unit is the first of the 2nd Tactical Air Force to transfer to an Advanced Landing Ground in Normandy.>
+<Breakout44GbBr> <After being stuck in the bocage for several weeks a breakout offensive is being prepared. Operation Cobra will start on July 24th. Your task remains tactical support of the offensive.>
+<Paris44GbBr> <Our troops finally broke out during Operation Cobra. The German forces were caught in a huge pocket near Falaise. The German army is in full retreat and Paris should be liberated soon.>
+<LowCountries44GbBr> <Our forces are driving the disorganised remnants of the enemy armies towards the borders of Germany. The Germans are abandoning France and Belgium, but they will soon reorganise their defenses.>
+<Stalemate44GbBr> <Our offensive has come to a halt due to the overstretching of our supply lines. After the failure of Operation Market Garden the chances for a fast conclusion of the war with Germany seem rather low.>
+<Bulge44GbBr> <Today German Panzer armies broke into the Ardennes. They are making a dangerously quick advance. We must slow the Germans down in order to prepare a counterattack.>
+<Germany45GbBr> <Our ground forces were able to cross the Rhine at several places. Now we are able to strike at the German heartland in an effort to end this war. Everyone must fulfill his duty until the final victory.>
+
+<Channel44GbDb> < >
+<Invasion44GbDb> < >
+<AirStart44GbDb> < >
+<Bocage44GbDb> < >
+<Breakout44GbDb> < >
+<Paris44GbDb> < >
+<LowCountries44GbDb> < >
+<Stalemate44GbDb> < >
+<Bulge44GbDb> < >
+<Germany45GbDb> < >
+
+<G45GbBr> <The long push through Germany is beginning. Our exhausted Divisions can feel the end is in sight but the Germans have not given up, as their push over Christmas showed. Now the enemy is starting to field jets and other advanced planes so advancing and the capture of enemy bases has become a matter of urgency! On the plus side, the quality of enemy pilots is terrible.>
+
+<G45GbDb> <We did it. Next stop Berlin!>
+
+
+<ArdennesTLDLuft46RGbBr> <February 1945: Operation Fruhlings Ehrwachen continues.>
+<Africa46GbBr> <1945: British bomber pilots in Germany strike following Luft46 offensive.>
+<ArdennesTLDLuft46RGbDb> < >
+<Africa46GbDb> < >
+
+<AfricaGbBr> < >
+<AfricaGbDb> < >
+
+<Tunisia43ItBr> < >
+<Tunisia43ItDb> < >
+
+
+<ITA_Africa40ItBr> < >
+<ITA_Africa40ItDb> < >
+
+<ITA_Africa41ItBr> < >
+<ITA_Africa41ItDb> < >
+
+<ITA_Belgorod42ItBr> < >
+<ITA_Belgorod42ItDb> < >
+
+<ITA_StalingradItBr> < >
+<ITA_StalingradItDb> < >
+
+<ITA_Stalingrad2ItBr> < >
+<ITA_Stalingrad2ItDb> < >
+
+<ITA_Tunisia43ItBr> < >
+<ITA_Tunisia43ItDb> < >
+
+<ITA_ItalyItBr> < >
+<ITA_ItalyItDb> < >
+
+
+
+<AirStart44bGbBr> < >
+<AirStart44bGbDb> < >
+
+
+<Channelshort41GbBr> <The RAF conducts sweeps into France, and we attempt to gain air superiority over the Channel front.>
+<Channelshort41GbDb> <You will now be transferred to North Africa, where your skills are desperately needed.>
+
+<CrusaderGbBr> <While more modern Italian fighter planes did not appear in North Africa, Royal Air Force squadrons of Hurricanes based in Egypt could feel free in the skies of Libya. Nevertheless, their numbers were not sufficient for sustained dogfights with the Fiats and up until September 13th, 1941 both sides held back from active offensive actions in the air. The second British offensive, operation Crusader, began at dawn on November 18th, 1941. At the beginning of December 1941 attacks by the Italian forces were stopped by the sudden five day offensive of British armed forces under the command of General Sir Archibald Wavell and General Sir Richard O'Connor. The limited campaign was unexpectedly completed establishing full control of the Allies over Kirenaic (East Libya).>
+<CrusaderGbDb> <At the beginning of January 1942 the British troops have just moved up to Al-Adjeila, but at this time they were expecting to be in control of the whole of Libya. Rommel then inflicted a devastating blow to the plans of the Allies by beginning a counter-offensive on 21 January. The commander of the 8th British army decided to take troops to support the line of Gazal, passing to the North of reinforcements in Tobruk.>
+
+<Desert42GbBr> < >
+<Desert42GbDb> <The British finally succeeded in managing close cooperation of subdivisions of the 8th army with subdivisions of RAF in the desert. This cooperation was not broken even in actions at night. Such collaboration did not exist in the Italian armies. The commanding of the 8th British Army was transferred to General Bernard Montgomery, a great enthusiast in reinforcing cooperation between RAF and ground forces.>
+
+<AlameinGbBr> <On 8th November operation "Torch" started: landing of British and American troops in North African colonies of Vichy France.>
+<AlameinGbDb> <The Allies locked Deutsches Afrika Korps on the territory of Western Libya and Tunisia. At this time RAF established complete domination in the air across the entire front line. Mobile radiolocation stations played a major role and were instrumental in creating such dominance. The last Rommel soldier abandoned Egypt on 12 November and the next day British forces entered Tobruk.>
+
+<TunisiaGBGbBr> <Just after Operation Torch started, the Germans established a bridgehead in Tunisia. We must fight to repel them out of Adrica altogether.>
+<TunisiaGBGbDb> <We finally succeeded. Now the next step is to start the liberation of Italy and Southern Europe.>
+
+<SicilyGbBr> < >
+<SicilyGbDb> < >
+
+<Channel43WbGbBr> < >
+<Channel43WbGbDb> < >
+
+
+<2TAF_ArdennesGbBr> < >
+<2TAF_ArdennesGbDb> < >
+
+<2TAF_G44GbBr> < >
+<2TAF_G44GbDb> < >
+
+<2TAF_G45GbBr> < >
+<2TAF_G45GbDb> < >
+
+
+<1939_ArdennesGbBr> < >
+<1939_ArdennesGbDb> < >
+
+<1940_ArdennesGbBr> < >
+<1940_ArdennesGbDb> < >
+
+<1940_FranceGbBr> < >
+<1940_FranceGbDb> < >
+
+
+<BerlinGBGbBr> <The Ardennes offensive has been repulsed and the Russian Army is closing on Berlin. Still, the Bomber Command is constantly attacking the city.>
+<BerlinGBGbDb> <With the russians in Berlin, the war is almost over and we can all go home soon!>
+
+
+<Africa40GbBr> <Italian Regia Aeronautica actively operates from airbases in Eritrea, Ethiopia and Italy-occupied part of Somalia. RAF command decided to strike back at enemy airfields.>
+
+<Africa40GbDb> < >
+
+<Africa41GbBr> <Air warfare over North Africa was conducted in support of ground forces and their divisions in the narrow land strip along the coast line of Libya, Egypt and Tunisia. The emergence of the Germans in Africa and especially the Field Marshal Erwin Rommel, little-known at that time, was instrumental in rising of moral spirit of the Italian soldiers and officers. Warfare action restarted with renewed strength.>
+
+<Africa41GbDb> <While more modern Italian fighter planes did not appear in North Africa, Royal Air Force squadrons of Hurricanes based in Egypt could feel free in the skies of Libya. Nevertheless, their numbers were not sufficient for sustained dogfights with the Fiats and up until September 13th, 1941 both sides held back from active offensive actions in the air. The second British offensive, operation Crusader, began at dawn on November 18th, 1941.>
+
+<Africa42GbBr> <At the beginning of December 1941 attacks by the Italian forces were stopped by the sudden five day offensive of British armed forces under the command of General Sir Archibald Wavell and General Sir Richard O'Connor. The limited campaign was unexpectedly completed establishing full control of the Allies over Kirenaic (East Libya).>
+
+<Africa42GbDb> <At the beginning of January 1942 the British troops have just moved up to Al-Adjeila, but at this time they were expecting to be in control of the whole of Libya. Rommel then inflicted a devastating blow to the plans of the Allies by beginning a counter-offensive on 21 January. The commander of the 8th British army decided to take troops to support the line of Gazal, passing to the North of reinforcements in Tobruk.>
+
+<Africa42tGbBr> <The British finally succeeded in managing close cooperation of subdivisions of the 8th army with subdivisions of RAF in the desert. This cooperation was not broken even in actions at night. Such collaboration did not exist in the Italian armies. The commanding of the 8th British Army was transferred to General Bernard Montgomery, a great enthusiast in reinforcing cooperation between RAF and ground forces.>
+
+<Africa42tGbDb> <On 8th November operation "Torch" started: landing of British and American troops in North African colonies of Vichy France. The Allies locked Deutsches Afrika Korps on the territory of Western Libya and Tunisia. At this time RAF established complete domination in the air across the entire front line. Mobile radiolocation stations played a major role and were instrumental in creating such dominance. The last Rommel soldier abandoned Egypt on 12 November and the next day British forces entered Tobruk.>
+
+
+<Africa41DeBr> <The scale of German military efforts towards helping Mussolini has increased. In April, I./JG-27 was moved at an airfield in Al Gazal, Libya. First operations of I./JG-27 fighters were completed on 19 April. The deployment of German fighters in the next ten months relieved the plight of Italian ground forces engaged in heavy fighting with the British.>
+	
+<Africa41DeDb> <At this time the situation in Northern Africa turned unfavourable for the Axis forces and there was a high probability that German and Italian forces could be forced out of Africa, putting the long-thought plans of Mussolini for capturing the entire Egypt under severe threat. Under the terms of the Steel Pact Hitler has pledged military support to the Italian dictator, but Mussolini also had his own ambitious plans.>
+
+<Africa42DeBr> <At the beginning of April 1941, divisions of Deutsches Afrika Korps left the vicinity of Tobruk. German fighters were based at Al Gazal: this airfield was only eight miles west of the port. Messerschmitt pilots provided reliable cover to crews of Ju-87B-2 from IV./StG 2, periodically concluding raids for the defence of Tobruk. Counter attacks of the Allies were mainly in the form of attack of German troop positions. Air combats between the Luftwaffe and Allied fighters became more frequent.>
+
+<Africa42DeDb> <After the fall of Tobruk, Axis forces continued to pursue the retreating enemy, covering 50km per day. Allied air forces were in a critical situation because they did not have the time to move East after the advances made by the motorised divisions of ground forces. On the other hand air support provided to Rommel's forces notably weakened: that had been undoubtedly a success for the British. Nevertheless the allied retreat threatened to become an escape right up to the gates of Cairo. RAF fighters, which could have provided cover to the columns going East, practically failed to appear in the sky.>
+
+<Africa42tDeBr> <Main action tactics of the German fighters were based on superiority in speed: diving, attack and swift exit; taking part in dogfights needed to be avoided, if possible. Such tactics proved extremely effective in air combats over the desert. Excellent visibility was also on the side of the Luftwaffe: Allied planes were often attacked while still together in formation before they had time to react to the danger.>
+
+<Africa42tDeDb> <Having gained after arrival in Africa 1000 victories during air combats,  pilots of I./JG-27 were convinced that they were facing a serious opponent here, capable to force down their planes even with expert pilots. On November 8th operation "Torch" started: landing of British and American troops in North African colonies of Vichy France. The fate of the campaign in North Africa was decided: Axis armies had only the option to fight for survival, and a victory march in Cairo was out of question. From now on fortune turned its back on Axis troops.>
+
+<Africa42zDeBr> <Main action tactics of the German fighters were based on superiority in speed: diving, attack and swift exit; taking part in dogfights needed to be avoided, if possible. Such tactics proved extremely effective in air combats over the desert. Excellent visibility was also on the side of Luftwaffe: Allied planes were often attacked while still together in formation, before they had time to react to the danger. You arrived in Zerstorer Gruppe 8./ZG26 as interceptor in order to defend against Allied bombers.>
+
+<Africa42zDeDb> <Having gained after arrival in Africa 1000 victories during air combats,  pilots of I./JG-27 were convinced that they were facing a serious opponent here, capable to force down their planes even with expert pilots. On November 8th operation "Torch" started: landing of British and American troops in North African colonies of Vichy France. The fate of the campaign in North Africa was decided: Axis armies had only the option to fight for survival, and a victory march in Cairo was out of question. From now on fortune turned its back on Axis troops.>
+
+
+<Africa40ItBr> <At the time when Italy declared war to Great Britain and France subdivisions of Africa Orientale Italiana (AOI) were in unenviable positions. Parts of AOI were cut off from the motherland and were based in a territory, fully surrounded by colonies of countries hostile to Italy. In addition, subdivisions of AOI were equipped with an out-of-date armament. On June 10th 1940 AOI had all in all 323 airplanes, 83 of which were considered not suitable to fly. AOI had 14 CR.42 and 32 CR.32 fighters in four squadrillie. Air forces of the Commonwealth countries opposing AOI consisted of 370 airplanes, which were also classified as "antiques". Nevertheless, the British had a few modern Hurricane fighters and Blenheim bombers. Unlike the Italians, the Allies could reinforce their air group in East Africa without problems.>
+
+<Africa40ItDb> <Taking the initiative, in short space of time the Italians took British-occupied Somaliland, allowing air-forces of AOI to establish air superiority and thus conducting bombing runs on Burao airport, La Farouq and Hergeisa. Italians even attacked English marine escorts far in the Red sea. During one such flight mission, conducted on 11 February 1941, Captain Mario Vicentini, an ace who had 17 victories on his account died.>
+
+<Africa41ItBr> < The emergence of the Germans in Africa and especially the Field Marshal Erwin Rommel, little-known at that time, was instrumental in rising of moral spirit of the Italian soldiers and officers. Warfare action restarted with renewed strength. Fighters with crests from Fliegerfuhrer Africa appeared in the air. Due to shortage of modern airplanes in the 5 Squadra Aerea this squadron contributed very little to the new offensive operation of the Axis forces on the North African theatre of the war. The Italian air force operated mainly at night.>
+
+<Africa41ItDb> <Compared to other subdivisions 5 Squadra Aerea’s distinct activity for its fighters was to provide cover for Ju-87 dive bombers from the Luftwaffe. In the course of spring-summer 1941 close and strengthened cooperation between Regia Aeronautica and Luftwaffe was created, especially on subdivisions level.>
+
+<Africa42ItBr> <At the beginning of January 1942 the British troops have just moved up to Al Adjeila, but at this time they were expecting to be in control of the whole of Libya. Rommel inflicted a devastating blow to the plans of the Allies. Desert Fox began a counter offensive on January 21st. All available Italian fighter planes pursued the enemy retreating in panic. On January 29th the Germans and the Italians have taken back Benghazi, where planes of 6 and 160 Gruppo were immediately relocated; 8 Gruppo were also shifted to the East at Al-Adjeila, 3 Gruppo at Sidi-Al-Ahmar.>
+
+<Africa42ItDb> <After the fall of Tobruk Axis forces continued to pursue the retreating enemy, covering 50km per day. Allied air forces were in a critical situation because they did not have the time to move East after the advances made by the motorised divisions of ground forces. On the other hand air support provided to Rommel's forces notably weakened: that had been undoubtedly a success for the British. Nevertheless the allied retreat threatened to become an escape right up to the gates of Cairo. RAF fighters, which could have provided cover to the columns going East, practically failed to appear in the sky.>
+
+<Africa42tItBr> <Despite the heroic behaviours shown by Italian and German soldiers, Rommel's attacks on Al-Alamein stalled. RAF air strikes in the desert on Rommel's armour proved quite effective. On October 23rd it became very clear: the second battle at Al Alamein finished with the defeat of the Axis forces. From now on fortune turned its back on Axis troops.>
+
+<Africa42tItDb> <On November 8th operation "Torch" started: landing of British-American troops in North-African colonies of Vichy France. For Rommel it became instantly clear that the fate of the campaign in North Africa had already been decided: his armies had only the option to fight for survival, and a victory march in Cairo was out of question. The Allies locked Deutsches Afrika Korps on the territory of Western Libya and Tunisia.>
+
+<MTO_Tunisia43UsBr> < >
+<MTO_Tunisia43UsDb> < >
+<MTO_BalatonSommer44UsBr> < >
+<MTO_BalatonSommer44UsDb> < >
+<MTO_ItalyUsBr> < >
+<MTO_ItalyUsDb> < >
+<MTO_Italy2UsBr> < >
+<MTO_Italy2UsDb> < >
+
+<RV_Berlin43DeBr> < >
+<RV_Berlin43DeDb> < >
+<RV_BerlinMai44DeBr> < >
+<RV_BerlinMai44DeDb> < >
+<RV_BalatonSommer44DeBr> < >
+<RV_BalatonSommer44DeDb> < >
+<RV_G44DeBr> < >
+<RV_G44DeDb> < >
+<RV_BerlinwsDeBr> < >
+<RV_BerlinwsDeDb> < >
+<RV_BodenplatteDeBr> < >
+<RV_BodenplatteDeDb> < >
+<RV_Berlinws2DeBr> < >
+<RV_Berlinws2DeDb> < >
+<RV_Berlinws3DeBr> < >
+<RV_Berlinws3DeDb> < >
+
+<JG27_Africa0DeBr> < >
+<JG27_Africa0DeDb> < >
+<JG27_Africa01DeBr> < >
+<JG27_Africa01DeDb> < >
+<JG27_Africa1DeBr> < >
+<JG27_Africa1DeDb> < >
+<JG27_Africa2DeBr> < >
+<JG27_Africa2DeDb> < >
+<JG27_Normandy43DeBr> < >
+<JG27_Normandy43DeDb> < >
+<JG27_Berlin43DeBr> < >
+<JG27_Berlin43DeDb> < >
+<JG27_BerlinMai44DeBr> < >
+<JG27_BerlinMai44DeDb> < >
+<JG27_Normandy_DDayDeBr> < >
+<JG27_Normandy_DDayDeDb> < >
+<JG27_Normandy_DDay2DeBr> < >
+<JG27_Normandy_DDay2DeDb> < >
+<JG27_G44DeBr> < >
+<JG27_G44DeDb> < >
+<JG27_BerlinWSDeBr> < >
+<JG27_BerlinWSDeDb> < >
+<JG27_ArdennesDeBr> < >
+<JG27_ArdennesDeDb> < >
+<JG27_G45DeBr> < >
+<JG27_G45DeDb> < >
+
+<JG54_Leningrad41DeBr> < >
+<JG54_Leningrad41DeDb> < >
+<JG54_Leningrad42DeBr> < >
+<JG54_Leningrad42DeDb> < >
+<JG54_Leningrad43DeBr> < >
+<JG54_Leningrad43DeDb> < >
+<JG54_Normandy43DeBr> < >
+<JG54_Normandy43DeDb> < >
+<JG54_Berlin43DeBr> < >
+<JG54_Berlin43DeDb> < >
+<JG54_BerlinMai44DeBr> < >
+<JG54_BerlinMai44DeDb> < >
+<JG54_Normandy_DDayDeBr> < >
+<JG54_Normandy_DDayDeDb> < >
+<JG54_Normandy_DDay2DeBr> < >
+<JG54_Normandy_DDay2DeDb> < >
+<JG54_G44DeBr> < >
+<JG54_G44DeDb> < >
+<JG54_ArdennesDeBr> < >
+<JG54_ArdennesDeDb> < >
+<JG54_BerlinWs2DeBr> < >
+<JG54_BerlinWs2DeDb> < >
+<JG54_G45DeBr> < >
+<JG54_G45DeDb> < >
+
+<Channel41GbBr> <The RAF conducts sweeps into France, and we attempt to gain air superiority over the Channel front. >
+<Channel41GbDb> < >
+<Channel42GbBr> <A new adversary has appeared: the Focke WUlf 190A. Beware! >
+<Channel42GbDb> < >
+<Channel43GbBr> <The USAAF joins us! >
+<Channel43GbDb> < >
+<Channel43WGbBr> < >
+<Channel43WGbDb> < >
+<Channel_44GbBr> <After almost two years of planning, the invasion of Europe will begin soon. In order to prepare for the invasion our Air Force will attack targets in the rear area of potential invasion areas. Main objectives are communications and logistics of the German troops based in France. Another goal is to weaken the Luftwaffe forces in France.>
+<Channel_44GbDb> <The Royal Air Force has flown numerous raids on targets in Normandy and around Calais, severely weakening the German supply network in France. Even more important, these raids were a good chance for our pilots to gain experience. Also, the intensified raids have prompted the Germans to weaken their home defense units in favor of basing more planes in France.>
+<ChannelDDayGbBr> <Operation Overlord, the Invasion of France, has begun! After joining up the five beaches and establishing a firm bridgehead covering 50 miles along the Channel coastline, we continue our offensive. Your unit is the first of the 2nd Tactical Air Force to transfer to an Advanced Landing Ground in Normandy.>
+<ChannelDDayGbDb> < >
+<ChannelDDay2GbBr> < >
+<ChannelDDay2GbDb> <Our troops finally broke out during Operation Cobra. The German forces were caught in a huge pocket near Falaise. The German army is in full retreat and Paris should be liberated soon.>
+
+<FB_Channel41GbBr> <The RAF conducts sweeps into France, and we attempt to gain air superiority over the Channel front. >
+<FB_Channel41GbDb> < >
+<FB_Channel42GbBr> <A new adversary has appeared: the Focke WUlf 190A. Beware! >
+<FB_Channel42GbDb> < >
+<FB_Channel43GbBr> <The USAAF joins us! >
+<FB_Channel43GbDb> < >
+<FB_Channel43WGbBr> < >
+<FB_Channel43WGbDb> < >
+<FB_Channel_44GbBr> <After almost two years of planning, the invasion of Europe will begin soon. In order to prepare for the invasion our Air Force will attack targets in the rear area of potential invasion areas. Main objectives are communications and logistics of the German troops based in France. Another goal is to weaken the Luftwaffe forces in France.>
+<FB_Channel_44GbDb> <The Royal Air Force has flown numerous raids on targets in Normandy and around Calais, severely weakening the German supply network in France. Even more important, these raids were a good chance for our pilots to gain experience. Also, the intensified raids have prompted the Germans to weaken their home defense units in favor of basing more planes in France.>
+<FB_ChannelDDayGbBr> <Operation Overlord, the Invasion of France, has begun! After joining up the five beaches and establishing a firm bridgehead covering 50 miles along the Channel coastline, we continue our offensive. Your unit is the first of the 2nd Tactical Air Force to transfer to an Advanced Landing Ground in Normandy.>
+<FB_ChannelDDayGbDb> < >
+<FB_ChannelDDay2GbBr> < >
+<FB_ChannelDDay2GbDb> <Our troops finally broke out during Operation Cobra. The German forces were caught in a huge pocket near Falaise. The German army is in full retreat and Paris should be liberated soon.>
+
+<B_Channel42GbBr> <A new adversary has appeared: the Focke WUlf 190A. Beware! >
+<B_Channel42GbDb> < >
+<B_Channel43GbBr> <The USAAF joins us! >
+<B_Channel43GbDb> < >
+<B_Channel43WGbBr> < >
+<B_Channel43WGbDb> < >
+<B_Channel_44GbBr> <After almost two years of planning, the invasion of Europe will begin soon. In order to prepare for the invasion our Air Force will attack targets in the rear area of potential invasion areas. Main objectives are communications and logistics of the German troops based in France. Another goal is to weaken the Luftwaffe forces in France.>
+<B_Channel_44GbDb> <The Royal Air Force has flown numerous raids on targets in Normandy and around Calais, severely weakening the German supply network in France. Even more important, these raids were a good chance for our pilots to gain experience. Also, the intensified raids have prompted the Germans to weaken their home defense units in favor of basing more planes in France.>
+
+
+
+
+
+<RuRescue> <Tut Euer bestes, um Ihn zu retten!>
+<RuRescue> <Versucht, das Flugzeug zu finden und erstattet sofort Bericht!>
+<DeRescue> <Tut Euer bestes, um Ihn zu retten!>
+<DeRescue> < Versucht, das Flugzeug zu finden und erstattet sofort Bericht!>
+
+<RuVerifySit> <Einer unserer jungen Piloten berichtet, dass er einen deutschen Bomber bei %s abgeschossen hätte. Bodenbeobachter konnten das nicht bestätigen. >
+<DeVerifySit> < Einer unserer jungen Piloten berichtet, dass er einen Bomber bei %s abgeschossen hat. Bodenbeobachter konnten das nicht bestätigen. >
+
+<RuVerify> < Versucht das Flugzeug zu finden - es könnte mit einem neuen Typ Funkmeßgerät ausgestattet sein.>
+<RuVerify> < Versucht das Flugzeug zu finden - wir vertrauen Ihm, aber ohne Beweis kann der Abschuß nicht anerkannt werden.>
+<RuVerify> <Sucht die Gegend ab - das Flugzeug ist wahrscheinlich mit neuen, geheimen Ausrüstungen ausgestattet.>
+
+<DeVerify> <Versucht das Flugzeug zu finden - es könnte mit einem neuen Typ Funkmeßgerät ausgestattet sein.>
+<DeVerify> <Versucht das Flugzeug zu finden - wir vertrauen Ihm, aber ohne Beweis kann der Abschuß nicht anerkannt werden.>
+<DeVerify> < Sucht die Gegend ab - das Flugzeug ist wahrscheinlich mit neuen, geheimen Ausrüstungen ausgestattet.>
+
+<YouAreBack> <\nSie sind wieder zurück im aktiven Einsatz\n>
+
+<DeAConR>	<Wir bauen ein neues Advanced Landing Ground ALG in der Gegend. Euer Ziel ist, es gegen mögliche Angriffe zu schützen.>
+<DeAConR>	<Unsere Ingenieure haben begonnen, einen neuen Feldflughafen hier zu errichten. Ihr werdet in der Gegend fliegen, um Luftwaffenflugzeuge abzufangen, die hier stören könnten. Haltet auch Ausschau nach Aufklärern der Jerries. Vielleicht wissen sie noch nichts von unserem Projekt, und dann soll es so bleiben. >
+<DeAConR>	<Eure Mission für heute ist, eine neues ALG, das hier im Bau ist, zu schützen. Natürlich bedeutet jedes neue ALG kürzere Flugzeiten, was wiederum bessere Luftdeckung, schnelleren Sieg und damit eine frühere Heimkehr bedeutet. Also, macht Euren Job heute gut, und vielleicht sind wir alle vor Weihnachten wieder Zuhause.>
+<DeAConD>	<Die Yankees bauen ein neues ALG hier. Wir haben schon genug Probleme mit denen. Zerstören Sie es.>
+
+<logAttackCon> 			<Angriff auf einen im Bau befindlichen Flughafen>
+<logDefendCon> 			<Schutz eines im Bau befindlichen Flughafens>
+
+<DeTranIntD> 	<\nDer feindliche Nachschub aus der Luft muss unterbrochen werden!\n>
+<RuAAFD>		<Die Yankees greifen zurzeit Flugplätze in unserer Gegend an. Deshalb fliegen wir heute freie Jagd über unseren Plätzen.\n>
+<DeAAFR>		<Wir fliegen heute Platzschutz.\n>
+<DeAAFR>		<Heute müssen wir den eigenen Platz schützen.\n>
+
+
+<January>       <Januar>
+<February>      <Februar>
+<March>         <März>
+<April>         <April>
+<May>           <Mai>
+<June>          <Juni>
+<July>          <Juli>
+<August>        <August>
+<September>     <September>
+<October>       <Oktober>
+<November>      <November>
+<December>      <Dezember>
+
+<Normandy> <Normandie>
+
+<,KIA>	<, gefallen>
+<,MIA>	<, vermisst>
+<,WIA>	<, verwundet>
+<KIA>	< gefallen>
+<MIA>	< vermisst>
+<WIA>	< verwundet>
+
+
+<Stabsfw.> 	 <Obfw.>
+
+<ml.l-t.> 	<Flt. Sgt.>
+<l-t.> 	<P/O.>
+<st.l-t.> 	<F/O.>
+<k-n.> 	<Flt. Lt.>
+<m-r.> 	<Sqn. Ldr.>
+<p/p-k.> <Wing Cmdr.>
+<p-k.> 	<Grp. Cpt.>
+
+
+
+<Sunset> <LG104>
+<Victoria> <LG85>
+<Monfort> <Pantelleria>
+<Camello> <Tunis>
+<Drypoint> <the Desert>
+<Casaloma> <Linosa>
+<Rocas>  <LG41>
+<Arenas> <LG211>

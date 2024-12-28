@@ -1,0 +1,44 @@
+CoralSea
+[Towns]
+10 Sea2
+10 Sea1
+[Schedule]
+21025 13 4
+21026 0 4
+[OOB]
+=USN_VB_10A=USN_VB_11A=USN_VB_15A=USN_VB_17A=USN_VB_18A=USN_VB_19A=USN_VB_1A=USN_VB_2A=USN_VB_2B=USN_VB_3B=USN_VB_4A=USN_VB_5A=USN_VB_5B=USN_VB_6Az=USN_VB_6B=USN_VB_83A=USN_VB_88A=USN_VB_8A=USN_VB_9A=USN_VB_9Az=USN_VBF_19A=USN_VBF_83A=USN_VBF_88A=USN_VF_10A=USN_VF_10B=USN_VF_11A=USN_VF_11Bz=USN_VF_12A=USN_VF_12B=USN_VF_13A=USN_VF_14A=USN_VF_15A=USN_VF_16A=USN_VF_17Az=USN_VF_18A=USN_VF_18B=USN_VF_19A=USN_VF_1A=USN_VF_20A=USN_VF_21A=USN_VF_21Bz=USN_VF_22A=USN_VF_23A=USN_VF_26A=USN_VF_27Az=USN_VF_29A=USN_VF_2A=USN_VF_2B=USN_VF_30A=USN_VF_31A=USN_VF_32A=USN_VF_33Az=USN_VF_3A=USN_VF_3B=USN_VF_41A=USN_VF_42A=USN_VF_44A=USN_VF_45A=USN_VF_47A=USN_VF_50A=USN_VF_51A=USN_VF_5A=USN_VF_5B=USN_VF_60A=USN_VF_6A=USN_VF_72A=USN_VF_7A=USN_VF_80A=USN_VF_82A=USN_VF_83A=USN_VF_84A=USN_VF_8A=USN_VF_8B=USN_VF_9A=USN_VFN_101A=USN_VFN_77A=USN_VFN_77B=USN_VME_124A=USN_VME_213A=USN_VNF_76A=USN_VNF_76B=USN_VS_2B=USN_VS_3A=USN_VS_5B=USN_VS_6B=USN_VT_10A=USN_VT_11A=USN_VT_15A=USN_VT_17A=USN_VT_18A=USN_VT_19A=USN_VT_1A=USN_VT_2A=USN_VT_2B=USN_VT_3A=USN_VT_3B=USN_VT_4A=USN_VT_5A=USN_VT_5B=USN_VT_6A=USN_VT_6B=USN_VT_83A=USN_VT_88A=USN_VT_8A=USN_VT_9A=USN_VT_9B=
+=IJN_C_Akagi_FS=IJN_C_Akagi_FS_VB=IJN_C_Akagi_FS_VT=IJN_C_Hiryu_FS=IJN_C_Hiryu_FS_VB=IJN_C_Hiryu_FS_VT=IJN_C_Hiyo_FS=IJN_C_Hiyo_FS_VB=IJN_C_Hiyo_FS_VT=IJN_C_Hosho_FS=IJN_C_Hosho_FS_VB=IJN_C_Hosho_FS_VT=IJN_C_Junyo_FS=IJN_C_Junyo_FS=IJN_C_Junyo_FS_VT=IJN_C_Kaga_FS=IJN_C_Kaga_FS_VB=IJN_C_Kaga_FS_VT=IJN_C_Ryuho_FS=IJN_C_Ryuho_FS_VB=IJN_C_Ryuho_FS_VT=IJN_C_Ryujo_FS=IJN_C_Ryujo_FS_VB=IJN_C_Ryujo_FS_VT=IJN_C_Shoho_FS=IJN_C_Shoho_FS_VB=IJN_C_Shoho_FS_VT=IJN_C_Shokaku_FS=IJN_C_Shokaku_FS_VB=IJN_C_Shokaku_FS_VT=IJN_C_Soryu_FS=IJN_C_Soryu_FS_VB=IJN_C_Soryu_FS_VT=IJN_C_Zuiho_FS=IJN_C_Zuiho_FS_VB=IJN_C_Zuiho_FS_VT=IJN_C_Zuikaku_FS=IJN_C_Zuikaku_FS_VB=IJN_C_Zuikaku_FS_VT=
+[Planes]
+32 PBN1
+39 B_17E
+72 F4F4
+24 TBF1
+8 H8K1
+65 SBD3
+63 D3A1
+57 B5N2
+82 A6M2_21
+[Skill]
+Blue:A5,V45,N5
+Red:A1,V20,N30
+[Links]
+oUsReconCarrier oUsAttackCarrier 1 oUsReconIntercept 0
+oUsReconConvoy  oUsAttackConvoy 1 oNone 0
+oUsReconConvoy  oUsBombConvoy 1 oNone 0
+oUsReconCarrier oUsAttackCarrier 1 oUsIntercept 0
+oUsReconCarrier oUsAttackCarrier 1 oUsReconSub 0
+oUsReconCarrier oUsBombCarrier 1 oUsReconIntercept 0
+oUsReconCarrier oNone 1 oNone 0
+oUsReconIntercept oUsReconCarrier 0 oUsScramble 1
+oUsScramble oUsReconCarrier 0 oUsReconSub 1
+oUsScramble oUsReconCarrier 0 oUsRescue 1
+oUsScramble oUsReconCarrier 0 oUsAttackSub 1
+oUsScramble oUsReconCarrier 1 oUsReconCarrier 1
+oUsScramble oUsBombCarrier 0 oUsBombCarrier 0
+oJpReconIntercept oJpReconCarrier 0 oJpScramble 1
+oJpReconCarrier oJpAttackCarrier 1 oJpReconIntercept 0
+oJpReconCarrier oJpBombCarrier 1 oJpReconIntercept 0
+oJpReconIntercept oJpReconCarrier 0 oJpScramble 1
+oJpScramble oJpReconCarrier 0 oJpBombCarrier 1
+oJpScramble oJpBombCarrier 0 oJpBombCarrier 1
+[Operations] <<opsCoralSea.dat

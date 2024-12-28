@@ -1,0 +1,1428 @@
+<DGen:>		<*>
+	--------------------------------------------------------------------------------------------
+		 
+	Czech Dgen PF file created 	17 11 2004
+	Updated 	(last)    	10 06 2006 
+	Translated and edited by Michal "Crayman" Stibinger (stim@seznam.cz)
+
+
+	Translation guidelines. 
+
+	Every line not starting with symbol < will be ignored. You may use it for comments.
+ 	Messages consist of three parts: message ID, optional message selector and text.
+
+	For every ID code there may be up to 10 variants of texts - one will be picked up randomly.
+	You don't need to translate every line exactly, you just need to describe the same situation.
+
+	Message selector in () brackets defines which campaign will use them.
+	*JA means all Japanese
+	aJA Japanese Army only
+	nJA Japanese Navy only
+
+	other codes are 
+	*U*, for all Allies
+	*UK, for RAF and RN
+	aUK, for RAF, RNZAF, RAAF 
+	aUD, for Dutch
+	nUK, for RN
+	*US, for USAAF,USMC,USN
+	aUS, for USAAF
+	nUS, for US Navy
+	mUS, for US Marine Corps
+
+	Some messages can be made map-specific. For instance:
+
+//<AttackAF>(*U*)
+
+	is a generic AF attack, while:
+
+//<AttackAF:Tarawa>(*U*) can contain some references to invasion of Tarawa. If there is map-specific varioant, 
+   only this version will be used.
+
+
+	Symbols \n ans %s must be left intact. \n means new line, %s means that some substring will be 
+	placed there - usually town name. 
+
+	Message texts cannot contain new lines - make them as long as you need (but not longer than 256 chars).
+	--------------------------------------------------------------------------------------------
+
+//<Retrn>		<After some much needed R & R your squadron is back in action...\n>
+
+<Retrn>		< >
+
+--------------------------------------------------------------------------------------------
+	The following messages are for pilot's logbook
+--------------------------------------------------------------------------------------------
+
+
+
+<logCAS>				<Pøímá letecká podpora>
+<logAttack>				<Úder>
+<logNavalAttack>		<Úder na lodì>
+<logCAP>				<Ochrana pozemních cílù>
+<logFleetPatrol>		<Ochrana lodí>
+<logParaEscort>			<Doprovod>
+<logIntercept>			<Pøepad>
+<logReconEscort>		<Doprovod prùzkumu>
+<logRecon>				<Prùzkum>
+<logFighterSweep>		<Vybojování vzdušné pøevahy>
+<logScramble>			<Hotovostní start>
+<logRescue>				<Záchrana>
+<logNone>				< >
+<logStrikeEscort>		<Doprovod bombardérù>
+<logTransfer>			<Pøemístìní>
+
+<logBailed> 			<Vyskoèil s padákem>	
+<logKill> 				<Sestøelil? %s>		
+<logCrashed> 			<Havaroval>	
+<logLandedAF> 			<Úspìšnì pøistál>
+<logLanded> 			<Nouzové pøistání>
+
+
+<logAttackAF>			<Napadeno nepøátelské letištì>
+<logTank>               <Znièen nepøátelský tank>
+<logShip>				<Potopena nepøátelská loï>
+<logArtillery>			<Napadena nepøátelská dìlostøelecká pozice>
+<logColumn>				<Napadena nepøátelská transportní kolona>
+<logTrain>				<Napaden nepøátelský vlak> 
+<logBridge>				<Znièen most>
+<logTroops>				<Napadena nepøátelská pìchota>
+
+	--------------------------------------------------------------------------------------------
+	The following messages are for pilot's personal files
+	--------------------------------------------------------------------------------------------
+
+<rstJoined> 		<pøiøazen k letce>
+<rstPromoted> 		<povýšen do hodnosti %s>
+<rstAwarded> 		<vyznamenán a obdržel - %s>
+
+<rstTransfered>(*U*) 	<pøevelen do letecké akademie>
+<rstTransfered>(*JA) 	<pøevelen na mateøské ostrovy>
+
+<rstHospitalize> 		<ranìn a hospitalizován >
+<rstReunited> 		<se vrátil k jednotce>
+ 
+
+
+<recJoined> 		<{DATE} {rank} {lastname} pøiøazen k letce>
+<recPromoted> 		<{DATE} {oldrank} {lastname} povýšen do hodnosti {rank}>
+<recAwarded> 		<{DATE} {rank} {lastname} vyznamenán, obdržel - {medal}>
+
+<recTransfered>(*U*) 	<{DATE} {rank} {lastname} pøevelen do letecké akademie>
+<recTransfered>(*JA) 	<{DATE} {rank} {lastname} pøevelen na mateøské ostrovy>
+
+<recHospitalize> 		<{DATE} {rank} {lastname} ranìn a hospitalizován>
+<recReunited> 		<{DATE} {rank} {lastname} se vrátil k letce>
+
+
+<rstKilled> 				<zabit pøi plnìní bojového úkolu>
+<rstMissed> 				<pohøešován>
+
+	--------------------------------------------------------------------------------------------
+	Please do not translate words Name and Description - they are used by IL2
+	--------------------------------------------------------------------------------------------
+<nSHR> 		<DGen mission\n>
+<nHDR> 		<Name Úkol %s\n>
+<hShortRuB>	<Bombardér. %s, '4%d>
+<hShortRuF>	<Stíhaè. %s, '4%d>
+<hShortJaB>	<Bombardér. %s, '4%d>
+<hShortJaF>	<Stíhaè. %s, '4%d>
+
+<hLongRuB>	<Description Dynamická kampaò amerického pilota bombardéru. %s, 194%d>
+<hLongRuF>	<Description Dynamická kampaò amerického stíhacího pilota. %s, 194%d>
+<hLongJaB>	<Description Dynamická kampaò japonského pilota bombardéru. %s, 194%d>
+<hLongJaF>	<Description Dynamická kampaò japonského stíhacího pilota. %s, 194%d>
+
+	--------------------------------------------------------------------------------------------
+	Plane names to appear in briefings
+	--------------------------------------------------------------------------------------------
+
+<JU_52_3MG4E>	<Ju-52 3mg4e>
+<LI_2>		<Li-2>
+<P_38J>		<P-38J>
+<P_38L>		<P-38L>
+<P_38LLate>	<P-38L>
+<P_39D1>	<P-39 D>
+<P_39D1>(*JA)	<Airacobra>
+<P_39D2>	<P-39 D>
+<P_39D2>(*JA)	<Airacobra>
+<P_39N>		<P-39 N>
+<P_39N>(*JA)	<Airacobra>
+<P_39Q1>	<P-39 Q-1>
+<P_39Q1>(*JA)	<Airacobra>
+<P_39Q10>	<P-39 Q-10>
+<P_39Q10>(*JA)	<Airacobra>
+<P_400>		<P-400>
+<P_400>(*JA)	<Airacobra>
+
+<P_40E>		<P-40>
+<P_40EM105>	<P-40E>	
+<P_40M>>	<P-40M>
+<P_40E>(*JA)	<Curtiss>
+<P_40M>(*JA)	<Curtiss>
+
+<P_40SUKAISVOLOCHHAWKA2> 	<Hawk 81A>
+<P_40SUKAISVOLOCHB>		<P-40B>
+<P_40SUKAISVOLOCHC>		<P-40C>
+<P_40SUKAISVOLOCH2A> 		<Tomahawk I>
+<P_40SUKAISVOLOCH2B> 		<Tomahawk II>
+
+<HurricaneMkIa>		<Hurricane I>
+<HurricaneMkIIb>	<Hurricane II>
+<HurricaneMkIIc>	<Hurricane II>
+<HurricaneMkIIbMod>	<Hurricane II>
+<BLENHEIM1>		<Blenheim I>
+<BLENHEIM4>		<Blenheim IV>
+
+<F2A2> 	<Brewster>
+<F2A_B339> 	<Brewster>
+<F2A_B239> 	<Brewster>
+<F2A2>(*UK) 	<Buffalo>
+<F2A_B239>(*US) <F2A Buffalo>
+<MS406> 	<M.S.406>
+<MS410> 	<M.S.410>
+<P_47D10> 	<P-47>
+<P_47D22> 	<P-47>
+<P_47D27> 	<P-47>
+<P_47D10>(*JA) 	<Thunderbolt>
+<P_47D22>(*JA) 	<Thunderbolt>
+<P_47D27>(*JA) 	<Thunderbolt>
+<P_51D20NA>	<P-51>
+<P_51D5NT>	<P-51>
+<P_51D20NA>(*JA)	<Mustang>
+<P_51D5NT>(*JA)		<Mustang>
+<P_47D10de> <Thunderbolt>
+<P_47D22de> <Thunderbolt>
+<P_47D27de> <Thunderbolt>
+<P_51D20NAde>	<Mustang>
+<P_51D5NTde>	<Mustang>
+<B_17E> 	<B-17E>
+<B_17F> 	<B-17F>
+<B_17D> 	<B-17D>
+<B_17G> 	<B-17G>
+<B_17E>(*JA) 	<Flying Fortress>
+<B_29> 		<B-29>
+<B_24J100> 	<B-24>
+<B_24J100>(*JA) <Liberator>
+
+<A6M2>(*U*)	<Zero>
+<A6M3>(*U*)	<Hamp>
+<A6M2_21>(*U*)	<Zeke>
+<A6M2N>(*U*)	<Rufe>
+<A6M5>(*U*)	<Zeke>
+<A6M5A>(*U*)	<Zeke>
+<A6M5B>(*U*)	<Zeke>
+<A6M5C>(*U*)	<Zeke>
+<A6M7_62>(*U*) <Zeke>
+<A6M7_63>(*U*) <Zeke>
+
+<A6M2>(*JA)	<A6M2>
+<A6M3>(*JA)	<A6M3>
+<A6M2_21>(*JA)	<A6M2-21>
+<A6M2N>(*JA)	<A6M2-N>
+<A6M5>(*JA)	<A6M5>
+<A6M5A>(*JA)	<A6M5a>
+<A6M5B>(*JA)	<A6M5b>
+<A6M5C>(*JA)	<A6M5c>
+<A6M7_62>(*JA) <A6M7>
+<A6M7_63>(*JA) <A6M7>
+
+<KI_84_IA>(*JA)	<Ki-84-Ia>
+<KI_84_IB>(*JA)	<Ki-84-Ib>
+<KI_84_IC>(*JA)	<Ki-84-Ic>
+<KI_84_IA>(*U*)	<Frank>
+<KI_84_IB>(*U*)	<Frank>
+<KI_84_IC>(*U*)	<Frank>
+
+<KI_43_IA>(*JA)	<Ki-43-Ia>
+<KI_43_IB>(*JA)	<Ki-43-Ib>
+<KI_43_IC>(*JA)	<Ki-43-Ic>
+<KI_43_II>(*JA)		<Ki-43-II>
+<KI_43_IIKAI>(*JA)	<Ki-43-IIKai>
+
+<KI_43_IA>(*U*)		<Oscar>
+<KI_43_IB>(*U*)		<Oscar>
+<KI_43_IC>(*U*)		<Oscar>
+<KI_43_II>(*U*)		<Oscar Mk.II>
+<KI_43_IIKAI>(*U*)	<Oscar Mk.II>
+
+<KI_46_OTSU>(*JA)	<Ki-46 Ocu>
+<KI_46_OTSUHEI>(*JA) 	<Ki-46 Ocu>
+<KI_46_RECCE>(*JA)	<Ki-46 Recce>
+<KI_61_IKO>(*JA)	<Ki-61-IKo>
+<KI_61_IHEI>(*JA)	<Ki-61-IHei>
+<KI_61_IOTSU>(*JA)	<Ki-61-IOcu>
+
+<KI_46_OTSU>(*U*)		<Dinah>
+<KI_46_OTSUHEI>(*U*)		<Dinah>
+<KI_46_RECCE>(*U*)		<Dinah>
+<KI_61_IKO>(*U*)		<Tony>
+<KI_61_IHEI>(*U*)		<Tony>
+<KI_61_IOTSU>(*U*)		<Tony>
+
+<KI_100_IKO> (*JA) <Ki-100>
+<KI_100_IKO> (*U*) <Tony>
+
+<D3A1>(*JA)	<D3A1>
+<D3A1>(*U*)	<Val>
+
+<B5N2>(*JA)	<B5N2>
+<B5N2>(*U*)	<Kate>
+
+<G4M1_11>(*JA)	<G4M1>
+<G4M1_11>(*U*)	<Betty>
+
+<G4M2E>(*JA)	<G4M2>
+<G4M2E>(*U*)	<Betty>
+
+<F6F3>(*U*)	<F6F3>
+<F6F3>(*US)	<F6F-3>
+<F6F3>(*JA)	<Hellcat>
+<F6F5>(*U*)	<F6F5>
+<F6F5>(*US)	<F6F-5>
+<F6F5>(*UK)	<Hellcat Mk.II>
+<F6F5>(*JA)	<Hellcat>
+<F4U1A>(*U*)	<F4U1A>
+<F4U1A>(*US)	<F4U-1A>
+<F4U1A>(*UK)	<Corsair Mk.I>
+<F4U1A>(*JA)	<Corsair>
+<F4U1C>(*U*)	<F4U1C>
+<F4U1C>(*US*)	<F4U-1C>
+<F4U1C>(*UK)	<Corsair Mk.II>
+<F4U1C>(*JA)	<Corsair>
+<F4U1D>(*U*)	<F4U1D>
+<F4U1D>(*US)	<F4U-1D>
+<F4U1D>(*UK)	<Corsair Mk.III>
+<F4U1D>(*JA)	<Corsair>
+<TBF1C>(*US)		<TBF1>
+<TBF1C>(*UK)		<Avenger I>
+<TBF1C>(*JA)		<Avenger>
+<TBF1>(*U*) 		<TBF1>
+<TBF1>(*JA) 		<Avenger>
+<TBM3AVENGER3>(*U*) 	<TBM-3>
+<TBM3AVENGER3>(*JA) 	<Avenger>
+<TBM3>(*U*) 		<TBM3>
+<TBM3>(*JA) 		<Avenger>
+
+<F4F3>(*U*)	<F4F>
+<F4F4>(*U*)	<F4F>
+<F4F_FM2>(*U*)	<F4F>
+<F4F3>(*JA)	<Wildcat>
+<F4F4>(*JA)	<Wildcat>
+<F4F_FM2>(*JA)	<Wildcat>
+
+<SEAFIRE3>(*UK) <Seafire Mk.III>
+<SEAFIRE3>	<Seafire Mk.III>
+
+<B_25C25>(*U*)	<B-25C>
+<B_25C25>(*JA)	<Mitchell>
+<B_25J1>(*U*)	<B-25J>
+<B_25J1>(*JA)	<Mitchell>
+<A_20G>(*U*)	<A-20G>
+<A_20G>(*JA)	<Douglas Boston>
+
+
+<F4UCORSAIR1>(*U*) <Corsair I>
+<F4UCORSAIR2>(*U*) <Corsair II>
+<F4UCORSAIR4>(*U*) <Corsair IV>
+<BEAU21>(*U*) <Beaufighter Mk.21>
+<SBD3>(*U*)	<SBD-3>
+
+<F4UCORSAIR1>(*JA) <Corsair>
+<F4UCORSAIR2>(*JA) <Corsair>
+<F4UCORSAIR4>(*JA) <Corsair>
+<BEAU21>(*JA) <Beaufighter>
+<SBD3>(*JA)	<Dauntless>
+
+	--------------------------------------------------------------------------------------------
+	Geographic names - if spelling is different from English
+	<Moscow>	<Moskau>
+	<Crimea>		<Krim>
+	--------------------------------------------------------------------------------------------
+
+<dbrDEAD>	<Byl jste zabit.>
+<dbrCAPTURED>	<\nByl jste zajat.>
+<dbrCAPTURED>(*U*)	<\nByl jste zajat a poslán do zajateckého tábora.>
+<dbrWOUNDED>	<\nByl jste ranìn a pøevezen do nemocnice.>
+
+<SQ> <Vaším velitelem je %s\n>
+<CO> <Byl jste jmenován velitelem letky!\n>
+
+<dbrEnemyLost> <\nZtráty nepøítele zpùsobené bìhem akce našimi piloty:\n>
+
+<CUR_KILLS>		<V této akci jste znièil:>
+<CUR_KILLS>		<Byly vám pøipsány následující cíle:>
+<CUR_KILLS>		<Bìhem posledního bojového letu jste znièil nepøíteli:>
+<CUR_KILLS> 		<Tyto cíle jste znièil pøi poslední akci:>
+
+<TOT_KILLS>		<Za celou vaši kariéru jste znièil:>
+<TOT_KILLS>		<Úplný seznam vámi znièených cílù:>
+<TOT_KILLS>		<Celkem jste znièil:>
+<TOT_KILLS> 		<Výèet všech cílù, které jste znièil:>
+
+<dbrNplanes>	<Letadel: %d\n>
+<dbrNplanesG>	<Letadel na zemi: %d\n>
+<dbrNtanks>		<Tankù: %d\n>
+<dbrNguns>		<Dìl: %d\n>
+<dbrNcars>		<Vozidel: %d\n>
+<dbrNwagons>	<Železnièních vozù: %d\n>
+<dbrNbridges>	<Mostù: %d\n>
+<dbrNships>		<Lodí: %d\n>
+
+<logRecon> 				<Vzdušný prùzkum>
+<logNavalRecon> 		<Námoøní prùzkum>
+<logReconB> 			<Vzdušný prùzkum>
+
+<YouAreBack> <\nJste opìt zaøazen do aktivní služby\n>
+
+
+////////////////////////////////////////////////////////////////////////////
+	MACROS:
+
+	{FIRSTNAME}		your first name
+	{LASTNAME}		your last name
+	{RANK}			your rank (abbreviated, Lt.Col)
+	{PLANE}			your plane
+	{SECTOR}	    destination sector (100,330)
+	(#)				number of planes in your group (4)
+	(#a)			number of planes in your group (four)
+	(#A)			number of planes in your group (Four)
+	{LDR_NAME}		group leader's last name
+	{LDR_RANK}		group leader's rank
+	{LDR_FULLRANK}  group leader's rank
+
+	{ESCORTED} escorted plane type.
+
+	{W0_RANK} the leader of player's group of up to 4 planes
+	{W1_RANK} his wingmen
+	{W2_RANK}
+	{W3_RANK}
+
+	{W0_NAME} the leader of player's group of up to 4 planes
+	{W1_NAME} his wingmen
+	{W2_NAME}
+	{W3_NAME}
+
+	{DATE}		  1 Janvier 1944
+	{DATE_D.MY}   1. Januar 1944
+	{DATE_DMY}    1 Janvier 1944
+	{DATE_MDY}    January 1, 1944
+	{DATE_DM,Y}	  1 January, 1944
+	{TIME}		9:15
+	{MTIME}		0915
+
+	{DIR} expands to whatever is written under {E} {NW}
+	{TO}
+	{FROM}
+
+	Temporary macros (calculated multiple times, just before usage)
+
+	(plane)
+	{rank}
+	{lastname}
+	{=#} number of planes
+	{=#a} number of planes
+	{=#A} number of planes
+	(~#) approximate number of planes
+
+////////////////////////////////////////////////////////////////////////////
+
+<One>			<Jeden>
+<Two>			<Dva>
+<Three>			<Tøi>
+<Four>			<Ètyøi>
+<Five>			<Pìt>
+<Six>			<Šest>
+
+<Seven>			<Sedm>
+<Eight>			<Osm>
+<Nine>			<Devìt>
+<Ten>			<Deset>
+<Eleven>		<Jedenáct>
+<Twelve>		<Dvanáct>
+<Thirteen>		<Tøináct>
+<Twenty six>	<Dvacetšest>
+<Thirty nine>	<Tøicetdevìt>
+
+<one>			<jeden>
+<two>			<dva>
+<three>			<tøi>
+<four>			<ètyøi>
+<five>			<pìt>
+<six>			<šest>
+<seven>			<sedm>
+<eight>			<osm>
+<nine>			<devìt>
+<ten>			<deset>
+<eleven>		<jedenáct>
+<twelve>		<dvanáct>
+<thirteen>		<tøináct>
+<twenty six>	<dvacetšest>
+<thirty nine>	<tøicetdevìt>
+
+<RANK0>(aUS) 	<Flt.Of.>
+
+<RANK1>(aUS) 	<2nd Lt.>
+<RANK2>(aUS) 	<1st Lt.>
+<RANK3>(aUS) 	<Cpt.>
+<RANK4>(aUS) 	<Maj.>
+<RANK5>(aUS)	<Lt.Col.>
+<RANK6>(aUS) 	<Col.>
+
+<RANK0>(mUS) 	<Gun.Sgt.>
+<RANK1>(mUS) 	<2nd Lt.>
+<RANK2>(mUS) 	<1st Lt.>
+<RANK3>(mUS) 	<Cpt.>
+<RANK4>(mUS) 	<Maj.>
+<RANK5>(mUS)	<Lt.Col.>
+<RANK6>(mUS) 	<Col.>
+
+
+<RANK0>(nUS) 	<Av.Plt.1c>
+<RANK1>(nUS) 	<Ens.>
+<RANK2>(nUS) 	<Lt(jg).>
+<RANK3>(nUS) 	<Lt.>
+<RANK4>(nUS) 	<LtCmdr.>
+<RANK5>(nUS)	<Cmdr.>
+<RANK6>(nUS) 	<Cpt.>
+
+<RANK0>(aUK) <F/Sgt>
+<RANK1>(aUK) <P/O>
+<RANK2>(aUK) <F/O>
+<RANK3>(aUK) <F/Lt>
+<RANK4>(aUK) <S/Ldr>
+<RANK5>(aUK) <W/Cdr>
+<RANK6>(aUK) <G/Cpt>
+
+<RANK0>(nUK) <FPO>
+<RANK1>(nUK) <FCPO>
+<RANK2>(nUK) <WO>
+<RANK3>(nUK) <Sub.Lt.>
+<RANK4>(nUK) <Lt.>
+<RANK5>(nUK) <Lt.Cmdr.>
+<RANK6>(nUK) <Cmdr.>
+
+<RANK0>(aJA) <Džuni> 
+<RANK1>(aJA) <Šóji> 	
+<RANK2>(aJA) <Èúji> 
+<RANK3>(aJA) <Taji>  
+<RANK4>(aJA) <Šósa>  
+<RANK5>(aJA) <Èúsa>
+<RANK6>(aJA) <Tajsa>
+
+<RANK0>(nJA) <Džótó (Hikó) Heiso> 
+<RANK1>(nJA) <Šóji> 	
+<RANK2>(nJA) <Èúji> 
+<RANK3>(nJA) <Daji>  
+<RANK4>(nJA) <Šósa>  
+<RANK5>(nJA) <Èúsa>
+<RANK6>(nJA) <Dajsa>
+
+<RANK0>(aUD) <Vaandrig>
+<RANK1>(aUD) <Tweede Luitenant>
+<RANK2>(aUD) <Eerste Luitenant>
+<RANK3>(aUD) <Kapitein>
+<RANK4>(aUD) <Majoor>
+<RANK5>(aUD) <Luitenant-Kolonel>
+<RANK6>(aUD) <Kolonel>
+
+<FULLRANK0>(aUS) <Flight Officer>
+<FULLRANK1>(aUS) <Second Lieutenant>
+<FULLRANK2>(aUS) <First Lieutenant>
+<FULLRANK3>(aUS) <Captain>
+<FULLRANK4>(aUS) <Major>
+<FULLRANK5>(aUS) <Lieutenant Colonel>
+<FULLRANK6>(aUS) <Colonel>
+
+<FULLRANK0>(mUS) <Gunnery Sergeant>
+<FULLRANK1>(mUS) <Second Lieutenant>
+<FULLRANK2>(mUS) <First Lieutenant>
+<FULLRANK3>(mUS) <Captain>
+<FULLRANK4>(mUS) <Major>
+<FULLRANK5>(mUS) <Lieutenant Colonel>
+<FULLRANK6>(mUS) <Colonel>
+
+<FULLRANK0>(nUS) <Aviation Pilot 1st class>
+<FULLRANK1>(nUS) <Ensign>
+<FULLRANK2>(nUS) <Lieutenant (Junior Grade)>
+<FULLRANK3>(nUS) <Lieutenant>
+<FULLRANK4>(nUS) <Lieutenant Commander>
+<FULLRANK5>(nUS) <Commander>
+<FULLRANK6>(nUS) <Captain>
+
+<FULLRANK0>(aUK) <Flight Sergeant>
+<FULLRANK1>(aUK) <Pilot Officer>
+<FULLRANK2>(aUK) <Flying Officer>
+<FULLRANK3>(aUK) <Flight Lieutenant>
+<FULLRANK4>(aUK) <Squadron Leader>
+<FULLRANK5>(aUK) <Wing Commander>
+<FULLRANK6>(aUK) <Group Captain>
+
+<FULLRANK0>(nUK) <Flight Petty Officer>
+<FULLRANK1>(nUK) <Flight Chief Petty Officer>
+<FULLRANK2>(nUK) <Warrant Officer>
+<FULLRANK3>(nUK) <Sub-Lieutenant>
+<FULLRANK4>(nUK) <Lieutenant>
+<FULLRANK5>(nUK) <Lieutenant-Commander>
+<FULLRANK6>(nUK) <Commander>
+
+<FULLRANK0>(aJA) <Džuni> 
+<FULLRANK1>(aJA) <Šóji> 	
+<FULLRANK2>(aJA) <Èúji> 
+<FULLRANK3>(aJA) <Taji>  
+<FULLRANK4>(aJA) <Šósa>  
+<FULLRANK5>(aJA) <Èúsa>
+<FULLRANK6>(aJA) <Tajsa>
+
+<FULLRANK0>(nJA) <Džótó (Hikó) Heiso> 
+<FULLRANK1>(nJA) <Šóji> 	
+<FULLRANK2>(nJA) <Èúji> 
+<FULLRANK3>(nJA) <Daji>  
+<FULLRANK4>(nJA) <Šósa>  
+<FULLRANK5>(nJA) <Èúsa>
+<FULLRANK6>(nJA) <Dajsa>
+
+<FULLRANK0>(aUD) <Vaandrig>
+<FULLRANK1>(aUD) <Tweede Luitenant>
+<FULLRANK2>(aUD) <Eerste Luitenant>
+<FULLRANK3>(aUD) <Kapitein>
+<FULLRANK4>(aUD) <Majoor>
+<FULLRANK5>(aUD) <Luitenant-Kolonel>
+<FULLRANK6>(aUD) <Kolonel>
+
+<AWARD0>(aUS) 		<Letecká medaile>
+<AWARD1>(aUS)		<Bronzová hvìzda>
+<AWARD2>(aUS) 		<Záslužný letecký køíž >
+<AWARD3>(aUS) 		<Medaile Záslužné legie>
+<AWARD4>(aUS) 		<Støíbrná hvìzda>
+<AWARD5>(aUS) 		<Záslužný letecký køíž>
+<AWARD6>(aUS) 		<Kongresová medaile cti>
+<AWARD7>(aUS) 		<Kongresová medaile cti>
+
+<AWARD0>(nUS) 		<Bronzová hvìzda>
+<AWARD1>(nUS)		<Medaile sboru námoøní pìchoty a námoønictva>
+<AWARD2>(nUS) 		<Záslužný letecký køíž>
+<AWARD3>(nUS) 		<Medaile Záslužné legie>
+<AWARD4>(nUS) 		<Støíbrná hvìzda>
+<AWARD5>(nUS) 		<Námoøní køíž>
+<AWARD6>(nUS) 		<Kongresová medaile cti>
+<AWARD7>(nUS) 		<Kongresová medaile cti>
+
+<AWARD0>(mUS) 		<Bronzová hvìzda>
+
+<AWARD1>(mUS)		<Medaile sboru námoøní pìchoty a námoønictva>
+<AWARD2>(mUS) 		<Záslužný letecký køíž>
+<AWARD3>(mUS) 		<Medaile Záslužné legie>
+<AWARD4>(mUS) 		<Støíbrná hvìzda>
+<AWARD5>(mUS) 		<Námoøní køíž>
+<AWARD6>(mUS) 		<Kongresová medaile cti>
+<AWARD7>(mUS) 		<Kongresová medaile cti>
+
+<AWARD0>(*UK) <Medaile za obranu>
+<AWARD1>(*UK) <Záslužná letecká medaile>
+<AWARD2>(*UK) <Záslužný letecký køíž>
+<AWARD3>(*UK) <Pruh k Záslužnému leteckému køíži>
+<AWARD4>(*UK) <Øád za vynikající služby>
+<AWARD5>(*UK) <Jiøího køíž>
+<AWARD6>(*UK) <Viktoriin Køíž>
+<AWARD7>(*UK) <Hvìzda 1939 - 1945>
+
+<AWARD0>(aUD) <Letecký køíž>
+<AWARD1>(aUD) <Letecký køíž s pruhem>
+<AWARD2>(aUD) <Záslužný køíž>
+<AWARD3>(aUD) <titul Rytíø Øádu Oranž-Nassau>
+<AWARD4>(aUD) <titul Dùstojník Øádu Oranž-Nassau>
+<AWARD5>(aUD) <titul Velitel Øádu Oranž-Nassau>
+<AWARD6>(aUD) <titul Velkodùstojník Øádu Oranž-Nassau>
+<AWARD7>(aUD) <titul Velkodùstojník Øádu Oranž-Nassau>
+
+<AWARD0>(*JA) 		<misku na saké>
+<AWARD1>(*JA)		<certifikát Vycházejícího slunce>
+<AWARD2>(*JA) 		<vlajku s podpisy a vìnováním>
+<AWARD3>(*JA) 		<láhev a misku na saké>
+<AWARD4>(*JA) 		<vzácnou dýku s vìnováním>
+<AWARD5>(*JA) 		<cennou pistol s vìnováním>
+<AWARD6>(*JA) 		<zdobené pouzdro pro pistol>
+<AWARD7>(*JA) 		<samurajský meè>
+
+<Time&Weather>(*U*) <{DATE_D.MY} {TIME}\nPoèasí: {WEATHER}. Oblaènost ve výšce {CLOUDS_FT1} stop.>
+<Time&Weather>(*JA) <{DATE_D.MY} {TIME}\nPoèasí: {WEATHER}. Oblaènost ve výšce {CLOUDS_M} metrù.>
+
+<Clear>  		<jasno, 0/10>
+
+<Good>(*U*)		<skoro jasno, 3/10>
+<Hazy>(*U*) 		<kouømo, 7/10>
+<Poor>(*U*)		<zataženo, 10/10>
+<Blind>(*U*)		<nulová dohlednost, 10/10>
+<Rain>(*U*)		<déš, 10/10>
+<Snow>(*U*)		<snìžení, 10/10>
+<Thunderstorm>(*U*)	<bouøka, 10/10>
+<Snowstorm>(*U*)	<snìhová vánice, 10/10>
+
+<Clear>  		<jasno>
+<Good>(*JA)		<skoro jasno>
+<Hazy>(*JA) 		<kouømo>
+<Poor>(*JA)		<slabá mlha>
+<Blind>(*JA)		<mlha>
+<Rain>(*JA)		<déš>
+<Snow>(*JA)		<snìžení>
+<Thunderstorm>(*JA)	<bouøka>
+<Snowstorm>(*JA)	<snìhová vánice>
+
+
+<January>		<leden>
+<February>		<únor>
+<March>			<bøezen>
+<April>			<duben>
+<May>			<kvìten>
+<June>			<èerven>
+<July>			<èervenec>
+<August>		<srpen>
+<September>		<záøí>
+<October>		<øíjen>
+<November>		<listopad>
+<December>		<prosinec>
+
+<from N>	<ze severu>	
+<from S>	<z jihu>	
+<from E>	<z východu>	
+<from W>	<ze západu>	
+<from NE>	<ze severovýchodu>	
+<from NW>	<ze severozápadu>	
+<from SE>	<z jihovýchodu>	
+<from SW>	<z jihozápadu>	
+
+<to N>	<na sever>	
+<to S>	<na jih>	
+<to E>	<na východ>	
+<to W>	<na západ>	
+<to NE>	<na severovýchod>	
+<to NW>	<na severozápad>	
+<to SE>	<na jihovýchod>	
+<to SW>	<na jihozápad>
+
+<N>	<Sever>	
+<S>	<Jih>	
+<E>	<Východ>	
+<W>	<Západ>	
+<NE>	<Severovýchod>	
+<NW>	<Severozápad>	
+<SE>	<Jihovýchod>	
+<SW>	<Jihozápad>
+
+<Leader>	< >
+<Leader22>	<{FULLRANK} {LASTNAME}, budete vedoucím druhé skupiny, {W1_RANK} {W1_NAME} je váš vedený.>
+<Leader23>	<{RANK} {LASTNAME}, budete vedoucím druhé skupiny. {W1_RANK} {W1_NAME} a {W2_RANK} {W2_NAME} jsou vaši vedení.>
+<Leader24>	<{FULLRANK} {LASTNAME}, budete vedoucím druhé skupiny. {W1_RANK} {W1_NAME}, {W2_RANK} {W2_NAME} a {W3_RANK} {W3_NAME} jsou vaši vedení.>
+<Leader32>	<{FULLRANK} {LASTNAME}, budete vedoucím poslední skupiny, {W1_RANK} {W1_NAME} je váš vedený.>
+<Leader33>	<{FULLRANK} {LASTNAME}, budete vedoucím poslední skupiny. {W1_RANK} {W1_NAME} a {W2_RANK} {W2_NAME} jsou vaši vedení.>
+<Leader34>	<{FULLRANK} {LASTNAME}, budete vedoucím poslední skupiny. {W1_RANK} {W1_NAME}, {W2_RANK} {W2_NAME} a {W3_RANK} {W3_NAME} jsou vaši vedení.>
+<Wingman>	<{FULLRANK} {LASTNAME} jste vedený, vaším vedoucím je {W0_RANK} {W0_NAME}.>
+<Wingman12>	<{FULLRANK} {LASTNAME} jste vedený v první skupinì tvoøené dvìma letadly, vaším vedoucím je {W0_RANK} {W0_NAME}.>
+<Wingman13>	<{FULLRANK} {LASTNAME} jste vedený v první skupinì tvoøené tøemi letadly, vaším vedoucím je {W0_RANK} {W0_NAME}.>
+<Wingman14>	<{FULLRANK} {LASTNAME} jste vedený v první skupinì tvoøené ètyømi letadly, vaším vedoucím je {W0_RANK} {W0_NAME}.>
+<Wingman22>	<{FULLRANK} {LASTNAME} jste vedený ve druhé skupinì tvoøené dvìma letadly, vaším vedoucím je {W0_RANK} {W0_NAME}.>
+<Wingman23>	<{FULLRANK} {LASTNAME} jste vedený ve druhé skupinì tvoøené tøemi letadly, vaším vedoucím je {W0_RANK} {W0_NAME}.>
+<Wingman24>	<{FULLRANK} {LASTNAME} jste vedený ve druhé skupinì tvoøené ètyømi letadly, vaším vedoucím je {W0_RANK} {W0_NAME}.>
+<Wingman32>	<{FULLRANK} {LASTNAME} jste vedený v poslední skupinì tvoøené dvìma letadly, vaším vedoucím je {W0_RANK} {W0_NAME}.>
+<Wingman33>	<{FULLRANK} {LASTNAME} jste vedený v poslední skupinì tvoøené tøemi letadly, vaším vedoucím je {W0_RANK} {W0_NAME}.>
+<Wingman34>	<{FULLRANK} {LASTNAME} jste vedený v poslední skupinì tvoøené ètyømi letadly, vaším vedoucím je {W0_RANK} {W0_NAME}.>
+ 
+<Route>(*U*)	<Vzdálenost k cíli: {DIST_NM} námoøních mil, výška letu: {ALT_FT1} stop.>
+<Route>(*U*)	<Poletíte ve výšce {ALT_FT1} stop, vzdálenost k cíli je {DIST_NM} námoøních mil.>
+<Route>(*JA)	<Vzdálenost k cíli: {DIST_KM} km, výška letu: {ALT_M} m.>
+<Route>(*JA)	<Poletíte ve výšce {ALT_M} metrù, vzdálenost k cíli je {DIST_KM} km.>
+
+
+// War victory and defeat messages can be customized according to operaiton
+// <WarDefeatDb:Hawaii>. The following are generic defeat messages.
+
+<WarDefeatDb>(*JA) <Tato operace se pro nás stala katastrofou!\n\nNepodaøilo se nám zpùsobit nepøíteli vážné ztráty, ztratili jsme tisíce zkušených námoøníkù a letcù... Je to zaèátek konce, mnoho našich vùdcù v nejbližších dnech možná spáchá seppuku!\n\nNaše takøka zcela znièené Spojené loïstvo bude muset pomoci Císaøské armádì, jinak se japonské tichomoøské impérium stane pouhým nesplnìným snem.....\n>
+<WarVictoryDb>(*JA) <Dosáhli jsme vynikajícího úspìchu. Naše loïstvo obklíèilo Havaj, zatímco se pøipravovala skvìlá obrana na našich nových územích.\n\nUSA a spojenci byli natolik demoralizováni, že nabídli pøímìøí. Víme, že ještì není mír a pokud se jim podaøí porazit Nìmecko, pravdìpodobnì na nás znovu zaútoèí, ale prozatím jsme v bezpeèí.\n\nVláda knížete Konoeho rozhodla, že bude lepší rok poèkat, posílit armádu a dokonèit výstavbu prùmyslu.\n\nPotom dokonèíme dobytí Èíny a napadneme Sovìtský svaz, abychom pomohli našim nìmeckým spojencùm získat vládu nad Evropou.\n\nPotom Nìmecko v Evropì, a Japonsko v Tichomoøí vstoupí do nové éry - éry blahobytu.\n>
+<WarDefeatDb>(*U*) <Utrpìli jsme drtivou porážku. Zatímco se pøipravovala rozsáhlá obrana na Japonci okupovaných územích, japonské loïstvo obklíèilo Havaj.\n\nByli jsme natolik demoralizováni a naše západní pobøeží bylo natolik ohroženo, že prezident Roosevelt byl nucen nabídnout pøímìøí, které naštìstí Japonci pøijali.\n\nJe jisté, že souèasný stav nelze nazvat mírem a jestliže porazíme Nìmecko, budeme znovu bojovat s Japonci, kteøí jsou zatím v bezpeèí..... \n\nZatím se budeme pøipravovat na nové tažení proti Japonskému císaøství..\n>
+<WarVictoryDb>(*U*) <Zvítìzili jsme!\n\nV Tichomoøí se zmìnila rovnováha sil!\n\nVelice brzy zaèneme osvobozovat americká území v Tichomoøí, okupovaná Japonci a zaženeme Japonce domù našimi bajonety!\n> 
+
+// Operational briefings/debriefings. Debriefis may be replaced with end of war debrief.
+
+<HawaiiBr>(*US) <Napìtí mezi západními mocnostmi a Impériem vycházejícího slunce roste již od japonské okupace Èíny v roce 1937. Pro udržení svého prùmyslu Japonsko nezbytnì potøebuje suroviny a demonstruje celému svìtu své expansionistické zamìøení, ohrožující zájmy Anglie, Francie, Holandska a Spojených státù.\n\nI pøes odpor japonského námoønictva a nedostateèné podpory císaøe, podepisuje japonská vláda dohodu o spolupráci s vládami Nìmecka a Itálie. Krátce poté Japonsko vtrhne do Francouzské Indoèíny a USA nezbývá nic jiného než vyhlášení embarga na vývoz surovin do Japonska.\n\nV posledních mìsících se velice aktivnì vedly rozhovory mezi velvyslancem Nomurou a naším ministrem zahranièních vìcí Cordellem Hullem, ale dosud nebylo nalezeno žádné varianty mírového ujednání. Tichomoøská flotila se již pøed nìkolika mìsíci pøemístila ze San Diega do Pearl Harboru, aby Japoncùm demonstrovala naše rozhodnutí bránit své zájmy v této oblasti, ale hlavní velitelství se obává nenadálého útoku a také, že únik lodí z pøístavu, v pøípadì vzdušného napadení, by byl velmi komplikovaný z dùvodu malé hloubky a úzkého vchodu do pøístavu.\n\nHlavní velitelství vìøí, že pøístavní hloubka, pouhých 40 stop, zabrání použití torpéd pøi útoku, protože zpravodajské služby hlásí, že japonská torpéda potøebují hloubku minimálnì 75 stop a také, že obrana byla posílena 394 letadly na Oahu, vìtšinou stíhaèi, ale nikdo se necítí zcela v bezpeèí. Základna Oahu je v plné bojové pohotovosti už od konce listopadu, ale jelikož se zatím nic nestalo, pøikázal generálporuèík Walter C Short, vrchní velitel vojenských sil na Havaji, zaparkovat všechna letadla blízko sebe mimo hangáry, protože se více obává možné sabotáže ze strany 13000 japonských Amerièanù, žijících na Havaji, než vzdušného útoku japonského námoønictva.\n\nNaštìstí je okolo Oahu rozmístìno nìkolik záložních letištních ploch a nìkteøí velitelé rozhodli pøemístit pro každý pøípad èást letadel na tato letištì....>
+<HawaiiVictoryDb>(*US) <Neèekaný útok Japoncù dnes ráno 7.prosince 1941 zpùsobil citelné ztráty naší Tichomoøské flotile.\n\nNìkolik bitevních lodí a torpédoborcù bylo potopeno nebo silnì poškozeno, desítky letadel znièeny a mnoho vojákù zahynulo.\n\nNìkterým odvážlivcùm se podaøilo na letadlech vzlétnout i pøes neustálé ostøelování, nìkteøí dokázali zorganizovat èinnost protiletadlového dìlostøelectva, aby to útoèníkùm oplatili stejným dílem.\n\nTento den hanby pøedznamenává, že nás v blízké budoucnosti èekají tìžké èasy, ale skuteènost, že Lexington a Enterprise jsou dosud na moøi a naše velké zásoby paliva jsou nedotèeny, nám stále dává nadìji. Naši piloti a technika dokázali, že se nemusí ve vzduchu nièeho bát a Japonsko brzy pocítí odhodlání Ameriky pro odplatu.\n>
+<HawaiiDefeatDb>(*US) <Japonský útok z dnešního rána 7.prosince 1941 zpùsobil ohromné ztráty naší Tichomoøské flotile.\n\nZnaèná èást našich lodí byla potopena nebo silnì poškozena, stovky letadel znièeny a mnoho zkušených vojákù bylo zabito.\n\nOjedinìlé pokusy odvážlivcù, vzlétnout do vzduchu na letadlech nebo zorganizovat odpor na zemi, skonèily neúspìšnì.\n\nTento ostudný den pøedznamenává mnohým, že nás èekají tìžké okamžiky. Musíme najít zpùsob jak èelit takové taktice, pokud chceme být pøi odvetném úderu úspìšní.\n>
+<HawaiiDb>(*US) <Zrádný útok Japoncù dnešního rána 7.prosince 1941 zpùsobil naší Tichomoøské flotile ztráty.\n\nArizona a Oklahoma jsou znièeny, California, Nevada a West Virginia potopeny, Pennsylvania, Tenessee a Maryland silnì poškozeny. 188 letadel znièeno a 159 poškozeno, 2400 námoøníkù, pilotù a vojákù zabito a 1350 ranìno.\n\nNìkterým odvážlivcùm se podaøilo na letadlech vzlétnout i pøes neustálé ostøelování, nìkteøí dokázali zorganizovat èinnost protiletadlového dìlostøelectva, ale Japonci ztratili pouze 29 letadel a 5 jednomístných ponorek.\n\nTento ostudný den pøedznamenává mnohým, že nás èekají tìžké okamžiky, ale v souèasné chvíli jsou Lexington a Enterprise stále na moøi a naše hlavní zásoby paliva jsou nedotèeny. Amerika se postaví a bude bojovat s Japonci až do koneèného vítìzství.\n>
+<HawaiiBr>(*JA) <V posledních letech neustále rostlo napìtí mezi naší zemí a Spojenými státy. Máme velkou nouzi o suroviny pro náš prùmysl a Japonsko nedisponuje dostateènými zásobami.\n\nNaše armáda vtrhla do Èíny v roce 1937 a teprve nedávno obsadila Francouzskou Indoèínu. Z tohoto dùvodu USA vyhlásily embargo na dodávku surovin, a tím nutí naši zemi pomýšlet na válku. Ve Washingtonu stále probíhají jednání, ale nadìje na to, že Amerièané budou souhlasit s našimi podmínkami, je malá.\n\nViceadmirál Jamamoto je jmenován velitelem Japonského císaøského námoønictva, zatímco Zengó Jošida je jmenován ministrem námoønictva ve vládì knížete Fuminaka Konoeho a je mu pøikázáno vypracovat plán bitvy proti USA. Jeho nápad je riskantní a on to ví. Zamýšlí znièit Tichomoøskou flotilu USA v Pearl Harboru, v podobném stylu jako to provedli Britové v Tarentu, aby bylo potopeno co možná nejvíce letadlových lodí a torpédoborcù, abychom si otevøeli cestu do Indonésie, aniž by hrozilo ohrožení ze strany flotily USA.\n\nHned jak bude toto nebezpeèí neutralizováno, mohou naše vojska lehce získat vítìzství nad koloniálními armádami Evropanù a rozmístit dostateèné síly pro sevøení USA a pøesvìdèit je o nezbytnosti pøehodnocení našich obecných sfér vlivu v Tichém oceánu, alespoò to si myslí ministr války generál Hideki Tódžó.....\n\nNaše úderná flotila vyplula z Japonska 26.listopadu 1941 a nasadila severní kurz, aby se vyhnula odhalení. Brzy potom jsme dostali kódový signál "Vystupte na horu Niitaka", potvrzující pøíkaz k útoku. Minory Genda, dùstojník leteckého personálu první flotily, vypracoval plán útoku a seznámil nás s ním, Fuèida povede první vlnu útoèníkù, takže budeme v dobrých rukou!\n\nBohužel, jak jsme se právì dozvìdìli od admirála Nagumoa, velitele flotily, rozvìdka hlásila, že americké letadlové lodì opustily pøístav pøed nìkolika dny, ale urèitì je potopíme ihned po tom co znièíme lodì, které zùstaly v Pearl Harboru.\n\nNoc byla krátká a už svítá....\n\n\n\n>
+<HawaiiVictoryDb>(*JA) <Zdá se, že plán admirála Jamamotoa se podaøil.\n\nJe pravda, že nám unikly americké letadlové lodì, které byly daleko na moøi od Pearl Harboru, ale výsledky úderu jsou skvìlé a pøitom jsme utrpìli jen malé ztráty.\n\nNyní se pomìr sil zmìnil v náš prospìch a mùžeme uskuteènit plán pokoøení Tichomoøského regionu.\n>
+<HawaiiDefeatDb>(*JA) <Zdá se, že plán admirála Jamamotoa se zcela nezdaøil.\n\nNejenže jsme propásli americké letadlové lodì, které byly daleko od Pearl Harboru, ale také jsme nechali netknuty strategicky dùležité zásoby paliva a utrpìli jsme znaèné ztráty.\n\nStále máme pøevahu sil, ale musíme nasadit maximální úsilí, jestliže chceme uskuteènit plán dobytí tichomoøského regionu.\n>
+<HawaiiDb>(*JA) <Riskantní plán admirála Jamamotoa vyšel.\n\nAèkoliv jsme propásli americké letadlové lodì, které se nacházely daleko od Pearl Harboru, zpùsobili jsme znaèné škody bitevním lodím a køižníkùm. Arizona a Oklahoma jsou znièeny, California, Nevada a West Virginia potopeny, Pennsylvania, Tenessee a Maryland silnì poškozeny. Témìø 200 letadel bylo znièeno a více než 200 jich bylo poškozeno, podle zpráv rozvìdky bylo zabito 3000 nepøátelských vojákù. Vše za cenu ztrát 29 sestøelených letadel a 5 jednomístných ponorek na naší stranì.\n\nPøevaha sil je na naší stranì a my mùžeme v plné míøe uskuteènit plán dobytí tichomoøského regionu do doby než budou USA schopny úèinnì zareagovat.\n>
+
+<WakeBr>(*JA) <Naše síly musí zaútoèit na ostrov Wake, který se stane doèasnou císaøskou pøedsunutou základnou na našem postupu na Havaj a kalifornské pobøeží. Bránící posádka na atolu není poèetná a jeho obsazení je otázkou nìkolika hodin, poté co se Císaøská flotila pøiblíží dostateènì blízko k bøehu. Ujistìte se, že nikdo ve vzduchu ani na zemi se našim lodím a pìchotì nepostaví na odpor.>
+<WakeVictoryDb>(*JA)	<Koneènì je Wake obklíèen. Admirál Kadžioka a jeho jednotky dosáhli bleskového vítìzství nad hloupými americkými námoøními pìšáky a pøejmenovali tento zanedbaný ostrov na "Otori Šima" - Ptaèí ostrov - poetické jméno, které bude trvale doprovázet naše padlé pøátele do nebe. Naštìstí byly naše ztráty velmi malé a my si mùžeme blahopøát k velmi rychlému a úspìšnému dobytí tohoto malého, ale strategicky velmi dùležitého píseèného ostrovu. Následující krok: Havajské ostrovy!\n>
+<WakeDefeatDb>(*JA)	<Stále ještì nemùžu pochopit, jak se nám podaøilo prohrát proti tak smìšnì malé skupinì obráncù, pøestože jsme mìli totální poèetní a technickou pøevahu, hrstka vojákù námoøní pìchoty a letcù se úspìšnì ubránila elitì Japonského císaøského váleèného námoønictva. Je to velmi špatné znamení pro všechny nadcházející operace... Ohlaste se na velitelství pro pøemístìní vaší letecké skupiny do jiné žhavìjší oblasti.\n>
+<WakeDb>(*JA) <Je neuvìøitelné, že tak malý ostrov nás mohl stát tolik ztrát. Pøílišnou cenu, kterou jsme museli zaplatit za toto vítìzství, nelze vysvìtlit jen udatností nepøítele. Vzhledem k množství nepøátelských sil, bránících náš cíl, jsou naše ztráty až neskuteènì vysoké. Císaøská armáda doufá, že vojáci tzv. "Americké námoøní pìchoty" nám nebudou zpùsobovat v budoucnosti nepøíjemnosti, protože jsou stejnì tak smìlí a odvážní jako naši vojáci. Bohužel zkušenost z váleèných operací na Filipínách ukazuje, že toto konání je pro "moøské pìšáky" typické. Doufejme, že se nám budou stavìt do cesty co možná nejménì.\n>
+<WakeBr>(*US)		<Vojáci! Pohov!\nJsem si jist, že každý zde ví jak se zkomplikovala situace. Pøed nìkolika hodinami, vyhlásilo Japonsko válku Spojeným státùm americkým provedením leteckého útoku na Pearl Harbor a Tichomoøskou flotilu. V daném okamžiku a díky své geografické poloze jsme se stali nejèelnìjšími obrannými jednotkami armády USA. Zpravodajská služba pøedpokládá, že se velice brzy støetneme s útoèníky, naštìstí jsou již posily na cestì a byla nám pøislíbena letecká podpora z letadlových lodí v pøípadì masivního invazního útoku. Všichni na svá místa! Piloti, buïte pøipraveni!>
+<WakeVictoryDb>(*US)	<Díky našim odvážným pilotùm a vojákùm a také dlouho oèekávané podpoøe letadlových lodí se podaøilo úspìšnì odrazit útok Japoncù, a tím jsme získali první vítìzství v Tichém oceánu. Vojáci, mùžete si blahopøát, že jste dali nadìji všem našim silám. Nyní jsme si jisti, že Japonci nejsou neporazitelní.\n>
+<WakeDefeatDb>(*US)	<Proklatì, Wake obsadili rychleji než jsme oèekávali. Bohužel, naše pìchota, odøíznutá od hlavních sil, musela èelit neporazitelnému nepøíteli v zoufalé bitvì, rovnìž našim letadlovým lodím se nepodaøilo dostat k ostrovu vèas, aby ho zachránili. No, je to však pouze prohraná bitva, ale ne válka.\n>
+<WakeDb>(*US)	<Byli jsme nuceni složit zbranì ohromné pøevaze japonských vojsk po nìkolikadenní úporné obranì, ponecháni bez podpory našeho námoønictva. Tato strašná bitva však ukázala Japoncùm bojovou zuøivost mariòákù a Japonci se nepochybnì nauèili respektovat naše piloty a vojáky. Doufejme, že tato válka nám brzy dá šanci pomstít naše hrdiny, padlé pøi obranì ostrova.\n>
+
+<CoralSeaBr>(*JA)	<Vy a vaši spolubojovníci jste byli vybráni, abyste se zúèastnili další velké operace Císaøského námoønictva, jejíž cílem je úplné dobytí Nové Guiney pøed pøípadnou invazí do Austrálie. Admirál Inouje bude pøi této operaci velet našim silám pod kódovým názvem "MO". Hlavní cíl - dobytí Port Moresby, zatímco sekundárním cílem je vybudování základny námoøního letectva v Tulagi, v centrální èásti Šalomounských ostrovù. Admirál Jamamoto chce, abychom našli a znièili jakoukoliv letadlovou loï nacházející se v této oblasti, tento úkol dostala 5.divize letadlových lodí, konkrétnì Šókaku a Zuikaku, zatímco lehká letadlová loï Šóhó bude zajišovat vzdušnou podporu invazních sil nad Port Moresby.>
+<CoralSeaVictoryDb>(*JA) <Potìšili jsme vrchní velitelství Kidó Butai, skvìlá práce samurajové! Americká pøítomnost v jižní èásti Tichého oceánu byla neutralizována v jediné bitvì a nyní nic nestojí v cestì mezi námi a australskými bøehy. Australané by si poèínali nerozumnì, kdyby se nyní zapojili do tohoto boje, zvláštì teï když zùstali sami bez podpory svých spojencù Amerièanù a Britù, kteøí již nadále nemohou bránit jejich zemi pøed naší vítìznou armádou. 5.divize letadlových lodí a další námoøní jednotky se musí okamžitì vrátit na Truk, pro zajištìní oprav a doplnìní zásob. Vybrali vás, abyste se zúèastnili následující bitvy, kterou svede Kidó Butai, jež bude nespornì rozhodujícím a posledním úplným vítìzstvím na tichomoøském válèišti. Brzy podáme zprávu císaøi o vašem úspìchu, buïte si jisti, že Kantó bude s velkým nadšením a pýchou oslavovat vaše vítìzství!\n>
+<CoralSeaDefeatDb>(*JA)	<Musíme zùstat vždy pokorní a pøíliš nepokoušet štìstí. Tato bitva je hoøkou lekcí, nepøítel demonstroval úžasnou schopnost strategického využití svých letadlových lodí v bitvì a dokázal zastavit naši ofenzívu v této oblasti. Z dùvodu našich tìžkých ztrát se operace "MO" ruší a všechny lodì se mají vrátit do Rabaulu a Truku pro nezbytné opravy/nebo nové rozkazy. Nezapomeòte, vítìzství v této válce musí být dosaženo velice rychle, jinak se mùžeme brzy setkat v boji s nepøítelem s velkými komplikacemi. Protivník se stává každým dnem silnìjším a takové prohry nepomáhají k dosažení našeho cíle. Doufejme, že naše další operace skonèí s mnohem lepším výsledkem. Další selhání nedopustíme.\n>
+<CoralSeaDb>(*JA) <Jsme rozèarováni výsledky této bitvy. I pøestože si mùžeme pøipsat taktické vítìzství, nic nemìní na faktu, že invaze do Port Moresby musí být odložena, èímž budou mít Australané èas nabrat síly. Brzy se vrátíme, abychom dokonèili co jsme zaèali, naštìstí už to nebude velký výpad. 5.divize letadlových lodí se musí ihned vrátit na Truk. Nejvíce poškozené jednotky se musí vrátit co možná nejrychleji do domovského pøístavu pro provedení oprav a dozásobení.\n>
+<CoralSeaBr>(*US) <Neptejte se mne, jak se nám podaøilo získat tuto informaci, ale poslední hlášení výzvìdné služby potvrzují, že hlavní japonská operace v oblasti Korálového moøe zaène v nejbližších dnech. Operaèní skupina, sestávající z letadlových lodí Lexington a Yorktown, pod velením kontraadmirála Fletchera, byla vyslána do tohoto regionu, aby se této nové hrozbì postavila. Jestliže se Japonci opozdí, podaøí se nám získat podporu operaèní skupiny složené z letadlových lodí Hornet a Enterprise, vracejících se ze severní èásti Tichého oceánu. Ještì pøed sebou máme dlouhou cestu a minimálnì týden nemùžeme oèekávat jejich pomoc. Do té doby se musíme spoléhat pouze na naše obranné a útoèné prostøedky, abychom našli a znièili nepøátelské letadlové lodì a invazní síly, které jsou naším hlavním cílem. Najdìte letadlové lodì a hned jak budou poslány ke dnu, již nic nebude stát v cestì mezi námi a transportními lodìmi.>
+<CoralSeaVictoryDb>(*US) <Skvìlý úspìch chlapci! Zpùsobili jste Japonsku nejkrutìjší porážku v historii! Ovšem Tokio je ještì daleko. Ale nyní už to nebude stejné jako døíve, Japonsko se musí zamyslet nad tím, zda byla tato válka moudrým krokem. Pomstili jsme Pearl Harbor, dobrá práce! Nyní se dáme na sever, mohli bychom tam být užiteèní, nebo Japonsko dosud nerozehrálo všechny své karty.\n>
+<CoralSeaDefeatDb>(*US)	<Naše vojska byla rozdrcena! Svoboda v Austrálii bude brzy utopena v krvi a to plnì naší vinou, nedokázali jsme ochránit našeho spojence pøed japonským uchvatitelem. Dále již nesmíme ustupovat, Austrálie mùže být ztracena - to je pravda, ale nyní se musíme bít za svou vlastní existenci v centrální èásti Tichomoøí proti hlavním silám císaøského Spojeného loïstva. Budeme èekat zde. Po naší porážce v Korálovém moøi si nemùžeme dovolit více riskovat, jinak se bude naše následující bitva konat nìkde mezi Seattlem a San Diegem.\n>
+<CoralSeaDb>(*US) <Obì strany utrpìly v první, ve své historii, bitvì dvou skupin letadlových lodí velké ztráty. Nevidìli jsme ani jediné støetnutí lodì proti lodi, ale víme, že použití bojového letectva nedìlá tento zpùsob vedení boje o nic ménì krutým. Nicménì, pokud není žádného papírového vítìze ani poraženého, samotný fakt, že jsme zastavili japonskou invazi na Port Moresby dokazuje, že japonská vojska nejsou neporazitelná a mohou být s nasazením vìtšího úsilí rozdrcena. Ale už si nemùžeme více dovolit takové ztráty: další bitva musí být rozhodujícím vítìzstvím, jestliže chceme skuteènì japonský váleèný stroj zastavit.\n>
+
+<MidwayBr>(*JA)	<Od bitvy v Korálovém moøi víme, jaké ohrožení pro naše operace mohou americké letadlové lodì pøedstavovat, je zøejmé že nálet na Tokio, provedený støedními bombardéry startujícími z letadlových lodí, provedený 18. dubna 1942, byl nedostateèným varováním.\n\nAdmirál Jamamoto nakonec pøesvìdèil Císaøský štáb pøijmout plán útoku na Midway.\n\nVe stejné dobì kdy budou naše námoøní bombardéry provádìt útoky na Midway, zaène druhá flotila úder na Aleutské ostrovy. Pøedpokládáme, že jeden z tìchto útokù vyláká americké letadlové lodì z Pearl Harboru a naše hlídkující ponorky v oblasti je odhalí. Pak pošleme do útoku naše bitevní lodì a hrozba bude neutralizována!\n\nOperace "MI" byla zahájena 26.kvìtna, když druhá flotila smìøující k Aleutským ostrovùm opustila Japonsko. Další den flotila letadlových lodí admirála Nagumoa nabrala smìr na Midway, za doprovodu transportních lodí, plujících za nimi a nakonec tøetí skupina opustila Japonsko 29.kvìtna. Admirál Jamamoto bude osobnì velet operacím z paluby gigantické lodi Jamato.\n\nBohužel operace "K", která mìla za cíl prùzkum okolo Pearl Harboru, naplánovaná na 31.kvìtna, musela být zrušena, ale radiorozvìdèíci na Jamato odhalili zvýšenou radiovou korespondenci z a na Midway. Takže pøesnì nevíme, kde se nyní nacházejí nepøátelské letadlové lodì, ale jistì spolkli návnadu a jsou nìkde v této oblasti......>
+<MidwayVictoryDb>(*JA)	<Plán admirála Jamamotoa se èásteènì zdaøil.\n\nAèkoliv jsme museli z dùvodu tìžkých ztrát zrušit invazi na Midway, utrpìla americká flotila znaèné škody a není již více schopna ohrožovat naše novì obsazená teritoria, dokud neodvolají èást sil z Atlantského oceánu.\n\nNyní budeme upevòovat své pozice ve støední a jižní èásti Tichomoøí, do té doby než dokážeme pøeskupit naše útoèné síly a udeøit znovu.\n>
+<MidwayDefeatDb>(*JA)	<Tato operace skonèila katastrofálnì. \n\nNejenže jsme byli pøinuceni zrušit invazi na Midway, ale také se nám nepodaøilo zpùsobit výrazné ztráty nepøátelské flotile, ztratili jsme všechny naše letadlové lodì, nìkolik køižníkù a ponorek, tisíce zkušených námoøníkù a pilotù - to vše jako cena za nìkolik úspìšných leteckých náletù na Midway.\n\nTo je urèitì zaèátek konce a možná mnozí naši politiètí vùdci v nejbližší dobì spáchají seppuku!\n\nNaše váleèné námoønictvo bude muset poskytnout by i sebemenší pomoc Císaøské armádì. Zatímco nyní když jsou naše síly vyrovnány, mohou americké svazy letadlových lodí brzy zaèít ofenzívu.\n>
+<MidwayDb>(*JA)	<Pøíliš komplikovaný plán admirála Jamamotoa ukázal své slabiny - ztratili jsme letadlové lodì Akagi, Kaga, Sórjú a Hirjú a také tìžký køižník Mikuma, to všechno za potopení jediné letadlové lodi Yorktown a znièení nìkolika obranných jednotek ostrova.\n\nAmeriètí piloti se sebeobìtováním a velkou odvahou dokázali zvítìzit, tím že využili taktických chyb admirála Nagumoa. Pøestože si naši piloti splnili svou povinnost, 110 jsme jich ztratili a také více než 2500 námoøníkù.\n\nTo že nepøátelské ztráty jsou mnohem vìtší než naše, je jen slabou útìchou a zatímco kampaò na Aleutských ostrovech pokraèuje, støední a jižní èást Pacifiku japonskou ofenzívu nespatøí.\n>
+<MidwayBr>(*US)	<Po bitvì v Korálovém moøi se pøipravují americká i japonská flotila k novému souboji, po kterém mùže následovat buï úspìšná ofenzíva našich sil nebo koneèná porážka, to záleží na výsledku. Naše morálka se po dubnovém Doolittlovì náletu na Tokio zlepšila, ale víme, že pomìr sil svìdèí v náš neprospìch.\n\nAtol Midway byl prohlášen územím Spojených státù 28.záøí 1867 Komandérem Reynoldsem. Poté byl pouze využíván jako retranslaèní stanice a zastávka pro klipry spoleènosti Pan Am ve 30.letech.\n\nJejich strategická dùležitost byla rozpoznána americkou vládou až ke konci roku 1939 a od té doby je na nìm stálá posádka americké armády. Ostrov byl ostøelován 7.prosince 1941 dvìma japonskými torpédoborci a od té chvíle byla posádka posilována a stojánky na letištích jsou plné letadel rùzných typù jako je Vindicator, Dauntless, Buffalo, PBY, B17, Wildcat, Avenger nebo B26.\n\nProtože oddìlení zpravodajské služby "Hypo" v Pearlu Harboru èásteènì dekódovalo japonský námoøní kód, víme že bude Midway brzy napaden loïstvem ještì vìtším, než to které napadlo Pearl Harbor. V souvislosti s tím admirál Nimitz ve svém operaèním plánu 29-42 pøikázal operaèním skupinám 16 a 17, pod velením kontraadmirála Frank J Fletchera a admirála Raye Spruance, pøesunout se na pozici "bod štìstìny", 325 mil severovýchodnì od Midway a èekat na nepøítele, který by se mìl objevit podle pøedpokladu kolem 3.èervna brzy ráno ....>
+<MidwayVictoryDb>(*US)	<Naši piloti mùžou být hrdí na toto velké vítìzství, splnili jsme ta nejoptimistiètìjší oèekávání admirála Nimitze a rozehnali jsme japonské námoøní síly s velmi malými ztrátami.\n\nTeï nastal èas pøemýšlet o ofenzívì, protože japonská expanze byla zastavena!\n>
+<MidwayDefeatDb>(*US)	<Nebyli jsme schopni splnit rozkazy admirála Nimitze a ztratili jsme víc než bylo možné.\n\nSamozøejmì se nám úspìšnì podaøilo odrazit invazi na Midway, ale protože naše Tichomoøská flotila byla témìø znièena, musíme požádat o posily z Atlantiku, což mùže negativnì ovlivnit naši globální strategii proti mocnostem Osy.\n\nJeštì nìkolik takových "polovièních vítìzství" a Japonsku se podaøí získat kontrolu nad Tichomoøím...\nNìkolik lodí bylo odvoláno z Atlantiku s cílem posílit naši flotilu, což mìlo negativní vliv na naše dodávky podle Smlouvy o pùjèce a pronájmu.\n>
+<MidwayDb>(*US) <S odvahou, rozhodností, a musím pøiznat i trochou štìstí, se stala bitva o Midway velkým úspìchem, protože jsme ztratili pouze jednu letadlovou loï (Yorktown) proti ètyøem nepøátelským (Akagi, Kaga, Sórjú a Hirjú), a ještì k tomu tìžký køižník Mikuma. Tím byly japonské invazní plány pøekaženy.\n\nNaše cena byla vysoká, ztratili jsme 189 pilotù, ale toto vítìzství bylo vybojováno proti nejvìtší flotile se kterou jsme se v Pacifiku mohli støetnout.\n\nPouèili jsme se z našich chyb a zastaralá letadla typu Devastator a Vindicator budou vyøazena. Nyní nastal èas pomýšlet opìt na ofenzívu nebo naše síly jsou takøka vyrovnány.\n>
+<TarawaBr>(*JA)	<Poslední hlášení poukazují na to, že nepøítel v tìchto chvílích zahajuje rozsáhlé operace proti Gilbertovým ostrovùm. Všechny naše dostupné jednotky by mìly pátrat po nepøátelské aktivitì v této oblasti. Oèekávejte pøítomnost letadlových lodí a s tím spojenými rozsáhlými leteckými operacemi nepøítele - protivník zavedl do výzbroje nové tìžké letadlové lodì, které mohou podpoøit vylodìní na Makin a v sektoru Betio.>
+<TarawaVictoryDb>(*JA)	<Navzdory stovkám letadel nasazených do této operace, nebyl nepøítel schopen získat kontrolu vzdušného prostoru a zajistit podporu své námoøní pìchotì, která utrpìla ohromné ztráty od naší hrdinné posádky.\n\nNavíc utrpìla nepøátelská flotila tìžké ztráty, zpùsobené leteckými nálety a útoky ponorek.\n\nBylo to Pyrrhovo vítìzství pro Amerièany, za tìchto podmínek nemohou pokraèovat ve válce!\n>
+<TarawaDefeatDb>(*JA)	<S nasazením tisícù letadel v této operaci byl nepøítel schopen provést velmi úèinné bombardování pøed vlastní invazí.\n\nNaši hrdinní obránci nedokázali zastavit nepøítele.\n\nZ dùvodu takøka úplné vzdušné pøevahy nepøítele jsme nemohli zpùsobit znaèné ztráty nepøátelskému loïstvu.\n>
+<TarawaDb>(*JA)	<Nemohli jsme bránit Tarawu donekoneèna, ale nepøítel za své vítìzství draze zaplatil.\n>
+
+<TarawaBr>(*US)	<V prùbìhu roku 1943 byli Japonci vytlaèeni z Aleutských ostrovù v severní èásti Tichého oceánu, 3.divize námoøní pìchoty se vylodila na Bougainville a osvobození Šalomounových ostrovù od Japoncù bylo témìø završeno. Generál MacArthur zajistil obranu východní Nové Guiney na jihozápadì Tichého oceánu a pøipravuje invazi na Bismarckovy ostrovy.\n\nGilbertovy ostrovy jsou skupinou korálových atolù, ležících napøíè rovníku, byly objeveny v roce 1765 kapitánem Byronem. Od 27.kvìtna 1872 až do japonské okupace v prosinci 1941 náležely Britùm. Nacházejí se severnì a západnì od našich ostrovù a jižnì a východnì od dùležitých japonských základen na Karolínách a Marshallových ostrovech.\n\nNa konferenci QUADRANT v Quebecu, v srpnu 1943, bylo rozhodnuto provést ofenzivu na Gilbertovy, Marshallovy a Mariánské ostrovy.\n\nViceadmirál R.A. Spruance, velící operaèním svazùm TF50, TF54 a TF57, ponese zodpovìdnost za provedení operace GALVANIC. Jižní skupina letadlových lodí admirála A.E. Montgomeryho jako souèást operaèní skupiny TF50, má za úkol podle potøeby provést vzdušný pøepad a podporu pozemních jednotek. 2.divize námoøní pìchoty jako souèást operaèního svazu TF54, má za úkol obsadit silnì bránìný ostrov Betio na jihozápadu atolu Tarawa.\n\nVýsledek bitvy bude záležet na momentu pøekvapení. Z tohoto dùvodu nebude provádìna dlouhá pøedbìžná letecká pøíprava, na útok budeme mít pouze krátkou omezenou dobu a proto musíme provádìt co nejpøesnìjší útoky. Vzdušná podpora bude pøíliš složitým úkolem, protože útoèící a bránící budou ve velmi tìsném kontaktu.\n\n>
+
+<TarawaVictoryDb>(*US)	<S pomocí 900 našich letadel, úèastnících se této bitvy jsme dokázali provést maximálnì efektivní bombardování pøed výsadkem.\n\nDíky tomu, naši chlapci utrpìli mnohem menší ztráty od japonské posádky než jsme oèekávali. Vzdušná podpora byla také velmi úèinná bez ohledu na blízkost našich a japonských sil.\n\nDosáhli jsme témìø úplné vzdušné pøevahy, a to pøineslo své výsledky - naše lodì byly jen minimálnì poškozeny.\n\nToto rychlé vítìzství nám dává více letiš, která nám pomohou dostat se k srdci japonské pøítomnosti ve støedotichomoøské oblasti. Nyní mùžeme plnì dùvìøovat našim Hellcatùm, kteøí prokázali svoji plnou pøevahu nad Zeke.\n>
+<TarawaDefeatDb>(*US)	<Navzdory 900 letadlùm, úèastnícím se této operace, jsme nebyli schopni zabezpeèit efektivní podporu ze vzduchu pro 2.divizi námoøní pìchoty, která utrpìla tìžké ztráty jak od japonské posádky, tak od støelby z vlastních øad.\n\nNavíc utrpìla flotila tìžké ztráty od útoku letadel a ponorek.\n\nS takovými výsledky vstoupíme do Tokia až v roce 1960!!!!! \n>
+<TarawaDb>(*US)	<S pomocí 900 našich letadel, úèastnících se této operace se nám podaøilo provést efektivní bombardování pøed vylodìním.\n\nZrušení posledního bombardování, které mìlo následovat tìsnì pøed výsadkem bylo chybou, mnoho našich chlapcù padlo pod palbou kulometù a dìl, když opouštìli výsadkové èluny.\n\nVzdušná podpora nebyla pøíliš úèinná z dùvodu tìsné blízkosti našich a japonských jednotek.\n\nVzdušná pøevaha nebyla úplná, ale pøinesla oèekávané výsledky, ponorka potopila pouze jedinou letadlovou loï a druhou poškodila torpédová letadla.\n\nToto draze zaplacené vítìzství nás nutí zrevidovat naši vyloïovací taktiku pro pøíští operace, ale již nyní mùžeme plnì spoléhat na naše Hellcaty, kteøí prokázali svoji plnou pøevahu nad Zeke.\n>
+<PalauBr>(*JA) <Mìli jsme to pøedvídat. Mysleli jsme si, že napadení Palau probìhne pøed útokem na Mariánské ostrovy - ouha, mýlili jsme se. Teï když jsme je ztratili, visí nad našimi hlavami hrozba, tady v Peleliu, v našem hlavním opìrném bodu na tomto souostroví. Za každou cenu musíme zahnat námoøní pìchotu zpátky do moøe, naše vzdušné síly v této oblasti na Filipínách a Nové Guinee nám v tom pomohou.>
+<PalauVictoryDb>(*JA)	<Peleliu padl, ale po urputném boji proti vzdušným a námoøním silám nepøítele. Zkušená 1.divize námoøní pìchoty byla v této bitvì zdecimována a nepøítel byl nucen povolat další síly. Taková obrana byla velmi úspìšná a zpùsobila nepøíteli znaèné ztráty. Má to silný demoralizující úèinek na Amerièany - díky vám!\n>
+
+<PalauDefeatDb>(*JA)	<Bohužel obránci na Peleliu nedokázali více odolávat elitní 1.divizi námoøní pìchoty a opevnìní na výšinách Peleliu se ukázalo jako nedostateènou obranou. Pøestože jsme nepøíteli zpùsobili tìžké ztráty, cena, kterou jsme za to museli zaplatit, byla pøíliš vysoká. Doufejme, že se pro nás Filipíny stanou úspìšnìjším místem støetnutí.\n>
+<PalauDb>(*JA)	<Výšiny Umurbrogol se staly høbitovem pro Amerièany z 1.divize námoøní pìchoty. Stovky, možná tisíce jich zahynuly pro tento kus skály, která nemá žádný strategický význam. Teï se mùžeme zaèít pøipravovat k nadcházejícímu støetnutí na Filipínách, abychom pøipravili nepøíteli ještì vìtší komplikace a zpùsobili mu mnohem tìžší ztráty.\n>
+<PalauBr>(*US) <Operace "Stalemate" zaèala. Po úderu na Mariánské ostrovy se naše skupina letadlových lodí pøibližuje k ostrovùm Palau, aby zabezpeèila naše levé køídlo u Filipín a ostrovu Tchajwan. Rupertovy mariòáci se vylodí na Peleliu, opevnìném ostrovu, s cílem vyøadit letištì a neutralizovat posádku a vyèistit naše levé køídlo od námoøních a leteckých sil nepøítele.>
+<PalauVictoryDb>(*US)	<Peleliu padl na kolena. Utrpìli jsme ztráty, ale celá operace byla provedena velmi efektivnì. Dobrá práce! Nikdo nás nebude ohrožovat z levého køídla na naší cestì k Manile a Taipei.\n>
+<PalauDefeatDb>(*US)	<Mìli bychom pøipomenout generálnímu štábu, že americká námoøní pìchota není bìžnou nízkorozpoètovou jednotkou, kterou je možno nasazovat v bezmyšlenkovitých a krvavých útoèných operacích jako byla tato. Ještì nìkolik podobných akcí a mùžete se vsadit, že si naši vojáci budou pøipomínat boj na "Krvavém høbetì" a øece Tenaru, jako ztracené dobré èasy… Nemùžeme již více pøipustit takové marné obìti.\n>
+<PalauDb>(*US)	<Peleliu byl tìžkou zkouškou pro naše vojáky. Ztráty byly vysoké. Pochopitelnì že teï už není na Peleliu ani jeden živý Japonec, ale zaplatili jsme za to vysokou cenu. To nás pouèilo, že bychom nemìli využívat cennou námoøní pìchotu jako potravu pro kulomety k dosažení takøka neznatelných úspìchù. Pohnìme se kupøedu!\n>
+
+
+
+<IwoBr>(*JA) <Po týdnech odvážného vzdoru náletùm nepøítele, bombardujícího naši vlast, se ostrov Iwodžima ocitl pod hrozbou napadení. Naštìstí generál Tadamièi Kuribajaši o tom ví a pøetvoøil malý ostrov v gigantickou pevnost. Slíbil bojovat do posledního muže: vy jako vojenský pilot máte za povinnost ctít odvahu vašich pøedchùdcù samurajù tím, že zpùsobíte co nejtìžší úder americkému námoønictvu. Pokud armádní i námoøní letectvo dobøe splní své úkoly, tak se Iwodžima stane pohøebištìm tisícù a tisícù západních ïáblù. Vycházející slunce musí vyjít hrdé a vítìzné nad výšinami Suribaèi!>
+
+<IwoVictoryDb>(*JA)	< Ustoupili jsme, ale bojovali jsme brilantnì! Fakticky jsme neprohráli a jsme si jisti, že Iwodžima bude v historii zapsána jako další slavné vítìzství Císaøství. Podívejte se na nìkolik málo amerických hlášení, které jsme získali a zjistíte, že Iwodžima se stala pro Amerièany ne vítìzstvím, ale krvavou lázní! Doufejme, že budou Amerièané pokraèovat v takovéto strategii, pokud se to bude opakovat, pak nemají žádné šance na vítìzství!\n>
+
+<IwoDefeatDb>(*JA)	<Naneštìstí obránci Iwodžimy nestaèili odolat silám nepøítele, se kterými se støetli na tomto malém ostrovì. Krvavé boje na Iwodžimì si vzaly tisíce životù vojákù zla, ale také tisíce odvážných samurajù. Osud se musí pøiklonit na naši stranu, když vidí takový beznadìjný boj, ale uvidíme…\n>
+
+<IwoDb>(*JA)	<Iwodžima padla do rukou nepøítele, ale to se neobešlo bez vítìzného pokøiku Kuribajaši-san. Žádný ze samurajù se nevzdal, všichni umøeli se ctí, kterou jim pøedepisuje kodex samurajù - Bušido. Císaø je hrdý na své udatné padlé syny. Vìèná sláva Císaøství a našemu císaøi!\n>
+
+<IwoBr>(*U*)	<Ostrov Iwodžima - dotìrná pøekážka stojící na cestì B-29 z Marian do Japonska. Budeme muset tento nepøíjemný vøed vyøíznout, obsadit jej. Jelikož se nemusíme bát ani nepøátelského letectva ani námoønictva, bude námoøní letectvo pomáhat ve vyèištìní vzdušného prostoru pøed výsadkem a podporovat pozemní jednotky po jejich vylodìní. V následujících dnech se budete jako peèovatelky starat o námoøní pìchotu. Avšak nejdøíve musíte zlikvidovat hrozbu napadení nepøátelskými letadly, nacházejícími se v této oblasti. Buïte pøipraveni èelit japonským vojenským pilotùm, kteøí nemají co ztratit. Pospìšte si chlapci!>
+
+<IwoVictoryDb>(*U*) <Dobrá práce chlapci, je to skvìlý výsledek pro naše vojáky po týdnech krvavých bojù. Vybojování vítìzství nám zabralo trochu více èasu, než jsme oèekávali, ale dosáhli jsme ho. Posádka LeMayových B-29 vám dìkují za vaši profesionalitu. Odvedli jste skuteènì skvìlou práci!\n>
+
+<IwoDefeatDb>(*U*) <Iwodžima byl krvavou lázní. Ztratili jsme tisíce životù jenom proto, aby Superpevnosti mìli další letištì pro tankování! Vypadá to, že námoøní pìchota je pouze laciné maso, které se hodí k plnìní hloupých strategických rozhodnutích.\n>
+
+<IwoDb>(*U*)	<Ztratili jsme stovky a stovky mariòákù. Další ostrov, další jatky - vzdají se vùbec nìkdy tito japonští ïáblové? Výsledkem je, že B-29 tady nyní mohou pøistávat, aby natankovali a provedli opravy, ale mùžeme se vsadit, že naše Superpevnosti budou ještì dlouho cítit tíhu smrti pokaždé, když budou pøistávat na této krvavé vzletové a pøistávací dráze…\n>
+
+<OkinawaBr>(*JA) <Pøed nìkolika dny byla spatøena nepøátelská flotila jak míøí smìrem na Okinawu. Nepøátelské bitevní lodì vèera veèer zahájily palbu a ostøelovali naše pozice po celou noc. Musíme reagovat velice rychle a udeøit na americkou námoøní flotilu! Generální štáb pøikázal zintenzívnit nálety kamikaze, které budou potøebovat ochranu na jejich cestì k cíli. Ujistìte se, že naše stateèné hrdiny nebudou, na jejich cestì k cílùm, obtìžovat nepøátelští stíhaèi a splní tak svoji božskou povinnost.>
+
+<OkinawaVictoryDb>(*JA)	<Zasadili jsme Amerièanùm tvrdou ránu. Stovky lodí byly potopeny a tisíce vojákù námoøní pìchoty a námoøníkù zahynulo pod našimi bombami a pod útoky našich hrdinných kamikaze! To se zapíše velkým písmem do naší historie a budoucí pokolení nám podìkují za naše úsilí. Nyní se Amerièané zamyslí nad tím, zda stojí za to ohrožovat svými vojáky naši svatou zemi!\n>
+
+<OkinawaDefeatDb>(*JA)	<Okinawa padla rychleji, než jsme oèekávali. Zajisté to nemá vliv na naše rozhodnutí bojovat, ale dosud hledáme zázraènou zbraò, která mùže naše nepøátele zastavit od útoku na naši svatou zem. V každém pøípadì, pokud nás bohové zkouší, nasadili jsme všechny síly abychom zasadili Amerièanùm co nejvìtší ránu!\n>
+
+<OkinawaDb>(*JA) <Okinawa i pøes náš hrdinný odpor padla. Pøesto jsme Amerièanùm dali hoøkou lekci a ztráty mezi útoèníky byly velmi vysoké. Ještì jeden takový výsadek a Amerièané budou zcela demoralizováni! Nyní jasnì pochopili jaké obìti je èekají, pokud se znovu pokusí poskvrnit naše svaté ostrovy!\n>
+
+<OkinawaBr>(*U*) <Zítra zaútoèíme na Okinawu, hlavní japonské postavení v tomto regionu. Tento úder bude svým zpùsobem generální zkouškou pøed naší plánovanou invazí na domovské ostrovy Japoncù - jak víte je to náš hlavní cíl. Jako vždy budou svazy letadlových lodí USA a Velké Británie zajišovat vzdušnou ochranu a bojové hlídky v prostoru nad cílem. Protože se japonská situace stále zhoršuje, buïte pøipraveni èelit masovému nasazení náletù kamikaze. Letadla sebevrahù nesmí proniknout pøes naši obranu jinak nás èekají ohromné ztráty!>
+
+<OkinawaVictoryDb>(*U*)	<Naše ztráty na Okinawì byly mnohem menší než jsme oèekávali. To je dobré znamení, které ukazuje na to, že je možno úspìšnì zaútoèit na domovské ostrovy Japoncù. Pojïme se pøipravit na závìreèné útoky, které budou brzy následovat.\n>
+
+<OkinawaDefeatDb>(*U*)	<Okinawa se pro nás stala krvavým ostrovem. Ztratili jsme mnohem více lidí, než jsme pùvodnì oèekávali. Horší je, že bojový duch Japoncù sílí. Jak ho máme zlomit? Jestliže to tak pùjde i nadále budeme muset pøemýšlet o nìèem, co pomùže vyhnout se obìtem a ukonèit tuto nekoneènou válku.\n>
+
+<OkinawaDb>(*U*) <Okinawa je dobyta - ale stálo nás to tisíce životù Amerièanù a Britù. Takový výsledek nás velmi znepokojuje a nutí nás pøemýšlet o proveditelnosti invaze na domovské ostrovy Japoncù. Bohužel, zdá se, že to je jediné øešení, které pøinutí japonskou vládu kapitulovat.\n>
+
+
+
+<Guadal1Br>(nUS) <Od kvìtna okupují japonské síly centrální ostrov Šalomounských ostrovù. Pøed nedávnem dokonce zaèali stavìt letištní dráhu, která hned jak bude dokonèena, bude pøedstavovat reálné nebezpeèí pro naše síly. Cílem operace "Watchtower" je pøevzít kontrolu nad ostrovy a vyhnat Japonce pokud možno co nejdále od Guadalcanalu. Poletíte do oblasti Tulagi a zajistíte vzdušný kryt našemu výsadku. Námoøní pìchota generála Vandergrifta bude ostøím naší první skuteènì rozsáhlé operace ve válce v Pacifiku - a vìøíme, že uspìjeme. Oèekávejte silnou leteckou aktivitu nepøítele, budeme muset èelit elitì japonského námoøního letectva v Rabaulu: transportní lodì musí být ochránìny za každou cenu!>
+
+<Guadal1Db>(nUS) <Dnes brzy ráno pronikly nepøátelské køižníky do prùlivu mezi ostrov Savo a Guadalcanal a zpùsobily neuvìøitelné škody našim eskortním silám. Nemùžeme již naše lodì dále ohrožovat. Admirál Fletcher pøikázal ustoupit našemu svazu letadlových lodí, který se bude pøipravovat na další konfrontaci s japonským Spojeným loïstvem.\n>
+
+<Guadal2Br>(mUS) <Henderson Field na Guadalcanalu je v provozu. Letectvo námoøní pìchoty se na nìj pøesune a zahájí v nejbližší dobì operaèní èinnost. Máte za úkol chránit letištní dráhu, jak pøed útoky nepøátelského letectva, tak i námoønictva. Snažte se narušit nepøátelské zásobování a odlehèit tak našim chlapcùm na zemi. Pokud se vám podaøí ubránit letištì, tak nám nebude nic pøekážet v obranì ostrova.>
+
+<Guadal2Br>(aUS) <Od té doby co je Henderson Field v provozu, dokázalo vojenské letectvo námoøní pìchoty udìlat kus práce, jednak pøi jeho obranì a také pøi narušení systému zásobování Japoncù. Vaše køídlo co nejdøíve pøistane na tomto letišti a okamžitì zahájí letecké operace, aby pomohlo námoønímu letectvu a letectvu námoøní pìchoty pøi plnìní jejich úloh. Braòte letištì, kryjte útoky na japonské lodì a zajišujte vzdušnou podporu pozemním jednotkám.>
+
+<Guadal2VictoryDb>(*US)	<Skvìlá práce! Obsazení Guadalcanalu probìhlo podle plánu. Mùžete být pyšní na své úspìchy - ujišuji vás, že po tomto rozhodujícím prùlomu se již naše vojska nevrátí k obranì. Ale mìjte na pamìti, že boj o vítìzství teprve zaèíná, proto nepolevujte ve svém úsilí!\n>
+
+<Guadal2DefeatDb>(*US)	<Ouha, i když americká vojska chrabøe odolávala pøesile Japoncù, tak naše vzdušné a námoøní síly nebyly schopny zajistit dostateènou ochranu a tolik potøebné zásobování ke zlomu tohoto krvavého patu na vítìzství. Probíhá transport posledních amerických vojákù, mnoho z nich je buï otøeseno japonskou krutostí nebo nemocných díky nehostinným podmínkám v Guadalcanalu. Co za hoøký konec našeho odvážného snažení… Kdo ví, kdy budeme moci opìt pøejít do ofenzívy? Doufejme, že díky této nepodaøené operaci jsme neohrozili Austrálii…\n>
+
+<Guadal2Db>(*US) <Vítìzství! Bolavé vítìzství, ale pøeci jen vítìzství. Pod rouškou noci opustili poslední japonští vojáci Guadalcanal. Po dlouhých mìsících urputných bojù mohou být vyèerpaná americká armáda a námoøní pìchota hrdé na svou mimoøádnou chrabrost, kterou ukázaly bìhem této operace. Dobrá práce - ale èeká nás ještì dlouhá a trnitá cesta do Tokia!\n>
+
+<Guadal1Br>(*JA) <Brzy ráno bylo spatøeno severnì od pobøeží Guadalcanalu poèetné americké loïstvo. Nepøátelské lodì zaèaly ostøelovat naše pozice na Guadalcanalu a Tulagi, pøed vlastním vylodìním, které pøekvapilo naše stateèné vojáky. Admiralita nemùže neèinnì pøihlížet této situaci. Dálkové stíhací letouny A6M z Tainanu zajistí doprovod letounùm G4M a bombardérùm D3A na jejich cestì k cíli. Pøíliš velká vzdálenost mezi Rabaulem a Guadalcanalem pøinutí naše stíhaèe pøistát na letových drahách v Bougainville po cestì na Guadalcanal a zpìt. Buïte si jisti, že udìláme vše co bude v našich silách, abychom zachránili posádky, které nouzovì pøistanou po vyèerpání paliva.>
+
+<Guadal1VictoryDb>(*JA)	<Amerièané se tady na Guadalcanalu pokusili zmìnit prùbìh války, ale díky vám a všem vašim spolubojovníkùm se jim to nepodaøilo. Zbylí ameriètí vojáci se bìhem nìkolika dní vzdají našim vítìzným silám. Poznali jste, že úspìch mùže být dosažen pouze tehdy, pokud vìøíte sám sobì, mladý samuraji! Císaø a celé Japonsko oslavují vaše ohromující vítìzství a blahopøejí vám, že jste splnil svou povinnost s neoblomnou vùlí.\n>
+
+<Guadal1DefeatDb>(*JA)	<Bez ohledu na úsilí, naši piloti a námoøníci nedokázali odolat vojenské pøevaze Amerièanù. Takovouto situaci nemùžeme akceptovat a tìžce ohrožuje naše pozice v jižním Pacifiku. Okamžitì se hlaste na velitelství námoøního letectva pro nové umístìní vaší letky. Nesmíme Amerièanùm dovolit tìžit z jejich úspìchu.\n>
+
+<Guadal1Db>(*JA) <Nedokázali jsme ubránit Guadalcanal pøed Amerièany. Dnes v noci rychlé èluny evakuovaly naše poslední síly z Tassafarongy. Utrpìli jsme tìžkou porážku, ale velká èást Šalomounových ostrovù je stále pod naší kontrolou, pokusíme se o opìtovné získání ostrova a zasadíme Amerièanùm takovou ránu ze které se již nevzpamatují!\n>
+
+
+
+<ChichiBr>(*U*) <Dnes budou naším uskupením letadlových lodí provádìny hromadné útoky na Èièidžimu, nejdùležitìjší japonský obranný bod Boninských ostrovù, hned po Iwodžimì. Samozøejmì, že si pøed možným vylodìním v této oblasti, musíme udìlat pøedstavu o obranných pozicích na tomto malém ostrovì. Potrapte posádku na ostrovì, sestøelte jakýkoliv letoun, který spatøíte a proveïte vzdušný prùzkum v cílové oblasti.>
+
+<ChichiVictoryDb>(*U*) <Jestliže Èièidžima døíve pøedstavovala hrozbu, už tomu tak není. Vaše nálety se ukázaly smrtelnými pro nepøátelská vojska a fotografický materiál, který jste shromáždil, byl klíèovým k získání pøesných informací o obranných pozicích nepøítele na ostrovì. Skvìlá práce! Nyní obrame pozornost na Okinawu...\n>
+
+<ChichiDefeatDb>(*U*) <Èièidžima vùbec nestála za to, co jsme museli zaplatit za shromáždìní nìkolika málo zpravodajských informací o nìm. Vše co s urèitostí víme je, že Èièidžima je velice dobøe bránìn a Japonci ho neopustí bez lítého boje...\n>
+
+<ChichiDb>(*U*) <Skvìlá práce. Nehledì na malé ztráty uštìdøili jsme japonským silám na Èièidžimì tvrdou ránu. Navíc jsme si jisti, že zrovna tento ostrov je hlavním komunikaèním a zásobovacím centrem v souostroví - pøíštì až se sem vrátíme, budeme vìdìt kam máme nejdøíve udeøit.\n>
+
+<ChichiBr>(*JA) <Poslední hlášení zpravodajské služby ukazuje na to, že nepøátelská flotila se pøibližuje k souostroví Bonin, aby zasadila úder na naše základny na Iwodžimì a Èièidžimì. Plukovník Masaki a major Horie na Èièi doufají, že budete úèinnì chránit naše dùležité komunikaèní a zásobovací centrum pøed nepøátelskými vzdušnými operacemi. Zajistìte, aby neopustili Èièi bez hoøké pøíchuti porážky.> 
+
+<ChichiVictoryDb>(*JA) <Bìhem nìkolika posledních dní bylo sestøeleno velké množství amerických letadel. Díky vašemu odvážnému vzdoru se zdá, že zbývající nepøátelské vzdušné síly ustoupily od dalších náletù. Amerièani se brzy vrátí a vìøte, že budou mnohem ménì domýšliví a sebejistí než pøedtím...\n> 
+
+<ChichiDefeatDb>(*JA) <Naše vzdušná obrana Èièidžimy byla smetena nepøítelem. Nemùžeme se rovnat zkušeným americkým pilotùm, kteøí nám uštìdøili na nebi nad ostrovem lekci letového mistrovství. Musíme velice rychle pøeskupit své síly, jestliže se chceme vyhnout dalšímu rozèarování až se tito ïáblové doopravdy vrátí! \n>
+
+<ChichiDb>(*JA) <Utrpìli jsme tìžké ztráty, když jsme bránili naše vojska na Èièidžimì, ale i Amerièané zaplatili vysokou cenu. Podle mého mínìní mùžeme hovoøit o nerozhodném výsledku, nebo žádná strana nedosáhla svého. Pøinejmenším nyní námoøní flotila USA ví, že obsazení tìchto ostrovù nebude procházkou rùžovým sadem ...\n > 
+
+<LeyteBr>(*U*) < >
+<LeyteVictoryDb>(*U*) < >
+<LeyteDefeatDb>(*U*) < >
+<LeyteDb>(*U*) < >
+
+<LeyteBr>(*JA) < >
+<LeyteVictoryDb>(*JA) < >
+<LeyteDefeatDb>(*JA) < >
+<LeyteDb>(*JA) < >
+
+<Japan1Br>(aUS) <Nové letecké základny na Marianách jsou pøíležitostí, které nemùžeme odolat. Nyní, když máme k dispozici v dostateèném množství nové moderní B-29 "Superfortress", mùžeme pomýšlet o zahájení metodického bombardování Japonska, takovém které provádí 8.vzdušná armáda na Nìmecko. Dolet Mustangu plnì dostaèuje na zajištìní efektivního doprovodu bombardéru nad japonské ostrovy a zpìt a navíc letecké hlídkování pomùže neutralizovat jakékoliv letecké akce nepøítele. Naším hlavním cílem budou prùmyslová centra. Máte urèen sektor Kjúšú, dùležité vojenské a námoøní centrum. Ukažte Japoncùm, že nikde nebudou v bezpeèí, pokud budou beznadìjnì vzdorovat naší nesporné vzdušné nadvládì.>
+
+<Japan1VictoryDb>(aUS) <Blahopøeji vám dùstojníci. Díky vaší úèinné podpoøe utrpìli Japonci tìžké ztráty jak na zemi, tak i ve vzduchu. Naše bombardéry zpùsobily japonskému prùmyslu a armádì velké škody, obracejíce Kjúšú v hoøící ostrov. Nepøátelští stíhaèi již nevzlétají na pøepady, což svìdèí o tom jak je, díky vašemu úsilí, morálka japonské armády nízká.\n>
+
+<Japan1DefeatDb>(aUS) <Nepøedpokládali jsme, že se nepøítel bude bránit s takovou silou našim bombardérùm. Jak se ukázalo nepøátelští stíhaèi dokáží sestøelit B-29 bez ohledu na jeho silnou výzbroj. Pokud by byli naši vlastní stíhaèi mnohem úèinnìjší pøi obranì bombardérù, pak by naše ztráty byly nižší. Musíme se zamyslet nad novou strategií - Japonsko nám dokáže stále ještì odolávat!\n>
+
+<Japan1Db>(aUS) <Generál Lemay se spoléhá na to, že množství našich bombardérù vykompenzuje jejich nízkou pøesnost. Je to tak, nedokázali jsme trefit naše hlavní cíle, protože se úèinnost B-29 ukázala nízkou. Naštìstí naši stíhaèi odvedli dobrou práci a nepøátelští stíhaèi utrpìli velké ztráty.\n>
+
+<Japan1Br>(nUS) <Naše flotila letadlových lodí musí vyèistit Kjúšú od nepøátelských letadel, ještì pøed naší pøíští ofenzívou v západním Pacifiku. Budete útoèit na ostrovy s leteckými základnami nebo jakýmkoliv jiným zpùsobem pùsobit nepøíteli škody a být užiteèný našemu velení: nièit nepøátelská letadla, útoèit na konvoje, vlaky, lodì, uložištì paliva a vojenská zaøízení. Likvidace námoøních a vzdušných sil nepøítele - náš prvoøadý cíl. Nezapomeòte zabezpeèit úèinnou vzdušnou ochranu našich letadlových lodí, nebo ještì nikdy pøedtím v této válce nebyly americké váleèné lodì tak blízko japonského pobøeží.>
+
+<Japan1VictoryDb>(nUS) <Dobrá práce, pilote! Dobøe jste se vypoøádali s japonskými leteckými základnami. Kjúšú je pokryt stovkami úlomkù japonských letadel, pøístavy jsou plné pøevrácených trupù lodí Císaøského námoønictva. Nyní mùžeme zahájit plánovanou invazi na západním válèišti beze strachu z vážného odporu nepøítele ve vzduchu.v>
+
+<Japan1DefeatDb>(nUS) <Naše údery na Kjúšú nebyly moc úèinné. Sestøelili jsme mnoho letadel, ale i nepøítel dokázal získat nadvládu ve vzduchu nad ostrovy. Kromì toho lodì japonského Císaøského námoønictva zakotvené v pøístavech byly jen velice málo nebo vùbec poškozeny. Za tyto chabé výsledky jsme zaplatili nepøimìøenì vysokou cenu a naše lodì museli èelit tìžkým útokùm armádního letectva nepøítele. Napøíštì si budeme dobøe pamatovat výsledky této nepodaøené operace.\n> 
+
+<Japan1Db>(nUS) <Odvedli jste skvìlou práci pøi nièení cílù na Kjúšú. Nepøátelské vojenské letectvo utrpìlo znaèné ztráty, i když se Japonci snažili uklidit podstatnou èást svých sil z dosahu našich letadel. Naše ztráty byly minimální, když uvážíme jak blízko jsme byli u domovských ostrovù Japoncù - s tímto faktem je nutno poèítat až se sem v pøíštím kole vrátíme.\n>
+
+<Japan1Br>(*JA) <Synové slunce, poprvé po staletích válek, se naše vlast ocitla v pøímém ohrožení nepøítele. Síly zla dokázaly zprovoznit nìkolik leteckých základen tisíce kilometrù odtud, které nyní využívají nepøátelské tìžké bombardéry, vzlétající k náletùm na naše domovské ostrovy. Navíc nepøátelská flotila letadlových lodí se pøipravuje zaútoèit na naše základny pøedtím než zaútoèí na naše území. Kjúšú, jako nejjižnìjší ostrov našeho souostroví, je nejzranitelnìjším cílem. Musíte bránit jak jižní pobøeží Honšú, tak i odrážet jakékoliv útoky nepøítele na Kjúšú a na jeho severní mìsta a prùmyslová centra. Jediný americký letoun nesmí beztrestnì uniknout pøed hnìvem našich chrabrých stíhaèù z naší posvátné zemì.>
+
+<Japan1VictoryDb>(*JA) <Samurajové, dokázali jste ochránit èistotu našeho nebe pøed poskvrnìním západními barbary. Letky B-29 utrpìly znaèné ztráty efektivními akcemi a taktikou našich stíhaèù. Nepøátelská kampaò strategického bombardování totálnì selhala, nebo nebyla schopna zastavit náš prùmysl a zlomit morálku našeho civilního obyvatelstva. Více než to, hanebný pokus amerického námoønictva udeøit na naše obranná postavení na pobøeží, se zvrátil na jatky pro americké posádky. Císaø je na vás hrdý!\n>
+
+<Japan1DefeatDb>(*JA) <Kjúšú hoøí, letky našich stíhaèù nedokázaly vzdorovat nepøátelské agresi. Tuny a tuny bomb padaly na naše mìsta a nepøátelské bombardéry se beztrestnì vracely na své základny. Kromì toho americká armáda a námoønictvo zpustošily naše letecké základny a znièily na zemi stovky stíhacích letadel, s minimálními vlastními ztrátami. Takováto situace nás nutí k mimoøádným obìtem, pokud si chceme zachovat èest a šanci na vítìzství.\n>
+
+<Japan1Db>(*JA) <Utrpìli jsme tìžké ztráty po bombardování, ale i nepøátelské B-29 zaplatily svùj díl. Bombardéry padaly jako suché listí po celém Kjúšú, jako dùkaz naší smrtelné úèinnosti. Ale pokud se jich chceme zbavit navždy, pak musíme vyvinout ještì vìtší úsilí.\n>
+
+
+
+<SantaCruzBr>(*U*) <Admirál Kinkaid dostal rozkaz pøepadnout uskupení letadlových lodí nepøítele severnì od ostrovù Santa Cruz, které jak pøedpokládáme zajišuje vzdušné krytí ohromnému pøevezení zásob. TF16 a TF17 jsou momentálnì jedinými dostupnými silami námoøního letectva, jelikož letadlové lodì Wasp a Saratoga byly vyøazeny po útocích nepøátelských ponorek. Protože nemáme žádné informace o souèasné poloze nepøátelských sil, budou letecké skupiny provádìt intenzivní prùzkumné mise v oblasti, zatímco letadla z Henderson Field budou vyhledávat a nièit nepøátelské transporty, které každý den proplouvají prùlivem. Pokuste se tvrdì zasáhnout na nepøátelské letadlové lodì bez zbyteèného riskování našich vlastních sil.>
+
+<SantaCruzVictoryDb>(*U*) <Admirál Halsey je na vás pyšný chlapci! Admirálu Kinkaidovi se podaøilo zasadit tvrdý úder nepøátelské divizi letadlových lodí, aniž by riskoval ztrátu našich cenných letadlových lodí. Nepøátelské letecké skupiny jsou vyèerpány a transporty se vypravují takøka bez ochrany - letectvo námoøní pìchoty z nich brzy udìlá hoøící vraky, pokud se odváží objevit. Tohle byla zajisté poslední japonská ofenzíva smìrem na Guadalcanal - vojáci námoøní pìchoty jsou rádi, že jste je zahnali zpìt!\n>
+
+<SantaCruzDefeatDb>(*U*) <Nepodaøilo se nám zpùsobit vážnìjší škody nepøátelské flotile. Mnohem horší je, že jsme zcela ztratili naše letadlové lodì v oblasti a ponechali Henderson Field a prùliv bez letecké ochrany. Nyní má nepøítel volné ruce k bezpeènému pøevezení zásob - doufejme, že naše hrdinné pozemní jednotky a námoøní pìchota dokáží úspìšnì bojovat i bez naší podpory.\n>
+
+<SantaCruzDb>(*U*) <Ztráty byly na obou stranách ohromné, svazy letadlových lodí papírovì vyøadily jeden druhého z akce. Nevím zda-li mùžeme hovoøit o vítìzi nebo poraženém - koneèného vítìze urèí až boje kolem Guadalcanalu.\n>
+
+<SantaCruzBr>(*JA) <Admirál Jamamoto vypracoval plán, který by mìl pøivést kampaò u Šalomounových ostrovù k rychlému a úspìšnému konci. Cílem je opìt nepøátelská flotila letadlových lodí, ve které je nyní pouze pár tìchto lodí v operaèní èinnosti - díky našim ponorkám, kterým se podaøilo potopit Wasp a Saratogu. 5.svaz letadlových lodí bude vyhledávat a nièit nepøátelské letadlové lodì, aby vyèistil Guadalcanal od letadel amerického námoønictva. Mezitím naše pozemní jednotky vyøadí z provozu Henderson Field s pomocí tìžkých lodních dìl a zabezpeèí pøístup z moøe na Lunga Point, na který se za pár dní naše jednotky vylodí. Hned jak bude zajištìn prostor u Tassafarongy, zahájíme rozhodující ofenzívu proti námoøní pìchotì Henderson Field a nadobro je smeteme ze zálivu Aola do moøe.>
+
+<SantaCruzVictoryDb>(*JA) <Piloti a námoøníci Císaøského loïstva, jsme pyšní na vaše odvážné akce! Rozdrcením nepøátelské flotily jste našemu protivníkovi ukázali udatnost naší Kidó Butai. Nyní když jsou nepøátelské letadlové lodì na dnì oceánu, se naše pozemní síly v Guadalcanalu pøipravují k poslední ofenzívì, která smete opuštìnou námoøní pìchotu. Skvìlá práce!\n>
+
+<SantaCruzDefeatDb>(*JA) <Kvùli našemu nezdaru se pro nás situace v Guadalcanalu stává nebezpeènou. Všechny naše nadìje se ubírají k admirálu Abe, jehož vojska se pokusí porazit nepøátelské pozemní jednotky - úkol velmi nesnadný, protože nepøátelské jednotky jsou silnì podporovány námoøním letectvem, které se nám nepodaøilo dnes vyøadit z akce.\n>
+
+<SantaCruzDb>(*JA) <Nepøítel utrpìl tìžké ztráty, ale nás toto úsilí stálo také mnoho spolubojovníkù, kteøí padli ve vzduchu a na moøi. Nepøátelské lodì byly bránìny novým typem rychlopalných protiletadlových kanónù, které mìly devastující úèinek na naše útoèící letouny. Pøesto zvrátila stateènost našich posádek toto støetnutí ve velké vítìzství, které je odplatou za Midway. Nyní když Kidó Butai udìlalo svou práci, pøišel èas, aby admirál Abe a jeho pozemní síly zasadily poslední úder ve vodách Guadalcanalu.\n>
+
+
+
+<MarianasBr>(nJA) <Pøedpokládali jsme, že nepøítel nejdøíve zaútoèí na Palauské ostrovy - mýlili jsme se. Americké lodì se pøibližují k Marianám, ale my jsme pøipraveni. Plán admirála Tojody spoléhá na to, že naši stíhaèi z pozemních základen oslabí úsilí nepøítele v prvních dnech bitvy. Mezitím pøiplují lodì admirála Ozawy, aby potlaèily zbývající odpor nepøátelských námoøních sil. Je to dobrý plán s velkými šancemi na úspìch, pokud armáda i námoønictvo splní své zadané úkoly.>
+
+<MarianasBr>(aJA) <Pøedpokládali jsme, že nepøítel nejdøíve zaútoèí na Palauské ostrovy - mýlili jsme se. Americké lodì se pøibližují k Marianám, ale my jsme pøipraveni. Poèetné armádní letecké jednotky jsou rozmístìny na Guamu, Saipanu a Tinianu a èekají až se objeví západní ïáblové. Jakmile budou nepøátelská letadla objevena, zaútoète na nì bez váhání a odlehèete tak našemu Spojenému loïstvu, lodím a leteckým osádkám, které se vypoøádají s operaèními skupinami nepøítele. Vìøíme, že se vám podaøí zvrátit toto støetnutí v drtivou porážku nepøítele.>
+
+<MarianasVictoryDb>(*JA) <Blahopøeji samurajové! Akce Kidó Butai byly smrtelnì úèinné a západní ïáblové dostali tvrdou lekci. Bylo potopeno mnoho nepøátelských lodí a invaze na Mariánské ostrovy byla odložena. Admirálové Tojoda, Ozawa, Kurita a Nagumo brzy vypracují nový plán ofenzívy s cílem pøevzít iniciativu ve støedotichomoøské oblasti. Možná, že vítìzství není již daleko!\n>
+
+<MarianasDefeatDb>(*JA)	<Znal jsem dùstojníky, kteøí spáchali seppuku z ménì podstatnìjších dùvodù ztráty cti než máme my. Støet na Mariánských ostrovech místo toho, aby byl velkým vítìzstvím se stal drtivou porážkou! Naše loïstvo se už možná nikdy nevzpamatuje ze ztrát, které utrpìlo po útocích nepøátelské letadlové flotily. Musíme pøeskupit naše síly pøed naším posledním zoufalým pokusem…\n>
+
+<MarianasDb>(*JA) <Nepodaøilo se nám zpùsobit nepøíteli znatelné ztráty, navíc jsme ztratili znaènou èást našich palubních letadel. Je to èerný den pro naše loïstvo, i když ztráty nebyly až tak velké. V každém pøípadì se musíme zamyslet o našich budoucích operacích: Císaøské loïstvo má stále sílu, aby úèinnì vzdorovalo americkým pokusùm obsadit Filipíny. Ale pokud si chceme stále udržet šance na vítìzství, nesmíme dopustit už žádnou porážku.\n>
+
+<MarianasBr>(*US) <Mariánské ostrovy jsou naším dalším cílem. Cílem operace "Forager" je obsazení tøí hlavních ostrovù tohoto souostroví, které poslouží jako pøedsunuté základny pro námoøní síly a strategické letectvo. Stejnì jako v pøedchozích útoèných operacích, musíte vyøadit z èinnosti letecké základny nepøítele a zabezpeèit ochranu našim výsadkùm. Uvìdomte si, že nynìjší cíle nejsou atoly, ale skuteèné ostrovy s velkým množstvím opevnìní a obrannými pøekážkami. Také doufáme, že bìhem operace se s námi pustí do boje operativní japonská flotila. Musíte být pøipraveni k zajišování vzdušné ochrany vlastních vojsk a k výzvìdným letùm tak dlouho, dokud se nám nepodaøí najít jádro hlavních sil nepøítele. Pokud se tak stane, tak se støetnutí u Marian musí stát zlým snem pro japonské operativní loïstvo.>
+
+<MarianasVictoryDb>(*US) <Dobrá práce, chlapci. Guam, Saipan a Tinian byly obsazeny s mnohem menšími ztrátami než jsme plánovali. Japonská flotila se pokusila vyvolat rozhodující bitvu - skuteènì se jí to podaøilo, ale ne s takovým výsledkem v jaký doufala. Ztráty japonského Císaøského námoønictva byly ohromné, ba mnohem vìtší - byly nenahraditelné. Nejvíce byly postiženy posádky palubních letadel - tisíce japonských letcù, v prùbìhu nìkolika dní bojù, zahynuly. Zasadili jsme japonské Císaøské flotile rozhodující úder, ze kterého se již nikdy nevzpamatují.\n>
+
+<MarianasDefeatDb>(*US)	<Podceòování nepøítele je tragickou chybou, celá operace "Forager" byla chybou. Utrpìli jsme ohromné ztráty, jak na zemi tak na moøi, museli jsme èelit neèekanému nepøátelskému odporu. Byli jsme pøinuceni ustoupit na východ, ponechávajíce ostrovy pod kontrolou Japoncù. Operativní loïstvo ukázalo, že bez ohledu na minulé porážky a ztráty neztratilo bojeschopnost. Jak bolestné rozèarování!\n>
+
+<MarianasDb>(*US) <Guam, Saipan a Tinian jsou osvobozeny. I když pozemní boje probìhly jak bylo plánováno, nehledì na mnohem vìtší ztráty, než jsme oèekávali, zùstala námoøní bitva nerozhodnuta. Bez ohledu na úspìchy našich ponorek a letcù, dokázaly hlavní nepøátelské síly uniknout pouze s malými poškozeními a admirál Spruance nedokázal získat drtivé vítìzství, o které usiloval. Bohužel budeme muset ještì nìkolik týdnù poèkat, než se nám opìt naskytne taková pøíležitost. V každém pøípadì jsme odvedli dobrou práci - nepøítel již nyní nemá skoro žádné posádky letadel.\n>
+
+<SingaporeBr>(nJA)	<Vojáci Císaøského námoønictva, blíží se hodina vaší slávy! Všechny osádky námoøního letectva rozmístìné v Indoèínì, se pøipravily na ofenzivní operace proti Malajskému poloostrovu a proti zlým a despotickým britským silám. Osádky bombardérù udeøí na nepøátelské pøístavy a britské letecké základny a skladištì. Stíhaèi zajistí efektivní vzdušnou obranu nad cílovými oblastmi, proti RAF s jejich letouny Buffalo a Hurricane - zkušenost a letové mistrovství našich výborných pilotù povede k získání vzdušné nadvlády. Všichni do letadel, vìèný život našemu Císaøství!\n>
+<SingaporeVictoryDb>(nJA)	<Nedokázali jsme si pøedstavit, že vítìzství bude tak snadné. Generál Jamašita obratnì velí svým vojskùm, dobyl pevnost Singapur i s posádkou. Armádní letci odvedli skvìlou práci pøi likvidaci britské Dálnìvýchodní flotily a RAF v oblasti. Vláda bílých v tomto regionu je historií, díky vám a vašim spolubojovníkùm! Nyní ještì musíme proniknout do Barmy a Indie - pak si mùžeme klidnì v Kalkatì oddychnout.\n>
+<SingaporeDefeatDb>(nJA)	<Operace neprobíhala dobøe a generál Jamašita nedokázal využít v této ofenzívì, momentu pøekvapení. Britové nás èekali jak ve vzduchu, na moøi tak i na zemi. Nedokázali jsme neutralizovat nepøátelskou flotilu, která zasadila tìžký úder našemu loïstvu a nepodaøilo se nám v souboji s RAF vybojovat vzdušnou nadvládu nad Malajsií. Generální štáb v Tokiu je velmi rozèarován našimi "úspìchy", musí zmìnit své plány, aby vycházely ze souèasné situace.\n>
+<SingaporeDb>(nJA)		<Operace byla složitá, ale nakonec jsme uspìli ve vytlaèení Britù z Malajského poloostrova. Ztráty byly pøimìøené, ale cíl stál za naše obìti. Pevnost Singapur je historií a naše síly nyní mohou postupovat smìrem na Barmu a Holandskou východní Indii, aby dovršily svou práci v jižní Asii.\n> 
+<SingaporeBr>(aJA) <Vojáci Císaøské armády, blíží se hodina vaší slávy! Všechny posádky armádního letectva, rozmístìné v Indoèínì, se pøipravily na ofenzivní operace proti Malajskému poloostrovu a proti povýšeným a sebejistým Britùm. Osádky bombardérù udeøí na nepøátelské pøístavy a britské letecké základny a vojenská zaøízení. Stíhaèi zajistí efektivní vzdušnou obranu nad cílovými oblastmi, proti RAF s jejich letouny Buffalo a Hurricane - zkušenost a letové mistrovství našich výborných pilotù povede k získání vzdušné nadvlády. Všichni do letadel, vìèný život našemu Císaøství!\n>
+<SingaporeVictoryDb>(aJA) 	<Nedokázali jsme si pøedstavit, že vítìzství bude tak snadné. Generál Jamašita obratnì velí svým vojskùm, dobyl pevnost Singapur i s posádkou. Armádní letci odvedli skvìlou práci pøi likvidaci britské Dálnìvýchodní flotily a RAF v oblasti. Vláda bílých v tomto regionu je historií, díky vám a vašim spolubojovníkùm! Nyní ještì musíme proniknout do Barmy a Indie - pak si mùžeme klidnì v Kalkatì oddychnout.\n>
+<SingaporeDefeatDb>(aJA) 	<Operace neprobíhala dobøe a generál Jamašita nedokázal využít v této ofenzívì, momentu pøekvapení. Britové nás èekali jak ve vzduchu, na moøi tak i na zemi. Nedokázali jsme neutralizovat nepøátelskou flotilu, která zasadila tìžký úder našemu loïstvu a nepodaøilo se nám v souboji s RAF vybojovat vzdušnou nadvládu nad Malajsií. Generální štáb v Tokiu je velmi rozèarován našimi "úspìchy", musí zmìnit své plány, aby vycházely ze souèasné situace.\n>
+<SingaporeDb>(aJA) 		<Operace byla složitá, ale nakonec jsme uspìli ve vytlaèení Britù z Malajského poloostrova. Ztráty byly pøimìøené, ale cíl stál za naše obìti. Pevnost Singapur je historií a naše síly nyní mohou postupovat smìrem na Barmu a Holandskou východní Indii, aby dovršily svou práci v jižní Asii.\n>
+<SingaporeBr>(aUK)	<Pøed nìkolika hodinami vyhlásilo Japonsko válku USA útokem na Pacifickou flotilu zakotvenou v Pearl Harboru. Máme dobré i špatné zprávy, dobrou zprávou je, že nyní mùžeme poèítat s pomocí Spojených státù v našem boji proti silám Osy; špatnou je skuteènost, že bìhem následujících dnù bude Malajsie s velkou pravdìpodobností napadena japonskými silami. Musíme být pøipraveni na každou možnost. Dnes veèer vyplují lodì Královského námoønictva ze Singapuru a budou pátrat po nepøátelských transportních lodích. RAF poskytne krytí našim lodím a mìstu Singapur, které velmi pravdìpodobnì bude v brzké dobì èelit náletùm. Úspìch èi neúspìch v Malajsii záleží z velké èásti na posádkách RAF: nezklamte nás a zniète agresora nebo Singapur bude muset bojovat o pøežití.\n>
+<SingaporeVictoryDb>(aUK) 	<Gratuluji, pánové! Japonská chobotnice byla zastavena, na prahu Malajsie. Jamašitova vojska byla zastavena a musela se zakopat, aby dokázala vzdorovat našim protiútokùm. Japonská Císaøská armáda utrpìla svou první porážku, a to hlavnì díky vám a vašim kamarádùm. Nyní když je Singapur v bezpeèí, musíme Japonce nadobro zahnat zpìt domù.\n>
+<SingaporeDefeatDb>(aUK) 	<Nedokázali jsme vzdorovat japonské pøesile. Naše ztráty na moøi a ve vzduchu nám zabránily chránit pobøeží Malajsie pøed nepøátelským vylodìním a Jamašita, který byl nazván "Malajským tygrem" snadno obsadil celý poloostrov a dokonce naši tzv. "pevnost" Singapur. To je katastrofa! Tisíce našich vojákù se musely vzdát bez jediného výstøelu. Zdá se, že britská pøítomnost na Dálném východì se již nikdy neobnoví.\n>
+<SingaporeDb>(aUK) 		<Udìlali jsme co jsme mohli, ale Malajsie a Singapur definitivnì padly po pár týdnech nelítostných bojù a krvavých útokù. Díky našemu schopnému velení nebyly britské jednotky znièeny a ustoupily v dobrém stavu smìrem na Barmu. A tam budeme muset vybojovat naši skuteènou bitvu pro záchranu našeho impéria na Dálném východì!\n>
+<SingaporeBr>(*U*)	<Pøed nìkolika hodinami vyhlásilo Japonsko válku USA útokem na Pacifickou flotilu zakotvenou v Pearl Harboru. Máme dobré i špatné zprávy, dobrou zprávou je, že nyní mùžeme poèítat s pomocí Spojených státù v našem boji proti silám Osy; špatnou je skuteènost, že bìhem následujících dnù bude Malajsie s velkou pravdìpodobností napadena japonskými silami. Musíme být pøipraveni na každou možnost. Dnes veèer vyplují lodì Královského námoønictva ze Singapuru a budou pátrat po nepøátelských transportních lodích. RAF poskytne krytí našim lodím a mìstu Singapur, které velmi pravdìpodobnì bude v brzké dobì èelit náletùm. Úspìch èi neúspìch v Malajsii záleží z velké èásti na posádkách RAF: nezklamte nás a zniète agresora nebo Singapur bude muset bojovat o pøežití.\n>
+<SingaporeVictoryDb>(*U*)	<Gratuluji, pánové! Japonská chobotnice byla zastavena, na prahu Malajsie. Jamašitova vojska byla zastavena a musela se zakopat, aby dokázala vzdorovat našim protiútokùm. Japonská Císaøská armáda utrpìla svou první porážku, a to hlavnì díky vám a vašim kamarádùm. Nyní, když je Singapur v bezpeèí, musíme Japonce nadobro zahnat zpìt domù.\n>
+<SingaporeDefeatDb>(*U*)	<Nedokázali jsme vzdorovat japonské pøesile. Naše ztráty na moøi a ve vzduchu nám zabránily chránit pobøeží Malajsie pøed nepøátelským vylodìním a Jamašita, který byl nazván "Malajským tygrem" snadno obsadil celý poloostrov a dokonce tzv. "pevnost" Singapur. To je katastrofa! Tisíce vojákù Britského spoleèenství národù se muselo vzdát bez jediného výstøelu. Zdá se, že britská pøítomnost na Dálném východì se již nikdy neobnoví.\n>
+<SingaporeDb>(*U*)		<Udìlali jsme co jsme mohli, ale Malajsie a Singapur definitivnì padly po pár týdnech nelítostných bojù a krvavých útokù. Díky našemu schopnému velení nebyly britské jednotky znièeny a ustoupily v dobrém stavu smìrem na Barmu. A tam budeme muset vybojovat naši skuteènou bitvu pro záchranu britského impéria na Dálném východì!\n>
+
+<Singapore2Br>(aJA) <Vojáci Císaøské armády, blíží se hodina vaší slávy! Všechny posádky armádního letectva, rozmístìné v Indoèínì, se pøipravily na ofenzivní operace proti Malajskému poloostrovu a proti povýšeným a sebejistým Britùm. Osádky bombardérù udeøí na nepøátelské pøístavy a britské letecké základny a vojenská zaøízení. Stíhaèi zajistí efektivní vzdušnou obranu nad cílovými oblastmi, proti RAF s jejich letouny Buffalo a Hurricane - zkušenost a letové mistrovství našich výborných pilotù povede k získání vzdušné nadvlády. Všichni do letadel, vìèný život našemu Císaøství!\n>
+<Singapore2VictoryDb>(aJA) <Nedokázali jsme si pøedstavit, že vítìzství bude tak snadné. Generál Jamašita obratnì velí svým vojskùm, dobyl pevnost Singapur i s posádkou. Armádní letci odvedli skvìlou práci pøi likvidaci britské Dálnìvýchodní flotily a RAF v oblasti. Vláda bílých v tomto regionu je historií, díky vám a vašim spolubojovníkùm! Nyní ještì musíme proniknout do Barmy a Indie - pak si mùžeme klidnì v Kalkatì oddychnout.\n>
+<Singapore2DefeatDb>(aJA) <Operace neprobíhala dobøe a generál Jamašita nedokázal využít v této ofenzívì, momentu pøekvapení. Britové nás èekali jak ve vzduchu, na moøi tak i na zemi. Nedokázali jsme neutralizovat nepøátelskou flotilu, která zasadila tìžký úder našemu loïstvu a nepodaøilo se nám v souboji s RAF vybojovat vzdušnou nadvládu nad Malajsií. Generální štáb v Tokiu je velmi rozèarován našimi "úspìchy", musí zmìnit své plány, aby vycházely ze souèasné situace.\n>
+<Singapore2Db>(aJA) <Operace byla složitá, ale nakonec jsme uspìli ve vytlaèení Britù z Malajského poloostrova. Ztráty byly pøimìøené, ale cíl stál za naše obìti. Pevnost Singapur je historií a naše síly nyní mohou postupovat smìrem na Barmu a Holandskou východní Indii, aby dovršily svou práci v jižní Asii.\n>
+<Singapore2Br>(aUK) <Pøed nìkolika hodinami vyhlásilo Japonsko válku USA útokem na Pacifickou flotilu zakotvenou v Pearl Harboru. Máme dobré i špatné zprávy, dobrou zprávou je, že nyní mùžeme poèítat s pomocí Spojených státù v našem boji proti silám Osy; špatnou je skuteènost, že bìhem následujících dnù bude Malajsie s velkou pravdìpodobností napadena japonskými silami. Musíme být pøipraveni na každou možnost. Dnes veèer vyplují lodì Královského námoønictva ze Singapuru a budou pátrat po nepøátelských transportních lodích. RAF poskytne krytí našim lodím a mìstu Singapur, které velmi pravdìpodobnì bude v brzké dobì èelit náletùm. Úspìch èi neúspìch v Malajsii záleží z velké èásti na posádkách RAF: nezklamte nás a zniète agresora nebo bude muset Singapur bojovat o pøežití.>
+<Singapore2VictoryDb>(aUK) <Gratuluji, pánové! Japonská chobotnice byla zastavena, na prahu Malajsie. Jamašitova vojska byla zastavena a musela se zakopat, aby dokázala vzdorovat našim protiútokùm. Japonská Císaøská armáda utrpìla svou první porážku, a to hlavnì díky vám a vašim kamarádùm. Nyní když je Singapur v bezpeèí, musíme Japonce nadobro zahnat zpìt domù.\n>
+<Singapore2DefeatDb>(aUK) <Nedokázali jsme vzdorovat japonské pøesile. Naše ztráty na moøi a ve vzduchu nám zabránily chránit pobøeží Malajsie pøed nepøátelským vylodìním a Jamašita, který byl nazván "Malajským tygrem" snadno obsadil celý poloostrov a dokonce naši tzv. "pevnost" Singapur. To je katastrofa! Tisíce našich vojákù se musely vzdát bez jediného výstøelu. Zdá se, že britská pøítomnost na Dálném východì se již nikdy neobnoví.\n>
+<Singapore2Db>(aUK) <Udìlali jsme co jsme mohli, ale Malajsie a Singapur definitivnì padly po pár týdnech nelítostných bojù a krvavých útokù. Díky našemu schopnému velení nebyly britské jednotky znièeny a ustoupily v dobrém stavu smìrem na Barmu. A tam budeme muset vybojovat naši skuteènou bitvu pro záchranu našeho impéria na Dálném východì!\n>
+<Singapore2Br>(*U*)	<Pøed nìkolika hodinami vyhlásilo Japonsko válku USA útokem na Pacifickou flotilu zakotvenou v Pearl Harboru. Máme dobré i špatné zprávy, dobrou zprávou je, že nyní mùžeme poèítat s pomocí Spojených státù v našem boji proti silám Osy; špatnou je skuteènost, že bìhem následujících dnù bude Malajsie s velkou pravdìpodobností napadena japonskými silami. Musíme být pøipraveni na každou možnost. Dnes veèer vyplují lodì Královského námoønictva ze Singapuru a budou pátrat po nepøátelských transportních lodích. RAF poskytne krytí našim lodím a mìstu Singapur, které velmi pravdìpodobnì bude v brzké dobì èelit náletùm. Úspìch èi neúspìch v Malajsii záleží z velké èásti na posádkách RAF: nezklamte nás a zniète agresora nebo Singapur bude muset bojovat o pøežití.\n>
+<Singapore2VictoryDb>(*U*)	<Gratuluji, pánové! Japonská chobotnice byla zastavena, na prahu Malajsie. Jamašitova vojska byla zastavena a musela se zakopat, aby dokázala vzdorovat našim protiútokùm. Japonská Císaøská armáda utrpìla svou první porážku, a to hlavnì díky vám a vašim kamarádùm. Nyní, když je Singapur v bezpeèí, musíme Japonce nadobro zahnat zpìt domù.\n>
+<Singapore2DefeatDb>(*U*)	<Nedokázali jsme vzdorovat japonské pøesile. Naše ztráty na moøi a ve vzduchu nám zabránily chránit pobøeží Malajsie pøed nepøátelským vylodìním a Jamašita, který byl nazván "Malajským tygrem" snadno obsadil celý poloostrov a dokonce tzv. "pevnost" Singapur. To je katastrofa! Tisíce vojákù Britského spoleèenství národù se muselo vzdát bez jediného výstøelu. Zdá se, že britská pøítomnost na Dálném východì se již nikdy neobnoví.\n>
+<Singapore2Db>(*U*)		<Udìlali jsme co jsme mohli, ale Malajsie a Singapur definitivnì padly po pár týdnech nelítostných bojù a krvavých útokù. Díky našemu schopnému velení nebyly britské jednotky znièeny a ustoupily v dobrém stavu smìrem na Barmu. A tam budeme muset vybojovat naši skuteènou bitvu pro záchranu britského impéria na Dálném východì!\n>
+
+
+<NewGuineaBr>(*JA) <Vybudováním letiš v Lae a Salamaua, jsme si vytvoøili podmínky pro dobytí tìch èástí jižní Nové Guineje, která dosud nejsou pod naší kontrolou. Obsazení Buny je logickým vývojem našeho postupu. Naším dalším úkolem je dobytí opìrného bodu Spojencù - Port Moresby, který musí být získán za každou cenu, buï útokem z moøe nebo z pevniny. Port Moresby musí padnout pod spoleènými údery Císaøského námoønictva a armády, jako kdyby se ocitl mezi moøem a ïáblem. Jakmile Port Moresby bude v našich rukou, nic nám nebude bránit v cestì do Austrálie.>
+
+<NewGuineaVictoryDb>(*JA) <Cesta do Port Moresby je vyèištìná od nepøátel. Americké, australské a novozélandské jednotky nedokázaly vzdorovat našim samurajùm, ovládajícím umìní boje v džungli. Pøíroda byla na naší stranì a pomohla oslabit obranu nepøítele, která nebyla schopna vzdorovat našim zdrcujícím útokùm. Dobrá práce vojáci, síly Impéria se pøipravují vylodit v Austrálii, aby tak završili naše úsilí o získání jižního Tichomoøí.\n>	
+
+<NewGuineaDefeatDb>(*JA) <Spojenecká vojska ukázala, že dokáží bojovat v džungli mnohem efektivnìji, než jsme pøedpokládali. Velice rychle se pøizpùsobila k tomuto typu války a nedala nám jedinou šanci pøevzít iniciativu. Toto støetnutí pro nás bylo od samého zaèátku patovou situací - nebyla žádná šance na vítìzství a mùžeme být rádi, že jsme se dokázali dostat z této nadcházející katastrofy. Pøesuneme naše síly na jiné místo v Pacifiku, které je mnohem dùležitìjší než toto. \n>
+
+<NewGuineaDb>(*JA) <Navzdory našemu úsilí, zùstalo Pohoøí Owena Stanleyho a Milneova zátoka v rukou Spojencù. Nepodaøilo se nám splnit vytýèené úkoly, ale tìžké ztráty zpùsobené silám armády USA, Austrálie a Novozélandského sboru, zdržují osvobozování ostrova a na èas narušily plány Spojeneckého velitelství a koordinaci jeho sil v jižní èásti Nové Guiney. I když prohrajeme válku v džunglích, odejdeme z Nové Guiney s pocitem, že jsme vykonali vše co jsme mohli.\n>
+
+<NewGuineaBr>(*U*) <Západní konec Nové Guiney je nejžhavìjším místem pro naši kampaò v této oblasti. Tady zahájíme naše námoøní pozemní operace: budeme podporovat americké, australské a novozélandské jednotky, které se budou probíjet pøes bažiny a pohoøí, nièit nepøátelské konvoje, které by se pokusily dostat za naše linie, ohrožujíc tak Port Moresby i pøestože je pøirozenì chránìn Pohoøím Owena Stanleyho. Musíme zatlaèit nepøítele zpìt a obsadit letištì Buna, jako první krok pøed osvobozením Salamaua a Lae od japonské okupace.>
+
+<NewGuineaVictoryDb>(*U*) <Nová Guinea se stala vražedným bitevním polem pro Japonce. Dokázali jsme to a Japonci jsou odtud nadobro vytlaèeni. Nyní když jsme si jisti, že se Japonci již nedotknou zemì na jihu Nové Guiney, mùžeme pomýšlet o postupu na sever. Lae, Nová Británie a Severní pobøeží dosud èekají na naše vojáky, pojïme dodìlat co jsme zaèali!\n>
+
+<NewGuineaDefeatDb>(*U*) <Džungle na Nové Guineji patøí mezi nejménì hostinná místa na Zemi. Ztratili jsme mnoho vojákù, jak pøi boji s nepøítelem, tak i pùsobením krutých nehostinných pøírodních podmínek, které dusilo naše úsilí a vyèerpávalo naše oslabené bojující jednotky. Nyní úspìšnì ustupujeme na jižní pobøeží, nebo nejsme schopni nadále zadržovat nastupující japonskou ofenzívu. Musíme doufat, že naše selhání vážnì neohrozí Austrálii, jinak budeme s lítostí vzpomínat na ztracenou džungli, až se ocitneme pod nadvládou Mikada...\n>
+
+<NewGuineaDb>(*U*) <Koneènì jsou Japonci vytlaèeni z jižní Nové Guiney - stálo nás to ale životy tisícù Amerièanù, Australanù a Novozélanïanù, kteøí se stali obìmi tìchto neprostupných, hlubokých džunglí. Stála tato zarostlá a blátivá místa, za tak vysokou cenu? Jestliže si uvìdomíme, že tím byla zachránìna Austrálie pøed japonskou chobotnicí, tak mohu odpovìdìt "ano, stála". Skvìlá práce!\n>
+
+// A text after "special" end mission
+
+<WarIsOver>			<{FULLRANK} {FIRSTNAME} {LASTNAME}! Pro vás válka skonèila.>
+
+
+// Linked codes
+
+<ReconIntercept-F-Scramble>(nU*) <Palubní pozorovatel na jedné z našich lodí spatøil nepøátelský výzvìdný letoun. Jsme ohroženi! {#a} {PLANE} jsou pøipraveny. {FULLRANK}, neprodlenì vzlétnìte!>
+<ReconIntercept-F-Scramble>(*U*) <Nedokázali jsme zastavit nepøátelská prùzkumná letadla a nyní jsme v pøímém ohrožení útoku! Máme k dispozici - {#a} {PLANE}. Ihned startujte, {FULLRANK}!>
+<ReconIntercept-F-Scramble>(*U*) <Japonský prùzkum ohlásil naši polohu a nyní už jsou urèité nepøátelské útoèné letouny na cestì k nám! {#a} {PLANE} - to je vše, co mùžeme poslat do vzduchu. {FULLRANK}, ihned vzlétnìte!> 
+<ReconIntercept-F-Scramble>(*U*) <Nedokázali jsme zastavit nepøátelská prùzkumná letadla a nyní jsme v pøímém ohrožení útoku! Máme k dispozici - {#a} {PLANE}. Ihned startujte, {FULLRANK}!>
+<ReconIntercept-F-Scramble>(*U*) <Japonský prùzkumný letoun unikl našim stíhaèùm a je jen otázkou krátkého èasu, kdy na nás nepøítel udeøí! {#a} {PLANE} - vše co máme k dispozici. Okamžitì vzlétnìte, {FULLRANK!>
+<ReconIntercept-F-Scramble>(*U*) <Nepodaøilo se nám dostihnout japonský výzvìdný letoun. Nyní jsme ohroženi nepøátelským leteckým úderem. Posíláme {#a} {PLANE} do vzduchu pro zajištìní vzdušného krytí. {FULLRANK}, máte se okamžitì pøipravit ke vzletu!>
+<ReconIntercept-F-Scramble>(nJA) <Palubní pozorovatel na jedné z našich lodí spatøil nepøátelský výzvìdný letoun. Jsme ohroženi! {#a} {PLANE} jsou pøipraveny. {FULLRANK}, neprodlenì vzlétnìte!>
+<ReconIntercept-F-Scramble>(*JA) <Americký prùzkum ohlásil naši polohu a nyní už jsou urèité nepøátelské útoèné letouny na cestì k nám! {#a} {PLANE} - to je vše, co mùžeme poslat do vzduchu. {FULLRANK}, ihned vzlétnìte!>
+<ReconIntercept-F-Scramble>(*JA) <Nedokázali jsme zastavit nepøátelská prùzkumná letadla a nyní jsme v pøímém ohrožení útoku! Máme k dispozici - {#a} {PLANE}. Ihned startujte, {FULLRANK}!>
+<ReconIntercept-F-Scramble>(*JA) <Americký prùzkumný letoun unikl našim stíhaèùm a je jen otázkou krátkého èasu, kdy na nás nepøítel udeøí! {#a} {PLANE} - vše co máme k dispozici. Okamžitì vzlétnìte, {FULLRANK}!>
+<ReconIntercept-F-Scramble>(*JA) <Nepodaøilo se nám dostihnout americký výzvìdný letoun. Nyní jsme ohroženi nepøátelským leteckým úderem. Posíláme {#a} {PLANE} do vzduchu pro zajištìní vzdušného krytí. {FULLRANK}, jste oèekáván na palubì!>
+<Scramble-F-ReconCarrier>(*JA) <Je nanejvýš dùležité najít nepøátelskou letadlovou loï , ze které byl veden pøedchozí útok! {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} a prohledá sektor {SECTOR}. Hodnì štìstí!>
+<Scramble-F-ReconCarrier>(nJA) <Piloti, naše bojová hlídka se støetla s nepøátelskými palubními útoènými letadly! {LDR_RANK} {LDR_NAME} vezme {#a} {PLANE} a pokusí se najít jejich letadlovou loï, která by se mìla nacházet nìkde v sektoru {SECTOR}.>
+<Scramble-F-ReconCarrier>(*JA) <Musíme za každou cenu nalézt nepøátelskou letadlovou! {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} na prùzkum do sektoru {SECTOR}. Hodnì zdaru!>
+<Scramble-F-ReconCarrier>(*JA) <Je bezpodmíneènì nutné, abychom našli letadlovou loï, která je pùvodcem pøedchozího útoku! Je pøipraveno {#a} {PLANE}, které povede {LDR_RANK} {LDR_NAME} do sektoru {SECTOR}. Hodnì štìstí!>
+<Scramble-F-ReconCarrier>(*JA) <Piloti! Vaším úkolem je najít nepøátelskou letadlovou loï, která na nás pøedtím zaútoèila. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} do sektoru {SECTOR}. A vám bohové požehnají!>
+<Scramble-S-ReconCarrier>(*U*) <Pánové! Je velmi dùležité, abychom našli letadlovou loï, ze které startovaly nepøátelské letouny! {#A} {PLANE}, které povede {LDR_RANK} {LDR_NAME} prohledá sektor {SECTOR}.>
+<Scramble-S-ReconCarrier>(nU*) <Chlapci, museli jsme tvrdì bojovat, abychom odrazili útok nepøátelských letadel! {LDR_RANK} {LDR_NAME} vezme {#a} {PLANE}, vzlétne a pokusí se najít jejich mateøskou letadlovou loï!> 
+<Scramble-S-ReconCarrier>(*U*) <Musíte najít letadlovou loï, která na nás pøedtím zaútoèila! {#A} {PLANE} povede {LDR_RANK} {LDR_NAME}. Cílem je prohledání sektoru {SECTOR}.>
+<Scramble-S-ReconCarrier>(*U*) <Poslouchejte! Pøipravujeme prùzkumnou akci, s cílem zjistit polohu nepøátelské letadlové lodì. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} do sektoru {SECTOR}. Hodnì štìstí!>
+<Scramble-F-AttackCarrier>(nU*) <Našli jsme ty bastardy, co na nás pøedtím zaútoèili. Teï je øada na nás! {LDR_RANK}{LDR_NAME} povede {#a} {PLANE} do sektoru {SECTOR} a dá jim lekci, na kterou nikdy nezapomenou!> 
+<Scramble-F-AttackCarrier>(*U*) <Pánové, sledovali jsme vracející se nepøátelské letouny a našli jejich letadlovou loï, ze které byl proveden útok. Karta se obrátila! {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} do sektoru {SECTOR}, kde se nachází nepøátelský operaèní svaz.>
+<Scramble-F-AttackCarrier>(*U*) <Našim prùzkumníkùm se podaøilo najít nepøátelskou letadlovou loï, která na nás døíve zaútoèila a nyní se karta obrací! {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} a zaútoèí na nepøítele v sektoru {SECTOR}.>
+<Scramble-F-AttackCarrier>(*U*) <Dobøe chlapci, poslouchejte! Máme polohu nepøátelského operaèního svazu. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} a udeøí na letadlové lodì v sektoru {SECTOR}. A jsme na vás pyšní!>
+<Scramble-S-BombCarrier>(nJA) <Sledovali jsme vracející se nepøátelské letouny a našli jejich letadlovou loï, ze které byl proveden útok. Karta se obrátila! {LDR_RANK} {LDR_NAME} povede {#a} {PLANE}, a doprovodí {ESCORTED} do sektoru {SECTOR}. Banzai!>
+<Scramble-S-BombCarrier>(*JA) <Díky Bohùm! Dokázali jsme nejen odrazit nepøátelský útok, ale prùzkum pøistál se zprávami o poloze nepøátelského operaèního svazu. Nepøátelské lodì se nacházejí v sektoru {SECTOR}. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE}, které doprovodí {ESCORTED} bìhem jejich útoku. Hodnì zdaru!>
+<Scramble-S-BombCarrier>(*JA) <Velký úspìch! Dokázali jsme nejen odrazit nepøátelský útok, a navíc se nám podaøilo najít nepøátelskou letadlovou loï, ze které na nás útoèili. Teï je øada na nás! {LDR_RANK} {LDR_NAME} s {#a} {PLANE} doprovodí {ESCORTED} do sektoru {SECTOR}.>
+<Scramble-S-BombCarrier>(*U*) <{LDR_RANK} {LDR_NAME} je dnes velitelem skupiny. Naše {#a} {PLANE} doprovodí údernou skupinu {ESCORTED} do sektoru {SECTOR}. Doveïte je bezpeènì zpìt. Hodnì zdaru!>
+<Scramble-S-BombCarrier>(*U*) <Pánové! Sledovali jsme vracející se nepøátelské letouny a našli jejich letadlovou loï, ze které byl proveden útok. Karta se obrátila! {LDR_RANK} {LDR_NAME} povede {#a} {PLANE}, a doprovodí {ESCORTED} do sektoru {SECTOR}.>
+<Scramble-S-BombCarrier>(*JA) <Našim prùzkumníkùm se podaøilo najít nepøátelskou letadlovou loï, která na nás døíve zaútoèila a nyní se karta obrací! {LDR_RANK} {LDR_NAME} povede {#a} {PLANE}, a doprovodí {ESCORTED} do sektoru {SECTOR}. Banzai!>
+<Scramble-S-BombCarrier>(*U*) <Pánové! Dokázali jsme nejen odrazit nepøátelský útok, a navíc se nám podaøilo najít nepøátelskou letadlovou loï, ze které na nás útoèili. Teï je øada na nás! {LDR_RANK} {LDR_NAME} s {#a} {PLANE} doprovodí {ESCORTED} do sektoru {SECTOR}.>
+
+// These lines are generic mission description, used only if specific one was not found. Should never happen.
+
+<Generic>(*U*) <Dámy! Dnes {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} do nepøátelského sektoru {SECTOR}. Poøádnì jim zatopte, chlapci!>
+<Generic>(*U*) <Poslouchejte! Dnes {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} do sektoru {SECTOR}.>
+<Generic>(*U*) <Pánové! V dnešním úkolu {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} do sektoru {SECTOR}.>
+
+<Generic>(*JA) <Samurajové! Stateèný {LDR_RANK} {LDR_NAME} vás povede do sektoru {SECTOR}. Máte k dispozici {#a} {PLANE}. Doufejme, že náš nepøítel neunikne!>
+<Generic>(*JA) <Samurajové! Dnes {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} do sektoru {SECTOR}.>
+<Generic>(*JA) <Samurajové! V dnešním úkolu {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} do sektoru {SECTOR}.>
+
+// These descriptions should be normally used for all escort (*Bomb*) missions. There may be more specific texts
+// for some mission types.
+
+<GenericEscort>(*U*)	<Poslouchejte chlapci! {ESCORTED} zasadí Japoncùm další tìžký úder! {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} a poskytne jim ochranu. Buïte ve støehu, budete mít hodnì pøíležitostí støetnout se s nepøítelem!>
+<GenericEscort>(*U*)	<Dobøe chlapci, poslouchejte!\n {ESCORTED} míøí do sektoru {SECTOR}, kde je hlášena èilá aktivita nepøítele ve vzduchu. Postarejte se, a se bezpeènì vrátí domù!>
+<GenericEscort>(*U*)	<Pánové!\nMusíte krýt naše {ESCORTED} na jejich cestì k cíli a zpìt! Vyhýbejte se manévrovým soubojùm, které vás odpoutají od vašeho hlavního úkolu! Hodnì štìstí!>
+<GenericEscort>(*U*)	<Pánové!\nNaše {ESCORTED} opìt udeøí na nepøítele. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE}, kteøí zajistí doprovod bombardovací skupinì! Bùh vás provázej!>
+<GenericEscort>(*U*)	<Poslouchejte!\n{#a} {PLANE} jimž bude velet {LDR_FULLRANK} {LDR_NAME}, doprovodí {ESCORTED}. Budu struèný - držte se poblíž bombardérù, striktnì dodržujte rádiovou disciplínu, nepouštìjte se do soubojù, neustále se rozhlížejte a snažte se všichni v poøádku vrátit domù.>
+<GenericEscort>(*U*)	<Pánové!\nDnešním úkolem je doprovod. {ESCORTED} udeøí v sektoru {SECTOR}. Doprovod zajistí {#a} {PLANE}. Velitel - {LDR_RANK} {LDR_NAME}.>
+<GenericEscort>(*U*)    <Máte za úkol doprovodit {ESCORTED}. Zùstávejte stále u bombardérù a nepouštìjte se do manévrových soubojù s nepøítelem. Hodnì zdaru!>
+<GenericEscort>(*U*)    <Pánové!\nKdo se už nemohl doèkat, až pøipíše pár sestøelù na své konto, tak se mùže tìšit. Dnes budete doprovázet {ESCORTED} do sektoru {SECTOR} a zpìt. V oblasti se nachází ve vzduchu hodnì japonských letadel. Hodnì zdaru!>
+<GenericEscort>(*U*)    <Pánové!\n{#a} {PLANE} jejichž velitel je {LDR_FULLRANK} {LDR_NAME}, poskytne doprovod pro {ESCORTED}. Úderná skupina zná svùj úkol, tak se postarejte, a se bezpeènì vrátí zpìt. Hodnì zdaru!>
+<GenericEscort>(*U*)	<Poslouchejte! Kdo chce získat dalších pár sestøelù na své konto, má dnes pøíležitost! {ESCORTED} se pøipravují zaútoèit na velmi šavnatý cíl a doprovod bude mít dost pøíležitostí si vylepšit konto. Velitel {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} a zajistí doprovod. Hodnì zdaru!>
+<GenericEscort>(*U*)	<Poslouchejte! Náš dnešní cíl - sektor {SECTOR}. {ESCORTED} budou vyhledávat potenciální cíle, zatímco {LDR_RANK} {LDR_NAME} povede {#a} {PLANE}, zajistí doprovod a získá vzdušnou pøevahu.>
+<GenericEscort>(*U*)	<Pánové, máme opìt práci. {ESCORTED} udeøí v sektoru {SECTOR}. Velitel doprovodu - {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} a zajistí ochranu {ESCORTED} na jejich cestì k cíli a zpìt. Hodnì zdaru!>
+
+<GenericEscort>(*JA)	<Samurajové! Dnešním úkolem je doprovod. {ESCORTED} udeøí v sektoru {SECTOR}. Doprovod zajistí {#a} {PLANE}. Velitel - {LDR_RANK} {LDR_NAME}.>
+<GenericEscort>(*JA)	<Samurajové!\nMáte za úkol doprovodit {ESCORTED}. Zùstávejte stále u bombardérù a nepouštìjte se do manévrových soubojù s nepøítelem. Hodnì zdaru!>
+<GenericEscort>(*JA)	<Piloti!\nKdo se už nemohl doèkat, až pøipíše pár sestøelù na své konto, tak se mùže tìšit. Dnes budete doprovázet {ESCORTED} do sektoru {SECTOR} a zpìt. V oblasti se nachází hodnì amerických letadel. Hodnì zdaru!>
+<GenericEscort>(*JA)	<Piloti!\n{#a} {PLANE} jimž bude velet {LDR_FULLRANK} {LDR_NAME}, doprovodí {ESCORTED}. Budu struèný - držte se poblíž bombardérù, striktnì dodržujte rádiovou disciplínu, nepouštìjte se do soubojù, neustále se rozhlížejte a snažte se všichni v poøádku vrátit domù.>
+<GenericEscort>(*JA)	<Váleèníci! Naše {ESCORTED} opìt udeøí na nepøítele. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE}, kteøí zajistí doprovod bombardovací skupinì!>
+<GenericEscort>(*JA)	<samurajové!\nMusíte krýt naše {ESCORTED} na jejich cestì k cíli a zpìt! Vyhýbejte se manévrovým soubojùm, které vás odpoutají od vašeho hlavního úkolu!>
+<GenericEscort>(*JA)	<Samurajové!\n {ESCORTED} míøí do sektoru {SECTOR}, kde je hlášena èilá aktivita nepøítele ve vzduchu. Postarejte se, a se bezpeènì vrátí domù!> 
+<GenericEscort>(*JA)	<{ESCORTED} zasadí Amerièanùm další tìžký úder! {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} a poskytne jim ochranu. Buïte ve støehu, budete mít hodnì pøíležitostí støetnout se s nepøítelem!> 
+<GenericEscort>(*JA)	<Piloti!\n{#a} {PLANE} jejichž velitel je {LDR_FULLRANK} {LDR_NAME}, poskytne doprovod pro {ESCORTED}. Úderná skupina zná svùj úkol, tak se postarejte, a se bezpeènì vrátí zpìt. Hodnì zdaru!>
+<GenericEscort>(*JA)	<Admirál si vyžádal úder v sektoru {SECTOR}. Velitel doprovodu - {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} a zajistí ochranu {ESCORTED} na jejich cestì k cíli a zpìt. Banzai!>
+<GenericEscort>(*JA)	<Náš dnešní cíl - sektor {SECTOR}. {ESCORTED} budou vyhledávat potenciální cíle, zatímco {LDR_RANK} {LDR_NAME} povede {#a} {PLANE}, zajistí doprovod a získá vzdušnou pøevahu.>
+<GenericEscort>(*JA)	<Piloti! Kdo chce získat dalších pár sestøelù na své konto, má dnes pøíležitost! {ESCORTED} se pøipravují zaútoèit na velmi šavnatý cíl a doprovod bude mít dost pøíležitostí si vylepšit konto. Velitel {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} a zajistí doprovod. Hodnì zdaru!>
+
+<KamikazeEscort>(*JA) <Dnes máme zvláštní úkol, doprovodit {ESCORTED} ze Speciálního úderného sboru, které se musí bezpeènì dostat do sektoru {SECTOR}. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} a zajistí ochranu našim velkým bojovníkùm !>
+<KamikazeEscort>(*JA) <Dnes doprovodíme {ESCORTED} z našeho Speciálního úderného sboru do sektoru {SECTOR}. Tento úkol bude zajišovat {#a} {PLANE}. Velitelem je {LDR_RANK} {LDR_NAME}. Máte za povinnost vrátit se zpìt na základnu a ohlásit výsledky útoku.>
+<KamikazeEscort>(*JA) <Svatý vítr opìt rozseje smrt mezi naše nepøátele. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} jako èestný doprovod, zatímco {ESCORTED} ze Speciálního úderného sboru splní své svaté poslání v sektoru {SECTOR}. Po návratu admirál oèekává hlášení o splnìní úkolu. Banzaai! >
+
+
+// These are used by default for all intercept and naval recon missions
+// (fleets, subs). You don't know what you will see there.
+
+<GenericPatrol>(*U*) <Pánové!\n{LDR_FULLRANK} {LDR_NAME} povede {#a} {PLANE} na hlídku do sektoru {SECTOR}. V celé operaèní oblasti máme poèetní leteckou pøevahu, ale Japonci se mohou pokusit doèasnì vyslat dost letadel do urèitého sektoru, pro získání lokální vzdušné pøevahy. Ostatní skupiny našich stíhaèù hlídkují v okolních sektorech. Proto si skuteènì ovìøte, že to je nepøítel a teprve pak støílejte!>
+<GenericPatrol>(*U*) <Poslouchejte!\n{LDR_FULLRANK} {LDR_NAME} povede skupinu na hlídku do sektoru {SECTOR}. Mìjte oèi otevøené, nebo je v tomto sektoru hlášena znaèná aktivita nepøítele. Hodnì štìstí!>
+<GenericPatrol>(*U*) <Pánové!\nSektor {SECTOR} je dùležitý pro naše operace a musí být vyèištìn od nepøátelských letadel. {LDR_FULLRANK} {LDR_NAME} bude velitel skupiny, tvoøící {#a} {PLANE}. Nepøátelé èasto pøelétávají pøes tento sektor, proto neztrácejte pozornost. Hodnì zdaru!>
+<GenericPatrol>(*U*) <{LDR_FULLRANK} {LDR_NAME} povede {#a} {PLANE}, a má za úkol hlídkovat v sektoru {SECTOR}. Nepøítel udržuje znaènou aktivitu ve vzduchu, proto buïte ve støehu! Hodnì zdaru!>
+<GenericPatrol>(*JA) <Samurajové!\n{LDR_FULLRANK} {LDR_NAME} povede skupinu na hlídku do sektoru {SECTOR}. Mìjte oèi otevøené, nebo je v tomto sektoru hlášena znaèná aktivita nepøítele. Hodnì štìstí!>
+<GenericPatrol>(*JA) <Piloti!\n{LDR_FULLRANK} {LDR_NAME}, má za úkol hlídkovat v sektoru {SECTOR}. Nepøítel udržuje znaènou aktivitu ve vzduchu, proto buïte ve støehu! Banzai!>
+<GenericPatrol>(*JA) <Piloti!\n {LDR_FULLRANK} {LDR_NAME} povede skupinu na lov Amerièanù do sektoru {SECTOR}. Jak víte vzdušné boje jsou v poslední dobì intenzívnìjší, proto buïte neustále ve støehu!>
+<GenericPatrol>(*JA) <Piloti!\n Sektor {SECTOR} je dùležitý pro naše operace a musí být vyèištìn od nepøátelských letadel. {LDR_FULLRANK} {LDR_NAME} bude velitel skupiny. V poslední dobì vzdušná aktivita nepøítele vzrostla, proto - neztrácejte pozornost!>
+
+
+// These descriptions should be normally used for all *Patrol* and *Defend* mission. There may be more specific texts
+// for some mission types.
+
+<Reinforce>(*U*) <{LDR_FULLRANK} {LDR_NAME} povede posily do sektoru {SECTOR}, kde {ESCORTED} byly napadeny nepøátelských sil majících pøevahu. Hodnì zdaru!>
+<Reinforce>(*U*) <{LDR_FULLRANK} {LDR_NAME}, naše {ESCORTED} jsou pod útokem pøevažujících nepøátelských sil v sektoru {SECTOR}. Okamžitì vzlétnìte!>
+<Reinforce>(*U*) <Naše {ESCORTED} jsou pod útokem v sektoru {SECTOR}. Ihned startujte! {LDR_FULLRANK} {LDR_NAME} bude velitelem.>
+<Reinforce>(*U*) <Naši chlapci se setkali s tìžkým odporem ve vzduchu v sektoru {SECTOR}. {LDR_FULLRANK} {LDR_NAME} tam povede {#a} {PLANE}. Vaším úkolem je pomoci našim {ESCORTED} a odrazit nepøátelský útok.>
+<Reinforce>(*JA) <{LDR_FULLRANK} {LDR_NAME} povede posily do sektoru {SECTOR}, kde {ESCORTED} byly napadeny nepøátelských sil majících pøevahu. Hodnì štìstí!>
+<Reinforce>(*JA) <Naše {ESCORTED} jsou pod útokem v sektoru {SECTOR}. Ihned startujte! {LDR_FULLRANK} {LDR_NAME} bude velitelem.>
+<Reinforce>(*JA) <{LDR_FULLRANK} {LDR_NAME}, naše {ESCORTED} jsou pod útokem pøevažujících nepøátelských sil v sektoru {SECTOR}. Okamžitì vzlétnìte!>
+<Reinforce>(*JA) <Naši spolubojovníci se setkali s tìžkým odporem ve vzduchu v sektoru {SECTOR}. {LDR_FULLRANK} {LDR_NAME} tam povede {#a} {PLANE}. Vaším úkolem je pomoci našim {ESCORTED} a odrazit nepøátelský útok.>
+
+<GenericIntercept>(*U*) <Náš úkol - hlídkování v sektoru {SECTOR}. {LDR_RANK} {LDR_NAME} tam povede {#a} {PLANE}. Víte, co máte dìlat! Hodnì štìstí!>
+<GenericIntercept>(*U*) <Pánové!\n{LDR_FULLRANK} {LDR_NAME} dnes povede {#a} {PLANE} na hlídku v sektoru {SECTOR}. Japonci se mohou pokusit vybojovat doèasnou vzdušnou pøevahu. Další naše stíhací letadla se pohybují v okolních sektorech, proto si pøipomeòte rozpoznávání cizích letadel, a než zaènete støílet si ovìøte, že to je skuteènì nepøítel.>
+<GenericIntercept>(*U*) <Náš úkol - hlídkování v sektoru {SECTOR}. {LDR_RANK} {LDR_NAME} tam povede {#a} {PLANE}. Víte, co máte dìlat. Hodnì zdaru!>
+<GenericIntercept>(*U*) <Dnes zamíøíme do sektoru {SECTOR}. S tím, jak se boje v posledních dnech neustále zesilují, je vysoká šance, že ve vzduchu potkáme letouny nepøítele. Velitel skupiny {LDR_RANK} {LDR_NAME} vezme do vzduchu {#a} {PLANE} za 15 minut.> 
+<GenericIntercept>(*U*) <Dobøe, {LDR_FULLRANK} {LDR_NAME}, náš hlavní úkol - hlídkování v sektoru {SECTOR}. Nedovolte žádnému nepøátelskému letounu beztrestnì proletìt. Máte letadel - {#a}.>
+<GenericIntercept>(*U*) <Pánové!\n{LDR_FULLRANK} {LDR_NAME} povede {#a} {PLANE} a zamíøí hlídkovat do sektoru {SECTOR}. Máme mnohonásobnou pøevahu ve vzduchu, ale Japonci mohou shromáždit rezervy a pokusit se vybojovat doèasnou pøevahu ve vzduchu v této oblasti. Další naše letadla hlídkují v okolních sektorech, aby v pøípadì potøeby, mohla pøiletìt na pomoc, než Japonci zaútoèí.>
+<GenericIntercept>(*U*) <Pánové!\n{LDR_FULLRANK} {LDR_NAME} povede skupinu lovcù Japonèíkù v sektoru {SECTOR}. Jak víte, bìhem posledních dnù bylo na nebi velmi horko, proto - neztrácejte pozornost!>
+<GenericIntercept>(*U*) <Dnešní cíl se nachází v sektoru {SECTOR}. Pokraèujeme v nièení nepøátelských letadel ve vzduchu i na zemi. S tím, jak se boje v posledních dnech zintenzívnily, je velká šance potkat ve vzduchu letadla nepøítele.>
+<GenericIntercept>(*U*) <Dobøe chlapci! Dnes nás èeká úkol v sektoru {SECTOR}, {LDR_FULLRANK} {LDR_NAME} tam povede {#a} {PLANE}. >
+
+<GenericIntercept>(*JA) <Náš úkol - hlídkování v sektoru {SECTOR}. {LDR_RANK} {LDR_NAME} tam povede {#a} {PLANE}. Víte, co máte dìlat! Banzai!>
+<GenericIntercept>(*JA) <Náš úkol - hlídkování v sektoru {SECTOR}. {LDR_RANK} {LDR_NAME} tam povede {#a} {PLANE}. Víte, co máte dìlat. Hodnì zdaru!>
+<GenericIntercept>(*JA) <Dnes zamíøíme do sektoru {SECTOR}. S tím, jak se boje v posledních dnech neustále zesilují, je vysoká šance, že ve vzduchu potkáme letouny nepøítele. Velitel skupiny {LDR_RANK} {LDR_NAME} vezme do vzduchu {#a} {PLANE} za 15 minut.> 
+<GenericIntercept>(*JA) <{LDR_FULLRANK} {LDR_NAME}, váš dnešní hlavní úkol - hlídkování ve vzdušném prostoru v sektoru {SECTOR}. Neztrate nikoho, jestliže se strhne šarvátka s nìkolika skupinami nepøátelských stíhaèù. Letadel pod vaším velením - {#a}.>
+<GenericIntercept>(*JA) <Samurajové!\n{LDR_FULLRANK} {LDR_NAME} dnes povede {#a} {PLANE} na hlídku v sektoru {SECTOR}. Amerièané se mohou pokusit vybojovat doèasnou pøevahu ve vzduchu. Další stíhací skupiny hlídkují v okolních sektorech, proto si pøipomeòte rozpoznávání cizích letadel, a než zaènete støílet tak si ovìøte, že to je skuteènì nepøítel.>
+<GenericIntercept>(*JA) <Piloti!\n{LDR_FULLRANK} {LDR_NAME} povede skupinu lovcù Yankee v sektoru {SECTOR}. Jak víte, bìhem posledních dnù bylo na nebi velmi horko, proto - neztrácejte pozornost!>
+<GenericIntercept>(*JA) <Dnešní cíl se nachází v sektoru {SECTOR}. Pokraèujeme v nièení nepøátelských letadel ve vzduchu i na zemi. S tím, jak se boje v posledních dnech zintenzívnily, je velká šance potkat ve vzduchu letadla nepøítele. >
+<GenericIntercept>(*JA) <Podívejte se na mapu, sektoru {SECTOR} - náš dnešní cíl. {LDR_FULLRANK} {LDR_NAME} tam povede {#a} {PLANE}. Banzai!>
+
+//<ReconIntercept>(*JA)	<Today we are patrolling in sector {SECTOR}. One of the most important tasks now is to intercept all enemy reconnaissance flights. {#A} {PLANE}s under command of {LDR_RANK} {LDR_NAME} will take off in 15 minutes.> 
+//<ReconIntercept>(*U*)	<Today we are patrolling in sector {SECTOR}. One of the most important tasks now is to intercept all enemy reconnaissance flights. {#A} {PLANE}s under command of {LDR_RANK} {LDR_NAME} will take off in 15 minutes.> 
+
+<AttackPearlHarbor>		<Piloti! Pøišel èas rozhodující bitvy. Výsledek záleží na momentu pøekvapení. Vrchní velitel nám pøeje hodnì úspìchù. \n \nKaždý ví, co má dìlat. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} na Pearl Harbor. >
+<BombPearlHarbor>		<Piloti! Pøišel èas rozhodující bitvy. Výsledek záleží na momentu pøekvapení. Vrchní velitel nám pøeje hodnì úspìchù. \n \nKaždý ví, co má dìlat. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} na Pearl Harbor. Budechránit {ESCORTED} pøed nepøátelskými stíhaèi. Budou bombardovat letištì, abychom znemožnili Amerièanùm odvetný úder nanaše loïstvo.>
+<ScramblePearlHarbor>	<Nálet na Pearl Harbor! Tohle není cvièení!>
+
+// These are defaults for ground attack missions. There should normally be more specific description
+
+<GenericAttack>(*U*)	<Poslouchejte! Dnes udeøíme na nepøítele v sektoru {SECTOR}. {LDR_RANK} {LDR_NAME} tam povede {#a} {PLANE}. Víte, co je vaší povinností. Hodnì zdaru!>
+<GenericAttack>(*U*)	<Dobøe, máme pro vás ještì jeden úkol. Cíle se nacházejí zde - v sektoru {SECTOR}. Buïte pøipraveni na velké množství cílù v této oblasti. {#A} {PLANE} povede {LDR_RANK} {LDR_NAME}. Vzlet za 15 minut.> 
+<GenericAttack>(*U*)	<{LDR_FULLRANK} {LDR_NAME}, je mnoho pozemních cílù pro tvé chlapce. Cíle - zde, v sektoru {SECTOR}. Tentokrát to nebude lehké. Povedete {#a} {PLANE}.>
+<GenericAttack>(*U*)	<Pánové!\nPodívejte se na mapu, v sektoru {SECTOR} nás èeká dnešní úkol. Zpravodajská služba nemá pøíliš mnoho informací a neví, na co budeme dnes útoèit. Ale nìco se tam k útoku urèitì najde. Pozemní aktivita nepøítele v této oblasti, bìhem poslední doby, silnì vzrostla, takže nebude o cíle nouze. Uvidíme, co dokáží udìlat naše {#a} {PLANE}.>
+<GenericAttack>(*U*)	<Pánové!\nNastal èas opìt poctít návštìvou Japonce, kteøí netrpìlivì oèekávají naši zásilku v sektoru {SECTOR}. {LDR_FULLRANK} {LDR_NAME} tam povede {#a} {PLANE}.>
+<GenericAttack>(*U*)	<Pánové!\nVelitelství pravdìpodobnì zaslechlo, že si nìkteøí piloti stìžují na jednotvárnost úkolù. Proto dnes máme zcela nový úkol - zaútoèíte na pozemní cíle v sektoru {SECTOR}.>
+<GenericAttack>(*U*)	<Pánové!\nJak jste mohli slyšet od mechanikù vyzbrojující vaše letouny, opìt poletíte útoèit na pozemní cíle. Cíl: sektor {SECTOR}. {#A} {PLANE}, povede {LDR_RANK} {LDR_NAME}. Vzlet za 20 minut.>
+
+
+<GenericAttack>(*JA)	<Poslouchejte! Dnes udeøíme na nepøítele v sektoru {SECTOR}. {LDR_RANK} {LDR_NAME} tam povede {#a} {PLANE}. Víte, co je vaší povinností. Hodnì zdaru!>
+<GenericAttack>(*JA)	<Piloti, máme pro vás ještì jeden úkol. Cíle se nacházejí zde - v sektoru {SECTOR}. Buïte pøipraveni na velké množství cílù v této oblasti. {#A} {PLANE} povede {LDR_RANK} {LDR_NAME}. Vzlet za 15 minut.> 
+<GenericAttack>(*JA)	<{LDR_FULLRANK} {LDR_NAME}, je mnoho pozemních cílù pro tvé chlapce. Cíle - zde, v sektoru {SECTOR}. Tentokrát to nebude lehké. Povedete {#a} {PLANE}.>
+<GenericAttack>(*JA)	<Samurajové!\nPodívejte se na mapu, v sektoru {SECTOR} nás èeká dnešní úkol. Zpravodajská služba nemá pøíliš mnoho informací a neví, na co budeme dnes útoèit. Ale nìco se tam k útoku urèitì najde. Pozemní aktivita nepøítele v této oblasti, bìhem poslední doby, silnì vzrostla, takže cílù bude sdostatek. Uvidíme, co dokáží udìlat naše {#a} {PLANE}.>
+<GenericAttack>(*JA)	<Samurajové!\nNastal èas opìt poctít návštìvou Amerièany, kteøí netrpìlivì oèekávají naši zásilku v sektoru {SECTOR}. {LDR_FULLRANK} {LDR_NAME} tam povede {#a} {PLANE}.>
+<GenericAttack>(*JA)	<Samurajové!\nVelitelství pravdìpodobnì zaslechlo, že si nìkteøí piloti stìžují na jednotvárnost úkolù. Proto dnes máme zcela nový úkol - zaútoèíte na pozemní cíle v sektoru {SECTOR}.>
+<GenericAttack>(*JA)	<Piloti!\nJak jste mohli slyšet od mechanikù vyzbrojující vaše letouny, opìt poletíte útoèit na pozemní cíle. Cíl: sektor {SECTOR}. {#A} {PLANE}, povede {LDR_RANK} {LDR_NAME}. Vzlet za 20 minut.>
+
+// Specific Attack type texts. Please add more variants.
+
+<AttackTrain>(*U*)		<Poslouchejte! Dnes zaútoèíme na nepøítele v sektoru {SECTOR}. {LDR_RANK} {LDR_NAME} tam povede {#a} {PLANE}. Hlavní úkol - útok na vlakové soupravy. Hodnì zdaru!>
+<AttackCars>(*U*)		<Dobøe, máme pro vás úkol - úder na pozemní cíle. Poletíte do sektoru {SECTOR}. Buïte pøipraveni na velké množství cílù v této oblasti. Vyhledejte a zniète nepøátelská vozidla - zvláštì nákladní automobily. {#A} {PLANE} povede {LDR_RANK} {LDR_NAME}. Vzlet za 15 minut.> 
+<AttackArmor>(*U*)		<{LDR_FULLRANK} {LDR_NAME}, je mnoho pozemních cílù pro tvé chlapce. Cíle - zde, v sektoru {SECTOR}. Primární úkol - znièení tankù nepøítele. Tentokrát to nebude lehké. Povedete {#a} {PLANE}.>
+<AttackAF>(*U*)			<Pánové!\nPodívejte se na mapu, náš úkol - útok na letištì v sektoru {SECTOR}. Pozor, cíl je velmi nebezpeènì a dobøe chránìn, velkorážní zbranì nepøátelské protiletadlové obrany nás pøivítají už pøi pøíletu. Uvidíme, co dokáží udìlat naše {#a} {PLANE}.>
+<AttackAF:Tarawa>(*U*)	<Pánové!\nLPodívejte se na mapu, náš úkol - útok na jediné letištì na ostrovì Tarawa. Pozor, cíl je velmi nebezpeènì a dobøe chránìn, velkorážní zbranì nepøátelské protiletadlové obrany nás pøivítají už pøi pøíletu. Uvidíme, co dokáží udìlat naše {#a} {PLANE}.>
+<AttackAF:Palau>(*U*)	<Pánové!\nPodívejte se na mapu, náš úkol - útok na letištì na Palauských ostrovech. Musíme ho vyøadit z provozu, abychom zaruèili úspìch naší invazi. Pozor, cíl je velmi nebezpeènì a dobøe chránìn, velkorážní zbranì nepøátelské protiletadlové obrany nás pøivítají už pøi pøíletu. Uvidíme, co dokáží udìlat naše {#a} {PLANE}.>
+<AttackBridge>(*U*)		<Pánové!\nNastal èas opìt poctít návštìvou Japonce, kteøí netrpìlivì oèekávají naši zásilku v sektoru {SECTOR}. Abychom nepøíteli narušili systém zásobování, {#a} {PLANE} zaútoèí na most v této oblasti. {LDR_FULLRANK} {LDR_NAME} povede skupinu.> 
+<AttackStation>(*U*)	<Pánové!\nVelitelství pravdìpodobnì zaslechlo, že si nìkteøí piloti stìžují na jednotvárnost úkolù. Proto dnes máme zcela nový úkol - zaútoèíte na železnièní stanici v sektoru {SECTOR}.>
+<AttackDepot>(*U*)		<Pánové!\nJak jste mohli slyšet od mechanikù vyzbrojující vaše letouny, opìt poletíte útoèit na pozemní cíle. Cíl: sklady v sektoru {SECTOR}. {#A} {PLANE}, povede {LDR_RANK} {LDR_NAME}. Vzlet za 20 minut.>
+<AttackShips>(*U*)		<Všichni poslouchejte! Dnes udeøíme na nepøítele v sektoru {SECTOR}. {LDR_RANK} {LDR_NAME} tam povede {#a} {PLANE}. Hlavní cíl - nepøátelské lodì. Hodnì zdaru!>
+
+
+<AttackTrain>(*JA)		<Pozor! Dnes zaútoèíme na nepøítele v sektoru {SECTOR}. {LDR_RANK} {LDR_NAME} tam povede {#a} {PLANE}. Hlavní úkol - útok na vlakové soupravy. Banzai!>
+<AttackCars>(*JA)		<Pozor, máme pro vás ještì jeden úkol - útok na pozemní cíle. Poletíte do sektoru {SECTOR}. Buïte pøipraveni na velké množství cílù v této oblasti. Vyhledejte a zniète nepøátelská vozidla - zvláštì nákladní automobily. {#A} {PLANE} povede {LDR_RANK} {LDR_NAME}. Vzlet za 15 minut.> 
+<AttackArmor>(*JA)		<{LDR_FULLRANK} {LDR_NAME}, je mnoho pozemních cílù pro tvé chlapce. Cíle - zde, v sektoru {SECTOR}. Primární úkol - znièení tankù nepøítele. Tentokrát to nebude lehké. Povedete {#a} {PLANE}.>
+<AttackAF>(*JA)			<Piloti!\nPodívejte se na mapu, náš úkol - útok na letištì v sektoru {SECTOR}. Pozor, cíl je velmi nebezpeènì a dobøe chránìn, velkorážní zbranì nepøátelské protiletadlové obrany nás pøivítají už pøi pøíletu. Uvidíme, co dokáží udìlat naše {#a} {PLANE}.>
+<AttackAF:Wake>(*JA)	<Piloti!\nPodívejte se na mapu, náš úkol - útok na letištì na ostrovì Wake. Pozor, cíl je velmi nebezpeènì a dobøe chránìn, velkorážní zbranì nepøátelské protiletadlové obrany nás pøivítají už pøi pøíletu. Uvidíme, co dokáží udìlat naše {#a} {PLANE}.>
+<AttackBridge>(*JA)		<Samurajové!\nNastal èas opìt poctít návštìvou Amerièany, kteøí netrpìlivì oèekávají naši zásilku v sektoru {SECTOR}. Abychom nepøíteli narušili systém zásobování, {#a} {PLANE} zaútoèí na most v této oblasti. {LDR_FULLRANK} {LDR_NAME} povede skupinu.>
+<AttackStation>(*JA)	<Samurajové!\nVelitelství pravdìpodobnì zaslechlo, že si nìkteøí piloti stìžují na jednotvárnost úkolù. Proto dnes máme zcela nový úkol - zaútoèíte na železnièní stanici v sektoru {SECTOR}.>
+<AttackDepot>(*JA)		<Piloti!\nJak jste mohli slyšet od mechanikù vyzbrojující vaše letouny, opìt poletíte útoèit na pozemní cíle. Cíl: sklady v sektoru {SECTOR}. {#A} {PLANE}, povede {LDR_RANK} {LDR_NAME}. Vzlet za 20 minut.>
+<AttackShips>(*JA)		<Všichni dávejte pozor! Dnes udeøíme na nepøítele v sektoru {SECTOR}. {LDR_RANK} {LDR_NAME} tam povede {#a} {PLANE}. Hlavní cíl - nepøátelské lodì. Hodnì zdaru!>
+
+
+// These are left generic
+
+//<AttackHQ>(*U*)		<>
+//<AttackBattery>(*U*)		<>
+//<AttackTroops>(*U*)		<>
+//<AttackPort>(*U*)		<>
+
+//<AttackPort>(*JA)	<>
+//<AttackHQ>(*JA)		<>
+//<AttackBattery>(*JA)	<>
+
+
+
+//  These are defaults for Recon missions 
+
+<GenericNavalRecon>(*U*) <Pánové! Naším dnešním úkolem je prùzkum. Budeme pátrat po japonských lodích. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} na prùzkum v sektoru {SECTOR}.>
+<GenericNavalRecon>(*JA) <Piloti! Naším dnešním úkolem je prùzkum. Budeme pátrat po nepøátelských lodích. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} na prùzkum v sektoru {SECTOR}.>
+
+// Specific recon targets
+
+//<ReconCarrier>(*U*) <Pánové! Naším dnešním úkolem je prùzkum. Budeme pátrat po japonských lodích. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} na prùzkum v sektoru {SECTOR}.>
+//<ReconCarrier>(*JA) <Piloti! Naším dnešním úkolem je prùzkum. Budeme pátrat po nepøátelských lodích. {LDR_RANK} {LDR_NAME} povede {#a} {PLANE} na prùzkum v sektoru {SECTOR}.>
+//<ReconSub>(*U*) <{FULLRANK} {LASTNAME}, you will scout sector {SECTOR} looking for Japanese submarines.>
+//<ReconSub>(*JA) <{FULLRANK} {LASTNAME}, you will scout sector {SECTOR} looking for American submarines.>
+
+<AttackSub>(*U*) <{LDR_FULLRANK} {LDR_NAME}, japonská ponorka byla spatøena v sektoru {SECTOR}. Vezmìte {#a} {PLANE}, najdìte a zniète ji!>
+<AttackSub>(*JA) <{LDR_FULLRANK} {LDR_NAME}, americká ponorka byla spatøena v sektoru {SECTOR}. Vezmìte {#a} {PLANE}, najdìte a zniète ji!>
+<AttackCarrier>(*U*) <{LDR_FULLRANK} {LDR_NAME}, japonská letadlová loï byla spatøena v sektoru {SECTOR}. Vezmìte {#a} {PLANE}, najdìte a zniète ji!>
+<BombCarrier>(*U*) <{LDR_FULLRANK} {LDR_NAME}, japonská letadlová loï byla spatøena v sektoru {SECTOR}. Tam budetedoprovázet {ESCORTED}>
+<AttackCarrier>(*JA) <{LDR_FULLRANK} {LDR_NAME}, americká letadlová loï byla spatøena v sektoru {SECTOR}. Vezmìte {#a} {PLANE}, najdìte a zniète ji!>
+<BombCarrier>(*JA) <{LDR_FULLRANK} {LDR_NAME}, americká letadlová loï byla spatøena v sektoru {SECTOR}. Tam budete doprovázet {ESCORTED}>
+<AttackConvoy>(*U*) <{LDR_FULLRANK} {LDR_NAME}, japonský konvoj byl spatøen v sektoru {SECTOR}. Vezmìte {#a} {PLANE}, najdìte a zniète ho!>
+<BombConvoy>(*U*) <{LDR_FULLRANK} {LDR_NAME}, japonský konvoj byl spatøen v sektoru {SECTOR}. Tam budete doprovázet{ESCORTED}>
+<AttackConvoy>(*JA) <{LDR_FULLRANK} {LDR_NAME}, americký konvoj byl spatøen v sektoru {SECTOR}. Vezmìte {#a} {PLANE}, najdìte a zniète ho!>
+<BombConvoy>(*JA) <{LDR_FULLRANK} {LDR_NAME}, americký konvoj byl spatøen v sektoru {SECTOR}. Tam budete doprovázet{ESCORTED}>
+
+<AttackAmph>(*U*) <{LDR_FULLRANK} {LDR_NAME}, japonské invazní síly se vyloïují v sektoru {SECTOR}. Vezmìte {#a} {PLANE} a zlikvidujte je!>
+<AttackAmph>(*JA) <{LDR_FULLRANK} {LDR_NAME}, americké invazní síly se vyloïují v sektoru {SECTOR}. Vezmìte {#a} {PLANE} a zlikvidujte je!>
+
+<PatrolAmph>(*U*) <{LDR_FULLRANK} {LDR_NAME}, japonská letadla útoèí na naši námoøní pìchotu v sektoru {SECTOR}. Vezmìte {#a} {PLANE} a podpoøte vylodìní!>
+<PatrolAmph>(*JA) <{LDR_FULLRANK} {LDR_NAME}, americká letadla útoèí na naše výsadkové letouny v sektoru {SECTOR}. Vezmìte {#a} {PLANE} a ochraòte naše vojáky!>
+
+<Rescue>(*U*) <{LDR_FULLRANK} {LDR_NAME}, máme zprávy, že {PLANE} nouzovì pøistál v sektoru {SECTOR}. Snažte se najít pilota.>
+<Rescue>(*JA) <{LDR_FULLRANK} {LDR_NAME}, máme zprávy, že {PLANE} nouzovì pøistál v sektoru {SECTOR}. Snažte se najít pilota.>
+
+
+// Scramble missions
+
+<KamikazeIntercept>	<Nepøátelské letouny, pravdìpodobnì kamikaze se pøibližují {FROM}! Okamžitì startujte!>
+<KamikazeIntercept>	<Skupina letadel kamikaze se pøibližuje {FROM}! Ihned vzlétnìte!>
+
+<Intercept>(*U*) 	<Nepøátelské letouny se pøibližují {FROM} a chtìjí na nás zaútoèit! {#A} {PLANE} je napadne. Velitelem je {LDR_FULLRANK} {LDR_NAME}. Ihned vzlétnìte!>
+<Intercept>(*JA) 	<Nepøátelské letouny se pøibližují {FROM} a chtìjí na nás zaútoèit! {#A} {PLANE} je napadne. Velitelem je {LDR_FULLRANK} {LDR_NAME}. Ihned vzlétnìte!>
+
+<Scramble>(*U*)	<Poplach! Nepøátelské letouny se blíží {FROM}. Vše co máme - {#a} {PLANE}. Ihned startujte, {FULLRANK}!>
+<Scramble>(*U*) 	<Všichni piloti do letadel! Blíží se poèetná skupina nepøátelských letadel! >
+<Scramble>(*U*) 	<Pozor! Nálet! Tohle není cvièení! Nepøátelské bombardéry pøilétávají {FROM}! Okamžitì vzlétnìte!>
+<Scramble>(*U*) 	<Nepøítel se blíží {FROM}! Máme málo èasu, abychom nabrali výšku! Spìšný vzlet! >
+
+<Scramble>(*JA)	<Poplach! Nepøátelské letouny se blíží {FROM}. Vše co máme - {#a} {PLANE}. Ihned startujte, {FULLRANK}!>
+<Scramble>(*JA) 	<Všichni piloti do letadel! Blíží se poèetná skupina nepøátelských letadel! >
+<Scramble>(*JA) 	<Pozor! Nálet! Tohle není cvièení! Nepøátelské bombardéry pøilétávají {FROM}! Okamžitì vzlétnìte!>
+<Scramble>(*JA) 	<Nepøítel se blíží {FROM}! Máme málo èasu, abychom nabrali výšku! Spìšný vzlet! >
+ 
+// All these missions are <GenericInercept>(*U*). If we need specifics, uncomment and expand them.
+
+//<DefendTrain>(*U*)		<>
+//<DefendArmor>(*U*)		<>
+//<DefendBridge>(*U*)		<>
+//<DefendStation>(*U*)		<>
+//<DefendPort>(*U*)		<>
+//<DefendDepot>(*U*)		<>
+//<DefendHQ>(*U*)			<>
+//<DefendBattery>(*U*)		<>
+//<DefendTroops>(*U*)		<>
+//<PatrolTrain>(*U*)		<>
+//<PatrolCars>(*U*)		<>
+//<PatrolTown>(*U*)		<>
+//<FreeHunt>(*U*)			<>
+//<PatrolStation>(*U*)		<>
+//<PatrolPort>(*U*)		<>
+//<PatrolDepot>(*U*)		<>
+//<PatrolHQ>(*U*)			<>
+//<PatrolBattery>(*U*)		<>
+//<PatrolTroops>(*U*)		<>
+
+// All these missions are <GenericEscort>. If we need specifics, uncomment and expand them.
+
+//<BombTown>(*U*)		<>
+//<BombTrain>(*U*)		<>
+//<BombCars>(*U*)		<>
+//<BombArmor>(*U*)		<>
+//<BombAF>(*U*)		<>
+//<BombBridge>(*U*)	<>
+//<BombShips>(*U*)		<>
+//<BombConvoy>(*U*)	<>
+//<BombStation>(*U*)	<>
+//<BombPort>(*U*)		<>
+//<BombDepot>(*U*)		<>
+//<BombHQ>(*U*)		<>
+//<BombBattery>(*U*)	<>
+//<BombTroops>(*U*)	<>
+
+//<BombStation>(*JA)		<>
+//<BombPort>(*JA)		<>
+//<BombDepot>(*JA)		<>
+//<BombHQ>(*JA)		<>
+//<BombBattery>(*JA)		<>
+//<BombTroops>(*JA)		<>
+//<BombArmor>(*JA)		<>
+//<BombAF>(*JA)		<>
+//<BombBridge>(*JA)		<>
+//<BombTrain>(*JA)		<>
+//<BombCars>(*JA)		<>
+//<BombTown>(*JA)		<>
+
+
+/////////////////////////////////////
+
+
+//<ReconAF>(*U*)		<>
+//<BDAAF>(*U*)		<>
+//<DefendTrans>(*U*)		<>
+//<TranIntercept>(*U*)		<>
+//<ParadropEscort>(*U*)		<>
+
+//<ReconEscort>(*U*)		<>
+//<ReconIntercept>(*U*)		<>
+//<Rescue>(*U*)		<>
+//<Verify>(*U*)		<>
+//<ReconHQ>(*U*)		<>
+//<ReconArty>(*U*)		<>
+//<ReconDepot>(*U*)		<>
+//
+//<Rescue>(*JA)		<>
+//<Verify>(*JA)		<>
+//<ReconHQ>(*JA)		<>
+//<ReconArty>(*JA)		<>
+//<ReconDepot>(*JA)		<>
+//<ReconAF>(*JA)		<>
+//<BDAAF>(*JA)		<>
+//<PatrolTown>(*JA)		<>
+//<TranIntercept>(*JA)		<>
+
+//<DefendTrain>(*JA)		<>
+//<DefendCars>(*JA)		<>
+//<PatrolTrain>(*JA)		<>
+//<PatrolCars>(*JA)		<>
+//<DefendArmor>(*JA)		<>
+//<PatrolArmor>(*JA)		<>
+//<DefendAF>(*JA)		<>
+//<PatrolAF>(*JA)		<>
+//<Scramble>(*JA)		<>
+//<ParadropIntercept>(*JA)		<>
+//<ParadropEscort>(*JA)		<>
+//<PatrolBridge>(*JA)		<>
+//<DefendBridge>(*JA)		<>
+//<Patrol>(*JA)		<>
+//<FreeHunt>(*JA)		<>
+//<ReconIntercept>(*JA)		<>
+//<ReconEscort>(*JA)		<>
+//<DefendShips>(*JA)		<>
+//<PatrolShips>(*JA)		<>
+//<DefendShips>(*JA)		<>
+//<DefendConvoy>(*JA)		<>
+//<AttackConvoy>(*JA)		<>
+//<PatrolConvoy>(*JA)		<>
+//<DefendConvoy>(*JA)		<>
+//<DefendStation>(*JA)		<>
+//<DefendPort>(*JA)		<>
+//<DefendDepot>(*JA)		<>
+//<DefendHQ>(*JA)		<>
+
+//<DefendBattery>(*JA)		<>
+//<DefendTroops>(*JA)		<>
+//<AttackTroops>(*JA)		<>
+//<PatrolStation>(*JA)		<>
+//<PatrolPort>(*JA)		<>
+//<PatrolDepot>(*JA)		<>
+//<PatrolHQ>(*JA)		<>
+//<PatrolBattery>(*JA)		<>
+//<PatrolTroops>(*JA)		<>
+//////////////////////
+
+<repHeader>			<	BOJOVÉ HLÁŠENÍ\n>
+<repDate>			< \nDATUM: {DATE}\n>
+<repTimeTO>			<Vzlet: {MTIME_TAKEOFF}>
+<repTimeContact>	< Kontakt: {MTIME_CONTACT}>
+<repTimeTarget>		< Nad cílem: {MTIME_TARGET}>
+<repTimeBack>		< Pøistání: {MTIME_LANDING}>
+<repMission>		<ÚKOL: >
+<repForces>		< \nSÍLY STRAN:\n>
+<repOwn>		<   NAŠE: {=#} {plane}\n>
+<repOtherFriendly>	<        {=#} {plane}\n>
+<repFirstEnemy>		<   NEPØÍTELE: {~#} {plane}>
+<repOtherEnemy>		<, {~#} {plane}>
+
+<repResults>		< \nVÝSLEDKY:\n>
+<repEnemyLosses>	<    NEPØÁTELSKÉ ZTRÁTY:\n>
+
+<repVictory>	<        {rank} {lastname} - 1 vítìzství\n>
+<repVictories>	<        {rank} {lastname} - {=#} vítìzství\n>
+
+<repOurLosses>		<    NAŠE ZTRÁTY:\n>
+<repKIA>		<        {rank} {lastname} - padl\n>
+<repMIA>		<        {rank} {lastname} - pohøešován\n>
+<repWIA>		<        {rank} {lastname} - ranìn\n>
+
+
+<repCVkill>	<Jedna nepøátelská letadlová loï znièena\n>
+<repCVkills> <Nepøátelských letadlových lodí znièeno - {#A}\n>
+<repCAkill> <Jedna nepøátelská bitevní loï znièena\n>>
+<repCAkills> <Nepøátelských bitevních lodí znièeno - {#A}\n>
+<repFleetLosses> <Naše flotila utrpìla tìžké ztráty\n>
+
+<fileHall>		<Síò slávy>
+<titleHall>		<Síò slávy>
+<recHall>		<{FULLRANK} {FIRSTNAME} {LASTNAME} bojových letù - {SORTIES} , sestøeleno - {AKILLS} ({POINTS}) 
+
+<fileAirKills>	<Sestøeleno letadel>
+<titleAirKills>	<{FIRSTNAME} {LASTNAME} sestøelil letadel\n>
+<recAirKill>		<{DATE}: {plane}\n>
+
+<fileWarDiary>  <Váleèný deník>
+<titleWarDiary>  <VÁLEÈNÝ DENÍK\n>
+
+<fileSummary>   <Celkem znièeno>
+<titleSummary>   <{FULLRANK} {FIRSTNAME} {LASTNAME}\n>
+
+<filePersonnel> <Povýšení a vyznamenání>
+<titlePersonnel> <Povýšení a vyznamenání\n\n>
+
+<YOURGROUP>	<\n \n>
+
+// Maps
+
+<Japan1> <Japonsko>
+<Japan> <Japonsko>
+<NewGuinea> <Nová Guinea>
+<Guadal> <Guadalcanal>
+<Guadal1> <Guadalcanal>
+<Guadal2> <Guadalcanal>
+<CoralSea> <Korálové moøe>
+<SantaCruz> <Santa Cruz>
+<Hawaii> <Havaj>
+<Midway> <Midway>
+<Palau>	 <Palauské ostrovy>
+<Iwo> <Iwodžima>
+<Chichi> <Èièidžima> 
+<Singapore> <Singapur>
+<Marianas> <Mariany>
+<Marianas1> <Mariany>
+<Marianas2> <Mariany>
+

@@ -1,0 +1,310 @@
+// 44-45 Norm
+[Operations]
+oRuRescue	10622:50509					VVS 2Y			LW 0F
+oRuRescue	10622:50509					VVS 2Y			LW 2F
+oRuRescue	10622:50509					VVS 2Y 2F		LW 2F
+oRuRescue	10622:50509					VVS 2Y 2F		LW 2F
+oRuVerify	10622:50509 				VVS 2Y			LW 0F
+oRuVerify	10622:50509 				VVS 2Y			LW 2F
+oRuVerify	10622:50509 				VVS 2Y 2F		LW 2F
+oRuVerify	10622:50509 				VVS 2Y 2F		LW 4F
+oDeRescue	10622:50509 				VVS 0F			LW 2Y
+oDeRescue	10622:50509 				VVS 2F			LW 2Y
+oDeRescue	10622:50509 				VVS 2F			LW 2Y 2F
+oDeRescue	10622:50509 				VVS 2F			LW 2Y
+oDeVerify	10622:50509 				VVS 2F			LW 2Y
+oDeVerify	10622:50509 				VVS 0F			LW 2Y
+oDeVerify	10622:50509 				VVS 2F			LW 2Y 2F
+oDeVerify	10622:50509 				VVS 2F			LW 2Y
+oRuRecon	10622:50509 				VVS 2Y			LW 0F
+oRuRecon	10622:50509 				VVS 2Y			LW 2F
+oRuRecon	10622:50509 				VVS 4Y 4F		LW 2F 2F 2F
+oRuRecon	10622:50509 				VVS 2Y 2F		LW 0F
+oDeRecon	10622:50509 				VVS 2F			LW 2Y
+oDeRecon	10622:50509 				VVS 0F			LW 2Y
+oDeRecon	10622:50509 				VVS 0F			LW 2Y 2F
+oDeRecon	10622:50509 				VVS 2F 2F 2F	LW 2Y 2F 
+oDeScramble	10622:50509					VVS 6Bx			LW 8Y  
+oDeScramble 10622:50509					VVS 9Bx			LW 8Y  
+oDeScramble 10622:50509					VVS 3Bx			LW 4Y  
+oDeScramble 10622:50509					VVS 6Bx			LW 4Y  
+oRuScramble 10622:50509					VVS 8Y			LW 9Bx  
+oRuScramble 10622:50509					VVS 8Y			LW 9Bx  
+oRuScramble 10622:50509					VVS 4Y			LW 4Bx  
+oRuScramble 10622:50509					VVS 6Y			LW 6Bx  
+oDeAttackAF 10622:50509					VVS 2F			LW 6Y 2F
+oDeAttackAF 10622:50509					VVS 2F			LW 6Y 8F
+oDeAttackAF 10622:50509					VVS 4F			LW 8Y 8F
+oDeAttackAF	10622:50509					VVS 2F 2F		LW 6Y 4F
+oDeAttackAF	10622:50509					VVS 6F			LW 6Y 8F
+oDeAttackArmor 10622:50509				VVS 2F 			LW 6Y 4F
+oDeAttackArmor 10622:50509				VVS 0F 			LW 6Y 4F
+oDeAttackArmor 10622:50509				VVS 2F			LW 3Y 4F  
+oDeAttackArmor 10622:50509				VVS 0F	 		LW 6Y 4F  
+oDeAttackArmor 10622:50509				VVS 2F  		LW 9Y 4F  
+oDeAttackArmor 10622:50509				VVS 4F 			LW 6Y 6F  
+oDeAttackArmor 10622:50509				VVS 0F			LW 6Y 2F
+oDeAttackCluster 10622:50509			VVS 2F	 		LW 6Y 4F
+oDeAttackCluster 10622:50509			VVS 0F		 	LW 6Y
+oDeAttackCluster 10622:50509			VVS 2F 			LW 3Y 4F  
+oDeAttackCluster 10622:50509			VVS 0F		 	LW 6Y 4F  
+oDeAttackCluster 10622:50509			VVS 2F 			LW 9Y 4F  
+oDeAttackCluster 10622:50509			VVS 4F	 		LW 6Y 6F  
+oDeAttackCluster 10622:50509			VVS 0F 			LW 6Y 2F
+oDeAttackBridge 10622:50509				VVS	4F 			LW 6Y 2F  
+oDeAttackBridge 10622:50509				VVS 2F	 		LW 4Y 4F   
+oDeAttackBridge 10622:50509				VVS 0F 			LW 4Y 2F  
+oDeAttackBridge 10622:50509				VVS 0F 			LW 6Y 2F   
+oDeAttackSoft 10622:50509				VVS 0F	 		LW 4Y 2F
+oDeAttackSoft 10622:50509				VVS 4F 			LW 4Y 4F
+oDeAttackSoft 10622:50509				VVS 0F 			LW 4Y 2F
+oDeAttackSoft 10622:50509				VVS 2F 			LW 4Y 4F
+oDeAttackSoft 10622:50509				VVS 0F 			LW 4Y 2F
+oDeBombAF 10622:50509					VVS 4F 2F 		LW 4fB 4Y
+oDeBombAF 10622:50509					VVS 4F 2F 		LW 4fB 4Y
+oDeBombAF 10622:50509					VVS 2F 2F 		LW 4fB 4Y  
+oDeBombAF 10622:50509					VVS 4F 2F 		LW 4fB 4Y  
+oDeBombAF 10622:50509					VVS 6F  		LW 4fB 4Y  
+oDeBombAF 10622:50509					VVS 4F 2F 		LW 6B 4Y  
+oDeBombAF 10622:50509					VVS 4F 			LW 4fB 4Y
+oDeBombArmor 10622:50509				VVS 4F	 		LW 4dB 4Y
+oDeBombArmor 10622:50509				VVS 2F 2F 		LW 4dB 4Y
+oDeBombArmor 10622:50509				VVS 4F 2F 		LW 8fB 2Y
+oDeBombArmor 10622:50509				VVS 6F 2F 		LW 8A 8Y  
+oDeBombArmor 10622:50509				VVS 4F	 		LW 8fB 4Y 
+oDeBombArmor 10622:50509				VVS 6F 			LW 4dB 8Y
+oDeBombBridge 10622:50509				VVS 2F 2F 		LW 6fB 4Y
+oDeBombBridge 10622:50509				VVS 4F 2F 		LW 4fB 4Y
+oDeBombBridge 10622:50509				VVS 2F 2F 		LW 6fB 4Y  
+oDeBombBridge 10622:50509				VVS 6F 2F  		LW 6B 8Y  
+oDeBombBridge 10622:50509				VVS 6F 2F 		LW 6B 8Y   
+oDeBombBridge 10622:50509				VVS 6F 2F 		LW 4fB 4Y  
+oDeBombBridge 10622:50509				VVS 4F 			LW 4fB 4Y
+oDeBombCluster 10622:50509				VVS 2F 2F 		LW 4fB 4Y 
+oDeBombCluster 10622:50509				VVS 4F 2F 		LW 4fB 2Y
+oDeBombCluster 10622:50509				VVS 4F	 		LW 9B 4Y  
+oDeBombCluster 10622:50509				VVS 6F 2F  		LW 4fB 4Y  
+oDeBombCluster 10622:50509				VVS 6F 2F 		LW 4fB 8Y   
+oDeBombCluster 10622:50509				VVS 6F 2F 		LW 4fB 4Y  
+oDeBombCluster 10622:50509				VVS 6F 			LW 9B 6Y
+oDeBombSoft 10622:50509					VVS 2F 2F 4F	LW 4dB 8Y  
+oDeBombSoft 10622:50509					VVS 4F 4F 		LW 4dB 8Y
+oDeBombSoft 10622:50509					VVS 6F 2F 		LW 4fB 8Y
+oDeBombSoft 10622:50509					VVS 2F 4F 		LW 4fB 4Y 
+oDeBombSoft 10622:50509					VVS 8F			LW 3dB 8Y
+oDeBombSoft 10622:50509					VVS 6F 			LW 3dB 8Y
+oDeBombTown 10622:50509					VVS 4F 2F 		LW 4fB 4Y
+oDeBombTown 10622:50509					VVS 4F 			LW 6B 4Y
+oDeBombTown 10622:50509					VVS 4F 2F 		LW 4fB 4Y  
+oDeBombTown 10622:50509					VVS 6F			LW 4fB 4Y
+oDeBombTown 10622:50509					VVS 2F 2F 4F	LW 4fB 8Y  
+oDeBombTown 10622:50509					VVS 2F 2F 2F	LW 4fB 4Y 
+oDeBombTown 10622:50509					VVS 4F 4F 		LW 8fB 4Y 
+oDeBombTown 10622:50509					VVS 2F 2F 		LW 4fB 4Y  
+oDeBTransfer 10622:50509				VVS 2F	 		LW 6Y 4F 
+oDeBTransfer 10622:50509				VVS 4F 			LW 9Y 6F  
+oDeDefendAF 10622:50509					VVS 3A 4F 2F	LW 8Y 
+oDeDefendAF 10622:50509					VVS 6A 4F 2F	LW 8Y 
+oDeDefendAF 10622:50509					VVS 6A 4F 		LW 4Y 
+oDeDefendAF 10622:50509					VVS 6A 2F 2F	LW 4Y 
+oDeDefendAF 10622:50509					VVS 6A 4F 		LW 4Y 
+oDeDefendArmor 10622:50509				VVS 6B 2F 4F	LW 4Y 
+oDeDefendArmor 10622:50509				VVS 3B 2F 4F	LW 4Y 
+oDeDefendArmor 10622:50509				VVS 3A 4F 		LW 4Y 
+oDeDefendArmor 10622:50509				VVS 6B 2F 4F	LW 8Y 
+oDeDefendArmor 10622:50509				VVS 6B 4F 4F	LW 8Y 
+oDeDefendArmor 10622:50509				VVS 6B 4F 4F	LW 8Y 
+oDeDefendArmor 10622:50509				VVS 9A  		LW 4Y
+oDeDefendCluster 10622:50509			VVS 3A 2F 		LW 4Y
+oDeDefendCluster 10622:50509			VVS 3B 4F 		LW 4Y
+oDeDefendCluster 10622:50509			VVS 6B 2F 		LW 4Y   
+oDeDefendCluster 10622:50509			VVS 4B 4F 		LW 4Y   
+oDeDefendCluster 10622:50509			VVS 6A 2F 		LW 4Y
+oDeDefendCluster 10622:50509			VVS 6A 2F 		LW 4Y   
+oDeDefendCluster 10622:50509			VVS 6B 4F 		LW 4Y  
+oDePatrolCluster 10622:50509			VVS 3A 2F 		LW 4Y
+oDePatrolCluster 10622:50509			VVS 3B 4F 		LW 4Y
+oDePatrolCluster 10622:50509			VVS 6B 2F 		LW 6Y   
+oDePatrolCluster 10622:50509			VVS 4B 4F 		LW 6Y   
+oDePatrolCluster 10622:50509			VVS 6A 2F 		LW 6Y
+oDePatrolCluster 10622:50509			VVS 6A 2F 		LW 4Y  
+oDePatrolCluster 10622:50509			VVS 6B 4F 		LW 6Y  
+oDeDefendSoft 10622:50509				VVS 4B 4F 		LW 4Y 
+oDeDefendSoft 10622:50509				VVS 4B 4F 4F	LW 8Y 
+oDeDefendSoft 10622:50509				VVS 6B 2F 4F	LW 8Y 
+oDeDefendSoft 10622:50509				VVS 6A 2F 4F	LW 8Y
+oDeDefendSoft 10622:50509				VVS 6A 4F 		LW 8Y 
+oDeDefendSoft 10622:50509				VVS 8A 		LW 4Y 
+oDeDefendSoft 10622:50509				VVS 8B 			LW 4Y
+oDeDefendSoft 10622:50509				VVS 9A	 		LW 4Y
+oDeFreeHunt 10622:50509					VVS 2F 2F 4F	LW 4Y
+oDeFreeHunt 10622:50509					VVS 4F 4F 		LW 8Y
+oDeFreeHunt 10622:50509					VVS 6F 2F 		LW 8Y   
+oDeFreeHunt 10622:50509					VVS 8F	 		LW 8Y  
+oDeFTransfer 10622:50509				VVS 4F 			LW 3T 8Y  
+oDeFTransfer 10622:50509				VVS 2F 			LW 6T 8Y
+oDeParadropEscort 10622:50509			VVS 6F	 		LW 3P 6Y
+oDeParadropEscort 10622:50509			VVS 6F 			LW 3P 6Y  
+oDeParadropEscort 10622:50509			VVS 6F 2F 		LW 3P 8Y   
+oDeParadropEscort 10622:50509			VVS 6F 4F 		LW 3P 8Y   
+oDeParadropEscort 10622:50509			VVS 8F 			LW 3P 4Y 
+oDeParadropEscort 10622:50509			VVS 8F	 		LW 3P 8Y  
+oDeParadropIntercept 10622:50509		VVS 3P 4F 4F 	LW 8Y 4F
+oDeParadropIntercept 10622:50509		VVS 3P 6F 		LW 8Y 4F
+oDePatrol 10622:50509					VVS 6F 6F 		LW 8Y   
+oDePatrol 10622:50509					VVS 9F	 		LW 8Y  
+oDePatrol 10622:50509					VVS 9F 			LW 8Y   
+oDePatrolAF 10622:50509					VVS 6A  		LW 4Y 
+oDePatrolAF 10622:50509					VVS 9B 2F 4F 	LW 8Y 
+oDePatrolAF 10622:50509					VVS 9A 		LW 4Y 
+oDePatrolArmor 10622:50509				VVS 4A 4F 		LW 4Y
+oDePatrolArmor 10622:50509				VVS 9B 4F 		LW 8Y 
+oDePatrolArmor 10622:50509				VVS 8A 		LW 4Y 
+oDePatrolBridge 10622:50509				VVS 4A 4F 		LW 4Y 
+oDePatrolBridge 10622:50509				VVS 9B 4F 4F	LW 8Y 
+oDePatrolBridge 10622:50509				VVS 8A 		LW 4Y 
+oDePatrolSoft 10622:50509				VVS 4A 4F 		LW 4Y 
+oDePatrolSoft 10622:50509				VVS 9B 6F 		LW 4Y 
+oDePatrolSoft 10622:50509				VVS 6A 2F 4F	LW 8Y 
+oDePatrolTown 10622:50509				VVS 9B 4F 4F 	LW 8Y 
+oDeReconEscort 10622:50509				VVS 2F 2F 		LW 1R 4Y 
+oDeReconIntercept 10622:50509			VVS 1R 4F  	LW 4Y
+oDeReconIntercept 10622:50509			VVS 1R 4F 		LW 8Y 
+oDeTranIntercept 10622:50509			VVS 6T 4F 		LW 8Y
+oDeTranIntercept 10622:50509			VVS 4T 4F 		LW 8Y
+oDeTranIntercept 10622:50509			VVS 9T 6F 		LW 8Y
+oRuAttackAF 10622:50509					VVS 4Y 6F	 	LW 0F 
+oRuAttackAF 10622:50509					VVS 6Y 2F 		LW 2F
+oRuAttackAF 10622:50509					VVS 6Y 2F	 	LW 2F
+oRuAttackAF 10622:50509					VVS 6Y 2F	 	LW 2F
+oRuAttackAF 10622:50509					VVS 6Y 6F	 	LW 4F
+oRuAttackAF 10622:50509					VVS 6Y 8F	 	LW 4F
+oRuAttackAF 10622:50509					VVS 6Y 4F 		LW 2F 2F
+oRuAttackArmor 10622:50509				VVS 6Y 4F	 	LW 4F
+oRuAttackArmor 10622:50509				VVS 3Y 2F	 	LW 2F
+oRuAttackArmor 10622:50509				VVS 3Y 2F	 	LW 0F
+oRuAttackArmor 10622:50509				VVS 6Y 		 	LW 0F
+oRuAttackArmor 10622:50509				VVS 6Y 2F	 	LW 4F
+oRuAttackArmor 10622:50509				VVS 6Y 		 	LW 0F
+oRuAttackArmor 10622:50509				VVS 9Y  		LW 0F
+oRuAttackCluster 10622:50509			VVS 4Y 2F	 	LW 2F
+oRuAttackCluster 10622:50509			VVS 4Y 2F 		LW 0F
+oRuAttackCluster 10622:50509			VVS 6Y 	 	LW 0F  
+oRuAttackCluster 10622:50509			VVS 4Y 4F 		LW 4F  
+oRuAttackCluster 10622:50509			VVS 6Y 2F	 	LW 0F
+oRuAttackCluster 10622:50509			VVS 6Y  		LW 0F  
+oRuAttackCluster 10622:50509			VVS 6Y 4F	 	LW 2F  
+oRuAttackSoft 10622:50509				VVS 4Y 2F 		LW 0F 
+oRuAttackSoft 10622:50509				VVS 4Y 4F	 	LW 4F
+oRuAttackSoft 10622:50509				VVS 4Y 2F	 	LW 0F
+oRuAttackSoft 10622:50509				VVS 4Y 		 	LW 0F
+oRuAttackSoft 10622:50509				VVS 4Y 	 	LW 0F
+oRuAttackSoft 10622:50509				VVS 4Y 2F 		LW 0F
+oRuAttackSoft 10622:50509				VVS 4Y	 		LW 0F
+oRuAttackSoft 10622:50509				VVS 4Y			LW 0F
+oRuBombAF 10622:50509					VVS 4fB 4Y 		LW 4F
+oRuBombAF 10622:50509					VVS 9B 4Y 	LW 4F
+oRuBombAF 10622:50509					VVS 9A 6Y 	LW 6F
+oRuBombCluster 10622:50509				VVS 4A 8Y 		LW 6F 2F
+oRuBombCluster 10622:50509				VVS 9B 8Y 	LW 4F 4F
+oRuBombCluster 10622:50509				VVS 9A 6Y 	LW 4F 
+oRuBombArmor 10622:50509				VVS 4fB 4Y	 	LW 4F
+oRuBombArmor 10622:50509				VVS 9B 8Y 		LW 2F 2F 4F
+oRuBombArmor 10622:50509				VVS 9A 4Y 	LW 4F
+oRuBombBridge 10622:50509				VVS 4fB 4Y	 	LW 6F
+oRuBombBridge 10622:50509				VVS 9B 4Y 	LW 4F
+oRuBombBridge 10622:50509				VVS 9A 4Y 		LW 2F 2F 2F
+oRuBombSoft 10622:50509					VVS 4A 6Y		LW 4F 2F
+oRuBombSoft 10622:50509					VVS 9B 8Y 		LW 2F 2F 2F
+oRuBombSoft 10622:50509					VVS 9A 6Y 	LW 2F 2F 4F
+oRuBombTown 10622:50509					VVS 9B 6Y 	LW 4F 
+oRuBTransfer 10622:50509				VVS 6Y 4F		LW 2F  
+oRuBTransfer 10622:50509				VVS 9Y 6F		LW 4F  
+oRuDefendAF 10622:50509					VVS 6Y  		LW 6fB 2F
+oRuDefendAF 10622:50509					VVS 4Y  		LW 6fB
+oRuDefendAF 10622:50509					VVS 6Y  		LW 6fB
+oRuDefendAF 10622:50509					VVS 6Y  		LW 8fB
+oRuDefendAF 10622:50509					VVS 4Y	 		LW 4fB
+oRuDefendArmor 10622:50509				VVS 4Y  		LW 6fB
+oRuDefendArmor 10622:50509				VVS 8Y 			LW 6B 2F
+oRuDefendArmor 10622:50509				VVS 4Y	 		LW 6fB
+oRuDefendArmor 10622:50509				VVS 8Y  		LW 8fB  
+oRuDefendArmor 10622:50509				VVS 4Y  		LW 4dB 4F
+oRuDefendArmor 10622:50509				VVS 6Y  		LW 8fB 
+oRuDefendArmor 10622:50509				VVS 8Y 			LW 4A 6F
+oRuDefendCluster 10622:50509			VVS 4Y  		LW 6B 4F
+oRuDefendCluster 10622:50509			VVS 6Y 			LW 6B
+oRuDefendCluster 10622:50509			VVS 6Y	 		LW 3B 4F  
+oRuDefendCluster 10622:50509			VVS 6Y  		LW 6fB
+oRuDefendCluster 10622:50509			VVS 4Y  		LW 9B 4F  
+oRuDefendCluster 10622:50509			VVS 8Y  		LW 6fB 
+oRuDefendCluster 10622:50509			VVS 8Y 			LW 6fB
+oRuPatrolCluster 10622:50509			VVS 4Y  		LW 6B 4F
+oRuPatrolCluster 10622:50509			VVS 6Y 			LW 4fB
+oRuPatrolCluster 10622:50509			VVS 6Y	 		LW 3B 4F  
+oRuPatrolCluster 10622:50509			VVS 6Y  		LW 6B 4F  
+oRuPatrolCluster 10622:50509			VVS 4Y  		LW 6fB
+oRuPatrolCluster 10622:50509			VVS 6Y  		LW 6B 6F  
+oRuPatrolCluster 10622:50509			VVS 8Y 			LW 6fB
+oRuDefendBridge 10622:50509				VVS 6Y  		LW 6B 2F 2F  
+oRuDefendBridge 10622:50509				VVS 8Y  		LW 4B 4F 4F   
+oRuDefendBridge 10622:50509				VVS 6Y  		LW 4fB 2F  
+oRuDefendBridge 10622:50509				VVS 6Y  		LW 6fB  
+oRuDefendSoft 10622:50509				VVS 8Y  		LW 8fB 
+oRuDefendSoft 10622:50509				VVS 6Y  		LW 6fB 
+oRuDefendSoft 10622:50509				VVS 4Y  		LW 4fB 
+oRuDefendSoft 10622:50509				VVS 6Y  		LW 6fB 
+oRuDefendSoft 10622:50509				VVS 4Y 			LW 6B 4F
+oRuFreeHunt 10622:50509					VVS 8Y  		LW 4F 4F  
+oRuFreeHunt 10622:50509					VVS 8Y	 		LW 2F 2F 4F  
+oRuFreeHunt 10622:50509					VVS 8Y 			LW 2F 2F 4F  
+oRuFTransfer 10622:50509				VVS 3T 8Y 		LW 4F  
+oRuFTransfer 10622:50509				VVS 6T 8Y 		LW 2F  
+oRuParadropEscort 10622:50509			VVS 3P 4F 6Y	LW 2F 2F 2F
+oRuParadropEscort 10622:50509			VVS 3P 6Y 		LW 2F 2F 
+oRuParadropIntercept 10622:50509		VVS 6Y 			LW 3P 4F
+oRuParadropIntercept 10622:50509		VVS 6Y	 		LW 3P 2F  
+oRuParadropIntercept 10622:50509		VVS 6Y 2F 		LW 3P 4F   
+oRuParadropIntercept 10622:50509		VVS 6Y 4F 		LW 3P 2F   
+oRuParadropIntercept 10622:50509		VVS 8Y	 		LW 3P 4F 
+oRuParadropIntercept 10622:50509		VVS 8Y 			LW 3P 4F  
+oRuPatrol 10622:50509					VVS 4Y  		LW 6F
+oRuPatrol 10622:50509					VVS 8Y  		LW 2F 2F 4F  
+oRuPatrol 10622:50509					VVS 8Y 			LW 8F  
+oRuPatrolAF 10622:50509					VVS 4Y  		LW 6fB 
+oRuPatrolAF 10622:50509					VVS 4Y  		LW 6fB 
+oRuPatrolAF 10622:50509					VVS 6Y  		LW 9B 2F 4F  
+oRuPatrolAF 10622:50509					VVS 6Y  		LW 6fB 
+oRuPatrolAF 10622:50509					VVS 8Y  		LW 9B 4F 4F  
+oRuPatrolAF 10622:50509					VVS 6Y  		LW 6fB 
+oRuPatrolAF 10622:50509					VVS 8Y 			LW 6fB 
+oRuPatrolArmor 10622:50509				VVS 4Y  		LW 4A 4F
+oRuPatrolArmor 10622:50509				VVS 6Y  		LW 4A 2F 2F
+oRuPatrolArmor 10622:50509				VVS 6Y  		LW 3dB 3F  
+oRuPatrolArmor 10622:50509				VVS 4Y  		LW 9B 4F  
+oRuPatrolArmor 10622:50509				VVS 6Y 			LW 9dB 4F
+oRuPatrolBridge 10622:50509				VVS 4Y  		LW 6fB 
+oRuPatrolBridge 10622:50509				VVS 4Y  		LW 9B 4F
+oRuPatrolBridge 10622:50509				VVS 4Y  		LW 6fB 
+oRuPatrolBridge 10622:50509				VVS 6Y   		LW 6fB 
+oRuPatrolBridge 10622:50509				VVS 6Y  		LW 6fB   
+oRuPatrolBridge 10622:50509				VVS 6Y  		LW 9B 4F 4F  
+oRuPatrolBridge 10622:50509				VVS 8Y 			LW 6fB 
+oRuPatrolSoft 10622:50509				VVS 2F 4Y 	LW 9dB 4F  
+oRuPatrolSoft 10622:50509				VVS 4Y  		LW 6fB 
+oRuPatrolSoft 10622:50509				VVS 6Y  		LW 6fB 
+oRuPatrolSoft 10622:50509				VVS 8Y  		LW 6fB 
+oRuPatrolSoft 10622:50509				VVS 8Y	 		LW 9dB 4F
+oRuPatrolSoft 10622:50509				VVS 8Y 			LW 6fB 
+oRuPatrolTown 10622:50509				VVS 4Y  		LW 6fB 
+oRuPatrolTown 10622:50509				VVS 6Y 			LW 9B 4F
+oRuPatrolTown 10622:50509				VVS 4Y  		LW 9B 4F   
+oRuPatrolTown 10622:50509				VVS 8Y	 		LW 6fB 
+oRuPatrolTown 10622:50509				VVS 4Y  		LW 9B 4F 
+oRuPatrolTown 10622:50509				VVS 6Y  		LW 9B 4F  
+oRuReconEscort 10622:50509				VVS 1R 6Y 		LW 4F 2F
+oRuReconEscort 10622:50509				VVS 1R 4Y 		LW 2F 2F
+oRuReconIntercept 10622:50509			VVS 4Y 4F 		LW 1R 4F 
+oRuTranIntercept 10622:50509			VVS 8Y 			LW 6T 4F
+oRuTranIntercept 10622:50509			VVS 6Y 			LW 9T 4F
+oRuTranIntercept 10622:50509			VVS 8Y 			LW 4T 2F

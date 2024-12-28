@@ -1,0 +1,184 @@
+[MAIN]
+  BriefSound samples/sounds/Briefing2.mp3
+  MAP Okinawa/Online_load.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 800.0
+  player IJN_C_Hiryu_FS00
+  army 2
+  playerNum 0
+[Wing]
+  ja0100
+  ja0111
+  IJN_C_Hiryu_FS00
+  usa0100
+  usa0101
+  usa0103
+[ja0100]
+  Planes 2
+  Skill 3
+  Class air.G4M1_11
+  Fuel 100
+  weapons default
+[ja0100_Way]
+  NORMFLY 120138.07 9630.11 1250.00 300.00 &1
+  NORMFLY 94994.70 9677.56 1250.00 300.00 &1
+  NORMFLY 47433.38 9995.54 3000.00 300.00 &1
+  NORMFLY 899.43 9752.74 3000.00 300.00 &1
+  NORMFLY -94984.53 9632.07 3000.00 300.00 &1
+[ja0111]
+  Planes 3
+  Skill 2
+  Class air.A6M2_21
+  Fuel 100
+  weapons default
+[ja0111_Way]
+  NORMFLY 123174.05 9565.30 1250.00 350.00 ja0100 0 &1
+  NORMFLY 95904.94 9665.64 1250.00 350.00 ja0100 1 &1
+  NORMFLY 52015.46 9793.74 3000.00 350.00 usa0101 1 &1
+  NORMFLY 12919.98 10014.74 3000.00 350.00 &1
+  LANDING 1125.90 10108.47 0 0 0_Chief 1 &1
+[IJN_C_Hiryu_FS00]
+  Planes 3
+  Skill 2
+  Class air.A6M3
+  Fuel 100
+  weapons default
+[IJN_C_Hiryu_FS00_Way]
+  TAKEOFF 100974.07 25330.67 0 0 &1
+  NORMFLY 95062.02 19960.48 1250.00 300.00 &1
+  NORMFLY 95001.79 10672.38 1500.00 400.00 ja0100 1 &1
+  NORMFLY 52010.01 10797.53 3000.00 400.00 ja0100 2 &1
+  NORMFLY 12948.25 10725.94 3000.00 400.00 &1
+  NORMFLY 12945.03 20349.44 3000.00 400.00 &1
+  NORMFLY 92861.24 32455.17 1000.00 400.00 &1
+  NORMFLY 108329.00 32503.54 500.00 400.00 &1
+  LANDING 101965.91 26509.01 0 0 &1
+[usa0100]
+  Planes 2
+  Skill 2
+  Class air.P_38L
+  Fuel 75
+  weapons default
+[usa0100_Way]
+  NORMFLY 50369.55 103749.01 3200.00 350.00 &0
+  NORMFLY 47298.61 10196.75 3200.00 350.00 IJN_C_Hiryu00 3 &0
+  NORMFLY 24064.03 10084.95 3200.00 350.00 &0
+  NORMFLY 74496.88 49669.58 2000.00 350.00 &0
+  NORMFLY 100276.16 71657.79 500.00 350.00 &0
+  LANDING 111514.67 80112.72 0 0 &0
+[usa0101]
+  Planes 1
+  Skill 0
+  Class air.P_38L
+  Fuel 75
+  weapons default
+[usa0101_Way]
+  NORMFLY 49555.80 104235.36 3250.00 350.00 &0
+  NORMFLY 46758.24 10742.31 3250.00 350.00 ja0100 2 &0
+  NORMFLY 23567.25 10856.42 3250.00 350.00 &0
+  NORMFLY 74395.03 48956.65 2050.00 350.00 &0
+  NORMFLY 100276.16 70893.93 550.00 300.00 &0
+  LANDING 111514.67 80112.72 0 0 &0
+[usa0103]
+  Planes 3
+  Skill0 2
+  Skill1 1
+  Skill2 1
+  Skill3 1
+  Class air.P_38L
+  Fuel 75
+  weapons default
+[usa0103_Way]
+  NORMFLY 48672.62 104767.58 3300.00 350.00 &0
+  NORMFLY 46231.76 11343.37 3300.00 350.00 ja0111 2 &0
+  NORMFLY 23077.19 11509.83 3300.00 350.00 &0
+  NORMFLY 74395.03 48956.65 2050.00 350.00 &0
+  NORMFLY 100276.16 70893.93 550.00 300.00 &0
+  LANDING 111514.67 80112.72 0 0 &0
+[Chiefs]
+  0_Chief Ships.IJNAkagiCV 2 0 2
+  1_Chief Ships.IJNYukikazeDD41 2 0 2
+  2_Chief Ships.IJNAmatsukazeDD43 2 0 2
+  3_Chief Ships.IJNAmatsukazeDD45 2 0 2
+[0_Chief_Road]
+  110304.93 9622.18 120.00 0 2 9.722222222222221
+  863.34 10121.39 120.00
+[1_Chief_Road]
+  111033.50 10350.53 120.00 0 2 9.722222222222221
+  1369.19 10697.29 120.00
+[2_Chief_Road]
+  110984.42 8927.60 120.00 0 2 9.722222222222221
+  1375.98 9612.17 120.00
+[3_Chief_Road]
+  111463.43 9629.03 120.00 0 2 9.722222222222221
+  1736.14 10113.29 120.00
+[NStationary]
+  19_Static vehicles.planes.Plane$A6M5A 2 101909.40 25352.69 388.90 0.0 ja
+  20_Static vehicles.planes.Plane$A6M5A 2 102027.10 25246.91 488.90 0.0 ja
+  21_Static vehicles.planes.Plane$A6M5A 2 102089.10 25203.22 488.90 0.0 ja
+  22_Static vehicles.stationary.Stationary$Kurogane 2 101907.48 25838.37 578.90 0.0
+  23_Static vehicles.stationary.Stationary$Kurogane 2 101909.63 25840.50 578.90 0.0
+  24_Static vehicles.stationary.Stationary$Kurogane 2 101925.03 25857.65 578.90 0.0
+  25_Static vehicles.stationary.Stationary$Truck_Type94 2 101930.11 25792.85 578.90 0.0
+  26_Static vehicles.stationary.Stationary$Truck_Type94 2 101938.62 25785.75 578.90 0.0
+  28_Static vehicles.stationary.Stationary$HaGoRadio 2 101887.54 25794.44 368.90 0.0
+  29_Static vehicles.stationary.Stationary$Truck_Type94 2 101647.74 26352.01 683.90 0.0
+  30_Static vehicles.artillery.Artillery$Twin25mm_JA 2 101373.50 25757.49 362.50 0.0 0
+  31_Static vehicles.artillery.Artillery$Twin25mm_JA 2 102051.97 25710.47 683.90 0.0 0
+  32_Static vehicles.artillery.Artillery$Twin25mm_JA 2 101803.45 26496.58 683.90 0.0 0
+  33_Static vehicles.artillery.Artillery$Twin25mm_JA 2 101876.06 24226.25 683.90 0.0 0
+  34_Static vehicles.artillery.Artillery$Twin25mm_JA 2 101917.06 24139.37 683.90 0.0 0
+  35_Static vehicles.planes.Plane$A6M5A 2 102711.92 23478.49 503.90 0.0 ja
+  36_Static vehicles.planes.Plane$A6M5A 2 102725.39 23456.49 503.90 0.0 ja
+  37_Static vehicles.planes.Plane$A6M5A 2 102739.77 23432.79 518.90 0.0 ja
+  38_Static vehicles.planes.Plane$A6M5A 2 102763.27 23394.72 513.90 0.0 ja
+  39_Static vehicles.planes.Plane$A6M5A 2 102779.00 23371.41 513.90 0.0 ja
+  40_Static vehicles.planes.Plane$A6M5A 2 102792.99 23347.13 513.90 0.0 ja
+  41_Static vehicles.stationary.Siren$SirenCity 2 100939.40 25289.42 683.90 0.0
+  42_Static vehicles.stationary.Siren$SirenCity 2 101936.73 24405.33 683.90 0.0
+[Buildings]
+  0_bld House$DummyPlane4 1 101637.56 26387.02 388.90
+  1_bld House$DummyPlane4 1 101653.20 26404.16 388.90
+  2_bld House$DummyPlane4 1 101670.04 26423.71 388.90
+  3_bld House$DummyPlane4 1 101686.88 26442.65 388.90
+  4_bld House$DummyPlane4 1 101702.82 26460.70 388.90
+  5_bld House$DummyPlane4 1 101718.76 26479.94 388.90
+  6_bld House$DummyPlane4 1 101733.19 26497.39 388.90
+  7_bld House$DummyPlane1 1 101947.54 25452.84 388.90
+  8_bld House$DummyPlane1 1 101948.65 25435.57 388.90
+  9_bld House$DummyPlane1 1 101962.30 25444.76 388.90
+  10_bld House$DummyPlane1 1 101962.30 25460.36 388.90
+  11_bld House$DummyPlane1 1 101947.54 25467.60 388.90
+  12_bld House$DummyPlane1 1 101960.63 25474.56 388.90
+  13_bld House$DummyPlane1 1 101946.70 25483.76 388.90
+  14_bld House$DummyPlane1 1 101960.35 25490.72 388.90
+  15_bld House$DummyPlane1 1 101946.15 25498.80 388.90
+  16_bld House$DummyPlane1 1 101960.07 25503.53 388.90
+  17_bld House$DummyPlane1 1 101946.91 25511.76 388.90
+  18_bld House$DummyPlane1 1 101959.79 25519.96 388.90
+  19_bld House$DummyPlane1 1 101947.43 25528.32 388.90
+  20_bld House$DummyPlane3 1 101408.60 25416.68 688.90
+  21_bld House$DummyPlane3 1 101441.04 25384.24 668.90
+  22_bld House$DummyPlane3 1 101475.77 25361.47 658.90
+  23_bld House$DummyPlane3 1 101515.85 25342.40 653.90
+  24_bld House$DummyGun 1 101886.22 24178.85 428.90
+  25_bld House$DummyPlane1 1 101901.97 24078.77 713.90
+  26_bld House$DummyPlane1 1 101942.03 24035.15 648.90
+  27_bld House$DummyPlane1 1 102001.02 24033.77 613.90
+[Target]
+  3 2 1 30 501 101700 25722 900
+  4 0 1 21 500 100199 5222 0 1 ja0100 94994 9677
+  3 2 1 30 500 347 14155 3000
+  4 2 0 0 00 125276 9107 0 0 ja0111 123174 9565
+[StaticCamera]
+  101043 25778 20
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 98334.36 49003.43 1
+  FrontMarker1 115016.06 42234.10 1
+  FrontMarker2 150087.44 39160.93 1
+  FrontMarker3 110469.78 30131.02 2
+  FrontMarker4 63845.78 16716.81 2
+  FrontMarker5 56190.41 48140.50 1
