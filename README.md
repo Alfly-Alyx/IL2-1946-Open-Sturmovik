@@ -5,13 +5,15 @@ Open-Sturmovik is an unofficial addon for IL-2 1946. This addon is a compilation
 **WIP Roadmap for Patch 1.15:**
 - Improve game loading stability and speed.
 - Improve config.ini
-
-**Roadmap for Patch 1.2:**
-- Update libraries.
+-  Update libraries.
 - Update executables.
 - Add new content.
-- Make Open-Sturmovik compatible with newer game versions.
 - Consolidate Open-Sturmovik into SFS files.
+
+**Roadmap for Patch 1.2:**
+
+- Update Open-Sturmovik to IL2 4.12
+
 
 
 -------------------------------------------------------------------------------------------
