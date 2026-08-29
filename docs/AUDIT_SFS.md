@@ -23,6 +23,8 @@ Les 179 copies exactes se repartissent ainsi :
 
 Conclusion : la redondance exacte ne represente qu'environ 1,5 Mo. Supprimer en bloc les 2 245 chemins communs detruirait environ 1,398 Go de remplacements reels du mod. Aucun nettoyage automatique n'est donc justifie pour la version 1.15.
 
+La verification complementaire des 46 copies provenant de `files.SFS` montre qu'elles sont identiques dans les neuf profils 4.08/4.09 conserves par le selecteur. Elles pourraient techniquement etre omises dans un profil donne, mais le gain serait insignifiant et leur absence compliquerait la reproductibilite des profils historiques. **Decision 1.15 : les 179 copies exactes, soit 1 504 582 octets, sont volontairement conservees.** Elles ne doivent pas etre confondues avec les 2 028 remplacements fonctionnels.
+
 ## Archives restaurees
 
 Le commit orphelin `7e93f90794ae85f0ea92f88f1935eb490855600b` a ete preserve par la branche `codex/recovered-sfs-2024`. Les trois fichiers de travail correspondent exactement a ce commit :

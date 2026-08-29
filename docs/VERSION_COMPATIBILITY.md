@@ -4,6 +4,8 @@
 
 Open Sturmovik 1.15 cible IL-2 Sturmovik 1946 **4.09m** pour son profil modifie. C'est la derniere base dont les executables, le wrapper, les classes libres, `air.ini` et les utilitaires historiques forment ici un ensemble coherent.
 
+Cette cible est maintenant gelee pour la stabilisation de la version 1.15. Les programmes communautaires incompatibles restent archives et desactives. Les etudes d'un portage 4.12.2m ou 4.15.1m ne doivent modifier ni les profils 4.09m ni leur chargeur.
+
 La derniere version officielle disponible est 4.15.1m. Elle n'est pas adoptee comme base du mod 1.15 : le patch 4.15 demande explicitement une installation 4.14.1m officielle et non modifiee. Un portage demanderait de revalider les classes Java, les registres d'avions/cartes, le `files.SFS`, le wrapper et chaque utilitaire. Il devra etre developpe comme profil separe.
 
 Les couples historiques « sans 6DOF » / « 6DOF » ont actuellement des executables, wrappers et `files.SFS` strictement identiques pour chaque version. Le menu conserve leur numerotation, mais avertit qu'il ne peut pas produire deux comportements differents tant que les vrais fichiers 6DOF n'ont pas ete retrouves.
@@ -35,7 +37,7 @@ Les six executables **modifies** ont le drapeau PE `Large Address Aware`. Sous W
 
 Le tas Java historique reste fixe a `-Xmx1G`. Le pousser directement a 2 ou 3 Go empecherait vraisemblablement le moteur ancien de reserver l'espace natif necessaire. Le gain de la v1.15 est donc l'espace disponible pour l'ensemble du processus, sans rendre le tas Java instable.
 
-Le profil `conf.max.ini` applique `ProcessAffinityMask=15`, soit les quatre premiers processeurs logiques. C'est une limite d'affinite, pas une promesse que le moteur ancien parallellisera toute sa charge sur quatre coeurs.
+Le fichier modele contient `ProcessAffinityMask=15`, mais le selecteur 1.15 remplace cette valeur d'apres la topologie declaree par Windows : jusqu'a quatre coeurs physiques, avec un seul processeur logique appartenant a chacun. Il interroge les masques de coeur du systeme au lieu de supposer que les fils Hyper-Threading sont numerotes dans un ordre particulier. La valeur 15 reste le repli si Windows ne fournit pas une topologie exploitable. Cette affinite ne promet pas que le moteur ancien parallellisera toute sa charge.
 
 Documentation Microsoft : [limites memoire des processus 32 bits](https://learn.microsoft.com/en-us/Windows/win32/memory/memory-limits-for-Windows-releases) et [masque d'affinite](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-setprocessaffinitymask).
 

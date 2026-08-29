@@ -225,6 +225,149 @@ function Set-IniSectionValues {
     }
 }
 
+function Get-FourPhysicalCoreAffinityMask {
+    try {
+        if (-not ('OpenSturmovik.CpuTopology' -as [type])) {
+            $source = @"
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
+
+namespace OpenSturmovik {
+    internal enum LogicalProcessorRelationship : int {
+        ProcessorCore = 0
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    internal struct SystemLogicalProcessorInformation {
+        public UIntPtr ProcessorMask;
+        public LogicalProcessorRelationship Relationship;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 16)]
+        public byte[] Details;
+    }
+
+    public static class CpuTopology {
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern bool GetLogicalProcessorInformation(
+            IntPtr buffer,
+            ref uint returnedLength);
+
+        public static ulong[] GetPhysicalCoreMasks() {
+            uint length = 0;
+            if (!GetLogicalProcessorInformation(IntPtr.Zero, ref length)) {
+                int error = Marshal.GetLastWin32Error();
+                if (error != 122) {
+                    throw new Win32Exception(error);
+                }
+            }
+            if (length == 0) {
+                throw new InvalidOperationException("Empty processor topology.");
+            }
+
+            IntPtr buffer = Marshal.AllocHGlobal((int)length);
+            try {
+                if (!GetLogicalProcessorInformation(buffer, ref length)) {
+                    throw new Win32Exception(Marshal.GetLastWin32Error());
+                }
+
+                int itemSize = Marshal.SizeOf(typeof(SystemLogicalProcessorInformation));
+                int count = (int)length / itemSize;
+                List<ulong> masks = new List<ulong>();
+                for (int index = 0; index < count; index++) {
+                    IntPtr current = new IntPtr(buffer.ToInt64() + (index * itemSize));
+                    SystemLogicalProcessorInformation item =
+                        (SystemLogicalProcessorInformation)Marshal.PtrToStructure(
+                            current, typeof(SystemLogicalProcessorInformation));
+                    if (item.Relationship == LogicalProcessorRelationship.ProcessorCore) {
+                        ulong mask = UIntPtr.Size == 8
+                            ? item.ProcessorMask.ToUInt64()
+                            : item.ProcessorMask.ToUInt32();
+                        if (mask != 0) {
+                            masks.Add(mask);
+                        }
+                    }
+                }
+                ulong[] result = masks.ToArray();
+                Array.Sort(result);
+                return result;
+            }
+            finally {
+                Marshal.FreeHGlobal(buffer);
+            }
+        }
+    }
+}
+"@
+            Add-Type -TypeDefinition $source -ErrorAction Stop
+        }
+
+        [uint64]$mask = 0
+        $selectedCores = 0
+        foreach ($coreMaskValue in [OpenSturmovik.CpuTopology]::GetPhysicalCoreMasks()) {
+            [uint64]$coreMask = $coreMaskValue
+            for ($logicalIndex = 0; $logicalIndex -lt 32; $logicalIndex++) {
+                [uint64]$logicalBit = ([uint64]1 -shl $logicalIndex)
+                if (($coreMask -band $logicalBit) -ne 0) {
+                    $mask = $mask -bor $logicalBit
+                    $selectedCores++
+                    break
+                }
+            }
+            if ($selectedCores -ge 4) {
+                break
+            }
+        }
+        if ($mask -eq 0) {
+            throw 'Masque processeur vide.'
+        }
+        return $mask
+    }
+    catch {
+        # Valeur historique : au plus quatre processeurs logiques.
+        return [uint64]15
+    }
+}
+
+function Get-GraphicsVendorProfile {
+    try {
+        $adapters = @(Get-CimInstance -ClassName Win32_VideoController -ErrorAction Stop)
+        $adapter = @($adapters | Where-Object {
+            $_.CurrentHorizontalResolution -and $_.CurrentVerticalResolution
+        })[0]
+        if (-not $adapter) {
+            $adapter = $adapters[0]
+        }
+        if (-not $adapter) {
+            throw 'Aucune carte graphique detectee.'
+        }
+
+        $pnpId = [string]$adapter.PNPDeviceID
+        $vendor = if ($pnpId -match 'VEN_10DE') {
+            'NVIDIA'
+        }
+        elseif ($pnpId -match 'VEN_(1002|1022)') {
+            'AMD'
+        }
+        elseif ($pnpId -match 'VEN_8086') {
+            'Intel'
+        }
+        else {
+            'Generique'
+        }
+        return (New-Object PSObject -Property @{
+            Vendor = $vendor
+            Name = [string]$adapter.Name
+        })
+    }
+    catch {
+        return (New-Object PSObject -Property @{
+            Vendor = 'Generique'
+            Name = 'carte non identifiee'
+        })
+    }
+}
+
 function Set-MaximumConfiguration {
     $confPath = Join-Path $script:Root 'conf.ini'
     $profilePath = Join-Path $script:ProfileRoot 'conf.max.ini'
@@ -265,6 +408,13 @@ function Set-MaximumConfiguration {
         }
 
         $profile = Read-ProfileFile -Path $profilePath
+        $affinityMask = Get-FourPhysicalCoreAffinityMask
+        $profile['rts']['ProcessAffinityMask'] = $affinityMask.ToString([System.Globalization.CultureInfo]::InvariantCulture)
+        $graphics = Get-GraphicsVendorProfile
+        $nvExtensions = if ($graphics.Vendor -eq 'NVIDIA') { '1' } else { '0' }
+        foreach ($key in 'TexFlags.TexEnvCombine4NV','TexFlags.DepthClampNV','TexFlags.TextureShaderNV') {
+            $profile['Render_OpenGL'][$key] = $nvExtensions
+        }
         foreach ($section in $profile.Keys) {
             Set-IniSectionValues -Lines $lines -Section $section -Values $profile[$section]
         }
@@ -274,7 +424,8 @@ function Set-MaximumConfiguration {
             $updated += $newline
         }
         [System.IO.File]::WriteAllText($confPath, $updated, $encoding)
-        Write-Host 'Reglages graphiques maximum appliques ; affinite limitee aux quatre premiers processeurs logiques.' -ForegroundColor Green
+        Write-Host "Reglages graphiques maximum appliques pour $($graphics.Vendor) ($($graphics.Name))." -ForegroundColor Green
+        Write-Host "Affinite limitee a quatre coeurs maximum (masque $affinityMask)." -ForegroundColor Green
     }
     catch {
         Copy-Item -LiteralPath $backupPath -Destination $confPath -Force
@@ -288,15 +439,17 @@ function New-CopyOperation {
 }
 
 $profiles = @{
-    '1' = @{ Label = '4.08m Original'; Folder = '4.08 Mods OFF (Original)'; Air = '408m air.ini\Air.ini\air.ini'; Original = $true }
-    '2' = @{ Label = '4.08m modifie (sans 6DOF)'; Folder = '4.08 Mod ON (NO 6DOF)'; Air = '408m air.ini\Air.ini\air.ini'; Original = $false }
-    '3' = @{ Label = '4.08m modifie + profil 6DOF historique'; Folder = '4.08 Mods 6DOF ON'; Air = '408m air.ini\Air.ini\air.ini'; Original = $false }
-    '4' = @{ Label = '4.09b Original'; Folder = '4.09 Mods OFF (Original)'; Air = '409m air.ini\Air.ini\air.ini'; Original = $true }
-    '5' = @{ Label = '4.09b modifie (sans 6DOF)'; Folder = '4.09 Mods ON (NO 6DOF)'; Air = '409m air.ini\Air.ini\air.ini'; Original = $false }
-    '6' = @{ Label = '4.09b modifie + profil 6DOF historique'; Folder = '4.09 Mods 6DOF ON'; Air = '409m air.ini\Air.ini\air.ini'; Original = $false }
-    '7' = @{ Label = '4.09m Original'; Folder = '4.09finalModsOFF(Original)'; Air = '409m air.ini\Air.ini\air.ini'; Original = $true }
-    '8' = @{ Label = '4.09m modifie (sans 6DOF)'; Folder = '4.09finalModsON(No-6DoF)'; Air = '409m air.ini\Air.ini\air.ini'; Original = $false }
-    '9' = @{ Label = '4.09m modifie + profil 6DOF historique'; Folder = '4.09final_ModsON+6DoF'; Air = '409m air.ini\Air.ini\air.ini'; Original = $false }
+    '1' = @{ Label = '4.08m Original'; Folder = '4.08 Mods OFF (Original)'; Air = '408m air.ini\Air.ini\air.ini'; Stationary = 'Stationary\408 & 409b\stationary.ini'; Original = $true }
+    '2' = @{ Label = '4.08m modifie (sans 6DOF)'; Folder = '4.08 Mod ON (NO 6DOF)'; Air = '408m air.ini\Air.ini\air.ini'; Stationary = 'Stationary\408 & 409b\stationary.ini'; Original = $false }
+    '3' = @{ Label = '4.08m modifie + profil 6DOF historique'; Folder = '4.08 Mods 6DOF ON'; Air = '408m air.ini\Air.ini\air.ini'; Stationary = 'Stationary\408 & 409b\stationary.ini'; Original = $false }
+    '4' = @{ Label = '4.09b Original'; Folder = '4.09 Mods OFF (Original)'; Air = '409m air.ini\Air.ini\air.ini'; Stationary = 'Stationary\408 & 409b\stationary.ini'; Original = $true }
+    '5' = @{ Label = '4.09b modifie (sans 6DOF)'; Folder = '4.09 Mods ON (NO 6DOF)'; Air = '409m air.ini\Air.ini\air.ini'; Stationary = 'Stationary\408 & 409b\stationary.ini'; Original = $false }
+    '6' = @{ Label = '4.09b modifie + profil 6DOF historique'; Folder = '4.09 Mods 6DOF ON'; Air = '409m air.ini\Air.ini\air.ini'; Stationary = 'Stationary\408 & 409b\stationary.ini'; Original = $false }
+    '7' = @{ Label = '4.09m Original'; Folder = '4.09finalModsOFF(Original)'; Air = '409m air.ini\Air.ini\air.ini'; Stationary = 'Stationary\409m\stationary.ini'; Original = $true }
+    '8' = @{ Label = '4.09m modifie (sans 6DOF)'; Folder = '4.09finalModsON(No-6DoF)'; Air = '409m air.ini\Air.ini\air.ini'; Stationary = 'Stationary\409m\stationary.ini'; Original = $false }
+    '9' = @{ Label = '4.09m modifie + profil 6DOF historique'; Folder = '4.09final_ModsON+6DoF'; Air = '409m air.ini\Air.ini\air.ini'; Stationary = 'Stationary\409m\stationary.ini'; Original = $false }
+    '11' = @{ Label = '4.09m modifie + cache experimental (sans 6DOF)'; Folder = '4.09finalModsON(No-6DoF)'; Wrapper = 'Wrapper Cache 4.09m (Experimental)\wrapper.dll'; Air = '409m air.ini\Air.ini\air.ini'; Stationary = 'Stationary\409m\stationary.ini'; Original = $false; ExperimentalCache = $true }
+    '12' = @{ Label = '4.09m modifie + cache experimental + profil 6DOF historique'; Folder = '4.09final_ModsON+6DoF'; Wrapper = 'Wrapper Cache 4.09m (Experimental)\wrapper.dll'; Air = '409m air.ini\Air.ini\air.ini'; Stationary = 'Stationary\409m\stationary.ini'; Original = $false; ExperimentalCache = $true }
 }
 
 try {
@@ -310,6 +463,8 @@ try {
         Write-Host "$key - $($profiles[$key].Label)"
     }
     Write-Host '10 - Quiet (quitter sans aucune modification)'
+    Write-Host '11 - 4.09m modifie + cache experimental (sans 6DOF)'
+    Write-Host '12 - 4.09m modifie + cache experimental + profil 6DOF historique'
     Write-Host ''
     $choice = (Read-Host 'Votre choix').Trim()
 
@@ -321,17 +476,22 @@ try {
         throw "Choix invalide : $choice"
     }
 
-    if ($choice -in @('3', '6', '9')) {
+    if ($choice -in @('3', '6', '9', '12')) {
         Write-Host '[AVERTISSEMENT] Les fichiers 6DOF historiques sont identiques au profil sans 6DOF correspondant.' -ForegroundColor Yellow
         Write-Host 'Ce choix est conserve pour compatibilite du menu, mais ne peut pas activer seul un comportement 6DOF distinct.' -ForegroundColor Yellow
     }
 
     $profile = $profiles[$choice]
+    if ($profile.ContainsKey('ExperimentalCache') -and $profile.ExperimentalCache) {
+        Write-Host '[EXPERIMENTAL] Ce wrapper a passe les tests statiques et le banc de cache, mais pas encore un lancement IL-2.' -ForegroundColor Yellow
+        Write-Host 'Le profil stable reste disponible avec les choix 8 et 9.' -ForegroundColor Yellow
+    }
     $sourceFolder = Join-Path $script:ProfileRoot $profile.Folder
     $copies = @(
         (New-CopyOperation -Source (Join-Path $sourceFolder 'il2fb.exe') -Target (Join-Path $script:Root 'il2fb.exe')),
         (New-CopyOperation -Source (Join-Path $sourceFolder 'files.SFS') -Target (Join-Path $script:Root 'files.SFS')),
-        (New-CopyOperation -Source (Join-Path $script:ProfileRoot $profile.Air) -Target (Join-Path $script:Root 'Files\com\maddox\il2\objects\air.ini'))
+        (New-CopyOperation -Source (Join-Path $script:ProfileRoot $profile.Air) -Target (Join-Path $script:Root 'Files\com\maddox\il2\objects\air.ini')),
+        (New-CopyOperation -Source (Join-Path $script:ProfileRoot $profile.Stationary) -Target (Join-Path $script:Root 'Files\com\maddox\il2\objects\stationary.ini'))
     )
     $removeTargets = @()
     $wrapperTarget = Join-Path $script:Root 'wrapper.dll'
@@ -339,7 +499,13 @@ try {
         $removeTargets += $wrapperTarget
     }
     else {
-        $copies += New-CopyOperation -Source (Join-Path $sourceFolder 'wrapper.dll') -Target $wrapperTarget
+        $wrapperSource = if ($profile.ContainsKey('Wrapper')) {
+            Join-Path $script:ProfileRoot $profile.Wrapper
+        }
+        else {
+            Join-Path $sourceFolder 'wrapper.dll'
+        }
+        $copies += New-CopyOperation -Source $wrapperSource -Target $wrapperTarget
     }
 
     Invoke-FileTransaction -Copies $copies -RemoveTargets $removeTargets

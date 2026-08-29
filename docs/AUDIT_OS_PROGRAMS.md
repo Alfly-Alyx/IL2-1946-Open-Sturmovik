@@ -30,7 +30,7 @@ Le selecteur Open Sturmovik, les scripts et les fichiers de configuration actifs
 
 ## Decision v1.15
 
-La v1.15 ne doit activer automatiquement aucun de ces outils. Les candidats a une integration ulterieure sont JoyControl, Mission Mate et DCG, apres essais dans une copie de jeu. VoiceOverlay, Quick Mission Tuner et San's FOV Changer restent desactives par securite. IL2 Sticks et JoyControl ne doivent jamais ecrire simultanement dans le meme `conf.ini`.
+La v1.15 ne doit activer automatiquement aucun de ces outils. Sur decision du mainteneur, les programmes actuellement incompatibles restent presents dans `_OS_Programs`, sans suppression ni modification, mais demeurent desactives. Les candidats a une integration ulterieure sont JoyControl, Mission Mate et DCG, apres essais dans une copie de jeu. VoiceOverlay, Quick Mission Tuner et San's FOV Changer restent desactives par securite. IL2 Sticks et JoyControl ne doivent jamais ecrire simultanement dans le meme `conf.ini`.
 
 ## Sources communautaires principales
 
