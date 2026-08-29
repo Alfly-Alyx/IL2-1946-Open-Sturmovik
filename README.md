@@ -32,6 +32,6 @@ Open-Sturmovik est une extension non officielle pour IL-2 1946. Cette extension 
 
 **Feuille de route pour le patch 1.2 :**
 
+- Mettre à jour Open-Sturmovik vers IL2 4.12
 - Ajouter du nouveau contenu.
-- Rendre Open-Sturmovik compatible avec les versions plus récentes du jeu.
 
