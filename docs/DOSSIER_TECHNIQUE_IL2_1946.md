@@ -215,9 +215,27 @@ Le forum [SAS 1946](https://www.sas1946.com/main/index.php) demeure une source c
 
 ## Protocole de confirmation en execution
 
-Le premier essai utilisera une copie complete et le choix 8, `4.09m modifie (sans 6DOF)`. Il devra relever :
+Les essais seront separes en phases. La phase 1 s'arrete au menu principal :
+demarrage instrumente, quelques secondes d'observation sans lancer de mission,
+puis fermeture propre. Les missions et le jeu reel ne commenceront qu'apres
+analyse et correction des anomalies de cette premiere phase.
+
+Sous reserve de la verification de la future copie de test, le premier candidat
+est le choix 8, `4.09m modifie (sans 6DOF)`, avec le wrapper historique stable et
+OpenGL natif. Ce profil limite les variables experimentales tout en exercant le
+coeur de l'add-on. Si l'etat de la copie le permet, une mesure originale 4.09m
+sera conservee comme reference avant la mesure modifiee.
+
+La phase 1 devra relever :
 
 - temps processus-vers-menu a froid et a chaud ;
+- ressources et SFS demandes avant l'apparition du menu ;
+- exceptions Java, DLL chargees et erreurs de ressources ;
+- memoire, CPU, entrees/sorties et threads jusqu'a la stabilisation du menu ;
+- comportement pendant quelques secondes au menu, puis fermeture et relance.
+
+Les phases ulterieures devront relever :
+
 - temps de chargement d'une petite mission et d'une grande carte ;
 - ordre et temps d'acces aux SFS et fichiers libres ;
 - exceptions Java et chargement des classes converties en version 47 ;
@@ -226,9 +244,140 @@ Le premier essai utilisera une copie complete et le choix 8, `4.09m modifie (san
 - DLL de coeur, audio et rendu effectivement chargees ;
 - fournisseur OpenGL/D3D/Vulkan reel ;
 - erreurs de ressources, textures, sons, cartes et avions ;
-- fermeture propre, second lancement et comportement du cache.
+- comportement du cache et stabilite en jeu.
 
 Une mesure de reference doit etre conservee avant chaque variante. Aucun resultat d'une session unique ne sera generalise sans repetition.
+
+### Correspondance entre les pourcentages et le travail du moteur
+
+Chaque ecran de chargement devra etre traite separement : demarrage du jeu,
+chargement d'une mission rapide, petite mission temoin, grande carte et mission
+avec beaucoup d'appareils. Le pourcentage affiche n'est pas suppose representer
+un volume d'octets ni une duree lineaire tant que le code ou les traces ne l'ont
+pas confirme.
+
+Une capture video horodatee conservera chaque changement de valeur. En parallele,
+une trace filtree sur `il2fb.exe` et ses processus descendants enregistrera les
+ouvertures et lectures de fichiers, les chargements d'images/DLL, les creations de
+threads, les acces au Registre et leurs codes de retour. Les compteurs CPU par
+coeur, memoire privee et virtuelle, entrees/sorties et nombre de threads seront
+echantillonnes regulierement. Process Monitor fournit la trace fonctionnelle ;
+WPR/ETW sera utilise lorsque le detail CPU, disque ou les piles d'appels sont
+necessaires : [Process Monitor](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon)
+et [Windows Performance Recorder](https://learn.microsoft.com/en-us/windows-hardware/test/wpt/windows-performance-recorder).
+
+Le rapport associera a chaque palier `0, 5, 10, ... 100 %` :
+
+- l'heure d'apparition, le temps passe depuis le palier precedent et le temps cumule ;
+- les ressources demandees entre les deux paliers et les dernieres operations avant le changement ;
+- la couche servante, lorsqu'elle est identifiable : `MODS`, `Files`, SFS officiel ou repli absent ;
+- les DLL nouvellement chargees et les threads crees ;
+- les variations de CPU, memoire et lectures disque ;
+- toutes les erreurs, avec chemin, operation, code Windows, repetition et consequence visible.
+
+Les resultats `NAME NOT FOUND`, `PATH NOT FOUND` et recherches de DLL ne seront
+pas automatiquement classes comme pannes : un moteur peut sonder plusieurs noms
+avant de choisir un repli valide. Une erreur sera classee **attendue**, **benigne**,
+**degradation**, **bloquante** ou **a confirmer**, apres verification de l'etape
+suivante et du resultat en jeu.
+
+La trace Windows voit les lectures du conteneur SFS, mais pas toujours le nom
+logique de la ressource interne. Pour completer cette limite, une variante de
+diagnostic separee du wrapper cache devra journaliser les appels `__SFS_openf`,
+leurs empreintes 64 bits, la resolution eventuelle vers un fichier libre et le
+resultat du repli SFS. Cette variante ne remplacera jamais le wrapper stable et
+son journal sera desactive dans la distribution normale. Les empreintes restantes
+seront rapprochees des index SFS analyses afin d'identifier autant que possible
+les textures, classes, sons, cartes et objets demandes a chaque palier.
+
+Chaque scenario sera execute au moins trois fois a froid et trois fois a chaud.
+Le livrable conservera la trace brute, une chronologie par tranche de 5 %, la
+liste dedoublonnee des erreurs et une conclusion expliquant ce que le moteur fait
+effectivement, sans deduire une phase a partir du seul dessin de la barre.
+
+## Configurations minimale et recommandee
+
+La version 1.15 devra publier deux configurations propres a Open Sturmovik, et
+non recopier les exigences historiques d'IL-2 1946. Aucun chiffre ne sera annonce
+comme definitive avant les essais en execution.
+
+La **configuration minimale** sera le materiel le plus faible valide pour
+installer l'add-on, demarrer de facon repetable, atteindre le menu, charger les
+missions temoins retenues et jouer sans erreur bloquante avec un profil graphique
+adapte. La **configuration recommandee** visera le profil visuel maximal retenu,
+une marge memoire suffisante, des chargements courts et une fluidite stable sur
+les missions representatives du contenu de l'add-on.
+
+La fiche finale precisera au minimum :
+
+- versions et architecture de Windows effectivement testees ;
+- niveau de performances CPU par coeur, nombre de coeurs utiles et comportement
+  avec l'affinite limitee a quatre coeurs physiques ;
+- quantite de RAM systeme, pic de memoire privee/virtuelle du processus 32 bits et
+  marge necessaire pour ne pas epuiser son espace d'adressage ;
+- espace d'installation, espace temporaire et taille maximale des caches ;
+- comportement sur disque dur et SSD, temps a froid et a chaud ;
+- GPU, VRAM, pilote et capacites OpenGL/D3D/Vulkan exigees par chaque profil ;
+- resolution, options graphiques et scenario utilises pour qualifier le resultat ;
+- temps de chargement, images par seconde, percentiles de frametime, stabilite et
+  erreurs observees sur plusieurs executions.
+
+Les exigences seront separees pour OpenGL natif et pour chaque wrapper graphique
+eventuellement distribue. Un wrapper moderne ne devra jamais rendre la
+configuration minimale plus exigeante si OpenGL natif reste fonctionnel. Les
+machines virtuelles pourront verifier l'installation et certaines versions de
+Windows, mais elles ne serviront pas seules a qualifier les performances GPU.
+
+Le premier test limite au menu fournira une borne basse pour CPU, RAM et disque.
+Les valeurs minimales et recommandees ne seront finalisees qu'apres les essais de
+petite mission, grande carte, nombreux appareils et session prolongee.
+
+## Limites techniques du moteur et extension de ses capacites
+
+Le projet devra maintenir un inventaire des limites du moteur 4.09m. Une valeur
+ne sera presentee comme une limite confirmee que si elle est visible dans le code
+ou les binaires, atteinte par un test reproductible, ou documentee par une source
+communautaire recoupee. Les suppositions seront marquees comme telles.
+
+L'etude couvrira notamment :
+
+- l'espace d'adressage du processus 32 bits, la repartition entre tas Java et
+  allocations natives, la fragmentation et le seuil reel de manque de memoire ;
+- la JVM 1.3.1 : versions de classes, tas, pile, ramasse-miettes, JNI, nombre de
+  classes et compatibilite des bibliotheques Java ;
+- le parallelisme reel du rendu, de la simulation, de l'IA, du son et du chargeur,
+  ainsi que les sections qui restent limitees par un seul coeur ;
+- le systeme SFS : nombre de conteneurs et de fichiers libres, temps d'indexation,
+  priorite des couches, empreintes 64 bits, collisions, caches et tailles limites ;
+- les tables de contenu (`air.ini`, `stationary.ini`, objets, armes et appareils),
+  leurs parseurs, compteurs, indices et eventuelles valeurs codees en dur ;
+- les cartes et missions : dimensions, textures, objets, appareils, IA, effets,
+  scripts et quantites maximales stables ;
+- le rendu : API 32 bits, extensions OpenGL, Direct3D 8, shaders, formats de
+  textures, VRAM, appels de dessin, resolution, eau, ombres et effets ;
+- le son, les entrees, le reseau, le nombre de joueurs et les formats de mission ;
+- les interfaces entre EXE, DLL, wrapper, Java et code natif, dont les conventions
+  d'appel, exports, adresses et dependances propres a la version 4.09m.
+
+Pour chaque limite, la documentation conservera : la valeur observee, le scenario
+qui l'atteint, le symptome, le composant responsable, les preuves, la marge de
+securite, les solutions candidates et leurs regressions possibles. Les essais de
+frontiere augmenteront une seule variable a la fois et seront repetes autour du
+dernier niveau stable.
+
+Les solutions seront classees du moins invasif au plus invasif : configuration,
+reduction du cout des donnees, cache ou profil de contenu, wrapper externe,
+remplacement d'une DLL, modification Java, puis correctif binaire de l'EXE. Toute
+extension devra rester reversible, specifique a 4.09m, controlee par empreinte et
+accompagnee d'un profil stable de repli. Repousser un plafond ne sera retenu que
+si le nouveau niveau reste stable et ne deplace pas simplement la panne vers la
+memoire, le rendu, le reseau ou la sauvegarde des missions.
+
+Les premiers plafonds deja etablis ou fortement encadres sont l'architecture
+32 bits, la version 47 maximale des classes chargeables par la JVM 1.3.1 et le
+cout d'indexation des 89 738 fichiers libres. Le gain reel apporte par Large
+Address Aware, le nombre de coeurs effectivement exploites et les limites de
+contenu restent a quantifier en execution.
 
 ## Questions encore ouvertes
 
