@@ -1,5 +1,14 @@
 [CmdletBinding()]
-param()
+param(
+    [Alias('Profile','Choice')]
+    [ValidateSet('1','2','3','4','5','6','7','8','9','10','11','12')]
+    [string]$SelectedProfile,
+
+    [ValidateSet('1','2','3')]
+    [string]$Hud,
+
+    [switch]$NoPause
+)
 
 Set-StrictMode -Version 2.0
 $ErrorActionPreference = 'Stop'
@@ -453,7 +462,9 @@ $profiles = @{
 }
 
 try {
-    Clear-Host
+    if (-not $PSBoundParameters.ContainsKey('SelectedProfile')) {
+        Clear-Host
+    }
     Write-Host '======================================================'
     Write-Host "       IL-2 Open Sturmovik Switcher $script:AddonVersion"
     Write-Host '======================================================'
@@ -466,7 +477,12 @@ try {
     Write-Host '11 - 4.09m modifie + cache experimental (sans 6DOF)'
     Write-Host '12 - 4.09m modifie + cache experimental + profil 6DOF historique'
     Write-Host ''
-    $choice = (Read-Host 'Votre choix').Trim()
+    $choice = if ($PSBoundParameters.ContainsKey('SelectedProfile')) {
+        $SelectedProfile
+    }
+    else {
+        (Read-Host 'Votre choix').Trim()
+    }
 
     if ($choice -eq '10' -or $choice -match '^[Qq]$') {
         Write-Host 'Aucune modification effectuee.' -ForegroundColor Green
@@ -516,7 +532,15 @@ try {
     Write-Host '1 - Standard'
     Write-Host '2 - Immersion'
     Write-Host '3 - Quiet (conserver le HUD actuel)'
-    $hudChoice = (Read-Host 'Votre choix').Trim()
+    $hudChoice = if ($PSBoundParameters.ContainsKey('Hud')) {
+        $Hud
+    }
+    elseif ($PSBoundParameters.ContainsKey('SelectedProfile')) {
+        '3'
+    }
+    else {
+        (Read-Host 'Votre choix').Trim()
+    }
     if ($hudChoice -eq '1' -or $hudChoice -eq '2') {
         $hudFolder = if ($hudChoice -eq '1') { 'HudLogStock' } else { 'HudLogImmersion' }
         $hudSource = Join-Path $script:ProfileRoot "$hudFolder\MODS\STD\i18n\hud_log_ru.properties"
@@ -531,7 +555,9 @@ try {
     Set-MaximumConfiguration
     Write-Host ''
     Write-Host 'Operation terminee avec succes. Vous pouvez lancer IL-2 Open Sturmovik.' -ForegroundColor Green
-    Read-Host 'Appuyez sur Entree pour fermer' | Out-Null
+    if (-not $NoPause) {
+        Read-Host 'Appuyez sur Entree pour fermer' | Out-Null
+    }
     exit 0
 }
 catch {

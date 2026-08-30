@@ -220,6 +220,10 @@ demarrage instrumente, quelques secondes d'observation sans lancer de mission,
 puis fermeture propre. Les missions et le jeu reel ne commenceront qu'apres
 analyse et correction des anomalies de cette premiere phase.
 
+La procedure executable, les outils utilises, les donnees collectees et la regle
+de redemarrage avant la mesure a froid sont decrits dans
+[`PROTOCOLE_PREMIER_LANCEMENT.md`](PROTOCOLE_PREMIER_LANCEMENT.md).
+
 Sous reserve de la verification de la future copie de test, le premier candidat
 est le choix 8, `4.09m modifie (sans 6DOF)`, avec le wrapper historique stable et
 OpenGL natif. Ce profil limite les variables experimentales tout en exercant le
