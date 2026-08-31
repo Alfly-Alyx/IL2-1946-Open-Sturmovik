@@ -85,7 +85,7 @@ else {
 }
 
 $expectedChiefHash = '14E9D0CE1C3B991FF3C43D9643F4744439126F690B3E294BA27EF1B18786AD8D'
-$expectedChiefExtensionsHash = 'D59C06A6B6937D013782B71FE6A62BBCA3FC8ECD2D7B0901C7B69E3B6E2363E5'
+$expectedChiefExtensionsHash = 'E56FE7B7FDF6A4C44EA9DF25A1B9D0D023A192F5D763C925714D06C545CEC22F'
 if (-not (Test-Path -LiteralPath $chiefActive -PathType Leaf)) {
     Add-Check 'chief.ini fusionne' FAIL 'Registre actif absent.'
 }
