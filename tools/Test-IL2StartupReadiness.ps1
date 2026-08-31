@@ -1,10 +1,13 @@
 [CmdletBinding()]
 param(
     [Parameter(Mandatory = $true)][string]$GameRoot,
+    [ValidateSet('1','2','3','4','5','6','7','8','9')][string]$Profile = '9',
+    [switch]$Windowed1024,
     [string]$ReferenceRoot = 'C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946',
     [string]$RepositoryRoot = (Join-Path $PSScriptRoot '..'),
     [string]$ProcmonPath = (Join-Path $PSScriptRoot '..\build\test-tools\sysinternals\Procmon64.exe'),
     [string]$FrameCapturePath = (Join-Path $PSScriptRoot '..\build\test-tools\FrameCapture.exe'),
+    [switch]$SelectorDumpLab,
     [string]$ReportPath
 )
 
@@ -28,6 +31,57 @@ function Get-IniValue {
         }
     }
     return $null
+}
+
+function Get-PowerShellSemanticHash {
+    param([string]$Path)
+
+    $tokens = $null
+    $parseErrors = $null
+    [System.Management.Automation.Language.Parser]::ParseFile(
+        $Path,
+        [ref]$tokens,
+        [ref]$parseErrors
+    ) | Out-Null
+    if ($parseErrors.Count -ne 0) {
+        throw "Script PowerShell invalide : $Path ($($parseErrors[0].Message))"
+    }
+
+    $semanticText = [string]::Join("`n", @(
+        $tokens | Where-Object {
+            $_.Kind -notin @(
+                [System.Management.Automation.Language.TokenKind]::Comment,
+                [System.Management.Automation.Language.TokenKind]::NewLine,
+                [System.Management.Automation.Language.TokenKind]::EndOfInput
+            )
+        } | ForEach-Object { "$($_.Kind):$($_.Text)" }
+    ))
+    $sha = [Security.Cryptography.SHA256]::Create()
+    try {
+        $hash = $sha.ComputeHash([Text.Encoding]::UTF8.GetBytes($semanticText))
+        return ([BitConverter]::ToString($hash)).Replace('-', '')
+    }
+    finally {
+        $sha.Dispose()
+    }
+}
+
+function Get-GraphicsVendor {
+    try {
+        $adapters = @(Get-CimInstance -ClassName Win32_VideoController -ErrorAction Stop)
+        $adapter = @($adapters | Where-Object {
+            $_.CurrentHorizontalResolution -and $_.CurrentVerticalResolution
+        })[0]
+        if (-not $adapter) {
+            $adapter = $adapters[0]
+        }
+        $pnpId = [string]$adapter.PNPDeviceID
+        if ($pnpId -match 'VEN_10DE') { return 'NVIDIA' }
+        if ($pnpId -match 'VEN_(1002|1022)') { return 'AMD' }
+        if ($pnpId -match 'VEN_8086') { return 'Intel' }
+    }
+    catch { }
+    return 'Generique'
 }
 
 function Get-PeState {
@@ -59,12 +113,79 @@ $gameItem = Get-Item -LiteralPath $resolvedGame -Force
 Add-Check -Name 'Dossier de test non redirige' -Passed (-not ($gameItem.Attributes -band [IO.FileAttributes]::ReparsePoint)) -Detail $gameItem.Attributes.ToString()
 Add-Check -Name 'Aucun IL-2 actif' -Passed (@(Get-Process -Name 'il2fb' -ErrorAction SilentlyContinue).Count -eq 0) -Detail 'Le processus doit etre absent avant armement.'
 
-$pairs = [ordered]@{
-    'il2fb.exe' = '_Game Switchers\4.09finalModsON(No-6DoF)\il2fb.exe'
-    'files.SFS' = '_Game Switchers\4.09finalModsON(No-6DoF)\files.SFS'
-    'wrapper.dll' = '_Game Switchers\4.09finalModsON(No-6DoF)\wrapper.dll'
-    'Files\com\maddox\il2\objects\air.ini' = '_Game Switchers\409m air.ini\Air.ini\air.ini'
-    'Files\com\maddox\il2\objects\stationary.ini' = '_Game Switchers\Stationary\409m\stationary.ini'
+$rootSfs = @(Get-ChildItem -LiteralPath $resolvedGame -File -Filter '*.SFS')
+Add-Check -Name 'Nombre de SFS conforme a la base 4.09m' -Passed ($rootSfs.Count -eq 52) -Detail "racine=$($rootSfs.Count), attendu=52"
+$laterSfs = @($rootSfs | Where-Object {
+    $_.Name -match '^fb_(3do|maps)(2[1-9]|3[0-9])' -or
+    $_.Name -match '^fb_sounds\.SFS$' -or
+    $_.Name -match '^filesserver\.SFS$'
+})
+$laterSfsDetail = if ($laterSfs.Count -eq 0) { 'aucun' } else { $laterSfs.Name -join ', ' }
+Add-Check -Name 'Aucun SFS posterieur a 4.09m' -Passed ($laterSfs.Count -eq 0) -Detail $laterSfsDetail
+
+$official409 = [ordered]@{
+    'fb_3do19.SFS' = '4527FC779F188364E2FC8739E53D74C85B3A47471B01F169586E4F1AFBB6B670'
+    'fb_3do20.SFS' = '02FB0095B9FE4882FB17054F4F11460D49F61B80AF78F9B6EBAF687251E4E283'
+    'fb_maps15.SFS' = 'AF87651FBCA2450A57735ED2013F12FC9F307ABFB8B2913F22EB5543322D8AD9'
+    'il2_core.dll' = '3145F63A53061C40604B57DED2F96313559BD69692123E7479D8C409339ECEB3'
+    'il2_corep4.dll' = '0B4CD130051E7D853219480606A1508C0FBB3C7FD29FA8AF87BB72BBD37BB979'
+    'mg_snd.dll' = '2FBE1180129806CC978A48879969E592918EA26C42EB235D62FC874BAD886421'
+    'mg_snd_sse.dll' = 'FDDD6924853306C94C9B8844703D4718F45CF22828975406E3C67DE40DFDE1C4'
+}
+foreach ($name in $official409.Keys) {
+    $path = Join-Path $resolvedGame $name
+    $present = Test-Path -LiteralPath $path -PathType Leaf
+    $actual = if ($present) { (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash } else { '' }
+    Add-Check -Name "Fichier officiel 4.09m : $name" -Passed ($present -and $actual -eq $official409[$name]) -Detail "identique=$($present -and $actual -eq $official409[$name])"
+}
+
+$profileFolder = switch ($Profile) {
+    '1' { '4.08 Mods OFF (Original)' }
+    '2' { '4.08 Mod ON (NO 6DOF)' }
+    '3' { '4.08 Mods 6DOF ON' }
+    '4' { '4.09 Mods OFF (Original)' }
+    '5' { '4.09 Mods ON (NO 6DOF)' }
+    '6' { '4.09 Mods 6DOF ON' }
+    '7' { '4.09finalModsOFF(Original)' }
+    '9' { '4.09final_ModsON+6DoF' }
+    default { '4.09finalModsON(No-6DoF)' }
+}
+$profileLabel = switch ($Profile) {
+    '1' { '1 - 4.08m Original, sans wrapper, OpenGL natif' }
+    '2' { '2 - 4.08m modifie (sans 6DOF), wrapper historique, OpenGL natif' }
+    '3' { '3 - 4.08m modifie + profil 6DOF historique, wrapper historique, OpenGL natif' }
+    '4' { '4 - 4.09b Original, sans wrapper, OpenGL natif' }
+    '5' { '5 - 4.09b modifie (sans 6DOF), wrapper historique, OpenGL natif' }
+    '6' { '6 - 4.09b modifie + profil 6DOF historique, wrapper historique, OpenGL natif' }
+    '7' { '7 - 4.09m Original, sans wrapper, OpenGL natif' }
+    '9' { '9 - 4.09m modifie + profil 6DOF historique, wrapper historique, OpenGL natif' }
+    default { '8 - 4.09m modifie (sans 6DOF), wrapper historique, OpenGL natif' }
+}
+$profileLabel = if ($SelectorDumpLab) { 'Selector 5.1.2 - 4.09m modifie sans 6DOF, DumpMode=3, cache desactive' } else { $profileLabel }
+$isOriginal = $Profile -in @('1','4','7')
+$airSource = if ($Profile -in @('1','2','3')) { '408m air.ini\Air.ini\air.ini' } else { '409m air.ini\Air.ini\air.ini' }
+$stationarySource = if ($Profile -in @('7','8','9')) { 'Stationary\409m\stationary.ini' } else { 'Stationary\408 & 409b\stationary.ini' }
+$pairs = if ($SelectorDumpLab) {
+    [ordered]@{
+        'il2fb.exe' = 'bin\selector\basefiles\mod\il2fb.exe'
+        'wrapper.dll' = 'bin\selector\basefiles\mod\wrapper.dll'
+        'DINPUT.dll' = 'bin\selector\basefiles\DINPUT.dll'
+        'files.SFS' = '_Game Switchers\4.09finalModsON(No-6DoF)\files.SFS'
+        'Files\com\maddox\il2\objects\air.ini' = '_Game Switchers\409m air.ini\Air.ini\air.ini'
+        'Files\com\maddox\il2\objects\stationary.ini' = '_Game Switchers\Stationary\409m\stationary.ini'
+    }
+}
+else {
+    $profilePairs = [ordered]@{
+        'il2fb.exe' = "_Game Switchers\$profileFolder\il2fb.exe"
+        'files.SFS' = "_Game Switchers\$profileFolder\files.SFS"
+        'Files\com\maddox\il2\objects\air.ini' = "_Game Switchers\$airSource"
+        'Files\com\maddox\il2\objects\stationary.ini' = "_Game Switchers\$stationarySource"
+    }
+    if (-not $isOriginal) {
+        $profilePairs['wrapper.dll'] = "_Game Switchers\$profileFolder\wrapper.dll"
+    }
+    $profilePairs
 }
 foreach ($activeRelative in $pairs.Keys) {
     $active = Join-Path $resolvedGame $activeRelative
@@ -72,17 +193,36 @@ foreach ($activeRelative in $pairs.Keys) {
     $present = (Test-Path -LiteralPath $active -PathType Leaf) -and (Test-Path -LiteralPath $source -PathType Leaf)
     $same = $false
     if ($present) {
-        $same = (Get-FileHash -LiteralPath $active -Algorithm SHA256).Hash -eq (Get-FileHash -LiteralPath $source -Algorithm SHA256).Hash
+        if ([IO.Path]::GetExtension($activeRelative) -ieq '.ini') {
+            # Les copies LF et CRLF sont equivalentes pour IL-2. Un controle
+            # binaire ferait echouer a tort un profil pourtant identique.
+            $activeText = [IO.File]::ReadAllText($active).Replace("`r`n", "`n").Replace("`r", "`n").TrimEnd("`n")
+            $sourceText = [IO.File]::ReadAllText($source).Replace("`r`n", "`n").Replace("`r", "`n").TrimEnd("`n")
+            $same = $activeText -ceq $sourceText
+        }
+        else {
+            $same = (Get-FileHash -LiteralPath $active -Algorithm SHA256).Hash -eq (Get-FileHash -LiteralPath $source -Algorithm SHA256).Hash
+        }
     }
     $pairDetail = if ($present) { "identique=$same" } else { 'fichier absent' }
-    Add-Check -Name "Profil 8 : $activeRelative" -Passed ($present -and $same) -Detail $pairDetail
+    Add-Check -Name "Profil $Profile : $activeRelative" -Passed ($present -and $same) -Detail $pairDetail
+}
+if ($isOriginal -and -not $SelectorDumpLab) {
+    $activeWrapper = Join-Path $resolvedGame 'wrapper.dll'
+    Add-Check -Name "Profil $Profile : aucun wrapper.dll actif" -Passed (-not (Test-Path -LiteralPath $activeWrapper)) -Detail $activeWrapper
 }
 
 $activeExe = Join-Path $resolvedGame 'il2fb.exe'
 if (Test-Path -LiteralPath $activeExe -PathType Leaf) {
     $pe = Get-PeState -Path $activeExe
     Add-Check -Name 'Executable PE32 x86' -Passed ($pe.Pe32 -and $pe.Machine -eq '0x014C') -Detail "machine=$($pe.Machine), pe32=$($pe.Pe32)"
-    Add-Check -Name 'Executable Large Address Aware' -Passed $pe.LargeAddressAware -Detail "LAA=$($pe.LargeAddressAware)"
+    if ($SelectorDumpLab) {
+        Add-Check -Name 'Executable Selector de laboratoire' -Passed $true -Detail "LAA=$($pe.LargeAddressAware), memoire geree par le Selector"
+    }
+    else {
+        $laaExpected = -not $isOriginal
+        Add-Check -Name 'Executable Large Address Aware conforme au profil' -Passed ($pe.LargeAddressAware -eq $laaExpected) -Detail "attendu=$laaExpected, actuel=$($pe.LargeAddressAware)"
+    }
 }
 else {
     Add-Check -Name 'Executable actif present' -Passed $false -Detail $activeExe
@@ -90,10 +230,40 @@ else {
 
 $switcherRepository = Join-Path $resolvedRepository 'Open_Sturmovik_Switcher.ps1'
 $switcherTest = Join-Path $resolvedGame 'Open_Sturmovik_Switcher.ps1'
-$switcherSame = (Test-Path -LiteralPath $switcherRepository -PathType Leaf) -and
-    (Test-Path -LiteralPath $switcherTest -PathType Leaf) -and
-    ((Get-FileHash -LiteralPath $switcherRepository -Algorithm SHA256).Hash -eq (Get-FileHash -LiteralPath $switcherTest -Algorithm SHA256).Hash)
-Add-Check -Name 'Selecteur de test a jour' -Passed $switcherSame -Detail "identique=$switcherSame"
+$switcherPresent = (Test-Path -LiteralPath $switcherRepository -PathType Leaf) -and
+    (Test-Path -LiteralPath $switcherTest -PathType Leaf)
+$switcherByteSame = $switcherPresent -and
+    ((Get-FileHash -LiteralPath $switcherRepository -Algorithm SHA256).Hash -eq
+        (Get-FileHash -LiteralPath $switcherTest -Algorithm SHA256).Hash)
+$switcherSemanticSame = $switcherPresent -and
+    ((Get-PowerShellSemanticHash -Path $switcherRepository) -eq
+        (Get-PowerShellSemanticHash -Path $switcherTest))
+Add-Check -Name 'Selecteur de test a jour' -Passed $switcherSemanticSame -Detail "octets_identiques=$switcherByteSame, logique_identique=$switcherSemanticSame"
+
+if ($SelectorDumpLab) {
+    $selectorIni = Join-Path $resolvedGame 'il2fb.ini'
+    $selectorExpectations = [ordered]@{
+        ModType = '7'
+        RamSize = '1024'
+        ExpertMode = '1'
+        MemoryStrategy = '0'
+        UseCachedFileLists = '0'
+        MultipleInstances = '0'
+        ExitWithIL2 = '1'
+        SplashScreenMode = '0'
+        DumpMode = '3'
+        InstantDump = '1'
+    }
+    foreach ($key in $selectorExpectations.Keys) {
+        $actual = if (Test-Path -LiteralPath $selectorIni -PathType Leaf) { Get-IniValue -Path $selectorIni -Section 'Settings' -Key $key } else { $null }
+        Add-Check -Name "Selector $key" -Passed ($actual -eq $selectorExpectations[$key]) -Detail "attendu=$($selectorExpectations[$key]), actuel=$actual"
+    }
+    $selectorManifest = Join-Path $resolvedGame '_OpenSturmovikLab\selector-dump-lab.json'
+    Add-Check -Name 'Manifeste du laboratoire Selector' -Passed (Test-Path -LiteralPath $selectorManifest -PathType Leaf) -Detail $selectorManifest
+    $dumpRoot = Join-Path $resolvedGame 'dump'
+    $dumpEmpty = (Test-Path -LiteralPath $dumpRoot -PathType Container) -and @(Get-ChildItem -LiteralPath $dumpRoot -Force).Count -eq 0
+    Add-Check -Name 'Dossier dump vide avant capture' -Passed $dumpEmpty -Detail $dumpRoot
+}
 
 $manifestPath = Join-Path $resolvedGame 'manifests\java47-1.15.json'
 $javaGood = $true
@@ -117,7 +287,37 @@ if (Test-Path -LiteralPath $manifestPath -PathType Leaf) {
 else { $javaGood = $false }
 Add-Check -Name 'Classes Java corrigees' -Passed ($javaGood -and $javaCount -eq 56) -Detail "verifiees=$javaCount, version=47"
 
+$contentValidator = Join-Path $resolvedRepository 'tools\Test-OpenSturmovikContent.ps1'
+$contentReport = if ($ReportPath) {
+    [IO.Path]::ChangeExtension([IO.Path]::GetFullPath($ReportPath), '.content.json')
+}
+else {
+    Join-Path ([IO.Path]::GetTempPath()) ('open-sturmovik-content-' + [Guid]::NewGuid().ToString('N') + '.json')
+}
+$contentValidationPassed = $false
+$contentValidationDetail = 'outil absent'
+if (Test-Path -LiteralPath $contentValidator -PathType Leaf) {
+    & $contentValidator -ProjectRoot $resolvedRepository -ContentRoot $resolvedGame -ReportPath $contentReport | Out-Host
+    $contentExitCode = $LASTEXITCODE
+    if (Test-Path -LiteralPath $contentReport -PathType Leaf) {
+        $contentSummary = Get-Content -LiteralPath $contentReport -Raw | ConvertFrom-Json
+        $contentValidationPassed = $contentExitCode -eq 0 -and $contentSummary.Fail -eq 0
+        $contentValidationDetail = "PASS=$($contentSummary.Pass), WARN=$($contentSummary.Warn), FAIL=$($contentSummary.Fail)"
+    }
+    else {
+        $contentValidationDetail = "rapport absent, code=$contentExitCode"
+    }
+}
+Add-Check -Name 'Contenu Open Sturmovik v1.15 coherent' -Passed $contentValidationPassed -Detail $contentValidationDetail
+if (-not $ReportPath -and (Test-Path -LiteralPath $contentReport -PathType Leaf)) {
+    Remove-Item -LiteralPath $contentReport -Force
+}
+
 $conf = Join-Path $resolvedGame 'conf.ini'
+$graphicsVendor = Get-GraphicsVendor
+$expectedHardwareShaders = if ($graphicsVendor -eq 'NVIDIA') { '1' } else { '0' }
+$expectedForest = if ($graphicsVendor -eq 'NVIDIA') { '3' } else { '2' }
+$expectedLandGeom = if ($graphicsVendor -eq 'NVIDIA') { '3' } else { '2' }
 $configurationExpectations = [ordered]@{
     'game/eventlogkeep' = '1'
     'Console/LOG' = '1'
@@ -126,10 +326,19 @@ $configurationExpectations = [ordered]@{
     'Console/LOGDEBUG' = '1'
     'Render_OpenGL/TexQual' = '3'
     'Render_OpenGL/TexMipFilter' = '2'
-    'Render_OpenGL/HardwareShaders' = '1'
-    'Render_OpenGL/Forest' = '3'
-    'Render_OpenGL/Water' = '4'
+    'Render_OpenGL/HardwareShaders' = $expectedHardwareShaders
+    'Render_OpenGL/Forest' = $expectedForest
+    'Render_OpenGL/LandGeom' = $expectedLandGeom
+    'Render_OpenGL/Water' = '2'
     'Render_OpenGL/Effects' = '1'
+}
+if ($Windowed1024) {
+    $configurationExpectations['window/width'] = '1024'
+    $configurationExpectations['window/height'] = '768'
+    $configurationExpectations['window/ChangeScreenRes'] = '0'
+    $configurationExpectations['window/FullScreen'] = '0'
+    $configurationExpectations['window/SaveAspect'] = '1'
+    $configurationExpectations['window/WideScreenFoV'] = '0'
 }
 foreach ($expectation in $configurationExpectations.Keys) {
     $section, $key = $expectation -split '/', 2
@@ -159,7 +368,7 @@ $report = [ordered]@{
     game_root = $resolvedGame
     reference_root = $resolvedReference
     repository_root = $resolvedRepository
-    profile = '8 - 4.09m modifie (sans 6DOF), wrapper historique, OpenGL natif'
+    profile = $profileLabel
     checks = $checks
     ready = @($checks | Where-Object { -not $_.Passed }).Count -eq 0
 }

@@ -155,8 +155,11 @@ test.
 - Les EXE modifies sont Large Address Aware. Sous Windows 64 bits, l'espace d'adressage utilisateur peut atteindre 4 Go ; cela ne signifie pas qu'un tas Java de 3 Go est stable.
 - Le profil stable conserve provisoirement `-Xmx1G` afin de laisser de l'espace aux textures, DLL, cartes, sons et autres allocations natives.
 - Le selecteur calcule un masque pour au plus quatre coeurs physiques avec un processeur logique par coeur. Il interroge les masques de topologie Windows et ne suppose pas l'ordre des fils SMT. `15` reste le repli.
+- Le profil stable 1.15 conserve cette selection de quatre coeurs physiques. Un profil experimental **HT/SMT** pourra autoriser tous les processeurs logiques disponibles (par exemple `0xFF` sur le Core i5-8350U), mais il ne deviendra un choix recommande qu'apres comparaison des temps de chargement, des frametimes, des micro-saccades et de la stabilite en mission avec le profil physique (actuellement `0x55` sur cette machine).
 - Le son possede au moins un thread natif. Le degre de parallelisme du rendu, de la simulation, du chargement et de l'IA reste a mesurer.
 - `-Xcomp` est une piste de lenteur au lancement : il force la compilation des methodes. Son retrait ne sera compare que dans un profil experimental.
+
+Les EXE et DLL propres aux profils modifies peuvent etre corriges pour repousser les limites constatees : en-tete Large Address Aware, allocations internes, compteurs, index, files de chargement, synchronisation et parallelisme. Une modification binaire ne peut cependant pas transformer le processus en 64 bits : sous Windows 32 bits, l'espace utilisateur reste limite par la configuration du systeme (jusqu'a 3 Gio avec 4GT) et doit aussi contenir la JVM, les DLL et les allocations natives. Toute correction sera appliquee uniquement aux copies Open Sturmovik, sous forme de patch reproductible avec version source, offsets ou symboles, empreintes SHA-256 avant/apres, controles PE32, test de retour arriere et validation en jeu. Le jeu original de reference reste strictement intact.
 
 References systeme : [limites d'adressage des versions de Windows](https://learn.microsoft.com/en-us/windows/win32/memory/memory-limits-for-windows-releases) et [API Windows GetLogicalProcessorInformation](https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getlogicalprocessorinformation) utilisee pour distinguer les coeurs physiques des fils logiques.
 
@@ -165,6 +168,23 @@ References systeme : [limites d'adressage des versions de Windows](https://learn
 Le modele `conf.max.ini` active le niveau maximal connu pour le chemin OpenGL historique : shaders materiels, eau 4, ombres, lumieres, geometrie, foret et distance elevees. Le selecteur fusionne seulement les sections gerees afin de conserver resolution, son, reseau et commandes du joueur.
 
 Les extensions `TexEnvCombine4NV`, `DepthClampNV` et `TextureShaderNV` sont activees uniquement lorsque la carte active est NVIDIA. Intel, AMD et les cartes non identifiees restent sur les options generiques ARB. Cette detection par fournisseur est une securite initiale ; un futur assistant graphique devra tester la creation du contexte et les extensions reelles.
+
+Le coeur 4.09m conserve un detecteur de capacites concu pour les GPU du debut
+des annees 2000. Son chemin Perfect accepte notamment l'extension
+`GL_NV_texture_shader`. Sur l'Intel UHD 620, le pilote 31.0.101.2141 expose
+OpenGL 4.6 et les programmes de shaders ARB, mais pas cette extension NVIDIA ;
+le moteur imprime donc deux avis Perfect meme avec un profil Excellent valide.
+Ce cas ne doit pas etre masque dans le binaire. Le rapport produit par
+`tools/Test-IL2GraphicsCompatibility.ps1` distingue l'avis historique attendu
+d'une demande Perfect reellement incompatible. Les captures suivantes
+ajouteront automatiquement `graphics-compatibility.json`.
+
+Pour les OS et cartes modernes, la cible est une adaptation par couches : sonde
+OpenGL x86 du contexte reel, selection d'un backend connu, configuration propre
+a ce backend, essai graphique court, puis repli automatique vers OpenGL natif.
+Les DLL x86 du jeu et le chargeur de mods `wrapper.dll` restent separes des
+wrappers graphiques. Aucun profil ne doit deduire la compatibilite Perfect du
+seul nom NVIDIA, AMD ou Intel.
 
 Profils prevus :
 
@@ -401,10 +421,13 @@ contenu restent a quantifier en execution.
 - [Comparaison des profils](AUDIT_PROFILES.md)
 - [Architecture du moteur](ARCHITECTURE_MOTEUR.md)
 - [Analyse de wrapper.dll](ANALYSE_WRAPPER_DLL.md)
+- [Audit des binaires, memoire x86 et affinite CPU](AUDIT_BINAIRES_X86.md)
 - [Audit et conversion des classes Java](AUDIT_CLASSES_JAVA.md)
+- [Audit des effets et limites 4.09m](AUDIT_EFFETS_409M.md)
 - [Redondance SFS](AUDIT_SFS.md)
 - [Programmes communautaires](AUDIT_OS_PROGRAMS.md)
 - [Performances et wrappers graphiques](PERFORMANCES_ET_WRAPPERS_GRAPHIQUES.md)
+- [Outils de modding, SFS, Buttons et Dump Mode](OUTILS_MODDING_IL2_1946.md)
 
 ## Bibliographie externe commentee
 
@@ -416,6 +439,7 @@ contenu restent a quantifier en execution.
 | Chargeur de mods | [Source IL-2 Selector 3.3.0](https://sourceforge.net/p/il2selector/code/HEAD/tree/trunk/3.3.0/) | Auditer wrapper, cache, lanceur et options memoire |
 | Compilation Windows x86 | [LLVM-MinGW](https://github.com/mstorsjo/llvm-mingw) | Chaine portable reproductible utilisee pour le wrapper cache |
 | Utilisation du Selector | [Manuel IL-2 Selector](https://www.sas1946.com/downloads/essentialsas/selector/IL-2_Selector_Manual.pdf) | Parametres, cache et modes de diagnostic |
+| Extraction ciblee | [IL-2 Selector, fil de publication](https://www.sas1946.com/main/index.php?topic=16403.0) | Dump Mode et journalisation SFS dans un clone de laboratoire |
 | Registres du mod | [Aide SAS aux nouveaux moddeurs](https://www.sas1946.com/main/index.php?topic=50904.0) | Emplacements communautaires de `air.ini`, `stationary.ini`, traductions |
 | Format Java | [JVM Specification — ClassFile](https://docs.oracle.com/javase/specs/jvms/se6/html/ClassFile.doc.html) | Lire correctement en-tetes, versions et constant pool |
 | Memoire x86 | [Microsoft — Memory Limits](https://learn.microsoft.com/en-us/windows/win32/memory/memory-limits-for-windows-releases) | Interpreter Large Address Aware sans confondre espace virtuel et RAM |

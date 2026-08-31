@@ -56,12 +56,24 @@ detecter les collisions d'empreintes avant activation.
 
 ## Execution CPU et memoire
 
-- conserver Large Address Aware sur les EXE modifies ;
+- conserver Large Address Aware sur les six EXE modifies ; l'audit PE confirme
+  qu'eux seuls portent ce drapeau et qu'ils sont binaires identiques ;
 - conserver provisoirement `-Xmx1G` jusqu'a mesure simultanee du tas Java et de la memoire native ;
 - conserver le profil stable avec ses options JVM et tester le retrait de `-Xcomp` uniquement dans un profil experimental ;
 - utiliser le masque calcule par le selecteur, qui choisit au plus quatre coeurs physiques et conserve 15 comme repli ;
+- conserver ce masque physique comme profil stable, puis comparer un profil HT/SMT experimental autorisant jusqu'aux huit processeurs logiques de la machine de test ; ne le recommander que si les mesures de chargement, frametime et stabilite sont meilleures ;
 - ne pas promettre quatre fois plus de performances : l'ancien moteur conserve des chemins principalement sequentiels, tandis que le son et certains services utilisent leurs propres threads ;
 - distinguer un profil **Qualite maximale** du futur profil **Performance equilibree** : certains reglages visuels augmentent surtout la charge CPU et le nombre d'appels de dessin.
+
+La limite cible doit etre formulee exactement : un jeu x86 LAA peut disposer de
+4 Gio d'adresses utilisateur sous Windows 64 bits, mais seulement de **3 Gio au
+maximum sous Windows 32 bits** avec 4GT/`increaseuserva`. Le profil demande pour
+les systemes 32 bits visera donc une enveloppe sure sous 3 Gio, pas une promesse
+de 4 Gio. Les en-tetes, empreintes, limites Microsoft et la selection de quatre
+coeurs physiques sont documentes dans
+[l'audit des binaires x86](AUDIT_BINAIRES_X86.md).
+
+Les EXE et DLL des profils modifies pourront etre patches lorsque l'analyse prouve une limite interne corrigible. Ces travaux viseront notamment l'adressage LAA, les allocations, index, compteurs, files de chargement et points de synchronisation. Ils resteront experimentaux tant que le gain et l'absence de regression ne sont pas mesures. Chaque patch devra etre reproductible, controle par empreintes avant/apres et reversible ; aucun binaire de l'installation originale protegee ne sera modifie.
 
 Le Selector recent sait construire au lancement des options `-Xmx`, `-Xss` et `-XX:PermSize`/`MaxPermSize` depuis `RamSize` et `MemoryStrategy`, ainsi qu'ajouter une section JVM. Cela offre une methode plus propre qu'une modification binaire pour les futurs essais. Ce n'est pas encore une preuve que 2 Gio de tas sont stables avec la JVM 1.3 et les allocations natives du moteur : le profil stable reste donc a 1 Gio jusqu'aux mesures.
 
@@ -86,7 +98,11 @@ La selection automatique doit combiner : fournisseur et identifiant PCI du GPU, 
 
 Sur la machine d'analyse : Intel UHD Graphics 620, pilote `31.0.101.2141`, Core i5-8350U 4 coeurs/8 processeurs logiques, environ 32 Gio de RAM et SSD NVMe WD Blue SN580. Ce materiel fournit un bon test pour le profil Intel et pour la construction d'un masque de quatre coeurs physiques.
 
-Le fichier `conf.max.ini` conserve maintenant les extensions NVIDIA (`TexEnvCombine4NV`, `DepthClampNV`, `TextureShaderNV`) desactivees comme valeur generique. Le selecteur ne les active que si l'adaptateur graphique actif est identifie comme NVIDIA ; Intel, AMD et les cartes inconnues gardent le profil ARB. Cette detection par fournisseur est une premiere barriere de securite, pas encore un test des extensions OpenGL. Le mode IL2GE exige en outre `Water=0` et `DynamicalLights=0`, ce qui est incompatible avec le profil maximal OpenGL actuel et justifie un fichier separe.
+Le fichier `conf.max.ini` conserve maintenant les extensions NVIDIA (`TexEnvCombine4NV`, `DepthClampNV`, `TextureShaderNV`) desactivees comme valeur generique. Il utilise aussi `HardwareShaders=0`, `Forest=2` et `LandGeom=2`, soit le chemin securise accepte par le moteur 4.09m. Le second essai Intel a isole `LandGeom=3` comme seule valeur reecrite : la documentation du patch 4.09m reserve cette portee de 72 km au mode Perfect, alors que `LandGeom=2` conserve la portee normale de 36 km. Le troisieme essai a confirme une empreinte `conf.ini` inchangee.
+
+L'analyse hors jeu de `il2_core.dll` explique les deux messages restants. Le code qui construit les capacites du rendu 4.09m verifie l'ancien chemin de pixel shaders `GL_NV_texture_shader` et imprime l'avis avant d'exposer les niveaux graphiques disponibles. Le pilote Intel UHD 620 fournit `GL_ARB_vertex_program` et `GL_ARB_fragment_program`, mais pas cette extension NVIDIA historique. Les messages ne sont donc pas declenches par une autre valeur inconnue de `conf.ini` et ne signalent ni crash ni echec du profil Excellent. Les masquer dans le binaire serait dangereux : le diagnostic `tools/Test-IL2GraphicsCompatibility.ps1` les classe maintenant comme `expected-legacy-capability-notice` uniquement si le profil natif securise est effectivement actif. Une demande Perfect incompatible reste une erreur.
+
+Le selecteur ne passe a `HardwareShaders=1`, `Forest=3`, `LandGeom=3` et aux extensions NV que si l'adaptateur actif est identifie comme NVIDIA. Cette detection par fournisseur est une premiere barriere de securite, pas encore un test des extensions OpenGL. L'adaptation aux GPU et OS modernes devra utiliser une sonde x86 du contexte reel, puis un profil wrapper reversible capable de traduire l'ancienne attente du moteur ; elle ne devra jamais simuler ces drapeaux par simple reconnaissance du nom du GPU. Le mode IL2GE exige en outre `Water=0` et `DynamicalLights=0`, ce qui est incompatible avec le profil maximal OpenGL actuel et justifie un fichier separe. Sources : [notes du patch 4.09m](https://www.com-central.net/index.php/pouk/seznam-ucbenikov-in-solskih-potrebscin/index.php?file=details&id=384&name=Downloads), [profil Perfect NVIDIA sur le forum IL-2](https://forum.il2sturmovik.com/topic/11568-new-install-of-1946/), [reglages Perfect SAS](https://www.sas1946.com/main/index.php?topic=9756.0).
 
 ## Evaluation des candidats
 

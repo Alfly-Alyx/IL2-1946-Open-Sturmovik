@@ -7,6 +7,8 @@ param(
     [ValidateSet('1','2','3')]
     [string]$Hud,
 
+    [switch]$Windowed1024,
+
     [switch]$NoPause
 )
 
@@ -417,12 +419,38 @@ function Set-MaximumConfiguration {
         }
 
         $profile = Read-ProfileFile -Path $profilePath
+        if ($Windowed1024) {
+            if (-not $profile.Contains('window')) {
+                $profile['window'] = [ordered]@{}
+            }
+            $profile['window']['width'] = '1024'
+            $profile['window']['height'] = '768'
+            $profile['window']['ChangeScreenRes'] = '0'
+            $profile['window']['FullScreen'] = '0'
+            $profile['window']['SaveAspect'] = '1'
+            $profile['window']['WideScreenFoV'] = '0'
+        }
         $affinityMask = Get-FourPhysicalCoreAffinityMask
         $profile['rts']['ProcessAffinityMask'] = $affinityMask.ToString([System.Globalization.CultureInfo]::InvariantCulture)
         $graphics = Get-GraphicsVendorProfile
         $nvExtensions = if ($graphics.Vendor -eq 'NVIDIA') { '1' } else { '0' }
         foreach ($key in 'TexFlags.TexEnvCombine4NV','TexFlags.DepthClampNV','TexFlags.TextureShaderNV') {
             $profile['Render_OpenGL'][$key] = $nvExtensions
+        }
+        if ($graphics.Vendor -eq 'NVIDIA') {
+            $profile['Render_OpenGL']['HardwareShaders'] = '1'
+            $profile['Render_OpenGL']['Forest'] = '3'
+            $profile['Render_OpenGL']['LandGeom'] = '3'
+        }
+        else {
+            # Le detecteur 4.09m exige les anciennes extensions NV pour son
+            # mode Perfect. Intel, AMD et les cartes inconnues restent en
+            # Excellent. Le moteur peut encore journaliser un avis Perfect
+            # lors de son inventaire materiel, mais ne doit plus reecrire
+            # conf.ini ni tenter ce chemin de rendu.
+            $profile['Render_OpenGL']['HardwareShaders'] = '0'
+            $profile['Render_OpenGL']['Forest'] = '2'
+            $profile['Render_OpenGL']['LandGeom'] = '2'
         }
         foreach ($section in $profile.Keys) {
             Set-IniSectionValues -Lines $lines -Section $section -Values $profile[$section]
@@ -433,7 +461,10 @@ function Set-MaximumConfiguration {
             $updated += $newline
         }
         [System.IO.File]::WriteAllText($confPath, $updated, $encoding)
-        Write-Host "Reglages graphiques maximum appliques pour $($graphics.Vendor) ($($graphics.Name))." -ForegroundColor Green
+        Write-Host "Profil graphique haute qualite securise applique pour $($graphics.Vendor) ($($graphics.Name))." -ForegroundColor Green
+        if ($Windowed1024) {
+            Write-Host 'Mode fenetre 1024x768 applique.' -ForegroundColor Green
+        }
         Write-Host "Affinite limitee a quatre coeurs maximum (masque $affinityMask)." -ForegroundColor Green
     }
     catch {
@@ -490,6 +521,10 @@ try {
     }
     if (-not $profiles.ContainsKey($choice)) {
         throw "Choix invalide : $choice"
+    }
+
+    if ($choice -in @('1', '2', '3', '4', '5', '6')) {
+        throw 'Profil historique temporairement verrouille : les SFS et DLL 4.08m/4.09b ne sont pas encore bascules par un manifeste exhaustif. Utiliser la cible 4.09m.'
     }
 
     if ($choice -in @('3', '6', '9', '12')) {
