@@ -1,3 +1,5 @@
+#requires -Version 7.0
+
 [CmdletBinding()]
 param(
     [string]$ManifestPath,
@@ -16,7 +18,8 @@ if (-not $ManifestPath) {
 
 $resolvedRoot = (Resolve-Path -LiteralPath $ProjectRoot).Path
 $resolvedManifest = (Resolve-Path -LiteralPath $ManifestPath).Path
-$manifest = Get-Content -LiteralPath $resolvedManifest -Raw | ConvertFrom-Json
+$manifestText = Get-Content -LiteralPath $resolvedManifest -Raw
+$manifest = $manifestText | ConvertFrom-Json
 $errors = New-Object System.Collections.Generic.List[string]
 $warnings = New-Object System.Collections.Generic.List[string]
 $checkedFiles = 0
@@ -34,11 +37,53 @@ function Test-RelativeProjectPath {
         Add-Error "$Context : chemin vide."
         return $false
     }
-    if ([IO.Path]::IsPathRooted($Value) -or $Value -split '[\\/]' -contains '..') {
+    if ([IO.Path]::IsPathRooted($Value) -or
+        $Value.Contains(':') -or
+        $Value -split '[\\/]' -contains '..') {
         Add-Error "$Context : chemin non relatif ou traversant ($Value)."
         return $false
     }
     return $true
+}
+
+function Resolve-ContainedProjectFile {
+    param([string]$RelativePath, [string]$Context)
+
+    $candidate = Join-Path $resolvedRoot $RelativePath
+    if (-not (Test-Path -LiteralPath $candidate -PathType Leaf)) {
+        Add-Error "$Context : fichier absent ($RelativePath)."
+        return $null
+    }
+
+    $item = Get-Item -LiteralPath $candidate
+    $fullPath = [IO.Path]::GetFullPath($item.FullName)
+    $rootPath = [IO.Path]::GetFullPath($resolvedRoot).TrimEnd('\', '/')
+    $rootPrefix = $rootPath + [IO.Path]::DirectorySeparatorChar
+    if (-not $fullPath.StartsWith($rootPrefix, [StringComparison]::OrdinalIgnoreCase)) {
+        Add-Error "$Context : la source sort du projet ($RelativePath)."
+        return $null
+    }
+
+    if (($item.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0) {
+        Add-Error "$Context : lien symbolique interdit ($RelativePath)."
+        return $null
+    }
+
+    $cursor = $item.Directory
+    while ($null -ne $cursor -and
+        -not $cursor.FullName.Equals($rootPath, [StringComparison]::OrdinalIgnoreCase)) {
+        if (($cursor.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0) {
+            Add-Error "$Context : lien symbolique ou jonction interdit ($RelativePath)."
+            return $null
+        }
+        $cursor = $cursor.Parent
+    }
+    if ($null -eq $cursor) {
+        Add-Error "$Context : impossible de prouver l appartenance au projet ($RelativePath)."
+        return $null
+    }
+
+    return $item
 }
 
 function Test-UniqueIds {
@@ -49,6 +94,16 @@ function Test-UniqueIds {
     foreach ($duplicate in $duplicates) {
         Add-Error "$Context : identifiant duplique ($duplicate)."
     }
+}
+
+$schemaPath = Join-Path $resolvedRoot '_launcher\manifests\launcher.schema.json'
+try {
+    if (-not (Test-Json -Json $manifestText -SchemaFile $schemaPath -ErrorAction Stop)) {
+        Add-Error 'Le manifeste ne respecte pas launcher.schema.json.'
+    }
+}
+catch {
+    Add-Error "Validation JSON Schema impossible : $($_.Exception.Message)"
 }
 
 if ($manifest.schemaVersion -ne 1) {
@@ -84,6 +139,24 @@ foreach ($profile in @($manifest.profiles)) {
     if ($profile.availability -ne 'available' -and [string]::IsNullOrWhiteSpace([string]$profile.reason)) {
         Add-Error "Le profil indisponible $($profile.id) doit expliquer pourquoi."
     }
+    $profileTargets = @($profile.files | ForEach-Object { [string]$_.target })
+    $duplicateTargets = @($profileTargets | Group-Object | Where-Object Count -gt 1 | ForEach-Object Name)
+    foreach ($duplicateTarget in $duplicateTargets) {
+        Add-Error "$($profile.id) : cible dupliquee ($duplicateTarget)."
+    }
+    if ([string]$profile.id -like 'open-sturmovik-409m-*') {
+        foreach ($requiredTarget in @(
+            'files.SFS',
+            'il2fb.exe',
+            'wrapper.dll',
+            'Files/com/maddox/il2/objects/air.ini',
+            'Files/com/maddox/il2/objects/stationary.ini'
+        )) {
+            if ($requiredTarget -notin $profileTargets) {
+                Add-Error "$($profile.id) : fichier coherent obligatoire absent ($requiredTarget)."
+            }
+        }
+    }
     foreach ($file in @($profile.files)) {
         $context = "$($profile.id)/$($file.target)"
         if (-not (Test-RelativeProjectPath ([string]$file.source) "$context source")) {
@@ -97,17 +170,15 @@ foreach ($profile in @($manifest.profiles)) {
             continue
         }
 
-        $sourcePath = Join-Path $resolvedRoot ([string]$file.source)
-        if (-not (Test-Path -LiteralPath $sourcePath -PathType Leaf)) {
-            Add-Error "$context : source absente ($($file.source))."
+        $sourceInfo = Resolve-ContainedProjectFile ([string]$file.source) "$context source"
+        if ($null -eq $sourceInfo) {
             continue
         }
 
-        $sourceInfo = Get-Item -LiteralPath $sourcePath
         if ($sourceInfo.Length -ne [long]$file.size) {
             Add-Error "$context : taille $($sourceInfo.Length), attendu $($file.size)."
         }
-        $actualHash = (Get-FileHash -LiteralPath $sourcePath -Algorithm SHA256).Hash
+        $actualHash = (Get-FileHash -LiteralPath $sourceInfo.FullName -Algorithm SHA256).Hash
         if ($actualHash -ne [string]$file.sha256) {
             Add-Error "$context : empreinte SHA-256 inattendue."
         }
@@ -190,13 +261,12 @@ foreach ($context in $contracts.Keys) {
     if (-not (Test-RelativeProjectPath $relativePath $context)) {
         continue
     }
-    $contractPath = Join-Path $resolvedRoot $relativePath
-    if (-not (Test-Path -LiteralPath $contractPath -PathType Leaf)) {
-        Add-Error "$context : fichier absent ($relativePath)."
+    $contractInfo = Resolve-ContainedProjectFile $relativePath $context
+    if ($null -eq $contractInfo) {
         continue
     }
     try {
-        Get-Content -LiteralPath $contractPath -Raw | ConvertFrom-Json | Out-Null
+        Get-Content -LiteralPath $contractInfo.FullName -Raw | ConvertFrom-Json | Out-Null
         $checkedContracts++
     }
     catch {
@@ -206,18 +276,18 @@ foreach ($context in $contracts.Keys) {
 
 $collectorRelativePath = [string]$manifest.errorReporting.logCollector
 if (Test-RelativeProjectPath $collectorRelativePath 'errorReporting.logCollector') {
-    $collectorPath = Join-Path $resolvedRoot $collectorRelativePath
-    if (-not (Test-Path -LiteralPath $collectorPath -PathType Leaf)) {
-        Add-Error "errorReporting.logCollector : fichier absent ($collectorRelativePath)."
+    $collectorInfo = Resolve-ContainedProjectFile $collectorRelativePath 'errorReporting.logCollector'
+    if ($null -eq $collectorInfo) {
+        # L erreur detaillee est deja ajoutee par Resolve-ContainedProjectFile.
     }
-    elseif ([IO.Path]::GetExtension($collectorPath) -cne '.ps1') {
+    elseif ([IO.Path]::GetExtension($collectorInfo.FullName) -cne '.ps1') {
         Add-Error 'errorReporting.logCollector : le collecteur attendu doit etre un script PowerShell.'
     }
     else {
         $tokens = $null
         $collectorErrors = $null
         [Management.Automation.Language.Parser]::ParseFile(
-            $collectorPath,
+            $collectorInfo.FullName,
             [ref]$tokens,
             [ref]$collectorErrors
         ) | Out-Null

@@ -1,3 +1,5 @@
+#requires -Version 7.0
+
 [CmdletBinding(DefaultParameterSetName = 'Json')]
 param(
     [Parameter(Mandatory = $true)]
@@ -8,6 +10,11 @@ param(
 
     [Parameter(Mandatory = $true, ParameterSetName = 'Path')]
     [string]$ChangesPath,
+
+    [ValidatePattern('^[A-Fa-f0-9]{64}$')]
+    [string]$ExpectedBeforeSha256,
+
+    [string]$BackupDirectory,
 
     [switch]$Apply
 )
@@ -215,15 +222,34 @@ $newBytes = Convert-TextToBytes $newText $document.encoding $document.hasBom
 $beforeHash = Get-Sha256Bytes $document.bytes
 $plannedHash = Get-Sha256Bytes $newBytes
 $backupPath = $null
+$rollbackPerformed = $false
+
+if ($ExpectedBeforeSha256 -and
+    $beforeHash -cne $ExpectedBeforeSha256.ToUpperInvariant()) {
+    throw 'Le fichier de configuration a change depuis l apercu. Relancez la preparation avant d appliquer.'
+}
 
 if ($Apply -and $beforeHash -ne $plannedHash) {
     $directory = Split-Path -Parent $resolvedConfiguration
-    $backupDirectory = Join-Path $directory '_OpenSturmovik_Backups'
-    if (-not (Test-Path -LiteralPath $backupDirectory)) {
-        $null = New-Item -ItemType Directory -Path $backupDirectory
+    $effectiveBackupDirectory = if ($BackupDirectory) {
+        [IO.Path]::GetFullPath($BackupDirectory)
+    }
+    else {
+        $localApplicationData = [Environment]::GetFolderPath(
+            [Environment+SpecialFolder]::LocalApplicationData
+        )
+        if ([string]::IsNullOrWhiteSpace($localApplicationData)) {
+            throw 'Le dossier de donnees applicatives locales est introuvable.'
+        }
+        $installationBytes = [Text.Encoding]::UTF8.GetBytes($directory.ToUpperInvariant())
+        $installationId = (Get-Sha256Bytes $installationBytes).Substring(0, 16)
+        Join-Path $localApplicationData "OpenSturmovik\Backups\$installationId"
+    }
+    if (-not (Test-Path -LiteralPath $effectiveBackupDirectory)) {
+        $null = New-Item -ItemType Directory -Path $effectiveBackupDirectory
     }
     $stamp = [DateTimeOffset]::UtcNow.ToString('yyyyMMddTHHmmssfffZ')
-    $backupPath = Join-Path $backupDirectory ("{0}.{1}.{2}.bak" -f @(
+    $backupPath = Join-Path $effectiveBackupDirectory ("{0}.{1}.{2}.bak" -f @(
         [IO.Path]::GetFileName($resolvedConfiguration),
         $stamp,
         $beforeHash.Substring(0, 12)
@@ -232,16 +258,73 @@ if ($Apply -and $beforeHash -ne $plannedHash) {
         [IO.Path]::GetFileName($resolvedConfiguration),
         [Guid]::NewGuid().ToString('N')
     ))
+    $rollbackPath = Join-Path $directory (".{0}.rollback.{1}.tmp" -f @(
+        [IO.Path]::GetFileName($resolvedConfiguration),
+        [Guid]::NewGuid().ToString('N')
+    ))
+    $replaceBackupPath = Join-Path $directory (".{0}.replace.{1}.bak" -f @(
+        [IO.Path]::GetFileName($resolvedConfiguration),
+        [Guid]::NewGuid().ToString('N')
+    ))
+    $rollbackBackupPath = Join-Path $directory (".{0}.rollback-replace.{1}.bak" -f @(
+        [IO.Path]::GetFileName($resolvedConfiguration),
+        [Guid]::NewGuid().ToString('N')
+    ))
+    $replacementStarted = $false
     try {
+        [IO.File]::WriteAllBytes($backupPath, $document.bytes)
+        if ((Get-Sha256Bytes ([IO.File]::ReadAllBytes($backupPath))) -ne $beforeHash) {
+            throw 'La verification de la sauvegarde a echoue.'
+        }
+
         [IO.File]::WriteAllBytes($temporaryPath, $newBytes)
         if ((Get-Sha256Bytes ([IO.File]::ReadAllBytes($temporaryPath))) -ne $plannedHash) {
             throw 'La verification du fichier temporaire a echoue.'
         }
-        [IO.File]::Replace($temporaryPath, $resolvedConfiguration, $backupPath, $true)
+
+        $currentHash = Get-Sha256Bytes ([IO.File]::ReadAllBytes($resolvedConfiguration))
+        if ($currentHash -ne $beforeHash) {
+            throw 'Le fichier de configuration a change pendant la transaction. Aucune ecriture n a ete effectuee.'
+        }
+
+        $replacementStarted = $true
+        [IO.File]::Replace($temporaryPath, $resolvedConfiguration, $replaceBackupPath, $true)
+        $resultHash = Get-Sha256Bytes ([IO.File]::ReadAllBytes($resolvedConfiguration))
+        if ($resultHash -ne $plannedHash) {
+            throw 'La verification apres remplacement a echoue.'
+        }
+    }
+    catch {
+        $transactionError = $_
+        if ($replacementStarted) {
+            $currentHash = Get-Sha256Bytes ([IO.File]::ReadAllBytes($resolvedConfiguration))
+            if ($currentHash -ne $beforeHash) {
+                [IO.File]::WriteAllBytes($rollbackPath, $document.bytes)
+                if ((Get-Sha256Bytes ([IO.File]::ReadAllBytes($rollbackPath))) -ne $beforeHash) {
+                    throw "La transaction a echoue et la preparation de la restauration a echoue : $($transactionError.Exception.Message)"
+                }
+                [IO.File]::Replace($rollbackPath, $resolvedConfiguration, $rollbackBackupPath, $true)
+                $restoredHash = Get-Sha256Bytes ([IO.File]::ReadAllBytes($resolvedConfiguration))
+                if ($restoredHash -ne $beforeHash) {
+                    throw "La transaction a echoue et la restauration n a pas pu etre verifiee : $($transactionError.Exception.Message)"
+                }
+                $rollbackPerformed = $true
+            }
+        }
+        throw "Transaction de configuration abandonnee : $($transactionError.Exception.Message)"
     }
     finally {
         if (Test-Path -LiteralPath $temporaryPath) {
             Remove-Item -LiteralPath $temporaryPath -Force
+        }
+        if (Test-Path -LiteralPath $rollbackPath) {
+            Remove-Item -LiteralPath $rollbackPath -Force
+        }
+        if (Test-Path -LiteralPath $replaceBackupPath) {
+            Remove-Item -LiteralPath $replaceBackupPath -Force
+        }
+        if (Test-Path -LiteralPath $rollbackBackupPath) {
+            Remove-Item -LiteralPath $rollbackBackupPath -Force
         }
     }
 }
@@ -262,6 +345,8 @@ else {
     beforeSha256 = $beforeHash
     plannedSha256 = $plannedHash
     afterSha256 = $afterHash
+    verified = ([bool]$Apply -and $afterHash -eq $plannedHash)
+    rollbackPerformed = $rollbackPerformed
     backup = $backupPath
     operations = $plan.ToArray()
 } | ConvertTo-Json -Depth 8

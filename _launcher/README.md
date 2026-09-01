@@ -11,6 +11,14 @@ du jeu porte le prefixe `_` : `_launcher`. Ses sous-dossiers (`docs`,
 normaux. Les noms historiques du jeu, dont `il2setup.exe` et `conf.ini`, ne sont
 jamais renommes.
 
+## Prerequis du socle executable
+
+Les scripts de reference exigent **PowerShell 7** (`pwsh`). L'ancien
+`powershell.exe` 5.1 de Windows n'est pas une cible : son moteur d'encodage et
+sa validation JSON ne fournissent pas le meme contrat. L'application finale
+.NET sera publiee en autonome et ne demandera pas a l'utilisateur d'installer
+PowerShell.
+
 ## Etat du socle
 
 - conception fonctionnelle et architecture : `docs/CONCEPTION.md` ;
@@ -42,20 +50,25 @@ jamais renommes.
   `tools/Read-IL2HotKeyCatalogue.ps1` ;
 - generateur de la reference lisible des reglages et commandes :
   `tools/New-IL2CommandReference.ps1` ;
-- moteur de modification transactionnelle de `conf.ini`, en aperçu par défaut :
+- moteur de modification transactionnelle de `conf.ini`, en aperçu par défaut,
+  avec garde contre les modifications concurrentes, sauvegarde hors du jeu,
+  verification apres ecriture et restauration automatique :
   `tools/Set-IL2Configuration.ps1` ;
 - anonymiseur local sans envoi : `tools/New-AnonymizedErrorReport.ps1` ;
 - validateur d'un rapport prêt à envoyer : `tools/Test-ErrorReport.ps1` ;
 - resolveur de configuration en lecture seule :
   `tools/Resolve-LauncherPlan.ps1`.
 
-Le socle ne modifie encore aucun fichier du jeu et n'envoie aucun rapport. Il
-rend les choix explicites, refuse une capacité indisponible et produit le plan
-qu'un futur moteur transactionnel appliquera après confirmation.
+Le socle n'applique encore aucun profil complet au jeu et n'envoie aucun
+rapport. Le moteur `conf.ini` n'ecrit que si `-Apply` est explicitement fourni ;
+les essais utilisent exclusivement une copie jetable. Le socle rend les choix
+explicites, refuse une capacité indisponible et produit le plan qu'un futur
+moteur transactionnel multi-fichier appliquera après confirmation.
 
 ## Essai local
 
 ```powershell
+pwsh --version
 pwsh -File _launcher/tools/Test-LauncherManifest.ps1
 pwsh -File _launcher/tools/Resolve-LauncherPlan.ps1
 pwsh -File _launcher/tests/Test-LogCollector.ps1

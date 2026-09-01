@@ -35,6 +35,18 @@
           "target": "wrapper.dll",
           "size": 233472,
           "sha256": "8B6091C38F1241F2CB7D4EAF239DE662A2C862B57B14D7ACA9074C5C37A03F78"
+        },
+        {
+          "source": "_Game Switchers/409m air.ini/Air.ini/air.ini",
+          "target": "Files/com/maddox/il2/objects/air.ini",
+          "size": 41446,
+          "sha256": "E5CDAAA4DFE66C0A188F022B2E29EEDB0D595679B977A8F2EDEA97C3C0EB5520"
+        },
+        {
+          "source": "_Game Switchers/Stationary/409m/stationary.ini",
+          "target": "Files/com/maddox/il2/objects/stationary.ini",
+          "size": 53247,
+          "sha256": "5D234CE357202F582D5049635C9B9A316B418F4E44954A8B630C4E7B058251E3"
         }
       ]
     },
@@ -61,6 +73,18 @@
           "target": "wrapper.dll",
           "size": 233472,
           "sha256": "8B6091C38F1241F2CB7D4EAF239DE662A2C862B57B14D7ACA9074C5C37A03F78"
+        },
+        {
+          "source": "_Game Switchers/409m air.ini/Air.ini/air.ini",
+          "target": "Files/com/maddox/il2/objects/air.ini",
+          "size": 41446,
+          "sha256": "E5CDAAA4DFE66C0A188F022B2E29EEDB0D595679B977A8F2EDEA97C3C0EB5520"
+        },
+        {
+          "source": "_Game Switchers/Stationary/409m/stationary.ini",
+          "target": "Files/com/maddox/il2/objects/stationary.ini",
+          "size": 53247,
+          "sha256": "5D234CE357202F582D5049635C9B9A316B418F4E44954A8B630C4E7B058251E3"
         }
       ]
     }
@@ -134,7 +158,13 @@
   },
   "integrity": {
     "algorithms": ["size", "sha256"],
-    "quickTargets": ["files.SFS", "il2fb.exe", "wrapper.dll"],
+    "quickTargets": [
+      "files.SFS",
+      "il2fb.exe",
+      "wrapper.dll",
+      "Files/com/maddox/il2/objects/air.ini",
+      "Files/com/maddox/il2/objects/stationary.ini"
+    ],
     "extendedValidator": "tools/Test-OpenSturmovikContent.ps1",
     "protectedPlayerPaths": [
       "Users/**",

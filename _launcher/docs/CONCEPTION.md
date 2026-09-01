@@ -110,7 +110,8 @@ le moteur de resolution sont deja prevus pour les deux choix.
 
 Trois niveaux sont prevus :
 
-1. **Rapide** : executables, SFS, wrapper, registres principaux et profil actif.
+1. **Rapide** : executables, SFS, wrapper, `air.ini`, `stationary.ini`, registres
+   principaux et profil actif.
 2. **Complete** : tous les fichiers geres par le manifeste, tailles, SHA-256 et
    coherences transversales deja couvertes par
    `tools/Test-OpenSturmovikContent.ps1`.
@@ -165,6 +166,19 @@ Principes structurants :
 - **diagnostic honnete** : une option non prouvee est indisponible, jamais
   simulee par un libelle optimiste.
 
+Le prototype transactionnel refuse maintenant une application si `conf.ini` a
+change depuis l'apercu ou pendant la preparation. La sauvegarde est conservee
+dans les donnees applicatives, hors du dossier du jeu. Le contenu temporaire,
+le resultat et une eventuelle restauration sont controles par SHA-256. Ces
+garanties sont obligatoires pour le futur moteur multi-fichier.
+
+Un profil Open Sturmovik 4.09m forme un ensemble coherent : `files.SFS`,
+`il2fb.exe`, `wrapper.dll`, `air.ini` et `stationary.ini` sont resolus et
+verifies ensemble. Un futur profil **Jeu original** suivra une politique
+distincte : aucun `wrapper.dll` n'est requis et un wrapper laisse par un profil
+modde devra etre retire dans la meme transaction, sans afficher une fausse
+erreur de fichier manquant.
+
 ## Donnees et confidentialite
 
 Les reglages generes restent locaux. Les mots de passe serveur et donnees
@@ -180,8 +194,9 @@ d'integrite contiennent des chemins relatifs lorsque cela suffit.
    ajoutees (a faire).
 3. Porter dans le futur domaine .NET le moteur transactionnel de référence
    `tools/Set-IL2Configuration.ps1`. Son aperçu, sa préservation des clés
-   inconnues, sa sauvegarde et son remplacement atomique sont déjà testés sur
-   une copie jetable de `conf.ini` ; aucun fichier réel du jeu n'a été modifié.
+   inconnues, sa garde de concurrence, sa sauvegarde hors du jeu, sa
+   verification et son remplacement atomique sont testes sur une copie jetable
+   de `conf.ini` ; aucun fichier reel du jeu n'a ete modifie.
 4. Creer l'application WPF et brancher l'accueil, l'image et l'integrite.
 5. Ajouter l'editeur de commandes, puis le 6DOF des qu'un profil distinct est
    disponible.
