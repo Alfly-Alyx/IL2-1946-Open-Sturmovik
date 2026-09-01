@@ -429,6 +429,11 @@ function Set-MaximumConfiguration {
             $profile['window']['FullScreen'] = '0'
             $profile['window']['SaveAspect'] = '1'
             $profile['window']['WideScreenFoV'] = '0'
+            # Le curseur 3D historique de mouseUse=2 peut disparaitre sous les
+            # Windows modernes en mode fenetre. Le profil de diagnostic confie
+            # donc le pointeur a Windows. Le plein ecran conserve le choix du
+            # joueur, notamment pour le libre regard sans limite.
+            $profile['rts']['mouseUse'] = '1'
         }
         $affinityMask = Get-FourPhysicalCoreAffinityMask
         $profile['rts']['ProcessAffinityMask'] = $affinityMask.ToString([System.Globalization.CultureInfo]::InvariantCulture)

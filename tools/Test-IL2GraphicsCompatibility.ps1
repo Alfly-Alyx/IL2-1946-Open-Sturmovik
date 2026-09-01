@@ -74,12 +74,14 @@ foreach ($line in $lines) {
 }
 
 $perfectWarnings = @(
-    foreach ($line in $lines) {
-        if ($line -match "WARNING:\s*('Perfect' Mode.*?)\s*$") {
-            $matches[1]
+    @(
+        foreach ($line in $lines) {
+            if ($line -match "WARNING:\s*('Perfect' Mode.*?)\s*$") {
+                $matches[1]
+            }
         }
-    }
-) | Select-Object -Unique
+    ) | Select-Object -Unique
+)
 
 $config = [ordered]@{}
 foreach ($key in @(

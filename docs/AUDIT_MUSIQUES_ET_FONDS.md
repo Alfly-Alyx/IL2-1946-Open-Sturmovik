@@ -52,6 +52,25 @@ nommees `Fond ecran installeur` sont differentes : `1.bmp` et `1.jpg` mesurent
 1600 x 740 et servent a l'installateur, tandis que la jaquette Ubisoft mesure
 3335 x 2214.
 
+### Extension `.tga` et conteneur IMF d'IL-2
+
+L'extension ne suffit pas a identifier le format reel. Les deux atlas d'interface
+examines le 31 aout 2026, `Files\gui\GAME\basicelements.tga` et
+`Files\gui\GAME\staticelements.tga`, ne commencent pas par un en-tete TGA
+standard : leurs premiers octets sont `49 4D 46 1A 31 30`, soit la signature
+`IMF` suivie de la variante `10` du conteneur d'image proprietaire d'IL-2. Un
+visualiseur TGA ordinaire les refuse donc, meme si leur nom se termine par
+`.tga`.
+
+Il ne faut ni les renommer en `.imf`, ni les convertir a l'aveugle : les fichiers
+`.mat` du moteur les referencent par leur nom historique et peuvent dependre de
+leur format, de leur palette et de leur canal alpha. L'inspection ou une future
+conversion reproductible doit passer par un outil compatible IMF, tel que
+`ViewIMF`, en conservant l'original et son empreinte. Cette observation est
+particulierement importante pour les atlas GUI susceptibles de contenir des
+sprites ou masques, dont le curseur. Elle ne prouve toutefois pas, a elle seule,
+que l'atlas est la cause d'un curseur invisible.
+
 ## Regle pour le futur lanceur
 
 Les captures communautaires originales seront conservees dans leur resolution

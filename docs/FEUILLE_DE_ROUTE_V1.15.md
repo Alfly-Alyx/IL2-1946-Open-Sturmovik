@@ -19,6 +19,89 @@ connue reste sans diagnostic. La cible est :
 Atteindre le menu est un jalon de diagnostic. Ce n'est pas encore une
 validation de la version.
 
+## Proposition de perimetre a faire valider
+
+Cette proposition cherche une v1.15 propre et publiable sans transformer la
+stabilisation 4.09m en audit infini de tout IL-2. Elle n'est pas une decision
+finale : Alexis valide le contenu de la version.
+
+### Indispensable pour publier la v1.15
+
+1. Corriger le moteur de nuages meteo ou fournir un repli explicitement
+   selectionne. Slovakia et Smolensk reproduisent de grands polygones blancs,
+   des volumes traversant le relief et 21 exceptions natives
+   `EffClouds.PreRender`. Rejouer d'abord la meme mission en A/B
+   `TypeClouds=1/0`, puis avec le profil 4.09m stock. Le profil « Realisme max »
+   ne peut pas sortir avec le moteur ameliore defectueux.
+2. Valider le correctif pause/reprise de Little Boy puis Fat Man, sur terre et
+   sur l'eau, sans gel, disparition, rattrapage visuel ou exception.
+3. Valider en jeu la correction Slovakia : le `load.ini` libre demandait
+   `actors.static`, alors que `fb_maps15.SFS` et le `load.ini` officiel 4.09m
+   utilisent `actors_summer.static`. Le gros fichier reste dans le SFS.
+4. Corriger ou neutraliser proprement les quatre chunks de cockpit B-29 absents
+   (`zOilFlap1`, `zOilFlap2`, `zCompressor1`, `zCompressor2`).
+5. Faire une mission Zuti/MDS d'au moins dix minutes et une mission AOC ; zero
+   exception de minuteur, spawner, navire, registre ou ressource.
+6. Corriger les appareils IA proposes comme appareil joueur. Le Su-2 teste sur
+   Berlin n'a ni vue `F1` ni commandes, alors que `F2/F3` fonctionnent et que
+   les outils historiques le marquent non pilotable. Retrouver un pack pilotable
+   complet ou le masquer du premier groupe joueur.
+7. Reparer les presets Allison des P-39D : le stress a produit 33
+   `FileNotFoundException`, 32 sample pools de demarrage absents et un preset
+   `motor.Allison_V1700_series` invalide.
+8. Valider les profils modifies avec et sans 6DOF/TrackIR. Les fichiers des deux
+   choix historiques sont actuellement identiques : le libelle ne suffit pas a
+   prouver que 6DOF est reellement actif.
+9. Valider le profil OpenGL natif, puis conserver les wrappers graphiques dans
+   des profils separes, optionnels et reversibles tant qu'ils n'ont pas passe la
+   meme matrice sur Intel, NVIDIA et AMD.
+10. Mesurer trois demarrages froids et chauds, une grande carte, une mission IA
+   dense et les textures les plus lourdes. Le cache de fichiers libres ne peut
+   remplacer le wrapper historique qu'apres equivalence de ressources prouvee.
+11. Installer sur une copie DVD 4.07m propre, appliquer la chaine 4.08m/4.09m,
+   changer de profil, simuler une copie en echec puis restaurer. Le jeu original
+   de reference reste en lecture seule.
+12. Verifier le profil stock et la desinstallation : aucun `wrapper.dll` requis,
+   aucun reste modde, et restauration atomique de `air.ini`, `stationary.ini`,
+   `Buttons`, SFS, DLL et executable.
+13. Qualifier reellement la cible Windows 32 bits. La v1.15 devra publier au
+    moins une combinaison x86 CPU/GPU/pilote testee, son plafond d'espace
+    virtuel stable, le reglage 4GT retenu et un profil graphique qui atteint les
+    criteres annonces. Une simple compatibilite theorique ne suffit pas.
+
+### A inclure si les essais restent stables
+
+- Ajouter au panache nucleaire une zone atmospherique bornee : souffle radial
+  a l'arrivee physique, ascendance chaude, couronne descendante et turbulence
+  decroissante. Elle doit suivre l'horloge de simulation, survivre aux pauses,
+  etre plafonnee en cout CPU et ne pas inventer des dommages hors des courbes
+  documentees.
+- Qualifier le profil graphique maximal 1 920 x 1 080 a 60 images/s. Les
+  configurations candidates et les criteres sont dans
+  `CONFIGURATIONS_MATERIELLES_V1.15.md` ; 2 560 x 1 440 sera une cible separee.
+- Corriger les chargements de terrain par a-coups seulement si une trace prouve
+  une cause modifiable sans casser l'ordre `MODS`, `Files`, SFS. Le moteur ne
+  fournit pas automatiquement un vrai streaming moderne de textures.
+- Faire un essai son, commandes, joystick, souris, fermeture et serveur dedie.
+  Le gestionnaire/testeur de joystick appartient au lanceur separe.
+
+### A reporter apres la v1.15
+
+- l'audit exhaustif de tous les avions, cockpits, armes, nuages et cartes ;
+- la generalisation du controle de pause aux explosions conventionnelles,
+  incendies, fumees, trainees et poussieres. C'est un objectif obligatoire a
+  terme, mais il commencera par un inventaire et des essais A/B : seuls les
+  effets qui reproduisent le defaut seront enregistres, afin de ne pas modifier
+  aveuglement toutes les particules du moteur ;
+- le repaquetage ou decoupage des SFS sous 100 Mo ;
+- le portage 4.15.1m, les utilitaires historiques incompatibles et la refonte
+  profonde des DLL natives ;
+- le nouveau lanceur tant que sa branche n'a pas passe sa propre validation.
+
+Reporter ne signifie pas ignorer une erreur bloquante decouverte pendant les
+tests v1.15 : toute regression reproductible du parcours publie reste a
+diagnostiquer avant la sortie.
+
 ## A faire en premier
 
 | Etat | Action | Resultat courant | Validation encore attendue |
@@ -83,10 +166,21 @@ touchant aux classes, registres, SFS, sons, modeles 3D, wrapper ou executable.
   `GL_NV_texture_shader`, pas une autre incoherence de `conf.ini` ;
 - la 28e erreur de fichier provenait des chemins `TBM1.him` absents de la classe
   TBM-1 ; les `hier.him` Multi1 et USA ont ete confirmes dans `fb_3do08p.SFS` ;
-- la v1.15 ne peut toujours pas etre qualifiee stable avant le nouveau demarrage,
+- la famille nucleaire corrigee ne gele plus sans pause et Fat Man a termine un
+  nouveau parcours ; en revanche, le correctif natif de pause/reprise a echoue
+  en jeu. Le panache repart aussi apres un demi-tour qui le fait sortir du champ,
+  ce qui designe le cycle rendu/culling. L'audit dedie obtient 33 PASS statiques,
+  mais la correction visuelle, la retention bornee des acteurs et l'altitude du
+  nuage stabilise restent obligatoires ;
+- l'erreur de ressource Slovakia est expliquee et corrigee statiquement : la
+  surcharge utilise maintenant `actors_summer.static`, chemin officiel 4.09m ;
+  la disparition des erreurs et le retour des objets statiques restent a
+  confirmer en jeu ;
+- la v1.15 ne peut toujours pas etre qualifiee stable avant ce nouvel essai,
   le test Zuti de dix minutes et les missions de validation ;
 - la recherche des paquets historiques AAA est commencee dans
   `D:\Projets\GITHUB\res\IL2 1946\Mods`.
 - le dossier de test a recu les correctifs de facon transactionnelle ; les
-  sauvegardes horodatees restent a cote de celui-ci et les 45 controles de
+  sauvegardes horodatees restent a cote de celui-ci. Le controle de contenu
+  retourne 16 PASS, un WARN de dump attendu et zero FAIL ; les 46 controles de
   disponibilite passent.

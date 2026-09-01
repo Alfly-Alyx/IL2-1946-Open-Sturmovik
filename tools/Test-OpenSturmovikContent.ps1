@@ -30,6 +30,19 @@ function Get-Sha256 {
     return (Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash
 }
 
+function Get-NormalizedTextSha256 {
+    param([Parameter(Mandatory = $true)][string]$Path)
+    $normalized = (([IO.File]::ReadAllLines($Path) | ForEach-Object { $_.TrimEnd() }) -join "`n").TrimEnd()
+    $algorithm = [Security.Cryptography.SHA256]::Create()
+    try {
+        $bytes = [Text.UTF8Encoding]::new($false).GetBytes($normalized)
+        return ([BitConverter]::ToString($algorithm.ComputeHash($bytes))).Replace('-', '')
+    }
+    finally {
+        $algorithm.Dispose()
+    }
+}
+
 function Test-SameFile {
     param(
         [Parameter(Mandatory = $true)][string]$ActivePath,
@@ -157,6 +170,103 @@ else {
     Add-Check 'Correctif ZutiTimer_ExtendPlanesWings' FAIL "Empreinte inattendue : $(Get-Sha256 $zutiClass)."
 }
 
+$nuclearManifestPath = Join-Path $specRoot 'manifests\effects\nuclear-blast-v1.15.json'
+$expectedNuclearClasses = [ordered]@{
+    '72DCDDF4D2AD25E8' = 'E32EBB8B4D84173C88A53AA74D06484DF47A74593D70E1FF858E170BDAD45707'
+    '303F5874196BEABE' = 'D4661E8594D24435C24747FBFBD0ADFCD972317E48075C528A1FCC67D9D61685'
+    '809E3320DB37687A' = '0576626EBA5B0DD233BDFEE22967E43A37DA52564B1166F9D4BDF20FEAC4AFBE'
+    '3F43760A72781132' = '8D7B5F3D570C3463D0119AA6FDDE011D7EF3D07F053F2120A58B601C9D451343'
+    '830E5C5AC3A1C77A' = '9DCB1DD4BDBF9E6EED9B401157796B1E2BF4F0206564834150C2C3F077AD4589'
+    '5AC49B8080496790' = '94ECE2CA0D1204B90EFD37BCEE7131F8083CF715305845E37FF4587B61DB3F30'
+    '761B02162C6E5D04' = '15BB56B33EB48A835700B623B21B04856D2F81DA4F08DB6C6BC8408A9F097F4C'
+    '709FB7A0C816C8B2' = 'BFBF4A805BDDC4FA186065333139A645316392E1A5345BD3C1A8AC7FF0837D1F'
+    '6482BE08C086B0BA' = '5FC39F58A4A924905BF7C924918E906E318AC74E4EFE981BD99BC138CCE6D25F'
+    '145128EC449ADBDA' = '05B45025FB3E1E09BA1BCC24E6D6FC0AC070481F1EC1689CFCC7D60143B43D66'
+    '2A3CF08C7344E18A' = '038C1168E34931873D64A2AFFE1FF9F464F00F0C8BDD47CB426984BB443FE196'
+    'AB04450E05C9E67C' = '5FED08559B56C2CD401D53AA2F4432999A3B98412FFEBF715D91E73B3FE4017B'
+}
+$expectedNuclearVisuals = [ordered]@{
+    'Files/3do/Effects/Fireworks/FatMan(buff).eff' = '8294F91189F87294B79ECBFE7C2F47B4621FC67B68EC4643EDB2D430771560A4'
+    'Files/3do/Effects/Fireworks/FatMan(circle).eff' = 'B18FCFB0B0107B10196BA6B370D8C12A95311551E3A1D8BB7478593F5CE56BB4'
+    'Files/3do/Effects/Fireworks/FatMan(circleL).eff' = '62B43DA7E8045DA2E25BA907010C6CFC72F26124F3D387CC58A56D069CC3A247'
+    'Files/3do/Effects/Fireworks/FatMan(column).eff' = 'BB9E2292D82562ABFE7C3FE6DC7BB07E999FE9EA88973D832B14074CDD5E09D4'
+    'Files/3do/Effects/Fireworks/FatMan(flare).eff' = 'EE46469205665B504577D637B604475AFEECDF6DA1A22E4CF097D30BC23EEE37'
+    'Files/3do/Effects/Fireworks/FatMan(ring).eff' = '1E60279ED5E9834EF23A28711CF4EA7C19A2237F865DB5C24552FD514B53A936'
+    'Files/3do/Effects/Fireworks/FatMan(shock).eff' = 'B02B7C38413EC34244E868C2D0290F35997B83E0AC23957DAC81A96AA79B5A00'
+    'Files/3do/Effects/Fireworks/FatMan(stabilized).eff' = 'A6C4D47C51D828946A263EA3D0A6E60CB52F55FD2646A41FFDB1DE5E41722C86'
+}
+$badNuclearClasses = New-Object System.Collections.Generic.List[string]
+$nuclearManifest = $null
+if (-not (Test-Path -LiteralPath $nuclearManifestPath -PathType Leaf)) {
+    $badNuclearClasses.Add('manifeste absent')
+}
+else {
+    try {
+        $nuclearManifest = Get-Content -LiteralPath $nuclearManifestPath -Raw | ConvertFrom-Json
+    }
+    catch {
+        $badNuclearClasses.Add("manifeste illisible : $($_.Exception.Message)")
+    }
+}
+foreach ($entry in $expectedNuclearClasses.GetEnumerator()) {
+    $path = Join-Path $root "Files\$($entry.Key)"
+    if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
+        $badNuclearClasses.Add("$($entry.Key) absent")
+        continue
+    }
+    $bytes = [IO.File]::ReadAllBytes($path)
+    $major = if ($bytes.Length -ge 8) { ($bytes[6] -shl 8) -bor $bytes[7] } else { -1 }
+    if ((Get-Sha256 $path) -ne $entry.Value -or $major -ne 47) {
+        $badNuclearClasses.Add("$($entry.Key) empreinte/version inattendue")
+    }
+}
+foreach ($entry in $expectedNuclearVisuals.GetEnumerator()) {
+    $path = Join-Path $root $entry.Key.Replace('/', '\')
+    if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
+        $badNuclearClasses.Add("$($entry.Key) absent")
+    }
+    elseif ((Get-Sha256 $path) -ne $entry.Value) {
+        $badNuclearClasses.Add("$($entry.Key) empreinte inattendue")
+    }
+}
+if ($null -ne $nuclearManifest) {
+    $manifestOutputs = @($nuclearManifest.outputs)
+    foreach ($entry in $expectedNuclearClasses.GetEnumerator()) {
+        $manifestEntry = @($manifestOutputs | Where-Object { [IO.Path]::GetFileName([string]$_.file) -eq $entry.Key })
+        if ($manifestEntry.Count -ne 1 -or [string]$manifestEntry[0].sha256 -ne $entry.Value) {
+            $badNuclearClasses.Add("$($entry.Key) incoherent avec le manifeste")
+        }
+    }
+    $manifestVisuals = @($nuclearManifest.visual_outputs)
+    foreach ($entry in $expectedNuclearVisuals.GetEnumerator()) {
+        $manifestEntry = @($manifestVisuals | Where-Object { [string]$_.file -eq $entry.Key })
+        if ($manifestEntry.Count -ne 1 -or [string]$manifestEntry[0].sha256 -ne $entry.Value) {
+            $badNuclearClasses.Add("$($entry.Key) incoherent avec le manifeste")
+        }
+    }
+    if ($nuclearManifest.model.little_boy.yield_kt -ne 15 -or
+        $nuclearManifest.model.little_boy.airburst_m_agl -ne 600 -or
+        $nuclearManifest.model.fat_man.yield_kt -ne 21 -or
+        $nuclearManifest.model.fat_man.airburst_m_agl -ne 503 -or
+        [string]$nuclearManifest.model.pause_preservation.detection -notmatch '25 ms' -or
+        [string]$nuclearManifest.model.pause_preservation.control -notmatch 'Eff3D.pause' -or
+        $nuclearManifest.validation.runtime_test_required -ne $true) {
+        $badNuclearClasses.Add('parametres historiques ou statut de validation inattendus')
+    }
+}
+if ($badNuclearClasses.Count -eq 0) {
+    Add-Check 'Souffle nucleaire Little Boy / Fat Man' PASS 'Les douze classes Java 1.3 et les huit effets correspondent au manifeste v1.15 : 15/21 kt, airbursts 600/503 m, souffle differe et cycle visuel phase 600/3600 s. Ce controle est statique.'
+}
+else {
+    Add-Check 'Souffle nucleaire Little Boy / Fat Man' FAIL ($badNuclearClasses -join '; ')
+}
+if ($null -ne $nuclearManifest -and [string]$nuclearManifest.status -eq 'static_coherent_runtime_visual_blocked') {
+    Add-Check 'Validation visuelle nucleaire' WARN 'Le panache repart encore apres pause/reprise et apres sortie du champ camera ; la surveillance native a 25 ms n est pas une correction validee.'
+}
+if ($null -ne $nuclearManifest -and $nuclearManifest.third_party_origin.redistribution_authorized -ne $true) {
+    Add-Check 'Licence Silverplate v1.2' WARN 'Le paquet n a pas de licence publiee et n accorde aucune autorisation de redistribution ; permission explicite, composant externe ou remplacement requis.'
+}
+
 $expectedTbm1Hash = 'BFAC0C3D60CB49DB6D857362196B79305E9D4AE5665E06146E8C30D374374C6B'
 if (-not (Test-Path -LiteralPath $tbm1ClassOverride -PathType Leaf)) {
     Add-Check 'Chemin de maillage TBM-1' FAIL 'Surcharge empreintee 7FF44CEAD0A8A81C absente.'
@@ -177,6 +287,24 @@ else {
     }
     else {
         Add-Check 'Chemin de maillage TBM-1' FAIL "Correction inattendue : SHA=$(Get-Sha256 $tbm1ClassOverride), major=$tbm1Major."
+    }
+}
+
+$slovakiaLoad = Join-Path $root 'Files\Maps\Slovakia\load.ini'
+if (-not (Test-Path -LiteralPath $slovakiaLoad -PathType Leaf)) {
+    Add-Check 'Objets statiques Slovakia 4.09m' FAIL 'Surcharge load.ini absente.'
+}
+else {
+    $slovakiaLines = [IO.File]::ReadAllLines($slovakiaLoad)
+    $staticIndex = [Array]::IndexOf($slovakiaLines, '[static]')
+    $staticResource = if ($staticIndex -ge 0 -and $staticIndex + 1 -lt $slovakiaLines.Length) {
+        $slovakiaLines[$staticIndex + 1].Trim()
+    } else { '' }
+    if ($staticResource -ceq 'actors_summer.static') {
+        Add-Check 'Objets statiques Slovakia 4.09m' PASS 'load.ini demande actors_summer.static, ressource officielle presente dans fb_maps15.SFS.'
+    }
+    else {
+        Add-Check 'Objets statiques Slovakia 4.09m' FAIL "Ressource [static] inattendue : $staticResource."
     }
 }
 
@@ -341,7 +469,7 @@ else {
 }
 
 $sfsEffectOverride = Join-Path $root 'Files\Effects\Smokes\SmokeBoiling.eff'
-$expectedSfsEffectOverrideHash = '963A8A7322A484E4923952C7D816E80FB44500CBC1DA1DFF34319C01F51D1EFB'
+$expectedSfsEffectSemanticHash = '629673DF3A1EE5EE23D8CFED8587DD06FAEFCB53FF6038AE889367EA0D56138D'
 $activeFilesSfs = Join-Path $root 'files.SFS'
 $allowedFilesSfsHashes = @(
     '9F7D136C586EB3FCD258C5C000F34951D410A0236934F22ABA2516637874B095',
@@ -349,9 +477,9 @@ $allowedFilesSfsHashes = @(
 )
 $activeFilesSfsHash = if (Test-Path -LiteralPath $activeFilesSfs -PathType Leaf) { Get-Sha256 $activeFilesSfs } else { '' }
 if ((Test-Path -LiteralPath $sfsEffectOverride -PathType Leaf) -and
-    (Get-Sha256 $sfsEffectOverride) -eq $expectedSfsEffectOverrideHash -and
+    (Get-NormalizedTextSha256 $sfsEffectOverride) -eq $expectedSfsEffectSemanticHash -and
     $activeFilesSfsHash -in $allowedFilesSfsHashes) {
-    Add-Check 'Effet SmokeBoiling du files.SFS' PASS "La surcharge libre ramene nParticles de 2000 a 512 avec un files.SFS 4.09m autorise ($activeFilesSfsHash)."
+    Add-Check 'Effet SmokeBoiling du files.SFS' PASS "La surcharge libre ramene nParticles de 2000 a 512 avec un files.SFS 4.09m autorise ; les espaces de fin de ligne sont ignores ($activeFilesSfsHash)."
 }
 else {
     Add-Check 'Effet SmokeBoiling du files.SFS' FAIL "Surcharge SmokeBoiling ou archive source inattendue ($activeFilesSfsHash)."

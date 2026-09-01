@@ -1,5 +1,37 @@
 # Notices des composants tiers
 
+## Zuti MDS v1.13 STD — autorisation a clarifier
+
+Le fichier historique `Files/$ReadMe$.txt` attribue MDS a `|ZUTI|` et demande
+explicitement de contacter l'auteur avant toute inclusion dans un pack. Le depot
+ne contient actuellement aucune preuve d'autorisation accordee a Open Sturmovik.
+
+La presence et la modification technique de classes Zuti ne constituent pas une
+autorisation de redistribution. Ce composant reste donc marque
+`redistribution_authorized: false` dans
+`manifests/mods/zuti-mds-1.13-static.json` jusqu'a obtention d'une permission ou
+identification de conditions de licence publiées. Cette question doit etre
+resolue avant une diffusion publique de la v1.15.
+
+## B-29 Silverplate v1.2 / Little Boy / Fat Man — aucune licence publiee
+
+Le paquet historique Silverplate v1.2 fournit le B-29 Silverplate, les classes
+Little Boy et Fat Man, leurs modeles et les effets nucleaires de base. Le seul
+fichier d'instructions retrouve, `To Add.txt`, enumere les lignes `air.ini` et
+les traductions d'armement ; il ne contient ni licence, ni auteur, ni condition
+de redistribution. Le mainteneur confirme que le paquet n'a pas de licence
+publiee. Ce composant doit donc etre traite comme non autorise a la
+redistribution tant qu'une permission explicite n'a pas ete obtenue.
+
+Open Sturmovik conserve les huit ressources de modele de bombe identiques au
+paquet historique, mais fusionne et corrige plusieurs classes Java pour assurer
+la compatibilite avec Zuti et le moteur 4.09m. La presence ancienne de ces
+fichiers dans l'add-on ne prouve pas une autorisation de redistribution ou de
+modification. Une diffusion publique de la v1.15 exige donc une permission
+explicite de l'auteur ; a defaut, Silverplate devra rester un composant externe
+installe par l'utilisateur ou etre remplace par des ressources dont la licence
+autorise clairement la redistribution et la modification.
+
 ## OpenIL2
 
 `tools/Analyze-Sfs.py` derive des algorithmes de lecture SFS et de calcul

@@ -4,14 +4,15 @@
   MatName ../TEXTURES/SmokeN.mat
   Color0 0.9 0.9 0.9 1
   Color1 1.0 1.0 1.0 0
-  nParticles 110
-  FinishTime 130.0
+  ; One particle per second during the observed ten-minute rise.
+  nParticles 512
+  FinishTime 600.0
   MaxR 32.0
   PhiN 5.0
   PsiN 5.0
   LiveTime 128.0
   EmitFrq 1.0
-  TranspTransitionTime 120.0f
+  TranspTransitionTime 128.0f
   EmitVelocity 110.0 70.0
   EmitTheta 0.0 7.0
   GasResist 0.0006

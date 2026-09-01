@@ -1,6 +1,6 @@
 # Audit Zuti MDS 1.13 et Mod AOC Public
 
-Derniere mise a jour : 31 aout 2026.
+Derniere mise a jour : 1er septembre 2026.
 
 Ce document distingue la presence des fichiers, leur chargement reel et les
 fonctions qui restent a tester. La cible est Open Sturmovik v1.15 sur IL-2 1946
@@ -16,9 +16,10 @@ transpose sans nouvel audit.
   `ClassCastException`. Une surcharge libre minimale et reversible la corrige ;
   elle doit encore etre validee pendant au moins dix minutes au menu puis dans
   une mission MDS.
-- Le **Mod AOC Public 1a** est actif. Le code qui lit ses fichiers est present
-  dans `FlightModelMain` et un lancement a deja cree automatiquement le fichier
-  AOC du F4F-3 dans le jeu de test.
+- Le chargeur du **Mod AOC Public 1a** s'execute, mais cela ne prouve pas que le
+  mod agit sur le modele de vol. L'analyse du bytecode montre au contraire que
+  neuf parametres sur dix ne possedent aucun consommateur Java ou natif trouve.
+  AOC 1a doit donc etre qualifie avant d'etre conserve.
 - Les six navires et les 17 appareils statiques sont maintenant couverts par les
   registres fusionnes. `air.ini` et `stationary.ini` correspondent au profil
   4.09m. Ces corrections sont validees statiquement, mais doivent encore etre
@@ -34,6 +35,12 @@ transpose sans nouvel audit.
 2. de supprimer toutes les anciennes versions MDS ;
 3. de fusionner les entrees de `i18n.rar` dans `MODS/STD/i18n` ;
 4. d'utiliser le revelateur de conflits en cas d'anomalie.
+
+Ce readme demande aussi explicitement de contacter l'auteur avant d'inclure MDS
+dans un pack. Aucune preuve d'autorisation accordee a Open Sturmovik n'est encore
+archivee. Le fonctionnement et le droit de redistribution sont deux controles
+distincts ; l'autorisation est un blocage de publication tant qu'elle n'est pas
+clarifiee.
 
 Open Sturmovik aplatit les ressources dans `Files`, mais le Selector les charge
 effectivement : le Dump Mode a restitue les classes Zuti lors du lancement
@@ -71,6 +78,13 @@ missions solo, coop et dogfight. Les missions historiques `0_ZutiMDS` sont aussi
 presentes. Il faudra ouvrir puis sauvegarder un echantillon dans le FMB et verifier
 qu'aucune cle de texte n'apparait brute.
 
+Le validateur `tools/Test-ZutiMDS113.ps1` controle cette structure de facon
+reproductible. Au 1er septembre 2026, il obtient **7 PASS, 2 WARN et 0 FAIL** :
+30 classes Zuti chargees, 12 points d'accrochage structurants, textes, missions,
+outils et correctif `ExtendPlanesWings` coherents. Les deux avertissements sont le
+test runtime MDS encore necessaire et l'autorisation de redistribution absente.
+Le rapport machine est `manifests/mods/zuti-mds-1.13-static.json`.
+
 ### Outils presents
 
 | Outil | Taille | SHA-256 | Usage |
@@ -99,6 +113,28 @@ taille, les offsets et la version Java 45 sont conserves. Empreinte corrigee :
 
 `70E039E839F092346CF8E4F06BA8431C3FF550237C6888D1BAE7B057E22D12C5`
 
+### Minuteurs Zuti et arret de la JVM
+
+Le dump complet du gel au largage de la Fat Man apporte une seconde preuve sur
+Zuti. Apres la sortie anormale de la boucle Java principale, HotSpot 1.3.1 reste
+bloque dans `DestroyJavaVM` car un `java/util/TimerThread` non daemon est encore
+vivant. Sa file contient exactement une tache :
+
+`com/maddox/il2/game/ZutiTimer_RadarsCountRefresh`
+
+Sa periode interne est `-2000` ms, soit une repetition a delai fixe toutes les
+deux secondes. Ce minuteur ne constitue pas le declencheur demontre du gel : le
+largage fait d'abord sortir la boucle principale, puis le minuteur empeche le
+processus de terminer et produit l'`AppHangB1` Windows. Le detail des preuves est
+dans [le dossier du bug B-29/Fat Man](BUG_CRITIQUE_B29_FATMAN.md).
+
+La correction Zuti devra garantir un cycle de vie explicite : conserver une
+reference sur le `Timer`, annuler la tache lors de la fin de mission et appeler
+`cancel()`/`purge()` quand le moteur revient au menu ou se ferme. Transformer
+simplement le fil en daemon masquerait l'attente finale, mais ne reparerait ni
+une tache qui fuit entre deux missions, ni le declencheur du largage. Aucun
+patch de cette classe n'est livre avant validation du scenario A/B.
+
 ### Elements absents ou optionnels
 
 - `ZUTI_Friction.pdf` mentionne par la documentation n'a pas ete retrouve.
@@ -123,7 +159,7 @@ taille, les offsets et la version Java 45 sont conserves. Empreinte corrigee :
 
 ## Mod AOC Public 1a
 
-### Fonctionnement prouve
+### Chargement prouve, effet physique non prouve
 
 `Mod_AOC_Public/Defaut.txt` definit les valeurs de repli. Le fichier
 `Bf-109G-6Early_AOC_1a.txt` surcharge notamment le couple, le regime minimal
@@ -136,25 +172,114 @@ Sa methode `load_modData()` :
 
 1. derive le nom `<modele-de-vol>_AOC_1a.txt` ;
 2. le cherche dans `Mod_AOC_Public` ;
-3. copie `Defaut.txt` vers ce nouveau nom si aucun reglage specifique n'existe ;
-4. charge ensuite les parametres AOC.
+3. si le fichier existe, lit ses parametres dans un ordre de lignes strict ;
+4. sinon, copie `Defaut.txt` puis termine sans appliquer ce profil pendant cette
+   construction du modele de vol.
 
 Le lancement de test du 30 aout 2026 a effectivement cree
 `Mod_AOC_Public/F4F-3_AOC_1a.txt` dans la copie de test, a 20:11:38. Cette
-creation constitue la preuve d'activation du code AOC. Le fichier genere n'est
+creation constitue la preuve d'execution du chargeur AOC, pas la preuve d'un
+effet sur la physique. Le fichier genere n'est
 pas recopie automatiquement dans le depot : il s'agit d'un artefact runtime a
 examiner, puis a conserver seulement si une configuration specifique est voulue.
 
-### Risques et decisions v1.15
+### Parametres effectivement raccordes
+
+La decompilation complete de `FlightModelMain` retrouve les dix champs suivants :
+
+- `coefTorque`, `tempOilMin`, `wOilMin`, `timeMinToStart` ;
+- `bInfoTemp`, `timeMaxNegatG`, `bShowAccel`, `coefQualFuel`, `bInfoMotor` ;
+- `bSwitchMagnetoOn`.
+
+Les neuf premiers apparaissent seulement dans leur declaration, leur valeur
+initiale et `load_modData()`. Aucun autre code de `FlightModelMain` ne les lit.
+Une recherche binaire dans toutes les classes libres, le Selector Dump et les
+EXE/DLL du projet ne retrouve ces identifiants que dans
+`Files/294ABC86A89FAEB4`. Il n'existe donc aucun consommateur Java externe ni
+acces natif par nom identifie. En l'etat des preuves, ces neuf reglages sont des
+donnees mortes ou une integration incomplete.
+
+`bSwitchMagnetoOn` est le seul reglage dont un effet soit directement visible
+dans le bytecode : lorsque sa valeur vaut zero, le chargeur appelle immediatement
+`CT.setMagnetoControl(0)` puis `setControlMagneto(0)` sur chaque moteur. Le champ
+lui-meme n'est plus lu ensuite.
+
+Cette conclusion corrige la formulation historique « AOC actif ». Le generateur
+de profils est actif ; la simulation AOC 1a n'est pas fonctionnellement demontree.
+
+### Profils generes pendant la campagne multicartes
+
+Le dossier reel est directement a la racine du jeu de test :
+
+`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test\Mod_AOC_Public`
+
+Il contient maintenant 13 fichiers, 3 587 octets. Le depot n'en livre que deux,
+551 octets : `Defaut.txt` et `Bf-109G-6Early_AOC_1a.txt`. Les onze autres ont ete
+crees dans l'ordre des essais entre le 30 aout et le 1er septembre 2026 :
+
+- `F4F-3_AOC_1a.txt` ;
+- `B-29SP_AOC_1a.txt` ;
+- `HurricaneMkI_AOC_1a.txt` ;
+- `TempestMkV_AOC_1a.txt` ;
+- `Typhoon1B_AOC_1a.txt` ;
+- `SeafireIII_AOC_1a.txt` ;
+- `DC-3_AOC_1a.txt` ;
+- `BattleMkII_AOC_1a.txt` ;
+- `MagM14A_AOC_1a.txt` ;
+- `Su-2_AOC_1a.txt` ;
+- `Fi-156B-2_AOC_1a.txt`.
+
+Ces onze fichiers ont tous l'empreinte du profil par defaut
+`D167FCF83539D299A701359C0CE29C5A0982DC6C0C667B0BCB11B94A12A244CB`.
+Ils prouvent que chaque modele de vol concerne est alle jusqu'a
+`FlightModelMain.load_modData()`. Ils ne prouvent ni couple accru, ni temperature
+d'huile, ni resistance aux G negatifs, puisque les champs correspondants n'ont
+pas de consommateur trouve. Le probleme F1/commandes du Su-2 et du B-29 ne peut
+pas etre explique par l'absence du chargeur AOC.
+
+Le nom du profil AOC est derive du nom du FMD et non de la cle `air.ini`. Les
+classes B-29 et KB-29P demandent toutes deux `FlightModels/B-29.fmd` : elles
+partageront donc le futur `B-29_AOC_1a.txt`. Le B-29 Silverplate demande
+`FlightModels/B-29SP.fmd` et utilise deja son profil separe
+`B-29SP_AOC_1a.txt`. Cette difference devra etre conservee dans la matrice de
+retest des trois variantes.
+
+### Candidat AOC 3A
+
+La branche communautaire ulterieure **AOC 3A**, attribuee a II/JG51-Lutz et a
+Histoire & Simulation, est beaucoup plus vaste que le Public 1a. Les messages de
+l'auteur documentent notamment la visibilite et l'eblouissement, les effets des G
+sur humains et IA, le reglage des mitrailleurs IA, les triggers de decollage et
+des sections de mission pour la meteo variable. Voir la
+[discussion AOC 3A sur CheckSix](https://ts.checksix-fr.com/viewtopic.php?f=322&t=158460&start=25).
+
+L'auteur avertit lui-meme que la compatibilite des avions depend des classes Java
+modifiees : les cartes sont peu problematiques, un cockpit ou Buttons peut etre
+compatible, mais toute autre classe doit etre examinee au cas par cas. AOC 3A ne
+doit donc pas etre superpose au 1a ni a Zuti. Il devient un **candidat de
+remplacement**, soumis aux controles suivants avant decision :
+
+1. retrouver le paquet complet et son readme, avec provenance et droits ;
+2. identifier exactement sa version IL-2/ModAct et tous ses fichiers prioritaires ;
+3. comparer chaque classe modifiee avec Zuti MDS 1.13 et Open Sturmovik ;
+4. separer les fonctions complementaires des doublons (mission, IA, meteo,
+   physiologie et modele de vol) ;
+5. faire un essai A/B quantifie sur vitesse, couple, chauffe, G negatifs et IA ;
+6. ne remplacer le 1a qu'avec un ensemble reproductible et compatible 4.09m.
+
+### Risques et decision provisoire v1.15
 
 - La creation au premier acces ajoute une ecriture disque, faible mais a mesurer.
 - Les fichiers specifiques generes peuvent diverger entre installations et entre
   client et serveur. Le lanceur devra proposer une politique reproductible.
-- Les valeurs AOC modifient le comportement moteur ; elles doivent faire partie du
-  manifeste de gameplay et non d'un simple profil graphique.
-- Pour la v1.15, le mod reste actif. On conserve `Defaut.txt` et le reglage
-  historique du Bf-109G-6 Early, puis on teste au moins un appareil avec repli et
-  un avec surcharge specifique.
+- Le 1a promet de modifier le comportement moteur, mais neuf valeurs ne sont pas
+  raccordees dans l'ensemble actuel ; elles ne doivent pas etre presentees comme
+  fonctionnelles.
+- Aucune decision de conservation ou de remplacement n'est encore prise. Le 1a
+  et le futur laboratoire 3A doivent etre testes separement, jamais actives en
+  meme temps.
+- Tout AOC retenu fera partie du manifeste de gameplay client/serveur, pas d'un
+  profil graphique.
 
 ## Rapport avec les erreurs actuelles
 

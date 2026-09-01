@@ -1,11 +1,117 @@
 # Etat de reprise technique de la version 1.15
 
-Derniere mise a jour : 31 aout 2026.
+Derniere mise a jour : 1er septembre 2026, apres la campagne multicartes.
 
 Ce document est le point d'entree d'une nouvelle session de travail. Il separe
 les faits observes, les causes demontrees, les corrections appliquees et les
 hypotheses encore a verifier. Il doit etre mis a jour apres chaque correction ou
 test important.
+
+## Etat le plus recent : nuages bloques, charge IA stable, sons a corriger
+
+La campagne complete est documentee dans
+`RESULTATS_CAMPAGNE_MULTICARTES_2026-09-01.md`. Les traces sont dans
+`test-results/startup/20260901-131015Z-profile9-warm-windowed1024-startup`.
+
+Le nouveau bloquant principal est le moteur de nuages meteo : Slovakia et
+Smolensk produisent des triangles/pics blancs, des volumes traversant le sol et
+21 `RuntimeException` dans `EffClouds.PreRender`. Le `conf.ini` teste utilise
+`TypeClouds=1`. La prochaine action sure est un A/B strict sur Smolensk avec
+`TypeClouds=1`, puis `0`, puis un profil 4.09m stock. Ne pas confondre ce defaut
+avec les panaches nucleaires : il apparait aussi sans bombe.
+
+Le Su-2 de Berlin n'a pas ete affecte comme appareil joueur : `F2/F3`
+fonctionnaient, mais pas `F1` ni les commandes. Trois `NullPointerException` de
+`AircraftHotKeys$14.begin` ont ete declenchees sans appareil joueur valide.
+L'audit statique montre pourtant un `SPAWN`, `FlightModels/Su-2.fmd` et trois
+cockpits presents ; le profil `Su-2_AOC_1a.txt` a ete genere en vol. Le diagnostic
+IA-only est donc abandonne au profit d'un retest de selection/affectation joueur.
+Le meme symptome a ete observe sur un B-29 : tester separement B-29, B-29SP et
+KB-29P, car leurs classes, FMD et cockpits ne sont pas identiques.
+
+L'audit automatise couvre maintenant les 535 lignes uniques de `air.ini` : 535
+classes d'appareil presentes, aucune classe de cockpit referencee absente et
+aucune classe Java au-dessus de 47. Il trouve 516 declarations pilotables
+directes, un candidat herite et 18 appareils probablement IA-only. Le doublon
+exact `CW-21` a ete retire. Les deux anciennes variantes Sea Hurricane ont des
+cles `Legacy` distinctes et leurs libelles i18n existent. Les ensembles AAA
+authentiques TBF-1C, TBM-3 et MiG-3 Pokryshkin ont ete restaures dans `Files`,
+sans encore declarer leurs FMD verifies dans `Buttons`. Les rapports sont
+`AUDIT_APPAREILS_AIR_INI.md`, `AUDIT_AAA_COCKPITS_V1.15.md` et
+`AUDIT_BUTTONS_MODELES_DE_VOL.md`.
+
+Le stress Smolensk nuageux avec 16 B-29/Fat Man et 16 P-39D a produit plusieurs
+largages et impacts sans ralentissement perceptible. Pendant le combat, zero des
+898 echantillons processus etait non repondant. Pics : 852,3 Mio physiques,
+720 Mio prives, 0,97 coeur CPU equivalent, environ 56,6 % du moteur GPU 3D et
+178,6 Mio de memoire GPU validee. Ce resultat ne qualifie ni 1080p60, ni les
+quatre coeurs, ni Windows x86.
+
+Le meme stress a revele un preset `motor.Allison_V1700_series` invalide, 32
+sample pools Allison de demarrage absents et 33 `FileNotFoundException`. Les
+anciens presets sonores ne sont donc pas encore propres pour les P-39D en grand
+nombre.
+
+## Bombes nucleaires : chaine statique saine, rendu encore bloque
+
+La session instrumentee
+`test-results/startup/20260901-060621Z-profile9-warm-windowed1024-startup`
+atteint la mission B-29 + Little Boy, reproduit deux fois le rattrapage visuel
+apres pause et se termine volontairement sans exception Java nouvelle. Le
+panache developpe a `06:12:28.621Z` est reduit a une petite sphere sur la
+premiere image de reprise a `06:12:31.298Z`, puis retrouve un volume comparable
+vers `06:12:36.785Z`. CPU, disque et memoire restent stables.
+
+Le code du menu gele correctement `Time`, mais ne transmet pas cet etat a la
+methode protegee `Eff3D.pause(boolean)` du moteur natif. Un premier candidat a
+enregistre uniquement les emetteurs nucleaires, surveille la transition toutes
+les 25 ms et propage la pause native par reflexion.
+
+La campagne `20260901-131015Z-profile9-warm-windowed1024-startup` a maintenant
+invalide ce candidat : Little Boy repart encore de zero apres pause/reprise. Le
+meme redemarrage visuel survient apres un demi-tour qui retire puis remet le
+panache dans le champ. Le probleme est donc lie au cycle rendu/culling des
+particules, pas seulement a l'horloge de pause. Aucun message d'echec de la
+reflexion n'est journalise : l'appel natif ne suffit simplement pas.
+
+Les trois classes modifiees ont ete deployees dans le dossier de test, sans
+lancer le jeu. Leur sauvegarde est :
+
+`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260901-083925`
+
+L'audit nucleaire dedie retourne 33 PASS et zero echec statique. Les douze
+classes Java major 47, les deux `BombGun`, les deux emports du B-29SP, les huit
+effets et tous leurs materiaux sont coherents. La sortie reste toutefois bloquee
+par le rendu : le surveillant 25 ms n'a aucun benefice visuel prouve, les
+`Eff3DActor` initiaux n'ont pas encore une duree de retention explicitement
+bornee, et le nuage stabilise est place trop bas par rapport aux 40 000-50 000
+pieds documentes. Voir `AUDIT_BOMBES_NUCLEAIRES_V1.15.md` et
+`manifests/effects/nuclear-static-audit-v1.15.json`.
+
+Fat Man a termine sa mission sans gel pendant la meme campagne. Le stress de
+16 B-29/Fat Man a egalement termine sans ralentissement en vol perceptible, mais
+il ne mesure pas encore le nombre d'acteurs d'effets retenus. Les airbursts sur
+l'eau, l'eclair image par image et l'autorite multijoueur restent a tester.
+Toujours prevenir Alexis avant capture et lancement.
+
+Une anomalie distincte de cette mission est maintenant corrigee statiquement.
+La surcharge libre `Files/Maps/Slovakia/load.ini` demandait l'ancien nom
+`actors.static`, absent de la base 4.09m. La lecture directe de `fb_maps15.SFS`
+a retrouve la ressource officielle `maps/slovakia/actors_summer.static`,
+5 824 549 octets, SHA-256
+`AB5980161F5B517A371B75E1F6721283826615A732A6043AD21CD7A7AED70A47`.
+Le `load.ini` officiel 4.09m la demande aussi sous ce nom. Seule cette ligne a
+donc ete corrigee ; le gros fichier reste dans le SFS et n'est pas duplique.
+La version precedente du `load.ini` du dossier de test est sauvegardee dans
+`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260901-085130`.
+Le prochain test doit confirmer zero `DAMAGED`, `FAILED` et
+`FileNotFoundException` pour la carte Slovakia.
+
+Decisions confirmees par Alexis : Little Boy et Fat Man ne sont que le premier
+banc du correctif de pause. A terme, toute explosion de bombe, tout incendie et
+toute fumee reproduisant le defaut devra etre prise en charge. La qualification
+sur un Windows 32 bits reel est imperative pour l'objectif v1.15 ; le plafond
+theorique x86 ne remplacera pas une campagne CPU/GPU/pilote/4GT mesuree.
 
 ## Perimetre et regles de securite
 

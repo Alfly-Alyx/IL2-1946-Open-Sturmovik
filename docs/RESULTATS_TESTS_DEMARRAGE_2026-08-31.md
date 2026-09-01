@@ -237,7 +237,7 @@ des avis de capacite attendus. `tools/Test-IL2GraphicsCompatibility.ps1` produit
 desormais cette classification de facon reproductible et conserve le niveau
 erreur si un profil demande reellement Perfect sans chemin compatible.
 
-## Prochain essai
+## Plan etabli apres le troisieme demarrage
 
 Un demarrage leger, machine au repos, reste necessaire. Il devra :
 
@@ -247,5 +247,324 @@ Un demarrage leger, machine au repos, reste necessaire. Il devra :
 4. verifier que le moteur ne reecrit plus aucune valeur du profil Intel ;
 5. conserver les journaux et une trace de fichiers exploitable.
 
-Le test du bug critique en vol sera ensuite un scenario separe, instrumente
-avec collecte de dump si le jeu plante ou se bloque.
+Le test du bug critique en vol a ensuite ete execute dans des captures separees,
+decrites ci-dessous.
+
+## Premier essai en vol : B-29, sans largage confirme
+
+Artefacts :
+
+`test-results/startup/20260831-145400Z-profile9-warm-windowed1024-startup`
+
+Le profil 9 a atteint le menu puis une mission rapide en B-29. Le passage du
+profil fenetre a `rts/mouseUse=1` a retabli un curseur visible et utilisable. Le
+joystick n'etait toutefois pas reconnu et aucune commande de largage n'a ete
+confirmee pendant ce parcours ; cet essai ne reproduit donc pas le bug critique.
+Alexis a quitte le jeu volontairement apres plusieurs minutes en vol.
+
+Les maxima du processus sont 622,88 Mio de working set, 639,66 Mio de memoire
+privee et 1 933,04 Mio d'espace virtuel. L'utilisation CPU totale du PC est de
+44,14 % en moyenne et 94,93 % au maximum ; le disque reste a 0,71 % en moyenne.
+Cette session constitue une premiere borne de vol sur le Core i5-8350U, mais pas
+encore une charge recommandee de reference.
+
+Le journal apporte quatre defauts de contenu distincts :
+
+- `music/menu/ab.wav` est absent ;
+- `maps/slovakia/actors.static` est declare endommage, puis sa lecture termine
+  par `FileNotFoundException`, meme si la mission finit par demarrer ;
+- le cockpit B-29 demande les chunks `zOilFlap1`, `zOilFlap2`, `zCompressor1` et
+  `zCompressor2`, absents du maillage effectivement charge ;
+- aucun fichier n'est disponible sous `music/inflight`, conformement au choix
+  historique de ne jamais jouer de musique en vol ; cet avertissement est
+  attendu et ne doit pas etre corrige.
+
+Les deux exceptions « Annule par l'utilisateur » correspondent aux deux
+chargements interrompus depuis l'interface et ne sont pas classees comme crash.
+Ces constats restent a traiter ; ils ne doivent pas etre confondus avec le gel
+au largage.
+
+## Second essai en vol : gel critique reproduit
+
+Artefacts :
+
+`test-results/startup/20260831-152135Z-profile9-warm-windowed1024-startup`
+
+La commande `Ctrl+B` a d'abord ete ajoutee comme seconde liaison de `Weapon3`,
+sans supprimer `Alt+Espace`. Le scenario observe sur la capture est : Boeing
+B-29 Silverplate 1944, emport `FatMan`, Smolensk, altitude QMB 10 000 m. Le
+largage a gele l'image vers 15:25:43,257 UTC. Six secondes plus tard, Windows a
+affiche `Ne repond pas`, puis la boite proposant d'attendre ou de fermer le
+programme. L'evenement Application Hang 1002 classe le cas en `AppHangB1`.
+
+ProcDump a conserve un dump complet de 862 461 129 octets, SHA-256
+`58F49621939843B7F0A5EFF704F68C1DDE477F5E3073F3CE793DACE1935AB4CC`.
+Au gel, IL-2 utilise environ 665,83 Mio de working set, 682,55 Mio de memoire
+privee et 1 968,37 Mio d'espace virtuel. Le maximum prive reste 708,17 Mio. Le
+GPU 3D atteint 78,39 % au maximum, le disque 1,31 % en moyenne et environ 19 Gio
+de RAM physique restent disponibles. La panne n'est donc pas un manque de RAM,
+de VRAM, de CPU ou de debit disque.
+
+Le dump montre que la boucle Java principale a deja rendu la main, puis que
+`DestroyJavaVM` attend indefiniment un minuteur Zuti non daemon. Sa seule tache
+est `ZutiTimer_RadarsCountRefresh`, repetee toutes les deux secondes. Ce minuteur
+explique l'impossibilite d'arreter proprement la JVM, mais la cause qui fait
+sortir la boucle au largage est distincte.
+
+La comparaison avec le paquet Silverplate v1.2 d'origine a d'abord isole
+`semi-realDropBomb v2.0` comme candidat. Ce candidat a ete controle lors de
+l'essai suivant et elimine comme cause primaire. Le dossier technique complet
+est [BUG_CRITIQUE_B29_FATMAN.md](BUG_CRITIQUE_B29_FATMAN.md).
+
+Une correction du collecteur graphique a aussi ete faite : une seule ligne
+Perfect dans un journal pouvait devenir un scalaire PowerShell et rendre
+`.Count` invalide. La liste est maintenant forcee en tableau, y compris avec
+zero ou un avertissement.
+
+## Troisieme essai en vol : `BombGun` officielle, gel reproduit
+
+Artefacts :
+
+`test-results/startup/20260831-164731Z-profile9-warm-windowed1024-startup`
+
+Le meme scenario B-29 Silverplate + Fat Man a ete rejoue avec la classe
+`BombGun` officielle 4.09m. Le gel est identique. Le processus reste
+continuellement `Responding=False` de 17:41:16,197 UTC jusqu'a sa fermeture,
+pendant 138,81 secondes. Il n'avance que de 796,88 ms de CPU et sa memoire reste
+stable : l'hypothese d'une saturation est de nouveau exclue.
+
+Le dump complet `process-dumps/il2fb.exe_260831_194117.dmp` mesure
+857 177 177 octets, SHA-256
+`5961FD46E6B46499659A60140D1BD19D5B9EC7F28CC38DCACE505B770D8DE825`.
+Son etat terminal est identique au premier : la boucle Java principale est deja
+sortie et `DestroyJavaVM` attend le minuteur Zuti non daemon.
+
+L'inventaire bytecode a alors identifie l'incompatibilite exacte. La classe
+`Bomb` de Silverplate appelle `Explosions.generate` avec six parametres, dont le
+type d'effet nucleaire. La classe `Explosions` active, modifiee pour Zuti, ne
+fournit plus que la variante a cinq parametres. La resolution de cet appel ne
+peut produire qu'un `NoSuchMethodError`. La sortie de la boucle principale est
+donc coherente avec les deux dumps ; le minuteur Zuti masque ensuite l'exception
+en maintenant le processus vivant.
+
+## Quatrieme essai en vol : famille `Explosions` Silverplate, succes
+
+Artefacts :
+
+`test-results/startup/20260831-184314Z-profile9-warm-windowed1024-startup`
+
+`semi-realDropBomb v2.0` a ete restaure et la famille complete de 15 classes
+`Explosions` du paquet Silverplate a ete activee temporairement dans le seul
+dossier de test. Le depot v1.15 n'a pas recu ce remplacement diagnostique.
+
+Le B-29 Silverplate avec Fat Man a demarre la mission Smolensk, largue la bombe,
+survecu a l'impact et continue a voler plusieurs minutes. `eventlog.lst`
+enregistre trois objets statiques detruits a `12:00:54`. La capture montre le
+message en jeu confirmant un coup direct et une cible detruite. La mission se
+termine normalement a `12:04:14`.
+
+Aucun echantillon `Responding=False` n'apparait apres l'armement du largage,
+aucune exception non geree et aucun dump ne sont produits. Le journal contient
+`Radars count refreshing stopped!` avant sa fermeture normale : le minuteur Zuti
+s'arrete donc correctement lorsque la boucle de jeu ne subit pas l'erreur de
+liaison.
+
+Autour de l'impact observe vers 18:50:33 UTC, le processus reste entre 663 et
+667 Mio de working set, 680 et 684 Mio de memoire privee et 1 967 Mio d'espace
+virtuel. Sur cette fenetre, le GPU 3D IL-2 atteint 50,67 %, la memoire graphique
+partagee 172,56 Mio et le disque 3,63 %. Le CPU systeme atteint presque 100 % car
+la machine execute aussi les collecteurs et d'autres projets, mais IL-2 reste
+repondant. Le maximum de la session est 689,07 Mio de working set, 706,47 Mio de
+memoire privee et 1 971,07 Mio d'espace virtuel.
+
+Ce resultat confirme l'incompatibilite ABI entre `Bomb` Silverplate et
+`Explosions` Open Sturmovik/Zuti comme cause du gel. Il ne valide pas encore le
+correctif final : celui-ci doit fusionner la surcharge nucleaire a six
+parametres avec les multiplicateurs de crateres Zuti. La capture confirme les
+destructions, mais ne montre pas clairement le panache nucleaire complet ; son
+aspect sera controle dans un essai dedie.
+
+## Cinquieme essai en vol : deux bombes atomiques et Hawker
+
+Artefacts :
+
+`test-results/startup/20260831-192529Z-profile9-warm-windowed1024-startup`
+
+Le lancement a reuni deux missions B-29 Silverplate et trois missions courtes
+avec des appareils Hawker. Les deux seules bombes atomiques du paquet ont
+fonctionne sans reproduire le gel : Little Boy detruit trois objets statiques a
+`12:00:40`, puis Fat Man en detruit trois a `12:01:13` dans la mission suivante.
+
+Leur rendu reste incorrect lorsque le jeu est mis en pause pendant l'effet.
+Apres reprise, le panache devient un ensemble de particules ressemblant a des
+nuages, puis une petite explosion conventionnelle demeure visible. Le bytecode
+confirme que les deux bombes partagent la routine `bombFatMan_*` et que la
+branche nucleaire peut appeler ensuite `bomb50_land(..., 10.0f)`. Les fichiers
+d'effet melangent aussi des durees de 1 a 99 999 secondes. Un essai sans pause
+est necessaire pour separer l'effet historique normal du vieillissement des
+particules pendant la pause.
+
+A 5 000 m, le B-29 n'a subi aucun souffle ni dommage. Les deux bombes declarent
+un rayon fixe de 3 200 m ; l'appareil est donc hors de la sphere de degats avant
+meme d'ajouter sa distance horizontale. Un modele progressif et retarde de
+flash, surpression, souffle et dommages 3D est desormais une exigence acceptee
+de la v1.15. Ce cas a 5 000 m servira de validation.
+
+Les trois missions Hawker enregistrees se terminent apres 28, 7 et 3 secondes.
+Les captures exterieures montrent les textures du dessus, du dessous et des
+cotes sans zone absente. Le defaut historique n'est donc **pas reproduit** dans
+l'installation de test actuelle ; il n'est pas encore prouve qu'une correction
+precise l'a supprime.
+
+ProcDump a classe comme gel une fenetre non repondante entre 21:41:17 et
+21:41:25, juste avant le debut de la premiere mission Hawker. Le dump complet,
+SHA-256 `CACA2268002E79B2DA797E0F14893F29BDFB11A2AA69C0975ED0BBBDD6AC8ADD`,
+ne contient pas de flux d'exception. Son thread principal se trouve dans
+`ig9icd32.dll`, sous `opengl32!glTexImage2D`, appele par
+`il2_corep4!BmpUtils_BMP8PalTo4TGA4`. Il s'agit d'une conversion et d'un envoi
+de texture Intel pendant le chargement, et non d'un crash Hawker. Ce point
+explique une partie des pauses de chargement observees.
+
+La session culmine a 840,88 Mio de working set, 705,01 Mio de memoire privee et
+2 000,21 Mio d'espace virtuel. La fermeture produit toutefois un `APPCRASH`
+Windows distinct, code `0xc0000005`, dans un module inconnu a 21:44:43. Aucun
+dump de cette sortie n'est disponible, car ProcDump avait deja atteint son
+quota sur le faux gel de chargement. Cette violation d'acces de fermeture reste
+a reproduire et a diagnostiquer separement.
+
+## Suite de la campagne
+
+1. **Fait statiquement :** construire la famille `Explosions` fusionnee
+   Silverplate + Zuti en Java major 47.
+2. **Fait dans le candidat :** retirer la petite explosion conventionnelle du
+   chemin nucleaire, declencher les airbursts historiques et programmer les
+   degats sur l'horloge de simulation.
+3. **Fait dans le candidat :** souffle progressif, retarde et borne a une
+   recherche spatiale, avec impulsion exterieure reservee aux avions.
+4. **Pret a tester :** le candidat et la famille interne Zuti coherente ont ete
+   copies dans le dossier de test apres sauvegarde de 19 fichiers ; les 24
+   copies et les 46 controles de preparation sont valides.
+5. Refaire Little Boy et Fat Man sans pause, puis avec pause, a plusieurs
+   altitudes et distances.
+6. Reproduire la violation d'acces a la fermeture avec un dump reserve a cette
+   phase.
+7. Conserver les Hawker comme controles visuels, le defaut n'etant plus
+   reproductible dans l'etat actuel.
+
+Aucun lancement ne sera effectue sans avertir Alexis juste avant.
+
+## Essai Little Boy du 1er septembre 2026
+
+Artefacts :
+
+`test-results/startup/20260831-222423Z-profile9-warm-windowed1024-startup`
+
+Little Boy a ete largue depuis le B-29 Silverplate. Le panache apparait vers
+22:31:22 UTC. La fenetre passe definitivement a `Responding=False` a 22:31:34,
+soit environ douze a treize secondes plus tard. ProcDump a conserve deux dumps
+complets de 855 082 239 et 854 971 651 octets. La JVM a quitte sa boucle
+principale, puis le minuteur Zuti non daemon a maintenu le processus en vie.
+
+La cause est une incompatibilite de signature dans le nouveau chemin de
+secousse : le stub declarait `Vector3d.add(Vector3d)`, mais IL-2 4.09m expose
+`Tuple3d.add(Tuple3d)`. L'appel n'etait execute qu'a l'arrivee differee de l'onde
+sur l'avion, ce qui explique le decalage. Le stub et le garde-fou du constructeur
+ont ete corriges. La pause/reprise continue par ailleurs a reduire le panache,
+mais moins fortement qu'avant ; ce probleme de particules demeure independant.
+
+### Validation du correctif et comparaison pause/sans pause
+
+Artefacts :
+
+`test-results/startup/20260901-050213Z-profile9-warm-windowed1024-startup`
+
+La meme session contient deux chargements de
+`Quick/SmolenskRedNone00.mis` et deux largages de Little Boy. Le processus
+`il2fb.exe` PID 17432 se termine volontairement avec le code `0x00000000`.
+ProcDump n'a declenche aucun dump et le journal Windows ne contient aucun
+evenement d'application. Le journal IL-2 ne contient ni `NoSuchMethodError`, ni
+`FileNotFoundException`, ni exception Java. Le correctif de l'ABI de
+`ShockAction` est donc valide dans le moteur 4.09m reel pour Little Boy.
+
+Chronologie visuelle extraite des 5 870 captures :
+
+- premier largage : le nuage entre dans l'image vers 05:10:10 UTC ; le menu de
+  pause est visible vers 05:10:13-05:10:14 ; a la reprise vers 05:10:15, le
+  nuage a disparu malgre un point de vue comparable ;
+- second largage sans pause : flash vers 05:12:40-05:12:41, formation du nuage
+  vers 05:12:42, puis panache encore visible vers 05:13:50, soit plus d'une
+  minute apres le flash ;
+- la traversee de la colonne n'a produit ni vent, ni turbulence, ni secousse
+  perceptible selon le pilote. Le code ne maintient actuellement aucune zone
+  atmospherique apres l'impulsion unique de `ShockAction`.
+
+Entre 05:12:10 et 05:13:55, toutes les mesures de reponse de la fenetre sont
+positives. La memoire privee atteint au plus 681,5 Mio, l'ensemble de travail
+665,1 Mio et l'espace virtuel 2 016,1 Mio. La consommation CPU du processus
+equivaut a 98,7 % d'un coeur logique en moyenne : l'affinite quatre coeurs est
+disponible, mais la boucle de vol reste essentiellement monothread. Le moteur
+3D Intel UHD 620 utilise en moyenne 59,9 % du GPU et atteint 74,5 % ; la memoire
+GPU engagee du processus culmine a environ 176,8 Mio. Le disque reste sous 2 %
+d'activite pendant le panache. L'explosion ne produit donc aucun pic CPU,
+memoire, GPU ou disque susceptible d'expliquer l'ancien gel.
+
+Le premier chargement de la mission dure environ 26 secondes, de 05:08:29 a
+05:08:55, contre environ six secondes pour le second chargement chaud, de
+05:11:49 a 05:11:55. Huit rechargements inattendus des textures du cockpit B-29
+ne sont journalises que pendant le premier chargement. Ce resultat confirme le
+benefice important des caches en memoire, sans encore resoudre le cout d'un
+premier chargement a froid.
+
+Problemes non bloquants mais reproductibles :
+
+- le cockpit B-29 demande a chaque mission les chunks absents `zOilFlap1`,
+  `zOilFlap2`, `zCompressor1` et `zCompressor2` ;
+- `music/inflight` ne contient aucun fichier : c'est une absence intentionnelle
+  et un avertissement attendu, pas un defaut de contenu ;
+- ProcDump observe quatre exceptions C++ traitees `E06D7363.PAD` a 05:11:55,
+  exactement lorsque les quatre erreurs de chunks sont emises. Il s'agit d'une
+  correlation a verifier, pas encore d'une preuve de causalite ;
+- les avertissements `Perfect` sont la notification attendue du profil OpenGL
+  natif securise sur Intel et ne constituent pas un echec.
+
+Verdict : le gel Little Boy cause par l'ABI est corrige. Le defaut de
+pause/reprise du panache est confirme. Fat Man, l'eau, les distances variables
+et la future atmosphere persistante restent a valider.
+
+### Candidat temporel realiste et compatible avec la pause
+
+L'analyse des classes 4.09m `Eff3D`, `Eff3DActor`, `Time`, `Renders` et
+`GUIWindowManager` distingue deux horloges natives. Le menu suspend l'horloge
+de simulation Java, tandis que chaque systeme de particules peut etre cree en
+temps de simulation ou en temps reel. La fabrique generique
+`Eff3DActor.New(...)` ne selectionne pas explicitement ce mode. Le candidat
+v1.15 appelle donc `Eff3D.initSetTypeTimer(false)` avant chacun des douze
+emetteurs nucleaires terre/eau. Une pause ne doit plus consommer leur formation
+ni leur vie.
+
+Les durees visuelles ont aussi ete remplacees par un modele historique borne :
+maximum de la boule de feu vers une seconde, formation et montee du nuage sur
+600 secondes de simulation, puis nuage stabilise jusqu'a 3 600 secondes. IL-2
+4.09m plafonne chaque emetteur a 512 particules et chaque particule a 128 s :
+le candidat respecte ces limites et renouvelle un pool stabilise de 512
+particules entre la dixieme minute et la premiere heure. Le maximum theorique
+est de 1 544 particules au depart sur terre, 1 288 sur l'eau et, pendant le
+bref recouvrement a dix minutes, 2 056/1 800. La duree reelle n'est donc pas
+simulee par une valeur que le moteur aurait silencieusement tronquee. La source de
+reference decrit un nuage stabilise apres environ dix minutes et encore visible
+pendant environ une heure ou davantage :
+[The Effects of Nuclear Weapons, chapitre II](https://www.atomicarchive.com/resources/documents/effects/glasstone-dolan/chapter2.html).
+La chronologie du
+[National Park Service](https://home.nps.gov/articles/000/the-atomic-bombings-of-hiroshima-and-nagasaki.htm)
+situe le maximum de la boule de feu de Little Boy et le debut du champignon une
+seconde apres la detonation.
+
+Le bytecode major 47 est valide et sa reconstruction est deterministe. Un
+premier candidat a ete sauvegarde puis remplace avant tout lancement lorsqu'a
+ete confirmee la limite `512/128` du moteur. La variante finale par emetteur
+phase a ete synchronisee dans le dossier de test avec sauvegarde recuperable
+dans
+`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260901-080125`.
+Le controle obtient 16 PASS, un WARN runtime attendu et zero FAIL ; les 46
+controles de preparation passent. Little Boy avec pause, Little Boy sans pause,
+puis Fat Man avec et sans pause restent les controles runtime obligatoires.

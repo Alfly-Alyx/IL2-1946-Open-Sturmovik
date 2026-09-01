@@ -151,6 +151,15 @@ pas utilisee pour reconstruire le Buttons de production 4.09m. Le `cmd.exe`
 Windows XP fourni dans cette archive est inutile et ne doit jamais etre lance ;
 le fichier JAR peut etre inspecte avec le JDK moderne deja installe.
 
+La commande de liste du JAR a ete testee le 1er septembre 2026 uniquement sur
+une copie temporaire du Buttons actif. Elle ouvre bien sa table et compte **739
+entrees** : `desktop.ini` et 738 noms numeriques. Une liste candidate contenant
+les 385 chemins FMD distincts demandes par les 536 lignes de `air.ini` n'en
+resout cependant aucun. Cela confirme que le resolveur de noms 4.10 (`d2wO` dans
+le bytecode de NTRK 0.3) n'est pas compatible avec ce Buttons 4.09m. Ce resultat
+ne prouve aucun FMD absent. L'ancien NTRK Wizard 0.2 et Class Resolver 0.2 de QTIM,
+documentes en 2009, deviennent les candidats prioritaires a retrouver.
+
 La derniere base Buttons annoncee comme strictement 4.09 est la 8.7. Elle est
 une **reference de comparaison**, pas un remplacement automatique : Open
 Sturmovik contient des avions communautaires qui peuvent exiger d'autres modeles
@@ -173,6 +182,14 @@ Sources : [explication communautaire du fichier Buttons](https://www.sas1946.com
 [versions SAS Buttons et derniere base 4.09](https://www.sas1946.com/main/index.php?topic=97.0),
 [discussion NTRK et outils de compilation](https://www.sas1946.com/main/index.php?topic=3988.36),
 [archive FreeIL2Modding](https://archive.org/details/@freeil2modding).
+
+Rapports reproductibles : [audit des 536 appareils](AUDIT_APPAREILS_AIR_INI.md)
+et [lecture de l'index Buttons](AUDIT_BUTTONS_MODELES_DE_VOL.md). Le nombre de
+739 entrees est une occupation mesuree, pas une limite moteur. Les retours sur
+la « Java Wall » indiquent une limite dependant de toutes les classes chargees
+et de leur structure, avec environ 600 avions comme ancien point de stabilite
+empirique et non comme plafond universel. Open Sturmovik en declare 536 ; la
+marge devra etre qualifiee par paliers et mesures JVM, pas devinee.
 
 ## Outils de contenu a conserver pour les phases suivantes
 

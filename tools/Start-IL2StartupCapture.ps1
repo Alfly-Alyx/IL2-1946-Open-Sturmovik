@@ -5,20 +5,39 @@ param(
     [ValidateSet('cold','warm')][string]$CacheState = 'cold',
     [switch]$Windowed1024,
     [string]$ReferenceRoot = 'C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946',
-    [string]$ResultsRoot = (Join-Path $PSScriptRoot '..\test-results\startup'),
-    [string]$ProcmonPath = (Join-Path $PSScriptRoot '..\build\test-tools\sysinternals\Procmon64.exe'),
-    [string]$ProcDumpPath = (Join-Path $PSScriptRoot '..\build\test-tools\sysinternals\procdump\procdump.exe'),
-    [string]$FrameCapturePath = (Join-Path $PSScriptRoot '..\build\test-tools\FrameCapture.exe'),
+    [string]$ResultsRoot,
+    [string]$ProcmonPath,
+    [string]$ProcDumpPath,
+    [string]$FrameCapturePath,
     [ValidateRange(1, 30)][int]$FrameRate = 10,
     [ValidateRange(50, 1000)][int]$SampleIntervalMs = 100,
+    [ValidateRange(104857600, 4294967296)][long]$ProcmonMaxBytes = 1073741824,
     [ValidateRange(30, 600)][int]$WaitForGameSeconds = 180,
     [switch]$SelectorDumpLab,
     [switch]$CaptureCrashOrHang,
+    [switch]$CaptureCrashOnly,
+    [switch]$DeferCrashOrHang,
     [switch]$SkipProcmon,
     [switch]$ValidateOnly
 )
 
 $ErrorActionPreference = 'Stop'
+
+# Windows PowerShell 5.1 can evaluate parameter defaults before $PSScriptRoot is
+# populated. Resolve script-relative defaults only after parameter binding.
+if ([string]::IsNullOrWhiteSpace($ResultsRoot)) {
+    $ResultsRoot = Join-Path $PSScriptRoot '..\test-results\startup'
+}
+if ([string]::IsNullOrWhiteSpace($ProcmonPath)) {
+    $ProcmonPath = Join-Path $PSScriptRoot '..\build\test-tools\sysinternals\Procmon64.exe'
+}
+if ([string]::IsNullOrWhiteSpace($ProcDumpPath)) {
+    $ProcDumpPath = Join-Path $PSScriptRoot '..\build\test-tools\sysinternals\procdump\procdump.exe'
+}
+if ([string]::IsNullOrWhiteSpace($FrameCapturePath)) {
+    $FrameCapturePath = Join-Path $PSScriptRoot '..\build\test-tools\FrameCapture.exe'
+}
+
 $repositoryRoot = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '..')).Path
 $resolvedGame = (Resolve-Path -LiteralPath $GameRoot -ErrorAction Stop).Path.TrimEnd('\')
 $resolvedReference = (Resolve-Path -LiteralPath $ReferenceRoot -ErrorAction Stop).Path.TrimEnd('\')
@@ -27,8 +46,13 @@ $resolvedProcmon = [IO.Path]::GetFullPath($ProcmonPath)
 $resolvedProcDump = [IO.Path]::GetFullPath($ProcDumpPath)
 $resolvedFrameCapture = [IO.Path]::GetFullPath($FrameCapturePath)
 $readinessTool = Join-Path $PSScriptRoot 'Test-IL2StartupReadiness.ps1'
+$enableProcDump = $CaptureCrashOrHang -or $CaptureCrashOnly -or $DeferCrashOrHang
 
-if ($CaptureCrashOrHang) {
+if ($DeferCrashOrHang -and ($CaptureCrashOrHang -or $CaptureCrashOnly)) {
+    throw 'DeferCrashOrHang ne peut pas etre combine avec un moniteur ProcDump arme au lancement.'
+}
+
+if ($enableProcDump) {
     if (-not (Test-Path -LiteralPath $resolvedProcDump -PathType Leaf)) {
         throw "ProcDump x86 absent : $resolvedProcDump"
     }
@@ -42,7 +66,7 @@ if ($CaptureCrashOrHang) {
 if ($ValidateOnly) {
     $reportPath = Join-Path $resolvedResults 'readiness-latest.json'
     & $readinessTool -GameRoot $resolvedGame -Profile $Profile -Windowed1024:$Windowed1024 -SelectorDumpLab:$SelectorDumpLab -ReferenceRoot $resolvedReference -RepositoryRoot $repositoryRoot -ProcmonPath $resolvedProcmon -FrameCapturePath $resolvedFrameCapture -ReportPath $reportPath
-    if ($CaptureCrashOrHang) {
+    if ($enableProcDump) {
         Write-Host "PROCDUMP_PRET : $resolvedProcDump" -ForegroundColor Green
     }
     exit 0
@@ -62,7 +86,7 @@ $logsRoot = Join-Path $runRoot 'logs'
 $preexistingLogs = Join-Path $runRoot 'preexisting-logs'
 $dumpRoot = Join-Path $runRoot 'process-dumps'
 $captureDirectories = @($runRoot, $frameRoot, $logsRoot, $preexistingLogs)
-if ($CaptureCrashOrHang) { $captureDirectories += $dumpRoot }
+if ($enableProcDump) { $captureDirectories += $dumpRoot }
 New-Item -ItemType Directory -Path $captureDirectories -Force | Out-Null
 $readinessReport = Join-Path $runRoot 'readiness.json'
 & $readinessTool -GameRoot $resolvedGame -Profile $Profile -Windowed1024:$Windowed1024 -SelectorDumpLab:$SelectorDumpLab -ReferenceRoot $resolvedReference -RepositoryRoot $repositoryRoot -ProcmonPath $resolvedProcmon -FrameCapturePath $resolvedFrameCapture -ReportPath $readinessReport | Out-Host
@@ -78,6 +102,7 @@ $wprLog = Join-Path $runRoot 'wpr.txt'
 $procmonLog = Join-Path $runRoot 'procmon.txt'
 $procDumpLog = Join-Path $runRoot 'procdump.txt'
 $procDumpErrorLog = Join-Path $runRoot 'procdump-error.txt'
+$deferredCrashSignal = Join-Path $runRoot 'arm-crash-or-hang.signal'
 $captureStartUtc = [DateTime]::UtcNow
 $captureStartLocal = Get-Date
 $procmonStarted = $false
@@ -96,6 +121,34 @@ function Write-Timeline {
     Add-Content -LiteralPath $timelinePath -Value $line -Encoding UTF8
 }
 
+function Stop-ProcmonCapture {
+    param([string]$Reason = 'normal')
+
+    $procmonAlive = $false
+    if ($script:procmonProcess) {
+        try {
+            $script:procmonProcess.Refresh()
+            $procmonAlive = -not $script:procmonProcess.HasExited
+        }
+        catch { }
+    }
+    if (-not $script:procmonStarted -and -not $procmonAlive) { return }
+
+    $procmonStopOutput = & $resolvedProcmon -accepteula -terminate -quiet 2>&1
+    $procmonStopExitCode = $LASTEXITCODE
+    $procmonStopOutput | Add-Content -LiteralPath $procmonLog -Encoding UTF8
+    $procmonStopDeadline = [DateTime]::UtcNow.AddSeconds(10)
+    while ([DateTime]::UtcNow -lt $procmonStopDeadline -and
+        @(Get-Process -Name 'Procmon','Procmon64' -ErrorAction SilentlyContinue).Count -ne 0) {
+        Start-Sleep -Milliseconds 250
+    }
+    Get-Process -Name 'Procmon','Procmon64' -ErrorAction SilentlyContinue |
+        Stop-Process -Force -ErrorAction SilentlyContinue
+    $script:procmonStarted = $false
+    $script:procmonProcess = $null
+    Write-Timeline -Event 'procmon_stopped' -Detail "exit=$procmonStopExitCode; reason=$Reason"
+}
+
 'utc,event,detail' | Set-Content -LiteralPath $timelinePath -Encoding UTF8
 'utc,elapsed_ms,pid,total_cpu_ms,working_set,private_bytes,virtual_bytes,threads,handles,responding' | Set-Content -LiteralPath $metricsPath -Encoding UTF8
 'utc,elapsed_ms,pid,module,path,base_address,size,file_version' | Set-Content -LiteralPath $modulesPath -Encoding UTF8
@@ -103,7 +156,33 @@ function Write-Timeline {
 $criticalRelative = @(
     'il2fb.exe','files.SFS','wrapper.dll','DINPUT.dll','il2fb.ini','conf.ini',
     'Files\com\maddox\il2\objects\air.ini',
-    'Files\com\maddox\il2\objects\stationary.ini'
+    'Files\com\maddox\il2\objects\stationary.ini',
+    # Classes impliquees dans le premier gel en vol reproductible. Leur
+    # empreinte permet de distinguer un vrai A/B d un changement de scenario.
+    'Files\ED31205CA2346688', # BombGun
+    'Files\830E5C5AC3A1C77A', # BombFatMan
+    'Files\46168B5EEE532404', # BombGunFatMan
+    'Files\7BCE3C02C280ED18', # B_29SP
+    'Files\77B1B3A6E89CFC22', # B_29X Silverplate (absence attendue lors de cet A/B)
+    'Files\E1FDDF9406C0ACAE', # ZutiTimer_RadarsCountRefresh
+    # Famille Explosions complete : classe externe, 13 classes anonymes et
+    # MydataForSmoke. Cet instantane prouve quelle variante est reellement
+    # active lors de l'essai Silverplate/Zuti.
+    'Files\72DCDDF4D2AD25E8',
+    'Files\DF2E6CCEA14288D6',
+    'Files\15E1127AE68FA29C',
+    'Files\EE4B63FC7A3AE93E',
+    'Files\A7E6F57A31D0D0A4',
+    'Files\32E5D3D88A48E082',
+    'Files\B13925F2D613408C',
+    'Files\925C70BA4FFD5BB8',
+    'Files\DF60469CAA814682',
+    'Files\358263948E92F8EE',
+    'Files\F87D56020C7BCC92',
+    'Files\64B1F5FC786E5622',
+    'Files\88B6A628AD693BD2',
+    'Files\4D88231E747CC83A',
+    'Files\B160819E84D1291E'
 )
 $criticalSnapshot = foreach ($relative in $criticalRelative) {
     $path = Join-Path $resolvedGame $relative
@@ -144,13 +223,16 @@ $environment = [ordered]@{
     display_mode = if ($Windowed1024) { 'windowed-1024x768' } else { 'configured-fullscreen' }
     selector_dump_lab = [bool]$SelectorDumpLab
     crash_or_hang_capture = [bool]$CaptureCrashOrHang
+    crash_only_capture = [bool]$CaptureCrashOnly
+    deferred_crash_or_hang_capture = [bool]$DeferCrashOrHang
     frame_rate = $FrameRate
     sample_interval_ms = $SampleIntervalMs
+    procmon_max_bytes = $ProcmonMaxBytes
     operating_system = @(Get-CimInstance Win32_OperatingSystem -ErrorAction SilentlyContinue | Select-Object Caption,Version,BuildNumber,OSArchitecture)
     processors = @(Get-CimInstance Win32_Processor -ErrorAction SilentlyContinue | Select-Object Name,NumberOfCores,NumberOfLogicalProcessors,MaxClockSpeed)
     graphics = @(Get-CimInstance Win32_VideoController -ErrorAction SilentlyContinue | Select-Object Name,DriverVersion,AdapterRAM,CurrentHorizontalResolution,CurrentVerticalResolution,PNPDeviceID)
     physical_memory = @(Get-CimInstance Win32_ComputerSystem -ErrorAction SilentlyContinue | Select-Object TotalPhysicalMemory)
-    procdump = if ($CaptureCrashOrHang) {
+    procdump = if ($enableProcDump) {
         $procDumpItem = Get-Item -LiteralPath $resolvedProcDump
         [ordered]@{
             path = $resolvedProcDump
@@ -202,9 +284,21 @@ try {
         Write-Timeline -Event 'procmon_started' -Detail "pid=$($procmonProcess.Id)"
     }
 
-    $wprOutput = & wpr.exe -start GeneralProfile -filemode 2>&1
+    # Windows PowerShell 5.1 convertit parfois stderr d un executable natif en
+    # NativeCommandError terminant lorsque ErrorActionPreference vaut Stop.
+    # WPR est optionnel ici : son refus doit etre journalise, pas interrompre les
+    # captures de fenetre, de processus et de compteurs.
+    $savedErrorActionPreference = $ErrorActionPreference
+    try {
+        $ErrorActionPreference = 'Continue'
+        $wprOutput = & wpr.exe -start GeneralProfile -filemode 2>&1
+        $wprExitCode = $LASTEXITCODE
+    }
+    finally {
+        $ErrorActionPreference = $savedErrorActionPreference
+    }
     $wprOutput | Set-Content -LiteralPath $wprLog -Encoding UTF8
-    if ($LASTEXITCODE -eq 0) {
+    if ($wprExitCode -eq 0) {
         $wprStarted = $true
         Write-Timeline -Event 'wpr_started'
     }
@@ -236,12 +330,22 @@ try {
     $gameStartUtc = $game.StartTime.ToUniversalTime()
     $clock = [Diagnostics.Stopwatch]::StartNew()
     Write-Timeline -Event 'game_detected' -Detail "pid=$($game.Id); start=$($gameStartUtc.ToString('O'))"
-    if ($CaptureCrashOrHang) {
-        $procDumpArguments = @(
-            '-accepteula','-ma','-e','-h','-n','2',
-            $game.Id,
-            ('"' + $dumpRoot + '"')
-        )
+    if ($enableProcDump -and -not $DeferCrashOrHang) {
+        $procDumpArguments = if ($CaptureCrashOnly) {
+            @(
+                '-accepteula','-ma','-e','-n','1',
+                $game.Id,
+                ('"' + $dumpRoot + '"')
+            )
+        }
+        else {
+            @(
+                '-accepteula','-ma','-e','-h','-n','2',
+                $game.Id,
+                ('"' + $dumpRoot + '"')
+            )
+        }
+        $procDumpTriggers = if ($CaptureCrashOnly) { 'unhandled-exception' } else { 'exception,hang' }
         $procDumpProcess = Start-Process `
             -FilePath $resolvedProcDump `
             -ArgumentList $procDumpArguments `
@@ -249,7 +353,10 @@ try {
             -RedirectStandardError $procDumpErrorLog `
             -WindowStyle Hidden `
             -PassThru
-        Write-Timeline -Event 'procdump_started' -Detail "pid=$($procDumpProcess.Id); target=$($game.Id); triggers=exception,hang"
+        Write-Timeline -Event 'procdump_started' -Detail "pid=$($procDumpProcess.Id); target=$($game.Id); triggers=$procDumpTriggers"
+    }
+    elseif ($DeferCrashOrHang) {
+        Write-Timeline -Event 'procdump_deferred' -Detail "target=$($game.Id); signal=$deferredCrashSignal"
     }
     $frameArguments = @(
         '--process-id', $game.Id,
@@ -266,15 +373,34 @@ try {
     $counterArguments = @(
         '-NoProfile','-File',('"' + $counterTool + '"'),
         '-Output',('"' + $systemCountersPath + '"'),
-        '-StopFile',('"' + $stopFile + '"')
+        '-StopFile',('"' + $stopFile + '"'),
+        '-ProcessId',$game.Id
     )
     $counterProcess = Start-Process -FilePath $powerShellExecutable -ArgumentList $counterArguments -PassThru
     Write-Timeline -Event 'system_counters_started' -Detail "pid=$($counterProcess.Id)"
 
     $knownModules = @{}
     $nextModuleSnapshot = 0L
+    $nextProcmonSizeCheck = 0L
     while (-not $game.HasExited) {
         try {
+            if ($DeferCrashOrHang -and -not $procDumpProcess -and
+                (Test-Path -LiteralPath $deferredCrashSignal -PathType Leaf)) {
+                $procDumpArguments = @(
+                    '-accepteula','-ma','-e','-h','-n','1',
+                    $game.Id,
+                    ('"' + $dumpRoot + '"')
+                )
+                $procDumpProcess = Start-Process `
+                    -FilePath $resolvedProcDump `
+                    -ArgumentList $procDumpArguments `
+                    -RedirectStandardOutput $procDumpLog `
+                    -RedirectStandardError $procDumpErrorLog `
+                    -WindowStyle Hidden `
+                    -PassThru
+                Write-Timeline -Event 'procdump_started' -Detail "pid=$($procDumpProcess.Id); target=$($game.Id); triggers=exception,hang; deferred=true"
+            }
+
             $game.Refresh()
             $responding = $false
             try { $responding = $game.Responding } catch { }
@@ -309,6 +435,20 @@ try {
                 catch { Write-Timeline -Event 'module_snapshot_error' -Detail $_.Exception.Message }
             }
 
+            if ($procmonStarted -and $clock.ElapsedMilliseconds -ge $nextProcmonSizeCheck) {
+                $nextProcmonSizeCheck = $clock.ElapsedMilliseconds + 2000
+                $procmonBytes = [long](
+                    Get-ChildItem -LiteralPath $runRoot -File -ErrorAction SilentlyContinue |
+                        Where-Object { $_.Name -like 'process-monitor*.pml' } |
+                        Measure-Object -Property Length -Sum
+                ).Sum
+                if ($procmonBytes -ge $ProcmonMaxBytes) {
+                    Write-Timeline -Event 'procmon_size_limit_reached' -Detail "bytes=$procmonBytes; limit=$ProcmonMaxBytes"
+                    Stop-ProcmonCapture -Reason 'size-limit'
+                    Write-Warning "Process Monitor a atteint sa limite de $ProcmonMaxBytes octets et a ete arrete. Le jeu et les autres captures continuent."
+                }
+            }
+
         }
         catch {
             if (-not $game.HasExited) { Write-Timeline -Event 'metrics_error' -Detail $_.Exception.Message }
@@ -340,18 +480,7 @@ finally {
         $wprStopOutput | Add-Content -LiteralPath $wprLog -Encoding UTF8
         Write-Timeline -Event 'wpr_stopped' -Detail "exit=$LASTEXITCODE"
     }
-    if ($procmonStarted -or ($procmonProcess -and -not $procmonProcess.HasExited)) {
-        $procmonStopOutput = & $resolvedProcmon -accepteula -terminate -quiet 2>&1
-        $procmonStopOutput | Add-Content -LiteralPath $procmonLog -Encoding UTF8
-        $procmonStopDeadline = [DateTime]::UtcNow.AddSeconds(10)
-        while ([DateTime]::UtcNow -lt $procmonStopDeadline -and
-            @(Get-Process -Name 'Procmon','Procmon64' -ErrorAction SilentlyContinue).Count -ne 0) {
-            Start-Sleep -Milliseconds 250
-        }
-        Get-Process -Name 'Procmon','Procmon64' -ErrorAction SilentlyContinue |
-            Stop-Process -Force -ErrorAction SilentlyContinue
-        Write-Timeline -Event 'procmon_stopped' -Detail "exit=$LASTEXITCODE"
-    }
+    Stop-ProcmonCapture -Reason 'capture-finalization'
 
     foreach ($logName in @('log.lst','eventlog.lst','sound.log')) {
         $logPath = Join-Path $resolvedGame $logName

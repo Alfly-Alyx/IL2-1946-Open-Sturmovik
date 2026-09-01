@@ -3,6 +3,7 @@ param(
     [string]$GameRoot = 'C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test',
     [ValidateSet('cold','warm')][string]$CacheState = 'cold',
     [ValidateRange(30, 600)][int]$WaitForGameSeconds = 180,
+    [switch]$WithFileTrace,
     [switch]$SkipProcmon,
     [switch]$ValidateOnly
 )
@@ -16,5 +17,5 @@ $captureTool = Join-Path $PSScriptRoot 'Start-IL2StartupCapture.ps1'
     -CacheState $CacheState `
     -Windowed1024 `
     -WaitForGameSeconds $WaitForGameSeconds `
-    -SkipProcmon:$SkipProcmon `
+    -SkipProcmon:($SkipProcmon -or -not $WithFileTrace) `
     -ValidateOnly:$ValidateOnly

@@ -1,6 +1,56 @@
 # Preparation du prochain test v1.15
 
-Derniere mise a jour : 31 aout 2026.
+Derniere mise a jour : 1er septembre 2026.
+
+## Candidat pause nucleaire invalide en jeu
+
+La capture `20260901-060621Z-profile9-warm-windowed1024-startup` a prouve que
+la pause fige bien l'horloge de simulation, mais que le sous-systeme natif des
+emetteurs reconstruit leur age apres le retour du rendu 3D. Le panache pleinement
+forme redevient une petite sphere a la premiere image de reprise, puis rattrape
+environ 5,5 secondes plus tard. Le processus reste repondant et la memoire est
+stable : ce n'est ni un gel de la JVM, ni un manque de RAM.
+
+Le candidat suivant enregistrait seulement les douze emetteurs Little Boy/Fat
+Man et l'emetteur stabilise. Une surveillance partagee detectait les transitions
+de pause sur une horloge reelle et appelait la pause native de ces effets. Elle
+ne modifiait pas le menu, les nuages meteorologiques, les fumees ou les
+explosions conventionnelles.
+
+Ce candidat a depuis ete teste dans
+`20260901-131015Z-profile9-warm-windowed1024-startup` et **n'est pas valide**.
+Le panache Little Boy repart de zero apres pause/reprise. Il repart aussi apres
+un demi-tour qui le retire puis le remet dans le champ de la camera. Aucun
+message d'indisponibilite de l'API native n'apparait : le correctif ne traite
+pas la reconstruction/coupure du rendu des particules.
+
+Les trois classes concernees ont ete synchronisees transactionnellement dans le
+seul dossier de test. Sauvegarde recuperable :
+
+`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260901-083925`
+
+La chaine de fichiers reste saine : l'audit dedie obtient 33 PASS et zero echec
+statique. Cela valide les classes, emports, maillages, textures, materiaux et
+limites declarees, pas le rendu final. La surveillance a 25 ms ne doit pas etre
+consideree comme une correction livrable ; sa suppression ou son remplacement
+et la duree de retention des `Eff3DActor` doivent etre traites avant le prochain
+essai nucleaire de qualification.
+
+Le dix-septieme controle couvre la carte Slovakia. Sa surcharge `load.ini`
+demandait `actors.static`, alors que le SFS officiel 4.09m contient et demande
+`actors_summer.static`. Une seule ligne a ete synchronisee et l'ancienne version
+reste dans la sauvegarde recuperable :
+
+`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260901-085130`
+
+Le fichier officiel de 5,8 Mio n'a pas ete duplique : le chemin corrige restaure
+le repli normal vers `fb_maps15.SFS`.
+
+Le prochain essai nucleaire devra etre lance seulement apres un nouveau candidat.
+Il comparera Little Boy puis Fat Man sans pause et avec pause, un demi-tour, une
+sortie volontaire du champ, l'eclair image par image et un airburst sur l'eau.
+Une mission dense devra mesurer les acteurs d'effets encore vivants. Alexis doit
+etre prevenu avant l'armement de la capture et avant le lancement du jeu.
 
 ## Etat pret avant redemarrage
 

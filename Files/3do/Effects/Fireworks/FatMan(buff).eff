@@ -5,13 +5,15 @@
   Color0 0.9 0.9 0.9 1
   Color1 1.0 1.0 1.0 0
   nParticles 128
-  FinishTime 10.0
+  ; Rising mushroom head: active formation for ten simulation minutes.
+  FinishTime 600.0
   MaxR 32.0
   PhiN 5.0
   PsiN 5.0
+  ; 4.09m clamps particle lifetime to 128 seconds; the active emitter renews it.
   LiveTime 128.0
   EmitFrq 500.0
-  TranspTransitionTime 120.0f
+  TranspTransitionTime 128.0f
   EmitVelocity 130.0 80.0
   EmitTheta 0.0 10.0
   GasResist 0.0006

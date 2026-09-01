@@ -4,14 +4,27 @@ param(
     [ValidateSet('1','2','3','4','5','6','7','8','9')][string]$Profile = '9',
     [switch]$Windowed1024,
     [string]$ReferenceRoot = 'C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946',
-    [string]$RepositoryRoot = (Join-Path $PSScriptRoot '..'),
-    [string]$ProcmonPath = (Join-Path $PSScriptRoot '..\build\test-tools\sysinternals\Procmon64.exe'),
-    [string]$FrameCapturePath = (Join-Path $PSScriptRoot '..\build\test-tools\FrameCapture.exe'),
+    [string]$RepositoryRoot,
+    [string]$ProcmonPath,
+    [string]$FrameCapturePath,
     [switch]$SelectorDumpLab,
     [string]$ReportPath
 )
 
 $ErrorActionPreference = 'Stop'
+
+# Windows PowerShell 5.1 can evaluate parameter defaults before $PSScriptRoot is
+# populated. Resolve script-relative defaults only after parameter binding.
+if ([string]::IsNullOrWhiteSpace($RepositoryRoot)) {
+    $RepositoryRoot = Join-Path $PSScriptRoot '..'
+}
+if ([string]::IsNullOrWhiteSpace($ProcmonPath)) {
+    $ProcmonPath = Join-Path $PSScriptRoot '..\build\test-tools\sysinternals\Procmon64.exe'
+}
+if ([string]::IsNullOrWhiteSpace($FrameCapturePath)) {
+    $FrameCapturePath = Join-Path $PSScriptRoot '..\build\test-tools\FrameCapture.exe'
+}
+
 $checks = New-Object 'System.Collections.Generic.List[object]'
 function Add-Check {
     param([string]$Name, [bool]$Passed, [string]$Detail)
@@ -339,6 +352,7 @@ if ($Windowed1024) {
     $configurationExpectations['window/FullScreen'] = '0'
     $configurationExpectations['window/SaveAspect'] = '1'
     $configurationExpectations['window/WideScreenFoV'] = '0'
+    $configurationExpectations['rts/mouseUse'] = '1'
 }
 foreach ($expectation in $configurationExpectations.Keys) {
     $section, $key = $expectation -split '/', 2
@@ -359,9 +373,13 @@ $wpr = Get-Command 'wpr.exe' -ErrorAction SilentlyContinue
 $wprDetail = if ($wpr) { $wpr.Source } else { 'introuvable' }
 Add-Check -Name 'Windows Performance Recorder' -Passed ($null -ne $wpr) -Detail $wprDetail
 
-$drive = Get-PSDrive -Name ([IO.Path]::GetPathRoot($resolvedRepository).Substring(0, 1))
-$freeGiB = [Math]::Round($drive.Free / 1GB, 2)
-Add-Check -Name 'Espace libre pour les traces' -Passed ($drive.Free -ge 10GB) -Detail "$freeGiB Gio libres"
+$driveRoot = [IO.Path]::GetPathRoot($resolvedRepository)
+# Windows PowerShell 5.1 peut retourner Free=$null pour Get-PSDrive dans une
+# session non interactive, alors que pwsh renseigne la valeur. DriveInfo donne
+# le meme espace disponible dans les deux hotes.
+$availableFreeSpace = [IO.DriveInfo]::new($driveRoot).AvailableFreeSpace
+$freeGiB = [Math]::Round($availableFreeSpace / 1GB, 2)
+Add-Check -Name 'Espace libre pour les traces' -Passed ($availableFreeSpace -ge 10GB) -Detail "$freeGiB Gio libres"
 
 $report = [ordered]@{
     generated_utc = [DateTime]::UtcNow.ToString('O')
