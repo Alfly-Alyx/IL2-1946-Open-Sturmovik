@@ -1,2 +1,50 @@
+[common]
+mode         relobj pos
+type         mixer
+undetune     1
+
+[spl]
+
 [samples]
-air_start_end_00.wav
+adb605_startup.wav
+axdb605_startup.wav
+
+
+[sample.adb605_Startup.wav]
+env 2 8
+infinite 1
+controls start
+
+[sample.adb605_startup.wav.start]
+minlo 0
+minhi 0
+maxlo 300
+maxhi 300
+value 4.0
+pmin  1.0
+pmax  1.0
+
+
+[sample.axdb605_Startup.wav]
+env 0
+infinite 1
+controls dist
+
+
+[sample.axdb605_startup.wav.start]
+minlo 0
+minhi 0
+maxlo 300
+maxhi 300
+value 4.0
+pmin  1.0
+pmax  1.0
+
+[sample.axdb605_startup.wav.dist]
+minlo 0
+minhi 0
+maxlo 100
+maxhi 200
+value 4.0
+pmin  1.0
+pmax  1.0

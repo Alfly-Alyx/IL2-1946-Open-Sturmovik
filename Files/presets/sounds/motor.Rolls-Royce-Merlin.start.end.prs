@@ -1,2 +1,49 @@
+[common]
+mode         relobj pos
+type         mixer
+undetune     1
+
+[spl]
+
+
+
 [samples]
-Merlin_XX_Startup.wav
+amerlin_startup.wav
+axMerlin_startup.wav
+
+[sample.amerlin_Startup.wav]
+env 2 8
+infinite 1
+controls start
+
+[sample.amerlin_startup.wav.start]
+minlo 0
+minhi 0
+maxlo 300
+maxhi 300
+value 4.0
+pmin  1.0
+pmax  1.0
+
+[sample.axmerlin_Startup.wav]
+env 0
+infinite 1
+controls dist
+
+[sample.axmerlin_startup.wav.start]
+minlo 0
+minhi 0
+maxlo 300
+maxhi 300
+value 4.0
+pmin  1.0
+pmax  1.0
+
+[sample.axmerlin_startup.wav.dist]
+minlo 0
+minhi 0
+maxlo 100
+maxhi 200
+value 4.0
+pmin  1.0
+pmax  1.0

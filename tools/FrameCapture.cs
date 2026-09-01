@@ -190,7 +190,7 @@ internal static class FrameCapture
                             using (Bitmap bitmap = new Bitmap(width, height, PixelFormat.Format24bppRgb))
                             using (Graphics graphics = Graphics.FromImage(bitmap))
                             {
-                                graphics.CopyFromScreen(rectangle.Left, rectangle.Top, 0, 0, new Size(width, height), CopyPixelOperation.SourceCopy | CopyPixelOperation.CaptureBlt);
+                                graphics.CopyFromScreen(rectangle.Left, rectangle.Top, 0, 0, new Size(width, height), CopyPixelOperation.SourceCopy);
                                 SaveJpeg(bitmap, framePath, quality);
                             }
                             framesWriter.WriteLine(

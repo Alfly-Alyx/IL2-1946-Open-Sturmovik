@@ -4,6 +4,12 @@
 
 Open Sturmovik 1.15 cible IL-2 Sturmovik 1946 **4.09m** pour son profil modifie. C'est la derniere base dont les executables, le wrapper, les classes libres, `air.ini` et les utilitaires historiques forment ici un ensemble coherent.
 
+Le profil normal de l'add-on est un profil complet : les mods communautaires
+retenus, les ameliorations de realisme et les textures haute definition doivent
+y etre actifs ensemble. Les profils Original servent de references et de modes
+de diagnostic. La compatibilite entre composants est une condition d'activation
+par defaut, pas une hypothese.
+
 Cette cible est maintenant gelee pour la stabilisation de la version 1.15. Les programmes communautaires incompatibles restent archives et desactives. Les etudes d'un portage 4.12.2m ou 4.15.1m ne doivent modifier ni les profils 4.09m ni leur chargeur.
 
 La derniere version officielle disponible est 4.15.1m. Elle n'est pas adoptee comme base du mod 1.15 : le patch 4.15 demande explicitement une installation 4.14.1m officielle et non modifiee. Un portage demanderait de revalider les classes Java, les registres d'avions/cartes, le `files.SFS`, le wrapper et chaque utilitaire. Il devra etre developpe comme profil separe.
@@ -28,6 +34,12 @@ La comparaison avec les installateurs officiels locaux donne :
 - patch 4.09m : 99 fichiers deja identiques ; les trois notices sont egalement conservees sous `_Guides_&_Manuals\Official Patches` ;
 - les SFS et DLL de coeur 4.08/4.09 correspondent octet par octet aux patchs locaux ;
 - `fb_3do.SFS`, requis depuis la base DVD, est restaure avec les deux autres SFS du commit orphelin.
+
+La reconstruction locale du test a egalement montre qu'une installation
+4.14.1m ne constitue pas une base 4.07m equivalente : huit anciennes archives
+SFS y manquaient, deux avaient ete consolidees ou remplacees, et 28 SFS
+posterieurs restaient presents. La liste, les tailles et les empreintes sont
+consignees dans [la matrice SFS](MATRICE_VERSIONS_SFS.md).
 
 L'add-on peut donc etre pose sur une installation 4.07m propre et selectionner le profil 4.09m sans modifier les archives de patch sources.
 

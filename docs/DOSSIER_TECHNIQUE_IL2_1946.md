@@ -116,6 +116,13 @@ Les principaux registres libres sont :
 
 Le selecteur bascule maintenant `air.ini` et `stationary.ini` avec le profil. Les choix 7 a 9 utilisent les registres 4.09m. Toute future activation modulaire devra verifier le graphe classe-modele-texture-arme-cockpit-son-carte avant de masquer un contenu.
 
+Les extensions de fichiers ne decrivent pas toujours leur encodage reel. Les
+atlas GUI `basicelements.tga` et `staticelements.tga` livres par l'add-on portent
+la signature binaire `IMF\x1A10`, et non un en-tete TGA standard. Ils doivent etre
+lus avec un outil IL-2 compatible IMF et conserves avec leurs fichiers `.mat` ;
+un editeur TGA generique ne constitue pas un validateur. Les details et les
+empreintes sont consignes dans [l'audit des musiques et fonds](AUDIT_MUSIQUES_ET_FONDS.md).
+
 ## Profils historiques
 
 - Les six EXE modifies sont identiques entre les profils fournis.
@@ -155,8 +162,84 @@ test.
 - Les EXE modifies sont Large Address Aware. Sous Windows 64 bits, l'espace d'adressage utilisateur peut atteindre 4 Go ; cela ne signifie pas qu'un tas Java de 3 Go est stable.
 - Le profil stable conserve provisoirement `-Xmx1G` afin de laisser de l'espace aux textures, DLL, cartes, sons et autres allocations natives.
 - Le selecteur calcule un masque pour au plus quatre coeurs physiques avec un processeur logique par coeur. Il interroge les masques de topologie Windows et ne suppose pas l'ordre des fils SMT. `15` reste le repli.
+- Le profil stable 1.15 conserve cette selection de quatre coeurs physiques. Un profil experimental **HT/SMT** pourra autoriser tous les processeurs logiques disponibles (par exemple `0xFF` sur le Core i5-8350U), mais il ne deviendra un choix recommande qu'apres comparaison des temps de chargement, des frametimes, des micro-saccades et de la stabilite en mission avec le profil physique (actuellement `0x55` sur cette machine).
 - Le son possede au moins un thread natif. Le degre de parallelisme du rendu, de la simulation, du chargement et de l'IA reste a mesurer.
 - `-Xcomp` est une piste de lenteur au lancement : il force la compilation des methodes. Son retrait ne sera compare que dans un profil experimental.
+
+Les EXE et DLL propres aux profils modifies peuvent etre corriges pour repousser les limites constatees : en-tete Large Address Aware, allocations internes, compteurs, index, files de chargement, synchronisation et parallelisme. Une modification binaire ne peut cependant pas transformer le processus en 64 bits : sous Windows 32 bits, l'espace utilisateur reste limite par la configuration du systeme (jusqu'a 3 Gio avec 4GT) et doit aussi contenir la JVM, les DLL et les allocations natives. Toute correction sera appliquee uniquement aux copies Open Sturmovik, sous forme de patch reproductible avec version source, offsets ou symboles, empreintes SHA-256 avant/apres, controles PE32, test de retour arriere et validation en jeu. Le jeu original de reference reste strictement intact.
+
+### Arret de HotSpot 1.3.1 et fils non daemon
+
+L'EXE natif appelle `DestroyJavaVM` apres le retour de la boucle Java principale.
+HotSpot 1.3.1 attend alors que tous les fils Java non daemon, sauf le fil courant,
+soient termines. Un `java.util.Timer` cree sans option daemon peut donc garder
+`il2fb.exe` vivant indefiniment, meme si la panne initiale est deja terminee.
+
+Les deux dumps du 31 aout 2026 ont montre ce cas exact : le fil principal attend
+sur un evenement Windows et `ZutiTimer_RadarsCountRefresh` reste le seul travail
+dans un `TimerThread` non daemon. Il faut distinguer les deux phases lors de chaque
+diagnostic : **cause du retour anormal de la boucle de jeu**, puis **ressource
+qui empeche l'arret**. Le second symptome produit la boite Windows « laisser le
+programme repondre / mettre fin a la tache », mais ne designe pas necessairement
+la premiere cause.
+
+Les dumps x86 sont analyses hors jeu par `Analyze-IL2Minidump.py`, puis les
+structures HotSpot 1.3.1 par `Analyze-IL2HotSpot131.py`. L'inspection ciblee du
+tas est disponible dans `Inspect-IL2HotSpotObject.py`. Les conclusions et les
+empreintes des deux cas sont dans
+[le dossier B-29/Fat Man](BUG_CRITIQUE_B29_FATMAN.md).
+
+### Compatibilite binaire des classes globales
+
+La priorite `Files` sur les SFS remplace une classe Java complete ; elle ne
+fusionne ni ses methodes, ni ses champs, ni ses classes internes avec une autre
+version. Deux mods peuvent donc fonctionner separement et casser le jeu une fois
+reunis, meme si chaque fichier existe et se charge correctement.
+
+Le B-29 Silverplate fournit un cas prouve. Sa classe `Bomb` appelle
+`Explosions.generate(Actor, Point3d, float, int, float, int)`. La variante
+`Explosions` active dans Open Sturmovik contient les multiplicateurs de crateres
+Zuti, mais seulement la methode a cinq parametres. Au premier passage sur cet
+appel a six parametres, HotSpot doit lever `NoSuchMethodError`. Si un minuteur
+non daemon reste vivant, cette erreur de liaison peut ensuite apparaitre sous la
+forme trompeuse d'un processus Windows gele.
+
+L'A/B du 31 aout 2026 confirme cette chaine : avec la famille `Explosions`
+coherente, Fat Man atteint sa cible, detruit les objets, le jeu reste repondant
+et le journal termine par `Radars count refreshing stopped!`. Le minuteur Zuti
+n'est donc pas bloque lors du chemin normal ; il masque surtout la sortie
+anormale provoquee par l'erreur de liaison.
+
+**Regle 1.15 :** pour toute surcharge d'une classe globale du moteur, inventorier
+les descripteurs JVM des methodes et champs publics/proteges, les interfaces et
+la famille des classes internes. Comparer la variante active avec chaque mod qui
+l'appelle. Une correction de compatibilite doit fusionner explicitement les API
+et comportements utiles ; changer seulement l'ordre des dossiers ne suffit pas.
+Le cas reproductible, les empreintes et la matrice d'essai sont documentes dans
+[le dossier B-29/Fat Man](BUG_CRITIQUE_B29_FATMAN.md).
+
+## Souris et curseur sur les Windows modernes
+
+Dans `[rts]`, `mouseUse=2` confie au moteur IL-2 l'entree et le dessin de son
+curseur 3D. Ce mode est utile en vol : le pointeur disparait quand aucune
+interface n'est active et le libre regard n'est pas limite par les bords du
+bureau. Sur les Windows modernes, le curseur historique peut toutefois devenir
+invisible ou rester bloque, notamment en fenetre ; un changement de focus par
+Alt+Tab peut parfois le retablir. `mouseUse=1` utilise le curseur Windows, plus
+fiable dans les menus, mais moins adapte au regard souris continu.
+
+**Regle 1.15 :** le profil de test fenetre 1024 x 768 impose `mouseUse=1`. Les
+profils plein ecran conservent le choix du joueur et pourront utiliser
+`mouseUse=2` apres validation du couple OS/backend graphique. Le futur lanceur
+presentera ce choix clairement et proposera un retour au curseur Windows. Lors
+d'une capture de vol, ProcDump surveille automatiquement les exceptions non
+gerees ; la surveillance de fenetre bloquee doit etre armee manuellement apres
+le chargement si le scenario l'exige, car l'absence de reponse normale du vieux
+moteur pendant l'indexation produit sinon de faux dumps de blocage.
+
+Sources communautaires et systeme : [explication des modes souris sur SAS
+1946](https://www.sas1946.com/main/index.php?topic=50141.0), [cas du curseur
+invisible et mise a l'echelle Windows](https://learn.microsoft.com/en-us/answers/questions/2689898/mouse-cursor-missing-while-playing-il2-1946-game).
 
 References systeme : [limites d'adressage des versions de Windows](https://learn.microsoft.com/en-us/windows/win32/memory/memory-limits-for-windows-releases) et [API Windows GetLogicalProcessorInformation](https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getlogicalprocessorinformation) utilisee pour distinguer les coeurs physiques des fils logiques.
 
@@ -165,6 +248,23 @@ References systeme : [limites d'adressage des versions de Windows](https://learn
 Le modele `conf.max.ini` active le niveau maximal connu pour le chemin OpenGL historique : shaders materiels, eau 4, ombres, lumieres, geometrie, foret et distance elevees. Le selecteur fusionne seulement les sections gerees afin de conserver resolution, son, reseau et commandes du joueur.
 
 Les extensions `TexEnvCombine4NV`, `DepthClampNV` et `TextureShaderNV` sont activees uniquement lorsque la carte active est NVIDIA. Intel, AMD et les cartes non identifiees restent sur les options generiques ARB. Cette detection par fournisseur est une securite initiale ; un futur assistant graphique devra tester la creation du contexte et les extensions reelles.
+
+Le coeur 4.09m conserve un detecteur de capacites concu pour les GPU du debut
+des annees 2000. Son chemin Perfect accepte notamment l'extension
+`GL_NV_texture_shader`. Sur l'Intel UHD 620, le pilote 31.0.101.2141 expose
+OpenGL 4.6 et les programmes de shaders ARB, mais pas cette extension NVIDIA ;
+le moteur imprime donc deux avis Perfect meme avec un profil Excellent valide.
+Ce cas ne doit pas etre masque dans le binaire. Le rapport produit par
+`tools/Test-IL2GraphicsCompatibility.ps1` distingue l'avis historique attendu
+d'une demande Perfect reellement incompatible. Les captures suivantes
+ajouteront automatiquement `graphics-compatibility.json`.
+
+Pour les OS et cartes modernes, la cible est une adaptation par couches : sonde
+OpenGL x86 du contexte reel, selection d'un backend connu, configuration propre
+a ce backend, essai graphique court, puis repli automatique vers OpenGL natif.
+Les DLL x86 du jeu et le chargeur de mods `wrapper.dll` restent separes des
+wrappers graphiques. Aucun profil ne doit deduire la compatibilite Perfect du
+seul nom NVIDIA, AMD ou Intel.
 
 Profils prevus :
 
@@ -192,6 +292,201 @@ Documentation des candidats : [dgVoodoo2](https://dgvoodoo2.dege.freeweb.hu/dgVo
 9. Ajuster le tas Java et l'affinite seulement avec mesures de memoire native, tas, frametime et stabilite.
 
 `Files\.preload` contient 417 directives, 412 uniques. Seules 114 correspondent actuellement a une surcharge libre ; les autres peuvent provenir des SFS. Les cinq repetitions ne justifient pas une modification.
+
+### Pause de chargement graphique confirmee
+
+Le dump du passage `20260831-192529Z-profile9-warm-windowed1024-startup`, pris
+pendant une fenetre non repondante juste avant une mission Hawker, fournit une
+premiere attribution native precise. Le thread principal est dans le pilote
+Intel `ig9icd32.dll`, sous `opengl32!glTexImage2D`, avec
+`il2_corep4!BmpUtils_BMP8PalTo4TGA4` dans sa pile. Le moteur convertit donc une
+texture indexee IL-2 puis l'envoie au pilote OpenGL sur son thread principal.
+Pendant cette operation, il ne traite plus les messages Windows et ProcDump
+peut declarer un faux gel apres dix secondes.
+
+Ce resultat ne prouve pas encore quelle texture est la plus couteuse. Les
+prochains collecteurs devront conserver le nom logique demande juste avant
+`BmpUtils`, la taille convertie, le temps de `glTexImage2D` et l'etat du cache.
+La solution recherchera d'abord la suppression des reconversions et envois
+redondants, puis une preconversion ou une precharge ciblee ; un thread OpenGL ne
+sera pas deplace sans verifier les contraintes de contexte du pilote. Le
+detecteur de gel devra aussi appliquer un delai plus long pendant les ecrans de
+chargement qu'en vol.
+
+### Architecture des explosions nucleaires
+
+Les classes `BombLittleBoy` et `BombFatMan` du paquet Silverplate declarent
+toutes deux `newEffect=1`, `nuke=1` et un rayon de 3 200 m. Leurs puissances
+historiques dans le mod sont respectivement `8 000 000` et `13 000 000`.
+`Bomb.doExplosion()` transmet `nuke` au calcul de degats `MsgExplosion`, mais
+transmet `newEffect` a la surcharge a six arguments de `Explosions.generate`.
+Les deux bombes suivent ainsi la meme routine visuelle `bombFatMan_land/water`.
+
+La famille Silverplate cree six systemes de particules `Eff3DActor`. Dans les
+ressources historiques, leurs emetteurs s'arretent entre 1 et 130 secondes et
+les particules principales vivent seulement 30 a 128 secondes. Une pause suivie
+d'une reprise faisait disparaitre le panache. Dans la branche non `ActorLand`,
+la petite explosion restante etait aussi expliquee par un appel explicite a
+`bomb50_land(..., 10.0f)`.
+
+L'inspection du moteur 4.09m montre que `Eff3D` possede un mode temps reel et un
+mode temps de simulation. `GUIWindowManager` suspend `Time`, mais la fabrique
+`Eff3DActor.New(...)` ne force pas le type d'horloge. Le constructeur v1.15
+insere desormais `Eff3D.initSetTypeTimer(false)` avant chacun des douze appels
+terre/eau. Le choix devient deterministe et la pause ne consomme plus la duree
+de simulation du nuage. La capture image par image montre toutefois une seconde
+couche : quand `renderGUI` cede de nouveau le focus au monde 3D, l'emetteur natif
+repart visuellement d'un etat jeune, puis rejoue son age en accelere.
+
+La classe native `Eff3D` expose des methodes protegees `pause(boolean)` et
+`isPaused()` qui ne sont pas appelees par le menu. Un candidat v1.15 a donc
+enregistre les acteurs visuels de Little Boy et Fat Man et surveille toutes les
+25 ms la transition de pause pour appeler `Eff3D.pause(boolean)`. L'essai
+`20260901-131015Z-profile9-warm-windowed1024-startup` invalide ce candidat : le
+panache repart encore apres pause/reprise et il se reinitialise aussi apres un
+demi-tour qui le fait sortir puis rentrer dans le champ de la camera. L'absence
+de message d'echec de reflexion montre que l'appel natif ne suffit pas. Le
+defaut appartient donc au cycle rendu/culling/reconstruction, pas uniquement a
+l'horloge de pause. Cette surveillance n'est pas une correction publiable et
+doit etre retiree ou remplacee.
+
+Le rayon fixe ne constitue pas un modele nucleaire realiste. La v1.15 devra
+appliquer des zones progressives sur la distance tridimensionnelle, avec flash,
+surpression, souffle, secousse et dommages propres aux acteurs. L'onde sera
+retardee selon sa propagation et le calcul groupera les acteurs afin de borner
+le cout CPU. Le B-29 place a 5 000 m au moment de l'impact est le premier cas de
+reference : il doit percevoir l'eclair puis l'onde environ quinze secondes plus
+tard, sans etre detruit automatiquement.
+
+Le prototype v1.15 construit le 31 aout 2026 realise cette architecture sans
+modifier la JVM. `Explosions` conserve les multiplicateurs Zuti et recoit les
+deux surcharges Silverplate. `Explosion.receivedTNT_1meter` retrouve la
+decroissance normale en inverse du carre au lieu d'accorder la puissance totale
+a tous les acteurs de la sphere. `MsgExplosion` delegue les explosions
+nucleaires a `NuclearBlast`, qui effectue une recherche spatiale unique et
+programme le dommage de chaque acteur sur l'horloge de simulation avec un delai
+`distance / 343` secondes. Les avions de la zone exterieure recoivent une
+impulsion de vitesse bornee au meme instant.
+
+Little Boy est configuree a 15 kt, 4 400 kg et 600 m AGL ; Fat Man a 21 kt,
+4 670 kg et 503 m AGL. Les hauteurs et rendements sont recoupes avec le
+[National Park Service](https://home.nps.gov/articles/000/the-atomic-bombings-of-hiroshima-and-nagasaki.htm)
+et le [Department of Energy](https://www.energy.gov/sites/default/files/maprod/documents/DE99001330.pdf).
+Les rayons IL-2 de 2 150 et 2 360 m correspondent approximativement a la zone
+2 psi apres application de la racine cubique du rendement et de la geometrie de
+l'explosion aerienne. La table 10 kt utilisee est celle du
+[guide HHS REMM](https://remm.hhs.gov/PlanningGuidanceNuclearDetonation.pdf) ;
+la mise a l'echelle est documentee par
+[OSTI](https://www.osti.gov/servlets/purl/4114321-vb7jLn/).
+
+Les limites sont volontaires et doivent rester visibles : la zone 1 a 0,5 psi
+et l'impulsion transmise a l'avion sont des approximations de jouabilite, le
+flash n'inflige pas encore de brulure thermique et aucun rayonnement ionisant
+n'est simule. Les airbursts ne creent pas de cratere. L'ensemble est construit
+par `tools/Build-OpenSturmovikNuclearPatch.ps1`, verifie sans API Java recente,
+force en major 47 et decrit par
+`manifests/effects/nuclear-blast-v1.15.json`.
+
+L'essai reel Little Boy sans pause du 1er septembre 2026 valide l'ABI corrigee
+`Tuple3d.add(Tuple3d)` : le flash, le nuage et le panache s'executent sans gel,
+le processus reste repondant et quitte avec le code zero. La pause/reprise fait
+en revanche disparaitre le panache presque immediatement, alors qu'il persiste
+plus d'une minute sans pause. La session
+`20260901-060621Z-profile9-warm-windowed1024-startup` precise le symptome : une
+grande masse visible avant le menu revient comme une petite sphere a la premiere
+image de reprise, puis retrouve son volume en environ 5,5 secondes. Le processus
+reste repondant, autour de 627 Mio prives, sans pic CPU ni erreur Java. Cette
+anomalie concerne le cycle natif de rendu des particules et non l'arrivee
+retardee de l'onde.
+
+La campagne la plus recente confirme cette distinction. Little Boy reproduit
+la remise a zero visuelle apres pause et apres sortie du champ ; Fat Man termine
+un essai simple sans gel. Un stress de seize B-29 larguant Fat Man contre seize
+chasseurs termine sans ralentissement en vol signale par le pilote. Apres
+armement, le processus atteint environ 733 Mio prives et 2 034 Mio virtuels.
+Ces resultats valident la compatibilite de base et la tenue de ce scenario, pas
+la duree d'une mission dense ni la preservation du panache.
+
+Le cycle visuel candidat suit trois reperes physiques. Pour Little Boy, le
+[National Park Service](https://home.nps.gov/articles/000/the-atomic-bombings-of-hiroshima-and-nagasaki.htm)
+place le diametre maximal de la boule de feu et le debut du champignon environ
+une seconde apres la detonation. Le chapitre II de
+[The Effects of Nuclear Weapons](https://www.atomicarchive.com/resources/documents/effects/glasstone-dolan/chapter2.html)
+decrit la montee, la circulation toroidale, les vents convergents, une
+stabilisation vers dix minutes et une visibilite d'environ une heure ou plus.
+Open Sturmovik represente donc la formation pendant 600 secondes de simulation
+et la persistance du nuage stabilise jusqu'a 3 600 secondes. Le moteur 4.09m
+plafonne cependant `nParticles` a 512 par emetteur et `LiveTime` a 128 s. Le
+modele ne depasse jamais ces valeurs : les emetteurs de montee renouvellent
+leurs pools pendant dix minutes, puis une action sur l'horloge de simulation
+cree a haute altitude un emetteur stabilise de 512 particules, actif de la
+dixieme minute a la premiere heure. Le maximum theorique vaut 1 544 particules
+au depart sur terre et 1 288 sur l'eau, puis 2 056/1 800 durant le recouvrement
+de transition. Le nombre instantane de particules est ainsi borne et les
+valeurs ne sont pas silencieusement tronquees. Cela ne garantit cependant pas
+la destruction des acteurs qui portent ces emetteurs. Il s'agit d'une
+approximation macroscopique, pas d'une simulation de dynamique des fluides.
+
+L'inspection de `Eff3DActor` ajoute une contrainte de duree de vie. Un acteur
+cree avec une duree de processus negative ne programme pas sa propre fin. Cinq
+des six acteurs initiaux de chaque detonation, puis l'acteur stabilise, utilisent
+actuellement `-1`. La liste partagee de surveillance conserve en outre chaque
+acteur encore valide et se reveille toutes les 25 ms. Une mission a seize
+explosions peut donc conserver au moins quatre-vingts acteurs initiaux apres le
+flash, avant meme les nuages stabilises. C'est un risque statique de retention
+et de cout de surveillance, pas encore une fuite memoire prouvee : le prochain
+test long devra compter les acteurs et verifier leur destruction.
+
+Enfin, la reference d'altitude du nuage stabilise est actuellement de 5 000 m
+pour 10 kt avant mise a l'echelle. Elle produit environ 5,7 km pour Little Boy
+et 6,4 km pour Fat Man, tres en dessous des 40 000 a 50 000 pieds documentes
+pour le maximum historique vers dix minutes. Le rendu stabilise doit donc etre
+recalibre vers environ 12 a 15 km, puis valide visuellement sans creer une
+transition brutale ni depasser les limites x86.
+
+Le modele physique actuel s'arrete apres une impulsion radiale unique appliquee
+par `ShockAction`. Le fichier d'effet du panache ne represente aucun volume
+atmospherique : y entrer plus tard ne produit ni vent, ni ascendance, ni
+turbulence. L'extension prevue devra enregistrer une zone temporaire par
+explosion et l'actualiser a faible frequence sur l'horloge de simulation. Elle
+combinera un vent radial decroissant, une colonne ascendante, une couronne
+descendante et un bruit turbulent borne. La recherche des avions devra etre
+spatiale, la force plafonnee et le cout independant du nombre de particules.
+Ce modele restera une approximation macroscospique adaptee au moteur IL-2, pas
+une simulation CFD.
+
+### Audit transversal des effets et des nuages
+
+Les mecanismes `Eff3D`, les horloges, les limites de particules, le vent et le
+chargement des textures sont partages par de nombreuses ressources. Toute
+anomalie decouverte pendant les essais nucleaires sera donc recherchee dans les
+bombes conventionnelles, explosions, incendies, fumigenes, fumee des moteurs,
+trainees, poussieres et effets navals. Une correction commune ne sera generalisee
+qu'apres un controle negatif et une mesure CPU, GPU, memoire et temps d'image.
+
+Deux contraintes sont deja confirmees comme globales pour les classes d'effet
+`TParticlesSystemParams` et `TSmokeSpiralParams` de la 4.09m : `nParticles` est
+borne a 512 par emetteur et `LiveTime` a 128 secondes par particule ; la
+transition de transparence ne peut pas depasser la vie effective. Ces limites
+s'appliquent donc aux bombes, explosions, fumees, incendies, trainees et nuages
+qui utilisent ce moteur. Une duree superieure doit etre representee par un
+emetteur borne qui renouvelle ses particules ou par des phases programmees, pas
+par un nombre que le moteur tronque silencieusement.
+
+Le scan de 5 171 classes de base trouve seulement deux references a
+`Eff3D.initSetTypeTimer` : sa propre declaration et `SmokeGeneric`, qui demande
+le temps reel uniquement dans l'etat de l'editeur. Aucun indice ne justifie donc
+de modifier globalement la fabrique pour toutes les missions. Le correctif
+nucleaire selectionne explicitement le temps de simulation a ses points de
+creation ; l'audit general verifiera chaque famille representative avant toute
+extension.
+
+Un audit distinct couvrira les nuages meteorologiques : apparition a distance,
+transition entre niveaux de detail, chargement progressif, comportement pendant
+la pause et l'acceleration temporelle, interaction avec le vent, anticrenelage,
+cout sur OpenGL natif et wrappers, et stabilite du moteur x86. Cet audit fait
+partie de la comprehension complete du jeu ; seules les corrections prouvees et
+maitrisables seront candidates a la v1.15.
 
 ## Programmes communautaires
 
@@ -335,6 +630,9 @@ Windows, mais elles ne serviront pas seules a qualifier les performances GPU.
 Le premier test limite au menu fournira une borne basse pour CPU, RAM et disque.
 Les valeurs minimales et recommandees ne seront finalisees qu'apres les essais de
 petite mission, grande carte, nombreux appareils et session prolongee.
+Les premieres classes materielles candidates, la distinction Windows x86/x64
+et le protocole 1080p60 sont maintenant consignes dans
+[`CONFIGURATIONS_MATERIELLES_V1.15.md`](CONFIGURATIONS_MATERIELLES_V1.15.md).
 
 ## Limites techniques du moteur et extension de ses capacites
 
@@ -377,6 +675,14 @@ accompagnee d'un profil stable de repli. Repousser un plafond ne sera retenu que
 si le nouveau niveau reste stable et ne deplace pas simplement la panne vers la
 memoire, le rendu, le reseau ou la sauvegarde des missions.
 
+La preservation d'etat des particules suivra la meme regle. Little Boy et Fat
+Man constituent le premier banc parce que leur defaut est capture image par
+image. A terme, le mecanisme devra couvrir toute explosion de bombe, tout
+incendie, fumee, trainee ou poussiere qui reproduit une perte d'etat apres
+pause. La generalisation sera pilotee par un registre d'effets observes, avec
+un seul controleur partage, et non par un correctif global non mesure du menu ou
+du moteur natif.
+
 Les premiers plafonds deja etablis ou fortement encadres sont l'architecture
 32 bits, la version 47 maximale des classes chargeables par la JVM 1.3.1 et le
 cout d'indexation des 89 738 fichiers libres. Le gain reel apporte par Large
@@ -401,10 +707,13 @@ contenu restent a quantifier en execution.
 - [Comparaison des profils](AUDIT_PROFILES.md)
 - [Architecture du moteur](ARCHITECTURE_MOTEUR.md)
 - [Analyse de wrapper.dll](ANALYSE_WRAPPER_DLL.md)
+- [Audit des binaires, memoire x86 et affinite CPU](AUDIT_BINAIRES_X86.md)
 - [Audit et conversion des classes Java](AUDIT_CLASSES_JAVA.md)
+- [Audit des effets et limites 4.09m](AUDIT_EFFETS_409M.md)
 - [Redondance SFS](AUDIT_SFS.md)
 - [Programmes communautaires](AUDIT_OS_PROGRAMS.md)
 - [Performances et wrappers graphiques](PERFORMANCES_ET_WRAPPERS_GRAPHIQUES.md)
+- [Outils de modding, SFS, Buttons et Dump Mode](OUTILS_MODDING_IL2_1946.md)
 
 ## Bibliographie externe commentee
 
@@ -416,6 +725,7 @@ contenu restent a quantifier en execution.
 | Chargeur de mods | [Source IL-2 Selector 3.3.0](https://sourceforge.net/p/il2selector/code/HEAD/tree/trunk/3.3.0/) | Auditer wrapper, cache, lanceur et options memoire |
 | Compilation Windows x86 | [LLVM-MinGW](https://github.com/mstorsjo/llvm-mingw) | Chaine portable reproductible utilisee pour le wrapper cache |
 | Utilisation du Selector | [Manuel IL-2 Selector](https://www.sas1946.com/downloads/essentialsas/selector/IL-2_Selector_Manual.pdf) | Parametres, cache et modes de diagnostic |
+| Extraction ciblee | [IL-2 Selector, fil de publication](https://www.sas1946.com/main/index.php?topic=16403.0) | Dump Mode et journalisation SFS dans un clone de laboratoire |
 | Registres du mod | [Aide SAS aux nouveaux moddeurs](https://www.sas1946.com/main/index.php?topic=50904.0) | Emplacements communautaires de `air.ini`, `stationary.ini`, traductions |
 | Format Java | [JVM Specification — ClassFile](https://docs.oracle.com/javase/specs/jvms/se6/html/ClassFile.doc.html) | Lire correctement en-tetes, versions et constant pool |
 | Memoire x86 | [Microsoft — Memory Limits](https://learn.microsoft.com/en-us/windows/win32/memory/memory-limits-for-windows-releases) | Interpreter Large Address Aware sans confondre espace virtuel et RAM |

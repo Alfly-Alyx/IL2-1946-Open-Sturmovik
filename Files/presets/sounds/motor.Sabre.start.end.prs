@@ -1,3 +1,48 @@
-[samples]
-Sabre_Startup.wav
+[common]
+mode         relobj pos
+type         mixer
+undetune     1
 
+[spl]
+
+
+[samples]
+sabre_startup.wav
+xsabre_startup.wav
+
+[sample.sabre_Startup.wav]
+env 2 8
+infinite 1
+controls start
+
+[sample.sabre_startup.wav.start]
+minlo 0
+minhi 0
+maxlo 300
+maxhi 300
+value 4.0
+pmin  1.0
+pmax  1.0
+
+[sample.xsabre_Startup.wav]
+env 0
+infinite 1
+controls dist
+
+[sample.xsabre_startup.wav.start]
+minlo 0
+minhi 0
+maxlo 300
+maxhi 300
+value 4.0
+pmin  1.0
+pmax  1.0
+
+[sample.xsabre_startup.wav.dist]
+minlo 0
+minhi 0
+maxlo 100
+maxhi 200
+value 4.0
+pmin  1.0
+pmax  1.0

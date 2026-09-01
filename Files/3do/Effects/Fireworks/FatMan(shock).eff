@@ -5,13 +5,14 @@
   Color0 0.5 0.5 0.5 1.0
   Color1 1.0 1.0 1.0 0
   nParticles 128
-  FinishTime 10.0
+  ; The visible condensation front is transient; the physical blast is Java-driven.
+  FinishTime 2.0
   MaxR 32.0
   PhiN 5.0
   PsiN 5.0
-  LiveTime 128.0
+  LiveTime 15.0
   EmitFrq 500.0
-  TranspTransitionTime 120.0f
+  TranspTransitionTime 10.0f
   EmitVelocity 100.0 80.0
   EmitTheta 8.0 18.0
   GasResist 0.0006
