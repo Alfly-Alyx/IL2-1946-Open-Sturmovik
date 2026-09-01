@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-sturmovik.invalid/schemas/error-report-v1.json",
+  "title": "Open Sturmovik anonymized error report",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "reportId",
+    "sessionId",
+    "occurredAtUtc",
+    "product",
+    "event",
+    "fingerprint",
+    "privacy"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "reportId": { "type": "string", "format": "uuid" },
+    "sessionId": { "type": "string", "format": "uuid" },
+    "occurredAtUtc": { "type": "string", "format": "date-time" },
+    "product": {
+      "type": "object",
+      "required": ["gameVersion", "launcherVersion", "manifestSha256"],
+      "properties": {
+        "gameVersion": { "type": "string", "maxLength": 32 },
+        "launcherVersion": { "type": "string", "maxLength": 32 },
+        "manifestSha256": { "$ref": "#/$defs/sha256" },
+        "profileId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{0,63}$" }
+      },
+      "additionalProperties": false
+    },
+    "event": {
+      "type": "object",
+      "required": ["type", "severity", "occurrences"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "missing-texture",
+            "missing-sound",
+            "missing-resource",
+            "java-exception",
+            "native-crash",
+            "integrity-failure",
+            "startup-error",
+            "graphics-error",
+            "audio-error",
+            "other"
+          ]
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["info", "warning", "error", "fatal"]
+        },
+        "occurrences": { "type": "integer", "minimum": 1, "maximum": 1000000 },
+        "resourceKind": {
+          "type": "string",
+          "enum": ["texture", "sound", "effect", "mesh", "class", "config", "other"]
+        },
+        "resourcePath": { "$ref": "#/$defs/relativePath" },
+        "errorCode": { "type": "string", "maxLength": 128 },
+        "message": { "type": "string", "maxLength": 1000 },
+        "module": { "type": "string", "pattern": "^[A-Za-z0-9_.-]{1,128}$" },
+        "stack": {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "type": "object",
+            "required": ["module", "offset"],
+            "properties": {
+              "module": { "type": "string", "pattern": "^[A-Za-z0-9_.-]{1,128}$" },
+              "offset": { "type": "string", "pattern": "^0x[0-9A-Fa-f]{1,16}$" },
+              "symbol": { "type": "string", "maxLength": 256 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "javaStack": {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "type": "object",
+            "required": ["class", "method"],
+            "properties": {
+              "class": { "type": "string", "pattern": "^[A-Za-z0-9_.$]{1,256}$" },
+              "method": { "type": "string", "pattern": "^[A-Za-z0-9_$<>]{1,128}$" },
+              "source": { "type": "string", "pattern": "^[A-Za-z0-9_.-]{1,128}$" },
+              "line": { "type": "integer", "minimum": 1, "maximum": 2147483647 }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "osFamily": { "const": "Windows" },
+        "osVersion": { "type": "string", "pattern": "^[0-9.]{1,32}$" },
+        "architecture": { "type": "string", "enum": ["x86", "x64", "arm64"] },
+        "locale": { "type": "string", "pattern": "^[a-z]{2}(-[A-Z]{2})?$" },
+        "gpuVendor": { "type": "string", "enum": ["NVIDIA", "AMD", "Intel", "Other", "Unknown"] },
+        "gpuDeviceId": { "type": "string", "pattern": "^[0-9A-Fa-f]{4}$" },
+        "gpuDriverVersion": { "type": "string", "pattern": "^[0-9.]{1,64}$" },
+        "audioBackend": { "type": "string", "maxLength": 64 }
+      },
+      "additionalProperties": false
+    },
+    "fingerprint": { "$ref": "#/$defs/sha256" },
+    "privacy": {
+      "type": "object",
+      "required": ["policyVersion", "rawLogIncluded", "memoryDumpIncluded", "redactions"],
+      "properties": {
+        "policyVersion": { "const": 1 },
+        "rawLogIncluded": { "const": false },
+        "memoryDumpIncluded": { "const": false },
+        "redactions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": ["user-name", "machine-name", "absolute-path", "ip-address", "email", "server", "port"]
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[0-9A-Fa-f]{64}$" },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^(?![A-Za-z]:)(?![/\\\\])(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$)).+$"
+    }
+  },
+  "additionalProperties": false
+}

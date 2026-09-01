@@ -1,0 +1,23 @@
+  public void createPilotHotKeys();
+    Code:
+       0: ldc           #1                  // String pilot
+       3: invokestatic  #2                  // Method com/maddox/rts/HotKeyCmdEnv.setCurrentEnv:(Ljava/lang/String;)V
+       6: new           #3                  // class com/maddox/il2/game/AircraftHotKeys$HotKeyCmdFire
+       9: ldc           #4                  // String 1basic01
+      12: ldc           #5                  // String ElevatorUp
+      15: invokespecial #6                  // Method com/maddox/il2/game/AircraftHotKeys$HotKeyCmdFire."<init>":(Lcom/maddox/il2/game/AircraftHotKeys;Ljava/lang/String;Ljava/lang/String;II)V
+      18: invokestatic  #7                  // Method com/maddox/rts/HotKeyCmdEnv.addCmd:(Lcom/maddox/rts/HotKeyCmd;)V
+      21: new           #8                  // class com/maddox/il2/game/AircraftHotKeys$1
+      24: ldc           #9                  // String $$$internal
+      27: ldc           #10                 // String 1basic99
+      30: invokespecial #11                 // Method com/maddox/il2/game/AircraftHotKeys$1."<init>":(Lcom/maddox/il2/game/AircraftHotKeys;ZLjava/lang/String;Ljava/lang/String;)V
+      33: invokestatic  #7                  // Method com/maddox/rts/HotKeyCmdEnv.addCmd:(Lcom/maddox/rts/HotKeyCmd;)V
+
+  public void createPilotHotMoves();
+    Code:
+       0: ldc           #12                 // String move
+       3: invokestatic  #2                  // Method com/maddox/rts/HotKeyCmdEnv.setCurrentEnv:(Ljava/lang/String;)V
+       6: new           #13                 // class com/maddox/il2/game/AircraftHotKeys$HotKeyCmdFireMove
+       9: ldc           #14                 // String -power
+      12: invokespecial #15                 // Method com/maddox/il2/game/AircraftHotKeys$HotKeyCmdFireMove."<init>":(Lcom/maddox/il2/game/AircraftHotKeys;Ljava/lang/String;Ljava/lang/String;II)V
+      15: invokestatic  #7                  // Method com/maddox/rts/HotKeyCmdEnv.addCmd:(Lcom/maddox/rts/HotKeyCmd;)V

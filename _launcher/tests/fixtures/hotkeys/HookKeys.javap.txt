@@ -1,0 +1,19 @@
+  private void initSnapKeys();
+    Code:
+       0: ldc           #1                  // String SnapView
+       2: astore_1
+       3: new           #2                  // class com/maddox/il2/game/HookKeys$1
+       6: ldc           #3                  // String Snap_0_0
+       9: ldc           #4                  // String 01
+      12: invokespecial #5                  // Method com/maddox/il2/game/HookKeys$1."<init>":(Lcom/maddox/il2/game/HookKeys;ZLjava/lang/String;Ljava/lang/String;)V
+      15: invokestatic  #6                  // Method com/maddox/rts/HotKeyCmdEnv.addCmd:(Ljava/lang/String;Lcom/maddox/rts/HotKeyCmd;)V
+
+  private void initPanKeys();
+    Code:
+       0: ldc           #7                  // String PanView
+       2: astore_1
+       3: new           #8                  // class com/maddox/il2/game/HookKeys$27
+       6: ldc           #9                  // String PanReset
+       9: ldc           #10                 // String 01
+      12: invokespecial #11                 // Method com/maddox/il2/game/HookKeys$27."<init>":(Lcom/maddox/il2/game/HookKeys;ZLjava/lang/String;Ljava/lang/String;)V
+      15: invokestatic  #6                  // Method com/maddox/rts/HotKeyCmdEnv.addCmd:(Ljava/lang/String;Lcom/maddox/rts/HotKeyCmd;)V

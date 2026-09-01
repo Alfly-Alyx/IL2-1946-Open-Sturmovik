@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "source": "IL-2 log.lst",
+  "status": "observed-and-testable",
+  "patterns": [
+    {
+      "id": "sound-preset-load-failed",
+      "regex": "^Cannot load sound preset (?<resource>.+?)(?: \\((?<detail>.+)\\))?$",
+      "eventType": "missing-sound",
+      "severity": "error",
+      "resourceKind": "sound",
+      "resourceCapture": "resource",
+      "errorCode": "SOUND_PRESET_LOAD_FAILED"
+    },
+    {
+      "id": "no-files",
+      "regex": "^warning: no files\\s*:\\s*(?<resource>.+)$",
+      "eventType": "missing-resource",
+      "severity": "warning",
+      "resourceKind": "other",
+      "resourceCapture": "resource",
+      "classifier": "audio-path",
+      "errorCode": "RESOURCE_SET_EMPTY"
+    },
+    {
+      "id": "texture-load-failed",
+      "regex": "^(?:INTERNAL ERROR:\\s*)?Texture:\\s*Can't load '(?<resource>[^']+)'$",
+      "eventType": "missing-texture",
+      "severity": "error",
+      "resourceKind": "texture",
+      "resourceCapture": "resource",
+      "errorCode": "TEXTURE_LOAD_FAILED"
+    },
+    {
+      "id": "material-load-failed",
+      "regex": "^(?:INTERNAL ERROR:\\s*)?Material:\\s*Can't load '(?<resource>[^']+)'$",
+      "eventType": "missing-resource",
+      "severity": "error",
+      "resourceKind": "other",
+      "resourceCapture": "resource",
+      "errorCode": "MATERIAL_LOAD_FAILED"
+    },
+    {
+      "id": "resource-preload-failed",
+      "regex": "^Preload resource (?<resource>\\S+) failed:\\s*(?<detail>.+)$",
+      "eventType": "missing-resource",
+      "severity": "error",
+      "resourceKind": "mesh",
+      "resourceCapture": "resource",
+      "errorCode": "RESOURCE_PRELOAD_FAILED"
+    },
+    {
+      "id": "sfs-file-missing",
+      "regex": "^com\\.maddox\\.rts\\.SFSException: No such file or directory:\\s*(?<resource>.+)$",
+      "eventType": "missing-resource",
+      "severity": "error",
+      "resourceKind": "config",
+      "resourceCapture": "resource",
+      "errorCode": "SFS_FILE_NOT_FOUND"
+    },
+    {
+      "id": "hiermesh-chunk-missing",
+      "regex": "^INTERNAL ERROR: HierMesh: Can't find chunk '(?<detail>[^']+)'$",
+      "eventType": "missing-resource",
+      "severity": "error",
+      "resourceKind": "mesh",
+      "errorCode": "HIERMESH_CHUNK_NOT_FOUND"
+    },
+    {
+      "id": "internal-error",
+      "regex": "^INTERNAL ERROR:\\s*(?<detail>.+)$",
+      "eventType": "other",
+      "severity": "error",
+      "errorCode": "IL2_INTERNAL_ERROR"
+    },
+    {
+      "id": "explicit-error",
+      "regex": "^(?:ERROR|FATAL):\\s*(?<detail>.+)$",
+      "eventType": "other",
+      "severity": "error",
+      "errorCode": "IL2_EXPLICIT_ERROR"
+    }
+  ],
+  "limitations": [
+    "Only messages written to log.lst are visible to this collector.",
+    "Native loader hooks are still required for failures that the engine does not log.",
+    "Every newly observed message form must receive a fixture before activation."
+  ]
+}

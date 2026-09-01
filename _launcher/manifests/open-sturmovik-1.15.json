@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "product": {
+    "id": "open-sturmovik",
+    "name": "Open Sturmovik",
+    "targetVersion": "4.09m",
+    "packageVersion": "1.15"
+  },
+  "defaults": {
+    "profile": "open-sturmovik-409m-classic",
+    "visualQuality": "secured-x86",
+    "viewMode": "classic",
+    "realism": []
+  },
+  "profiles": [
+    {
+      "id": "open-sturmovik-409m-classic",
+      "userLabel": "Open Sturmovik 4.09m",
+      "availability": "available",
+      "files": [
+        {
+          "source": "_Game Switchers/4.09finalModsON(No-6DoF)/files.SFS",
+          "target": "files.SFS",
+          "size": 24126259,
+          "sha256": "18F3C5471D93642916394DE53B482051106E024DDAC8124C7B0D700D1796B05A"
+        },
+        {
+          "source": "_Game Switchers/4.09finalModsON(No-6DoF)/il2fb.exe",
+          "target": "il2fb.exe",
+          "size": 348160,
+          "sha256": "68C78F7F981BDDF4B6FB3A6FF901B59115AE7B3D953B8F53121E6BE5B8A65584"
+        },
+        {
+          "source": "_Game Switchers/4.09finalModsON(No-6DoF)/wrapper.dll",
+          "target": "wrapper.dll",
+          "size": 233472,
+          "sha256": "8B6091C38F1241F2CB7D4EAF239DE662A2C862B57B14D7ACA9074C5C37A03F78"
+        }
+      ]
+    },
+    {
+      "id": "open-sturmovik-409m-6dof",
+      "userLabel": "Open Sturmovik 4.09m avec vue cockpit 6DOF",
+      "availability": "blocked",
+      "reason": "Les sources 6DOF retrouvees sont identiques aux sources de la vue classique. Un profil distinct doit etre retrouve et valide.",
+      "files": [
+        {
+          "source": "_Game Switchers/4.09final_ModsON+6DoF/files.SFS",
+          "target": "files.SFS",
+          "size": 24126259,
+          "sha256": "18F3C5471D93642916394DE53B482051106E024DDAC8124C7B0D700D1796B05A"
+        },
+        {
+          "source": "_Game Switchers/4.09final_ModsON+6DoF/il2fb.exe",
+          "target": "il2fb.exe",
+          "size": 348160,
+          "sha256": "68C78F7F981BDDF4B6FB3A6FF901B59115AE7B3D953B8F53121E6BE5B8A65584"
+        },
+        {
+          "source": "_Game Switchers/4.09final_ModsON+6DoF/wrapper.dll",
+          "target": "wrapper.dll",
+          "size": 233472,
+          "sha256": "8B6091C38F1241F2CB7D4EAF239DE662A2C862B57B14D7ACA9074C5C37A03F78"
+        }
+      ]
+    }
+  ],
+  "visualQuality": [
+    {
+      "id": "secured-x86",
+      "order": 1,
+      "userLabel": "Haute qualite securisee x86",
+      "summary": "Textures compressees, effets moderes et marge memoire pour le moteur 32 bits.",
+      "availability": "available",
+      "source": "_Game Switchers/conf.max.ini"
+    },
+    {
+      "id": "enhanced",
+      "order": 2,
+      "userLabel": "Qualite amelioree",
+      "summary": "Palier intermediaire a mesurer en mission.",
+      "availability": "research",
+      "reason": "Les valeurs et le budget memoire doivent encore etre valides."
+    },
+    {
+      "id": "maximum",
+      "order": 3,
+      "userLabel": "Qualite maximale",
+      "summary": "Intention visuelle maximale, reservee aux backends certifies.",
+      "availability": "research",
+      "reason": "Le mode Perfect, l'eau et la consommation x86 doivent encore etre certifies par GPU."
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "realism.negative-g-tolerance",
+      "category": "realism",
+      "userLabel": "Limiter la tolerance aux G negatifs",
+      "summary": "Rendre les contraintes moteur sous G negatifs plus exigeantes.",
+      "availability": "research",
+      "reason": "Les valeurs AOC cibles et leur politique de synchronisation client/serveur restent a valider."
+    },
+    {
+      "id": "view.mode",
+      "category": "view",
+      "userLabel": "Mode de vue cockpit",
+      "availability": "available",
+      "options": [
+        {
+          "id": "classic",
+          "userLabel": "Vue classique",
+          "availability": "available",
+          "profile": "open-sturmovik-409m-classic"
+        },
+        {
+          "id": "six-dof",
+          "userLabel": "Vue cockpit 6DOF",
+          "availability": "blocked",
+          "profile": "open-sturmovik-409m-6dof",
+          "reason": "Les fichiers 6DOF actuellement disponibles ne different pas du profil classique."
+        }
+      ]
+    }
+  ],
+  "keyMapping": {
+    "availability": "research",
+    "playerFilePattern": "Users/{pilot}/settings.ini",
+    "preserveUnknownEntries": true,
+    "backupBeforeWrite": true,
+    "catalogues": [
+      "_launcher/manifests/hotkeys-4.09m-modified.json"
+    ],
+    "reason": "Un catalogue statique de 282 commandes est disponible. Une base 4.09m strictement d'origine reste necessaire pour distinguer avec certitude les commandes historiques de celles ajoutees par les mods."
+  },
+  "integrity": {
+    "algorithms": ["size", "sha256"],
+    "quickTargets": ["files.SFS", "il2fb.exe", "wrapper.dll"],
+    "extendedValidator": "tools/Test-OpenSturmovikContent.ps1",
+    "protectedPlayerPaths": [
+      "Users/**",
+      "Missions/**",
+      "PaintSchemes/**",
+      "Screenshots/**"
+    ],
+    "repair": {
+      "mode": "transactional",
+      "requiresConfirmation": true,
+      "verifyStaging": true,
+      "verifyResult": true,
+      "rollbackOnFailure": true
+    }
+  },
+  "il2SetupCompatibility": {
+    "replacementFileName": "il2setup.exe",
+    "legacyContract": "_launcher/manifests/il2setup-1.0.0.2.json",
+    "configurationFile": "conf.ini",
+    "presetCatalogue": "il2setup.ini",
+    "transactionalWrites": true,
+    "preserveUnknownKeys": true
+  },
+  "errorReporting": {
+    "availability": "research",
+    "schema": "_launcher/manifests/error-report.schema.json",
+    "collectorManifest": "_launcher/manifests/diagnostic-patterns.json",
+    "logCollector": "_launcher/tools/Convert-IL2LogToEvents.ps1",
+    "automaticUploadRequiresConsent": true,
+    "canDisable": true,
+    "canPreview": true,
+    "canDeletePending": true,
+    "includeRawLogs": false,
+    "includeMemoryDumpsAutomatically": false,
+    "transport": "https-relay-github-app",
+    "githubPermissions": ["issues:write"],
+    "reason": "Les collecteurs, l'anonymiseur et le relais doivent être audités avant activation."
+  }
+}
