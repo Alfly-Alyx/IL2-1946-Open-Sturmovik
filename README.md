@@ -46,7 +46,7 @@ Le selecteur fusionne ensuite `_Game Switchers\conf.max.ini` dans le `conf.ini` 
 
 - [Dossier technique vivant : fonctionnement, attentes et regles de l'add-on](docs/DOSSIER_TECHNIQUE_IL2_1946.md)
 - [Redondance entre SFS et fichiers libres](docs/AUDIT_SFS.md)
-- [Etat des quatorze groupes d'utilitaires de `_OS_Programs`](docs/AUDIT_OS_PROGRAMS.md)
+- [Audit, tri et classement des outils externes](docs/AUDIT_OS_PROGRAMS.md)
 - [Compatibilite des versions 4.07m a 4.15.1m](docs/VERSION_COMPATIBILITY.md)
 - [Preparation du prochain test v1.15](docs/PREPARATION_PROCHAIN_TEST_V1.15.md)
 - [Comparaison des neuf profils 4.08/4.09](docs/AUDIT_PROFILES.md)
@@ -67,7 +67,7 @@ Le selecteur fusionne ensuite `_Game Switchers\conf.max.ini` dans le `conf.ini` 
 - [Catalogue des mods historiques et sources All Aircraft Arcade](docs/CATALOGUE_MODS_HISTORIQUES.md)
 - [Etat de reprise technique de la v1.15 pour continuer dans une nouvelle session](docs/ETAT_REPRISE_V1.15.md)
 
-Les utilitaires de `_OS_Programs` n'ont pas ete modifies ni lances pendant l'audit. Aucun n'est active automatiquement dans la version 1.15.
+Des lancements controles ont ete effectues uniquement dans une copie de travail. IL2 Connect et VoiceOverlay ont ensuite ete retires faute d'usage recent identifiable. Les programmes conserves sont repartis entre `_Utilities`, `_Game_Enhancements` et `_Runtime_Addons` ; aucun n'est active automatiquement dans la version 1.15.
 
 ## Developpement ulterieur
 

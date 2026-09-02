@@ -490,7 +490,7 @@ maitrisables seront candidates a la v1.15.
 
 ## Programmes communautaires
 
-Les quatorze groupes de `_OS_Programs` ont ete inventories statiquement. Aucun n'est active automatiquement. Les programmes incompatibles restent presents et inchanges, conformement a la decision du mainteneur. Une integration future devra documenter pour chaque outil : version, source, licence, fichiers ecrits, droits requis, version IL-2 compatible, conflit potentiel avec `conf.ini` et procedure de retour arriere.
+Les quatorze groupes de l'ancien `_OS_Programs` ont ete inventories. IL2 Connect et VoiceOverlay ont ete retires faute d'usage recent identifiable. Les outils conserves sont maintenant repartis entre `_Utilities` pour la creation, la configuration, la consultation et les services communautaires, `_Game_Enhancements` pour San FOV et `_Runtime_Addons` pour Gapa. Ce dernier classement reste provisoire jusqu'aux essais fonctionnels. Aucun outil n'est active automatiquement. Une integration future devra documenter pour chaque outil : version, source, licence, fichiers ecrits, droits requis, version IL-2 compatible, conflit potentiel avec `conf.ini` et procedure de retour arriere.
 
 Le forum [SAS 1946](https://www.sas1946.com/main/index.php) demeure une source communautaire majeure. Son [guide d'introduction au modding](https://www.sas1946.com/main/index.php?topic=50904.0) rappelle notamment le role de `air.ini`, `stationary.ini`, `technics.ini` et des fichiers de traduction. Ces informations communautaires doivent toujours etre recoupees avec les binaires et le profil 4.09m reellement livres.
 
