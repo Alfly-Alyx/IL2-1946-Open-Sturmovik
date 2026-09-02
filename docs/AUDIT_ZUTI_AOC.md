@@ -1,6 +1,6 @@
 # Audit Zuti MDS 1.13 et Mod AOC Public
 
-Derniere mise a jour : 1er septembre 2026.
+Derniere mise a jour : 2 septembre 2026.
 
 Ce document distingue la presence des fichiers, leur chargement reel et les
 fonctions qui restent a tester. La cible est Open Sturmovik v1.15 sur IL-2 1946
@@ -14,8 +14,11 @@ transpose sans nouvel audit.
 - Les textes d'interface, exemples de missions et deux outils Zuti sont presents.
 - La classe `ZutiTimer_ExtendPlanesWings` livree provoquait une
   `ClassCastException`. Une surcharge libre minimale et reversible la corrige ;
-  elle doit encore etre validee pendant au moins dix minutes au menu puis dans
-  une mission MDS.
+  l'essai MDS du 2 septembre n'a produit aucune nouvelle exception Zuti pendant
+  plus de dix minutes.
+- L'essai runtime valide les bases capturables, les unites mobiles, le retour au
+  menu et l'arret du minuteur radar. Le radar joue, les limites d'appareils, le
+  R/R/R et la parite serveur/client restent a tester.
 - Le chargeur du **Mod AOC Public 1a** s'execute, mais cela ne prouve pas que le
   mod agit sur le modele de vol. L'analyse du bytecode montre au contraire que
   neuf parametres sur dix ne possedent aucun consommateur Java ou natif trouve.
@@ -51,6 +54,31 @@ d'appareils et le rearmement/ravitaillement/reparation. La fonction a ensuite
 ete integree au jeu officiel 4.10 ; la [presentation MDS de Mission4Today](https://www.mission4today.com/index.php?kid=715&name=Knowledge_Base&op=show)
 decrit cette filiation.
 
+### Activation dans les missions
+
+Zuti est une modification globale du moteur : ses classes sont disponibles tant
+que le mod est installe. Il ne convertit cependant pas automatiquement toutes
+les missions en missions MDS. Les bases capturables, stocks, limites d'appareils,
+radars, objectifs et actions de rearmement/ravitaillement/reparation demandent
+des sections et objets MDS dans le fichier de mission.
+
+Une partie de l'initialisation reste globale. La mission rapide standard
+`Quick/SlovakiaRedNone00.mis` du 2 septembre a demarre puis arrete
+`ZutiTimer_RadarsCountRefresh`, alors qu'elle n'etait pas une mission MDS de
+demonstration. Zuti impose donc un petit cout et une surface de compatibilite a
+toutes les missions du profil actif, meme lorsque ses fonctions visibles ne sont
+pas utilisees. Aucun ralentissement perceptible ni effet de gameplay parasite
+n'a cependant ete demontre dans cette mission standard.
+
+En solo, l'interet est reel seulement pour les missions preparees pour MDS :
+champ de bataille mobile, bases changeant de camp, radar, ressources et R/R/R.
+Une campagne ou mission classique ne devient ni dynamique ni persistante par la
+seule presence de Zuti. Le conditionnement recommande est donc de le conserver
+dans le profil principal si une campagne de missions classiques confirme sa
+neutralite. Une option de desactivation doit rester disponible pour le diagnostic,
+les conflits de classes et un profil strictement d'origine ; elle n'a pas besoin
+d'etre le choix solo par defaut.
+
 ### Composants charges
 
 Le dernier dump contient 30 classes nommees Zuti :
@@ -84,6 +112,10 @@ reproductible. Au 1er septembre 2026, il obtient **7 PASS, 2 WARN et 0 FAIL** :
 outils et correctif `ExtendPlanesWings` coherents. Les deux avertissements sont le
 test runtime MDS encore necessaire et l'autorisation de redistribution absente.
 Le rapport machine est `manifests/mods/zuti-mds-1.13-static.json`.
+
+L'avertissement runtime de ce rapport statique est maintenant partiellement
+leve par l'essai du 2 septembre ci-dessous. Le manifeste n'est pas reecrit a la
+main : le validateur devra etre etendu pour integrer une preuve runtime separee.
 
 ### Outils presents
 
@@ -135,6 +167,41 @@ simplement le fil en daemon masquerait l'attente finale, mais ne reparerait ni
 une tache qui fuit entre deux missions, ni le declencheur du largage. Aucun
 patch de cette classe n'est livre avant validation du scenario A/B.
 
+L'essai du 2 septembre 2026 montre le cycle normal attendu : le minuteur radar
+s'est arrete a 18:43:17, le journal Java s'est termine a 18:44:41 et le processus
+n'est pas reste bloque dans `DestroyJavaVM`. Windows a toutefois enregistre a
+18:44:44 un `APPCRASH` `0xc0000005` dans `combase.dll`. Ce plantage de sortie
+existait deja dans plusieurs captures sans cette mission ; il demeure une
+anomalie distincte et ne doit pas etre attribue au minuteur Zuti.
+
+### Essai runtime du 2 septembre 2026
+
+La mission de controle est :
+
+`Missions/Single/US/A-20C/Zuti MDS 1.13 - test 10 minutes.mis`
+
+La capture complete est conservee dans :
+
+`test-results/startup/20260902-161718Z-profile9-warm-windowed1024-startup`
+
+Resultats observes et journalises :
+
+- plus de dix minutes de fonctionnement reel, jeu repondant ;
+- deux changements de camp de base enregistres et visibles en jeu ;
+- navires et unites IA mobiles engages, avec 1 332 evenements de dommages ;
+- zero `ClassCastException`, exception Zuti ou erreur `ZutiTimer` pendant la
+  mission ;
+- echec de l'objectif de bombardement attendu, sans rapport avec la sante de
+  Zuti ;
+- retour au menu, arret explicite du minuteur radar et liberation d'environ
+  140 Mio de memoire de travail ;
+- fermeture sans fuite de minuteur, mais avec l'`APPCRASH` de sortie distinct
+  decrit ci-dessus.
+
+Verdict : **fonctionnel pour les bases capturables, les unites mobiles et le
+cycle de vie teste**. Ce verdict n'etend pas la validation aux fonctions non
+exercees.
+
 ### Elements absents ou optionnels
 
 - `ZUTI_Friction.pdf` mentionne par la documentation n'a pas ete retrouve.
@@ -148,14 +215,14 @@ patch de cette classe n'est livre avant validation du scenario A/B.
 
 ### Tests Zuti restant obligatoires
 
-1. Demarrer sans introduction et rester au menu au moins dix minutes : aucune
-   nouvelle exception du minuteur.
-2. Charger une mission MDS fournie et verifier les unites IA mobiles.
-3. Tester une base capturable, un radar, une limite d'appareils et une action R/R/R.
-4. Tester Essex et Akagi : le manuel MDS les annonce compatibles, alors que
+1. Tester le radar en situation de jeu, une limite d'appareils et une action
+   R/R/R complete.
+2. Tester Essex et Akagi : le manuel MDS les annonce compatibles, alors que
    l'introduction actuelle refuse ces types de navires.
-5. Tester un serveur et un client construits depuis le meme manifeste de fichiers.
-6. Lancer le revelateur de conflits dans le laboratoire et archiver son rapport.
+3. Tester un serveur et un client construits depuis le meme manifeste de fichiers.
+4. Lancer le revelateur de conflits dans le laboratoire et archiver son rapport.
+5. Isoler l'`APPCRASH` de fermeture dans `combase.dll` par un essai A/B sans
+   Zuti, puis avec Zuti, sans confondre ce crash natif avec une fuite de minuteur.
 
 ## Mod AOC Public 1a
 
@@ -182,6 +249,15 @@ creation constitue la preuve d'execution du chargeur AOC, pas la preuve d'un
 effet sur la physique. Le fichier genere n'est
 pas recopie automatiquement dans le depot : il s'agit d'un artefact runtime a
 examiner, puis a conserver seulement si une configuration specifique est voulue.
+
+Le 2 septembre 2026, un essai en Bell P-39 Airacobra a cree
+`P-39Q-10_AOC_1a.txt`. Son contenu et son empreinte sont identiques a
+`Defaut.txt`. Cela confirme une nouvelle fois le chargeur et identifie exactement
+le modele de vol P-39Q-10, sans apporter de preuve d'un effet physique. Le meme
+chargement a revele une anomalie distincte : les pools
+`motor.Allison.start.begin`, `motor.Allison.start.end` et le preset
+`motor.Allison_V1700_series` ne se chargent pas. Ce defaut sonore doit etre
+corrige avant de prendre le P-39 comme reference A/B pour AOC.
 
 ### Parametres effectivement raccordes
 

@@ -1,0 +1,201 @@
+[MAIN]
+  MAP Net8Islands/load_v2.ini
+  TIME 12.0
+  CloudType 0
+  CloudHeight 1000.0
+  player r0100
+  army 1
+  playerNum 0
+[MDS]
+  ZutiCarrierSpawnPoints_CV2 6
+  ZutiCarrierSpawnPoints_CV9 5
+  ZutiCarrierSpawnPoints_CVE 2
+  ZutiCarrierSpawnPoints_CVL 7
+  ZutiCarrierSpawnPoints_Akagi 8
+  ZutiCarrierSpawnPoints_IJN 6
+  ZutiCarrierSpawnPoints_HMS 5
+  ZutiNextMission_RedWon
+  ZutiNextMission_BlueWon
+  ZutiNextMission_Difficulty
+  ZutiNextMission_LoadDelay 60
+  ZutiShips_EnableResync 1
+  ZutiTargets_StaticIcons 0
+  ZutiTargets_MovingIcons 1
+  ZutiTargets_CheckForWinner 0
+  ZutiTargets_ShowTargets 1
+  ZutiIcons_IconsSize 4
+  ZutiIcons_ShowNeutralHB 1
+  ZutiRadar_SetRadarToAdvanceMode 0
+  ZutiRadar_ShowAircraft 0
+  ZutiRadar_ShowGroundUnits 0
+  ZutiRadar_ShowRockets 0
+  ZutiRadar_StaticIconsIfNoRadar 0
+  ZutiRadar_AircraftIconsWhite 0
+  ZutiRadar_RefreshInterval 0
+  ZutiRadar_EnableTowerCommunications 1
+  ZutiRadar_ShipsAsRadar 0
+  ZutiRadar_ShipRadar_MaxRange 100
+  ZutiRadar_ShipRadar_MinHeight 100
+  ZutiRadar_ShipRadar_MaxHeight 5000
+  ZutiRadar_ShipSmallRadar_MaxRange 25
+  ZutiRadar_ShipSmallRadar_MinHeight 0
+  ZutiRadar_ShipSmallRadar_MaxHeight 2000
+  ZutiRadar_ScoutsAsRadar 0
+  ZutiRadar_ScoutRadar_MaxRange 2
+  ZutiRadar_ScoutRadar_DeltaHeight 1500
+  ZutiRadar_ScoutRadarType_Red
+  ZutiRadar_ScoutRadarType_Blue
+  ZutiRadar_HideUnpopulatedAirstripsFromMinimap 1
+  ZutiRadar_ScoutGroundObjects_Alpha 5
+  ZutiRadar_ShowPlayerAircraft 1
+  ZutiHud_DisableHudStatistics 0
+  ZutiHud_ShowPilotNumber 0
+  ZutiHud_ShowPilotPing 1
+  ZutiHud_ShowPilotName 1
+  ZutiHud_ShowPilotScore 1
+  ZutiHud_ShowPilotArmy 1
+  ZutiHud_ShowPilotACDesignation 0
+  ZutiHud_ShowPilotACType 1
+  ZutiMisc_DisableAIRadioChatter 0
+  ZutiMisc_DespawnAIPlanesAfterLanding 1
+  ZutiMisc_HidePlayersCountOnHomeBase 0
+  ZutiMisc_EnableReflyOnlyIfBailedOrDied 0
+  ZutiMisc_DisableReflyForMissionDuration 0
+  ZutiMisc_ReflyKIADelay 15
+  ZutiMisc_MaxAllowedKIA 10
+  ZutiMisc_ReflyKIADelayMultiplier 2.0
+  ZutiMisc_BombsCat1_CratersVisibilityMultiplier 1.0
+  ZutiMisc_BombsCat2_CratersVisibilityMultiplier 1.0
+  ZutiMisc_BombsCat3_CratersVisibilityMultiplier 1.0
+  ZutiMisc_BombsCat4_CratersVisibilityMultiplier 1.0
+  ZutiReload_OneMgCannonRearmSecond 10
+  ZutiReload_OneBombFTankTorpedoeRearmSeconds 25
+  ZutiReload_OneRocketRearmSeconds 20
+  ZutiReload_GallonsLitersPerSecond 3
+  ZutiReload_OneWeaponRepairSeconds 3
+  ZutiReload_FlapsRepairSeconds 30
+  ZutiReload_EngineRepairSeconds 90
+  ZutiReload_OneControlCableRepairSeconds 15
+  ZutiReload_OneFuelOilTankRepairSeconds 20
+  ZutiReload_LoadoutChangePenaltySeconds 30
+  ZutiReload_CockpitRepairSeconds 30
+  ZutiReload_ReloadOnlyIfFuelTanksExist 0
+  ZutiReload_ReloadOnlyIfAmmoBoxesExist 0
+  ZutiReload_RepairOnlyIfWorkshopExist 0
+  ZutiReload_OnlyHomeBaseSpecificLoadouts 1
+  ZutiDrop_OverFriendlyHomeBase 0
+  ZutiDrop_OverEnemyHomeBase 0
+  ZutiDrop_OverNeutralHomeBase 0
+  ZutiDrop_OverFriendlyFrictionArea 0
+  ZutiDrop_OverEnemyFrictionArea 1
+  ZutiDrop_OverDestroyGroundArea 1
+  ZutiDrop_OverDefenceGroundArea 1
+  ZutiFront_EnableHomeBaseCapturing 0
+[RespawnTime]
+  Bigship 1800
+  Ship 1800
+  Aeroanchored 1800
+  Artillery 1800
+  Searchlight 1800
+[Wing]
+  r0100
+  g0100
+[r0100]
+  Planes 1
+  Skill 1
+  Class air.A_20C
+  Fuel 100
+  weapons default
+[r0100_Way]
+  TAKEOFF 11090.16 10146.60 0 0 &0
+[g0100]
+  Planes 1
+  Skill 1
+  Class air.JU_88A4
+  Fuel 100
+  weapons default
+[g0100_Way]
+  TAKEOFF 37270.30 43966.32 0 0 &0
+[Chiefs]
+  0_Chief Ships.USSWardDD139 1 0 3 1.0
+  1_Chief Ships.IJNNowakiDD41 2 0 0 99.0
+  2_Chief Ships.USSSaratogaCV3 1 0 3 1.0
+  3_Chief Ships.HMSPoWBB 1 0 3 1.0
+  4_Chief Ships.HMSKingGeorgeVBB 1 0 3 1.0
+  5_Chief Ships.HMSDukeOfYorkBB 1 0 3 1.0
+[0_Chief_Road]
+  19980.38 26347.24 120.00 0 2 18.005556106567383
+  22147.86 28042.95 120.00
+[1_Chief_Road]
+  25000.86 31153.64 120.00 0 2 18.262779235839844
+  23864.91 29958.64 120.00
+[2_Chief_Road]
+  19028.34 26751.96 120.00 0 2 17.61944580078125
+  21636.92 28616.82 120.00
+[3_Chief_Road]
+  23378.01 25838.78 120.00 0 2 14.661667823791504
+  23407.36 27906.37 120.00
+[4_Chief_Road]
+  19878.17 30103.77 120.00 0 2 14.661667823791504
+  21908.83 29493.70 120.00
+[5_Chief_Road]
+  25631.45 27270.31 120.00 0 2 14.661667823791504
+  24334.22 28489.15 120.00
+[NStationary]
+  0_Static ships.Ship$RwyTransp 0 22687.07 28868.13 360.00 0.0 0 2 1.0
+[Buildings]
+  0_bld House$AirdromeRadar1 1 10990.32 11148.82 360.00
+  1_bld House$AirdromeRadar1 1 36400.81 43699.82 360.00
+[Target]
+  0 0 0 0 500 26216 31408 0 0 1_Chief 25000 31153
+  5 0 0 0 500 20151 25600 0 0 0_Chief 19980 26347
+[BornPlace]
+  3 2900 22687 28868 1 3000 300 0 0 1 0 5000 50 1 0 0 1 0 3.8 0
+  1 3000 10715 11085 1 1000 200 0 0 1 0 5000 50 0 1 0 0 1 2.0 0
+  2 3000 36452 43966 1 1000 200 0 0 1 0 5000 50 0 1 0 0 1 2.0 0
+  1 500 19028 26751 1 1000 200 0 0 1 0 5000 50 0 1 1 0 0 3.8 0
+[MDS_BornPlace_22687_28868_CapturedAc_Red]
+  F6F-5 20
+[MDS_BornPlace_22687_28868_CapturedAc_Blue]
+  A6M5c 20
+[MDS_BornPlace_22687_28868_Countries]
+  None
+[MDS_BornPlace_22687_28868_RRR]
+  0 10 25 20 30 1 0 3 0 90 15 30 3 30 20 0
+[BornPlace1]
+  CorsairMkII 5 0 7 8
+  F6F-5 5 0 3 7 25
+[MDS_BornPlace_10715_11085_Countries]
+  None
+  RAAF
+  USN
+[MDS_BornPlace_10715_11085_RRR]
+  0 10 25 20 30 1 0 3 0 90 15 30 3 30 20 0
+[BornPlace2]
+  Ki-84-Ib 10 0 2 3
+  Ki-100-I-Ko 10 0 1
+[MDS_BornPlace_36452_43966_RRR]
+  1 1 1 1 1 1 0 10 0 4 4 4 1 4 4 0
+[MDS_BornPlace_36452_43966_Countries]
+  IJA
+  None
+[MDS_BornPlace_36452_43966_RRR]
+  1 1 1 1 1 1 0 10 0 4 4 4 1 4 4 0
+[BornPlace3]
+  F6F-3 5 0 29
+[MDS_BornPlace_19028_26751_Countries]
+  None
+  USN
+[MDS_BornPlace_19028_26751_RRR]
+  0 10 25 20 30 1 0 3 0 90 15 30 3 30 20 0
+[Bridge]
+[House]
+[FrontMarker]
+  FrontMarker0 19962.31 26389.33 1
+  FrontMarker1 25015.92 31206.60 2
+  FrontMarker2 24030.48 28031.05 3
+  FrontMarker3 21013.03 29993.22 3
+  FrontMarker4 24021.91 30003.85 3
+  FrontMarker5 21023.66 27994.39 3
+  FrontMarker6 10793.41 11415.02 1
+  FrontMarker7 36194.58 43674.09 2
