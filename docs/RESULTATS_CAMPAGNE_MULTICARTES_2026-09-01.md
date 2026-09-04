@@ -10,7 +10,7 @@ de test etait :
 
 Le jeu original de reference n'a pas ete modifie. Les traces brutes sont dans :
 
-`test-results/startup/20260901-131015Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260901-131015Z-profile9-warm-windowed1024-startup`
 
 La session a produit 33 050 images (2,63 Gio), les compteurs processus et systeme, le
 journal Java/natif, deux dumps de gel et les evenements Windows. Process Monitor

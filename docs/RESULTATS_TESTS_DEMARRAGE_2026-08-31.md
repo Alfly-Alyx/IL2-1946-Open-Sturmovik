@@ -13,7 +13,7 @@ L'essai a utilise uniquement
 
 Les artefacts complets sont conserves dans :
 
-`test-results/startup/20260831-105746Z-profile9-cold-windowed1024-startup`
+`WIP/captures/startup/20260831-105746Z-profile9-cold-windowed1024-startup`
 
 ## Profil mesure
 
@@ -118,12 +118,12 @@ dernier parametre demandait toujours une fonction reservee au mode Perfect.
 
 La mise a jour du dossier de test a cree la sauvegarde recuperable :
 
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260831-132504`
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-backups\IL 2 Sturmovik 1946 test.sync-backup-20260831-132504`
 
 La normalisation finale des fins de lignes des presets a cree une sauvegarde
 supplementaire :
 
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260831-133554`
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-backups\IL 2 Sturmovik 1946 test.sync-backup-20260831-133554`
 
 Apres activation du profil 9 :
 
@@ -138,7 +138,7 @@ Apres activation du profil 9 :
 Le second lancement a lui aussi atteint le menu, puis Alexis a ferme le jeu
 volontairement. Les artefacts sont conserves dans :
 
-`test-results/startup/20260831-121920Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260831-121920Z-profile9-warm-windowed1024-startup`
 
 Le PC n'avait pas ete redemarre et compilait d'autres projets. Process Monitor
 a donc ete volontairement omis pour ne pas alourdir davantage la machine ; les
@@ -192,7 +192,7 @@ explicitement `LandGeom` selon le fournisseur.
 
 La correction a ete synchronisee dans le dossier de test avec la sauvegarde
 recuperable
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260831-144614`.
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-backups\IL 2 Sturmovik 1946 test.sync-backup-20260831-144614`.
 Le controle final passe 45 verifications sur 45 ; le validateur de contenu reste
 a 15 PASS, un WARN attendu faute de Dump runtime recent et zero FAIL.
 
@@ -201,7 +201,7 @@ a 15 PASS, un WARN attendu faute de Dump runtime recent et zero FAIL.
 Le troisieme lancement a atteint le menu puis Alexis a ferme volontairement le
 jeu. Les artefacts sont conserves dans :
 
-`test-results/startup/20260831-132416Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260831-132416Z-profile9-warm-windowed1024-startup`
 
 | Etape | Heure UTC | Temps depuis le processus | Observation |
 |---|---:|---:|---|
@@ -254,7 +254,7 @@ decrites ci-dessous.
 
 Artefacts :
 
-`test-results/startup/20260831-145400Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260831-145400Z-profile9-warm-windowed1024-startup`
 
 Le profil 9 a atteint le menu puis une mission rapide en B-29. Le passage du
 profil fenetre a `rts/mouseUse=1` a retabli un curseur visible et utilisable. Le
@@ -288,7 +288,7 @@ au largage.
 
 Artefacts :
 
-`test-results/startup/20260831-152135Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260831-152135Z-profile9-warm-windowed1024-startup`
 
 La commande `Ctrl+B` a d'abord ete ajoutee comme seconde liaison de `Weapon3`,
 sans supprimer `Alt+Espace`. Le scenario observe sur la capture est : Boeing
@@ -325,7 +325,7 @@ zero ou un avertissement.
 
 Artefacts :
 
-`test-results/startup/20260831-164731Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260831-164731Z-profile9-warm-windowed1024-startup`
 
 Le meme scenario B-29 Silverplate + Fat Man a ete rejoue avec la classe
 `BombGun` officielle 4.09m. Le gel est identique. Le processus reste
@@ -351,7 +351,7 @@ en maintenant le processus vivant.
 
 Artefacts :
 
-`test-results/startup/20260831-184314Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260831-184314Z-profile9-warm-windowed1024-startup`
 
 `semi-realDropBomb v2.0` a ete restaure et la famille complete de 15 classes
 `Explosions` du paquet Silverplate a ete activee temporairement dans le seul
@@ -388,7 +388,7 @@ aspect sera controle dans un essai dedie.
 
 Artefacts :
 
-`test-results/startup/20260831-192529Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260831-192529Z-profile9-warm-windowed1024-startup`
 
 Le lancement a reuni deux missions B-29 Silverplate et trois missions courtes
 avec des appareils Hawker. Les deux seules bombes atomiques du paquet ont
@@ -457,7 +457,7 @@ Aucun lancement ne sera effectue sans avertir Alexis juste avant.
 
 Artefacts :
 
-`test-results/startup/20260831-222423Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260831-222423Z-profile9-warm-windowed1024-startup`
 
 Little Boy a ete largue depuis le B-29 Silverplate. Le panache apparait vers
 22:31:22 UTC. La fenetre passe definitivement a `Responding=False` a 22:31:34,
@@ -476,7 +476,7 @@ mais moins fortement qu'avant ; ce probleme de particules demeure independant.
 
 Artefacts :
 
-`test-results/startup/20260901-050213Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260901-050213Z-profile9-warm-windowed1024-startup`
 
 La meme session contient deux chargements de
 `Quick/SmolenskRedNone00.mis` et deux largages de Little Boy. Le processus
@@ -564,7 +564,7 @@ premier candidat a ete sauvegarde puis remplace avant tout lancement lorsqu'a
 ete confirmee la limite `512/128` du moteur. La variante finale par emetteur
 phase a ete synchronisee dans le dossier de test avec sauvegarde recuperable
 dans
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260901-080125`.
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-backups\IL 2 Sturmovik 1946 test.sync-backup-20260901-080125`.
 Le controle obtient 16 PASS, un WARN runtime attendu et zero FAIL ; les 46
 controles de preparation passent. Little Boy avec pause, Little Boy sans pause,
 puis Fat Man avec et sans pause restent les controles runtime obligatoires.

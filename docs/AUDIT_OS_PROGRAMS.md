@@ -24,7 +24,7 @@ La cible de compatibilite est celle du depot : Open Sturmovik v1.15 sur IL-2 194
 L'audit a couvert :
 
 - les 14 sous-dossiers initiaux de l'ancien `_OS_Programs` et leurs 18 executables, avant le retrait de 2 dossiers et 3 executables ;
-- les aides locales, README, PDF, RTF et anciens documents Word de `_Guides_&_Manuals` ;
+- les aides locales, README, PDF, RTF et anciens documents Word de `_Documentation` ;
 - les chemins et reglages livres avec chaque outil ;
 - les dependances Windows visibles et l'architecture des executables ;
 - les references eventuelles dans le selecteur, les scripts et les configurations du depot ;
@@ -327,10 +327,10 @@ Un utilitaire ne doit passer au statut « fonctionnel » que si :
 ## Sources locales utilisees
 
 - Ancien `_OS_Programs/*`, maintenant reparti entre `_Utilities/*`, `_Game_Enhancements/*` et `_Runtime_Addons/*` : aides, README, historiques, configurations et donnees livres avec les outils ; les sources IL2 Connect et VoiceOverlay ont ete lues avant leur suppression recuperable par Git.
-- `_Guides_&_Manuals/HardBall408 ReadMe.rtf`.
-- `_Guides_&_Manuals/San's IL2 Fov Changer v1.0 english.pdf`.
-- `_Guides_&_Manuals/MDS_v1.13.pdf`.
-- `_Guides_&_Manuals/ReadmePatch4081Fr.rtf` et documentation locale du patch 4.09.
-- Les anciens `.doc` de `_Guides_&_Manuals`, verifies comme documentations de campagnes/missions et non comme manuels des 14 utilitaires.
+- `_Documentation/Mods et outils/HardBall Aircraft Viewer 4.08/Manuel - HardBall Aircraft Viewer 4.08.rtf`.
+- `_Documentation/Mods et outils/San FOV Changer 1.0/Manuel - San FOV Changer 1.0 - anglais.pdf`.
+- `_Documentation/Mods et outils/Zuti MDS 1.13/Manuel - Zuti MDS 1.13.pdf`.
+- `_Documentation/Jeu et correctifs/4.08m/Notes de version 4.08m - francais.rtf` et documentation locale du patch 4.09.
+- Les anciens `.doc` de `_Documentation/Campagnes`, verifies comme documentations de campagnes/missions et non comme manuels des utilitaires.
 - `Files/com/maddox/il2/objects/air.ini`, compare aux catalogues DCG, Mission Mate et QMT.
 - `docs/VERSION_COMPATIBILITY.md` pour la cible 4.09m du depot.

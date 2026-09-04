@@ -8,4 +8,8 @@ public final class Engine {
     public static CollideEnv collideEnv() {
         return null;
     }
+
+    public static Landscape land() {
+        return null;
+    }
 }

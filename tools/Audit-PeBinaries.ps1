@@ -86,7 +86,7 @@ $resolvedRoot = (Resolve-Path -LiteralPath $Root).Path.TrimEnd('\')
 $files = @(Get-ChildItem -LiteralPath $resolvedRoot -Recurse -File -ErrorAction Stop |
     Where-Object {
         $_.Extension -in @('.exe', '.dll') -and
-        $_.FullName -notmatch '[\\/](\.git|tmp|test-results)[\\/]'
+        $_.FullName -notmatch '[\\/](\.git|WIP)[\\/]'
     } |
     Sort-Object FullName)
 

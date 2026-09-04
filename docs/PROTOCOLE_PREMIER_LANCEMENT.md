@@ -2,8 +2,8 @@
 
 ## Perimetre
 
-Le premier test utilise uniquement la copie :
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test`.
+Le protocole utilise uniquement la copie de test courante :
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-installations\IL 2 Sturmovik 1946 test`.
 
 L'installation de reference sans le suffixe `test` reste en lecture seule. Le
 profil retenu est le choix 9 : **4.09m modifie, 6DOF, wrapper historique et
@@ -18,7 +18,7 @@ mission n'est lancee.
 
 1. Compiler `tools/FrameCapture.cs` avec `tools/Build-TestTools.ps1`.
 2. Conserver Process Monitor et ProcDump x86 portables sous
-   `build/test-tools/sysinternals` ; ces outils Microsoft ne sont pas distribues
+   `WIP/sdk/test-tools/sysinternals` ; ces outils Microsoft ne sont pas distribues
    avec l'add-on.
 3. Copier le selecteur courant dans la copie et activer le profil 9 avec
    `-Profile 9 -Hud 3 -Windowed1024 -NoPause`.
@@ -34,7 +34,7 @@ mission n'est lancee.
 Le dossier de test a ete reconstruit transactionnellement depuis la base DVD
 4.07m authentique, puis le contenu utile de l'add-on a ete superpose. L'ancienne
 copie a ete conservee sous
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.backup-before-clean-20260830`.
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-backups\IL 2 Sturmovik 1946 test.backup-before-clean-20260830`.
 
 La nouvelle copie contient 142 648 fichiers et 26 530 020 000 octets. Elle
 possede les 52 SFS attendus jusqu'a 4.09m et aucun SFS posterieur. Les fichiers
@@ -66,7 +66,7 @@ adresse a l'utilisateur.
 ## Capture
 
 La capture reelle est armee avant le lancement de l'EXE. Elle produit dans
-`test-results/startup` :
+`WIP/captures/startup` :
 
 - une trace Process Monitor des acces aux fichiers, au Registre, aux processus et
   aux DLL ;
@@ -128,13 +128,13 @@ restent actifs si le bug est seulement fonctionnel ou visuel.
 Process Monitor est desactive par defaut pour reduire le cout et ne pas perturber
 la reproduction. Ajouter `-WithFileTrace` seulement si le symptome parait lie a
 un fichier. Les dumps peuvent contenir des chemins et des donnees presentes en
-memoire : ils restent sous `test-results`, sont ignores par Git et ne doivent pas
+memoire : ils restent sous `WIP/captures`, sont ignores par Git et ne doivent pas
 etre publies bruts.
 
 ## Parcours Selector/Dump 4.09m
 
 Un second clone independant est prepare sous
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 Selector Dump`. Il a ete copie le
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\labs\IL 2 Sturmovik 1946 Selector Dump`. Il a ete copie le
 30 aout 2026 depuis la copie de test validee : 6 490 dossiers, 141 540 fichiers
 et 26 528 657 353 octets. La copie source et l'installation originale n'ont pas
 ete modifiees.
@@ -162,7 +162,7 @@ L'installation reproductible s'effectue avec :
 
 ```powershell
 & .\tools\Install-IL2SelectorDumpLab.ps1 `
-  -GameRoot 'C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 Selector Dump'
+  -GameRoot 'C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\labs\IL 2 Sturmovik 1946 Selector Dump'
 ```
 
 Le controle complet, sans lancement, est :

@@ -1,12 +1,17 @@
 [CmdletBinding()]
 param(
-    [string]$SourceRoot = (Split-Path -Parent $PSScriptRoot),
+    [string]$SourceRoot,
     [Parameter(Mandatory = $true)][string]$DestinationRoot,
-    [string]$OutputPath = (Join-Path (Split-Path -Parent $PSScriptRoot) 'manifests\test\v1.15-test-sync.json')
+    [string]$OutputPath,
+    [string[]]$IncludePath = @(),
+    [switch]$IncludeManagedPayloads,
+    [switch]$OnlyIncludedPaths
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+
+if (-not $SourceRoot) { $SourceRoot = Split-Path -Parent $PSScriptRoot }
 
 function Get-Sha256 {
     param([Parameter(Mandatory = $true)][string]$Path)
@@ -15,10 +20,49 @@ function Get-Sha256 {
 $source = (Resolve-Path -LiteralPath $SourceRoot -ErrorAction Stop).Path.TrimEnd('\')
 $destination = (Resolve-Path -LiteralPath $DestinationRoot -ErrorAction Stop).Path.TrimEnd('\')
 if ($source -ieq $destination) { throw 'La source et la destination doivent etre distinctes.' }
+if (-not $OutputPath) { $OutputPath = Join-Path $source 'manifests\test\v1.15-test-sync.json' }
 
-$changedPaths = @(& git -C $source ls-files -m -d -o --exclude-standard -- 'Files' '_Game Switchers' 'Open_Sturmovik_Switcher.ps1')
-if ($LASTEXITCODE -ne 0) { throw 'Git ne peut pas enumerer les changements a synchroniser.' }
-$changedPaths = @($changedPaths | Where-Object { $_ } | Sort-Object -Unique)
+$changedPaths = @()
+if (-not $OnlyIncludedPaths) {
+    $changedPaths = @(& git -C $source ls-files -m -d -o --exclude-standard -- 'Files' '_Game Switchers' 'Open_Sturmovik_Switcher.ps1')
+    if ($LASTEXITCODE -ne 0) { throw 'Git ne peut pas enumerer les changements a synchroniser.' }
+}
+$forcedPaths = @($IncludePath | ForEach-Object { $_.Replace('\', '/').TrimStart('/') } | Where-Object { $_ })
+if ($IncludeManagedPayloads) {
+    $nuclearManifestPath = Join-Path $source 'manifests\effects\nuclear-blast-v1.15.json'
+    if (-not (Test-Path -LiteralPath $nuclearManifestPath -PathType Leaf)) {
+        throw "Manifeste nucleaire absent : $nuclearManifestPath"
+    }
+    $nuclearManifest = Get-Content -LiteralPath $nuclearManifestPath -Raw | ConvertFrom-Json
+    $forcedPaths += @($nuclearManifest.outputs | ForEach-Object { ([string]$_.file).Replace('\', '/') })
+
+    $aaaManifestPath = Join-Path $source 'manifests\aircraft\aaa-community-cockpits-v1.15.json'
+    if (-not (Test-Path -LiteralPath $aaaManifestPath -PathType Leaf)) {
+        throw "Manifeste AAA absent : $aaaManifestPath"
+    }
+    $aaaManifest = Get-Content -LiteralPath $aaaManifestPath -Raw | ConvertFrom-Json
+    foreach ($packageName in @('TBF-1C', 'TBM-3', 'SU_2')) {
+        $property = $aaaManifest.candidate_packages.PSObject.Properties[$packageName]
+        if ($null -eq $property) { throw "Paquet AAA absent : $packageName" }
+        $forcedPaths += @($property.Value.classes | ForEach-Object {
+            'Files/' + [IO.Path]::GetFileName([string]$_.source)
+        })
+        $forcedPaths += @($property.Value.resources | ForEach-Object {
+            'Files/' + ([string]$_.relative_path).TrimStart('/')
+        })
+    }
+    $acesProperty = $aaaManifest.candidate_packages.PSObject.Properties['ACES']
+    if ($null -eq $acesProperty) { throw 'Paquet AAA ACES absent.' }
+    $migClasses = @($acesProperty.Value.classes | Where-Object internal_class -eq 'com/maddox/il2/objects/air/MIG_3POKRYSHKIN')
+    if ($migClasses.Count -ne 1) { throw "Classe MIG_3POKRYSHKIN ambigue ou absente : $($migClasses.Count)" }
+    $forcedPaths += 'Files/' + [IO.Path]::GetFileName([string]$migClasses[0].source)
+
+    # These two addresses belong to the retired VisualAction/VisualData classes.
+    # Keeping their canonical repository bytes in the plan repairs test trees
+    # produced by the failed 2026-09-02 candidate which overwrote both paths.
+    $forcedPaths += @('Files/2A3CF08C7344E18A', 'Files/AB04450E05C9E67C')
+}
+$changedPaths = @($changedPaths + $forcedPaths | Where-Object { $_ } | Sort-Object -Unique)
 if ($changedPaths.Count -eq 0) { throw 'Aucun changement runtime detecte par Git.' }
 
 $entries = foreach ($relativeGit in $changedPaths) {

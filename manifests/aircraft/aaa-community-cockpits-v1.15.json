@@ -1,17 +1,17 @@
 {
   "schema": 1,
-  "generated_utc": "2026-09-01T21:40:19.722338+00:00",
+  "generated_utc": "2026-09-03T12:29:15.888605+00:00",
   "project_root": "C:\\Users\\Alexis\\DATA\\Projets\\GITHUB\\IL2-1946-Open-Sturmovik",
   "aaa_root": "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1",
   "aaa_root_read_only_source": true,
   "summary": {
     "air_ini_probable_ai_rows": 18,
     "air_ini_probable_ai_unique_classes": 18,
-    "aircraft_rows_audited": 21,
+    "aircraft_rows_audited": 22,
     "aaa_class_files": 966,
     "aaa_internal_classes": 947,
     "aaa_direct_flyable_candidates": 0,
-    "aaa_historical_flyable_sets_restored": 3,
+    "aaa_historical_flyable_sets_restored": 4,
     "aaa_parse_errors": []
   },
   "aircraft": [
@@ -350,6 +350,64 @@
             {
               "path": "3DO/Plane/TBM-3(USA)/hier.him",
               "present_in_open_sturmovik_loose_files": true
+            }
+          ],
+          "same_binary_as_open_sturmovik": true
+        }
+      ],
+      "aaa_direct_flyable_override_found": true,
+      "aaa_direct_flyable_override_dependency_complete": true,
+      "decision": "historical-flyable-set-restored"
+    },
+    {
+      "line": 218,
+      "air_key": "Su-2",
+      "internal_class": "com/maddox/il2/objects/air/SU_2",
+      "current_sha256": "1EF1E7008A8DDE711E2A10F34BFDF59A5D461E2A8B33DCF3C1C3443D71641508",
+      "current_java_major": 47,
+      "current_player_classification": "player-capable-static",
+      "aaa_definitions": [
+        {
+          "source": "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1\\MODS\\SU_2\\70C9BE082DD9AB42",
+          "aaa_package": "SU_2",
+          "sha256": "1EF1E7008A8DDE711E2A10F34BFDF59A5D461E2A8B33DCF3C1C3443D71641508",
+          "java_major": 47,
+          "super_class": "com/maddox/il2/objects/air/Scheme1",
+          "direct_cockpit_classes": [
+            "com/maddox/il2/objects/air/CockpitSU_2",
+            "com/maddox/il2/objects/air/CockpitSU_2_Bombardier",
+            "com/maddox/il2/objects/air/CockpitSU_2_TGunner"
+          ],
+          "cockpit_dependencies": [
+            {
+              "internal_class": "com/maddox/il2/objects/air/CockpitSU_2",
+              "present_in_aaa": true,
+              "aaa_sources": [
+                "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1\\MODS\\SU_2\\29E6151E2A2051E4"
+              ],
+              "present_in_open_sturmovik": true
+            },
+            {
+              "internal_class": "com/maddox/il2/objects/air/CockpitSU_2_Bombardier",
+              "present_in_aaa": true,
+              "aaa_sources": [
+                "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1\\MODS\\SU_2\\F71090502F7F2E04"
+              ],
+              "present_in_open_sturmovik": true
+            },
+            {
+              "internal_class": "com/maddox/il2/objects/air/CockpitSU_2_TGunner",
+              "present_in_aaa": true,
+              "aaa_sources": [
+                "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1\\MODS\\SU_2\\B4EF0ADEAE24EC44"
+              ],
+              "present_in_open_sturmovik": true
+            }
+          ],
+          "assets_referenced": [
+            {
+              "path": "3DO/Plane/Su-2/hier.him",
+              "present_in_open_sturmovik_loose_files": false
             }
           ],
           "same_binary_as_open_sturmovik": true
@@ -876,6 +934,126 @@
           "relative_path": "3do/Cockpit/JU-87G2RUDEL-Gun/x.txt",
           "bytes": 634,
           "sha256": "967D420607EDE20DDC3A84D5F956F14B1D9F72E46AEA440091A4DD47C0C59D9B"
+        }
+      ],
+      "unresolved_direct_class_references": []
+    },
+    "SU_2": {
+      "root": "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1\\MODS\\SU_2",
+      "classes": [
+        {
+          "internal_class": "com/maddox/il2/objects/air/CockpitSU_2",
+          "source": "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1\\MODS\\SU_2\\29E6151E2A2051E4",
+          "sha256": "B7AFE01BF5182AED2890D96B63E310727E5F2334F0DF8B7D9E7A77F736F0241E",
+          "java_major": 47,
+          "super_class": "com/maddox/il2/objects/air/CockpitPilot",
+          "direct_cockpit_classes": [],
+          "present_in_open_sturmovik": true,
+          "same_binary_as_open_sturmovik": true,
+          "unresolved_direct_class_references": []
+        },
+        {
+          "internal_class": "com/maddox/il2/objects/air/CockpitSU_2$1",
+          "source": "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1\\MODS\\SU_2\\D6C9412439D42D74",
+          "sha256": "38D7F4FA7BFDFCAE028805AFA270857B631B1D4BD2B62724C7955D654A02197F",
+          "java_major": 47,
+          "super_class": "java/lang/Object",
+          "direct_cockpit_classes": [],
+          "present_in_open_sturmovik": true,
+          "same_binary_as_open_sturmovik": true,
+          "unresolved_direct_class_references": []
+        },
+        {
+          "internal_class": "com/maddox/il2/objects/air/CockpitSU_2$Interpolater",
+          "source": "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1\\MODS\\SU_2\\B4F248AE3E2CD206",
+          "sha256": "E2EEDDC903F9A2F62026053F04E9BF70936FF22E2B54A8A63177332601AEEAE0",
+          "java_major": 47,
+          "super_class": "com/maddox/il2/engine/InterpolateRef",
+          "direct_cockpit_classes": [],
+          "present_in_open_sturmovik": true,
+          "same_binary_as_open_sturmovik": true,
+          "unresolved_direct_class_references": []
+        },
+        {
+          "internal_class": "com/maddox/il2/objects/air/CockpitSU_2$Variables",
+          "source": "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1\\MODS\\SU_2\\7CA2DDF8F105A328",
+          "sha256": "FE9BF13744675B230E83214E327D0C8B073D911FB335C34B32E7F375D1AE0CA3",
+          "java_major": 47,
+          "super_class": "java/lang/Object",
+          "direct_cockpit_classes": [],
+          "present_in_open_sturmovik": true,
+          "same_binary_as_open_sturmovik": true,
+          "unresolved_direct_class_references": []
+        },
+        {
+          "internal_class": "com/maddox/il2/objects/air/CockpitSU_2_Bombardier",
+          "source": "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1\\MODS\\SU_2\\F71090502F7F2E04",
+          "sha256": "45F1397DB1EE969B4E49143149BF75B491FFC5C08E3D0ECB361FBE9A68501171",
+          "java_major": 47,
+          "super_class": "com/maddox/il2/objects/air/CockpitPilot",
+          "direct_cockpit_classes": [],
+          "present_in_open_sturmovik": true,
+          "same_binary_as_open_sturmovik": true,
+          "unresolved_direct_class_references": []
+        },
+        {
+          "internal_class": "com/maddox/il2/objects/air/CockpitSU_2_Bombardier$Interpolater",
+          "source": "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1\\MODS\\SU_2\\FD45E4CC4122F6E6",
+          "sha256": "916BEB576F684D6D7BF33919DD3ED4DDF5D56BE8576F127CD27117841DACDF0F",
+          "java_major": 47,
+          "super_class": "com/maddox/il2/engine/InterpolateRef",
+          "direct_cockpit_classes": [],
+          "present_in_open_sturmovik": true,
+          "same_binary_as_open_sturmovik": true,
+          "unresolved_direct_class_references": []
+        },
+        {
+          "internal_class": "com/maddox/il2/objects/air/CockpitSU_2_TGunner",
+          "source": "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1\\MODS\\SU_2\\B4EF0ADEAE24EC44",
+          "sha256": "5F307F0A8CA3D51A188D285373B62D244775AA140FB7842ED48769ECB6B613E3",
+          "java_major": 47,
+          "super_class": "com/maddox/il2/objects/air/CockpitGunner",
+          "direct_cockpit_classes": [],
+          "present_in_open_sturmovik": true,
+          "same_binary_as_open_sturmovik": true,
+          "unresolved_direct_class_references": []
+        },
+        {
+          "internal_class": "com/maddox/il2/objects/air/SU_2",
+          "source": "C:\\Users\\Alexis\\Downloads\\AAA_Community_Installer_ver_1_1\\MODS\\SU_2\\70C9BE082DD9AB42",
+          "sha256": "1EF1E7008A8DDE711E2A10F34BFDF59A5D461E2A8B33DCF3C1C3443D71641508",
+          "java_major": 47,
+          "super_class": "com/maddox/il2/objects/air/Scheme1",
+          "direct_cockpit_classes": [
+            "com/maddox/il2/objects/air/CockpitSU_2",
+            "com/maddox/il2/objects/air/CockpitSU_2_Bombardier",
+            "com/maddox/il2/objects/air/CockpitSU_2_TGunner"
+          ],
+          "present_in_open_sturmovik": true,
+          "same_binary_as_open_sturmovik": true,
+          "unresolved_direct_class_references": []
+        }
+      ],
+      "resources": [
+        {
+          "relative_path": "3do/Cockpit/Il-10-TGun/skin1o.tga",
+          "bytes": 3145772,
+          "sha256": "28EEDA2E4DBEE0AB976CC8F5C426517A2706AD86E772CFA68469E20AEADC98E2"
+        },
+        {
+          "relative_path": "3do/Cockpit/Il-10-TGun/TGunnerSU2.him",
+          "bytes": 1430,
+          "sha256": "01AB4D134F3542DA4D4E90763CFFC12C6F3CBE81FA0EEB1EC8A3ED8F3A1D452C"
+        },
+        {
+          "relative_path": "3do/Cockpit/MIG-3/CockpitSU2.him",
+          "bytes": 5308,
+          "sha256": "555E8E6CFB28D02094970F9DB87B418C3383E8A93D53913DDCA19E0E37D3DF98"
+        },
+        {
+          "relative_path": "3do/Cockpit/Pe-2-Bombardier/BombardierSU2.him",
+          "bytes": 545,
+          "sha256": "4FD25CEB408CD56767E9DDE29A8043772A4F8AB71E4E39C0675C2CBA1FA40B6C"
         }
       ],
       "unresolved_direct_class_references": []

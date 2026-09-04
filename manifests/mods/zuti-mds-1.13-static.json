@@ -1,244 +1,244 @@
-﻿{
-    "schema":  1,
-    "generated_utc":  "2026-09-01T21:40:22.2221100Z",
-    "project_root":  "C:\\Users\\Alexis\\DATA\\Projets\\GITHUB\\IL2-1946-Open-Sturmovik",
-    "selector_dump_root":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump",
-    "target":  "IL-2 1946 4.09m / Zuti MDS v1.13 STD",
-    "summary":  {
-                    "pass":  7,
-                    "warn":  2,
-                    "fail":  0,
-                    "static_integration":  "READY_FOR_RUNTIME_TEST",
-                    "runtime_validated":  false,
-                    "redistribution_authorized":  false
-                },
-    "checks":  [
-                   {
-                       "name":  "Version Zuti",
-                       "status":  "PASS",
-                       "details":  "Le paquet declare exactement v1.13 (SHA-256 4D53D0A36C902747BE74177D46FEEB53A7F6D092E5241A78ED450DD118662E95)."
-                   },
-                   {
-                       "name":  "Autorisation de redistribution Zuti",
-                       "status":  "WARN",
-                       "details":  "Le readme exige de contacter Zuti avant inclusion dans un pack. Aucune preuve d\u0027autorisation Open Sturmovik n\u0027est encore archivee."
-                   },
-                   {
-                       "name":  "Classes Zuti chargees",
-                       "status":  "PASS",
-                       "details":  "30 classes Zuti presentes dans le Selector Dump, toutes compatibles Java 1.3 (major 45 a 47)."
-                   },
-                   {
-                       "name":  "Points d\u0027accrochage moteur",
-                       "status":  "PASS",
-                       "details":  "12 classes structurantes chargees referencent Zuti : mission, commandes, reseau, appareil, porte-avions et FMB."
-                   },
-                   {
-                       "name":  "Correctif ExtendPlanesWings",
-                       "status":  "PASS",
-                       "details":  "La surcharge corrigeant le cast premature est presente, Java major 45 et empreinte validee."
-                   },
-                   {
-                       "name":  "Textes interface MDS",
-                       "status":  "PASS",
-                       "details":  "Les 169/36/12 entrees attendues sont presentes dans les trois catalogues historiques."
-                   },
-                   {
-                       "name":  "Missions exemples MDS",
-                       "status":  "PASS",
-                       "details":  "Les quatre missions solo/coop/dogfight contiennent MDS, radar, R/R/R et bases."
-                   },
-                   {
-                       "name":  "Outils Zuti",
-                       "status":  "PASS",
-                       "details":  "AirportsExtractor et Mods Conflicts Revealer correspondent aux empreintes inventoriees."
-                   },
-                   {
-                       "name":  "Validation fonctionnelle runtime",
-                       "status":  "WARN",
-                       "details":  "La structure est chargee, mais une mission MDS doit encore valider base capturable, radar, limite appareils, R/R/R, client/serveur et arret propre du minuteur radar."
-                   }
-               ],
-    "zuti_dump_classes":  [
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\PlMission$WZutiMDS.class",
-                                  "bytes":  35921,
-                                  "java_major":  45,
-                                  "sha256":  "8FB60C75CB421DE8A1A4B2EE60A9903A46838C2285907088F19D621C8D0908D7"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$1.class",
-                                  "bytes":  712,
-                                  "java_major":  45,
-                                  "sha256":  "255C30C2E8613887B63B6152E164B35FBB4EEEB0B71B3200E206D6DBBAFF75D3"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$10.class",
-                                  "bytes":  1973,
-                                  "java_major":  45,
-                                  "sha256":  "841401CA8AEEC3E622893D76DDDFF9593DD67816EA8C0B2296265815E3F830CE"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$11.class",
-                                  "bytes":  2113,
-                                  "java_major":  45,
-                                  "sha256":  "4E8A74F15093AB83AB47DA8EE09CB6F5338703492F19BB8B1C440B8EBB526C88"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$12.class",
-                                  "bytes":  2147,
-                                  "java_major":  45,
-                                  "sha256":  "FEFD39C31CD360E048AEE1ED99E58F2B70E795E46033EA6E4D31556EC19A3975"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$13.class",
-                                  "bytes":  3292,
-                                  "java_major":  45,
-                                  "sha256":  "6E58CC11852408053B13AE1E988B34DB0DB2DE558C3BC425E429FAF070AB07C5"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$14.class",
-                                  "bytes":  2094,
-                                  "java_major":  45,
-                                  "sha256":  "B79882C09775BB4407B26010E9F276F6FF81F73377EEDDE2539A5665207E17C1"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$15.class",
-                                  "bytes":  2104,
-                                  "java_major":  45,
-                                  "sha256":  "5597969AC92514049C449350B9BF34B52795C168101953451D744F0EC5759AA3"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$2.class",
-                                  "bytes":  1173,
-                                  "java_major":  45,
-                                  "sha256":  "8300CF10E6F549FCF66C330F29D7AF2D241F60A9FF2070D1A56DFBA8C140B799"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$3.class",
-                                  "bytes":  1284,
-                                  "java_major":  45,
-                                  "sha256":  "9692A8C0BCEC216B9AE35535FE5B5116A65BCD19906C2A53CD3879E919C252D7"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$4.class",
-                                  "bytes":  1056,
-                                  "java_major":  45,
-                                  "sha256":  "8088676A8019C97E202D7D0F019F636E0C5D957B74822FEDB9AFB8CB725939A6"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$5.class",
-                                  "bytes":  1201,
-                                  "java_major":  45,
-                                  "sha256":  "C5E9AD741519EF6F01A5988CB90658A7706BB6F03820446D20594DC3913454B6"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$6.class",
-                                  "bytes":  1563,
-                                  "java_major":  45,
-                                  "sha256":  "57950F7D2A525946EFE612CBCB78FBBBD09BE0CAFD691D69BC8578E64CBFB2F1"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$7.class",
-                                  "bytes":  2361,
-                                  "java_major":  45,
-                                  "sha256":  "96C02609FCBB0CD28DE7442E8BB6AAA512F3A0EBB71258CC3BE10A78FDA2204F"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$8.class",
-                                  "bytes":  1925,
-                                  "java_major":  45,
-                                  "sha256":  "953B2DE468E584AD2622F95176B5F98C241C866ADA92AF930E96983D4928EB0B"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$9.class",
-                                  "bytes":  1959,
-                                  "java_major":  45,
-                                  "sha256":  "3BD9EFC0512863C1DBE85F6284254E1A27217758A2E74058C4137DFF4D0729FC"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$Table.class",
-                                  "bytes":  1613,
-                                  "java_major":  45,
-                                  "sha256":  "131242EF6229F7C85B999D75C8BBE7DD5C8EEBBDF5CB4979BD063C91C827B9BE"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts.class",
-                                  "bytes":  11811,
-                                  "java_major":  45,
-                                  "sha256":  "57F6EBF23F39980E5E392E8078284D73A50233DF6F98B4BF75C56F9D0CF5D6D8"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_EngineRepair.class",
-                                  "bytes":  1245,
-                                  "java_major":  45,
-                                  "sha256":  "D6375EB7E732ACAD6D072B927CE69DB54FCB5106F9F3C71BD44D58E9118A8DDF"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_Loadout.class",
-                                  "bytes":  1230,
-                                  "java_major":  45,
-                                  "sha256":  "883CBCDD78E72B9AF8A2B10EDB8DA20482321C153659FC921A775475CBB70846"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_RearmAircraft.class",
-                                  "bytes":  997,
-                                  "java_major":  45,
-                                  "sha256":  "3A40BBCD645E6671E9F65978FFB06BF4B5C52E8D27DA5CC05413AC12A9D28594"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_RefuelAircraft.class",
-                                  "bytes":  1042,
-                                  "java_major":  45,
-                                  "sha256":  "42E66C11CB8234BE223951D48A985F28A70B86068D1D1AFF803CF029D67FFDE1"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_RepairAircraft.class",
-                                  "bytes":  1002,
-                                  "java_major":  45,
-                                  "sha256":  "050E3BA35EAC31F14A6BFB62C6EBC7C6318E5A12569130011622119D391FEF89"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_StartAll.class",
-                                  "bytes":  976,
-                                  "java_major":  45,
-                                  "sha256":  "1FD372C9F33844AE7CB270C486CDA031BBC012F8D8D5F895559FF505DE38C8C7"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_UnjamChocks.class",
-                                  "bytes":  993,
-                                  "java_major":  45,
-                                  "sha256":  "D7EF8D302595992F607F468F3E50AEAED80A10A19F8B8D75B48FB6C6417DD5F0"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_VectorToNearestHB.class",
-                                  "bytes":  3112,
-                                  "java_major":  45,
-                                  "sha256":  "79AD922A2A53A2B231321FB7A484C795C5EF84CB72E57A25BEF39A2557026B1E"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\ZutiAirfieldPoint.class",
-                                  "bytes":  4366,
-                                  "java_major":  45,
-                                  "sha256":  "143E6FC5F18A1A9290A158615F17F3FE082411FD5141D07889491A029446EE01"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\ZutiTimer_ExtendPlanesWings.class",
-                                  "bytes":  1573,
-                                  "java_major":  45,
-                                  "sha256":  "7C01D9322D3C9FF2EE8C55399D08B544E006F1C6269012674E28A2F5FFB3D530"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\ZutiTimer_RadarsCountRefresh.class",
-                                  "bytes":  3296,
-                                  "java_major":  45,
-                                  "sha256":  "8718FBE2AA4E74A2055AF9E751913330F13B5F248114679D194FB19CD1AF415F"
-                              },
-                              {
-                                  "path":  "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\ZutiWeaponsManagement.class",
-                                  "bytes":  9979,
-                                  "java_major":  45,
-                                  "sha256":  "CD9D6118FDBFD8B30C5C2A77E83F82AEEFD8F692C578606FC3E807C1C475B66E"
-                              }
-                          ]
+{
+  "schema": 1,
+  "generated_utc": "2026-09-02T17:08:56.2848953Z",
+  "project_root": "C:\\Users\\Alexis\\DATA\\Projets\\GITHUB\\IL2-1946-Open-Sturmovik",
+  "selector_dump_root": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump",
+  "target": "IL-2 1946 4.09m / Zuti MDS v1.13 STD",
+  "summary": {
+    "pass": 7,
+    "warn": 2,
+    "fail": 0,
+    "static_integration": "READY_FOR_RUNTIME_TEST",
+    "runtime_validated": false,
+    "redistribution_authorized": false
+  },
+  "checks": [
+    {
+      "name": "Version Zuti",
+      "status": "PASS",
+      "details": "Le paquet declare exactement v1.13 (SHA-256 4D53D0A36C902747BE74177D46FEEB53A7F6D092E5241A78ED450DD118662E95)."
+    },
+    {
+      "name": "Autorisation de redistribution Zuti",
+      "status": "WARN",
+      "details": "Le readme exige de contacter Zuti avant inclusion dans un pack. Aucune preuve d'autorisation Open Sturmovik n'est encore archivee."
+    },
+    {
+      "name": "Classes Zuti chargees",
+      "status": "PASS",
+      "details": "30 classes Zuti presentes dans le Selector Dump, toutes compatibles Java 1.3 (major 45 a 47)."
+    },
+    {
+      "name": "Points d'accrochage moteur",
+      "status": "PASS",
+      "details": "12 classes structurantes chargees referencent Zuti : mission, commandes, reseau, appareil, porte-avions et FMB."
+    },
+    {
+      "name": "Correctif ExtendPlanesWings",
+      "status": "PASS",
+      "details": "La surcharge corrigeant le cast premature est presente, Java major 45 et empreinte validee."
+    },
+    {
+      "name": "Textes interface MDS",
+      "status": "PASS",
+      "details": "Les 169/36/12 entrees attendues sont presentes dans les trois catalogues historiques."
+    },
+    {
+      "name": "Missions exemples MDS",
+      "status": "PASS",
+      "details": "Les quatre missions solo/coop/dogfight contiennent MDS, radar, R/R/R et bases."
+    },
+    {
+      "name": "Outils Zuti",
+      "status": "PASS",
+      "details": "AirportsExtractor et Mods Conflicts Revealer correspondent aux empreintes inventoriees."
+    },
+    {
+      "name": "Validation fonctionnelle runtime",
+      "status": "WARN",
+      "details": "La structure est chargee, mais une mission MDS doit encore valider base capturable, radar, limite appareils, R/R/R, client/serveur et arret propre du minuteur radar."
+    }
+  ],
+  "zuti_dump_classes": [
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\PlMission$WZutiMDS.class",
+      "bytes": 35921,
+      "java_major": 45,
+      "sha256": "8FB60C75CB421DE8A1A4B2EE60A9903A46838C2285907088F19D621C8D0908D7"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts.class",
+      "bytes": 11811,
+      "java_major": 45,
+      "sha256": "57F6EBF23F39980E5E392E8078284D73A50233DF6F98B4BF75C56F9D0CF5D6D8"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$1.class",
+      "bytes": 712,
+      "java_major": 45,
+      "sha256": "255C30C2E8613887B63B6152E164B35FBB4EEEB0B71B3200E206D6DBBAFF75D3"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$10.class",
+      "bytes": 1973,
+      "java_major": 45,
+      "sha256": "841401CA8AEEC3E622893D76DDDFF9593DD67816EA8C0B2296265815E3F830CE"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$11.class",
+      "bytes": 2113,
+      "java_major": 45,
+      "sha256": "4E8A74F15093AB83AB47DA8EE09CB6F5338703492F19BB8B1C440B8EBB526C88"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$12.class",
+      "bytes": 2147,
+      "java_major": 45,
+      "sha256": "FEFD39C31CD360E048AEE1ED99E58F2B70E795E46033EA6E4D31556EC19A3975"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$13.class",
+      "bytes": 3292,
+      "java_major": 45,
+      "sha256": "6E58CC11852408053B13AE1E988B34DB0DB2DE558C3BC425E429FAF070AB07C5"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$14.class",
+      "bytes": 2094,
+      "java_major": 45,
+      "sha256": "B79882C09775BB4407B26010E9F276F6FF81F73377EEDDE2539A5665207E17C1"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$15.class",
+      "bytes": 2104,
+      "java_major": 45,
+      "sha256": "5597969AC92514049C449350B9BF34B52795C168101953451D744F0EC5759AA3"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$2.class",
+      "bytes": 1173,
+      "java_major": 45,
+      "sha256": "8300CF10E6F549FCF66C330F29D7AF2D241F60A9FF2070D1A56DFBA8C140B799"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$3.class",
+      "bytes": 1284,
+      "java_major": 45,
+      "sha256": "9692A8C0BCEC216B9AE35535FE5B5116A65BCD19906C2A53CD3879E919C252D7"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$4.class",
+      "bytes": 1056,
+      "java_major": 45,
+      "sha256": "8088676A8019C97E202D7D0F019F636E0C5D957B74822FEDB9AFB8CB725939A6"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$5.class",
+      "bytes": 1201,
+      "java_major": 45,
+      "sha256": "C5E9AD741519EF6F01A5988CB90658A7706BB6F03820446D20594DC3913454B6"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$6.class",
+      "bytes": 1563,
+      "java_major": 45,
+      "sha256": "57950F7D2A525946EFE612CBCB78FBBBD09BE0CAFD691D69BC8578E64CBFB2F1"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$7.class",
+      "bytes": 2361,
+      "java_major": 45,
+      "sha256": "96C02609FCBB0CD28DE7442E8BB6AAA512F3A0EBB71258CC3BE10A78FDA2204F"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$8.class",
+      "bytes": 1925,
+      "java_major": 45,
+      "sha256": "953B2DE468E584AD2622F95176B5F98C241C866ADA92AF930E96983D4928EB0B"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$9.class",
+      "bytes": 1959,
+      "java_major": 45,
+      "sha256": "3BD9EFC0512863C1DBE85F6284254E1A27217758A2E74058C4137DFF4D0729FC"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\builder\\Zuti_WManageAircrafts$Table.class",
+      "bytes": 1613,
+      "java_major": 45,
+      "sha256": "131242EF6229F7C85B999D75C8BBE7DD5C8EEBBDF5CB4979BD063C91C827B9BE"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_EngineRepair.class",
+      "bytes": 1245,
+      "java_major": 45,
+      "sha256": "D6375EB7E732ACAD6D072B927CE69DB54FCB5106F9F3C71BD44D58E9118A8DDF"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_Loadout.class",
+      "bytes": 1230,
+      "java_major": 45,
+      "sha256": "883CBCDD78E72B9AF8A2B10EDB8DA20482321C153659FC921A775475CBB70846"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_RearmAircraft.class",
+      "bytes": 997,
+      "java_major": 45,
+      "sha256": "3A40BBCD645E6671E9F65978FFB06BF4B5C52E8D27DA5CC05413AC12A9D28594"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_RefuelAircraft.class",
+      "bytes": 1042,
+      "java_major": 45,
+      "sha256": "42E66C11CB8234BE223951D48A985F28A70B86068D1D1AFF803CF029D67FFDE1"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_RepairAircraft.class",
+      "bytes": 1002,
+      "java_major": 45,
+      "sha256": "050E3BA35EAC31F14A6BFB62C6EBC7C6318E5A12569130011622119D391FEF89"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_StartAll.class",
+      "bytes": 976,
+      "java_major": 45,
+      "sha256": "1FD372C9F33844AE7CB270C486CDA031BBC012F8D8D5F895559FF505DE38C8C7"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_UnjamChocks.class",
+      "bytes": 993,
+      "java_major": 45,
+      "sha256": "D7EF8D302595992F607F468F3E50AEAED80A10A19F8B8D75B48FB6C6417DD5F0"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\order\\ZutiOrder_VectorToNearestHB.class",
+      "bytes": 3112,
+      "java_major": 45,
+      "sha256": "79AD922A2A53A2B231321FB7A484C795C5EF84CB72E57A25BEF39A2557026B1E"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\ZutiAirfieldPoint.class",
+      "bytes": 4366,
+      "java_major": 45,
+      "sha256": "143E6FC5F18A1A9290A158615F17F3FE082411FD5141D07889491A029446EE01"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\ZutiTimer_ExtendPlanesWings.class",
+      "bytes": 1573,
+      "java_major": 45,
+      "sha256": "7C01D9322D3C9FF2EE8C55399D08B544E006F1C6269012674E28A2F5FFB3D530"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\ZutiTimer_RadarsCountRefresh.class",
+      "bytes": 3296,
+      "java_major": 45,
+      "sha256": "8718FBE2AA4E74A2055AF9E751913330F13B5F248114679D194FB19CD1AF415F"
+    },
+    {
+      "path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 Selector Dump\\dump\\com\\maddox\\il2\\game\\ZutiWeaponsManagement.class",
+      "bytes": 9979,
+      "java_major": 45,
+      "sha256": "CD9D6118FDBFD8B30C5C2A77E83F82AEEFD8F692C578606FC3E807C1C475B66E"
+    }
+  ]
 }

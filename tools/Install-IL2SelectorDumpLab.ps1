@@ -1,13 +1,16 @@
 [CmdletBinding()]
 param(
     [Parameter(Mandatory = $true)][string]$GameRoot,
-    [string]$SelectorArchive = 'D:\Projets\GITHUB\res\IL2 1946\Outils\IL-2_Selector_5.1.2.zip',
+    [string]$SelectorArchive = 'D:\Projets\GITHUB\#res\IL2 1946\Outils\IL-2_Selector_5.1.2.zip',
     [string]$SevenZipPath = 'C:\Program Files\7-Zip\7z.exe',
-    [string]$BaselineRoot = 'C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test',
+    [string]$BaselineRoot,
     [switch]$RefreshManifest
 )
 
 $ErrorActionPreference = 'Stop'
+if ([string]::IsNullOrWhiteSpace($BaselineRoot)) {
+    $BaselineRoot = Join-Path $PSScriptRoot '..\WIP\test-installations\IL 2 Sturmovik 1946 test'
+}
 $expectedArchiveSha256 = '0F1A8C6DDB4D6062DE84F99583B932C1DE429E1D2D7119DCA8EE69EB7817C7D4'
 $resolvedGame = (Resolve-Path -LiteralPath $GameRoot -ErrorAction Stop).Path.TrimEnd('\')
 $resolvedArchive = (Resolve-Path -LiteralPath $SelectorArchive -ErrorAction Stop).Path

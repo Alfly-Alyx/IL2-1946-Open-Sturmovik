@@ -30,8 +30,8 @@ Les couples historiques « sans 6DOF » / « 6DOF » ont actuellement des execut
 
 La comparaison avec les installateurs officiels locaux donne :
 
-- patch 4.08m : 107 fichiers deja identiques, `files.SFS` gere par le selecteur et une texture volontairement remplacee par le mod ; les trois notices sont conservees sous `_Guides_&_Manuals\Official Patches` ;
-- patch 4.09m : 99 fichiers deja identiques ; les trois notices sont egalement conservees sous `_Guides_&_Manuals\Official Patches` ;
+- patch 4.08m : 107 fichiers deja identiques, `files.SFS` gere par le selecteur et une texture volontairement remplacee par le mod ; les trois notices sont conservees sous `_Documentation\Jeu et correctifs\4.08m` ;
+- patch 4.09m : 99 fichiers deja identiques ; les trois notices sont conservees sous `_Documentation\Jeu et correctifs\4.09m` ;
 - les SFS et DLL de coeur 4.08/4.09 correspondent octet par octet aux patchs locaux ;
 - `fb_3do.SFS`, requis depuis la base DVD, est restaure avec les deux autres SFS du commit orphelin.
 

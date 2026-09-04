@@ -1,0 +1,67 @@
+{
+  "schema": "open-sturmovik-nuclear-runtime-observation-v1",
+  "run": "WIP/captures/startup/20260903-190834Z-profile9-warm-windowed1024-startup",
+  "scenario": {
+    "mission": "Nuclear-Little-Boy-Static-Cameras",
+    "map": "Smolensk",
+    "aircraft": "B-29 Silverplate",
+    "weapon": "Little Boy",
+    "surface": "land",
+    "successful_attempt": 2,
+    "view": "F2 external top-down view following the B-29",
+    "pause": false
+  },
+  "timeline_utc": {
+    "first_mission_playing": "2026-09-03T19:11:53Z",
+    "second_mission_playing": "2026-09-03T19:16:51Z",
+    "detonation": "2026-09-03T19:20:01Z",
+    "process_end": "2026-09-03T19:21:59Z"
+  },
+  "simulation_after_detonation_seconds": 42,
+  "nuclear_log": [
+    { "age_ms": 0, "action": "created", "phase": "detonation", "actors": 0, "target_agl_m": 599 },
+    { "age_ms": 1000, "action": "phase", "phase": "early-rise", "actors": 6, "target_agl_m": 637 },
+    { "age_ms": 30000, "action": "phase", "phase": "mature-rise", "actors": 6, "target_agl_m": 1711 },
+    { "age_ms": 30000, "action": "rise-layer-30s", "phase": "mature-rise", "actors": 7, "rise_layers": 1, "target_agl_m": 1711 }
+  ],
+  "process_detonation_to_mission_end": {
+    "samples": 284,
+    "duration_seconds": 43.96,
+    "max_working_set_mib": 650.0,
+    "max_private_mib": 667.7,
+    "max_virtual_mib": 1984.0,
+    "mean_cpu_cores": 0.78,
+    "not_responding_samples": 0
+  },
+  "capture": {
+    "frames": 6760,
+    "duration_seconds": 785.63,
+    "effect_visible_at_seconds": [2, 5, 10, 20, 30, 35, 40],
+    "effect_partially_out_of_frame_after_seconds": 20
+  },
+  "observations": {
+    "positive": [
+      "white flash and initial ring captured",
+      "cloud remained visible through mission end",
+      "30-second fixed layer created",
+      "single detonation event",
+      "no hang, exception or reset",
+      "all 284 process samples remained responsive"
+    ],
+    "limitations": [
+      "top-down camera followed the B-29 instead of the blast",
+      "cloud progressively left the lower edge of the frame",
+      "mission ended before the 90-second layer",
+      "no height or width measurement is possible from this view"
+    ]
+  },
+  "control_audit": {
+    "F7": "ViewEnemyGround",
+    "Alt+F7": "ViewEnemyDirectGround",
+    "F8": "OutsideViewFollow",
+    "Ctrl+F2": "NextViewEnemy",
+    "quick_track_before_correction": "unassigned",
+    "quick_track_after_correction": "Ctrl R=quickSaveNetTrack"
+  },
+  "verdict": "PASS for visibility, stability and the first fixed layer; INCONCLUSIVE beyond 42 seconds and for physical dimensions"
+}

@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [string]$GameRoot = 'C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test',
+    [string]$GameRoot,
     [ValidateSet('8','9')][string]$Profile = '9',
     [ValidateSet('cold','warm')][string]$CacheState = 'warm',
     [switch]$WithFileTrace,
@@ -8,6 +8,9 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+if ([string]::IsNullOrWhiteSpace($GameRoot)) {
+    $GameRoot = Join-Path $PSScriptRoot '..\WIP\test-installations\IL 2 Sturmovik 1946 test'
+}
 $captureTool = Join-Path $PSScriptRoot 'Start-IL2StartupCapture.ps1'
 
 & $captureTool `

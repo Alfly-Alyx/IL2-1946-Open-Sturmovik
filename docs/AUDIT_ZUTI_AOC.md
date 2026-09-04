@@ -182,7 +182,7 @@ La mission de controle est :
 
 La capture complete est conservee dans :
 
-`test-results/startup/20260902-161718Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260902-161718Z-profile9-warm-windowed1024-startup`
 
 Resultats observes et journalises :
 
@@ -228,9 +228,11 @@ exercees.
 
 ### Chargement prouve, effet physique non prouve
 
-`Mod_AOC_Public/Defaut.txt` definit les valeurs de repli. Le fichier
-`Bf-109G-6Early_AOC_1a.txt` surcharge notamment le couple, le regime minimal
-d'huile et la duree toleree en G negatifs.
+`Mod_AOC_Public/Defaut.txt` definit les valeurs de repli. Le profil specifique
+historique `Bf-109G-6Early_AOC_1a.txt`, qui surchargeait notamment le couple,
+le regime minimal d'huile et la duree toleree en G negatifs, a ete retire du
+depot le 4 septembre 2026 sur decision du mainteneur. La v1.15 ne livre donc
+plus de surcharge AOC propre au Bf-109G-6 Early.
 
 Le fichier sans extension `Files/294ABC86A89FAEB4` est la classe
 `com/maddox/il2/fm/FlightModelMain`, taille 40 760 octets, SHA-256
@@ -287,11 +289,13 @@ de profils est actif ; la simulation AOC 1a n'est pas fonctionnellement demontre
 
 Le dossier reel est directement a la racine du jeu de test :
 
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test\Mod_AOC_Public`
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-installations\IL 2 Sturmovik 1946 test\Mod_AOC_Public`
 
-Il contient maintenant 13 fichiers, 3 587 octets. Le depot n'en livre que deux,
-551 octets : `Defaut.txt` et `Bf-109G-6Early_AOC_1a.txt`. Les onze autres ont ete
-crees dans l'ordre des essais entre le 30 aout et le 1er septembre 2026 :
+Pendant la campagne, il a contenu 13 fichiers, 3 587 octets. Le depot n'en livre
+desormais qu'un seul : `Defaut.txt`. Le profil specifique
+`Bf-109G-6Early_AOC_1a.txt` a ete retire le 4 septembre 2026. Les onze profils
+suivants ont ete crees dans l'ordre des essais entre le 30 aout et le
+1er septembre 2026 :
 
 - `F4F-3_AOC_1a.txt` ;
 - `B-29SP_AOC_1a.txt` ;
@@ -356,6 +360,30 @@ remplacement**, soumis aux controles suivants avant decision :
   meme temps.
 - Tout AOC retenu fera partie du manifeste de gameplay client/serveur, pas d'un
   profil graphique.
+
+### Tache differee : regrouper AOC avec les mods moteur
+
+Le dossier racine `Mod_AOC_Public` ne doit pas rester isole des contenus moteur
+comme Zuti. Son deplacement dans leur future arborescence commune est ajoute a
+la liste de travail. Il ne peut toutefois pas etre renomme ou deplace par une
+simple operation de fichiers : `FlightModelMain.load_modData()` recherche et
+alimente actuellement le chemin `Mod_AOC_Public` en dur.
+
+La remise en ordre devra donc :
+
+1. fixer le dossier commun definitif des mods charges par le moteur, distinct
+   des utilitaires externes et des programmes actifs en parallele ;
+2. modifier le chargeur AOC pour lire et creer ses profils dans ce nouvel
+   emplacement, avec une migration explicite des profils existants ;
+3. mettre a jour le manifeste, l'installation, le selecteur, les validateurs et
+   la documentation sans laisser deux sources actives concurrentes ;
+4. verifier les chemins sur une installation neuve et sur une mise a niveau ;
+5. refaire les essais AOC avec profil par defaut et profil specifique, en
+   confirmant la creation au bon endroit et l'absence de regression Zuti.
+
+Le deplacement restera differe tant que le choix entre AOC 1a et son candidat de
+remplacement n'est pas tranche, afin de ne pas figer deux fois une arborescence
+encore provisoire.
 
 ## Rapport avec les erreurs actuelles
 

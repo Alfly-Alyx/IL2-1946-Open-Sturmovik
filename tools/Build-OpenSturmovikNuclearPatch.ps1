@@ -31,7 +31,9 @@ $sourceFiles = [ordered]@{
             '2F66A5AA35C0DF6D29D44DA27FC71DDEF1198F05B9974D92DE11B22F14926F91',
             '082E0B42CF24DE7E61C6B55EF057DB3CB87D8E0E33373D9BDDE578507C57AD44',
             '0FAFDB908E7317C8E0E0E5092EE4D40E52251B3D8B06FDAC8CB08EBA1E05554C',
-            'E32EBB8B4D84173C88A53AA74D06484DF47A74593D70E1FF858E170BDAD45707'
+            'E32EBB8B4D84173C88A53AA74D06484DF47A74593D70E1FF858E170BDAD45707',
+            'F90E68C7A11987E052146544068E35C0ED5DB8D381E5BDDC63870E7B470D0226',
+            '24CCB92F1AD8BCAD777CAF03B9357CD7756E3E1248986A2C3B7FD317DDD2CF9A'
         )
     }
     'Explosions-Silverplate' = [pscustomobject]@{
@@ -61,14 +63,16 @@ $sourceFiles = [ordered]@{
         Path = Join-Path $files '3F43760A72781132'
         Sha256 = @(
             'B2780228AA6C8521B9117583E713A39C5F1BB6078BA119D59578F4EE27880AD8',
-            '8D7B5F3D570C3463D0119AA6FDDE011D7EF3D07F053F2120A58B601C9D451343'
+            '8D7B5F3D570C3463D0119AA6FDDE011D7EF3D07F053F2120A58B601C9D451343',
+            'FAEAEFAA3D57ECF615912BB46FD19259E923D8C8AEA23862BB652A7248C2C6BE'
         )
     }
     'BombFatMan' = [pscustomobject]@{
         Path = Join-Path $files '830E5C5AC3A1C77A'
         Sha256 = @(
             '515DCE7B2FE6B555F9F56FC7EA1DFB96C33EBE6F370CCD8FD149FD6FB1C3CA6C',
-            '9DCB1DD4BDBF9E6EED9B401157796B1E2BF4F0206564834150C2C3F077AD4589'
+            '9DCB1DD4BDBF9E6EED9B401157796B1E2BF4F0206564834150C2C3F077AD4589',
+            '94ABC0A426CAF8E300FC995FE4D23ACCC164F88406D9314BC2A712C7E088E428'
         )
     }
 }
@@ -150,8 +154,31 @@ $mapping = [ordered]@{
     'NuclearBlast$DamageData.class' = [pscustomobject]@{ Class = 'com.maddox.il2.objects.effects.NuclearBlast$DamageData'; LooseName = '709FB7A0C816C8B2' }
     'NuclearBlast$ShockAction.class' = [pscustomobject]@{ Class = 'com.maddox.il2.objects.effects.NuclearBlast$ShockAction'; LooseName = '6482BE08C086B0BA' }
     'NuclearBlast$ShockData.class' = [pscustomobject]@{ Class = 'com.maddox.il2.objects.effects.NuclearBlast$ShockData'; LooseName = '145128EC449ADBDA' }
-    'NuclearBlast$VisualAction.class' = [pscustomobject]@{ Class = 'com.maddox.il2.objects.effects.NuclearBlast$VisualAction'; LooseName = '2A3CF08C7344E18A' }
-    'NuclearBlast$VisualData.class' = [pscustomobject]@{ Class = 'com.maddox.il2.objects.effects.NuclearBlast$VisualData'; LooseName = 'AB04450E05C9E67C' }
+    'NuclearBlast$PhaseAction.class' = [pscustomobject]@{ Class = 'com.maddox.il2.objects.effects.NuclearBlast$PhaseAction'; LooseName = '8D53953C1956F06A' }
+    'NuclearBlast$VisualTickAction.class' = [pscustomobject]@{ Class = 'com.maddox.il2.objects.effects.NuclearBlast$VisualTickAction'; LooseName = 'ABFC6F18761EB542' }
+    'NuclearBlast$State.class' = [pscustomobject]@{ Class = 'com.maddox.il2.objects.effects.NuclearBlast$State'; LooseName = '51AD1FEC90031C8A' }
+}
+
+# Every class emitted from NuclearBlast.java must have one loose-file mapping.
+# The semantic audit independently verifies that each hexadecimal name is the
+# SFS fingerprint of the corresponding Java class name.
+$generatedNuclearClassNames = @(
+    Get-ChildItem -LiteralPath $semanticClasses -Filter 'NuclearBlast*.class' -File |
+        ForEach-Object Name |
+        Sort-Object
+)
+$mappedNuclearClassNames = @(
+    $mapping.Keys |
+        Where-Object { $_ -like 'NuclearBlast*.class' } |
+        Sort-Object
+)
+$mappingDifferences = @(Compare-Object -ReferenceObject $generatedNuclearClassNames -DifferenceObject $mappedNuclearClassNames)
+if ($mappingDifferences.Count -ne 0) {
+    throw "Mappage incomplet des classes NuclearBlast : $($mappingDifferences | Out-String)"
+}
+$duplicateLooseNames = @($mapping.Values | Group-Object LooseName | Where-Object Count -gt 1)
+if ($duplicateLooseNames.Count -ne 0) {
+    throw "Noms libres SFS dupliques : $($duplicateLooseNames.Name -join ', ')."
 }
 
 $manifestEntries = [Collections.Generic.List[object]]::new()
@@ -175,7 +202,6 @@ foreach ($entry in $mapping.GetEnumerator()) {
 
 $manifest = [ordered]@{
     schema = 'open-sturmovik-nuclear-patch-v1'
-    generated_utc = [DateTime]::UtcNow.ToString('o')
     model = [ordered]@{
         little_boy = [ordered]@{ yield_kt = 15; airburst_m = 600; engine_radius_m = 2150; mass_kg = 4400; visual_scale = 0.894 }
         fat_man = [ordered]@{ yield_kt = 21; airburst_m = 503; engine_radius_m = 2360; mass_kg = 4670; visual_scale = 1.0 }
@@ -183,22 +209,45 @@ $manifest = [ordered]@{
         propagation_m_s = 343
         damage_timing = 'per-actor simulation-time delay'
         outer_aircraft_effect = 'bounded velocity impulse only'
-        visual_clock = 'explicit IL-2 simulation time; pause must not consume particle lifetime'
-        pause_preservation = [ordered]@{
-            detection_clock = 'IL-2 real-time MsgAction, one shared 25 ms watcher'
-            emitter_control = 'native Eff3D.pause via cached protected-method reflection'
-            scope = 'registered Little Boy and Fat Man emitters only'
-            purpose = 'prevent particle emitter reset and accelerated age replay after pause menu'
+        visual_clock = 'IL-2 simulation time only; pause freezes age and never recreates an emitter'
+        visual_state = [ordered]@{
+            identity = 'one persistent state per rendered detonation'
+            fields = @('detonation_time', 'position', 'altitude', 'ground_altitude', 'yield', 'surface', 'phase', 'actor_roles', 'actors_created', 'actors_destroyed', 'visual_ticks', 'stabilized_created', 'transients_retired', 'rise_retired', 'next_rise_layer', 'rise_layers_created', 'rise_layers_skipped', 'emission_complete')
+            ownership = 'all initial and phased Eff3DActor instances are registered and explicitly destroyed'
+            diagnostics = 'event, phase, simulation age, surface, actor, heartbeat, drain and emission state written to log'
+            pause_recovery = 'no Java recreation: the simulation-timed actors remain owned across pause and resume'
+            rise_curve = 'fixed layers follow a quadratic ease-out from the historical airburst to the configured AGL summit over 600 simulated seconds; no live emitter is moved'
+            phase_overlap = 'ten head layers at 30+60n s and five torus layers at 90+120n s each emit for 60 s and drain for 128 s; transients drain through 130 s; all rise actors overlap the stabilized phase until 728 s'
         }
         visual_lifecycle_s = [ordered]@{
-            fireball_max = 1
-            active_cloud_rise = 600
-            stabilized_cloud_visibility = 3600
+            detonation_end = 1
+            early_rise_end = 30
+            mature_rise_end = 120
+            late_rise_end = 600
+            stabilized_end = 1800
+            dissipating_end = 3600
+            transient_drain_end = 130
+            rise_drain_end = 728
+            stabilized_particle_drain_end = 3718
+            cleanup_deadline = 3728
+            rise_layer_checkpoints = @(30, 90, 150, 210, 270, 330, 390, 450, 510, 570)
+            torus_layer_checkpoints = @(90, 210, 330, 450, 570)
+            rise_layer_emission = 60
+            rise_layer_particle_drain = 128
+            rise_layer_actor_duration = 190
+        }
+        cloud_summit = [ordered]@{
+            little_boy_m = 12000
+            fat_man_m = 13500
+            interpretation = 'approximately above local ground including historical airburst altitude'
         }
         effect_engine_limits = [ordered]@{
             particles_per_emitter = 512
             particle_lifetime_s = 128
-            representation = 'bounded pools renewed by simulation-time emitters'
+            max_concurrent_rise_head_emitters = 4
+            max_concurrent_rise_torus_emitters = 2
+            max_created_visual_actors_per_blast = 22
+            representation = 'bounded fixed-position pools renewed by simulation-time emitters; no particle origin is moved after creation'
         }
     }
     classes = $manifestEntries

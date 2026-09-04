@@ -10,7 +10,7 @@ $ErrorActionPreference = 'Stop'
 # Windows PowerShell 5.1 can evaluate parameter defaults before $PSScriptRoot is
 # populated. Resolve the script-relative default after parameter binding.
 if ([string]::IsNullOrWhiteSpace($ResultsRoot)) {
-    $ResultsRoot = Join-Path $PSScriptRoot '..\test-results\startup'
+    $ResultsRoot = Join-Path $PSScriptRoot '..\WIP\captures\startup'
 }
 
 if ([string]::IsNullOrWhiteSpace($RunRoot)) {

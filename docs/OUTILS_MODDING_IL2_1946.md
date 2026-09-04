@@ -7,7 +7,7 @@ Le numero de version le plus eleve n'est pas toujours le bon choix : certains
 formats proteges, executables et wrappers changent avec la version du jeu.
 
 Les archives recuperees sont conservees hors du depot, dans
-`D:\Projets\GITHUB\res\IL2 1946\Outils`. Elles ne sont ni installees dans le
+`D:\Projets\GITHUB\#res\IL2 1946\Outils`. Elles ne sont ni installees dans le
 jeu de reference, ni activees par Open Sturmovik. Les executables communautaires
 examines ne sont pas signes. Un controle Microsoft Defender realise sur les
 archives extraites le 30 aout 2026 n'a signale aucune menace ; ce resultat ne

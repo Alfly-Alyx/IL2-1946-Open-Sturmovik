@@ -65,8 +65,10 @@ if ($unexpectedRootSfs.Count -ne 0) {
 
 $payloadDirectories = @(
     '_Game Switchers',
-    '_Guides_&_Manuals',
-    '_OS_Programs',
+    '_Documentation',
+    '_Utilities',
+    '_Game_Enhancements',
+    '_Runtime_Addons',
     'DGen',
     'docs',
     'Files',

@@ -4,12 +4,16 @@ param(
     [Parameter(Mandatory = $true)][string]$DestinationRoot,
     [string]$PlanPath = (Join-Path (Split-Path -Parent $PSScriptRoot) 'manifests\test\v1.15-test-sync.json'),
     [string]$BackupRoot,
-    [string]$ProtectedReferenceRoot = 'C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946',
+    [string]$ProtectedReferenceRoot,
+    [string[]]$AllowedContentFailures = @(),
     [switch]$Apply
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+if ([string]::IsNullOrWhiteSpace($ProtectedReferenceRoot)) {
+    $ProtectedReferenceRoot = Join-Path $PSScriptRoot '..\WIP\resources\IL2\IL 2 Sturmovik 1946'
+}
 
 function Get-Sha256 {
     param([Parameter(Mandatory = $true)][string]$Path)
@@ -17,8 +21,8 @@ function Get-Sha256 {
 }
 function Restore-Sync {
     param(
-        [Parameter(Mandatory = $true)][System.Collections.Generic.List[string]]$Created,
-        [Parameter(Mandatory = $true)][System.Collections.Generic.List[string]]$BackedUp,
+        [Parameter(Mandatory = $true)][AllowEmptyCollection()][System.Collections.Generic.List[string]]$Created,
+        [Parameter(Mandatory = $true)][AllowEmptyCollection()][System.Collections.Generic.List[string]]$BackedUp,
         [Parameter(Mandatory = $true)][string]$Destination,
         [Parameter(Mandatory = $true)][string]$Backup
     )
@@ -93,7 +97,12 @@ if (-not $Apply) {
 }
 
 if (-not $BackupRoot) {
-    $BackupRoot = $destination + '.sync-backup-' + [DateTime]::Now.ToString('yyyyMMdd-HHmmss')
+    # The test tree can live deep below the repository. Repeating its long
+    # directory name in the backup used to push nested mission paths beyond
+    # the legacy Win32 MAX_PATH limit before the first copy.
+    $BackupRoot = Join-Path `
+        ([IO.Path]::GetDirectoryName($destination)) `
+        ('sync-' + [DateTime]::Now.ToString('yyyyMMdd-HHmmss'))
 }
 $backup = [IO.Path]::GetFullPath($BackupRoot).TrimEnd('\')
 if (Test-Path -LiteralPath $backup) { throw "La sauvegarde existe deja : $backup" }
@@ -128,8 +137,24 @@ try {
     }
 
     $validator = Join-Path $source 'tools\Test-OpenSturmovikContent.ps1'
-    & $validator -ProjectRoot $source -ContentRoot $destination | Out-Host
-    if ($LASTEXITCODE -ne 0) { throw 'La validation fonctionnelle apres synchronisation a echoue.' }
+    $contentReport = Join-Path $backup 'content-validation.json'
+    & $validator -ProjectRoot $source -ContentRoot $destination -ReportPath $contentReport | Out-Host
+    $contentExitCode = $LASTEXITCODE
+    if (-not (Test-Path -LiteralPath $contentReport -PathType Leaf)) {
+        throw "La validation fonctionnelle n a produit aucun rapport (code=$contentExitCode)."
+    }
+    $contentSummary = Get-Content -LiteralPath $contentReport -Raw | ConvertFrom-Json
+    $failedNames = @($contentSummary.Checks | Where-Object { $_.Status -eq 'FAIL' } | ForEach-Object { $_.Name })
+    $unexpectedFailures = @($failedNames | Where-Object { $_ -notin $AllowedContentFailures })
+    if ($unexpectedFailures.Count -ne 0) {
+        throw "La validation fonctionnelle apres synchronisation a echoue : $($unexpectedFailures -join ', ')."
+    }
+    if ($contentExitCode -ne 0 -and $failedNames.Count -eq 0) {
+        throw "La validation fonctionnelle a retourne le code $contentExitCode sans controle FAIL."
+    }
+    if ($failedNames.Count -ne 0) {
+        Write-Host "Echec(s) global(aux) connu(s), conserve(s) explicitement : $($failedNames -join ', ')." -ForegroundColor Yellow
+    }
 
     [ordered]@{
         applied_utc = [DateTime]::UtcNow.ToString('O')
@@ -138,6 +163,13 @@ try {
         operations = $pending.Count
         backed_up = @($backedUp)
         created = @($created)
+        content_validation = [ordered]@{
+            pass = $contentSummary.Pass
+            warn = $contentSummary.Warn
+            fail = $contentSummary.Fail
+            allowed_failures = @($failedNames)
+            report = 'content-validation.json'
+        }
     } | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $backup 'sync-receipt.json') -Encoding UTF8
     Write-Host "Synchronisation validee. Sauvegarde recuperable : $backup" -ForegroundColor Green
 }

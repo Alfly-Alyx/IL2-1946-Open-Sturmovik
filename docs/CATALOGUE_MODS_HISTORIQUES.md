@@ -6,10 +6,43 @@ Ce catalogue sert a retrouver la provenance des composants reunis dans Open
 Sturmovik entre 2006 et 2010. Les archives telechargees sont conservees hors du
 depot Git dans :
 
-`D:\Projets\GITHUB\res\IL2 1946\Mods`
+`D:\Projets\GITHUB\#res\IL2 1946\Mods`
+
+Les compilations communautaires completes et leurs correctifs sont ranges dans :
+
+`D:\Projets\GITHUB\#res\IL2 1946\Packs`
 
 Aucun fichier retrouve n'est copie automatiquement dans l'add-on. Il doit etre
 identifie, compare, teste sur une copie et documente avant integration.
+
+## Packs ajoutes le 4 septembre 2026
+
+L'inventaire suivant a ete effectue en lecture seule. Ces paquets ciblent des
+bases posterieures a Open Sturmovik v1.15, qui reste fonde sur IL-2 4.09m. Ils
+constituent donc des sources de comparaison et de retroportage ; aucun ne doit
+etre superpose directement a la v1.15.
+
+| Paquet | Fichiers | Taille | Cible constatee | Etat local |
+|---|---:|---:|---|---|
+| Ultrapack 3.4 `Cassie` | 38 | 18 605 708 439 octets | famille Ultrapack fondee sur la branche communautaire 4.12.2m | Superpack continu `part01` a `part31`, Patch 2 continu `part1` a `part6`, Hotfix 23 present |
+| TFM-412 Level 38 | 42 | 11 228 566 709 octets | IL-2 4.12.2m, SAS ModAct/AI Flyables 5.30 | niveaux `01` a `38` continus, correctif Heavies et prerequis presents |
+| HSFX 7.0.3 | 11 | 5 804 984 891 octets | IL-2 4.12.2m | trois ensembles multivolumes et correctif 7.0 vers 7.0.3 presents |
+| SAS ModAct 6.40 | 1 | 138 764 529 octets | IL-2 4.13.4m | installateur unique present |
+
+Sources communautaires de reference :
+
+- [Ultrapack 3.4 Cassie](https://www.sas1946.com/main/index.php?topic=67406.0) ;
+- [sources Ultrapack 3.4](https://github.com/MichaelStiefler/IL-2-1946-Ultrapack-3.4),
+  [Patch 2](https://github.com/MichaelStiefler/IL-2-1946-Ultrapack-3.4-Patch-2)
+  et [Hotfix](https://github.com/MichaelStiefler/IL-2-1946-Ultrapack-3.4-Patch-2-Hotfix) ;
+- [TFM-412 The Next Level](https://www.sas1946.com/main/index.php?topic=40015.0) ;
+- [SAS ModAct 6.40 pour 4.13.4m](https://www.sas1946.com/main/index.php?topic=55051.0) ;
+- [guide communautaire HSFX 7.0.3](https://www.sas1946.com/main/index.php?topic=50309.0).
+
+La continuite des noms prouve seulement que les parties attendues sont presentes.
+Elle ne remplace pas un test d'integrite des archives. Il reste a calculer leurs
+empreintes, tester les volumes sans extraction, puis inventorier leur contenu
+dans un espace WIP avant toute comparaison avec `Files`, les SFS et `Buttons`.
 
 ## Informations conservees pour chaque paquet
 
@@ -111,7 +144,7 @@ echantillons locaux verifies ; ce paquet n'etait pas leur source.
 | `UV3_SFS.rar` | 314 342 108 | `37BCD6C0B39F1293048220A024D5C9A36AC7A24EBBF7EABD3D96A62D4FBA6FB2` | `tigersounds_1.sfs` et `tigersounds_2.sfs` |
 
 Les deux archives sont conservees sans modification dans
-`D:\Projets\GITHUB\res\IL2 1946\Mods\Tiger33 Ultimate Sound Mod V3`.
+`D:\Projets\GITHUB\#res\IL2 1946\Mods\Tiger33 Ultimate Sound Mod V3`.
 
 Les trois RAR internes comptent respectivement 393, 788 et 772 entrees. Une
 recherche d'extensions executables dans les enveloppes et les archives internes

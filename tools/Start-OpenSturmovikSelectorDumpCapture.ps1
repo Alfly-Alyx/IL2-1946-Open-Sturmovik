@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [string]$GameRoot = 'C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 Selector Dump',
+    [string]$GameRoot = (Join-Path $PSScriptRoot '..\WIP\labs\IL 2 Sturmovik 1946 Selector Dump'),
     [ValidateSet('cold','warm')][string]$CacheState = 'cold',
     [ValidateRange(30, 600)][int]$WaitForGameSeconds = 180,
     [switch]$SkipProcmon,

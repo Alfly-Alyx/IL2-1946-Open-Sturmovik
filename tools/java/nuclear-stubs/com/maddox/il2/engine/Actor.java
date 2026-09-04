@@ -16,4 +16,7 @@ public abstract class Actor {
 
     public void setSpeed(Vector3d speed) {
     }
+
+    public void postDestroy(long simulationTime) {
+    }
 }

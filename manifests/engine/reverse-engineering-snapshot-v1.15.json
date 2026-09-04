@@ -1,0 +1,605 @@
+{
+  "schema": "open-sturmovik.reverse-engineering-snapshot.v1",
+  "target": {
+    "addon_version": "1.15",
+    "game_runtime": "IL-2 Sturmovik 1946 4.09m modified",
+    "process_architecture": "x86",
+    "java_runtime": "HotSpot 1.3.1",
+    "maximum_supported_class_major": 47
+  },
+  "evidence_policy": {
+    "static": "Observed directly in files, headers, bytecode or configuration.",
+    "runtime": "Observed in a captured game session and retained with raw evidence.",
+    "inferred": "Consistent with evidence but not yet isolated by a controlled test.",
+    "unknown": "Must not be presented as established behavior."
+  },
+  "repository_runtime_files": [
+    {
+      "path": "fb_3do.SFS",
+      "bytes": 154030389,
+      "sha256": "E95D1E3659B04F1638CC644B292846F94C1823CD5B63419F71FC26DEFF0C057B"
+    },
+    {
+      "path": "fb_3do18.SFS",
+      "bytes": 15954060,
+      "sha256": "AFD482C2BECB39BC4E88C8CCA30E367A5261B06C5059A29E2D467CDDDD8163C0"
+    },
+    {
+      "path": "fb_3do19.SFS",
+      "bytes": 187104836,
+      "sha256": "4527FC779F188364E2FC8739E53D74C85B3A47471B01F169586E4F1AFBB6B670"
+    },
+    {
+      "path": "fb_3do20.SFS",
+      "bytes": 2020049,
+      "sha256": "02FB0095B9FE4882FB17054F4F11460D49F61B80AF78F9B6EBAF687251E4E283"
+    },
+    {
+      "path": "fb_maps14.SFS",
+      "bytes": 70234937,
+      "sha256": "9AFA2CB3670224185B693788F3D9196C971CA25AE5A6064C8F4710B3AB95F1FC"
+    },
+    {
+      "path": "fb_maps15.SFS",
+      "bytes": 343180796,
+      "sha256": "AF87651FBCA2450A57735ED2013F12FC9F307ABFB8B2913F22EB5543322D8AD9"
+    },
+    {
+      "path": "files.SFS",
+      "bytes": 25111885,
+      "sha256": "9F7D136C586EB3FCD258C5C000F34951D410A0236934F22ABA2516637874B095"
+    },
+    {
+      "path": "il2_core.dll",
+      "bytes": 1552384,
+      "sha256": "3145F63A53061C40604B57DED2F96313559BD69692123E7479D8C409339ECEB3"
+    },
+    {
+      "path": "il2_corep4.dll",
+      "bytes": 1634304,
+      "sha256": "0B4CD130051E7D853219480606A1508C0FBB3C7FD29FA8AF87BB72BBD37BB979"
+    },
+    {
+      "path": "il2_usgs.dll",
+      "bytes": 548864,
+      "sha256": "44507A6071A1A7B9BF89F19CC43EE13569D3433240A51606AF0F7B7D717B28CB"
+    },
+    {
+      "path": "il2_usgs2.dll",
+      "bytes": 229376,
+      "sha256": "5BF14513A3B12D5ABBE00EEB91BC0EE3393181969E219B566638871BE2CE140D"
+    },
+    {
+      "path": "il2fb.exe",
+      "bytes": 4548608,
+      "sha256": "9ACE9A542AC7203D8A66961570B6854C11FB0BF721F0234DA9D6095D69D2525C"
+    },
+    {
+      "path": "mg_snd_sse.dll",
+      "bytes": 380928,
+      "sha256": "FDDD6924853306C94C9B8844703D4718F45CF22828975406E3C67DE40DFDE1C4"
+    },
+    {
+      "path": "mg_snd.dll",
+      "bytes": 380928,
+      "sha256": "2FBE1180129806CC978A48879969E592918EA26C42EB235D62FC874BAD886421"
+    },
+    {
+      "path": "msvcp71.dll",
+      "bytes": 499712,
+      "sha256": "DF96156F6A548FD6FE5672918DE5AE4509D3C810A57BFFD2A91DE45A3ED5B23B"
+    },
+    {
+      "path": "msvcr71.dll",
+      "bytes": 348160,
+      "sha256": "8094AF5EE310714CAEBCCAEEE7769FFB08048503BA478B879EDFEF5F1A24FEFE"
+    }
+  ],
+  "loose_content": {
+    "root": "Files",
+    "files": 89775,
+    "directories": 4900,
+    "bytes": 16887629221,
+    "zones": [
+      {
+        "name": "3do",
+        "files": 83634,
+        "bytes": 12355117162
+      },
+      {
+        "name": "Maps",
+        "files": 1975,
+        "bytes": 4144441813
+      },
+      {
+        "name": "Samples",
+        "files": 621,
+        "bytes": 339116654
+      },
+      {
+        "name": "com",
+        "files": 7,
+        "bytes": 3094242
+      },
+      {
+        "name": "gui",
+        "files": 21,
+        "bytes": 6699411
+      },
+      {
+        "name": "presets",
+        "files": 163,
+        "bytes": 205309
+      }
+    ],
+    "extensions": [
+      {
+        "extension": ".msh",
+        "files": 38043,
+        "bytes": 974949332
+      },
+      {
+        "extension": ".mat",
+        "files": 24476,
+        "bytes": 13892616
+      },
+      {
+        "extension": ".tga",
+        "files": 17574,
+        "bytes": 13509524906
+      },
+      {
+        "extension": ".sim",
+        "files": 3410,
+        "bytes": 150625
+      },
+      {
+        "extension": "(none)",
+        "files": 2466,
+        "bytes": 14346529
+      },
+      {
+        "extension": ".him",
+        "files": 835,
+        "bytes": 8641236
+      },
+      {
+        "extension": ".mis",
+        "files": 630,
+        "bytes": 15288688
+      },
+      {
+        "extension": ".wav",
+        "files": 621,
+        "bytes": 339116654
+      },
+      {
+        "extension": ".tgb",
+        "files": 428,
+        "bytes": 1654750167
+      },
+      {
+        "extension": ".eff",
+        "files": 302,
+        "bytes": 108950
+      },
+      {
+        "extension": ".ini",
+        "files": 212,
+        "bytes": 3716545
+      },
+      {
+        "extension": ".txt",
+        "files": 197,
+        "bytes": 575841
+      },
+      {
+        "extension": ".prs",
+        "files": 163,
+        "bytes": 205309
+      },
+      {
+        "extension": ".bumph",
+        "files": 90,
+        "bytes": 88543096
+      },
+      {
+        "extension": ".static",
+        "files": 82,
+        "bytes": 138809065
+      },
+      {
+        "extension": ".tga_table",
+        "files": 62,
+        "bytes": 9796152
+      },
+      {
+        "extension": ".properties",
+        "files": 55,
+        "bytes": 1819035
+      },
+      {
+        "extension": ".raw",
+        "files": 18,
+        "bytes": 21807104
+      },
+      {
+        "extension": ".psd",
+        "files": 13,
+        "bytes": 61796065
+      },
+      {
+        "extension": ".rar",
+        "files": 13,
+        "bytes": 1008348
+      },
+      {
+        "extension": ".bak",
+        "files": 9,
+        "bytes": 276321
+      },
+      {
+        "extension": ".txl",
+        "files": 9,
+        "bytes": 3111
+      },
+      {
+        "extension": ".old",
+        "files": 8,
+        "bytes": 4985952
+      },
+      {
+        "extension": ".3ds",
+        "files": 5,
+        "bytes": 571188
+      },
+      {
+        "extension": ".msh_",
+        "files": 4,
+        "bytes": 95484
+      },
+      {
+        "extension": ".ms",
+        "files": 4,
+        "bytes": 64944
+      },
+      {
+        "extension": ".dds",
+        "files": 4,
+        "bytes": 874432
+      },
+      {
+        "extension": ".exe",
+        "files": 4,
+        "bytes": 875520
+      },
+      {
+        "extension": ".him_",
+        "files": 4,
+        "bytes": 93809
+      },
+      {
+        "extension": ".jbf",
+        "files": 4,
+        "bytes": 688000
+      },
+      {
+        "extension": ".bat",
+        "files": 3,
+        "bytes": 200
+      },
+      {
+        "extension": ".jar",
+        "files": 3,
+        "bytes": 83258
+      },
+      {
+        "extension": ".tgb___",
+        "files": 2,
+        "bytes": 6291544
+      },
+      {
+        "extension": ".class",
+        "files": 2,
+        "bytes": 2403
+      },
+      {
+        "extension": ".ms_",
+        "files": 2,
+        "bytes": 31148
+      },
+      {
+        "extension": ".msh-",
+        "files": 2,
+        "bytes": 155645
+      },
+      {
+        "extension": ".ppf",
+        "files": 2,
+        "bytes": 803257
+      },
+      {
+        "extension": ".rds",
+        "files": 1,
+        "bytes": 58975
+      },
+      {
+        "extension": ".him-",
+        "files": 1,
+        "bytes": 5428
+      },
+      {
+        "extension": ".m__",
+        "files": 1,
+        "bytes": 52394
+      },
+      {
+        "extension": ".srd",
+        "files": 1,
+        "bytes": 5503
+      },
+      {
+        "extension": ".preload",
+        "files": 1,
+        "bytes": 17620
+      },
+      {
+        "extension": ".tga_",
+        "files": 1,
+        "bytes": 786476
+      },
+      {
+        "extension": ".cld",
+        "files": 1,
+        "bytes": 5975
+      },
+      {
+        "extension": ".tgawat",
+        "files": 1,
+        "bytes": 8388626
+      },
+      {
+        "extension": ".org",
+        "files": 1,
+        "bytes": 262668
+      },
+      {
+        "extension": ".mdb",
+        "files": 1,
+        "bytes": 118784
+      },
+      {
+        "extension": ".bmp",
+        "files": 1,
+        "bytes": 3145782
+      },
+      {
+        "extension": ".mtl",
+        "files": 1,
+        "bytes": 117
+      },
+      {
+        "extension": ".him__",
+        "files": 1,
+        "bytes": 34533
+      },
+      {
+        "extension": ".rls",
+        "files": 1,
+        "bytes": 3861
+      }
+    ]
+  },
+  "java_loose_classes": {
+    "hexadecimal_root_names": 2459,
+    "cafebabe_headers": 2459,
+    "by_major": [
+      {
+        "major": 45,
+        "files": 705
+      },
+      {
+        "major": 46,
+        "files": 150
+      },
+      {
+        "major": 47,
+        "files": 1604
+      }
+    ]
+  },
+  "textures": {
+    "tga_extension_files": 17574,
+    "imf_1a10_signature_files": 2641,
+    "warning": "The .tga extension does not prove a standard TGA stream. IMF containers require an IL-2-aware decoder."
+  },
+  "effects": {
+    "files": 302,
+    "classes": [
+      {
+        "class_name": "TAnimatedSpriteParams",
+        "occurrences": 12
+      },
+      {
+        "class_name": "TParticlesSystemParams",
+        "occurrences": 245
+      },
+      {
+        "class_name": "TSmokeSpiralParams",
+        "occurrences": 33
+      },
+      {
+        "class_name": "TSmokeTrailParams",
+        "occurrences": 12
+      }
+    ],
+    "fields": [
+      {
+        "field_name": "Angle",
+        "occurrences": 12
+      },
+      {
+        "field_name": "AngleSpeed",
+        "occurrences": 12
+      },
+      {
+        "field_name": "BasedOn",
+        "occurrences": 42
+      },
+      {
+        "field_name": "Color0",
+        "occurrences": 278
+      },
+      {
+        "field_name": "Color1",
+        "occurrences": 278
+      },
+      {
+        "field_name": "ColorPeriod",
+        "occurrences": 12
+      },
+      {
+        "field_name": "EmitFrq",
+        "occurrences": 256
+      },
+      {
+        "field_name": "EmitTheta",
+        "occurrences": 257
+      },
+      {
+        "field_name": "EmitVelocity",
+        "occurrences": 262
+      },
+      {
+        "field_name": "FinishTime",
+        "occurrences": 267
+      },
+      {
+        "field_name": "GasResist",
+        "occurrences": 257
+      },
+      {
+        "field_name": "LiveTime",
+        "occurrences": 268
+      },
+      {
+        "field_name": "MatName",
+        "occurrences": 274
+      },
+      {
+        "field_name": "MaxObjectVelocity",
+        "occurrences": 26
+      },
+      {
+        "field_name": "MaxR",
+        "occurrences": 256
+      },
+      {
+        "field_name": "nParticles",
+        "occurrences": 268
+      },
+      {
+        "field_name": "PerspCompensDist",
+        "occurrences": 12
+      },
+      {
+        "field_name": "PerspCompensScale",
+        "occurrences": 12
+      },
+      {
+        "field_name": "PhiN",
+        "occurrences": 256
+      },
+      {
+        "field_name": "PsiN",
+        "occurrences": 255
+      },
+      {
+        "field_name": "Radius0",
+        "occurrences": 12
+      },
+      {
+        "field_name": "Radius1",
+        "occurrences": 12
+      },
+      {
+        "field_name": "RadiusPeriod",
+        "occurrences": 12
+      },
+      {
+        "field_name": "Rnd",
+        "occurrences": 267
+      },
+      {
+        "field_name": "SegmentLen",
+        "occurrences": 26
+      },
+      {
+        "field_name": "Size",
+        "occurrences": 279
+      },
+      {
+        "field_name": "TranspTransitionTime",
+        "occurrences": 63
+      },
+      {
+        "field_name": "VertAccel",
+        "occurrences": 257
+      },
+      {
+        "field_name": "Wind",
+        "occurrences": 268
+      }
+    ],
+    "observed_409m_bounds": {
+      "nParticles": {
+        "min": 1,
+        "max": 512
+      },
+      "FinishTime": {
+        "min": -1,
+        "max": 10000
+      },
+      "MaxR": {
+        "min": 0,
+        "max": 32
+      },
+      "PhiN": {
+        "min": 0,
+        "max": 32
+      },
+      "PsiN": {
+        "min": 0,
+        "max": 32
+      },
+      "LiveTime": {
+        "min": 0.01,
+        "max": 128
+      },
+      "Wind": {
+        "min": 0,
+        "max": 100
+      },
+      "Rnd": {
+        "min": 0,
+        "max": 0.95
+      }
+    }
+  },
+  "registries": {
+    "air_ini_entries": 535,
+    "maps_all_ini_entries": 404
+  },
+  "reproducible_tools": [
+    "tools/Analyze-Sfs.py",
+    "tools/Audit-PeBinaries.ps1",
+    "tools/Disassemble-IL2PE.py",
+    "tools/Audit-JavaClasses.py",
+    "tools/Analyze-IL2Minidump.py",
+    "tools/Analyze-IL2HotSpot131.py",
+    "tools/Inspect-IL2HotSpotObject.py",
+    "tools/Audit-ButtonsFlightModels.py",
+    "tools/Normalize-EffectLimits.py",
+    "tools/Start-IL2StartupCapture.ps1"
+  ]
+}

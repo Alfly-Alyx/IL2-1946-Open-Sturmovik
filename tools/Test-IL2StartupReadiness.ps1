@@ -3,11 +3,12 @@ param(
     [Parameter(Mandatory = $true)][string]$GameRoot,
     [ValidateSet('1','2','3','4','5','6','7','8','9')][string]$Profile = '9',
     [switch]$Windowed1024,
-    [string]$ReferenceRoot = 'C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946',
+    [string]$ReferenceRoot,
     [string]$RepositoryRoot,
     [string]$ProcmonPath,
     [string]$FrameCapturePath,
     [switch]$SelectorDumpLab,
+    [string[]]$AllowedContentFailures = @(),
     [string]$ReportPath
 )
 
@@ -15,14 +16,17 @@ $ErrorActionPreference = 'Stop'
 
 # Windows PowerShell 5.1 can evaluate parameter defaults before $PSScriptRoot is
 # populated. Resolve script-relative defaults only after parameter binding.
+if ([string]::IsNullOrWhiteSpace($ReferenceRoot)) {
+    $ReferenceRoot = Join-Path $PSScriptRoot '..\WIP\resources\IL2\IL 2 Sturmovik 1946'
+}
 if ([string]::IsNullOrWhiteSpace($RepositoryRoot)) {
     $RepositoryRoot = Join-Path $PSScriptRoot '..'
 }
 if ([string]::IsNullOrWhiteSpace($ProcmonPath)) {
-    $ProcmonPath = Join-Path $PSScriptRoot '..\build\test-tools\sysinternals\Procmon64.exe'
+    $ProcmonPath = Join-Path $PSScriptRoot '..\WIP\sdk\test-tools\sysinternals\Procmon64.exe'
 }
 if ([string]::IsNullOrWhiteSpace($FrameCapturePath)) {
-    $FrameCapturePath = Join-Path $PSScriptRoot '..\build\test-tools\FrameCapture.exe'
+    $FrameCapturePath = Join-Path $PSScriptRoot '..\WIP\sdk\test-tools\FrameCapture.exe'
 }
 
 $checks = New-Object 'System.Collections.Generic.List[object]'
@@ -314,8 +318,15 @@ if (Test-Path -LiteralPath $contentValidator -PathType Leaf) {
     $contentExitCode = $LASTEXITCODE
     if (Test-Path -LiteralPath $contentReport -PathType Leaf) {
         $contentSummary = Get-Content -LiteralPath $contentReport -Raw | ConvertFrom-Json
-        $contentValidationPassed = $contentExitCode -eq 0 -and $contentSummary.Fail -eq 0
-        $contentValidationDetail = "PASS=$($contentSummary.Pass), WARN=$($contentSummary.Warn), FAIL=$($contentSummary.Fail)"
+        $failedContentNames = @($contentSummary.Checks | Where-Object { $_.Status -eq 'FAIL' } | ForEach-Object { $_.Name })
+        $unexpectedContentFailures = @($failedContentNames | Where-Object { $_ -notin $AllowedContentFailures })
+        $contentValidationPassed = $unexpectedContentFailures.Count -eq 0 -and
+            ($contentExitCode -eq 0 -or $failedContentNames.Count -gt 0)
+        $allowedDetail = if ($failedContentNames.Count -ne 0) {
+            "; echecs autorises=$($failedContentNames -join ', ')"
+        }
+        else { '' }
+        $contentValidationDetail = "PASS=$($contentSummary.Pass), WARN=$($contentSummary.Warn), FAIL=$($contentSummary.Fail)$allowedDetail"
     }
     else {
         $contentValidationDetail = "rapport absent, code=$contentExitCode"
@@ -332,6 +343,7 @@ $expectedHardwareShaders = if ($graphicsVendor -eq 'NVIDIA') { '1' } else { '0' 
 $expectedForest = if ($graphicsVendor -eq 'NVIDIA') { '3' } else { '2' }
 $expectedLandGeom = if ($graphicsVendor -eq 'NVIDIA') { '3' } else { '2' }
 $configurationExpectations = [ordered]@{
+    'window/DrawIfNotFocused' = '1'
     'game/eventlogkeep' = '1'
     'Console/LOG' = '1'
     'Console/LOGTIME' = '1'
@@ -387,6 +399,7 @@ $report = [ordered]@{
     reference_root = $resolvedReference
     repository_root = $resolvedRepository
     profile = $profileLabel
+    allowed_content_failures = @($AllowedContentFailures)
     checks = $checks
     ready = @($checks | Where-Object { -not $_.Passed }).Count -eq 0
 }

@@ -7,7 +7,7 @@ par Selector Dump. Il ne modifie aucun fichier du jeu.
 ## Perimetre et limites
 
 - `air.ini` : `C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\Files\com\maddox\il2\objects\air.ini` ;
-- dump SFS : `C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 Selector Dump\dump` ;
+- dump SFS : `C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\labs\IL 2 Sturmovik 1946 Selector Dump\dump` ;
 - entrees : **535** ;
 - classes d'appareils distinctes : **535** ;
 - fichier Buttons : `C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\Files\gui\GAME\buttons`, 1789137 octets ;
@@ -32,7 +32,7 @@ incoherence statique concrete ou l'absence d'une reference essentielle.
 | Ligne | Entree | Classe | Cockpit | Modele de vol | Statut |
 | ---: | --- | --- | --- | --- | --- |
 | 20 | `B-29` | `air.B_29` | CockpitB29, CockpitB29_AGunner, CockpitB29_Bombardier, CockpitB29_FGunner, CockpitB29_RGunner, CockpitB29_T2Gunner, CockpitB29_TGunner | `FlightModels/B-29.fmd` | REVIEW |
-| 21 | `B-29-SP` | `air.B_29SP` | CockpitB29, CockpitB29SP_AGunner, CockpitB29SP_Bombardier | `FlightModels/B-29SP.fmd` | REVIEW |
+| 21 | `B-29-SP` | `air.B_29SP` | CockpitB29SP, CockpitB29SP_AGunner, CockpitB29SP_Bombardier | `FlightModels/B-29SP.fmd` | REVIEW |
 | 22 | `KB_29P` | `air.KB_29P` | aucun | `FlightModels/B-29.fmd` | REVIEW |
 | 218 | `Su-2` | `air.SU_2` | CockpitSU_2, CockpitSU_2_Bombardier, CockpitSU_2_TGunner | `FlightModels/Su-2.fmd` | REVIEW |
 

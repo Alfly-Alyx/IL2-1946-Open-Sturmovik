@@ -2,7 +2,7 @@
 
 ## Perimetre
 
-Cette analyse est statique : aucun executable du jeu ou de `_OS_Programs` n'a ete lance. L'installation de reference `C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946` et les archives de patch de `D:\Documents\##Documents\Informatique\Retro-gaming\Jeux Retro-gaming\Patchs\Patches IL2` ont seulement ete lues.
+Cette analyse etait statique : aucun executable du jeu ou de l'ancien `_OS_Programs` n'avait alors ete lance. Ces programmes ont depuis ete audites, tries puis repartis entre `_Utilities`, `_Game_Enhancements` et `_Runtime_Addons`. L'installation de reference, maintenant rangee sous `C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\resources\IL2\IL 2 Sturmovik 1946`, et les archives de patch de `D:\Documents\##Documents\Informatique\Retro-gaming\Jeux Retro-gaming\Patchs\Patches IL2` avaient seulement ete lues pour cette analyse du moteur.
 
 La cible fonctionnelle de la version 1.15 reste **4.09m**. L'installation de reference contient des composants plus recents et un chargeur de mods ; elle est utile pour comprendre l'architecture, mais ne constitue pas une image stock 4.09m fiable.
 

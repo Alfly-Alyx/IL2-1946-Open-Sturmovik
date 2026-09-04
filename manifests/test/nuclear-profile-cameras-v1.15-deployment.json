@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "deployed_at_utc": "2026-09-04T05:51:01.5739382Z",
+  "verified_after_wip_move": "2026-09-04",
+  "plan": "manifests/test/nuclear-profile-cameras-v1.15-sync.json",
+  "destination": "WIP/test-installations/IL 2 Sturmovik 1946 test",
+  "backup": "WIP/test-backups/sync-cam-20260904-055053Z",
+  "operations": 8,
+  "matching_after_deployment": 8,
+  "camera_validation": {
+    "status": "PASS",
+    "manifests": 2,
+    "missions": 4,
+    "camera_groups": 14
+  },
+  "layout": [
+    {"order":1,"purpose":"close_profile","standoff_m":1000,"altitude_m":1200},
+    {"order":2,"purpose":"measurement","standoff_m":20000,"altitude_m":6000},
+    {"order":3,"purpose":"measurement","standoff_m":30000,"altitude_m":7000},
+    {"order":4,"purpose":"close_altitude_check","standoff_m":1000,"altitude_m":3000},
+    {"order":5,"purpose":"close_altitude_check","standoff_m":1000,"altitude_m":6000},
+    {"order":6,"purpose":"close_altitude_check","standoff_m":1000,"altitude_m":10000},
+    {"order":7,"purpose":"overhead_radius","standoff_m":0,"altitude_m":16000}
+  ],
+  "content_validation": {
+    "pass": 19,
+    "warn": 2,
+    "fail": 1,
+    "allowed_failure": "Chaine sonore Allison en vol"
+  },
+  "game_launched_during_deployment": false
+}

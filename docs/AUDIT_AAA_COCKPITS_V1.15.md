@@ -40,6 +40,7 @@ de vol compatible avec Buttons.
 | 516 | `RE-2000` | `RE_2000` | — | — | not-found-in-aaa-community-installer-1.1 |
 | 70 | `TBF-1C` | `TBF1C` | TBF-1C | CockpitTBF1C, CockpitTBF1C_BGunner, CockpitTBF1C_TGunner | historical-flyable-set-restored |
 | 72 | `TBM-3` | `TBM3` | TBM-3 | CockpitTBM3, CockpitTBM3_BGunner, CockpitTBM3_TGunner | historical-flyable-set-restored |
+| 218 | `Su-2` | `SU_2` | SU_2 | CockpitSU_2, CockpitSU_2_Bombardier, CockpitSU_2_TGunner | historical-flyable-set-restored |
 | 532 | `Pokryshkins_MiG-3` | `MIG_3POKRYSHKIN` | ACES | CockpitMIG_3 | historical-flyable-set-restored |
 
 ## Paquets historiques candidats
@@ -72,6 +73,23 @@ de vol compatible avec Buttons.
 | `P_39NPOKRYSHKIN` | oui | oui |
 | `P_39Q15RECHKALOV` | oui | oui |
 | `YAK_9TALBERT` | oui | oui |
+### SU_2
+
+- classes Java : **8** ;
+- ressources non Java : **4** ;
+- references directes de classes non resolues : **0** ;
+- toutes les classes du paquet ciblent Java major 47.
+
+| Classe interne | Deja dans Open Sturmovik | Binaire identique |
+| --- | --- | --- |
+| `CockpitSU_2` | oui | oui |
+| `CockpitSU_2$1` | oui | oui |
+| `CockpitSU_2$Interpolater` | oui | oui |
+| `CockpitSU_2$Variables` | oui | oui |
+| `CockpitSU_2_Bombardier` | oui | oui |
+| `CockpitSU_2_Bombardier$Interpolater` | oui | oui |
+| `CockpitSU_2_TGunner` | oui | oui |
+| `SU_2` | oui | oui |
 ### TBF-1C
 
 - classes Java : **7** ;

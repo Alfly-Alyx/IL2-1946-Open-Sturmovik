@@ -1,0 +1,116 @@
+{
+  "schema": "open-sturmovik-nuclear-particle-ab-v1",
+  "status": "PASS",
+  "deployment": {
+    "test_root": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 test",
+    "enabled": false,
+    "runtime_pending": false,
+    "backup": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 test.nuclear-particle-ab-backup-20260903-142012Z",
+    "readiness": "47/47 Ready=True",
+    "invalid_captures": [
+      "20260903-134713Z-profile9-warm-windowed1024-startup",
+      "20260903-141052Z-profile9-warm-windowed1024-startup"
+    ],
+    "validated_capture": "20260903-142458Z-profile9-warm-windowed1024-startup",
+    "effect_a_sha256": "AD45E9925A63FFA70C28FE40C8EE23B4C65CD99E7921FB202290ED53B7E88850",
+    "effect_b_sha256": "88D062389657CB18A1CB25F34CE654F64B8023E8938D3ABF106B8BF3642A556A"
+  },
+  "runtime": {
+    "status": "PASS_WITH_FOCUS_RELOAD_TO_QUALIFY",
+    "detonation_utc": "2026-09-03T14:29:32Z",
+    "checkpoints_reached_s": [10, 60, 120, 130, 150, 180, 240, 300],
+    "cleanup_s": 310,
+    "actors_created": 8,
+    "actors_destroyed": 8,
+    "actors_remaining": 0,
+    "rehydrates": 0,
+    "resource_errors": 0,
+    "observations": [
+      "initial density similar",
+      "64-particle red probe fades before 512-particle blue probe",
+      "both probes reappeared once after focus changes; Java rehydration remained zero"
+    ],
+    "performance": {
+      "duration_s": 561.5,
+      "captured_frames": 4884,
+      "max_working_set_bytes": 861270016,
+      "max_private_bytes": 728834048,
+      "max_virtual_bytes": 2065469440,
+      "cpu_one_core_equivalent_percent": 82.62,
+      "cpu_four_core_capacity_percent": 20.66,
+      "nonresponding_after_detonation": false
+    }
+  },
+  "summary": {
+    "checks": 8,
+    "pass": 8,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "name": "fichiers du banc A/B",
+      "status": "PASS",
+      "detail": "complets"
+    },
+    {
+      "name": "variables physiques isolees",
+      "status": "PASS",
+      "detail": "seules la capacite et les couleurs d'identification different"
+    },
+    {
+      "name": "capacites A/B",
+      "status": "PASS",
+      "detail": "A=64, B=512"
+    },
+    {
+      "name": "fenetre d'observation",
+      "status": "PASS",
+      "detail": "emission 180 s, vie 128 s, observation 310 s"
+    },
+    {
+      "name": "materiaux resolus dans l'arborescence du jeu",
+      "status": "PASS",
+      "detail": "A et B resolvent vers Files/3do/Effects/Textures/SmokeN.mat"
+    },
+    {
+      "name": "activation et nettoyage bornes",
+      "status": "PASS",
+      "detail": "marqueur local, deux effets et checkpoints jusqu'a 300 s"
+    },
+    {
+      "name": "classe Java 1.3 du banc",
+      "status": "PASS",
+      "detail": "major 47 et activation par File.isFile"
+    },
+    {
+      "name": "installation reversible et cible protegee",
+      "status": "PASS",
+      "detail": "stock interdit, cible test exigee, desactivation disponible"
+    }
+  ],
+  "protocol": {
+    "A": {
+      "color": "red",
+      "nParticles": 64,
+      "offset_x_m": -750
+    },
+    "B": {
+      "color": "blue",
+      "nParticles": 512,
+      "offset_x_m": 750
+    },
+    "finish_s": 180,
+    "particle_life_s": 128,
+    "cleanup_s": 310,
+    "checkpoints_s": [
+      10,
+      60,
+      120,
+      130,
+      150,
+      180,
+      240,
+      300
+    ]
+  }
+}

@@ -4,13 +4,13 @@
   MatName ../TEXTURES/SmokeN.mat
   Color0 0.9 0.9 0.9 1
   Color1 1.0 1.0 1.0 0
-  nParticles 128
-  ; Rising mushroom head: active formation for ten simulation minutes.
-  FinishTime 600.0
+  nParticles 512
+  ; Initial mushroom head. Fixed high-altitude layers continue the rise.
+  FinishTime 60.0
   MaxR 32.0
   PhiN 5.0
   PsiN 5.0
-  ; 4.09m clamps particle lifetime to 128 seconds; the active emitter renews it.
+  ; 4.09m clamps particle lifetime to 128 seconds.
   LiveTime 128.0
   EmitFrq 500.0
   TranspTransitionTime 128.0f

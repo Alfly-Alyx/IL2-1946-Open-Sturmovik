@@ -5,8 +5,8 @@ public final class Time {
     private Time() {
     }
 
-    public static boolean isPaused() {
-        return false;
+    public static long current() {
+        return 0L;
     }
 
     public static long currentReal() {

@@ -3,7 +3,7 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$ToolchainRoot,
 
-    [string]$Wrapper = (Join-Path $PSScriptRoot '..\..\build\native\wrapper-cache-409m\wrapper.dll')
+    [string]$Wrapper = (Join-Path $PSScriptRoot '..\..\WIP\sdk\native\wrapper-cache-409m\wrapper.dll')
 )
 
 $ErrorActionPreference = 'Stop'
@@ -58,10 +58,15 @@ Set-Content -LiteralPath $cache -Value '#cache volontairement corrompu' -Encodin
 Invoke-Host '0123456789ABCDEF'
 if ((Get-Content -LiteralPath $cache -TotalCount 1) -notlike '#OSWRAPCACHE1?*') { throw "Le cache corrompu n'a pas ete reconstruit." }
 
-[pscustomobject]@{
+$result = [pscustomobject]@{
     TestRoot = $testRoot
     ColdBuild = 'OK'
     CacheHit = 'OK'
     DirectoryInvalidation = 'OK'
     CorruptionRecovery = 'OK'
 }
+
+# Une execution reussie ne doit pas laisser un nouveau laboratoire dans %TEMP%.
+# En cas d'exception, le dossier est volontairement conserve pour diagnostic.
+Remove-Item -LiteralPath $testRoot -Recurse -Force
+$result

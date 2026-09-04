@@ -179,7 +179,7 @@ touchant aux classes, registres, SFS, sons, modeles 3D, wrapper ou executable.
 - la v1.15 ne peut toujours pas etre qualifiee stable avant ce nouvel essai,
   le test Zuti de dix minutes et les missions de validation ;
 - la recherche des paquets historiques AAA est commencee dans
-  `D:\Projets\GITHUB\res\IL2 1946\Mods`.
+  `D:\Projets\GITHUB\#res\IL2 1946\Mods`.
 - le dossier de test a recu les correctifs de facon transactionnelle ; les
   sauvegardes horodatees restent a cote de celui-ci. Le controle de contenu
   retourne 16 PASS, un WARN de dump attendu et zero FAIL ; les 46 controles de

@@ -1,0 +1,28 @@
+{
+  "schema": "open-sturmovik-test-deployment-v1",
+  "applied_utc": "2026-09-03T22:00:29.3799605Z",
+  "source_branch": "v1.15",
+  "destination": "C:/Users/Alexis/DATA/Projets/GITHUB/IL2-1946-Open-Sturmovik/WIP/test-installations/IL 2 Sturmovik 1946 test",
+  "destination_at_apply": "C:/Users/Alexis/Desktop/IL 2 Sturmovik 1946 test",
+  "relocated_with_test_installation": true,
+  "plan": "manifests/test/nuclear-vertical-camera-v1.15-sync.json",
+  "operations": 8,
+  "camera_geometry": {
+    "mode": "vertical stack centered exactly over each impact point",
+    "heights_m": [1200, 3000, 10000, 16000, 6000],
+    "primary_camera_height_m": 6000,
+    "primary_camera_is_last_entry": true,
+    "land_impact_xy_m": [110000, 95000],
+    "water_impact_xy_m": [-540000, -592000]
+  },
+  "validation": {
+    "mission_validator": "PASS: manifests=2 missions=4 cameras=10",
+    "test_tree_hashes": "8/8 match source plan",
+    "content_pass": 19,
+    "content_warn": 2,
+    "content_fail": 1,
+    "allowed_failure": "Chaine sonore Allison en vol"
+  },
+  "backup": "WIP/test-backups/IL 2 Sturmovik 1946 test.sync-backup-nuclear-cameras-overhead-20260904",
+  "protected_reference_modified": false
+}

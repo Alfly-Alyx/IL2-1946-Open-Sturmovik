@@ -279,7 +279,7 @@ def main(argv: Iterable[str] | None = None) -> int:
         item for item in air_audit["aircraft"]
         if item["player_classification"] == "probable-ai-only"
     ]
-    restored_targets = {'TBF-1C', 'TBM-3', 'Pokryshkins_MiG-3'}
+    restored_targets = {'TBF-1C', 'TBM-3', 'Pokryshkins_MiG-3', 'Su-2'}
     suspects = probable_ai + [
         item for item in air_audit["aircraft"]
         if item["air_key"] in restored_targets and item not in probable_ai

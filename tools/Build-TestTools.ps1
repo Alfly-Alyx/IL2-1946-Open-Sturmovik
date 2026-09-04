@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [string]$OutputDirectory = (Join-Path $PSScriptRoot '..\build\test-tools')
+    [string]$OutputDirectory = (Join-Path $PSScriptRoot '..\WIP\sdk\test-tools')
 )
 
 $ErrorActionPreference = 'Stop'

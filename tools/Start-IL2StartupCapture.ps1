@@ -4,7 +4,7 @@ param(
     [ValidateSet('1','2','3','4','5','6','7','8','9')][string]$Profile = '9',
     [ValidateSet('cold','warm')][string]$CacheState = 'cold',
     [switch]$Windowed1024,
-    [string]$ReferenceRoot = 'C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946',
+    [string]$ReferenceRoot,
     [string]$ResultsRoot,
     [string]$ProcmonPath,
     [string]$ProcDumpPath,
@@ -18,6 +18,7 @@ param(
     [switch]$CaptureCrashOnly,
     [switch]$DeferCrashOrHang,
     [switch]$SkipProcmon,
+    [string[]]$AllowedContentFailures = @(),
     [switch]$ValidateOnly
 )
 
@@ -25,17 +26,20 @@ $ErrorActionPreference = 'Stop'
 
 # Windows PowerShell 5.1 can evaluate parameter defaults before $PSScriptRoot is
 # populated. Resolve script-relative defaults only after parameter binding.
+if ([string]::IsNullOrWhiteSpace($ReferenceRoot)) {
+    $ReferenceRoot = Join-Path $PSScriptRoot '..\WIP\resources\IL2\IL 2 Sturmovik 1946'
+}
 if ([string]::IsNullOrWhiteSpace($ResultsRoot)) {
-    $ResultsRoot = Join-Path $PSScriptRoot '..\test-results\startup'
+    $ResultsRoot = Join-Path $PSScriptRoot '..\WIP\captures\startup'
 }
 if ([string]::IsNullOrWhiteSpace($ProcmonPath)) {
-    $ProcmonPath = Join-Path $PSScriptRoot '..\build\test-tools\sysinternals\Procmon64.exe'
+    $ProcmonPath = Join-Path $PSScriptRoot '..\WIP\sdk\test-tools\sysinternals\Procmon64.exe'
 }
 if ([string]::IsNullOrWhiteSpace($ProcDumpPath)) {
-    $ProcDumpPath = Join-Path $PSScriptRoot '..\build\test-tools\sysinternals\procdump\procdump.exe'
+    $ProcDumpPath = Join-Path $PSScriptRoot '..\WIP\sdk\test-tools\sysinternals\procdump\procdump.exe'
 }
 if ([string]::IsNullOrWhiteSpace($FrameCapturePath)) {
-    $FrameCapturePath = Join-Path $PSScriptRoot '..\build\test-tools\FrameCapture.exe'
+    $FrameCapturePath = Join-Path $PSScriptRoot '..\WIP\sdk\test-tools\FrameCapture.exe'
 }
 
 $repositoryRoot = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '..')).Path
@@ -65,7 +69,7 @@ if ($enableProcDump) {
 
 if ($ValidateOnly) {
     $reportPath = Join-Path $resolvedResults 'readiness-latest.json'
-    & $readinessTool -GameRoot $resolvedGame -Profile $Profile -Windowed1024:$Windowed1024 -SelectorDumpLab:$SelectorDumpLab -ReferenceRoot $resolvedReference -RepositoryRoot $repositoryRoot -ProcmonPath $resolvedProcmon -FrameCapturePath $resolvedFrameCapture -ReportPath $reportPath
+    & $readinessTool -GameRoot $resolvedGame -Profile $Profile -Windowed1024:$Windowed1024 -SelectorDumpLab:$SelectorDumpLab -ReferenceRoot $resolvedReference -RepositoryRoot $repositoryRoot -ProcmonPath $resolvedProcmon -FrameCapturePath $resolvedFrameCapture -AllowedContentFailures $AllowedContentFailures -ReportPath $reportPath
     if ($enableProcDump) {
         Write-Host "PROCDUMP_PRET : $resolvedProcDump" -ForegroundColor Green
     }
@@ -89,7 +93,7 @@ $captureDirectories = @($runRoot, $frameRoot, $logsRoot, $preexistingLogs)
 if ($enableProcDump) { $captureDirectories += $dumpRoot }
 New-Item -ItemType Directory -Path $captureDirectories -Force | Out-Null
 $readinessReport = Join-Path $runRoot 'readiness.json'
-& $readinessTool -GameRoot $resolvedGame -Profile $Profile -Windowed1024:$Windowed1024 -SelectorDumpLab:$SelectorDumpLab -ReferenceRoot $resolvedReference -RepositoryRoot $repositoryRoot -ProcmonPath $resolvedProcmon -FrameCapturePath $resolvedFrameCapture -ReportPath $readinessReport | Out-Host
+& $readinessTool -GameRoot $resolvedGame -Profile $Profile -Windowed1024:$Windowed1024 -SelectorDumpLab:$SelectorDumpLab -ReferenceRoot $resolvedReference -RepositoryRoot $repositoryRoot -ProcmonPath $resolvedProcmon -FrameCapturePath $resolvedFrameCapture -AllowedContentFailures $AllowedContentFailures -ReportPath $readinessReport | Out-Host
 
 $timelinePath = Join-Path $runRoot 'timeline.csv'
 $metricsPath = Join-Path $runRoot 'process-metrics.csv'
@@ -165,6 +169,14 @@ $criticalRelative = @(
     'Files\7BCE3C02C280ED18', # B_29SP
     'Files\77B1B3A6E89CFC22', # B_29X Silverplate (absence attendue lors de cet A/B)
     'Files\E1FDDF9406C0ACAE', # ZutiTimer_RadarsCountRefresh
+    # Paquet AAA Su-2 : avion, cockpits et deux ressources dont l'absence
+    # empechait l'affectation joueur et la vue F1.
+    'Files\70C9BE082DD9AB42', # SU_2
+    'Files\29E6151E2A2051E4', # CockpitSU_2
+    'Files\F71090502F7F2E04', # CockpitSU_2_Bombardier
+    'Files\B4EF0ADEAE24EC44', # CockpitSU_2_TGunner
+    'Files\3do\Cockpit\Il-10-TGun\TGunnerSU2.him',
+    'Files\3do\Cockpit\Il-10-TGun\skin1o.tga',
     # Famille Explosions complete : classe externe, 13 classes anonymes et
     # MydataForSmoke. Cet instantane prouve quelle variante est reellement
     # active lors de l'essai Silverplate/Zuti.

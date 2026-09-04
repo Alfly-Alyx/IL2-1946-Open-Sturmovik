@@ -1,6 +1,53 @@
 # Gel critique au largage de la Fat Man depuis le B-29 Silverplate
 
-Derniere mise a jour : 1er septembre 2026.
+Derniere mise a jour : 3 septembre 2026.
+
+## Validation en jeu de 12 h 44 UTC
+
+Le gel critique d'origine reste corrige : quatre detonations successives n'ont
+produit ni `AppHang`, ni exception Java, ni echantillon non repondant en vol.
+Le pic le plus eleve des fenetres nucleaires est de 688,6 Mio de memoire privee
+et 1 977,8 Mio d'espace virtuel. Le cockpit dedie du B-29 Silverplate est aussi
+valide, sans les avertissements `zOilFlap`/`zCompressor`.
+
+Le blocage restant est visuel. Une pause courte reduit le champignon puis le
+laisse recroitre. Le detecteur de reprise n'a pas agi (`rehydrates=0`) et la
+capture ne montre qu'environ 0,67 s de frames identiques, sous son seuil de
+1,5 s. La recreation du meme `.eff` ne serait de toute facon pas suffisante,
+car l'API Java du moteur ne permet pas d'en restaurer l'age interne. Les effets
+persistants doivent devenir des phases bornees et agees logiquement.
+
+Les essais de cette session etaient courts : Fat Man terrestre n'a ete suivie
+que 24 s et Fat Man sur l'eau n'a pas ete testee. La correction de duree et de
+pause doit preceder les validations a dix minutes et en mission dense.
+
+## Dernier candidat du 3 septembre 2026
+
+Le gel Java initial et l'erreur d'ABI de la secousse restent corriges. Le lot le
+plus recent traite maintenant les deux anomalies relevees au dernier essai sans
+modifier le souffle ni les degats :
+
+- le rendu persistant du champignon est reconstruit a son age logique apres une
+  interruption du rendu, sans rejouer le flash, la boule de feu ou l'onde ;
+- le coeur du panache suit une montee continue relative au terrain jusqu'a
+  environ 12 000 m AGL pour Little Boy et 13 500 m AGL pour Fat Man ;
+- le B-29 Silverplate utilise son cockpit pilote `CockpitB29SP`, dont le
+  maillage contient les quatre morceaux recherches par sa classe.
+
+Le nouveau cycle produit treize classes Java major 47 reproductibles et passe
+18/18 validations de cycle ainsi que 41/41 controles nucleaires statiques. Le
+patch de cockpit est idempotent et protege par les empreintes source/cible. La
+copie de test est synchronisee et retourne 19 PASS, 3 WARN, 0 FAIL ainsi que
+`Ready=True` sur ses 47 controles de preparation. Aucun lancement n'a encore
+ete effectue avec cette combinaison.
+
+Le modele de souffle actuel reste un candidat de simulation, pas encore une
+reproduction physique complete : propagation a vitesse acoustique fixe,
+impulsion radiale unique et zones mises a l'echelle par racine cubique. Il ne
+modele pas encore la vitesse supersonique initiale, la phase negative, la
+pression dynamique continue, les reflexions sur le terrain ni un volume de
+turbulence persistant dans le nuage. Cette evolution doit rester un lot separe
+apres validation du correctif visuel.
 
 ## Etat du diagnostic
 
@@ -34,7 +81,7 @@ correctif final doit maintenant fusionner l'API nucleaire avec les ajouts Zuti.
 
 Artefacts :
 
-`test-results/startup/20260831-152135Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260831-152135Z-profile9-warm-windowed1024-startup`
 
 La derniere image encore animee precede 15:25:43,257 UTC. A partir de cette
 image, 56 captures successives restent identiques pendant environ six secondes.
@@ -52,7 +99,7 @@ SHA-256 :
 
 Le controle A/B avec `BombGun` officielle 4.09m est conserve dans :
 
-`test-results/startup/20260831-164731Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260831-164731Z-profile9-warm-windowed1024-startup`
 
 Son dump complet mesure 857 177 177 octets :
 
@@ -112,7 +159,7 @@ Le paquet **Boeing B-29 Silverplate Atomic Bomber v1.2** a ete telecharge depuis
 le lien conserve par son [fil SAS d'origine](https://www.sas1946.com/main/index.php?topic=7894.0).
 Une copie de reference est archivee hors du jeu dans :
 
-`D:\Projets\GITHUB\res\IL2 1946\Mods\B29 Silverplate v1.2\silverplate.7z`
+`D:\Projets\GITHUB\#res\IL2 1946\Mods\B29 Silverplate v1.2\silverplate.7z`
 
 Taille : 13 196 771 octets. SHA-256 :
 
@@ -196,7 +243,7 @@ remplacer aveuglement les classes de la bombe.
 
 Artefacts :
 
-`test-results/startup/20260831-184314Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260831-184314Z-profile9-warm-windowed1024-startup`
 
 La famille complete de 15 classes `Explosions` du paquet Silverplate a ete
 activee dans le seul dossier de test, avec `semi-realDropBomb v2.0` restaure. Le
@@ -226,7 +273,7 @@ distinct de la correction de liaison Java.
 
 Artefacts :
 
-`test-results/startup/20260831-192529Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260831-192529Z-profile9-warm-windowed1024-startup`
 
 Les deux emports atomiques declares par `B_29SP` ont ete controles dans le meme
 lancement instrumente. Alexis a confirme qu'il n'existe pas de troisieme bombe
@@ -463,7 +510,7 @@ a l'impact ; l'apparence complete des effets reste a valider separement.
 ## Capture pause/reprise du 1er septembre 2026
 
 La session instrumentee
-`test-results/startup/20260901-060621Z-profile9-warm-windowed1024-startup`
+`WIP/captures/startup/20260901-060621Z-profile9-warm-windowed1024-startup`
 confirme le defaut sans ambiguite. La capture contient 2 854 images et les
 compteurs du processus. La mission B-29 + Little Boy se termine volontairement,
 sans gel ni exception Java nouvelle.
@@ -527,7 +574,7 @@ ete synchronisees dans le dossier de test. Dix-sept autres fichiers du plan
 etaient deja identiques et aucun retrait n'a ete effectue. Les versions
 precedentes restent recuperables dans :
 
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260901-083925`
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-backups\IL 2 Sturmovik 1946 test.sync-backup-20260901-083925`
 
 Apres cette operation, le validateur de contenu retourne 16 PASS, un WARN de
 dump attendu et zero FAIL. Les 46 controles du profil 9 fenetre 1 024 x 768
@@ -537,7 +584,7 @@ coherence et la reversibilite du candidat, pas encore son comportement visuel.
 ## Verdict apres la campagne multicartes du 1er septembre
 
 Le candidat de pause native a finalement ete execute dans
-`test-results/startup/20260901-131015Z-profile9-warm-windowed1024-startup`.
+`WIP/captures/startup/20260901-131015Z-profile9-warm-windowed1024-startup`.
 Il **n'a pas corrige le panache** : Little Boy repart de zero apres une
 pause/reprise. Le meme redemarrage apparait apres un demi-tour qui retire puis
 remet l'effet dans le champ. L'absence du message

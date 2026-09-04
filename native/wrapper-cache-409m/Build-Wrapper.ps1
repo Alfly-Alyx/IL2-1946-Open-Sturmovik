@@ -3,7 +3,7 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$ToolchainRoot,
 
-    [string]$OutputDirectory = (Join-Path $PSScriptRoot '..\..\build\native\wrapper-cache-409m')
+    [string]$OutputDirectory = (Join-Path $PSScriptRoot '..\..\WIP\sdk\native\wrapper-cache-409m')
 )
 
 $ErrorActionPreference = 'Stop'

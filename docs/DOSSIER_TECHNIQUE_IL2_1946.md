@@ -11,12 +11,20 @@ Chaque information appartient a l'un de ces niveaux :
 - **hypothese** : explication plausible qui exige encore un essai ;
 - **regle 1.15** : decision de construction ou de securite du projet.
 
-Au 29 aout 2026, l'analyse est essentiellement statique. Aucun executable IL-2 ou utilitaire de `_OS_Programs` n'a encore ete lance.
+**Devise du projet : REALISME MAX.** Une valeur historique doit etre preferee a
+une approximation arbitraire, puis adaptee explicitement aux limites mesurees
+du moteur 4.09m. Une fidelite affichee mais silencieusement tronquee, instable ou
+non reproductible n'est pas consideree comme realiste.
+
+Au 1er septembre 2026, l'analyse combine des audits statiques, plusieurs
+lancements instrumentes jusqu'au menu et des essais en vol, dont Little Boy et
+Fat Man. Les affirmations d'execution restent rattachees a leurs artefacts de
+capture ; les outils externes de `_Utilities`, `_Game_Enhancements` et `_Runtime_Addons` demeurent inventories sans activation automatique.
 
 ## Perimetre et sources protegees
 
 - Add-on modifiable : depot Open Sturmovik.
-- Jeu de reference, lecture seule : `C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946`.
+- Jeu de reference, lecture seule : `C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\resources\IL2\IL 2 Sturmovik 1946`.
 - Archives de patch, lecture seule : `D:\Documents\##Documents\Informatique\Retro-gaming\Jeux Retro-gaming\Patchs\Patches IL2`.
 - Cible gelee pour Open Sturmovik 1.15 : **IL-2 1946 4.09m**.
 - La version originale et les archives de patch ne doivent jamais etre modifiees. Tout essai futur doit utiliser une copie distincte.

@@ -1,5 +1,10 @@
 # Preparation du prochain test v1.15
 
+> **Suspendu le 4 septembre 2026.** Le chantier des bombes est arrete et les
+> missions nucleaires creees pour ces essais ont ete supprimees. Les consignes
+> ci-dessous sont conservees comme historique et ne doivent plus declencher un
+> lancement. Lire d'abord `ETAT_COURANT_V1.15.md`.
+
 Derniere mise a jour : 1er septembre 2026.
 
 ## Candidat pause nucleaire invalide en jeu
@@ -27,7 +32,7 @@ pas la reconstruction/coupure du rendu des particules.
 Les trois classes concernees ont ete synchronisees transactionnellement dans le
 seul dossier de test. Sauvegarde recuperable :
 
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260901-083925`
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-backups\IL 2 Sturmovik 1946 test.sync-backup-20260901-083925`
 
 La chaine de fichiers reste saine : l'audit dedie obtient 33 PASS et zero echec
 statique. Cela valide les classes, emports, maillages, textures, materiaux et
@@ -41,7 +46,7 @@ demandait `actors.static`, alors que le SFS officiel 4.09m contient et demande
 `actors_summer.static`. Une seule ligne a ete synchronisee et l'ancienne version
 reste dans la sauvegarde recuperable :
 
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260901-085130`
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-backups\IL 2 Sturmovik 1946 test.sync-backup-20260901-085130`
 
 Le fichier officiel de 5,8 Mio n'a pas ete duplique : le chemin corrige restaure
 le repli normal vers `fb_maps15.SFS`.
@@ -56,10 +61,10 @@ etre prevenu avant l'armement de la capture et avant le lancement du jeu.
 
 La synchronisation a ete autorisee puis appliquee au seul dossier
 `C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test`. L'installation originale
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946` est restee strictement en lecture
+`C:\Users\Alexis\Desktop\ressources IL2\IL 2 Sturmovik 1946` est restee strictement en lecture
 seule. La sauvegarde transactionnelle recuperable est :
 
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260831-121346`
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-backups\IL 2 Sturmovik 1946 test.sync-backup-20260831-121346`
 
 Le controle statique du projet donne **15 PASS, 1 WARN, 0 FAIL**. Le seul WARN
 est normal avant un nouveau lancement : aucun Dump runtime recent n'a encore
@@ -85,15 +90,15 @@ supplementaire n'est necessaire pour ce point.
 
 La synchronisation corrective a cree une seconde sauvegarde recuperable :
 
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260831-132504`
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-backups\IL 2 Sturmovik 1946 test.sync-backup-20260831-132504`
 
 La normalisation finale des dix presets a ensuite cree :
 
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260831-133554`
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-backups\IL 2 Sturmovik 1946 test.sync-backup-20260831-133554`
 
 La synchronisation du correctif `LandGeom` et du selecteur a cree :
 
-`C:\Users\Alexis\Desktop\IL 2 Sturmovik 1946 test.sync-backup-20260831-144614`
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-backups\IL 2 Sturmovik 1946 test.sync-backup-20260831-144614`
 
 ## Plan transactionnel prepare
 
@@ -165,3 +170,53 @@ Les objectifs runtime sont : zero `FileNotFoundException`, zero `No spawner`,
 zero exception Zuti, zero refus d'enregistrement de navire, et disparition des
 63 avertissements `Str2FloatClamp` connus. La validation du Dump devra aussi
 confirmer qu'aucune classe chargee ne depasse Java major 47.
+
+## Relocalisation du 4 septembre 2026
+
+Le jeu de test actif a ete deplace hors du Bureau vers
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-installations\IL 2 Sturmovik 1946 test`.
+La reference originale protegee se trouve maintenant sous
+`C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\resources\IL2\IL 2 Sturmovik 1946`.
+Les commandes et chemins precedents sont conserves plus haut comme historique
+des synchronisations deja effectuees. Les scripts de capture resolvent les deux
+nouveaux chemins par defaut. Aucun lancement n'a suivi le deplacement.
+
+## Cameras du prochain essai nucleaire
+
+Les huit fichiers des quatre missions terre/eau ont ete synchronises et
+verifies une nouvelle fois le 4 septembre. Depuis la vue externe F2 alignee
+dans l'axe ouest-est :
+
+1. un appui sur `Ctrl+F2` selectionne directement la camera de mesure a 20 km
+   et 6 000 m d'altitude ;
+2. un deuxieme appui selectionne la camera de secours a 30 km et 7 000 m ;
+3. un troisieme appui seulement selectionne la reference rapprochee a 5 km et
+   1 200 m.
+
+Pour le prochain essai, utiliser la premiere camera a 20 km et la conserver
+pendant toute la detonation. La camera de 30 km ne sert qu'en secours si le
+sommet sort du cadre. Le jeu reste ferme jusqu'a l'avertissement explicite
+adresse a Alexis, puis son nouveau `go`.
+
+### Correction apres la prise a 5 km
+
+La prise `20260904-135929Z-profile9-warm-windowed1024-startup` montre que la
+selection d'une camera ne suffit pas : `[StaticCamera]` ne stocke aucun angle
+de visee. Le centre de l'explosion est reste hors cadre et seule sa lumiere a
+traverse le bord gauche. Lors du prochain lancement :
+
+1. activer le pilote automatique avec `A` ;
+2. demarrer l'enregistrement NTRK avec `Ctrl+R` et verifier le message HUD ;
+3. passer en `F2`, puis parcourir les cameras avec `Ctrl+F2` ;
+4. afficher les icones avec `Shift+Q` si necessaire ;
+5. orienter la vue avec la souris jusqu'a placer l'icone du camion cible au
+   centre ; les cinq P-51D allies places tous les kilometres, nez vers la
+   cible, materialisent l'axe d'approche ;
+6. ne plus toucher a la vue pendant toute la detonation ;
+7. attendre au minimum 150 secondes apres l'impact ;
+8. arreter l'enregistrement avec un second `Ctrl+R`, verifier le message HUD,
+   puis seulement quitter la mission.
+
+L'enregistrement NTRK est indispensable pour reutiliser la meme detonation et
+comparer ensuite les vues a 5, 20 et 30 km sans introduire de variation entre
+les vols.

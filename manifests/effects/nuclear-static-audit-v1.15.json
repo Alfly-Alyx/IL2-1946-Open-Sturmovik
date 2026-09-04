@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-09-01T21:40:26.767173+00:00",
+  "generated_utc": "2026-09-03T17:01:04.206072+00:00",
   "repository": "C:\\Users\\Alexis\\DATA\\Projets\\GITHUB\\IL2-1946-Open-Sturmovik",
   "static_status": "PASS",
   "release_status": "BLOCKED_RUNTIME_AND_LICENSE",
   "summary": {
-    "checks": 33,
-    "pass": 33,
+    "checks": 42,
+    "pass": 42,
     "fail": 0,
     "parse_errors": 20
   },
@@ -62,14 +62,24 @@
       "detail": "empreinte, taille et Java 1.3 conformes"
     },
     {
-      "name": "classe generee com.maddox.il2.objects.effects.NuclearBlast$VisualAction",
+      "name": "classe generee com.maddox.il2.objects.effects.NuclearBlast$PhaseAction",
       "status": "PASS",
       "detail": "empreinte, taille et Java 1.3 conformes"
     },
     {
-      "name": "classe generee com.maddox.il2.objects.effects.NuclearBlast$VisualData",
+      "name": "classe generee com.maddox.il2.objects.effects.NuclearBlast$VisualTickAction",
       "status": "PASS",
       "detail": "empreinte, taille et Java 1.3 conformes"
+    },
+    {
+      "name": "classe generee com.maddox.il2.objects.effects.NuclearBlast$State",
+      "status": "PASS",
+      "detail": "empreinte, taille et Java 1.3 conformes"
+    },
+    {
+      "name": "adressage SFS des classes generees",
+      "status": "PASS",
+      "detail": "chaque nom libre correspond a l'empreinte de sa classe Java"
     },
     {
       "name": "integration com.maddox.il2.objects.air.B_29SP",
@@ -92,6 +102,11 @@
       "detail": "Little Boy et Fat Man utilisent deux crochets distincts"
     },
     {
+      "name": "cockpit pilote B-29 Silverplate",
+      "status": "PASS",
+      "detail": "CockpitB29SP et son maillage B-29-SP remplacent le cockpit B-29 standard incompatible"
+    },
+    {
       "name": "liaison BombGunLittleBoy -> BombLittleBoy",
       "status": "PASS",
       "detail": "une munition, classe de bombe correcte"
@@ -104,12 +119,42 @@
     {
       "name": "ABI Silverplate / Zuti",
       "status": "PASS",
-      "detail": "surcharge a six arguments et enregistrement des 12 effets presents"
+      "detail": "surcharge a six arguments et transactions visuelles terre/eau presentes"
     },
     {
       "name": "distribution differee du souffle",
       "status": "PASS",
       "detail": "NuclearBlast.schedule remplace la distribution nucleaire immediate"
+    },
+    {
+      "name": "age visuel fonde uniquement sur la simulation",
+      "status": "PASS",
+      "detail": "Time=['current'], reflection=False"
+    },
+    {
+      "name": "etat nucleaire persistant",
+      "status": "PASS",
+      "detail": "temps, position, altitude, puissance, surface, phase et acteurs suivis"
+    },
+    {
+      "name": "cycle de vie borne des acteurs",
+      "status": "PASS",
+      "detail": "postDestroy explicite, listes videes et etats termines retires"
+    },
+    {
+      "name": "origines fixes des couches de particules",
+      "status": "PASS",
+      "detail": "aucun Eff3DActor actif n'est deplace apres sa creation"
+    },
+    {
+      "name": "ordre et delai de nettoyage",
+      "status": "PASS",
+      "detail": "phases=[1, 30, 120, 600, 1800, 3600], limite=3728s"
+    },
+    {
+      "name": "sommets des champignons",
+      "status": "PASS",
+      "detail": "Little Boy=12000m, Fat Man=13500m"
     },
     {
       "name": "declaration air.ini",
@@ -157,7 +202,7 @@
       "detail": "identique au paquet Silverplate v1.2"
     },
     {
-      "name": "empreintes des huit effets",
+      "name": "empreintes des dix effets",
       "status": "PASS",
       "detail": "effets visuels conformes au manifeste"
     },
@@ -180,8 +225,8 @@
   "generated_classes": [
     {
       "file": "Files/72DCDDF4D2AD25E8",
-      "size": 26601,
-      "sha256": "E32EBB8B4D84173C88A53AA74D06484DF47A74593D70E1FF858E170BDAD45707",
+      "size": 26742,
+      "sha256": "24CCB92F1AD8BCAD777CAF03B9357CD7756E3E1248986A2C3B7FD317DDD2CF9A",
       "java_major": 47,
       "super": "java/lang/Object",
       "fields": [
@@ -1128,8 +1173,23 @@
         ],
         [
           "com/maddox/il2/objects/effects/NuclearBlast",
+          "beginVisual",
+          "(Lcom/maddox/JGP/Point3d;FZ)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "endVisual",
+          "()V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
           "registerVisual",
           "(Lcom/maddox/il2/engine/Eff3DActor;)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "visualScaleForPower",
+          "(F)F"
         ],
         [
           "com/maddox/il2/objects/sounds/SfxExplosion",
@@ -1599,8 +1659,8 @@
     },
     {
       "file": "Files/3F43760A72781132",
-      "size": 3194,
-      "sha256": "8D7B5F3D570C3463D0119AA6FDDE011D7EF3D07F053F2120A58B601C9D451343",
+      "size": 3058,
+      "sha256": "FAEAEFAA3D57ECF615912BB46FD19259E923D8C8AEA23862BB652A7248C2C6BE",
       "java_major": 47,
       "super": "com/maddox/il2/objects/weapons/Bomb",
       "fields": [
@@ -1645,7 +1705,6 @@
         "com/maddox/il2/engine/Engine",
         "com/maddox/il2/engine/Landscape",
         "com/maddox/il2/engine/Mesh",
-        "com/maddox/il2/objects/effects/Explosions",
         "com/maddox/il2/objects/weapons/Bomb",
         "com/maddox/il2/objects/weapons/BombLittleBoy",
         "com/maddox/rts/Property",
@@ -1705,16 +1764,6 @@
           "com/maddox/il2/engine/Mesh",
           "materialReplace",
           "(Ljava/lang/String;Ljava/lang/String;)V"
-        ],
-        [
-          "com/maddox/il2/objects/effects/Explosions",
-          "bombFatMan_land",
-          "(Lcom/maddox/JGP/Point3d;FF)V"
-        ],
-        [
-          "com/maddox/il2/objects/effects/Explosions",
-          "bombFatMan_water",
-          "(Lcom/maddox/JGP/Point3d;FF)V"
         ],
         [
           "com/maddox/il2/objects/weapons/Bomb",
@@ -1810,8 +1859,8 @@
     },
     {
       "file": "Files/830E5C5AC3A1C77A",
-      "size": 3179,
-      "sha256": "9DCB1DD4BDBF9E6EED9B401157796B1E2BF4F0206564834150C2C3F077AD4589",
+      "size": 3043,
+      "sha256": "94ABC0A426CAF8E300FC995FE4D23ACCC164F88406D9314BC2A712C7E088E428",
       "java_major": 47,
       "super": "com/maddox/il2/objects/weapons/Bomb",
       "fields": [
@@ -1856,7 +1905,6 @@
         "com/maddox/il2/engine/Engine",
         "com/maddox/il2/engine/Landscape",
         "com/maddox/il2/engine/Mesh",
-        "com/maddox/il2/objects/effects/Explosions",
         "com/maddox/il2/objects/weapons/Bomb",
         "com/maddox/il2/objects/weapons/BombFatMan",
         "com/maddox/rts/Property",
@@ -1916,16 +1964,6 @@
           "com/maddox/il2/engine/Mesh",
           "materialReplace",
           "(Ljava/lang/String;Ljava/lang/String;)V"
-        ],
-        [
-          "com/maddox/il2/objects/effects/Explosions",
-          "bombFatMan_land",
-          "(Lcom/maddox/JGP/Point3d;FF)V"
-        ],
-        [
-          "com/maddox/il2/objects/effects/Explosions",
-          "bombFatMan_water",
-          "(Lcom/maddox/JGP/Point3d;FF)V"
         ],
         [
           "com/maddox/il2/objects/weapons/Bomb",
@@ -2021,25 +2059,157 @@
     },
     {
       "file": "Files/5AC49B8080496790",
-      "size": 5639,
-      "sha256": "94ECE2CA0D1204B90EFD37BCEE7131F8083CF715305845E37FF4587B61DB3F30",
+      "size": 13539,
+      "sha256": "FF2F2698D31EC53119CC7A76BA6CBD084C636F0A3793A9FC29D3A149C2F25FD5",
       "java_major": 47,
       "super": "java/lang/Object",
       "fields": [
         [
-          "ACTIVE_CLOUD_RISE_SECONDS",
-          "D"
-        ],
-        [
-          "ACTIVE_VISUALS",
+          "ACTIVE_STATES",
           "Ljava/util/ArrayList;"
         ],
         [
-          "PAUSE_WATCH_INTERVAL_MILLISECONDS",
+          "CLEANUP_DEADLINE_MILLISECONDS",
           "J"
         ],
         [
-          "REAL_TIME_MESSAGE_FLAG",
+          "COMPLETE_AT_MILLISECONDS",
+          "J"
+        ],
+        [
+          "DISSIPATING_AT_MILLISECONDS",
+          "J"
+        ],
+        [
+          "EARLY_RISE_AT_MILLISECONDS",
+          "J"
+        ],
+        [
+          "EFFECT_PARTICLE_PROBE_A",
+          "Ljava/lang/String;"
+        ],
+        [
+          "EFFECT_PARTICLE_PROBE_B",
+          "Ljava/lang/String;"
+        ],
+        [
+          "EFFECT_RISE_HEAD",
+          "Ljava/lang/String;"
+        ],
+        [
+          "EFFECT_RISE_TORUS",
+          "Ljava/lang/String;"
+        ],
+        [
+          "EFFECT_STABILIZED",
+          "Ljava/lang/String;"
+        ],
+        [
+          "FAT_MAN_CLOUD_SUMMIT_AGL_METERS",
+          "D"
+        ],
+        [
+          "FAT_MAN_YIELD_KT",
+          "D"
+        ],
+        [
+          "LATE_RISE_AT_MILLISECONDS",
+          "J"
+        ],
+        [
+          "LITTLE_BOY_CLOUD_SUMMIT_AGL_METERS",
+          "D"
+        ],
+        [
+          "LITTLE_BOY_YIELD_KT",
+          "D"
+        ],
+        [
+          "MATURE_RISE_AT_MILLISECONDS",
+          "J"
+        ],
+        [
+          "PARTICLE_CAPACITY_PROBE_ENABLED",
+          "Z"
+        ],
+        [
+          "PARTICLE_PROBE_CHECKPOINTS_MILLISECONDS",
+          "[J"
+        ],
+        [
+          "PARTICLE_PROBE_COMPLETE_MILLISECONDS",
+          "J"
+        ],
+        [
+          "PARTICLE_PROBE_MARKER",
+          "Ljava/lang/String;"
+        ],
+        [
+          "PHASE_COMPLETE",
+          "I"
+        ],
+        [
+          "PHASE_DETONATION",
+          "I"
+        ],
+        [
+          "PHASE_DISSIPATING",
+          "I"
+        ],
+        [
+          "PHASE_EARLY_RISE",
+          "I"
+        ],
+        [
+          "PHASE_LATE_RISE",
+          "I"
+        ],
+        [
+          "PHASE_MATURE_RISE",
+          "I"
+        ],
+        [
+          "PHASE_STABILIZED",
+          "I"
+        ],
+        [
+          "RISE_DRAIN_END_MILLISECONDS",
+          "J"
+        ],
+        [
+          "RISE_LAYER_ACTOR_DURATION_SECONDS",
+          "F"
+        ],
+        [
+          "RISE_LAYER_CHECKPOINTS_MILLISECONDS",
+          "[J"
+        ],
+        [
+          "RISE_LAYER_MAX_AGE_MILLISECONDS",
+          "J"
+        ],
+        [
+          "ROLE_CLOUD_COLUMN",
+          "I"
+        ],
+        [
+          "ROLE_CLOUD_HEAD",
+          "I"
+        ],
+        [
+          "ROLE_CLOUD_TORUS",
+          "I"
+        ],
+        [
+          "ROLE_PARTICLE_PROBE",
+          "I"
+        ],
+        [
+          "ROLE_STABILIZED",
+          "I"
+        ],
+        [
+          "ROLE_TRANSIENT",
           "I"
         ],
         [
@@ -2047,28 +2217,60 @@
           "D"
         ],
         [
-          "STABILIZED_CLOUD_EFFECT",
-          "Ljava/lang/String;"
+          "STABILIZED_AT_MILLISECONDS",
+          "J"
         ],
         [
-          "STABILIZED_CLOUD_HEIGHT_10KT_METERS",
+          "TRANSIENT_DRAIN_END_MILLISECONDS",
+          "J"
+        ],
+        [
+          "VISUAL_TICK_SECONDS",
           "D"
         ],
         [
-          "effectPauseMethod",
-          "Ljava/lang/reflect/Method;"
+          "actorsCreated",
+          "J"
         ],
         [
-          "effectPauseMethodUnavailable",
-          "Z"
+          "actorsDestroyed",
+          "J"
         ],
         [
-          "pauseWatchScheduled",
-          "Z"
+          "cleanupFailures",
+          "J"
         ],
         [
-          "visualsPaused",
-          "Z"
+          "currentVisualState",
+          "Lcom/maddox/il2/objects/effects/NuclearBlast$State;"
+        ],
+        [
+          "eventsCompleted",
+          "J"
+        ],
+        [
+          "eventsCreated",
+          "J"
+        ],
+        [
+          "nextEventId",
+          "J"
+        ],
+        [
+          "pendingVisualPosition",
+          "Lcom/maddox/JGP/Point3d;"
+        ],
+        [
+          "pendingVisualYieldKilotonnes",
+          "D"
+        ],
+        [
+          "phaseTransitions",
+          "J"
+        ],
+        [
+          "visualTicks",
+          "J"
         ]
       ],
       "methods": [
@@ -2082,35 +2284,127 @@
         ],
         [
           "access$000",
-          "()V"
+          "()Z"
+        ],
+        [
+          "access$100",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
+        ],
+        [
+          "access$200",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;I)V"
+        ],
+        [
+          "addActor",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;Lcom/maddox/il2/engine/Eff3DActor;I)V"
+        ],
+        [
+          "beginVisual",
+          "(Lcom/maddox/JGP/Point3d;FZ)V"
+        ],
+        [
+          "bindExactYield",
+          "(Lcom/maddox/JGP/Point3d;F)V"
+        ],
+        [
+          "cloudHeadPoint",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;J)Lcom/maddox/JGP/Point3d;"
+        ],
+        [
+          "cloudSummitMeters",
+          "(D)D"
+        ],
+        [
+          "completeState",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
         ],
         [
           "coupledAircraftImpulse",
           "(D)D"
         ],
         [
+          "createEffect",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;Lcom/maddox/JGP/Point3d;Ljava/lang/String;FFI)V"
+        ],
+        [
+          "createPhaseActors",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;I)V"
+        ],
+        [
+          "createScheduledRiseLayers",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;J)V"
+        ],
+        [
+          "destroyActors",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
+        ],
+        [
+          "destroyActorsByRole",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;II)V"
+        ],
+        [
+          "diagnosticSnapshot",
+          "()Ljava/lang/String;"
+        ],
+        [
+          "endVisual",
+          "()V"
+        ],
+        [
           "interpolate",
           "(DDDDD)D"
         ],
         [
-          "pollVisualPause",
-          "()V"
+          "logParticleProbeCheckpoints",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;J)V"
+        ],
+        [
+          "logState",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;Ljava/lang/String;)V"
+        ],
+        [
+          "phaseForAgeMilliseconds",
+          "(J)I"
+        ],
+        [
+          "phaseName",
+          "(I)Ljava/lang/String;"
         ],
         [
           "pressureAtTenKilotonScaledDistance",
           "(D)D"
         ],
         [
+          "pruneCompletedStates",
+          "()V"
+        ],
+        [
           "registerVisual",
           "(Lcom/maddox/il2/engine/Eff3DActor;)V"
+        ],
+        [
+          "roleForInitialRegistration",
+          "(I)I"
         ],
         [
           "schedule",
           "(Lcom/maddox/JGP/Point3d;Lcom/maddox/il2/engine/Actor;FIF)V"
         ],
         [
-          "setVisualPaused",
-          "(Lcom/maddox/il2/engine/Eff3DActor;Z)V"
+          "startParticleCapacityProbe",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
+        ],
+        [
+          "transition",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;I)V"
+        ],
+        [
+          "visualScaleForPower",
+          "(F)F"
+        ],
+        [
+          "visualTick",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
         ]
       ],
       "class_refs": [
@@ -2119,27 +2413,28 @@
         "com/maddox/il2/engine/Actor",
         "com/maddox/il2/engine/ActorPos",
         "com/maddox/il2/engine/CollideEnv",
+        "com/maddox/il2/engine/Eff3D",
         "com/maddox/il2/engine/Eff3DActor",
         "com/maddox/il2/engine/Engine",
+        "com/maddox/il2/engine/Loc",
+        "com/maddox/il2/engine/Orient",
         "com/maddox/il2/objects/air/Aircraft",
         "com/maddox/il2/objects/effects/NuclearBlast",
         "com/maddox/il2/objects/effects/NuclearBlast$DamageAction",
         "com/maddox/il2/objects/effects/NuclearBlast$DamageData",
+        "com/maddox/il2/objects/effects/NuclearBlast$PhaseAction",
         "com/maddox/il2/objects/effects/NuclearBlast$ShockAction",
         "com/maddox/il2/objects/effects/NuclearBlast$ShockData",
-        "com/maddox/il2/objects/effects/NuclearBlast$VisualAction",
-        "com/maddox/il2/objects/effects/NuclearBlast$VisualData",
+        "com/maddox/il2/objects/effects/NuclearBlast$State",
+        "com/maddox/il2/objects/effects/NuclearBlast$VisualTickAction",
         "com/maddox/rts/Time",
+        "java/io/File",
         "java/io/PrintStream",
-        "java/lang/Boolean",
-        "java/lang/Class",
-        "java/lang/Exception",
+        "java/lang/Integer",
         "java/lang/Math",
         "java/lang/Object",
-        "java/lang/StringBuilder",
+        "java/lang/StringBuffer",
         "java/lang/System",
-        "java/lang/reflect/Field",
-        "java/lang/reflect/Method",
         "java/util/ArrayList"
       ],
       "method_refs": [
@@ -2169,9 +2464,69 @@
           "(Ljava/util/AbstractCollection;Lcom/maddox/JGP/Point3d;D)V"
         ],
         [
+          "com/maddox/il2/engine/Eff3D",
+          "initSetTypeTimer",
+          "(Z)V"
+        ],
+        [
+          "com/maddox/il2/engine/Eff3DActor",
+          "New",
+          "(Lcom/maddox/il2/engine/Loc;FLjava/lang/String;F)Lcom/maddox/il2/engine/Eff3DActor;"
+        ],
+        [
+          "com/maddox/il2/engine/Eff3DActor",
+          "postDestroy",
+          "(J)V"
+        ],
+        [
           "com/maddox/il2/engine/Engine",
           "collideEnv",
           "()Lcom/maddox/il2/engine/CollideEnv;"
+        ],
+        [
+          "com/maddox/il2/engine/Loc",
+          "<init>",
+          "()V"
+        ],
+        [
+          "com/maddox/il2/engine/Loc",
+          "set",
+          "(Lcom/maddox/JGP/Tuple3d;Lcom/maddox/il2/engine/Orient;)V"
+        ],
+        [
+          "com/maddox/il2/engine/Orient",
+          "<init>",
+          "()V"
+        ],
+        [
+          "com/maddox/il2/engine/Orient",
+          "set",
+          "(FFF)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "addActor",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;Lcom/maddox/il2/engine/Eff3DActor;I)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "bindExactYield",
+          "(Lcom/maddox/JGP/Point3d;F)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "cloudHeadPoint",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;J)Lcom/maddox/JGP/Point3d;"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "cloudSummitMeters",
+          "(D)D"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "completeState",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
         ],
         [
           "com/maddox/il2/objects/effects/NuclearBlast",
@@ -2180,13 +2535,53 @@
         ],
         [
           "com/maddox/il2/objects/effects/NuclearBlast",
+          "createEffect",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;Lcom/maddox/JGP/Point3d;Ljava/lang/String;FFI)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "createPhaseActors",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;I)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "createScheduledRiseLayers",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;J)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "destroyActors",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "destroyActorsByRole",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;II)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
           "interpolate",
           "(DDDDD)D"
         ],
         [
           "com/maddox/il2/objects/effects/NuclearBlast",
-          "pollVisualPause",
-          "()V"
+          "logParticleProbeCheckpoints",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;J)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "logState",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;Ljava/lang/String;)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "phaseForAgeMilliseconds",
+          "(J)I"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "phaseName",
+          "(I)Ljava/lang/String;"
         ],
         [
           "com/maddox/il2/objects/effects/NuclearBlast",
@@ -2195,8 +2590,28 @@
         ],
         [
           "com/maddox/il2/objects/effects/NuclearBlast",
-          "setVisualPaused",
-          "(Lcom/maddox/il2/engine/Eff3DActor;Z)V"
+          "pruneCompletedStates",
+          "()V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "roleForInitialRegistration",
+          "(I)I"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "startParticleCapacityProbe",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "transition",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;I)V"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "visualTick",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
         ],
         [
           "com/maddox/il2/objects/effects/NuclearBlast$DamageAction",
@@ -2209,6 +2624,11 @@
           "(Lcom/maddox/JGP/Point3d;Lcom/maddox/il2/engine/Actor;FIF)V"
         ],
         [
+          "com/maddox/il2/objects/effects/NuclearBlast$PhaseAction",
+          "<init>",
+          "(DLcom/maddox/il2/objects/effects/NuclearBlast$State;I)V"
+        ],
+        [
           "com/maddox/il2/objects/effects/NuclearBlast$ShockAction",
           "<init>",
           "(DLcom/maddox/il2/engine/Actor;Lcom/maddox/il2/objects/effects/NuclearBlast$ShockData;)V"
@@ -2219,28 +2639,28 @@
           "(Lcom/maddox/JGP/Point3d;D)V"
         ],
         [
-          "com/maddox/il2/objects/effects/NuclearBlast$VisualAction",
+          "com/maddox/il2/objects/effects/NuclearBlast$State",
           "<init>",
-          "(DLcom/maddox/JGP/Point3d;Lcom/maddox/il2/objects/effects/NuclearBlast$VisualData;)V"
+          "(JJLcom/maddox/JGP/Point3d;DZ)V"
         ],
         [
-          "com/maddox/il2/objects/effects/NuclearBlast$VisualAction",
+          "com/maddox/il2/objects/effects/NuclearBlast$VisualTickAction",
           "<init>",
-          "(J)V"
-        ],
-        [
-          "com/maddox/il2/objects/effects/NuclearBlast$VisualData",
-          "<init>",
-          "(F)V"
+          "(DLcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
         ],
         [
           "com/maddox/rts/Time",
-          "currentReal",
+          "current",
           "()J"
         ],
         [
-          "com/maddox/rts/Time",
-          "isPaused",
+          "java/io/File",
+          "<init>",
+          "(Ljava/lang/String;)V"
+        ],
+        [
+          "java/io/File",
+          "isFile",
           "()Z"
         ],
         [
@@ -2249,19 +2669,14 @@
           "(Ljava/lang/String;)V"
         ],
         [
-          "java/lang/Class",
-          "forName",
-          "(Ljava/lang/String;)Ljava/lang/Class;"
+          "java/lang/Integer",
+          "<init>",
+          "(I)V"
         ],
         [
-          "java/lang/Class",
-          "getDeclaredMethod",
-          "(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;"
-        ],
-        [
-          "java/lang/Class",
-          "getField",
-          "(Ljava/lang/String;)Ljava/lang/reflect/Field;"
+          "java/lang/Integer",
+          "intValue",
+          "()I"
         ],
         [
           "java/lang/Math",
@@ -2269,49 +2684,44 @@
           "(DD)D"
         ],
         [
+          "java/lang/Math",
+          "round",
+          "(D)J"
+        ],
+        [
           "java/lang/Object",
           "<init>",
           "()V"
         ],
         [
-          "java/lang/Object",
-          "getClass",
-          "()Ljava/lang/Class;"
-        ],
-        [
-          "java/lang/StringBuilder",
+          "java/lang/StringBuffer",
           "<init>",
-          "()V"
+          "(I)V"
         ],
         [
-          "java/lang/StringBuilder",
+          "java/lang/StringBuffer",
           "append",
-          "(Ljava/lang/Object;)Ljava/lang/StringBuilder;"
+          "(C)Ljava/lang/StringBuffer;"
         ],
         [
-          "java/lang/StringBuilder",
+          "java/lang/StringBuffer",
           "append",
-          "(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+          "(I)Ljava/lang/StringBuffer;"
         ],
         [
-          "java/lang/StringBuilder",
+          "java/lang/StringBuffer",
+          "append",
+          "(J)Ljava/lang/StringBuffer;"
+        ],
+        [
+          "java/lang/StringBuffer",
+          "append",
+          "(Ljava/lang/String;)Ljava/lang/StringBuffer;"
+        ],
+        [
+          "java/lang/StringBuffer",
           "toString",
           "()Ljava/lang/String;"
-        ],
-        [
-          "java/lang/reflect/Field",
-          "get",
-          "(Ljava/lang/Object;)Ljava/lang/Object;"
-        ],
-        [
-          "java/lang/reflect/Method",
-          "invoke",
-          "(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;"
-        ],
-        [
-          "java/lang/reflect/Method",
-          "setAccessible",
-          "(Z)V"
         ],
         [
           "java/util/ArrayList",
@@ -2321,6 +2731,16 @@
         [
           "java/util/ArrayList",
           "add",
+          "(Ljava/lang/Object;)Z"
+        ],
+        [
+          "java/util/ArrayList",
+          "clear",
+          "()V"
+        ],
+        [
+          "java/util/ArrayList",
+          "contains",
           "(Ljava/lang/Object;)Z"
         ],
         [
@@ -2337,6 +2757,11 @@
           "java/util/ArrayList",
           "remove",
           "(I)Ljava/lang/Object;"
+        ],
+        [
+          "java/util/ArrayList",
+          "remove",
+          "(Ljava/lang/Object;)Z"
         ],
         [
           "java/util/ArrayList",
@@ -2583,25 +3008,21 @@
       ]
     },
     {
-      "file": "Files/2A3CF08C7344E18A",
-      "size": 1232,
-      "sha256": "038C1168E34931873D64A2AFFE1FF9F464F00F0C8BDD47CB426984BB443FE196",
+      "file": "Files/8D53953C1956F06A",
+      "size": 629,
+      "sha256": "49F04044ED71EC2966A1CE912A5C64BA8FB3D5120E0B4B4FC30299F681CCABC0",
       "java_major": 47,
       "super": "com/maddox/rts/MsgAction",
       "fields": [
         [
-          "visual",
-          "Lcom/maddox/il2/objects/effects/NuclearBlast$VisualData;"
+          "requestedPhase",
+          "I"
         ]
       ],
       "methods": [
         [
           "<init>",
-          "(DLcom/maddox/JGP/Point3d;Lcom/maddox/il2/objects/effects/NuclearBlast$VisualData;)V"
-        ],
-        [
-          "<init>",
-          "(J)V"
+          "(DLcom/maddox/il2/objects/effects/NuclearBlast$State;I)V"
         ],
         [
           "doAction",
@@ -2609,79 +3030,216 @@
         ]
       ],
       "class_refs": [
-        "com/maddox/JGP/Point3d",
-        "com/maddox/il2/engine/Eff3D",
-        "com/maddox/il2/engine/Eff3DActor",
-        "com/maddox/il2/engine/Loc",
         "com/maddox/il2/objects/effects/NuclearBlast",
-        "com/maddox/il2/objects/effects/NuclearBlast$VisualAction",
-        "com/maddox/il2/objects/effects/NuclearBlast$VisualData",
+        "com/maddox/il2/objects/effects/NuclearBlast$PhaseAction",
+        "com/maddox/il2/objects/effects/NuclearBlast$State",
         "com/maddox/rts/MsgAction"
       ],
       "method_refs": [
         [
-          "com/maddox/il2/engine/Eff3D",
-          "initSetTypeTimer",
-          "(Z)V"
-        ],
-        [
-          "com/maddox/il2/engine/Eff3DActor",
-          "New",
-          "(Lcom/maddox/il2/engine/Loc;FLjava/lang/String;F)Lcom/maddox/il2/engine/Eff3DActor;"
-        ],
-        [
-          "com/maddox/il2/engine/Loc",
-          "<init>",
-          "(Lcom/maddox/JGP/Tuple3d;)V"
-        ],
-        [
           "com/maddox/il2/objects/effects/NuclearBlast",
-          "access$000",
-          "()V"
-        ],
-        [
-          "com/maddox/il2/objects/effects/NuclearBlast",
-          "registerVisual",
-          "(Lcom/maddox/il2/engine/Eff3DActor;)V"
+          "access$200",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;I)V"
         ],
         [
           "com/maddox/rts/MsgAction",
           "<init>",
           "(DLjava/lang/Object;)V"
-        ],
-        [
-          "com/maddox/rts/MsgAction",
-          "<init>",
-          "(IJLjava/lang/Object;)V"
         ]
       ]
     },
     {
-      "file": "Files/AB04450E05C9E67C",
-      "size": 304,
-      "sha256": "5FED08559B56C2CD401D53AA2F4432999A3B98412FFEBF715D91E73B3FE4017B",
+      "file": "Files/ABFC6F18761EB542",
+      "size": 588,
+      "sha256": "A80BD5673F14A795CFF6DFBC65372C73C80700BD5AEAB215506ED42F1F1E307B",
+      "java_major": 47,
+      "super": "com/maddox/rts/MsgAction",
+      "fields": [],
+      "methods": [
+        [
+          "<init>",
+          "(DLcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
+        ],
+        [
+          "doAction",
+          "(Ljava/lang/Object;)V"
+        ]
+      ],
+      "class_refs": [
+        "com/maddox/il2/objects/effects/NuclearBlast",
+        "com/maddox/il2/objects/effects/NuclearBlast$State",
+        "com/maddox/il2/objects/effects/NuclearBlast$VisualTickAction",
+        "com/maddox/rts/MsgAction"
+      ],
+      "method_refs": [
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "access$100",
+          "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
+        ],
+        [
+          "com/maddox/rts/MsgAction",
+          "<init>",
+          "(DLjava/lang/Object;)V"
+        ]
+      ]
+    },
+    {
+      "file": "Files/51AD1FEC90031C8A",
+      "size": 1586,
+      "sha256": "68E05AB18BA693EF0B2AC48D95D0D251434D36376937A568264045C9ACF05CE9",
       "java_major": 47,
       "super": "java/lang/Object",
       "fields": [
         [
-          "scale",
+          "actorRoles",
+          "Ljava/util/ArrayList;"
+        ],
+        [
+          "actors",
+          "Ljava/util/ArrayList;"
+        ],
+        [
+          "actorsCreated",
+          "I"
+        ],
+        [
+          "actorsDestroyed",
+          "I"
+        ],
+        [
+          "altitudeMeters",
+          "D"
+        ],
+        [
+          "complete",
+          "Z"
+        ],
+        [
+          "detonationTime",
+          "J"
+        ],
+        [
+          "emissionComplete",
+          "Z"
+        ],
+        [
+          "groundAltitudeMeters",
+          "D"
+        ],
+        [
+          "id",
+          "J"
+        ],
+        [
+          "initialRegistrations",
+          "I"
+        ],
+        [
+          "lastVisualTickSimulation",
+          "J"
+        ],
+        [
+          "nextRiseLayerIndex",
+          "I"
+        ],
+        [
+          "particleCapacityProbe",
+          "Z"
+        ],
+        [
+          "particleProbeCheckpoint",
+          "I"
+        ],
+        [
+          "phase",
+          "I"
+        ],
+        [
+          "position",
+          "Lcom/maddox/JGP/Point3d;"
+        ],
+        [
+          "riseLayersCreated",
+          "I"
+        ],
+        [
+          "riseLayersSkipped",
+          "I"
+        ],
+        [
+          "riseRetired",
+          "Z"
+        ],
+        [
+          "stabilizedCreated",
+          "Z"
+        ],
+        [
+          "transientsRetired",
+          "Z"
+        ],
+        [
+          "visualScale",
           "F"
+        ],
+        [
+          "visualTicks",
+          "I"
+        ],
+        [
+          "water",
+          "Z"
+        ],
+        [
+          "yieldKilotonnes",
+          "D"
         ]
       ],
       "methods": [
         [
           "<init>",
-          "(F)V"
+          "(JJLcom/maddox/JGP/Point3d;DZ)V"
         ]
       ],
       "class_refs": [
+        "com/maddox/JGP/Point3d",
+        "com/maddox/il2/engine/Engine",
+        "com/maddox/il2/engine/Landscape",
         "com/maddox/il2/objects/effects/NuclearBlast",
-        "com/maddox/il2/objects/effects/NuclearBlast$VisualData",
-        "java/lang/Object"
+        "com/maddox/il2/objects/effects/NuclearBlast$State",
+        "java/lang/Math",
+        "java/lang/Object",
+        "java/util/ArrayList"
       ],
       "method_refs": [
         [
+          "com/maddox/il2/engine/Engine",
+          "land",
+          "()Lcom/maddox/il2/engine/Landscape;"
+        ],
+        [
+          "com/maddox/il2/engine/Landscape",
+          "HQ",
+          "(DD)D"
+        ],
+        [
+          "com/maddox/il2/objects/effects/NuclearBlast",
+          "access$000",
+          "()Z"
+        ],
+        [
+          "java/lang/Math",
+          "pow",
+          "(DD)D"
+        ],
+        [
           "java/lang/Object",
+          "<init>",
+          "()V"
+        ],
+        [
+          "java/util/ArrayList",
           "<init>",
           "()V"
         ]
@@ -2691,8 +3249,8 @@
   "delivery_classes": [
     {
       "file": "Files/7BCE3C02C280ED18",
-      "size": 10411,
-      "sha256": "94312FF3B395E081B785871C0D584E2EEB9E14C4BF2C77A22AAB250D31E6AF6F",
+      "size": 10415,
+      "sha256": "0A83344F9617AECF9F2B0B50B06B265E7C41F2A733B226DA32656465AF994992",
       "java_major": 47,
       "super": "com/maddox/il2/objects/air/B_29X",
       "fields": [
@@ -2713,7 +3271,7 @@
           "Ljava/lang/Class;"
         ],
         [
-          "class$com$maddox$il2$objects$air$CockpitB29",
+          "class$com$maddox$il2$objects$air$CockpitB29SP",
           "Ljava/lang/Class;"
         ],
         [
@@ -3402,8 +3960,8 @@
         "MatName": "../TEXTURES/SmokeN.mat",
         "Color0": "0.9 0.9 0.9 1",
         "Color1": "1.0 1.0 1.0 0",
-        "nParticles": "128",
-        "FinishTime": "600.0",
+        "nParticles": "512",
+        "FinishTime": "60.0",
         "MaxR": "32.0",
         "PhiN": "5.0",
         "PsiN": "5.0",
@@ -3418,12 +3976,12 @@
         "Size": "500.0 1000.0",
         "Rnd": "0.01"
       },
-      "nParticles": 128.0,
-      "FinishTime": 600.0,
+      "nParticles": 512.0,
+      "FinishTime": 60.0,
       "LiveTime": 128.0,
       "EmitFrq": 500.0,
-      "sha256": "8294F91189F87294B79ECBFE7C2F47B4621FC67B68EC4643EDB2D430771560A4",
-      "expected_sha256": "8294F91189F87294B79ECBFE7C2F47B4621FC67B68EC4643EDB2D430771560A4",
+      "sha256": "2065B731EB3EE3BB12388CC56584686F17CD9151F7CD4C6D7368746BD84CD2BA",
+      "expected_sha256": "2065B731EB3EE3BB12388CC56584686F17CD9151F7CD4C6D7368746BD84CD2BA",
       "match": true,
       "material": "Files/3do/Effects/Textures/SmokeN.mat",
       "material_exists": true
@@ -3469,7 +4027,7 @@
         "Color0": "0.9 0.9 0.9 1",
         "Color1": "1.0 1.0 1.0 0",
         "nParticles": "512",
-        "FinishTime": "600.0",
+        "FinishTime": "60.0",
         "MaxR": "32.0",
         "PhiN": "5.0",
         "PsiN": "5.0",
@@ -3485,11 +4043,11 @@
         "Rnd": "0.94"
       },
       "nParticles": 512.0,
-      "FinishTime": 600.0,
+      "FinishTime": 60.0,
       "LiveTime": 128.0,
       "EmitFrq": 100.0,
-      "sha256": "62B43DA7E8045DA2E25BA907010C6CFC72F26124F3D387CC58A56D069CC3A247",
-      "expected_sha256": "62B43DA7E8045DA2E25BA907010C6CFC72F26124F3D387CC58A56D069CC3A247",
+      "sha256": "3674DDFD5B25B369E09FD27B689CE42F02AED44F7ED81F5C84AE972029556D6B",
+      "expected_sha256": "3674DDFD5B25B369E09FD27B689CE42F02AED44F7ED81F5C84AE972029556D6B",
       "match": true,
       "material": "Files/3do/Effects/Textures/SmokeN.mat",
       "material_exists": true
@@ -3625,6 +4183,72 @@
       "material_exists": true
     },
     {
+      "file": "Files/3do/Effects/Fireworks/FatMan(rise-head).eff",
+      "values": {
+        "ClassName": "TParticlesSystemParams",
+        "MatName": "../TEXTURES/SmokeN.mat",
+        "Color0": "0.88 0.88 0.88 0.92",
+        "Color1": "0.98 0.98 0.98 0.0",
+        "nParticles": "256",
+        "FinishTime": "60.0",
+        "MaxR": "32.0",
+        "PhiN": "6.0",
+        "PsiN": "6.0",
+        "LiveTime": "128.0",
+        "EmitFrq": "24.0",
+        "TranspTransitionTime": "128.0f",
+        "EmitVelocity": "25.0 55.0",
+        "EmitTheta": "0.0 35.0",
+        "GasResist": "0.0015",
+        "VertAccel": "0.0",
+        "Wind": "20.0",
+        "Size": "700.0 1700.0",
+        "Rnd": "0.35"
+      },
+      "nParticles": 256.0,
+      "FinishTime": 60.0,
+      "LiveTime": 128.0,
+      "EmitFrq": 24.0,
+      "sha256": "AF4B25448C25D85F78E3E493427A6E734AA85F14AEBE401EDBF7AD6EBE1E9217",
+      "expected_sha256": "AF4B25448C25D85F78E3E493427A6E734AA85F14AEBE401EDBF7AD6EBE1E9217",
+      "match": true,
+      "material": "Files/3do/Effects/Textures/SmokeN.mat",
+      "material_exists": true
+    },
+    {
+      "file": "Files/3do/Effects/Fireworks/FatMan(rise-torus).eff",
+      "values": {
+        "ClassName": "TParticlesSystemParams",
+        "MatName": "../TEXTURES/SmokeN.mat",
+        "Color0": "0.86 0.86 0.86 0.88",
+        "Color1": "0.98 0.98 0.98 0.0",
+        "nParticles": "192",
+        "FinishTime": "60.0",
+        "MaxR": "32.0",
+        "PhiN": "6.0",
+        "PsiN": "6.0",
+        "LiveTime": "128.0",
+        "EmitFrq": "16.0",
+        "TranspTransitionTime": "128.0f",
+        "EmitVelocity": "-180.0 420.0",
+        "EmitTheta": "92.0 92.0",
+        "GasResist": "0.003",
+        "VertAccel": "0.0",
+        "Wind": "12.0",
+        "Size": "850.0 1700.0",
+        "Rnd": "0.88"
+      },
+      "nParticles": 192.0,
+      "FinishTime": 60.0,
+      "LiveTime": 128.0,
+      "EmitFrq": 16.0,
+      "sha256": "D5A25A90A7DCDC37B5B5C308B86A69EC0A63837416F1B9EC153D1F55263C0346",
+      "expected_sha256": "D5A25A90A7DCDC37B5B5C308B86A69EC0A63837416F1B9EC153D1F55263C0346",
+      "match": true,
+      "material": "Files/3do/Effects/Textures/SmokeN.mat",
+      "material_exists": true
+    },
+    {
       "file": "Files/3do/Effects/Fireworks/FatMan(stabilized).eff",
       "values": {
         "ClassName": "TParticlesSystemParams",
@@ -3632,7 +4256,7 @@
         "Color0": "0.82 0.82 0.82 0.72",
         "Color1": "0.95 0.95 0.95 0.0",
         "nParticles": "512",
-        "FinishTime": "3000.0",
+        "FinishTime": "2990.0",
         "MaxR": "32.0",
         "PhiN": "8.0",
         "PsiN": "8.0",
@@ -3648,11 +4272,11 @@
         "Rnd": "0.90"
       },
       "nParticles": 512.0,
-      "FinishTime": 3000.0,
+      "FinishTime": 2990.0,
       "LiveTime": 128.0,
       "EmitFrq": 4.0,
-      "sha256": "A6C4D47C51D828946A263EA3D0A6E60CB52F55FD2646A41FFDB1DE5E41722C86",
-      "expected_sha256": "A6C4D47C51D828946A263EA3D0A6E60CB52F55FD2646A41FFDB1DE5E41722C86",
+      "sha256": "7100A469125EED848C07B0F3AEA7AB238ED7584FF00DE20CBD9BE074E1AB91D7",
+      "expected_sha256": "7100A469125EED848C07B0F3AEA7AB238ED7584FF00DE20CBD9BE074E1AB91D7",
       "match": true,
       "material": "Files/3do/Effects/Textures/SmokeN.mat",
       "material_exists": true
@@ -3682,24 +4306,15 @@
     "Files\\FA003A8809273DBE: lecture hors limites a 0x2ABE"
   ],
   "runtime_evidence": {
-    "capture": "test-results/startup/20260901-131015Z-profile9-warm-windowed1024-startup",
-    "observations": [
-      "Slovakia B-29 + Little Boy : largage, panache, pause longue puis courte",
-      "Little Boy Slovakia termine; preparation Fat Man",
-      "Little Boy: explosion repart de zero apres pause; flash lumineux douteux a verifier image par image",
-      "Fat Man: B-29 en vol, largage autorise",
-      "Little Boy: panache repart aussi de zero apres demi-tour avion; hypothese sortie champ/culling, pas pause seule",
-      "Fat Man Slovakia termine",
-      "Passage B-29 sous/dans le champignon: aucune instabilite aerodynamique; besoin champ volumique ascendance/cisaillement/turbulence",
-      "Smolensk stress test: 16 B-29 Fat Man contre 16 Fw 190; largage multiple imminent"
-    ],
-    "conclusion": "native pause watcher did not preserve the plume across pause/resume or camera culling"
+    "capture": "WIP/captures/startup/20260903-160537Z-profile9-warm-windowed1024-startup",
+    "observations": [],
+    "conclusion": "the moving-emitter candidate remained responsive but split the rising origin from its world-fixed particle mass; the replacement uses bounded fixed layers and is pending runtime validation"
   },
   "known_release_blockers": [
-    "Le panache repart apres pause/reprise et apres une sortie puis un retour dans le champ de la camera.",
-    "La surveillance de pause native n'a donc aucun benefice visuel valide ; son controle toutes les 25 ms doit etre retire ou remplace.",
-    "La duree des Eff3DActor initiaux et stabilises n'est pas encore explicitement bornee ; les sessions longues ou denses exigent un audit de retention.",
-    "Le nuage stabilise est place a seulement 5 000 m pour 10 kt avant mise a l'echelle, sous le maximum historique documente de 40 000 a 50 000 pieds.",
+    "Le nouveau rendu par couches fixes n'est pas encore valide dans IL-2 apres pause/reprise et sortie puis retour dans le champ de la camera.",
+    "Le masquage camera peut encore relancer l'emetteur de la phase courante ; il ne doit cependant plus pouvoir rejouer la detonation complete apres une seconde.",
+    "Les compteurs runtime doivent confirmer que tous les acteurs crees sont detruits et qu'aucun etat ne subsiste apres 3 600 secondes simulees.",
+    "Les sommets cibles de 12 km et 13,5 km sont implantes mais leur placement visuel doit etre confirme en jeu.",
     "Fat Man avec/sans pause, les deux airbursts sur l'eau, la visibilite image par image du flash et l'autorite multijoueur exigent encore un essai dedie.",
     "Les blessures thermiques, le rayonnement ionisant, les retombees et la turbulence persistante du panache ne sont pas implementes.",
     "Silverplate v1.2 n'a pas de licence publiee et n'accorde aucune autorisation de redistribution ; une permission explicite, une installation externe ou un remplacement est requis avant publication."

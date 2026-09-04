@@ -19,11 +19,19 @@ if ([string]$manifest.aaa_root -ne $aaa) {
 }
 
 function Get-Sha256([string]$Path) {
-    (Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash
+    $stream = [IO.File]::OpenRead($Path)
+    $sha = [Security.Cryptography.SHA256]::Create()
+    try {
+        ([BitConverter]::ToString($sha.ComputeHash($stream))).Replace('-', '')
+    }
+    finally {
+        $sha.Dispose()
+        $stream.Dispose()
+    }
 }
 
 $operations = [Collections.Generic.List[object]]::new()
-foreach ($packageName in @('TBF-1C', 'TBM-3')) {
+foreach ($packageName in @('TBF-1C', 'TBM-3', 'SU_2')) {
     $package = $manifest.candidate_packages.$packageName
     if ($null -eq $package) { throw "Paquet absent du manifeste : $packageName" }
     foreach ($class in $package.classes) {

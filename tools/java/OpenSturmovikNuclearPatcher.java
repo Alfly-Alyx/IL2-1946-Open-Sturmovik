@@ -60,18 +60,20 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
 
         Path compiledNuclear = Paths.get(args[6]);
         validateShockVectorAbi(Files.readAllBytes(compiledNuclear.resolve("NuclearBlast$ShockAction.class")));
-        validateVisualEffectAbi(Files.readAllBytes(compiledNuclear.resolve("NuclearBlast$VisualAction.class")));
-        validatePausePreservationAbi(
+        validateVisualLifecycleAbi(
             Files.readAllBytes(compiledNuclear.resolve("NuclearBlast.class")),
-            Files.readAllBytes(compiledNuclear.resolve("NuclearBlast$VisualAction.class"))
+            Files.readAllBytes(compiledNuclear.resolve("NuclearBlast$PhaseAction.class")),
+            Files.readAllBytes(compiledNuclear.resolve("NuclearBlast$VisualTickAction.class")),
+            Files.readAllBytes(compiledNuclear.resolve("NuclearBlast$State.class"))
         );
         copyDowngraded(compiledNuclear.resolve("NuclearBlast.class"), output.resolve("NuclearBlast.class"));
         copyDowngraded(compiledNuclear.resolve("NuclearBlast$DamageAction.class"), output.resolve("NuclearBlast$DamageAction.class"));
         copyDowngraded(compiledNuclear.resolve("NuclearBlast$DamageData.class"), output.resolve("NuclearBlast$DamageData.class"));
         copyDowngraded(compiledNuclear.resolve("NuclearBlast$ShockAction.class"), output.resolve("NuclearBlast$ShockAction.class"));
         copyDowngraded(compiledNuclear.resolve("NuclearBlast$ShockData.class"), output.resolve("NuclearBlast$ShockData.class"));
-        copyDowngraded(compiledNuclear.resolve("NuclearBlast$VisualAction.class"), output.resolve("NuclearBlast$VisualAction.class"));
-        copyDowngraded(compiledNuclear.resolve("NuclearBlast$VisualData.class"), output.resolve("NuclearBlast$VisualData.class"));
+        copyDowngraded(compiledNuclear.resolve("NuclearBlast$PhaseAction.class"), output.resolve("NuclearBlast$PhaseAction.class"));
+        copyDowngraded(compiledNuclear.resolve("NuclearBlast$VisualTickAction.class"), output.resolve("NuclearBlast$VisualTickAction.class"));
+        copyDowngraded(compiledNuclear.resolve("NuclearBlast$State.class"), output.resolve("NuclearBlast$State.class"));
     }
 
     private static void validateShockVectorAbi(byte[] data) {
@@ -95,86 +97,114 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
         }
     }
 
-    private static void validateVisualEffectAbi(byte[] data) {
-        ClassNode node = parse(data);
-        MethodNode method = findMethod(node, "doAction", "(Ljava/lang/Object;)V");
-        int locConstructors = 0;
-        int timerSelections = 0;
-        int effectFactories = 0;
-        int visualRegistrations = 0;
-        for (AbstractInsnNode instruction = method.instructions.getFirst(); instruction != null; instruction = instruction.getNext()) {
-            if (!(instruction instanceof MethodInsnNode)) {
-                continue;
-            }
-            MethodInsnNode call = (MethodInsnNode)instruction;
-            if (call.owner.equals("com/maddox/il2/engine/Loc") && call.name.equals("<init>")) {
-                if (!call.desc.equals("(Lcom/maddox/JGP/Tuple3d;)V")) {
-                    throw new IllegalStateException("Incompatible IL-2 4.09m Loc ABI: " + call.desc);
-                }
-                ++locConstructors;
-            }
-            if (call.getOpcode() == INVOKESTATIC && call.owner.equals(EFF3D) &&
-                call.name.equals("initSetTypeTimer") && call.desc.equals("(Z)V")) {
-                AbstractInsnNode timerValue = previousReal(call);
-                if (timerValue == null || timerValue.getOpcode() != ICONST_0) {
-                    throw new IllegalStateException("Stabilized cloud must use IL-2 simulation time");
-                }
-                ++timerSelections;
-            }
-            if (isNuclearEffectFactoryCall(call)) {
-                ++effectFactories;
-            }
-            if (call.getOpcode() == INVOKESTATIC && call.owner.equals(NUCLEAR_BLAST) &&
-                call.name.equals("registerVisual") &&
-                call.desc.equals("(Lcom/maddox/il2/engine/Eff3DActor;)V")) {
-                ++visualRegistrations;
-            }
-        }
-        if (locConstructors != 1 || timerSelections != 1 || effectFactories != 1 || visualRegistrations != 1) {
-            throw new IllegalStateException(
-                "Expected one compatible stabilized-cloud constructor/timer/factory/registration, got " +
-                locConstructors + "/" + timerSelections + "/" + effectFactories + "/" + visualRegistrations
-            );
-        }
-    }
-
-    private static void validatePausePreservationAbi(byte[] rootData, byte[] visualActionData) {
+    private static void validateVisualLifecycleAbi(
+        byte[] rootData,
+        byte[] phaseActionData,
+        byte[] visualTickActionData,
+        byte[] stateData
+    ) {
         ClassNode root = parse(rootData);
+        MethodNode begin = findMethod(
+            root,
+            "beginVisual",
+            "(Lcom/maddox/JGP/Point3d;FZ)V"
+        );
         MethodNode register = findMethod(
             root,
             "registerVisual",
             "(Lcom/maddox/il2/engine/Eff3DActor;)V"
         );
-        MethodNode pause = findMethod(
+        MethodNode end = findMethod(
             root,
-            "setVisualPaused",
-            "(Lcom/maddox/il2/engine/Eff3DActor;Z)V"
+            "endVisual",
+            "()V"
         );
-        if ((register.access & (ACC_PUBLIC | ACC_STATIC)) != (ACC_PUBLIC | ACC_STATIC)) {
-            throw new IllegalStateException("NuclearBlast.registerVisual must remain public static");
+        MethodNode destroy = findMethod(
+            root,
+            "destroyActors",
+            "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
+        );
+        if ((begin.access & (ACC_PUBLIC | ACC_STATIC)) != (ACC_PUBLIC | ACC_STATIC) ||
+            (register.access & (ACC_PUBLIC | ACC_STATIC)) != (ACC_PUBLIC | ACC_STATIC) ||
+            (end.access & (ACC_PUBLIC | ACC_STATIC)) != (ACC_PUBLIC | ACC_STATIC)) {
+            throw new IllegalStateException("Nuclear visual transaction methods must remain public static");
         }
-        if (countCalls(root, "com/maddox/rts/Time", "isPaused") < 2 ||
-            countCalls(pause, "java/lang/reflect/Method", "invoke") != 1) {
-            throw new IllegalStateException("Nuclear visual pause watcher ABI is incomplete");
+        if (countCalls(root, "com/maddox/rts/Time", "current") < 3 ||
+            countCalls(root, "com/maddox/rts/Time", "currentReal") != 0 ||
+            countCalls(root, "com/maddox/rts/Time", "isPaused") != 0 ||
+            countCalls(root, "java/lang/reflect/Method", "invoke") != 0) {
+            throw new IllegalStateException(
+                "Nuclear age must use simulation time only; real-time pause reconstruction is forbidden"
+            );
+        }
+        if (countCalls(destroy, "com/maddox/il2/engine/Eff3DActor", "postDestroy") != 1 ||
+            countCalls(root, "java/util/ArrayList", "clear") < 1 ||
+            countCalls(root, "java/util/ArrayList", "remove") < 1) {
+            throw new IllegalStateException("Nuclear visual actor cleanup ABI is incomplete");
         }
 
-        ClassNode action = parse(visualActionData);
+        ClassNode action = parse(phaseActionData);
         if (!action.superName.equals("com/maddox/rts/MsgAction")) {
-            throw new IllegalStateException("Nuclear visual watcher must extend MsgAction");
+            throw new IllegalStateException("Nuclear phase action must extend MsgAction");
         }
-        MethodNode realTimeConstructor = findMethod(action, "<init>", "(J)V");
-        int realTimeConstructors = 0;
-        for (AbstractInsnNode instruction = realTimeConstructor.instructions.getFirst(); instruction != null; instruction = instruction.getNext()) {
-            if (instruction instanceof MethodInsnNode) {
-                MethodInsnNode call = (MethodInsnNode)instruction;
-                if (call.getOpcode() == INVOKESPECIAL && call.owner.equals("com/maddox/rts/MsgAction") &&
-                    call.name.equals("<init>") && call.desc.equals("(IJLjava/lang/Object;)V")) {
-                    ++realTimeConstructors;
+        MethodNode constructor = findMethod(
+            action,
+            "<init>",
+            "(DLcom/maddox/il2/objects/effects/NuclearBlast$State;I)V"
+        );
+        int transitionCalls = countCalls(action, NUCLEAR_BLAST, "transition") +
+            countSyntheticAccessCalls(
+                action,
+                NUCLEAR_BLAST,
+                "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;I)V"
+            );
+        if (countCalls(constructor, "com/maddox/rts/MsgAction", "<init>") != 1 ||
+            transitionCalls != 1) {
+            throw new IllegalStateException("Nuclear phase action must use one simulation-time MsgAction");
+        }
+
+        ClassNode visualAction = parse(visualTickActionData);
+        if (!visualAction.superName.equals("com/maddox/rts/MsgAction")) {
+            throw new IllegalStateException("Nuclear visual tick action must extend MsgAction");
+        }
+        MethodNode visualConstructor = findMethod(
+            visualAction,
+            "<init>",
+            "(DLcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
+        );
+        int visualTickCalls = countCalls(visualAction, NUCLEAR_BLAST, "visualTick") +
+            countSyntheticAccessCalls(
+                visualAction,
+                NUCLEAR_BLAST,
+                "(Lcom/maddox/il2/objects/effects/NuclearBlast$State;)V"
+            );
+        if (countCalls(visualConstructor, "com/maddox/rts/MsgAction", "<init>") != 1 ||
+            visualTickCalls != 1) {
+            throw new IllegalStateException("Nuclear visual tick must use one simulation-time MsgAction");
+        }
+
+        ClassNode state = parse(stateData);
+        if (countCalls(state, "com/maddox/rts/Time", "currentReal") != 0) {
+            throw new IllegalStateException("Persistent nuclear state must not depend on real time");
+        }
+        String[] requiredFields = {
+            "detonationTime", "position", "altitudeMeters", "groundAltitudeMeters", "yieldKilotonnes",
+            "water", "phase", "actors", "actorRoles", "actorsCreated", "actorsDestroyed",
+            "lastVisualTickSimulation", "visualTicks", "stabilizedCreated", "transientsRetired",
+            "riseRetired", "nextRiseLayerIndex", "riseLayersCreated", "riseLayersSkipped",
+            "emissionComplete", "complete"
+        };
+        for (String fieldName : requiredFields) {
+            boolean found = false;
+            for (FieldNode field : state.fields) {
+                if (field.name.equals(fieldName)) {
+                    found = true;
+                    break;
                 }
             }
-        }
-        if (realTimeConstructors != 1) {
-            throw new IllegalStateException("Nuclear pause watcher must use one real-time MsgAction constructor");
+            if (!found) {
+                throw new IllegalStateException("Persistent nuclear state field missing: " + fieldName);
+            }
         }
     }
 
@@ -228,12 +258,15 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
     private static byte[] patchExplosions(byte[] zutiData, byte[] silverplateData) {
         ClassNode zuti = parse(zutiData);
         if (isAlreadyPatchedExplosions(zuti)) {
+            scaleNuclearDispatchFromYield(zuti);
             verifyBytecode(zuti);
-            return zutiData;
+            return emit(zuti);
         }
         if (isMergedExplosions(zuti)) {
+            scaleNuclearDispatchFromYield(zuti);
             forceSimulationTimerForNuclearEffects(zuti);
             registerNuclearVisuals(zuti);
+            instrumentNuclearVisualLifecycle(zuti);
             return emit(zuti);
         }
         ClassNode silverplate = parse(silverplateData);
@@ -273,10 +306,59 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
             throw new IllegalStateException("Expected to remove one nuclear bomb50_land fallback, got " + removedFallbacks);
         }
         removeNuclearAirburstCrater(zuti);
+        scaleNuclearDispatchFromYield(zuti);
         scaleNuclearVisualsFromArgument(zuti);
         forceSimulationTimerForNuclearEffects(zuti);
         registerNuclearVisuals(zuti);
+        instrumentNuclearVisualLifecycle(zuti);
         return emit(zuti);
+    }
+
+    private static void scaleNuclearDispatchFromYield(ClassNode node) {
+        MethodNode generate = findMethod(
+            node,
+            "generate",
+            "(Lcom/maddox/il2/engine/Actor;Lcom/maddox/JGP/Point3d;FIFI)V"
+        );
+        int dispatches = 0;
+        for (AbstractInsnNode instruction = generate.instructions.getFirst(); instruction != null; instruction = instruction.getNext()) {
+            if (!(instruction instanceof MethodInsnNode)) {
+                continue;
+            }
+            MethodInsnNode call = (MethodInsnNode)instruction;
+            if (call.getOpcode() != INVOKESTATIC || !call.owner.equals(EXPLOSIONS) ||
+                !(call.name.equals("bombFatMan_land") || call.name.equals("bombFatMan_water")) ||
+                !call.desc.equals("(Lcom/maddox/JGP/Point3d;FF)V")) {
+                continue;
+            }
+            // Silverplate also contains a later conventional very-large-bomb
+            // branch with the same two calls. Only the first water/land pair
+            // is selected by newEffect=1 for Little Boy and Fat Man.
+            if (dispatches >= 2) {
+                continue;
+            }
+            ++dispatches;
+            AbstractInsnNode scale = previousReal(call);
+            if (scale instanceof MethodInsnNode) {
+                MethodInsnNode scaleCall = (MethodInsnNode)scale;
+                if (scaleCall.getOpcode() == INVOKESTATIC && scaleCall.owner.equals(NUCLEAR_BLAST) &&
+                    scaleCall.name.equals("visualScaleForPower") && scaleCall.desc.equals("(F)F")) {
+                    continue;
+                }
+            }
+            if (scale.getOpcode() != FCONST_1 && !isFloatConstant(scale, 1.0F)) {
+                throw new IllegalStateException("Unexpected nuclear dispatch scale before " + call.name);
+            }
+            VarInsnNode loadPower = new VarInsnNode(FLOAD, 2);
+            generate.instructions.set(scale, loadPower);
+            generate.instructions.insert(
+                loadPower,
+                new MethodInsnNode(INVOKESTATIC, NUCLEAR_BLAST, "visualScaleForPower", "(F)F", false)
+            );
+        }
+        if (dispatches != 2) {
+            throw new IllegalStateException("Expected two yield-scaled nuclear visual dispatches, got " + dispatches);
+        }
     }
 
     private static boolean isAlreadyPatchedExplosions(ClassNode node) {
@@ -286,7 +368,11 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
         MethodNode land = findMethod(node, "bombFatMan_land", "(Lcom/maddox/JGP/Point3d;FF)V");
         MethodNode water = findMethod(node, "bombFatMan_water", "(Lcom/maddox/JGP/Point3d;FF)V");
         return countSimulationTimerGuards(land) + countSimulationTimerGuards(water) == 12 &&
-            countVisualRegistrations(land) + countVisualRegistrations(water) == 12;
+            countVisualRegistrations(land) + countVisualRegistrations(water) == 12 &&
+            countCalls(land, NUCLEAR_BLAST, "beginVisual") == 1 &&
+            countCalls(water, NUCLEAR_BLAST, "beginVisual") == 1 &&
+            countCalls(land, NUCLEAR_BLAST, "endVisual") == 1 &&
+            countCalls(water, NUCLEAR_BLAST, "endVisual") == 1;
     }
 
     private static boolean isMergedExplosions(ClassNode node) {
@@ -359,9 +445,73 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
         int total = countVisualRegistrations(land) + countVisualRegistrations(water);
         if (total != 12) {
             throw new IllegalStateException(
-                "Expected 12 nuclear visual emitters registered for pause preservation, got " + total +
+                "Expected 12 initial nuclear visual emitters registered for lifecycle ownership, got " + total +
                 " after " + changes + " changes"
             );
+        }
+    }
+
+    private static void instrumentNuclearVisualLifecycle(ClassNode node) {
+        String[] methods = {"bombFatMan_land", "bombFatMan_water"};
+        for (int methodIndex = 0; methodIndex < methods.length; ++methodIndex) {
+            MethodNode method = findMethod(node, methods[methodIndex], "(Lcom/maddox/JGP/Point3d;FF)V");
+            int beginCalls = countCalls(method, NUCLEAR_BLAST, "beginVisual");
+            int endCalls = countCalls(method, NUCLEAR_BLAST, "endVisual");
+            if (beginCalls == 0) {
+                AbstractInsnNode earlyReturn = null;
+                for (AbstractInsnNode instruction = method.instructions.getFirst(); instruction != null; instruction = instruction.getNext()) {
+                    if (instruction.getOpcode() == RETURN) {
+                        earlyReturn = instruction;
+                        break;
+                    }
+                }
+                AbstractInsnNode bodyStart = nextReal(earlyReturn);
+                if (earlyReturn == null || bodyStart == null) {
+                    throw new IllegalStateException("Could not find rendered nuclear method entry: " + methods[methodIndex]);
+                }
+                InsnList begin = new InsnList();
+                begin.add(new VarInsnNode(ALOAD, 0));
+                begin.add(new VarInsnNode(FLOAD, 2));
+                begin.add(new InsnNode(methodIndex == 1 ? ICONST_1 : ICONST_0));
+                begin.add(new MethodInsnNode(
+                    INVOKESTATIC,
+                    NUCLEAR_BLAST,
+                    "beginVisual",
+                    "(Lcom/maddox/JGP/Point3d;FZ)V",
+                    false
+                ));
+                method.instructions.insertBefore(bodyStart, begin);
+            } else if (beginCalls != 1) {
+                throw new IllegalStateException("Unexpected beginVisual count in " + methods[methodIndex] + ": " + beginCalls);
+            }
+
+            if (endCalls == 0) {
+                AbstractInsnNode finalReturn = null;
+                for (AbstractInsnNode instruction = method.instructions.getLast(); instruction != null; instruction = instruction.getPrevious()) {
+                    if (instruction.getOpcode() == RETURN) {
+                        finalReturn = instruction;
+                        break;
+                    }
+                }
+                if (finalReturn == null) {
+                    throw new IllegalStateException("Could not find rendered nuclear method exit: " + methods[methodIndex]);
+                }
+                method.instructions.insertBefore(
+                    finalReturn,
+                    new MethodInsnNode(INVOKESTATIC, NUCLEAR_BLAST, "endVisual", "()V", false)
+                );
+            } else if (endCalls != 1) {
+                throw new IllegalStateException("Unexpected endVisual count in " + methods[methodIndex] + ": " + endCalls);
+            }
+        }
+
+        MethodNode land = findMethod(node, "bombFatMan_land", "(Lcom/maddox/JGP/Point3d;FF)V");
+        MethodNode water = findMethod(node, "bombFatMan_water", "(Lcom/maddox/JGP/Point3d;FF)V");
+        if (countCalls(land, NUCLEAR_BLAST, "beginVisual") != 1 ||
+            countCalls(water, NUCLEAR_BLAST, "beginVisual") != 1 ||
+            countCalls(land, NUCLEAR_BLAST, "endVisual") != 1 ||
+            countCalls(water, NUCLEAR_BLAST, "endVisual") != 1) {
+            throw new IllegalStateException("Nuclear visual transactions are incomplete");
         }
     }
 
@@ -433,6 +583,27 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
                     ++count;
                 }
             }
+        }
+        return count;
+    }
+
+    private static int countSyntheticAccessCalls(MethodNode method, String owner, String descriptor) {
+        int count = 0;
+        for (AbstractInsnNode instruction = method.instructions.getFirst(); instruction != null; instruction = instruction.getNext()) {
+            if (instruction instanceof MethodInsnNode) {
+                MethodInsnNode call = (MethodInsnNode)instruction;
+                if (call.owner.equals(owner) && call.name.startsWith("access$") && call.desc.equals(descriptor)) {
+                    ++count;
+                }
+            }
+        }
+        return count;
+    }
+
+    private static int countSyntheticAccessCalls(ClassNode node, String owner, String descriptor) {
+        int count = 0;
+        for (MethodNode method : node.methods) {
+            count += countSyntheticAccessCalls(method, owner, descriptor);
         }
         return count;
     }
@@ -649,8 +820,13 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
         ClassNode node = parse(data);
         for (FieldNode field : node.fields) {
             if (field.name.equals("osAirburstTriggered")) {
+                MethodNode existing = findMethod(node, "interpolateTick", "()V");
+                int removed = removeExplicitNuclearVisualCalls(existing);
+                if (removed != 0 && removed != 2) {
+                    throw new IllegalStateException(node.name + " has an incomplete duplicate visual dispatch: " + removed);
+                }
                 verifyBytecode(node);
-                return data;
+                return removed == 0 ? data : emit(node);
             }
         }
         patchProperty(node, "power", Float.valueOf(power));
@@ -705,26 +881,6 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
         code.add(new VarInsnNode(ALOAD, 1));
         code.add(new MethodInsnNode(INVOKESPECIAL, POINT3D, "<init>", "(Lcom/maddox/JGP/Point3d;)V", false));
         code.add(new VarInsnNode(ASTORE, 4));
-        code.add(new MethodInsnNode(INVOKESTATIC, ENGINE, "land", "()Lcom/maddox/il2/engine/Landscape;", false));
-        code.add(new VarInsnNode(ALOAD, 4));
-        code.add(new FieldInsnNode(GETFIELD, POINT3D, "x", "D"));
-        code.add(new VarInsnNode(ALOAD, 4));
-        code.add(new FieldInsnNode(GETFIELD, POINT3D, "y", "D"));
-        code.add(new MethodInsnNode(INVOKEVIRTUAL, LANDSCAPE, "isWater", "(DD)Z", false));
-        LabelNode landEffect = new LabelNode();
-        LabelNode afterEffect = new LabelNode();
-        code.add(new JumpInsnNode(IFEQ, landEffect));
-        code.add(new VarInsnNode(ALOAD, 4));
-        code.add(new LdcInsnNode(Float.valueOf(-1.0F)));
-        code.add(new LdcInsnNode(Float.valueOf(visualScale)));
-        code.add(new MethodInsnNode(INVOKESTATIC, EXPLOSIONS, "bombFatMan_water", "(Lcom/maddox/JGP/Point3d;FF)V", false));
-        code.add(new JumpInsnNode(GOTO, afterEffect));
-        code.add(landEffect);
-        code.add(new VarInsnNode(ALOAD, 4));
-        code.add(new LdcInsnNode(Float.valueOf(-1.0F)));
-        code.add(new LdcInsnNode(Float.valueOf(visualScale)));
-        code.add(new MethodInsnNode(INVOKESTATIC, EXPLOSIONS, "bombFatMan_land", "(Lcom/maddox/JGP/Point3d;FF)V", false));
-        code.add(afterEffect);
         code.add(new VarInsnNode(ALOAD, 0));
         code.add(new MethodInsnNode(INVOKESTATIC, ENGINE, "actorLand", "()Lcom/maddox/il2/engine/Actor;", false));
         code.add(new LdcInsnNode("Body"));
@@ -743,6 +899,29 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
         code.add(new InsnNode(RETURN));
         node.methods.add(method);
         return emit(node);
+    }
+
+    private static int removeExplicitNuclearVisualCalls(MethodNode method) {
+        int removed = 0;
+        for (AbstractInsnNode instruction = method.instructions.getFirst(); instruction != null;) {
+            AbstractInsnNode next = instruction.getNext();
+            if (instruction instanceof MethodInsnNode) {
+                MethodInsnNode call = (MethodInsnNode)instruction;
+                if (call.getOpcode() == INVOKESTATIC && call.owner.equals(EXPLOSIONS) &&
+                    (call.name.equals("bombFatMan_land") || call.name.equals("bombFatMan_water")) &&
+                    call.desc.equals("(Lcom/maddox/JGP/Point3d;FF)V")) {
+                    InsnList discardArguments = new InsnList();
+                    discardArguments.add(new InsnNode(POP));
+                    discardArguments.add(new InsnNode(POP));
+                    discardArguments.add(new InsnNode(POP));
+                    method.instructions.insertBefore(instruction, discardArguments);
+                    method.instructions.remove(instruction);
+                    ++removed;
+                }
+            }
+            instruction = next;
+        }
+        return removed;
     }
 
     private static void patchProperty(ClassNode node, String propertyName, Float replacement) {

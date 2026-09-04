@@ -109,6 +109,7 @@ $lines = New-Object 'System.Collections.Generic.List[string]'
 foreach ($line in $parts) { $lines.Add($line) | Out-Null }
 
 Set-IniSectionValues -Lines $lines -Section 'game' -Values ([ordered]@{ eventlog = 'eventlog.lst'; eventlogkeep = '1' })
+Set-IniSectionValues -Lines $lines -Section 'window' -Values ([ordered]@{ DrawIfNotFocused = '1' })
 Set-IniSectionValues -Lines $lines -Section 'Console' -Values ([ordered]@{
     LOG = '1'
     LOGTIME = '1'

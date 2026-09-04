@@ -1,0 +1,65 @@
+{
+  "schema": "open-sturmovik-nuclear-runtime-observation-v1",
+  "run": "WIP/captures/startup/20260903-172444Z-profile9-warm-windowed1024-startup",
+  "scenario": {
+    "map": "Smolensk",
+    "aircraft": "B-29 Silverplate",
+    "weapon": "Little Boy",
+    "surface": "land",
+    "pause": false,
+    "turn_around": false
+  },
+  "timeline_utc": {
+    "mission_playing": "2026-09-03T18:01:54Z",
+    "detonation": "2026-09-03T18:03:27Z",
+    "mission_end": "2026-09-03T18:03:55Z",
+    "process_end": "2026-09-03T18:06:42Z"
+  },
+  "simulation_after_detonation_seconds": 28,
+  "nuclear_log": [
+    { "age_ms": 0, "action": "created", "phase": "detonation", "actors": 0, "target_agl_m": 603 },
+    { "age_ms": 1000, "action": "phase", "phase": "early-rise", "actors": 6, "target_agl_m": 641 }
+  ],
+  "process_detonation_to_mission_end": {
+    "samples": 206,
+    "duration_seconds": 27.9,
+    "max_working_set_mib": 654.3,
+    "max_private_mib": 670.7,
+    "max_virtual_mib": 1967.0,
+    "mean_cpu_cores": 0.96,
+    "not_responding_samples": 0
+  },
+  "process_detonation_to_process_end": {
+    "samples": 1413,
+    "duration_seconds": 195.1,
+    "max_working_set_mib": 654.4,
+    "max_private_mib": 670.8,
+    "max_virtual_mib": 1967.0,
+    "mean_cpu_cores": 0.85,
+    "not_responding_samples": 0
+  },
+  "observations": {
+    "positive": [
+      "single detonation event",
+      "vertical initial effect",
+      "flash, fireball and early cloud visible",
+      "no hang or exception after detonation",
+      "game remained responsive"
+    ],
+    "user_feedback": [
+      "initial result judged promising",
+      "column appears too thin and insufficiently dense",
+      "aircraft speed caused the effect to leave the frame"
+    ],
+    "not_validated": [
+      "first fixed layer at 30 seconds",
+      "cloud continuity through 210 seconds",
+      "final cloud height",
+      "fireball diameter",
+      "visible shock-front speed",
+      "damage radius"
+    ]
+  },
+  "capture_limitation": "The view followed the B-29 and the mission ended 28 seconds after detonation. Static-camera missions are required for quantitative visual validation.",
+  "verdict": "PASS for early stability only; INCONCLUSIVE for fixed layers and physical dimensions"
+}

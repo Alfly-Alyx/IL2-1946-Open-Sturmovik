@@ -23,7 +23,7 @@ HEX_NAME = re.compile(r"[0-9A-Fa-f]{16}")
 EXPECTED_DELIVERY = {
     "com/maddox/il2/objects/air/B_29SP": {
         "file": "7BCE3C02C280ED18",
-        "sha256": "94312FF3B395E081B785871C0D584E2EEB9E14C4BF2C77A22AAB250D31E6AF6F",
+        "sha256": "0A83344F9617AECF9F2B0B50B06B265E7C41F2A733B226DA32656465AF994992",
     },
     "com/maddox/il2/objects/weapons/BombGunLittleBoy": {
         "file": "C40DA0A681C6554C",
@@ -51,7 +51,7 @@ REQUIRED_LOADOUT_TOKENS = {
     "BombGunFatMan",
     "_BombSpawn01",
     "_BombSpawn02",
-    "com.maddox.il2.objects.air.CockpitB29",
+    "com.maddox.il2.objects.air.CockpitB29SP",
 }
 
 
@@ -68,6 +68,24 @@ def load_class_parser(repository: Path):
     sys.modules[spec.name] = module
     spec.loader.exec_module(module)
     return module
+
+
+def load_sfs_finger(repository: Path):
+    source = repository / "tools" / "Analyze-Sfs.py"
+    spec = importlib.util.spec_from_file_location("open_sturmovik_sfs_finger", source)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot load SFS fingerprint implementation: {source}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def class_loose_name(finger: Any, dotted_class_name: str) -> str:
+    obfuscated = f"sdw{dotted_class_name}cwc2w9e"
+    class_hash = finger.finger_int(ord(character) for character in obfuscated)
+    fingerprint = finger.finger_string(0, f"cod/{class_hash}")
+    return f"{fingerprint & 0xFFFFFFFFFFFFFFFF:016X}"
 
 
 def class_candidates(files_root: Path) -> list[Path]:
@@ -134,11 +152,19 @@ def add_check(checks: list[dict[str, str]], name: str, ok: bool, detail: str) ->
 def audit(repository: Path, manifest_path: Path) -> dict[str, Any]:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
     classes, parse_errors = index_classes(repository)
+    finger = load_sfs_finger(repository)
     checks: list[dict[str, str]] = []
 
     output_details: list[dict[str, Any]] = []
+    loose_name_errors: list[str] = []
     for expected in manifest["outputs"]:
         internal = expected["class"].replace(".", "/")
+        actual_loose_name = Path(expected["file"]).name.upper()
+        calculated_loose_name = class_loose_name(finger, expected["class"])
+        if actual_loose_name != calculated_loose_name:
+            loose_name_errors.append(
+                f"{expected['class']}: manifeste={actual_loose_name}, calcule={calculated_loose_name}"
+            )
         definitions = classes.get(internal, [])
         matching = [item for item in definitions if item["file"] == expected["file"]]
         valid = (
@@ -154,6 +180,14 @@ def audit(repository: Path, manifest_path: Path) -> dict[str, Any]:
             "empreinte, taille et Java 1.3 conformes" if valid else f"definitions={definitions}",
         )
         output_details.extend(matching)
+
+    add_check(
+        checks,
+        "adressage SFS des classes generees",
+        not loose_name_errors,
+        "chaque nom libre correspond a l'empreinte de sa classe Java"
+        if not loose_name_errors else "; ".join(loose_name_errors),
+    )
 
     delivery_details: list[dict[str, Any]] = []
     for internal, expected in EXPECTED_DELIVERY.items():
@@ -171,6 +205,19 @@ def audit(repository: Path, manifest_path: Path) -> dict[str, Any]:
         "emports B-29 Silverplate",
         not missing_tokens,
         "Little Boy et Fat Man utilisent deux crochets distincts" if not missing_tokens else "tokens absents: " + ", ".join(missing_tokens),
+    )
+    b29_raw = b29.get("raw_text", "")
+    silverplate_pilot = "com.maddox.il2.objects.air.CockpitB29SP" in b29_raw
+    stock_pilot = re.search(r"com\.maddox\.il2\.objects\.air\.CockpitB29(?!SP)", b29_raw) is not None
+    add_check(
+        checks,
+        "cockpit pilote B-29 Silverplate",
+        silverplate_pilot and not stock_pilot,
+        (
+            "CockpitB29SP et son maillage B-29-SP remplacent le cockpit B-29 standard incompatible"
+            if silverplate_pilot and not stock_pilot
+            else f"Silverplate={silverplate_pilot}, ancien_cockpit_standard={stock_pilot}"
+        ),
     )
 
     for gun_name, bomb_name in (
@@ -203,7 +250,18 @@ def audit(repository: Path, manifest_path: Path) -> dict[str, Any]:
         owner == "com/maddox/il2/objects/effects/NuclearBlast" and name == "registerVisual"
         for owner, name, _ in explosions.get("method_refs", [])
     )
-    add_check(checks, "ABI Silverplate / Zuti", six_arg and registered, "surcharge a six arguments et enregistrement des 12 effets presents")
+    lifecycle_calls = {
+        name
+        for owner, name, _ in explosions.get("method_refs", [])
+        if owner == "com/maddox/il2/objects/effects/NuclearBlast"
+    }
+    lifecycle_injected = {"beginVisual", "registerVisual", "endVisual"} <= lifecycle_calls
+    add_check(
+        checks,
+        "ABI Silverplate / Zuti",
+        six_arg and registered and lifecycle_injected,
+        "surcharge a six arguments et transactions visuelles terre/eau presentes",
+    )
 
     msg = classes.get("com/maddox/il2/ai/MsgExplosion", [{}])[0]
     delayed = any(
@@ -211,6 +269,83 @@ def audit(repository: Path, manifest_path: Path) -> dict[str, Any]:
         for owner, name, _ in msg.get("method_refs", [])
     )
     add_check(checks, "distribution differee du souffle", delayed, "NuclearBlast.schedule remplace la distribution nucleaire immediate")
+
+    nuclear = classes.get("com/maddox/il2/objects/effects/NuclearBlast", [{}])[0]
+    nuclear_refs = nuclear.get("method_refs", [])
+    time_methods = {
+        name for owner, name, _ in nuclear_refs if owner == "com/maddox/rts/Time"
+    }
+    simulation_age_only = (
+        "current" in time_methods and "currentReal" not in time_methods and "isPaused" not in time_methods
+    )
+    no_reflection = not any(owner.startswith("java/lang/reflect/") for owner, _, _ in nuclear_refs)
+    add_check(
+        checks,
+        "age visuel fonde uniquement sur la simulation",
+        simulation_age_only and no_reflection,
+        f"Time={sorted(time_methods)}, reflection={not no_reflection}",
+    )
+
+    state = classes.get("com/maddox/il2/objects/effects/NuclearBlast$State", [{}])[0]
+    state_fields = {name for name, _ in state.get("fields", [])}
+    expected_state_fields = {
+        "detonationTime", "position", "altitudeMeters", "groundAltitudeMeters", "yieldKilotonnes", "water",
+        "phase", "actors", "actorRoles", "actorsCreated", "actorsDestroyed", "lastVisualTickSimulation",
+        "visualTicks", "stabilizedCreated", "transientsRetired", "riseRetired", "emissionComplete", "complete",
+        "nextRiseLayerIndex", "riseLayersCreated", "riseLayersSkipped",
+    }
+    add_check(
+        checks,
+        "etat nucleaire persistant",
+        expected_state_fields <= state_fields,
+        "temps, position, altitude, puissance, surface, phase et acteurs suivis",
+    )
+
+    destroys_actors = any(name == "postDestroy" for _, name, _ in nuclear_refs)
+    clears_references = any(
+        owner == "java/util/ArrayList" and name == "clear"
+        for owner, name, _ in nuclear_refs
+    ) and any(
+        owner == "java/util/ArrayList" and name == "remove"
+        for owner, name, _ in nuclear_refs
+    )
+    add_check(
+        checks,
+        "cycle de vie borne des acteurs",
+        destroys_actors and clears_references,
+        "postDestroy explicite, listes videes et etats termines retires",
+    )
+
+    moving_emitters = [
+        f"{owner}.{name}{descriptor}"
+        for owner, name, descriptor in nuclear_refs
+        if owner == "com/maddox/il2/engine/ActorPos" and name in {"setAbs", "reset"}
+    ]
+    add_check(
+        checks,
+        "origines fixes des couches de particules",
+        not moving_emitters,
+        "aucun Eff3DActor actif n'est deplace apres sa creation"
+        if not moving_emitters else str(moving_emitters),
+    )
+
+    lifecycle = manifest["model"]["visual_lifecycle"]
+    boundaries = lifecycle.get("phase_boundaries_s", [])
+    cleanup_deadline = lifecycle.get("cleanup_deadline_s", 0)
+    add_check(
+        checks,
+        "ordre et delai de nettoyage",
+        boundaries == sorted(set(boundaries)) and boundaries[-1] < cleanup_deadline <= 3728,
+        f"phases={boundaries}, limite={cleanup_deadline}s",
+    )
+
+    summit = manifest["model"].get("cloud_summit", {})
+    add_check(
+        checks,
+        "sommets des champignons",
+        summit.get("little_boy_m") == 12000 and summit.get("fat_man_m") == 13500,
+        f"Little Boy={summit.get('little_boy_m')}m, Fat Man={summit.get('fat_man_m')}m",
+    )
 
     active_air = repository / "Files" / "com" / "maddox" / "il2" / "objects" / "air.ini"
     air_text = active_air.read_text(encoding="latin-1")
@@ -247,7 +382,7 @@ def audit(repository: Path, manifest_path: Path) -> dict[str, Any]:
 
     visuals_ok = all(item.get("match") for item in visual_details)
     limits_ok = all(item.get("nParticles", 0) <= 512 and item.get("LiveTime", 0) <= 128 for item in visual_details)
-    add_check(checks, "empreintes des huit effets", visuals_ok, "effets visuels conformes au manifeste")
+    add_check(checks, "empreintes des dix effets", visuals_ok, "effets visuels conformes au manifeste")
     add_check(checks, "limites du moteur d'effets", limits_ok, "nParticles <= 512 et LiveTime <= 128 pour chaque emetteur")
     add_check(checks, "materiaux des effets", not material_errors, "tous les MatName se resolvent" if not material_errors else "; ".join(material_errors))
 
@@ -258,7 +393,7 @@ def audit(repository: Path, manifest_path: Path) -> dict[str, Any]:
             duplicate_required[name] = [item["file"] for item in classes[name]]
     add_check(checks, "unicite des classes nucleaires", not duplicate_required, "aucune definition libre concurrente" if not duplicate_required else str(duplicate_required))
 
-    latest_capture = repository / "test-results" / "startup" / "20260901-131015Z-profile9-warm-windowed1024-startup"
+    latest_capture = repository / "WIP" / "captures" / "startup" / "20260903-160537Z-profile9-warm-windowed1024-startup"
     observations: list[str] = []
     timeline = latest_capture / "timeline.csv"
     if timeline.is_file():
@@ -290,13 +425,13 @@ def audit(repository: Path, manifest_path: Path) -> dict[str, Any]:
         "runtime_evidence": {
             "capture": latest_capture.relative_to(repository).as_posix(),
             "observations": observations,
-            "conclusion": "native pause watcher did not preserve the plume across pause/resume or camera culling",
+            "conclusion": "the moving-emitter candidate remained responsive but split the rising origin from its world-fixed particle mass; the replacement uses bounded fixed layers and is pending runtime validation",
         },
         "known_release_blockers": [
-            "Le panache repart apres pause/reprise et apres une sortie puis un retour dans le champ de la camera.",
-            "La surveillance de pause native n'a donc aucun benefice visuel valide ; son controle toutes les 25 ms doit etre retire ou remplace.",
-            "La duree des Eff3DActor initiaux et stabilises n'est pas encore explicitement bornee ; les sessions longues ou denses exigent un audit de retention.",
-            "Le nuage stabilise est place a seulement 5 000 m pour 10 kt avant mise a l'echelle, sous le maximum historique documente de 40 000 a 50 000 pieds.",
+            "Le nouveau rendu par couches fixes n'est pas encore valide dans IL-2 apres pause/reprise et sortie puis retour dans le champ de la camera.",
+            "Le masquage camera peut encore relancer l'emetteur de la phase courante ; il ne doit cependant plus pouvoir rejouer la detonation complete apres une seconde.",
+            "Les compteurs runtime doivent confirmer que tous les acteurs crees sont detruits et qu'aucun etat ne subsiste apres 3 600 secondes simulees.",
+            "Les sommets cibles de 12 km et 13,5 km sont implantes mais leur placement visuel doit etre confirme en jeu.",
             "Fat Man avec/sans pause, les deux airbursts sur l'eau, la visibilite image par image du flash et l'autorite multijoueur exigent encore un essai dedie.",
             "Les blessures thermiques, le rayonnement ionisant, les retombees et la turbulence persistante du panache ne sont pas implementes.",
             "Silverplate v1.2 n'a pas de licence publiee et n'accorde aucune autorisation de redistribution ; une permission explicite, une installation externe ou un remplacement est requis avant publication.",
@@ -315,7 +450,7 @@ def markdown(payload: dict[str, Any]) -> str:
         f"- coherence statique : **{payload['static_status']}** ({payload['summary']['pass']} controles reussis, {payload['summary']['fail']} echec) ;",
         "- aptitude a publier : **BLOQUEE PAR LA VALIDATION EN JEU ET L'ABSENCE DE LICENCE SILVERPLATE** ;",
         "- l'ancien gel Silverplate/Zuti et l'erreur d'ABI de la secousse sont corriges ;",
-        "- le panache reste incorrect apres pause ou sortie du champ de la camera.",
+        "- le prototype a emetteur mobile a ete rejete apres capture ; son remplacement par couches fixes bornees reussit les controles hors jeu, mais son comportement camera/pause reste a valider en vol.",
         "",
         "Le mot `PASS` ne couvre que les fichiers, les liaisons Java et les limites",
         "statiques. Il ne signifie pas que l'effet visuel final est valide.",
@@ -341,6 +476,7 @@ def markdown(payload: dict[str, Any]) -> str:
         "- [Histoire du projet Manhattan, Department of Energy](https://www.energy.gov/sites/default/files/maprod/documents/DE99001330.pdf) : Fat Man, 21 kt, explosion a 1 650 pieds ;",
         "- [Guide HHS/REMM](https://remm.hhs.gov/PlanningGuidanceNuclearDetonation.pdf) : pour 10 kt, rayons de reference 20/10/5/2 psi = 0,48/0,71/0,97/1,8 km ;",
         "- [Rapport OSTI sur Hiroshima et Nagasaki](https://www.osti.gov/opennet/servlets/purl/16009191-5O5srR/16009191.pdf) : maximum du nuage vers dix minutes et 40 000 a 50 000 pieds.",
+        "- [The Effects of Nuclear Weapons, edition officielle GovInfo](https://www.govinfo.gov/content/pkg/GOVPUB-D-PURL-gpo106759/pdf/GOVPUB-D-PURL-gpo106759.pdf) : stabilisation vers dix minutes, visibilite possible pendant une heure ou davantage et, sous environ 20 kt, rayon de la tige voisin de la moitie du rayon du nuage.",
         "",
         "## Prochain essai cible",
         "",

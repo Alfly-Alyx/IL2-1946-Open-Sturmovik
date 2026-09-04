@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "deployed_at_utc": "2026-09-04T13:24:11.1352042Z",
+  "plan": "manifests/test/nuclear-20km-first-v1.15-sync.json",
+  "destination": "WIP/test-installations/IL 2 Sturmovik 1946 test",
+  "backup": "WIP/test-backups/sync-cam20-20260904b",
+  "operations": 8,
+  "matching_after_deployment": 8,
+  "camera_validation": {
+    "status": "PASS",
+    "manifests": 2,
+    "missions": 4,
+    "camera_groups": 14
+  },
+  "selection_order": [
+    { "order": 1, "purpose": "primary_measurement", "standoff_m": 20000, "altitude_m": 6000 },
+    { "order": 2, "purpose": "secondary_measurement", "standoff_m": 30000, "altitude_m": 7000 },
+    { "order": 3, "purpose": "close_reference", "standoff_m": 1000, "altitude_m": 1200 }
+  ],
+  "content_validation": {
+    "pass": 19,
+    "warn": 2,
+    "fail": 1,
+    "allowed_failure": "Chaine sonore Allison en vol"
+  },
+  "game_launched_during_deployment": false
+}

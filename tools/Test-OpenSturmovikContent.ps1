@@ -142,6 +142,92 @@ else {
     }
 }
 
+$aaaRestoreManifestPath = Join-Path $specRoot 'manifests\aircraft\aaa-community-cockpits-v1.15.json'
+$aaaRestoreProblems = New-Object System.Collections.Generic.List[string]
+$aaaRestoreExpected = New-Object System.Collections.Generic.List[object]
+if (-not (Test-Path -LiteralPath $aaaRestoreManifestPath -PathType Leaf)) {
+    $aaaRestoreProblems.Add('manifeste AAA absent')
+}
+else {
+    try {
+        $aaaRestoreManifest = Get-Content -LiteralPath $aaaRestoreManifestPath -Raw | ConvertFrom-Json
+        foreach ($packageName in @('TBF-1C', 'TBM-3', 'SU_2')) {
+            $property = $aaaRestoreManifest.candidate_packages.PSObject.Properties[$packageName]
+            if ($null -eq $property) {
+                $aaaRestoreProblems.Add("paquet $packageName absent du manifeste")
+                continue
+            }
+            $package = $property.Value
+            foreach ($class in @($package.classes)) {
+                $aaaRestoreExpected.Add([pscustomobject]@{
+                    Path = 'Files/' + [IO.Path]::GetFileName([string]$class.source)
+                    Sha256 = [string]$class.sha256
+                    Kind = 'class'
+                })
+            }
+            foreach ($resource in @($package.resources)) {
+                $aaaRestoreExpected.Add([pscustomobject]@{
+                    Path = 'Files/' + ([string]$resource.relative_path).TrimStart('/')
+                    Sha256 = [string]$resource.sha256
+                    Kind = 'resource'
+                })
+            }
+        }
+        $acesProperty = $aaaRestoreManifest.candidate_packages.PSObject.Properties['ACES']
+        if ($null -eq $acesProperty) {
+            $aaaRestoreProblems.Add('paquet ACES absent du manifeste')
+        }
+        else {
+            $migClasses = @($acesProperty.Value.classes | Where-Object internal_class -eq 'com/maddox/il2/objects/air/MIG_3POKRYSHKIN')
+            if ($migClasses.Count -ne 1) {
+                $aaaRestoreProblems.Add("classe MIG_3POKRYSHKIN ambigue ou absente : $($migClasses.Count)")
+            }
+            else {
+                $aaaRestoreExpected.Add([pscustomobject]@{
+                    Path = 'Files/' + [IO.Path]::GetFileName([string]$migClasses[0].source)
+                    Sha256 = [string]$migClasses[0].sha256
+                    Kind = 'class'
+                })
+            }
+        }
+    }
+    catch {
+        $aaaRestoreProblems.Add("manifeste AAA illisible : $($_.Exception.Message)")
+    }
+}
+
+$duplicateAaaRestorePaths = @($aaaRestoreExpected | Group-Object Path | Where-Object Count -gt 1)
+if ($duplicateAaaRestorePaths.Count -ne 0) {
+    $aaaRestoreProblems.Add("cibles dupliquees : $($duplicateAaaRestorePaths.Name -join ', ')")
+}
+if ($aaaRestoreExpected.Count -ne 37) {
+    $aaaRestoreProblems.Add("payload incomplet : $($aaaRestoreExpected.Count) fichiers au lieu de 37")
+}
+foreach ($expected in $aaaRestoreExpected) {
+    $target = Join-Path $root ([string]$expected.Path).Replace('/', '\')
+    if (-not (Test-Path -LiteralPath $target -PathType Leaf)) {
+        $aaaRestoreProblems.Add("$($expected.Path) absent")
+        continue
+    }
+    if ((Get-Sha256 $target) -ne [string]$expected.Sha256) {
+        $aaaRestoreProblems.Add("$($expected.Path) empreinte inattendue")
+        continue
+    }
+    if ([string]$expected.Kind -eq 'class') {
+        $bytes = [IO.File]::ReadAllBytes($target)
+        $major = if ($bytes.Length -ge 8) { ($bytes[6] -shl 8) -bor $bytes[7] } else { -1 }
+        if ($major -ne 47) {
+            $aaaRestoreProblems.Add("$($expected.Path) Java major $major au lieu de 47")
+        }
+    }
+}
+if ($aaaRestoreProblems.Count -eq 0) {
+    Add-Check 'Appareils AAA restaures' PASS 'Les 37 classes et ressources de TBF-1C, TBM-3, Su-2 et Pokryshkins MiG-3 correspondent au manifeste et les classes sont en Java major 47.'
+}
+else {
+    Add-Check 'Appareils AAA restaures' FAIL ($aaaRestoreProblems -join '; ')
+}
+
 $wheelTire = Join-Path $root 'Files\3do\Plane\Bf-109G-2\WheelTire.mat'
 if (-not (Test-Path -LiteralPath $wheelTire -PathType Leaf)) {
     Add-Check 'Bf-109G-2 WheelTire.mat' FAIL 'Fichier absent.'
@@ -171,29 +257,54 @@ else {
 }
 
 $nuclearManifestPath = Join-Path $specRoot 'manifests\effects\nuclear-blast-v1.15.json'
+$b29SilverplateClass = Join-Path $root 'Files\7BCE3C02C280ED18'
+$b29SilverplateMesh = Join-Path $root 'Files\3do\Cockpit\B-29-SP\CockpitB29SP.him'
+$expectedB29SilverplateHash = '0A83344F9617AECF9F2B0B50B06B265E7C41F2A733B226DA32656465AF994992'
+if (-not (Test-Path -LiteralPath $b29SilverplateClass -PathType Leaf) -or
+    -not (Test-Path -LiteralPath $b29SilverplateMesh -PathType Leaf)) {
+    Add-Check 'Cockpit pilote B-29 Silverplate' FAIL 'Classe ou maillage Silverplate absent.'
+}
+else {
+    $b29Text = [Text.Encoding]::GetEncoding(28591).GetString([IO.File]::ReadAllBytes($b29SilverplateClass))
+    $meshText = [Text.Encoding]::GetEncoding(28591).GetString([IO.File]::ReadAllBytes($b29SilverplateMesh))
+    $requiredChunks = @('zOilFlap1', 'zOilFlap2', 'zCompressor1', 'zCompressor2')
+    $missingChunks = @($requiredChunks | Where-Object { -not $meshText.Contains($_) })
+    $usesSilverplate = $b29Text.Contains('com.maddox.il2.objects.air.CockpitB29SP')
+    $usesOldPilot = [regex]::IsMatch($b29Text, 'com\.maddox\.il2\.objects\.air\.CockpitB29(?!SP)')
+    if ((Get-Sha256 $b29SilverplateClass) -eq $expectedB29SilverplateHash -and
+        $usesSilverplate -and -not $usesOldPilot -and $missingChunks.Count -eq 0) {
+        Add-Check 'Cockpit pilote B-29 Silverplate' PASS 'La variante Silverplate appelle CockpitB29SP et son maillage contient les quatre morceaux auparavant absents.'
+    }
+    else {
+        Add-Check 'Cockpit pilote B-29 Silverplate' FAIL "empreinte=$((Get-Sha256 $b29SilverplateClass)); Silverplate=$usesSilverplate; ancien=$usesOldPilot; morceaux_absents=$($missingChunks -join ',')"
+    }
+}
 $expectedNuclearClasses = [ordered]@{
-    '72DCDDF4D2AD25E8' = 'E32EBB8B4D84173C88A53AA74D06484DF47A74593D70E1FF858E170BDAD45707'
+    '72DCDDF4D2AD25E8' = '24CCB92F1AD8BCAD777CAF03B9357CD7756E3E1248986A2C3B7FD317DDD2CF9A'
     '303F5874196BEABE' = 'D4661E8594D24435C24747FBFBD0ADFCD972317E48075C528A1FCC67D9D61685'
     '809E3320DB37687A' = '0576626EBA5B0DD233BDFEE22967E43A37DA52564B1166F9D4BDF20FEAC4AFBE'
-    '3F43760A72781132' = '8D7B5F3D570C3463D0119AA6FDDE011D7EF3D07F053F2120A58B601C9D451343'
-    '830E5C5AC3A1C77A' = '9DCB1DD4BDBF9E6EED9B401157796B1E2BF4F0206564834150C2C3F077AD4589'
-    '5AC49B8080496790' = '94ECE2CA0D1204B90EFD37BCEE7131F8083CF715305845E37FF4587B61DB3F30'
+    '3F43760A72781132' = 'FAEAEFAA3D57ECF615912BB46FD19259E923D8C8AEA23862BB652A7248C2C6BE'
+    '830E5C5AC3A1C77A' = '94ABC0A426CAF8E300FC995FE4D23ACCC164F88406D9314BC2A712C7E088E428'
+    '5AC49B8080496790' = 'FF2F2698D31EC53119CC7A76BA6CBD084C636F0A3793A9FC29D3A149C2F25FD5'
     '761B02162C6E5D04' = '15BB56B33EB48A835700B623B21B04856D2F81DA4F08DB6C6BC8408A9F097F4C'
     '709FB7A0C816C8B2' = 'BFBF4A805BDDC4FA186065333139A645316392E1A5345BD3C1A8AC7FF0837D1F'
     '6482BE08C086B0BA' = '5FC39F58A4A924905BF7C924918E906E318AC74E4EFE981BD99BC138CCE6D25F'
     '145128EC449ADBDA' = '05B45025FB3E1E09BA1BCC24E6D6FC0AC070481F1EC1689CFCC7D60143B43D66'
-    '2A3CF08C7344E18A' = '038C1168E34931873D64A2AFFE1FF9F464F00F0C8BDD47CB426984BB443FE196'
-    'AB04450E05C9E67C' = '5FED08559B56C2CD401D53AA2F4432999A3B98412FFEBF715D91E73B3FE4017B'
+    '8D53953C1956F06A' = '49F04044ED71EC2966A1CE912A5C64BA8FB3D5120E0B4B4FC30299F681CCABC0'
+    '51AD1FEC90031C8A' = '68E05AB18BA693EF0B2AC48D95D0D251434D36376937A568264045C9ACF05CE9'
+    'ABFC6F18761EB542' = 'A80BD5673F14A795CFF6DFBC65372C73C80700BD5AEAB215506ED42F1F1E307B'
 }
 $expectedNuclearVisuals = [ordered]@{
-    'Files/3do/Effects/Fireworks/FatMan(buff).eff' = '8294F91189F87294B79ECBFE7C2F47B4621FC67B68EC4643EDB2D430771560A4'
+    'Files/3do/Effects/Fireworks/FatMan(buff).eff' = '2065B731EB3EE3BB12388CC56584686F17CD9151F7CD4C6D7368746BD84CD2BA'
     'Files/3do/Effects/Fireworks/FatMan(circle).eff' = 'B18FCFB0B0107B10196BA6B370D8C12A95311551E3A1D8BB7478593F5CE56BB4'
-    'Files/3do/Effects/Fireworks/FatMan(circleL).eff' = '62B43DA7E8045DA2E25BA907010C6CFC72F26124F3D387CC58A56D069CC3A247'
+    'Files/3do/Effects/Fireworks/FatMan(circleL).eff' = '3674DDFD5B25B369E09FD27B689CE42F02AED44F7ED81F5C84AE972029556D6B'
     'Files/3do/Effects/Fireworks/FatMan(column).eff' = 'BB9E2292D82562ABFE7C3FE6DC7BB07E999FE9EA88973D832B14074CDD5E09D4'
     'Files/3do/Effects/Fireworks/FatMan(flare).eff' = 'EE46469205665B504577D637B604475AFEECDF6DA1A22E4CF097D30BC23EEE37'
     'Files/3do/Effects/Fireworks/FatMan(ring).eff' = '1E60279ED5E9834EF23A28711CF4EA7C19A2237F865DB5C24552FD514B53A936'
     'Files/3do/Effects/Fireworks/FatMan(shock).eff' = 'B02B7C38413EC34244E868C2D0290F35997B83E0AC23957DAC81A96AA79B5A00'
-    'Files/3do/Effects/Fireworks/FatMan(stabilized).eff' = 'A6C4D47C51D828946A263EA3D0A6E60CB52F55FD2646A41FFDB1DE5E41722C86'
+    'Files/3do/Effects/Fireworks/FatMan(rise-head).eff' = 'AF4B25448C25D85F78E3E493427A6E734AA85F14AEBE401EDBF7AD6EBE1E9217'
+    'Files/3do/Effects/Fireworks/FatMan(rise-torus).eff' = 'D5A25A90A7DCDC37B5B5C308B86A69EC0A63837416F1B9EC153D1F55263C0346'
+    'Files/3do/Effects/Fireworks/FatMan(stabilized).eff' = '7100A469125EED848C07B0F3AEA7AB238ED7584FF00DE20CBD9BE074E1AB91D7'
 }
 $badNuclearClasses = New-Object System.Collections.Generic.List[string]
 $nuclearManifest = $null
@@ -248,20 +359,26 @@ if ($null -ne $nuclearManifest) {
         $nuclearManifest.model.little_boy.airburst_m_agl -ne 600 -or
         $nuclearManifest.model.fat_man.yield_kt -ne 21 -or
         $nuclearManifest.model.fat_man.airburst_m_agl -ne 503 -or
-        [string]$nuclearManifest.model.pause_preservation.detection -notmatch '25 ms' -or
-        [string]$nuclearManifest.model.pause_preservation.control -notmatch 'Eff3D.pause' -or
+        [string]$nuclearManifest.model.visual_lifecycle.clock -notmatch 'simulation time only' -or
+        $nuclearManifest.model.visual_lifecycle.cleanup_deadline_s -ne 3728 -or
+        $nuclearManifest.model.visual_lifecycle.transient_drain_end_s -ne 130 -or
+        $nuclearManifest.model.visual_lifecycle.rise_drain_end_s -ne 728 -or
+        $nuclearManifest.model.visual_lifecycle.stabilized_particle_drain_end_s -ne 3718 -or
+        $nuclearManifest.model.cloud_summit.little_boy_m -ne 12000 -or
+        $nuclearManifest.model.cloud_summit.fat_man_m -ne 13500 -or
+        [string]$nuclearManifest.model.persistent_visual_state.replacement -notmatch 'real-time clock.*removed' -or
         $nuclearManifest.validation.runtime_test_required -ne $true) {
         $badNuclearClasses.Add('parametres historiques ou statut de validation inattendus')
     }
 }
 if ($badNuclearClasses.Count -eq 0) {
-    Add-Check 'Souffle nucleaire Little Boy / Fat Man' PASS 'Les douze classes Java 1.3 et les huit effets correspondent au manifeste v1.15 : 15/21 kt, airbursts 600/503 m, souffle differe et cycle visuel phase 600/3600 s. Ce controle est statique.'
+        Add-Check 'Souffle nucleaire Little Boy / Fat Man' PASS 'Les treize classes Java 1.3 et les dix effets correspondent au manifeste v1.15 : 15/21 kt, airbursts 600/503 m, souffle differe, couches fixes bornees et nettoyage a 3728 s. Ce controle est statique.'
 }
 else {
     Add-Check 'Souffle nucleaire Little Boy / Fat Man' FAIL ($badNuclearClasses -join '; ')
 }
-if ($null -ne $nuclearManifest -and [string]$nuclearManifest.status -eq 'static_coherent_runtime_visual_blocked') {
-    Add-Check 'Validation visuelle nucleaire' WARN 'Le panache repart encore apres pause/reprise et apres sortie du champ camera ; la surveillance native a 25 ms n est pas une correction validee.'
+if ($null -ne $nuclearManifest -and [string]$nuclearManifest.status -eq 'phased_visual_candidate_offline_validated_runtime_pending') {
+    Add-Check 'Validation visuelle nucleaire' WARN 'Le cycle chevauche et borne passe les controles hors jeu ; pause/reprise, demi-tour, eau, acceleration temporelle et nettoyage final doivent encore etre valides dans IL-2.'
 }
 if ($null -ne $nuclearManifest -and $nuclearManifest.third_party_origin.redistribution_authorized -ne $true) {
     Add-Check 'Licence Silverplate v1.2' WARN 'Le paquet n a pas de licence publiee et n accorde aucune autorisation de redistribution ; permission explicite, composant externe ou remplacement requis.'
@@ -424,7 +541,7 @@ $missingReplacements = @($replacementSampleNames | Where-Object {
     -not (Test-Path -LiteralPath (Join-Path $root "Files\Samples\$_") -PathType Leaf)
 })
 if ($obsoleteReferences.Count -eq 0 -and $missingReplacements.Count -eq 0) {
-    Add-Check 'References WAV corrigees' PASS 'Les trois anciens noms invalides ne sont plus references ; les echantillons Allison et MG FF correspondants sont presents.'
+    Add-Check 'References WAV corrigees' PASS 'Les trois remplacements WAV cibles sont presents ; la chaine de presets Allison chargee en vol est controlee separement.'
 }
 else {
     $details = @()
@@ -435,6 +552,47 @@ else {
         $details += ("echantillon(s) de remplacement absent(s) : {0}" -f ($missingReplacements -join ', '))
     }
     Add-Check 'References WAV corrigees' FAIL ($details -join '; ')
+}
+
+$allisonRuntimePresetNames = @(
+    'motor.Allison.start.begin.prs',
+    'motor.Allison.start.end.prs',
+    'motor.Allison_V1700_series.prs'
+)
+$missingAllisonRuntimePresets = @($allisonRuntimePresetNames | Where-Object {
+    -not (Test-Path -LiteralPath (Join-Path $soundPresetRoot $_) -PathType Leaf)
+})
+$allisonTbBegin = Join-Path $soundPresetRoot 'motor.Allison_tb.start.begin.prs'
+$allisonTbEnd = Join-Path $soundPresetRoot 'motor.Allison_tb.start.end.prs'
+$malformedAllisonTbPresets = @()
+foreach ($path in @($allisonTbBegin, $allisonTbEnd)) {
+    if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
+        $malformedAllisonTbPresets += [IO.Path]::GetFileName($path)
+        continue
+    }
+    $text = Get-Content -LiteralPath $path -Raw
+    if (-not $text.Contains('[common]') -or -not $text.Contains('[sample.')) {
+        $malformedAllisonTbPresets += [IO.Path]::GetFileName($path)
+    }
+}
+$allisonStartupSampleMissing = -not (Test-Path -LiteralPath (Join-Path $root 'Files\Samples\Allison_XX_Startup.wav') -PathType Leaf)
+if ($missingAllisonRuntimePresets.Count -eq 0 -and
+    $malformedAllisonTbPresets.Count -eq 0 -and
+    -not $allisonStartupSampleMissing) {
+    Add-Check 'Chaine sonore Allison en vol' PASS 'Les presets demandes par le moteur et leurs echantillons de demarrage sont complets.'
+}
+else {
+    $details = @()
+    if ($missingAllisonRuntimePresets.Count -gt 0) {
+        $details += ('presets runtime absents : ' + ($missingAllisonRuntimePresets -join ', '))
+    }
+    if ($malformedAllisonTbPresets.Count -gt 0) {
+        $details += ('presets _tb incomplets et non substituables tels quels : ' + ($malformedAllisonTbPresets -join ', '))
+    }
+    if ($allisonStartupSampleMissing) {
+        $details += 'Allison_XX_Startup.wav reference par motor.Allison_tb.start.end.prs mais absent'
+    }
+    Add-Check 'Chaine sonore Allison en vol' FAIL ($details -join '; ')
 }
 
 $effectManifestPath = Join-Path $specRoot 'manifests\effects\effect-limit-audit.json'

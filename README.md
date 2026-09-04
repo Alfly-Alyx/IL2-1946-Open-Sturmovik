@@ -44,6 +44,10 @@ Le selecteur fusionne ensuite `_Game Switchers\conf.max.ini` dans le `conf.ini` 
 
 ## Audits 1.15
 
+- [Etat courant faisant autorite pour reprendre le travail](docs/ETAT_COURANT_V1.15.md)
+- [Journal central des essais, erreurs de protocole et enseignements a ne pas repeter](docs/JOURNAL_DIAGNOSTIC_V1.15.md)
+- [Reference de retro-ingenierie du moteur et etude exploratoire x64](docs/REFERENCE_RETROINGENIERIE_MOTEUR.md)
+- [Regles de stockage des captures et sauvegardes locales](docs/STOCKAGE_ARTIFACTS_LOCAUX.md)
 - [Dossier technique vivant : fonctionnement, attentes et regles de l'add-on](docs/DOSSIER_TECHNIQUE_IL2_1946.md)
 - [Redondance entre SFS et fichiers libres](docs/AUDIT_SFS.md)
 - [Audit, tri et classement des outils externes](docs/AUDIT_OS_PROGRAMS.md)
@@ -53,6 +57,7 @@ Le selecteur fusionne ensuite `_Game Switchers\conf.max.ini` dans le `conf.ini` 
 - [Matrice des versions, SFS et reconstruction des bases](docs/MATRICE_VERSIONS_SFS.md)
 - [Cahier des charges du futur lanceur et de ses raccourcis](docs/CAHIER_DES_CHARGES_LANCEUR.md)
 - [Architecture statique du jeu et du mod](docs/ARCHITECTURE_MOTEUR.md)
+- [Lisibilite, modifiabilite et pistes de performance du moteur](docs/AUDIT_MODIFIABILITE_MOTEUR.md)
 - [Analyse approfondie du chargeur `wrapper.dll`](docs/ANALYSE_WRAPPER_DLL.md)
 - [Audit des executables, DLL, limites memoire x86 et affinite CPU](docs/AUDIT_BINAIRES_X86.md)
 - [Audit et traitement des classes Java libres](docs/AUDIT_CLASSES_JAVA.md)
@@ -63,7 +68,12 @@ Le selecteur fusionne ensuite `_Game Switchers\conf.max.ini` dans le `conf.ini` 
 - [Resultats compares des premiers demarrages 4.09m stock et modifies](docs/RESULTATS_TESTS_DEMARRAGE_2026-08-30.md)
 - [Resultat du demarrage profile 9 et correctifs du 31 aout 2026](docs/RESULTATS_TESTS_DEMARRAGE_2026-08-31.md)
 - [Outils de modding, SFS, Buttons et diagnostic du chargement](docs/OUTILS_MODDING_IL2_1946.md)
+- [Audit statique exhaustif des 536 appareils de air.ini](docs/AUDIT_APPAREILS_AIR_INI.md)
+- [Lecture sure de l'index Buttons et audit des references de modeles de vol](docs/AUDIT_BUTTONS_MODELES_DE_VOL.md)
 - [Feuille de route de stabilisation et criteres de sortie 1.15](docs/FEUILLE_DE_ROUTE_V1.15.md)
+- [Configurations materielles candidates et protocole 1080p60](docs/CONFIGURATIONS_MATERIELLES_V1.15.md)
+- [Protocole de l'essai multicartes du 1er septembre 2026](docs/PROTOCOLE_ESSAI_MULTICARTES_2026-09-01.md)
+- [Resultats de la campagne multicartes et du stress 32 appareils du 1er septembre 2026](docs/RESULTATS_CAMPAGNE_MULTICARTES_2026-09-01.md)
 - [Catalogue des mods historiques et sources All Aircraft Arcade](docs/CATALOGUE_MODS_HISTORIQUES.md)
 - [Etat de reprise technique de la v1.15 pour continuer dans une nouvelle session](docs/ETAT_REPRISE_V1.15.md)
 
