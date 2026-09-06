@@ -77,11 +77,11 @@ version demandee.
 | Version et mode | `files.SFS` | EXE | Wrapper | Etat |
 | --- | --- | --- | --- | --- |
 | 4.08m stock | 22 448 651 octets, SHA-256 `7F872A...AFD0` | EXE stock commun de 4 548 608 octets | absent | Reference stock |
-| 4.08m modifie | 21 449 752 octets, SHA-256 `D8A7DA...9986` | EXE modifie commun de 348 160 octets | historique | Avec et sans 6DOF actuellement identiques |
+| 4.08m modifie | 21 449 752 octets, SHA-256 `D8A7DA...9986` | EXE 348 160 octets, empreinte distincte avec/sans 6DOF | historique | Couple 6DOF restaure statiquement |
 | 4.09b stock | 22 447 129 octets, SHA-256 `DD9A1C...CFA8` | EXE stock commun | absent | Historique |
-| 4.09b modifie | 21 453 950 octets, SHA-256 `99CF13...9D17` | EXE modifie commun | historique | Avec et sans 6DOF actuellement identiques |
+| 4.09b modifie | 21 453 950 octets, SHA-256 `99CF13...9D17` | EXE 348 160 octets, empreinte distincte avec/sans 6DOF | historique | Couple 6DOF restaure statiquement |
 | 4.09m stock | 25 111 885 octets, SHA-256 `9F7D13...B095` | EXE stock commun | absent | Reference officielle finale |
-| 4.09m modifie | 24 126 259 octets, SHA-256 `18F3C5...B05A` | EXE modifie commun | historique | Cible 1.15 ; avec et sans 6DOF actuellement identiques |
+| 4.09m modifie | 24 126 259 octets, SHA-256 `18F3C5...B05A` | avec 6DOF `68C78F...65584`, sans 6DOF `622CFD...BCC0F` | historique | Cible 1.15 ; distinction restauree, validation TrackIR requise |
 
 Le profil Open Sturmovik complet doit devenir le choix par defaut du futur
 lanceur. Les profils stock restent disponibles pour le diagnostic et le retour

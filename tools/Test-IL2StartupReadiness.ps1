@@ -9,6 +9,7 @@ param(
     [string]$FrameCapturePath,
     [switch]$SelectorDumpLab,
     [string[]]$AllowedContentFailures = @(),
+    [switch]$ExcludeNuclear,
     [string]$ReportPath
 )
 
@@ -245,17 +246,30 @@ else {
     Add-Check -Name 'Executable actif present' -Passed $false -Detail $activeExe
 }
 
-$switcherRepository = Join-Path $resolvedRepository 'Open_Sturmovik_Switcher.ps1'
-$switcherTest = Join-Path $resolvedGame 'Open_Sturmovik_Switcher.ps1'
-$switcherPresent = (Test-Path -LiteralPath $switcherRepository -PathType Leaf) -and
-    (Test-Path -LiteralPath $switcherTest -PathType Leaf)
-$switcherByteSame = $switcherPresent -and
-    ((Get-FileHash -LiteralPath $switcherRepository -Algorithm SHA256).Hash -eq
-        (Get-FileHash -LiteralPath $switcherTest -Algorithm SHA256).Hash)
-$switcherSemanticSame = $switcherPresent -and
-    ((Get-PowerShellSemanticHash -Path $switcherRepository) -eq
-        (Get-PowerShellSemanticHash -Path $switcherTest))
-Add-Check -Name 'Selecteur de test a jour' -Passed $switcherSemanticSame -Detail "octets_identiques=$switcherByteSame, logique_identique=$switcherSemanticSame"
+$switcherComponents = @(
+    'Open_Sturmovik_Switcher.bat',
+    '_Game Switchers\Open_Sturmovik_Switcher.hta',
+    '_Game Switchers\Open_Sturmovik_Hash_Check.bat',
+    '_Game Switchers\Open_Sturmovik_Switcher.ico'
+)
+$switcherDifferences = @()
+foreach ($relative in $switcherComponents) {
+    $repositoryComponent = Join-Path $resolvedRepository $relative
+    $testComponent = Join-Path $resolvedGame $relative
+    if (-not (Test-Path -LiteralPath $repositoryComponent -PathType Leaf) -or
+        -not (Test-Path -LiteralPath $testComponent -PathType Leaf) -or
+        (Get-FileHash -LiteralPath $repositoryComponent -Algorithm SHA256).Hash -ne
+            (Get-FileHash -LiteralPath $testComponent -Algorithm SHA256).Hash) {
+        $switcherDifferences += $relative
+    }
+}
+$switcherDetail = if ($switcherDifferences.Count -eq 0) {
+    'BAT, interface, controleur et icone identiques'
+}
+else {
+    'absents ou differents : ' + ($switcherDifferences -join ', ')
+}
+Add-Check -Name 'Switcher de test a jour' -Passed ($switcherDifferences.Count -eq 0) -Detail $switcherDetail
 
 if ($SelectorDumpLab) {
     $selectorIni = Join-Path $resolvedGame 'il2fb.ini'
@@ -314,7 +328,7 @@ else {
 $contentValidationPassed = $false
 $contentValidationDetail = 'outil absent'
 if (Test-Path -LiteralPath $contentValidator -PathType Leaf) {
-    & $contentValidator -ProjectRoot $resolvedRepository -ContentRoot $resolvedGame -ReportPath $contentReport | Out-Host
+    & $contentValidator -ProjectRoot $resolvedRepository -ContentRoot $resolvedGame -ReportPath $contentReport -ExcludeNuclear:$ExcludeNuclear | Out-Host
     $contentExitCode = $LASTEXITCODE
     if (Test-Path -LiteralPath $contentReport -PathType Leaf) {
         $contentSummary = Get-Content -LiteralPath $contentReport -Raw | ConvertFrom-Json
@@ -339,9 +353,15 @@ if (-not $ReportPath -and (Test-Path -LiteralPath $contentReport -PathType Leaf)
 
 $conf = Join-Path $resolvedGame 'conf.ini'
 $graphicsVendor = Get-GraphicsVendor
-$expectedHardwareShaders = if ($graphicsVendor -eq 'NVIDIA') { '1' } else { '0' }
-$expectedForest = if ($graphicsVendor -eq 'NVIDIA') { '3' } else { '2' }
-$expectedLandGeom = if ($graphicsVendor -eq 'NVIDIA') { '3' } else { '2' }
+$glProvider = Get-IniValue -Path $conf -Section 'GLPROVIDER' -Key 'GL'
+$dxProvider = Get-IniValue -Path $conf -Section 'GLPROVIDERS' -Key 'DirectX'
+$isDirectX = $dxProvider -and $glProvider -ieq $dxProvider
+$renderSection = if ($isDirectX) { 'Render_DirectX' } else { 'Render_OpenGL' }
+$profileLabel = $profileLabel -replace ', OpenGL natif$', (', rendu ' + $glProvider)
+$nativeNvidia = -not $isDirectX -and $graphicsVendor -eq 'NVIDIA'
+$expectedHardwareShaders = if ($nativeNvidia) { '1' } else { '0' }
+$expectedForest = if ($nativeNvidia) { '3' } else { '2' }
+$expectedLandGeom = if ($nativeNvidia) { '3' } else { '2' }
 $configurationExpectations = [ordered]@{
     'window/DrawIfNotFocused' = '1'
     'game/eventlogkeep' = '1'
@@ -349,20 +369,23 @@ $configurationExpectations = [ordered]@{
     'Console/LOGTIME' = '1'
     'Console/LOGKEEP' = '1'
     'Console/LOGDEBUG' = '1'
-    'Render_OpenGL/TexQual' = '3'
-    'Render_OpenGL/TexMipFilter' = '2'
-    'Render_OpenGL/HardwareShaders' = $expectedHardwareShaders
-    'Render_OpenGL/Forest' = $expectedForest
-    'Render_OpenGL/LandGeom' = $expectedLandGeom
-    'Render_OpenGL/Water' = '2'
-    'Render_OpenGL/Effects' = '1'
+    "$renderSection/TexQual" = '3'
+    "$renderSection/TexMipFilter" = '2'
+    "$renderSection/HardwareShaders" = $expectedHardwareShaders
+    "$renderSection/Forest" = $expectedForest
+    "$renderSection/LandGeom" = $expectedLandGeom
+    "$renderSection/Water" = '2'
+    "$renderSection/Effects" = '1'
+    "$renderSection/TypeClouds" = '1'
+    'game/Typeclouds' = '1'
 }
 if ($Windowed1024) {
     $configurationExpectations['window/width'] = '1024'
     $configurationExpectations['window/height'] = '768'
     $configurationExpectations['window/ChangeScreenRes'] = '0'
     $configurationExpectations['window/FullScreen'] = '0'
-    $configurationExpectations['window/SaveAspect'] = '1'
+    # San's IL2 FOV Changer 1.0 requires SaveAspect=0 (bundled manual, page 5).
+    $configurationExpectations['window/SaveAspect'] = '0'
     $configurationExpectations['window/WideScreenFoV'] = '0'
     $configurationExpectations['rts/mouseUse'] = '1'
 }
@@ -399,6 +422,9 @@ $report = [ordered]@{
     reference_root = $resolvedReference
     repository_root = $resolvedRepository
     profile = $profileLabel
+    graphics_provider = $glProvider
+    render_section = $renderSection
+    content_scope = if ($ExcludeNuclear) { 'v1.15-excluding-v1.20-nuclear-content' } else { 'complete-historical-validator' }
     allowed_content_failures = @($AllowedContentFailures)
     checks = $checks
     ready = @($checks | Where-Object { -not $_.Passed }).Count -eq 0

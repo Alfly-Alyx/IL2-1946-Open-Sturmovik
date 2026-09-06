@@ -1,6 +1,6 @@
 # Audit Zuti MDS 1.13 et Mod AOC Public
 
-Derniere mise a jour : 2 septembre 2026.
+Derniere mise a jour : 6 septembre 2026.
 
 Ce document distingue la presence des fichiers, leur chargement reel et les
 fonctions qui restent a tester. La cible est Open Sturmovik v1.15 sur IL-2 1946
@@ -40,10 +40,9 @@ transpose sans nouvel audit.
 4. d'utiliser le revelateur de conflits en cas d'anomalie.
 
 Ce readme demande aussi explicitement de contacter l'auteur avant d'inclure MDS
-dans un pack. Aucune preuve d'autorisation accordee a Open Sturmovik n'est encore
-archivee. Le fonctionnement et le droit de redistribution sont deux controles
-distincts ; l'autorisation est un blocage de publication tant qu'elle n'est pas
-clarifiee.
+dans un pack. Cette mention est conservee dans les notices tierces, mais ne fait
+pas partie de la qualification fonctionnelle v1.15 et ne bloque aucun des essais
+techniques de ce document.
 
 Open Sturmovik aplatit les ressources dans `Files`, mais le Selector les charge
 effectivement : le Dump Mode a restitue les classes Zuti lors du lancement
@@ -107,11 +106,13 @@ presentes. Il faudra ouvrir puis sauvegarder un echantillon dans le FMB et verif
 qu'aucune cle de texte n'apparait brute.
 
 Le validateur `tools/Test-ZutiMDS113.ps1` controle cette structure de facon
-reproductible. Au 1er septembre 2026, il obtient **7 PASS, 2 WARN et 0 FAIL** :
-30 classes Zuti chargees, 12 points d'accrochage structurants, textes, missions,
-outils et correctif `ExtendPlanesWings` coherents. Les deux avertissements sont le
-test runtime MDS encore necessaire et l'autorisation de redistribution absente.
-Le rapport machine est `manifests/mods/zuti-mds-1.13-static.json`.
+reproductible. Son rapport historique du 1er septembre 2026 obtenait **7 PASS,
+2 WARN et 0 FAIL** : 30 classes Zuti chargees, 12 points d'accrochage
+structurants, textes, missions, outils et correctif `ExtendPlanesWings`
+coherents. Le controle v1.15 est maintenant strictement fonctionnel ; il ne
+conserve que l'avertissement demandant les essais runtime restants. Le rapport
+machine historique est `manifests/mods/zuti-mds-1.13-static.json` et sera
+regenere pendant la future validation hors jeu.
 
 L'avertissement runtime de ce rapport statique est maintenant partiellement
 leve par l'essai du 2 septembre ci-dessous. Le manifeste n'est pas reecrit a la
@@ -224,14 +225,35 @@ exercees.
 5. Isoler l'`APPCRASH` de fermeture dans `combase.dll` par un essai A/B sans
    Zuti, puis avec Zuti, sans confondre ce crash natif avec une fuite de minuteur.
 
-## Mod AOC Public 1a
+## Mod AOC 1a
 
-### Chargement prouve, effet physique non prouve
+### Decision v1.15 du 6 septembre 2026
 
-`Mod_AOC_Public/Defaut.txt` definit les valeurs de repli. Le profil specifique
+L'ensemble **AOC 1a complet** a ete retrouve dans HSFX 4.0 Part 2. Le paquet
+HSFX 4.0 exige explicitement IL-2 4.09m et son option `Advanced Engine
+Management` contient les trois classes `FlightModelMain`, `Motor` et
+`RealFlightModel`. Son arbre principal fournit 267 profils associes, dont 266
+profils d'appareils et `Defaut.txt`.
+
+Cette decouverte corrige la conclusion tiree du petit ensemble local. Celui-ci
+contenait bien le chargeur AOC dans `FlightModelMain`, mais les classes `Motor`
+et `RealFlightModel` actives etaient celles de Zuti et ne consommaient plus neuf
+des dix reglages. AOC 1a n'etait donc pas intrinsèquement incomplet :
+l'installation locale avait perdu deux des trois parties du module.
+
+La v1.15 selectionne AOC **V1/1a**, car c'est le premier ensemble complet dont
+la compatibilite 4.09m et le contenu ont pu etre verifies. V2a reste documente
+mais son paquet n'a pas ete retrouve ; V3a reste un developpement/documentation
+sans publication complete recuperee. Le numero de version ne prime pas sur la
+compatibilite et la disponibilite reelles.
+
+### Etat initial : chargeur present, effet physique non prouve
+
+`_Game_Enhancements/Mod_AOC_Public/Defaut.txt` definit les valeurs de repli. Le profil specifique
 historique `Bf-109G-6Early_AOC_1a.txt`, qui surchargeait notamment le couple,
-le regime minimal d'huile et la duree toleree en G negatifs, a ete retire du
-depot le 4 septembre 2026 sur decision du mainteneur. La v1.15 ne livre donc
+le regime minimal d'huile et la duree toleree en G negatifs, a ete retire de
+nouveau le 6 septembre 2026 apres recuperation du paquet complet, sur decision
+du mainteneur. La v1.15 ne livre donc
 plus de surcharge AOC propre au Bf-109G-6 Early.
 
 Le fichier sans extension `Files/294ABC86A89FAEB4` est la classe
@@ -324,66 +346,102 @@ partageront donc le futur `B-29_AOC_1a.txt`. Le B-29 Silverplate demande
 `B-29SP_AOC_1a.txt`. Cette difference devra etre conservee dans la matrice de
 retest des trois variantes.
 
-### Candidat AOC 3A
+### Choix entre AOC v1, v2 et v3 pour IL-2 4.09m
 
-La branche communautaire ulterieure **AOC 3A**, attribuee a II/JG51-Lutz et a
-Histoire & Simulation, est beaucoup plus vaste que le Public 1a. Les messages de
-l'auteur documentent notamment la visibilite et l'eblouissement, les effets des G
-sur humains et IA, le reglage des mitrailleurs IA, les triggers de decollage et
-des sections de mission pour la meteo variable. Voir la
-[discussion AOC 3A sur CheckSix](https://ts.checksix-fr.com/viewtopic.php?f=322&t=158460&start=25).
+La version ne sera pas choisie d'apres son numero seul. La cible imposee est
+IL-2 **4.09m** et le candidat doit etre complet, reproductible et compatible avec
+les classes Zuti deja chargees.
 
-L'auteur avertit lui-meme que la compatibilite des avions depend des classes Java
-modifiees : les cartes sont peu problematiques, un cockpit ou Buttons peut etre
-compatible, mais toute autre classe doit etre examinee au cas par cas. AOC 3A ne
-doit donc pas etre superpose au 1a ni a Zuti. Il devient un **candidat de
-remplacement**, soumis aux controles suivants avant decision :
+| Ligne AOC | Preuve de compatibilite 4.09m | Etat retrouve | Decision v1.15 |
+| --- | --- | --- | --- |
+| v1 (`1a`) | HSFX 4.0 exige 4.09m et livre l'option AOC de Lutz ; les trois classes et les profils correspondants ont ete extraits | ensemble complet retrouve : 3 classes et 267 profils | **selectionne**, fusion statique AOC + Zuti terminee ; essai en jeu restant |
+| v2 (`2a`) | l'auteur indique en avril 2010 que les effets des G sur le pilote humain fonctionnent deja depuis plusieurs mois dans `2a` ; la documentation communautaire de 55 pages decrit cette ligne 4.09m | documentation identifiee, paquet original pas retrouve | non selectionne faute de paquet complet |
+| v3 (`3a`) | le developpement part explicitement de 4.09m et l'export annonce en 2011 est decrit comme reserve a 4.09m, avec certains apports 4.10 retroportes | version interne et demos documentees, mais aucune publication complete recuperee | non selectionne faute de paquet final complet |
 
-1. retrouver le paquet complet et son readme, avec provenance et droits ;
-2. identifier exactement sa version IL-2/ModAct et tous ses fichiers prioritaires ;
-3. comparer chaque classe modifiee avec Zuti MDS 1.13 et Open Sturmovik ;
-4. separer les fonctions complementaires des doublons (mission, IA, meteo,
+Les sources principales sont la
+[capture Wayback de l'annonce AOC 1a d'octobre 2008](https://web.archive.org/web/20090217073751id_/http://www.checksix-forums.com/showthread.php?t=147704),
+la [publication HSFX 4.0 exigeant IL-2 4.09m et listant Advanced Engine Management](https://mail.mission4today.com/index.php?file=viewtopic&finish=15&name=ForumsPro&start=0&t=7663),
+le [fil AOC v3A de l'auteur sur CheckSix](https://ts.checksix-fr.com/viewtopic.php?f=322&t=158460),
+sa [page 2 consacree aux fonctions v2a/v3a](https://ts.checksix-fr.com/viewtopic.php?f=322&t=158460&start=25)
+et la [discussion SAS 4.09 sur l'export AOC 3](https://www.sas1946.com/main/index.php?topic=36.60).
+Cette derniere identifie aussi le manuel original AOC v2a de 55 pages a
+`http://hist-simu.2jg51.org/Mods/AOCv2a.pdf`. Le site et le PDF ne repondent
+plus directement. Une discussion SAS de janvier 2012 renvoie encore vers le
+site de Lutz pour la publication promise, sans fournir de lien vers un paquet
+complet aujourd'hui recuperable :
+`https://www.sas1946.com/main/index.php?topic=20982.0`.
+Le document `gunner_EN.pdf`, recupere dans l'archive Common Crawl 2012 du site
+Histoire & Simulation, confirme que le module mitrailleurs de v3 est une
+extension de mission parametrable ; il ne constitue pas le paquet AOC 3 complet.
+
+Le choix courant est donc **V1/1a issu de HSFX 4.0**. Il ne s'agit pas d'un
+melange arbitraire V1/V2/V3 : les donnees et les comportements physiques
+proviennent tous du meme paquet AOC 1a. La seule fusion concerne la coexistence
+technique avec Zuti MDS 1.13.
+
+L'archive publique `Command_and_Control_409_v3.01m.7z` a aussi ete examinee a
+cause de son nom et de sa cible 4.09. Sa documentation l'identifie comme
+**Command & Control 4.09 (v3)** par Checkyersix : elle combine des objets de
+mission, radars, controle IA et Mission Randomizer, et exige notamment L-5,
+Artillery-Mortars et des sous-marins. Ce n'est ni AOC V3 ni un remplacement de
+son modele de vol. Ses 729 fichiers sont donc exclus du candidat AOC.
+
+La recherche locale du 6 septembre 2026 a egalement parcouru les noms de
+fichiers, les documents et les index d'archives des ensembles AAA Community
+Installer 1.1, HSFX 7.0.3, SAS ModAct 6.40, TFM 4.12 et Ultrapack 3.4 Cassie.
+L'index des 31 volumes Ultrapack, celui de son Patch 2 et celui de SAS ModAct ne
+contiennent ni `Mod_AOC`, ni paquet AOC V2/V3, ni les signatures de configuration
+du chargeur 1a. Les seules donnees locales retrouvees restent `Defaut.txt` et
+l'ancien profil Bf-109G-6 Early 1a dans l'installation source. Cette absence
+n'est pas une incompatibilite prouvee : elle signifie seulement qu'aucun contenu
+complet V2/V3 n'est disponible pour une integration reproductible.
+
+Quel que soit le candidat retrouve, l'audit doit :
+
+1. identifier exactement sa version IL-2/ModAct et tous ses fichiers prioritaires ;
+2. comparer chaque classe modifiee avec Zuti MDS 1.13 et Open Sturmovik ;
+3. separer les fonctions complementaires des doublons (mission, IA, meteo,
    physiologie et modele de vol) ;
-5. faire un essai A/B quantifie sur vitesse, couple, chauffe, G negatifs et IA ;
-6. ne remplacer le 1a qu'avec un ensemble reproductible et compatible 4.09m.
+4. faire un essai A/B quantifie sur vitesse, couple, chauffe, G negatifs et IA ;
+5. ne remplacer le 1a qu'avec un ensemble reproductible et compatible 4.09m.
 
-### Risques et decision provisoire v1.15
+### Integration AOC 1a + Zuti 1.13
 
-- La creation au premier acces ajoute une ecriture disque, faible mais a mesurer.
-- Les fichiers specifiques generes peuvent diverger entre installations et entre
-  client et serveur. Le lanceur devra proposer une politique reproductible.
-- Le 1a promet de modifier le comportement moteur, mais neuf valeurs ne sont pas
-  raccordees dans l'ensemble actuel ; elles ne doivent pas etre presentees comme
-  fonctionnelles.
-- Aucune decision de conservation ou de remplacement n'est encore prise. Le 1a
-  et le futur laboratoire 3A doivent etre testes separement, jamais actives en
-  meme temps.
-- Tout AOC retenu fera partie du manifeste de gameplay client/serveur, pas d'un
-  profil graphique.
+- `FlightModelMain` conserve le chargeur 1a mais lit maintenant
+  `_Game_Enhancements/Mod_AOC_Public`. Les donnees restent celles retrouvees
+  sous `Files/maps/aoc` dans le paquet HSFX original.
+- `Motor` conserve les methodes Zuti `zutiMakeEngineBackup()` et
+  `zutiRestoreMotor()`. Les etats de chauffe et de G negatifs ainsi que les
+  consommateurs des reglages AOC sont greffes depuis le moteur HSFX.
+- `RealFlightModel` conserve le comportement Open Sturmovik et applique
+  `coefTorque` aux deux calculs de souffle lateral de l'helice.
+- Les interfaces publiques des trois classes sont identiques a celles de la base
+  Zuti ; les classes restent en major 45 ou 47.
+- Le paquet source contenait 267 profils. La v1.15 en livre 266 tels quels : le
+  profil specifique du Bf-109G-6 Early est volontairement exclu afin que le
+  chargeur utilise `Defaut.txt`. Aucun profil physique n'est invente.
+- Le bytecode et les empreintes passent les controles statiques. Les effets en
+  jeu, le multijoueur et le cycle R/R/R restent a valider dans la campagne
+  finale.
 
-### Tache differee : regrouper AOC avec les mods moteur
+### Regroupement des ressources AOC termine
 
-Le dossier racine `Mod_AOC_Public` ne doit pas rester isole des contenus moteur
-comme Zuti. Son deplacement dans leur future arborescence commune est ajoute a
-la liste de travail. Il ne peut toutefois pas etre renomme ou deplace par une
-simple operation de fichiers : `FlightModelMain.load_modData()` recherche et
-alimente actuellement le chemin `Mod_AOC_Public` en dur.
+Le dossier historique racine `Mod_AOC_Public` et l'ancien emplacement de
+travail `Files/maps/aoc` sont retires. Le chargeur lit et cree desormais les
+profils sous `_Game_Enhancements/Mod_AOC_Public`, dossier commun impose pour
+les composants qui agissent sur le jeu ou en parallele. Les classes actives
+restent sous `Files`, emplacement requis par le chargeur de classes libres
+d'IL-2 ; elles ne sont pas dupliquees dans le dossier de profils.
+Le constructeur reproductible est
+`tools/Build-OpenSturmovikAocZutiPatch.ps1`; ses six classes sources controlees
+sont sous `test-assets/aoc-v1.15`. Les empreintes, le digest des profils et les
+preuves historiques sont dans `manifests/aoc-v1.15.json`.
 
-La remise en ordre devra donc :
-
-1. fixer le dossier commun definitif des mods charges par le moteur, distinct
-   des utilitaires externes et des programmes actifs en parallele ;
-2. modifier le chargeur AOC pour lire et creer ses profils dans ce nouvel
-   emplacement, avec une migration explicite des profils existants ;
-3. mettre a jour le manifeste, l'installation, le selecteur, les validateurs et
-   la documentation sans laisser deux sources actives concurrentes ;
-4. verifier les chemins sur une installation neuve et sur une mise a niveau ;
-5. refaire les essais AOC avec profil par defaut et profil specifique, en
-   confirmant la creation au bon endroit et l'absence de regression Zuti.
-
-Le deplacement restera differe tant que le choix entre AOC 1a et son candidat de
-remplacement n'est pas tranche, afin de ne pas figer deux fois une arborescence
-encore provisoire.
+Cette organisation est un fait de construction propre a Open Sturmovik 1.15,
+pas une exigence du format AOC original. Elle est reproductible par le
+constructeur, qui remplace les deux constantes de chemin du chargeur puis
+verifie leur unicite. Confiance : elevee pour le chemin lu par le bytecode ;
+validation en jeu encore requise pour la creation du profil de repli.
 
 ## Rapport avec les erreurs actuelles
 

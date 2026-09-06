@@ -1,9 +1,10 @@
-# Preparation du prochain test v1.15
+# Preparation du prochain test v1.15 — archive historique
 
-> **Suspendu le 4 septembre 2026.** Le chantier des bombes est arrete et les
-> missions nucleaires creees pour ces essais ont ete supprimees. Les consignes
-> ci-dessous sont conservees comme historique et ne doivent plus declencher un
-> lancement. Lire d'abord `ETAT_COURANT_V1.15.md`.
+> **Archivee.** Cette page decrit les anciennes campagnes nucleaires et les
+> copies de test precedentes. Elle ne doit plus servir a preparer un lancement
+> v1.15. La copie courante, AOC V1/1a et les dix raccourcis sont decrits dans
+> `ETAT_COURANT_V1.15.md`; le seul protocole actif est
+> `CAMPAGNE_FINALE_V1.15.md`.
 
 Derniere mise a jour : 1er septembre 2026.
 
@@ -143,9 +144,11 @@ La copie est configuree avec :
 - affinite `85`, soit quatre coeurs physiques sur cette machine ;
 - journaux de diagnostic actifs.
 
-Le selecteur avertit que les fichiers historiques du choix 6DOF sont binairement
-identiques a ceux du profil sans 6DOF. Le libelle est donc conserve, mais cette
-copie ne prouve pas encore qu'un comportement 6DOF distinct est active.
+Depuis le 6 septembre, les EXE des choix avec et sans 6DOF sont binairement
+distincts selon le differentiel historique AAA, tout en conservant le format
+v1.15 Large Address Aware. Cette preparation anterieure ne constitue cependant
+pas une preuve runtime : les choix 8 puis 9 devront etre compares avec TrackIR,
+puis le choix 8 restaure.
 
 ## Reprise apres redemarrage
 

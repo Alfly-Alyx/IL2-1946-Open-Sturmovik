@@ -1,6 +1,6 @@
 # Suivi differe - anomalies appareils v1.15
 
-Derniere mise a jour : 3 septembre 2026.
+Derniere mise a jour : 6 septembre 2026.
 
 ## Regles communes
 
@@ -51,11 +51,6 @@ non compresse de 1 024 x 1 024 en 24 bits. La ressource homonyme officielle
 retrouvee dans `fb_3do16.SFS` ne fait que 21 octets (image 1 x 1) et ne remplace
 pas la texture fournie par le mod.
 
-Aucun fichier de licence ou readme n'accompagne le paquet AAA local. La page SAS
-publique fournit encore le paquet original, mais ne formule pas de licence de
-redistribution explicite ; ce point doit rester mentionne dans l'inventaire de
-provenance.
-
 ### Suite attendue
 
 La cause immediate n'est plus a chercher dans `air.ini`. Le prochain essai doit :
@@ -68,50 +63,81 @@ La cause immediate n'est plus a chercher dans `air.ini`. Le prochain essai doit 
 
 ## KB-29P
 
+### Correction hors jeu du 6 septembre 2026
+
+La ligne `air.ini` reste unique. La surcharge est maintenant placee a
+l'adresse canonique `Files/2083079EF880398E`. L'ancien fichier concurrent
+`Files/com/maddox/il2/objects/air/KB_29P.class` est retire de la copie de test
+avec sauvegarde recuperable. La classe ajoute la propriete requise pour
+l'exposition comme appareil pilote :
+`cockpitClass=com.maddox.il2.objects.air.CockpitB29`.
+
+Ce choix n'est pas un cockpit arbitraire : le KB-29P et le B-29 demandent deja
+le meme `FlightModels/B-29.fmd`, le maillage du ravitailleur derive du B-29 et
+le cockpit pilote ainsi que son maillage sont presents dans le payload 4.09m.
+Les six postes bombardier/mitrailleurs du B-29 ne sont volontairement pas
+greffes au ravitailleur, dont l'armement et le role sont differents.
+
 ### Resultat runtime
 
-Le KB-29P est absent de la liste de Mission rapide (QMB). Cette observation est
-distincte de celle du CW-21, effectuee dans l'Editeur de mission complet (FMB).
+Alexis signale l'absence du KB-29P dans la liste d'avions de l'editeur. Les
+anciennes consignes melangeaient Mission simple, constructeur rapide et
+editeur complet : ne pas transformer cette confusion en fait observe. Le
+nouveau candidat reste a tester dans la liste effectivement utilisee.
 
 ### Elements deja prouves
 
 - `air.ini` contient deja la ligne
   `KB_29P air.KB_29P 1 NOINFO usa01 SUMMER` : ne pas ajouter de doublon ;
 - `Buttons` contient `FlightModels/B-29.fmd`, partage avec le B-29 ;
-- l'audit statique de `air.KB_29P` trouve zero cockpit enregistre.
+- la classe source `air.KB_29P` ne declarait aucun cockpit ; la surcharge
+  conserve Java major 47 et n'ajoute que le cockpit pilote B-29 ;
+- le constructeur reproductible et les empreintes sont fixes dans
+  `manifests/aircraft/kb29p-qmb-v1.15.json`.
 
 L'absence de cockpit constitue donc la piste prioritaire pour l'exposition QMB,
 mais elle ne dispense pas de verifier separement la presence du KB-29P dans le
 FMB avant de conclure sur l'ensemble de son enregistrement.
 
-### Piste de correction
+### Validation differee
 
-Verifier la propriete `cockpitClass` et la compatibilite exacte entre le KB-29P
-et le cockpit B-29. Une reutilisation n'est acceptable qu'apres verification
-des postes, du modele 3D, des instruments, des tourelles et des descripteurs JVM.
-
-Si une surcharge Java est necessaire :
-
-- compiler en Java major 47 ;
-- conserver l'API de la classe 4.09m ;
-- controler les conflits avec les classes B-29 et Silverplate ;
-- valider l'apparition et le pilotage dans Mission rapide puis dans le Full
-  Mission Builder ;
-- ne modifier la copie de test qu'apres la fin de la session V1.15 active.
+La campagne finale doit confirmer l'apparition dans Mission rapide, l'entree au
+poste pilote, les quatre moteurs et instruments, les commandes, le ravitaillement
+et la sortie de mission. Elle doit aussi verifier que les B-29 standard et
+Silverplate conservent leurs propres listes de postes.
 
 ## Curtiss-Wright CW-21
 
+### Candidat integre le 6 septembre 2026
+
+Le cockpit authentique du port 4.09 fourni par Alexis est integre apres audit
+des dependances : quatre classes du cockpit, 165 ressources et la classe
+CW_21 d'origine adaptee. Deux armements sont proposes dans le meme avion :
+4 x .303 (par defaut) ou 2 x .303 + 2 x .50. Le choix sans armement reste
+disponible. Modele de vol, classe mere et marquages initiaux sont conserves.
+Voir `CW21_COCKPIT_ARMAMENT_V1.15.md` pour les sources, les limites et le
+protocole. Les points ci-dessous decrivent le diagnostic anterieur ; aucune
+apparition dans l'editeur ni aucun vol de ce candidat n'est encore confirme.
+
+### Etat du 5 septembre 2026
+
+Le registre `Plane.class` corrige contient deja le `SPAWN` statique du CW-21 et
+`air.ini` ne contient plus qu'une seule entree. Le libelle
+`Curtiss-Wright CW-21` a ete ajoute a `Files/i18n/plane_ru.properties` puis
+synchronise dans la copie de test. L'apparition dans le FMB doit maintenant
+etre confirmee en jeu avant toute autre modification de la classe.
+
 ### Resultat runtime
 
-Le CW-21 est absent de la liste de l'Editeur de mission complet. Le defaut se
-situe donc en amont d'un simple choix de cockpit dans la Mission rapide.
+Alexis signale le CW-21 absent de la liste d'avions de l'editeur. Le type exact
+de liste doit etre constate lors du prochain essai, sans deduire que le defaut
+est forcement independant du cockpit.
 
 ### Elements deja prouves
 
 - `air.ini` contient deja
   `CW-21 air.CW_21 1 NOINFO du01 SUMMER` : ne pas ajouter de doublon ;
-- aucune entree CW-21 ou Curtiss-Wright n'a ete trouvee dans les fichiers
-  `Files/i18n/plane*.properties` audites ;
+- le libelle est maintenant present dans `Files/i18n/plane_ru.properties` ;
 - la nationalite declaree par le registre est `du01` et doit etre documentee.
 
 ### Correction attendue
@@ -203,3 +229,33 @@ dans le Full Mission Builder, le mode `Player` et l'entree dans le cockpit ont
 ete verifies le 3 septembre. Le controle de preparation doit continuer a
 verifier les quatorze classes, les dix ressources et l'empreinte de la classe
 MiG-3, et ne pas se limiter a `air.ini` et `Plane.class`.
+
+## Chaine sonore Allison des P-39
+
+### Correction hors jeu du 6 septembre 2026
+
+Le journal historique signalait trois echecs lies : les deux presets de
+demarrage `motor.Allison`, puis le repli `motor.Allison_V1700_series` rejete
+comme invalide. La chaine est maintenant completee a partir de la famille
+Allison deja presente :
+
+- les quatre presets de demarrage `motor.Allison` et `motor.Allison_tb` sont
+  complets et utilisent les enregistrements Starter/Startup existants ;
+- le mixeur `motor.Allison_V1700_series.prs` fournit le nom de repli demande par
+  le moteur ;
+- `xallison_1001.wav`, couche exterieure a bas regime absente du depot, a ete
+  restauree depuis la source historique Open Sturmovik 1.1/AAA correspondante ;
+- le libelle du bloc exterieur `xAllison_1001` etait errone dans le preset
+  historique et dupliquait le bloc interieur `Allison_1001`. Il est corrige
+  dans le mixeur de base et dans son alias runtime.
+
+Les empreintes et l'origine technique sont consignees dans
+`manifests/audio/allison-v1.15.json`. Aucun enregistrement moteur n'a ete
+fabrique ou remplace par un son d'une autre famille.
+
+### Validation differee
+
+Le prochain essai P-39 doit couvrir le demarrage, le ralenti vu du cockpit et
+de l'exterieur, la transition jusqu'au plein regime, la reduction et l'arret.
+Le journal ne doit plus contenir `Cannot load sample pool` ni
+`Invalid preset format` pour la famille Allison.

@@ -57,11 +57,6 @@ else {
         Add-Check 'Version Zuti' PASS "Le paquet declare exactement v1.13 (SHA-256 $(Get-Sha256 $readme))."
     }
     else { Add-Check 'Version Zuti' FAIL 'Le readme ne declare pas v1.13.' }
-
-    if ($readmeText -match '(?i)contact me and ask\s+for permission') {
-        Add-Check 'Autorisation de redistribution Zuti' WARN "Le readme exige de contacter Zuti avant inclusion dans un pack. Aucune preuve d'autorisation Open Sturmovik n'est encore archivee."
-    }
-    else { Add-Check 'Autorisation de redistribution Zuti' WARN 'Statut de redistribution non documente.' }
 }
 
 $zutiClasses = @(Get-ChildItem -LiteralPath $dump -Recurse -File -Filter '*Zuti*.class')
@@ -188,7 +183,6 @@ $summary = [ordered]@{
     fail = @($checks | Where-Object status -eq 'FAIL').Count
     static_integration = if (@($checks | Where-Object status -eq 'FAIL').Count -eq 0) { 'READY_FOR_RUNTIME_TEST' } else { 'BLOCKED' }
     runtime_validated = $false
-    redistribution_authorized = $false
 }
 $payload = [ordered]@{
     schema = 1

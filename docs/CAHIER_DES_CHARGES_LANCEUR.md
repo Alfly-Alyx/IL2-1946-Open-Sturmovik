@@ -68,8 +68,10 @@ commandes du joueur :
 Le lanceur ne presente le 6DOF comme fonctionnel que si l'executable et les
 classes necessaires correspondent au manifeste actif. Des lignes `6dof_*` ou
 `NewTrackIR` presentes dans `conf.ini` ne suffisent pas a prouver que la fonction
-est chargee. Le mode sans 6DOF devra utiliser un executable reellement distinct,
-et non une copie du meme binaire.
+est chargee. Le mode sans 6DOF utilise maintenant l'EXE final
+`70B3F84E...990D3`, distinct de l'EXE 6DOF `F43C9997...845E`. Le switcher
+v1.15 controle ces empreintes depuis `manifests/switcher-v1.15.json`, puis le lanceur devra
+laisser la campagne runtime confirmer les mouvements reels du peripherique.
 
 ### Serveur Open Sturmovik
 
@@ -98,6 +100,18 @@ l'add-on.
 - Le raccourci principal utilise un mode direct sans interface.
 - Le raccourci de configuration utilise un argument explicite ouvrant
   l'interface.
+- La mise a jour v1.15 installe aussi sur le Bureau les neuf utilitaires retenus
+  et le switcher, soit dix raccourcis :
+  Bombsight Table 2, HardBall 4.08, IL2 Compare, JoyCtrl, Lowengrin DCG,
+  Mission Mate 6, WeatherSet, ZipNav et San's IL2 FOV Changer.
+- Leurs noms, cibles relatives et dossiers de travail sont definis dans
+  `manifests/utilities-v1.15.json`. Apres la pose des fichiers, l'etape
+  d'installation appelle `tools/Complete-OpenSturmovikV115Update.ps1` ; celle-ci
+  initialise les utilitaires puis appelle
+  `tools/Install-OpenSturmovikUtilityShortcuts.ps1`. Elle echoue si l'un des neuf
+  executables manque au lieu de creer un lien mort.
+- Une mise a jour de tous les utilisateurs peut demander le Bureau commun ;
+  sinon les raccourcis restent dans le profil Windows courant.
 - Desinstaller le lanceur retire uniquement ses propres raccourcis et reglages.
 
 ## Profils et compatibilite

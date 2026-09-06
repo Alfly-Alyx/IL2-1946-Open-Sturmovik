@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "release": "1.15",
+  "updateInstaller": {
+    "finalizer": "tools\\Complete-OpenSturmovikV115Update.ps1",
+    "runAfterFilesAreInstalled": true,
+    "order": [
+      "initialize utility paths and DeviceLink integration",
+      "install exactly ten desktop shortcuts"
+    ],
+    "defaultShortcutScope": "current Windows user"
+  },
+  "configuration": {
+    "initializer": "tools\\Initialize-OpenSturmovikUtilities.ps1",
+    "missionMate": {
+      "gamePathFile": "_Utilities\\Mission Mate 6\\FBPath.txt",
+      "gamePathValue": "installation root containing il2fb.exe",
+      "hardballSettingFile": "_Utilities\\Mission Mate 6\\MisMate.ini",
+      "hardballTarget": "_Utilities\\HardBall408\\HardBall408.exe",
+      "modCatalogPolicy": {
+        "useBundledCatalogForFirstValidation": true,
+        "filesDirectoryMustNotBeExposedAsModsStd": true,
+        "reason": "Mission Mate expects MODS\\STD for automatic mod import, while Open Sturmovik loads Files separately. Linking Files as MODS\\STD would make the wrapper scan the same payload twice."
+      }
+    },
+    "bombsightTable2": {
+      "settingsFile": "_Utilities\\Bombsight Table 2\\settings.ini",
+      "defaultWindowPosition": {
+        "left": 32,
+        "top": 32
+      },
+      "reason": "Keep the first window visible on a single 1024x768 or larger display instead of reusing the source-machine desktop coordinate."
+    },
+    "fovChanger": {
+      "official409DeviceLinkFile": "DeviceLink.txt",
+      "official409DeviceLinkSha256": "457A656E622A37960027E478D955AB61E10A8288DC076A316744B15903D24329",
+      "confIni": {
+        "window.SaveAspect": 0,
+        "DeviceLink.port": 1711,
+        "DeviceLink.host": "detected local non-loopback IPv4",
+        "DeviceLink.IPS": "same detected local IPv4"
+      },
+      "preferencePolicy": "Do not change the documented start/end offsets; clear the source-machine MAC so the tool detects the current adapter on first use."
+    },
+    "zipNav": {
+      "bundledMaps": "_Utilities\\ZipNav\\maps",
+      "expectedMapPath": "mods\\mapmods",
+      "installationPolicy": "Create a directory junction inside the selected installation so ZipNav sees its bundled maps without copying them. Never replace an existing mods\\mapmods directory."
+    },
+    "manualRuntimeSetup": [
+      "Lowengrin DCG: select il2fb.exe and keep manual generation mode for the first validation.",
+      "WeatherSet: edit only a disposable mission copy.",
+      "ZipNav: select the installation root, use the linked bundled maps directory and validate map scale before adding a new map.",
+      "JoyCtrl: edit only a backed-up conf.ini while the game is closed."
+    ]
+  },
+  "shortcuts": [
+    {
+      "name": "Bombsight Table 2",
+      "target": "_Utilities\\Bombsight Table 2\\Bombsight Table 2.exe",
+      "workingDirectory": "_Utilities\\Bombsight Table 2",
+      "description": "Table de bombardement pour Open Sturmovik"
+    },
+    {
+      "name": "HardBall 4.08",
+      "target": "_Utilities\\HardBall408\\HardBall408.exe",
+      "workingDirectory": "_Utilities\\HardBall408",
+      "description": "Encyclopedie HardBall pour IL-2 1946"
+    },
+    {
+      "name": "IL2 Compare",
+      "target": "_Utilities\\IL2C\\ILC2.exe",
+      "workingDirectory": "_Utilities\\IL2C",
+      "description": "Comparateur d'appareils IL-2"
+    },
+    {
+      "name": "JoyCtrl",
+      "target": "_Utilities\\JoyCtrl\\JoyCtrl.exe",
+      "workingDirectory": "_Utilities\\JoyCtrl",
+      "description": "Reglage des commandes de vol IL-2"
+    },
+    {
+      "name": "Lowengrin DCG",
+      "target": "_Utilities\\Lowegrin_DCG\\il2dcg.exe",
+      "workingDirectory": "_Utilities\\Lowegrin_DCG",
+      "description": "Lowengrin Dynamic Campaign Generator"
+    },
+    {
+      "name": "Mission Mate 6",
+      "target": "_Utilities\\Mission Mate 6\\Mission Mate v6.0.exe",
+      "workingDirectory": "_Utilities\\Mission Mate 6",
+      "description": "Generateur de missions Mission Mate pour IL-2"
+    },
+    {
+      "name": "WeatherSet",
+      "target": "_Utilities\\WeatherSet\\WeatherSet.exe",
+      "workingDirectory": "_Utilities\\WeatherSet",
+      "description": "Editeur de meteo pour les missions IL-2"
+    },
+    {
+      "name": "ZipNav",
+      "target": "_Utilities\\ZipNav\\ZipNavV1.1.exe",
+      "workingDirectory": "_Utilities\\ZipNav",
+      "description": "Outil de navigation ZipNav pour IL-2"
+    },
+    {
+      "name": "San's IL2 FOV Changer",
+      "target": "_Game_Enhancements\\San's IL2 FOV Changer\\San's_IL2_FovChanger_RC.exe",
+      "workingDirectory": "_Game_Enhancements\\San's IL2 FOV Changer",
+      "description": "Reglage du champ de vision d'IL-2"
+    },
+    {
+      "name": "Open Sturmovik Switcher",
+      "target": "Open_Sturmovik_Switcher.bat",
+      "workingDirectory": ".",
+      "description": "Choix securise des profils IL-2 4.08m, 4.09b et 4.09m",
+      "icon": "_Game Switchers\\Open_Sturmovik_Switcher.ico"
+    }
+  ]
+}

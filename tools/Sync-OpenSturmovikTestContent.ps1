@@ -113,9 +113,11 @@ if ([IO.Path]::GetDirectoryName($backup) -ine [IO.Path]::GetDirectoryName($desti
 $created = New-Object 'System.Collections.Generic.List[string]'
 $backedUp = New-Object 'System.Collections.Generic.List[string]'
 New-Item -ItemType Directory -Path $backup -Force | Out-Null
+$currentRelative = '<avant la premiere operation>'
 try {
     foreach ($entry in $pending) {
         $relative = $entry.path.Replace('/', '\')
+        $currentRelative = $relative
         $target = Join-Path $destination $relative
         $targetParent = Split-Path -Parent $target
         if (-not (Test-Path -LiteralPath $targetParent)) { New-Item -ItemType Directory -Path $targetParent -Force | Out-Null }
@@ -138,7 +140,7 @@ try {
 
     $validator = Join-Path $source 'tools\Test-OpenSturmovikContent.ps1'
     $contentReport = Join-Path $backup 'content-validation.json'
-    & $validator -ProjectRoot $source -ContentRoot $destination -ReportPath $contentReport | Out-Host
+    & $validator -ProjectRoot $source -ContentRoot $destination -ReportPath $contentReport -ExcludeNuclear | Out-Host
     $contentExitCode = $LASTEXITCODE
     if (-not (Test-Path -LiteralPath $contentReport -PathType Leaf)) {
         throw "La validation fonctionnelle n a produit aucun rapport (code=$contentExitCode)."
@@ -164,6 +166,7 @@ try {
         backed_up = @($backedUp)
         created = @($created)
         content_validation = [ordered]@{
+            scope = 'v1.15-excluding-v1.20-nuclear-content'
             pass = $contentSummary.Pass
             warn = $contentSummary.Warn
             fail = $contentSummary.Fail
@@ -174,6 +177,12 @@ try {
     Write-Host "Synchronisation validee. Sauvegarde recuperable : $backup" -ForegroundColor Green
 }
 catch {
-    Restore-Sync -Created $created -BackedUp $backedUp -Destination $destination -Backup $backup
-    throw "Synchronisation annulee et fichiers precedents restaures. $($_.Exception.Message)"
+    $originalMessage = $_.Exception.Message
+    try {
+        Restore-Sync -Created $created -BackedUp $backedUp -Destination $destination -Backup $backup
+    }
+    catch {
+        throw "Synchronisation interrompue a '$currentRelative'. La restauration a aussi echoue : $($_.Exception.Message). Erreur initiale : $originalMessage"
+    }
+    throw "Synchronisation annulee a '$currentRelative' et fichiers precedents restaures. $originalMessage"
 }

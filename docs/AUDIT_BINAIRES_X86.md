@@ -1,6 +1,6 @@
 # Audit des executables, DLL, memoire x86 et affinite CPU
 
-Derniere mise a jour : 31 aout 2026.
+Derniere mise a jour : 6 septembre 2026.
 
 ## Perimetre et resultat
 
@@ -18,13 +18,28 @@ les fichiers. Le rapport reproductible est
 | PE32 i386 non Large Address Aware | 58 |
 
 Les six PE32 marques Large Address Aware sont exactement les six copies de
-`il2fb.exe` des profils **moddes**. Elles sont binaires identiques :
+`il2fb.exe` des profils **moddes**. Elles ont le meme format, mais le
+differentiel historique 6DOF est maintenant restaure :
 
 - taille : 348 160 octets ;
-- SHA-256 :
-  `68C78F7F981BDDF4B6FB3A6FF901B59115AE7B3D953B8F53121E6BE5B8A65584` ;
+- trois profils avec 6DOF, SHA-256
+  `F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E` ;
+- trois profils sans 6DOF, SHA-256
+  `70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3` ;
 - architecture : i386 / PE32 ;
-- drapeau `IMAGE_FILE_LARGE_ADDRESS_AWARE` present.
+- drapeau `IMAGE_FILE_LARGE_ADDRESS_AWARE` present ;
+- `FileDescription` et `ProductName` Windows : `Open Sturmovik`.
+
+La ressource `VERSIONINFO` permet au volet **Processus** du Gestionnaire des
+taches d'afficher `Open Sturmovik`. Le nom d'image technique reste `il2fb.exe`
+dans le volet **Details**, car le fichier actif conserve ce nom necessaire a la
+chaine historique. L'ajout est reproductible par
+`tools/Set-OpenSturmovikExeBranding.ps1`. Le SHA-256 de la section `.text` est
+controle avant et apres : ni le code 6DOF, ni le code sans 6DOF ne sont changes.
+
+Les ressources PE et les ajustements v1.15 sont conserves dans les deux
+variantes. Le detail des offsets et des classes TrackIR est consigne dans
+`manifests/profiles-6dof-v1.15.json`.
 
 Les trois profils originaux et l'EXE racine emploient tous l'executable stock :
 

@@ -19,6 +19,7 @@ param(
     [switch]$DeferCrashOrHang,
     [switch]$SkipProcmon,
     [string[]]$AllowedContentFailures = @(),
+    [switch]$ExcludeNuclear,
     [switch]$ValidateOnly
 )
 
@@ -69,7 +70,7 @@ if ($enableProcDump) {
 
 if ($ValidateOnly) {
     $reportPath = Join-Path $resolvedResults 'readiness-latest.json'
-    & $readinessTool -GameRoot $resolvedGame -Profile $Profile -Windowed1024:$Windowed1024 -SelectorDumpLab:$SelectorDumpLab -ReferenceRoot $resolvedReference -RepositoryRoot $repositoryRoot -ProcmonPath $resolvedProcmon -FrameCapturePath $resolvedFrameCapture -AllowedContentFailures $AllowedContentFailures -ReportPath $reportPath
+    & $readinessTool -GameRoot $resolvedGame -Profile $Profile -Windowed1024:$Windowed1024 -SelectorDumpLab:$SelectorDumpLab -ReferenceRoot $resolvedReference -RepositoryRoot $repositoryRoot -ProcmonPath $resolvedProcmon -FrameCapturePath $resolvedFrameCapture -AllowedContentFailures $AllowedContentFailures -ExcludeNuclear:$ExcludeNuclear -ReportPath $reportPath
     if ($enableProcDump) {
         Write-Host "PROCDUMP_PRET : $resolvedProcDump" -ForegroundColor Green
     }
@@ -81,7 +82,7 @@ if ($existingRecorder.Count -ne 0) {
     throw "Un processus de jeu ou de capture est deja actif : $($existingRecorder.Name -join ', ')"
 }
 
-$displayTag = if ($Windowed1024) { '-windowed1024' } else { '-fullscreen' }
+$displayTag = if ($Windowed1024) { '-windowed1024' } else { '-configured-display' }
 $profileTag = if ($SelectorDumpLab) { 'selector-dump' } else { "profile$Profile" }
 $runName = [DateTime]::UtcNow.ToString('yyyyMMdd-HHmmssZ') + "-$profileTag-$CacheState$displayTag-startup"
 $runRoot = Join-Path $resolvedResults $runName
@@ -93,7 +94,7 @@ $captureDirectories = @($runRoot, $frameRoot, $logsRoot, $preexistingLogs)
 if ($enableProcDump) { $captureDirectories += $dumpRoot }
 New-Item -ItemType Directory -Path $captureDirectories -Force | Out-Null
 $readinessReport = Join-Path $runRoot 'readiness.json'
-& $readinessTool -GameRoot $resolvedGame -Profile $Profile -Windowed1024:$Windowed1024 -SelectorDumpLab:$SelectorDumpLab -ReferenceRoot $resolvedReference -RepositoryRoot $repositoryRoot -ProcmonPath $resolvedProcmon -FrameCapturePath $resolvedFrameCapture -AllowedContentFailures $AllowedContentFailures -ReportPath $readinessReport | Out-Host
+& $readinessTool -GameRoot $resolvedGame -Profile $Profile -Windowed1024:$Windowed1024 -SelectorDumpLab:$SelectorDumpLab -ReferenceRoot $resolvedReference -RepositoryRoot $repositoryRoot -ProcmonPath $resolvedProcmon -FrameCapturePath $resolvedFrameCapture -AllowedContentFailures $AllowedContentFailures -ExcludeNuclear:$ExcludeNuclear -ReportPath $readinessReport | Out-Host
 
 $timelinePath = Join-Path $runRoot 'timeline.csv'
 $metricsPath = Join-Path $runRoot 'process-metrics.csv'
@@ -161,13 +162,6 @@ $criticalRelative = @(
     'il2fb.exe','files.SFS','wrapper.dll','DINPUT.dll','il2fb.ini','conf.ini',
     'Files\com\maddox\il2\objects\air.ini',
     'Files\com\maddox\il2\objects\stationary.ini',
-    # Classes impliquees dans le premier gel en vol reproductible. Leur
-    # empreinte permet de distinguer un vrai A/B d un changement de scenario.
-    'Files\ED31205CA2346688', # BombGun
-    'Files\830E5C5AC3A1C77A', # BombFatMan
-    'Files\46168B5EEE532404', # BombGunFatMan
-    'Files\7BCE3C02C280ED18', # B_29SP
-    'Files\77B1B3A6E89CFC22', # B_29X Silverplate (absence attendue lors de cet A/B)
     'Files\E1FDDF9406C0ACAE', # ZutiTimer_RadarsCountRefresh
     # Paquet AAA Su-2 : avion, cockpits et deux ressources dont l'absence
     # empechait l'affectation joueur et la vue F1.
@@ -176,7 +170,34 @@ $criticalRelative = @(
     'Files\F71090502F7F2E04', # CockpitSU_2_Bombardier
     'Files\B4EF0ADEAE24EC44', # CockpitSU_2_TGunner
     'Files\3do\Cockpit\Il-10-TGun\TGunnerSU2.him',
-    'Files\3do\Cockpit\Il-10-TGun\skin1o.tga',
+    'Files\3do\Cockpit\Il-10-TGun\skin1o.tga'
+)
+# Record the exact four-fix candidate and the existing AOC test state without
+# changing either. The preflight report remains explicit about its AOC exception.
+$runtimeFixPlan = Join-Path $repositoryRoot 'WIP\test-plans\runtimefix-20260906.json'
+if (Test-Path -LiteralPath $runtimeFixPlan -PathType Leaf) {
+    $runtimeFix = Get-Content -LiteralPath $runtimeFixPlan -Raw | ConvertFrom-Json
+    if ($runtimeFix.destination_root -ieq $resolvedGame) {
+        $criticalRelative += @($runtimeFix.entries | ForEach-Object { $_.path.Replace('/', '\') })
+    }
+}
+$criticalRelative += @('dx8wrap.dll', 'Files\294ABC86A89FAEB4', 'Files\684916A0E86D1CC8', 'Files\AF5F8A326C3FA53C')
+$testAocRoot = Join-Path $resolvedGame '_Game_Enhancements\Mod_AOC_Public'
+if (Test-Path -LiteralPath $testAocRoot -PathType Container) {
+    $criticalRelative += @(Get-ChildItem -LiteralPath $testAocRoot -File | ForEach-Object {
+        '_Game_Enhancements\Mod_AOC_Public\' + $_.Name
+    })
+}
+$criticalRelative = @($criticalRelative | Sort-Object -Unique)
+if (-not $ExcludeNuclear) {
+    $criticalRelative += @(
+    # Classes impliquees dans le premier gel en vol reproductible. Leur
+    # empreinte permet de distinguer un vrai A/B d un changement de scenario.
+    'Files\ED31205CA2346688', # BombGun
+    'Files\830E5C5AC3A1C77A', # BombFatMan
+    'Files\46168B5EEE532404', # BombGunFatMan
+    'Files\7BCE3C02C280ED18', # B_29SP
+    'Files\77B1B3A6E89CFC22', # B_29X Silverplate (absence attendue lors de cet A/B)
     # Famille Explosions complete : classe externe, 13 classes anonymes et
     # MydataForSmoke. Cet instantane prouve quelle variante est reellement
     # active lors de l'essai Silverplate/Zuti.
@@ -195,7 +216,8 @@ $criticalRelative = @(
     'Files\88B6A628AD693BD2',
     'Files\4D88231E747CC83A',
     'Files\B160819E84D1291E'
-)
+    )
+}
 $criticalSnapshot = foreach ($relative in $criticalRelative) {
     $path = Join-Path $resolvedGame $relative
     if (Test-Path -LiteralPath $path -PathType Leaf) {
@@ -225,6 +247,8 @@ $profileLabel = switch ($Profile) {
     default { '8 - 4.09m modifie (sans 6DOF), wrapper historique, OpenGL natif' }
 }
 $profileLabel = if ($SelectorDumpLab) { 'Selector 5.1.2 - 4.09m modifie sans 6DOF, DumpMode=3, cache desactive' } else { $profileLabel }
+$checkedReadiness = Get-Content -LiteralPath $readinessReport -Raw | ConvertFrom-Json
+$profileLabel = $checkedReadiness.profile
 $environment = [ordered]@{
     run = $runName
     started_utc = $captureStartUtc.ToString('O')
@@ -232,7 +256,10 @@ $environment = [ordered]@{
     reference_root = $resolvedReference
     profile = $profileLabel
     cache_state = $CacheState
-    display_mode = if ($Windowed1024) { 'windowed-1024x768' } else { 'configured-fullscreen' }
+    display_mode = if ($Windowed1024) { 'windowed-1024x768' } else { 'unchanged-conf.ini' }
+    graphics_provider = $checkedReadiness.graphics_provider
+    render_section = $checkedReadiness.render_section
+    allowed_content_failures = @($AllowedContentFailures)
     selector_dump_lab = [bool]$SelectorDumpLab
     crash_or_hang_capture = [bool]$CaptureCrashOrHang
     crash_only_capture = [bool]$CaptureCrashOnly
@@ -273,7 +300,7 @@ try {
     }
     else {
         $procmonArguments = @('-accepteula','-quiet','-minimized','-backingfile',('"' + $procmonTrace + '"'))
-        $procmonProcess = Start-Process -FilePath $resolvedProcmon -ArgumentList $procmonArguments -PassThru
+        $procmonProcess = Start-Process -FilePath $resolvedProcmon -ArgumentList $procmonArguments -WindowStyle Hidden -PassThru
         $procmonDeadline = [DateTime]::UtcNow.AddSeconds(30)
         while ([DateTime]::UtcNow -lt $procmonDeadline -and
             -not $procmonProcess.HasExited -and
@@ -377,7 +404,7 @@ try {
         '--fps', $FrameRate,
         '--quality', 82
     )
-    $frameProcess = Start-Process -FilePath $resolvedFrameCapture -ArgumentList $frameArguments -PassThru
+    $frameProcess = Start-Process -FilePath $resolvedFrameCapture -ArgumentList $frameArguments -WindowStyle Hidden -PassThru
     Write-Timeline -Event 'frame_capture_started' -Detail "pid=$($frameProcess.Id)"
     $counterTool = Join-Path $PSScriptRoot 'Sample-IL2SystemCounters.ps1'
     $powerShellExecutable = Join-Path $PSHOME 'pwsh.exe'
@@ -388,7 +415,7 @@ try {
         '-StopFile',('"' + $stopFile + '"'),
         '-ProcessId',$game.Id
     )
-    $counterProcess = Start-Process -FilePath $powerShellExecutable -ArgumentList $counterArguments -PassThru
+    $counterProcess = Start-Process -FilePath $powerShellExecutable -ArgumentList $counterArguments -WindowStyle Hidden -PassThru
     Write-Timeline -Event 'system_counters_started' -Detail "pid=$($counterProcess.Id)"
 
     $knownModules = @{}

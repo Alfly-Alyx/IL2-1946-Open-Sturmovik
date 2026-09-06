@@ -19,6 +19,7 @@ $captureTool = Join-Path $PSScriptRoot 'Start-IL2StartupCapture.ps1'
     -Profile 9 `
     -CacheState $CacheState `
     -Windowed1024 `
+    -ExcludeNuclear `
     -WaitForGameSeconds $WaitForGameSeconds `
     -SkipProcmon:($SkipProcmon -or -not $WithFileTrace) `
     -ValidateOnly:$ValidateOnly

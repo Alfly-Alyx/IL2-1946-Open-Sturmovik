@@ -2,7 +2,7 @@
 
 ## Perimetre
 
-Cette analyse etait statique : aucun executable du jeu ou de l'ancien `_OS_Programs` n'avait alors ete lance. Ces programmes ont depuis ete audites, tries puis repartis entre `_Utilities`, `_Game_Enhancements` et `_Runtime_Addons`. L'installation de reference, maintenant rangee sous `C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\resources\IL2\IL 2 Sturmovik 1946`, et les archives de patch de `D:\Documents\##Documents\Informatique\Retro-gaming\Jeux Retro-gaming\Patchs\Patches IL2` avaient seulement ete lues pour cette analyse du moteur.
+Cette analyse etait statique : aucun executable du jeu ou de l'ancien `_OS_Programs` n'avait alors ete lance. Ces programmes ont depuis ete audites, tries puis repartis entre `_Utilities` et le dossier commun `_Game_Enhancements`. L'installation de reference, maintenant rangee sous `C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\resources\IL2\IL 2 Sturmovik 1946`, et les archives de patch de `D:\Documents\##Documents\Informatique\Retro-gaming\Jeux Retro-gaming\Patchs\Patches IL2` avaient seulement ete lues pour cette analyse du moteur.
 
 La cible fonctionnelle de la version 1.15 reste **4.09m**. L'installation de reference contient des composants plus recents et un chargeur de mods ; elle est utile pour comprendre l'architecture, mais ne constitue pas une image stock 4.09m fiable.
 
@@ -21,7 +21,7 @@ Le nom historique `wrapper.dll` est donc trompeur : ce fichier est ici le **char
 
 | Composant | Role observe | Remarque 1.15 |
 | --- | --- | --- |
-| `il2fb.exe` | Demarrage, chargement de la JVM, SFS, JNI et parametrage du processus | Les six EXE modifies sont identiques et Large Address Aware |
+| `il2fb.exe` | Demarrage, chargement de la JVM, SFS, JNI et parametrage du processus | Les six EXE modifies sont Large Address Aware, marques `Open Sturmovik`, et repartis en deux variantes de code avec/sans 6DOF |
 | `wrapper.dll` | Resolution prioritaire des ressources libres, puis repli SFS | Identique dans les six profils modifies |
 | `jgl.dll` | Couche de dispatch du fournisseur de rendu | Doit venir du jeu de base/patch officiel |
 | `dx8Wrap.dll` | Traduction du rendu IL-2 vers Direct3D 8 | Ce n'est pas le chargeur de mods |

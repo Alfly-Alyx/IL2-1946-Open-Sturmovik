@@ -264,9 +264,11 @@ et confirme que le profil ne fournit pas de musique en vol.
 
 Les commandes resident dans le profil `Users`. Certaines actions ne sont lues
 que dans un environnement de touches particulier : `quickSaveNetTrack` exige
-`[HotKey $$$misc]`, et non `[HotKey misc]`. Les variantes historiques annoncees
-avec et sans 6DOF ont actuellement les memes EXE, wrapper et `files.SFS` ; leur
-difference n'est donc pas prouvee avec les fichiers disponibles.
+`[HotKey $$$misc]`, et non `[HotKey misc]`. Les variantes avec et sans 6DOF
+partagent toujours le wrapper et le `files.SFS` de leur version, mais leurs EXE
+sont maintenant distincts. Le differentiel natif historique et les cinq classes
+TrackIR/HookPilot sont decrits dans `manifests/profiles-6dof-v1.15.json` ; la
+difference de mouvement reste a confirmer avec le peripherique reel.
 
 Le futur lanceur devra inventorier DirectInput, joysticks, axes, zones mortes,
 TrackIR/6DOF et conflits de touches sans remplacer silencieusement le profil du

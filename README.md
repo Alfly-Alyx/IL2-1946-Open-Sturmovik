@@ -16,23 +16,34 @@ La version 1.15 stabilise le profil modifie **4.09m**. Elle est concue pour etre
 
 La version officielle 4.15.1m ne doit pas etre installee par-dessus ce profil modifie. Elle exige une base officielle 4.14.1m non modifiee et fera l'objet d'un profil separe si le chargeur de mods peut etre porte sans regression. Voir [la matrice de compatibilite](docs/VERSION_COMPATIBILITY.md).
 
-Les anciens choix 4.08m et 4.09b restent archives pour l'etude de la compatibilite serveur, mais sont temporairement verrouilles dans le selecteur. Ils ne seront reactives qu'avec un manifeste transactionnel couvrant aussi leurs SFS et DLL ; la cible de test et de distribution est la 4.09m.
+Les choix 4.08m, 4.09b et 4.09m sont maintenant presentes par le switcher sous
+forme de neuf profils : Original, Open Sturmovik sans 6DOF et Open Sturmovik
+avec 6DOF pour chaque version. La cible stable et le profil recommande restent
+Open Sturmovik 4.09m sans 6DOF. Les profils modifies annonces 4.08m reproduisent
+l'architecture hybride historique AAA et doivent etre testes seulement avec
+des cartes et contenus compatibles avec cette configuration.
 
 ## Selecteur securise
 
-Lancer `Open_Sturmovik_Switcher.bat` depuis la racine du jeu.
+Lancer `Open_Sturmovik_Switcher.bat` depuis la racine du jeu. Il ouvre une
+interface graphique et confie les remplacements au moteur batch natif.
 
-- Le choix `10 - Quiet` quitte sans modifier le moindre fichier.
-- Toutes les sources sont verifiees avant le premier remplacement.
-- Chaque copie est controlee par taille et SHA-256.
-- Une erreur provoque le retour a l'etat precedent et interdit le message de succes.
-- Les profils Original n'utilisent pas `wrapper.dll` ; les profils modifies le restaurent.
-- Les chemins 4.08m/4.09m de `air.ini` tiennent compte du sous-dossier `Air.ini`.
-- Le registre `stationary.ini` est maintenant bascule avec le profil : 4.08/4.09b ou 4.09m.
-- Les HUD sont installes dans `Files\i18n`, le dossier reel charge par cet add-on.
-- Les choix 11 et 12 activent le nouveau wrapper de cache 4.09m experimental ; les choix 8 et 9 conservent le wrapper historique stable.
+- Les sources de chaque profil sont verifiees par SHA-256 avant le premier
+  remplacement.
+- L'EXE, `files.SFS`, le wrapper, les SFS de version, les DLL, `air.ini` et
+  `stationary.ini` sont traites dans une seule transaction avec sauvegarde et
+  retour arriere.
+- Les profils Original retirent `wrapper.dll`; le profil Original 4.08m retire
+  aussi les trois archives propres a la 4.09.
+- Les profils modifies restaurent le wrapper et l'EXE avec ou sans 6DOF choisi.
+- Le HUD peut etre conserve, remis en version standard ou passe en mode
+  immersion.
+- Le jeu doit etre ferme pendant le changement de profil.
 
-Le selecteur fusionne ensuite `_Game Switchers\conf.max.ini` dans le `conf.ini` existant. La resolution, le son, le reseau et les commandes du joueur sont conserves. Une sauvegarde `conf.ini.open-sturmovik.bak` est creee.
+Les six EXE modifies portent des metadonnees Windows `Open Sturmovik`, sans
+modifier leur code 6DOF. En mode fenetre, une surcharge moteur fixe aussi le
+titre a `Open Sturmovik`. Les trois EXE Original restent identiques au fichier
+stock et le wrapper qui chargerait cette surcharge est retire.
 
 ## Memoire, processeurs et qualite
 
@@ -60,6 +71,7 @@ Le selecteur fusionne ensuite `_Game Switchers\conf.max.ini` dans le `conf.ini` 
 - [Lisibilite, modifiabilite et pistes de performance du moteur](docs/AUDIT_MODIFIABILITE_MOTEUR.md)
 - [Analyse approfondie du chargeur `wrapper.dll`](docs/ANALYSE_WRAPPER_DLL.md)
 - [Audit des executables, DLL, limites memoire x86 et affinite CPU](docs/AUDIT_BINAIRES_X86.md)
+- [Marquage des executables et origine du titre de fenetre](docs/BRANDING_EXECUTABLES_V1.15.md)
 - [Audit et traitement des classes Java libres](docs/AUDIT_CLASSES_JAVA.md)
 - [Audit des effets et limites du moteur 4.09m](docs/AUDIT_EFFETS_409M.md)
 - [Chargements, execution et wrappers graphiques](docs/PERFORMANCES_ET_WRAPPERS_GRAPHIQUES.md)
@@ -77,7 +89,7 @@ Le selecteur fusionne ensuite `_Game Switchers\conf.max.ini` dans le `conf.ini` 
 - [Catalogue des mods historiques et sources All Aircraft Arcade](docs/CATALOGUE_MODS_HISTORIQUES.md)
 - [Etat de reprise technique de la v1.15 pour continuer dans une nouvelle session](docs/ETAT_REPRISE_V1.15.md)
 
-Des lancements controles ont ete effectues uniquement dans une copie de travail. IL2 Connect et VoiceOverlay ont ensuite ete retires faute d'usage recent identifiable. Les programmes conserves sont repartis entre `_Utilities`, `_Game_Enhancements` et `_Runtime_Addons` ; aucun n'est active automatiquement dans la version 1.15.
+Des lancements controles ont ete effectues uniquement dans une copie de travail. IL2 Connect et VoiceOverlay ont ensuite ete retires faute d'usage recent identifiable. Les programmes conserves sont repartis entre `_Utilities` et le dossier commun `_Game_Enhancements` ; les programmes externes de ce dernier ne sont pas actives automatiquement dans la version 1.15.
 
 ## Developpement ulterieur
 
@@ -87,11 +99,12 @@ Des lancements controles ont ete effectues uniquement dans une copie de travail.
 - Consolider les fichiers libres en SFS seulement apres une comparaison fonctionnelle ; l'audit montre que la grande majorite des chemins communs sont des remplacements volontaires, pas des doublons.
 - Mesurer dans le jeu le wrapper de cache 4.09m deja valide sur banc isole, puis le promouvoir seulement en l'absence de regression.
 - Creer des profils graphiques x86 transactionnels ; OpenGL natif restera le repli garanti et le chargeur de mods `wrapper.dll` ne sera jamais remplace par un backend graphique.
-- Creer deux raccourcis distincts : lancement direct d'Open Sturmovik sans
-  interface, et ouverture a la demande du lanceur de configuration.
+- Le futur lanceur complet pourra ajouter un raccourci de lancement direct ;
+  la mise a jour v1.15 installe deja le raccourci du switcher et ceux des neuf
+  utilitaires retenus.
 - Exploiter le clone Selector/Dump 4.09m sans 6DOF pour associer les ressources
   SFS aux paliers visibles du chargement, sans remplacer le wrapper stable.
 
 ---
 
-Open Sturmovik is an unofficial community add-on compiled by Alfly. Version 1.15 keeps the modded runtime on IL-2 1946 4.09m, adds a transactional switcher, safe Original profiles, corrected `air.ini` and HUD paths, maximum visual settings, affinity for up to four physical cores, and Large Address Aware modded executables. See the linked audit documents for the compatibility boundaries.
+Open Sturmovik is an unofficial community add-on compiled by Alfly. Version 1.15 keeps the stable modded runtime on IL-2 1946 4.09m, adds a graphical transactional switcher for 4.08m/4.09b/4.09m, safe Original profiles, corrected `air.ini` and HUD paths, maximum visual settings, affinity for up to four physical cores, branded windowed-mode titles, and Large Address Aware modded executables. See the linked audit documents for the compatibility boundaries.

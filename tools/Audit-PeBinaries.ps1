@@ -83,11 +83,13 @@ function Read-PeMetadata {
 }
 
 $resolvedRoot = (Resolve-Path -LiteralPath $Root).Path.TrimEnd('\')
-$files = @(Get-ChildItem -LiteralPath $resolvedRoot -Recurse -File -ErrorAction Stop |
-    Where-Object {
-        $_.Extension -in @('.exe', '.dll') -and
-        $_.FullName -notmatch '[\\/](\.git|WIP)[\\/]'
-    } |
+$rootFiles = @(Get-ChildItem -LiteralPath $resolvedRoot -File -ErrorAction Stop)
+$rootDirectories = @(Get-ChildItem -LiteralPath $resolvedRoot -Directory -ErrorAction Stop |
+    Where-Object { $_.Name -notin @('.git', 'WIP') })
+$files = @($rootFiles + @($rootDirectories | ForEach-Object {
+        Get-ChildItem -LiteralPath $_.FullName -Recurse -File -ErrorAction Stop
+    }) |
+    Where-Object { $_.Extension -in @('.exe', '.dll') } |
     Sort-Object FullName)
 
 $records = @($files | ForEach-Object { Read-PeMetadata -File $_ -ResolvedRoot $resolvedRoot })

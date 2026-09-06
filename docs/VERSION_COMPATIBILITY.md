@@ -14,7 +14,13 @@ Cette cible est maintenant gelee pour la stabilisation de la version 1.15. Les p
 
 La derniere version officielle disponible est 4.15.1m. Elle n'est pas adoptee comme base du mod 1.15 : le patch 4.15 demande explicitement une installation 4.14.1m officielle et non modifiee. Un portage demanderait de revalider les classes Java, les registres d'avions/cartes, le `files.SFS`, le wrapper et chaque utilitaire. Il devra etre developpe comme profil separe.
 
-Les couples historiques « sans 6DOF » / « 6DOF » ont actuellement des executables, wrappers et `files.SFS` strictement identiques pour chaque version. Le menu conserve leur numerotation, mais avertit qu'il ne peut pas produire deux comportements differents tant que les vrais fichiers 6DOF n'ont pas ete retrouves.
+Les couples historiques « sans 6DOF » / « 6DOF » partagent le wrapper et le
+`files.SFS` de leur version, mais utilisent maintenant deux executables
+distincts. Le differentiel exact a ete retrouve dans la source locale AAA
+Community Installer 1.1 puis reporte sur les EXE v1.15 de 348 160 octets sans
+retirer leur drapeau Large Address Aware. Les cinq classes du module 6DOF sont
+egalement presentes et identiques a cette source. Les empreintes et offsets
+sont fixes dans `manifests/profiles-6dof-v1.15.json`.
 
 | Version du jeu | Donnees locales | Profil Open Sturmovik 1.15 |
 | --- | --- | --- |
@@ -30,8 +36,8 @@ Les couples historiques « sans 6DOF » / « 6DOF » ont actuellement des execut
 
 La comparaison avec les installateurs officiels locaux donne :
 
-- patch 4.08m : 107 fichiers deja identiques, `files.SFS` gere par le selecteur et une texture volontairement remplacee par le mod ; les trois notices sont conservees sous `_Documentation\Jeu et correctifs\4.08m` ;
-- patch 4.09m : 99 fichiers deja identiques ; les trois notices sont conservees sous `_Documentation\Jeu et correctifs\4.09m` ;
+- patch 4.08m : 107 fichiers deja identiques, `files.SFS` gere par le selecteur et une texture volontairement remplacee par le mod ; les trois notices sont conservees sous `_Documentations\Game and Patches\4.08m` ;
+- patch 4.09m : 99 fichiers deja identiques ; les trois notices sont conservees sous `_Documentations\Game and Patches\4.09m` ;
 - les SFS et DLL de coeur 4.08/4.09 correspondent octet par octet aux patchs locaux ;
 - `fb_3do.SFS`, requis depuis la base DVD, est restaure avec les deux autres SFS du commit orphelin.
 

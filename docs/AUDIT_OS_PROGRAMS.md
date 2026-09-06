@@ -1,10 +1,10 @@
 # Audit fonctionnel des outils externes
 
-Date de mise a jour : 1er septembre 2026.
+Date de mise a jour : 6 septembre 2026.
 
 ## Conclusion
 
-L'audit initial a porte sur les 14 groupes de l'ancien dossier `_OS_Programs`. Apres verification de leur usage communautaire, IL2 Connect et VoiceOverlay ont ete retires le 1er septembre 2026. Les 12 groupes conserves sont maintenant separes entre `_Utilities` (10 groupes), `_Game_Enhancements` (San FOV) et `_Runtime_Addons` (Gapa). Aucun n'est copie, active ou lance par le selecteur Open Sturmovik, les scripts ou la configuration actuelle.
+L'audit initial a porte sur les 14 groupes de l'ancien dossier `_OS_Programs`. Apres verification de leur usage communautaire, IL2 Connect et VoiceOverlay ont ete retires le 1er septembre 2026. Les 12 groupes conserves sont maintenant separes entre `_Utilities` (10 groupes) et le dossier commun `_Game_Enhancements` (San FOV et Gapa). Aucun de ces programmes externes n'est copie, active ou lance par le selecteur Open Sturmovik, les scripts ou la configuration actuelle.
 
 En l'etat :
 
@@ -12,10 +12,9 @@ En l'etat :
 - aucun outil qui depend du jeu n'est valide de bout en bout avec Open Sturmovik v1.15 / IL-2 1946 4.09m ;
 - les generateurs de missions ont des listes d'avions incompletes ou obsoletes ;
 - les chemins conserves dans plusieurs fichiers pointent vers d'anciennes installations Windows XP ;
-- DCG et San's FOV Changer ne peuvent pas etre redistribues dans une version publique sans l'autorisation de leurs auteurs ;
-- les droits de redistribution de plusieurs autres utilitaires ne sont pas documentes localement.
+- leur configuration finale et leur validation en situation restent a effectuer sur la copie de test commune.
 
-La recommandation pour la v1.15 reste de ne rien lancer automatiquement. La decision du mainteneur est toutefois de remettre en service, comme outils externes a fenetre, Bombsight Table 2, HardBall408, IL2 Compare, JoyCtrl, Lowengrin DCG, Mission Mate, San's FOV Changer, WeatherSet et ZipNav. Leur presence dans cette liste ne supprime pas les conditions techniques et juridiques detaillees ci-dessous. IL2 Connect et VoiceOverlay ont ete retires faute d'usage communautaire recent identifiable ; leurs suppressions restent recuperables par Git.
+La recommandation pour la v1.15 reste de ne rien lancer automatiquement. La decision du mainteneur est toutefois de remettre en service, comme outils externes a fenetre, Bombsight Table 2, HardBall408, IL2 Compare, JoyCtrl, Lowengrin DCG, Mission Mate, San's FOV Changer, WeatherSet et ZipNav. Le manifeste v1.15 decrit leurs cibles et l'installateur prepare dix raccourcis de bureau : ces neuf outils et le switcher, sans lancer les programmes. IL2 Connect et VoiceOverlay ont ete retires faute d'usage communautaire recent identifiable ; leurs suppressions restent recuperables par Git.
 
 ## Portee et methode
 
@@ -24,7 +23,7 @@ La cible de compatibilite est celle du depot : Open Sturmovik v1.15 sur IL-2 194
 L'audit a couvert :
 
 - les 14 sous-dossiers initiaux de l'ancien `_OS_Programs` et leurs 18 executables, avant le retrait de 2 dossiers et 3 executables ;
-- les aides locales, README, PDF, RTF et anciens documents Word de `_Documentation` ;
+- les aides locales, README, PDF, RTF et anciens documents Word de `_Documentations` ;
 - les chemins et reglages livres avec chaque outil ;
 - les dependances Windows visibles et l'architecture des executables ;
 - les references eventuelles dans le selecteur, les scripts et les configurations du depot ;
@@ -61,13 +60,13 @@ Cette classification devra etre reprise dans le futur lanceur : les mods moteur/
 | IL2C / IL2 Compare | Fenetre `IL2 Compare v2.4` ouverte | Donnees arretees a AEP 2.01 | A remettre en service apres reconstruction de son catalogue |
 | il2con / IL2 Connect | Fenetre ouverte pendant l'audit | `GamePath` vide, ancien journal et recherche de `il2.exe`/ancienne cle de registre | Supprime du paquet ; utiliser la connexion IP native d'IL-2 |
 | JoyCtrl / IL2 JoyControl | Fenetre ouverte | Non relie au `conf.ini` actif ; essai joystick non fait | Meilleur candidat pour les courbes de commandes |
-| Lowengrin DCG 3.43 | Fenetre ouverte ; configuration temporaire creee | Reconnait les ajouts officiels 4.09, mais pas toutes les classes du mod | Candidat apres autorisation, configuration et synchronisation des donnees |
-| Mission Mate 6.0.1 | S'ouvre et demande le dossier d'IL-2 | Chemins vides et catalogue d'avions incomplet/corrompu | Candidat apres regeneration de ses donnees |
+| Lowengrin DCG 3.43 | Fenetre ouverte ; configuration temporaire creee | Reconnait les ajouts officiels 4.09, mais pas toutes les classes du mod | Candidat apres configuration et synchronisation des donnees |
+| Mission Mate 6.0.1 | S'ouvre et demande le dossier d'IL-2 | Catalogue d'avions incomplet/corrompu | Son chemin racine et celui de HardBall sont maintenant initialisables sans valeur propre a une machine |
 | Quick Mission Tuner 2.00.0009 | Outil principal et deux editeurs ouverts ; Shift-Rot execute avec le nom de fichier attendu | Listes 2007 incompletes | Desactive jusqu'a mise a jour des donnees et essais sur copies |
-| San's IL2 FOV Changer RC 1.0 | Non lance par precaution ; dependances presentes | Configuration liee a une ancienne machine ; aucun `DeviceLink.txt`/`conf.ini` racine disponible ; points memoire dependants de la version | A remettre en service apres validation 4.09m et autorisation |
+| San's IL2 FOV Changer RC 1.0 | Non lance par precaution ; dependances presentes | Points memoire dependants de la version et essai 4.09m restant | `DeviceLink.txt` 4.09m restaure, ancienne adresse materielle retiree et configuration reproductible preparee |
 | VoiceOverlay Alpha 1.1 | Non lance par precaution | Cible TeamSpeak 2/Ventrilo 2.2 et anciens hooks DirectX/OpenGL ; aucun client compatible detecte | Supprime du paquet |
 | WeatherSet | Fenetre ouverte | Edite des champs meteo/vent, mais leur effet reel sous 4.09m n'est pas etabli | Conserver comme editeur experimental ; essai A/B en jeu requis |
-| ZipNav 1.1 | Fenetre ouverte ; `Act.jar` fonctionne avec Java 17 | Attend `mods/mapmods`, absent du depot ; couverture des cartes actives non validee | Candidat apres adaptation du chemin des cartes |
+| ZipNav 1.1 | Fenetre ouverte ; `Act.jar` fonctionne avec Java 17 | Le paquet contient ses cartes, mais leur couverture et leurs echelles ne sont pas encore validees | Candidat au test de navigation stock et mod |
 
 ## Analyse et remise en service, outil par outil
 
@@ -79,7 +78,7 @@ Tous les outils retenus restent des applications Windows separees du jeu. DCG, M
 
 **Etat.** Le programme demarre sans integration au jeu. Son utilite ne depend pas du catalogue d'avions de 4.09m.
 
-**A faire.** Le lancer manuellement, verifier en vol que la fenetre et les raccourcis restent accessibles et qu'ils n'entrent pas en conflit avec IL-2 ou le selecteur. Le distribuer uniquement gratuitement, sans modification, avec son aide et sa mention d'auteur.
+**A faire.** Le lancer manuellement, verifier en vol que la fenetre et les raccourcis restent accessibles et qu'ils n'entrent pas en conflit avec IL-2 ou le selecteur.
 
 ### 2. Gapa
 
@@ -87,7 +86,7 @@ Tous les outils retenus restent des applications Windows separees du jeu. DCG, M
 
 **Etat.** La documentation date de 2002 et mentionne Windows 98/XP. Le test a ete evite pour ne pas changer la LUT de l'ecran de travail.
 
-**A faire.** Si l'outil est conserve, le placer dans une categorie « affichage, a vos risques », ne jamais le lancer automatiquement et documenter une procedure de retour aux couleurs par defaut. Tester sur une machine de jeu, HDR desactive puis active, avec fermeture normale et forcee. La redistribution doit rester gratuite et non modifiee ; la formulation locale evoque un usage personnel.
+**A faire.** Si l'outil est conserve, le placer dans une categorie « affichage, a vos risques », ne jamais le lancer automatiquement et documenter une procedure de retour aux couleurs par defaut. Tester sur une machine de jeu, HDR desactive puis active, avec fermeture normale et forcee.
 
 ### 3. HardBall408
 
@@ -138,8 +137,6 @@ Tous les outils retenus restent des applications Windows separees du jeu. DCG, M
 4. verifier aller-retour d'un profil, axes, inversion, zones mortes et restauration ;
 5. conserver IL2 Sticks desactive si JoyCtrl est retenu.
 
-Les droits de redistribution ne sont pas etablis par un fichier local : obtenir l'autorisation ou ne fournir qu'une notice d'installation externe.
-
 ### 8. Lowengrin DCG 3.43
 
 **Role.** Generation de campagnes et missions dynamiques, avec modes pouvant remplacer DGen/NGen.
@@ -148,13 +145,12 @@ Les droits de redistribution ne sont pas etablis par un fichier local : obtenir 
 
 **A faire.** Proceder par etapes :
 
-1. obtenir l'autorisation ecrite de redistribution, la notice interdisant l'hebergement ou la distribution CD/DVD sans accord ;
-2. configurer manuellement le chemin de `il2fb.exe` dans une copie de jeu ;
-3. tester d'abord le mode de generation manuelle, sans remplacement de DGen/NGen ;
-4. produire un rapport des classes, charges utiles et peintures absentes ;
-5. completer `class.dcg` et les tables associees a partir des donnees actives, avec controle humain ;
-6. generer, ouvrir puis jouer une campagne test ;
-7. n'envisager le remplacement DGen/NGen qu'avec manifeste des fichiers, sauvegarde et restauration automatique.
+1. configurer le chemin de `il2fb.exe` dans une copie de jeu ;
+2. tester d'abord le mode de generation manuelle, sans remplacement de DGen/NGen ;
+3. produire un rapport des classes, charges utiles et peintures absentes ;
+4. completer `class.dcg` et les tables associees a partir des donnees actives, avec controle humain ;
+5. generer, ouvrir puis jouer une campagne test ;
+6. n'envisager le remplacement DGen/NGen qu'avec manifeste des fichiers, sauvegarde et restauration automatique.
 
 Tant que ces points ne sont pas valides, DCG doit rester un outil manuel hors du selecteur.
 
@@ -175,7 +171,7 @@ Son catalogue contient 322 classes uniques : 312 correspondent aux 535 classes a
 5. ecrit les missions dans un dossier de sortie separe ;
 6. valide au minimum une mission stock 4.09 et une mission utilisant des avions du mod.
 
-Mission Mate peut etre redistribue gratuitement d'apres son aide locale. HardBall doit rester facultatif et clairement etiquete 4.08.
+HardBall doit rester facultatif et clairement etiquete 4.08.
 
 ### 10. Quick Mission Tuner 2.00.0009
 
@@ -185,23 +181,19 @@ Mission Mate peut etre redistribue gratuitement d'apres son aide locale. HardBal
 
 Le catalogue QMT couvre 302 des 535 classes actives ; 233 manquent et une entree n'existe plus dans la liste active. Les 18 ajouts officiels 4.09 manquent tous.
 
-**A faire.** Regenerer les tables avions, cartes et charges utiles, puis faire travailler l'outil uniquement sur une copie de mission. Ajouter un petit lanceur qui choisit l'entree, cree le dossier temporaire avec les noms attendus et n'ecrase jamais l'original. Les droits du programme principal ne sont pas documentes localement ; seule la notice d'un auxiliaire porte une mention de libre distribution.
+**A faire.** Regenerer les tables avions, cartes et charges utiles, puis faire travailler l'outil uniquement sur une copie de mission. Ajouter un petit lanceur qui choisit l'entree, cree le dossier temporaire avec les noms attendus et n'ecrase jamais l'original.
 
 ### 11. San's IL2 FOV Changer RC 1.0
 
 **Role.** Changement de champ de vision par raccourcis, DeviceLink/UDP et parametres propres a la version du jeu.
 
-**Etat.** Les dependances visibles sont presentes (.NET 2+/3.5, DirectInput manage). En revanche, `pref.ini` contient encore une ancienne adresse materielle, le port 1711 et des points de debut/fin propres a un executable. La racine du depot auditee ne fournit ni `DeviceLink.txt` ni le `conf.ini` d'une installation de jeu.
+**Etat.** Les dependances visibles sont presentes (.NET 2+/3.5, DirectInput manage). L'ancienne adresse materielle de `pref.ini` a ete retiree. Le `DeviceLink.txt` officiel de la 4.09m a ete restaure a la racine. Les points de debut/fin propres a l'executable n'ont volontairement pas ete modifies. Le `conf.ini` appartient a l'installation de jeu et sera configure par l'initialiseur v1.15.
 
 **A faire.** Ne jamais reprendre les anciennes valeurs comme valeurs par defaut. Dans une installation de test 4.09m :
 
-1. creer `DeviceLink.txt` ;
-2. regler `SaveAspect=0` et la section `[DeviceLink]` de `conf.ini` selon le manuel ;
-3. utiliser l'adresse locale et le port choisis par l'utilisateur ;
-4. determiner et verifier les points correspondant exactement a l'executable 4.09m utilise ;
-5. tester tous les raccourcis, le multijoueur, l'arret du programme et la restauration du FOV.
-
-Le manuel interdit l'hebergement ou l'inclusion dans un modpack sans demander l'auteur. L'autorisation est donc un prerequis absolu a toute distribution dans Open Sturmovik.
+1. appliquer l'initialiseur a la copie de test : `SaveAspect=0`, section `[DeviceLink]`, port 1711 et adresse IPv4 locale non boucle ;
+2. verifier les points correspondant exactement a l'executable 4.09m utilise ;
+3. tester tous les raccourcis, la coexistence avec le profil 6DOF, le multijoueur, l'arret du programme et la restauration du FOV.
 
 ### 12. VoiceOverlay Alpha 1.1
 
@@ -217,15 +209,15 @@ Le manuel interdit l'hebergement ou l'inclusion dans un modpack sans demander l'
 
 **Etat.** L'editeur demarre. Des missions du depot contiennent deja ces champs, mais la documentation 4.09 locale ne permet pas d'affirmer que le moteur cible les interprete tous. Le manuel MDS 1.13 ne valide pas non plus cette fonction. L'outil ne doit donc pas etre declare fonctionnel en jeu sur la seule base de son interface.
 
-**A faire.** Creer deux missions minimales identiques, l'une sans ces champs et l'autre avec des valeurs extremes, puis comparer en 4.09m les nuages, la derive, les rafales et la turbulence. S'il n'existe aucune difference observable, classer WeatherSet « 4.10+ seulement » au lieu de chercher a l'integrer a la v1.15. Toujours travailler sur une copie. Les droits de redistribution ne sont pas documentes localement.
+**A faire.** Creer deux missions minimales identiques, l'une sans ces champs et l'autre avec des valeurs extremes, puis comparer en 4.09m les nuages, la derive, les rafales et la turbulence. S'il n'existe aucune difference observable, classer WeatherSet « 4.10+ seulement » au lieu de chercher a l'integrer a la v1.15. Toujours travailler sur une copie.
 
 ### 14. ZipNav 1.1
 
 **Role.** Calcul de route a partir des cartes et de leurs coordonnees.
 
-**Etat.** L'interface demarre. Le programme attend `mods/mapmods`, absent de l'arborescence actuelle qui utilise `Files/Maps`. Son paquet contient de nombreuses cartes et inclut notamment Bessarabia, MTO et Slovakia, mais leur correspondance exacte avec toutes les cartes actives n'est pas etablie. Le helper `Act.jar` s'execute avec Java 17 et affiche correctement son aide, ce qui valide la dependance Java mais pas l'extraction complete d'une carte.
+**Etat.** L'interface demarre. Son paquet contient ses propres cartes et inclut notamment Bessarabia, MTO et Slovakia, mais leur correspondance exacte avec toutes les cartes actives n'est pas etablie. L'initialiseur prepare `mods/mapmods` comme jonction vers ces donnees, sans les copier ni remplacer un dossier deja present. Le helper `Act.jar` s'execute avec Java 17 et affiche correctement son aide, ce qui valide la dependance Java mais pas l'extraction complete d'une carte.
 
-**A faire.** Rendre le dossier des cartes configurable ou fournir un lanceur qui pointe explicitement vers une copie de `Files/Maps`. Tester l'extraction d'une carte stock et d'une carte du mod, comparer l'echelle et plusieurs caps connus, puis documenter les cartes reellement prises en charge. Ne pas recopier aveuglement les 168 Mo du paquet dans le jeu. Les droits de redistribution ne sont pas documentes localement.
+**A faire.** Tester une carte stock et une carte du mod, comparer l'echelle et plusieurs caps connus, puis documenter les cartes reellement prises en charge. Ne pas recopier les donnees de ZipNav dans le jeu : l'utilitaire doit conserver son arborescence autonome.
 
 ## Compatibilite des catalogues d'avions
 
@@ -241,7 +233,7 @@ Ces nombres mesurent uniquement la correspondance des identifiants. Ils ne prouv
 
 ## Dependances, securite et isolation
 
-- Les 18 executables audites etaient 32 bits et non signes. Apres retrait d'IL2 Connect et des deux executables VoiceOverlay, 15 executables audites restent dans `_Utilities`, `_Game_Enhancements` et `_Runtime_Addons`. L'absence de signature ne prouve pas qu'ils sont malveillants, mais impose de conserver les originaux, enregistrer leurs empreintes et limiter leur acces aux dossiers necessaires.
+- Les 18 executables audites etaient 32 bits et non signes. Apres retrait d'IL2 Connect et des deux executables VoiceOverlay, 15 executables audites restent dans `_Utilities` et `_Game_Enhancements`. L'absence de signature ne prouve pas qu'ils sont malveillants, mais impose de conserver les originaux, enregistrer leurs empreintes et limiter leur acces aux dossiers necessaires.
 - Les runtimes Visual Basic 6, .NET 3.5/4.x et Java 17 necessaires aux outils concernes sont presents sur la machine auditee.
 - HardBall livre son propre runtime VB5 et d'anciennes DLL/OCX : ils doivent rester dans son dossier, sans installation systeme.
 - Les editeurs de mission doivent toujours ecrire dans une copie ou un dossier de sortie, jamais directement sur l'unique original.
@@ -249,58 +241,43 @@ Ces nombres mesurent uniquement la correspondance des identifiants. Ils ne prouv
 - DCG ne doit pas remplacer DGen/NGen avant qu'une restauration complete ait ete testee.
 - Aucun utilitaire ne doit etre lance automatiquement par le selecteur tant que ses criteres d'acceptation ne sont pas remplis.
 
-## Droits de redistribution
+## Perimetre de cet audit
 
-Inclure un executable dans le depot ou une archive publique est distinct de l'utiliser localement.
-
-| Situation d'apres les notices locales | Utilitaires |
-| --- | --- |
-| Redistribution permise avec conditions indiquees dans leur notice | Bombsight Table 2, Gapa, HardBall408, IL2 Connect, Mission Mate |
-| Autorisation ecrite necessaire avant inclusion publique | Lowengrin DCG, San's IL2 FOV Changer |
-| Droit non etabli par la documentation locale | IL2 Sticks, IL2C, JoyCtrl, Quick Mission Tuner principal, VoiceOverlay, WeatherSet, ZipNav |
-
-Avant publication, ajouter chaque outil autorise a `docs/THIRD_PARTY_NOTICES.md` avec auteur, version, origine, licence/permission et empreintes des fichiers. Pour les outils sans droit clair, fournir plutot une notice et un lien d'installation externe, ou obtenir une autorisation explicite.
+Cet audit v1.15 est strictement fonctionnel : presence, configuration, compatibilite 4.09m, demarrage et resultat observable. Les questions de publication ou de provenance peuvent etre suivies separement, mais elles ne constituent pas un critere fonctionnel de la v1.15.
 
 ## Plan de remise en service recommande
 
-### Priorite 0 - Publication sure
-
-- Obtenir les permissions DCG et San FOV.
-- Resoudre les droits non documentes.
-- Creer un manifeste des versions, origines, empreintes et licences.
-- Confirmer qu'aucun utilitaire n'est lance par defaut.
-
-### Priorite 1 - Integration portable commune
+### Priorite 0 - Integration portable commune
 
 - Ajouter un catalogue manuel des outils, pas un auto-lanceur.
 - Faire choisir le dossier du jeu et valider la presence de `il2fb.exe`.
 - Stocker les reglages propres a Open Sturmovik sans reutiliser les chemins historiques.
 - Fournir sauvegarde, journal et restauration pour toute ecriture dans le jeu.
 
-### Priorite 2 - Premier outil fonctionnel
+### Priorite 1 - Premier outil fonctionnel
 
 - Integrer JoyCtrl seul.
 - Valider les profils sur un joystick reel et la restauration de `conf.ini`.
 
-### Priorite 3 - Generation de campagnes
+### Priorite 2 - Generation de campagnes
 
 - Configurer DCG en mode manuel.
 - Synchroniser classes, charges et peintures avec les donnees actives.
 - Jouer une campagne de validation avant tout mode DGen/NGen.
 
-### Priorite 4 - Creation de missions
+### Priorite 3 - Creation de missions
 
 - Regenerer les donnees Mission Mate depuis `Files`.
 - Valider une mission 4.09 stock et une mission Open Sturmovik.
 - N'evaluer QMT qu'apres avoir mis ses listes au meme niveau.
 
-### Priorite 5 - Navigation et outils optionnels
+### Priorite 4 - Navigation et outils optionnels
 
-- Adapter ZipNav au chemin `Files/Maps`.
+- Appliquer la jonction ZipNav `mods/mapmods` preparee par l'initialiseur.
 - Effectuer le test A/B WeatherSet.
 - Valider Bombsight en vol.
 
-### Priorite 6 - Outils de consultation et de connexion
+### Priorite 5 - Outils de consultation et de connexion
 
 - Valider Bombsight Table 2 en vol et ses raccourcis globaux.
 - Reconstruire ou etiqueter clairement les donnees HardBall408.
@@ -315,7 +292,7 @@ Gapa, IL2 Sticks et Quick Mission Tuner restent historiques, redondants ou risqu
 
 Un utilitaire ne doit passer au statut « fonctionnel » que si :
 
-1. son droit d'utilisation et de redistribution est documente ;
+1. sa version, sa cible et ses fichiers d'entree sont identifies ;
 2. il demarre sur une installation Windows de test propre ;
 3. il utilise des chemins configurables et aucune ancienne machine ;
 4. ses donnees couvrent la cible 4.09m et les classes Open Sturmovik qu'il doit manipuler ;
@@ -326,11 +303,11 @@ Un utilitaire ne doit passer au statut « fonctionnel » que si :
 
 ## Sources locales utilisees
 
-- Ancien `_OS_Programs/*`, maintenant reparti entre `_Utilities/*`, `_Game_Enhancements/*` et `_Runtime_Addons/*` : aides, README, historiques, configurations et donnees livres avec les outils ; les sources IL2 Connect et VoiceOverlay ont ete lues avant leur suppression recuperable par Git.
-- `_Documentation/Mods et outils/HardBall Aircraft Viewer 4.08/Manuel - HardBall Aircraft Viewer 4.08.rtf`.
-- `_Documentation/Mods et outils/San FOV Changer 1.0/Manuel - San FOV Changer 1.0 - anglais.pdf`.
-- `_Documentation/Mods et outils/Zuti MDS 1.13/Manuel - Zuti MDS 1.13.pdf`.
-- `_Documentation/Jeu et correctifs/4.08m/Notes de version 4.08m - francais.rtf` et documentation locale du patch 4.09.
-- Les anciens `.doc` de `_Documentation/Campagnes`, verifies comme documentations de campagnes/missions et non comme manuels des utilitaires.
+- Ancien `_OS_Programs/*`, maintenant reparti entre `_Utilities/*` et `_Game_Enhancements/*` : aides, README, historiques, configurations et donnees livres avec les outils ; les sources IL2 Connect et VoiceOverlay ont ete lues avant leur suppression recuperable par Git.
+- `_Documentations/Mods and Tools/HardBall Aircraft Viewer 4.08/Manuel - HardBall Aircraft Viewer 4.08.rtf`.
+- `_Documentations/Mods and Tools/San FOV Changer 1.0/Manuel - San FOV Changer 1.0 - anglais.pdf`.
+- `_Documentations/Mods and Tools/Zuti MDS 1.13/Manuel - Zuti MDS 1.13.pdf`.
+- `_Documentations/Game and Patches/4.08m/Notes de version 4.08m - francais.rtf` et documentation locale du patch 4.09.
+- Les anciens `.doc` de `_Documentations/Campaigns`, verifies comme documentations de campagnes/missions et non comme manuels des utilitaires.
 - `Files/com/maddox/il2/objects/air.ini`, compare aux catalogues DCG, Mission Mate et QMT.
 - `docs/VERSION_COMPATIBILITY.md` pour la cible 4.09m du depot.

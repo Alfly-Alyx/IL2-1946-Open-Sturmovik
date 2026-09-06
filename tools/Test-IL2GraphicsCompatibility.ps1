@@ -39,7 +39,8 @@ function Convert-ToNullableInt {
 
 function Get-LoggedValue {
     param([string[]]$Lines, [string]$Label)
-    foreach ($line in $Lines) {
+    for ($index = $Lines.Count - 1; $index -ge 0; $index--) {
+        $line = $Lines[$index]
         if ($line -match ('\b' + [regex]::Escape($Label) + ':\s*(.*?)\s*$')) {
             return $matches[1]
         }
@@ -83,6 +84,10 @@ $perfectWarnings = @(
     ) | Select-Object -Unique
 )
 
+$configuredProvider = Get-IniValue -Path $resolvedConf -Section 'GLPROVIDER' -Key 'GL'
+$directXProvider = Get-IniValue -Path $resolvedConf -Section 'GLPROVIDERS' -Key 'DirectX'
+$isDirectX = $directXProvider -and $configuredProvider -ieq $directXProvider
+$renderSection = if ($isDirectX) { 'Render_DirectX' } else { 'Render_OpenGL' }
 $config = [ordered]@{}
 foreach ($key in @(
     'TexFlags.TexEnvCombine4NV',
@@ -95,7 +100,7 @@ foreach ($key in @(
     'LandGeom',
     'Water'
 )) {
-    $config[$key] = Get-IniValue -Path $resolvedConf -Section 'Render_OpenGL' -Key $key
+    $config[$key] = Get-IniValue -Path $resolvedConf -Section $renderSection -Key $key
 }
 
 $hardwareShaders = Convert-ToNullableInt $config.HardwareShaders
@@ -160,11 +165,25 @@ if ($perfectWarnings.Count -gt 0) {
         $recommendation = 'Verifier le profil, le pilote 32 bits et les extensions du backend avant un essai en vol.'
     }
 }
+if (-not $isDirectX -and $vendor -match '(?i)intel' -and
+    $configuredProvider -match '(?i)^opengl32\.dll$' -and $severity -ne 'error') {
+    $classification = 'intel-native-opengl-cloud-risk'
+    $severity = 'warning'
+    $recommendation = 'Des nuages en pics sont signales avec Intel/OpenGL. Comparer au wrapper DirectX 4.09m en conservant WxTech et TypeClouds=1 ; validation visuelle requise.'
+}
+if ($configuredProvider -and $provider -and $configuredProvider -ine $provider) {
+    $classification = 'configuration-not-yet-tested'
+    $severity = 'warning'
+    $recommendation = 'Le journal concerne un autre fournisseur graphique que la configuration preparee. Attendre un nouvel essai avant de conclure.'
+}
 
 $result = [pscustomobject][ordered]@{
     log_path = $resolvedLog
     conf_path = $resolvedConf
     provider = $provider
+    configured_provider = $configuredProvider
+    render_section = $renderSection
+    render_configuration = $config
     vendor = $vendor
     renderer = $renderer
     version = $version
@@ -181,7 +200,7 @@ $result = [pscustomobject][ordered]@{
         GL_ARB_vertex_program = $extensions.Contains('GL_ARB_vertex_program')
         GL_ARB_fragment_program = $extensions.Contains('GL_ARB_fragment_program')
     }
-    render_opengl = $config
+    render_opengl = if ($isDirectX) { $null } else { $config }
     recommendation = $recommendation
 }
 

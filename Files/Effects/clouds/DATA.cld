@@ -1,35 +1,35 @@
 [GENERAL]
 CLOUDS_GENERATOR 2
 TYPE CIRROCUMULUS
-	MAT_DENSITY	0.4
-	NGHBR_ABSRB	1.75
-	PLANE_DISP	2
-	INTERSECT	0
-	TIER		2
-	Z_TO_X		1.0
-	N_PER_SQ	10
-	DZ_Z_RATIO	0.15
-	BASE_R_DISP	5.0
+	MAT_DENSITY	0.4   //stock 0.4; incr = make underside brighter; no longer any effect?
+	NGHBR_ABSRB	0.97  //stock 0.97; incr = make shadows brighter, less contrasty; no longer any effect?
+	PLANE_DISP	2     //stock 2; no effect?
+	INTERSECT	0     //stock 0; no effect?
+	TIER		2     //stock 2; no effect?
+	Z_TO_X		1.0   //stock 1.0; no effect?
+	N_PER_SQ	1     //stock 1; no effect? (some early mods have had larger values like 24)
+	DZ_Z_RATIO	0.0   //stock 0.15; no effect? used with F_UP/F_DOWN?
+	BASE_R_DISP	3.5   //stock 2.5; cloud size; 5 is quite big enough; 4 OK
 								LEVELS_MUST_BE_HERE
 	LEVELS		2
 	LEVEL 0
-		F_UP	8.00
-		F_DOWN	6.0
-		F_SIDE	1.0
-		F_DIR	1.0
-		DENSITY	4
-		K_THIN	0
+		F_UP	0.0   //stock 0.15; gives some clouds a higher base; 0 = uniform base height!
+		F_DOWN	0.0   //stock 0.1; gives some clouds a lower base; 0 = uniform base height!
+		F_SIDE	1.0   //stock 1.0; subtle effect; (some early mods have had larger values like 125)
+		F_DIR	1.0   //stock 1.0; subtle effect; (some early mods have had larger values like 15)
+		DENSITY	4     //stock 4; controls number/density of clouds; must NOT be less than 1; [2 and below is OK]
+		K_THIN	0     //stock 0; no effect?
 	END_LEVEL
-	LEVEL 1
-		F_UP	80.0
-		F_DOWN	40.0
-		F_CEN	0.0
-		DENSITY	4
-		K_THIN	0
-		K_FADE	3.3
+	LEVEL 1		      //fills in additional, different clouds
+		F_UP	0.0   //stock 0.2; gives some clouds a higher base; 0 = uniform base height!
+		F_DOWN	0.0   //stock 0.1; gives some clouds a lower base; 0 = uniform base height!
+		F_CEN	0.0   //stock 0.0; no effect?
+		DENSITY	4     //stock 4; controls number/density of clouds; must NOT be less than 1; [2 and above is OK]
+		K_THIN	0     //stock 0; no effect?
+		K_FADE	1.4   //stock 0.7; had 1.4; incr = make bigger central clouds when grouped (4 is pretty large)
 	END_LEVEL
 END_GENERATOR	
-[GEN_TABLE]	
+[GEN_TABLE]		//499 entries, from 0.004028 to 0.999939, roughly evenly distributed
 	0.410260
 	0.615040
 	0.919614
@@ -37,7 +37,7 @@ END_GENERATOR
 	0.300180
 	0.575701
 	0.320353
-	0.768746
+	0.268746
 	0.688314
 	0.699332
 	0.165441
@@ -48,12 +48,12 @@ END_GENERATOR
 	0.106845
 	0.317240
 	0.089846
-	0.640529
-	0.943068
-	1.191620
+	0.040529
+	0.443068
+	0.791620
 	0.618091
-	1.400800
-	0.831108
+	0.400800
+	0.131108
 	0.610401
 	0.944517
 	0.778314
@@ -72,9 +72,9 @@ END_GENERATOR
 	0.139225
 	0.814508
 	0.685965
-	1.375500
-	1.908505
-	1.465102
+	0.375500
+	0.908505
+	0.465102
 	0.947172
 	0.689261
 	0.465926
@@ -120,12 +120,12 @@ END_GENERATOR
 	0.575213
 	0.569842
 	0.347453
-	1.256874
-	1.721335
+	0.256874
+	0.721335
 	0.491501
 	0.965300
 	0.866421
-	1.669637
+	0.669637
 	0.817682
 	0.967559
 	0.434706
@@ -147,7 +147,7 @@ END_GENERATOR
 	0.824763
 	0.840388
 	0.021790
-	1.645558
+	0.645558
 	0.211005
 	0.881802
 	0.236335
@@ -196,7 +196,7 @@ END_GENERATOR
 	0.469253
 	0.887997
 	0.030793
-	0.077361
+	0.377361
 	0.596179
 	0.913724
 	0.290719
@@ -218,10 +218,10 @@ END_GENERATOR
 	0.944456
 	0.066317
 	0.101016
-	1.100223
-	1.380078
-	1.445784
-	1.819361
+	0.100223
+	0.380078
+	0.445784
+	0.819361
 	0.626820
 	0.999695
 	0.256600
@@ -230,7 +230,7 @@ END_GENERATOR
 	0.522660
 	0.620228
 	0.665365
-	0.053566
+	0.453566
 	0.007111
 	0.024995
 	0.136357
@@ -240,7 +240,7 @@ END_GENERATOR
 	0.756615
 	0.185308
 	0.502426
-	1.346568
+	0.346568
 	0.112735
 	0.363109
 	0.130772
@@ -280,7 +280,7 @@ END_GENERATOR
 	0.771935
 	0.680532
 	0.803583
-	1.852168
+	0.852168
 	0.060152
 	0.053987
 	0.681417
@@ -344,9 +344,9 @@ END_GENERATOR
 	0.284677
 	0.461226
 	0.660695
-	1.214331
-	2.579394
-	1.460372
+	0.214331
+	0.579394
+	0.460372
 	0.226478
 	0.188696
 	0.557024
@@ -410,7 +410,7 @@ END_GENERATOR
 	0.931822
 	0.904813
 	0.402783
-	2.086917
+	0.086917
 	0.712516
 	0.664571
 	0.233680
@@ -446,7 +446,7 @@ END_GENERATOR
 	0.913022
 	0.978301
 	0.999939
-	2.235328
+	0.235328
 	0.270425
 	0.514878
 	0.511002
@@ -485,7 +485,7 @@ END_GENERATOR
 	0.755028
 	0.985351
 	0.987732
-	1.921384
+	0.921384
 	0.734947
 	0.639760
 	0.822108
@@ -504,14 +504,14 @@ END_GENERATOR
 	0.389569
 	0.540757
 	0.130222
-	0.909491
+	0.009491
 	0.597858
 	0.146062
 	0.086642
 	0.434339
-	1.607196
-	2.768670
-	1.761254
+	0.607196
+	0.768670
+	0.761254
 	0.301065
 	0.782586
 	0.573779
@@ -521,8 +521,8 @@ END_GENERATOR
 	0.271035
 	0.064638
 	0.713370
-	1.316691
-	1.443648
+	0.316691
+	0.443648
 	0.995636
 	0.810358
 	0.647114

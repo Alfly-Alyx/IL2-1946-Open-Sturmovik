@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 2,
+  "release": "1.15",
+  "gameVersion": "4.09m",
+  "selection": "WxTech clouds Jan 2023",
+  "decision": "Replace the legacy Atmosphere override with the most detailed complete cumulus package found, while retaining the stock 4.09m resources as the A/B baseline only.",
+  "source": {
+    "author": "WxTech",
+    "published": "2023-01-23",
+    "forum": "https://www.sas1946.com/main/index.php?topic=70195.0",
+    "archive": "WxTech_clouds_Jan_2023.7z",
+    "download": "https://www.mediafire.com/file/2its64m1m5tg1d8/WxTech_clouds_Jan_2023.7z/file",
+    "archiveSha256": "DFB436CD077332B1F7D25CE794D6572081E2D19EADDDBCE5A2A3B140ED414D63"
+  },
+  "compatibilityEvidence": [
+    "The package contains only cloud materials, TGA textures and CLD geometry; it replaces no Java or native class.",
+    "The author identifies Effects/Clouds as the correct resource path and the bundled 3do copy as superfluous.",
+    "The same Big Clouds resource architecture is reported working from IL-2 4.09 through 4.12.",
+    "Runtime validation on Open Sturmovik 4.09m remains mandatory before release."
+  ],
+  "quality": {
+    "simpleCloudTexture": "256x256 RGBA",
+    "detailedCloudTextures": [
+      "1024x1024 RGBA",
+      "1024x1024 RGBA"
+    ],
+    "detailedMaterialLayers": 2,
+    "geometryBytes": 7331,
+    "referenceScreenshotIncludedInSourceArchive": true
+  },
+  "activeFiles": [
+    {
+      "path": "Files/Effects/clouds/CloBoard.mat",
+      "size": 1219,
+      "sha256": "47A624CD516932AC446A0126392E79D46F06979D64B6542C7EC001BA1EAB6F0E"
+    },
+    {
+      "path": "Files/Effects/clouds/cloboard.tga",
+      "size": 65580,
+      "sha256": "C4BB88B579727DAE606267A2260E1EAB41071C7CC86ACA247C446965A08B5449"
+    },
+    {
+      "path": "Files/Effects/clouds/Cloud.mat",
+      "size": 1449,
+      "sha256": "25888CA303C635FE14D124F27D2E7AF0F06A31E4351FDCCDAE1A8F89A2042F22"
+    },
+    {
+      "path": "Files/Effects/clouds/Cloud4x4.mat",
+      "size": 2177,
+      "sha256": "546798C67F9A7CF7D6C0FC0FF4F2365C5B6A7E920C1148FACB18C7D03D4E070A"
+    },
+    {
+      "path": "Files/Effects/clouds/Clouds4x4_WxTech.tga",
+      "size": 4194348,
+      "sha256": "325E1010FAE2EC25C133535313C5378A8975B83F2A930B823CEBF594CAF0D6AA"
+    },
+    {
+      "path": "Files/Effects/clouds/Clouds4x4A_WxTech.tga",
+      "size": 4194348,
+      "sha256": "C26279C9CA4F9761BD55B29706682526A6792A6D550F6242B1726A26A0CF5BD8"
+    },
+    {
+      "path": "Files/Effects/clouds/cloudsA.tga",
+      "size": 262188,
+      "sha256": "3EE127EBA47C213D0BF07957E6B6D1A399DD1D5F2E15BA8DE86B24D7F31BED67"
+    },
+    {
+      "path": "Files/Effects/clouds/DATA.cld",
+      "size": 7331,
+      "sha256": "738BA59B10AE83115755BE24E78224F2DAF9295549D29A2A63D9D2CA74BF1058"
+    }
+  ],
+  "removedLegacyFiles": [
+    "Files/Effects/clouds/Cloud4x4_nosort.mat",
+    "Files/Effects/clouds/clouds4x4.tga"
+  ],
+  "removedSuperfluousDuplicate": [
+    "Files/3do/Effects/clouds/Cloud.mat",
+    "Files/3do/Effects/clouds/Cloud4x4.mat",
+    "Files/3do/Effects/clouds/Cloud4x4_nosort.mat",
+    "Files/3do/Effects/clouds/cloboard.tga",
+    "Files/3do/Effects/clouds/clouds4x4.tga",
+    "Files/3do/Effects/clouds/cloudsA.tga"
+  ],
+  "excludedSourceAuxiliaries": [
+    "cloudata.cld",
+    "Clouds4x4_test-text.tga",
+    "Kopia cloboard.a"
+  ],
+  "validation": {
+    "static": "Every active file must match this manifest and the wrong-path duplicate must be absent.",
+    "runtimeRequired": true,
+    "runtimeMaps": [
+      "Smolensk",
+      "Slovakia"
+    ],
+    "runtimeCloudType": 1,
+    "successCriteria": [
+      "No white polygon or ground intersection artifact",
+      "No unknown exception in clouds",
+      "Greater visible detail and realism than the 4.09m stock A/B baseline",
+      "Acceptable frame rate and 32-bit memory margin"
+    ]
+  }
+}

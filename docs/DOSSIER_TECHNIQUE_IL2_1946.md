@@ -19,7 +19,7 @@ non reproductible n'est pas consideree comme realiste.
 Au 1er septembre 2026, l'analyse combine des audits statiques, plusieurs
 lancements instrumentes jusqu'au menu et des essais en vol, dont Little Boy et
 Fat Man. Les affirmations d'execution restent rattachees a leurs artefacts de
-capture ; les outils externes de `_Utilities`, `_Game_Enhancements` et `_Runtime_Addons` demeurent inventories sans activation automatique.
+capture ; les outils externes de `_Utilities` et `_Game_Enhancements` demeurent inventories sans activation automatique.
 
 ## Perimetre et sources protegees
 
@@ -133,10 +133,15 @@ empreintes sont consignes dans [l'audit des musiques et fonds](AUDIT_MUSIQUES_ET
 
 ## Profils historiques
 
-- Les six EXE modifies sont identiques entre les profils fournis.
+- Les six EXE modifies partagent le meme format, mais les trois profils sans
+  6DOF utilisent maintenant une variante native distincte des trois profils
+  avec 6DOF.
 - Les six `wrapper.dll` sont identiques.
 - Les trois EXE Original sont identiques.
-- Les variantes avec/sans 6DOF ont actuellement le meme EXE, le meme wrapper et le meme `files.SFS` dans chaque version ; elles ne peuvent donc pas produire deux comportements differents avec les fichiers disponibles.
+- Les variantes avec/sans 6DOF partagent le wrapper et le `files.SFS` de chaque
+  version. Leur differentiel EXE historique est restaure et les cinq classes
+  6DOF sont presentes ; la distinction fonctionnelle doit encore etre validee
+  avec TrackIR.
 - Le `files.SFS` 4.09m ajoute des centaines de ressources et modifie des dizaines de contenus par rapport a 4.09b. Le dossier `4.09final...` est bien la cible reelle.
 
 ## Java, classes et compatibilite
@@ -498,7 +503,7 @@ maitrisables seront candidates a la v1.15.
 
 ## Programmes communautaires
 
-Les quatorze groupes de l'ancien `_OS_Programs` ont ete inventories. IL2 Connect et VoiceOverlay ont ete retires faute d'usage recent identifiable. Les outils conserves sont maintenant repartis entre `_Utilities` pour la creation, la configuration, la consultation et les services communautaires, `_Game_Enhancements` pour San FOV et `_Runtime_Addons` pour Gapa. Ce dernier classement reste provisoire jusqu'aux essais fonctionnels. Aucun outil n'est active automatiquement. Une integration future devra documenter pour chaque outil : version, source, licence, fichiers ecrits, droits requis, version IL-2 compatible, conflit potentiel avec `conf.ini` et procedure de retour arriere.
+Les quatorze groupes de l'ancien `_OS_Programs` ont ete inventories. IL2 Connect et VoiceOverlay ont ete retires faute d'usage recent identifiable. Les outils conserves sont maintenant repartis entre `_Utilities` pour la creation, la configuration, la consultation et les services communautaires, et `_Game_Enhancements` pour tout composant agissant sur le jeu ou en parallele pendant son execution. Ce dossier commun contient San FOV, Gapa et les profils AOC 1a. San FOV et Gapa ne sont pas actives automatiquement. Une integration future devra documenter pour chaque outil : version, source, licence, fichiers ecrits, droits requis, version IL-2 compatible, conflit potentiel avec `conf.ini` et procedure de retour arriere.
 
 Le forum [SAS 1946](https://www.sas1946.com/main/index.php) demeure une source communautaire majeure. Son [guide d'introduction au modding](https://www.sas1946.com/main/index.php?topic=50904.0) rappelle notamment le role de `air.ini`, `stationary.ini`, `technics.ini` et des fichiers de traduction. Ces informations communautaires doivent toujours etre recoupees avec les binaires et le profil 4.09m reellement livres.
 

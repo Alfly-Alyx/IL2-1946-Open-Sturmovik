@@ -24,10 +24,18 @@ if (-not $OutputPath) { $OutputPath = Join-Path $source 'manifests\test\v1.15-te
 
 $changedPaths = @()
 if (-not $OnlyIncludedPaths) {
-    $changedPaths = @(& git -C $source ls-files -m -d -o --exclude-standard -- 'Files' '_Game Switchers' 'Open_Sturmovik_Switcher.ps1')
+    $changedPaths = @(& git -C $source ls-files -m -d -o --exclude-standard -- `
+        'Files' '_Documentation' '_Documentations' '_Game Switchers' '_Game_Enhancements' `
+        '_Runtime_Addons' '_Utilities' 'Mod_AOC_Public' 'DeviceLink.txt' `
+        'Open_Sturmovik_Switcher.bat' 'Open_Sturmovik_Switcher.ps1')
     if ($LASTEXITCODE -ne 0) { throw 'Git ne peut pas enumerer les changements a synchroniser.' }
 }
 $forcedPaths = @($IncludePath | ForEach-Object { $_.Replace('\', '/').TrimStart('/') } | Where-Object { $_ })
+if (-not $OnlyIncludedPaths) {
+    # This old untracked override disappears from Git's changed-file list once
+    # removed, but still must be retired from earlier test installations.
+    $forcedPaths += 'Files/com/maddox/il2/objects/air/KB_29P.class'
+}
 if ($IncludeManagedPayloads) {
     $nuclearManifestPath = Join-Path $source 'manifests\effects\nuclear-blast-v1.15.json'
     if (-not (Test-Path -LiteralPath $nuclearManifestPath -PathType Leaf)) {
