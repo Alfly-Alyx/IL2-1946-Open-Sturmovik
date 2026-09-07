@@ -1,0 +1,17 @@
+* text=auto
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.prs text eol=crlf
+*.md text eol=lf
+*.rtf binary
+*.dll binary
+*.exe binary
+*.wav binary
+
+# Archives volumineuses : stockage Git LFS pour les nouveaux commits.
+*.SFS filter=lfs diff=lfs merge=lfs -text
+*.sfs filter=lfs diff=lfs merge=lfs -text
+*.7z filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text

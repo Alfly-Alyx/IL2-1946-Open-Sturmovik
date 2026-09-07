@@ -1,0 +1,13 @@
+  public com.maddox.il2.game.order.OrdersTree(boolean);
+    Code:
+       0: ldc           #1                  // String orders
+       3: invokestatic  #2                  // Method com/maddox/rts/HotKeyCmdEnv.setCurrentEnv:(Ljava/lang/String;)V
+       6: new           #3                  // class com/maddox/il2/game/order/OrdersTree$27
+       9: ldc           #4                  // String activate
+      12: ldc           #5                  // String 0
+      15: invokespecial #6                  // Method com/maddox/il2/game/order/OrdersTree$27."<init>":(Lcom/maddox/il2/game/order/OrdersTree;ZLjava/lang/String;Ljava/lang/String;)V
+      18: invokestatic  #7                  // Method com/maddox/rts/HotKeyCmdEnv.addCmd:(Lcom/maddox/rts/HotKeyCmd;)V
+      21: new           #8                  // class com/maddox/il2/game/order/OrdersTree$HotKeyCmdFire
+      24: ldc           #9                  // String order0
+      27: invokespecial #10                 // Method com/maddox/il2/game/order/OrdersTree$HotKeyCmdFire."<init>":(Lcom/maddox/il2/game/order/OrdersTree;Ljava/lang/String;Ljava/lang/String;II)V
+      30: invokestatic  #7                  // Method com/maddox/rts/HotKeyCmdEnv.addCmd:(Lcom/maddox/rts/HotKeyCmd;)V

@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "binary": {
+    "fileName": "il2setup.exe",
+    "fileVersion": "1.0.0.2",
+    "format": "PE32",
+    "machine": "i386",
+    "size": 225280,
+    "sha256": "CEEE5EFB50BF1BB9424865321C4D1A2D33A1EEBCB9A3719563174CDC32549928",
+    "signed": false
+  },
+  "inputs": {
+    "configuration": "conf.ini",
+    "presetCatalogue": "il2setup.ini",
+    "relativeTo": "game-directory"
+  },
+  "presetCatalogueEvidence": {
+    "size": 16168,
+    "sha256": "C5656BE666AFBEE705F9C3946F5B5012A4488403D5DEF2074DB6C82155D59C45",
+    "sectionCount": 40,
+    "profileCount": 39,
+    "categories": ["OpenGL", "DirectX", "Sound"],
+    "inheritanceKey": "Parent",
+    "unreferencedProfiles": ["ATIRAGEGL"]
+  },
+  "dialogs": {
+    "mainFrenchResourceId": 152,
+    "tabs": [
+      { "id": "driver", "label": "Pilote" },
+      { "id": "video", "label": "Vidéo", "resourceId": 143 },
+      { "id": "joystick", "label": "Joystick", "resourceId": 144 },
+      { "id": "sound", "label": "Son", "resourceId": 145 },
+      { "id": "network", "label": "Réseau", "resourceId": 146 }
+    ],
+    "advancedVideoResourceId": 142
+  },
+  "settings": [
+    {
+      "id": "general.intro",
+      "userLabel": "Voir l'introduction",
+      "section": "game",
+      "key": "Intro",
+      "type": "boolean",
+      "confidence": "proven"
+    },
+    {
+      "id": "general.locale",
+      "userLabel": "Langue de l'interface",
+      "section": "rts",
+      "key": "locale",
+      "type": "choice",
+      "values": ["en", "fr", "de", "ru", "ja", "pl", "lt", "hu", "cs"],
+      "writeStatus": "unresolved",
+      "confidence": "proven-read"
+    },
+    {
+      "id": "video.provider",
+      "userLabel": "Fournisseur graphique",
+      "section": "GLPROVIDER",
+      "key": "GL",
+      "type": "provider-reference",
+      "providerSection": "GLPROVIDERS",
+      "confidence": "proven"
+    },
+    {
+      "id": "video.fullscreen",
+      "userLabel": "Plein écran",
+      "section": "window",
+      "key": "FullScreen",
+      "type": "boolean",
+      "confidence": "proven"
+    },
+    {
+      "id": "video.change-screen-resolution",
+      "userLabel": "Changer le mode écran",
+      "section": "window",
+      "key": "ChangeScreenRes",
+      "type": "boolean",
+      "confidence": "strong"
+    },
+    {
+      "id": "video.mode",
+      "userLabel": "Mode vidéo",
+      "section": "window",
+      "keys": ["width", "height", "ColourBits"],
+      "type": "display-mode",
+      "confidence": "proven"
+    },
+    {
+      "id": "video.stencil",
+      "userLabel": "Utiliser le stencil buffer",
+      "section": "window",
+      "key": "StencilBits",
+      "type": "choice",
+      "values": { "off": 0, "on": 8 },
+      "confidence": "strong"
+    },
+    {
+      "id": "joystick.enabled",
+      "userLabel": "Utiliser un joystick",
+      "section": "rts",
+      "key": "joyUse",
+      "type": "boolean",
+      "confidence": "proven"
+    },
+    {
+      "id": "sound.profile",
+      "userLabel": "Profil sonore",
+      "section": "sound",
+      "key": "SoundSetupId",
+      "type": "profile-reference",
+      "providerCategory": "Sound",
+      "confidence": "proven"
+    },
+    {
+      "id": "sound.enabled",
+      "userLabel": "Activer le son",
+      "section": "sound",
+      "key": "SoundUse",
+      "type": "boolean",
+      "confidence": "proven"
+    },
+    {
+      "id": "sound.playback-channels",
+      "userLabel": "Lecture des canaux",
+      "section": "sound",
+      "key": "NumChannels",
+      "type": "choice",
+      "values": { "default": 0, "8": 1, "16": 2, "32": 3 },
+      "confidence": "inferred"
+    },
+    {
+      "id": "sound.speakers",
+      "userLabel": "Type de haut-parleurs",
+      "section": "sound",
+      "key": "Speakers",
+      "type": "choice",
+      "values": {
+        "default": 0,
+        "headphones": 1,
+        "desktop": 2,
+        "quadraphonic": 3,
+        "surround": 4
+      },
+      "confidence": "inferred"
+    },
+    {
+      "id": "sound.reverse-stereo",
+      "userLabel": "Inverser la stéréo",
+      "section": "sound",
+      "key": "SoundFlags.reversestereo",
+      "type": "boolean",
+      "confidence": "proven"
+    },
+    {
+      "id": "sound.hardware",
+      "userLabel": "Accélération matérielle",
+      "section": "sound",
+      "key": "SoundFlags.hardware",
+      "type": "boolean",
+      "confidence": "proven"
+    },
+    {
+      "id": "sound.mode",
+      "userLabel": "Mode du moteur sonore 3D",
+      "section": "sound",
+      "key": "SoundMode",
+      "type": "choice",
+      "values": { "default": 0, "minimal": 1, "balanced": 2, "full": 3 },
+      "confidence": "inferred"
+    },
+    {
+      "id": "sound.sampling-rate",
+      "userLabel": "Fréquence d'échantillonnage",
+      "section": "sound",
+      "key": "SamplingRate",
+      "type": "choice",
+      "visibleChoices": ["default", "22050", "44100"],
+      "observedProfileValues": [0, 2, 3],
+      "mappingStatus": "unresolved",
+      "confidence": "inferred"
+    },
+    {
+      "id": "sound.radio-chatter",
+      "userLabel": "Bavardage radio",
+      "section": "sound",
+      "key": "SoundFlags.UseRadioChatter",
+      "type": "boolean",
+      "confidence": "proven"
+    },
+    {
+      "id": "sound.auto-activation",
+      "userLabel": "Activation automatique",
+      "section": "sound",
+      "key": "SoundFlags.AutoActivation",
+      "type": "boolean",
+      "confidence": "proven"
+    },
+    {
+      "id": "network.speed",
+      "userLabel": "Type de connexion",
+      "section": "NET",
+      "key": "speed",
+      "type": "choice",
+      "values": {
+        "modem-9k6": 900,
+        "modem-14k4": 1500,
+        "modem-28k8": 3000,
+        "modem-56k": 5000,
+        "isdn": 10000,
+        "cable-xdsl": 25000,
+        "lan": 100000
+      },
+      "confidence": "inferred"
+    },
+    {
+      "id": "network.skin-download",
+      "userLabel": "Téléchargement des livrées",
+      "section": "NET",
+      "key": "SkinDownload",
+      "type": "boolean",
+      "confidence": "proven"
+    },
+    {
+      "id": "network.local-host",
+      "userLabel": "Adresse locale",
+      "section": "NET",
+      "key": "LocalHost",
+      "type": "ip-address",
+      "sensitive": true,
+      "confidence": "proven"
+    },
+    {
+      "id": "network.local-port",
+      "userLabel": "Port local",
+      "section": "NET",
+      "key": "LocalPort",
+      "type": "port",
+      "sensitive": true,
+      "confidence": "proven"
+    }
+  ],
+  "renderSections": ["Render_OpenGL", "Render_DirectX"],
+  "renderKeys": [
+    "VideoSetupId",
+    "TexMipFilter",
+    "TexCompress",
+    "TexFlags.UseDither",
+    "TexFlags.PolygonStipple",
+    "TexFlags.UseVertexArrays",
+    "TexFlags.DisableAPIExtensions",
+    "TexFlags.ARBMultitextureExt",
+    "TexFlags.TexEnvCombineExt",
+    "TexFlags.SecondaryColorExt",
+    "TexFlags.VertexArrayExt",
+    "TexFlags.ClipHintExt",
+    "TexFlags.UsePaletteExt",
+    "TexFlags.TexEnvCombine4NV",
+    "TexFlags.TexEnvCombineDot3",
+    "TexFlags.DepthClampNV",
+    "TexFlags.SeparateSpecular",
+    "TexFlags.TextureShaderNV",
+    "TexFlags.TexAnisotropicExt",
+    "TexFlags.TexCompressARBExt",
+    "ForceShaders1x",
+    "PolygonOffsetFactor",
+    "PolygonOffsetUnits"
+  ],
+  "soundKeys": [
+    "SoundSetupId",
+    "SoundUse",
+    "SoundEngine",
+    "Channels",
+    "NumChannels",
+    "Speakers",
+    "SoundFlags.reversestereo",
+    "SoundFlags.hardware",
+    "SoundFlags.Hardware",
+    "SoundMode",
+    "SamplingRate",
+    "SoundFlags.forceEAX1",
+    "SoundFlags.UseRadioChatter",
+    "SoundFlags.AutoActivation"
+  ],
+  "preserveUnlessProven": [
+    "window/DepthBits",
+    "window/SaveAspect",
+    "window/WideScreenFoV",
+    "NET/remoteHost",
+    "NET/remotePort",
+    "HotKey *",
+    "rts_joystick/*"
+  ]
+}
