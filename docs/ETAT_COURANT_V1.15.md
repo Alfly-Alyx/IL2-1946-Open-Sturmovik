@@ -49,14 +49,27 @@ puis as (prenom, nom, modele) restent separes. Les trois listes conservent
 exactement leurs entrees : active **535**, 4.08 **516**, 4.09 **535**.
 Voir `CLASSEMENT_AVIONS_V1.15.md` et `CW21_COCKPIT_ARMAMENT_V1.15.md`.
 
-Les prefixes Bereznyak-Isayev manquants devant BI-1 et BI-6 sont ajoutes ;
-les trois air.ini sont inchanges octet pour octet. Mustang Mk.III/Mk.IV et
-Curtiss Hawk/Tomahawk sont conserves apres verification historique.
+Les prefixes Bereznyak-Isayev manquants devant BI-1 et BI-6 sont ajoutes.
+La revue finale des noms corrige ensuite 188 libelles selon le concepteur
+d'origine, sans fabricant sous licence. Mustang Mk.III/Mk.IV et Tomahawk
+restent des noms nationaux distincts des designations US ; les Hawk suivent
+Model 75/81 puis leur variante. Les familles Li-2/L2D et Macchi sont
+repositionnees selon leur concepteur, sans changer aucune ligne technique.
+Les 27 cas Early/Late sont examines : Serie I ajoutee aux G.55, distinctions
+conservees quand aucun autre bloc exact n'est etabli. Les conflits IAR80early
+et Bf-109E-1_Late sont documentes, pas declares resolus.
+Voir `REVISION_NOMS_AVIONS_V1.15.md` et `manifests/aircraft/name-review-v1.15.json`.
 
 Le commit de consolidation `eb674095b014e117edbf5bb92eb1cc68d141a67c` a ete
 pousse et verifie sur GitHub `v1.15` avant ce test. Les correctifs du 7 septembre
 font l'objet d'une consolidation distincte : preparation hors jeu 6 PASS,
 copie de test synchronisee par `manifests/test/bi-cw21-dedup-v1.15.json`.
+
+La revue finale des noms passe ensuite 11 tests de regression et les six
+controles de preparation hors jeu. Ses cinq fichiers runtime sont synchronises
+par `manifests/test/aircraft-name-review-v1.15.json` ; sauvegarde recuperable
+`WIP/test-installations/sync-20260907-063226`. Aucun jeu lance, aucun profil
+joueur modifie ; l'ecart AOC connu de la copie de test reste preserve.
 
 **Prochaine sequence demandee :** validation des choix uniques et des deux
 armements CW-21, de la liste d'avions et du switcher. La discussion
@@ -156,8 +169,10 @@ du Gestionnaire des taches et les profils Original restent a qualifier.
   `WIP/test-plans/v1.15-documentations-name-20260906.json` ;
 - derniers plans appliques :
   `manifests/test/cw21-and-aircraft-presentation-v1.15.json`, puis
-  `manifests/test/aircraft-family-evolution-v1.15.json` ;
-- derniere sauvegarde recuperable : `WIP/test-installations/sync-20260906-221033` ;
+  `manifests/test/aircraft-family-evolution-v1.15.json`,
+  `manifests/test/bi-cw21-dedup-v1.15.json`, et enfin
+  `manifests/test/aircraft-name-review-v1.15.json` ;
+- derniere sauvegarde recuperable : `WIP/test-installations/sync-20260907-063226` ;
 - AOC du depot : 266 profils distribues ; AOC de la copie de test : cinq profils
   (`Defaut`, B-29, CW-21, Mosquito-FBMkVI et P-51D-20), chacun de 274 octets.
   Cet inventaire de test a ete preserve. Les trois classes fusionnees sont conformes ;

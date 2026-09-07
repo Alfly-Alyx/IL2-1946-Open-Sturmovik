@@ -1,5 +1,12 @@
 # Classement des avions v1.15
 
+Derniere passe : voir [la revision finale des noms](REVISION_NOMS_AVIONS_V1.15.md)
+du 7 septembre 2026 : 188 libelles corriges, concepteur d'origine sans
+fabricant sous licence, 27 cas Early/Late examines. Les 535/516/535 entrees
+techniques et les as sont conserves. Les paragraphes suivants decrivent les
+passes anterieures ; leurs anciennes empreintes ne remplacent pas celles
+du manifeste courant `manifests/aircraft/presentation-v1.15.json`.
+
 6 septembre 2026. Demande d'Alexis : conserver son classement et ses abreviations,
 ordonner les allies puis l'axe puis les as. Les avions ordinaires suivent
 constructeur, modele, variante ; les as suivent prenom, nom, modele d'avion.

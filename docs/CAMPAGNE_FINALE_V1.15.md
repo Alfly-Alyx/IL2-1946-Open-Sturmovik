@@ -25,6 +25,12 @@ Ordre convenu avec Alexis, sans lancement automatique :
    par variantes, Sea Hurricane, Typhoon, Tempest puis Sea Fury, ainsi que
    Spitfire puis Seafire. Verifier les prefixes Bereznyak-Isayev devant BI-1
    et BI-6, corriges apres le retour du 7 septembre.
+   Apres revision finale : concepteur d'origine sans fabricant sous licence,
+   Mustang Mk.III/IV distincts des P-51B/C/D, Model 75/81 Hawk, G.55 Serie I
+   Early/Late et Fokker Sarja 3 Early/Late. Verifier que les libelles restent
+   lisibles en largeur et que les deux P-51D de mods restent distinguables.
+   Li-2 rejoint Douglas cote Allies ; L2D reste cote Axe sous Douglas ;
+   Macchi est maintenant classe a M. Les noms des as restent inchanges.
    Les comptes hors jeu restent 535 / 516 / 535.
 3. **Switcher :** fermer completement le jeu avant chaque changement. Dans
    la copie de test seulement, exercer 4.08m, 4.09b et 4.09m, profils Original,
