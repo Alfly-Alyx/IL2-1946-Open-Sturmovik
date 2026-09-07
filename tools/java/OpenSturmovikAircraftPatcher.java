@@ -8,6 +8,8 @@ import jdk.internal.org.objectweb.asm.tree.AbstractInsnNode;
 import jdk.internal.org.objectweb.asm.tree.ClassNode;
 import jdk.internal.org.objectweb.asm.tree.InsnList;
 import jdk.internal.org.objectweb.asm.tree.InsnNode;
+import jdk.internal.org.objectweb.asm.tree.JumpInsnNode;
+import jdk.internal.org.objectweb.asm.tree.LabelNode;
 import jdk.internal.org.objectweb.asm.tree.FieldInsnNode;
 import jdk.internal.org.objectweb.asm.tree.LdcInsnNode;
 import jdk.internal.org.objectweb.asm.tree.MethodInsnNode;
@@ -25,6 +27,7 @@ public final class OpenSturmovikAircraftPatcher implements Opcodes {
     private static final String KB_29 = "com/maddox/il2/objects/air/KB_29";
     private static final String PROPERTY = "com/maddox/rts/Property";
     private static final String COCKPIT_B29 = "com.maddox.il2.objects.air.CockpitB29";
+    private static final String CW21_LIST = "com/maddox/il2/objects/air/OpenSturmovikCW21LoadoutList";
 
     private OpenSturmovikAircraftPatcher() {
     }
@@ -47,6 +50,9 @@ public final class OpenSturmovikAircraftPatcher implements Opcodes {
             cw21 ? "FlightModels/CW-21.fmd" : "FlightModels/B-29.fmd");
         Files.createDirectories(output.getParent());
         Files.write(output, patched);
+        if (cw21) {
+            Files.write(output.resolveSibling("OpenSturmovikCW21LoadoutList.class"), cw21UniqueList());
+        }
     }
 
     private static byte[] patchCockpit(byte[] source, String aircraft, String parent,
@@ -146,7 +152,7 @@ public final class OpenSturmovikAircraftPatcher implements Opcodes {
         InsnList code = method.instructions;
         String slot = "com/maddox/il2/objects/air/Aircraft$_WeaponSlot";
         String map = "com/maddox/util/HashMapInt";
-        String[] containers = {"java/util/ArrayList", map};
+        String[] containers = {CW21_LIST, map};
         for (int i = 0; i < containers.length; ++i) {
             code.add(new TypeInsnNode(NEW, containers[i]));
             code.add(new InsnNode(DUP));
@@ -200,6 +206,41 @@ public final class OpenSturmovikAircraftPatcher implements Opcodes {
         }
         code.add(new InsnNode(RETURN));
         return method;
+    }
+
+    private static byte[] cw21UniqueList() {
+        // Aircraft.weapons appends the stock cod names after class registration.
+        // Preserve its ArrayList contract, but suppress duplicate names only for
+        // this CW-21 property; do not patch the global aircraft loader.
+        ClassNode node = new ClassNode();
+        node.version = JAVA_13_CLASS_VERSION;
+        node.access = ACC_PUBLIC | ACC_FINAL | ACC_SUPER;
+        node.name = CW21_LIST;
+        node.superName = "java/util/ArrayList";
+        MethodNode constructor = new MethodNode(ACC_PUBLIC, "<init>", "()V", null, null);
+        constructor.instructions.add(new VarInsnNode(ALOAD, 0));
+        constructor.instructions.add(new MethodInsnNode(INVOKESPECIAL, node.superName, "<init>", "()V", false));
+        constructor.instructions.add(new InsnNode(RETURN));
+        node.methods.add(constructor);
+        MethodNode add = new MethodNode(ACC_PUBLIC, "add", "(Ljava/lang/Object;)Z", null, null);
+        LabelNode absent = new LabelNode();
+        add.instructions.add(new VarInsnNode(ALOAD, 0));
+        add.instructions.add(new VarInsnNode(ALOAD, 1));
+        add.instructions.add(new MethodInsnNode(INVOKEVIRTUAL, node.superName, "contains", "(Ljava/lang/Object;)Z", false));
+        add.instructions.add(new JumpInsnNode(IFEQ, absent));
+        add.instructions.add(new InsnNode(ICONST_0));
+        add.instructions.add(new InsnNode(IRETURN));
+        add.instructions.add(absent);
+        add.instructions.add(new VarInsnNode(ALOAD, 0));
+        add.instructions.add(new VarInsnNode(ALOAD, 1));
+        add.instructions.add(new MethodInsnNode(INVOKESPECIAL, node.superName, "add", "(Ljava/lang/Object;)Z", false));
+        add.instructions.add(new InsnNode(IRETURN));
+        node.methods.add(add);
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        node.accept(writer);
+        byte[] result = writer.toByteArray();
+        verifyBytecode(parse(result));
+        return result;
     }
 
     private static MethodNode cw21SoundDiagnostic(String parent) {

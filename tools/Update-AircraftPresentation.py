@@ -167,6 +167,8 @@ def tidy(key, value):
         value = 'Showa/Nakajima ' + value
     if key == 'U-2VS':
         value = 'Polikarpov ' + value
+    if key in ('BI-1', 'BI-6') and not value.startswith('Bereznyak-Isayev '):
+        value = 'Bereznyak-Isayev ' + value
     value = re.sub(r'^Sukho[iï]', 'Sukhoi', value, flags=re.I)
     value = re.sub(r'^Morane[ -]Saulnier', 'Morane-Saulnier', value, flags=re.I)
     value = re.sub(r'^Fokker DXXI\b', 'Fokker D.XXI', value)

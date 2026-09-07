@@ -264,8 +264,13 @@ if (-not (Test-Path -LiteralPath $cwManifestPath)) {
             $cwErrors.Add($entry.path)
         }
     }
-    if (-not $cwManifest.staticPassed -or @($cwManifest.activeFiles).Count -ne 170) {
+    if (-not $cwManifest.staticPassed -or @($cwManifest.activeFiles).Count -ne 171) {
         $cwErrors.Add('Inventaire ou audit 4.09m invalide')
+    }
+    $cwHelper = @($cwManifest.activeFiles | Where-Object { $_.path -eq $cwManifest.uniqueListHelper.path })
+    if ($cwManifest.uniqueListHelper.class -ne 'com.maddox.il2.objects.air.OpenSturmovikCW21LoadoutList' -or
+        $cwHelper.Count -ne 1 -or $cwHelper[0].sha256 -ne $cwManifest.uniqueListHelper.sha256) {
+        $cwErrors.Add('Classe de liste anti-doublons CW-21 absente ou incoherente')
     }
     $cwWeapons = [IO.File]::ReadAllText((Join-Path $root 'Files\i18n\weapons_ru.properties'))
     foreach ($key in @('CW-21.default','CW-21.2x303_2x50','CW-21.none')) {
@@ -275,7 +280,7 @@ if (-not (Test-Path -LiteralPath $cwManifestPath)) {
     }
 }
 if ($cwErrors.Count -eq 0) {
-    Add-Check 'Cockpit et deux armements CW-21' PASS 'Cinq classes, 165 ressources et les libelles d armement correspondent au candidat 4.09m ; essai en jeu requis.'
+    Add-Check 'Cockpit et deux armements CW-21' PASS 'Six classes dont la liste anti-doublons, 165 ressources et les libelles d armement correspondent au candidat 4.09m ; essai en jeu requis.'
 } else {
     Add-Check 'Cockpit et deux armements CW-21' FAIL ($cwErrors -join '; ')
 }

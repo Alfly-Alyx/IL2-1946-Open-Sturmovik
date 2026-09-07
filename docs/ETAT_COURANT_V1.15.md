@@ -1,6 +1,6 @@
 # Etat courant faisant autorite — Open Sturmovik v1.15
 
-Derniere consolidation : 6 septembre 2026.
+Derniere consolidation : 7 septembre 2026.
 
 ## Perimetre de travail
 
@@ -23,7 +23,7 @@ et miroirs verifiables. Aucun parametre physique n'est invente.
 
 ## Etat des dix points de `IL2.txt`
 
-### Derniere reprise, avant commit et push demandes par Alexis
+### Derniere reprise, apres les retours du test du 7 septembre
 
 Les retours utilisateur acquis sont : KB-29P fonctionnel, titre de fenetre
 `Open Sturmovik`, nuages WxTech juges magnifiques en DirectX et simulation
@@ -36,14 +36,30 @@ armements doivent encore etre selectionnes et essayes en vol. Le moteur trop
 discret reste non corrige : une trace du preset reel est prete au chargement
 du CW-21 ; aucun volume arbitraire n'a ete applique.
 
+Le test utilisateur du 7 septembre a revele des doublons `4 x .303` et
+`sans armement`. Le chargement tardif ajoutait ses deux choix d'origine a
+notre liste. Une liste anti-doublons propre au CW-21 corrige ce chemin ; le
+test renforce execute aussi le vrai bytecode d'import, avec entrees simulees.
+Voir `CW21_DUPLICATE_LOADOUTS_V1.15.md`. La confirmation visuelle et les tirs
+restent a obtenir, sans relancement automatique du jeu.
+
 Le classement Constructeur / Modele / Variante est termine, par familles et
 evolution, avec les derives navals apres leur famille terrestre. Allies, Axe
 puis as (prenom, nom, modele) restent separes. Les trois listes conservent
 exactement leurs entrees : active **535**, 4.08 **516**, 4.09 **535**.
 Voir `CLASSEMENT_AVIONS_V1.15.md` et `CW21_COCKPIT_ARMAMENT_V1.15.md`.
 
-**Prochaine sequence demandee :** commit et push sur `v1.15`, puis validation
-des deux armements CW-21, de la liste d'avions et du switcher. La discussion
+Les prefixes Bereznyak-Isayev manquants devant BI-1 et BI-6 sont ajoutes ;
+les trois air.ini sont inchanges octet pour octet. Mustang Mk.III/Mk.IV et
+Curtiss Hawk/Tomahawk sont conserves apres verification historique.
+
+Le commit de consolidation `eb674095b014e117edbf5bb92eb1cc68d141a67c` a ete
+pousse et verifie sur GitHub `v1.15` avant ce test. Les correctifs du 7 septembre
+font l'objet d'une consolidation distincte : preparation hors jeu 6 PASS,
+copie de test synchronisee par `manifests/test/bi-cw21-dedup-v1.15.json`.
+
+**Prochaine sequence demandee :** validation des choix uniques et des deux
+armements CW-21, de la liste d'avions et du switcher. La discussion
 de release vient ensuite ; aucun tag, publication ou installateur final n'est
 autorise par le seul push. Les autres points ouverts restent documentes.
 

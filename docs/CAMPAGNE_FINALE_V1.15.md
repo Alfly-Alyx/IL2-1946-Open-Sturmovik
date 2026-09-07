@@ -1,6 +1,6 @@
 # Campagne finale Open Sturmovik v1.15
 
-Derniere mise a jour : 6 septembre 2026.
+Derniere mise a jour : 7 septembre 2026.
 
 Cette campagne couvre exactement les dix points v1.15 de `IL2.txt`. Alexis a
 deja effectue des vols et confirme que la simulation continue a la perte de
@@ -13,7 +13,9 @@ Alexis et ne pas lui faire recommencer les essais acquis sans regression.
 Ordre convenu avec Alexis, sans lancement automatique :
 
 1. **CW-21 :** profil 8, ouvrir la liste de l'editeur de missions rapides
-   (pas `Mission simple`). Choisir `4 x .303`, charger, entrer au cockpit et
+   (pas `Mission simple`). Verifier exactement trois choix, chacun une seule
+   fois : `4 x .303`, `2 x .303 + 2 x .50`, `sans armement`.
+   Choisir `4 x .303`, charger, entrer au cockpit et
    tirer ; revenir au menu, choisir `2 x .303 + 2 x .50` et recommencer.
    Verifier que le choix persiste et que les deux chargements fonctionnent.
    Conserver la nouvelle trace `[OS CW-21]` du preset moteur pour poursuivre
@@ -21,7 +23,9 @@ Ordre convenu avec Alexis, sans lancement automatique :
 2. **Liste d'avions :** verifier Allies / Axe / as ; noms Constructeur Modele
    Variante et, pour les as, prenom nom modele. Controler notamment Hurricane
    par variantes, Sea Hurricane, Typhoon, Tempest puis Sea Fury, ainsi que
-   Spitfire puis Seafire. Les comptes hors jeu restent 535 / 516 / 535.
+   Spitfire puis Seafire. Verifier les prefixes Bereznyak-Isayev devant BI-1
+   et BI-6, corriges apres le retour du 7 septembre.
+   Les comptes hors jeu restent 535 / 516 / 535.
 3. **Switcher :** fermer completement le jeu avant chaque changement. Dans
    la copie de test seulement, exercer 4.08m, 4.09b et 4.09m, profils Original,
    modifies sans 6DOF et avec 6DOF. Verifier la version au menu, les noms
@@ -34,8 +38,9 @@ Discuter de la release apres ces trois validations. Aucun succes hors jeu
 ne remplace ces retours utilisateur ; les points ouverts de la campagne
 complete ci-dessous restent visibles.
 
-Derniere synchronisation : `manifests/test/aircraft-family-evolution-v1.15.json`,
-sauvegarde `WIP/test-installations/sync-20260906-221033`. Le dossier AOC de test
+Derniere synchronisation : `manifests/test/bi-cw21-dedup-v1.15.json`,
+sauvegarde `WIP/test-installations/sync-20260907-054352` (trois fichiers,
+correctif CW-21 et noms BI, aucun profil joueur modifie). Le dossier AOC de test
 contient desormais cinq profils, contre 266 dans le paquet ; cette difference
 reste l'unique FAIL de contenu accepte pour les essais cibles, pas pour la
 qualification de distribution.

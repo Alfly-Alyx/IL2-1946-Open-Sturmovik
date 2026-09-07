@@ -123,3 +123,43 @@ Le nouvel essai AAA/Wayback est reste inaccessible.
 Le classement est aussi synchronise vers la copie de test au moyen du plan
 `manifests/test/aircraft-family-evolution-v1.15.json`. Aucun jeu n'est lance
 pendant cette passe ; le rendu des menus reste a confirmer manuellement.
+
+## Retours du test du 7 septembre : BI et appellations historiques
+
+Alexis signale l'absence du constructeur devant BI-1 et BI-6. Le classement
+avait bien reconnu Bereznyak-Isayev dans ses commentaires, mais `tidy()` ne
+l'ajoutait pas aux libelles affiches. Les deux libelles sont corriges dans
+`Files/i18n/plane_ru.properties`, ainsi que cette regle du constructeur.
+Aucune date, entree technique, famille ou autre appellation n'est changee.
+
+Sauvegarde verifiee avant modification :
+`D:\Projets\GITHUB\#res\IL2 1946\Sauvegarde_avant_correctifs_BI_CW21_v1.15_20260907`.
+Les trois air.ini restent identiques octet pour octet (535 / 516 / 535).
+Le manifeste de presentation contient l'empreinte actuelle et renvoie a
+`manifests/aircraft/display-name-corrections-v1.15.json`. Le rapport de tri
+`family-evolution-v1.15.json` reste le resultat historique de la deuxieme passe,
+avant cette correction de deux noms ; ne pas le prendre pour l'empreinte
+actuelle du fichier de libelles ni rejouer le tri pour appliquer cette correction.
+
+Les noms questionnes sont conserves apres verification :
+
+- Bereznyak-Isayev est l'attribution usuelle aux concepteurs du BI ; le bureau
+  de construction est l'OKB-293 dirige par Bolkhovitinov, et non une entreprise
+  commerciale portant le nom des deux concepteurs.
+- N.A signifie North American. Mustang Mk.III est la designation RAF des
+  P-51B/C ; Mk.IV celle du P-51D (le P-51K est Mk.IVA).
+- Curtiss Hawk est authentique : Hawk 75 appartient a la famille P-36,
+  Hawk 81 a celle du premier P-40. Tomahawk est l'appellation britannique des
+  premiers P-40 ; elle ne doit pas etre remplacee arbitrairement par Warhawk.
+
+Sources locales prioritaires : `Packs/AAA_Community_Installer_ver_1_1/MODS/STD/i18n/plane_ru.properties`
+et `0 - ORIGINAL GAMES DO NOT USE/IL2-1946-Open-Sturmovik _1.1/Files/i18n/plane_ru.properties`
+dans les ressources IL2 1946 : les libelles Mustang et Curtiss y existaient
+deja ; les BI n'y avaient pas non plus de prefixe affiche.
+Recoupement historique : [Bereznyak-Isayev BI](https://en.wikipedia.org/wiki/Bereznyak-Isayev_BI-1),
+[variantes du Mustang](https://en.wikipedia.org/wiki/North_American_P-51_Mustang_variants),
+[Curtiss Hawk 75](https://en.wikipedia.org/wiki/Curtiss_P-36_Hawk),
+[US Navy, P-40B Tomahawk](https://www.history.navy.mil/content/history/museums/nnam/explore/collections/aircraft/p/p-40b-tomahawk.html)
+(ce dernier accessible par son extrait indexe, ouverture directe en echec).
+AAA/Wayback reste inaccessible lors du nouvel essai ; aucun contenu suppose.
+Mission4Today et SAS ont aussi ete consultes pour le CW-21, voir son diagnostic.

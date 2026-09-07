@@ -18,6 +18,8 @@ import zipfile
 ROOT = Path(__file__).resolve().parent.parent
 LIB = runpy.run_path(str(ROOT / 'tools/Audit-JavaClasses.py'))
 IDENTITY = runpy.run_path(str(ROOT / 'tools/Audit-AirIniAircraft.py'))['parse_class']
+SFS = runpy.run_path(str(ROOT / 'tools/Analyze-Sfs.py'))
+HELPER = 'com.maddox.il2.objects.air.OpenSturmovikCW21LoadoutList'
 parse = LIB['parse_class']
 ApiClass = LIB['ApiClass']
 COCKPITS = {
@@ -29,6 +31,10 @@ COCKPITS = {
 def sha(data):
     return hashlib.sha256(data).hexdigest().upper()
 
+def class_address(dotted_name):
+    value = SFS['finger_int'](ord(c) for c in f'sdw{dotted_name}cwc2w9e')
+    return f"{SFS['finger_string'](0, f'cod/{value}') & 0xFFFFFFFFFFFFFFFF:016X}"
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--donor-root', type=Path, required=True)
@@ -37,7 +43,7 @@ def main():
     p.add_argument('--source-archive', type=Path, default=Path('D:/Projets/GITHUB/#res/IL2 1946/Mods/Utilisés/Cockpit_CW-21_for409.zip'))
     p.add_argument('--apply', action='store_true')
     p.add_argument('--replace-previous-cw21', action='store_true',
-                   help='Allow replacing only the verified previous ineffective CW-21 patch, with backup.')
+                   help='Allow replacing only a hash-verified previous CW-21 patch, with backup.')
     args = p.parse_args()
     assert subprocess.check_output(['git', '-C', str(ROOT), 'branch', '--show-current'], text=True).strip() == 'v1.15'
     assert Path(subprocess.check_output(['git', '-C', str(ROOT), 'rev-parse', '--show-toplevel'], text=True).strip()).resolve() == ROOT
@@ -56,12 +62,16 @@ def main():
                     str(ROOT / 'tools/java/TestCW21Loadouts.java')], check=True)
     patched = build / 'CW_21.class'
     subprocess.run(['java', *exports, '-cp', str(build), 'OpenSturmovikAircraftPatcher', str(stock), str(patched), 'CW-21'], check=True)
-    subprocess.run(['java', *exports, '-cp', str(build), 'TestCW21Loadouts', str(patched)], check=True)
+    helper = build / 'OpenSturmovikCW21LoadoutList.class'
+    assert class_address('com.maddox.il2.objects.air.CW_21') == 'F00C363EBB3865E8'
+    helper_path = 'Files/' + class_address(HELPER)
+    subprocess.run(['java', *exports, '-cp', str(build), 'TestCW21Loadouts', str(patched),
+                    str(ROOT / 'Files/4B598398AD1D180C'), str(helper)], check=True)
     effective_aircraft = parse((ROOT / 'Files/4B598398AD1D180C').read_bytes())
     registration = [m for m in effective_aircraft.methods if m.name == 'weaponsRegister']
     assert len(registration) == 1 and registration[0].code_blocks == [b'\xb1'], \
         'Effective Aircraft.weaponsRegister is no longer the audited empty method'
-    candidates = {'Files/F00C363EBB3865E8': patched}
+    candidates = {'Files/F00C363EBB3865E8': patched, helper_path: helper}
     for address, expected in COCKPITS.items():
         source = donor / address
         assert sha(source.read_bytes()) == expected, str(source)
@@ -75,7 +85,7 @@ def main():
     assert sha(args.source_archive.read_bytes()) == 'CB6FC40E2ACEFC8F479B00AC5E07FCFAF400633B3882B155AFE7736C6C451DB3'
     with zipfile.ZipFile(args.source_archive) as archive:
         for relative, source in candidates.items():
-            if relative == 'Files/F00C363EBB3865E8':
+            if relative in ('Files/F00C363EBB3865E8', helper_path):
                 continue
             member = donor.name + '/' + source.relative_to(donor).as_posix()
             assert source.read_bytes() == archive.read(member), member
@@ -155,8 +165,10 @@ def main():
         'sourceArchiveSha256': 'CB6FC40E2ACEFC8F479B00AC5E07FCFAF400633B3882B155AFE7736C6C451DB3',
         'sourceStockAircraftSha256': sha(stock.read_bytes()),
         'excludedDonorClasses': ['F00C363EBB3865E8', '723373B2DBC01626'],
-        'strategy': 'Four authentic cockpit classes and assets; stock 4.09m CW_21 gains cockpitClass, explicit weaponsList/weaponsMap registration and one resolved-audio diagnostic line per aircraft load. Stock FMD, parent, paint and default armament retained.',
-        'registrationContractTest': 'PASS: executed emitted method with API doubles; not an in-game test',
+        'strategy': 'Four authentic cockpit classes and assets; stock 4.09m CW_21 gains cockpitClass, explicit weaponsList/weaponsMap registration, a CW-21-only unique ArrayList helper and one resolved-audio diagnostic line per aircraft load. Stock FMD, parent, paint and default armament retained; global Aircraft loader unchanged.',
+        'registrationContractTest': 'PASS: emitted registration plus actual effective Aircraft.weapons/getWeaponsRegistered bytecode, with API/input doubles; repeated late imports preserve exactly three choices and all slots. Not an in-game or SFS-decryption test.',
+        'uniqueListHelper': {'class': HELPER, 'path': helper_path, 'sha256': sha(helper.read_bytes())},
+        'effectiveAircraftSha256': sha((ROOT / 'Files/4B598398AD1D180C').read_bytes()),
         'effectiveWeaponsRegisterIsEmpty': True,
         'soundDiagnosis': 'Resolved soundName/startStopName/propName logged; no audio gain or physics change; listening test pending',
         'armament': {'default': ['MGunBrowning303ki 300'] * 4,
@@ -179,11 +191,15 @@ def main():
         for relative, source in candidates.items():
             target = ROOT / relative
             if target.exists() and sha(target.read_bytes()) != sha(source.read_bytes()):
-                previous = '8B97C4067A78619DD19023806AF8A6CE7F736CBE3ED756922DE6071688F4FF2B'
+                previous_versions = {
+                    '8B97C4067A78619DD19023806AF8A6CE7F736CBE3ED756922DE6071688F4FF2B': 'cw21-before-direct-registration',
+                    '2BF3C9625781A7116423BDD18764CAA3AA156C6C76DE20EB24F4A447DB87EE27': 'cw21-before-unique-loadouts',
+                }
+                previous = sha(target.read_bytes())
                 if not (args.replace_previous_cw21 and relative == 'Files/F00C363EBB3865E8'
-                        and sha(target.read_bytes()) == previous):
+                        and previous in previous_versions):
                     raise RuntimeError('Different existing file preserved: ' + relative)
-                saved = ROOT / 'build/preservation/cw21-before-direct-registration' / target.name
+                saved = ROOT / 'build/preservation' / previous_versions[previous] / target.name
                 saved.parent.mkdir(parents=True, exist_ok=True)
                 if saved.exists() and sha(saved.read_bytes()) != previous:
                     raise RuntimeError('Conflicting backup preserved: ' + str(saved))

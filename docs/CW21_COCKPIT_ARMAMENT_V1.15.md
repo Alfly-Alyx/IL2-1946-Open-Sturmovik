@@ -127,7 +127,7 @@ publication du cockpit SAS citee plus haut (acces direct actuellement en echec,
 archive locale conservee), AAA/Wayback (nouvel essai inaccessible, aucun contenu
 suppose). Le guide 4.10 justifie les options, pas leur compatibilite 4.09m.
 
-### Etat de la copie de test apres installation
+### Historique : copie de test du 6 septembre apres installation
 
 Le correctif actif et celui du jeu de test ont la meme empreinte :
 `2BF3C9625781A7116423BDD18764CAA3AA156C6C76DE20EB24F4A447DB87EE27`.
@@ -143,3 +143,11 @@ L'outil de capture Windows a echoue deux fois avec
 Aucune liste ni mission n'a pu etre observee ; cela ne constitue pas une
 validation visuelle. Le processus lance pour cet essai est referme afin de ne
 pas le laisser consommer du CPU. Aucun gain sonore n'a ete modifie.
+
+## Correctif suivant : doublons signales le 7 septembre
+
+Le candidat `2BF3C962...` ci-dessus est remplace apres le retour utilisateur
+sur les choix doubles. Voir `CW21_DUPLICATE_LOADOUTS_V1.15.md` : cause dans
+l'import tardif des choix d'origine, test negatif reproductible, correctif
+de liste limite au CW-21 et nouvelles empreintes. L'affichage et les tirs
+restent a valider en jeu ; le son n'a pas ete modifie.
