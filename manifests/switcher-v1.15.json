@@ -2,21 +2,57 @@
   "schemaVersion": 1,
   "release": "1.15",
   "entryPoint": "Open_Sturmovik_Switcher.bat",
-  "gui": "_Game Switchers/Open_Sturmovik_Switcher.hta",
-  "hashChecker": "_Game Switchers/Open_Sturmovik_Hash_Check.bat",
-  "desktopIcon": "_Game Switchers/Open_Sturmovik_Switcher.ico",
+  "gui": null,
+  "guiMode": "embedded-hta-in-entry-point",
+  "hashChecker": null,
+  "hashCheckerMode": "embedded-sha256-validation",
+  "resourceDirectory": "_Game Switcher/Resources",
+  "desktopIcon": "_Game Switcher/Resources/Open_Sturmovik_Switcher_Original.ico",
+  "icons": [
+    {
+      "path": "_Game Switcher/Resources/Open_Sturmovik_Switcher_Original.ico",
+      "role": "active-original-switcher-design",
+      "size": 270398,
+      "sha256": "CCC954FA9D9BB38549F9D26335634914A26B9FFA576CF8729DD934EFAB8AA38E"
+    },
+    {
+      "path": "_Game Switcher/Resources/Open_Sturmovik_Switcher.ico",
+      "role": "retained-v1.15-alternative",
+      "size": 177146,
+      "sha256": "D2D60AAA4B5054AA3949C4A8D8B21F3C6A19F8DB9262B9488D9C5906BE6198C9"
+    },
+    {
+      "path": "_Game Switcher/Resources/IL2-2001-Demo__icone-extraite-executable.ico",
+      "role": "retained-2001-demo-alternative",
+      "size": 766,
+      "sha256": "9E649EC57395E136682655A3EDCFD5CD8DCD6C23A0B1FC97775AD007721A740D"
+    }
+  ],
+  "referenceArtwork": {
+    "path": "_Game Switcher/Resources/OFFICIEL-Steam__IL2-1946__icone-communaute.jpg",
+    "size": 823,
+    "sha256": "0DA97532DD799185C259CFEBFD1635CD3AD24EA662BB909770DFA3C7F170544F"
+  },
+  "background": {
+    "path": "_Game Switcher/Resources/Open_Sturmovik_Switcher_Background.jpg",
+    "size": 247787,
+    "sha256": "B4E3294816632A7F2A39530C644C0DB9CBD9CC56CB630EDA9711F4E23CA981C5"
+  },
   "defaultProfile": 8,
-  "status": "offline-integrity-and-transaction-passed-runtime-pending",
+  "status": "single-batch-switcher-offline-verified-runtime-pending",
   "rules": {
     "gameMustBeClosed": true,
     "sourceHashesCheckedBeforeWrite": true,
     "transactionalBackupAndRollback": true,
     "activeFilesVerifiedAfterCopy": true,
     "originalProfilesRemoveWrapper": true,
-    "pure408OriginalRemoves409Archives": true,
+    "all408ProfilesRemove409Archives": true,
     "moddedExecutablesUseOpenSturmovikVersionInfo": true,
     "originalExecutablesRemainByteIdentical": true,
-    "moddedWindowTitleUsesLooseConfigClass": true
+    "moddedWindowTitleUsesLooseConfigClass": true,
+    "activeProfileStateIncludedInRollback": true,
+    "keepHudDetectedFromActualFile": true,
+    "rejectAbandonedTransaction": true
   },
   "branding": {
     "windowTitleClass": {
@@ -62,44 +98,219 @@
   ],
   "payloads": {
     "4.08m": [
-      { "file": "il2_core.dll", "size": 1388544, "sha256": "AE1B06F2D4F6CC14A535FC47DF66D53A3DB1AE2BBA49A20F94BD109A03E6CE9C" },
-      { "file": "il2_corep4.dll", "size": 1470464, "sha256": "9D7D89C664D490EDBED97836FA810BB88BBAFA7D37A7B8D1DC76D15050F79A15" },
-      { "file": "mg_snd.dll", "size": 311296, "sha256": "A7DA1C4EA4E6A9239CFE2176D1DD3436EFD2D90D41DA3E9ACEC49507C76CE37C" },
-      { "file": "mg_snd_sse.dll", "size": 356352, "sha256": "3FF5D0CDD6AD7571A8E5453D882E671190B03EE340DE525D37FB25A3D487B93F" }
+      {
+        "file": "il2_core.dll",
+        "size": 1388544,
+        "sha256": "AE1B06F2D4F6CC14A535FC47DF66D53A3DB1AE2BBA49A20F94BD109A03E6CE9C"
+      },
+      {
+        "file": "il2_corep4.dll",
+        "size": 1470464,
+        "sha256": "9D7D89C664D490EDBED97836FA810BB88BBAFA7D37A7B8D1DC76D15050F79A15"
+      },
+      {
+        "file": "mg_snd.dll",
+        "size": 311296,
+        "sha256": "A7DA1C4EA4E6A9239CFE2176D1DD3436EFD2D90D41DA3E9ACEC49507C76CE37C"
+      },
+      {
+        "file": "mg_snd_sse.dll",
+        "size": 356352,
+        "sha256": "3FF5D0CDD6AD7571A8E5453D882E671190B03EE340DE525D37FB25A3D487B93F"
+      }
     ],
     "4.09b": [
-      { "file": "fb_3do19.SFS", "size": 40155141, "sha256": "F4EBF76EA04511E57D75AC9F7D3E68953A6D85EF5093AFE35486DDBC10D81007" },
-      { "file": "fb_3do20.SFS", "size": 2020049, "sha256": "02FB0095B9FE4882FB17054F4F11460D49F61B80AF78F9B6EBAF687251E4E283" },
-      { "file": "fb_maps15.SFS", "size": 201152566, "sha256": "35742CA5476DA955C6B544303739F4E3F4BFD54D6EF9505B993BBA4ACC7C2522" },
-      { "file": "il2_core.dll", "size": 1544192, "sha256": "F8DDE5FC6C10BCA94481875BBAA4DA07F408CD5168E7E7DEECDD0B08C0B1992D" },
-      { "file": "il2_corep4.dll", "size": 1626112, "sha256": "B5D014D457107EFB86F740055692A5923C0E6A14B4C147CD7965EA007101277B" },
-      { "file": "mg_snd.dll", "size": 311296, "sha256": "A7DA1C4EA4E6A9239CFE2176D1DD3436EFD2D90D41DA3E9ACEC49507C76CE37C" },
-      { "file": "mg_snd_sse.dll", "size": 356352, "sha256": "3FF5D0CDD6AD7571A8E5453D882E671190B03EE340DE525D37FB25A3D487B93F" }
+      {
+        "file": "fb_3do19.SFS",
+        "size": 40155141,
+        "sha256": "F4EBF76EA04511E57D75AC9F7D3E68953A6D85EF5093AFE35486DDBC10D81007"
+      },
+      {
+        "file": "fb_3do20.SFS",
+        "size": 2020049,
+        "sha256": "02FB0095B9FE4882FB17054F4F11460D49F61B80AF78F9B6EBAF687251E4E283"
+      },
+      {
+        "file": "fb_maps15.SFS",
+        "size": 201152566,
+        "sha256": "35742CA5476DA955C6B544303739F4E3F4BFD54D6EF9505B993BBA4ACC7C2522"
+      },
+      {
+        "file": "il2_core.dll",
+        "size": 1544192,
+        "sha256": "F8DDE5FC6C10BCA94481875BBAA4DA07F408CD5168E7E7DEECDD0B08C0B1992D"
+      },
+      {
+        "file": "il2_corep4.dll",
+        "size": 1626112,
+        "sha256": "B5D014D457107EFB86F740055692A5923C0E6A14B4C147CD7965EA007101277B"
+      },
+      {
+        "file": "mg_snd.dll",
+        "size": 311296,
+        "sha256": "A7DA1C4EA4E6A9239CFE2176D1DD3436EFD2D90D41DA3E9ACEC49507C76CE37C"
+      },
+      {
+        "file": "mg_snd_sse.dll",
+        "size": 356352,
+        "sha256": "3FF5D0CDD6AD7571A8E5453D882E671190B03EE340DE525D37FB25A3D487B93F"
+      }
     ],
     "4.09m": [
-      { "file": "fb_3do19.SFS", "size": 187104836, "sha256": "4527FC779F188364E2FC8739E53D74C85B3A47471B01F169586E4F1AFBB6B670" },
-      { "file": "fb_3do20.SFS", "size": 2020049, "sha256": "02FB0095B9FE4882FB17054F4F11460D49F61B80AF78F9B6EBAF687251E4E283" },
-      { "file": "fb_maps15.SFS", "size": 343180796, "sha256": "AF87651FBCA2450A57735ED2013F12FC9F307ABFB8B2913F22EB5543322D8AD9" },
-      { "file": "il2_core.dll", "size": 1552384, "sha256": "3145F63A53061C40604B57DED2F96313559BD69692123E7479D8C409339ECEB3" },
-      { "file": "il2_corep4.dll", "size": 1634304, "sha256": "0B4CD130051E7D853219480606A1508C0FBB3C7FD29FA8AF87BB72BBD37BB979" },
-      { "file": "mg_snd.dll", "size": 380928, "sha256": "2FBE1180129806CC978A48879969E592918EA26C42EB235D62FC874BAD886421" },
-      { "file": "mg_snd_sse.dll", "size": 380928, "sha256": "FDDD6924853306C94C9B8844703D4718F45CF22828975406E3C67DE40DFDE1C4" }
+      {
+        "file": "fb_3do19.SFS",
+        "size": 187104836,
+        "sha256": "4527FC779F188364E2FC8739E53D74C85B3A47471B01F169586E4F1AFBB6B670"
+      },
+      {
+        "file": "fb_3do20.SFS",
+        "size": 2020049,
+        "sha256": "02FB0095B9FE4882FB17054F4F11460D49F61B80AF78F9B6EBAF687251E4E283"
+      },
+      {
+        "file": "fb_maps15.SFS",
+        "size": 343180796,
+        "sha256": "AF87651FBCA2450A57735ED2013F12FC9F307ABFB8B2913F22EB5543322D8AD9"
+      },
+      {
+        "file": "il2_core.dll",
+        "size": 1552384,
+        "sha256": "3145F63A53061C40604B57DED2F96313559BD69692123E7479D8C409339ECEB3"
+      },
+      {
+        "file": "il2_corep4.dll",
+        "size": 1634304,
+        "sha256": "0B4CD130051E7D853219480606A1508C0FBB3C7FD29FA8AF87BB72BBD37BB979"
+      },
+      {
+        "file": "mg_snd.dll",
+        "size": 380928,
+        "sha256": "2FBE1180129806CC978A48879969E592918EA26C42EB235D62FC874BAD886421"
+      },
+      {
+        "file": "mg_snd_sse.dll",
+        "size": 380928,
+        "sha256": "FDDD6924853306C94C9B8844703D4718F45CF22828975406E3C67DE40DFDE1C4"
+      }
     ]
   },
   "profiles": [
-    { "number": 1, "version": "4.08m", "mode": "original", "folder": "4.08 Mods OFF (Original)", "payload": "4.08m", "exeSha256": "9ACE9A542AC7203D8A66961570B6854C11FB0BF721F0234DA9D6095D69D2525C", "filesSha256": "7F872ADAB1845E2837A2EE43FD378372B9DBAF01819C8F3BA7413B04BEFEAFD0", "remove": ["wrapper.dll", "fb_3do19.SFS", "fb_3do20.SFS", "fb_maps15.SFS"] },
-    { "number": 2, "version": "4.08m", "mode": "open-sturmovik-no-6dof", "folder": "4.08 Mod ON (NO 6DOF)", "payload": "4.09b", "exeSha256": "70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3", "filesSha256": "D8A7DAD54CBA505B5E7B2C394491701A705A86D20091D3746F399D8A08049986", "compatibility": "historical AAA hybrid: 4.08 network/mod profile on the 4.09b resource payload" },
-    { "number": 3, "version": "4.08m", "mode": "open-sturmovik-6dof", "folder": "4.08 Mods 6DOF ON", "payload": "4.09b", "exeSha256": "F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E", "filesSha256": "D8A7DAD54CBA505B5E7B2C394491701A705A86D20091D3746F399D8A08049986", "compatibility": "historical AAA hybrid: 4.08 network/mod profile on the 4.09b resource payload" },
-    { "number": 4, "version": "4.09b", "mode": "original", "folder": "4.09 Mods OFF (Original)", "payload": "4.09b", "exeSha256": "9ACE9A542AC7203D8A66961570B6854C11FB0BF721F0234DA9D6095D69D2525C", "filesSha256": "DD9A1C7CFD51533560FC349A5B09DE360126F733FB2765F099A01CE6B178CFA8", "remove": ["wrapper.dll"] },
-    { "number": 5, "version": "4.09b", "mode": "open-sturmovik-no-6dof", "folder": "4.09 Mods ON (NO 6DOF)", "payload": "4.09b", "exeSha256": "70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3", "filesSha256": "99CF133FA20A1A117C60E85D510E443693AB15B860314CAE02684069D3C79D17" },
-    { "number": 6, "version": "4.09b", "mode": "open-sturmovik-6dof", "folder": "4.09 Mods 6DOF ON", "payload": "4.09b", "exeSha256": "F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E", "filesSha256": "99CF133FA20A1A117C60E85D510E443693AB15B860314CAE02684069D3C79D17" },
-    { "number": 7, "version": "4.09m", "mode": "original", "folder": "4.09finalModsOFF(Original)", "payload": "4.09m", "exeSha256": "9ACE9A542AC7203D8A66961570B6854C11FB0BF721F0234DA9D6095D69D2525C", "filesSha256": "9F7D136C586EB3FCD258C5C000F34951D410A0236934F22ABA2516637874B095", "remove": ["wrapper.dll"] },
-    { "number": 8, "version": "4.09m", "mode": "open-sturmovik-no-6dof", "folder": "4.09finalModsON(No-6DoF)", "payload": "4.09m", "exeSha256": "70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3", "filesSha256": "18F3C5471D93642916394DE53B482051106E024DDAC8124C7B0D700D1796B05A" },
-    { "number": 9, "version": "4.09m", "mode": "open-sturmovik-6dof", "folder": "4.09final_ModsON+6DoF", "payload": "4.09m", "exeSha256": "F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E", "filesSha256": "18F3C5471D93642916394DE53B482051106E024DDAC8124C7B0D700D1796B05A" }
+    {
+      "number": 1,
+      "version": "4.08m",
+      "mode": "original",
+      "folder": "4.08 Mods OFF (Original)",
+      "payload": "4.08m",
+      "exeSha256": "9ACE9A542AC7203D8A66961570B6854C11FB0BF721F0234DA9D6095D69D2525C",
+      "filesSha256": "7F872ADAB1845E2837A2EE43FD378372B9DBAF01819C8F3BA7413B04BEFEAFD0",
+      "remove": [
+        "wrapper.dll",
+        "fb_3do19.SFS",
+        "fb_3do20.SFS",
+        "fb_maps15.SFS"
+      ],
+      "airRegistry": "4.08m"
+    },
+    {
+      "number": 2,
+      "version": "4.08m",
+      "mode": "open-sturmovik-no-6dof",
+      "folder": "4.08 Mod ON (NO 6DOF)",
+      "payload": "4.08m",
+      "exeSha256": "70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3",
+      "filesSha256": "D8A7DAD54CBA505B5E7B2C394491701A705A86D20091D3746F399D8A08049986",
+      "remove": [
+        "fb_3do19.SFS",
+        "fb_3do20.SFS",
+        "fb_maps15.SFS"
+      ],
+      "airRegistry": "4.08m"
+    },
+    {
+      "number": 3,
+      "version": "4.08m",
+      "mode": "open-sturmovik-6dof",
+      "folder": "4.08 Mods 6DOF ON",
+      "payload": "4.08m",
+      "exeSha256": "F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E",
+      "filesSha256": "D8A7DAD54CBA505B5E7B2C394491701A705A86D20091D3746F399D8A08049986",
+      "remove": [
+        "fb_3do19.SFS",
+        "fb_3do20.SFS",
+        "fb_maps15.SFS"
+      ],
+      "airRegistry": "4.08m"
+    },
+    {
+      "number": 4,
+      "version": "4.09b",
+      "mode": "original",
+      "folder": "4.09 Mods OFF (Original)",
+      "payload": "4.09b",
+      "exeSha256": "9ACE9A542AC7203D8A66961570B6854C11FB0BF721F0234DA9D6095D69D2525C",
+      "filesSha256": "DD9A1C7CFD51533560FC349A5B09DE360126F733FB2765F099A01CE6B178CFA8",
+      "remove": [
+        "wrapper.dll"
+      ],
+      "airRegistry": "4.09b"
+    },
+    {
+      "number": 5,
+      "version": "4.09b",
+      "mode": "open-sturmovik-no-6dof",
+      "folder": "4.09 Mods ON (NO 6DOF)",
+      "payload": "4.09b",
+      "exeSha256": "70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3",
+      "filesSha256": "99CF133FA20A1A117C60E85D510E443693AB15B860314CAE02684069D3C79D17",
+      "airRegistry": "4.09b"
+    },
+    {
+      "number": 6,
+      "version": "4.09b",
+      "mode": "open-sturmovik-6dof",
+      "folder": "4.09 Mods 6DOF ON",
+      "payload": "4.09b",
+      "exeSha256": "F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E",
+      "filesSha256": "99CF133FA20A1A117C60E85D510E443693AB15B860314CAE02684069D3C79D17",
+      "airRegistry": "4.09b"
+    },
+    {
+      "number": 7,
+      "version": "4.09m",
+      "mode": "original",
+      "folder": "4.09finalModsOFF(Original)",
+      "payload": "4.09m",
+      "exeSha256": "9ACE9A542AC7203D8A66961570B6854C11FB0BF721F0234DA9D6095D69D2525C",
+      "filesSha256": "9F7D136C586EB3FCD258C5C000F34951D410A0236934F22ABA2516637874B095",
+      "remove": [
+        "wrapper.dll"
+      ],
+      "airRegistry": "4.09m"
+    },
+    {
+      "number": 8,
+      "version": "4.09m",
+      "mode": "open-sturmovik-no-6dof",
+      "folder": "4.09finalModsON(No-6DoF)",
+      "payload": "4.09m",
+      "exeSha256": "70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3",
+      "filesSha256": "18F3C5471D93642916394DE53B482051106E024DDAC8124C7B0D700D1796B05A",
+      "airRegistry": "4.09m"
+    },
+    {
+      "number": 9,
+      "version": "4.09m",
+      "mode": "open-sturmovik-6dof",
+      "folder": "4.09final_ModsON+6DoF",
+      "payload": "4.09m",
+      "exeSha256": "F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E",
+      "filesSha256": "18F3C5471D93642916394DE53B482051106E024DDAC8124C7B0D700D1796B05A",
+      "airRegistry": "4.09m"
+    }
   ],
   "runtimeChecks": [
     "Each profile reaches the menu and reports the selected version.",
-    "Profiles 2 and 3 are tested only with maps and content compatible with their historical AAA configuration.",
+    "Profiles 1, 2 and 3 use the exact 4.08m core and sound DLL payload and remove the three later 4.09 archives.",
     "Profiles 8 and 9 are compared with TrackIR, then profile 8 is restored.",
     "Switching to each Original profile removes wrapper.dll and does not load the loose mod tree.",
     "A failed replacement restores the complete previous file set."
@@ -115,5 +326,67 @@
     "result": "PASS",
     "abandonedTransactions": 0,
     "gameLaunched": false
+  },
+  "airRegistries": {
+    "4.08m": {
+      "path": "_Game Switcher/408m air.ini/Air.ini/air.ini",
+      "sha256": "C7DC944BFFCF1DD2E0D12382894F6193CA23D6F72D8F92478A92A708194C5BA3",
+      "entries": 516
+    },
+    "4.09b": {
+      "path": "_Game Switcher/409b air.ini/Air.ini/air.ini",
+      "sha256": "9A7ED6510B2569F20EBFC57AB47B06645C39E3766361B5A5C31C0C6A55337B39",
+      "entries": 516,
+      "derivedFrom": "4.09m presentation restricted to the historical 4.08/4.09b aircraft key set",
+      "excluded409mEntries": [
+        "CW-21",
+        "DXXI_DK",
+        "DXXI_DU",
+        "I-15bis",
+        "I-15bis_Skis",
+        "I-16type5_Skis",
+        "I-16type5_SPB",
+        "I-16type6",
+        "I-16type6_Skis",
+        "AviaB534",
+        "G-55",
+        "G-55-Late",
+        "DXXI_SARJA3_EARLY",
+        "DXXI_SARJA3_LATE",
+        "DXXI_SARJA4",
+        "S-328",
+        "RE-2000",
+        "SM-79",
+        "Sarvanto_DXXI"
+      ]
+    },
+    "4.09m": {
+      "path": "_Game Switcher/409m air.ini/Air.ini/air.ini",
+      "sha256": "71B25E4AD1880ADBB29440BBBD791955DDFC61CEB9DEA9AFCE37B72EA628617F",
+      "entries": 535
+    }
+  },
+  "entryPointSha256": "761B2BF4CF9EAB2B73DF3AAC8EFE708B1015256B1A54FD462C563C7DB17F12DE",
+  "latestVerification": {
+    "date": "2026-09-07",
+    "fileTransactionsPassed": 18,
+    "keepHudChecks": [
+      "immersion-preserved-9-to-8",
+      "standard-preserved-9-to-8"
+    ],
+    "lateStateWriteFailureRollback": "PASS - all fourteen files restored including active-profile state",
+    "abandonedTransactionRejected": true,
+    "protectedFilesUnchanged": true,
+    "normalTransactionReport": "WIP/test-installations/switcher-matrix-20260907-210358",
+    "focusedRollbackReport": "WIP/test-installations/switcher-rollback-20260907-213307/result.json",
+    "singleBatch": true,
+    "embeddedGuiSelectionTests": 18,
+    "embeddedGuiStateRestorationTests": 18,
+    "windowsLineEndingsRequired": true,
+    "gameLaunched": false,
+    "capturesLaunched": false,
+    "guiLaunched": false,
+    "stockHudPolicy": "stock profiles force the original HUD; standard and immersion remain selectable for modded profiles",
+    "runtimeValidation": "pending"
   }
 }

@@ -64,7 +64,7 @@ if ($unexpectedRootSfs.Count -ne 0) {
 }
 
 $payloadDirectories = @(
-    '_Game Switchers',
+    '_Game Switcher',
     '_Documentations',
     '_Utilities',
     '_Game_Enhancements',
@@ -86,11 +86,11 @@ foreach ($name in $payloadDirectories) {
 }
 
 $profile9 = @(
-    '_Game Switchers\4.09final_ModsON+6DoF\il2fb.exe',
-    '_Game Switchers\4.09final_ModsON+6DoF\files.SFS',
-    '_Game Switchers\4.09final_ModsON+6DoF\wrapper.dll',
-    '_Game Switchers\409m air.ini\Air.ini\air.ini',
-    '_Game Switchers\Stationary\409m\stationary.ini'
+    '_Game Switcher\4.09final_ModsON+6DoF\il2fb.exe',
+    '_Game Switcher\4.09final_ModsON+6DoF\files.SFS',
+    '_Game Switcher\4.09final_ModsON+6DoF\wrapper.dll',
+    '_Game Switcher\409m air.ini\Air.ini\air.ini',
+    '_Game Switcher\Stationary\409m\stationary.ini'
 )
 foreach ($relative in $profile9) {
     if (-not (Test-Path -LiteralPath (Join-Path $addon $relative) -PathType Leaf)) {

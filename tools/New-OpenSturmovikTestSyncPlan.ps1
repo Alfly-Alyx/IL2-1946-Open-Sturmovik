@@ -25,7 +25,7 @@ if (-not $OutputPath) { $OutputPath = Join-Path $source 'manifests\test\v1.15-te
 $changedPaths = @()
 if (-not $OnlyIncludedPaths) {
     $changedPaths = @(& git -C $source ls-files -m -d -o --exclude-standard -- `
-        'Files' '_Documentation' '_Documentations' '_Game Switchers' '_Game_Enhancements' `
+        'Files' '_Documentation' '_Documentations' '_Game Switcher' '_Game_Enhancements' `
         '_Runtime_Addons' '_Utilities' 'Mod_AOC_Public' 'DeviceLink.txt' `
         'Open_Sturmovik_Switcher.bat' 'Open_Sturmovik_Switcher.ps1')
     if ($LASTEXITCODE -ne 0) { throw 'Git ne peut pas enumerer les changements a synchroniser.' }

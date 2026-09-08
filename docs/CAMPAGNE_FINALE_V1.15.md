@@ -12,7 +12,17 @@ Alexis et ne pas lui faire recommencer les essais acquis sans regression.
 
 Ordre convenu avec Alexis, sans lancement automatique :
 
-1. **CW-21 :** profil 8, ouvrir la liste de l'editeur de missions rapides
+Preparation du 7 septembre verifiee sans jeu ni captures : profil 8 / 4.09m /
+sans 6DOF / HUD standard. Voir `VERIFICATION_SWITCHER_TEST_V1.15.md` :
+18 transactions de fichiers passent, mais 4.09b modifie utilise une liste
+incompatible (18 classes d'avions absentes et deux dependances CW-21 absentes).
+Cette incoherence de registre est maintenant corrigee par une liste beta
+distincte de 516 entrees : voir `CORRECTION_SWITCHER_V1.15.md`. La validation
+des lancements historiques reste a faire, sans lancer les avions 4.09m en beta.
+Le mode Original force maintenant le HUD du jeu ; standard et immersion restent
+selectionnables uniquement dans les deux modes Open Sturmovik.
+
+1. **CW-21 :** profil 8, ouvrir la liste de l'editeur complet de missions
    (pas `Mission simple`). Verifier exactement trois choix, chacun une seule
    fois : `4 x .303`, `2 x .303 + 2 x .50`, `sans armement`.
    Choisir `4 x .303`, charger, entrer au cockpit et
@@ -37,8 +47,12 @@ Ordre convenu avec Alexis, sans lancement automatique :
    modifies sans 6DOF et avec 6DOF. Verifier la version au menu, les noms
    d'origine ou Open Sturmovik selon le profil, les listes compatibles et le
    retour au profil 8. Ne pas changer de version sur une session ouverte.
-   Les controles hors jeu couvrent deja neuf profils et deux HUD ; la GUI et
-   les lancements reels restent a valider.
+   Les 18 remplacements de fichiers passent ainsi que la logique des neuf choix
+   de la GUI, mais pas son rendu visuel ni les lancements reels. Ne pas valider
+   4.09b modifie sur la seule preuve des copies : verifier en jeu sa liste beta
+   de 516 avions apres la correction de registre.
+   Tester les deux HUD dans le profil modifie 4.09m. En mode Original,
+   l'interface doit imposer le HUD du jeu et desactiver le choix immersion.
 
 Discuter de la release apres ces trois validations. Aucun succes hors jeu
 ne remplace ces retours utilisateur ; les points ouverts de la campagne
@@ -50,6 +64,10 @@ correctif CW-21 et noms BI, aucun profil joueur modifie). Le dossier AOC de test
 contient desormais cinq profils, contre 266 dans le paquet ; cette difference
 reste l'unique FAIL de contenu accepte pour les essais cibles, pas pour la
 qualification de distribution.
+
+Le switcher BAT unique et ses manifestes ont ete resynchronises suivant
+`manifests/test/switcher-crlf-rollback-v1.15.json`, sauvegarde recuperable
+`WIP/test-installations/sync-20260907-213247`.
 
 ## Historique : reprise des quatre anomalies du 6 septembre
 

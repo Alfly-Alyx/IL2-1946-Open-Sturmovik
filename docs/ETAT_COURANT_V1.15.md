@@ -76,6 +76,27 @@ armements CW-21, de la liste d'avions et du switcher. La discussion
 de release vient ensuite ; aucun tag, publication ou installateur final n'est
 autorise par le seul push. Les autres points ouverts restent documentes.
 
+### Verification sans jeu ni captures du 7 septembre
+
+Voir `VERIFICATION_SWITCHER_TEST_V1.15.md`. Les 18 commutations reelles
+(neuf profils, deux fichiers HUD) passent, ainsi que les deux controles keep.
+La copie est revenue au profil 8 / 4.09m / sans 6DOF / HUD standard ;
+29 fichiers surveilles restent inchanges. Le classement repasse 11 tests,
+le test anti-doublons CW-21 passe et la preparation du test repasse 42/42
+controles avec la seule exception AOC deja connue. Aucun jeu ni capture lance.
+
+**Ne pas confondre ces succes avec la compatibilite globale.** L'audit des
+classes propres a chaque version trouve 18 classes d'avions manquantes et
+deux dependances CW-21 manquantes dans le profil 4.09b modifie, qui selectionne
+le registre 4.09m. Le HUD immersion propose en Original ne prouve pas son
+chargement sans wrapper. Ces points ne sont pas corriges par cet audit initial.
+
+Suite demandee : `CORRECTION_SWITCHER_V1.15.md`. Le registre beta est maintenant
+distinct, avec 516 entrees dont les classes sont presentes ; les 535 entrees
+4.09m et les deux autres listes sont inchangees. L'etat du profil et le HUD
+conserve sont memorises, et active-profile.txt entre dans la restauration.
+Le choix definitif concernant HUD immersion en stock attend encore Alexis.
+
 | No | Point v1.15 | Etat courant hors jeu | Reste avant fermeture |
 | ---: | --- | --- | --- |
 | 1 | KB-29P et CW-21 absents de la liste de l'editeur | KB-29P corrige a son adresse de classe canonique, ancien doublon retire. Cockpit CW-21 4.09 integre ; armement 4 x .303 ou 2 x .303 + 2 x .50 au choix. Voir CW21_COCKPIT_ARMAMENT_V1.15.md. | Verifier la presence des deux appareils dans la liste utilisee par Alexis, puis cockpit et deux armements CW-21. |
@@ -147,11 +168,21 @@ sous-dossiers ont des intitules anglais : `Campaigns`, `Game and Patches`,
 `Mod_AOC_Public` de la racine ont ete retires ; AOC reside uniquement sous
 `_Game_Enhancements/Mod_AOC_Public`.
 
-Le switcher `.bat` gere neuf profils : Original, sans 6DOF et avec 6DOF pour
-4.08m, 4.09b et 4.09m. Sa transaction reelle a ete exercee hors jeu sur les
-profils 1, 2 et 8, avec les HUD standard et immersion : remplacements et
-retraits exacts, zero message parasite, zero transaction abandonnee. La copie
-est revenue au profil 8.
+Le switcher est maintenant un seul fichier `.bat`, avec interface integree
+inspiree du menu principal IL-2. Il propose neuf profils : Original, sans 6DOF
+et avec 6DOF pour 4.08m, 4.09b et 4.09m. Ses transactions reelles ont ete
+exercees hors jeu sur les neuf profils et les deux fichiers HUD : remplacements
+et retraits exacts, zero transaction abandonnee. La copie est revenue au profil
+8. Le profil 4.09b utilise sa liste propre de 516 entrees. Les trois choix 4.08m
+utilisent maintenant le payload moteur/son 4.08m et retirent les archives 4.09.
+Le BAT est force en fins de ligne Windows, necessaires a ses sous-routines.
+Son lancement direct ne garde plus de console ouverte. Le raccourci Bureau
+utilise le meme BAT avec une fenetre CMD masquee ; ce comportement a ete
+verifie sur un raccourci cree dans le Bureau temporaire, sans l'executer.
+Son dossier est `_Game Switcher` au singulier et ses images/icones sont sous
+`Resources`. L'icone historique v1.1 retrouvee est active ; les variantes
+v1.15, Demo 2001 et Steam citees restent conservees dans ce dossier.
+Voir les correctifs et limites dans `CORRECTION_SWITCHER_V1.15.md`.
 
 Les six EXE modifies portent les metadonnees Windows `Open Sturmovik`; les trois
 EXE Original sont inchanges. La surcharge `Config` fixe le titre de fenetre

@@ -99,6 +99,39 @@ $validated = foreach ($entry in $entries) {
         throw "Dossier de travail introuvable pour $name : $workingDirectory"
     }
 
+    $launchMode = 'direct'
+    if ($entry.PSObject.Properties.Name -contains 'launchMode' -and
+        -not [string]::IsNullOrWhiteSpace([string]$entry.launchMode)) {
+        $launchMode = [string]$entry.launchMode
+    }
+
+    $shortcutTarget = $target
+    $arguments = ''
+    switch ($launchMode) {
+        'direct' {}
+        'hidden-batch-via-mshta' {
+            if ($targetExtension -ine '.bat') {
+                throw "Le lancement masque de $name est reserve aux fichiers batch : $target"
+            }
+            if (-not ($entry.PSObject.Properties.Name -contains 'launcherArguments') -or
+                [string]::IsNullOrWhiteSpace([string]$entry.launcherArguments)) {
+                throw "Les arguments du lanceur masque de $name sont absents."
+            }
+            $arguments = [string]$entry.launcherArguments
+            if (-not $arguments.StartsWith('javascript:', [StringComparison]::OrdinalIgnoreCase) -or
+                $arguments -match '[\r\n]') {
+                throw "Les arguments du lanceur masque de $name sont invalides."
+            }
+            $shortcutTarget = Join-Path ([Environment]::SystemDirectory) 'mshta.exe'
+            if (-not (Test-Path -LiteralPath $shortcutTarget -PathType Leaf)) {
+                throw "Lanceur Windows introuvable pour $name : $shortcutTarget"
+            }
+        }
+        default {
+            throw "Mode de lancement inconnu pour ${name} : $launchMode"
+        }
+    }
+
     $icon = $null
     if ($entry.PSObject.Properties.Name -contains 'icon' -and -not [string]::IsNullOrWhiteSpace([string]$entry.icon)) {
         $icon = Resolve-PathBelowRoot -Root $root -RelativePath ([string]$entry.icon) -Label "L'icone de $name"
@@ -110,6 +143,9 @@ $validated = foreach ($entry in $entries) {
     [pscustomobject]@{
         Name = $name
         Target = $target
+        ShortcutTarget = $shortcutTarget
+        Arguments = $arguments
+        LaunchMode = $launchMode
         WorkingDirectory = $workingDirectory
         Description = [string]$entry.description
         Icon = $icon
@@ -128,6 +164,9 @@ if ($ValidateOnly) {
         [pscustomobject]@{
             Name = $_.Name
             Target = $_.Target
+            ShortcutTarget = $_.ShortcutTarget
+            Arguments = $_.Arguments
+            LaunchMode = $_.LaunchMode
             Shortcut = $null
             Status = 'VALIDE'
         }
@@ -149,7 +188,8 @@ try {
         $shortcutWritten = $false
         if ($PSCmdlet.ShouldProcess($shortcutPath, "Creer le raccourci vers $($entry.Target)")) {
             $shortcut = $shell.CreateShortcut($shortcutPath)
-            $shortcut.TargetPath = $entry.Target
+            $shortcut.TargetPath = $entry.ShortcutTarget
+            $shortcut.Arguments = $entry.Arguments
             $shortcut.WorkingDirectory = $entry.WorkingDirectory
             $shortcut.Description = $entry.Description
             $shortcut.IconLocation = if ($entry.Icon) { $entry.Icon + ',0' } else { $entry.Target + ',0' }
@@ -160,6 +200,8 @@ try {
         [pscustomobject]@{
             Name = $entry.Name
             Target = $entry.Target
+            ShortcutTarget = $entry.ShortcutTarget
+            LaunchMode = $entry.LaunchMode
             Shortcut = $shortcutPath
             Status = if ($WhatIfPreference) { 'SIMULE' } elseif ($shortcutWritten) { 'INSTALLE' } else { 'IGNORE' }
         }

@@ -20,8 +20,8 @@ Elle conserve les trois air.ini, plane_ru.properties, le switcher et son manifes
 | Fichier | Avant | Apres |
 | --- | ---: | ---: |
 | Files/com/maddox/il2/objects/air.ini | 535 | 535 |
-| _Game Switchers/408m air.ini/Air.ini/air.ini | 516 | 516 |
-| _Game Switchers/409m air.ini/Air.ini/air.ini | 535 | 535 |
+| _Game Switcher/408m air.ini/Air.ini/air.ini | 516 | 516 |
+| _Game Switcher/409m air.ini/Air.ini/air.ini | 535 | 535 |
 
 Aucun identifiant, classe Java, camp, drapeau ou autre champ technique n'est
 modifie. Les entrees normalisees sont identiques a la sauvegarde, hors ordre

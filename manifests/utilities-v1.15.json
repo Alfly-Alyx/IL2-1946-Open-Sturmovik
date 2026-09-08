@@ -114,7 +114,9 @@
       "target": "Open_Sturmovik_Switcher.bat",
       "workingDirectory": ".",
       "description": "Choix securise des profils IL-2 4.08m, 4.09b et 4.09m",
-      "icon": "_Game Switchers\\Open_Sturmovik_Switcher.ico"
+      "icon": "_Game Switcher\\Resources\\Open_Sturmovik_Switcher_Original.ico",
+      "launchMode": "hidden-batch-via-mshta",
+      "launcherArguments": "javascript:new/**/ActiveXObject('WScript.Shell').Run('cmd.exe\\x20/D\\x20/C\\x20\"\"Open_Sturmovik_Switcher.bat\"\"',0,false);close()"
     }
   ]
 }

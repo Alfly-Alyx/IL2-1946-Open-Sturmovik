@@ -15,8 +15,8 @@ import unicodedata
 
 ROOT = Path(__file__).resolve().parent.parent
 AIR_ACTIVE = 'Files/com/maddox/il2/objects/air.ini'
-AIR408 = '_Game Switchers/408m air.ini/Air.ini/air.ini'
-AIR409 = '_Game Switchers/409m air.ini/Air.ini/air.ini'
+AIR408 = '_Game Switcher/408m air.ini/Air.ini/air.ini'
+AIR409 = '_Game Switcher/409m air.ini/Air.ini/air.ini'
 LABELS = 'Files/i18n/plane_ru.properties'
 SWITCHER = 'Open_Sturmovik_Switcher.bat'
 BACKUP_HASHES = {

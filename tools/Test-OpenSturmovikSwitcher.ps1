@@ -1,11 +1,13 @@
 [CmdletBinding()]
 param(
-    [string]$RepositoryRoot = (Split-Path -Parent $PSScriptRoot),
-    [string]$ManifestPath = (Join-Path $PSScriptRoot '..\manifests\switcher-v1.15.json')
+    [string]$RepositoryRoot,
+    [string]$ManifestPath
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+if (-not $RepositoryRoot) { $RepositoryRoot = Split-Path -Parent $PSScriptRoot }
+if (-not $ManifestPath) { $ManifestPath = Join-Path $RepositoryRoot 'manifests/switcher-v1.15.json' }
 
 $root = [IO.Path]::GetFullPath($RepositoryRoot)
 $manifestFile = [IO.Path]::GetFullPath($ManifestPath)
@@ -14,10 +16,47 @@ if ($manifest.schemaVersion -ne 1 -or $manifest.release -ne '1.15') {
     throw 'Manifeste du switcher v1.15 invalide.'
 }
 
-foreach ($relative in @($manifest.entryPoint, $manifest.gui, $manifest.hashChecker, $manifest.desktopIcon)) {
+foreach ($relative in @($manifest.entryPoint, $manifest.desktopIcon, $manifest.background.path) | Where-Object { $_ }) {
     if (-not (Test-Path -LiteralPath (Join-Path $root ([string]$relative)) -PathType Leaf)) {
         throw "Composant du switcher absent : $relative"
     }
+}
+if ((Get-Item -LiteralPath (Join-Path $root ([string]$manifest.background.path))).Length -ne [long]$manifest.background.size -or
+    (Get-FileHash -LiteralPath (Join-Path $root ([string]$manifest.background.path)) -Algorithm SHA256).Hash -ne
+        [string]$manifest.background.sha256) {
+    throw 'Fond graphique du switcher absent ou altere.'
+}
+if ([string]$manifest.resourceDirectory -ne '_Game Switcher/Resources' -or
+    @($manifest.icons).Count -ne 3) {
+    throw 'Le dossier Resources ou la liste des trois icones du switcher est invalide.'
+}
+foreach ($resource in @($manifest.icons) + @($manifest.referenceArtwork)) {
+    $resourcePath = Join-Path $root ([string]$resource.path)
+    if (-not (Test-Path -LiteralPath $resourcePath -PathType Leaf) -or
+        (Get-Item -LiteralPath $resourcePath).Length -ne [long]$resource.size -or
+        (Get-FileHash -LiteralPath $resourcePath -Algorithm SHA256).Hash -ne [string]$resource.sha256) {
+        throw "Ressource graphique du switcher absente ou alteree : $($resource.path)"
+    }
+}
+
+foreach ($background in @($manifest.loadingBackgrounds.formats)) {
+    $backgroundPath = Join-Path $root ([string]$background.path)
+    if (-not (Test-Path -LiteralPath $backgroundPath -PathType Leaf) -or
+        (Get-Item -LiteralPath $backgroundPath).Length -ne [long]$background.size -or
+        (Get-FileHash -LiteralPath $backgroundPath -Algorithm SHA256).Hash -ne [string]$background.sha256) {
+        throw "Fond de chargement absent ou altere : $($background.path)"
+    }
+    $header = [IO.File]::ReadAllBytes($backgroundPath)
+    $width = [BitConverter]::ToUInt16($header, 12)
+    $height = [BitConverter]::ToUInt16($header, 14)
+    if ($header[2] -ne 2 -or $header[16] -ne 24 -or
+        $width -ne [int]$background.width -or $height -ne [int]$background.height) {
+        throw "Format TGA incorrect pour le fond $($background.name)."
+    }
+}
+if ($manifest.guiMode -ne 'embedded-hta-in-entry-point' -or
+    $manifest.hashCheckerMode -ne 'embedded-sha256-validation') {
+    throw 'La GUI et le controle SHA-256 doivent etre integres au BAT unique.'
 }
 
 $profiles = @($manifest.profiles)
@@ -33,6 +72,15 @@ foreach ($common in @($manifest.commonFiles)) {
     }
 }
 
+foreach ($registry in $manifest.airRegistries.PSObject.Properties) {
+    $path = Join-Path $root $registry.Value.path
+    if ((Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash -ne $registry.Value.sha256) {
+        throw "Registre d avions altere : $($registry.Name)"
+    }
+    $count = @(Get-Content -LiteralPath $path | Where-Object { $_ -match '^\s*\S+\s+air\.' }).Count
+    if ($count -ne $registry.Value.entries) { throw "Nombre d entrees incorrect : $($registry.Name)" }
+}
+
 $windowTitleClass = Join-Path $root ([string]$manifest.branding.windowTitleClass.path)
 if (-not (Test-Path -LiteralPath $windowTitleClass -PathType Leaf) -or
     (Get-FileHash -LiteralPath $windowTitleClass -Algorithm SHA256).Hash -ne
@@ -42,7 +90,7 @@ if (-not (Test-Path -LiteralPath $windowTitleClass -PathType Leaf) -or
 
 foreach ($payloadProperty in $manifest.payloads.PSObject.Properties) {
     foreach ($file in @($payloadProperty.Value)) {
-        $relative = "_Game Switchers\Version Payloads\$($payloadProperty.Name)\$($file.file)"
+        $relative = "_Game Switcher\Version Payloads\$($payloadProperty.Name)\$($file.file)"
         $path = Join-Path $root $relative
         if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
             throw "Charge utile absente : $relative"
@@ -56,7 +104,7 @@ foreach ($payloadProperty in $manifest.payloads.PSObject.Properties) {
 }
 
 foreach ($profile in $profiles | Sort-Object number) {
-    $profileRoot = Join-Path $root ("_Game Switchers\" + [string]$profile.folder)
+    $profileRoot = Join-Path $root ("_Game Switcher\" + [string]$profile.folder)
     $exe = Join-Path $profileRoot 'il2fb.exe'
     $files = Join-Path $profileRoot 'files.SFS'
     if ((Get-FileHash -LiteralPath $exe -Algorithm SHA256).Hash -ne [string]$profile.exeSha256 -or
@@ -101,7 +149,7 @@ foreach ($hud in @('standard', 'immersion')) {
     }
 }
 
-$transactions = @(Get-ChildItem -LiteralPath (Join-Path $root '_Game Switchers') -Directory -Filter '_transaction-*')
+$transactions = @(Get-ChildItem -LiteralPath (Join-Path $root '_Game Switcher') -Directory -Filter '_transaction-*')
 if ($transactions.Count -ne 0) {
     throw "Transaction abandonnee detectee : $($transactions.FullName -join ', ')"
 }

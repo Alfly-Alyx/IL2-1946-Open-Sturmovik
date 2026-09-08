@@ -1,6 +1,6 @@
 @echo off
 setlocal
-set "SOURCE=%~dp0_Game Switchers\HudLogImmersion\MODS\STD\i18n\hud_log_ru.properties"
+set "SOURCE=%~dp0_Game Switcher\HudLogImmersion\MODS\STD\i18n\hud_log_ru.properties"
 set "TARGET_DIR=%~dp0Files\i18n"
 set "TARGET=%TARGET_DIR%\hud_log_ru.properties"
 

@@ -98,7 +98,7 @@ Le lecteur de cache de ce source merite egalement une correction defensive : il 
 ## Variante cache 4.09m de la version 1.15
 
 Le port se trouve dans `native/wrapper-cache-409m`. La DLL reproductible livree
-dans `_Game Switchers/Wrapper Cache 4.09m (Experimental)` est PE32 i386, importe
+dans `_Game Switcher/Wrapper Cache 4.09m (Experimental)` est PE32 i386, importe
 seulement les DLL systeme Windows et exporte exactement :
 
 - `ReadDump`, qui termine par `ret 8` ;

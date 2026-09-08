@@ -68,7 +68,8 @@ class AircraftNames(unittest.TestCase):
 
     def test_technical_identity_counts_and_aces(self):
         for path, count in zip(M['AIR_PATHS'], (535, 516, 535)):
-            old = M['BASE']['parse_air']((self.backup / path).read_bytes())
+            legacy_path = path.replace('_Game Switcher', '_Game Switchers', 1)
+            old = M['BASE']['parse_air']((self.backup / legacy_path).read_bytes())
             new = M['BASE']['parse_air']((ROOT / path).read_bytes())
             self.assertEqual(len(new), count)
             self.assertEqual(Counter(map(tuple, old)), Counter(map(tuple, new)))
@@ -96,10 +97,30 @@ class AircraftNames(unittest.TestCase):
         switcher = (ROOT / M['BASE']['SWITCHER']).read_bytes()
         for path, info in self.report['files'].items():
             payload = (ROOT / path).read_bytes()
+            if path == M['BASE']['SWITCHER']:
+                # The naming report predates the beta-registry/state fixes.
+                current = json.loads((ROOT / 'manifests/switcher-v1.15.json').read_text())
+                self.assertEqual(current['entryPointSha256'], M['sha'](payload))
+                self.assertEqual(manifest['files'][path]['sha256'], M['sha'](payload))
+                continue
             self.assertEqual(info['sha256'], M['sha'](payload))
             self.assertEqual(info, manifest['files'][path])
         for path in M['AIR_PATHS'][1:]:
             self.assertIn(self.report['files'][path]['sha256'].encode(), switcher)
+
+    def test_beta_registry_preserves_current_presentation(self):
+        parse = M['BASE']['parse_air']
+        historical = parse((ROOT / M['AIR_PATHS'][1]).read_bytes())
+        final = parse((ROOT / M['AIR_PATHS'][2]).read_bytes())
+        beta = parse((ROOT / '_Game Switcher/409b air.ini/Air.ini/air.ini').read_bytes())
+        historical_keys = {row[0] for row in historical}
+        self.assertEqual(len(beta), 516)
+        self.assertEqual(beta, [row for row in final if row[0] in historical_keys])
+        self.assertEqual({row[0] for row in beta}, historical_keys)
+        self.assertNotIn('CW-21', historical_keys)
+        manifest = json.loads((ROOT / 'manifests/switcher-v1.15.json').read_text())
+        info = manifest['airRegistries']['4.09b']
+        self.assertEqual(info['sha256'], M['sha']((ROOT / info['path']).read_bytes()))
 
     def test_encoding_and_label_order(self):
         payload = (ROOT / M['LABELS']).read_bytes()

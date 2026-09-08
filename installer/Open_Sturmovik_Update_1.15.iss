@@ -49,6 +49,8 @@ Type: files; Name: "{app}\Files\Effects\clouds\clouds4x4.tga"
 Type: filesandordirs; Name: "{app}\Mod_AOC_Public"
 Type: filesandordirs; Name: "{app}\_Runtime_Addons"
 Type: filesandordirs; Name: "{app}\_Documentation"
+; Retire l'ancien nom pluriel apres migration vers _Game Switcher.
+Type: filesandordirs; Name: "{app}\_Game Switchers"
 Type: files; Name: "{app}\Open_Sturmovik_Switcher.ps1"
 Type: dirifempty; Name: "{app}\Files\3do\Effects\clouds"
 
@@ -62,7 +64,7 @@ Name: "{userdesktop}\Mission Mate 6"; Filename: "{app}\_Utilities\Mission Mate 6
 Name: "{userdesktop}\WeatherSet"; Filename: "{app}\_Utilities\WeatherSet\WeatherSet.exe"; WorkingDir: "{app}\_Utilities\WeatherSet"; Comment: "Editeur de meteo pour les missions IL-2"
 Name: "{userdesktop}\ZipNav"; Filename: "{app}\_Utilities\ZipNav\ZipNavV1.1.exe"; WorkingDir: "{app}\_Utilities\ZipNav"; Comment: "Outil de navigation ZipNav pour IL-2"
 Name: "{userdesktop}\San's IL2 FOV Changer"; Filename: "{app}\_Game_Enhancements\San's IL2 FOV Changer\San's_IL2_FovChanger_RC.exe"; WorkingDir: "{app}\_Game_Enhancements\San's IL2 FOV Changer"; Comment: "Reglage du champ de vision d'IL-2"
-Name: "{userdesktop}\Open Sturmovik Switcher"; Filename: "{app}\Open_Sturmovik_Switcher.bat"; WorkingDir: "{app}"; IconFilename: "{app}\_Game Switchers\Open_Sturmovik_Switcher.ico"; Comment: "Choix securise des profils IL-2 4.08m, 4.09b et 4.09m"
+Name: "{userdesktop}\Open Sturmovik Switcher"; Filename: "{sys}\mshta.exe"; Parameters: "javascript:new/**/ActiveXObject('WScript.Shell').Run('cmd.exe\x20/D\x20/C\x20""""Open_Sturmovik_Switcher.bat""""',0,false);close()"; WorkingDir: "{app}"; IconFilename: "{app}\_Game Switcher\Resources\Open_Sturmovik_Switcher_Original.ico"; Comment: "Choix securise des profils IL-2 4.08m, 4.09b et 4.09m"
 
 [Run]
 Filename: "{sys}\WindowsPowerShell\v1.0\powershell.exe"; Parameters: "-NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ""{app}\tools\Initialize-OpenSturmovikUtilities.ps1"" -InstallationRoot ""{app}"""; WorkingDir: "{app}"; StatusMsg: "Configuration des utilitaires Open Sturmovik..."; Flags: runhidden waituntilterminated

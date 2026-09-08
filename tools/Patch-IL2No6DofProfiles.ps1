@@ -11,9 +11,9 @@ $source6DofSha256 =
 $expectedLength = 348160
 
 $profiles = @(
-    '_Game Switchers\4.08 Mod ON (NO 6DOF)\il2fb.exe',
-    '_Game Switchers\4.09 Mods ON (NO 6DOF)\il2fb.exe',
-    '_Game Switchers\4.09finalModsON(No-6DoF)\il2fb.exe'
+    '_Game Switcher\4.08 Mod ON (NO 6DOF)\il2fb.exe',
+    '_Game Switcher\4.09 Mods ON (NO 6DOF)\il2fb.exe',
+    '_Game Switcher\4.09finalModsON(No-6DoF)\il2fb.exe'
 )
 
 $onSequences = @(

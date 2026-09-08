@@ -226,3 +226,32 @@ verifier les familles et leurs variantes, les designations RAF/US, les deux
 G.55 Serie I, les Fokker Sarja 3 Early/Late, les as en dernier et les noms
 de mods restes distincts. Ne pas tester de nouveau les nuages/titre deja
 valides, sauf regression. Aucun jeu n'est lance par cette passe.
+
+## Retour visuel du 8 septembre : largeur de la liste QMBPlus
+
+**Observation reproductible, confiance elevee :** la capture d'Alexis montre
+que les libelles longs sont affiches au-dela du bord droit du champ `Avion`.
+Les valeurs completes existent toujours dans `plane_ru.properties` ; il ne
+s'agit donc pas d'une troncature des donnees a 26 caracteres.
+
+La classe active `GUIQuick$DialogClient`, fichier libre
+`Files/92B0367AF05311B4`, est identique octet pour octet a la copie du dump et
+porte le SHA-256
+`D3357FB21D130AF754F659AEB92DE7063805FE4F883AF9D5D3B7E05E38D28514`.
+Sa methode `setPosSize()` fixe les huit listes d'avions a `x=318`, largeur
+`274`, dans le repere 1024 du jeu. Les listes d'armement commencent a `x=609`
+et ont une largeur de `332`. Ces constantes expliquent le rendu observe.
+
+**Deduction, confiance elevee :** la zone des avions peut etre elargie, mais
+cela exige de modifier la classe d'interface et de redistribuer l'espace avec
+la colonne d'armement ; un changement de traduction seul ne peut pas corriger
+le probleme. Aucun bytecode n'est modifie par cette constatation. Il reste a
+choisir et tester des dimensions qui conservent le bouton d'armement et les
+autres commandes visibles dans toutes les resolutions prises en charge.
+
+Reproduction :
+
+```powershell
+Get-FileHash -Algorithm SHA256 Files/92B0367AF05311B4
+javap -classpath 'WIP/labs/IL 2 Sturmovik 1946 Selector Dump/dump' -c 'com.maddox.il2.gui.GUIQuick$DialogClient'
+```

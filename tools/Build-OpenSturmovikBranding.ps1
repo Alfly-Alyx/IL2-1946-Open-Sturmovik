@@ -7,7 +7,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $root = [IO.Path]::GetFullPath($RepositoryRoot)
-$switchRoot = Join-Path $root '_Game Switchers'
+$switchRoot = Join-Path $root '_Game Switcher'
 $filesRoot = Join-Path $root 'Files'
 $titleClass = '5D18E55E5DF1D418'
 $work = Join-Path ([IO.Path]::GetTempPath()) ('open-sturmovik-branding-' + [guid]::NewGuid().ToString('N'))

@@ -1,6 +1,6 @@
 # Audit des profils 4.08 / 4.09
 
-Derniere mise a jour : 6 septembre 2026.
+Derniere mise a jour : 7 septembre 2026.
 
 ## Couples binaires
 
@@ -58,6 +58,41 @@ Le selecteur basculait deja `air.ini`, mais les deux fichiers historiques `stati
 
 Le selecteur 1.15 inclut maintenant `stationary.ini` dans la meme transaction verifiee que l'EXE, `files.SFS` et `air.ini`. Les choix 1 a 6 installent le registre 4.08/4.09b ; les choix 7 a 9 installent le registre 4.09m.
 
+### Role verifie de `stationary.ini`
+
+Le fichier local officiel `bldconf.ini` branche explicitement le module de
+l'editeur complet `builder.PlMisStatic` sur
+`com/maddox/il2/objects/stationary.ini`. Ce registre alimente les familles
+d'objets statiques placables dans une mission : `Artillery`,
+`StationaryArmor`, `StationaryObjects`, `StationaryPlanes`,
+`StationaryShips` et `StationaryShipPack`. Chaque ligne associe le nom presente
+par l'editeur a une classe Java concrete et a son camp numerique.
+
+Ce n'est donc pas un second `air.ini`. `air.ini` declare la liste des appareils
+du moteur ; `stationary.ini` declare leurs representations posees au sol, ainsi
+que les canons, blindes, objets et navires statiques. Un appareil peut etre
+present dans la liste de vol sans avoir son equivalent statique, ou inversement.
+Une mission deja sauvegardee contient la classe concrete de l'objet ; un
+registre ou une classe incompatible peut faire disparaitre un choix de
+l'editeur ou empecher le chargement correct de cet objet.
+
+Le registre 4.08/4.09b mesure 52 177 octets et 818 entrees. Celui de 4.09m
+mesure 53 246 octets et 836 entrees. Les 18 ajouts sont tous dans
+`StationaryPlanes`, notamment le CW-21, les D.XXI, I-15/I-16, Avia B.534,
+G.55, Re.2000, S.328 et SM.79. C'est pourquoi le switcher remplace ce registre
+avec la version : conserver le fichier 4.09m en 4.08/4.09b exposerait dans
+l'editeur des classes absentes de ces payloads.
+
+Recoupement communautaire :
+
+- [Mission4Today, configuration de l'editeur complet](https://www.mission4today.com/index.php?file=viewtopic&name=ForumsPro&t=16676)
+  reproduit le branchement `builder.PlMisStatic` vers `stationary.ini` ;
+- [SAS, guide Mod Activator 4.09](https://www.sas1946.com/main/index.php?topic=5310.0)
+  confirme que l'ajout de lignes de navires dans ces registres fait apparaitre
+  les nouvelles categories dans l'editeur complet ;
+- la recherche AAA prioritaire via Wayback n'a fourni aucune page exploitable
+  supplementaire ; aucun contenu inaccessible n'est suppose.
+
 ## Transaction hors jeu exercee
 
 Le 6 septembre 2026, le switcher corrige a ete execute dans la copie isolee,
@@ -66,12 +101,18 @@ sans lancer IL-2 :
 | Etape | Resultat verifie |
 | --- | --- |
 | Profil 1, 4.08m Original, HUD standard | EXE et `files.SFS` originaux ; wrapper et trois archives 4.09 retires ; HUD standard exact |
-| Profil 2, 4.08m modifie sans 6DOF, HUD immersion | EXE marque, wrapper, `files.SFS` et charge utile historique 4.09b exacts ; HUD immersion exact |
+| Profil 2, 4.08m modifie sans 6DOF, HUD immersion | EXE marque, wrapper, `files.SFS` et DLL coeur/son 4.08m exacts ; archives 4.09 absentes ; HUD immersion exact |
 | Profil 8, 4.09m modifie sans 6DOF, HUD standard | EXE marque, wrapper, `files.SFS`, charge utile, `air.ini`, `stationary.ini` et HUD 4.09m exacts |
 
 Les trois appels ont retourne zero, sans chemin introuvable ni message duplique.
 Aucun dossier `_transaction-*` n'est reste. La copie de test est donc revenue
 au profil 8 dans un etat mesure, pas seulement declare.
+
+Le controle etendu du 7 septembre a ensuite exerce les neuf profils avec les
+deux fichiers HUD. Les choix 1/2/3 utilisent tous le payload 4.08m et retirent
+les archives 4.09 ; 4/5/6 utilisent le payload 4.09b ; 7/8/9 utilisent le
+payload 4.09m. Les 18 commutations normales passent. Le test de panne tardive
+du BAT unique restaure aussi les 14 fichiers actifs et revient au profil 8.
 
 ## Fichiers actifs avant le premier essai runtime
 

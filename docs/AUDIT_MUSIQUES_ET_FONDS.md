@@ -52,6 +52,37 @@ nommees `Fond ecran installeur` sont differentes : `1.bmp` et `1.jpg` mesurent
 1600 x 740 et servent a l'installateur, tandis que la jaquette Ubisoft mesure
 3335 x 2214.
 
+## Fond de chargement du premier IL-2 Sturmovik (2001)
+
+Extraction du 8 septembre 2026, sans installation ni lancement de la demo.
+La source telechargee est la demo officielle 1.0 de 2001 publiee par Maddox
+Games et conservee par
+[Mission4Today](https://www.mission4today.com/index.php?file=details&id=3564&name=downloads).
+Elle n'est pas le jeu commercial complet.
+
+`demo.SFS` est une archive SFS v201 de 90 276 662 octets, contenant 14 670
+entrees et le commentaire `Copyright (c) 1997-2001 Maddox Games Ltd.`. Le chemin
+historique `gui/background0.tga` a ete extrait avec `tools/Analyze-Sfs.py`.
+Il s'agit d'un TGA standard RGB 24 bits de 512 x 512 pixels, 786 476 octets,
+SHA-256
+`1E9CFDC8DC39C475FD736ABEE5EDCAFCE5AC24558BC241B5E0F27405DFFCE8F6`.
+Le fichier `gui/background0.mat` de la meme archive pointe directement vers
+ce nom et porte le SHA-256
+`776C9605A9432485B6E67D0F0A69684615362C59F6B6E969CE040F011BB821BC`.
+
+Copies de reference conservees hors du jeu actif :
+
+- `D:\Projets\GITHUB\#res\IL2 1946\background\RAW\OFFICIEL-2001-DEMO__gui__background0.tga` : octets originaux ;
+- `D:\Projets\GITHUB\#res\IL2 1946\background\RAW\OFFICIEL-2001-DEMO__gui__background0.png` : simple apercu PNG, sans retouche.
+
+Le visuel correspond au casque, aux lunettes, au manuel et au logo visibles
+sur la
+[capture de la version Windows commerciale de 2001](https://www.mobygames.com/game/5410/il-2-sturmovik/screenshots/windows/21202/).
+Cette correspondance visuelle etablit l'identite du dessin avec une confiance
+elevee, mais ne prouve pas encore que les octets de la demo et du jeu complet
+sont identiques. Une extraction du SFS commercial de 2001 reste necessaire
+pour certifier cette identite binaire.
+
 ### Extension `.tga` et conteneur IMF d'IL-2
 
 L'extension ne suffit pas a identifier le format reel. Les deux atlas d'interface

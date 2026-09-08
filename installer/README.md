@@ -48,10 +48,21 @@ v1.15 et le gel explicite du dossier `Payload`.
   et `_Documentations` ;
 - dix raccourcis sont crees sur le Bureau : les neuf outils retenus et
   `Open Sturmovik Switcher` ;
+- le raccourci `Open Sturmovik Switcher` lance l'unique BAT avec une console
+  masquee ; le BAT reste directement utilisable et ne garde plus la console
+  ouverte une fois son interface chargee ;
 - l'initialiseur des utilitaires configure les chemins locaux sans lancer le
   jeu ni les programmes externes ;
 - l'installateur utilise l'icone bouclier et le fond d'ecran fournis dans les
   ressources locales du projet.
+
+Le fond propre au switcher est livre avec le jeu sous
+`_Game Switcher/Resources/Open_Sturmovik_Switcher_Background.jpg`. C'est cette copie
+source qu'il faut modifier avant de regenerer le manifeste et le Payload.
+Le meme dossier `Resources` conserve les trois icones citees pour le
+switcheur et l'image communautaire Steam. L'icone historique retrouvee
+`Open_Sturmovik_Switcher_Original.ico` est celle de la fenetre et du raccourci ;
+`Open_Sturmovik_Switcher.ico` reste disponible comme variante v1.15.
 
 Le script reprend le principe de detection du dossier existant de
 `IL2_Open_Sturmovik_Patch_1.1.iss`, mais ne reprend pas la longue suppression

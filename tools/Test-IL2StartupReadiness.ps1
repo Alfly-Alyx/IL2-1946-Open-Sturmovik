@@ -181,27 +181,27 @@ $profileLabel = switch ($Profile) {
 }
 $profileLabel = if ($SelectorDumpLab) { 'Selector 5.1.2 - 4.09m modifie sans 6DOF, DumpMode=3, cache desactive' } else { $profileLabel }
 $isOriginal = $Profile -in @('1','4','7')
-$airSource = if ($Profile -in @('1','2','3')) { '408m air.ini\Air.ini\air.ini' } else { '409m air.ini\Air.ini\air.ini' }
+$airSource = if ($Profile -in @('1','2','3')) { '408m air.ini\Air.ini\air.ini' } elseif ($Profile -in @('4','5','6')) { '409b air.ini\Air.ini\air.ini' } else { '409m air.ini\Air.ini\air.ini' }
 $stationarySource = if ($Profile -in @('7','8','9')) { 'Stationary\409m\stationary.ini' } else { 'Stationary\408 & 409b\stationary.ini' }
 $pairs = if ($SelectorDumpLab) {
     [ordered]@{
         'il2fb.exe' = 'bin\selector\basefiles\mod\il2fb.exe'
         'wrapper.dll' = 'bin\selector\basefiles\mod\wrapper.dll'
         'DINPUT.dll' = 'bin\selector\basefiles\DINPUT.dll'
-        'files.SFS' = '_Game Switchers\4.09finalModsON(No-6DoF)\files.SFS'
-        'Files\com\maddox\il2\objects\air.ini' = '_Game Switchers\409m air.ini\Air.ini\air.ini'
-        'Files\com\maddox\il2\objects\stationary.ini' = '_Game Switchers\Stationary\409m\stationary.ini'
+        'files.SFS' = '_Game Switcher\4.09finalModsON(No-6DoF)\files.SFS'
+        'Files\com\maddox\il2\objects\air.ini' = '_Game Switcher\409m air.ini\Air.ini\air.ini'
+        'Files\com\maddox\il2\objects\stationary.ini' = '_Game Switcher\Stationary\409m\stationary.ini'
     }
 }
 else {
     $profilePairs = [ordered]@{
-        'il2fb.exe' = "_Game Switchers\$profileFolder\il2fb.exe"
-        'files.SFS' = "_Game Switchers\$profileFolder\files.SFS"
-        'Files\com\maddox\il2\objects\air.ini' = "_Game Switchers\$airSource"
-        'Files\com\maddox\il2\objects\stationary.ini' = "_Game Switchers\$stationarySource"
+        'il2fb.exe' = "_Game Switcher\$profileFolder\il2fb.exe"
+        'files.SFS' = "_Game Switcher\$profileFolder\files.SFS"
+        'Files\com\maddox\il2\objects\air.ini' = "_Game Switcher\$airSource"
+        'Files\com\maddox\il2\objects\stationary.ini' = "_Game Switcher\$stationarySource"
     }
     if (-not $isOriginal) {
-        $profilePairs['wrapper.dll'] = "_Game Switchers\$profileFolder\wrapper.dll"
+        $profilePairs['wrapper.dll'] = "_Game Switcher\$profileFolder\wrapper.dll"
     }
     $profilePairs
 }
@@ -248,9 +248,11 @@ else {
 
 $switcherComponents = @(
     'Open_Sturmovik_Switcher.bat',
-    '_Game Switchers\Open_Sturmovik_Switcher.hta',
-    '_Game Switchers\Open_Sturmovik_Hash_Check.bat',
-    '_Game Switchers\Open_Sturmovik_Switcher.ico'
+    '_Game Switcher\Resources\Open_Sturmovik_Switcher_Original.ico',
+    '_Game Switcher\Resources\Open_Sturmovik_Switcher.ico',
+    '_Game Switcher\Resources\IL2-2001-Demo__icone-extraite-executable.ico',
+    '_Game Switcher\Resources\OFFICIEL-Steam__IL2-1946__icone-communaute.jpg',
+    '_Game Switcher\Resources\Open_Sturmovik_Switcher_Background.jpg'
 )
 $switcherDifferences = @()
 foreach ($relative in $switcherComponents) {
@@ -264,7 +266,7 @@ foreach ($relative in $switcherComponents) {
     }
 }
 $switcherDetail = if ($switcherDifferences.Count -eq 0) {
-    'BAT, interface, controleur et icone identiques'
+    'BAT autonome (interface et controle SHA-256 integres), icone et fond graphique identiques'
 }
 else {
     'absents ou differents : ' + ($switcherDifferences -join ', ')

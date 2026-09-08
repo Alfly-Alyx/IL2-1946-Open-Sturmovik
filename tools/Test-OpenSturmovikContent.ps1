@@ -78,9 +78,9 @@ if (-not $ContentRoot) { $ContentRoot = $ProjectRoot }
 $specRoot = (Resolve-Path -LiteralPath $ProjectRoot).Path
 $root = (Resolve-Path -LiteralPath $ContentRoot).Path
 $airActive = Join-Path $root 'Files\com\maddox\il2\objects\air.ini'
-$air409 = Join-Path $specRoot '_Game Switchers\409m air.ini\Air.ini\air.ini'
+$air409 = Join-Path $specRoot '_Game Switcher\409m air.ini\Air.ini\air.ini'
 $stationaryActive = Join-Path $root 'Files\com\maddox\il2\objects\stationary.ini'
-$stationary409 = Join-Path $specRoot '_Game Switchers\Stationary\409m\stationary.ini'
+$stationary409 = Join-Path $specRoot '_Game Switcher\Stationary\409m\stationary.ini'
 $buttons = Join-Path $root 'Files\gui\GAME\buttons'
 $chiefActive = Join-Path $root 'Files\com\maddox\il2\objects\chief.ini'
 $chiefExtensions = Join-Path $specRoot 'manifests\registries\chief.mod-extensions.ini'
@@ -947,7 +947,7 @@ else {
     Add-Check 'Effet SmokeBoiling du files.SFS' FAIL "Surcharge SmokeBoiling ou archive source inattendue ($activeFilesSfsHash)."
 }
 
-$testConf = Join-Path $root '_Game Switchers\conf.max.ini'
+$testConf = Join-Path $root '_Game Switcher\conf.max.ini'
 if (Test-Path -LiteralPath $testConf -PathType Leaf) {
     $introLines = @(Select-String -LiteralPath $testConf -Pattern '^\s*Intro\s*=\s*(\d+)\s*$')
     if ($introLines.Count -gt 0 -and $introLines[-1].Matches[0].Groups[1].Value -eq '0') {
