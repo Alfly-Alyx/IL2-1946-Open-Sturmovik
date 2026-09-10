@@ -56,10 +56,10 @@ v1.15 et le gel explicite du dossier `Payload`.
 - l'installateur utilise l'icone bouclier et le fond d'ecran fournis dans les
   ressources locales du projet.
 
-Le fond propre au switcher est livre avec le jeu sous
-`_Game Switcher/Resources/Open_Sturmovik_Switcher_Background.jpg`. C'est cette copie
-source qu'il faut modifier avant de regenerer le manifeste et le Payload.
-Le meme dossier `Resources` conserve les trois icones citees pour le
+Le fond provisoire propre au switcher a ete retire le 8 septembre 2026 a la
+demande d'Alexis. Jusqu'au choix de son remplacant, l'interface utilise son fond
+uni de secours et l'installateur ne doit livrer aucun JPEG de fond du switcher.
+Le dossier `Resources\Icons` conserve les trois icones citees pour le
 switcheur et l'image communautaire Steam. L'icone historique retrouvee
 `Open_Sturmovik_Switcher_Original.ico` est celle de la fenetre et du raccourci ;
 `Open_Sturmovik_Switcher.ico` reste disponible comme variante v1.15.

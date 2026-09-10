@@ -76,18 +76,21 @@ n'est affiche ; seul le fond bleu de secours est visible. Cause reproduite :
 le BAT cherchait `installer/assets/OpenSturmovik-Wizard.jpg`, present dans le
 depot mais absent de la copie de test.
 
-Correction : le JPEG 1600 x 740 est desormais une ressource obligatoire du
-switcher sous `_Game Switcher/Resources/Open_Sturmovik_Switcher_Background.jpg`, avec
-taille et SHA-256 inscrits dans le manifeste. Les controles du depot et de la
-copie de test doivent echouer s'il manque. La fenetre passe a 1000 x 760, le
+Correction historique du 7 septembre : le JPEG 1600 x 740 avait ete ajoute sous
+`_Game Switcher/Resources/Open_Sturmovik_Switcher_Background.jpg`. Alexis l'a
+finalement refuse le 8 septembre : le fichier et sa dependance ont ete retires.
+En attendant le choix d'un nouveau fond, l'interface utilise son fond uni de
+secours. La presentation a ensuite ete rapprochee du menu principal du jeu :
+gris metallique plus brut, reliefs et bordures moins lisses, typographie plus
+proche et contraste attenue. La disposition, les emplacements des boutons et
+leurs intitules sont inchanges. La fenetre passe a 1000 x 760, le
 panneau a 900 x 590, les zones de texte n'empietent plus sur les actions, le
 panneau est plus transparent et huit rivets reprennent le cadre du menu IL-2.
 Une seconde capture fournie par Alexis confirme ensuite que le fond est bien
 charge. Les separateurs de tableau ont ete retires et le bouton Quitter a pris
 un traitement rouge plus proche du langage visuel du menu, sans le reproduire
-a l'identique. L'image modifiable de reference se trouve dans le depot sous
-`_Game Switcher/Resources/Open_Sturmovik_Switcher_Background.jpg`. Aucune interface,
-capture ou jeu n'a ete lance par la tache pour ces corrections.
+a l'identique. Aucun fond de remplacement du switcher n'est encore choisi.
+Aucune interface ou capture n'a ete lancee pour ce retrait.
 
 Le dossier technique porte desormais le nom singulier `_Game Switcher`. Ses
 ressources graphiques sont rangees dans le sous-dossier court `Resources`, sans
@@ -218,3 +221,19 @@ L'ajustement final limite le dossier aux seules ressources citees et conserve
 sa sauvegarde recuperable sous `WIP/test-installations/sync-20260907-230312`.
 Les lancements, le comportement TrackIR et les HUD visibles restent a tester
 avec Alexis ; la verification de fichiers n'est pas leur qualification.
+
+## Presentation comparee au menu du jeu
+
+La copie affichee le 8 septembre 2026 confirme que le BAT du dossier de test
+utilise bien la nouvelle interface : panneau metallique texture, cadre en
+relief, vis, voyants ambre/verts et separateurs clairs sont visibles. La
+disposition, les emplacements et les intitules demandes sont conserves. Aucune
+fenetre de commande n'apparait a cote de l'interface.
+
+Les fonds de chargement sont ranges sous
+`_Game Switcher\Resources\Loading Backgrounds`. Le fond actif `Maddox` et
+quatre familles visuelles sont disponibles en 4:3, 16:10, 16:9, 21:9 et 32:9
+jusqu'a 4K, sans etirement. Les trois images reservees au fond de l'interface
+du switcher sont isolees sous `_Game Switcher\Resources\Backgrounds`.
+Les quatre icones et l'image de reference sont isolees sous
+`_Game Switcher\Resources\Icons`.

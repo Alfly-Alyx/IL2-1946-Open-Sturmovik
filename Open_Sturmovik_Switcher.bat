@@ -207,6 +207,10 @@ call :profileDataCheck
 if errorlevel 1 exit /b 4
 call :payloadCheck%PAYLOAD_ID%
 if errorlevel 1 exit /b 4
+call :detectBackground
+if errorlevel 1 exit /b 4
+call :verify "%SWITCH_ROOT%\Resources\Loading Backgrounds\Maddox\%BACKGROUND_FORMAT%\Background.tga" "%BACKGROUND_HASH%" "Fond de chargement %BACKGROUND_FORMAT%"
+if errorlevel 1 exit /b 4
 if /I "%HUD%"=="standard" (
     call :verify "%SWITCH_ROOT%\HudLogStock\MODS\STD\i18n\hud_log_ru.properties" "932A3925C8C624B1948AEB96C3F4B466EAD6A1108F61494335558F2A116E7862" "HUD standard"
     if errorlevel 1 exit /b 4
@@ -218,6 +222,7 @@ if /I "%HUD%"=="immersion" (
 
 if "%VALIDATE_ONLY%"=="1" (
     echo [OK] Profil valide sans modification : %LABEL%
+    echo [OK] Fond de chargement valide : %BACKGROUND_FORMAT% pour %BACKGROUND_WIDTH%x%BACKGROUND_HEIGHT%
     exit /b 0
 )
 
@@ -242,6 +247,8 @@ if errorlevel 1 (
     echo label=%LABEL%
     echo hud=%EFFECTIVE_HUD%
     echo modhud=%MOD_HUD%
+    echo background=%BACKGROUND_FORMAT%
+    echo resolution=%BACKGROUND_WIDTH%x%BACKGROUND_HEIGHT%
 )
 if errorlevel 1 goto stage_failed
 
@@ -252,6 +259,8 @@ if errorlevel 1 goto stage_failed
 call :stage "%SWITCH_ROOT%\%AIR%" "Files\com\maddox\il2\objects\air.ini"
 if errorlevel 1 goto stage_failed
 call :stage "%SWITCH_ROOT%\%STATIONARY%" "Files\com\maddox\il2\objects\stationary.ini"
+if errorlevel 1 goto stage_failed
+call :stage "%SWITCH_ROOT%\Resources\Loading Backgrounds\Maddox\%BACKGROUND_FORMAT%\Background.tga" "Files\background0.tga"
 if errorlevel 1 goto stage_failed
 if "%ORIGINAL%"=="0" (
     call :stage "%PROFILE_DIR%\wrapper.dll" "wrapper.dll"
@@ -312,6 +321,8 @@ if /I not "%HUD%"=="keep" (
 )
 call :backup 14 "_Game Switcher\active-profile.txt"
 if errorlevel 1 goto backup_failed
+call :backup 15 "Files\background0.tga"
+if errorlevel 1 goto backup_failed
 
 for /R "%TX%\stage" %%F in (*) do (
     set "REL=%%~fF"
@@ -339,6 +350,7 @@ fc /B "%TX%\next-profile.txt" "%SWITCH_ROOT%\active-profile.txt" >nul || goto co
 rmdir /S /Q "%TX%"
 echo [OK] Profil active : %LABEL%
 echo [OK] HUD du profil : %EFFECTIVE_HUD%
+echo [OK] Fond de chargement : %BACKGROUND_FORMAT% pour %BACKGROUND_WIDTH%x%BACKGROUND_HEIGHT%
 exit /b 0
 
 :stage_failed
@@ -437,6 +449,46 @@ if /I "!ACTUAL_HASH!"=="932A3925C8C624B1948AEB96C3F4B466EAD6A1108F61494335558F2A
 if /I "!ACTUAL_HASH!"=="ABD3E33F35F4ACC0421788E6974C587E9E3A861256CD39DD3F36A76FFF29B32C" set "MOD_HUD=immersion"
 exit /b 0
 
+:detectBackground
+set "BACKGROUND_WIDTH=1024"
+set "BACKGROUND_HEIGHT=768"
+set "BACKGROUND_IN_WINDOW=0"
+if exist "%ROOT%conf.ini" for /F "usebackq tokens=* delims=" %%L in ("%ROOT%conf.ini") do (
+    set "BACKGROUND_LINE=%%L"
+    if /I "!BACKGROUND_LINE!"=="[window]" (
+        set "BACKGROUND_IN_WINDOW=1"
+    ) else if "!BACKGROUND_LINE:~0,1!"=="[" (
+        set "BACKGROUND_IN_WINDOW=0"
+    ) else if "!BACKGROUND_IN_WINDOW!"=="1" (
+        for /F "tokens=1,* delims==" %%A in ("!BACKGROUND_LINE!") do (
+            if /I "%%A"=="width" set "BACKGROUND_WIDTH=%%B"
+            if /I "%%A"=="height" set "BACKGROUND_HEIGHT=%%B"
+        )
+    )
+)
+set /A BACKGROUND_RATIO=BACKGROUND_WIDTH*1000/BACKGROUND_HEIGHT >nul 2>&1
+if errorlevel 1 (
+    echo [ERREUR] Resolution invalide dans conf.ini : %BACKGROUND_WIDTH%x%BACKGROUND_HEIGHT%
+    exit /b 1
+)
+if %BACKGROUND_RATIO% LEQ 1420 (
+    set "BACKGROUND_FORMAT=4x3"
+    set "BACKGROUND_HASH=E1C0BFB53AE7E5891BF7A4F8333D33F119B177E373DBE8B6BBEC3014EC7CB898"
+) else if %BACKGROUND_RATIO% LEQ 1700 (
+    set "BACKGROUND_FORMAT=16x10"
+    set "BACKGROUND_HASH=B7305B816509CBADF15FC2484696484F676F0CB97721DC503C34FFB7C233913A"
+) else if %BACKGROUND_RATIO% LEQ 2050 (
+    set "BACKGROUND_FORMAT=16x9"
+    set "BACKGROUND_HASH=EFC91DD0047146AA4414A0F06B979AA3CFD7F6B5D86E5D621F0E65F8DD0C70E9"
+) else if %BACKGROUND_RATIO% LEQ 2800 (
+    set "BACKGROUND_FORMAT=21x9"
+    set "BACKGROUND_HASH=59FFE92F41A42A5BD2517D1FFE8B85EE2F85CB1723B7539D315B16EF048875D4"
+) else (
+    set "BACKGROUND_FORMAT=32x9"
+    set "BACKGROUND_HASH=46B39B63E660B7D8CD8C8F544866D17367483BEFA92AD6D322CF403C6A4CA6BC"
+)
+exit /b 0
+
 :stage
 for %%D in ("%TX%\stage\%~2") do if not exist "%%~dpD" md "%%~dpD" >nul 2>&1
 copy /B /Y "%~1" "%TX%\stage\%~2" >nul || exit /b 1
@@ -504,6 +556,8 @@ call :restore 13 "Files\i18n\hud_log_ru.properties"
 if errorlevel 1 set "ROLLBACK_FAILED=1"
 call :restore 14 "_Game Switcher\active-profile.txt"
 if errorlevel 1 set "ROLLBACK_FAILED=1"
+call :restore 15 "Files\background0.tga"
+if errorlevel 1 set "ROLLBACK_FAILED=1"
 if "%ROLLBACK_FAILED%"=="1" exit /b 1
 exit /b 0
 
@@ -522,7 +576,7 @@ if errorlevel 1 (
     echo [ERREUR] Impossible de preparer l'interface graphique.
     exit /b 2
 )
-copy /Y "%SWITCH_ROOT%\Resources\Open_Sturmovik_Switcher_Original.ico" "%SWITCHER_GUI_ICON_TEMP%" >nul
+copy /Y "%SWITCH_ROOT%\Resources\Icons\Open_Sturmovik_Switcher_Original.ico" "%SWITCHER_GUI_ICON_TEMP%" >nul
 if errorlevel 1 (
     del /F /Q "%SWITCHER_GUI_TEMP%" >nul 2>&1
     echo [ERREUR] Impossible de preparer l'icone de l'interface.
@@ -549,24 +603,24 @@ exit /b 0
   singleinstance="yes" sysmenu="yes" windowstate="normal" />
 <style>
 html, body { width:100%; height:100%; margin:0; overflow:hidden; }
-body { font-family:Arial,Helvetica,sans-serif; font-size:17px; color:#d2d8cf; background:#1d3037 center center no-repeat; background-size:cover; }
-.titlebar { position:absolute; left:0; right:0; top:0; height:29px; border:1px solid #172d32; background:rgba(92,114,117,.96); box-shadow:inset 1px 1px 2px #c0ceca,inset -1px -2px 3px #364e53; }
-.titlebar .caption { box-sizing:border-box; float:left; width:30%; height:29px; padding:4px 28px; border-right:3px ridge #728785; font-size:16px; font-weight:normal; }
-.titlebar .pilot { float:right; margin:4px 28px 0 0; font-size:16px; }
-.panel { position:absolute; left:50%; top:66px; width:820px; height:598px; margin-left:-414px; border:4px solid #15363b; border-radius:6px; background:rgba(38,72,79,.84); background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjYiPjxwYXRoIGQ9Ik0tMSAxbDItMk0wIDZsNi02TTUgN2wyLTIiIHN0cm9rZT0iI2QyZGNjZSIgc3Ryb2tlLW9wYWNpdHk9Ii4wMzUiLz48cGF0aCBkPSJNLTEgNWwyIDJNMCAwbDYgNk01LTFsMiAyIiBzdHJva2U9IiMwOTFiMjAiIHN0cm9rZS1vcGFjaXR5PSIuMDYiLz48L3N2Zz4="); box-shadow:inset 2px 2px 3px #638489,inset -2px -2px 3px #061f27,0 2px 3px #0e1c23; }
+body { font-family:"Trebuchet MS",Tahoma,Arial,sans-serif; font-size:17px; color:#d6d8d0; background:#293a40 center center no-repeat; background-size:cover; text-shadow:1px 1px 1px #252c2b; }
+.titlebar { position:absolute; left:0; right:0; top:0; height:29px; border:2px ridge #8b9690; background:rgba(91,101,98,.98); box-shadow:inset 1px 1px #c6ccc2,inset -2px -2px #34413f; }
+.titlebar .caption { box-sizing:border-box; float:left; width:30%; height:29px; padding:3px 28px; border-right:3px ridge #87928d; font-size:17px; font-weight:normal; }
+.titlebar .pilot { float:right; margin:3px 28px 0 0; font-size:17px; }
+.panel { position:absolute; left:50%; top:66px; width:820px; height:598px; margin-left:-414px; border:4px ridge #89938e; border-radius:1px; background:rgba(77,86,83,.94); background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjYiPjxwYXRoIGQ9Ik0tMSAxbDItMk0wIDZsNi02TTUgN2wyLTIiIHN0cm9rZT0iI2QyZGNjZSIgc3Ryb2tlLW9wYWNpdHk9Ii4wMzUiLz48cGF0aCBkPSJNLTEgNWwyIDJNMCAwbDYgNk01LTFsMiAyIiBzdHJva2U9IiMwOTFiMjAiIHN0cm9rZS1vcGFjaXR5PSIuMDYiLz48L3N2Zz4="); box-shadow:inset 2px 2px 2px #aeb7b0,inset -3px -3px 3px #283330,0 3px 4px #111a1b; }
 .bolt { position:absolute; width:12px; height:12px; background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJtIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiNkNmQ1YWUiLz48c3RvcCBvZmZzZXQ9Ii40IiBzdG9wLWNvbG9yPSIjODI5MTgxIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMjUzYzM5Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGNpcmNsZSBjeD0iNi41IiBjeT0iNi41IiByPSI0LjgiIGZpbGw9IiMxMTJiMmUiLz48Y2lyY2xlIGN4PSI1LjUiIGN5PSI1LjUiIHI9IjQuMiIgZmlsbD0idXJsKCNtKSIgc3Ryb2tlPSIjNTk3NjZiIiBzdHJva2Utd2lkdGg9Ii42Ii8+PHBhdGggZD0iTTMgOGw1LTUiIHN0cm9rZT0iIzIzM2IzNSIgc3Ryb2tlLXdpZHRoPSIxLjEiLz48cGF0aCBkPSJNMy42IDguNGw1LTUiIHN0cm9rZT0iI2NlZDJiMiIgc3Ryb2tlLXdpZHRoPSIuNiIvPjwvc3ZnPg==") center center no-repeat; }
 .tl{left:4px;top:4px}.tr{right:4px;top:4px}.bl{left:4px;bottom:4px}.br{right:4px;bottom:4px}
 .tm{left:50%;top:4px;margin-left:-6px}.bm{left:50%;bottom:4px;margin-left:-6px}.ml{left:4px;top:50%;margin-top:-6px}.mr{right:4px;top:50%;margin-top:-6px}
 .tq{left:25%;top:4px}.tq3{left:75%;top:4px}.bq{left:25%;bottom:4px}.bq3{left:75%;bottom:4px}.lq{left:4px;top:25%}.lq3{left:4px;top:75%}.rq{right:4px;top:25%}.rq3{right:4px;top:75%}
 .column { position:absolute; top:29px; bottom:112px; box-sizing:border-box; }
-.left { left:30px; width:380px; padding-right:25px; border-right:1px solid #b5c8c2; box-shadow:1px 0 #4b6567; }
+.left { left:30px; width:380px; padding-right:25px; border-right:2px solid #c3c7be; box-shadow:2px 0 #353e3b; }
 .right { right:30px; width:354px; }
-.heading { margin:0 0 12px; padding:8px 14px; color:#d7ddd4; font-size:17px; line-height:24px; font-weight:normal; border:2px solid #6b7564; border-radius:3px; background:rgba(10,22,24,.84); box-shadow:inset 1px 1px #b5b399,inset -1px -1px #263a35; text-align:center; }
+.heading { margin:0 0 12px; padding:8px 14px; color:#e0e2d8; font-size:19px; line-height:24px; font-weight:normal; border:0; border-radius:0; background:none; box-shadow:none; text-align:left; text-shadow:1px 1px #252d2b,0 0 1px #e9eadf; }
 .choice { display:block; position:relative; height:52px; margin:2px 0; cursor:pointer; }
 .choice input { position:absolute; left:11px; top:15px; width:27px; height:27px; margin:0; opacity:0; filter:alpha(opacity=0); }
 .lamp { position:absolute; left:3px; top:7px; width:44px; height:44px; background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im1ldGFsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2YwZjBkZSIvPjxzdG9wIG9mZnNldD0iLjI1IiBzdG9wLWNvbG9yPSIjYzdjZWJmIi8+PHN0b3Agb2Zmc2V0PSIuNDMiIHN0b3AtY29sb3I9IiM2Zjg0N2UiLz48c3RvcCBvZmZzZXQ9Ii42NyIgc3RvcC1jb2xvcj0iI2E5YjZhOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzNhNDk0NyIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJnbGFzcyIgY3g9Ii4zOCIgY3k9Ii4zIiByPSIuNzIiPjxzdG9wIHN0b3AtY29sb3I9IiNkOGEzM2IiLz48c3RvcCBvZmZzZXQ9Ii4zNiIgc3RvcC1jb2xvcj0iIzc4NTIwZCIvPjxzdG9wIG9mZnNldD0iLjc5IiBzdG9wLWNvbG9yPSIjMjMxNzBiIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTAxNjEzIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGVsbGlwc2UgY3g9IjI1IiBjeT0iMjciIHJ4PSIxNyIgcnk9IjE1IiBmaWxsPSIjMDcxMDE1IiBvcGFjaXR5PSIuNiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjE3IiBmaWxsPSIjMmMzZDNjIiBzdHJva2U9IiMyODM3MzUiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxNiIgZmlsbD0idXJsKCNtZXRhbCkiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxMiIgZmlsbD0iIzc3ODU3ZSIgc3Ryb2tlPSIjZDNkOWNhIiBzdHJva2Utd2lkdGg9Ii42Ii8+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTAuNSIgZmlsbD0iIzE1MjUxZiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjkuNSIgZmlsbD0idXJsKCNnbGFzcykiLz48ZWxsaXBzZSBjeD0iMTYuNSIgY3k9IjE1IiByeD0iMy41IiByeT0iMi40IiBmaWxsPSIjZmZmZGU4IiBvcGFjaXR5PSIuOTIiLz48Y2lyY2xlIGN4PSIyMi41IiBjeT0iMjUuNSIgcj0iMS41IiBmaWxsPSIjZTBjYzc5IiBvcGFjaXR5PSIuMzUiLz48cGF0aCBkPSJNOSAxMmwyIDFNMzEgMjVsMiAxTTE0IDMzbDEtMiIgc3Ryb2tlPSIjNGI1YjU2IiBzdHJva2Utd2lkdGg9IjEuMiIvPjwvc3ZnPg==") no-repeat; }
 .choice input:checked + .lamp, .choice:hover .lamp { background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im1ldGFsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2YwZjBkZSIvPjxzdG9wIG9mZnNldD0iLjI1IiBzdG9wLWNvbG9yPSIjYzdjZWJmIi8+PHN0b3Agb2Zmc2V0PSIuNDMiIHN0b3AtY29sb3I9IiM2Zjg0N2UiLz48c3RvcCBvZmZzZXQ9Ii42NyIgc3RvcC1jb2xvcj0iI2E5YjZhOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzNhNDk0NyIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJnbGFzcyIgY3g9Ii4zOCIgY3k9Ii4zIiByPSIuNzIiPjxzdG9wIHN0b3AtY29sb3I9IiNjMWVjNTkiLz48c3RvcCBvZmZzZXQ9Ii4zNiIgc3RvcC1jb2xvcj0iIzIxYjkxYiIvPjxzdG9wIG9mZnNldD0iLjc5IiBzdG9wLWNvbG9yPSIjMTU0NjE3Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTAxNjEzIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGVsbGlwc2UgY3g9IjI1IiBjeT0iMjciIHJ4PSIxNyIgcnk9IjE1IiBmaWxsPSIjMDcxMDE1IiBvcGFjaXR5PSIuNiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjE3IiBmaWxsPSIjMmMzZDNjIiBzdHJva2U9IiMyODM3MzUiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxNiIgZmlsbD0idXJsKCNtZXRhbCkiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxMiIgZmlsbD0iIzc3ODU3ZSIgc3Ryb2tlPSIjZDNkOWNhIiBzdHJva2Utd2lkdGg9Ii42Ii8+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTAuNSIgZmlsbD0iIzE1MjUxZiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjkuNSIgZmlsbD0idXJsKCNnbGFzcykiLz48ZWxsaXBzZSBjeD0iMTYuNSIgY3k9IjE1IiByeD0iMy41IiByeT0iMi40IiBmaWxsPSIjZmZmZGU4IiBvcGFjaXR5PSIuOTIiLz48Y2lyY2xlIGN4PSIyMi41IiBjeT0iMjUuNSIgcj0iMS41IiBmaWxsPSIjZTBjYzc5IiBvcGFjaXR5PSIuMzUiLz48cGF0aCBkPSJNOSAxMmwyIDFNMzEgMjVsMiAxTTE0IDMzbDEtMiIgc3Ryb2tlPSIjNGI1YjU2IiBzdHJva2Utd2lkdGg9IjEuMiIvPjwvc3ZnPg=="); }
-.choice .name { position:absolute; left:64px; top:18px; font-size:18px; font-weight:normal; color:#d6ddd3; }
+.choice .name { position:absolute; left:64px; top:17px; font-size:19px; font-weight:normal; color:#d8dad2; text-shadow:1px 1px #2b312f,0 0 1px #e5e7dd; }
 .choice input:checked ~ .name { color:#f0f3e4; }
 .choice input:focus ~ .name { outline:1px dotted #dfdfc0; outline-offset:4px; }
 .choice .detail { display:none; }
@@ -576,26 +630,26 @@ body { font-family:Arial,Helvetica,sans-serif; font-size:17px; color:#d2d8cf; ba
 .hudrow .choice { display:inline-block; width:170px; height:51px; margin:0; vertical-align:top; }
 .hudrow .choice .lamp { left:1px; top:3px; }
 .hudrow .choice .name { left:52px; top:16px; font-size:16px; }
-.hudheading { margin-top:14px; padding:8px 0 0; border:0; border-top:1px solid #b5c8c2; border-radius:0; background:none; box-shadow:inset 0 1px #4b6567; text-align:left; }
-.summary { box-sizing:border-box; height:128px; margin-top:18px; padding:10px 12px; border:1px solid #a8b6a6; background:rgba(15,33,37,.55); box-shadow:inset 1px 1px 2px #183335,1px 1px #223b3c; color:#cad5cb; font-size:11px; line-height:17px; }
+.hudheading { margin-top:14px; padding:8px 0 0; border:0; border-top:2px solid #c3c7be; border-radius:0; background:none; box-shadow:inset 0 2px #353e3b; text-align:left; }
+.summary { box-sizing:border-box; height:128px; margin-top:18px; padding:10px 12px; border:2px inset #89958e; background:rgba(38,45,43,.72); box-shadow:none; color:#d0d4cc; font-size:11px; line-height:17px; text-shadow:1px 1px #202624; }
 .summary strong { font-weight:normal; color:#eff0d7; font-size:12px; }
-.current { box-sizing:border-box; margin-top:16px; min-height:60px; padding:10px 13px; border:2px solid #677567; border-radius:3px; background:rgba(12,25,26,.86); box-shadow:inset 1px 1px #a8b09b,inset -1px -1px #253c35; color:#d7dfd3; font-size:14px; line-height:19px; }
-.actions { position:absolute; left:30px; right:30px; bottom:28px; height:52px; padding-top:18px; border-top:1px solid #b5c8c2; box-shadow:inset 0 1px #4b6567; }
-.button { position:relative; box-sizing:border-box; height:46px; min-width:154px; margin:0 0 0 56px; padding:0 16px; border:2px solid #a9bcb6; border-radius:5px; color:#dfe5da; background:transparent; font:18px Arial,Helvetica,sans-serif; text-align:left; cursor:pointer; box-shadow:inset 1px 1px #d2d7c6,inset -1px -1px #526b64; }
+.current { box-sizing:border-box; margin-top:16px; min-height:60px; padding:10px 13px; border:2px ridge #838d84; border-radius:1px; background:rgba(42,48,46,.84); box-shadow:inset 1px 1px #aeb3a7,inset -2px -2px #313a36; color:#d9ddd4; font-size:14px; line-height:19px; }
+.actions { position:absolute; left:30px; right:30px; bottom:28px; height:52px; padding-top:18px; border-top:2px solid #c3c7be; box-shadow:inset 0 2px #353e3b; }
+.button { position:relative; box-sizing:border-box; height:46px; min-width:154px; margin:0 0 0 56px; padding:0 16px; border:3px ridge #b3bbb1; border-radius:1px; color:#e2e3da; background:#68716d; font:18px "Trebuchet MS",Tahoma,Arial,sans-serif; text-align:left; cursor:pointer; box-shadow:inset 1px 1px #d7dbd0,inset -2px -2px #3a4440; text-shadow:1px 1px #2c302f; }
 .button .bulb { display:none; }
 .button:before { content:""; position:absolute; left:-55px; top:0; width:44px; height:44px; background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im1ldGFsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2YwZjBkZSIvPjxzdG9wIG9mZnNldD0iLjI1IiBzdG9wLWNvbG9yPSIjYzdjZWJmIi8+PHN0b3Agb2Zmc2V0PSIuNDMiIHN0b3AtY29sb3I9IiM2Zjg0N2UiLz48c3RvcCBvZmZzZXQ9Ii42NyIgc3RvcC1jb2xvcj0iI2E5YjZhOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzNhNDk0NyIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJnbGFzcyIgY3g9Ii4zOCIgY3k9Ii4zIiByPSIuNzIiPjxzdG9wIHN0b3AtY29sb3I9IiNkOGEzM2IiLz48c3RvcCBvZmZzZXQ9Ii4zNiIgc3RvcC1jb2xvcj0iIzc4NTIwZCIvPjxzdG9wIG9mZnNldD0iLjc5IiBzdG9wLWNvbG9yPSIjMjMxNzBiIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTAxNjEzIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGVsbGlwc2UgY3g9IjI1IiBjeT0iMjciIHJ4PSIxNyIgcnk9IjE1IiBmaWxsPSIjMDcxMDE1IiBvcGFjaXR5PSIuNiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjE3IiBmaWxsPSIjMmMzZDNjIiBzdHJva2U9IiMyODM3MzUiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxNiIgZmlsbD0idXJsKCNtZXRhbCkiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxMiIgZmlsbD0iIzc3ODU3ZSIgc3Ryb2tlPSIjZDNkOWNhIiBzdHJva2Utd2lkdGg9Ii42Ii8+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTAuNSIgZmlsbD0iIzE1MjUxZiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjkuNSIgZmlsbD0idXJsKCNnbGFzcykiLz48ZWxsaXBzZSBjeD0iMTYuNSIgY3k9IjE1IiByeD0iMy41IiByeT0iMi40IiBmaWxsPSIjZmZmZGU4IiBvcGFjaXR5PSIuOTIiLz48Y2lyY2xlIGN4PSIyMi41IiBjeT0iMjUuNSIgcj0iMS41IiBmaWxsPSIjZTBjYzc5IiBvcGFjaXR5PSIuMzUiLz48cGF0aCBkPSJNOSAxMmwyIDFNMzEgMjVsMiAxTTE0IDMzbDEtMiIgc3Ryb2tlPSIjNGI1YjU2IiBzdHJva2Utd2lkdGg9IjEuMiIvPjwvc3ZnPg==") no-repeat; }
-.button.quit { background:#9b3025; }
+.button.quit { background:#9b3025; border-color:#d2c2b9; }
 .button.quit:before { background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im1ldGFsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2YwZjBkZSIvPjxzdG9wIG9mZnNldD0iLjI1IiBzdG9wLWNvbG9yPSIjYzdjZWJmIi8+PHN0b3Agb2Zmc2V0PSIuNDMiIHN0b3AtY29sb3I9IiM2Zjg0N2UiLz48c3RvcCBvZmZzZXQ9Ii42NyIgc3RvcC1jb2xvcj0iI2E5YjZhOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzNhNDk0NyIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJnbGFzcyIgY3g9Ii4zOCIgY3k9Ii4zIiByPSIuNzIiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmE3NzMiLz48c3RvcCBvZmZzZXQ9Ii4zNiIgc3RvcC1jb2xvcj0iI2QzMWExMCIvPjxzdG9wIG9mZnNldD0iLjc5IiBzdG9wLWNvbG9yPSIjNjYxNzE0Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTAxNjEzIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGVsbGlwc2UgY3g9IjI1IiBjeT0iMjciIHJ4PSIxNyIgcnk9IjE1IiBmaWxsPSIjMDcxMDE1IiBvcGFjaXR5PSIuNiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjE3IiBmaWxsPSIjMmMzZDNjIiBzdHJva2U9IiMyODM3MzUiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxNiIgZmlsbD0idXJsKCNtZXRhbCkiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxMiIgZmlsbD0iIzc3ODU3ZSIgc3Ryb2tlPSIjZDNkOWNhIiBzdHJva2Utd2lkdGg9Ii42Ii8+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTAuNSIgZmlsbD0iIzE1MjUxZiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjkuNSIgZmlsbD0idXJsKCNnbGFzcykiLz48ZWxsaXBzZSBjeD0iMTYuNSIgY3k9IjE1IiByeD0iMy41IiByeT0iMi40IiBmaWxsPSIjZmZmZGU4IiBvcGFjaXR5PSIuOTIiLz48Y2lyY2xlIGN4PSIyMi41IiBjeT0iMjUuNSIgcj0iMS41IiBmaWxsPSIjZTBjYzc5IiBvcGFjaXR5PSIuMzUiLz48cGF0aCBkPSJNOSAxMmwyIDFNMzEgMjVsMiAxTTE0IDMzbDEtMiIgc3Ryb2tlPSIjNGI1YjU2IiBzdHJva2Utd2lkdGg9IjEuMiIvPjwvc3ZnPg=="); }
-.button.apply { float:right; min-width:144px; margin-right:0; border-color:transparent; border-radius:0; box-shadow:none; }
+.button.apply { float:right; min-width:144px; margin-right:0; border-color:transparent; border-radius:0; background:transparent; box-shadow:none; }
 .button.apply:before { background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im1ldGFsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2YwZjBkZSIvPjxzdG9wIG9mZnNldD0iLjI1IiBzdG9wLWNvbG9yPSIjYzdjZWJmIi8+PHN0b3Agb2Zmc2V0PSIuNDMiIHN0b3AtY29sb3I9IiM2Zjg0N2UiLz48c3RvcCBvZmZzZXQ9Ii42NyIgc3RvcC1jb2xvcj0iI2E5YjZhOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzNhNDk0NyIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJnbGFzcyIgY3g9Ii4zOCIgY3k9Ii4zIiByPSIuNzIiPjxzdG9wIHN0b3AtY29sb3I9IiNkOGEzM2IiLz48c3RvcCBvZmZzZXQ9Ii4zNiIgc3RvcC1jb2xvcj0iIzc4NTIwZCIvPjxzdG9wIG9mZnNldD0iLjc5IiBzdG9wLWNvbG9yPSIjMjMxNzBiIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTAxNjEzIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGVsbGlwc2UgY3g9IjI1IiBjeT0iMjciIHJ4PSIxNyIgcnk9IjE1IiBmaWxsPSIjMDcxMDE1IiBvcGFjaXR5PSIuNiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjE3IiBmaWxsPSIjMmMzZDNjIiBzdHJva2U9IiMyODM3MzUiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxNiIgZmlsbD0idXJsKCNtZXRhbCkiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxMiIgZmlsbD0iIzc3ODU3ZSIgc3Ryb2tlPSIjZDNkOWNhIiBzdHJva2Utd2lkdGg9Ii42Ii8+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTAuNSIgZmlsbD0iIzE1MjUxZiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjkuNSIgZmlsbD0idXJsKCNnbGFzcykiLz48ZWxsaXBzZSBjeD0iMTYuNSIgY3k9IjE1IiByeD0iMy41IiByeT0iMi40IiBmaWxsPSIjZmZmZGU4IiBvcGFjaXR5PSIuOTIiLz48Y2lyY2xlIGN4PSIyMi41IiBjeT0iMjUuNSIgcj0iMS41IiBmaWxsPSIjZTBjYzc5IiBvcGFjaXR5PSIuMzUiLz48cGF0aCBkPSJNOSAxMmwyIDFNMzEgMjVsMiAxTTE0IDMzbDEtMiIgc3Ryb2tlPSIjNGI1YjU2IiBzdHJva2Utd2lkdGg9IjEuMiIvPjwvc3ZnPg=="); }
 .button.apply:hover:before, .button.apply:focus:before { background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im1ldGFsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2YwZjBkZSIvPjxzdG9wIG9mZnNldD0iLjI1IiBzdG9wLWNvbG9yPSIjYzdjZWJmIi8+PHN0b3Agb2Zmc2V0PSIuNDMiIHN0b3AtY29sb3I9IiM2Zjg0N2UiLz48c3RvcCBvZmZzZXQ9Ii42NyIgc3RvcC1jb2xvcj0iI2E5YjZhOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzNhNDk0NyIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJnbGFzcyIgY3g9Ii4zOCIgY3k9Ii4zIiByPSIuNzIiPjxzdG9wIHN0b3AtY29sb3I9IiNjMWVjNTkiLz48c3RvcCBvZmZzZXQ9Ii4zNiIgc3RvcC1jb2xvcj0iIzIxYjkxYiIvPjxzdG9wIG9mZnNldD0iLjc5IiBzdG9wLWNvbG9yPSIjMTU0NjE3Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTAxNjEzIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGVsbGlwc2UgY3g9IjI1IiBjeT0iMjciIHJ4PSIxNyIgcnk9IjE1IiBmaWxsPSIjMDcxMDE1IiBvcGFjaXR5PSIuNiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjE3IiBmaWxsPSIjMmMzZDNjIiBzdHJva2U9IiMyODM3MzUiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxNiIgZmlsbD0idXJsKCNtZXRhbCkiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxMiIgZmlsbD0iIzc3ODU3ZSIgc3Ryb2tlPSIjZDNkOWNhIiBzdHJva2Utd2lkdGg9Ii42Ii8+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTAuNSIgZmlsbD0iIzE1MjUxZiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjkuNSIgZmlsbD0idXJsKCNnbGFzcykiLz48ZWxsaXBzZSBjeD0iMTYuNSIgY3k9IjE1IiByeD0iMy41IiByeT0iMi40IiBmaWxsPSIjZmZmZGU4IiBvcGFjaXR5PSIuOTIiLz48Y2lyY2xlIGN4PSIyMi41IiBjeT0iMjUuNSIgcj0iMS41IiBmaWxsPSIjZTBjYzc5IiBvcGFjaXR5PSIuMzUiLz48cGF0aCBkPSJNOSAxMmwyIDFNMzEgMjVsMiAxTTE0IDMzbDEtMiIgc3Ryb2tlPSIjNGI1YjU2IiBzdHJva2Utd2lkdGg9IjEuMiIvPjwvc3ZnPg=="); }
 .button:hover, .button:focus { color:#fffde5; outline:1px dotted #dddcc3; outline-offset:3px; }
-.button.quit:hover { background:#b43c2d; }
+.button.quit:hover { background:#ad382b; }
 .button:active { top:1px; }
 .button:disabled { color:#8da097; cursor:default; opacity:.6; outline:0; }
 #result { display:none; position:absolute; left:30px; right:30px; top:29px; bottom:28px; }
-#statusTitle { margin:0 0 22px; padding:15px; border:2px solid #899681; border-radius:3px; background:rgba(11,25,26,.86); font-size:21px; font-weight:normal; text-align:center; }
-#log { box-sizing:border-box; height:359px; overflow:auto; padding:16px; border:1px solid #a8b6a6; background:rgba(12,26,28,.82); color:#d9e0d4; font:13px/20px Consolas,monospace; white-space:pre-wrap; word-wrap:break-word; }
+#statusTitle { margin:0 0 22px; padding:15px; border:2px ridge #929b91; border-radius:1px; background:rgba(39,46,44,.88); font-size:21px; font-weight:normal; text-align:center; }
+#log { box-sizing:border-box; height:359px; overflow:auto; padding:16px; border:2px inset #929b91; background:rgba(34,40,38,.86); color:#d9dcd4; font:13px/20px Consolas,monospace; white-space:pre-wrap; word-wrap:break-word; text-shadow:none; }
 #result .actions { left:0; right:0; bottom:0; }
 .ok { color:#bbdf9d; }.error { color:#ffb49a; }
 @media screen and (max-height:700px) { .panel { top:44px; height:calc(100% - 62px); min-height:565px; } .column { top:24px; } }
@@ -613,9 +667,6 @@ function init() {
   guiIconTemp = shell.Environment('PROCESS').Item('SWITCHER_GUI_ICON_TEMP');
   root = fso.GetParentFolderName(bat);
   switchRoot = fso.BuildPath(root, '_Game Switcher');
-  var resources = fso.BuildPath(switchRoot, 'Resources');
-  var background = fso.BuildPath(resources, 'Open_Sturmovik_Switcher_Background.jpg');
-  if (fso.FileExists(background)) document.body.style.backgroundImage = 'url("file:///' + background.replace(/\\/g, '/') + '")';
   restoreState();
   updateSelection();
   setTimeout(cleanupGuiSource, 750);

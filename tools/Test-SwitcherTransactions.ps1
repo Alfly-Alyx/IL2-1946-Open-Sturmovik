@@ -138,7 +138,11 @@ Assert-True ($game -notmatch '[!%"\r\n]') 'Unsupported command-path character.'
 $manifest = Get-Content -LiteralPath (Join-Path $repo 'manifests/switcher-v1.15.json') -Raw | ConvertFrom-Json
 Assert-True (($manifest.profiles.number -join ',') -eq '1,2,3,4,5,6,7,8,9') 'Expected nine ordered profiles.'
 $bat = Join-Path $game $manifest.entryPoint
-foreach ($component in @($manifest.entryPoint,$manifest.desktopIcon,$manifest.background.path) | Where-Object { $_ }) {
+$components = @($manifest.entryPoint, $manifest.desktopIcon)
+if ($null -ne $manifest.background) {
+    $components += [string]$manifest.background.path
+}
+foreach ($component in $components | Where-Object { $_ }) {
     Assert-Hash (Join-Path $game $component) (Hash (Join-Path $repo $component))
 }
 $activeFiles = @('il2fb.exe','files.SFS','wrapper.dll','fb_3do19.SFS','fb_3do20.SFS','fb_maps15.SFS',

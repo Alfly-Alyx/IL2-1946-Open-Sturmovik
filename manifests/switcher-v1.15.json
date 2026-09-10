@@ -7,39 +7,83 @@
   "hashChecker": null,
   "hashCheckerMode": "embedded-sha256-validation",
   "resourceDirectory": "_Game Switcher/Resources",
-  "desktopIcon": "_Game Switcher/Resources/Open_Sturmovik_Switcher_Original.ico",
+  "desktopIcon": "_Game Switcher/Resources/Icons/Open_Sturmovik_Switcher_Original.ico",
   "icons": [
     {
-      "path": "_Game Switcher/Resources/Open_Sturmovik_Switcher_Original.ico",
+      "path": "_Game Switcher/Resources/Icons/Open_Sturmovik_Switcher_Original.ico",
       "role": "active-original-switcher-design",
       "size": 270398,
       "sha256": "CCC954FA9D9BB38549F9D26335634914A26B9FFA576CF8729DD934EFAB8AA38E"
     },
     {
-      "path": "_Game Switcher/Resources/Open_Sturmovik_Switcher.ico",
+      "path": "_Game Switcher/Resources/Icons/Open_Sturmovik_Switcher.ico",
       "role": "retained-v1.15-alternative",
       "size": 177146,
       "sha256": "D2D60AAA4B5054AA3949C4A8D8B21F3C6A19F8DB9262B9488D9C5906BE6198C9"
     },
     {
-      "path": "_Game Switcher/Resources/IL2-2001-Demo__icone-extraite-executable.ico",
+      "path": "_Game Switcher/Resources/Icons/IL2-2001-Demo__icone-extraite-executable.ico",
       "role": "retained-2001-demo-alternative",
       "size": 766,
       "sha256": "9E649EC57395E136682655A3EDCFD5CD8DCD6C23A0B1FC97775AD007721A740D"
     }
   ],
   "referenceArtwork": {
-    "path": "_Game Switcher/Resources/OFFICIEL-Steam__IL2-1946__icone-communaute.jpg",
+    "path": "_Game Switcher/Resources/Icons/OFFICIEL-Steam__IL2-1946__icone-communaute.jpg",
     "size": 823,
     "sha256": "0DA97532DD799185C259CFEBFD1635CD3AD24EA662BB909770DFA3C7F170544F"
   },
-  "background": {
-    "path": "_Game Switcher/Resources/Open_Sturmovik_Switcher_Background.jpg",
-    "size": 247787,
-    "sha256": "B4E3294816632A7F2A39530C644C0DB9CBD9CC56CB630EDA9711F4E23CA981C5"
+  "background": null,
+  "loadingBackgrounds": {
+    "style": "registered-maddox-games-trademark-with-deterministic-gold-treatment",
+    "selection": "automatic-from-conf.ini-window-aspect-when-applying-a-switcher-profile",
+    "activeTexture": "Files/background0.tga",
+    "material": "Files/background0.mat",
+    "formats": [
+      {
+        "name": "4x3",
+        "path": "_Game Switcher/Resources/Loading Backgrounds/Maddox/4x3/Background.tga",
+        "width": 2880,
+        "height": 2160,
+        "size": 18662444,
+        "sha256": "E1C0BFB53AE7E5891BF7A4F8333D33F119B177E373DBE8B6BBEC3014EC7CB898"
+      },
+      {
+        "name": "16x10",
+        "path": "_Game Switcher/Resources/Loading Backgrounds/Maddox/16x10/Background.tga",
+        "width": 3456,
+        "height": 2160,
+        "size": 22394924,
+        "sha256": "B7305B816509CBADF15FC2484696484F676F0CB97721DC503C34FFB7C233913A"
+      },
+      {
+        "name": "16x9",
+        "path": "_Game Switcher/Resources/Loading Backgrounds/Maddox/16x9/Background.tga",
+        "width": 3840,
+        "height": 2160,
+        "size": 24883244,
+        "sha256": "EFC91DD0047146AA4414A0F06B979AA3CFD7F6B5D86E5D621F0E65F8DD0C70E9"
+      },
+      {
+        "name": "21x9",
+        "path": "_Game Switcher/Resources/Loading Backgrounds/Maddox/21x9/Background.tga",
+        "width": 3840,
+        "height": 1646,
+        "size": 18961964,
+        "sha256": "59FFE92F41A42A5BD2517D1FFE8B85EE2F85CB1723B7539D315B16EF048875D4"
+      },
+      {
+        "name": "32x9",
+        "path": "_Game Switcher/Resources/Loading Backgrounds/Maddox/32x9/Background.tga",
+        "width": 3840,
+        "height": 1080,
+        "size": 12441644,
+        "sha256": "46B39B63E660B7D8CD8C8F544866D17367483BEFA92AD6D322CF403C6A4CA6BC"
+      }
+    ]
   },
   "defaultProfile": 8,
-  "status": "single-batch-switcher-offline-verified-runtime-pending",
+  "status": "single-batch-switcher-offline-verified-loading-background-retest-pending",
   "rules": {
     "gameMustBeClosed": true,
     "sourceHashesCheckedBeforeWrite": true,
@@ -51,6 +95,8 @@
     "originalExecutablesRemainByteIdentical": true,
     "moddedWindowTitleUsesLooseConfigClass": true,
     "activeProfileStateIncludedInRollback": true,
+    "loadingBackgroundIncludedInRollback": true,
+    "loadingBackgroundSelectedFromWindowAspect": true,
     "keepHudDetectedFromActualFile": true,
     "rejectAbandonedTransaction": true
   },
@@ -366,9 +412,9 @@
       "entries": 535
     }
   },
-  "entryPointSha256": "761B2BF4CF9EAB2B73DF3AAC8EFE708B1015256B1A54FD462C563C7DB17F12DE",
+  "entryPointSha256": "21F83A7CFEDDE090A876F3931ACA320066B090FB77784B43C8DD5B21C705C6EE",
   "latestVerification": {
-    "date": "2026-09-07",
+    "date": "2026-09-08",
     "fileTransactionsPassed": 18,
     "keepHudChecks": [
       "immersion-preserved-9-to-8",
@@ -382,11 +428,13 @@
     "singleBatch": true,
     "embeddedGuiSelectionTests": 18,
     "embeddedGuiStateRestorationTests": 18,
+    "profileValidationsPassed": 15,
+    "profileValidationScope": "all nine profiles with standard HUD, plus the six modded profiles with immersion HUD",
     "windowsLineEndingsRequired": true,
-    "gameLaunched": false,
+    "gameLaunched": true,
     "capturesLaunched": false,
     "guiLaunched": false,
     "stockHudPolicy": "stock profiles force the original HUD; standard and immersion remain selectable for modded profiles",
-    "runtimeValidation": "pending"
+    "runtimeValidation": "profile 9 reached the loading screen; the observed Files/background0.tga target has now been corrected and awaits a no-capture relaunch"
   }
 }

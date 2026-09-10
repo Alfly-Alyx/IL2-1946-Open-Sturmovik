@@ -16,15 +16,21 @@ if ($manifest.schemaVersion -ne 1 -or $manifest.release -ne '1.15') {
     throw 'Manifeste du switcher v1.15 invalide.'
 }
 
-foreach ($relative in @($manifest.entryPoint, $manifest.desktopIcon, $manifest.background.path) | Where-Object { $_ }) {
+$components = @($manifest.entryPoint, $manifest.desktopIcon)
+if ($null -ne $manifest.background) {
+    $components += [string]$manifest.background.path
+}
+foreach ($relative in $components | Where-Object { $_ }) {
     if (-not (Test-Path -LiteralPath (Join-Path $root ([string]$relative)) -PathType Leaf)) {
         throw "Composant du switcher absent : $relative"
     }
 }
-if ((Get-Item -LiteralPath (Join-Path $root ([string]$manifest.background.path))).Length -ne [long]$manifest.background.size -or
-    (Get-FileHash -LiteralPath (Join-Path $root ([string]$manifest.background.path)) -Algorithm SHA256).Hash -ne
-        [string]$manifest.background.sha256) {
-    throw 'Fond graphique du switcher absent ou altere.'
+if ($null -ne $manifest.background) {
+    if ((Get-Item -LiteralPath (Join-Path $root ([string]$manifest.background.path))).Length -ne [long]$manifest.background.size -or
+        (Get-FileHash -LiteralPath (Join-Path $root ([string]$manifest.background.path)) -Algorithm SHA256).Hash -ne
+            [string]$manifest.background.sha256) {
+        throw 'Fond graphique du switcher absent ou altere.'
+    }
 }
 if ([string]$manifest.resourceDirectory -ne '_Game Switcher/Resources' -or
     @($manifest.icons).Count -ne 3) {

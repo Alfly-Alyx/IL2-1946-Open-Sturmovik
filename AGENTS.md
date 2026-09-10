@@ -26,6 +26,8 @@
 
 ## Emplacement des depots et dossiers de travail
 
+- Les sous-dossiers d'un dossier principal dont le nom commence par `_` ne
+  doivent pas eux-memes commencer par `_`.
 - Le dossier `D:\Projets\GITHUB` est reserve au main.
 - Tous les dossiers de travail des taches doivent etre places dans
   `C:\Users\Alexis\.codex`.

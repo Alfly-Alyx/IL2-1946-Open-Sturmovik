@@ -52,11 +52,10 @@ Assert-True (@(Get-ChildItem -LiteralPath $switchRoot -Directory -Filter '_trans
 $bat = Join-Path $game 'Open_Sturmovik_Switcher.bat'
 foreach ($relative in @(
     'Open_Sturmovik_Switcher.bat',
-    '_Game Switcher/Resources/Open_Sturmovik_Switcher_Original.ico',
-    '_Game Switcher/Resources/Open_Sturmovik_Switcher.ico',
-    '_Game Switcher/Resources/IL2-2001-Demo__icone-extraite-executable.ico',
-    '_Game Switcher/Resources/OFFICIEL-Steam__IL2-1946__icone-communaute.jpg',
-    '_Game Switcher/Resources/Open_Sturmovik_Switcher_Background.jpg'
+    '_Game Switcher/Resources/Icons/Open_Sturmovik_Switcher_Original.ico',
+    '_Game Switcher/Resources/Icons/Open_Sturmovik_Switcher.ico',
+    '_Game Switcher/Resources/Icons/IL2-2001-Demo__icone-extraite-executable.ico',
+    '_Game Switcher/Resources/Icons/OFFICIEL-Steam__IL2-1946__icone-communaute.jpg'
 )) {
     Assert-True ((Hash (Join-Path $game $relative)) -eq (Hash (Join-Path $repo $relative))) "The test copy does not contain the current switcher component: $relative"
 }
