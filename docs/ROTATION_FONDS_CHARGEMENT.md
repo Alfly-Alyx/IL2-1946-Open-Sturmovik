@@ -1,6 +1,6 @@
 # Rotation des fonds de chargement Open Sturmovik
 
-État du 11 septembre 2026 — Open Sturmovik v1.15, profils moddés 4.08m, 4.09b et 4.09m, avec ou sans 6DOF. Développement isolé sur `codex/rotation-fonds`. La logique est testée hors jeu. Le premier lancement natif a atteint le helper, mais refusé la texture 1586 × 992. Les copies ont ensuite été réduites sous 4,20 Mo à la demande d’Alexis ; leur nouvel affichage en jeu reste à vérifier.
+État du 11 septembre 2026 — Open Sturmovik v1.15, profils moddés 4.08m, 4.09b et 4.09m, avec ou sans 6DOF. Développement isolé sur `codex/rotation-fonds`. La logique est testée hors jeu. Le premier lancement natif a atteint le helper, mais refusé la texture 1586 × 992. Les copies ont ensuite été réduites sous 4,20 Mo. Deux lancements directs successifs ont changé de fond ; Alexis a confirmé visuellement que le changement fonctionne parfaitement.
 
 ## Utilisation et principe
 
@@ -168,3 +168,26 @@ Alexis a demandé de réduire les fichiers après le constat natif. Les quatre T
 Les **78 contrôles d'installation/restauration réussissent** avec ces nouvelles images, ainsi que neuf cas simulés de détection des processus sous PowerShell 5.1. Les jeux de données de test conservent désormais le wrapper lorsqu'ils reproduisent un profil moddé. Le jeu n'a pas été relancé pour cette correction : le respect du plafond est vérifié, le rendu natif des nouvelles dimensions reste à confirmer.
 
 Rapports : `WIP/loading-rotation-resize-20260911/images-verification.json`, `installation-verification.json` dans le même dossier, et `build/loading-rotation-install-tests/resize-20260911/report.json`. Les TGA précédents, scripts, catalogue et inventaire sont sauvegardés sous `WIP/loading-rotation-resize-20260911/before`. La limite exacte du moteur et ses preuves sont aussi conservées dans [`AUDIT_CHARGEMENT_TEXTURES_4.09M.md`](AUDIT_CHARGEMENT_TEXTURES_4.09M.md) et indexées dans la référence de rétro-ingénierie.
+
+
+## Validation du changement au relancement — 11 septembre 2026
+
+Après le lancement direct de 19:52:59 UTC, le fond choisi était `il2-2001-box` (IL-2 Sturmovik 2001 — jaquette), position 1. Le relancement demandé à 19:56:58 UTC a créé à 19:57:11 UTC un état `last=background-3`, position 2, avec la même signature et le même cycle. Aucun état n'a été modifié ou remis à zéro par l'outil entre les deux processus. La création du nouvel état suit l'acceptation native du matériau.
+
+Alexis a ensuite confirmé : « le changement fonctionne parfaitement ». **Le changement visible entre ces deux lancements directs est validé par l'utilisateur.** Le rapport [`loading-rotation-runtime-validation.json`](../manifests/loading-rotation-runtime-validation.json) conserve les deux états, les heures, les identifiants de processus et la portée exacte du test. Les preuves brutes sont sous `WIP/loading-rotation-launches/20260911-195658Z`.
+
+Cette confirmation couvre le changement observé sur le profil 8 4.09m, avec les copies réduites. Elle ne constitue pas un essai de chacun des six profils ou d'un cycle complet de cinq passages. Les fréquences et l'absence de répétition sont par ailleurs couvertes par les tests de logique. La rotation est toujours activée avec les quatre images, le mode mélangé et le fond officiel doublé ; les options de désactivation et retrait sont conservées.
+
+
+## Essai du profil 4.09m mods 6DOF — 11 septembre 2026
+
+À la demande d'Alexis de lancer un autre profil, la copie isolée est passée du profil 8 au **profil 9 (4.09m mods 6DOF)**. Le switcher a validé toutes ses sources sans modification. Douze ressources actives communes ont ensuite été comparées par SHA-256 à celles du profil 9 : elles étaient déjà identiques. Seuls l'EXE différent et le fichier d'état du profil ont été actualisés, après sauvegarde et vérification de fermeture de cette installation. EXE 6DOF actif : `F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E`. Les classes de rotation sont inchangées.
+
+Lancement direct à 20:04:55 UTC, PID 11640. À 20:05:10 UTC, le moteur a accepté le matériau **`il2-2001` (fond officiel IL-2 Sturmovik 2001 Retail)** et la rotation est passée de la position 2 à la position 3, avec la même signature et le même cycle. L'acceptation et la continuité de sélection sont vérifiées. Alexis a ensuite confirmé visuellement ce lancement : « ca marche ». La rotation observée est donc également validée sur le profil 4.09m mods 6DOF.
+
+Preuves et sauvegardes du profil précédent : `WIP/loading-rotation-launches/20260911-200455Z-profile9`. Le manifeste `manifests/loading-rotation-runtime-validation.json` conserve aussi cet essai, séparé de la confirmation visuelle du profil 8. Le changement reste limité à cette copie et n'affecte pas le checkout partagé.
+
+
+## Validation par Alexis et arrêt des essais
+
+Le 11 septembre 2026, Alexis a demandé l'arrêt des essais et validé la modification : « on s'arrete là. On valide ». La validation en jeu couvre les profils **4.09m mods NO 6DOF** et **4.09m mods 6DOF**. La fonctionnalité reste désactivable et réversible. Aucun essai des autres profils n'est présenté comme réalisé.
