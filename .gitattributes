@@ -49,3 +49,12 @@
 # Documents deplaces : preservation de leur contenu original.
 /_Documentations/**/*.pdf binary
 /_Documentations/**/*.doc binary
+
+# Optional startup rotation: preserve the bytecode and image containers exactly.
+"/_Game Switcher/Loading Rotation Patch/Files/*" -text
+"/_Game Switcher/Resources/Loading Rotation/**/*.tga" -text
+"/_Game Switcher/Resources/Loading Rotation/**/*.png" -text
+/test-assets/loading-rotation/*.class -text
+/tools/java/OpenSturmovikLoadingRotationPatcher.java text eol=lf
+/tools/java/loading-rotation/**/*.java text eol=lf
+/tools/java/loading-rotation-tests/**/*.java text eol=lf
