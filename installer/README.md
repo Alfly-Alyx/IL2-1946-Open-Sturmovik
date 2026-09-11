@@ -53,8 +53,19 @@ v1.15 et le gel explicite du dossier `Payload`.
   ouverte une fois son interface chargee ;
 - l'initialiseur des utilitaires configure les chemins locaux sans lancer le
   jeu ni les programmes externes ;
+- le diagnostic automatique active les journaux persistants, configure cinq
+  dumps WER au maximum, surveille chaque lancement direct de `il2fb.exe` et met
+  en file les anomalies avant leur envoi vers les tickets du depot Open
+  Sturmovik ;
 - l'installateur utilise l'icone bouclier et le fond d'ecran fournis dans les
   ressources locales du projet.
+
+Le moniteur est lance sous le compte Windows d'origine, puis enregistre dans
+`HKCU\Software\Microsoft\Windows\CurrentVersion\Run`. Ses donnees locales sont
+placees sous `%LOCALAPPDATA%\OpenSturmovik\Diagnostics`. L'authentification
+GitHub provient, dans l'ordre, de la variable
+`OPEN_STURMOVIK_GITHUB_TOKEN`, d'un jeton protege par DPAPI ou du gestionnaire
+d'identifiants Git existant. Aucun secret n'est place dans le paquet.
 
 Le fond du switcher retenu le 11 septembre 2026 est la remasterisation de la
 jaquette Pacific Fighters Retail, livree sous

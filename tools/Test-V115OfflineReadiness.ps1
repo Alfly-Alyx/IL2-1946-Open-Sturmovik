@@ -55,6 +55,23 @@ catch {
 }
 
 try {
+    $diagnosticResult = & (Join-Path $root 'tools\Test-OpenSturmovikDiagnostics.ps1')
+    if ($diagnosticResult.Status -eq 'PASS' -and
+        $diagnosticResult.Redaction -eq 'PASS' -and
+        $diagnosticResult.CleanRun -eq 'PASS' -and
+        $diagnosticResult.MinidumpReader -eq 'PASS' -and
+        $diagnosticResult.ProcessWatcher -eq 'PASS') {
+        Add-Result 'Diagnostic automatique GitHub' PASS 'Fichiers fautifs, contexte, redaction, minidump, fermeture saine et surveillance il2fb valides hors jeu.'
+    }
+    else {
+        Add-Result 'Diagnostic automatique GitHub' FAIL 'Le controle du collecteur ne retourne pas tous les resultats attendus.'
+    }
+}
+catch {
+    Add-Result 'Diagnostic automatique GitHub' FAIL $_.Exception.Message
+}
+
+try {
     $switcherResult = & (Join-Path $root 'tools\Test-OpenSturmovikSwitcher.ps1') -RepositoryRoot $root
     if ($switcherResult.Result -eq 'PASS' -and $switcherResult.ProfileCount -eq 9) {
         Add-Result 'Switcher 4.08m/4.09b/4.09m' PASS 'Neuf profils, deux HUD, marquage Open Sturmovik et sources verifies hors jeu.'

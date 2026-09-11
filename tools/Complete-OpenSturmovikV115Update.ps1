@@ -1,8 +1,8 @@
 [CmdletBinding(SupportsShouldProcess = $true)]
 param(
-    [string]$InstallationRoot = (Split-Path -Parent $PSScriptRoot),
+    [string]$InstallationRoot,
 
-    [string]$ManifestPath = (Join-Path $PSScriptRoot '..\manifests\utilities-v1.15.json'),
+    [string]$ManifestPath,
 
     [string]$DesktopPath,
 
@@ -14,11 +14,20 @@ param(
 
     [switch]$SkipZipNavMaps,
 
-    [switch]$SkipUtilityInitialization
+    [switch]$SkipUtilityInitialization,
+
+    [switch]$SkipDiagnostics
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+
+if ([string]::IsNullOrWhiteSpace($InstallationRoot)) {
+    $InstallationRoot = Split-Path -Parent $PSScriptRoot
+}
+if ([string]::IsNullOrWhiteSpace($ManifestPath)) {
+    $ManifestPath = Join-Path $PSScriptRoot '..\manifests\utilities-v1.15.json'
+}
 
 $root = [IO.Path]::GetFullPath($InstallationRoot).TrimEnd(
     [IO.Path]::DirectorySeparatorChar,
@@ -33,9 +42,10 @@ if (-not (Test-Path -LiteralPath (Join-Path $root 'il2fb.exe') -PathType Leaf)) 
 
 $initializerPath = Join-Path $PSScriptRoot 'Initialize-OpenSturmovikUtilities.ps1'
 $shortcutInstallerPath = Join-Path $PSScriptRoot 'Install-OpenSturmovikUtilityShortcuts.ps1'
+$diagnosticsInstallerPath = Join-Path $PSScriptRoot 'Install-OpenSturmovikDiagnostics.ps1'
 # Existing pilots, including unchanged stock identities, belong to the player.
 # Update finalization must never migrate or recreate anything under Users.
-foreach ($requiredScript in @($initializerPath, $shortcutInstallerPath)) {
+foreach ($requiredScript in @($initializerPath, $shortcutInstallerPath, $diagnosticsInstallerPath)) {
     if (-not (Test-Path -LiteralPath $requiredScript -PathType Leaf)) {
         throw "Etape de finalisation v1.15 absente : $requiredScript"
     }
@@ -56,6 +66,16 @@ if (-not $SkipUtilityInitialization) {
     }
 
     $initializerResult = & $initializerPath @initializerParameters
+}
+
+$diagnosticsResult = $null
+if (-not $SkipDiagnostics) {
+    $diagnosticsParameters = @{
+        InstallationRoot = $root
+        StartNow = $true
+    }
+    if ($WhatIfPreference) { $diagnosticsParameters.WhatIf = $true }
+    $diagnosticsResult = & $diagnosticsInstallerPath @diagnosticsParameters
 }
 
 $shortcutParameters = @{
@@ -83,6 +103,7 @@ if ($shortcutResults.Count -ne 10 -or $incompleteShortcuts.Count -gt 0) {
     Release = '1.15'
     InstallationRoot = $root
     UtilityInitialization = if ($SkipUtilityInitialization) { 'IGNORE' } else { $initializerResult.Status }
+    Diagnostics = if ($SkipDiagnostics) { 'IGNORE' } else { $diagnosticsResult.Status }
     ShortcutCount = $shortcutResults.Count
     ShortcutScope = if ($AllUsers) { 'TOUS_LES_UTILISATEURS' } else { 'UTILISATEUR_COURANT' }
     Status = if ($WhatIfPreference) { 'SIMULATION' } else { 'FINALISE' }
