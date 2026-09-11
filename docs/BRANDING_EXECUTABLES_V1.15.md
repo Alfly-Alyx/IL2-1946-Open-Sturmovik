@@ -1,6 +1,6 @@
 # Marquage des executables et du titre de fenetre v1.15
 
-Derniere mise a jour : 6 septembre 2026.
+Derniere mise a jour : 11 septembre 2026.
 
 ## Resultat vise
 
@@ -11,12 +11,16 @@ jeu d'origine.
 
 ## Faits verifies statiquement
 
-- Les six executables modifies sont des PE32 i386 de 348 160 octets et sont
+- Les six executables modifies sont des PE32 i386 de 274 432 octets et sont
   repartis entre une variante avec 6DOF et une variante sans 6DOF.
 - Aucun des deux executables sources ne contenait de ressource Windows
   `VERSIONINFO` exploitable.
 - L'ajout de cette ressource donne `FileDescription=Open Sturmovik` et
   `ProductName=Open Sturmovik`. Windows relit ces valeurs sans lancer le jeu.
+- Leur groupe de ressources `IL2ICON` contient les six tailles Windows de
+  l'icone `avion-ciel` : 16, 32, 48, 64, 128 et 256 pixels. Cette icone est
+  reservee aux executables modifies ; les trois executables `Original` restent
+  strictement identiques.
 - L'empreinte de la section `.text`, la machine PE et le point d'entree restent
   identiques avant et apres l'ajout.
 - Les trois executables `Original` conservent tous le SHA-256
@@ -27,8 +31,8 @@ Empreintes finales des executables modifies :
 
 | Variante | SHA-256 |
 | --- | --- |
-| Sans 6DOF | `70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3` |
-| Avec 6DOF | `F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E` |
+| Sans 6DOF | `BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328` |
+| Avec 6DOF | `F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3` |
 
 Le volet **Processus** du Gestionnaire des taches utilise normalement la
 description du fichier et doit donc afficher `Open Sturmovik`. Le volet
@@ -61,8 +65,9 @@ d'origine avec leur titre d'origine.
 - `tools/Build-OpenSturmovikBranding.ps1` reconstruit les six EXE et la classe
   de titre a partir d'empreintes sources imposees. Une seconde execution
   reconnait les sorties finales, les revalide et ne change aucune empreinte.
-- `tools/Set-OpenSturmovikExeBranding.ps1` ajoute uniquement la ressource
-  `VERSIONINFO` et verifie l'identite du code PE.
+- `tools/Set-OpenSturmovikExeBranding.ps1` ajoute la ressource `VERSIONINFO`,
+  remplace `IL2ICON` par l'icone multiresolution `avion-ciel` et verifie
+  l'identite du code PE.
 - `tools/java/OpenSturmovikWindowTitlePatcher.java` remplace uniquement
   les deux affectations de `windowTitle`, avec un controle distinct de chacune.
 - `tools/Test-OpenSturmovikSwitcher.ps1` controle les empreintes, les
@@ -71,6 +76,7 @@ d'origine avec leur titre d'origine.
 ## Validation runtime encore requise
 
 Niveau de confiance statique : eleve. Il reste toutefois a lancer un profil
-modifie en mode fenetre pour verifier visuellement le titre et le nom affiche
-par le Gestionnaire des taches, puis a lancer un profil Original pour confirmer
-la separation. Aucun lancement de jeu n'a ete effectue pendant cette etape.
+modifie en mode fenetre pour verifier visuellement le titre, l'icone de fenetre
+et le nom affiche par le Gestionnaire des taches, puis a lancer un profil
+Original pour confirmer la separation. Aucun lancement de jeu n'a ete effectue
+pendant cette etape.

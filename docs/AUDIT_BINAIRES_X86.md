@@ -21,20 +21,23 @@ Les six PE32 marques Large Address Aware sont exactement les six copies de
 `il2fb.exe` des profils **moddes**. Elles ont le meme format, mais le
 differentiel historique 6DOF est maintenant restaure :
 
-- taille : 348 160 octets ;
+- taille : 274 432 octets ;
 - trois profils avec 6DOF, SHA-256
-  `F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E` ;
+  `F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3` ;
 - trois profils sans 6DOF, SHA-256
-  `70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3` ;
+  `BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328` ;
 - architecture : i386 / PE32 ;
 - drapeau `IMAGE_FILE_LARGE_ADDRESS_AWARE` present ;
 - `FileDescription` et `ProductName` Windows : `Open Sturmovik`.
+- icone Windows : dessin `avion-ciel` multiresolution, reserve aux six EXE
+  modifies.
 
 La ressource `VERSIONINFO` permet au volet **Processus** du Gestionnaire des
 taches d'afficher `Open Sturmovik`. Le nom d'image technique reste `il2fb.exe`
 dans le volet **Details**, car le fichier actif conserve ce nom necessaire a la
 chaine historique. L'ajout est reproductible par
-`tools/Set-OpenSturmovikExeBranding.ps1`. Le SHA-256 de la section `.text` est
+`tools/Set-OpenSturmovikExeBranding.ps1`. Le meme outil remplace le groupe
+`IL2ICON` sans toucher au code. Le SHA-256 de la section `.text` est
 controle avant et apres : ni le code 6DOF, ni le code sans 6DOF ne sont changes.
 
 Les ressources PE et les ajustements v1.15 sont conserves dans les deux

@@ -66,12 +66,12 @@ if "%PROFILE%"=="2" (
     set "VERSION=4.08m"
     set "PAYLOAD=4.08m"
     set "PAYLOAD_ID=408"
-    set "PROFILE_FOLDER=4.08 Mod ON (NO 6DOF)"
+    set "PROFILE_FOLDER=4.08 Mods ON (NO 6DOF)"
     set "AIR=408m air.ini\Air.ini\air.ini"
     set "STATIONARY=Stationary\408 & 409b\stationary.ini"
     set "ORIGINAL=0"
     set "REMOVE_VERSION_SFS=1"
-    set "EXE_HASH=70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3"
+    set "EXE_HASH=BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328"
     set "FILES_HASH=D8A7DAD54CBA505B5E7B2C394491701A705A86D20091D3746F399D8A08049986"
 )
 if "%PROFILE%"=="3" (
@@ -79,12 +79,12 @@ if "%PROFILE%"=="3" (
     set "VERSION=4.08m"
     set "PAYLOAD=4.08m"
     set "PAYLOAD_ID=408"
-    set "PROFILE_FOLDER=4.08 Mods 6DOF ON"
+    set "PROFILE_FOLDER=4.08 Mods ON 6DOF"
     set "AIR=408m air.ini\Air.ini\air.ini"
     set "STATIONARY=Stationary\408 & 409b\stationary.ini"
     set "ORIGINAL=0"
     set "REMOVE_VERSION_SFS=1"
-    set "EXE_HASH=F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E"
+    set "EXE_HASH=F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3"
     set "FILES_HASH=D8A7DAD54CBA505B5E7B2C394491701A705A86D20091D3746F399D8A08049986"
 )
 if "%PROFILE%"=="4" (
@@ -110,7 +110,7 @@ if "%PROFILE%"=="5" (
     set "STATIONARY=Stationary\408 & 409b\stationary.ini"
     set "ORIGINAL=0"
     set "REMOVE_VERSION_SFS=0"
-    set "EXE_HASH=70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3"
+    set "EXE_HASH=BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328"
     set "FILES_HASH=99CF133FA20A1A117C60E85D510E443693AB15B860314CAE02684069D3C79D17"
 )
 if "%PROFILE%"=="6" (
@@ -118,12 +118,12 @@ if "%PROFILE%"=="6" (
     set "VERSION=4.09b"
     set "PAYLOAD=4.09b"
     set "PAYLOAD_ID=409b"
-    set "PROFILE_FOLDER=4.09 Mods 6DOF ON"
+    set "PROFILE_FOLDER=4.09 Mods ON 6DOF"
     set "AIR=409b air.ini\Air.ini\air.ini"
     set "STATIONARY=Stationary\408 & 409b\stationary.ini"
     set "ORIGINAL=0"
     set "REMOVE_VERSION_SFS=0"
-    set "EXE_HASH=F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E"
+    set "EXE_HASH=F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3"
     set "FILES_HASH=99CF133FA20A1A117C60E85D510E443693AB15B860314CAE02684069D3C79D17"
 )
 if "%PROFILE%"=="7" (
@@ -131,7 +131,7 @@ if "%PROFILE%"=="7" (
     set "VERSION=4.09m"
     set "PAYLOAD=4.09m"
     set "PAYLOAD_ID=409m"
-    set "PROFILE_FOLDER=4.09finalModsOFF(Original)"
+    set "PROFILE_FOLDER=4.09 final Mods OFF (Original)"
     set "AIR=409m air.ini\Air.ini\air.ini"
     set "STATIONARY=Stationary\409m\stationary.ini"
     set "ORIGINAL=1"
@@ -144,12 +144,12 @@ if "%PROFILE%"=="8" (
     set "VERSION=4.09m"
     set "PAYLOAD=4.09m"
     set "PAYLOAD_ID=409m"
-    set "PROFILE_FOLDER=4.09finalModsON(No-6DoF)"
+    set "PROFILE_FOLDER=4.09 final Mods ON (NO 6DOF)"
     set "AIR=409m air.ini\Air.ini\air.ini"
     set "STATIONARY=Stationary\409m\stationary.ini"
     set "ORIGINAL=0"
     set "REMOVE_VERSION_SFS=0"
-    set "EXE_HASH=70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3"
+    set "EXE_HASH=BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328"
     set "FILES_HASH=18F3C5471D93642916394DE53B482051106E024DDAC8124C7B0D700D1796B05A"
 )
 if "%PROFILE%"=="9" (
@@ -157,12 +157,12 @@ if "%PROFILE%"=="9" (
     set "VERSION=4.09m"
     set "PAYLOAD=4.09m"
     set "PAYLOAD_ID=409m"
-    set "PROFILE_FOLDER=4.09final_ModsON+6DoF"
+    set "PROFILE_FOLDER=4.09 final Mods ON 6DOF"
     set "AIR=409m air.ini\Air.ini\air.ini"
     set "STATIONARY=Stationary\409m\stationary.ini"
     set "ORIGINAL=0"
     set "REMOVE_VERSION_SFS=0"
-    set "EXE_HASH=F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E"
+    set "EXE_HASH=F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3"
     set "FILES_HASH=18F3C5471D93642916394DE53B482051106E024DDAC8124C7B0D700D1796B05A"
 )
 
@@ -571,21 +571,31 @@ if not defined SWITCHER_GUI_LINE (
 )
 set "SWITCHER_GUI_TEMP=%TEMP%\OpenSturmovikSwitcher-%RANDOM%-%RANDOM%.hta"
 set "SWITCHER_GUI_ICON_TEMP=%TEMP%\OpenSturmovikSwitcher-v115.ico"
+set "SWITCHER_GUI_BACKGROUND_TEMP=%TEMP%\OpenSturmovikSwitcher-v115-background.png"
 more +%SWITCHER_GUI_LINE% "%~f0" > "%SWITCHER_GUI_TEMP%"
 if errorlevel 1 (
     echo [ERREUR] Impossible de preparer l'interface graphique.
     exit /b 2
 )
-copy /Y "%SWITCH_ROOT%\Resources\Icons\Open_Sturmovik_Switcher_Original.ico" "%SWITCHER_GUI_ICON_TEMP%" >nul
+copy /Y "%SWITCH_ROOT%\Resources\Icons\Open_Sturmovik_Switcher.ico" "%SWITCHER_GUI_ICON_TEMP%" >nul
 if errorlevel 1 (
     del /F /Q "%SWITCHER_GUI_TEMP%" >nul 2>&1
     echo [ERREUR] Impossible de preparer l'icone de l'interface.
+    exit /b 2
+)
+copy /Y "%SWITCH_ROOT%\Resources\Backgrounds\Open_Sturmovik_Switcher_Background__Pacific_Fighters_Retail.png" "%SWITCHER_GUI_BACKGROUND_TEMP%" >nul
+if errorlevel 1 (
+    del /F /Q "%SWITCHER_GUI_TEMP%" >nul 2>&1
+    del /F /Q "%SWITCHER_GUI_ICON_TEMP%" >nul 2>&1
+    del /F /Q "%SWITCHER_GUI_BACKGROUND_TEMP%" >nul 2>&1
+    echo [ERREUR] Impossible de preparer le fond de l'interface.
     exit /b 2
 )
 start "Open Sturmovik Switcher" mshta.exe "%SWITCHER_GUI_TEMP%"
 if errorlevel 1 (
     del /F /Q "%SWITCHER_GUI_TEMP%" >nul 2>&1
     del /F /Q "%SWITCHER_GUI_ICON_TEMP%" >nul 2>&1
+    del /F /Q "%SWITCHER_GUI_BACKGROUND_TEMP%" >nul 2>&1
     echo [ERREUR] Impossible de lancer l'interface graphique.
     exit /b 2
 )
@@ -603,7 +613,7 @@ exit /b 0
   singleinstance="yes" sysmenu="yes" windowstate="normal" />
 <style>
 html, body { width:100%; height:100%; margin:0; overflow:hidden; }
-body { font-family:"Trebuchet MS",Tahoma,Arial,sans-serif; font-size:17px; color:#d6d8d0; background:#293a40 center center no-repeat; background-size:cover; text-shadow:1px 1px 1px #252c2b; }
+body { font-family:"Trebuchet MS",Tahoma,Arial,sans-serif; font-size:17px; color:#d6d8d0; background:#293a40 url("OpenSturmovikSwitcher-v115-background.png") center center no-repeat; background-size:cover; text-shadow:1px 1px 1px #252c2b; }
 .titlebar { position:absolute; left:0; right:0; top:0; height:29px; border:2px ridge #8b9690; background:rgba(91,101,98,.98); box-shadow:inset 1px 1px #c6ccc2,inset -2px -2px #34413f; }
 .titlebar .caption { box-sizing:border-box; float:left; width:30%; height:29px; padding:3px 28px; border-right:3px ridge #87928d; font-size:17px; font-weight:normal; }
 .titlebar .pilot { float:right; margin:3px 28px 0 0; font-size:17px; }
@@ -655,7 +665,7 @@ body { font-family:"Trebuchet MS",Tahoma,Arial,sans-serif; font-size:17px; color
 @media screen and (max-height:700px) { .panel { top:44px; height:calc(100% - 62px); min-height:565px; } .column { top:24px; } }
 </style>
 <script language="javascript">
-var fso, shell, root, bat, switchRoot, guiTemp, guiIconTemp;
+var fso, shell, root, bat, switchRoot, guiTemp, guiIconTemp, guiBackgroundTemp;
 
 function init() {
   window.resizeTo(1000, 760);
@@ -665,6 +675,7 @@ function init() {
   bat = shell.Environment('PROCESS').Item('OPEN_STURMOVIK_SWITCHER_BAT');
   guiTemp = shell.Environment('PROCESS').Item('SWITCHER_GUI_TEMP');
   guiIconTemp = shell.Environment('PROCESS').Item('SWITCHER_GUI_ICON_TEMP');
+  guiBackgroundTemp = shell.Environment('PROCESS').Item('SWITCHER_GUI_BACKGROUND_TEMP');
   root = fso.GetParentFolderName(bat);
   switchRoot = fso.BuildPath(root, '_Game Switcher');
   restoreState();
@@ -676,6 +687,7 @@ function cleanupGuiSource() {
   if (!guiTemp) return;
   try { if (fso.FileExists(guiTemp)) fso.DeleteFile(guiTemp, true); } catch (ignore) {}
   try { if (guiIconTemp && fso.FileExists(guiIconTemp)) fso.DeleteFile(guiIconTemp, true); } catch (ignore) {}
+  try { if (guiBackgroundTemp && fso.FileExists(guiBackgroundTemp)) fso.DeleteFile(guiBackgroundTemp, true); } catch (ignore) {}
 }
 
 function selected(name) {

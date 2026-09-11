@@ -53,9 +53,9 @@ l'etat actif prepare.
 
 Les cinq variantes valides (4:3, 16:10, 16:9, 21:9 et 32:9) conservent le
 casque, le manuel et le cartouche complet 1C / Maddox Games. Le 8 septembre,
-l'icone exacte `Open_Sturmovik_Switcher_Original.ico` a ete ajoutee en bas a
-droite, sans deformation, avec une hauteur proportionnelle a celle du
-cartouche. Aucun texte « Open Sturmovik » n'est encore integre : plusieurs
+l'icone historique du switcher a ete integree en bas a droite du rendu, sans
+deformation, avec une hauteur proportionnelle a celle du cartouche. Aucun
+texte « Open Sturmovik » n'est encore integre : plusieurs
 serigraphies et dispositions seront proposees seulement apres validation du
 reste de la v1.15.
 
@@ -222,9 +222,32 @@ Les remasterisations Pacific Fighters restent des candidats separes :
 | Pacific Fighters — PF-splash5 | `_Game Switcher\Resources\Loading Backgrounds\Pacific Fighters 2004 Remaster\PF-splash5\16x10` | remasterisation 16:10 reconstruite en haute definition, et non simple agrandissement |
 | Pacific Fighters — montage rejete | `_Game Switcher\Resources\Loading Backgrounds\Pacific Fighters 2004 Remaster\16x10` | candidat rejete : le fond fusionne FB+AEP+PF a plusieurs avions ne correspond pas au fond recherche |
 
-Les trois illustrations Pacific Fighters destinees au fond de l'interface du
-switcher, et non au chargement du jeu, sont rangees separement sous
-`_Game Switcher\Resources\Backgrounds`.
+Les trois illustrations destinees au fond de l'interface du switcher, et non
+au chargement du jeu, sont rangees separement sous
+`_Game Switcher\Resources\Backgrounds`. Alexis a retenu la remasterisation de
+la jaquette `Pacific Fighters Retail` comme fond actif du switcher. Elle est
+conservee sous
+`Open_Sturmovik_Switcher_Background__Pacific_Fighters_Retail.png`. La variante
+de combat est conservee sous
+`Open_Sturmovik_Switcher_Alternate__Corsair_vs_Zero.png`.
+
+## Fond de la selection des missions retenu le 11 septembre 2026
+
+Alexis a retenu l'illustration du SBD Dauntless pour le fond de la selection
+des missions. La source de travail est conservee dans le depot sous
+`_Game Switcher\Resources\Backgrounds\Open_Sturmovik_Missions_Background__SBD_Dauntless.png`
+(1586 x 992 pixels, SHA-256
+`6C6E2C38A135D8D19505579251EFF0BD96FFBFB5E5AE4E98B5E05722A6FFC6A8`).
+
+La texture active est `Missions\Background.tga`. Le fichier reste conforme au
+format deja utilise a cet emplacement : TGA standard non compresse, type 2,
+968 x 608 pixels, BGRA 32 bits, origine inferieure gauche et pied TGA 2.0. Le
+passage au rapport 968:608 emploie un recadrage centre de 3,316 pixels sur
+chaque bord lateral avant reduction bicubique ; l'image n'est pas deformee.
+L'empreinte SHA-256 du fichier integre est
+`88C63E7A103AEA84076E710500255F21D5536B3ECAEB40149615E40A83A2B3B8`.
+Le materiau `Missions\background.mat` reste inchange et continue de pointer
+vers `background.tga`.
 
 Les termes `Remaster` et `adaptation` sont volontaires : ces fichiers respectent
 les compositions historiques mais ne sont pas des copies binaires des textures

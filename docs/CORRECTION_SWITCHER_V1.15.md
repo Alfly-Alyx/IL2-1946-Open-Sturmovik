@@ -98,13 +98,14 @@ prefixe `_`. L'ancienne reference `Icones\1.ico` citee par les scripts Inno de
 la v1.1 n'existe plus a son emplacement historique. Le fichier local
 `Icones\HD\1.ico` produit toutefois exactement le meme rendu d'icone que
 l'executable compile `Patch 1.1\Output\IL2_Open_Sturmovik_Patch_1.1.exe` ; ce
-controle reproductible confirme la ressource retrouvee. Elle est conservee
-sous `Open_Sturmovik_Switcher_Original.ico` et devient l'icone active de la
-fenetre et du raccourci. L'icone v1.15 deja creee reste sous
-`Open_Sturmovik_Switcher.ico`. L'icone 2001 Demo et l'image Steam communaute
-demandees sont conservees a cote, sans etre choisies arbitrairement
-comme icone active. Le BAT copie temporairement l'icone active a cote de son
-HTA extrait, puis supprime les deux fichiers temporaires apres chargement.
+controle reproductible confirme la ressource retrouvee. Cette ancienne
+variante et les deux references devenues inutiles ont ete retirees du dossier
+actif le 11 septembre 2026. `Open_Sturmovik_Switcher.ico` contient le dessin
+`logo-IL2-B` et devient l'icone active de la fenetre et du raccourci.
+`Open_Sturmovik_Game.ico` contient le dessin `avion-ciel`, reserve aux
+executables de jeu modifies. Le BAT copie temporairement l'icone et le fond
+Pacific Fighters Retail a cote de son HTA extrait, puis supprime les trois
+fichiers temporaires apres chargement.
 
 Test d'echec reel : garder active-profile.txt ouvert en lecture partagee,
 permettre sa sauvegarde mais interdire son ecriture, tenter le profil 1 depuis
@@ -233,7 +234,11 @@ fenetre de commande n'apparait a cote de l'interface.
 Les fonds de chargement sont ranges sous
 `_Game Switcher\Resources\Loading Backgrounds`. Le fond actif `Maddox` et
 quatre familles visuelles sont disponibles en 4:3, 16:10, 16:9, 21:9 et 32:9
-jusqu'a 4K, sans etirement. Les trois images reservees au fond de l'interface
-du switcher sont isolees sous `_Game Switcher\Resources\Backgrounds`.
-Les quatre icones et l'image de reference sont isolees sous
-`_Game Switcher\Resources\Icons`.
+jusqu'a 4K, sans etirement. Le fond de l'interface retenu par Alexis est la
+remasterisation `Pacific Fighters Retail`, chargee depuis
+`_Game Switcher\Resources\Backgrounds\Open_Sturmovik_Switcher_Background__Pacific_Fighters_Retail.png`.
+La source du fond Missions et une variante Corsair/Zero restent dans le meme
+dossier sous des noms descriptifs.
+Les deux icones actives sont isolees sous
+`_Game Switcher\Resources\Icons` : `Open_Sturmovik_Switcher.ico` pour le
+lanceur et `Open_Sturmovik_Game.ico` pour les executables modifies.

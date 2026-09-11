@@ -86,9 +86,9 @@ foreach ($name in $payloadDirectories) {
 }
 
 $profile9 = @(
-    '_Game Switcher\4.09final_ModsON+6DoF\il2fb.exe',
-    '_Game Switcher\4.09final_ModsON+6DoF\files.SFS',
-    '_Game Switcher\4.09final_ModsON+6DoF\wrapper.dll',
+    '_Game Switcher\4.09 final Mods ON 6DOF\il2fb.exe',
+    '_Game Switcher\4.09 final Mods ON 6DOF\files.SFS',
+    '_Game Switcher\4.09 final Mods ON 6DOF\wrapper.dll',
     '_Game Switcher\409m air.ini\Air.ini\air.ini',
     '_Game Switcher\Stationary\409m\stationary.ini'
 )

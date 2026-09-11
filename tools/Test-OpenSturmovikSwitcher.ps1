@@ -33,10 +33,10 @@ if ($null -ne $manifest.background) {
     }
 }
 if ([string]$manifest.resourceDirectory -ne '_Game Switcher/Resources' -or
-    @($manifest.icons).Count -ne 3) {
-    throw 'Le dossier Resources ou la liste des trois icones du switcher est invalide.'
+    @($manifest.icons).Count -ne 2) {
+    throw 'Le dossier Resources ou la liste des deux icones actives Open Sturmovik est invalide.'
 }
-foreach ($resource in @($manifest.icons) + @($manifest.referenceArtwork)) {
+foreach ($resource in @($manifest.icons)) {
     $resourcePath = Join-Path $root ([string]$resource.path)
     if (-not (Test-Path -LiteralPath $resourcePath -PathType Leaf) -or
         (Get-Item -LiteralPath $resourcePath).Length -ne [long]$resource.size -or

@@ -47,7 +47,7 @@ function Test-BinaryContains([string]$Path, [string]$Needle) {
     return [Text.Encoding]::GetEncoding(28591).GetString($bytes).Contains($Needle)
 }
 
-$readme = Join-Path $root 'Files\$ReadMe$.txt'
+$readme = Join-Path $root '_Documentations\Mods and Tools\Zuti MDS 1.13\Lisez-moi - Zuti MDS 1.13.txt'
 if (-not (Test-Path -LiteralPath $readme -PathType Leaf)) {
     Add-Check 'Version Zuti' FAIL 'Readme Zuti absent.'
 }

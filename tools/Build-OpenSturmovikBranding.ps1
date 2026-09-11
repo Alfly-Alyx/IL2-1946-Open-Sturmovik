@@ -1,14 +1,17 @@
 [CmdletBinding()]
 param(
-    [string]$RepositoryRoot = (Split-Path -Parent $PSScriptRoot)
+    [string]$RepositoryRoot
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
+if (-not $RepositoryRoot) { $RepositoryRoot = Split-Path -Parent $PSScriptRoot }
+
 $root = [IO.Path]::GetFullPath($RepositoryRoot)
 $switchRoot = Join-Path $root '_Game Switcher'
 $filesRoot = Join-Path $root 'Files'
+$gameIcon = Join-Path $switchRoot 'Resources\Icons\Open_Sturmovik_Game.ico'
 $titleClass = '5D18E55E5DF1D418'
 $work = Join-Path ([IO.Path]::GetTempPath()) ('open-sturmovik-branding-' + [guid]::NewGuid().ToString('N'))
 $exports = @(
@@ -17,17 +20,17 @@ $exports = @(
 )
 
 $moddedProfiles = @(
-    [pscustomobject]@{ Folder = '4.08 Mod ON (NO 6DOF)'; Kind = 'No6Dof'; SourceHash = '622CFD3F3F5C3D7AA7106AE7DE177B8F58A678715385CA58B674651084FBCC0F'; FinalHash = '70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3' },
-    [pscustomobject]@{ Folder = '4.08 Mods 6DOF ON'; Kind = '6Dof'; SourceHash = '68C78F7F981BDDF4B6FB3A6FF901B59115AE7B3D953B8F53121E6BE5B8A65584'; FinalHash = 'F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E' },
-    [pscustomobject]@{ Folder = '4.09 Mods ON (NO 6DOF)'; Kind = 'No6Dof'; SourceHash = '622CFD3F3F5C3D7AA7106AE7DE177B8F58A678715385CA58B674651084FBCC0F'; FinalHash = '70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3' },
-    [pscustomobject]@{ Folder = '4.09 Mods 6DOF ON'; Kind = '6Dof'; SourceHash = '68C78F7F981BDDF4B6FB3A6FF901B59115AE7B3D953B8F53121E6BE5B8A65584'; FinalHash = 'F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E' },
-    [pscustomobject]@{ Folder = '4.09finalModsON(No-6DoF)'; Kind = 'No6Dof'; SourceHash = '622CFD3F3F5C3D7AA7106AE7DE177B8F58A678715385CA58B674651084FBCC0F'; FinalHash = '70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3' },
-    [pscustomobject]@{ Folder = '4.09final_ModsON+6DoF'; Kind = '6Dof'; SourceHash = '68C78F7F981BDDF4B6FB3A6FF901B59115AE7B3D953B8F53121E6BE5B8A65584'; FinalHash = 'F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E' }
+    [pscustomobject]@{ Folder = '4.08 Mods ON (NO 6DOF)'; Kind = 'No6Dof'; SourceHash = '622CFD3F3F5C3D7AA7106AE7DE177B8F58A678715385CA58B674651084FBCC0F'; LegacyFinalHash = '70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3'; FinalHash = 'BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328' },
+    [pscustomobject]@{ Folder = '4.08 Mods ON 6DOF'; Kind = '6Dof'; SourceHash = '68C78F7F981BDDF4B6FB3A6FF901B59115AE7B3D953B8F53121E6BE5B8A65584'; LegacyFinalHash = 'F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E'; FinalHash = 'F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3' },
+    [pscustomobject]@{ Folder = '4.09 Mods ON (NO 6DOF)'; Kind = 'No6Dof'; SourceHash = '622CFD3F3F5C3D7AA7106AE7DE177B8F58A678715385CA58B674651084FBCC0F'; LegacyFinalHash = '70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3'; FinalHash = 'BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328' },
+    [pscustomobject]@{ Folder = '4.09 Mods ON 6DOF'; Kind = '6Dof'; SourceHash = '68C78F7F981BDDF4B6FB3A6FF901B59115AE7B3D953B8F53121E6BE5B8A65584'; LegacyFinalHash = 'F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E'; FinalHash = 'F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3' },
+    [pscustomobject]@{ Folder = '4.09 final Mods ON (NO 6DOF)'; Kind = 'No6Dof'; SourceHash = '622CFD3F3F5C3D7AA7106AE7DE177B8F58A678715385CA58B674651084FBCC0F'; LegacyFinalHash = '70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3'; FinalHash = 'BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328' },
+    [pscustomobject]@{ Folder = '4.09 final Mods ON 6DOF'; Kind = '6Dof'; SourceHash = '68C78F7F981BDDF4B6FB3A6FF901B59115AE7B3D953B8F53121E6BE5B8A65584'; LegacyFinalHash = 'F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E'; FinalHash = 'F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3' }
 )
 $originalProfiles = @(
     '4.08 Mods OFF (Original)',
     '4.09 Mods OFF (Original)',
-    '4.09finalModsOFF(Original)'
+    '4.09 final Mods OFF (Original)'
 )
 $originalHash = '9ACE9A542AC7203D8A66961570B6854C11FB0BF721F0234DA9D6095D69D2525C'
 
@@ -39,9 +42,9 @@ try {
             $source = Join-Path (Join-Path $switchRoot $profile.Folder) 'il2fb.exe'
             $sourceHash = (Get-FileHash -LiteralPath $source -Algorithm SHA256).Hash
             $output = Join-Path $work ($profile.Kind + '-il2fb.exe')
-            if ($sourceHash -eq $profile.SourceHash) {
+            if ($sourceHash -in @($profile.SourceHash, $profile.LegacyFinalHash)) {
                 $result = & (Join-Path $root 'tools\Set-OpenSturmovikExeBranding.ps1') `
-                    -InputPath $source -OutputPath $output -ExpectedSha256 $profile.SourceHash
+                    -InputPath $source -OutputPath $output -ExpectedSha256 $sourceHash -IconPath $gameIcon
             }
             elseif ($sourceHash -eq $profile.FinalHash) {
                 Copy-Item -LiteralPath $source -Destination $output -Force

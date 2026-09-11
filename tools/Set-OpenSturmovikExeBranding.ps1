@@ -8,7 +8,10 @@ param(
 
     [Parameter(Mandatory)]
     [ValidatePattern('^[0-9A-Fa-f]{64}$')]
-    [string]$ExpectedSha256
+    [string]$ExpectedSha256,
+
+    [Parameter(Mandatory)]
+    [string]$IconPath
 )
 
 Set-StrictMode -Version Latest
@@ -30,6 +33,17 @@ namespace OpenSturmovik {
             IntPtr update,
             IntPtr type,
             IntPtr name,
+            ushort language,
+            byte[] data,
+            uint dataSize
+        );
+
+        [DllImport("kernel32.dll", EntryPoint = "UpdateResourceW", CharSet = CharSet.Unicode, SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool UpdateResourceByName(
+            IntPtr update,
+            IntPtr type,
+            string name,
             ushort language,
             byte[] data,
             uint dataSize
@@ -146,6 +160,62 @@ function New-VersionResource {
     return $buffer.ToArray()
 }
 
+function Read-IconFile {
+    param([string]$Path)
+    $bytes = [IO.File]::ReadAllBytes($Path)
+    if ($bytes.Length -lt 6 -or
+        [BitConverter]::ToUInt16($bytes, 0) -ne 0 -or
+        [BitConverter]::ToUInt16($bytes, 2) -ne 1) {
+        throw "Fichier ICO invalide : $Path"
+    }
+    $count = [BitConverter]::ToUInt16($bytes, 4)
+    if ($count -lt 1 -or $count -gt 64 -or $bytes.Length -lt 6 + (16 * $count)) {
+        throw "Repertoire ICO invalide : $Path"
+    }
+    $entries = [Collections.Generic.List[object]]::new()
+    for ($index = 0; $index -lt $count; ++$index) {
+        $offset = 6 + (16 * $index)
+        $imageSize = [BitConverter]::ToUInt32($bytes, $offset + 8)
+        $imageOffset = [BitConverter]::ToUInt32($bytes, $offset + 12)
+        $imageEnd = [uint64]$imageOffset + [uint64]$imageSize
+        if ($imageSize -eq 0 -or $imageEnd -gt [uint64]$bytes.Length) {
+            throw "Image ICO hors limites a l index $index : $Path"
+        }
+        $image = [byte[]]::new($imageSize)
+        [Array]::Copy($bytes, [int]$imageOffset, $image, 0, [int]$imageSize)
+        $entries.Add([pscustomobject]@{
+            Width = $bytes[$offset]
+            Height = $bytes[$offset + 1]
+            ColorCount = $bytes[$offset + 2]
+            Reserved = $bytes[$offset + 3]
+            Planes = [BitConverter]::ToUInt16($bytes, $offset + 4)
+            BitCount = [BitConverter]::ToUInt16($bytes, $offset + 6)
+            Image = $image
+        })
+    }
+    return $entries.ToArray()
+}
+
+function New-GroupIconResource {
+    param([object[]]$Entries)
+    $buffer = [Collections.Generic.List[byte]]::new()
+    Add-UInt16 $buffer 0
+    Add-UInt16 $buffer 1
+    Add-UInt16 $buffer ([uint16]$Entries.Count)
+    for ($index = 0; $index -lt $Entries.Count; ++$index) {
+        $entry = $Entries[$index]
+        $buffer.Add([byte]$entry.Width)
+        $buffer.Add([byte]$entry.Height)
+        $buffer.Add([byte]$entry.ColorCount)
+        $buffer.Add([byte]$entry.Reserved)
+        Add-UInt16 $buffer ([uint16]$entry.Planes)
+        Add-UInt16 $buffer ([uint16]$entry.BitCount)
+        Add-UInt32 $buffer ([uint32]$entry.Image.Length)
+        Add-UInt16 $buffer ([uint16]($index + 1))
+    }
+    return $buffer.ToArray()
+}
+
 function Get-PeCodeIdentity {
     param([string]$Path)
     $data = [IO.File]::ReadAllBytes($Path)
@@ -193,8 +263,12 @@ function Get-PeCodeIdentity {
 
 $input = [IO.Path]::GetFullPath($InputPath)
 $output = [IO.Path]::GetFullPath($OutputPath)
+$icon = [IO.Path]::GetFullPath($IconPath)
 if (-not (Test-Path -LiteralPath $input -PathType Leaf)) {
     throw "Executable source absent : $input"
+}
+if (-not (Test-Path -LiteralPath $icon -PathType Leaf)) {
+    throw "Icone source absente : $icon"
 }
 $inputHash = (Get-FileHash -LiteralPath $input -Algorithm SHA256).Hash
 if ($inputHash -ne $ExpectedSha256.ToUpperInvariant()) {
@@ -208,6 +282,8 @@ if (-not (Test-Path -LiteralPath $outputDirectory -PathType Container)) {
 Copy-Item -LiteralPath $input -Destination $output -Force
 $before = Get-PeCodeIdentity $input
 $resource = New-VersionResource
+$iconEntries = Read-IconFile $icon
+$groupIcon = New-GroupIconResource $iconEntries
 $handle = [OpenSturmovik.NativeResources]::BeginUpdateResource($output, $false)
 if ($handle -eq [IntPtr]::Zero) {
     throw "BeginUpdateResource a echoue (Win32 $([Runtime.InteropServices.Marshal]::GetLastWin32Error()))."
@@ -224,6 +300,43 @@ try {
     )
     if (-not $ok) {
         throw "UpdateResource a echoue (Win32 $([Runtime.InteropServices.Marshal]::GetLastWin32Error()))."
+    }
+    for ($index = 0; $index -lt $iconEntries.Count; ++$index) {
+        $image = [byte[]]$iconEntries[$index].Image
+        $ok = [OpenSturmovik.NativeResources]::UpdateResource(
+            $handle,
+            [IntPtr]3,
+            [IntPtr]($index + 1),
+            [uint16]0x0419,
+            $image,
+            [uint32]$image.Length
+        )
+        if (-not $ok) {
+            throw "Ajout de l image ICO $($index + 1) impossible (Win32 $([Runtime.InteropServices.Marshal]::GetLastWin32Error()))."
+        }
+    }
+    # Les EXE historiques ont sept images sous IL2ICON ; la nouvelle ICO en a six.
+    $ok = [OpenSturmovik.NativeResources]::UpdateResource(
+        $handle,
+        [IntPtr]3,
+        [IntPtr]7,
+        [uint16]0x0419,
+        $null,
+        0
+    )
+    if (-not $ok) {
+        throw "Suppression de l ancienne image ICO 7 impossible (Win32 $([Runtime.InteropServices.Marshal]::GetLastWin32Error()))."
+    }
+    $ok = [OpenSturmovik.NativeResources]::UpdateResourceByName(
+        $handle,
+        [IntPtr]14,
+        'IL2ICON',
+        [uint16]0x0419,
+        $groupIcon,
+        [uint32]$groupIcon.Length
+    )
+    if (-not $ok) {
+        throw "Remplacement du groupe IL2ICON impossible (Win32 $([Runtime.InteropServices.Marshal]::GetLastWin32Error()))."
     }
     if (-not [OpenSturmovik.NativeResources]::EndUpdateResource($handle, $false)) {
         throw "EndUpdateResource a echoue (Win32 $([Runtime.InteropServices.Marshal]::GetLastWin32Error()))."
@@ -250,6 +363,16 @@ if ($version.FileDescription -ne 'Open Sturmovik' -or
     $version.OriginalFilename -ne 'il2fb.exe') {
     throw 'La ressource VERSIONINFO produite ne peut pas etre relue correctement par Windows.'
 }
+Add-Type -AssemblyName System.Drawing
+$embeddedIcon = [Drawing.Icon]::ExtractAssociatedIcon($output)
+if ($null -eq $embeddedIcon) {
+    throw 'La ressource IL2ICON produite ne peut pas etre relue correctement par Windows.'
+}
+try {
+    $embeddedIconSize = '{0}x{1}' -f $embeddedIcon.Width, $embeddedIcon.Height
+} finally {
+    $embeddedIcon.Dispose()
+}
 
 [pscustomobject]@{
     InputSha256 = $inputHash
@@ -257,6 +380,9 @@ if ($version.FileDescription -ne 'Open Sturmovik' -or
     FileDescription = $version.FileDescription
     ProductName = $version.ProductName
     OriginalFilename = $version.OriginalFilename
+    IconSha256 = (Get-FileHash -LiteralPath $icon -Algorithm SHA256).Hash
+    IconImages = $iconEntries.Count
+    EmbeddedIconSize = $embeddedIconSize
     Machine = ('0x{0:X4}' -f $after.Machine)
     EntryPoint = ('0x{0:X8}' -f $after.EntryPoint)
     TextSha256 = $after.TextSha256
