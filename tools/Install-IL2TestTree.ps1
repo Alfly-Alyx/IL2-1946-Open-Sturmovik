@@ -36,23 +36,23 @@ if ($baseFiles.Count -ne 19474 -or $baseBytes -ne 4575508511 -or $baseSfs.Count 
     throw "Base 4.07m inattendue : $($baseFiles.Count) fichiers, $baseBytes octets, $($baseSfs.Count) SFS."
 }
 
-$official409 = [ordered]@{
+$expectedAddon409 = [ordered]@{
     'fb_3do19.SFS' = '4527FC779F188364E2FC8739E53D74C85B3A47471B01F169586E4F1AFBB6B670'
     'fb_3do20.SFS' = '02FB0095B9FE4882FB17054F4F11460D49F61B80AF78F9B6EBAF687251E4E283'
     'fb_maps15.SFS' = 'AF87651FBCA2450A57735ED2013F12FC9F307ABFB8B2913F22EB5543322D8AD9'
-    'files.SFS' = '9F7D136C586EB3FCD258C5C000F34951D410A0236934F22ABA2516637874B095'
+    'files.SFS' = 'FCFCE245EC23FF314C6CD86E9A51D563D091CFF74DDD0B46B704B670C0340C6A'
     'il2_core.dll' = '3145F63A53061C40604B57DED2F96313559BD69692123E7479D8C409339ECEB3'
     'il2_corep4.dll' = '0B4CD130051E7D853219480606A1508C0FBB3C7FD29FA8AF87BB72BBD37BB979'
     'mg_snd.dll' = '2FBE1180129806CC978A48879969E592918EA26C42EB235D62FC874BAD886421'
     'mg_snd_sse.dll' = 'FDDD6924853306C94C9B8844703D4718F45CF22828975406E3C67DE40DFDE1C4'
 }
-foreach ($name in $official409.Keys) {
+foreach ($name in $expectedAddon409.Keys) {
     $path = Join-Path $addon $name
     if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
         throw "Fichier 4.09m absent de l'add-on : $name"
     }
     $hash = (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash
-    if ($hash -ne $official409[$name]) {
+    if ($hash -ne $expectedAddon409[$name]) {
         throw "Empreinte 4.09m incorrecte : $name"
     }
 }

@@ -48,7 +48,7 @@ L'installation de test utilise actuellement le profil 4.09m modifie :
 |---|---|
 | `il2fb.exe` | PE32 i386, 274 432 octets, Large Address Aware ; variante 6DOF finale SHA-256 `F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3` |
 | `wrapper.dll` | Wrapper historique sans cache, 233 472 octets, SHA-256 `8B6091C38F1241F2CB7D4EAF239DE662A2C862B57B14D7ACA9074C5C37A03F78` |
-| `files.SFS` | Profil modifie 4.09m, 24 126 259 octets, SHA-256 `18F3C5471D93642916394DE53B482051106E024DDAC8124C7B0D700D1796B05A` |
+| `files.SFS` | Profil modifie 4.09m, 23 010 398 octets, SHA-256 `5CB81D4FAE005429B701CE3DCAC001892DB2C66D0AECEE0A00E918D5E8892E71` |
 | JVM | HotSpot 1.3.1 x86 sous `bin\hotspot\jvm.dll` |
 | Rendu | OpenGL natif, pilote Intel UHD Graphics 620 OpenGL 4.6 |
 | Fenetre | 1024 x 768, mode fenetre |
@@ -56,11 +56,13 @@ L'installation de test utilise actuellement le profil 4.09m modifie :
 | Profil graphique | `HardwareShaders=0`, `Forest=2`, `LandGeom=2`, `Water=2` |
 | Diagnostics | `LOG=1`, `LOGDEBUG=1`, journal d'evenements conserve |
 
-Le `files.SFS` original 4.09m reste disponible dans le profil Original. Il fait
-25 111 885 octets et porte l'empreinte
+Le profil `4.09m stock` conserve le contenu de jeu original, avec la seule
+normalisation du fond de demarrage `gui\background0.tga`. Son `files.SFS` fait
+23 998 523 octets et porte l'empreinte
+`FCFCE245EC23FF314C6CD86E9A51D563D091CFF74DDD0B46B704B670C0340C6A`.
+L'archive officielle avant cette adaptation faisait 25 111 885 octets et
+portait l'empreinte
 `9F7D136C586EB3FCD258C5C000F34951D410A0236934F22ABA2516637874B095`.
-La difference avec le fichier actif est attendue : l'installation de test est
-sur le profil modifie.
 
 ## Composants natifs
 

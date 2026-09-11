@@ -262,3 +262,78 @@ autonome du titre fusionne FB+AEP+PF. La couverture 2001 provient de la
 Aucun marquage `Open Sturmovik` n'a ete ajoute. Les propositions de serigraphie
 et de disposition seront produites apres validation du fond retenu, comme
 demande par Alexis.
+
+## Remplacement du fond localise dans les neuf profils
+
+Le 11 septembre 2026, Alexis a precise que le probleme de fond concernait les
+neuf profils. Six archives `files.SFS` distinctes alimentent ces profils : une
+archive stock et une archive mods pour chacune des versions 4.08, 4.09b et
+4.09m ; les variantes mods avec et sans 6DOF partagent la meme archive. Les
+faits verifies sont les suivants :
+
+- les six archives sont des SFS v202 ;
+- `gui\background.tga` contient deja le fond officiel IL-2 Sturmovik 1946,
+  786 956 octets, SHA-256
+  `831B136385DBC87651DA610B5F3BE12E1833B3CCEB3E78707F6ADAD82DF5D18F` ;
+- `gui\background0.tga`, empreinte SFS `287C53E300FD73AD`, contient quatre
+  variantes historiques selon l'archive : `A4159D8D...E8925` dans les stocks
+  4.08/4.09b, `B39734DC...B5EE` dans les mods 4.08/4.09b,
+  `CD2C6320...181FC` dans le stock 4.09m et `AC3314AC...6AA0B` dans les mods
+  4.09m ;
+- `gui\background.mat` pointe vers `background.tga`, tandis que les materiaux
+  `gui\background0_cs.mat`, `gui\background0_de.mat`,
+  `gui\background0_fr.mat` et `gui\background0_ru.mat` pointent vers
+  `background0.tga` ;
+- l'entree `gui\background0.tga` occupe seule sa plage de donnees. Son dernier
+  entier de TOC correspond a la somme non signee de ses octets sur 32 bits.
+
+La source officielle utilisee est conservee sous
+`D:\Projets\GITHUB\#res\IL2 1946\background\Official In Games Backgrounds\Originaux\IL-2 Sturmovik 1946 (2006)\gui\background.tga`.
+Elle commence par la signature `IMF\x1A10` et mesure 512 x 512 pixels apres
+decodage.
+
+La reconstruction reproductible est implementee dans
+`tools\Repack-SfsEntry.py`. L'outil conserve l'ordre de la TOC, remplace une
+seule plage, recalcule la taille et la somme de l'entree, decale les offsets
+posterieurs, reconstruit les blocs DEFLATE de 32 768 octets, puis rechiffre les
+metadonnees. Il rouvre enfin le resultat et compare toutes les entrees a la
+source. Exemple :
+
+```powershell
+python tools\Repack-SfsEntry.py `
+  "_Game Switcher\4.09 final Mods ON 6DOF\files.SFS" `
+  "C:\chemin-temporaire\files.SFS" `
+  --path "gui\background0.tga" `
+  --replacement "D:\Projets\GITHUB\#res\IL2 1946\background\Official In Games Backgrounds\Originaux\IL-2 Sturmovik 1946 (2006)\gui\background.tga"
+```
+
+La methode a d'abord ete controlee sans remplacement sur le `TestIniA.SFS`
+v201 livre avec SFS Manager 4.1 : en-tete, TOC, contenu de chaque entree et flux
+decompresse sont restes identiques. Chaque archive reconstruite a ensuite ete
+rouverte et comparee integralement a sa source. Seule `gui\background0.tga`
+change ; toutes les autres entrees et leurs metadonnees fonctionnelles restent
+identiques.
+
+| Profils | Entrees | Taille reconstruite | SHA-256 reconstruit |
+| --- | ---: | ---: | --- |
+| `4.08 stock` | 10 075 | 22 237 821 | `42342CE1089C42B4FBB61F6CFC3850F3AC27FAFE6F4192CD7C6CF042E056F7EC` |
+| `4.08 mods NO 6DOF`, `4.08 mods 6DOF` | 9 971 | 21 232 146 | `E00F86B80183313B846F72F153A9102A1DC40AFBB90323DE8AC7DE34DED0D5FD` |
+| `4.09b stock` | 10 075 | 22 235 571 | `08682F88511336D083A068A2D3DE81BC02F2AE8A27DF61666FC91F3DFF95BCC2` |
+| `4.09b mods NO 6DOF`, `4.09b mods 6DOF` | 9 971 | 21 236 211 | `53B97E4993C17DECDEEC6E4E46E70F42ED01A625AE9AEB274A14327C399F890E` |
+| `4.09m stock` | 10 543 | 23 998 523 | `FCFCE245EC23FF314C6CD86E9A51D563D091CFF74DDD0B46B704B670C0340C6A` |
+| `4.09m mods NO 6DOF`, `4.09m mods 6DOF` | 10 441 | 23 010 398 | `5CB81D4FAE005429B701CE3DCAC001892DB2C66D0AECEE0A00E918D5E8892E71` |
+
+Fait valide en execution : Alexis a confirme que l'image officielle IL-2 1946
+s'affiche au demarrage du profil `4.09m mods 6DOF` avec l'archive reconstruite.
+La structure et le contenu des cinq autres archives distinctes ont ete verifies
+statiquement ; elles utilisent le meme format SFS v202 et la meme entree cible.
+Le fond de selection des missions reste la texture SBD Dauntless distincte sous
+`Missions\Background.tga`.
+
+Les informations communautaires recoupees sont la description des materiaux de
+splash sur [SAS 1946](https://www.sas1946.com/main/index.php?topic=37662.0) et
+la publication de [SFS Manager 4.1](https://www.sas1946.com/main/index.php?topic=63325.12).
+Les recherches dans les archives AAA/All Aircraft Arcade et sur Mission4Today
+n'ont pas fourni d'instruction de reconstruction exploitable pour ce cas
+precis. La description binaire est confirmee pour les archives v201 et v202
+testees ; sa generalisation aux autres revisions SFS reste une hypothese.
