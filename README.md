@@ -47,7 +47,7 @@ stock et le wrapper qui chargerait cette surcharge est retire.
 
 ## Fonds de chargement variables (option en cours de validation)
 
-La rotation facultative propose les quatre fonds choisis par Alexis, avec deux
+La rotation facultative propose les quatre fonds choisis par Alexis, avec trois
 passages par cycle pour le fond officiel de 2001. Les images sont installees
 sous `Files/gui/backgrounds`. Le choix du fond intervient au demarrage
 modde, y compris lors d'un lancement direct de `il2fb.exe`.

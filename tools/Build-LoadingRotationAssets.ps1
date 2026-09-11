@@ -148,10 +148,10 @@ function Write-VerifiedTga {
     }
 }
 
-# Final selection provided by Alexis; only il2-2001 has the official double weight.
+# Final selection provided by Alexis; only il2-2001 has the official triple weight.
 $definitions = @(
     [pscustomobject]@{ Id = 'forgotten-battles-box'; Label = 'Forgotten Battles - jaquette, logo gauche'; Weight = 1; SourceFilename = 'Forgotten Battles - jaquette remaster 1586x992 - logo gauche.png' },
-    [pscustomobject]@{ Id = 'il2-2001'; Label = 'IL-2 Sturmovik 2001 Retail - officiel'; Weight = 2; SourceFilename = 'IL-2 Sturmovik 2001 Retail - remaster 1586x992.png' },
+    [pscustomobject]@{ Id = 'il2-2001'; Label = 'IL-2 Sturmovik 2001 Retail - officiel'; Weight = 3; SourceFilename = 'IL-2 Sturmovik 2001 Retail - remaster 1586x992.png' },
     [pscustomobject]@{ Id = 'background-3'; Label = 'Fond 3 (3.png)'; Weight = 1; SourceFilename = '3.png' },
     [pscustomobject]@{ Id = 'il2-2001-box'; Label = 'IL-2 Sturmovik 2001 - jaquette'; Weight = 1; SourceFilename = 'IL-2 Sturmovik 2001 - jaquette remaster 1586x992.png' }
 )

@@ -39,7 +39,7 @@ $preview=New-Object Windows.Forms.PictureBox
 $preview.Location=New-Object Drawing.Point(494,140);$preview.Size=New-Object Drawing.Size(440,275)
 $preview.SizeMode='Zoom';$preview.BackColor=[Drawing.Color]::FromArgb(35,40,42)
 $form.Controls.Add($preview)
-$officialLabel=Label 'Fond officiel : deux passages par cycle' 24 326 435 25
+$officialLabel=Label 'Fond officiel : trois passages par cycle' 24 326 435 25
 $official=New-Object Windows.Forms.ComboBox
 $official.Location=New-Object Drawing.Point(24,355);$official.Size=New-Object Drawing.Size(442,30)
 $official.DropDownStyle='DropDownList'
@@ -64,7 +64,7 @@ $mode.Location=New-Object Drawing.Point(24,428);$mode.Size=New-Object Drawing.Si
 [void]$mode.Items.Add('Ordre régulier, sans répétition immédiate')
 $mode.SelectedIndex=if ($state.configuration.mode -eq 'ordered') { 1 } else { 0 }
 $form.Controls.Add($mode)
-$explanation=Label 'Le fond officiel reçoit deux places ; chaque autre fond en reçoit une. Il faut au moins trois images pour doubler sa fréquence sans répétition immédiate.' 494 432 440 66
+$explanation=Label 'Le fond officiel reçoit trois places ; chaque autre fond en reçoit une. Il faut quatre images pour tripler sa fréquence sans répétition immédiate.' 494 432 440 66
 $status=Label '' 24 487 442 50
 $status.ForeColor=[Drawing.Color]::FromArgb(40,90,64)
 function Update-State {
@@ -92,7 +92,7 @@ $enable.add_Click({
         $ids=@($list.CheckedIndices | ForEach-Object { $catalog[[int]$_].id })
         $officialId=$script:officialIds[$official.SelectedIndex]
         if ($ids.Count -lt 2 -or $ids.Count -gt 4) { throw 'Cochez entre deux et quatre images.' }
-        if ($officialId -and $ids.Count -lt 3) { throw 'Choisissez au moins trois images pour doubler le fond officiel.' }
+        if ($officialId -and $ids.Count -lt 4) { throw 'Choisissez quatre images pour tripler le fond officiel.' }
         if (-not (Set-OSLoadingRotation -GameRoot $GameRoot -Action Status).installed) {
             $null=Set-OSLoadingRotation -GameRoot $GameRoot -Action Install
         }

@@ -12,6 +12,7 @@ public final class OpenSturmovikLoadingRotation {
     private static boolean attempted;
     private static String chosen;
     private static final Random random = new Random();
+    private static final int OFFICIAL_WEIGHT = 3;
     private static final String ORIGINAL = "gui/background0.mat";
     private static final String POOL = "Files/gui/backgrounds";
     private static final String DATA = ".open-sturmovik-loading-rotation";
@@ -44,7 +45,8 @@ public final class OpenSturmovikLoadingRotation {
         String mode = config.getProperty("mode", "shuffle");
         if (!"shuffle".equals(mode) && !"ordered".equals(mode)) throw new IOException("Invalid rotation mode");
         validateSelection(ids, official);
-        StringBuffer signatureText = new StringBuffer(mode).append('|').append(official);
+        StringBuffer signatureText = new StringBuffer(mode).append('|').append(official)
+            .append("|weight=").append(official.length() > 0 ? OFFICIAL_WEIGHT : 1);
         Hashtable hashes = new Hashtable();
         for (int i = 0; i < ids.length; i++) {
             File material = new File(pool, ids[i] + ".mat");
@@ -111,8 +113,8 @@ public final class OpenSturmovikLoadingRotation {
             if (ids[i].equals(official)) found = true;
         }
         if (!found) throw new IOException("Official picture is not selected");
-        if (official.length() > 0 && ids.length < 3)
-            throw new IOException("Double frequency requires at least three pictures");
+        if (official.length() > 0 && ids.length < OFFICIAL_WEIGHT + 1)
+            throw new IOException("Triple frequency requires four pictures");
     }
 
     private static boolean validId(String id) {
@@ -129,7 +131,7 @@ public final class OpenSturmovikLoadingRotation {
         int[] counts = new int[ids.length];
         int total = 0;
         for (int i = 0; i < ids.length; i++) {
-            counts[i] = ids[i].equals(official) ? 2 : 1;
+            counts[i] = ids[i].equals(official) ? OFFICIAL_WEIGHT : 1;
             total += counts[i];
         }
         String[] result = new String[total];
@@ -161,7 +163,7 @@ public final class OpenSturmovikLoadingRotation {
     private static void validateCycle(String[] cycle, String[] ids, String official) throws IOException {
         int[] expected = new int[ids.length];
         int total = 0;
-        for (int i = 0; i < ids.length; i++) { expected[i] = ids[i].equals(official) ? 2 : 1; total += expected[i]; }
+        for (int i = 0; i < ids.length; i++) { expected[i] = ids[i].equals(official) ? OFFICIAL_WEIGHT : 1; total += expected[i]; }
         if (cycle.length != total) throw new IOException("Invalid saved cycle length");
         String last = "";
         for (int i = 0; i < cycle.length; i++) {

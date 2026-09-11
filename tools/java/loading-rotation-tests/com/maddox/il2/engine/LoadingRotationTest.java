@@ -13,6 +13,7 @@ import java.lang.reflect.Method;
 import java.security.MessageDigest;
 import java.util.Arrays;
 import java.util.Properties;
+import java.util.StringTokenizer;
 import java.util.TreeMap;
 
 /**
@@ -184,7 +185,7 @@ public final class LoadingRotationTest {
             String previous = "";
             for (int round = 0; round < 150; round++) {
                 String[] cycle = OpenSturmovikLoadingRotation.buildCycle(IDS, IDS[0], previous, mode == 1);
-                check(cycle.length == 5, "Weighted cycle length must be five.");
+                check(cycle.length == 6, "Weighted cycle length must be six.");
                 int[] counts = new int[4];
                 for (int index = 0; index < cycle.length; index++) {
                     check(!cycle[index].equals(previous), "Adjacent duplicate at cycle boundary or inside cycle.");
@@ -195,7 +196,7 @@ public final class LoadingRotationTest {
                     check(known, "Unexpected cycle identifier.");
                     previous = cycle[index];
                 }
-                for (int id = 0; id < counts.length; id++) check(counts[id] == (id == 0 ? 2 : 1), "Weighted occurrence count differs.");
+                for (int id = 0; id < counts.length; id++) check(counts[id] == (id == 0 ? 3 : 1), "Weighted occurrence count differs.");
             }
         }
     }
@@ -221,11 +222,17 @@ public final class LoadingRotationTest {
         }
     }
 
-    private static void testImpossibleWeightedPair() throws Exception {
-        boolean rejected = false;
-        try { OpenSturmovikLoadingRotation.buildCycle(new String[] { IDS[0], IDS[1] }, IDS[0], "", false); }
-        catch (IOException expected) { rejected = true; }
-        check(rejected, "Two images cannot sustain weight 2:1 without repeats across all launches.");
+    private static void testImpossibleWeightedSelections() throws Exception {
+        for (int size = 2; size <= 3; size++) {
+            String[] selected = new String[size];
+            System.arraycopy(IDS, 0, selected, 0, size);
+            for (int mode = 0; mode < 2; mode++) {
+                boolean rejected = false;
+                try { OpenSturmovikLoadingRotation.buildCycle(selected, IDS[0], "", mode == 1); }
+                catch (IOException expected) { rejected = true; }
+                check(rejected, "Weight three requires four images to avoid repeats across all launches.");
+            }
+        }
     }
 
     private static void testDisabledNoWrites() throws Exception {
@@ -276,7 +283,7 @@ public final class LoadingRotationTest {
         configure(IDS, IDS[0], "ordered", true);
         String previous = "";
         int[] counts = new int[IDS.length];
-        for (int launch = 0; launch < 20; launch++) {
+        for (int launch = 0; launch < 24; launch++) {
             resetProcess();
             String selected = chosenId(choose());
             check(!selected.equals(previous), "Persistent launch sequence repeated an image.");
@@ -285,12 +292,74 @@ public final class LoadingRotationTest {
             Properties stored = properties(state());
             check("1".equals(stored.getProperty("schema")), "State schema differs.");
             check(selected.equals(stored.getProperty("last")), "Persisted last choice differs.");
-            check(Integer.parseInt(stored.getProperty("position")) == launch % 5 + 1, "Persisted position advanced incorrectly.");
-            if (launch % 5 == 4) {
+            check(Integer.parseInt(stored.getProperty("position")) == launch % 6 + 1, "Persisted position advanced incorrectly.");
+            if (launch % 6 == 5) {
                 for (int id = 0; id < IDS.length; id++) {
-                    check(counts[id] == (id == 0 ? 2 : 1), "Five actual selections violated exact weights.");
+                    check(counts[id] == (id == 0 ? 3 : 1), "Six actual selections violated exact weights.");
                     counts[id] = 0;
                 }
+            }
+        }
+    }
+
+    private static String fixtureSignature(String mode, boolean includeWeight) throws Exception {
+        StringBuffer text = new StringBuffer(mode).append('|').append(IDS[0]);
+        if (includeWeight) text.append("|weight=3");
+        for (int id = 0; id < IDS.length; id++) {
+            text.append('|').append(IDS[id]).append(':').append(digest(read(image(IDS[id]))));
+        }
+        return digest(text.toString().getBytes("US-ASCII"));
+    }
+
+    private static void testLegacyWeightedStateMigration() throws Exception {
+        // Every old position is valid for the previous 2:1:1:1 implementation.
+        String[] legacyCycle = { IDS[0], IDS[1], IDS[0], IDS[2], IDS[3] };
+        for (int mode = 0; mode < 2; mode++) {
+            String selectedMode = mode == 0 ? "ordered" : "shuffle";
+            for (int oldPosition = 1; oldPosition <= legacyCycle.length; oldPosition++) {
+                fixture();
+                configure(IDS, IDS[0], selectedMode, true);
+                Properties legacy = new Properties();
+                legacy.setProperty("schema", "1");
+                legacy.setProperty("signature", fixtureSignature(selectedMode, false));
+                legacy.setProperty("cycle", csv(legacyCycle));
+                legacy.setProperty("position", Integer.toString(oldPosition));
+                String previous = legacyCycle[oldPosition - 1];
+                legacy.setProperty("last", previous);
+                properties(state(), legacy);
+                byte[] oldBytes = read(state());
+
+                Mat.fail = true;
+                check(ORIGINAL.equals(choose()), "Failed migration preload did not fall back.");
+                check(Mat.calls == 1, "Legacy state was not usable before migration preload.");
+                check(equal(oldBytes, read(state())), "Failed migration consumed or rewrote legacy state.");
+
+                int[] counts = new int[IDS.length];
+                for (int launch = 0; launch < 6; launch++) {
+                    resetProcess();
+                    String selected = chosenId(choose());
+                    check(!selected.equals(previous), "Migration repeated the old last image or a new neighbor.");
+                    previous = selected;
+                    for (int id = 0; id < IDS.length; id++) if (selected.equals(IDS[id])) counts[id]++;
+                    Properties stored = properties(state());
+                    check("1".equals(stored.getProperty("schema")), "Migration changed the state schema.");
+                    check(fixtureSignature(selectedMode, true).equals(stored.getProperty("signature")),
+                        "Migrated signature does not include official weight three.");
+                    check(new StringTokenizer(stored.getProperty("cycle"), ",").countTokens() == 6,
+                        "Legacy five-entry cycle was not rebuilt as six entries.");
+                    check(Integer.parseInt(stored.getProperty("position")) == launch + 1,
+                        "Migrated cycle did not start at its first entry or advance once.");
+                    check(selected.equals(stored.getProperty("last")), "Migration lost the actual last selection.");
+                }
+                for (int id = 0; id < IDS.length; id++) {
+                    check(counts[id] == (id == 0 ? 3 : 1), "Migrated cycle violated 3:1:1:1 weights.");
+                }
+                resetProcess();
+                String next = chosenId(choose());
+                check(!next.equals(previous), "Migrated cycle boundary repeated its last image.");
+                check("1".equals(properties(state()).getProperty("position")),
+                    "The cycle following migration did not start at position one.");
+                check(!new File(current, DATA + "/selection.lock").exists(), "Migration left its selection lock.");
             }
         }
     }
@@ -341,7 +410,7 @@ public final class LoadingRotationTest {
             chosenId(choose());
             Properties values = properties(state());
             if (mutation == 0) values.setProperty("position", "999");
-            else values.setProperty("cycle", "first,first,first,first,first");
+            else values.setProperty("cycle", "first,first,first,first,first,first");
             properties(state(), values);
             byte[] corrupt = read(state());
             resetProcess();
@@ -397,7 +466,7 @@ public final class LoadingRotationTest {
     }
 
     private static void testInvalidConfigurationNeverConsumesState() throws Exception {
-        for (int invalid = 0; invalid < 5; invalid++) {
+        for (int invalid = 0; invalid < 6; invalid++) {
             fixture();
             configure(IDS, IDS[0], "ordered", true);
             chosenId(choose());
@@ -408,10 +477,12 @@ public final class LoadingRotationTest {
             if (invalid == 2) values.setProperty("official", "absent");
             if (invalid == 3) values.setProperty("mode", "invalid-mode");
             if (invalid == 4) values.setProperty("images", "first,../outside,third");
+            if (invalid == 5) values.setProperty("images", "first,second,third");
             properties(config(), values);
             resetProcess();
             check(ORIGINAL.equals(choose()), "Invalid configuration was accepted (case " + invalid + ").");
             check(equal(before, read(state())), "Invalid configuration consumed state.");
+            check(Mat.calls == 0, "Invalid configuration reached material preload.");
         }
     }
 
@@ -469,9 +540,10 @@ public final class LoadingRotationTest {
         if (!testRoot.getPath().startsWith(allowed.getPath() + File.separator)) throw new IOException("Fixtures must remain under " + allowed);
         if (testRoot.exists() || !testRoot.mkdirs()) throw new IOException("Fixture root must be a fresh directory: " + testRoot);
         String[] tests = {
-            "testWeightedCycles", "testUniformCycles", "testImpossibleWeightedPair",
+            "testWeightedCycles", "testUniformCycles", "testImpossibleWeightedSelections",
             "testDisabledNoWrites", "testOnlyStartupMaterial", "testOneDecisionPerProcess",
-            "testWeightedPersistentLaunches", "testMissingCandidateDoesNotConsumeState",
+            "testWeightedPersistentLaunches", "testLegacyWeightedStateMigration",
+            "testMissingCandidateDoesNotConsumeState",
             "testCorruptCandidateDoesNotConsumeState", "testCorruptStateIsPreserved",
             "testInvalidStatePositionAndCycle", "testBusyLockIsPreserved",
             "testMaterialPreloadFailureDoesNotConsumeState", "testPersistenceFailureAfterPreload",

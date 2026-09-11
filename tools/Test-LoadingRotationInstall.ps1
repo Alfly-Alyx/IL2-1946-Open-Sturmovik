@@ -113,13 +113,14 @@ try {
     $installedSnapshot = Snapshot-Fixture $game
     Assert-Test ((Set-OSLoadingRotation -GameRoot $game -Action Install).status -eq 'AlreadyInstalled') 'Repeated install is idempotent'
     Assert-Snapshot $game $installedSnapshot 'Repeated install'
-    Expect-Failure { Set-OSLoadingRotation -GameRoot $game -Action Enable -ImageIds @($ids[0],$ids[1]) -OfficialId $ids[0] } 'Official double weight with two images is rejected'
+    Expect-Failure { Set-OSLoadingRotation -GameRoot $game -Action Enable -ImageIds @($ids[0],$ids[1]) -OfficialId $ids[0] } 'Official triple weight with two images is rejected'
+    Expect-Failure { Set-OSLoadingRotation -GameRoot $game -Action Enable -ImageIds @($ids[0],$ids[1],$ids[2]) -OfficialId $ids[0] } 'Official triple weight with three images is rejected'
     Expect-Failure { Set-OSLoadingRotation -GameRoot $game -Action Enable -ImageIds @($ids[0],$ids[0]) } 'Duplicate selection is rejected'
     Expect-Failure { Set-OSLoadingRotation -GameRoot $game -Action Enable -ImageIds @($ids[0],'unknown-image') } 'Unknown image is rejected'
     Assert-Snapshot $game $installedSnapshot 'Invalid selections do not change active files'
-    $null = Set-OSLoadingRotation -GameRoot $game -Action Enable -ImageIds @($ids[0],$ids[1],$ids[2]) -OfficialId $ids[0] -Mode ordered
+    $null = Set-OSLoadingRotation -GameRoot $game -Action Enable -ImageIds @($ids[0],$ids[1],$ids[2],$ids[3]) -OfficialId $ids[0] -Mode ordered
     $enabled = (Set-OSLoadingRotation -GameRoot $game -Action Status).configuration
-    Assert-Test ($enabled.enabled -and $enabled.images.Count -eq 3 -and $enabled.official -eq $ids[0] -and $enabled.mode -eq 'ordered') 'Valid weighted selection is persisted'
+    Assert-Test ($enabled.enabled -and $enabled.images.Count -eq 4 -and $enabled.official -eq $ids[0] -and $enabled.mode -eq 'ordered') 'Valid four-image selection with official triple weight is persisted'
     $null = Set-OSLoadingRotation -GameRoot $game -Action Disable
     Assert-Test (-not (Set-OSLoadingRotation -GameRoot $game -Action Status).configuration.enabled) 'Disable clears activation'
     Assert-Installed $game 'Disable retains installed package'

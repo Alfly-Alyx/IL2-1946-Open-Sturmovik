@@ -271,7 +271,7 @@ function Set-OSLoadingRotation {
             $catalog=@(Get-OSLoadingCatalog)
             if ($ImageIds.Count -lt 2 -or $ImageIds.Count -gt 4 -or @($ImageIds | Select-Object -Unique).Count -ne $ImageIds.Count) { throw 'Choisir entre deux et quatre images distinctes.' }
             foreach ($id in $ImageIds) { if ($id -notin $catalog.id) { throw "Fond inconnu : $id" } }
-            if ($OfficialId -and ($OfficialId -notin $ImageIds -or $ImageIds.Count -lt 3)) { throw 'Le fond officiel double demande au moins trois images, dont ce fond.' }
+            if ($OfficialId -and ($OfficialId -notin $ImageIds -or $ImageIds.Count -lt 4)) { throw 'Le fond officiel triple demande quatre images, dont ce fond.' }
             $configuration.images=@($ImageIds);$configuration.official=$OfficialId;$configuration.mode=$Mode;$configuration.enabled=$true
         } else { $configuration.enabled=$false }
         $bytes=Get-OSConfigBytes $configuration
