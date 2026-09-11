@@ -32,7 +32,8 @@ transpose sans nouvel audit.
 
 ### Version et compatibilite
 
-`Files/$ReadMe$.txt` declare exactement `Version: v1.13`. Il demande :
+`_Documentations/Mods and Tools/Zuti MDS 1.13/Lisez-moi - Zuti MDS 1.13.txt`
+declare exactement `Version: v1.13`. Il demande :
 
 1. d'extraire le mod dans `MODS` ;
 2. de supprimer toutes les anciennes versions MDS ;

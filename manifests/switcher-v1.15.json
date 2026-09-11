@@ -7,33 +7,30 @@
   "hashChecker": null,
   "hashCheckerMode": "embedded-sha256-validation",
   "resourceDirectory": "_Game Switcher/Resources",
-  "desktopIcon": "_Game Switcher/Resources/Icons/Open_Sturmovik_Switcher_Original.ico",
+  "desktopIcon": "_Game Switcher/Resources/Icons/Open_Sturmovik_Switcher.ico",
   "icons": [
     {
-      "path": "_Game Switcher/Resources/Icons/Open_Sturmovik_Switcher_Original.ico",
-      "role": "active-original-switcher-design",
-      "size": 270398,
-      "sha256": "CCC954FA9D9BB38549F9D26335634914A26B9FFA576CF8729DD934EFAB8AA38E"
-    },
-    {
       "path": "_Game Switcher/Resources/Icons/Open_Sturmovik_Switcher.ico",
-      "role": "retained-v1.15-alternative",
-      "size": 177146,
-      "sha256": "D2D60AAA4B5054AA3949C4A8D8B21F3C6A19F8DB9262B9488D9C5906BE6198C9"
+      "role": "active-logo-il2-b-switcher-design",
+      "size": 77298,
+      "sha256": "A03924A3F96C246E78AE6B407AA9063A8C4E40A72550ABF52440B1BD38C50980"
     },
     {
-      "path": "_Game Switcher/Resources/Icons/IL2-2001-Demo__icone-extraite-executable.ico",
-      "role": "retained-2001-demo-alternative",
-      "size": 766,
-      "sha256": "9E649EC57395E136682655A3EDCFD5CD8DCD6C23A0B1FC97775AD007721A740D"
+      "path": "_Game Switcher/Resources/Icons/Open_Sturmovik_Game.ico",
+      "role": "modded-executable-avion-ciel-design",
+      "size": 114922,
+      "sha256": "15CDF20FBF22B9704F43B1F4F792A253216F5629A66C9E9E2B04202B0E4F0080"
     }
   ],
-  "referenceArtwork": {
-    "path": "_Game Switcher/Resources/Icons/OFFICIEL-Steam__IL2-1946__icone-communaute.jpg",
-    "size": 823,
-    "sha256": "0DA97532DD799185C259CFEBFD1635CD3AD24EA662BB909770DFA3C7F170544F"
+  "background": {
+    "path": "_Game Switcher/Resources/Backgrounds/Open_Sturmovik_Switcher_Background__Pacific_Fighters_Retail.png",
+    "role": "active-switcher-interface-background",
+    "sourceDesign": "Pacific Fighters Retail - remaster 1586x992",
+    "width": 1586,
+    "height": 992,
+    "size": 4634420,
+    "sha256": "9BB228ADE2E24A4CA0905BE613E9E2DB0B00981B9701F49D3C636550B951731C"
   },
-  "background": null,
   "loadingBackgrounds": {
     "style": "registered-maddox-games-trademark-with-deterministic-gold-treatment",
     "selection": "automatic-from-conf.ini-window-aspect-when-applying-a-switcher-profile",
@@ -92,11 +89,13 @@
     "originalProfilesRemoveWrapper": true,
     "all408ProfilesRemove409Archives": true,
     "moddedExecutablesUseOpenSturmovikVersionInfo": true,
+    "moddedExecutablesUseDedicatedIcon": true,
     "originalExecutablesRemainByteIdentical": true,
     "moddedWindowTitleUsesLooseConfigClass": true,
     "activeProfileStateIncludedInRollback": true,
     "loadingBackgroundIncludedInRollback": true,
     "loadingBackgroundSelectedFromWindowAspect": true,
+    "switcherBackgroundLoadedFromResource": true,
     "keepHudDetectedFromActualFile": true,
     "rejectAbandonedTransaction": true
   },
@@ -113,6 +112,13 @@
       "productName": "Open Sturmovik",
       "fileVersion": "1.15.0.0",
       "originalFilename": "il2fb.exe"
+    },
+    "moddedExeIcon": {
+      "path": "_Game Switcher/Resources/Icons/Open_Sturmovik_Game.ico",
+      "sourceDesign": "exec-f97469cb__avion-ciel__master-1024",
+      "sha256": "15CDF20FBF22B9704F43B1F4F792A253216F5629A66C9E9E2B04202B0E4F0080",
+      "images": 6,
+      "sizes": [16, 32, 48, 64, 128, 256]
     }
   },
   "commonFiles": [
@@ -248,7 +254,7 @@
       "folder": "4.08 Mods OFF (Original)",
       "payload": "4.08m",
       "exeSha256": "9ACE9A542AC7203D8A66961570B6854C11FB0BF721F0234DA9D6095D69D2525C",
-      "filesSha256": "7F872ADAB1845E2837A2EE43FD378372B9DBAF01819C8F3BA7413B04BEFEAFD0",
+      "filesSha256": "42342CE1089C42B4FBB61F6CFC3850F3AC27FAFE6F4192CD7C6CF042E056F7EC",
       "remove": [
         "wrapper.dll",
         "fb_3do19.SFS",
@@ -261,10 +267,10 @@
       "number": 2,
       "version": "4.08m",
       "mode": "open-sturmovik-no-6dof",
-      "folder": "4.08 Mod ON (NO 6DOF)",
+      "folder": "4.08 Mods ON (NO 6DOF)",
       "payload": "4.08m",
-      "exeSha256": "70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3",
-      "filesSha256": "D8A7DAD54CBA505B5E7B2C394491701A705A86D20091D3746F399D8A08049986",
+      "exeSha256": "BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328",
+      "filesSha256": "E00F86B80183313B846F72F153A9102A1DC40AFBB90323DE8AC7DE34DED0D5FD",
       "remove": [
         "fb_3do19.SFS",
         "fb_3do20.SFS",
@@ -276,10 +282,10 @@
       "number": 3,
       "version": "4.08m",
       "mode": "open-sturmovik-6dof",
-      "folder": "4.08 Mods 6DOF ON",
+      "folder": "4.08 Mods ON 6DOF",
       "payload": "4.08m",
-      "exeSha256": "F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E",
-      "filesSha256": "D8A7DAD54CBA505B5E7B2C394491701A705A86D20091D3746F399D8A08049986",
+      "exeSha256": "F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3",
+      "filesSha256": "E00F86B80183313B846F72F153A9102A1DC40AFBB90323DE8AC7DE34DED0D5FD",
       "remove": [
         "fb_3do19.SFS",
         "fb_3do20.SFS",
@@ -294,7 +300,7 @@
       "folder": "4.09 Mods OFF (Original)",
       "payload": "4.09b",
       "exeSha256": "9ACE9A542AC7203D8A66961570B6854C11FB0BF721F0234DA9D6095D69D2525C",
-      "filesSha256": "DD9A1C7CFD51533560FC349A5B09DE360126F733FB2765F099A01CE6B178CFA8",
+      "filesSha256": "08682F88511336D083A068A2D3DE81BC02F2AE8A27DF61666FC91F3DFF95BCC2",
       "remove": [
         "wrapper.dll"
       ],
@@ -306,28 +312,28 @@
       "mode": "open-sturmovik-no-6dof",
       "folder": "4.09 Mods ON (NO 6DOF)",
       "payload": "4.09b",
-      "exeSha256": "70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3",
-      "filesSha256": "99CF133FA20A1A117C60E85D510E443693AB15B860314CAE02684069D3C79D17",
+      "exeSha256": "BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328",
+      "filesSha256": "53B97E4993C17DECDEEC6E4E46E70F42ED01A625AE9AEB274A14327C399F890E",
       "airRegistry": "4.09b"
     },
     {
       "number": 6,
       "version": "4.09b",
       "mode": "open-sturmovik-6dof",
-      "folder": "4.09 Mods 6DOF ON",
+      "folder": "4.09 Mods ON 6DOF",
       "payload": "4.09b",
-      "exeSha256": "F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E",
-      "filesSha256": "99CF133FA20A1A117C60E85D510E443693AB15B860314CAE02684069D3C79D17",
+      "exeSha256": "F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3",
+      "filesSha256": "53B97E4993C17DECDEEC6E4E46E70F42ED01A625AE9AEB274A14327C399F890E",
       "airRegistry": "4.09b"
     },
     {
       "number": 7,
       "version": "4.09m",
       "mode": "original",
-      "folder": "4.09finalModsOFF(Original)",
+      "folder": "4.09 final Mods OFF (Original)",
       "payload": "4.09m",
       "exeSha256": "9ACE9A542AC7203D8A66961570B6854C11FB0BF721F0234DA9D6095D69D2525C",
-      "filesSha256": "9F7D136C586EB3FCD258C5C000F34951D410A0236934F22ABA2516637874B095",
+      "filesSha256": "FCFCE245EC23FF314C6CD86E9A51D563D091CFF74DDD0B46B704B670C0340C6A",
       "remove": [
         "wrapper.dll"
       ],
@@ -337,20 +343,20 @@
       "number": 8,
       "version": "4.09m",
       "mode": "open-sturmovik-no-6dof",
-      "folder": "4.09finalModsON(No-6DoF)",
+      "folder": "4.09 final Mods ON (NO 6DOF)",
       "payload": "4.09m",
-      "exeSha256": "70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3",
-      "filesSha256": "18F3C5471D93642916394DE53B482051106E024DDAC8124C7B0D700D1796B05A",
+      "exeSha256": "BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328",
+      "filesSha256": "5CB81D4FAE005429B701CE3DCAC001892DB2C66D0AECEE0A00E918D5E8892E71",
       "airRegistry": "4.09m"
     },
     {
       "number": 9,
       "version": "4.09m",
       "mode": "open-sturmovik-6dof",
-      "folder": "4.09final_ModsON+6DoF",
+      "folder": "4.09 final Mods ON 6DOF",
       "payload": "4.09m",
-      "exeSha256": "F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E",
-      "filesSha256": "18F3C5471D93642916394DE53B482051106E024DDAC8124C7B0D700D1796B05A",
+      "exeSha256": "F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3",
+      "filesSha256": "5CB81D4FAE005429B701CE3DCAC001892DB2C66D0AECEE0A00E918D5E8892E71",
       "airRegistry": "4.09m"
     }
   ],
@@ -412,7 +418,7 @@
       "entries": 535
     }
   },
-  "entryPointSha256": "21F83A7CFEDDE090A876F3931ACA320066B090FB77784B43C8DD5B21C705C6EE",
+  "entryPointSha256": "FBFE3110361BD6A5C91BFD93DADEEA79AD670329E40FD6BC4463386AC6FC249F",
   "latestVerification": {
     "date": "2026-09-08",
     "fileTransactionsPassed": 18,

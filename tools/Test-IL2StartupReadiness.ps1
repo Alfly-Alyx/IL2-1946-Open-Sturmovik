@@ -159,14 +159,14 @@ foreach ($name in $official409.Keys) {
 
 $profileFolder = switch ($Profile) {
     '1' { '4.08 Mods OFF (Original)' }
-    '2' { '4.08 Mod ON (NO 6DOF)' }
-    '3' { '4.08 Mods 6DOF ON' }
+    '2' { '4.08 Mods ON (NO 6DOF)' }
+    '3' { '4.08 Mods ON 6DOF' }
     '4' { '4.09 Mods OFF (Original)' }
     '5' { '4.09 Mods ON (NO 6DOF)' }
-    '6' { '4.09 Mods 6DOF ON' }
-    '7' { '4.09finalModsOFF(Original)' }
-    '9' { '4.09final_ModsON+6DoF' }
-    default { '4.09finalModsON(No-6DoF)' }
+    '6' { '4.09 Mods ON 6DOF' }
+    '7' { '4.09 final Mods OFF (Original)' }
+    '9' { '4.09 final Mods ON 6DOF' }
+    default { '4.09 final Mods ON (NO 6DOF)' }
 }
 $profileLabel = switch ($Profile) {
     '1' { '1 - 4.08m Original, sans wrapper, OpenGL natif' }
@@ -188,7 +188,7 @@ $pairs = if ($SelectorDumpLab) {
         'il2fb.exe' = 'bin\selector\basefiles\mod\il2fb.exe'
         'wrapper.dll' = 'bin\selector\basefiles\mod\wrapper.dll'
         'DINPUT.dll' = 'bin\selector\basefiles\DINPUT.dll'
-        'files.SFS' = '_Game Switcher\4.09finalModsON(No-6DoF)\files.SFS'
+        'files.SFS' = '_Game Switcher\4.09 final Mods ON (NO 6DOF)\files.SFS'
         'Files\com\maddox\il2\objects\air.ini' = '_Game Switcher\409m air.ini\Air.ini\air.ini'
         'Files\com\maddox\il2\objects\stationary.ini' = '_Game Switcher\Stationary\409m\stationary.ini'
     }
@@ -248,10 +248,9 @@ else {
 
 $switcherComponents = @(
     'Open_Sturmovik_Switcher.bat',
-    '_Game Switcher\Resources\Icons\Open_Sturmovik_Switcher_Original.ico',
     '_Game Switcher\Resources\Icons\Open_Sturmovik_Switcher.ico',
-    '_Game Switcher\Resources\Icons\IL2-2001-Demo__icone-extraite-executable.ico',
-    '_Game Switcher\Resources\Icons\OFFICIEL-Steam__IL2-1946__icone-communaute.jpg'
+    '_Game Switcher\Resources\Icons\Open_Sturmovik_Game.ico',
+    '_Game Switcher\Resources\Backgrounds\Open_Sturmovik_Switcher_Background__Pacific_Fighters_Retail.png'
 )
 $switcherDifferences = @()
 foreach ($relative in $switcherComponents) {

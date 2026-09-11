@@ -13,8 +13,9 @@ const marker = '### OPEN_STURMOVIK_GUI ###';
 const markerAt = batch.indexOf(marker);
 assert.notEqual(markerAt, -1);
 const html = batch.slice(batch.indexOf('\n', markerAt) + 1);
-assert.doesNotMatch(html, /Open_Sturmovik_Switcher_Background\.jpg/);
-assert.doesNotMatch(html, /document\.body\.style\.backgroundImage/);
+assert.match(batch, /Open_Sturmovik_Switcher_Background__Pacific_Fighters_Retail\.png/);
+assert.match(html, /url\("OpenSturmovikSwitcher-v115-background\.png"\) center center no-repeat/);
+assert.match(html, /guiBackgroundTemp/);
 assert.match(html, /font-family:"Trebuchet MS",Tahoma,Arial,sans-serif/);
 assert.match(html, /border:4px ridge #89938e/);
 assert.match(html, /icon="OpenSturmovikSwitcher-v115\.ico"/);
@@ -130,7 +131,7 @@ for (const version of ['408', '409b', '409m']) {
   context.updateSelection();
   assert.match(elements.summary.innerHTML, new RegExp(version === '408' ? '4\\.08m' : version.replace('.', '\\.')));
 }
-console.log('PASS: embedded IL-2-style GUI and required background found; 9 profile mappings and 18 profile/HUD dispatches.');
+console.log('PASS: embedded IL-2-style GUI and selected Pacific Fighters Retail background found; 9 profile mappings and 18 profile/HUD dispatches.');
 console.log('PASS: 18 saved-state restorations, stock-HUD guard, summaries and invalid-state guard.');
 console.log('PASS: installed shortcut starts the single BAT through a hidden CMD; installer and utility manifest agree.');
 console.log('Scope: selection logic only; no UI, game, capture or external process launched.');

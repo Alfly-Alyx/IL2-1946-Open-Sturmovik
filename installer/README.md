@@ -56,13 +56,13 @@ v1.15 et le gel explicite du dossier `Payload`.
 - l'installateur utilise l'icone bouclier et le fond d'ecran fournis dans les
   ressources locales du projet.
 
-Le fond provisoire propre au switcher a ete retire le 8 septembre 2026 a la
-demande d'Alexis. Jusqu'au choix de son remplacant, l'interface utilise son fond
-uni de secours et l'installateur ne doit livrer aucun JPEG de fond du switcher.
-Le dossier `Resources\Icons` conserve les trois icones citees pour le
-switcheur et l'image communautaire Steam. L'icone historique retrouvee
-`Open_Sturmovik_Switcher_Original.ico` est celle de la fenetre et du raccourci ;
-`Open_Sturmovik_Switcher.ico` reste disponible comme variante v1.15.
+Le fond du switcher retenu le 11 septembre 2026 est la remasterisation de la
+jaquette Pacific Fighters Retail, livree sous
+`Resources\Backgrounds\Open_Sturmovik_Switcher_Background__Pacific_Fighters_Retail.png`.
+Le dossier `Resources\Icons` contient les deux icones actives.
+`Open_Sturmovik_Switcher.ico`, issu du dessin `logo-IL2-B`, est l'icone de la
+fenetre et du raccourci. `Open_Sturmovik_Game.ico`, issu du dessin
+`avion-ciel`, est reserve aux executables de jeu modifies.
 
 Le script reprend le principe de detection du dossier existant de
 `IL2_Open_Sturmovik_Patch_1.1.iss`, mais ne reprend pas la longue suppression

@@ -27,14 +27,14 @@ foreach ($relative in @(
     'files.SFS',
     'Files\com\maddox\il2\objects\air.ini',
     'Files\com\maddox\il2\objects\stationary.ini',
-    '_Game Switcher\4.09finalModsON(No-6DoF)\files.SFS'
+    '_Game Switcher\4.09 final Mods ON (NO 6DOF)\files.SFS'
 )) {
     if (-not (Test-Path -LiteralPath (Join-Path $resolvedGame $relative) -PathType Leaf)) {
         throw "Fichier 4.09m requis absent : $relative"
     }
 }
 
-$modSfs = Join-Path $resolvedGame '_Game Switcher\4.09finalModsON(No-6DoF)\files.SFS'
+$modSfs = Join-Path $resolvedGame '_Game Switcher\4.09 final Mods ON (NO 6DOF)\files.SFS'
 $activeSfs = Join-Path $resolvedGame 'files.SFS'
 if ((Get-FileHash -LiteralPath $activeSfs -Algorithm SHA256).Hash -ne
     (Get-FileHash -LiteralPath $modSfs -Algorithm SHA256).Hash) {

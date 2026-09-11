@@ -85,10 +85,8 @@ foreach ($theme in @($manifest.themes)) {
 
 $icons = Join-Path $root '_Game Switcher\Resources\Icons'
 foreach ($name in @(
-    'IL2-2001-Demo__icone-extraite-executable.ico',
-    'OFFICIEL-Steam__IL2-1946__icone-communaute.jpg',
-    'Open_Sturmovik_Switcher_Original.ico',
-    'Open_Sturmovik_Switcher.ico'
+    'Open_Sturmovik_Switcher.ico',
+    'Open_Sturmovik_Game.ico'
 )) {
     if (-not (Test-Path -LiteralPath (Join-Path $icons $name) -PathType Leaf)) {
         throw "Icon missing: $name"
@@ -96,7 +94,11 @@ foreach ($name in @(
 }
 
 $guiBackgrounds = Join-Path $root '_Game Switcher\Resources\Backgrounds'
-foreach ($name in @('1.png', '2.png', '3.png')) {
+foreach ($name in @(
+    'Open_Sturmovik_Missions_Background__SBD_Dauntless.png'
+    'Open_Sturmovik_Switcher_Alternate__Corsair_vs_Zero.png'
+    'Open_Sturmovik_Switcher_Background__Pacific_Fighters_Retail.png'
+)) {
     if (-not (Test-Path -LiteralPath (Join-Path $guiBackgrounds $name) -PathType Leaf)) {
         throw "Switcher background missing: $name"
     }
@@ -104,6 +106,6 @@ foreach ($name in @('1.png', '2.png', '3.png')) {
 
 $message = (
     "PASS: {0} themes x {1} formats, authentic Maddox master, " +
-    "4 icons and 3 switcher backgrounds verified."
+    "2 active icons and 3 switcher backgrounds verified."
 ) -f $expectedThemes.Count, $expectedFormats.Count
 Write-Host $message

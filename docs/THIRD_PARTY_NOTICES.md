@@ -2,9 +2,11 @@
 
 ## Zuti MDS v1.13 STD — autorisation a clarifier
 
-Le fichier historique `Files/$ReadMe$.txt` attribue MDS a `|ZUTI|` et demande
-explicitement de contacter l'auteur avant toute inclusion dans un pack. Le depot
-ne contient actuellement aucune preuve d'autorisation accordee a Open Sturmovik.
+Le fichier historique
+`_Documentations/Mods and Tools/Zuti MDS 1.13/Lisez-moi - Zuti MDS 1.13.txt`
+attribue MDS a `|ZUTI|` et demande explicitement de contacter l'auteur avant
+toute inclusion dans un pack. Le depot ne contient actuellement aucune preuve
+d'autorisation accordee a Open Sturmovik.
 
 La presence et la modification technique de classes Zuti ne constituent pas une
 autorisation de redistribution. Ce composant reste donc marque
@@ -13,15 +15,22 @@ autorisation de redistribution. Ce composant reste donc marque
 identification de conditions de licence publiées. Cette question doit etre
 resolue avant une diffusion publique de la v1.15.
 
-## B-29 Silverplate v1.2 / Little Boy / Fat Man — aucune licence publiee
+## B-29 Silverplate v1.2 / Little Boy / Fat Man — credits retrouves, aucune licence publiee
 
 Le paquet historique Silverplate v1.2 fournit le B-29 Silverplate, les classes
 Little Boy et Fat Man, leurs modeles et les effets nucleaires de base. Le seul
-fichier d'instructions retrouve, `To Add.txt`, enumere les lignes `air.ini` et
-les traductions d'armement ; il ne contient ni licence, ni auteur, ni condition
-de redistribution. Le mainteneur confirme que le paquet n'a pas de licence
-publiee. Ce composant doit donc etre traite comme non autorise a la
-redistribution tant qu'une permission explicite n'a pas ete obtenue.
+fichier d'instructions local, `To Add.txt`, enumere les lignes `air.ini` et les
+traductions d'armement sans indiquer d'auteur ni de licence. La
+[publication SAS du paquet v1.2](https://www.sas1946.com/main/index.php?topic=7894.0)
+conserve toutefois les credits suivants : 1C/Maddox, O_Magpie, Fireball,
+SAS~Cirx, MrJolly, Lt.Wolf, Fat Duck, VC-81_BOLTER, O_Leigh, Max_Thehitman,
+Ranwers, Wolfighter et Twister. Santobr y est cite pour des effets additionnels,
+dont la presence exacte dans Open Sturmovik reste a verifier.
+
+Cette publication ne donne pas de licence ni de permission de redistribution.
+Le mainteneur confirme que le paquet n'a pas de licence publiee. Ce composant
+doit donc etre traite comme non autorise a la redistribution tant qu'une
+permission explicite n'a pas ete obtenue.
 
 Open Sturmovik conserve les huit ressources de modele de bombe identiques au
 paquet historique, mais fusionne et corrige plusieurs classes Java pour assurer

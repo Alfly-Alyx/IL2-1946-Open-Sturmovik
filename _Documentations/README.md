@@ -1,7 +1,7 @@
 # Documentation Open Sturmovik
 
 Le dossier `_Documentations`, au pluriel, remplace l'ancien
-`_Documentation`. Les 24 documents d'origine ont ete identifies, renommes et
+`_Documentation`. Les 25 documents d'origine ont ete identifies, renommes et
 classes sans modifier leur contenu. Leurs empreintes SHA-256 ont ete controlees
 avant et apres le deplacement.
 
@@ -38,11 +38,12 @@ supprimables.
 
 - HardBall Aircraft Viewer 4.08 ;
 - San FOV Changer 1.0, manuel anglais ;
-- Zuti Moving Dogfight Server 1.13.
+- Zuti Moving Dogfight Server 1.13 : manuel fonctionnel et lisez-moi original
+  (installation, historique, composants inclus et credits).
 
 ## Nettoyage
 
-Aucun doublon exact n'a ete trouve parmi les 24 documents sources. Aucun
+Aucun doublon exact n'a ete trouve parmi les 25 documents sources. Aucun
 document n'a donc ete supprime. Les noms generiques comme `Document.rtf`,
 `Readme.doc` et `Mission Notes - Please Read.doc` ont ete remplaces par des noms
 qui indiquent leur contenu reel.

@@ -10,7 +10,7 @@ vrai differentiel binaire entre les executables avec et sans 6DOF.
 
 | Groupe | Resultat |
 | --- | --- |
-| Six profils modifies | Meme format d'`il2fb.exe` de 348 160 octets et meme `wrapper.dll` de 233 472 octets ; deux empreintes d'EXE existent maintenant selon le choix 6DOF |
+| Six profils modifies | Meme format d'`il2fb.exe` de 274 432 octets et meme `wrapper.dll` de 233 472 octets ; deux empreintes d'EXE existent maintenant selon le choix 6DOF |
 | Trois profils Original | Meme `il2fb.exe` de 4 548 608 octets ; aucun `wrapper.dll` requis |
 | 4.08 modifie avec/sans 6DOF | `files.SFS` et wrapper identiques ; EXE distincts |
 | 4.09b modifie avec/sans 6DOF | `files.SFS` et wrapper identiques ; EXE distincts |
@@ -21,12 +21,13 @@ restaures a partir du differentiel exact des deux EXE AAA historiques, sans
 remplacer les ressources PE ni l'ajustement Large Address Aware courant :
 
 - avec 6DOF : SHA-256
-  `F43C999779B599102146A19E644DF7B56E20A5995E3D060C7D80C958BCDD845E` ;
+  `F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3` ;
 - sans 6DOF : SHA-256
-  `70B3F84EDD111921B93CDFD720D6394764DD7C40249D0CD3617B18A7A3F990D3`.
+  `BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328`.
 
 Ces empreintes finales incluent la ressource Windows v1.15 qui declare
-`Open Sturmovik` comme description et nom de produit. Les empreintes
+`Open Sturmovik` comme description et nom de produit, ainsi que l'icone
+`avion-ciel` reservee aux profils modifies. Les empreintes
 intermediaires, avant ce marquage mais apres la restauration du differentiel
 6DOF, restent consignees dans `manifests/profiles-6dof-v1.15.json`.
 
