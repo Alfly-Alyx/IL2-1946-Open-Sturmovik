@@ -1,4 +1,4 @@
-#requires -Version 5.1
+﻿#requires -Version 5.1
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 $script:PackageRoot = Split-Path -Parent $PSScriptRoot
@@ -44,8 +44,13 @@ function Get-OSBytesHash([byte[]]$Bytes) {
     $sha = [Security.Cryptography.SHA256]::Create()
     try { return [BitConverter]::ToString($sha.ComputeHash($Bytes)).Replace('-', '') } finally { $sha.Dispose() }
 }
-function Assert-OSIdle {
-    if (@(Get-Process -Name il2fb,Open_Sturmovik -ErrorAction SilentlyContinue).Count -gt 0) { throw 'Fermez le jeu avant de modifier la rotation.' }
+function Assert-OSIdle([string]$GameRoot) {
+    $executables = @((Join-Path $GameRoot 'il2fb.exe'), (Join-Path $GameRoot 'Open_Sturmovik.exe'))
+    foreach ($process in @(Get-Process -Name il2fb,Open_Sturmovik -ErrorAction SilentlyContinue)) {
+        try { $processPath = $process.Path } catch { throw 'Impossible de verifier le dossier du jeu actif. Fermez le jeu avant de modifier la rotation.' }
+        if (-not $processPath) { throw 'Impossible de verifier le dossier du jeu actif. Fermez le jeu avant de modifier la rotation.' }
+        if ($processPath -in $executables) { throw 'Fermez ce jeu avant de modifier sa rotation.' }
+    }
 }
 function Get-OSLoadingCatalog {
     $folder = Join-Path $script:PackageRoot '_Game Switcher/Resources/Loading Rotation'
@@ -62,6 +67,7 @@ function Get-OSLoadingCatalog {
             $h = New-Object byte[] 18
             if ($stream.Read($h, 0, 18) -ne 18) { throw 'TGA incomplet.' }
             $width = [BitConverter]::ToUInt16($h, 12); $height = [BitConverter]::ToUInt16($h, 14)
+            if ($stream.Length -gt 4200000L -or 3L * $width * $height -gt 4200000L) { throw 'Fond trop volumineux : limite de 4,20 Mo pour le moteur historique.' }
             if ($h[1] -ne 0 -or $h[2] -ne 2 -or $h[16] -ne 24 -or $width -ne $item.width -or $height -ne $item.height -or $stream.Length -lt (18L + $h[0] + 3L * $width * $height)) { throw 'Format TGA invalide.' }
         } finally { $stream.Dispose() }
         $seenIds[$item.id] = $true; $seenHashes[$hash] = $true
@@ -214,7 +220,7 @@ function Set-OSLoadingRotation {
     if ([IO.File]::Exists($ledgerPath)) { $ledger = Read-OSJson $ledgerPath }
     if ($Action -eq 'Status') { return [pscustomobject]@{installed=($null -ne $ledger -and $ledger.installed);configuration=(Get-OSConfig $root)} }
     if ($Action -eq 'Install' -and (Get-OSGameProfile -GameRoot $root).kind -eq 'Unknown') { throw 'Profil Open Sturmovik v1.15 non reconnu (EXE/SFS/wrapper). Aucune installation effectuee.' }
-    Assert-OSIdle
+    Assert-OSIdle $root
     $switchRoot = Get-OSSafePath $root '_Game Switcher'
     if ((Test-Path -LiteralPath $switchRoot) -and @(Get-ChildItem -LiteralPath $switchRoot -Directory -Filter '_transaction-*').Count) { throw 'Changement de profil en cours.' }
     $data = Get-OSSafePath $root $script:DataName

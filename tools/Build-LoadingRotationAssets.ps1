@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param(
     [string]$ResourceDirectory
 )
@@ -10,7 +10,9 @@ if ([string]::IsNullOrWhiteSpace($ResourceDirectory)) {
 }
 Add-Type -AssemblyName System.Drawing
 
-# The sources stay byte-for-byte intact. Only the image container changes.
+# Original PNG files stay intact. Only runtime copies are reduced when needed.
+# Decimal 4.20 MB includes the TGA header; native RGB buffer limit is 4,202,496.
+$MaximumTgaBytes = 4200000L
 # TGA: type 2, BGR 24-bit, no RLE, bottom-left origin, no alpha or color map.
 if (-not ('OpenSturmovik.LoadingRotationPixels' -as [type])) {
     Add-Type -TypeDefinition @"
@@ -39,10 +41,35 @@ namespace OpenSturmovik {
 
 function Read-SourcePixels {
     param([Parameter(Mandatory = $true)][string]$Path)
-    $bitmap = [System.Drawing.Bitmap]::FromFile($Path)
+    $original = [System.Drawing.Bitmap]::FromFile($Path)
+    $bitmap = $original
     try {
         if ($bitmap.Width -gt 65535 -or $bitmap.Height -gt 65535) {
             throw "Image exceeds the TGA 16-bit dimension fields: $Path"
+        }
+        $sourceWidth = $original.Width
+        $sourceHeight = $original.Height
+        $scale = [Math]::Min(1.0, [Math]::Sqrt(($MaximumTgaBytes - 18.0) / (3.0 * $sourceWidth * $sourceHeight)))
+        $targetHeight = [Math]::Max(1, [int][Math]::Floor($sourceHeight * $scale))
+        $targetWidth = [Math]::Max(1, [int][Math]::Round($targetHeight * $sourceWidth / [double]$sourceHeight))
+        while (18L + 3L * $targetWidth * $targetHeight -gt $MaximumTgaBytes) {
+            $targetHeight--
+            if ($targetHeight -lt 1) { throw 'Image cannot fit the runtime byte budget.' }
+            $targetWidth = [Math]::Max(1, [int][Math]::Round($targetHeight * $sourceWidth / [double]$sourceHeight))
+        }
+        if ($targetWidth -ne $sourceWidth -or $targetHeight -ne $sourceHeight) {
+            $bitmap = New-Object System.Drawing.Bitmap($targetWidth, $targetHeight, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
+            $graphics = [System.Drawing.Graphics]::FromImage($bitmap)
+            $attributes = New-Object System.Drawing.Imaging.ImageAttributes
+            try {
+                $graphics.CompositingMode = [System.Drawing.Drawing2D.CompositingMode]::SourceCopy
+                $graphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+                $graphics.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
+                $attributes.SetWrapMode([System.Drawing.Drawing2D.WrapMode]::TileFlipXY)
+                $target = New-Object System.Drawing.Rectangle(0, 0, $targetWidth, $targetHeight)
+                $graphics.DrawImage($original, $target, 0, 0, $sourceWidth, $sourceHeight, [System.Drawing.GraphicsUnit]::Pixel, $attributes)
+            }
+            finally { $attributes.Dispose(); $graphics.Dispose() }
         }
         $rectangle = New-Object System.Drawing.Rectangle(0, 0, $bitmap.Width, $bitmap.Height)
         $locked = $bitmap.LockBits($rectangle, [System.Drawing.Imaging.ImageLockMode]::ReadOnly, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
@@ -54,15 +81,19 @@ function Read-SourcePixels {
                 [System.Runtime.InteropServices.Marshal]::Copy($rowPointer, $pixels, $row * $rowLength, $rowLength)
             }
             $bgr = [OpenSturmovik.LoadingRotationPixels]::ToBgr24($pixels)
-            return [pscustomobject]@{ Width = $bitmap.Width; Height = $bitmap.Height; Bgr = $bgr }
+            return [pscustomobject]@{ Width = $bitmap.Width; Height = $bitmap.Height; SourceWidth = $sourceWidth; SourceHeight = $sourceHeight; Bgr = $bgr }
         }
         finally { $bitmap.UnlockBits($locked) }
     }
-    finally { $bitmap.Dispose() }
+    finally {
+        if (-not [Object]::ReferenceEquals($bitmap, $original)) { $bitmap.Dispose() }
+        $original.Dispose()
+    }
 }
 
 function Write-VerifiedTga {
     param([Parameter(Mandatory = $true)]$SourcePixels, [Parameter(Mandatory = $true)][string]$Path)
+    if (18L + 3L * $SourcePixels.Width * $SourcePixels.Height -gt $MaximumTgaBytes) { throw "TGA exceeds the 4.20 MB runtime budget: $Path" }
     $header = New-Object byte[] 18
     $header[2] = 2
     $header[12] = $SourcePixels.Width -band 255
@@ -77,7 +108,7 @@ function Write-VerifiedTga {
         try {
             $stream.Write($header, 0, $header.Length)
             # The existing game background uses bottom-left origin. Reverse only
-            # row storage; decoded pixels remain identical to the PNG source.
+            # row storage; decoded pixels remain identical to the prepared RGB copy.
             $rowLength = $SourcePixels.Width * 3
             for ($row = $SourcePixels.Height - 1; $row -ge 0; $row--) {
                 $stream.Write($SourcePixels.Bgr, $row * $rowLength, $rowLength)
@@ -95,7 +126,7 @@ function Write-VerifiedTga {
             $decodedWidth = [int]$decodedHeader[12] + ([int]$decodedHeader[13] -shl 8)
             $decodedHeight = [int]$decodedHeader[14] + ([int]$decodedHeader[15] -shl 8)
             if ($decodedWidth -ne $SourcePixels.Width -or $decodedHeight -ne $SourcePixels.Height) {
-                throw "TGA dimensions differ from the source: $Path"
+                throw "TGA dimensions differ from the prepared copy: $Path"
             }
             $storedPixels = $reader.ReadBytes($decodedWidth * $decodedHeight * 3)
             if ($storedPixels.Length -ne $decodedWidth * $decodedHeight * 3) { throw "Truncated TGA pixels: $Path" }
@@ -106,7 +137,7 @@ function Write-VerifiedTga {
                 [Buffer]::BlockCopy($storedPixels, $storedRow * $decodedRowLength, $decodedPixels, $displayRow * $decodedRowLength, $decodedRowLength)
             }
             if ($reader.BaseStream.Position -ne $reader.BaseStream.Length -or -not [OpenSturmovik.LoadingRotationPixels]::Equal($decodedPixels, $SourcePixels.Bgr)) {
-                throw "TGA pixels differ from the source: $Path"
+                throw "TGA pixels differ from the prepared copy: $Path"
             }
         }
         finally { $reader.Dispose() }
@@ -149,10 +180,15 @@ foreach ($definition in $definitions) {
         sourceSha256 = (Get-FileHash -LiteralPath $sourcePath -Algorithm SHA256).Hash.ToLowerInvariant()
         width = $pixels.Width
         height = $pixels.Height
+        sourceWidth = $pixels.SourceWidth
+        sourceHeight = $pixels.SourceHeight
+        bytes = (Get-Item -LiteralPath $imagePath).Length
+        pixelBytes = 3L * $pixels.Width * $pixels.Height
+        transformation = 'fit-within-byte-budget-high-quality-bicubic-no-crop'
     }
-    Write-Host ("Verified {0}: {1} x {2}, RGB pixels unchanged." -f $definition.Id, $pixels.Width, $pixels.Height)
+    Write-Host ("Verified {0}: {1} x {2}, {3} bytes; original PNG retained." -f $definition.Id, $pixels.Width, $pixels.Height, (Get-Item -LiteralPath $imagePath).Length)
 }
-$catalog = [ordered]@{ schemaVersion = 1; status = 'selected-by-user'; images = $images }
+$catalog = [ordered]@{ schemaVersion = 1; status = 'selected-by-user'; maximumTgaBytes = $MaximumTgaBytes; nativeBufferLimitBytes = 4202496L; images = $images }
 $catalogJson = ($catalog | ConvertTo-Json -Depth 5) + [Environment]::NewLine
 [System.IO.File]::WriteAllText((Join-Path $ResourceDirectory 'catalog.json'), $catalogJson, (New-Object System.Text.UTF8Encoding($false)))
 Write-Host "Catalog rebuilt from the four bundled Sources PNG files."

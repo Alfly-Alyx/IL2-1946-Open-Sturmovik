@@ -1,6 +1,6 @@
 # Audit du chargement des textures IL-2 4.09m
 
-Derniere mise a jour : 2 septembre 2026.
+Derniere mise a jour : 11 septembre 2026.
 
 ## Conclusion courte
 
@@ -188,3 +188,31 @@ premier passage**. Le cache de wrapper est pret pour un A/B de laboratoire. La
 seule optimisation a conserver sans nouvel essai est la configuration actuelle
 avec compression S3TC et mipmaps trilineaires. L'amelioration principale reste a
 implementer apres identification des conversions redondantes.
+
+
+## Limite du tampon natif de texture — 11 septembre 2026
+
+Cette découverte est conservée pour la rétro-ingénierie du moteur existant et une éventuelle réimplémentation compatible. Elle provient du premier essai réel de rotation des fonds ; ce n'est pas une estimation tirée de la taille d'un fichier compressé.
+
+**R — fait observé, confiance élevée.** Open Sturmovik v1.15, profil 8 (4.09m moddé sans 6DOF), cœur officiel, DirectX via `dx8Wrap.dll`, fenêtre 1024 × 768. Le 11 septembre à 18:18:31 UTC, `Mat.New("gui/backgrounds/forgotten-battles-box.mat")` provoque :
+
+```text
+INTERNAL ERROR: Texture Buffer (limit 4202496 Bytes)is to small to fit 4719936 Bytes!
+```
+
+Le moteur refuse ensuite la texture RGB24 non compressée 1586 × 992 puis son matériau. **4 719 936 = 1586 × 992 × 3** : la demande correspond aux pixels RGB décodés. La limite rapportée est **4 202 496 octets**, soit **4,202496 Mo décimaux** (environ 4,0078125 Mio). La carte graphique annonce pourtant une dimension maximale de 8192 pixels ; cette capacité du pilote ne prouve donc pas que le chargeur du moteur accepte des images de cette dimension.
+
+Le journal brut est versionné dans [`test-assets/loading-rotation/native-first-launch.log`](../test-assets/loading-rotation/native-first-launch.log), SHA-256 `E1546123324F15E3BB9C7B95D7AE31B769A0280E46287C9A8B39F4812299DAE8`. Le manifeste [`texture-buffer-limit-409m.json`](../manifests/engine/texture-buffer-limit-409m.json) conserve le contexte et les empreintes exactes des binaires de cet essai.
+
+**S — localisation statique, confiance élevée.** La chaîne formatée `Texture Buffer (limit %i Bytes)is to small to fit %i Bytes!` apparaît aux offsets **de fichier** suivants (ce ne sont pas des adresses mémoire ni les adresses d'allocation du tampon) :
+
+| Binaire 4.09m | Offset de la chaîne | SHA-256 |
+| --- | --- | --- |
+| `il2_core.dll` | `0x1253E0` | `3145F63A53061C40604B57DED2F96313559BD69692123E7479D8C409339ECEB3` |
+| `il2_corep4.dll` | `0x1393E8` | `0B4CD130051E7D853219480606A1508C0FBB3C7FD29FA8AF87BB72BBD37BB979` |
+
+Reproduction sans lancer le jeu : rechercher cette chaîne ASCII dans les deux DLL identifiées et comparer leurs empreintes. Reproduction runtime historique : profil 8, rotation activée, TGA RGB24 de 1586 × 992, lancement direct de `il2fb.exe`, lecture de l'erreur de tampon dans `log.lst`. La réduction ultérieure des copies corrige ce jeu de données ; les PNG source et les empreintes des anciens TGA restent conservés.
+
+**Décision du paquet, distincte du fait moteur.** À la demande d'Alexis, les quatre TGA de rotation sont limités à **4 200 000 octets, en-tête compris**. Le générateur produit **1495 × 935 RGB24**, soit **4 193 475 octets de pixels + 18 octets d'en-tête = 4 193 493 octets** par fichier. La marge face au tampon observé est de 9 021 octets pour les pixels. Les PNG originaux restent intacts. Ce plafond du paquet est un choix conservateur ; il ne modifie aucune DLL du cœur.
+
+**I / U — limites de la conclusion.** La structure du tampon et son site d'allocation restent inconnus. La présence de la chaîne dans les deux DLL ne prouve pas que chaque variante a été exécutée pendant l'essai. L'acceptation à la frontière exacte, les autres profils, les formats IMF/DDS/RLE et les dimensions 1495 × 935 restent à qualifier dans le moteur. Réduire la taille compressée sur disque ne prouve pas qu'on réduit le besoin de mémoire après décodage. Aucune modification HD du cœur n'a été intégrée.

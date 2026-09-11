@@ -1,6 +1,8 @@
 # Reference de retro-ingenierie du moteur IL-2 1946 4.09m
 
-Derniere mise a jour : 3 septembre 2026.
+Derniere mise a jour : 11 septembre 2026.
+
+Découverte du 11 septembre : le chargeur natif de textures du profil 4.09m testé rapporte un tampon de **4 202 496 octets**. Voir la preuve runtime, les empreintes des DLL et les inconnues dans [l’audit des textures](AUDIT_CHARGEMENT_TEXTURES_4.09M.md#limite-du-tampon-natif-de-texture--11-septembre-2026).
 
 ## Finalite
 

@@ -1,4 +1,4 @@
-#requires -Version 5.1
+﻿#requires -Version 5.1
 [CmdletBinding()]
 param([string]$RepositoryRoot, [string]$OutputDirectory)
 Set-StrictMode -Version Latest
@@ -39,9 +39,12 @@ function New-Fixture([string]$Name, [bool]$ExistingConsole = $false) {
     $script:fixtureNumber++
     $fixture = Join-Path $output ('{0:D2}-{1}' -f $script:fixtureNumber,$Name)
     [void][IO.Directory]::CreateDirectory($fixture)
-    # Genuine stock executable/archive permit version recognition; the game is never run.
+    # Preserve the actual verified profile, including its wrapper when modded; never run it.
     foreach ($relative in @('il2fb.exe','files.SFS')) {
         [IO.File]::Copy((Join-Path $root $relative),(Join-Path $fixture $relative),$false)
+    }
+    if ([IO.File]::Exists((Join-Path $root 'wrapper.dll'))) {
+        [IO.File]::Copy((Join-Path $root 'wrapper.dll'),(Join-Path $fixture 'wrapper.dll'),$false)
     }
     Text-Fixture $fixture 'Files/gui/Background.tga' 'untouched-original-background-sentinel'
     Text-Fixture $fixture 'Files/gui/background0_ru.mat' "[ClassInfo]`r`n  ClassName TMaterial`r`n[Layer0]`r`n  TextureName background.tga`r`n"

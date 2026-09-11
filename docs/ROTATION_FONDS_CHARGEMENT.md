@@ -1,6 +1,6 @@
 # Rotation des fonds de chargement Open Sturmovik
 
-État du 11 septembre 2026 — Open Sturmovik v1.15, profils moddés 4.08m, 4.09b et 4.09m, avec ou sans 6DOF. Développement isolé sur `codex/rotation-fonds`. La logique est testée hors jeu ; la validation dans le moteur natif reste à effectuer.
+État du 11 septembre 2026 — Open Sturmovik v1.15, profils moddés 4.08m, 4.09b et 4.09m, avec ou sans 6DOF. Développement isolé sur `codex/rotation-fonds`. La logique est testée hors jeu. Le premier lancement natif a atteint le helper, mais refusé la texture 1586 × 992. Les copies ont ensuite été réduites sous 4,20 Mo à la demande d’Alexis ; leur nouvel affichage en jeu reste à vérifier.
 
 ## Utilisation et principe
 
@@ -108,6 +108,63 @@ Le manifeste léger `manifests/loading-rotation-verification.json` conserve les 
 
 ## Limites restant à valider
 
-La JVM 1.3 embarquée et le rendu natif n'ont pas été exécutés. La copie de base disponible pour cette étape ne contient pas les bibliothèques embarquées `bin/java.dll` et `bin/hotspot/jvm.dll` (dépendances décrites dans `docs/DOSSIER_TECHNIQUE_IL2_1946.md`) ni tous les fichiers du jeu de base ; elle ne permet donc pas un essai complet du jeu. Les tests ne prouvent donc pas l'affichage effectif, le bon cadrage des images 1586 × 992 ni le comportement du wrapper sur les six profils. Ces essais restent nécessaires, ainsi qu'un retour au profil Original pour confirmer visuellement son fond habituel. La fenêtre de gestion a été rendue et contrôlée visuellement sous Windows PowerShell 5.1 ; cela ne valide pas le rendu des textures par le jeu. Avec `UseStartLog` actif, le démarrage observé utilise la console et ne demande pas ce fond.
+La JVM 1.3 embarquée a été exécutée lors du premier essai. Le helper est atteint, mais le moteur natif refuse la taille de texture préparée. La copie initiale ne possédait pas les dépendances du jeu de base ; la préparation décrite ci-dessous les a ajoutées avant cet essai. Les tests ne prouvent donc pas l'affichage effectif, le bon cadrage des images 1586 × 992 ni le comportement du wrapper sur les six profils. Ces essais restent nécessaires, ainsi qu'un retour au profil Original pour confirmer visuellement son fond habituel. La fenêtre de gestion a été rendue et contrôlée visuellement sous Windows PowerShell 5.1 ; cela ne valide pas le rendu des textures par le jeu. Avec `UseStartLog` actif, le démarrage observé utilise la console et ne demande pas ce fond.
 
 Un arrêt forcé pendant la sélection peut laisser `selection.lock`. Les démarrages suivants gardent alors le fond initial ; une désactivation ou réactivation par l'outil, jeu fermé, retire ce verrou résiduel. Un arrêt après validation de l'état peut consommer un passage même si l'image n'a pas été vue : l'état enregistre une sélection préchargée, pas une preuve d'affichage. Ces limites sont distinctes de la réversibilité des fichiers installés.
+
+## Préparation au lancement — 11 septembre 2026
+
+État historique avant le premier essai : la copie `C:\Users\Alexis\.codex\rotation-fonds` était préparée sans avoir été lancée. Le lancement décrit ci-dessous a ensuite été demandé explicitement par Alexis. Le profil 8 est sélectionné : Open Sturmovik 4.09m sans 6DOF, wrapper historique, DirectX et fenêtre 1024 × 768. Ces réglages proviennent de la copie de test historique ; la rotation reste activée avec les quatre images finales et le fond officiel doublé. `UseStartLog` est absent de `[Console]` : la valeur initiale `false` observée dans `Main3D` conserve le chemin du fond graphique.
+
+Les **49 contrôles de préparation passent**, ainsi que les 25 contrôles de contenu. Le seul avertissement de contenu concerne l'absence normale de vérification par dump d'une exécution, puisque le jeu reste fermé. Les 27 fichiers de rotation correspondent toujours à leurs empreintes. Le manifeste `manifests/loading-rotation-preparation.json` conserve les résultats, les provenances et les empreintes. Cette préparation ne valide ni l'affichage natif ni toutes les fonctions du jeu.
+
+**Provenance vérifiée.** Les 134 fichiers absents ajoutés représentent 2 307 720 642 octets : 45 SFS historiques, `bin` et `lib`, trois DLL de base et les paramètres nécessaires au test. Ils proviennent exclusivement de la copie historique `C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-installations\IL 2 Sturmovik 1946 test`, restée en lecture seule. Sa reconstruction DVD 4.07m puis correctifs 4.09m est décrite dans `PROTOCOLE_PREMIER_LANCEMENT.md` et ses démarrages dans `RESULTATS_TESTS_DEMARRAGE_2026-08-30.md`. Le déplacement de cette copie est tracé dans `manifests/test/local-layout-v1.15.json`. Les 52 archives présentes et 17 empreintes de référence ont été contrôlées avant copie. Chaque fichier ajouté a ensuite été comparé par SHA-256 à sa source.
+
+La recherche prioritaire dans `#res/IL2 1946` a également retrouvé l'ISO DVD authentique, vérifié contre son `SOURCE.txt` : SHA-256 `7BA9629BD21B7D4A44AB022FB7AD28E328543F84412113A67C1E03E7747FED78`, taille 3 609 690 112 octets, volume DISK1 du 14 novembre 2006. L'ISO n'a pas été extrait pour cette préparation. Les dossiers intitulés `_4.09m` et l'ancienne référence `WIP/resources/IL2/IL 2 Sturmovik 1946` contiennent désormais des fichiers postérieurs à 4.09m : ils n'ont pas servi de donneurs. Un nom de dossier ne suffit pas à établir une version.
+
+**Compatibilité Java statique.** Le `rt.jar` du donneur annonce Java 1.3.1. La comparaison des références des deux classes du correctif avec ses 5 251 classes, méthodes et champs ne révèle aucune API manquante. Le contrôle s'appuie sur le parseur `tools/Audit-JavaClasses.py`, sans exécuter la JVM. Les CRC centraux incohérents du JAR correspondent à l'anomalie historique décrite dans `docs/AUDIT_CLASSES_JAVA.md` ; aucune réparation du JAR n'a été faite. Le comportement graphique demeure natif et non testé.
+
+**Écarts de copie corrigés.** Git avait converti des fins de ligne mixtes. Le matériau de référence du switcher manquait aussi de son dossier de ressources. `stationary.ini` et sept fichiers texte ont été restitués aux octets de référence uniquement après preuve que CRLF/LF constituait toute la différence, puis les contrôles ont été repassés sans exception autorisée. Le fond Maddox 4:3 requis par le switcher a été copié depuis `Files/background0.tga`, dont le SHA-256 correspond exactement à l'empreinte attendue `E1C0BFB53AE7E5891BF7A4F8333D33F119B177E373DBE8B6BBEC3014EC7CB898` ; aucun visuel n'a été fabriqué ou adapté.
+
+Les sauvegardes et rapports de préparation restent dans `WIP/loading-rotation-preparation-20260911`. Les fichiers du jeu de base sont exclus localement du suivi Git et ne sont pas ajoutés au paquet distribué. Les remplacements du profil ont été précédés d'une sauvegarde. Le dossier partagé est toujours sur `v1.15` et n'a pas été modifié par cette préparation.
+## Premier lancement natif — échec du chargement de la nouvelle texture
+
+Essai du 11 septembre 2026, démarré à 18:18:16 UTC : exécutable de la copie isolée, profil 8 (4.09m moddé sans 6DOF), DirectX, fenêtre 1024 × 768. La capture fournie par Alexis montre le fond russe historique. La mention Windows « Ne répond pas » n'est pas le problème étudié, conformément à sa précision. Aucun réglage réseau ou de démarrage n'a été changé pour ce diagnostic.
+
+**Faits vérifiés, confiance élevée.** Le journal conservé dans `WIP/loading-rotation-launches/20260911-181816Z/log.lst` donne à 18:18:31 :
+
+```text
+INTERNAL ERROR: Texture Buffer (limit 4202496 Bytes)is to small to fit 4719936 Bytes!
+WARNING: object 'gui/backgrounds/forgotten-battles-box.tga' of class 'TTexture2D' not loaded
+INTERNAL ERROR: Texture required
+WARNING: object 'gui/backgrounds/forgotten-battles-box.mat' of class 'TMaterial' not loaded
+```
+
+4 719 936 = 1586 × 992 × 3 : la texture RGB24 préparée dépasse le tampon indiqué. Le nom précis du nouveau matériau dans le journal prouve que l'appel ajouté a été exécuté et que le moteur a tenté ce chargement. Ce défaut ne peut donc pas être expliqué uniquement par un nom de fichier erroné. L'absence de `state.properties` est cohérente avec le retour sans validation lorsque `Mat.New` échoue. Le journal ne contient pas de message d'erreur Java du helper.
+
+Le repli vers `gui/background0_ru.mat` tente ensuite `gui/background.tga`, également refusé : 18 662 400 octets pour la même limite. La capture montre alors le fond russe ; l'identité exacte de la ressource finalement affichée doit être recoupée avec l'analyse du SFS. Les 8192 pixels maximum annoncés par le pilote ne prouvent pas que le chargeur du moteur accepte une texture de cette taille.
+
+SHA-256 du journal : `E1546123324F15E3BB9C7B95D7AE31B769A0280E46287C9A8B39F4812299DAE8`. La capture utilisateur est `C:/Users/Alexis/Desktop/1.png`. La session du journal se termine à 18:20:06 UTC ; le processus lancé n'était plus présent lors du contrôle suivant. Ce constat ne permet pas d'attribuer la fermeture à une cause précise.
+
+**À déterminer.** Dimensions et format acceptés par le chargeur natif pour les quatre images ; rendu et cadrage après correction ; comportement des autres profils. Les tests hors jeu précédents restent des preuves de logique et de restauration des fichiers, pas des preuves de compatibilité graphique des textures 1586 × 992.
+### Recoupement des noms et des formats
+
+L'extraction en lecture seule de `files.SFS` **de cette copie**, SHA-256 `18F3C5471D93642916394DE53B482051106E024DDAC8124C7B0D700D1796B05A`, confirme que `gui/background0.mat` et `gui/background0_ru.mat` pointent tous deux sur `background0.tga`. Les deux matériaux ont le SHA-256 `776C9605A9432485B6E67D0F0A69684615362C59F6B6E969CE040F011BB821BC`. La texture interne est un IMF10 1024 × 1024, SHA-256 `AC3314AC8A8A1D3F5AC1B44BA34E3CCCE500ABB7EED342D1CFD710A437F6AA0B`. Les variantes libres du paquet pointent, elles, sur `background.tga`. Il existe donc réellement deux noms dans la chaîne de repli ; cela n'annule pas l'erreur de taille de notre texture, dont le chemin a été trouvé et tenté.
+
+Reproduction : `python tools/Analyze-Sfs.py inspect files.SFS --path gui/background0.tga --path gui/background0_ru.mat --path gui/background0.mat --output WIP/loading-rotation-launches/20260911-181816Z/sfs-backgrounds`. Cette commande produit des copies de diagnostic et n'écrit pas dans l'archive.
+
+La chaîne d'erreur du tampon se trouve dans les DLL natives officielles du cœur 4.09m : offset fichier `0x1253E0` dans `il2_core.dll` et `0x1393E8` dans `il2_corep4.dll` (recherche binaire en lecture seule). L'annonce de 8192 pixels par le pilote n'augmente donc pas nécessairement cette limite du chargeur.
+
+La ressource locale `#res/IL2 1946/Packs/AAA_Community_Installer_ver_1_1/MODS/SplashScreen/GUI/background.tga` est un TGA RGB24 1024 × 768, origine basse, avec les mêmes paramètres de matériau. Les textures officielles extraites donnent également des exemples 512 × 512. Une copie plus petite est donc une piste étayée ; les dimensions particulières choisies restent à essayer dans ce pack. Compresser le fichier sur disque (RLE, IMF ou autre) ne constitue pas une preuve de réduction du tampon RGB demandé après décodage.
+
+Une autre piste communautaire est le mod [High Resolution / True Color Textures](https://www.sas1946.com/main/index.php?topic=33239.0), dont l'annonce indexée mentionne une prise en charge depuis 4.09m. [Mission4Today](https://www.mission4today.com/index.php?file=viewtopic&name=ForumsPro&t=23378) décrit une correction de cette erreur avec des DLL HD sur 4.12.2. La page SAS directe reste inaccessible (403). La compatibilité des DLL et classes de ce mod avec notre pack exact n'est pas établie : aucun fichier de ce mod n'a été installé. Un choix entre l'adaptation des copies d'images et l'étude du correctif HD a été présenté à Alexis avant tout changement de ce type.
+
+## Correction des copies sous 4,20 Mo — 11 septembre 2026
+
+Alexis a demandé de réduire les fichiers après le constat natif. Les quatre TGA du paquet et leurs copies actives dans `Files/gui/backgrounds` sont désormais en **1495 × 935**, **4 193 493 octets chacune**. Réduction bicubique de qualité, sans recadrage, ratio conservé à l'arrondi près (écart de 0,00877 %). Les PNG 1586 × 992 restent intacts ; leurs SHA-256 sont identiques au catalogue précédent. Les TGA demeurent RGB24 non compressés, origine en bas à gauche.
+
+`Build-LoadingRotationAssets.ps1` ajuste les dimensions au budget de 4 200 000 octets, en-tête compris, puis vérifie le décodage. Le lecteur du catalogue refuse aussi les fichiers dépassant ce plafond. Les quatre fichiers ont été décodés indépendamment avec Pillow et contrôlés visuellement. La réinstallation suit `Remove → Install → Enable` pour mettre à jour l'inventaire de restauration et conserver la sélection, le mode mélangé et le double passage officiel. La détection d'un jeu ouvert porte sur l'installation ciblée ; un chemin de processus inconnu bloque toujours la modification.
+
+Les **78 contrôles d'installation/restauration réussissent** avec ces nouvelles images, ainsi que neuf cas simulés de détection des processus sous PowerShell 5.1. Les jeux de données de test conservent désormais le wrapper lorsqu'ils reproduisent un profil moddé. Le jeu n'a pas été relancé pour cette correction : le respect du plafond est vérifié, le rendu natif des nouvelles dimensions reste à confirmer.
+
+Rapports : `WIP/loading-rotation-resize-20260911/images-verification.json`, `installation-verification.json` dans le même dossier, et `build/loading-rotation-install-tests/resize-20260911/report.json`. Les TGA précédents, scripts, catalogue et inventaire sont sauvegardés sous `WIP/loading-rotation-resize-20260911/before`. La limite exacte du moteur et ses preuves sont aussi conservées dans [`AUDIT_CHARGEMENT_TEXTURES_4.09M.md`](AUDIT_CHARGEMENT_TEXTURES_4.09M.md) et indexées dans la référence de rétro-ingénierie.
