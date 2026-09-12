@@ -111,6 +111,9 @@
 - Les mods necessitant une licence ou n'etant pas libres d'utilisation doivent
   etre telecharges sans etre integres a Open Sturmovik, puis places dans
   `D:\Projets\GITHUB\#res\IL2 1946\Mods\Besoin Licence`.
+- Pour chaque mod necessitant une autorisation, l'adresse e-mail de l'auteur
+  doit etre placee dans le dossier du mod. Aucune autre coordonnee ne doit y
+  etre ajoutee.
 - Pour chaque mod ajoute a Open Sturmovik, les credits d'Open Sturmovik doivent
   etre mis a jour.
 - Open Sturmovik doit contenir les patchs de mise a jour d'IL-2 afin de
