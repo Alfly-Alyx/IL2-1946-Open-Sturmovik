@@ -28,6 +28,13 @@
 
 - Open Sturmovik vise la beaute maximale et le realisme maximal.
 
+## Distribution et installation
+
+- Open Sturmovik est heberge sur un depot GitHub public et telechargeable
+  gratuitement sous la forme d'un executable.
+- Cet executable doit detecter une installation existante d'IL-2 et installer
+  Open Sturmovik par-dessus cette installation.
+
 ## Emplacement des depots et dossiers de travail
 
 - Les sous-dossiers d'un dossier principal dont le nom commence par `_` ne
@@ -86,9 +93,28 @@
   `D:\Projets\GITHUB\#res\IL2 1946\Mods\Utilisés`.
 - Tout mod en reserve doit etre conserve dans
   `D:\Projets\GITHUB\#res\IL2 1946\Mods\Reserve`.
+- Tout mod necessitant une licence ou n'etant pas libre d'utilisation doit etre
+  conserve dans
+  `D:\Projets\GITHUB\#res\IL2 1946\Mods\Besoin Licence`.
 - Ce classement porte sur les sources et sauvegardes ; il ne deplace pas les
   fichiers actifs du jeu. Une integration partielle doit etre documentee.
   Une sauvegarde partielle ne doit jamais etre presentee comme un mod complet.
+
+### Integration des futurs mods et patchs
+
+- Les futurs mods libres d'utilisation peuvent etre integres a Open Sturmovik,
+  apres verification de leur compatibilite avec la version ciblee du pack.
+- Les donnees telechargees d'un mod libre d'utilisation doivent etre placees
+  dans `D:\Projets\GITHUB\#res\IL2 1946\Mods\Utilisés` si le mod est utilise,
+  ou dans `D:\Projets\GITHUB\#res\IL2 1946\Mods\Reserve` s'il est conserve en
+  reserve.
+- Les mods necessitant une licence ou n'etant pas libres d'utilisation doivent
+  etre telecharges sans etre integres a Open Sturmovik, puis places dans
+  `D:\Projets\GITHUB\#res\IL2 1946\Mods\Besoin Licence`.
+- Pour chaque mod ajoute a Open Sturmovik, les credits d'Open Sturmovik doivent
+  etre mis a jour.
+- Open Sturmovik doit contenir les patchs de mise a jour d'IL-2 afin de
+  faciliter l'installation pour l'utilisateur.
 
 ### Recherche et compatibilite
 
