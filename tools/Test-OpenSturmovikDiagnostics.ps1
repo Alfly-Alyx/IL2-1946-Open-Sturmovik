@@ -150,7 +150,7 @@ using System.IO;
 using System.Threading;
 public static class Program {
     public static int Main() {
-        Thread.Sleep(1500);
+        Thread.Sleep(4000);
         File.AppendAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "log.lst"), "ERROR: can't load texture 3DO/Test/missing.tga\r\n");
         Thread.Sleep(500);
         return 0;
@@ -158,8 +158,21 @@ public static class Program {
 }
 '@
     $fakeExe = Join-Path $watchGame 'il2fb.exe'
-    Add-Type -TypeDefinition $fakeSource -OutputAssembly $fakeExe -OutputType ConsoleApplication
     $windowsPowerShell = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe'
+    if ($PSVersionTable.PSEdition -eq 'Desktop') {
+        Add-Type -TypeDefinition $fakeSource -OutputAssembly $fakeExe -OutputType ConsoleApplication
+    }
+    else {
+        $fakeSourcePath = Join-Path $watchGame 'SyntheticIl2.cs'
+        [IO.File]::WriteAllText($fakeSourcePath, $fakeSource, [Text.UTF8Encoding]::new($false))
+        $escapedSourcePath = $fakeSourcePath.Replace("'", "''")
+        $escapedFakeExe = $fakeExe.Replace("'", "''")
+        $compileCommand = "Add-Type -Path '$escapedSourcePath' -OutputAssembly '$escapedFakeExe' -OutputType ConsoleApplication"
+        $compileOutput = @(& $windowsPowerShell -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command $compileCommand 2>&1)
+        if ($LASTEXITCODE -ne 0 -or -not (Test-Path -LiteralPath $fakeExe -PathType Leaf)) {
+            throw "ECHEC : compilation du faux jeu impossible avec Windows PowerShell : $($compileOutput -join ' ')"
+        }
+    }
     $watchArguments = @(
         '-NoLogo','-NoProfile','-NonInteractive','-ExecutionPolicy','Bypass',
         '-File',('"' + (Join-Path $watchTools 'Watch-OpenSturmovikDiagnostics.ps1') + '"'),
@@ -167,8 +180,26 @@ public static class Program {
         '-StateRoot',('"' + $watchState + '"'),
         '-PollSeconds','1','-Once','-QueueOnly'
     )
-    $watchProcess = Start-Process -FilePath $windowsPowerShell -ArgumentList $watchArguments -WindowStyle Hidden -PassThru
-    Start-Sleep -Seconds 2
+    $watchPowerShell = if ($PSVersionTable.PSEdition -eq 'Core') {
+        (Get-Process -Id $PID).Path
+    }
+    else {
+        $windowsPowerShell
+    }
+    $watchProcess = Start-Process -FilePath $watchPowerShell -ArgumentList $watchArguments -WindowStyle Hidden -PassThru
+    $watcherLogPath = Join-Path $watchState 'watcher.log'
+    $watcherDeadline = [DateTime]::UtcNow.AddSeconds(10)
+    $watcherReady = $false
+    while ([DateTime]::UtcNow -lt $watcherDeadline -and -not $watchProcess.HasExited) {
+        if ((Test-Path -LiteralPath $watcherLogPath -PathType Leaf) -and
+            (Select-String -LiteralPath $watcherLogPath -Pattern 'watcher_started' -Quiet)) {
+            $watcherReady = $true
+            break
+        }
+        Start-Sleep -Milliseconds 100
+        $watchProcess.Refresh()
+    }
+    Assert-True $watcherReady 'le moniteur synthetique doit confirmer son demarrage'
     $fakeProcess = Start-Process -FilePath $fakeExe -WorkingDirectory $watchGame -PassThru
     $fakeProcess.WaitForExit()
     if (-not $watchProcess.WaitForExit(20000)) {
