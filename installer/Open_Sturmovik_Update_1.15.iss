@@ -68,6 +68,7 @@ Name: "{userdesktop}\Open Sturmovik Switcher"; Filename: "{sys}\mshta.exe"; Para
 
 [Run]
 Filename: "{sys}\WindowsPowerShell\v1.0\powershell.exe"; Parameters: "-NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ""{app}\tools\Initialize-OpenSturmovikUtilities.ps1"" -InstallationRoot ""{app}"""; WorkingDir: "{app}"; StatusMsg: "Configuration des utilitaires Open Sturmovik..."; Flags: runhidden waituntilterminated
+Filename: "{sys}\WindowsPowerShell\v1.0\powershell.exe"; Parameters: "-NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ""{app}\tools\Install-OpenSturmovikDiagnostics.ps1"" -InstallationRoot ""{app}"" -StartNow"; WorkingDir: "{app}"; StatusMsg: "Activation du diagnostic automatique Open Sturmovik..."; Flags: runhidden waituntilterminated runasoriginaluser
 
 [Code]
 function FindPreviousInstallation(Default: string): string;

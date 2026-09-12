@@ -57,6 +57,24 @@ la modification. L'installation seule reste desactivee ; la selection se
 regle dans cette fenetre. Les fichiers d'origine sont preserves. La logique et
 le retour arriere sont testes ; le rendu natif dans le jeu reste a verifier.
 Voir [le fonctionnement et la procedure de retour arriere](docs/ROTATION_FONDS_CHARGEMENT.md).
+
+## Diagnostic automatique
+
+La mise a jour installe un moniteur discret qui observe chaque execution de
+`il2fb.exe`, meme lorsque le jeu est lance directement. Il conserve les nouveaux
+messages de `log.lst`, `eventlog.lst`, `sound.log` et des autres journaux racine,
+detecte les erreurs de fichiers, textures, materiaux, sons, classes, exceptions,
+sorties anormales et gels prolonges, puis cree ou complete un ticket dans le
+depot GitHub Open Sturmovik. Le profil actif, les empreintes des composants, la
+configuration graphique utile, le materiel et les evenements Windows associes
+sont joints au diagnostic.
+
+Les rapports sont expurges avant envoi et restent en file locale lorsque le
+reseau ou l'authentification GitHub est indisponible. Windows Error Reporting
+conserve jusqu'a cinq dumps complets localement ; seuls leur nom, leur taille et
+leur SHA-256 sont publies, car un dump memoire brut peut contenir des donnees
+privees. Voir [le fonctionnement et les limites du collecteur](docs/DIAGNOSTIC_AUTOMATIQUE_GITHUB.md).
+
 ## Memoire, processeurs et qualite
 
 - Les executables modifies sont `Large Address Aware` : jusqu'a 4 Go d'espace d'adressage sous Windows 64 bits, ou jusqu'a 3 Go sous un Windows 32 bits configure avec 4GT.
@@ -69,6 +87,7 @@ Voir [le fonctionnement et la procedure de retour arriere](docs/ROTATION_FONDS_C
 
 - [Etat courant faisant autorite pour reprendre le travail](docs/ETAT_COURANT_V1.15.md)
 - [Journal central des essais, erreurs de protocole et enseignements a ne pas repeter](docs/JOURNAL_DIAGNOSTIC_V1.15.md)
+- [Collecte automatique des anomalies et envoi vers GitHub](docs/DIAGNOSTIC_AUTOMATIQUE_GITHUB.md)
 - [Reference de retro-ingenierie du moteur et etude exploratoire x64](docs/REFERENCE_RETROINGENIERIE_MOTEUR.md)
 - [Regles de stockage des captures et sauvegardes locales](docs/STOCKAGE_ARTIFACTS_LOCAUX.md)
 - [Dossier technique vivant : fonctionnement, attentes et regles de l'add-on](docs/DOSSIER_TECHNIQUE_IL2_1946.md)
