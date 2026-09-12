@@ -27,11 +27,9 @@ $expectedNames = @(
     'HardBall 4.08',
     'IL2 Compare',
     'JoyCtrl',
-    'Lowengrin DCG',
     'Mission Mate 6',
     'WeatherSet',
     'ZipNav',
-    "San's IL2 FOV Changer",
     'Open Sturmovik Switcher'
 )
 
@@ -54,28 +52,6 @@ if ($manifest.configuration.initializer -ne 'tools\Initialize-OpenSturmovikUtili
 if ($manifest.updateInstaller.finalizer -ne 'tools\Complete-OpenSturmovikV115Update.ps1' -or
     $manifest.updateInstaller.runAfterFilesAreInstalled -ne $true) {
     throw 'Finalisation incoherente dans le manifeste de mise a jour v1.15.'
-}
-
-$deviceLinkPath = Join-Path $root ([string]$manifest.configuration.fovChanger.official409DeviceLinkFile)
-if (-not (Test-Path -LiteralPath $deviceLinkPath -PathType Leaf)) {
-    throw "DeviceLink 4.09m introuvable : $deviceLinkPath"
-}
-$deviceLinkHash = (Get-FileHash -LiteralPath $deviceLinkPath -Algorithm SHA256).Hash
-if ($deviceLinkHash -ne [string]$manifest.configuration.fovChanger.official409DeviceLinkSha256) {
-    throw "Empreinte DeviceLink 4.09m incorrecte : $deviceLinkHash"
-}
-
-$fovPreferencePath = Join-Path $root "_Game_Enhancements\San's IL2 FOV Changer\pref.ini"
-$fovPreferenceLines = [IO.File]::ReadAllLines($fovPreferencePath, [Text.Encoding]::GetEncoding(1252))
-$macCommentIndex = -1
-for ($index = 0; $index -lt $fovPreferenceLines.Count; $index++) {
-    if ($fovPreferenceLines[$index] -match '//\s*Local Mac - detected on first use') {
-        $macCommentIndex = $index
-        break
-    }
-}
-if ($macCommentIndex -lt 0 -or $fovPreferenceLines[$macCommentIndex] -notmatch '^\s*//') {
-    throw "L'ancienne adresse materielle du FOV Changer n'est pas neutralisee."
 }
 
 $zipNavMaps = Join-Path $root ([string]$manifest.configuration.zipNav.bundledMaps)
@@ -173,7 +149,6 @@ if (-not [string]::IsNullOrWhiteSpace($DesktopPath)) {
     Release = '1.15'
     InstallationRoot = $root
     ShortcutCount = $validation.Count
-    DeviceLink409m = $true
     ZipNavBundledMaps = $true
     MissionMateBundledCatalog = $true
     BombsightTableWindowVisible = $true

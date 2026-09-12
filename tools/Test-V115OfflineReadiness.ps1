@@ -43,11 +43,11 @@ else {
 
 try {
     $utilityResult = & (Join-Path $root 'tools\Test-OpenSturmovikUtilityShortcuts.ps1') -RepositoryRoot $root
-    if ($utilityResult.Result -eq 'PASS' -and $utilityResult.ShortcutCount -eq 10 -and -not $utilityResult.DesktopModified) {
-        Add-Result 'Raccourcis v1.15' PASS 'Neuf utilitaires et le switcher valides ; aucun Bureau modifie pendant le controle.'
+    if ($utilityResult.Result -eq 'PASS' -and $utilityResult.ShortcutCount -eq 8 -and -not $utilityResult.DesktopModified) {
+        Add-Result 'Raccourcis v1.15' PASS 'Sept utilitaires et le switcher valides ; aucun Bureau modifie pendant le controle.'
     }
     else {
-        Add-Result 'Raccourcis v1.15' FAIL 'Le controle des dix raccourcis ne retourne pas le resultat attendu.'
+        Add-Result 'Raccourcis v1.15' FAIL 'Le controle des huit raccourcis ne retourne pas le resultat attendu.'
     }
 }
 catch {

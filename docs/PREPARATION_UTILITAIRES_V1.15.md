@@ -1,93 +1,79 @@
 # Preparation des utilitaires Open Sturmovik v1.15
 
-Date : 6 septembre 2026.
+Mise a jour : 12 septembre 2026.
 
-## Perimetre
+## Perimetre courant
 
-Ce lot couvre les neuf utilitaires demandes pour la v1.15 :
-Bombsight Table 2, HardBall408, IL2 Compare, JoyCtrl, Lowengrin DCG,
-Mission Mate 6, WeatherSet, ZipNav et San's IL2 FOV Changer. Le dixieme
-raccourci ouvre le switcher Open Sturmovik.
+Sept utilitaires sont fournis avec un raccourci : Bombsight Table 2,
+HardBall408, IL2 Compare, JoyCtrl, Mission Mate 6, WeatherSet et ZipNav.
+Le huitieme raccourci ouvre le switcher Open Sturmovik.
 
-Aucun de ces programmes ne doit etre lance automatiquement avec le jeu. La
-preparation et l'installation des raccourcis sont deux operations distinctes.
+Lowengrin DCG 3.43 et San FOV Changer 1.0 ont ete retires a la demande
+explicite d'Alexis. Leur redistribution demande une autorisation de l'auteur
+qui n'est pas conservee avec le pack. Leurs fichiers et notices sont archives
+avec leurs empreintes sous
+`D:\Projets\GITHUB\#res\IL2 1946\Mods\Retirés\besoin_licence`.
+Le retrait concerne les composants distribues ; aucun profil joueur, campagne
+personnelle ou reglage de l'installation de test n'a ete supprime.
 
-## Ce qui est prepare
+Aucun utilitaire n'est lance automatiquement avec le jeu. La preparation des
+chemins et l'installation des raccourcis sont deux operations distinctes.
 
-- `manifests/utilities-v1.15.json` fixe les dix noms, executables, dossiers de
-  travail et descriptions des raccourcis ;
-- `tools/Initialize-OpenSturmovikUtilities.ps1` configure une installation
-  cible sans chemin provenant d'une ancienne machine ;
-- `tools/Install-OpenSturmovikUtilityShortcuts.ps1` cree les dix raccourcis sur
-  le Bureau choisi ;
-- `tools/Complete-OpenSturmovikV115Update.ps1` est le point d'entree que
-  l'installateur de mise a jour appelle apres la pose des fichiers : il execute
-  l'initialisation, puis installe exactement les dix raccourcis ;
-- `tools/Test-OpenSturmovikUtilityShortcuts.ps1` controle les cibles, le
-  manifeste, DeviceLink, les cartes ZipNav et les composants Mission
-  Mate/HardBall sans modifier le Bureau.
+## Initialisation
 
-## Initialisation d'une installation
+`manifests/utilities-v1.15.json` definit les huit cibles et leurs noms.
+`tools/Initialize-OpenSturmovikUtilities.ps1` exige une installation contenant
+`il2fb.exe`, puis :
 
-L'initialiseur exige un dossier contenant `il2fb.exe`, puis :
+1. inscrit la racine dans `Mission Mate 6/FBPath.txt` ;
+2. configure le chemin de HardBall408 dans `Mission Mate 6/MisMate.ini` ;
+3. relie les cartes fournies avec ZipNav a `mods/mapmods`, sans recopier leurs
+   donnees ni remplacer un dossier deja present.
 
-1. ecrit ce dossier racine dans `Mission Mate 6/FBPath.txt` ;
-2. renseigne dans `MisMate.ini` le chemin absolu de `HardBall408.exe` ;
-3. rend les cartes fournies avec ZipNav visibles sous `mods/mapmods` au moyen
-   d'une jonction, sans recopier les 168 Mio de cartes et sans remplacer un
-   dossier deja present ;
-4. conserve le `DeviceLink.txt` officiel 4.09m a la racine ;
-5. regle `conf.ini` avec `SaveAspect=0`, le port DeviceLink 1711 et une adresse
-   IPv4 locale non boucle ;
-6. conserve les points de debut et de fin documentes dans le `pref.ini` du FOV
-   Changer, mais ne reutilise pas l'adresse materielle de l'ancienne machine.
-
-La position memorisee de Bombsight Table 2 a ete ramenee a `32,32`. Son ancien
-`Left=1045` pouvait placer la fenetre hors ecran sur un poste mono-ecran.
-
-Mission Mate conserve son catalogue embarque pour le premier essai. Son import
-automatique de mods cherche historiquement `MODS/STD`, alors qu'Open Sturmovik
-charge son contenu sous `Files`. Il ne faut donc pas relier `Files` a
-`MODS/STD` : le wrapper parcourrait deux fois les memes ressources. Les avions
-du mod seront ajoutes depuis l'interface de Mission Mate apres validation de la
-generation avec son catalogue de base.
+L'option `-SkipZipNavMaps` omet la troisieme etape. Les anciens parametres
+`-DeviceLinkAddress` et `-SkipDeviceLink`, reserves a l'integration San, sont
+retires. L'initialiseur ne modifie plus `conf.ini` : DeviceLink, SaveAspect et
+les reglages FOV existants restent ceux du joueur. Le document officiel
+`DeviceLink.txt` reste fourni a la racine.
 
 Chaque fichier texte modifie recoit au plus une sauvegarde
-`.opensturmovik-v1.15.bak`, et l'ecriture passe par un fichier temporaire. Les
-options `-SkipDeviceLink` et `-SkipZipNavMaps` permettent d'omettre les deux
-integrations concernees.
+`.opensturmovik-v1.15.bak` ; son remplacement passe par un fichier temporaire.
+Mission Mate conserve son catalogue embarque. Ne pas relier `Files` a
+`MODS/STD` pour son import automatique : cela ferait parcourir deux fois les
+memes ressources au chargeur. HardBall et ZipNav restent des programmes
+separes, avec leurs propres donnees.
 
-## Validation runtime differee
+Le manifeste conserve la position initiale `32,32` de Bombsight Table 2,
+choisie pour eviter une fenetre hors ecran sur un poste mono-ecran.
 
-La campagne finale doit encore confirmer :
+## Raccourcis et finalisation
 
-- DCG en generation manuelle avant tout remplacement de DGen/NGen ;
-- une mission jetable stock puis une mission utilisant un avion du mod dans
-  Mission Mate ;
-- l'effet A/B de WeatherSet sur une copie de mission ;
-- les raccourcis et le retour au FOV initial, avec et sans 6DOF ;
-- l'echelle et plusieurs caps connus dans ZipNav ;
-- l'etiquetage 4.08 de HardBall et l'anciennete des donnees IL2 Compare ;
-- les raccourcis en vol de Bombsight Table 2 ;
-- l'aller-retour d'un profil JoyCtrl avec sauvegarde exacte de `conf.ini`.
+`tools/Install-OpenSturmovikUtilityShortcuts.ps1` valide les huit cibles avant
+creation sur le Bureau choisi. `-ValidateOnly` n'ecrit rien ; `-WhatIf` annonce
+les actions simulees. Le mode tous utilisateurs reste explicite.
 
-Ces controles seront effectues ensemble dans la copie de test lorsque tous les
-correctifs hors jeu de la v1.15 seront figes.
+Le finaliseur PowerShell `tools/Complete-OpenSturmovikV115Update.ps1` execute
+l'initialisation, le diagnostic sauf `-SkipDiagnostics`, puis les huit
+raccourcis. Une cible absente ou un compte incorrect fait echouer ce finaliseur.
+Le script Inno Setup declare directement les huit raccourcis dans `[Icons]`
+et appelle l'initialiseur et l'installation du diagnostic apres copie des
+fichiers. Aucun installateur final n'a ete compile par ce retrait.
 
-Le DCG livre est la version 3.43 (octobre 2009), d'apres son propre historique.
-Une version recente ne doit pas l'ecraser sans migration separee : les formats
-de donnees et les campagnes existantes ont evolue. Pour la v1.15, le premier
-test reste donc volontairement en generation manuelle et sans remplacement de
-`DGen.exe` ou `NGen.exe`.
+## Verification du retrait
 
-## Appel depuis l'installateur de mise a jour
+Le controle des cibles retourne huit raccourcis valides sous Windows
+PowerShell 5.1, sans modifier le Bureau. Les huit declarations Inno Setup
+concordent. Un essai de l'initialiseur dans une petite installation fictive,
+sans DCG ni San, configure les chemins Mission Mate et conserve octet pour
+octet un `conf.ini` personnalise et un fichier de profil joueur. Aucun jeu
+ni utilitaire externe n'est lance ; la fixture est retiree apres controle.
 
-Apres avoir copie le contenu v1.15 dans le dossier du jeu, l'installateur appelle
-`tools/Complete-OpenSturmovikV115Update.ps1` avec ce dossier comme
-`InstallationRoot`. Par defaut, les raccourcis sont installes sur le Bureau de
-l'utilisateur Windows courant. Le mode tous utilisateurs reste explicite et ne
-doit etre choisi que par un installateur eleve. Une cible absente ou un nombre de
-raccourcis different de dix fait echouer la finalisation au lieu de laisser une
-installation partielle silencieuse. Le mode `-WhatIf` n'initialise pas le
-composant Windows des raccourcis et annonce chaque entree comme simulee ; le
-mode `-ValidateOnly` reste entierement sans ecriture.
+Ces verifications ne constituent pas de nouveaux essais en jeu.
+
+## Validation fonctionnelle restante
+
+La campagne finale doit encore couvrir les outils conserves : generation de
+mission dans Mission Mate, effet A/B de WeatherSet, echelles et caps ZipNav,
+etiquetage HardBall et anciennete IL2 Compare, utilisation Bombsight Table 2
+et aller-retour JoyCtrl avec sauvegarde exacte. Les essais portent sur des
+copies de donnees et conservent les validations deja acquises.

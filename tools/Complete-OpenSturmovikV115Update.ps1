@@ -8,10 +8,6 @@ param(
 
     [switch]$AllUsers,
 
-    [string]$DeviceLinkAddress,
-
-    [switch]$SkipDeviceLink,
-
     [switch]$SkipZipNavMaps,
 
     [switch]$SkipUtilityInitialization,
@@ -55,11 +51,7 @@ $initializerResult = $null
 if (-not $SkipUtilityInitialization) {
     $initializerParameters = @{
         InstallationRoot = $root
-        SkipDeviceLink = $SkipDeviceLink
         SkipZipNavMaps = $SkipZipNavMaps
-    }
-    if ($PSBoundParameters.ContainsKey('DeviceLinkAddress')) {
-        $initializerParameters.DeviceLinkAddress = $DeviceLinkAddress
     }
     if ($WhatIfPreference) {
         $initializerParameters.WhatIf = $true
@@ -95,8 +87,8 @@ if ($WhatIfPreference) {
 $shortcutResults = @(& $shortcutInstallerPath @shortcutParameters)
 $expectedShortcutStatus = if ($WhatIfPreference) { 'SIMULE' } else { 'INSTALLE' }
 $incompleteShortcuts = @($shortcutResults | Where-Object Status -ne $expectedShortcutStatus)
-if ($shortcutResults.Count -ne 10 -or $incompleteShortcuts.Count -gt 0) {
-    throw "La finalisation v1.15 n'a pas installe les dix raccourcis attendus : comptes=$($shortcutResults.Count), incomplets=$($incompleteShortcuts.Count)."
+if ($shortcutResults.Count -ne 8 -or $incompleteShortcuts.Count -gt 0) {
+    throw "La finalisation v1.15 n'a pas installe les huit raccourcis attendus : comptes=$($shortcutResults.Count), incomplets=$($incompleteShortcuts.Count)."
 }
 
 [pscustomobject]@{

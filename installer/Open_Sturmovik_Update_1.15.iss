@@ -59,11 +59,9 @@ Name: "{userdesktop}\Bombsight Table 2"; Filename: "{app}\_Utilities\Bombsight T
 Name: "{userdesktop}\HardBall 4.08"; Filename: "{app}\_Utilities\HardBall408\HardBall408.exe"; WorkingDir: "{app}\_Utilities\HardBall408"; Comment: "Encyclopedie HardBall pour IL-2 1946"
 Name: "{userdesktop}\IL2 Compare"; Filename: "{app}\_Utilities\IL2C\ILC2.exe"; WorkingDir: "{app}\_Utilities\IL2C"; Comment: "Comparateur d'appareils IL-2"
 Name: "{userdesktop}\JoyCtrl"; Filename: "{app}\_Utilities\JoyCtrl\JoyCtrl.exe"; WorkingDir: "{app}\_Utilities\JoyCtrl"; Comment: "Reglage des commandes de vol IL-2"
-Name: "{userdesktop}\Lowengrin DCG"; Filename: "{app}\_Utilities\Lowegrin_DCG\il2dcg.exe"; WorkingDir: "{app}\_Utilities\Lowegrin_DCG"; Comment: "Lowengrin Dynamic Campaign Generator"
 Name: "{userdesktop}\Mission Mate 6"; Filename: "{app}\_Utilities\Mission Mate 6\Mission Mate v6.0.exe"; WorkingDir: "{app}\_Utilities\Mission Mate 6"; Comment: "Generateur de missions Mission Mate pour IL-2"
 Name: "{userdesktop}\WeatherSet"; Filename: "{app}\_Utilities\WeatherSet\WeatherSet.exe"; WorkingDir: "{app}\_Utilities\WeatherSet"; Comment: "Editeur de meteo pour les missions IL-2"
 Name: "{userdesktop}\ZipNav"; Filename: "{app}\_Utilities\ZipNav\ZipNavV1.1.exe"; WorkingDir: "{app}\_Utilities\ZipNav"; Comment: "Outil de navigation ZipNav pour IL-2"
-Name: "{userdesktop}\San's IL2 FOV Changer"; Filename: "{app}\_Game_Enhancements\San's IL2 FOV Changer\San's_IL2_FovChanger_RC.exe"; WorkingDir: "{app}\_Game_Enhancements\San's IL2 FOV Changer"; Comment: "Reglage du champ de vision d'IL-2"
 Name: "{userdesktop}\Open Sturmovik Switcher"; Filename: "{sys}\mshta.exe"; Parameters: "javascript:new/**/ActiveXObject('WScript.Shell').Run('cmd.exe\x20/D\x20/C\x20""""Open_Sturmovik_Switcher.bat""""',0,false);close()"; WorkingDir: "{app}"; IconFilename: "{app}\_Game Switcher\Resources\Icons\Open_Sturmovik_Switcher.ico"; Comment: "Choix securise des profils IL-2 4.08m, 4.09b et 4.09m"
 
 [Run]

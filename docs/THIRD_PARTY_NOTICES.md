@@ -1,5 +1,18 @@
 # Notices des composants tiers
 
+## Retraits du 12 septembre 2026
+
+Lowengrin DCG 3.43, San FOV Changer 1.0 et Malta de 6S.Maraz ont ete retires
+du pack sur demande d'Alexis. Leurs notices demandent une permission pour
+la redistribution ou l'inclusion dans un pack ; aucune preuve correspondante
+n'a ete retrouvee dans les ressources examinees. Cela ne signifie pas qu'une
+licence payante etait exigee pour leur utilisation personnelle.
+
+Les fichiers, notices et recherches de contact sont conserves hors du depot,
+dans `D:\Projets\GITHUB\#res\IL2 1946\Mods\Retirés\besoin_licence`.
+Voir [le perimetre exact des retraits](RETRAIT_COMPOSANTS_V1.15.md).
+Zuti est encore present et sa situation reste celle de la section suivante.
+
 ## Zuti MDS v1.13 STD — autorisation a clarifier
 
 Le fichier historique

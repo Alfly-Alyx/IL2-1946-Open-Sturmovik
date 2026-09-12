@@ -1,6 +1,21 @@
 # Etat courant faisant autorite — Open Sturmovik v1.15
 
-Derniere consolidation : 7 septembre 2026.
+Derniere consolidation : 12 septembre 2026.
+
+## Retraits demandes le 12 septembre
+
+DCG 3.43, San FOV 1.0 et la carte Malta de 6S.Maraz sont retires du depot,
+avec les missions et campagnes dependantes de Malta. Les sauvegardes verifiees
+sont sous `Mods\Retirés\besoin_licence` dans les ressources locales. Le
+manifeste des utilitaires et l'installateur declarent maintenant huit raccourcis.
+Les credits publics correspondent aux retraits effectifs.
+
+Zuti reste present : ses classes sont fusionnees avec d'autres fonctions et
+leur retrait brut casserait des dependances. La version finale ne peut donc
+pas etre declaree prete. Le [suivi des retraits](RETRAIT_COMPOSANTS_V1.15.md)
+fait autorite sur ces composants. Les resultats historiques ci-dessous restent
+dates ; la copie WIP et le Bureau temporaire n'ont pas ete resynchronises avec
+ces retraits et ne representent pas encore le nouveau contenu du depot.
 
 ## Perimetre de travail
 
@@ -106,8 +121,8 @@ Le choix definitif concernant HUD immersion en stock attend encore Alexis.
 | 5 | AOC compatible 4.09m | AOC V1/1a complet retrouve dans HSFX 4.0 : trois classes et 267 profils sources. La v1.15 en distribue 266 ; le profil specifique du Bf-109G-6 Early est retire afin que cet appareil utilise `Defaut.txt`. Les dix reglages ont un consommateur dans la fusion AOC+Zuti reproductible. | Verifier la creation du profil Bf depuis `Defaut.txt`, son chargement au second passage, puis chauffe, demarrage, G negatifs, carburant, magnetos et coexistence Zuti. |
 | 6 | Absence de pause a la perte de focus | Alexis confirme que la simulation continue pendant la perte de focus. | Retour utilisateur valide pour l'essai fenetre effectue ; ne pas lui faire recommencer ce point sans regression observee. |
 | 7 | Profils avec/sans 6DOF et TrackIR | Les cinq classes 6DOF/TrackIR sont identifiees et les EXE 4.08, 4.09b et 4.09m sont distincts entre profils avec et sans 6DOF selon la source AAA. | Valider six axes, profil sans translation, recentrage, perte de focus et restauration. |
-| 8 | DCG, Mission Mate, WeatherSet, FOV Changer | Initialisation et cibles controlees dans la copie de test. `SaveAspect=0` est sous `[window]` conformement au manuel San FOV Changer ; DeviceLink 4.09m et les chemins Mission Mate/HardBall sont prepares. | Ouvrir les quatre raccourcis et effectuer une operation reversible par outil. |
-| 9 | ZipNav, IL2 Compare, HardBall408, Bombsight Table 2, JoyCtrl | Les cinq outils completent les quatre precedents. Le switcher porte le total de la mise a jour a dix raccourcis, tous crees et verifies dans le Bureau temporaire. Cartes ZipNav et position visible de Bombsight Table 2 controlees. | Tester demarrage, donnees et ecritures reversibles, sans runtime installe globalement. |
+| 8 | Mission Mate et WeatherSet | DCG et San FOV retires le 12 septembre. L'initialiseur prepare Mission Mate/HardBall sans modifier les reglages FOV ou DeviceLink. | Effectuer une operation reversible par outil conserve dans une copie actualisee. |
+| 9 | ZipNav, IL2 Compare, HardBall408, Bombsight Table 2, JoyCtrl | Ces cinq outils completent les deux precedents. Le switcher porte le total a huit raccourcis ; leurs cibles ont ete controlees apres retrait. | Tester demarrage, donnees et ecritures reversibles dans une copie actualisee, sans runtime installe globalement. |
 | 10 | Non-regression finale | Campagne et reprise des quatre anomalies decrites dans `docs/CAMPAGNE_FINALE_V1.15.md`. | Rejouer les controles affectes par les correctifs, conserver les acquis puis terminer les points encore ouverts. |
 
 ## Decisions techniques actives
@@ -148,16 +163,17 @@ detaillee se trouve dans `docs/AUDIT_ZUTI_AOC.md`.
 
 ### Configuration et utilitaires
 
-`SaveAspect=0` reste sous `[window]`. Le manuel fourni avec San FOV Changer 1.0
-l'exige avec un bloc `[DeviceLink]` sur le port 1711. `TypeClouds=1` reste sous
+San FOV etant retire, l'initialiseur ne modifie plus `SaveAspect`, le port
+DeviceLink ni les adresses reseau. Les configurations existantes sont conservees.
+`TypeClouds=1` reste sous
 `[game]` et dans la section du fournisseur graphique selectionne ; les
 preferences du fournisseur inactif sont conservees.
 
-`manifests/utilities-v1.15.json` declare neuf utilitaires et le switcher, soit
-exactement dix raccourcis.
+`manifests/utilities-v1.15.json` declare sept utilitaires et le switcher, soit
+exactement huit raccourcis.
 `tools/Complete-OpenSturmovikV115Update.ps1` est le point d'entree de fin de mise
-a jour : une fois les fichiers poses, il initialise la cible puis cree les dix
-raccourcis sur le Bureau. La verification actuelle a utilise uniquement
+a jour : une fois les fichiers poses, il initialise la cible puis cree les huit
+raccourcis sur le Bureau. La verification historique a utilise uniquement
 `WIP/test-desktop/v1.15-clean-pretest-20260906`.
 
 ### Organisation et switcher

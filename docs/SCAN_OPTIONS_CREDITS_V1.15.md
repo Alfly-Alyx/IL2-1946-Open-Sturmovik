@@ -14,13 +14,13 @@ Relevé du 11 septembre 2026. Les notices et métadonnées locales identifient l
 | Blackout Darker | 10 pour cent plus sombre | à identifier | variante fournie | Notice décrit 10% plus sombre, ne prouve pas sélection. |
 | Variantes textures véhicules et bus | non indiquée | à identifier | variantes fournies | Instructions copier variantes Guy, NAAFI ou RAF et enlever préfixe. Ne pas assimiler noms de variantes à auteurs. |
 | Gamma Panel - Gapa | 1.0.0.20 | Tomasz Porosiński | compagnon optionnel fourni | Notice et version Windows concordent ; désactivé par défaut selon README améliorations. |
-| San's IL2 FOV Changer | RC 1.0 | San ; code joystick basé sur Mark Harris | compagnon optionnel fourni | Copyright SAN 2009 ; notice crédite Mark Harris pour code joystick. Pas lancé. |
+| San's IL2 FOV Changer | RC 1.0 | San ; code joystick basé sur Mark Harris | retiré le 12 septembre 2026 | Notice conservée dans `Mods/Retirés/besoin_licence/San FOV Changer 1.0` ; ne figure plus dans les crédits des outils fournis. |
 | Bombsight Table 2 | 2 (désignation paquet) | WT_Pedropan ; WT_Pitr | outil externe fourni | Auteurs section Authors. Aides RTF .txt référencées dans programme : maintenir originaux. |
 | HardBall Aircraft Viewer | 4.08 | Matt « Flight Lieutenant HardBall » Henderson | outil externe fourni | Notice signée. FileVersion Windows 4.00.0008 ; données historiques 4.08. |
 | IL2 Sticks | 1.0h Beta | FoolTrottel | outil historique fourni | Version notice juillet 2005 ; auteur métadonnée manuel. HTML référencé dans executable. |
 | IL2 Compare | 2.4 | à confirmer ; Ross Youss remercié dans manuel HardBall pour IL2 Compare | outil externe fourni | Version 2.4.0.0 ; données AEP 2.01. Le remerciement ne suffit pas à établir attribution directe complète. |
 | IL2 JoyControl - JoyCtrl | 1.4.2.1 | Oleg_BS | outil externe fourni | LegalCopyright (c) Oleg_BS, CompanyName BreakSoft. Aucune notice locale identifiée. |
-| Lowengrin Dynamic Campaign Generator | 3.43 | Lowengrin ; prénom non établi dans scan | outil externe fourni | Historique commence version 3.43, site lowengrin.com ; aucun remplacement DGen/NGen testé ou demandé. |
+| Lowengrin Dynamic Campaign Generator | 3.43 | Lowengrin ; prénom non établi dans scan | retiré le 12 septembre 2026 | Notice conservée dans `Mods/Retirés/besoin_licence/Lowengrin DCG 3.43` ; ne figure plus dans les crédits des outils fournis. |
 | Mission Mate | 6.0.1 | CrazySchmidt ; Barbs | outil externe fourni | Auteurs en tête du manuel. Ne pas recopier liste familiale/testeurs. Skins Geoff Fisken fournies dans outil : Dave Bakshi selon manuel, sans preuve copie dans jeu. |
 | Quick Mission Tuner 1946 | 2.00.0009 | DiverseWare | outil historique fourni | FileVersion et copyright DiverseWare 2003-2007 ; catalogue ancien. |
 | IL2 Properties Editor et Difficulty Editor | Properties 2.0 ; Difficulty V1 fichier | MadBran, signature MWF 12T - MadBran - F4U-1C | outils auxiliaires QMT | Notice version 2.0 ; FileVersion générique Properties 1.0.0.0. Conserver regroupés sous QMT. |

@@ -67,8 +67,8 @@ if ($manifest.schemaVersion -ne 1 -or $manifest.release -ne '1.15') {
 }
 
 $entries = @($manifest.shortcuts)
-if ($entries.Count -ne 10) {
-    throw "Le manifeste v1.15 doit contenir exactement 10 raccourcis ; trouve : $($entries.Count)."
+if ($entries.Count -ne 8) {
+    throw "Le manifeste v1.15 doit contenir exactement 8 raccourcis ; trouve : $($entries.Count)."
 }
 
 $seenNames = @{}

@@ -384,8 +384,6 @@ if ($Windowed1024) {
     $configurationExpectations['window/height'] = '768'
     $configurationExpectations['window/ChangeScreenRes'] = '0'
     $configurationExpectations['window/FullScreen'] = '0'
-    # San's IL2 FOV Changer 1.0 requires SaveAspect=0 (bundled manual, page 5).
-    $configurationExpectations['window/SaveAspect'] = '0'
     $configurationExpectations['window/WideScreenFoV'] = '0'
     $configurationExpectations['rts/mouseUse'] = '1'
 }

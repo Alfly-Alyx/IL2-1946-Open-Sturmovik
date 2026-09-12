@@ -100,15 +100,15 @@ l'add-on.
 - Le raccourci principal utilise un mode direct sans interface.
 - Le raccourci de configuration utilise un argument explicite ouvrant
   l'interface.
-- La mise a jour v1.15 installe aussi sur le Bureau les neuf utilitaires retenus
-  et le switcher, soit dix raccourcis :
-  Bombsight Table 2, HardBall 4.08, IL2 Compare, JoyCtrl, Lowengrin DCG,
-  Mission Mate 6, WeatherSet, ZipNav et San's IL2 FOV Changer.
+- La mise a jour v1.15 installe aussi sur le Bureau les sept utilitaires retenus
+  et le switcher, soit huit raccourcis :
+  Bombsight Table 2, HardBall 4.08, IL2 Compare, JoyCtrl, Mission Mate 6,
+  WeatherSet et ZipNav.
 - Leurs noms, cibles relatives et dossiers de travail sont definis dans
   `manifests/utilities-v1.15.json`. Apres la pose des fichiers, l'etape
   d'installation appelle `tools/Complete-OpenSturmovikV115Update.ps1` ; celle-ci
   initialise les utilitaires puis appelle
-  `tools/Install-OpenSturmovikUtilityShortcuts.ps1`. Elle echoue si l'un des neuf
+  `tools/Install-OpenSturmovikUtilityShortcuts.ps1`. Elle echoue si l'un des sept
   executables manque au lieu de creer un lien mort.
 - Une mise a jour de tous les utilisateurs peut demander le Bureau commun ;
   sinon les raccourcis restent dans le profil Windows courant.

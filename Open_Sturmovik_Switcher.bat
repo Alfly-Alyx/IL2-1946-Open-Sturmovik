@@ -979,13 +979,11 @@ Cr&#233;dits &#8212; Open Sturmovik
 <thead><tr><th scope="col">Mod ou outil</th><th scope="col">Auteur</th><th scope="col">Contribution</th></tr></thead>
 <tbody>
 <tr><td>Viseurs Schr&#228;ge Musik du Bf-110G</td><td class="credits-author">magot</td><td>Variantes de r&#233;ticules fournies.</td></tr>
-<tr><td>San&#8217;s IL2 FOV Changer</td><td class="credits-author">San ; code joystick bas&#233; sur Mark Harris</td><td>R&#233;glage optionnel du champ de vision.</td></tr>
 <tr><td>Gamma Panel</td><td class="credits-author">Tomasz Porosi&#324;ski</td><td>R&#233;glage optionnel du gamma.</td></tr>
 <tr><td>Bombsight Table 2</td><td class="credits-author">WT_Pedropan ; WT_Pitr</td><td>Outil de calcul pour le bombardement.</td></tr>
 <tr><td>HardBall Aircraft Viewer 4.08</td><td class="credits-author">Matt &#171; HardBall &#187; Henderson</td><td>Consultation des caract&#233;ristiques des avions.</td></tr>
 <tr><td>IL2 Sticks</td><td class="credits-author">FoolTrottel</td><td>Configuration des commandes.</td></tr>
 <tr><td>IL2 JoyControl</td><td class="credits-author">Oleg_BS</td><td>R&#233;glage des commandes.</td></tr>
-<tr><td>Lowengrin Dynamic Campaign Generator</td><td class="credits-author">Lowengrin</td><td>G&#233;n&#233;rateur de campagnes fourni comme utilitaire.</td></tr>
 <tr><td>Mission Mate 6</td><td class="credits-author">CrazySchmidt ; Barbs</td><td>Pr&#233;paration de missions.</td></tr>
 <tr><td>Quick Mission Tuner 1946</td><td class="credits-author">DiverseWare</td><td>Modification de missions.</td></tr>
 <tr><td>Properties Editor et Difficulty Editor</td><td class="credits-author">MadBran</td><td>Outils auxiliaires de Quick Mission Tuner.</td></tr>

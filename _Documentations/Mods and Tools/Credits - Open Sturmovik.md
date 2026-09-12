@@ -71,13 +71,11 @@ Les crédits portent sur les contributions indiquées. Ils ne remplacent pas ceu
 | Mod ou outil | Auteur | Contribution |
 | --- | --- | --- |
 | Viseurs Schräge Musik du Bf-110G | magot | Variantes de réticules fournies. |
-| San’s IL2 FOV Changer | San ; code joystick basé sur Mark Harris | Réglage optionnel du champ de vision. |
 | Gamma Panel | Tomasz Porosiński | Réglage optionnel du gamma. |
 | Bombsight Table 2 | WT_Pedropan ; WT_Pitr | Outil de calcul pour le bombardement. |
 | HardBall Aircraft Viewer 4.08 | Matt « HardBall » Henderson | Consultation des caractéristiques des avions. |
 | IL2 Sticks | FoolTrottel | Configuration des commandes. |
 | IL2 JoyControl | Oleg_BS | Réglage des commandes. |
-| Lowengrin Dynamic Campaign Generator | Lowengrin | Générateur de campagnes fourni comme utilitaire. |
 | Mission Mate 6 | CrazySchmidt ; Barbs | Préparation de missions. |
 | Quick Mission Tuner 1946 | DiverseWare | Modification de missions. |
 | Properties Editor et Difficulty Editor | MadBran | Outils auxiliaires de Quick Mission Tuner. |

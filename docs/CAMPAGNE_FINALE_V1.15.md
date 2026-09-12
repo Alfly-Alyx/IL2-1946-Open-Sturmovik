@@ -1,6 +1,11 @@
 # Campagne finale Open Sturmovik v1.15
 
-Derniere mise a jour : 7 septembre 2026.
+Derniere mise a jour : 12 septembre 2026.
+
+La campagne doit utiliser une copie actualisee apres les retraits de DCG,
+San FOV et Malta. Elle ne peut pas clore la sortie tant que Zuti reste a
+traiter : voir [le suivi des retraits](RETRAIT_COMPOSANTS_V1.15.md).
+Les resultats du 7 septembre ci-dessous decrivent la copie anterieure.
 
 Cette campagne couvre exactement les dix points v1.15 de `IL2.txt`. Alexis a
 deja effectue des vols et confirme que la simulation continue a la perte de
@@ -189,7 +194,7 @@ synchronisation deja validee.
 | 5 | AOC V1/1a | Avant lancement, verifier que `Bf-109G-6Early_AOC_1a.txt` est absent et que `Defaut.txt` est present. Charger une premiere fois le Bf-109G-6 Early : le chargeur doit creer le fichier specifique comme copie exacte de `Defaut.txt`, puis terminer cette premiere construction sans appliquer le profil. Quitter la mission, verifier l'identite des deux fichiers, puis recharger la meme mission : le profil genere doit cette fois etre lu. Tester demarrage a froid, chauffe/huile, G negatifs, carburant et magnetos, puis un cycle Zuti R/R/R. Apres la campagne, supprimer le fichier Bf genere afin de retrouver l'etat distribue a 266 profils. |
 | 6 | Perte de focus sans pause | Simulation continue en mode fenetre : confirme par Alexis. Conserver cet acquis et `DrawIfNotFocused=1` ; ne refaire le test qu'en cas de regression ou pour qualifier un mode non encore essaye. |
 | 7 | Profils avec/sans 6DOF, TrackIR et marquage | Activer le profil 8 sans 6DOF puis le profil 9 avec 6DOF. Verifier les six axes, le recentrage, l'absence de translation dans le profil 8 et la reprise apres perte de focus. En mode fenetre, les profils modifies doivent afficher `Open Sturmovik` dans leur barre de titre et dans le volet Processus du Gestionnaire des taches ; le volet Details peut conserver `il2fb.exe`. Activer ensuite le profil 7 Original et verifier son titre et ses metadonnees d'origine, puis revenir au profil 8 et confirmer la restauration de son EXE. |
-| 8 | DCG, Mission Mate, WeatherSet et FOV Changer | Depuis le Bureau temporaire, ouvrir chaque raccourci, creer ou modifier une donnee jetable, la relire puis fermer sans toucher a l'installation de reference. Pour le FOV Changer, confirmer `SaveAspect=0`, DeviceLink sur 1711 et le changement/recentrage de FOV. |
+| 8 | Mission Mate et WeatherSet | Depuis un Bureau temporaire actualise, ouvrir chaque raccourci, creer ou modifier une donnee jetable, la relire puis fermer sans toucher a l'installation de reference. DCG et San FOV sont retires depuis le 12 septembre 2026. |
 | 9 | ZipNav, IL2 Compare, HardBall408, Bombsight Table 2 et JoyCtrl | Ouvrir chaque raccourci. Verifier cartes/echelle/navigation ZipNav, comparaison de deux donnees connues, calcul HardBall, fenetre visible de Bombsight Table et JoyCtrl sur une copie de `conf.ini` jeu ferme avec restauration exacte. Aucun runtime ancien n'est installe globalement. |
 | 10 | Non-regression finale | Mission rapide, FMB, mission solo, campagne, MDS hote/client, son, commandes, joystick, souris et fermeture. Zero plantage, erreur Java bloquante, ressource manquante ou modification hors cible. |
 
@@ -198,7 +203,7 @@ synchronisation deja validee.
 1. verifier qu'IL-2 est ferme et conserver les rapports/empreintes frais ;
 2. qualifier l'inventaire AOC du paquet complet avant de conclure sur la
    distribution ; un `Ready=True` avec exception AOC n'y suffit pas ;
-3. tester les dix raccourcis depuis le Bureau temporaire s'ils ne sont pas
+3. tester les huit raccourcis depuis un Bureau temporaire actualise s'ils ne sont pas
    deja valides ;
 4. terminer les points 1 a 9 encore ouverts, sans modifier les fichiers actifs
    pendant la session ;
@@ -209,7 +214,7 @@ synchronisation deja validee.
    et les resultats des essais non affectes ;
 7. executer le point 10 uniquement lorsque les neuf premiers sont verts ;
 8. tester enfin l'installateur de mise a jour avec le vrai Bureau : il doit creer
-   exactement dix raccourcis ;
+   exactement huit raccourcis ;
 9. conserver le rapport final, les journaux, les captures utiles et les
    empreintes, en distinguant clairement les candidats et le resultat final.
 

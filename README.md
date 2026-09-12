@@ -86,6 +86,7 @@ privees. Voir [le fonctionnement et les limites du collecteur](docs/DIAGNOSTIC_A
 
 ## Audits 1.15
 
+- [Retrait des composants soumis a permission et etat restant de Zuti](docs/RETRAIT_COMPOSANTS_V1.15.md)
 - [Etat courant faisant autorite pour reprendre le travail](docs/ETAT_COURANT_V1.15.md)
 - [Journal central des essais, erreurs de protocole et enseignements a ne pas repeter](docs/JOURNAL_DIAGNOSTIC_V1.15.md)
 - [Collecte automatique des anomalies et envoi vers GitHub](docs/DIAGNOSTIC_AUTOMATIQUE_GITHUB.md)
@@ -127,12 +128,12 @@ Des lancements controles ont ete effectues uniquement dans une copie de travail.
 
 - Tester le profil 4.09m dans une copie complete du jeu.
 - Evaluer un portage separe vers 4.12.2m ou 4.15.1m sans ecraser la version stable.
-- Revalider ou mettre a jour JoyControl, Mission Mate et Lowengrin DCG avant toute integration.
+- Revalider JoyControl et Mission Mate avant la sortie finale. Lowengrin DCG est retire du pack.
 - Consolider les fichiers libres en SFS seulement apres une comparaison fonctionnelle ; l'audit montre que la grande majorite des chemins communs sont des remplacements volontaires, pas des doublons.
 - Mesurer dans le jeu le wrapper de cache 4.09m deja valide sur banc isole, puis le promouvoir seulement en l'absence de regression.
 - Creer des profils graphiques x86 transactionnels ; OpenGL natif restera le repli garanti et le chargeur de mods `wrapper.dll` ne sera jamais remplace par un backend graphique.
 - Le futur lanceur complet pourra ajouter un raccourci de lancement direct ;
-  la mise a jour v1.15 installe deja le raccourci du switcher et ceux des neuf
+  la mise a jour v1.15 installe le raccourci du switcher et ceux des sept
   utilitaires retenus.
 - Exploiter le clone Selector/Dump 4.09m sans 6DOF pour associer les ressources
   SFS aux paliers visibles du chargement, sans remplacer le wrapper stable.

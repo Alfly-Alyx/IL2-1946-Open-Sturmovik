@@ -4,10 +4,6 @@ param(
     [ValidateNotNullOrEmpty()]
     [string]$InstallationRoot,
 
-    [string]$DeviceLinkAddress,
-
-    [switch]$SkipDeviceLink,
-
     [switch]$SkipZipNavMaps
 )
 
@@ -62,113 +58,6 @@ function Write-PortableTextFile {
     }
 
     return $true
-}
-
-function Set-IniValues {
-    param(
-        [Parameter(Mandatory = $true)][string]$Path,
-        [Parameter(Mandatory = $true)][System.Collections.IDictionary]$Sections
-    )
-
-    if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) {
-        throw "Fichier INI absent : $Path"
-    }
-
-    $lines = [Collections.Generic.List[string]]::new()
-    [IO.File]::ReadAllLines($Path, $textEncoding) | ForEach-Object {
-        $lines.Add($_)
-    }
-
-    foreach ($sectionName in $Sections.Keys) {
-        $sectionIndex = -1
-        for ($index = 0; $index -lt $lines.Count; $index++) {
-            if ($lines[$index] -match '^\s*\[([^]]+)\]\s*$' -and
-                $Matches[1] -ieq [string]$sectionName) {
-                $sectionIndex = $index
-                break
-            }
-        }
-
-        if ($sectionIndex -lt 0) {
-            if ($lines.Count -gt 0 -and $lines[$lines.Count - 1] -ne '') {
-                $lines.Add('')
-            }
-            $lines.Add("[$sectionName]")
-            foreach ($key in $Sections[$sectionName].Keys) {
-                $lines.Add("$key=$($Sections[$sectionName][$key])")
-            }
-            continue
-        }
-
-        $sectionEnd = $lines.Count
-        for ($index = $sectionIndex + 1; $index -lt $lines.Count; $index++) {
-            if ($lines[$index] -match '^\s*\[[^]]+\]\s*$') {
-                $sectionEnd = $index
-                break
-            }
-        }
-
-        foreach ($key in $Sections[$sectionName].Keys) {
-            # PowerShell variable names are case-insensitive. Do not call this
-            # list $matches: the -match operator overwrites the automatic
-            # $Matches hashtable before the index is appended.
-            $matchingIndexes = [Collections.Generic.List[int]]::new()
-            $keyPattern = '^\s*' + [regex]::Escape([string]$key) + '\s*='
-            for ($index = $sectionIndex + 1; $index -lt $sectionEnd; $index++) {
-                if ($lines[$index] -match $keyPattern) {
-                    $matchingIndexes.Add($index)
-                }
-            }
-
-            $valueLine = "$key=$($Sections[$sectionName][$key])"
-            if ($matchingIndexes.Count -eq 0) {
-                $lines.Insert($sectionEnd, $valueLine)
-                $sectionEnd++
-            }
-            else {
-                $lines[$matchingIndexes[0]] = $valueLine
-                for ($matchIndex = $matchingIndexes.Count - 1; $matchIndex -ge 1; $matchIndex--) {
-                    $lines.RemoveAt($matchingIndexes[$matchIndex])
-                    $sectionEnd--
-                }
-            }
-        }
-    }
-
-    return Write-PortableTextFile -Path $Path -Lines $lines.ToArray()
-}
-
-function Get-PreferredLocalIpv4 {
-    $candidates = foreach ($adapter in [Net.NetworkInformation.NetworkInterface]::GetAllNetworkInterfaces()) {
-        if ($adapter.OperationalStatus -ne [Net.NetworkInformation.OperationalStatus]::Up -or
-            $adapter.NetworkInterfaceType -eq [Net.NetworkInformation.NetworkInterfaceType]::Loopback) {
-            continue
-        }
-
-        $properties = $adapter.GetIPProperties()
-        $hasGateway = @($properties.GatewayAddresses | Where-Object {
-            $_.Address.AddressFamily -eq [Net.Sockets.AddressFamily]::InterNetwork -and
-            -not $_.Address.Equals([Net.IPAddress]::Any)
-        }).Count -gt 0
-
-        foreach ($unicast in $properties.UnicastAddresses) {
-            if ($unicast.Address.AddressFamily -eq [Net.Sockets.AddressFamily]::InterNetwork -and
-                -not [Net.IPAddress]::IsLoopback($unicast.Address)) {
-                [pscustomobject]@{
-                    Address = $unicast.Address.IPAddressToString
-                    HasGateway = $hasGateway
-                    Adapter = $adapter.Name
-                }
-            }
-        }
-    }
-
-    $preferred = $candidates | Sort-Object HasGateway -Descending | Select-Object -First 1
-    if ($null -eq $preferred) {
-        throw 'Aucune adresse IPv4 locale non loopback active pour DeviceLink.'
-    }
-
-    return $preferred.Address
 }
 
 $root = Get-NormalizedPath -Path $InstallationRoot
@@ -248,50 +137,11 @@ if (-not $SkipZipNavMaps) {
     }
 }
 
-if (-not $SkipDeviceLink) {
-    $deviceLinkDocumentation = Join-Path $root 'DeviceLink.txt'
-    $confIni = Join-Path $root 'conf.ini'
-    $fovPreference = Join-Path $root "_Game_Enhancements\San's IL2 FOV Changer\pref.ini"
-    foreach ($requiredPath in @($deviceLinkDocumentation, $confIni, $fovPreference)) {
-        if (-not (Test-Path -LiteralPath $requiredPath -PathType Leaf)) {
-            throw "Composant DeviceLink/FOV absent : $requiredPath"
-        }
-    }
-
-    if ([string]::IsNullOrWhiteSpace($DeviceLinkAddress)) {
-        $DeviceLinkAddress = Get-PreferredLocalIpv4
-    }
-
-    $parsedAddress = $null
-    if (-not [Net.IPAddress]::TryParse($DeviceLinkAddress, [ref]$parsedAddress) -or
-        $parsedAddress.AddressFamily -ne [Net.Sockets.AddressFamily]::InterNetwork -or
-        [Net.IPAddress]::IsLoopback($parsedAddress)) {
-        throw "Adresse DeviceLink invalide ou loopback : $DeviceLinkAddress"
-    }
-
-    $iniValues = [ordered]@{
-        window = [ordered]@{
-            SaveAspect = '0'
-        }
-        DeviceLink = [ordered]@{
-            port = '1711'
-            host = $DeviceLinkAddress
-            IPS = $DeviceLinkAddress
-        }
-    }
-
-    if ($PSCmdlet.ShouldProcess($confIni, "Configurer DeviceLink sur $DeviceLinkAddress`:1711")) {
-        if (Set-IniValues -Path $confIni -Sections $iniValues) {
-            $changes.Add("DeviceLink : $DeviceLinkAddress`:1711")
-        }
-    }
-}
+# DeviceLink and aspect/FOV settings belong to the player. San FOV is no longer shipped.
 
 [pscustomobject]@{
     InstallationRoot = $root
     Changes = $changes.ToArray()
-    DeviceLinkAddress = if ($SkipDeviceLink) { $null } else { $DeviceLinkAddress }
-    DeviceLinkPort = if ($SkipDeviceLink) { $null } else { 1711 }
     ZipNavMapPath = if ($SkipZipNavMaps) { $null } else { $zipNavMapTarget }
     Status = if ($changes.Count -eq 0) { 'DEJA_CONFIGURE' } else { 'CONFIGURE' }
 }

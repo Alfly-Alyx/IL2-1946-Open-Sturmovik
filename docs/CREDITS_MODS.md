@@ -1,6 +1,13 @@
 # Credits des mods - inventaire initial
 
-Etat du 11 septembre 2026. Cible : Open Sturmovik v1.15 sur IL-2 1946 4.09m.
+Etat mis a jour le 12 septembre 2026. Cible : Open Sturmovik v1.15 sur IL-2 1946 4.09m.
+
+DCG 3.43, San FOV 1.0 et Malta de 6S.Maraz sont retires du pack et archives
+dans `D:\Projets\GITHUB\#res\IL2 1946\Mods\Retirés\besoin_licence`.
+Les credits publics de DCG et San FOV ont ete retires ; Malta n'y figurait pas.
+Les scans dates restent des preuves historiques, pas un inventaire du contenu
+apres retrait. Zuti est encore present et reste credite jusqu'a son retrait
+effectif. Voir [le suivi](RETRAIT_COMPOSANTS_V1.15.md).
 
 ## Objet et regles
 
@@ -52,7 +59,6 @@ Le checkout au moment du scan correspond, pour son executable et `files.SFS`, au
 | Nations and Squadrons V2 | Deux notices identiques signees Gaston, rangees dans `_Documentations/Mods and Tools/Nations and Squadrons V2`. | La notice signe l’auteur du mod ; son perimetre actuel dans les registres et escadrilles doit encore etre compare aux sources. |
 | RMP3 Atmosphere v4.3 / ZloyPetrushkO | Les anciens nuages RMP3 ont ete remplaces par WxTech. Deux classes actives correspondent exactement au `WindConfig_v3` du paquet AAA ; une autre classe historiquement associee a RMP3 appartient maintenant a la fusion AOC/Zuti. | Le perimetre actif ne peut pas encore etre attribue proprement a RMP3. Il faut distinguer RMP3, WindConfig v3 et WxTech fichier par fichier. |
 | WindConfig v3 / auteur a identifier | Les fichiers actifs `96F4C2FA0F2B0FD0` et `E9BD6E7219DE5998` correspondent aux sources AAA ; `684916A0E86D1CC8` differe, conformement a la fusion AOC/Zuti documentee. | La notice locale `MODS/_DOCS_/WindConfig_v3_README.txt` n'est pas signee. `uf_josse` y designe un autre mod incompatible, pas l'auteur de WindConfig. Ne pas presenter le module complet comme integre sans adaptation. |
-| San's IL2 FOV Changer | Outil fourni sous `_Game_Enhancements`, avec un code joystick base sur un travail de Mark Harris. | Desactive par defaut et non valide : a crediter comme outil optionnel, pas comme mod actif. L'identite complete de San et les droits doivent etre retrouves. |
 | Gamma Panel 1.0 (`Gapa`) | Tomasz Porosinski, copyright 2002-2003. | Outil fourni mais desactive par defaut ; il releve des credits des utilitaires optionnels, pas des mods actifs. |
 | Appareils, cartes, objets, cockpits et effets herites du pack AAA | Le paquet local contient les modules et quelques lisez-moi, mais pas une table de credits exhaustive. | Une simple presence dans le paquet source ne prouve pas que chaque ressource est encore active dans la v1.15. |
 

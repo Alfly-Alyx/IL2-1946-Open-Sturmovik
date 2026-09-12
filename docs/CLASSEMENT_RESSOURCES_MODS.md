@@ -14,6 +14,15 @@ et le perimetre d'integration restent documentes dans les manifestes.
 
 ## Classement du 6 septembre
 
+Mise a jour du 12 septembre 2026 : DCG 3.43, San FOV 1.0 et Malta de
+6S.Maraz sont retires du contenu distribue et sauvegardes dans
+`Retirés\besoin_licence`, avec un sous-dossier par composant. Il s'agit
+d'un seul dossier `besoin_licence`, selon la confirmation d'Alexis.
+Les inventaires distinguent fichiers retires, configurations avant modification
+et sources historiques. Le dossier Zuti y conserve la recherche de contact ;
+sa presence dans ce classement ne signifie pas que le retrait du code est fini.
+Voir [le detail et les limites](RETRAIT_COMPOSANTS_V1.15.md).
+
 | Ressource | Dossier | Justification |
 | --- | --- | --- |
 | Tiger33 Ultimate Sound Mod V3 | Utilisés | Sons/presets partiellement integres ; les SFS sources ne sont pas montes en bloc. |

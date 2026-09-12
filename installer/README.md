@@ -46,7 +46,7 @@ v1.15 et le gel explicite du dossier `Payload`.
   l'ancien `_Documentation` singulier ; leur contenu v1.15 se trouve
   respectivement dans les emplacements conserves ou sous `_Game_Enhancements`
   et `_Documentations` ;
-- dix raccourcis sont crees sur le Bureau : les neuf outils retenus et
+- huit raccourcis sont crees sur le Bureau : les sept outils retenus et
   `Open Sturmovik Switcher` ;
 - le raccourci `Open Sturmovik Switcher` lance l'unique BAT avec une console
   masquee ; le BAT reste directement utilisable et ne garde plus la console
@@ -86,3 +86,8 @@ Avant de compiler, il faudra produire le dossier `Payload`, verifier ses
 empreintes, puis executer les controles hors-jeu v1.15. La compilation Inno
 Setup doit enfin etre essayee dans une copie jetable du jeu, jamais directement
 sur l'installation de reference.
+
+Lowengrin DCG et San FOV Changer ne sont plus fournis : leur redistribution
+necessite une autorisation de leur auteur. Leurs fichiers et notices sont
+archives localement hors du paquet. L'initialisation des outils restants
+conserve les reglages DeviceLink, FOV et SaveAspect du joueur.
