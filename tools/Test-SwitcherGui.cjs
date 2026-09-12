@@ -75,7 +75,7 @@ const elements = {};
 const context = vm.createContext({
   document: {
     getElementsByName: name => inputs.filter(input => input.name === name),
-    getElementById: id => elements[id] ??= { style: {}, className: '', disabled: false }
+    getElementById: id => elements[id] ??= { style: {}, className: '', disabled: false, focus: function () {} }
   },
   setTimeout: fn => fn(),
   ActiveXObject: function () { throw new Error('ActiveX must never execute in this test'); }
@@ -135,3 +135,41 @@ console.log('PASS: embedded IL-2-style GUI and selected Pacific Fighters Retail 
 console.log('PASS: 18 saved-state restorations, stock-HUD guard, summaries and invalid-state guard.');
 console.log('PASS: installed shortcut starts the single BAT through a hidden CMD; installer and utility manifest agree.');
 console.log('Scope: selection logic only; no UI, game, capture or external process launched.');
+
+// Credits are a self-contained page. Opening and closing them must never
+// apply a profile, read a saved profile or discard unsaved radio choices.
+assert.match(html, /id="creditsButton"[^>]*onclick="showCredits\(\)"/);
+assert.match(html, /id="creditsPage"/);
+assert.match(html, /id="creditsScroll"/);
+assert.match(html, /id="creditsBack"[^>]*onclick="closeCredits\(\)"/);
+elements.apply.disabled = false;
+const savedRestorer = context.restoreState;
+const savedUpdater = context.updateSelection;
+const savedFso = context.fso;
+context.restoreState = () => { throw new Error('Credits must preserve pending choices'); };
+context.updateSelection = () => { throw new Error('Credits must not alter pending choices'); };
+context.fso = new Proxy({}, { get: () => { throw new Error('Credits must not need filesystem access'); } });
+context.shell = { Run: () => { throw new Error('Credits navigation must not start a process'); } };
+for (const version of ['408', '409b', '409m']) {
+  select('version', version); select('mode', 'sixdof'); select('hud', 'immersion');
+  const pending = inputs.map(input => input.checked);
+  context.showCredits();
+  assert.equal(elements.form.style.display, 'none');
+  assert.equal(elements.creditsPage.style.display, 'block');
+  context.closeCredits();
+  assert.equal(elements.form.style.display, 'block');
+  assert.equal(elements.creditsPage.style.display, 'none');
+  assert.deepEqual(inputs.map(input => input.checked), pending);
+}
+context.restoreState = savedRestorer;
+context.updateSelection = savedUpdater;
+context.fso = savedFso;
+assert.match(html, /forum All Aircraft Arcade \(AAA\)/);
+assert.doesNotMatch(html, /AAA Community Installer|Socle historique du pack|modules AAA/);
+assert.match(html, /\|ZUTI\|/);
+assert.match(html, /PlusWave Expansions/);
+assert.match(html, /WindConfig v3/);
+const byteData = fs.readFileSync(path.join(root, 'Open_Sturmovik_Switcher.bat'));
+assert.notEqual(byteData.subarray(0, 3).toString('hex'), 'efbbbf', 'BAT must not have a BOM');
+assert.doesNotMatch(batch, /(?<!\r)\n/, 'BAT must use CRLF throughout');
+console.log('PASS: self-contained Credits page, pending choices preserved across 3 versions, no filesystem or process access during navigation; CRLF and encoding.');

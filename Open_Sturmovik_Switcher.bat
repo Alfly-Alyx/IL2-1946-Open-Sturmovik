@@ -653,10 +653,37 @@ body { font-family:"Trebuchet MS",Tahoma,Arial,sans-serif; font-size:17px; color
 .button.apply { float:right; min-width:144px; margin-right:0; border-color:transparent; border-radius:0; background:transparent; box-shadow:none; }
 .button.apply:before { background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im1ldGFsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2YwZjBkZSIvPjxzdG9wIG9mZnNldD0iLjI1IiBzdG9wLWNvbG9yPSIjYzdjZWJmIi8+PHN0b3Agb2Zmc2V0PSIuNDMiIHN0b3AtY29sb3I9IiM2Zjg0N2UiLz48c3RvcCBvZmZzZXQ9Ii42NyIgc3RvcC1jb2xvcj0iI2E5YjZhOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzNhNDk0NyIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJnbGFzcyIgY3g9Ii4zOCIgY3k9Ii4zIiByPSIuNzIiPjxzdG9wIHN0b3AtY29sb3I9IiNkOGEzM2IiLz48c3RvcCBvZmZzZXQ9Ii4zNiIgc3RvcC1jb2xvcj0iIzc4NTIwZCIvPjxzdG9wIG9mZnNldD0iLjc5IiBzdG9wLWNvbG9yPSIjMjMxNzBiIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTAxNjEzIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGVsbGlwc2UgY3g9IjI1IiBjeT0iMjciIHJ4PSIxNyIgcnk9IjE1IiBmaWxsPSIjMDcxMDE1IiBvcGFjaXR5PSIuNiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjE3IiBmaWxsPSIjMmMzZDNjIiBzdHJva2U9IiMyODM3MzUiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxNiIgZmlsbD0idXJsKCNtZXRhbCkiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxMiIgZmlsbD0iIzc3ODU3ZSIgc3Ryb2tlPSIjZDNkOWNhIiBzdHJva2Utd2lkdGg9Ii42Ii8+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTAuNSIgZmlsbD0iIzE1MjUxZiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjkuNSIgZmlsbD0idXJsKCNnbGFzcykiLz48ZWxsaXBzZSBjeD0iMTYuNSIgY3k9IjE1IiByeD0iMy41IiByeT0iMi40IiBmaWxsPSIjZmZmZGU4IiBvcGFjaXR5PSIuOTIiLz48Y2lyY2xlIGN4PSIyMi41IiBjeT0iMjUuNSIgcj0iMS41IiBmaWxsPSIjZTBjYzc5IiBvcGFjaXR5PSIuMzUiLz48cGF0aCBkPSJNOSAxMmwyIDFNMzEgMjVsMiAxTTE0IDMzbDEtMiIgc3Ryb2tlPSIjNGI1YjU2IiBzdHJva2Utd2lkdGg9IjEuMiIvPjwvc3ZnPg=="); }
 .button.apply:hover:before, .button.apply:focus:before { background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im1ldGFsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2YwZjBkZSIvPjxzdG9wIG9mZnNldD0iLjI1IiBzdG9wLWNvbG9yPSIjYzdjZWJmIi8+PHN0b3Agb2Zmc2V0PSIuNDMiIHN0b3AtY29sb3I9IiM2Zjg0N2UiLz48c3RvcCBvZmZzZXQ9Ii42NyIgc3RvcC1jb2xvcj0iI2E5YjZhOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzNhNDk0NyIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJnbGFzcyIgY3g9Ii4zOCIgY3k9Ii4zIiByPSIuNzIiPjxzdG9wIHN0b3AtY29sb3I9IiNjMWVjNTkiLz48c3RvcCBvZmZzZXQ9Ii4zNiIgc3RvcC1jb2xvcj0iIzIxYjkxYiIvPjxzdG9wIG9mZnNldD0iLjc5IiBzdG9wLWNvbG9yPSIjMTU0NjE3Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTAxNjEzIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGVsbGlwc2UgY3g9IjI1IiBjeT0iMjciIHJ4PSIxNyIgcnk9IjE1IiBmaWxsPSIjMDcxMDE1IiBvcGFjaXR5PSIuNiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjE3IiBmaWxsPSIjMmMzZDNjIiBzdHJva2U9IiMyODM3MzUiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxNiIgZmlsbD0idXJsKCNtZXRhbCkiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxMiIgZmlsbD0iIzc3ODU3ZSIgc3Ryb2tlPSIjZDNkOWNhIiBzdHJva2Utd2lkdGg9Ii42Ii8+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTAuNSIgZmlsbD0iIzE1MjUxZiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjkuNSIgZmlsbD0idXJsKCNnbGFzcykiLz48ZWxsaXBzZSBjeD0iMTYuNSIgY3k9IjE1IiByeD0iMy41IiByeT0iMi40IiBmaWxsPSIjZmZmZGU4IiBvcGFjaXR5PSIuOTIiLz48Y2lyY2xlIGN4PSIyMi41IiBjeT0iMjUuNSIgcj0iMS41IiBmaWxsPSIjZTBjYzc5IiBvcGFjaXR5PSIuMzUiLz48cGF0aCBkPSJNOSAxMmwyIDFNMzEgMjVsMiAxTTE0IDMzbDEtMiIgc3Ryb2tlPSIjNGI1YjU2IiBzdHJva2Utd2lkdGg9IjEuMiIvPjwvc3ZnPg=="); }
+.button.apply#apply { border-color:#adc49f; color:#f0f5e9; background:#3f6e40; box-shadow:inset 1px 1px #b4cba8,inset -2px -2px #294b2d; }
+.button.apply#apply:hover, .button.apply#apply:focus { background:#4c8050; }
+.button.apply#apply:before { background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im1ldGFsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2YwZjBkZSIvPjxzdG9wIG9mZnNldD0iLjI1IiBzdG9wLWNvbG9yPSIjYzdjZWJmIi8+PHN0b3Agb2Zmc2V0PSIuNDMiIHN0b3AtY29sb3I9IiM2Zjg0N2UiLz48c3RvcCBvZmZzZXQ9Ii42NyIgc3RvcC1jb2xvcj0iI2E5YjZhOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzNhNDk0NyIvPjwvbGluZWFyR3JhZGllbnQ+PHJhZGlhbEdyYWRpZW50IGlkPSJnbGFzcyIgY3g9Ii4zOCIgY3k9Ii4zIiByPSIuNzIiPjxzdG9wIHN0b3AtY29sb3I9IiNjMWVjNTkiLz48c3RvcCBvZmZzZXQ9Ii4zNiIgc3RvcC1jb2xvcj0iIzIxYjkxYiIvPjxzdG9wIG9mZnNldD0iLjc5IiBzdG9wLWNvbG9yPSIjMTU0NjE3Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTAxNjEzIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PGVsbGlwc2UgY3g9IjI1IiBjeT0iMjciIHJ4PSIxNyIgcnk9IjE1IiBmaWxsPSIjMDcxMDE1IiBvcGFjaXR5PSIuNiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjE3IiBmaWxsPSIjMmMzZDNjIiBzdHJva2U9IiMyODM3MzUiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxNiIgZmlsbD0idXJsKCNtZXRhbCkiLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxMiIgZmlsbD0iIzc3ODU3ZSIgc3Ryb2tlPSIjZDNkOWNhIiBzdHJva2Utd2lkdGg9Ii42Ii8+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTAuNSIgZmlsbD0iIzE1MjUxZiIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjkuNSIgZmlsbD0idXJsKCNnbGFzcykiLz48ZWxsaXBzZSBjeD0iMTYuNSIgY3k9IjE1IiByeD0iMy41IiByeT0iMi40IiBmaWxsPSIjZmZmZGU4IiBvcGFjaXR5PSIuOTIiLz48Y2lyY2xlIGN4PSIyMi41IiBjeT0iMjUuNSIgcj0iMS41IiBmaWxsPSIjZTBjYzc5IiBvcGFjaXR5PSIuMzUiLz48cGF0aCBkPSJNOSAxMmwyIDFNMzEgMjVsMiAxTTE0IDMzbDEtMiIgc3Ryb2tlPSIjNGI1YjU2IiBzdHJva2Utd2lkdGg9IjEuMiIvPjwvc3ZnPg=="); }
 .button:hover, .button:focus { color:#fffde5; outline:1px dotted #dddcc3; outline-offset:3px; }
 .button.quit:hover { background:#ad382b; }
 .button:active { top:1px; }
 .button:disabled { color:#8da097; cursor:default; opacity:.6; outline:0; }
+.button.credits { position:absolute; left:50%; top:18px; min-width:150px; margin-left:-75px; text-align:center; }
+#creditsPage { display:none; position:absolute; left:30px; right:30px; top:29px; bottom:28px; }
+#creditsPage h1 { margin:0; padding:3px 0; color:#f0f0df; font-size:23px; line-height:32px; font-weight:normal; }
+#creditsJump { position:absolute; right:0; top:6px; box-sizing:border-box; width:244px; padding:5px 7px; border:2px inset #929b91; color:#e4e6dc; background:#303b36; font:13px "Trebuchet MS",Tahoma,Arial,sans-serif; }
+#creditsScroll { position:absolute; left:0; right:0; top:57px; bottom:89px; overflow-x:hidden; overflow-y:auto; padding:4px 19px 24px; border:2px inset #929b91; background:rgba(29,37,33,.94); color:#dce0d5; font-size:14px; line-height:21px; text-shadow:none; }
+#creditsScroll:focus { outline:1px dotted #dddcc3; outline-offset:3px; }
+#creditsScroll p { margin:15px 0; }
+#creditsScroll strong, .credits-author { color:#eee7bd; font-weight:bold; }
+.credits-section { margin-top:27px; }
+.credits-section h2 { margin:0 0 13px; padding:8px 0; border-bottom:1px solid #859084; color:#f1efdb; font-size:19px; line-height:25px; font-weight:normal; }
+.credits-table { width:100%; border-collapse:collapse; table-layout:fixed; font-size:13px; line-height:20px; }
+.credits-table th { padding:9px 10px; border-bottom:1px solid #94a08f; color:#b8c6ad; background:#26332c; font-size:12px; text-align:left; font-weight:normal; }
+.credits-table td { padding:12px 10px; border-bottom:1px solid #46554a; vertical-align:top; word-wrap:break-word; }
+.credits-table tbody tr:nth-child(even) { background:rgba(108,124,107,.09); }
+.credits-table td:first-child { color:#f0f1e1; }
+.credits-table.cols-3 th:first-child { width:27%; }
+.credits-table.cols-3 th:first-child + th { width:28%; }
+.credits-table.cols-2 th:first-child { width:64%; }
+#creditsScroll a { color:#c8dca5; text-decoration:underline; }
+#creditsScroll a:hover, #creditsScroll a:focus { color:#fff4c5; }
+.credits-reference { border-bottom:1px dotted #829079; cursor:help; }
+#creditsPage .actions { left:0; right:0; bottom:0; }
+.credits-hint { float:left; padding-top:11px; color:#bac3b6; font-size:13px; }
+
 #result { display:none; position:absolute; left:30px; right:30px; top:29px; bottom:28px; }
 #statusTitle { margin:0 0 22px; padding:15px; border:2px ridge #929b91; border-radius:1px; background:rgba(39,46,44,.88); font-size:21px; font-weight:normal; text-align:center; }
 #log { box-sizing:border-box; height:359px; overflow:auto; padding:16px; border:2px inset #929b91; background:rgba(34,40,38,.86); color:#d9dcd4; font:13px/20px Consolas,monospace; white-space:pre-wrap; word-wrap:break-word; text-shadow:none; }
@@ -786,6 +813,43 @@ function showResult(ok, text) {
   document.getElementById('log').innerText = text;
 }
 
+function showCredits() {
+  if (document.getElementById('apply').disabled) return;
+  document.getElementById('form').style.display = 'none';
+  document.getElementById('creditsPage').style.display = 'block';
+  document.getElementById('pageCaption').innerText = 'Credits';
+  document.getElementById('creditsScroll').focus();
+}
+
+function closeCredits() {
+  document.getElementById('creditsPage').style.display = 'none';
+  document.getElementById('form').style.display = 'block';
+  document.getElementById('pageCaption').innerText = 'S\u00e9lecteur de version';
+  document.getElementById('creditsButton').focus();
+}
+
+function jumpToCreditSection(value) {
+  var scroll = document.getElementById('creditsScroll');
+  var section = document.getElementById(value);
+  scroll.scrollTop = section ? Math.max(0, section.offsetTop - 12) : 0;
+  scroll.focus();
+}
+
+function openCreditLink(url) {
+  if (!/^https?:\/\/[a-z0-9.-]+(?::[0-9]+)?\/[^\s<>"']*$/i.test(url)) return false;
+  try { shell.Run(url, 1, false); }
+  catch (error) { alert('Impossible d\u2019ouvrir cette source dans le navigateur.'); }
+  return false;
+}
+
+function handlePageKey(event) {
+  if (event.keyCode == 27 && document.getElementById('creditsPage').style.display == 'block') {
+    closeCredits();
+    return false;
+  }
+  return true;
+}
+
 function backToForm() {
   document.getElementById('result').style.display = 'none';
   document.getElementById('form').style.display = 'block';
@@ -795,8 +859,8 @@ function backToForm() {
 }
 </script>
 </head>
-<body onload="init()" onunload="cleanupGuiSource()">
-<div class="titlebar"><div class="caption">Sélecteur de version</div><div class="pilot">Open Sturmovik v1.15 · Made by Alfly</div></div>
+<body onload="init()" onunload="cleanupGuiSource()" onkeydown="return handlePageKey(event)">
+<div class="titlebar"><div class="caption" id="pageCaption">Sélecteur de version</div><div class="pilot">Open Sturmovik v1.15 · Made by Alfly</div></div>
 <div class="panel">
   <span class="bolt tl"></span><span class="bolt tm"></span><span class="bolt tr"></span>
   <span class="bolt ml"></span><span class="bolt mr"></span>
@@ -826,7 +890,123 @@ function backToForm() {
     </div>
     <div class="actions">
       <button class="button quit" onclick="window.close()"><span class="bulb"></span>Quitter</button>
+      <button class="button credits" id="creditsButton" onclick="showCredits()">Credits</button>
       <button class="button apply" id="apply" onclick="applyProfile()"><span class="bulb"></span>Appliquer</button>
+    </div>
+  </div>
+  <div id="creditsPage" role="region" aria-labelledby="creditsTitle">
+    <h1 id="creditsTitle"><!-- BEGIN GENERATED CREDITS TITLE -->
+Cr&#233;dits &#8212; Open Sturmovik
+<!-- END GENERATED CREDITS TITLE --></h1>
+    <select id="creditsJump" title="Aller directement &agrave; une rubrique" aria-label="Rubrique des cr&eacute;dits" onchange="jumpToCreditSection(this.value)">
+      <option value="">Toutes les contributions</option>
+<!-- BEGIN GENERATED CREDITS NAVIGATION -->
+<option value="credits-section-1">Mods et contributions</option>
+<option value="credits-section-2">B-29 Silverplate</option>
+<option value="credits-section-3">Cartes et textures</option>
+<option value="credits-section-4">Campagnes fournies</option>
+<option value="credits-section-5">Variantes et outils fournis</option>
+<option value="credits-section-6">Attributions compl&#233;mentaires</option>
+<option value="credits-section-7">Inventaire en cours</option>
+<!-- END GENERATED CREDITS NAVIGATION -->
+    </select>
+    <div id="creditsScroll" tabindex="0" role="region" aria-label="Liste des cr&eacute;dits">
+<!-- BEGIN GENERATED CREDITS CONTENT -->
+<p><strong>par la communaut&#233;, pour la communaut&#233;</strong></p>
+<p>Open Sturmovik r&#233;unit des cr&#233;ations de la communaut&#233; IL-2 1946. Merci aux auteurs et aux &#233;quipes des mods dont les travaux contribuent au pack.</p>
+<p>Liste en cours pour la v1.15, enrichie par le scan des dossiers du jeu et la comparaison aux sources locales. Les contributions et options ci-dessous sont fournies par le pack ; leur pr&#233;sence ne signifie pas qu&#8217;elles sont toutes s&#233;lectionn&#233;es dans chaque profil.</p>
+<div class="credits-section" id="credits-section-1">
+<h2>Mods et contributions</h2>
+<table class="credits-table cols-3">
+<thead><tr><th scope="col">Mod</th><th scope="col">Auteur ou collectif</th><th scope="col">Contribution au pack</th></tr></thead>
+<tbody>
+<tr><td>Am&#233;liorations issues du forum All Aircraft Arcade (AAA)</td><td class="credits-author">Auteurs et contributeurs du forum AAA</td><td>Plusieurs am&#233;liorations d&#8217;Open Sturmovik proviennent des cr&#233;ations partag&#233;es sur ce forum.</td></tr>
+<tr><td>Zuti Moving Dogfight Server 1.13</td><td class="credits-author">|ZUTI|</td><td>Fonctions MDS et gestion des missions.</td></tr>
+<tr><td>Advanced Engine Management &#8212; AOC 1a</td><td class="credits-author">II/JG51-Lutz</td><td>Gestion avanc&#233;e des moteurs.</td></tr>
+<tr><td>Tiger33 Ultimate Sound Mod V3</td><td class="credits-author">Tiger33</td><td>S&#233;lection de sons et de r&#233;glages de d&#233;marrage des moteurs.</td></tr>
+<tr><td>WxTech clouds Jan 2023</td><td class="credits-author">WxTech</td><td>Ressources visuelles des nuages. <a href="https://www.sas1946.com/main/index.php?topic=70195.0" onclick="return openCreditLink(this.href)">Publication du mod</a>.</td></tr>
+<tr><td>Cockpit CW-21 pour 4.09</td><td class="credits-author">Epervier &#8212; conversion pour Rebels 409 ; Team Daidalos &#8212; cr&#233;dits du cockpit</td><td>Cockpit du CW-21 adapt&#233; &#224; la base 4.09.</td></tr>
+<tr><td>Magister &#8212; mod&#232;le ext&#233;rieur</td><td class="credits-author">RAF_Magpie</td><td>&#201;l&#233;ment du mod&#232;le ext&#233;rieur retrouv&#233; &#224; l&#8217;identique ; <span class="credits-reference" title="Documentation : ../../docs/SCAN_PACKS_CREDITS_V1.15.md">source et p&#233;rim&#232;tre confirm&#233;</span>.</td></tr>
+<tr><td>B-29 Silverplate 1.2, Little Boy et Fat Man</td><td class="credits-author">Auteurs et &#233;quipe d&#233;taill&#233;s ci-dessous</td><td>B-29 Silverplate, cockpit et ressources des bombes, avec adaptations pour Open Sturmovik.</td></tr>
+<tr><td>6DOF Tracker 2.0</td><td class="credits-author">sHr</td><td>D&#233;placement du point de vue dans les profils 6DOF du switcher ; attribution aussi reprise dans les <a href="https://mail.mission4today.com/index.php?file=viewtopic&amp;finish=15&amp;name=ForumsPro&amp;start=0&amp;t=7663" onclick="return openCreditLink(this.href)">notes HSFX v4</a>.</td></tr>
+</tbody></table>
+<p>La <span class="credits-reference" title="Documentation : Zuti MDS 1.13/Lisez-moi - Zuti MDS 1.13.txt">notice originale de Zuti</span> mentionne aussi <strong>Certificates AI mod 3.0</strong> et <strong>Fireballs Carrier Takeoff mod 5.3.x</strong> parmi les mods incorpor&#233;s &#224; MDS. Ces noms sont repris de la notice ; leurs attributions individuelles restent &#224; compl&#233;ter.</p>
+</div>
+<div class="credits-section" id="credits-section-2">
+<h2>B-29 Silverplate</h2>
+<p>Cr&#233;dits du paquet d&#x27;origine : <strong>1C/Maddox, O_Magpie, Fireball, SAS~Cirx, MrJolly, Lt.Wolf, Fat Duck, VC-81_BOLTER, O_Leigh, Max_Thehitman, Ranwers, Wolfighter et Twister</strong>. <a href="https://www.sas1946.com/main/index.php?topic=7894.0" onclick="return openCreditLink(this.href)">Publication et cr&#233;dits du mod Silverplate</a>.</p>
+</div>
+<div class="credits-section" id="credits-section-3">
+<h2>Cartes et textures</h2>
+<table class="credits-table cols-3">
+<thead><tr><th scope="col">Carte ou contribution</th><th scope="col">Auteurs</th><th scope="col">Notice conserv&#233;e</th></tr></thead>
+<tbody>
+<tr><td>Ukraine, &#233;t&#233; et hiver</td><td class="credits-author">Autopilot</td><td><span class="credits-reference" title="Documentation : ../Maps/AP_Ukraine/Lisez-moi - Ukraine beta ete et hiver.txt">Notice</span></td></tr>
+<tr><td>B29 Alley</td><td class="credits-author">delvpier</td><td><span class="credits-reference" title="Documentation : ../Maps/B29_Alley/Lisez-moi - installation.txt">Notice</span></td></tr>
+<tr><td>Bessarabia &#8212; repeuplement</td><td class="credits-author">Zipzapp ; Fly_zo pour l&#8217;installateur historique</td><td><span class="credits-reference" title="Documentation : ../Maps/Bessarabia/Lisez-moi - repeuplement par Zipzapp.txt">Notice</span></td></tr>
+<tr><td>Guadalcanal, septembre 1942</td><td class="credits-author">Marco</td><td><span class="credits-reference" title="Documentation : ../Maps/guadal/Lisez-moi - Guadalcanal septembre 1942 version 1-2.txt">Notice</span></td></tr>
+<tr><td>Channel &#8212; petite carte Kt_channel</td><td class="credits-author">Kapteeni</td><td><span class="credits-reference" title="Documentation : ../Maps/Kt_channel/Lisez-moi - Channel.txt">Notice</span></td></tr>
+<tr><td>Eastafrica</td><td class="credits-author">Kapteeni ; Fly_zo pour le correctif</td><td><span class="credits-reference" title="Documentation : ../Maps/Kt_eastafrica/Lisez-moi - Eastafrica beta 0.91.txt">Notice</span></td></tr>
+<tr><td>Lybia N-E / Tobruk</td><td class="credits-author">BADA</td><td><span class="credits-reference" title="Documentation : ../Maps/Lybia_N-E/Lisez-moi - Lybia N-E alpha 1.3.txt">Notice</span></td></tr>
+<tr><td>BP Midway et eau du Pacifique</td><td class="credits-author">Boosher &#8212; carte ; panzerkeil &#8212; objets statiques ; Viking &#8212; couleur de l&#8217;eau</td><td><span class="credits-reference" title="Documentation : ../Maps/midway/Lisez-moi - eau du Pacifique pour BP Midway.txt">Notice</span></td></tr>
+<tr><td>Darwin Small</td><td class="credits-author">Neil Lowe</td><td><span class="credits-reference" title="Documentation : ../Maps/NTL_Darwin_Small/Lisez-moi - Darwin Small 1.1.txt">Notice</span></td></tr>
+<tr><td>Alpen</td><td class="credits-author">Zipzapp ; JV69_BADA &#8212; a&#233;rodromes ; Lowfighter &#8212; ch&#226;teaux suisses</td><td><span class="credits-reference" title="Documentation : ../Maps/zip_Alpen/Lisez-moi - Alpen beta 2.txt">Notice</span></td></tr>
+<tr><td>Alpen &#8212; textures fsmd_mount3 et champs Bob</td><td class="credits-author">Phasmid &#8212; relief ; Rus_Andrey &#8212; champs</td><td><span class="credits-reference" title="Documentation : ../Maps/zip_Alpen/Lisez-moi - Alpen beta 2.txt">Notice</span></td></tr>
+<tr><td>Mbug Slovakia winter</td><td class="credits-author">may-bug &#8212; adaptation hivernale ; Slovakia Team &#8212; carte d&#8217;origine</td><td><span class="credits-reference" title="Documentation : ../../docs/SCAN_CARTES_CREDITS_V1.15.md">Preuves et version adapt&#233;e</span></td></tr>
+</tbody></table>
+<p>Les cr&#233;dits portent sur les contributions indiqu&#233;es. Ils ne remplacent pas ceux des cartes d&#8217;origine ni ceux des autres &#233;l&#233;ments utilis&#233;s.</p>
+</div>
+<div class="credits-section" id="credits-section-4">
+<h2>Campagnes fournies</h2>
+<table class="credits-table cols-2">
+<thead><tr><th scope="col">Campagne</th><th scope="col">Auteur</th></tr></thead>
+<tbody>
+<tr><td><span class="credits-reference" title="Documentation : ../Campaigns/Baltic Sparrows 1946/Lisez-moi - Baltic Sparrows 1946.txt">Baltic Sparrows 1946</span></td><td class="credits-author">Eldon45</td></tr>
+<tr><td><span class="credits-reference" title="Documentation : ../Campaigns/Schlageter 43/Lisez-moi - Schlageter 43.txt">Schlageter 43</span></td><td class="credits-author">mandrill7</td></tr>
+<tr><td><span class="credits-reference" title="Documentation : ../Campaigns/Wunderbomber/Lisez-moi - Wunderbomber.txt">Wunderbomber</span></td><td class="credits-author">Kernow</td></tr>
+<tr><td><span class="credits-reference" title="Documentation : ../Campaigns/Kilroy/Lisez-moi - Kilroy - version moddee.txt">Kilroy</span></td><td class="credits-author">Bowie</td></tr>
+<tr><td><span class="credits-reference" title="Documentation : ../Campaigns/Straight Down/Lisez-moi - Straight Down.txt">Straight Down</span></td><td class="credits-author">Zeus-cat</td></tr>
+<tr><td><span class="credits-reference" title="Documentation : ../Campaigns/Two Little DUCs/Lisez-moi - Two Little DUCs.htm">Two Little DUCs</span></td><td class="credits-author">Extreme_One</td></tr>
+<tr><td><span class="credits-reference" title="Documentation : ../Campaigns/Wings over Waves/Version - Kuro Yuri IJ1.txt">Wings over Waves - Kuro Yuri</span></td><td class="credits-author">PlusWave Expansions / MDi Design GmbH</td></tr>
+<tr><td><span class="credits-reference" title="Documentation : ../Campaigns/Wings over Waves/Version - Koryo IJ2.txt">Wings over Waves - Koryo</span></td><td class="credits-author">PlusWave Expansions / MDi Design GmbH</td></tr>
+<tr><td><span class="credits-reference" title="Documentation : ../Campaigns/Wings over Waves/Version - Archer US2.txt">Wings over Waves - Archer</span></td><td class="credits-author">PlusWave Expansions / MDi Design GmbH</td></tr>
+<tr><td><span class="credits-reference" title="Documentation : ../Campaigns/Wings over Waves/Version - Catball US1.txt">Wings over Waves - Catball</span></td><td class="credits-author">PlusWave Expansions / MDi Design GmbH</td></tr>
+</tbody></table>
+</div>
+<div class="credits-section" id="credits-section-5">
+<h2>Variantes et outils fournis</h2>
+<table class="credits-table cols-3">
+<thead><tr><th scope="col">Mod ou outil</th><th scope="col">Auteur</th><th scope="col">Contribution</th></tr></thead>
+<tbody>
+<tr><td>Viseurs Schr&#228;ge Musik du Bf-110G</td><td class="credits-author">magot</td><td>Variantes de r&#233;ticules fournies.</td></tr>
+<tr><td>San&#8217;s IL2 FOV Changer</td><td class="credits-author">San ; code joystick bas&#233; sur Mark Harris</td><td>R&#233;glage optionnel du champ de vision.</td></tr>
+<tr><td>Gamma Panel</td><td class="credits-author">Tomasz Porosi&#324;ski</td><td>R&#233;glage optionnel du gamma.</td></tr>
+<tr><td>Bombsight Table 2</td><td class="credits-author">WT_Pedropan ; WT_Pitr</td><td>Outil de calcul pour le bombardement.</td></tr>
+<tr><td>HardBall Aircraft Viewer 4.08</td><td class="credits-author">Matt &#171; HardBall &#187; Henderson</td><td>Consultation des caract&#233;ristiques des avions.</td></tr>
+<tr><td>IL2 Sticks</td><td class="credits-author">FoolTrottel</td><td>Configuration des commandes.</td></tr>
+<tr><td>IL2 JoyControl</td><td class="credits-author">Oleg_BS</td><td>R&#233;glage des commandes.</td></tr>
+<tr><td>Lowengrin Dynamic Campaign Generator</td><td class="credits-author">Lowengrin</td><td>G&#233;n&#233;rateur de campagnes fourni comme utilitaire.</td></tr>
+<tr><td>Mission Mate 6</td><td class="credits-author">CrazySchmidt ; Barbs</td><td>Pr&#233;paration de missions.</td></tr>
+<tr><td>Quick Mission Tuner 1946</td><td class="credits-author">DiverseWare</td><td>Modification de missions.</td></tr>
+<tr><td>Properties Editor et Difficulty Editor</td><td class="credits-author">MadBran</td><td>Outils auxiliaires de Quick Mission Tuner.</td></tr>
+<tr><td>Shift-Rot</td><td class="credits-author">Antonio M.</td><td>Outil auxiliaire de Quick Mission Tuner.</td></tr>
+</tbody></table>
+<p>Les versions, les notices et les limites de ces options sont relev&#233;es dans <span class="credits-reference" title="Documentation : ../../docs/SCAN_OPTIONS_CREDITS_V1.15.md">l&#8217;inventaire des outils</span>.</p>
+</div>
+<div class="credits-section" id="credits-section-6">
+<h2>Attributions compl&#233;mentaires</h2>
+<p><strong>BombBayDoors Plus 2.5.3 &#8212; Zuti et Fireball.</strong> Attribution retrouv&#233;e dans une notice du pack BAT. La version exacte du code pr&#233;sent dans Open Sturmovik reste &#224; pr&#233;ciser ; <span class="credits-reference" title="Documentation : ../../docs/SCAN_PACKS_CREDITS_V1.15.md">la source et les correspondances sont conserv&#233;es ici</span>.</p>
+</div>
+<div class="credits-section" id="credits-section-7">
+<h2>Inventaire en cours</h2>
+<p>Le <span class="credits-reference" title="Documentation : ../../docs/SCAN_MODS_V1.15.md">scan des dossiers et des ressources</span> conserve les noms des 130 modules compar&#233;s, leurs correspondances et les fichiers restant &#224; attribuer. Le <span class="credits-reference" title="Documentation : ../../docs/SCAN_PACKS_CREDITS_V1.15.md">relev&#233; des packs locaux examin&#233;s</span> compl&#232;te ces recherches. La liste sera enrichie avec les auteurs des autres ressources effectivement int&#233;gr&#233;es. L&#x27;attribution des &#233;l&#233;ments h&#233;rit&#233;s de RMP3 Atmosphere et de WindConfig v3 reste notamment &#224; pr&#233;ciser.</p>
+<p>Les sources, les limites des int&#233;grations partielles et les points &#224; v&#233;rifier sont consign&#233;s dans <span class="credits-reference" title="Documentation : ../../docs/CREDITS_MODS.md">l&#x27;inventaire d&#233;taill&#233; des mods</span>.</p>
+</div>
+<!-- END GENERATED CREDITS CONTENT -->
+    </div>
+    <div class="actions">
+      <span class="credits-hint">Merci &agrave; la communaut&eacute; IL-2 1946.</span>
+      <button class="button apply" id="creditsBack" onclick="closeCredits()"><span class="bulb"></span>Retour</button>
     </div>
   </div>
   <div id="result">
