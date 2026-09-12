@@ -42,7 +42,7 @@ démarrage du jeu modifié et les fichiers remplacés peuvent être restaurés.
 ## Nom et identité
 
 Le nom **Open Sturmovik** est associé à ce projet depuis 2006. « Open » exprime
-son ouverture au téléchargement, au partage, aux contributions et aux
+son ouverture au partage, aux contributions et aux
 modifications non commerciales. « Sturmovik » est un clin d'œil au premier
 IL-2 Sturmovik, sorti en 2001.
 
