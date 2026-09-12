@@ -70,8 +70,8 @@ depot GitHub Open Sturmovik. Le profil actif, les empreintes des composants, la
 configuration graphique utile, le materiel et les evenements Windows associes
 sont joints au diagnostic.
 
-Les rapports sont expurges avant envoi et restent en file locale lorsque le
-reseau ou l'authentification GitHub est indisponible. Windows Error Reporting
+Aucun compte GitHub ni jeton n'est requis sur le PC utilisateur. Les rapports sont expurges avant envoi et restent en file locale lorsque le
+reseau ou le service de rapports est indisponible. Windows Error Reporting
 conserve jusqu'a cinq dumps complets localement ; seuls leur nom, leur taille et
 leur SHA-256 sont publies, car un dump memoire brut peut contenir des donnees
 privees. Voir [le fonctionnement et les limites du collecteur](docs/DIAGNOSTIC_AUTOMATIQUE_GITHUB.md).

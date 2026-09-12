@@ -3,6 +3,7 @@ param(
     [Parameter(Mandatory = $true)][string]$ReportPath,
     [string]$Repository = 'Alfly-Alyx/IL2-1946-Open-Sturmovik',
     [string]$StateRoot = (Join-Path $env:LOCALAPPDATA 'OpenSturmovik\Diagnostics'),
+    [string]$RelayUrl = 'https://androlink-feedback.alex-baujard.workers.dev/api/open-sturmovik/diagnostic',
     [switch]$DryRun,
     [switch]$KeepReport
 )
@@ -16,7 +17,7 @@ if ($Repository -notmatch '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$') {
 $resolvedReport = (Resolve-Path -LiteralPath $ReportPath -ErrorAction Stop).Path
 $resolvedState = [IO.Path]::GetFullPath($StateRoot)
 New-Item -ItemType Directory -Path $resolvedState -Force | Out-Null
-$report = Get-Content -LiteralPath $resolvedReport -Raw | ConvertFrom-Json
+$report = Get-Content -LiteralPath $resolvedReport -Raw -Encoding UTF8 | ConvertFrom-Json
 if (-not $report.signature -or -not $report.report_id) {
     throw "Rapport de diagnostic incomplet : $resolvedReport"
 }
@@ -25,7 +26,7 @@ function Limit-Text {
     param([AllowEmptyString()][string]$Text, [int]$Maximum = 60000)
     if ($null -eq $Text) { return '' }
     if ($Text.Length -le $Maximum) { return $Text }
-    return $Text.Substring(0, $Maximum) + "`n`n[contenu tronque localement]"
+    return $Text.Substring(0, [Math]::Max(0, $Maximum - 30)) + "`n`n[contenu tronque localement]"
 }
 
 function ConvertTo-CodeBlock {
@@ -83,7 +84,7 @@ function New-OccurrenceMarkdown {
 
     $findings = @($Diagnostic.findings)
     $affectedResourcesProperty = $Diagnostic.PSObject.Properties['affected_resources']
-    $affectedResources = if ($null -ne $affectedResourcesProperty) { @($affectedResourcesProperty.Value) } else { @() }
+    $affectedResources = @(if ($null -ne $affectedResourcesProperty) { $affectedResourcesProperty.Value })
     if ($affectedResources.Count -gt 0) {
         $lines.Add('')
         $lines.Add('### Ressources concernees')
@@ -145,79 +146,6 @@ function New-OccurrenceMarkdown {
     return Limit-Text -Text ($lines -join "`n") -Maximum 60000
 }
 
-function Get-GitHubToken {
-    if (-not [string]::IsNullOrWhiteSpace($env:OPEN_STURMOVIK_GITHUB_TOKEN)) {
-        return $env:OPEN_STURMOVIK_GITHUB_TOKEN
-    }
-
-    $protectedToken = Join-Path $resolvedState 'github-token.dpapi'
-    if (Test-Path -LiteralPath $protectedToken -PathType Leaf) {
-        try {
-            $secure = Get-Content -LiteralPath $protectedToken -Raw | ConvertTo-SecureString
-            $pointer = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($secure)
-            try { return [Runtime.InteropServices.Marshal]::PtrToStringBSTR($pointer) }
-            finally { [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($pointer) }
-        }
-        catch { }
-    }
-
-    $git = Get-Command git.exe -ErrorAction SilentlyContinue
-    if (-not $git) { $git = Get-Command git -ErrorAction SilentlyContinue }
-    if ($git) {
-        $credentialInputPath = $null
-        try {
-            $credentialInputPath = [IO.Path]::GetTempFileName()
-            [IO.File]::WriteAllText($credentialInputPath, "protocol=https`r`nhost=github.com`r`n`r`n", [Text.Encoding]::ASCII)
-            $startInfo = New-Object Diagnostics.ProcessStartInfo
-            $startInfo.FileName = $env:ComSpec
-            $startInfo.Arguments = '/d /s /c ""' + $git.Source + '" credential fill < "' + $credentialInputPath + '""'
-            $startInfo.UseShellExecute = $false
-            $startInfo.CreateNoWindow = $true
-            $startInfo.RedirectStandardOutput = $true
-            $startInfo.RedirectStandardError = $true
-            $credentialProcess = New-Object Diagnostics.Process
-            $credentialProcess.StartInfo = $startInfo
-            [void]$credentialProcess.Start()
-            $credentialOutput = $credentialProcess.StandardOutput.ReadToEnd()
-            $credentialProcess.StandardError.ReadToEnd() | Out-Null
-            $credentialProcess.WaitForExit()
-            if ($credentialProcess.ExitCode -ne 0) { return $null }
-            foreach ($line in @($credentialOutput -split '\r?\n')) {
-                if ($line.StartsWith('password=', [StringComparison]::OrdinalIgnoreCase)) {
-                    return $line.Substring('password='.Length)
-                }
-            }
-        }
-        catch { }
-        finally {
-            if (-not [string]::IsNullOrWhiteSpace($credentialInputPath)) {
-                Remove-Item -LiteralPath $credentialInputPath -Force -ErrorAction SilentlyContinue
-            }
-        }
-    }
-    return $null
-}
-
-function Invoke-GitHubJson {
-    param(
-        [Parameter(Mandatory = $true)][ValidateSet('GET','POST','PATCH')][string]$Method,
-        [Parameter(Mandatory = $true)][string]$Uri,
-        $Payload,
-        [Parameter(Mandatory = $true)][string]$Token
-    )
-    $headers = @{
-        Authorization = 'Bearer ' + $Token
-        Accept = 'application/vnd.github+json'
-        'X-GitHub-Api-Version' = '2022-11-28'
-        'User-Agent' = 'Open-Sturmovik-Diagnostics'
-    }
-    if ($Method -eq 'GET') {
-        return Invoke-RestMethod -Method Get -Uri $Uri -Headers $headers
-    }
-    $json = $Payload | ConvertTo-Json -Depth 10 -Compress
-    return Invoke-RestMethod -Method $Method -Uri $Uri -Headers $headers -ContentType 'application/json; charset=utf-8' -Body $json
-}
-
 function Split-MarkdownComments {
     param($Sources, [int]$Maximum = 50000)
     $comments = [Collections.Generic.List[string]]::new()
@@ -251,57 +179,89 @@ if ($DryRun) {
     exit 0
 }
 
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$token = Get-GitHubToken
-if ([string]::IsNullOrWhiteSpace($token)) {
-    throw 'Aucune authentification GitHub disponible. Le rapport reste dans la file locale.'
+# The public service holds the GitHub App credentials; no client credential is read.
+if ($Repository -cne 'Alfly-Alyx/IL2-1946-Open-Sturmovik') {
+    throw 'Le service de rapports ne prend pas en charge ce depot.'
 }
-
-$apiRoot = 'https://api.github.com/repos/' + $Repository
-$shortSignature = ([string]$report.signature).Substring(0, [Math]::Min(12, ([string]$report.signature).Length))
-$query = [Uri]::EscapeDataString("repo:$Repository is:issue in:title $shortSignature")
-$search = Invoke-GitHubJson -Method GET -Uri ("https://api.github.com/search/issues?q=$query&per_page=10") -Token $token
-$existing = @($search.items | Where-Object { $_.title -like "*$shortSignature*" } | Select-Object -First 1)
-$issue = $null
-$created = $false
-if ($existing.Count -gt 0) {
-    $issue = $existing[0]
-    if ([string]$issue.state -eq 'closed') {
-        $issue = Invoke-GitHubJson -Method PATCH -Uri ("$apiRoot/issues/$($issue.number)") -Payload @{ state = 'open' } -Token $token
+$endpoint = $null
+if (-not [Uri]::TryCreate($RelayUrl, [UriKind]::Absolute, [ref]$endpoint) -or
+    $endpoint.Scheme -ne 'https' -or $endpoint.UserInfo -or $endpoint.Fragment) {
+    throw 'Adresse HTTPS du service de rapports invalide.'
+}
+if ([string]$report.report_id -notmatch '^[a-fA-F0-9]{32}$' -or
+    [string]$report.signature -notmatch '^[a-fA-F0-9]{64}$') {
+    throw 'Identifiant du rapport invalide.'
+}
+$sentRoot = Join-Path $resolvedState 'Sent'
+$sentPath = Join-Path $sentRoot (([string]$report.report_id) + '.json')
+if (Test-Path -LiteralPath $sentPath -PathType Leaf) {
+    $previous = Get-Content -LiteralPath $sentPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    if ($previous.report_id -eq $report.report_id -and $previous.signature -eq $report.signature -and
+        $previous.repository -eq $Repository -and $previous.issue_url -match '^https://github\.com/Alfly-Alyx/IL2-1946-Open-Sturmovik/issues/[1-9][0-9]*$') {
+        if (-not $KeepReport) { Remove-Item -LiteralPath $resolvedReport -Force }
+        [pscustomobject]@{ Status = 'ALREADY_SENT'; Issue = $previous.issue_number; Url = $previous.issue_url; Signature = $report.signature; SentRecord = $sentPath }
+        return
     }
-    $occurrence = New-OccurrenceMarkdown -Diagnostic $report
-    Invoke-GitHubJson -Method POST -Uri ("$apiRoot/issues/$($issue.number)/comments") -Payload @{ body = $occurrence } -Token $token | Out-Null
 }
-else {
-    $titleCategory = ([string]$report.category).ToUpperInvariant()
-    $title = "[Diagnostic automatique][$shortSignature] $titleCategory - $($report.profile.label)"
-    $issue = Invoke-GitHubJson -Method POST -Uri ("$apiRoot/issues") -Payload @{ title = (Limit-Text -Text $title -Maximum 240); body = $mainBody } -Token $token
-    $created = $true
+$shortSignature = ([string]$report.signature).Substring(0, 12)
+$title = "[Diagnostic automatique][$shortSignature] $(([string]$report.category).ToUpperInvariant()) - $($report.profile.label)"
+$allComments = @(Split-MarkdownComments -Sources $report.sources)
+$comments = @($allComments | Select-Object -First 20)
+$omitted = $allComments.Count - $comments.Count
+$payload = [ordered]@{
+    schemaVersion = 1
+    reportId = ([string]$report.report_id).ToLowerInvariant()
+    signature = ([string]$report.signature).ToLowerInvariant()
+    title = (Limit-Text -Text $title -Maximum 240)
+    body = $mainBody
+    comments = $comments
 }
-
-foreach ($comment in @(Split-MarkdownComments -Sources $report.sources)) {
-    Invoke-GitHubJson -Method POST -Uri ("$apiRoot/issues/$($issue.number)/comments") -Payload @{ body = $comment } -Token $token | Out-Null
+do {
+    $payload.comments = @($comments)
+    $notice = if ($omitted -gt 0) { "`n`n_$omitted extrait(s) supplementaire(s) conserve(s) dans le rapport local complet._" } else { '' }
+    $payload.body = (Limit-Text -Text $mainBody -Maximum 59500) + $notice
+    $wireBytes = [Text.Encoding]::UTF8.GetBytes(($payload | ConvertTo-Json -Depth 6 -Compress))
+    if ($wireBytes.Length -le 1000000) { break }
+    if ($comments.Count -eq 0) { throw 'Rapport trop volumineux pour le service.' }
+    $comments = @($comments | Select-Object -First ($comments.Count - 1))
+    $omitted++
+} while ($true)
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+$result = Invoke-RestMethod -Method Post -Uri $endpoint.AbsoluteUri -TimeoutSec 90 -MaximumRedirection 0 `
+    -Headers @{ 'X-Open-Sturmovik-Diagnostic' = '1' } -UserAgent 'Open-Sturmovik/1.15' `
+    -ContentType 'application/json; charset=utf-8' -Body $wireBytes
+$issueUrl = [string](Get-PropertyValue -Object $result -Name 'url')
+$issueNumber = Get-PropertyValue -Object $result -Name 'issueNumber' -Default 0
+if ((Get-PropertyValue -Object $result -Name 'ok' -Default $false) -ne $true -or
+    (Get-PropertyValue -Object $result -Name 'completed' -Default $false) -ne $true -or
+    (Get-PropertyValue -Object $result -Name 'reportId') -cne $payload.reportId -or
+    $issueNumber -notmatch '^[1-9][0-9]*$' -or
+    $issueUrl -cne ("https://github.com/$Repository/issues/$issueNumber")) {
+    throw 'La livraison complete du rapport na pas ete confirmee. Le rapport reste dans la file locale.'
 }
-
+$created = (Get-PropertyValue -Object $result -Name 'created' -Default $false) -eq $true
 $sentRecord = [ordered]@{
     sent_utc = [DateTime]::UtcNow.ToString('O')
     report_id = [string]$report.report_id
     signature = [string]$report.signature
     repository = $Repository
-    issue_number = [int]$issue.number
-    issue_url = [string]$issue.html_url
+    issue_number = [int]$issueNumber
+    issue_url = $issueUrl
     issue_created = $created
+    omitted_log_parts = $omitted
 }
-$sentRoot = Join-Path $resolvedState 'Sent'
 New-Item -ItemType Directory -Path $sentRoot -Force | Out-Null
-$sentPath = Join-Path $sentRoot (([string]$report.report_id) + '.json')
-$sentRecord | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $sentPath -Encoding UTF8
+if ($omitted -gt 0) {
+    Copy-Item -LiteralPath $resolvedReport -Destination (Join-Path $sentRoot ($report.report_id + '.report.json')) -Force
+}
+$receiptTemp = $sentPath + '.' + [Guid]::NewGuid().ToString('N') + '.tmp'
+[IO.File]::WriteAllText($receiptTemp, ($sentRecord | ConvertTo-Json -Depth 4), [Text.UTF8Encoding]::new($false))
+Move-Item -LiteralPath $receiptTemp -Destination $sentPath -Force
 if (-not $KeepReport) { Remove-Item -LiteralPath $resolvedReport -Force }
-
 [pscustomobject]@{
     Status = if ($created) { 'ISSUE_CREATED' } else { 'ISSUE_UPDATED' }
-    Issue = [int]$issue.number
-    Url = [string]$issue.html_url
+    Issue = [int]$issueNumber
+    Url = $issueUrl
     Signature = [string]$report.signature
     SentRecord = $sentPath
 }

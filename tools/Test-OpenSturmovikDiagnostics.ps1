@@ -200,7 +200,7 @@ public static class Program {
         $watchProcess.Refresh()
     }
     Assert-True $watcherReady 'le moniteur synthetique doit confirmer son demarrage'
-    $fakeProcess = Start-Process -FilePath $fakeExe -WorkingDirectory $watchGame -PassThru
+    $fakeProcess = Start-Process -FilePath $fakeExe -WorkingDirectory $watchGame -WindowStyle Hidden -PassThru
     $fakeProcess.WaitForExit()
     if (-not $watchProcess.WaitForExit(20000)) {
         Stop-Process -Id $watchProcess.Id -Force -ErrorAction SilentlyContinue

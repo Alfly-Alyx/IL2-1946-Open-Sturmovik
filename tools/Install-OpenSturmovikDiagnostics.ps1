@@ -90,7 +90,7 @@ if ($PSCmdlet.ShouldProcess($state, 'Creer le stockage local des diagnostics')) 
         state_root = $state
         queue_root = $queueRoot
         dump_root = $dumpRoot
-        transport = 'GitHub Issues API; DPAPI token, environment token, or Git Credential Manager'
+        transport = 'Public HTTPS diagnostic service; no GitHub account, token or Git required on this PC'
         privacy = 'sanitized text only; raw memory dumps remain local'
     }
     $config | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $configPath -Encoding UTF8

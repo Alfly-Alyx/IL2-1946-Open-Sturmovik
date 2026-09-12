@@ -64,28 +64,76 @@ affiches juste apres. Les extensions IL-2 usuelles sont couvertes, notamment
 TGA, MAT, MSH, HIM, SIM, EMD, PRS, WAV, CLASS, INI, PROPERTIES, MIS, SFS, DLL,
 EXE et EFF.
 
-## Transport, reprise et authentification
+## Transport et reprise sans compte utilisateur
 
 Les rapports expurges sont d'abord ecrits sous
-`%LOCALAPPDATA%\OpenSturmovik\Diagnostics\Queue`. L'envoi utilise l'API des
-tickets GitHub. En cas d'absence de reseau, de limite API ou d'identifiant, le
-fichier reste dans la file et sera repris au prochain demarrage du moniteur ou
-a la fin de la prochaine session de jeu.
+`%LOCALAPPDATA%\OpenSturmovik\Diagnostics\Queue`. Le programme envoie leur
+version textuelle au service public HTTPS :
 
-L'identifiant est cherche dans cet ordre :
+`https://androlink-feedback.alex-baujard.workers.dev/api/open-sturmovik/diagnostic`
 
-1. variable de processus `OPEN_STURMOVIK_GITHUB_TOKEN` ;
-2. jeton chiffre par DPAPI pour l'utilisateur courant ;
-3. Git Credential Manager, lorsqu'une connexion GitHub existe deja.
+Aucun compte GitHub, jeton, Git ou Git Credential Manager n'est necessaire sur
+le PC utilisateur. L'authentification GitHub appartient au service Cloudflare,
+avec le bot dedie `open-sturmovik-diagnostics`, autorise uniquement sur
+`Alfly-Alyx/IL2-1946-Open-Sturmovik` pour les Issues en lecture/ecriture et les
+metadonnees en lecture seule. Les trois secrets serveur portent le prefixe
+`OPEN_STURMOVIK_GITHUB_` ; aucun repli vers le bot AndroLink n'est autorise.
+Le bot dedie est installe et son envoi reel a ete verifie le 12 septembre 2026.
+Le PC ne lit plus les anciens identifiants d'environnement ou DPAPI. Le script
+historique `Set-OpenSturmovikGitHubCredential.ps1` n'est plus necessaire.
 
-Le jeton DPAPI peut etre configure interactivement avec :
+En cas d'absence de reseau, de limite du service ou de refus GitHub, le rapport
+reste dans la file. Le moniteur reprend les envois au demarrage et apres chaque
+session. La file n'est videe qu'apres reception d'un accuse complet avec le bon
+identifiant et une URL d'issue du depot attendu. Un recu local evite de renvoyer
+un rapport deja livre. Le JSON est transmis explicitement en UTF-8, y compris
+sous Windows PowerShell 5.1.
+
+Le service regroupe les occurrences par signature et rouvre le ticket si
+necessaire. Chaque partie porte un marqueur stable pour reprendre les extraits
+manquants apres une reponse perdue. Les recus et correspondances de signatures
+sont conserves trente jours dans le stockage KV du service. Une empreinte salee
+de la connexion limite les envois a dix tentatives par vingt-quatre heures.
+Aucun texte de rapport n'est conserve dans ce stockage KV.
+
+L'envoi est borne a 1 000 000 octets et vingt extraits. Si des extraits doivent
+etre omis, le ticket le precise et une copie complete du rapport nettoye est
+conservee dans `Sent/<identifiant>.report.json` avant suppression de la file.
+Les dumps bruts ne sont jamais transmis.
+
+Le service est maintenu dans `feedback/src/worker.js` du projet AndroLink.
+Sa route Open Sturmovik impose son depot de destination ; les suggestions
+manuelles AndroLink continuent a creer des Discussions dans le depot AndroLink.
+Les reprises sont verifiees pour les reponses perdues et les envois concurrents
+dans une instance. KV n'etant pas un verrou global, une creation simultanee
+depuis plusieurs instances peut exceptionnellement produire un doublon. Les
+tickets comportant plus de mille commentaires demandent une intervention de
+maintenance pour une reprise automatique sure.
+
+Verification locale sans reseau ni compte :
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File tools\Set-OpenSturmovikGitHubCredential.ps1
+powershell -NoProfile -File tools\Test-OpenSturmovikDiagnosticTransport.ps1
+powershell -NoProfile -File tools\Test-OpenSturmovikDiagnostics.ps1
 ```
 
-Sur la machine de developpement d'Alexis, Git Credential Manager fournit deja
-une authentification valable pour le depot, sans copie du secret dans le pack.
+Le 12 septembre 2026, ces deux suites passent sous Windows PowerShell 5.1 :
+transport sans identifiants, UTF-8, conservation de la file, validation des
+recus, absence de renvoi apres livraison, collecte expurgee, lecteur minidump,
+moniteur avec un faux processus et installation simulee sans modifier le registre.
+L'essai reel du 12 septembre 2026 a cree
+[l'issue #2](https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik/issues/2)
+avec le vrai script `Send-OpenSturmovikDiagnostic.ps1` sous Windows PowerShell
+5.1.19041.6456. Le rapport `75a9fe69dfee461aa51e7c9e3d4b27fe` et son unique
+commentaire de journal sont entierement fictifs ; leur auteur GitHub observe
+est `open-sturmovik-diagnostics[bot]`. Les accents du journal sont intacts.
+La file de test contient ensuite zero rapport et la retransmission du meme
+rapport retourne `ALREADY_SENT`, avec la meme URL et sans nouveau commentaire.
+Aucun jeu installe ni inventaire du PC n'a ete utilise pour cet essai.
+
+La lecture des JSON UTF-8 sans BOM est explicite, car Windows PowerShell 5.1
+les interpretait autrement et alterait les accents avant la transmission.
+Le test de transport couvre desormais ce format produit par le collecteur.
 
 ## Protection des donnees
 
@@ -112,8 +160,9 @@ etre ajoute au ticket.
 - La propriete Windows `Responding` qualifie un gel de l'interface. Un defaut
   visuel sans message de journal, evenement, gel ou fermeture anormale ne peut
   pas etre devine automatiquement.
-- L'API GitHub exige une authentification. Sans elle, la collecte reste complete
-  et locale, mais aucun programme ne peut creer anonymement un ticket GitHub.
+- L'authentification GitHub est geree par le service. Si ce service ou son bot
+  est indisponible, la collecte reste locale et les rapports sont conserves
+  pour une tentative ulterieure, sans demander de compte GitHub au joueur.
 - Le dump brut n'est pas televerse vers le depot public. Cette limite est
   volontaire et n'empeche pas la publication de son empreinte et de son analyse
   textuelle expurgee.
@@ -155,5 +204,20 @@ Les composants sont :
 - `Send-OpenSturmovikDiagnostic.ps1` : creation ou mise a jour du ticket ;
 - `Read-OpenSturmovikMinidump.ps1` : exception et modules d'un dump natif ;
 - `Install-OpenSturmovikDiagnostics.ps1` : journaux, WER et demarrage ;
-- `Set-OpenSturmovikGitHubCredential.ps1` : configuration DPAPI facultative ;
+- `Set-OpenSturmovikGitHubCredential.ps1` : ancien utilitaire DPAPI, inutilise par le transport actuel ;
 - `Test-OpenSturmovikDiagnostics.ps1` : regression hors jeu.
+
+## Identite du service verifiee le 12 septembre 2026
+
+- GitHub App : `open-sturmovik-diagnostics`, App ID `4918929`.
+- Installation : `161089524`, limitee au depot Open Sturmovik ; Issues en
+  lecture/ecriture et Metadata en lecture seule.
+- L'ancienne application `androlink-feedback` ne dispose plus de l'acces a ce
+  depot et conserve uniquement AndroLink.
+- Les trois secrets propres au bot sont enregistres dans Cloudflare. La copie
+  temporaire de la cle telechargee pour la configuration a ete supprimee.
+- Version du service testee : `e5cc4277-e5f5-4b11-a3a6-088320a1b13e`.
+
+Ces essais valident les sources de la branche v1.15 et le service distant.
+Ils ne constituent pas une installation ou une publication d'une nouvelle
+version du jeu.
