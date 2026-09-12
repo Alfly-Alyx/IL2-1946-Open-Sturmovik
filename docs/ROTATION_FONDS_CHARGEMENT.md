@@ -213,3 +213,12 @@ Le poids participe maintenant à la signature de l’état. Au prochain lancemen
 **19 scénarios et 7 036 assertions par variante** passent sur le helper source et sur le helper Java 47 exact du paquet (14 072 assertions au total). Les **79 contrôles d’installation et de réversibilité** passent sous PowerShell 5.1. Après normalisation des fins de ligne du source, la reconstruction produit les mêmes classes octet par octet.
 
 La copie de test a reçu ce correctif par retrait, installation puis réactivation. Les 27 fichiers actifs correspondent à leur inventaire ; les empreintes de restauration originales, les images, les réglages et le dernier état sont conservés. Aucun lancement natif n’a été effectué pour cette modification. Les confirmations visuelles et rapports précédents décrivent la fréquence historique de deux passages. Preuves actuelles : [`loading-rotation-official-weight3.json`](../manifests/loading-rotation-official-weight3.json).
+
+
+## Validation native et publication autorisée — 12 septembre 2026
+
+Le lancement direct demandé par Alexis à 04:58:25 UTC utilise le profil 9, **4.09m avec 6DOF**, et le helper de poids trois. À 04:58:42 UTC, le moteur accepte `il2-2001-box` et publie un nouveau cycle de six entrées : `il2-2001-box,il2-2001,background-3,il2-2001,forgotten-battles-box,il2-2001`. La position passe à 1 et la signature change ; le dernier fond de l’ancien cycle, `il2-2001`, n’est pas répété.
+
+Alexis confirme « c’est bon pour moi » et autorise le commit ainsi que la publication sur `v1.15`, sur GitHub et dans le checkout local indiqué. Cette confirmation valide l’affichage de cet essai et la transition depuis l’ancien état. Un cycle de six lancements natifs n’est pas présenté comme réalisé : les fréquences exactes et les frontières restent couvertes par les tests de logique. Les états et empreintes sont conservés dans [`loading-rotation-native-acceptance.json`](../manifests/loading-rotation-native-acceptance.json).
+
+Les ressources sources du module validé sont archivées dans `D:\Projets\GITHUB\#res\IL2 1946\Mods\Utilisés\Open Sturmovik - rotation fonds v1.15 - 2026-09-12`. Les archives antérieures de réserve restent des états historiques. La publication fournit le module optionnel complet et ses outils ; son installation et son activation se font par `Open_Sturmovik_Fonds.vbs`.

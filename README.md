@@ -45,7 +45,7 @@ modifier leur code 6DOF. En mode fenetre, une surcharge moteur fixe aussi le
 titre a `Open Sturmovik`. Les trois EXE Original restent identiques au fichier
 stock et le wrapper qui chargerait cette surcharge est retire.
 
-## Fonds de chargement variables (option en cours de validation)
+## Fonds de chargement variables (option validee)
 
 La rotation facultative propose les quatre fonds choisis par Alexis, avec trois
 passages par cycle pour le fond officiel de 2001. Les images sont installees
@@ -55,7 +55,8 @@ modde, y compris lors d'un lancement direct de `il2fb.exe`.
 Ouvrir `Open_Sturmovik_Fonds.vbs` pour installer, activer, desactiver ou retirer
 la modification. L'installation seule reste desactivee ; la selection se
 regle dans cette fenetre. Les fichiers d'origine sont preserves. La logique et
-le retour arriere sont testes ; le rendu natif dans le jeu reste a verifier.
+le retour arriere sont testes ; un lancement direct avec le fond officiel triple
+a ete valide en 4.09m avec 6DOF.
 Voir [le fonctionnement et la procedure de retour arriere](docs/ROTATION_FONDS_CHARGEMENT.md).
 
 ## Diagnostic automatique
