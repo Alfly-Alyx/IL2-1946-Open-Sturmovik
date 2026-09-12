@@ -110,7 +110,7 @@ trace explicite. Pour chaque configuration :
 5. compter les ouvertures par texture, les octets lus, les erreurs et la memoire
    maximale.
 
-La mission ne doit pas etre changee entre les passes. Les essais AOC, Zuti,
+La mission ne doit pas etre changee entre les passes. Les essais AOC, moteur,
 nuages et textures ne doivent pas partager une meme comparaison si une seule
 variable n'est pas maintenue.
 

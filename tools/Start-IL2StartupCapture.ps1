@@ -162,7 +162,6 @@ $criticalRelative = @(
     'il2fb.exe','files.SFS','wrapper.dll','DINPUT.dll','il2fb.ini','conf.ini',
     'Files\com\maddox\il2\objects\air.ini',
     'Files\com\maddox\il2\objects\stationary.ini',
-    'Files\E1FDDF9406C0ACAE', # ZutiTimer_RadarsCountRefresh
     # Paquet AAA Su-2 : avion, cockpits et deux ressources dont l'absence
     # empechait l'affectation joueur et la vue F1.
     'Files\70C9BE082DD9AB42', # SU_2
@@ -200,7 +199,7 @@ if (-not $ExcludeNuclear) {
     'Files\77B1B3A6E89CFC22', # B_29X Silverplate (absence attendue lors de cet A/B)
     # Famille Explosions complete : classe externe, 13 classes anonymes et
     # MydataForSmoke. Cet instantane prouve quelle variante est reellement
-    # active lors de l'essai Silverplate/Zuti.
+    # active lors de l'essai Silverplate.
     'Files\72DCDDF4D2AD25E8',
     'Files\DF2E6CCEA14288D6',
     'Files\15E1127AE68FA29C',

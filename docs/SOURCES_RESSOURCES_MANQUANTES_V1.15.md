@@ -33,8 +33,8 @@ presentes et s'il ne supprime pas une fonction deja utilisee par Open Sturmovik.
 La recherche AAA/Wayback puis les fils historiques CheckSix, Ultrapack et HSFX
 a permis de retrouver l'ensemble AOC 1a complet de HSFX 4.0 : trois classes et
 267 profils. La v1.15 en distribue 266, le profil specifique du Bf-109G-6 Early
-etant volontairement omis pour utiliser `Defaut.txt`. Le paquet HSFX 4.0 cible explicitement IL-2 4.09m. La classe moteur
-originale ne contenait toutefois pas les methodes R/R/R de Zuti MDS 1.13 ; la
-v1.15 conserve donc la classe Zuti comme base et n'y greffe que les
-consommateurs AOC verifies. La provenance, les empreintes et le choix V1/V2/V3
-sont detailles dans `manifests/aoc-v1.15.json` et `docs/AUDIT_ZUTI_AOC.md`.
+etant volontairement omis pour utiliser `Defaut.txt`. Le paquet HSFX 4.0 cible explicitement IL-2 4.09m. La reconstruction actuelle conserve les consommateurs AOC verifies dans une
+base Open Sturmovik personnalisee, dont les quatre methodes Motor MDS ont ete
+retirees. Les autres methodes, champs et profils restent inchanges ; la
+validation statique du retrait moteur passe ; les essais en jeu restent a refaire. La provenance, les empreintes et le choix V1/V2/V3
+sont detailles dans `manifests/aoc-v1.15.json` et `docs/AUDIT_AOC_SANS_MDS_20260912.md`.

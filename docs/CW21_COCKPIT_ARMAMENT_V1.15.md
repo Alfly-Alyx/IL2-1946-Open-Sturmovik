@@ -3,6 +3,30 @@
 6 septembre 2026. Installation hors jeu ; validation visuelle et en vol encore
 requise. Demande d'Alexis : proposer les deux armements dans le meme avion.
 
+## Actualisation du 12 septembre 2026 : retrait de MDS
+
+L'override global `Aircraft` fusionne avec MDS a ete retire. Le chargeur effectif
+vient maintenant du `files.SFS` du profil ; son SHA-256 est
+`079760CADF85DA3CB26856C0D5B541EBC51E017A450F1648B27426D8E00D7BE3`, identique
+dans les trois profils 4.08m, 4.09b et 4.09m. Les six classes du correctif CW-21
+et les 165 ressources de cockpit conservent leurs empreintes.
+
+Le contrat `TestCW21Loadouts` a ete execute avec le CW-21 et son helper actifs,
+puis l'Aircraft stock extrait de chacun des trois SFS : trois PASS, choix
+uniques, quatre emplacements, armes/munitions exactes et imports tardifs repetes.
+Ce resultat porte sur le chargeur et utilise des doubles d'API/entrees ; il
+ne prouve pas la disponibilite de tout le cockpit dans les anciens profils.
+L'audit complet de l'installateur pour **4.09m** donne aussi PASS : six classes,
+165 ressources, aucune dependance manquante, aucune ecriture dans le jeu.
+
+`Install-CW21Cockpit.py` resout desormais les classes absentes de `Files`
+dans le SFS 4.09m dont l'empreinte est imposee, avant le dump complementaire.
+L'Aircraft extraite pour le contrat reste dans `build`, jamais dans `Files`.
+Le manifeste cockpit indique sa nouvelle origine SFS. Reproduction et recus :
+`docs/research/zuti-family-reconstruction-20260912/test-cw21-stock.py`,
+`cw21-stock-contract.json` et `RECONSTRUCTION_MOTEUR_SANS_MDS_V1.15_20260912.md`.
+Les paragraphes suivants conservent les observations historiques precedant ce retrait.
+
 ## Source et compatibilite
 
 Source prioritaire : `D:\Projets\GITHUB\#res\IL2 1946\Mods\Utilisés\Cockpit_CW-21_for409.zip`,

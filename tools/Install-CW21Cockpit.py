@@ -40,11 +40,17 @@ def main():
     p.add_argument('--donor-root', type=Path, required=True)
     p.add_argument('--dump-root', type=Path, required=True)
     p.add_argument('--rt-jar', type=Path, required=True)
+    p.add_argument('--files-sfs', type=Path,
+                   default=ROOT / '_Game Switcher/4.09 final Mods ON (NO 6DOF)/files.SFS',
+                   help='Exact 4.09m profile archive used when an effective loose class is absent.')
     p.add_argument('--source-archive', type=Path, default=Path('D:/Projets/GITHUB/#res/IL2 1946/Mods/Utilisés/Cockpit_CW-21_for409.zip'))
     p.add_argument('--apply', action='store_true')
     p.add_argument('--replace-previous-cw21', action='store_true',
                    help='Allow replacing only a hash-verified previous CW-21 patch, with backup.')
     args = p.parse_args()
+    args.files_sfs = args.files_sfs.resolve()
+    sfs_origin = (args.files_sfs.relative_to(ROOT).as_posix() if args.files_sfs.is_relative_to(ROOT)
+                  else str(args.files_sfs))
     assert subprocess.check_output(['git', '-C', str(ROOT), 'branch', '--show-current'], text=True).strip() == 'v1.15'
     assert Path(subprocess.check_output(['git', '-C', str(ROOT), 'rev-parse', '--show-toplevel'], text=True).strip()).resolve() == ROOT
     donor = args.donor_root.resolve()
@@ -55,6 +61,27 @@ def main():
     assert b'cockpitClass' not in stock.read_bytes()
     build = ROOT / 'build/aircraft-patcher'
     build.mkdir(parents=True, exist_ok=True)
+    assert sha(args.files_sfs.read_bytes()) == '5CB81D4FAE005429B701CE3DCAC001892DB2C66D0AECEE0A00E918D5E8892E71', \
+        'Unrecognised 4.09m modded files.SFS'
+    sfs_cache = {}
+    def sfs_class(name):
+        if name not in sfs_cache:
+            with SFS['SfsArchive'](args.files_sfs) as archive:
+                try:
+                    sfs_cache[name] = archive.extract_class(name.replace('/', '.'))
+                except KeyError:
+                    sfs_cache[name] = None
+        return sfs_cache[name]
+    effective_source = ROOT / 'Files/4B598398AD1D180C'
+    if effective_source.is_file():
+        effective_bytes = effective_source.read_bytes()
+        effective_origin = 'Files/4B598398AD1D180C'
+    else:
+        effective_bytes = sfs_class('com/maddox/il2/objects/air/Aircraft')
+        assert effective_bytes is not None, 'Effective Aircraft missing from loose files and exact profile SFS'
+        effective_source = build / 'EffectiveAircraft-from-SFS.class'
+        effective_source.write_bytes(effective_bytes)
+        effective_origin = sfs_origin + ':com/maddox/il2/objects/air/Aircraft'
     exports = sum((['--add-exports', 'java.base/jdk.internal.org.objectweb.asm' + suffix + '=ALL-UNNAMED']
                    for suffix in ('', '.tree', '.tree.analysis')), [])
     subprocess.run(['javac', *exports, '-d', str(build),
@@ -66,8 +93,8 @@ def main():
     assert class_address('com.maddox.il2.objects.air.CW_21') == 'F00C363EBB3865E8'
     helper_path = 'Files/' + class_address(HELPER)
     subprocess.run(['java', *exports, '-cp', str(build), 'TestCW21Loadouts', str(patched),
-                    str(ROOT / 'Files/4B598398AD1D180C'), str(helper)], check=True)
-    effective_aircraft = parse((ROOT / 'Files/4B598398AD1D180C').read_bytes())
+                    str(effective_source), str(helper)], check=True)
+    effective_aircraft = parse(effective_bytes)
     registration = [m for m in effective_aircraft.methods if m.name == 'weaponsRegister']
     assert len(registration) == 1 and registration[0].code_blocks == [b'\xb1'], \
         'Effective Aircraft.weaponsRegister is no longer the audited empty method'
@@ -122,12 +149,17 @@ def main():
             c = parse(source.read_bytes(), keep_code=False)
             origins[name] = source.relative_to(ROOT).as_posix()
         else:
-            source = args.dump_root / (name + '.class')
-            if not source.is_file():
-                missing.add(name)
-                return
-            c = parse(source.read_bytes(), keep_code=False)
-            origins[name] = '4.09m dump/' + name + '.class'
+            stock_bytes = sfs_class(name)
+            if stock_bytes is not None:
+                c = parse(stock_bytes, keep_code=False)
+                origins[name] = sfs_origin + ':' + name
+            else:
+                source = args.dump_root / (name + '.class')
+                if not source.is_file():
+                    missing.add(name)
+                    return
+                c = parse(source.read_bytes(), keep_code=False)
+                origins[name] = '4.09m dump/' + name + '.class'
         api[name] = ApiClass(c.super_name, c.interfaces,
                             {(m.name, m.descriptor) for m in c.fields},
                             {(m.name, m.descriptor) for m in c.methods})
@@ -168,7 +200,8 @@ def main():
         'strategy': 'Four authentic cockpit classes and assets; stock 4.09m CW_21 gains cockpitClass, explicit weaponsList/weaponsMap registration, a CW-21-only unique ArrayList helper and one resolved-audio diagnostic line per aircraft load. Stock FMD, parent, paint and default armament retained; global Aircraft loader unchanged.',
         'registrationContractTest': 'PASS: emitted registration plus actual effective Aircraft.weapons/getWeaponsRegistered bytecode, with API/input doubles; repeated late imports preserve exactly three choices and all slots. Not an in-game or SFS-decryption test.',
         'uniqueListHelper': {'class': HELPER, 'path': helper_path, 'sha256': sha(helper.read_bytes())},
-        'effectiveAircraftSha256': sha((ROOT / 'Files/4B598398AD1D180C').read_bytes()),
+        'effectiveAircraftSha256': sha(effective_bytes),
+        'effectiveAircraftSource': effective_origin,
         'effectiveWeaponsRegisterIsEmpty': True,
         'soundDiagnosis': 'Resolved soundName/startStopName/propName logged; no audio gain or physics change; listening test pending',
         'armament': {'default': ['MGunBrowning303ki 300'] * 4,

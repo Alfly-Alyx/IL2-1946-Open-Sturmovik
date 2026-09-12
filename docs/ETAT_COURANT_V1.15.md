@@ -10,9 +10,16 @@ sont sous `Mods\Retirés\besoin_licence` dans les ressources locales. Le
 manifeste des utilitaires et l'installateur declarent maintenant huit raccourcis.
 Les credits publics correspondent aux retraits effectifs.
 
-Zuti reste present : ses classes sont fusionnees avec d'autres fonctions et
-leur retrait brut casserait des dependances. La version finale ne peut donc
-pas etre declaree prete. Le [suivi des retraits](RETRAIT_COMPOSANTS_V1.15.md)
+Zuti MDS est retire du contenu local. Les 699 originaux touches sont archives
+avec verification des empreintes dans
+`Mods/Retirés/besoin_licence/Zuti MDS 1.13/retrait_complet_pack_20260912` :
+648 fichiers retires, dont 544 classes correspondant a 543 noms internes ;
+51 fichiers remplaces, dont quatre classes, 43 missions et quatre catalogues
+de textes. Les 43 missions dediees a MDS sont retirees avec leurs fichiers
+associes. La simulation des trois versions passe : aucun marqueur Zuti dans
+les classes controlees et aucune nouvelle rupture de reference detectee.
+Les tests statiques et cibles passent ; les essais reels du jeu et de
+l'installateur restent a refaire. La version finale ne peut pas encore etre declaree prete. Le [suivi des retraits](RETRAIT_COMPOSANTS_V1.15.md)
 fait autorite sur ces composants. Les resultats historiques ci-dessous restent
 dates ; la copie WIP et le Bureau temporaire n'ont pas ete resynchronises avec
 ces retraits et ne representent pas encore le nouveau contenu du depot.
@@ -22,9 +29,9 @@ ces retraits et ne representent pas encore le nouveau contenu du depot.
 - depot local verifie : `C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik` ;
 - branche active : `v1.15`, sans changement, fusion ni rebase ;
 - le lanceur reste dans son depot/worktree separe ;
-- aucune autre tache IA n'est active et aucun nouveau worktree n'est requis ;
+- aucun nouveau worktree ni changement de branche n'est requis pour ce retrait ;
 - aucun chantier v1.20 ne fait partie de cette reprise ;
-- la copie de test a ete synchronisee apres consolidation des travaux hors jeu ;
+- la copie de test doit etre actualisee apres le retrait local avant les prochains essais ;
 - aucun jeu ne doit etre lance pour la consolidation Git ; les essais precedents
   et leurs limites sont distingues ci-dessous ;
 - le vrai Bureau n'a pas ete modifie : les raccourcis ont ete verifies dans un
@@ -117,8 +124,8 @@ Le choix definitif concernant HUD immersion en stock attend encore Alexis.
 | 1 | KB-29P et CW-21 absents de la liste de l'editeur | KB-29P corrige a son adresse de classe canonique, ancien doublon retire. Cockpit CW-21 4.09 integre ; armement 4 x .303 ou 2 x .303 + 2 x .50 au choix. Voir CW21_COCKPIT_ARMAMENT_V1.15.md. | Verifier la presence des deux appareils dans la liste utilisee par Alexis, puis cockpit et deux armements CW-21. |
 | 2 | Polygones blancs et erreurs de nuages | WxTech Jan 2023 conserve, sans retrait supplementaire de la physique Atmosphere. Intel OpenGL reste une piste pour les pics ; essai DirectX original prepare, reversible, sans baisse de resolution des textures. | Comparer la meme scene en DirectX/OpenGL puis au stock ; exiger zero artefact/exception et conserver le detail et le realisme. |
 | 3 | Sons Allison des P-39 et boucle de ralenti persistante | Chaine Allison completee. Vingt drapeaux de boucle de demarrage retires dans dix presets Tiger33, sans modifier les WAV ni les courbes RPM. Allison etait deja sans ces boucles : cause globale non demontree. | Ecouter P-39N et Bf-109 DB-600, cockpit/exterieur, demarrage et depart en vol ; verifier le regime reel. |
-| 4 | Zuti dix minutes, MDS et fermeture | Zuti MDS 1.13 charge, correctif `ExtendPlanesWings` integre ; les methodes R/R/R sont preservees dans la classe moteur fusionnee avec AOC. | Exercer radar, limite d'appareils, R/R/R, porte-avions, hote/client et fermeture. |
-| 5 | AOC compatible 4.09m | AOC V1/1a complet retrouve dans HSFX 4.0 : trois classes et 267 profils sources. La v1.15 en distribue 266 ; le profil specifique du Bf-109G-6 Early est retire afin que cet appareil utilise `Defaut.txt`. Les dix reglages ont un consommateur dans la fusion AOC+Zuti reproductible. | Verifier la creation du profil Bf depuis `Defaut.txt`, son chargement au second passage, puis chauffe, demarrage, G negatifs, carburant, magnetos et coexistence Zuti. |
+| 4 | Retrait MDS et stabilite du moteur | Retrait applique localement ; controles statiques sur trois versions et tests cibles passes. Anciens essais radar/R/R/R historiques. | Mission standard de dix minutes, FMB, hote/client et fermeture dans une copie actualisee ; installateur a revalider. |
+| 5 | AOC compatible 4.09m | AOC V1/1a HSFX 4.0 conserve : trois classes sans MDS reconstruites, 266 profils inchanges, dix reglages consommes. | Verifier le repli Bf-109G-6 Early vers Defaut.txt, chauffe, demarrage, G negatifs, carburant et magnetos dans la copie actualisee. |
 | 6 | Absence de pause a la perte de focus | Alexis confirme que la simulation continue pendant la perte de focus. | Retour utilisateur valide pour l'essai fenetre effectue ; ne pas lui faire recommencer ce point sans regression observee. |
 | 7 | Profils avec/sans 6DOF et TrackIR | Les cinq classes 6DOF/TrackIR sont identifiees et les EXE 4.08, 4.09b et 4.09m sont distincts entre profils avec et sans 6DOF selon la source AAA. | Valider six axes, profil sans translation, recentrage, perte de focus et restauration. |
 | 8 | Mission Mate et WeatherSet | DCG et San FOV retires le 12 septembre. L'initialiseur prepare Mission Mate/HardBall sans modifier les reglages FOV ou DeviceLink. | Effectuer une operation reversible par outil conserve dans une copie actualisee. |
@@ -152,14 +159,16 @@ complet n'a pas ete retrouve ; V3a est documente en developpement mais aucune
 publication complete exploitable n'a ete recuperee. Le numero le plus eleve ne
 prime jamais sur la compatibilite et l'integrite du paquet.
 
-Le petit ensemble local etait incomplet : le chargeur AOC etait present, mais
-les parties moteur avaient ete remplacees par Zuti. La fusion courante conserve
-Zuti comme base, restaure uniquement les consommateurs AOC de HSFX, lit les 266
-profils distribues sous `_Game_Enhancements/Mod_AOC_Public` et ne fabrique
-aucune donnee physique. Le paquet HSFX original en contenait 267 ; le profil
-du Bf-109G-6 Early est volontairement omis pour utiliser `Defaut.txt`.
-Le constructeur est `tools/Build-OpenSturmovikAocZutiPatch.ps1` et la preuve
-detaillee se trouve dans `docs/AUDIT_ZUTI_AOC.md`.
+Le constructeur courant `tools/Build-OpenSturmovikAocPatch.ps1` utilise une
+base Open Sturmovik 4.09m personnalisee et expurgee des quatre methodes Motor
+propres a MDS. FlightModelMain et RealFlightModel restent identiques ; les
+autres methodes et champs Motor sont preserves. Les consommateurs AOC HSFX et
+les 266 profils sous `_Game_Enhancements/Mod_AOC_Public` sont inchanges.
+Le paquet HSFX original contenait 267 profils ; celui du Bf-109G-6 Early reste
+volontairement omis pour utiliser `Defaut.txt`.
+La preuve est [l'audit AOC sans MDS](AUDIT_AOC_SANS_MDS_20260912.md).
+`tools/Test-OpenSturmovikAoc.ps1` verifie les trois sorties et les profils ;
+l'integration locale est appliquee et verifiee statiquement ; le vol reste a valider.
 
 ### Configuration et utilitaires
 
@@ -248,7 +257,7 @@ du Gestionnaire des taches et les profils Original restent a qualifier.
 
 Il ne manque plus de paquet AOC pour commencer les essais. Les prochains
 controles utilisateur sont les deux armements CW-21, le classement des avions
-et le switcher. Le son CW-21, AOC, MDS/Zuti, 6DOF/TrackIR, les utilitaires et
+et le switcher. Le son CW-21, AOC, le moteur apres retrait MDS, 6DOF/TrackIR, les utilitaires et
 la non-regression complete restent a qualifier ou diagnostiquer. Les nuages
 DirectX, le titre modifie et la perte de focus ont deja ete confirmes par Alexis.
 L'inventaire des profils AOC

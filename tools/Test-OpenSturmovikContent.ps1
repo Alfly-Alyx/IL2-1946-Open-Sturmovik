@@ -105,7 +105,7 @@ if (-not (Test-Path -LiteralPath $aocManifestPath -PathType Leaf)) {
 }
 else {
     $aocManifest = Get-Content -LiteralPath $aocManifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
-    if ($aocManifest.currentSelection -ne 'v1-1a-hsfx4-409m-zuti-merged') {
+    if ($aocManifest.currentSelection -ne 'v1-1a-hsfx4-409m') {
         $aocProblems.Add("selection inattendue : $($aocManifest.currentSelection)")
     }
     foreach ($entry in @($aocManifest.integration.outputClasses)) {
@@ -153,10 +153,10 @@ if ($legacyAocFiles.Count -ne 0) {
     $aocProblems.Add("ancienne source Mod_AOC_Public encore presente : $($legacyAocFiles.Count) fichier(s)")
 }
 if ($aocProblems.Count -eq 0) {
-    Add-Check 'AOC 1a + Zuti 1.13' PASS 'Trois classes fusionnees et 266 profils distribues verifies ; le Bf-109G-6 Early utilisera Defaut.txt.'
+    Add-Check 'AOC 1a sans MDS' PASS 'Trois classes AOC sans MDS et 266 profils distribues verifies ; le Bf-109G-6 Early utilisera Defaut.txt.'
 }
 else {
-    Add-Check 'AOC 1a + Zuti 1.13' FAIL ($aocProblems -join '; ')
+    Add-Check 'AOC 1a sans MDS' FAIL ($aocProblems -join '; ')
 }
 
 $expectedChiefHash = '14E9D0CE1C3B991FF3C43D9643F4744439126F690B3E294BA27EF1B18786AD8D'
@@ -387,16 +387,14 @@ else {
     }
 }
 
-$zutiClass = Join-Path $root 'Files\com\maddox\il2\game\ZutiTimer_ExtendPlanesWings.class'
-$expectedZutiHash = '70E039E839F092346CF8E4F06BA8431C3FF550237C6888D1BAE7B057E22D12C5'
-if (-not (Test-Path -LiteralPath $zutiClass -PathType Leaf)) {
-    Add-Check 'Correctif ZutiTimer_ExtendPlanesWings' FAIL 'Classe libre corrigee absente.'
+try {
+    $mdsReport = & python -B (Join-Path $specRoot 'tools\Test-NoMds.py') --content-root $root --manifest-root $specRoot
+    if ($LASTEXITCODE -ne 0) { throw ($mdsReport -join [Environment]::NewLine) }
+    $mdsResult = ($mdsReport -join [Environment]::NewLine) | ConvertFrom-Json
+    Add-Check 'Retrait MDS' PASS ("{0} classes et {1} chemins retires verifies ; archives des profils conformes." -f $mdsResult.runtimeClassesScanned, $mdsResult.retiredPathsChecked)
 }
-elseif ((Get-Sha256 $zutiClass) -eq $expectedZutiHash) {
-    Add-Check 'Correctif ZutiTimer_ExtendPlanesWings' PASS "Correctif binaire attendu present ($expectedZutiHash)."
-}
-else {
-    Add-Check 'Correctif ZutiTimer_ExtendPlanesWings' FAIL "Empreinte inattendue : $(Get-Sha256 $zutiClass)."
+catch {
+    Add-Check 'Retrait MDS' FAIL $_.Exception.Message
 }
 
 if (-not $ExcludeNuclear) {
@@ -424,7 +422,7 @@ if (-not $ExcludeNuclear) {
         }
     }
     $expectedNuclearClasses = [ordered]@{
-    '72DCDDF4D2AD25E8' = '24CCB92F1AD8BCAD777CAF03B9357CD7756E3E1248986A2C3B7FD317DDD2CF9A'
+    '72DCDDF4D2AD25E8' = '66C9816220AD8942B06FF41F1CD846AF6FFA35DA9F5A57BA6ED26E10CBF6CCD2'
     '303F5874196BEABE' = 'D4661E8594D24435C24747FBFBD0ADFCD972317E48075C528A1FCC67D9D61685'
     '809E3320DB37687A' = '0576626EBA5B0DD233BDFEE22967E43A37DA52564B1166F9D4BDF20FEAC4AFBE'
     '3F43760A72781132' = 'FAEAEFAA3D57ECF615912BB46FD19259E923D8C8AEA23862BB652A7248C2C6BE'

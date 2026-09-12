@@ -1,5 +1,11 @@
 # Reference de retro-ingenierie du moteur IL-2 1946 4.09m
 
+> Etat du 12 septembre 2026 : MDS est retire du contenu local ;
+> [le suivi des retraits](RETRAIT_COMPOSANTS_V1.15.md) fait autorite. Les exemples
+> Zuti tires des captures d'aout/septembre restent des observations historiques
+> du moteur et ne decrivent pas les fonctions attendues apres retrait. AOC est
+> reconstruit sans MDS : [preuve](AUDIT_AOC_SANS_MDS_20260912.md).
+
 Derniere mise a jour : 11 septembre 2026.
 
 Découverte du 11 septembre : le chargeur natif de textures du profil 4.09m testé rapporte un tampon de **4 202 496 octets**. Voir la preuve runtime, les empreintes des DLL et les inconnues dans [l’audit des textures](AUDIT_CHARGEMENT_TEXTURES_4.09M.md#limite-du-tampon-natif-de-texture--11-septembre-2026).

@@ -25,15 +25,11 @@ $output = [IO.Path]::GetFullPath($OutputRoot)
 $files = Join-Path $root 'Files'
 
 $sourceFiles = [ordered]@{
-    'Explosions-Zuti' = [pscustomobject]@{
+    'Explosions-Base' = [pscustomobject]@{
         Path = Join-Path $files '72DCDDF4D2AD25E8'
         Sha256 = @(
-            '2F66A5AA35C0DF6D29D44DA27FC71DDEF1198F05B9974D92DE11B22F14926F91',
-            '082E0B42CF24DE7E61C6B55EF057DB3CB87D8E0E33373D9BDDE578507C57AD44',
-            '0FAFDB908E7317C8E0E0E5092EE4D40E52251B3D8B06FDAC8CB08EBA1E05554C',
-            'E32EBB8B4D84173C88A53AA74D06484DF47A74593D70E1FF858E170BDAD45707',
-            'F90E68C7A11987E052146544068E35C0ED5DB8D381E5BDDC63870E7B470D0226',
-            '24CCB92F1AD8BCAD777CAF03B9357CD7756E3E1248986A2C3B7FD317DDD2CF9A'
+            '24CCB92F1AD8BCAD777CAF03B9357CD7756E3E1248986A2C3B7FD317DDD2CF9A',
+            '66C9816220AD8942B06FF41F1CD846AF6FFA35DA9F5A57BA6ED26E10CBF6CCD2'
         )
     }
     'Explosions-Silverplate' = [pscustomobject]@{
@@ -42,7 +38,9 @@ $sourceFiles = [ordered]@{
             '4749790F3DD6CA95E6FC81930B866A83531F735F4DC6161D6C99921A8811B1A9',
             '082E0B42CF24DE7E61C6B55EF057DB3CB87D8E0E33373D9BDDE578507C57AD44',
             '0FAFDB908E7317C8E0E0E5092EE4D40E52251B3D8B06FDAC8CB08EBA1E05554C',
-            'E32EBB8B4D84173C88A53AA74D06484DF47A74593D70E1FF858E170BDAD45707'
+            'E32EBB8B4D84173C88A53AA74D06484DF47A74593D70E1FF858E170BDAD45707',
+            '24CCB92F1AD8BCAD777CAF03B9357CD7756E3E1248986A2C3B7FD317DDD2CF9A',
+            '66C9816220AD8942B06FF41F1CD846AF6FFA35DA9F5A57BA6ED26E10CBF6CCD2'
         )
     }
     'Explosion' = [pscustomobject]@{
@@ -116,8 +114,9 @@ $exports = @(
 )
 
 $patcherSource = Join-Path $root 'tools\java\OpenSturmovikNuclearPatcher.java'
+$cleanupSource = Join-Path $root 'tools\java\OpenSturmovikControlsExplosionsPatcher.java'
 Invoke-Checked -Executable $javac -Arguments @(
-    $exports + @('-d', $patcherClasses, $patcherSource)
+    $exports + @('-d', $patcherClasses, $patcherSource, $cleanupSource)
 ) -FailureMessage 'Compilation du constructeur nucleaire impossible'
 
 $stubSources = @(Get-ChildItem -LiteralPath (Join-Path $root 'tools\java\nuclear-stubs') -Recurse -Filter *.java | ForEach-Object FullName)
@@ -132,7 +131,7 @@ Invoke-Checked -Executable $java -Arguments @(
     $exports + @(
         '-cp', $patcherClasses,
         'OpenSturmovikNuclearPatcher',
-        $sourceFiles['Explosions-Zuti'].Path,
+        $sourceFiles['Explosions-Base'].Path,
         $sourceFiles['Explosions-Silverplate'].Path,
         $sourceFiles['Explosion'].Path,
         $sourceFiles['MsgExplosion'].Path,

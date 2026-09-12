@@ -1,5 +1,13 @@
 # Scan des mods fournis — Open Sturmovik v1.15
 
+> **Perimetre historique avant le retrait du 12 septembre 2026.** Les constats,
+> empreintes, listes de fichiers et commandes lies a MDS, DCG, San FOV ou Malta
+> ci-dessous decrivent l'etat observe a leur date, pas le contenu cible actuel.
+> MDS est desormais retire localement ; voir [le suivi courant](RETRAIT_COMPOSANTS_V1.15.md)
+> et [la reconstruction AOC sans MDS](AUDIT_AOC_SANS_MDS_20260912.md).
+> Les anciens constructeurs et pieces retires sont conserves dans les archives
+> externes identifiees par ce suivi ; ne pas reinstaller leur contenu.
+
 Scan du 11 septembre 2026, effectué sur les dossiers du jeu, avant rangement des notices. Branche `v1.15`, commit de départ `13cbd09bdeaefc27d91e6c80cf7eaba92777fb5c`. Les documents déplacés sont reliés à leurs anciens chemins dans le journal de classement.
 
 ## Résultat du scan des dossiers

@@ -3,8 +3,10 @@
 Derniere mise a jour : 12 septembre 2026.
 
 La campagne doit utiliser une copie actualisee apres les retraits de DCG,
-San FOV et Malta. Elle ne peut pas clore la sortie tant que Zuti reste a
-traiter : voir [le suivi des retraits](RETRAIT_COMPOSANTS_V1.15.md).
+San FOV, Malta et MDS, desormais retires localement. Les controles statiques
+et tests cibles passent ; cette nouvelle composition exige encore les essais
+reels du jeu et de l'installateur.
+Le constructeur AOC est `tools/Build-OpenSturmovikAocPatch.ps1`. Voir [le suivi des retraits](RETRAIT_COMPOSANTS_V1.15.md).
 Les resultats du 7 septembre ci-dessous decrivent la copie anterieure.
 
 Cette campagne couvre exactement les dix points v1.15 de `IL2.txt`. Alexis a
@@ -190,13 +192,13 @@ synchronisation deja validee.
 | 1 | KB-29P et CW-21 dans la liste d'avions de l'editeur | Les deux appareils sont selectionnables et pilotables. Cockpit B-29 pilote uniquement pour le KB-29P, quatre moteurs, instruments et ravitaillement ; B-29 standard toujours chargeable. Cockpit CW-21, deux armements au choix, placement, sauvegarde et rechargement sans erreur. |
 | 2 | Polygones blancs et erreurs de nuages | Avec `TypeClouds=1`, parcourir Slovakia et Smolensk sous la meteo fautive. Aucun triangle blanc, nuage au sol anormal ni `unknown exception in clouds`. Le rendu WxTech doit etre plus detaille, profond et realiste que le temoin stock 4.09m, avec des performances acceptables. `TypeClouds=0` ne sert que de temoin. |
 | 3 | Sons Allison des P-39 | Sur un P-39, verifier demarrage froid, ralenti cockpit/exterieur, montee en regime, vol stabilise, reduction et arret. `Allison_1001.wav` et `xallison_1001.wav` restent distincts et audibles ; aucun silence, mauvais moteur ou preset absent dans le journal. |
-| 4 | Zuti pendant dix minutes, MDS et fermeture | Jouer au moins dix minutes une mission MDS couvrant radar, limites d'appareils, rearmement/reparation/ravitaillement et porte-avions ; quitter la mission puis le jeu. Aucun conflit de classe, minuteur orphelin ou erreur de fermeture. Si possible, repeter avec un hote et un client issus de la meme copie. |
-| 5 | AOC V1/1a | Avant lancement, verifier que `Bf-109G-6Early_AOC_1a.txt` est absent et que `Defaut.txt` est present. Charger une premiere fois le Bf-109G-6 Early : le chargeur doit creer le fichier specifique comme copie exacte de `Defaut.txt`, puis terminer cette premiere construction sans appliquer le profil. Quitter la mission, verifier l'identite des deux fichiers, puis recharger la meme mission : le profil genere doit cette fois etre lu. Tester demarrage a froid, chauffe/huile, G negatifs, carburant et magnetos, puis un cycle Zuti R/R/R. Apres la campagne, supprimer le fichier Bf genere afin de retrouver l'etat distribue a 266 profils. |
+| 4 | Moteur apres retrait MDS et fermeture | Dans la copie actualisee apres le retrait, jouer au moins dix minutes une mission standard ; verifier appareils, unites mobiles, porte-avions et sortie. Aucun conflit de classe, minuteur orphelin ou erreur de fermeture. Repeter en hote/client avec deux copies de meme version. Les anciens essais radar et R/R/R MDS ne sont plus des fonctions attendues. |
+| 5 | AOC V1/1a | Avant lancement, verifier que `Bf-109G-6Early_AOC_1a.txt` est absent et que `Defaut.txt` est present. Charger une premiere fois le Bf-109G-6 Early : le chargeur doit creer le fichier specifique comme copie exacte de `Defaut.txt`, puis terminer cette premiere construction sans appliquer le profil. Quitter la mission, verifier l'identite des deux fichiers, puis recharger la meme mission : le profil genere doit cette fois etre lu. Tester demarrage a froid, chauffe/huile, G negatifs, carburant et magnetos dans le moteur sans MDS. Apres la campagne, supprimer le fichier Bf genere afin de retrouver l'etat distribue a 266 profils. |
 | 6 | Perte de focus sans pause | Simulation continue en mode fenetre : confirme par Alexis. Conserver cet acquis et `DrawIfNotFocused=1` ; ne refaire le test qu'en cas de regression ou pour qualifier un mode non encore essaye. |
 | 7 | Profils avec/sans 6DOF, TrackIR et marquage | Activer le profil 8 sans 6DOF puis le profil 9 avec 6DOF. Verifier les six axes, le recentrage, l'absence de translation dans le profil 8 et la reprise apres perte de focus. En mode fenetre, les profils modifies doivent afficher `Open Sturmovik` dans leur barre de titre et dans le volet Processus du Gestionnaire des taches ; le volet Details peut conserver `il2fb.exe`. Activer ensuite le profil 7 Original et verifier son titre et ses metadonnees d'origine, puis revenir au profil 8 et confirmer la restauration de son EXE. |
 | 8 | Mission Mate et WeatherSet | Depuis un Bureau temporaire actualise, ouvrir chaque raccourci, creer ou modifier une donnee jetable, la relire puis fermer sans toucher a l'installation de reference. DCG et San FOV sont retires depuis le 12 septembre 2026. |
 | 9 | ZipNav, IL2 Compare, HardBall408, Bombsight Table 2 et JoyCtrl | Ouvrir chaque raccourci. Verifier cartes/echelle/navigation ZipNav, comparaison de deux donnees connues, calcul HardBall, fenetre visible de Bombsight Table et JoyCtrl sur une copie de `conf.ini` jeu ferme avec restauration exacte. Aucun runtime ancien n'est installe globalement. |
-| 10 | Non-regression finale | Mission rapide, FMB, mission solo, campagne, MDS hote/client, son, commandes, joystick, souris et fermeture. Zero plantage, erreur Java bloquante, ressource manquante ou modification hors cible. |
+| 10 | Non-regression finale | Mission rapide, FMB, mission solo, campagne, multijoueur hote/client, son, commandes, joystick, souris et fermeture. Zero plantage, erreur Java bloquante, ressource manquante ou modification hors cible. |
 
 ## Suite de la campagne complete, apres la reprise ciblee
 

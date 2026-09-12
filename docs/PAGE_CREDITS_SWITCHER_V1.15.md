@@ -1,7 +1,6 @@
 # Page Credits du switcher v1.15
 
-Le bouton **Credits** ouvre une page intégrée au switcher, avec sept rubriques,
-quatre tableaux et 41 contributions. Le slogan **« par la communauté, pour la
+Le bouton **Credits** ouvre une page intégrée au switcher, avec 40 contributions generees depuis la source Markdown du pack. Le slogan **« par la communauté, pour la
 communauté »** figure en tête. AAA est crédité comme forum dont les auteurs et
 contributeurs ont partagé plusieurs améliorations ; aucun pack AAA n’est annoncé
 comme intégré. Le bouton **Appliquer** et son voyant sont verts.
@@ -14,8 +13,9 @@ cours, y compris ceux qui n’ont pas été appliqués.
 
 Le 12 septembre 2026, les entrées DCG et San FOV ont été retirées après leur
 archivage hors du pack. Malta et ses campagnes retirées n'avaient pas d'entrée
-dans cette page. Zuti reste crédité tant que son code est encore présent ;
-voir [le suivi du retrait](RETRAIT_COMPOSANTS_V1.15.md).
+dans cette page. Apres le retrait local effectif de MDS, sa ligne a egalement
+ete retiree et la page regeneree ; elle contient maintenant 40 contributions.
+Voir [le suivi du retrait](RETRAIT_COMPOSANTS_V1.15.md).
 
 La source éditable est
 `_Documentations/Mods and Tools/Credits - Open Sturmovik.md`.

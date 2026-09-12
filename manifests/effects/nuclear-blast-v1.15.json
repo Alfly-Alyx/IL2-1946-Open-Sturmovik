@@ -19,8 +19,8 @@
   },
   "source_classes": [
     {
-      "role": "Zuti outer Explosions with crater multipliers",
-      "file": "Files/72DCDDF4D2AD25E8",
+      "role": "Historical mixed Explosions input before MDS removal; not the active runtime class",
+      "historical_destination": "Files/72DCDDF4D2AD25E8",
       "sha256": "2F66A5AA35C0DF6D29D44DA27FC71DDEF1198F05B9974D92DE11B22F14926F91"
     },
     {
@@ -28,6 +28,7 @@
       "sha256": "4749790F3DD6CA95E6FC81930B866A83531F735F4DC6161D6C99921A8811B1A9"
     }
   ],
+  "mds_removal": {"status": "removed", "proof": "docs/RECONSTRUCTION_CONTROLS_EXPLOSIONS_SANS_MDS.md", "runtime_sha256": "66C9816220AD8942B06FF41F1CD846AF6FFA35DA9F5A57BA6ED26E10CBF6CCD2"},
   "model": {
     "development_particle_probe": {
       "release_enabled": false,
@@ -128,7 +129,7 @@
     "Phase changes overlap for one maximum particle lifetime, avoiding abrupt cuts while remaining bounded by the 3 728-second cleanup deadline."
   ],
   "outputs": [
-    { "class": "com.maddox.il2.objects.effects.Explosions", "file": "Files/72DCDDF4D2AD25E8", "size": 26742, "sha256": "24CCB92F1AD8BCAD777CAF03B9357CD7756E3E1248986A2C3B7FD317DDD2CF9A" },
+    { "class": "com.maddox.il2.objects.effects.Explosions", "file": "Files/72DCDDF4D2AD25E8", "size": 22781, "sha256": "66C9816220AD8942B06FF41F1CD846AF6FFA35DA9F5A57BA6ED26E10CBF6CCD2" },
     { "class": "com.maddox.il2.ai.Explosion", "file": "Files/303F5874196BEABE", "size": 2765, "sha256": "D4661E8594D24435C24747FBFBD0ADFCD972317E48075C528A1FCC67D9D61685" },
     { "class": "com.maddox.il2.ai.MsgExplosion", "file": "Files/809E3320DB37687A", "size": 2948, "sha256": "0576626EBA5B0DD233BDFEE22967E43A37DA52564B1166F9D4BDF20FEAC4AFBE" },
     { "class": "com.maddox.il2.objects.weapons.BombLittleBoy", "file": "Files/3F43760A72781132", "size": 3058, "sha256": "FAEAEFAA3D57ECF615912BB46FD19259E923D8C8AEA23862BB652A7248C2C6BE" },

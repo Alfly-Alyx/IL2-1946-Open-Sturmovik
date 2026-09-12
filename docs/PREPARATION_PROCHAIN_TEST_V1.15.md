@@ -1,5 +1,11 @@
 # Preparation du prochain test v1.15 — archive historique
 
+> Actualisation du 12 septembre 2026 : MDS est retire localement et les
+> controles statiques passent. Preparer une copie actualisee pour refaire les
+> essais du jeu et de l'installateur. Le suivi courant
+> est [ETAT_COURANT_V1.15.md](ETAT_COURANT_V1.15.md) ; les captures et anciens
+> chemins de test ci-dessous ne certifient pas le contenu apres retrait.
+
 > **Archivee.** Cette page decrit les anciennes campagnes nucleaires et les
 > copies de test precedentes. Elle ne doit plus servir a preparer un lancement
 > v1.15. La copie courante, AOC V1/1a et les dix raccourcis sont decrits dans
@@ -170,7 +176,7 @@ lances pendant cette preparation. Apres le redemarrage :
 
 La premiere execution reste un demarrage instrumente, pas encore une mission.
 Les objectifs runtime sont : zero `FileNotFoundException`, zero `No spawner`,
-zero exception Zuti, zero refus d'enregistrement de navire, et disparition des
+zero exception de classe apres retrait MDS, zero refus d'enregistrement de navire, et disparition des
 63 avertissements `Str2FloatClamp` connus. La validation du Dump devra aussi
 confirmer qu'aucune classe chargee ne depasse Java major 47.
 

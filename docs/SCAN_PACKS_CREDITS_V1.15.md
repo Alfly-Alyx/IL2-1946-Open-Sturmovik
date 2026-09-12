@@ -1,5 +1,13 @@
 # Sources complémentaires des crédits — dossier Packs
 
+> **Perimetre historique avant le retrait du 12 septembre 2026.** Les constats,
+> empreintes, listes de fichiers et commandes lies a MDS, DCG, San FOV ou Malta
+> ci-dessous decrivent l'etat observe a leur date, pas le contenu cible actuel.
+> MDS est desormais retire localement ; voir [le suivi courant](RETRAIT_COMPOSANTS_V1.15.md)
+> et [la reconstruction AOC sans MDS](AUDIT_AOC_SANS_MDS_20260912.md).
+> Les anciens constructeurs et pieces retires sont conserves dans les archives
+> externes identifiees par ce suivi ; ne pas reinstaller leur contenu.
+
 Relevé du 11 septembre 2026, cible Open Sturmovik v1.15. Les neuf dossiers de `D:\Projets\GITHUB\#res\IL2 1946\Packs` ont été examinés : le paquet AAA et huit dossiers supplémentaires. Les sources et les fichiers du jeu sont lus seulement ; aucun installateur ni jeu n’a été exécuté. Les extractions ciblées ont été faites dans le dossier de la tâche sous `C:\Users\Alexis\.codex`.
 
 ## Couverture et résultats

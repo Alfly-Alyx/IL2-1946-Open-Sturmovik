@@ -86,7 +86,13 @@ privees. Voir [le fonctionnement et les limites du collecteur](docs/DIAGNOSTIC_A
 
 ## Audits 1.15
 
-- [Retrait des composants soumis a permission et etat restant de Zuti](docs/RETRAIT_COMPOSANTS_V1.15.md)
+Zuti MDS est retire du contenu local. La reconstruction AOC sans MDS conserve
+les 266 profils ; les controles statiques du retrait sur les trois versions
+passent. Les vrais essais en jeu et la validation de l'installateur restent a
+refaire avant publication.
+Voir [la reconstruction AOC](docs/AUDIT_AOC_SANS_MDS_20260912.md).
+
+- [Retrait des composants soumis a permission et reconstruction du moteur](docs/RETRAIT_COMPOSANTS_V1.15.md)
 - [Etat courant faisant autorite pour reprendre le travail](docs/ETAT_COURANT_V1.15.md)
 - [Journal central des essais, erreurs de protocole et enseignements a ne pas repeter](docs/JOURNAL_DIAGNOSTIC_V1.15.md)
 - [Collecte automatique des anomalies et envoi vers GitHub](docs/DIAGNOSTIC_AUTOMATIQUE_GITHUB.md)

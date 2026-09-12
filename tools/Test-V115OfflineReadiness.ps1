@@ -95,7 +95,7 @@ else {
     if ($aoc.release -ne '1.15' -or $aoc.gameVersion -ne '4.09m' -or
         (@($lines | Sort-Object) -join ',') -ne 'v1,v2,v3' -or
         $v1.Count -ne 1 -or $v1[0].functionalState -notmatch '^selected-' -or
-        $aoc.currentSelection -ne 'v1-1a-hsfx4-409m-zuti-merged') {
+        $aoc.currentSelection -ne 'v1-1a-hsfx4-409m') {
         Add-Result 'Choix AOC 4.09m' FAIL 'La matrice V1/V2/V3 est incoherente.'
     }
     else {
@@ -146,7 +146,7 @@ else {
             )) -join '; ')
         }
         else {
-            Add-Result 'Choix AOC 4.09m' PASS 'V1/1a HSFX 4.0 selectionne : trois classes AOC+Zuti et 266 profils distribues verifies ; Bf-109G-6 Early sur Defaut.txt.'
+            Add-Result 'Choix AOC 4.09m' PASS 'V1/1a HSFX 4.0 selectionne : trois classes AOC sans MDS et 266 profils distribues verifies ; Bf-109G-6 Early sur Defaut.txt.'
         }
     }
 }

@@ -1,5 +1,13 @@
 # Resultats des premiers demarrages instrumentes
 
+> **Perimetre historique avant le retrait du 12 septembre 2026.** Les constats,
+> empreintes, listes de fichiers et commandes lies a MDS, DCG, San FOV ou Malta
+> ci-dessous decrivent l'etat observe a leur date, pas le contenu cible actuel.
+> MDS est desormais retire localement ; voir [le suivi courant](RETRAIT_COMPOSANTS_V1.15.md)
+> et [la reconstruction AOC sans MDS](AUDIT_AOC_SANS_MDS_20260912.md).
+> Les anciens constructeurs et pieces retires sont conserves dans les archives
+> externes identifiees par ce suivi ; ne pas reinstaller leur contenu.
+
 Date des mesures : 30 aout 2026. La copie de test est issue de la base DVD
 4.07m reconstruite, completee par les fichiers officiels jusqu'a 4.09m et par
 le contenu de l'add-on. Les essais utilisent OpenGL natif, une fenetre

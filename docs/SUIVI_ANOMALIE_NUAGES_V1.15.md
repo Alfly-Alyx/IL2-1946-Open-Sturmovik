@@ -51,8 +51,8 @@ cumulus complet le plus detaille retrouve :
 - une texture RGBA 256 x 256 pour les nuages simples ;
 - un nouveau voile interieur RGBA 128 x 128 ;
 - une geometrie `DATA.cld` plus riche et documentee par l'auteur ;
-- aucun remplacement Java ou natif, donc aucun conflit de classe avec 4.09m ou
-  Zuti.
+- aucun remplacement Java ou natif, donc aucun conflit de classe avec le moteur
+  4.09m.
 
 La [publication originale de WxTech](https://www.sas1946.com/main/index.php?topic=70195.0)
 indique que le chemin correct est `Effects/Clouds` et que la copie `3do` de

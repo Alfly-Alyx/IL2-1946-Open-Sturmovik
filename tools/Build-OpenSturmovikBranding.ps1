@@ -16,7 +16,9 @@ $titleClass = '5D18E55E5DF1D418'
 $work = Join-Path ([IO.Path]::GetTempPath()) ('open-sturmovik-branding-' + [guid]::NewGuid().ToString('N'))
 $exports = @(
     '--add-exports', 'java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED',
-    '--add-exports', 'java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED'
+    '--add-exports', 'java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED',
+    '--add-exports', 'java.base/jdk.internal.org.objectweb.asm.tree.analysis=ALL-UNNAMED',
+    '--add-exports', 'java.base/jdk.internal.org.objectweb.asm.util=ALL-UNNAMED'
 )
 
 $moddedProfiles = @(
@@ -84,25 +86,33 @@ try {
     $sourceTitleHash = (Get-FileHash -LiteralPath $sourceTitle -Algorithm SHA256).Hash
     $sourceTitleHashBefore = '45586634CD777F2DF6DB7463F8047806CBE11E71987883152AF32850BA6728D1'
     $constructorOnlyHash = '113E72DC1429DA8BBE33DF1FA7A659C584CA2124A01A3834B10309737280BC15'
-    $sourceTitleHashFinal = '8CEF8D5EC9EAAAC27D2797462E33B9FC5EED4506C3B8B273B4553292CBA20A94'
-    if ($sourceTitleHash -in @($sourceTitleHashBefore, $constructorOnlyHash)) {
+    $legacyMdsHash = '8CEF8D5EC9EAAAC27D2797462E33B9FC5EED4506C3B8B273B4553292CBA20A94'
+    $sourceTitleHashFinal = 'FE230776544C329C68E658EC6E293936F31116508D42F7BE43FF5EC68EDCBB5B'
+    if ($sourceTitleHash -in @($sourceTitleHashBefore, $constructorOnlyHash, $legacyMdsHash)) {
         $patcherClasses = Join-Path $work 'patcher'
         New-Item -ItemType Directory -Path $patcherClasses -Force | Out-Null
         $javac = (Get-Command javac -ErrorAction Stop).Source
         $java = (Get-Command java -ErrorAction Stop).Source
-        & $javac @exports -d $patcherClasses (Join-Path $root 'tools\java\OpenSturmovikWindowTitlePatcher.java')
+        & $javac @exports -d $patcherClasses (Join-Path $root 'tools\java\OpenSturmovikWindowTitlePatcher.java') (Join-Path $root 'tools\java\OpenSturmovikConfigWithoutMds.java')
         if ($LASTEXITCODE -ne 0) {
             throw 'Compilation du patcher de titre impossible.'
         }
         $patchedTitle = Join-Path $work 'Config.class'
-        & $java @exports -cp $patcherClasses OpenSturmovikWindowTitlePatcher $sourceTitle $patchedTitle
-        if ($LASTEXITCODE -ne 0) {
-            throw 'Modification du titre de fenetre impossible.'
+        if ($sourceTitleHash -eq $legacyMdsHash) {
+            Copy-Item -LiteralPath $sourceTitle -Destination $patchedTitle
+        } else {
+            & $java @exports -cp $patcherClasses OpenSturmovikWindowTitlePatcher $sourceTitle $patchedTitle
+            if ($LASTEXITCODE -ne 0) { throw 'Modification du titre de fenetre impossible.' }
         }
-        if ((Get-FileHash -LiteralPath $patchedTitle).Hash -ne $sourceTitleHashFinal) {
-            throw 'Classe construite non conforme ; fichier actif conserve.'
+        if ((Get-FileHash -LiteralPath $patchedTitle).Hash -ne $legacyMdsHash) {
+            throw 'Classe intermediaire non conforme ; fichier actif conserve.'
         }
-        Copy-Item -LiteralPath $patchedTitle -Destination $sourceTitle -Force
+        $cleanTitle = Join-Path $work 'ConfigWithoutMds.class'
+        & $java @exports -cp $patcherClasses OpenSturmovikConfigWithoutMds $patchedTitle $cleanTitle
+        if ($LASTEXITCODE -ne 0 -or (Get-FileHash -LiteralPath $cleanTitle).Hash -ne $sourceTitleHashFinal) {
+            throw 'Suppression MDS non conforme ; fichier actif conserve.'
+        }
+        Copy-Item -LiteralPath $cleanTitle -Destination $sourceTitle -Force
     }
     elseif ($sourceTitleHash -ne $sourceTitleHashFinal) {
         throw "Classe Config source inattendue : $sourceTitleHash"

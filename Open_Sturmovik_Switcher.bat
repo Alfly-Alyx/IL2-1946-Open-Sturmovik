@@ -921,7 +921,6 @@ Cr&#233;dits &#8212; Open Sturmovik
 <thead><tr><th scope="col">Mod</th><th scope="col">Auteur ou collectif</th><th scope="col">Contribution au pack</th></tr></thead>
 <tbody>
 <tr><td>Am&#233;liorations issues du forum All Aircraft Arcade (AAA)</td><td class="credits-author">Auteurs et contributeurs du forum AAA</td><td>Plusieurs am&#233;liorations d&#8217;Open Sturmovik proviennent des cr&#233;ations partag&#233;es sur ce forum.</td></tr>
-<tr><td>Zuti Moving Dogfight Server 1.13</td><td class="credits-author">|ZUTI|</td><td>Fonctions MDS et gestion des missions.</td></tr>
 <tr><td>Advanced Engine Management &#8212; AOC 1a</td><td class="credits-author">II/JG51-Lutz</td><td>Gestion avanc&#233;e des moteurs.</td></tr>
 <tr><td>Tiger33 Ultimate Sound Mod V3</td><td class="credits-author">Tiger33</td><td>S&#233;lection de sons et de r&#233;glages de d&#233;marrage des moteurs.</td></tr>
 <tr><td>WxTech clouds Jan 2023</td><td class="credits-author">WxTech</td><td>Ressources visuelles des nuages. <a href="https://www.sas1946.com/main/index.php?topic=70195.0" onclick="return openCreditLink(this.href)">Publication du mod</a>.</td></tr>
@@ -930,7 +929,6 @@ Cr&#233;dits &#8212; Open Sturmovik
 <tr><td>B-29 Silverplate 1.2, Little Boy et Fat Man</td><td class="credits-author">Auteurs et &#233;quipe d&#233;taill&#233;s ci-dessous</td><td>B-29 Silverplate, cockpit et ressources des bombes, avec adaptations pour Open Sturmovik.</td></tr>
 <tr><td>6DOF Tracker 2.0</td><td class="credits-author">sHr</td><td>D&#233;placement du point de vue dans les profils 6DOF du switcher ; attribution aussi reprise dans les <a href="https://mail.mission4today.com/index.php?file=viewtopic&amp;finish=15&amp;name=ForumsPro&amp;start=0&amp;t=7663" onclick="return openCreditLink(this.href)">notes HSFX v4</a>.</td></tr>
 </tbody></table>
-<p>La <span class="credits-reference" title="Documentation : Zuti MDS 1.13/Lisez-moi - Zuti MDS 1.13.txt">notice originale de Zuti</span> mentionne aussi <strong>Certificates AI mod 3.0</strong> et <strong>Fireballs Carrier Takeoff mod 5.3.x</strong> parmi les mods incorpor&#233;s &#224; MDS. Ces noms sont repris de la notice ; leurs attributions individuelles restent &#224; compl&#233;ter.</p>
 </div>
 <div class="credits-section" id="credits-section-2">
 <h2>B-29 Silverplate</h2>

@@ -11,22 +11,24 @@ licence payante etait exigee pour leur utilisation personnelle.
 Les fichiers, notices et recherches de contact sont conserves hors du depot,
 dans `D:\Projets\GITHUB\#res\IL2 1946\Mods\Retirés\besoin_licence`.
 Voir [le perimetre exact des retraits](RETRAIT_COMPOSANTS_V1.15.md).
-Zuti est encore present et sa situation reste celle de la section suivante.
+Zuti MDS est retire du contenu local ; la section suivante conserve
+la raison historique du retrait, sans annoncer une autorisation acquise.
 
-## Zuti MDS v1.13 STD — autorisation a clarifier
+## Zuti MDS v1.13 STD — retire du contenu local
 
 Le fichier historique
-`_Documentations/Mods and Tools/Zuti MDS 1.13/Lisez-moi - Zuti MDS 1.13.txt`
+`Lisez-moi - Zuti MDS 1.13.txt`, conserve avec les notices archivees sous
+`Mods/Retirés/besoin_licence/Zuti MDS 1.13`,
 attribue MDS a `|ZUTI|` et demande explicitement de contacter l'auteur avant
 toute inclusion dans un pack. Le depot ne contient actuellement aucune preuve
 d'autorisation accordee a Open Sturmovik.
 
-La presence et la modification technique de classes Zuti ne constituent pas une
-autorisation de redistribution. Ce composant reste donc marque
-`redistribution_authorized: false` dans
-`manifests/mods/zuti-mds-1.13-static.json` jusqu'a obtention d'une permission ou
-identification de conditions de licence publiées. Cette question doit etre
-resolue avant une diffusion publique de la v1.15.
+Les classes conservees sont reconstruites sans MDS et ses ressources sont
+retirees. Les controles statiques du retrait et les tests cibles passent.
+Les vrais essais en jeu et la validation de l'installateur restent a refaire
+avant de qualifier la sortie. Voir
+[le suivi effectif](RETRAIT_COMPOSANTS_V1.15.md) et
+[la reconstruction AOC](AUDIT_AOC_SANS_MDS_20260912.md).
 
 ## B-29 Silverplate v1.2 / Little Boy / Fat Man — credits retrouves, aucune licence publiee
 
@@ -47,7 +49,8 @@ permission explicite n'a pas ete obtenue.
 
 Open Sturmovik conserve les huit ressources de modele de bombe identiques au
 paquet historique, mais fusionne et corrige plusieurs classes Java pour assurer
-la compatibilite avec Zuti et le moteur 4.09m. La presence ancienne de ces
+la compatibilite avec le moteur 4.09m. La verification statique de leur preservation
+lors du retrait MDS passe ; les essais en jeu restent a refaire. La presence ancienne de ces
 fichiers dans l'add-on ne prouve pas une autorisation de redistribution ou de
 modification. Une diffusion publique de la v1.15 exige donc une permission
 explicite de l'auteur ; a defaut, Silverplate devra rester un composant externe

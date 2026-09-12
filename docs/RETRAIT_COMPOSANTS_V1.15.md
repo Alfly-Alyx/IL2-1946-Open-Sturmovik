@@ -18,7 +18,7 @@ retrouvee ne constitue pas une autorisation de redistribution.
 | Lowengrin DCG 3.43 | Retire : 391 fichiers utilitaires et 2 notices | `besoin_licence/Lowengrin DCG 3.43`, 393 fichiers verifies par SHA-256 ; `manifest-sha256.json` |
 | San FOV Changer 1.0 | Retire : 4 fichiers utilitaires et 2 notices | `besoin_licence/San FOV Changer 1.0`, 6 fichiers verifies par SHA-256 ; `manifest-sha256.json` |
 | Malta v1.3 — 6S.Maraz | Retire : 192 fichiers, dont 96 missions, 3 campagnes dependantes et fichiers associes ; 7 declarations carte et 1 entree QMB retirees | `besoin_licence/Malta - 6S.Maraz` : 210 copies verifiees, incluant 2 configurations avant modification et 16 fichiers sources AAA |
-| Zuti MDS 1.13 | **Encore present. Retrait moteur non effectue.** | `besoin_licence/Zuti MDS 1.13/sauvegarde_partielle_20260912` : 689 fichiers, 7 885 098 octets verifies par SHA-256 ; sauvegarde partielle des classes fusionnees et pieces associees, pas un mod complet retire |
+| Zuti MDS 1.13 | **Retire du contenu local** : 648 fichiers retires et 51 nettoyes ; tests statiques passes, essai en jeu requis | `besoin_licence/Zuti MDS 1.13/retrait_complet_pack_20260912` : 699 originaux verifies ; sauvegardes partielles precedentes et preuves AOC conservees |
 
 Le manifeste Malta est
 [`manifests/mods/retired-malta-v1.15.json`](../manifests/mods/retired-malta-v1.15.json).
@@ -39,7 +39,7 @@ n'ont pas ete nettoyes ou resynchronises par cette operation.
 | DCG 3.43 | Archive `documentation/Readme.txt`, ligne 273 | Permission ecrite demandee avant hebergement Internet ou redistribution sur CD/DVD |
 | San FOV 1.0 | Archive `documentation/Manuel - San FOV Changer 1.0 - anglais.pdf`, p. 10 | Permission demandee avant inclusion dans un mod-pack ; restrictions de diffusion et d'usage commercial |
 | Malta | Source AAA `MODS/MapMods/Maps/mrz_Malta/Malta release-notes-1_3.txt`, lignes 102–104, copie dans l'archive | Distribution inchangee permise ; permission demandee pour modification ou incorporation dans un mod plus grand |
-| Zuti MDS 1.13 | `_Documentations/Mods and Tools/Zuti MDS 1.13/Lisez-moi - Zuti MDS 1.13.txt`, lignes 5–9 | Contacter l'auteur et demander sa permission avant inclusion dans un pack |
+| Zuti MDS 1.13 | Notice dans l archive de retrait, `_Documentations/Mods and Tools/Zuti MDS 1.13/Lisez-moi - Zuti MDS 1.13.txt`, lignes 5-9 | Contacter l auteur et demander sa permission avant inclusion dans un pack |
 
 Il s'agit de conditions de redistribution/integration, pas d'une preuve
 d'obligation d'achat pour installer ces mods chez soi. L'absence d'une preuve
@@ -74,8 +74,10 @@ n'avaient pas d'entree sur cette page. Les rapports de scan dates restent
 conserves comme preuves historiques ; ils ne representent plus l'inventaire
 actuel de ces composants.
 
-Zuti et les contributions incorporees encore presentes restent credites.
-Retirer seulement un nom d'auteur masquerait du code encore distribue.
+La ligne MDS et les mentions Certificates AI / Fireballs Carrier Takeoff incorpores
+a MDS ont aussi ete retirees apres retrait effectif. La page compte maintenant
+40 contributions. Les attributions de creations independantes conservees restent
+presentes ; voir le perimetre detaille ci-dessous.
 
 Le manifeste, les scripts de preparation/finalisation, l'installateur et les
 tests des raccourcis annoncent **sept utilitaires et le switcher, soit huit
@@ -87,27 +89,26 @@ ete preserves. Les trois campagnes retirees sont `Fortress_Malta`,
 `OperationAegeus` et `FliegerkorpsX`, dont toutes les missions dependaient de
 `mrz_Malta`. Aucune mission restante examinee n'appelle cette carte.
 
-## Limite technique Zuti
+## Retrait moteur Zuti MDS realise
 
-Voir [l'analyse reproductible du retrait Zuti](AUDIT_RETRAIT_ZUTI_V1.15_20260912.md).
-Le scan trouve 253 classes contenant une reference Zuti ; les remplacer ou
-les supprimer en bloc introduirait 317 references de membres introuvables
-dans 82 classes. Ce constat ne signifie pas que les 253 classes appartiennent
-exclusivement au mod : plusieurs contiennent des fonctions partagees.
+Le retrait moteur a ete explicitement demande et applique. Le
+[rapport de retrait](RETRAIT_ZUTI_MDS_V1.15.md) decrit les 544 fichiers de
+classes retires, les quatre classes mixtes reconstruites et les ressources
+nettoyees. La simulation des trois versions ne detecte aucune nouvelle
+rupture de dependance. Les fichiers SFS des neuf profils sont inchanges.
 
-Au minimum, les controles d'avions, le moteur AOC et les explosions contiennent
-des apports melanges. Les familles internes doivent etre traitees ensemble,
-et les trois versions proposees par le switcher doivent rester compatibles.
-Les ressources disponibles n'etablissent pas encore une methode de retrait
-qui conserve ces fonctions. Aucun remplacement moteur n'a ete applique.
+L'[analyse initiale](AUDIT_RETRAIT_ZUTI_V1.15_20260912.md) reste une preuve
+historique expliquant pourquoi une suppression naive etait insuffisante.
+Elle est completee par la reconstruction qualifiee et le controle du contenu
+reel. Les essais en jeu et la qualification de l'installateur restent a faire.
 
-La regle du depot exige une demande explicite dans une tache dediee pour
-modifier le moteur. Une reconstruction des familles partagees reste donc a
-definir avec Alexis avant application. La sortie finale reste ouverte tant
-que ce retrait n'est pas realise ou qu'une permission correspondante n'est
-pas obtenue. Aucun installateur final ni publication n'a ete produit.
+## Verifications anterieures et controle apres retrait MDS
 
-## Verifications
+Les resultats suivants relatifs au premier retrait DCG/San/Malta restent
+historiques. Apres retrait MDS, le controle complet donne **26 PASS, 1 WARN,
+0 FAIL**, et le controle specifique ne trouve aucune constante Zuti dans
+1 929 classes libres. Les resultats actuels et limites figurent dans le
+[rapport de retrait MDS](RETRAIT_ZUTI_MDS_V1.15.md).
 
 - DCG/San : sauvegardes verifiees avant retrait ; huit cibles de raccourcis
   passent sous Windows PowerShell 5.1 ; huit declarations Inno coherentes ;

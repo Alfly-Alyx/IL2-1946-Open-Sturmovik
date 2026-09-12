@@ -1,5 +1,13 @@
 # RMP3 Atmosphere : conservation et perimetre reel
 
+> **Perimetre historique avant le retrait du 12 septembre 2026.** Les constats,
+> empreintes, listes de fichiers et commandes lies a MDS, DCG, San FOV ou Malta
+> ci-dessous decrivent l'etat observe a leur date, pas le contenu cible actuel.
+> MDS est desormais retire localement ; voir [le suivi courant](RETRAIT_COMPOSANTS_V1.15.md)
+> et [la reconstruction AOC sans MDS](AUDIT_AOC_SANS_MDS_20260912.md).
+> Les anciens constructeurs et pieces retires sont conserves dans les archives
+> externes identifiees par ce suivi ; ne pas reinstaller leur contenu.
+
 Audit du 6 septembre 2026, Open Sturmovik v1.15 / IL-2 4.09m.
 
 ## Ce qui est conserve

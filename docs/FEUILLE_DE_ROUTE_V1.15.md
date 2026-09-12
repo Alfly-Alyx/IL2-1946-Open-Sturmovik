@@ -1,5 +1,11 @@
 # Feuille de route de stabilisation Open Sturmovik 1.15
 
+> Mise a jour du 12 septembre 2026 : MDS est retire localement ; les controles statiques passent.
+> Les essais reels du jeu et de l'installateur restent a refaire.
+> Voir [le suivi des retraits](RETRAIT_COMPOSANTS_V1.15.md) et
+> [la reconstruction AOC](AUDIT_AOC_SANS_MDS_20260912.md). Les tests fonctionnels
+> de MDS des anciens comptes rendus ne sont plus des criteres de la version cible.
+
 ## Regle de sortie
 
 La version 1.15 ne sera pas declaree stable tant qu'une anomalie reproductible
@@ -40,8 +46,9 @@ finale : Alexis valide le contenu de la version.
    utilisent `actors_summer.static`. Le gros fichier reste dans le SFS.
 4. Corriger ou neutraliser proprement les quatre chunks de cockpit B-29 absents
    (`zOilFlap1`, `zOilFlap2`, `zCompressor1`, `zCompressor2`).
-5. Faire une mission Zuti/MDS d'au moins dix minutes et une mission AOC ; zero
-   exception de minuteur, spawner, navire, registre ou ressource.
+5. Faire dans la copie actualisee une mission standard d'au moins dix minutes
+   et une mission AOC apres retrait MDS ; zero erreur de classe, minuteur,
+   spawner, navire, registre ou ressource.
 6. Corriger les appareils IA proposes comme appareil joueur. Le Su-2 teste sur
    Berlin n'a ni vue `F1` ni commandes, alors que `F2/F3` fonctionnent et que
    les outils historiques le marquent non pilotable. Retrouver un pack pilotable
@@ -107,7 +114,7 @@ diagnostiquer avant la sortie.
 | Etat | Action | Resultat courant | Validation encore attendue |
 |---|---|---|---|
 | Fait statique | Remplacer le `WheelTire.mat` nul du Bf-109G-2 | Materiau texte valide, controle par empreinte | Aucun echec du `hier.him` au prochain lancement |
-| Fait statique | Corriger `ZutiTimer_ExtendPlanesWings` | Cast premature neutralise, Java 45 conserve | Zero exception Zuti pendant 10 minutes et en mission |
+| Fait local, runtime restant | Retirer MDS en preservant les mods conserves | Retrait applique ; reconstruction et dependances verifiees statiquement sur trois versions | Refaire les missions, la fermeture et l'installation  |
 | Fait statique | Reconstituer les dependances des 17 avions sans spawner | Registre `Plane.class` fusionne, 343 `SPAWN`, Java 47 | Zero `No spawner`, appareil statique et pilotable verifies |
 | Fait statique | Reparer la coherence des six navires | `chief.ini` fusionne avec les six sections, sans doublon | Zero `Wrong chief's type`, navires mobiles verifies |
 | Valide au second demarrage | Supprimer les collisions sonores et corriger les presets/WAV | Zero collision ; dix mixeurs Tiger33 complets ; vingt WAV manifestes, dont deux Sabre historiques conserves ; zero `Invalid preset format` jusqu'au menu | Sons verifies en vol |
@@ -177,7 +184,7 @@ touchant aux classes, registres, SFS, sons, modeles 3D, wrapper ou executable.
   la disparition des erreurs et le retour des objets statiques restent a
   confirmer en jeu ;
 - la v1.15 ne peut toujours pas etre qualifiee stable avant ce nouvel essai,
-  le test Zuti de dix minutes et les missions de validation ;
+  la mission standard de dix minutes apres retrait MDS et les missions de validation ;
 - la recherche des paquets historiques AAA est commencee dans
   `D:\Projets\GITHUB\#res\IL2 1946\Mods`.
 - le dossier de test a recu les correctifs de facon transactionnelle ; les

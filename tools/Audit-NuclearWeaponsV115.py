@@ -258,7 +258,7 @@ def audit(repository: Path, manifest_path: Path) -> dict[str, Any]:
     lifecycle_injected = {"beginVisual", "registerVisual", "endVisual"} <= lifecycle_calls
     add_check(
         checks,
-        "ABI Silverplate / Zuti",
+        "ABI Silverplate sans MDS",
         six_arg and registered and lifecycle_injected,
         "surcharge a six arguments et transactions visuelles terre/eau presentes",
     )

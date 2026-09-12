@@ -166,7 +166,7 @@ context.updateSelection = savedUpdater;
 context.fso = savedFso;
 assert.match(html, /forum All Aircraft Arcade \(AAA\)/);
 assert.doesNotMatch(html, /AAA Community Installer|Socle historique du pack|modules AAA/);
-assert.match(html, /\|ZUTI\|/);
+assert.doesNotMatch(html, /Zuti Moving Dogfight Server|\|ZUTI\||Certificates AI mod|Fireballs Carrier Takeoff/);
 assert.match(html, /PlusWave Expansions/);
 assert.match(html, /WindConfig v3/);
 const byteData = fs.readFileSync(path.join(root, 'Open_Sturmovik_Switcher.bat'));

@@ -45,14 +45,18 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
     public static void main(String[] args) throws Exception {
         if (args.length != 8) {
             throw new IllegalArgumentException(
-                "Expected: zutiExplosions silverplateExplosions Explosion MsgExplosion LittleBoy FatMan compiledNuclear outputDir"
+                "Expected: baseExplosions silverplateExplosions Explosion MsgExplosion LittleBoy FatMan compiledNuclear outputDir"
             );
         }
 
         Path output = Paths.get(args[7]);
         Files.createDirectories(output);
 
-        write(output.resolve("Explosions.class"), patchExplosions(read(args[0]), read(args[1])));
+        // Clean the reviewed mixed input before rebuilding. Validate the final
+        // result too, so a donor cannot reintroduce removed MDS dependencies.
+        byte[] cleanBase = OpenSturmovikControlsExplosionsPatcher.cleanExplosions(read(args[0]));
+        byte[] rebuiltExplosions = patchExplosions(cleanBase, read(args[1]));
+        write(output.resolve("Explosions.class"), OpenSturmovikControlsExplosionsPatcher.cleanExplosions(rebuiltExplosions));
         write(output.resolve("Explosion.class"), patchExplosionFalloff(read(args[2])));
         write(output.resolve("MsgExplosion.class"), patchMsgExplosion(read(args[3])));
         write(output.resolve("BombLittleBoy.class"), patchBomb(read(args[4]), 600.0, 15000000.0F, 2150.0F, 4400.0F, 0.894F));
@@ -255,19 +259,19 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
         }
     }
 
-    private static byte[] patchExplosions(byte[] zutiData, byte[] silverplateData) {
-        ClassNode zuti = parse(zutiData);
-        if (isAlreadyPatchedExplosions(zuti)) {
-            scaleNuclearDispatchFromYield(zuti);
-            verifyBytecode(zuti);
-            return emit(zuti);
+    private static byte[] patchExplosions(byte[] baseData, byte[] silverplateData) {
+        ClassNode base = parse(baseData);
+        if (isAlreadyPatchedExplosions(base)) {
+            scaleNuclearDispatchFromYield(base);
+            verifyBytecode(base);
+            return emit(base);
         }
-        if (isMergedExplosions(zuti)) {
-            scaleNuclearDispatchFromYield(zuti);
-            forceSimulationTimerForNuclearEffects(zuti);
-            registerNuclearVisuals(zuti);
-            instrumentNuclearVisualLifecycle(zuti);
-            return emit(zuti);
+        if (isMergedExplosions(base)) {
+            scaleNuclearDispatchFromYield(base);
+            forceSimulationTimerForNuclearEffects(base);
+            registerNuclearVisuals(base);
+            instrumentNuclearVisualLifecycle(base);
+            return emit(base);
         }
         ClassNode silverplate = parse(silverplateData);
         List<MethodNode> replacements = new ArrayList<MethodNode>();
@@ -284,7 +288,7 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
             throw new IllegalStateException("Silverplate must provide exactly two generate overloads");
         }
 
-        Iterator<MethodNode> iterator = zuti.methods.iterator();
+        Iterator<MethodNode> iterator = base.methods.iterator();
         while (iterator.hasNext()) {
             MethodNode method = iterator.next();
             if (method.name.equals("generate") && (
@@ -300,18 +304,18 @@ public final class OpenSturmovikNuclearPatcher implements Opcodes {
             if (method.desc.endsWith("FIFI)V")) {
                 removedFallbacks += removeNuclearConventionalFallback(method);
             }
-            zuti.methods.add(method);
+            base.methods.add(method);
         }
         if (removedFallbacks != 1) {
             throw new IllegalStateException("Expected to remove one nuclear bomb50_land fallback, got " + removedFallbacks);
         }
-        removeNuclearAirburstCrater(zuti);
-        scaleNuclearDispatchFromYield(zuti);
-        scaleNuclearVisualsFromArgument(zuti);
-        forceSimulationTimerForNuclearEffects(zuti);
-        registerNuclearVisuals(zuti);
-        instrumentNuclearVisualLifecycle(zuti);
-        return emit(zuti);
+        removeNuclearAirburstCrater(base);
+        scaleNuclearDispatchFromYield(base);
+        scaleNuclearVisualsFromArgument(base);
+        forceSimulationTimerForNuclearEffects(base);
+        registerNuclearVisuals(base);
+        instrumentNuclearVisualLifecycle(base);
+        return emit(base);
     }
 
     private static void scaleNuclearDispatchFromYield(ClassNode node) {

@@ -2,6 +2,12 @@
 
 Derniere mise a jour : 2 septembre 2026.
 
+> Actualisation du 12 septembre : les resultats MDS ci-dessous sont historiques.
+> MDS est retire du contenu local et AOC conserve ses dix reglages sans MDS ;
+> voir [le suivi courant](RETRAIT_COMPOSANTS_V1.15.md) et
+> [la reconstruction AOC](AUDIT_AOC_SANS_MDS_20260912.md). Les essais reels du jeu
+> et de l'installateur restent a refaire apres les controles statiques passes.
+
 ## Decision de version
 
 La v1.15 doit rester une version 4.09m stable. Le correctif nucleaire est un
@@ -93,7 +99,7 @@ moins 15 % ou trois secondes sur le premier chargement, moins de 5 % de
 regression a chaud, zero corruption visuelle et moins de 10 % d'augmentation du
 pic de memoire privee.
 
-## Resultats OS_Programs a integrer
+## Resultats OS_Programs historiques du 2 septembre
 
 Les derniers essais transmis donnent :
 
@@ -103,7 +109,8 @@ Les derniers essais transmis donnent :
   consommation dans le code actif ; seul `bSwitchMagnetoOn` est prouve ;
 - le son P-39 reste incomplet en raison de presets Allison absents.
 
-Zuti reste donc candidat v1.15 sous reserve des derniers avertissements. AOC 1a
-ne doit pas etre annonce comme entierement fonctionnel, et AOC 3A ne doit pas
-remplacer 1a dans la v1.15 sans audit de sa cible, de ses conflits Zuti et de
-ses effets sur les modeles de vol.
+A cette date, Zuti restait candidat v1.15 sous reserve des avertissements et
+AOC 1a ne pouvait pas etre annonce comme entierement fonctionnel. Cette etape
+precede la reconstruction AOC puis le retrait de MDS. La regle de compatibilite
+reste applicable : aucune autre version AOC ne remplace 1a sans audit de sa
+cible, de ses dependances et de ses effets sur les modeles de vol.

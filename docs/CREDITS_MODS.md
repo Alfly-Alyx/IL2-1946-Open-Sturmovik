@@ -6,8 +6,8 @@ DCG 3.43, San FOV 1.0 et Malta de 6S.Maraz sont retires du pack et archives
 dans `D:\Projets\GITHUB\#res\IL2 1946\Mods\Retirés\besoin_licence`.
 Les credits publics de DCG et San FOV ont ete retires ; Malta n'y figurait pas.
 Les scans dates restent des preuves historiques, pas un inventaire du contenu
-apres retrait. Zuti est encore present et reste credite jusqu'a son retrait
-effectif. Voir [le suivi](RETRAIT_COMPOSANTS_V1.15.md).
+apres retrait. MDS est retire du contenu local et de la page de credits generee ; ses
+contributions sont conservees ci-dessous uniquement comme provenance historique. Voir [le suivi](RETRAIT_COMPOSANTS_V1.15.md).
 
 ## Objet et regles
 
@@ -42,14 +42,24 @@ Le checkout au moment du scan correspond, pour son executable et `files.SFS`, au
 
 | Mod ou contribution | Auteur ou credits publies | Perimetre exact dans la v1.15 | Etat des droits / point restant |
 | --- | --- | --- | --- |
-| Zuti Moving Dogfight Server v1.13 STD | `|ZUTI|` ; remerciements publies a la communaute UltraPack, Oleg Maddox et QTim | Coeur MDS charge, textes, exemples et outils ; correction locale minimale de `ZutiTimer_ExtendPlanesWings`. | Le lisez-moi exige une autorisation avant inclusion dans un pack. Aucune preuve d'autorisation pour Open Sturmovik n'est conservee. |
-| Certificates AI mod v3.0 | Nom publie : Certificates | Integre indirectement dans Zuti MDS v1.13 d'apres le lisez-moi original. | Auteur, source primaire et droits a confirmer separement avant l'affichage final. |
-| Fireballs Carrier Takeoff mod v5.3.x | Nom publie : Fireballs | Integre indirectement dans Zuti MDS v1.13 d'apres le lisez-moi original. | Auteur, source primaire et droits a confirmer separement avant l'affichage final. |
-| Advanced Engine Management - AOC 1a | II/JG51-Lutz | Trois classes moteur fusionnees avec la base 4.09m/Zuti et 266 profils conserves sous `_Game_Enhancements/Mod_AOC_Public`. | Ensemble 1a complet retrouve dans HSFX 4.0. Audit statique passe ; la validation fonctionnelle en jeu reste partielle. |
+| Advanced Engine Management - AOC 1a | II/JG51-Lutz | Trois classes AOC sans MDS reconstruites et verifiees hors jeu, avec 266 profils conserves sous `_Game_Enhancements/Mod_AOC_Public`. | Ensemble 1a complet retrouve dans HSFX 4.0. Audit statique passe ; la validation fonctionnelle en jeu reste partielle. |
 | Tiger33 Ultimate Sound Mod V3 | Tiger33 | Integration ciblee de dix presets de demarrage et de dix-huit WAV absents. Les deux SFS complets ne sont pas montes et deux WAV Sabre anterieurs sont conserves. | Source et compatibilite 4.09m + UP 2.01 confirmees. Conditions de redistribution a consigner avant publication. |
 | WxTech clouds Jan 2023 | WxTech | Huit ressources actives de nuages dans `Files/Effects/clouds`, toutes identiques aux empreintes de `manifests/effects/clouds-4.09m-v1.15.json` lors du controle du 11 septembre 2026. | Auteur confirme par sa publication SAS du 23 janvier 2023. Archive source non retrouvee dans les ressources locales lors de cette passe ; emplacement a retablir dans `Mods/Utilisés`. |
 | Cockpit CW-21 pour 4.09 | Conversion publiee par Epervier pour Rebels 409 ; credits Team Daidalos | Quatre classes de cockpit et 165 ressources authentiques, avec adaptation locale de la classe CW-21 pour l'enregistrement des armements. | Integration statique confirmee ; validation complete en vol encore requise. Les droits de redistribution restent a consigner. |
-| B-29 Silverplate v1.2, Little Boy et Fat Man | 1C/Maddox ; O_Magpie ; Fireball ; SAS~Cirx ; MrJolly ; Lt.Wolf ; Fat Duck ; VC-81_BOLTER ; O_Leigh ; Max_Thehitman ; Ranwers ; Wolfighter ; Twister. La publication cite aussi Santobr pour des effets additionnels. | Huit ressources de modeles de bombes identiques au paquet ; plusieurs classes sont fusionnees ou adaptees pour Zuti et le moteur 4.09m. | Les credits sont retrouves, mais aucune licence publiee ni autorisation n'est conservee. La presence exacte des effets additionnels de Santobr reste a verifier. |
+| B-29 Silverplate v1.2, Little Boy et Fat Man | 1C/Maddox ; O_Magpie ; Fireball ; SAS~Cirx ; MrJolly ; Lt.Wolf ; Fat Duck ; VC-81_BOLTER ; O_Leigh ; Max_Thehitman ; Ranwers ; Wolfighter ; Twister. La publication cite aussi Santobr pour des effets additionnels. | Huit ressources de modeles de bombes identiques au paquet ; plusieurs classes sont adaptees au moteur 4.09m ; leurs interfaces et les fonctions conservees sont verifiees statiquement apres retrait MDS, avec essais en jeu restant a refaire. | Les credits sont retrouves, mais aucune licence publiee ni autorisation n'est conservee. La presence exacte des effets additionnels de Santobr reste a verifier. |
+
+## Contributions historiques du paquet MDS retire
+
+Ce releve conserve la provenance historique ; il ne presente pas MDS comme
+une fonction de la version cible. Les notices et anciennes classes sont dans
+`Mods/Retirés/besoin_licence/Zuti MDS 1.13`. Le suivi des retraits precise l'etat
+effectif ; la ligne MDS a ete retiree des credits publics et la page a ete regeneree.
+
+| Contribution historique | Attribution publiee | Perimetre |
+| --- | --- | --- |
+| MDS v1.13 STD | Zuti | Code moteur MDS, textes, exemples et outils retires du contenu local ; provenance conservee hors du pack. |
+| Certificates AI v3.0 | Certificates | Contribution incorporee par MDS selon sa notice ; aucune integration independante etablie ici. |
+| Carrier Takeoff v5.3.x | Fireballs | Contribution incorporee par MDS selon sa notice ; aucune integration independante etablie ici. |
 
 ## Attributions a resoudre avant affichage final
 
@@ -57,8 +67,8 @@ Le checkout au moment du scan correspond, pour son executable et `files.SFS`, au
 | --- | --- | --- |
 | BombBayDoors Plus | Notice 2.5.3 rangee ; source documentaire BAT, manuel SAS Engine Mod v27 p. 6, attribuant le travail a Zuti et Fireball. | Auteur documentaire retrouve ; code exact et perimetre fusionne encore a etablir. Le module AAA v2 ne correspond que pour 13 fichiers sur 123. Voir [le releve des packs](SCAN_PACKS_CREDITS_V1.15.md). |
 | Nations and Squadrons V2 | Deux notices identiques signees Gaston, rangees dans `_Documentations/Mods and Tools/Nations and Squadrons V2`. | La notice signe l’auteur du mod ; son perimetre actuel dans les registres et escadrilles doit encore etre compare aux sources. |
-| RMP3 Atmosphere v4.3 / ZloyPetrushkO | Les anciens nuages RMP3 ont ete remplaces par WxTech. Deux classes actives correspondent exactement au `WindConfig_v3` du paquet AAA ; une autre classe historiquement associee a RMP3 appartient maintenant a la fusion AOC/Zuti. | Le perimetre actif ne peut pas encore etre attribue proprement a RMP3. Il faut distinguer RMP3, WindConfig v3 et WxTech fichier par fichier. |
-| WindConfig v3 / auteur a identifier | Les fichiers actifs `96F4C2FA0F2B0FD0` et `E9BD6E7219DE5998` correspondent aux sources AAA ; `684916A0E86D1CC8` differe, conformement a la fusion AOC/Zuti documentee. | La notice locale `MODS/_DOCS_/WindConfig_v3_README.txt` n'est pas signee. `uf_josse` y designe un autre mod incompatible, pas l'auteur de WindConfig. Ne pas presenter le module complet comme integre sans adaptation. |
+| RMP3 Atmosphere v4.3 / ZloyPetrushkO | Les anciens nuages RMP3 ont ete remplaces par WxTech. Deux classes actives correspondent exactement au `WindConfig_v3` du paquet AAA ; une autre classe historiquement associee a RMP3 appartient maintenant a la adaptation AOC 4.09m. | Le perimetre actif ne peut pas encore etre attribue proprement a RMP3. Il faut distinguer RMP3, WindConfig v3 et WxTech fichier par fichier. |
+| WindConfig v3 / auteur a identifier | Les fichiers actifs `96F4C2FA0F2B0FD0` et `E9BD6E7219DE5998` correspondent aux sources AAA ; `684916A0E86D1CC8` differe, conformement a la adaptation AOC 4.09m documentee. | La notice locale `MODS/_DOCS_/WindConfig_v3_README.txt` n'est pas signee. `uf_josse` y designe un autre mod incompatible, pas l'auteur de WindConfig. Ne pas presenter le module complet comme integre sans adaptation. |
 | Gamma Panel 1.0 (`Gapa`) | Tomasz Porosinski, copyright 2002-2003. | Outil fourni mais desactive par defaut ; il releve des credits des utilitaires optionnels, pas des mods actifs. |
 | Appareils, cartes, objets, cockpits et effets herites du pack AAA | Le paquet local contient les modules et quelques lisez-moi, mais pas une table de credits exhaustive. | Une simple presence dans le paquet source ne prouve pas que chaque ressource est encore active dans la v1.15. |
 
@@ -68,12 +78,11 @@ Le checkout au moment du scan correspond, pour son executable et `files.SFS`, au
 
 - `D:\Projets\GITHUB\#res\IL2 1946\Mods\Utilisés` et son classement ;
 - `D:\Projets\GITHUB\#res\IL2 1946\Packs\AAA_Community_Installer_ver_1_1` ;
-- `_Documentations/Mods and Tools/Zuti MDS 1.13` ;
+- notices MDS historiques archivees sous `Mods/Retirés/besoin_licence/Zuti MDS 1.13` ;
 - `manifests/aoc-v1.15.json`, `manifests/audio/tiger33-startup-sounds.json`,
   `manifests/aircraft/cw21-cockpit-v1.15.json`,
-  `manifests/mods/zuti-mds-1.13-static.json` et
   `manifests/profiles-6dof-v1.15.json` ;
-- `docs/AUDIT_ZUTI_AOC.md`, `docs/CW21_COCKPIT_ARMAMENT_V1.15.md`,
+- `docs/AUDIT_AOC_SANS_MDS_20260912.md`, `docs/CW21_COCKPIT_ARMAMENT_V1.15.md`,
   `docs/RMP3_ATMOSPHERE_PRESERVATION.md` et `docs/THIRD_PARTY_NOTICES.md`.
 
 ### Sources communautaires
@@ -144,4 +153,4 @@ d'origine quand plusieurs createurs y ont participe.
 La premiere liste lisible est conservee dans
 `_Documentations/Mods and Tools/Credits - Open Sturmovik.md`. Le present
 inventaire conserve les preuves et les attributions a completer. L'ajout de
-la page a l'interface du switcher reste une etape ulterieure.
+la page a l'interface du switcher est documente dans `PAGE_CREDITS_SWITCHER_V1.15.md`.

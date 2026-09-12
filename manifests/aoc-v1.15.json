@@ -1,9 +1,9 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "release": "1.15",
   "gameVersion": "4.09m",
-  "policy": "Select the first complete original AOC payload demonstrably compatible with IL-2 4.09m, then merge only the required engine consumers with the current Zuti classes. Version number alone never determines the choice.",
-  "currentSelection": "v1-1a-hsfx4-409m-zuti-merged",
+  "policy": "Preserve the selected, compatible AOC 1a engine consumers and all 266 shipped profiles; the retired MDS engine backup methods are absent from build inputs and outputs.",
+  "currentSelection": "v1-1a-hsfx4-409m",
   "status": "selected-static-audit-passed-runtime-pending",
   "publicResearch": {
     "completed": "2026-09-06",
@@ -87,16 +87,12 @@
     }
   },
   "integration": {
-    "strategy": "Preserve the current 4.09m/Zuti classes as the base. Recover the missing AOC engine state and methods from the HSFX 4 Motor donor, add the two torque multipliers to the current RealFlightModel, and keep the existing AOC loader while redirecting it to the common game-enhancements directory.",
-    "builder": "tools/Build-OpenSturmovikAocZutiPatch.ps1",
-    "patcher": "tools/java/OpenSturmovikAocZutiPatcher.java",
+    "strategy": "Preserve the existing Open Sturmovik AOC loader, engine consumers and torque hooks. The compatible custom 4.09m base has exactly four retired Motor backup/array-copy methods removed; every other field and method is preserved. This base is not a stock IL-2 class set.",
+    "builder": "tools/Build-OpenSturmovikAocPatch.ps1",
+    "patcher": "tools/java/OpenSturmovikAocPatcher.java",
     "fixtures": "test-assets/aoc-v1.15",
     "profilePath": "_Game_Enhancements/Mod_AOC_Public",
     "publicApiIdenticalToBase": true,
-    "zutiMethodsPreserved": [
-      "Motor.zutiMakeEngineBackup()",
-      "Motor.zutiRestoreMotor(Motor)"
-    ],
     "settingsConsumed": [
       "coefTorque",
       "tempOilMin",
@@ -127,9 +123,9 @@
       {
         "class": "com/maddox/il2/fm/Motor",
         "path": "Files/AF5F8A326C3FA53C",
-        "length": 62121,
+        "length": 57710,
         "major": 45,
-        "sha256": "576204B58D11A79751462EBDC18EF84E64001E9C6B3670051E802BC60029337A"
+        "sha256": "1F200D47D5D62E8D837A1137A06B70116AAC4872FB7190435476E7C8D8AA03AA"
       }
     ],
     "staticValidation": "passed",
@@ -139,7 +135,23 @@
       "fallback": "_Game_Enhancements/Mod_AOC_Public/Defaut.txt",
       "loaderBehavior": "When the specific profile is absent, FlightModelMain copies Defaut.txt to the expected aircraft filename and returns without applying it during that first construction. A subsequent construction loads the generated default copy.",
       "generatedFileMustBeRemovedAfterTest": true
-    }
+    },
+    "retiredExtensionAbsent": true,
+    "preservationAudit": "docs/AUDIT_AOC_SANS_MDS_20260912.md",
+    "baseFixtures": [
+      {
+        "path": "test-assets/aoc-v1.15/base-409m/294ABC86A89FAEB4",
+        "sha256": "E3A0842D8A8BAFA37AC32F5AED5F6AAA72A97A4D54C3628964692504B4F647AD"
+      },
+      {
+        "path": "test-assets/aoc-v1.15/base-409m/684916A0E86D1CC8",
+        "sha256": "8506C75A6FC08982E4F49AA6CE864FE7BCA1161679A5CDDDF1028AF5309958C0"
+      },
+      {
+        "path": "test-assets/aoc-v1.15/base-409m/AF5F8A326C3FA53C",
+        "sha256": "FD2D4B4F5A975C246E13FA07E5CAD11B39A41C5E08234DC46A6E20187BD0C14E"
+      }
+    ]
   },
   "versions": [
     {

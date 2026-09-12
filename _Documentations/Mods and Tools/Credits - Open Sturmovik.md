@@ -12,7 +12,6 @@ Liste en cours pour la v1.15, enrichie par le scan des dossiers du jeu et la com
 | Mod | Auteur ou collectif | Contribution au pack |
 | --- | --- | --- |
 | Améliorations issues du forum All Aircraft Arcade (AAA) | Auteurs et contributeurs du forum AAA | Plusieurs améliorations d’Open Sturmovik proviennent des créations partagées sur ce forum. |
-| Zuti Moving Dogfight Server 1.13 | \|ZUTI\| | Fonctions MDS et gestion des missions. |
 | Advanced Engine Management — AOC 1a | II/JG51-Lutz | Gestion avancée des moteurs. |
 | Tiger33 Ultimate Sound Mod V3 | Tiger33 | Sélection de sons et de réglages de démarrage des moteurs. |
 | WxTech clouds Jan 2023 | WxTech | Ressources visuelles des nuages. [Publication du mod](https://www.sas1946.com/main/index.php?topic=70195.0). |
@@ -20,11 +19,6 @@ Liste en cours pour la v1.15, enrichie par le scan des dossiers du jeu et la com
 | Magister — modèle extérieur | RAF_Magpie | Élément du modèle extérieur retrouvé à l’identique ; [source et périmètre confirmé](../../docs/SCAN_PACKS_CREDITS_V1.15.md). |
 | B-29 Silverplate 1.2, Little Boy et Fat Man | Auteurs et équipe détaillés ci-dessous | B-29 Silverplate, cockpit et ressources des bombes, avec adaptations pour Open Sturmovik. |
 | 6DOF Tracker 2.0 | sHr | Déplacement du point de vue dans les profils 6DOF du switcher ; attribution aussi reprise dans les [notes HSFX v4](https://mail.mission4today.com/index.php?file=viewtopic&finish=15&name=ForumsPro&start=0&t=7663). |
-
-La [notice originale de Zuti](<Zuti MDS 1.13/Lisez-moi - Zuti MDS 1.13.txt>)
-mentionne aussi **Certificates AI mod 3.0** et **Fireballs Carrier Takeoff mod
-5.3.x** parmi les mods incorporés à MDS. Ces noms sont repris de la notice ;
-leurs attributions individuelles restent à compléter.
 
 ## B-29 Silverplate
 

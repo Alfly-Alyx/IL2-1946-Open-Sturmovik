@@ -1,5 +1,11 @@
 # Dossier technique vivant — IL-2 1946 / Open Sturmovik 1.15
 
+> Etat du 12 septembre 2026 : MDS est retire du contenu local ;
+> [le suivi des retraits](RETRAIT_COMPOSANTS_V1.15.md) fait autorite. Les exemples
+> Zuti tires des captures d'aout/septembre restent des observations historiques
+> du moteur et ne decrivent pas les fonctions attendues apres retrait. AOC est
+> reconstruit sans MDS : [preuve](AUDIT_AOC_SANS_MDS_20260912.md).
+
 ## Objet du document
 
 Ce fichier est la reference centrale de ce qui est decouvert sur le jeu original, le moteur, le format de l'add-on et les conditions necessaires a son fonctionnement. Il doit etre mis a jour a chaque nouvelle analyse statique ou session de test.
@@ -211,8 +217,8 @@ reunis, meme si chaque fichier existe et se charge correctement.
 
 Le B-29 Silverplate fournit un cas prouve. Sa classe `Bomb` appelle
 `Explosions.generate(Actor, Point3d, float, int, float, int)`. La variante
-`Explosions` active dans Open Sturmovik contient les multiplicateurs de crateres
-Zuti, mais seulement la methode a cinq parametres. Au premier passage sur cet
+`Explosions` active au moment de cette capture du 31 aout contenait les
+multiplicateurs de crateres Zuti, mais seulement la methode a cinq parametres. Au premier passage sur cet
 appel a six parametres, HotSpot doit lever `NoSuchMethodError`. Si un minuteur
 non daemon reste vivant, cette erreur de liaison peut ensuite apparaitre sous la
 forme trompeuse d'un processus Windows gele.
@@ -372,7 +378,7 @@ reference : il doit percevoir l'eclair puis l'onde environ quinze secondes plus
 tard, sans etre detruit automatiquement.
 
 Le prototype v1.15 construit le 31 aout 2026 realise cette architecture sans
-modifier la JVM. `Explosions` conserve les multiplicateurs Zuti et recoit les
+modifier la JVM. A cette date, `Explosions` conservait les multiplicateurs Zuti et recevait les
 deux surcharges Silverplate. `Explosion.receivedTNT_1meter` retrouve la
 decroissance normale en inverse du carre au lieu d'accorder la puissance totale
 a tous les acteurs de la sphere. `MsgExplosion` delegue les explosions
