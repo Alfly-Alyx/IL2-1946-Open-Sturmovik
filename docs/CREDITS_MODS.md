@@ -1,4 +1,4 @@
-# Credits des mods - inventaire initial
+# Credits des mods - inventaire documente
 
 Etat mis a jour le 12 septembre 2026. Cible : Open Sturmovik v1.15 sur IL-2 1946 4.09m.
 
@@ -11,7 +11,7 @@ contributions sont conservees ci-dessous uniquement comme provenance historique.
 
 ## Objet et regles
 
-Ce document est la source de travail de la future page **Credits** du switcher.
+Ce document conserve les preuves et le perimetre des attributions de la page **Credits** du switcher.
 La [presentation des credits du pack](<../_Documentations/Mods and Tools/Credits - Open Sturmovik.md>)
 reprend les noms des mods, leurs auteurs ou collectifs et leurs contributions.
 Il ne constitue pas encore la liste exhaustive des centaines de ressources
@@ -48,6 +48,16 @@ Le checkout au moment du scan correspond, pour son executable et `files.SFS`, au
 | Cockpit CW-21 pour 4.09 | Conversion publiee par Epervier pour Rebels 409 ; credits Team Daidalos | Quatre classes de cockpit et 165 ressources authentiques, avec adaptation locale de la classe CW-21 pour l'enregistrement des armements. | Integration statique confirmee ; validation complete en vol encore requise. Les droits de redistribution restent a consigner. |
 | B-29 Silverplate v1.2, Little Boy et Fat Man | 1C/Maddox ; O_Magpie ; Fireball ; SAS~Cirx ; MrJolly ; Lt.Wolf ; Fat Duck ; VC-81_BOLTER ; O_Leigh ; Max_Thehitman ; Ranwers ; Wolfighter ; Twister. La publication cite aussi Santobr pour des effets additionnels. | Huit ressources de modeles de bombes identiques au paquet ; plusieurs classes sont adaptees au moteur 4.09m ; leurs interfaces et les fonctions conservees sont verifiees statiquement apres retrait MDS, avec essais en jeu restant a refaire. | Les credits sont retrouves, mais aucune licence publiee ni autorisation n'est conservee. La presence exacte des effets additionnels de Santobr reste a verifier. |
 
+## Cartes conservees apres le reexamen du 12 septembre 2026
+
+| Carte | Attribution | Presence et source |
+| --- | --- | --- |
+| Darwin Small (NTL_Darwin_Small) | Neil Lowe | Carte conservee. Le nom de l'auteur est explicite dans la notice 1.0, ligne 2 ; les notices 1.0 et 1.1 sont liees dans les credits publics. Le dossier `Mods/Besoin Licence/Darwin Small` contient seulement la fiche de contact demandee par Alexis, pas un retrait de la carte. La provenance exacte de la revision actuelle n'est pas certifiee par ces credits. |
+| Slovenia, variantes ete et hiver | Zuti — carte ; may_bugs — textures hivernales | Six INI presents et declares. Attribution Zuti recoupee avec les notes HSFX v4 ; roles complementaires dans les notices AAA integralement lues. Les credits ne revendiquent pas une version 1.35 certifiee dans Open Sturmovik. Voir le [complement du scan cartes](SCAN_CARTES_CREDITS_V1.15.md). |
+
+Ces deux cartes sont distinctes de Malta et de Zuti MDS retires. Leur credit
+documente les auteurs ; il ne constitue pas une nouvelle autorisation.
+
 ## Contributions historiques du paquet MDS retire
 
 Ce releve conserve la provenance historique ; il ne presente pas MDS comme
@@ -61,11 +71,11 @@ effectif ; la ligne MDS a ete retiree des credits publics et la page a ete regen
 | Certificates AI v3.0 | Certificates | Contribution incorporee par MDS selon sa notice ; aucune integration independante etablie ici. |
 | Carrier Takeoff v5.3.x | Fireballs | Contribution incorporee par MDS selon sa notice ; aucune integration independante etablie ici. |
 
-## Attributions a resoudre avant affichage final
+## Contributions documentees et limites d'attribution
 
-| Candidat | Observation verifiee | Pourquoi il n'entre pas encore dans la liste finale |
+| Contribution | Observation verifiee | Perimetre et limites |
 | --- | --- | --- |
-| BombBayDoors Plus | Notice 2.5.3 rangee ; source documentaire BAT, manuel SAS Engine Mod v27 p. 6, attribuant le travail a Zuti et Fireball. | Auteur documentaire retrouve ; code exact et perimetre fusionne encore a etablir. Le module AAA v2 ne correspond que pour 13 fichiers sur 123. Voir [le releve des packs](SCAN_PACKS_CREDITS_V1.15.md). |
+| BombBayDoors Plus | Notice 2.5.3 rangee ; source documentaire BAT, manuel SAS Engine Mod v27 p. 6, attribuant le travail a Zuti et Fireball. | Attribution complementaire affichee pour les commandes des portes conservees apres retrait MDS. La version exacte du code fusionne n'est pas etablie : le titre public ne le presente plus comme BombBayDoors 2.5.3. Le module AAA v2 ne correspond que pour 13 fichiers sur 123. Voir [le releve des packs](SCAN_PACKS_CREDITS_V1.15.md) et [les fonctions conservees](RECONSTRUCTION_CONTROLS_EXPLOSIONS_SANS_MDS.md). |
 | Nations and Squadrons V2 | Deux notices identiques signees Gaston, rangees dans `_Documentations/Mods and Tools/Nations and Squadrons V2`. | La notice signe l’auteur du mod ; son perimetre actuel dans les registres et escadrilles doit encore etre compare aux sources. |
 | RMP3 Atmosphere v4.3 / ZloyPetrushkO | Les anciens nuages RMP3 ont ete remplaces par WxTech. Deux classes actives correspondent exactement au `WindConfig_v3` du paquet AAA ; une autre classe historiquement associee a RMP3 appartient maintenant a la adaptation AOC 4.09m. | Le perimetre actif ne peut pas encore etre attribue proprement a RMP3. Il faut distinguer RMP3, WindConfig v3 et WxTech fichier par fichier. |
 | WindConfig v3 / auteur a identifier | Les fichiers actifs `96F4C2FA0F2B0FD0` et `E9BD6E7219DE5998` correspondent aux sources AAA ; `684916A0E86D1CC8` differe, conformement a la adaptation AOC 4.09m documentee. | La notice locale `MODS/_DOCS_/WindConfig_v3_README.txt` n'est pas signee. `uf_josse` y designe un autre mod incompatible, pas l'auteur de WindConfig. Ne pas presenter le module complet comme integre sans adaptation. |
@@ -144,7 +154,7 @@ redistribution.
 4. Separer les contributions RMP3, WindConfig v3 et WxTech.
 5. Completer les sections cartes, campagnes et utilitaires commencees par le scan, puis poursuivre les appareils, cockpits, objets, effets et sons encore non attribues.
 
-## Presentation future dans le switcher
+## Presentation dans le switcher
 
 La presentation demandee par Alexis est celle d'un mod ou pack de mods : nom
 du mod, auteur ou collectif, contribution integree, et credits du paquet

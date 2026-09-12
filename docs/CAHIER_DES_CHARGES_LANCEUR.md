@@ -69,7 +69,7 @@ Le lanceur ne presente le 6DOF comme fonctionnel que si l'executable et les
 classes necessaires correspondent au manifeste actif. Des lignes `6dof_*` ou
 `NewTrackIR` presentes dans `conf.ini` ne suffisent pas a prouver que la fonction
 est chargee. Le mode sans 6DOF utilise maintenant l'EXE final
-`BF934357...14328`, distinct de l'EXE 6DOF `F1DFCE9E...DECE3`. Le switcher
+`BA1C702C...43C80`, distinct de l'EXE 6DOF `7EBC80C4...FD21`. Le switcher
 v1.15 controle ces empreintes depuis `manifests/switcher-v1.15.json`, puis le lanceur devra
 laisser la campagne runtime confirmer les mouvements reels du peripherique.
 

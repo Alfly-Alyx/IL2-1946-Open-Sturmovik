@@ -21,9 +21,9 @@ restaures a partir du differentiel exact des deux EXE AAA historiques, sans
 remplacer les ressources PE ni l'ajustement Large Address Aware courant :
 
 - avec 6DOF : SHA-256
-  `F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3` ;
+  `7EBC80C47CDC9EB1C8AF3F740E5D8347551D12521D2E0CE02D1106383A2EFD21` ;
 - sans 6DOF : SHA-256
-  `BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328`.
+  `BA1C702C1FC0DCC3D760FAEE46F74AD8BDF3D8CB5CE44B2CA40DAA3F75343C80`.
 
 Ces empreintes finales incluent la ressource Windows v1.15 qui declare
 `Open Sturmovik` comme description et nom de produit, ainsi que l'icone

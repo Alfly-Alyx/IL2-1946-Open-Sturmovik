@@ -1,20 +1,46 @@
-# Preparation de l'installateur de mise a jour v1.15
+# Préparation de l'installation complète v1.15
 
-Le script Inno Setup `Open_Sturmovik_Update_1.15.iss` est destine a etre place
-avec les sous-dossiers suivants :
+La v1.15 sera une réinstallation complète d'Open Sturmovik sur une installation
+compatible d'IL-2 Sturmovik 1946. Elle ne sera pas un patch de la v1.10 et
+ne devra dépendre d'aucune installation préalable d'Open Sturmovik.
+
+L'ancienne ébauche Inno Setup `Open_Sturmovik_Update_1.15.iss` et ses deux
+fonds `OpenSturmovik-Wizard.bmp` et `OpenSturmovik-Wizard.jpg` ont été supprimés
+par Alexis le 12 septembre 2026. Aucun script d'installation v1.15 n'est
+actuellement fourni. Le futur installateur complet reste à créer et à valider.
+
+Le contenu à préparer pour sa distribution comprend :
 
 ```text
-Open_Sturmovik_Update_1.15.iss
-assets/
-  OpenSturmovik-Setup.ico
-  OpenSturmovik-Wizard.bmp
 Payload/
-  ...fichiers de mise a jour reproduisant leur emplacement dans le jeu...
+  LICENSE.md
+  docs/
+    LICENSING.md
+    THIRD_PARTY_NOTICES.md
+  ...ensemble complet des fichiers du pack, à leur emplacement dans le jeu...
 ```
 
 Le dossier `Payload` n'est volontairement pas fabrique avant le gel du contenu
 v1.15. Cette separation empeche qu'un ancien test, un fichier WIP ou une
 ressource de developpement entre silencieusement dans l'installateur.
+
+## Licence a conserver dans la distribution
+
+Le futur `Payload` doit inclure `LICENSE.md`, `docs/LICENSING.md` et
+`docs/THIRD_PARTY_NOTICES.md` depuis le depot, ainsi que les credits et notices
+des composants tiers effectivement fournis. Leur présence à la racine Git
+ne garantit pas leur inclusion dans l'exécutable : le futur installateur
+devra les livrer avec le contenu de `Payload`.
+
+La licence des contributions originales d'Alfly autorise les usages,
+modifications, forks et partages non commerciaux. Tout usage commercial de
+ces contributions, meme modifiees, est interdit. Le contenu tiers
+de l'installateur conserve ses conditions propres ; la licence de la logique
+de l'installateur ne concede pas de droits sur tout son contenu.
+
+Ces documents doivent etre controles au meme titre que les autres fichiers
+du `Payload` avant compilation. Aucun `Payload` ni nouvel executable n'est
+produit par l'ajout de cette licence.
 
 ## Compilateur portable prepare
 
@@ -23,7 +49,7 @@ Inno Setup 7.1.0 x64 est prepare en mode portable officiel sous
 `ISCC.exe` dans ce dossier. L'installateur source officiel est conserve sous
 `WIP/sdk/inno-setup-portable/downloads` avec sa signature `.issig`.
 
-Controles effectues avant execution :
+Contrôles consignés lors de la préparation du compilateur :
 
 - SHA-256 de l'installateur :
   `0362A383ED217D4C4239B5933866DD96D3EB2102737DA92F80F6057A4B40DF2F` ;
@@ -35,37 +61,34 @@ Controles effectues avant execution :
 Le compilateur ne doit pas etre utilise avant la fin des essais runtime de la
 v1.15 et le gel explicite du dossier `Payload`.
 
-## Comportement prepare
+## Exigences du futur installateur complet
 
-- l'utilisateur doit choisir une installation existante contenant
-  `il2fb.exe` ;
-- les applications `il2fb.exe` en cours sont fermees avant remplacement ;
-- le contenu de `Payload` est copie en conservant son arborescence ;
-- seuls les anciens fichiers et dossiers explicitement remplaces par la v1.15
-  sont supprimes, notamment `_Runtime_Addons`, le `Mod_AOC_Public` racine et
-  l'ancien `_Documentation` singulier ; leur contenu v1.15 se trouve
-  respectivement dans les emplacements conserves ou sous `_Game_Enhancements`
-  et `_Documentations` ;
-- huit raccourcis sont crees sur le Bureau : les sept outils retenus et
+- reconnaître une installation IL-2 compatible et vérifier ses fichiers
+  nécessaires, au-delà de la seule présence d'`il2fb.exe` ;
+- remplacer les fichiers seulement lorsque le jeu est fermé ;
+- livrer le pack complet depuis `Payload` en conservant son arborescence,
+  sans dépendance à une ancienne version d'Open Sturmovik ;
+- prévoir une procédure de réinstallation qui assure l'absence des composants
+  retirés et préserve les données personnelles du joueur ; toute suppression
+  devra reposer sur une liste explicite et vérifiée ;
+- créer huit raccourcis sur le Bureau : les sept outils retenus et
   `Open Sturmovik Switcher` ;
-- le raccourci `Open Sturmovik Switcher` lance l'unique BAT avec une console
+- faire lancer par le raccourci `Open Sturmovik Switcher` l'unique BAT avec une console
   masquee ; le BAT reste directement utilisable et ne garde plus la console
   ouverte une fois son interface chargee ;
-- l'initialiseur des utilitaires configure les chemins locaux sans lancer le
+- utiliser l'initialiseur des utilitaires pour configurer les chemins locaux sans lancer le
   jeu ni les programmes externes ;
-- le diagnostic automatique active les journaux persistants, configure cinq
+- intégrer le diagnostic automatique existant : il active les journaux persistants, configure cinq
   dumps WER au maximum, surveille chaque lancement direct de `il2fb.exe` et met
   en file les anomalies avant leur envoi vers les tickets du depot Open
-  Sturmovik ;
-- l'installateur utilise l'icone bouclier et le fond d'ecran fournis dans les
-  ressources locales du projet.
+  Sturmovik.
 
-Le moniteur est lance sous le compte Windows d'origine, puis enregistre dans
-`HKCU\Software\Microsoft\Windows\CurrentVersion\Run`. Ses donnees locales sont
-placees sous `%LOCALAPPDATA%\OpenSturmovik\Diagnostics`. L'authentification
-GitHub provient, dans l'ordre, de la variable
-`OPEN_STURMOVIK_GITHUB_TOKEN`, d'un jeton protege par DPAPI ou du gestionnaire
-d'identifiants Git existant. Aucun secret n'est place dans le paquet.
+Lors de cette installation, le moniteur devra être lancé sous le compte Windows
+d'origine, puis enregistré dans `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`.
+Ses données locales devront rester
+placees sous `%LOCALAPPDATA%\OpenSturmovik\Diagnostics`. Le transport actuel
+utilise un service HTTPS public : aucun compte GitHub, jeton ou client Git
+n'est requis sur le PC du joueur. Les dumps mémoire bruts restent locaux.
 
 Le fond du switcher retenu le 11 septembre 2026 est la remasterisation de la
 jaquette Pacific Fighters Retail, livree sous
@@ -75,12 +98,18 @@ Le dossier `Resources\Icons` contient les deux icones actives.
 fenetre et du raccourci. `Open_Sturmovik_Game.ico`, issu du dessin
 `avion-ciel`, est reserve aux executables de jeu modifies.
 
-Le script reprend le principe de detection du dossier existant de
-`IL2_Open_Sturmovik_Patch_1.1.iss`, mais ne reprend pas la longue suppression
-globale de l'ancien installateur 1.1. Les suppressions v1.15 sont bornees a une
-liste connue et relisible de ressources devenues obsoletes.
+Les observations sur la détection et les suppressions de l'ancienne ébauche
+sont conservées comme historique dans
+[l'audit de sortie](../docs/AUDIT_SORTIE_V1.15_20260912.md).
+Elles ne décrivent pas un installateur actuellement disponible.
 
 ## Controle avant compilation
+
+Le futur installateur doit reconnaître une base IL-2 compatible et livrer
+le pack complet. La procédure de réinstallation doit garantir l'absence
+des anciens composants retirés, notamment MDS, DCG, San et Malta, tout en
+préservant les données personnelles du joueur. La copie générique et la
+liste de suppressions de l'ancienne ébauche ne suffisaient pas à établir ce résultat.
 
 Avant de compiler, il faudra produire le dossier `Payload`, verifier ses
 empreintes, puis executer les controles hors-jeu v1.15. La compilation Inno

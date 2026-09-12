@@ -74,3 +74,42 @@ Les notices sont destinées à `_Documentations/Maps/<dossier de carte>/`. Les v
 Les 21 notices de cartes ont été déplacées et leurs empreintes vérifiées ; leurs liens ci-dessus pointent désormais vers `_Documentations`. Les fichiers du jeu ont conservé leur emplacement. Le journal global est disponible dans [CLASSEMENT_DOCUMENTATIONS_V1.15.md](CLASSEMENT_DOCUMENTATIONS_V1.15.md).
 
 La notice Alpen, ligne 70, attribue explicitement `fsmd_mount3` à Phasmid et les champs Bob à Rus_Andrey. La comparaison a retrouvé `fsmd_mount3.tga` et `bob_fields_1.tga` identiques aux sources. Ces deux contributions précises sont donc attribuables ; cela ne signifie pas que les packs de textures complets sont intégrés. Les empreintes et la citation locale sont conservées dans [les preuves d’attribution AAA](../manifests/mods/credits-v1.15/aaa-authors.json).
+
+## Complément du 12 septembre 2026 : Darwin et Slovenia conservées
+
+Darwin Small reste créditée à Neil Lowe. La notice 1.0, ligne 2, signe
+explicitement ce nom ; la page publique lie maintenant cette source et la
+notice 1.1. Ce crédit ne certifie pas l'identité binaire avec une archive
+originale 1.1. La fiche de contact rangée à la demande d'Alexis dans
+`Mods/Besoin Licence/Darwin Small` ne correspond pas à un retrait de la carte.
+
+Pour Slovenia, la limite de lecture partielle signalée dans le scan initial
+est désormais levée pour le texte : les deux DOC locaux ont été convertis
+avec LibreOffice puis intégralement lus lors du réexamen. Sources sous
+`D:/Projets/GITHUB/#res/IL2 1946/Packs/AAA_Community_Installer_ver_1_1` :
+
+- `MODS/_DOCS_/Zuti_Slovenia_ReadMe.doc` ;
+- `MODS/MapMods/Maps/Zuti_Slovenia/Zuti_Slovenia_ReadMe.doc`.
+
+Ces notices attribuent les textures hivernales à may_bugs. Elles remercient
+lowfighter et, dans la notice étendue, widowmaker pour les tests, mapalm pour
+les documents historiques, Fly_Zo pour l'aide initiale et Thrud pour les
+indications sur les infrastructures des aérodromes. Ces rôles restent
+distincts de l'auteur principal de la carte.
+
+Les [notes HSFX v4 publiées sur Mission4Today](https://mail.mission4today.com/index.php?file=viewtopic&finish=15&name=ForumsPro&start=0&t=7663)
+nomment explicitement « Slovenia Map 1.35 (Zuti) ». Cette attribution,
+recoupée avec les notices locales, permet d'ajouter Zuti aux crédits de la
+carte. Elle ne démontre pas que la révision précise intégrée ici est 1.35.
+La page a été retrouvée dans les résultats indexés ; son ouverture directe
+échouait pendant cette vérification. AAA/Wayback était inaccessible lors du
+réexamen et le sujet SAS 41083 confirme la présence de variantes Slovenia
+dans une compilation ultérieure, sans fournir leur auteur dans la liste.
+
+Présence revérifiée : les six fichiers `Slovenia_Off_S.ini`,
+`Slovenia_Off_W.ini`, `Slovenia_On_S.ini`, `Slovenia_On_W.ini`,
+`Slovenia_Summer.ini` et `Slovenia_Winter.ini` existent et sont déclarés dans
+`Files/Maps/all.ini`. Les INI hivernaux référencent les textures `Mbug_*`.
+Slovenia figure désormais dans les crédits publics avec Zuti pour la carte
+et may_bugs pour ces textures. Aucun fichier de carte ou réglage du jeu n'a
+été modifié par cette mise à jour documentaire.

@@ -2,6 +2,13 @@
 
 Derniere mise a jour : 12 septembre 2026.
 
+> Relance demandee le 12 septembre : la copie est maintenant actualisee apres
+> les retraits, avec 266 profils AOC conformes, 24 PASS / 1 WARN / 0 FAIL et
+> 42 controles avant lancement reussis. Le profil existant 9 avec 6DOF est
+> conserve pour cette session. Voir [le compte rendu](RELANCE_TEST_V1.15_20260912.md).
+> Les anciens nombres de profils AOC et les anciens profils de session
+> ci-dessous decrivent les essais historiques, pas cette relance.
+
 La campagne doit utiliser une copie actualisee apres les retraits de DCG,
 San FOV, Malta et MDS, desormais retires localement. Les controles statiques
 et tests cibles passent ; cette nouvelle composition exige encore les essais

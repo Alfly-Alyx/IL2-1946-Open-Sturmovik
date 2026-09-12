@@ -261,6 +261,64 @@ function Get-PeCodeIdentity {
     }
 }
 
+function Get-PeFileOffsetFromRva {
+    param([byte[]]$Data, [uint32]$Rva)
+    $pe = [BitConverter]::ToInt32($Data, 0x3C)
+    $sectionCount = [BitConverter]::ToUInt16($Data, $pe + 6)
+    $optionalSize = [BitConverter]::ToUInt16($Data, $pe + 20)
+    $sections = $pe + 24 + $optionalSize
+    for ($index = 0; $index -lt $sectionCount; ++$index) {
+        $offset = $sections + ($index * 40)
+        $virtualSize = [BitConverter]::ToUInt32($Data, $offset + 8)
+        $virtualAddress = [BitConverter]::ToUInt32($Data, $offset + 12)
+        $rawSize = [BitConverter]::ToUInt32($Data, $offset + 16)
+        $rawOffset = [BitConverter]::ToUInt32($Data, $offset + 20)
+        $mappedSize = [Math]::Max([uint64]$virtualSize, [uint64]$rawSize)
+        if ($Rva -ge $virtualAddress -and [uint64]$Rva -lt [uint64]$virtualAddress + $mappedSize) {
+            return [int]([uint64]$rawOffset + ([uint64]$Rva - [uint64]$virtualAddress))
+        }
+    }
+    throw ('RVA 0x{0:X8} hors des sections PE.' -f $Rva)
+}
+
+function Set-WindowClassIconBinding {
+    param([string]$Path)
+    $data = [IO.File]::ReadAllBytes($Path)
+    $patches = @(
+        [pscustomobject]@{
+            Rva = [uint32]0x0000D820
+            Before = [byte[]](0x68, 0x00, 0x7F, 0x00, 0x00, 0x56)
+            After = [byte[]](0x68, 0x00, 0x7F, 0x00, 0x00, 0x50)
+            Meaning = 'RegisterClassW: LoadIconA(hInstance, 0x7F00)'
+        },
+        [pscustomobject]@{
+            Rva = [uint32]0x0000D88E
+            Before = [byte[]](0x68, 0x00, 0x7F, 0x00, 0x00, 0x56)
+            After = [byte[]](0x68, 0x00, 0x7F, 0x00, 0x00, 0x52)
+            Meaning = 'RegisterClassA: LoadIconA(hInstance, 0x7F00)'
+        }
+    )
+    $changed = 0
+    foreach ($patch in $patches) {
+        $offset = Get-PeFileOffsetFromRva -Data $data -Rva $patch.Rva
+        $current = [byte[]]::new($patch.Before.Length)
+        [Array]::Copy($data, $offset, $current, 0, $current.Length)
+        $isBefore = [Linq.Enumerable]::SequenceEqual($current, $patch.Before)
+        $isAfter = [Linq.Enumerable]::SequenceEqual($current, $patch.After)
+        if (-not $isBefore -and -not $isAfter) {
+            throw ('Sequence inattendue au RVA 0x{0:X8} ; correction de l icone refusee.' -f $patch.Rva)
+        }
+        if ($isBefore) {
+            [Array]::Copy($patch.After, 0, $data, $offset, $patch.After.Length)
+            ++$changed
+        }
+    }
+    if ($changed -gt 0) {
+        [IO.File]::WriteAllBytes($Path, $data)
+    }
+    [pscustomobject]@{ Bindings = $patches.Count; Changed = $changed }
+}
+
 $input = [IO.Path]::GetFullPath($InputPath)
 $output = [IO.Path]::GetFullPath($OutputPath)
 $icon = [IO.Path]::GetFullPath($IconPath)
@@ -315,18 +373,8 @@ try {
             throw "Ajout de l image ICO $($index + 1) impossible (Win32 $([Runtime.InteropServices.Marshal]::GetLastWin32Error()))."
         }
     }
-    # Les EXE historiques ont sept images sous IL2ICON ; la nouvelle ICO en a six.
-    $ok = [OpenSturmovik.NativeResources]::UpdateResource(
-        $handle,
-        [IntPtr]3,
-        [IntPtr]7,
-        [uint16]0x0419,
-        $null,
-        0
-    )
-    if (-not $ok) {
-        throw "Suppression de l ancienne image ICO 7 impossible (Win32 $([Runtime.InteropServices.Marshal]::GetLastWin32Error()))."
-    }
+    # Le nouveau groupe reference uniquement les six images de l'ICO. Une
+    # ancienne image non referencee peut rester sans influer sur le resultat.
     $ok = [OpenSturmovik.NativeResources]::UpdateResourceByName(
         $handle,
         [IntPtr]14,
@@ -338,6 +386,19 @@ try {
     if (-not $ok) {
         throw "Remplacement du groupe IL2ICON impossible (Win32 $([Runtime.InteropServices.Marshal]::GetLastWin32Error()))."
     }
+    # IL-2 enregistre sa classe de fenetre avec l'identifiant numerique 0x7F00.
+    # Le groupe nomme IL2ICON reste le premier groupe de l'EXE pour Explorer.
+    $ok = [OpenSturmovik.NativeResources]::UpdateResource(
+        $handle,
+        [IntPtr]14,
+        [IntPtr]0x7F00,
+        [uint16]0x0419,
+        $groupIcon,
+        [uint32]$groupIcon.Length
+    )
+    if (-not $ok) {
+        throw "Ajout du groupe d icone de fenetre 0x7F00 impossible (Win32 $([Runtime.InteropServices.Marshal]::GetLastWin32Error()))."
+    }
     if (-not [OpenSturmovik.NativeResources]::EndUpdateResource($handle, $false)) {
         throw "EndUpdateResource a echoue (Win32 $([Runtime.InteropServices.Marshal]::GetLastWin32Error()))."
     }
@@ -348,12 +409,19 @@ try {
     }
 }
 
+$afterResources = Get-PeCodeIdentity $output
+if ($before.Machine -ne $afterResources.Machine -or
+    $before.EntryPoint -ne $afterResources.EntryPoint -or
+    $before.TextSize -ne $afterResources.TextSize -or
+    $before.TextSha256 -ne $afterResources.TextSha256) {
+    throw 'Le code PE a change pendant l ajout des ressources Windows.'
+}
+$windowIconBinding = Set-WindowClassIconBinding -Path $output
 $after = Get-PeCodeIdentity $output
 if ($before.Machine -ne $after.Machine -or
     $before.EntryPoint -ne $after.EntryPoint -or
-    $before.TextSize -ne $after.TextSize -or
-    $before.TextSha256 -ne $after.TextSha256) {
-    throw 'Le code PE a change pendant l ajout de la ressource VERSIONINFO.'
+    $before.TextSize -ne $after.TextSize) {
+    throw 'La structure du code PE a change pendant le marquage.'
 }
 
 $version = (Get-Item -LiteralPath $output).VersionInfo
@@ -383,6 +451,8 @@ try {
     IconSha256 = (Get-FileHash -LiteralPath $icon -Algorithm SHA256).Hash
     IconImages = $iconEntries.Count
     EmbeddedIconSize = $embeddedIconSize
+    WindowIconBindings = $windowIconBinding.Bindings
+    WindowIconBindingsChanged = $windowIconBinding.Changed
     Machine = ('0x{0:X4}' -f $after.Machine)
     EntryPoint = ('0x{0:X8}' -f $after.EntryPoint)
     TextSha256 = $after.TextSha256

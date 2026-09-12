@@ -2,12 +2,30 @@
 
 Derniere consolidation : 12 septembre 2026.
 
+## Copie actualisee et relance du 12 septembre
+
+La copie `WIP/test-installations/IL 2 Sturmovik 1946 test` a ete synchronisee
+apres les retraits : 287 copies et 1 240 retraits recuperables, dont quatre
+anciennes missions de demonstration MDS propres au test. Sauvegarde :
+`WIP/test-installations/sync-20260912-141157`.
+Le controle du contenu donne **24 PASS, 1 WARN, 0 FAIL**, sans exception AOC
+ou MDS. Les 266 profils AOC distribues sont conformes. Les **42 controles
+avant lancement** passent ; les neuf fichiers de reglages et profils joueur
+controles sont inchanges. Le profil existant 9 / 4.09m avec 6DOF / HUD
+standard / DirectX est conserve, sans reapplication du switcher.
+
+Le jeu a ete lance a la demande d'Alexis pour ses essais. Ce lancement ne
+vaut pas validation des vols, des deux armements CW-21 ou de la campagne
+complete. Voir [le compte rendu de relance](RELANCE_TEST_V1.15_20260912.md).
+Les resultats plus anciens ci-dessous restent historiques.
+
 ## Retraits demandes le 12 septembre
 
 DCG 3.43, San FOV 1.0 et la carte Malta de 6S.Maraz sont retires du depot,
 avec les missions et campagnes dependantes de Malta. Les sauvegardes verifiees
 sont sous `Mods\Retirés\besoin_licence` dans les ressources locales. Le
-manifeste des utilitaires et l'installateur declarent maintenant huit raccourcis.
+manifeste des utilitaires declare maintenant huit raccourcis ; l'ancienne
+ebauche d'installateur a ete supprimee.
 Les credits publics correspondent aux retraits effectifs.
 
 Zuti MDS est retire du contenu local. Les 699 originaux touches sont archives
@@ -21,8 +39,8 @@ les classes controlees et aucune nouvelle rupture de reference detectee.
 Les tests statiques et cibles passent ; les essais reels du jeu et de
 l'installateur restent a refaire. La version finale ne peut pas encore etre declaree prete. Le [suivi des retraits](RETRAIT_COMPOSANTS_V1.15.md)
 fait autorite sur ces composants. Les resultats historiques ci-dessous restent
-dates ; la copie WIP et le Bureau temporaire n'ont pas ete resynchronises avec
-ces retraits et ne representent pas encore le nouveau contenu du depot.
+dates ; la copie WIP est maintenant synchronisee comme indique ci-dessus.
+Les anciens controles du Bureau temporaire ne qualifient pas un installateur.
 
 ## Perimetre de travail
 
@@ -31,9 +49,9 @@ ces retraits et ne representent pas encore le nouveau contenu du depot.
 - le lanceur reste dans son depot/worktree separe ;
 - aucun nouveau worktree ni changement de branche n'est requis pour ce retrait ;
 - aucun chantier v1.20 ne fait partie de cette reprise ;
-- la copie de test doit etre actualisee apres le retrait local avant les prochains essais ;
-- aucun jeu ne doit etre lance pour la consolidation Git ; les essais precedents
-  et leurs limites sont distingues ci-dessous ;
+- la copie de test a ete actualisee apres les retraits avant la relance demandee ;
+- le lancement du 12 septembre est explicitement demande par Alexis ; les
+  essais precedents et leurs limites sont distingues ci-dessous ;
 - le vrai Bureau n'a pas ete modifie : les raccourcis ont ete verifies dans un
   Bureau temporaire.
 
@@ -260,8 +278,8 @@ controles utilisateur sont les deux armements CW-21, le classement des avions
 et le switcher. Le son CW-21, AOC, le moteur apres retrait MDS, 6DOF/TrackIR, les utilitaires et
 la non-regression complete restent a qualifier ou diagnostiquer. Les nuages
 DirectX, le titre modifie et la perte de focus ont deja ete confirmes par Alexis.
-L'inventaire des profils AOC
-de test devra etre clarifie avec lui avant qualification du paquet complet.
+L'inventaire des profils AOC de test est desormais conforme aux 266 profils
+distribues ; leur fonctionnement en vol reste a qualifier.
 Les bombes
 nucleaires, nouveaux wrappers et chargement progressif des textures restent
 hors v1.15.

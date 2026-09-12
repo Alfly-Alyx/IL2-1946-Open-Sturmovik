@@ -132,7 +132,8 @@ if (-not [string]::IsNullOrWhiteSpace($DesktopPath)) {
             }
             $shortcut = $shell.CreateShortcut($shortcutPath)
             if ([IO.Path]::GetFullPath([string]$shortcut.TargetPath) -ine
-                    [IO.Path]::GetFullPath([string]$entry.Target) -or
+                    [IO.Path]::GetFullPath([string]$entry.ShortcutTarget) -or
+                [string]$shortcut.Arguments -cne [string]$entry.Arguments -or
                 [IO.Path]::GetFullPath([string]$shortcut.WorkingDirectory) -ine
                     [IO.Path]::GetDirectoryName([string]$entry.Target)) {
                 throw "Raccourci installe incoherent : $($entry.Name)"

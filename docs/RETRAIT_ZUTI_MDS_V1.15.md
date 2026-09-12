@@ -20,7 +20,7 @@ nettoyes**. Le manifeste exact est
 | Missions ordinaires | 43 missions conservees ; seules les sections et cles MDS sont retirees |
 | Traductions | Quatre fichiers i18n nettoyes des entrees MDS ; autres libelles preserves |
 | Outils et notices | Deux outils Java, leurs lanceurs, les notices MDS et les anciens outils/tests specifiques retires du pack |
-| Credits | Ligne MDS et mentions des deux mods incorpores a MDS retirees ; 40 contributions dans la page generee |
+| Credits | Ligne MDS et mentions des deux mods incorpores a MDS retirees ; 40 contributions au moment du retrait, puis 41 apres ajout du credit de Slovenia conservee |
 
 Les mentions historiques restent dans les rapports et outils de reconstruction.
 La carte `Zuti_Slovenia` est une ressource distincte de MDS. L'attribution

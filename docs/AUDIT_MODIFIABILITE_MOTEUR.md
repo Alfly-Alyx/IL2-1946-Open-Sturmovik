@@ -46,7 +46,7 @@ L'installation de test utilise actuellement le profil 4.09m modifie :
 
 | Element | Observation |
 |---|---|
-| `il2fb.exe` | PE32 i386, 274 432 octets, Large Address Aware ; variante 6DOF finale SHA-256 `F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3` |
+| `il2fb.exe` | PE32 i386, 274 432 octets, Large Address Aware ; variante 6DOF finale SHA-256 `7EBC80C47CDC9EB1C8AF3F740E5D8347551D12521D2E0CE02D1106383A2EFD21` |
 | `wrapper.dll` | Wrapper historique sans cache, 233 472 octets, SHA-256 `8B6091C38F1241F2CB7D4EAF239DE662A2C862B57B14D7ACA9074C5C37A03F78` |
 | `files.SFS` | Profil modifie 4.09m, 23 010 398 octets, SHA-256 `5CB81D4FAE005429B701CE3DCAC001892DB2C66D0AECEE0A00E918D5E8892E71` |
 | JVM | HotSpot 1.3.1 x86 sous `bin\hotspot\jvm.dll` |

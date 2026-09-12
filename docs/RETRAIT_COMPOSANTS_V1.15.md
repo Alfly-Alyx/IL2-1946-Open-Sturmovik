@@ -75,8 +75,9 @@ conserves comme preuves historiques ; ils ne representent plus l'inventaire
 actuel de ces composants.
 
 La ligne MDS et les mentions Certificates AI / Fireballs Carrier Takeoff incorpores
-a MDS ont aussi ete retirees apres retrait effectif. La page compte maintenant
-40 contributions. Les attributions de creations independantes conservees restent
+a MDS ont aussi ete retirees apres retrait effectif. La page comptait alors
+40 contributions ; l'ajout ulterieur du credit de Slovenia la porte a 41.
+Les attributions de creations independantes conservees restent
 presentes ; voir le perimetre detaille ci-dessous.
 
 Le manifeste, les scripts de preparation/finalisation, l'installateur et les

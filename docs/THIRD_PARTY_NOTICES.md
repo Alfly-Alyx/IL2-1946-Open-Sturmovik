@@ -1,5 +1,11 @@
 # Notices des composants tiers
 
+La [licence de partage non commercial d'Open Sturmovik](../LICENSE.md)
+couvre les contributions originales d'Alfly, dans le périmètre décrit par
+[LICENSING.md](LICENSING.md). Elle ne remplace ni ne restreint les licences
+des composants tiers ci-dessous et ne fournit aucune autorisation supplémentaire
+sur les éléments d'IL-2 ou les mods de leurs auteurs.
+
 ## Retraits du 12 septembre 2026
 
 Lowengrin DCG 3.43, San FOV Changer 1.0 et Malta de 6S.Maraz ont ete retires
@@ -30,7 +36,7 @@ avant de qualifier la sortie. Voir
 [le suivi effectif](RETRAIT_COMPOSANTS_V1.15.md) et
 [la reconstruction AOC](AUDIT_AOC_SANS_MDS_20260912.md).
 
-## B-29 Silverplate v1.2 / Little Boy / Fat Man — credits retrouves, aucune licence publiee
+## B-29 Silverplate v1.2 / Little Boy / Fat Man — crédits retrouvés, permission non établie
 
 Le paquet historique Silverplate v1.2 fournit le B-29 Silverplate, les classes
 Little Boy et Fat Man, leurs modeles et les effets nucleaires de base. Le seul
@@ -42,20 +48,18 @@ SAS~Cirx, MrJolly, Lt.Wolf, Fat Duck, VC-81_BOLTER, O_Leigh, Max_Thehitman,
 Ranwers, Wolfighter et Twister. Santobr y est cite pour des effets additionnels,
 dont la presence exacte dans Open Sturmovik reste a verifier.
 
-Cette publication ne donne pas de licence ni de permission de redistribution.
-Le mainteneur confirme que le paquet n'a pas de licence publiee. Ce composant
-doit donc etre traite comme non autorise a la redistribution tant qu'une
-permission explicite n'a pas ete obtenue.
+Aucune permission applicable à la redistribution et aux adaptations présentes
+dans Open Sturmovik n'a été retrouvée dans les éléments examinés. Ces éléments
+ne permettent pas de certifier les droits de distribution de Silverplate ;
+ils ne documentent pas non plus une interdiction particulière de son auteur.
 
 Open Sturmovik conserve les huit ressources de modele de bombe identiques au
 paquet historique, mais fusionne et corrige plusieurs classes Java pour assurer
 la compatibilite avec le moteur 4.09m. La verification statique de leur preservation
 lors du retrait MDS passe ; les essais en jeu restent a refaire. La presence ancienne de ces
 fichiers dans l'add-on ne prouve pas une autorisation de redistribution ou de
-modification. Une diffusion publique de la v1.15 exige donc une permission
-explicite de l'auteur ; a defaut, Silverplate devra rester un composant externe
-installe par l'utilisateur ou etre remplace par des ressources dont la licence
-autorise clairement la redistribution et la modification.
+modification. La présente notice conserve cette limite de preuve ; elle ne
+constitue ni une autorisation supplémentaire ni une décision de retrait.
 
 ## OpenIL2
 

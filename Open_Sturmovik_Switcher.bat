@@ -71,7 +71,7 @@ if "%PROFILE%"=="2" (
     set "STATIONARY=Stationary\408 & 409b\stationary.ini"
     set "ORIGINAL=0"
     set "REMOVE_VERSION_SFS=1"
-    set "EXE_HASH=BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328"
+    set "EXE_HASH=BA1C702C1FC0DCC3D760FAEE46F74AD8BDF3D8CB5CE44B2CA40DAA3F75343C80"
     set "FILES_HASH=E00F86B80183313B846F72F153A9102A1DC40AFBB90323DE8AC7DE34DED0D5FD"
 )
 if "%PROFILE%"=="3" (
@@ -84,7 +84,7 @@ if "%PROFILE%"=="3" (
     set "STATIONARY=Stationary\408 & 409b\stationary.ini"
     set "ORIGINAL=0"
     set "REMOVE_VERSION_SFS=1"
-    set "EXE_HASH=F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3"
+    set "EXE_HASH=7EBC80C47CDC9EB1C8AF3F740E5D8347551D12521D2E0CE02D1106383A2EFD21"
     set "FILES_HASH=E00F86B80183313B846F72F153A9102A1DC40AFBB90323DE8AC7DE34DED0D5FD"
 )
 if "%PROFILE%"=="4" (
@@ -110,7 +110,7 @@ if "%PROFILE%"=="5" (
     set "STATIONARY=Stationary\408 & 409b\stationary.ini"
     set "ORIGINAL=0"
     set "REMOVE_VERSION_SFS=0"
-    set "EXE_HASH=BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328"
+    set "EXE_HASH=BA1C702C1FC0DCC3D760FAEE46F74AD8BDF3D8CB5CE44B2CA40DAA3F75343C80"
     set "FILES_HASH=53B97E4993C17DECDEEC6E4E46E70F42ED01A625AE9AEB274A14327C399F890E"
 )
 if "%PROFILE%"=="6" (
@@ -123,7 +123,7 @@ if "%PROFILE%"=="6" (
     set "STATIONARY=Stationary\408 & 409b\stationary.ini"
     set "ORIGINAL=0"
     set "REMOVE_VERSION_SFS=0"
-    set "EXE_HASH=F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3"
+    set "EXE_HASH=7EBC80C47CDC9EB1C8AF3F740E5D8347551D12521D2E0CE02D1106383A2EFD21"
     set "FILES_HASH=53B97E4993C17DECDEEC6E4E46E70F42ED01A625AE9AEB274A14327C399F890E"
 )
 if "%PROFILE%"=="7" (
@@ -149,7 +149,7 @@ if "%PROFILE%"=="8" (
     set "STATIONARY=Stationary\409m\stationary.ini"
     set "ORIGINAL=0"
     set "REMOVE_VERSION_SFS=0"
-    set "EXE_HASH=BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328"
+    set "EXE_HASH=BA1C702C1FC0DCC3D760FAEE46F74AD8BDF3D8CB5CE44B2CA40DAA3F75343C80"
     set "FILES_HASH=5CB81D4FAE005429B701CE3DCAC001892DB2C66D0AECEE0A00E918D5E8892E71"
 )
 if "%PROFILE%"=="9" (
@@ -162,7 +162,7 @@ if "%PROFILE%"=="9" (
     set "STATIONARY=Stationary\409m\stationary.ini"
     set "ORIGINAL=0"
     set "REMOVE_VERSION_SFS=0"
-    set "EXE_HASH=F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3"
+    set "EXE_HASH=7EBC80C47CDC9EB1C8AF3F740E5D8347551D12521D2E0CE02D1106383A2EFD21"
     set "FILES_HASH=5CB81D4FAE005429B701CE3DCAC001892DB2C66D0AECEE0A00E918D5E8892E71"
 )
 
@@ -901,21 +901,35 @@ Cr&#233;dits &#8212; Open Sturmovik
     <select id="creditsJump" title="Aller directement &agrave; une rubrique" aria-label="Rubrique des cr&eacute;dits" onchange="jumpToCreditSection(this.value)">
       <option value="">Toutes les contributions</option>
 <!-- BEGIN GENERATED CREDITS NAVIGATION -->
-<option value="credits-section-1">Mods et contributions</option>
-<option value="credits-section-2">B-29 Silverplate</option>
-<option value="credits-section-3">Cartes et textures</option>
-<option value="credits-section-4">Campagnes fournies</option>
-<option value="credits-section-5">Variantes et outils fournis</option>
-<option value="credits-section-6">Attributions compl&#233;mentaires</option>
-<option value="credits-section-7">Inventaire en cours</option>
+<option value="credits-section-1">Compl&#233;ter les cr&#233;dits et proposer une contribution</option>
+<option value="credits-section-2">Images et captures de la communaut&#233;</option>
+<option value="credits-section-3">Mods et contributions</option>
+<option value="credits-section-4">B-29 Silverplate</option>
+<option value="credits-section-5">Cartes et textures</option>
+<option value="credits-section-6">Campagnes fournies</option>
+<option value="credits-section-7">Variantes et outils fournis</option>
+<option value="credits-section-8">Attributions compl&#233;mentaires</option>
+<option value="credits-section-9">Inventaire en cours</option>
 <!-- END GENERATED CREDITS NAVIGATION -->
     </select>
     <div id="creditsScroll" tabindex="0" role="region" aria-label="Liste des cr&eacute;dits">
 <!-- BEGIN GENERATED CREDITS CONTENT -->
 <p><strong>par la communaut&#233;, pour la communaut&#233;</strong></p>
 <p>Open Sturmovik r&#233;unit des cr&#233;ations de la communaut&#233; IL-2 1946. Merci aux auteurs et aux &#233;quipes des mods dont les travaux contribuent au pack.</p>
-<p>Liste en cours pour la v1.15, enrichie par le scan des dossiers du jeu et la comparaison aux sources locales. Les contributions et options ci-dessous sont fournies par le pack ; leur pr&#233;sence ne signifie pas qu&#8217;elles sont toutes s&#233;lectionn&#233;es dans chaque profil.</p>
+<p>Cr&#233;dits de la v1.15 mis &#224; jour le 12 septembre 2026 &#224; partir des composants conserv&#233;s dans le pack et des sources documentaires retrouv&#233;es. Les contributions et options ci-dessous sont fournies par le pack ; leur pr&#233;sence ne signifie pas qu&#8217;elles sont toutes s&#233;lectionn&#233;es dans chaque profil.</p>
 <div class="credits-section" id="credits-section-1">
+<h2>Compl&#233;ter les cr&#233;dits et proposer une contribution</h2>
+<p>&#192; la suite de la perte des fichiers de mods conserv&#233;s sur un disque dur, Alfly ne dispose plus de la liste compl&#232;te des mods composant Open Sturmovik ni de l&#x27;identit&#233; de tous leurs auteurs. Les cr&#233;dits sont progressivement reconstitu&#233;s &#224; partir des sources retrouv&#233;es.</p>
+<p>Si vous reconnaissez votre travail dans Open Sturmovik, vous pouvez contacter Alfly pour &#234;tre cr&#233;dit&#233; ou faire corriger une attribution, en pr&#233;cisant le mod concern&#233; et le nom ou pseudonyme &#224; mentionner.</p>
+<p>Si vous souhaitez partager votre travail et en autoriser l&#x27;int&#233;gration &#224; Open Sturmovik, vous pouvez &#233;galement contacter Alfly en pr&#233;cisant les conditions d&#x27;utilisation et de redistribution que vous autorisez.</p>
+<p>Pour ces demandes, contactez Alfly dans les <a href="https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik/discussions" onclick="return openCreditLink(this.href)">discussions du d&#233;p&#244;t GitHub</a>.</p>
+</div>
+<div class="credits-section" id="credits-section-2">
+<h2>Images et captures de la communaut&#233;</h2>
+<p>Plusieurs ic&#244;nes, fonds d&#x27;&#233;cran et autres visuels d&#x27;Open Sturmovik sont des remixes d&#x27;images des pr&#233;c&#233;dents titres : &#233;crans de chargement, jaquettes et autres illustrations d&#x27;IL-2 Sturmovik (2001), de Pacific Fighters et de Forgotten Battles. Le m&#233;rite de ces cr&#233;ations d&#x27;origine revient aux auteurs et aux &#233;quipes de ces titres.</p>
+<p>Les fonds d&#x27;&#233;cran des menus de missions et de pays proviennent de captures d&#x27;&#233;cran r&#233;alis&#233;es par la communaut&#233;. Leur utilisation vise &#224; mettre cette communaut&#233; &#224; l&#x27;honneur ; Alfly ne revendique pas la cr&#233;ation de ces images. Les auteurs qui reconnaissent une de leurs captures peuvent se signaler dans les discussions du d&#233;p&#244;t pour que leur nom ou pseudonyme soit ajout&#233;.</p>
+</div>
+<div class="credits-section" id="credits-section-3">
 <h2>Mods et contributions</h2>
 <table class="credits-table cols-3">
 <thead><tr><th scope="col">Mod</th><th scope="col">Auteur ou collectif</th><th scope="col">Contribution au pack</th></tr></thead>
@@ -930,11 +944,11 @@ Cr&#233;dits &#8212; Open Sturmovik
 <tr><td>6DOF Tracker 2.0</td><td class="credits-author">sHr</td><td>D&#233;placement du point de vue dans les profils 6DOF du switcher ; attribution aussi reprise dans les <a href="https://mail.mission4today.com/index.php?file=viewtopic&amp;finish=15&amp;name=ForumsPro&amp;start=0&amp;t=7663" onclick="return openCreditLink(this.href)">notes HSFX v4</a>.</td></tr>
 </tbody></table>
 </div>
-<div class="credits-section" id="credits-section-2">
+<div class="credits-section" id="credits-section-4">
 <h2>B-29 Silverplate</h2>
 <p>Cr&#233;dits du paquet d&#x27;origine : <strong>1C/Maddox, O_Magpie, Fireball, SAS~Cirx, MrJolly, Lt.Wolf, Fat Duck, VC-81_BOLTER, O_Leigh, Max_Thehitman, Ranwers, Wolfighter et Twister</strong>. <a href="https://www.sas1946.com/main/index.php?topic=7894.0" onclick="return openCreditLink(this.href)">Publication et cr&#233;dits du mod Silverplate</a>.</p>
 </div>
-<div class="credits-section" id="credits-section-3">
+<div class="credits-section" id="credits-section-5">
 <h2>Cartes et textures</h2>
 <table class="credits-table cols-3">
 <thead><tr><th scope="col">Carte ou contribution</th><th scope="col">Auteurs</th><th scope="col">Notice conserv&#233;e</th></tr></thead>
@@ -947,14 +961,15 @@ Cr&#233;dits &#8212; Open Sturmovik
 <tr><td>Eastafrica</td><td class="credits-author">Kapteeni ; Fly_zo pour le correctif</td><td><span class="credits-reference" title="Documentation : ../Maps/Kt_eastafrica/Lisez-moi - Eastafrica beta 0.91.txt">Notice</span></td></tr>
 <tr><td>Lybia N-E / Tobruk</td><td class="credits-author">BADA</td><td><span class="credits-reference" title="Documentation : ../Maps/Lybia_N-E/Lisez-moi - Lybia N-E alpha 1.3.txt">Notice</span></td></tr>
 <tr><td>BP Midway et eau du Pacifique</td><td class="credits-author">Boosher &#8212; carte ; panzerkeil &#8212; objets statiques ; Viking &#8212; couleur de l&#8217;eau</td><td><span class="credits-reference" title="Documentation : ../Maps/midway/Lisez-moi - eau du Pacifique pour BP Midway.txt">Notice</span></td></tr>
-<tr><td>Darwin Small</td><td class="credits-author">Neil Lowe</td><td><span class="credits-reference" title="Documentation : ../Maps/NTL_Darwin_Small/Lisez-moi - Darwin Small 1.1.txt">Notice</span></td></tr>
+<tr><td>Darwin Small (NTL_Darwin_Small)</td><td class="credits-author">Neil Lowe</td><td><span class="credits-reference" title="Documentation : ../Maps/NTL_Darwin_Small/Lisez-moi - Darwin Small 1.0.txt">Notice 1.0 et auteur</span> ; <span class="credits-reference" title="Documentation : ../Maps/NTL_Darwin_Small/Lisez-moi - Darwin Small 1.1.txt">notice 1.1</span></td></tr>
+<tr><td>Slovenia &#8212; variantes &#233;t&#233; et hiver</td><td class="credits-author">Zuti &#8212; carte ; may_bugs &#8212; textures hivernales</td><td><span class="credits-reference" title="Documentation : ../../docs/SCAN_CARTES_CREDITS_V1.15.md">Attributions et sources</span></td></tr>
 <tr><td>Alpen</td><td class="credits-author">Zipzapp ; JV69_BADA &#8212; a&#233;rodromes ; Lowfighter &#8212; ch&#226;teaux suisses</td><td><span class="credits-reference" title="Documentation : ../Maps/zip_Alpen/Lisez-moi - Alpen beta 2.txt">Notice</span></td></tr>
 <tr><td>Alpen &#8212; textures fsmd_mount3 et champs Bob</td><td class="credits-author">Phasmid &#8212; relief ; Rus_Andrey &#8212; champs</td><td><span class="credits-reference" title="Documentation : ../Maps/zip_Alpen/Lisez-moi - Alpen beta 2.txt">Notice</span></td></tr>
 <tr><td>Mbug Slovakia winter</td><td class="credits-author">may-bug &#8212; adaptation hivernale ; Slovakia Team &#8212; carte d&#8217;origine</td><td><span class="credits-reference" title="Documentation : ../../docs/SCAN_CARTES_CREDITS_V1.15.md">Preuves et version adapt&#233;e</span></td></tr>
 </tbody></table>
 <p>Les cr&#233;dits portent sur les contributions indiqu&#233;es. Ils ne remplacent pas ceux des cartes d&#8217;origine ni ceux des autres &#233;l&#233;ments utilis&#233;s.</p>
 </div>
-<div class="credits-section" id="credits-section-4">
+<div class="credits-section" id="credits-section-6">
 <h2>Campagnes fournies</h2>
 <table class="credits-table cols-2">
 <thead><tr><th scope="col">Campagne</th><th scope="col">Auteur</th></tr></thead>
@@ -971,7 +986,7 @@ Cr&#233;dits &#8212; Open Sturmovik
 <tr><td><span class="credits-reference" title="Documentation : ../Campaigns/Wings over Waves/Version - Catball US1.txt">Wings over Waves - Catball</span></td><td class="credits-author">PlusWave Expansions / MDi Design GmbH</td></tr>
 </tbody></table>
 </div>
-<div class="credits-section" id="credits-section-5">
+<div class="credits-section" id="credits-section-7">
 <h2>Variantes et outils fournis</h2>
 <table class="credits-table cols-3">
 <thead><tr><th scope="col">Mod ou outil</th><th scope="col">Auteur</th><th scope="col">Contribution</th></tr></thead>
@@ -989,11 +1004,11 @@ Cr&#233;dits &#8212; Open Sturmovik
 </tbody></table>
 <p>Les versions, les notices et les limites de ces options sont relev&#233;es dans <span class="credits-reference" title="Documentation : ../../docs/SCAN_OPTIONS_CREDITS_V1.15.md">l&#8217;inventaire des outils</span>.</p>
 </div>
-<div class="credits-section" id="credits-section-6">
+<div class="credits-section" id="credits-section-8">
 <h2>Attributions compl&#233;mentaires</h2>
-<p><strong>BombBayDoors Plus 2.5.3 &#8212; Zuti et Fireball.</strong> Attribution retrouv&#233;e dans une notice du pack BAT. La version exacte du code pr&#233;sent dans Open Sturmovik reste &#224; pr&#233;ciser ; <span class="credits-reference" title="Documentation : ../../docs/SCAN_PACKS_CREDITS_V1.15.md">la source et les correspondances sont conserv&#233;es ici</span>.</p>
+<p><strong>BombBayDoors Plus &#8212; Zuti et Fireball.</strong> Contributions aux commandes des portes de soute conserv&#233;es dans Open Sturmovik. <span class="credits-reference" title="Documentation : ../../docs/CREDITS_MODS.md">Sources et p&#233;rim&#232;tre de l&#8217;attribution</span>.</p>
 </div>
-<div class="credits-section" id="credits-section-7">
+<div class="credits-section" id="credits-section-9">
 <h2>Inventaire en cours</h2>
 <p>Le <span class="credits-reference" title="Documentation : ../../docs/SCAN_MODS_V1.15.md">scan des dossiers et des ressources</span> conserve les noms des 130 modules compar&#233;s, leurs correspondances et les fichiers restant &#224; attribuer. Le <span class="credits-reference" title="Documentation : ../../docs/SCAN_PACKS_CREDITS_V1.15.md">relev&#233; des packs locaux examin&#233;s</span> compl&#232;te ces recherches. La liste sera enrichie avec les auteurs des autres ressources effectivement int&#233;gr&#233;es. L&#x27;attribution des &#233;l&#233;ments h&#233;rit&#233;s de RMP3 Atmosphere et de WindConfig v3 reste notamment &#224; pr&#233;ciser.</p>
 <p>Les sources, les limites des int&#233;grations partielles et les points &#224; v&#233;rifier sont consign&#233;s dans <span class="credits-reference" title="Documentation : ../../docs/CREDITS_MODS.md">l&#x27;inventaire d&#233;taill&#233; des mods</span>.</p>

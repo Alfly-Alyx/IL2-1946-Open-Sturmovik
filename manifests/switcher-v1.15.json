@@ -80,7 +80,7 @@
     ]
   },
   "defaultProfile": 8,
-  "status": "single-batch-switcher-offline-verified-loading-background-retest-pending",
+  "status": "single-batch-switcher-and-profile9-window-branding-runtime-verified",
   "rules": {
     "gameMustBeClosed": true,
     "sourceHashesCheckedBeforeWrite": true,
@@ -117,6 +117,11 @@
       "path": "_Game Switcher/Resources/Icons/Open_Sturmovik_Game.ico",
       "sourceDesign": "exec-f97469cb__avion-ciel__master-1024",
       "sha256": "15CDF20FBF22B9704F43B1F4F792A253216F5629A66C9E9E2B04202B0E4F0080",
+      "windowClassResourceId": 32512,
+      "nativeBindingRvas": [
+        "0x0000D820",
+        "0x0000D88E"
+      ],
       "images": 6,
       "sizes": [
         16,
@@ -276,7 +281,7 @@
       "mode": "open-sturmovik-no-6dof",
       "folder": "4.08 Mods ON (NO 6DOF)",
       "payload": "4.08m",
-      "exeSha256": "BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328",
+      "exeSha256": "BA1C702C1FC0DCC3D760FAEE46F74AD8BDF3D8CB5CE44B2CA40DAA3F75343C80",
       "filesSha256": "E00F86B80183313B846F72F153A9102A1DC40AFBB90323DE8AC7DE34DED0D5FD",
       "remove": [
         "fb_3do19.SFS",
@@ -291,7 +296,7 @@
       "mode": "open-sturmovik-6dof",
       "folder": "4.08 Mods ON 6DOF",
       "payload": "4.08m",
-      "exeSha256": "F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3",
+      "exeSha256": "7EBC80C47CDC9EB1C8AF3F740E5D8347551D12521D2E0CE02D1106383A2EFD21",
       "filesSha256": "E00F86B80183313B846F72F153A9102A1DC40AFBB90323DE8AC7DE34DED0D5FD",
       "remove": [
         "fb_3do19.SFS",
@@ -319,7 +324,7 @@
       "mode": "open-sturmovik-no-6dof",
       "folder": "4.09 Mods ON (NO 6DOF)",
       "payload": "4.09b",
-      "exeSha256": "BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328",
+      "exeSha256": "BA1C702C1FC0DCC3D760FAEE46F74AD8BDF3D8CB5CE44B2CA40DAA3F75343C80",
       "filesSha256": "53B97E4993C17DECDEEC6E4E46E70F42ED01A625AE9AEB274A14327C399F890E",
       "airRegistry": "4.09b"
     },
@@ -329,7 +334,7 @@
       "mode": "open-sturmovik-6dof",
       "folder": "4.09 Mods ON 6DOF",
       "payload": "4.09b",
-      "exeSha256": "F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3",
+      "exeSha256": "7EBC80C47CDC9EB1C8AF3F740E5D8347551D12521D2E0CE02D1106383A2EFD21",
       "filesSha256": "53B97E4993C17DECDEEC6E4E46E70F42ED01A625AE9AEB274A14327C399F890E",
       "airRegistry": "4.09b"
     },
@@ -352,7 +357,7 @@
       "mode": "open-sturmovik-no-6dof",
       "folder": "4.09 final Mods ON (NO 6DOF)",
       "payload": "4.09m",
-      "exeSha256": "BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328",
+      "exeSha256": "BA1C702C1FC0DCC3D760FAEE46F74AD8BDF3D8CB5CE44B2CA40DAA3F75343C80",
       "filesSha256": "5CB81D4FAE005429B701CE3DCAC001892DB2C66D0AECEE0A00E918D5E8892E71",
       "airRegistry": "4.09m"
     },
@@ -362,7 +367,7 @@
       "mode": "open-sturmovik-6dof",
       "folder": "4.09 final Mods ON 6DOF",
       "payload": "4.09m",
-      "exeSha256": "F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3",
+      "exeSha256": "7EBC80C47CDC9EB1C8AF3F740E5D8347551D12521D2E0CE02D1106383A2EFD21",
       "filesSha256": "5CB81D4FAE005429B701CE3DCAC001892DB2C66D0AECEE0A00E918D5E8892E71",
       "airRegistry": "4.09m"
     }
@@ -425,9 +430,9 @@
       "entries": 535
     }
   },
-  "entryPointSha256": "28271B49BE9C4A3F6045AAE9BEF0783C5ED3C3514B717164327ED3A594822460",
+  "entryPointSha256": "127046D207B396C8BE3BB1EFB30645F2E4D9D35FB1EE8F7BAA9D6033B631D2FE",
   "latestVerification": {
-    "date": "2026-09-08",
+    "date": "2026-09-12",
     "fileTransactionsPassed": 18,
     "keepHudChecks": [
       "immersion-preserved-9-to-8",
@@ -448,6 +453,6 @@
     "capturesLaunched": false,
     "guiLaunched": false,
     "stockHudPolicy": "stock profiles force the original HUD; standard and immersion remain selectable for modded profiles",
-    "runtimeValidation": "profile 9 reached the loading screen; the observed Files/background0.tga target has now been corrected and awaits a no-capture relaunch"
+    "runtimeValidation": "profile 9 passed 48/48 startup checks, launched with the corrected executable, reported the Open Sturmovik window title, and exposed a 32x32 class icon pixel-identical to Open_Sturmovik_Game.ico; loading rotation remained installed and enabled; Alexis confirmed the visible window and taskbar icon"
   }
 }

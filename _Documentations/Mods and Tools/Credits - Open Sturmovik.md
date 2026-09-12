@@ -5,7 +5,39 @@
 Open Sturmovik réunit des créations de la communauté IL-2 1946. Merci aux
 auteurs et aux équipes des mods dont les travaux contribuent au pack.
 
-Liste en cours pour la v1.15, enrichie par le scan des dossiers du jeu et la comparaison aux sources locales. Les contributions et options ci-dessous sont fournies par le pack ; leur présence ne signifie pas qu’elles sont toutes sélectionnées dans chaque profil.
+Crédits de la v1.15 mis à jour le 12 septembre 2026 à partir des composants conservés dans le pack et des sources documentaires retrouvées. Les contributions et options ci-dessous sont fournies par le pack ; leur présence ne signifie pas qu’elles sont toutes sélectionnées dans chaque profil.
+
+## Compléter les crédits et proposer une contribution
+
+À la suite de la perte des fichiers de mods conservés sur un disque dur,
+Alfly ne dispose plus de la liste complète des mods composant Open Sturmovik
+ni de l'identité de tous leurs auteurs. Les crédits sont progressivement
+reconstitués à partir des sources retrouvées.
+
+Si vous reconnaissez votre travail dans Open Sturmovik, vous pouvez contacter
+Alfly pour être crédité ou faire corriger une attribution, en précisant le
+mod concerné et le nom ou pseudonyme à mentionner.
+
+Si vous souhaitez partager votre travail et en autoriser l'intégration à
+Open Sturmovik, vous pouvez également contacter Alfly en précisant les
+conditions d'utilisation et de redistribution que vous autorisez.
+
+Pour ces demandes, contactez Alfly dans les
+[discussions du dépôt GitHub](https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik/discussions).
+
+## Images et captures de la communauté
+
+Plusieurs icônes, fonds d'écran et autres visuels d'Open Sturmovik sont des
+remixes d'images des précédents titres : écrans de chargement, jaquettes
+et autres illustrations d'IL-2 Sturmovik (2001), de Pacific Fighters et de
+Forgotten Battles. Le mérite de ces créations d'origine revient aux
+auteurs et aux équipes de ces titres.
+
+Les fonds d'écran des menus de missions et de pays proviennent de captures
+d'écran réalisées par la communauté. Leur utilisation vise à mettre cette
+communauté à l'honneur ; Alfly ne revendique pas la création de ces images.
+Les auteurs qui reconnaissent une de leurs captures peuvent se signaler
+dans les discussions du dépôt pour que leur nom ou pseudonyme soit ajouté.
 
 ## Mods et contributions
 
@@ -38,7 +70,8 @@ Wolfighter et Twister**. [Publication et crédits du mod Silverplate](https://ww
 | Eastafrica | Kapteeni ; Fly_zo pour le correctif | [Notice](<../Maps/Kt_eastafrica/Lisez-moi - Eastafrica beta 0.91.txt>) |
 | Lybia N-E / Tobruk | BADA | [Notice](<../Maps/Lybia_N-E/Lisez-moi - Lybia N-E alpha 1.3.txt>) |
 | BP Midway et eau du Pacifique | Boosher — carte ; panzerkeil — objets statiques ; Viking — couleur de l’eau | [Notice](<../Maps/midway/Lisez-moi - eau du Pacifique pour BP Midway.txt>) |
-| Darwin Small | Neil Lowe | [Notice](<../Maps/NTL_Darwin_Small/Lisez-moi - Darwin Small 1.1.txt>) |
+| Darwin Small (NTL_Darwin_Small) | Neil Lowe | [Notice 1.0 et auteur](<../Maps/NTL_Darwin_Small/Lisez-moi - Darwin Small 1.0.txt>) ; [notice 1.1](<../Maps/NTL_Darwin_Small/Lisez-moi - Darwin Small 1.1.txt>) |
+| Slovenia — variantes été et hiver | Zuti — carte ; may_bugs — textures hivernales | [Attributions et sources](../../docs/SCAN_CARTES_CREDITS_V1.15.md) |
 | Alpen | Zipzapp ; JV69_BADA — aérodromes ; Lowfighter — châteaux suisses | [Notice](<../Maps/zip_Alpen/Lisez-moi - Alpen beta 2.txt>) |
 | Alpen — textures fsmd_mount3 et champs Bob | Phasmid — relief ; Rus_Andrey — champs | [Notice](<../Maps/zip_Alpen/Lisez-moi - Alpen beta 2.txt>) |
 | Mbug Slovakia winter | may-bug — adaptation hivernale ; Slovakia Team — carte d’origine | [Preuves et version adaptée](../../docs/SCAN_CARTES_CREDITS_V1.15.md) |
@@ -79,7 +112,7 @@ Les versions, les notices et les limites de ces options sont relevées dans [l�
 
 ## Attributions complémentaires
 
-**BombBayDoors Plus 2.5.3 — Zuti et Fireball.** Attribution retrouvée dans une notice du pack BAT. La version exacte du code présent dans Open Sturmovik reste à préciser ; [la source et les correspondances sont conservées ici](../../docs/SCAN_PACKS_CREDITS_V1.15.md).
+**BombBayDoors Plus — Zuti et Fireball.** Contributions aux commandes des portes de soute conservées dans Open Sturmovik. [Sources et périmètre de l’attribution](../../docs/CREDITS_MODS.md).
 
 ## Inventaire en cours
 

@@ -1,6 +1,6 @@
 # Page Credits du switcher v1.15
 
-Le bouton **Credits** ouvre une page intégrée au switcher, avec 40 contributions generees depuis la source Markdown du pack. Le slogan **« par la communauté, pour la
+Le bouton **Credits** ouvre une page intégrée au switcher, avec 41 contributions generees depuis la source Markdown du pack. Le slogan **« par la communauté, pour la
 communauté »** figure en tête. AAA est crédité comme forum dont les auteurs et
 contributeurs ont partagé plusieurs améliorations ; aucun pack AAA n’est annoncé
 comme intégré. Le bouton **Appliquer** et son voyant sont verts.
@@ -14,8 +14,16 @@ cours, y compris ceux qui n’ont pas été appliqués.
 Le 12 septembre 2026, les entrées DCG et San FOV ont été retirées après leur
 archivage hors du pack. Malta et ses campagnes retirées n'avaient pas d'entrée
 dans cette page. Apres le retrait local effectif de MDS, sa ligne a egalement
-ete retiree et la page regeneree ; elle contient maintenant 40 contributions.
+ete retiree et la page regeneree ; elle contenait alors 40 contributions.
 Voir [le suivi du retrait](RETRAIT_COMPOSANTS_V1.15.md).
+
+La mise à jour suivante conserve Darwin Small au nom de Neil Lowe et lie les
+notices 1.0 (qui nomme l'auteur) et 1.1. Elle ajoute Slovenia, toujours fournie,
+au nom de Zuti, avec may_bugs pour les textures hivernales : la page contient
+désormais 41 lignes de contributions. L'attribution complémentaire de
+BombBayDoors à Zuti et Fireball est conservée, sans présenter le code intégré
+comme une copie certifiée de la version 2.5.3. Aucun mod n'est retiré ou ajouté
+par cette mise à jour des crédits.
 
 La source éditable est
 `_Documentations/Mods and Tools/Credits - Open Sturmovik.md`.
@@ -32,8 +40,9 @@ node tools/Test-SwitcherGui.cjs
 Le générateur transforme le Markdown en HTML embarqué dans le BAT. La page ne
 lit ni ne lance le fichier Markdown à l’exécution et n’exige aucune bibliothèque
 ou connexion réseau pour afficher les crédits. Après toute régénération,
-actualiser `entryPointSha256` dans `manifests/switcher-v1.15.json` à partir du BAT
-en UTF-8 sans BOM avec fins de ligne CRLF.
+actualiser `entryPointSha256` dans `manifests/switcher-v1.15.json`, ainsi que
+l'empreinte et la taille du BAT dans `manifests/aircraft/presentation-v1.15.json`,
+à partir du BAT en UTF-8 sans BOM avec fins de ligne CRLF.
 
 ## Vérification et périmètre
 

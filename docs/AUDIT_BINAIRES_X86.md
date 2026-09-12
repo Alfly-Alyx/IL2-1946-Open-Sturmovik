@@ -1,6 +1,6 @@
 # Audit des executables, DLL, memoire x86 et affinite CPU
 
-Derniere mise a jour : 6 septembre 2026.
+Derniere mise a jour : 12 septembre 2026.
 
 ## Perimetre et resultat
 
@@ -10,12 +10,12 @@ les fichiers. Le rapport reproductible est
 
 | Controle | Resultat |
 |---|---:|
-| EXE/DLL trouves | 66 |
-| En-tetes PE valides | 66 |
-| PE32 i386 | 64 |
-| PE32+ amd64 / arm64 | 1 / 1 |
+| EXE/DLL trouves | 65 |
+| En-tetes PE valides | 65 |
+| PE32 i386 | 65 |
+| PE32+ amd64 / arm64 | 0 / 0 |
 | PE32 i386 Large Address Aware | 6 |
-| PE32 i386 non Large Address Aware | 58 |
+| PE32 i386 non Large Address Aware | 59 |
 
 Les six PE32 marques Large Address Aware sont exactement les six copies de
 `il2fb.exe` des profils **moddes**. Elles ont le meme format, mais le
@@ -23,9 +23,9 @@ differentiel historique 6DOF est maintenant restaure :
 
 - taille : 274 432 octets ;
 - trois profils avec 6DOF, SHA-256
-  `F1DFCE9E955F61D03837BA14F9497CC4A3EFA989A79CA7EF39C0831F840DECE3` ;
+  `7EBC80C47CDC9EB1C8AF3F740E5D8347551D12521D2E0CE02D1106383A2EFD21` ;
 - trois profils sans 6DOF, SHA-256
-  `BF93435737A3332AAD653D8269DBC18D9F82EBBB6940C96ECEA46E961B314328` ;
+  `BA1C702C1FC0DCC3D760FAEE46F74AD8BDF3D8CB5CE44B2CA40DAA3F75343C80` ;
 - architecture : i386 / PE32 ;
 - drapeau `IMAGE_FILE_LARGE_ADDRESS_AWARE` present ;
 - `FileDescription` et `ProductName` Windows : `Open Sturmovik`.
@@ -37,8 +37,10 @@ taches d'afficher `Open Sturmovik`. Le nom d'image technique reste `il2fb.exe`
 dans le volet **Details**, car le fichier actif conserve ce nom necessaire a la
 chaine historique. L'ajout est reproductible par
 `tools/Set-OpenSturmovikExeBranding.ps1`. Le meme outil remplace le groupe
-`IL2ICON` sans toucher au code. Le SHA-256 de la section `.text` est
-controle avant et apres : ni le code 6DOF, ni le code sans 6DOF ne sont changes.
+`IL2ICON`, ajoute le groupe numerique `0x7F00` et corrige les deux appels
+`LoadIconA` qui demandaient auparavant l'icone generique Windows. Seuls les
+octets d'argument documentes aux RVA `0xD820` et `0xD88E` changent dans la
+section `.text` ; le differentiel 6DOF reste intact.
 
 Les ressources PE et les ajustements v1.15 sont conserves dans les deux
 variantes. Le detail des offsets et des classes TrackIR est consigne dans
