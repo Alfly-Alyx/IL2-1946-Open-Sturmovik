@@ -1,0 +1,186 @@
+{
+  "schema": 1,
+  "date": "2026-09-11",
+  "target": "Open Sturmovik v1.15 / IL-2 1946 4.09m",
+  "readOnly": true,
+  "method": "Listing 7-Zip 24.09 de 29 ZIP BAT et 5 EXE sans exécuter installateurs. Lecture ciblée de quatre PDF et deux fichiers _version.txt. Comparaison en flux ZIP par chemin moteur/nom hash, taille puis SHA256 vers Files. Aucune extraction SFS ou nouvelle rétro-ingénierie moteur.",
+  "bat": {
+    "versions": [
+      {
+        "name": "4.0 RED CORE",
+        "zipCount": 13
+      },
+      {
+        "name": "4.1 BLUE EDGE",
+        "zipCount": 7
+      },
+      {
+        "name": "4.2 FLASHPOINT",
+        "zipCount": 2
+      },
+      {
+        "name": "4.3 DANGER ZONE",
+        "zipCount": 7,
+        "patch": "BAT_4.3_DANGER_ZONE_Patch01.exe"
+      }
+    ],
+    "archiveCount": 34,
+    "all7zipListExitCodesZero": true,
+    "entryInventory": "bat-archive-entries.json",
+    "moduleInventory": "bat-modules.json",
+    "moduleFamilies": [
+      "SAS Engine Mod",
+      "SAS Engine Mod Guided Missiles",
+      "CommonUtils",
+      "InstantLog",
+      "Classes-FMs",
+      "Classes-ObjectsAir",
+      "Classes-ObjectsOther",
+      "Classes-ObjectsShip",
+      "Classes-ObjectsWeapon",
+      "Classes-BAT",
+      "Classes-TrueColorHDSkins",
+      "STD",
+      "Sounds",
+      "MAPMODS",
+      "BATMODS options"
+    ],
+    "eras": [
+      "#WAW3",
+      "#DOF3",
+      "#TGA3",
+      "#JTW3"
+    ],
+    "versionsRead": {
+      "#WAW3/!SAS_Engine_Mod/_version.txt": "2.8.19w",
+      "#WAW3/!SAS_Engine_Mod_GuidedMissiles/_version.txt": "2.8.17w"
+    },
+    "versionCaveat": "Le manuel fourni décrit v2.7 / 4.12.2m, différent des versions texte payload. Ne pas écarter tous actifs partagés à cause de version cible plus récente.",
+    "sharedLooseFiles": {
+      "activeFilesIndexed": 89912,
+      "uniqueMatchingTargets": 226,
+      "details": "bat-shared-loose-files.json",
+      "archiveMatches": [
+        {
+          "archive": "BAT-v4.0_13.zip",
+          "mapped": 15476,
+          "samePath": 1731,
+          "sameSize": 322,
+          "identicalOccurrences": 179
+        },
+        {
+          "archive": "BAT-v4.1_07.zip",
+          "mapped": 29877,
+          "samePath": 3376,
+          "sameSize": 433,
+          "identicalOccurrences": 196
+        },
+        {
+          "archive": "BAT-v4.2_01.zip",
+          "mapped": 45980,
+          "samePath": 213,
+          "sameSize": 16,
+          "identicalOccurrences": 16
+        },
+        {
+          "archive": "BAT-v4.3_01.zip",
+          "mapped": 1714,
+          "samePath": 43,
+          "sameSize": 0,
+          "identicalOccurrences": 0
+        },
+        {
+          "archive": "BAT-v4.3_02.zip",
+          "mapped": 566,
+          "samePath": 20,
+          "sameSize": 0,
+          "identicalOccurrences": 0
+        },
+        {
+          "archive": "BAT-v4.3_06.zip",
+          "mapped": 2214,
+          "samePath": 8,
+          "sameSize": 0,
+          "identicalOccurrences": 0
+        }
+      ],
+      "examples": [
+        "Files/3do/effects/aircraft/dumpfueltspd.eff",
+        "Files/3do/effects/textures/planedamagesmoke.tga",
+        "Files/3do/effects/textures/start.mat",
+        "Files/d8a67dcc419d125e",
+        "Files/samples/db605_starter.wav",
+        "Files/gui/game/pad/body.msh"
+      ],
+      "interpretation": "Preuve de ressources communes, pas preuve d'origine directe BAT ni intégration de SAS Engine Mod complet. Certains éléments peuvent être stock ou issus d'un héritage commun plus ancien."
+    }
+  },
+  "bombBayDoorsAttribution": {
+    "mod": "BombBayDoors Plus",
+    "noticeVersion": "2.5.3",
+    "authors": "Zuti et Fireball (source documentaire SAS)",
+    "archive": "D:/Projets/GITHUB/#res/IL2 1946/Packs/B.A.T/4.0 RED CORE/BAT-v4.0_13.zip",
+    "member": "BATDOCS/SAS Engine Mod Readme v27.pdf",
+    "pageOneBased": 6,
+    "quote": "Based on the hard work of Zuti and Fireball (BombBayDoors Plus 2.5.3)",
+    "followingLine": "New additions and compilation by SAS~Anto",
+    "interpretation": "La compilation SAS~Anto est une évolution décrite dans ce manuel. Ne pas attribuer SAS~Anto aux classes Open Sturmovik sans preuve. Version exacte du code Open Sturmovik toujours inconnue.",
+    "pdfSHA256": "BD7E0BA03CCCD23D05050A9A5804AC0227C9FA735A346CD1A59FACF215364BF9"
+  },
+  "canvasKnights": {
+    "fullGameRoot": "D:/Projets/GITHUB/#res/IL2 1946/Packs/Canvas_Knights_Full_Game/Canvas_Knights",
+    "versions": {
+      "Canvas Knights.exe": "0.1.2.0",
+      "CK_Mod_Missions_Vehicles.exe": "0.1.2.0",
+      "VSF_CK_Map_Vehicle_Panel.exe": "2.4.9.0"
+    },
+    "authors": {
+      "engine": "Ilan Papini",
+      "gameConceptAircraftModelsDefaultTexturesSounds": "John Marco = Deutschmark"
+    },
+    "sources": [
+      "How To Use Game Info/Credits.txt",
+      "How To Use Game Info/Legal.txt",
+      "EXES Readme.txt",
+      "vehicles/Fokker_DR1/readme.txt",
+      "Windows VERSIONINFO of executables"
+    ],
+    "aircraft": [
+      "Albatros_D5",
+      "AVRO_504L",
+      "Bristol_F2B",
+      "Fokker_D7",
+      "Fokker_DR1",
+      "Hannover_CL3",
+      "HB_W29",
+      "SE_5_A",
+      "Sopwith_Camel",
+      "SPAD_13"
+    ],
+    "formatEvidence": "Fokker_DR1 : vehicle.xx, damage0.xx à damage4.xx, vehicle.cfg, damage.cfg, JPG et WAV. EXES Readme décrit trois programmes Canvas Knights / Vehicle Simulator.",
+    "wwiWipArchive": "D:/Projets/GITHUB/#res/IL2 1946/Packs/Canvas_Knights_WWI_Assets_et_WIP",
+    "localInventoryStatement": {
+      "date": "2026-09-02",
+      "extractedAssetsFiles": 2687,
+      "addonsZipCount": 29,
+      "addonsAircraft": 17,
+      "groundGroups": 4,
+      "groundObjectPack": 1,
+      "missions": 7,
+      "aaaPages": 48,
+      "developmentImages": 12
+    },
+    "statementCaveat": "Comptes assets/pages tirés du LISEZ-MOI/INVENTAIRE préexistant ; 29 noms et tailles ZIP et 10 dossiers avions contrôlés par lecture du disque dans ce scan.",
+    "legalObservation": "Legal.txt original lu : stock modèles/textures/sons réservés aux mods Canvas Knights, portage vers autre jeu expressément non autorisé. Observation documentaire, pas avis juridique.",
+    "status": "Source distincte en réserve documentaire ; aucune intégration Open Sturmovik établie, ne pas l'ajouter aux crédits des mods utilisés sur seule présence dans Packs.",
+    "historicalCaveat": "LISEZ-MOI/INVENTAIRE déclarent recherche antérieure sans version jouable publique du WIP IL-2 retrouvée. Pas de nouvelle recherche Web complète dans cette sous-tâche."
+  },
+  "limits": [
+    "Listing d'index ne remplace pas test CRC intégral des archives.",
+    "SFS BAT non parcourus : 226 correspondances ne représentent pas tous les actifs partagés possibles.",
+    "Comparaison modules #SAS / ères et BATMODS mappables vers Files ; root samples et root stock exclus.",
+    "Correspondance seule ne détermine pas auteur.",
+    "Aucune modification jeu, sources ou branches. Aucun programme jeu ou installateur lancé.",
+    "Tous processus lancés par cette sous-tâche sont terminés."
+  ]
+}

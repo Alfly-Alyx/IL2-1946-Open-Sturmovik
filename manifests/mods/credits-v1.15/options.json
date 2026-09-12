@@ -1,0 +1,248 @@
+{
+  "schema": 1,
+  "date": "2026-09-11",
+  "branch": "v1.15",
+  "scope": [
+    "_Game_Enhancements",
+    "_Game Switcher",
+    "_Utilities",
+    "Files hors Maps : notices, Tools, Sample Missions"
+  ],
+  "rootState": {
+    "wrapperPresent": false,
+    "confIniPresent": false,
+    "exeSha256": "9ACE9A542AC7203D8A66961570B6854C11FB0BF721F0234DA9D6095D69D2525C",
+    "filesSfsSha256": "9F7D136C586EB3FCD258C5C000F34951D410A0236934F22ABA2516637874B095",
+    "interpretation": "Concordance avec profil 7 Original 4.09m pour ces deux fichiers. Présence de mods dans le pack ne signifie pas activation runtime dans le checkout."
+  },
+  "method": "Lecture des dossiers, notices et manifestes ; métadonnées Windows des exécutables utilitaires ; SHA256 comparés aux sources AAA locales et manifeste AOC. Aucune exécution de programme du jeu et aucune nouvelle rétro-ingénierie moteur.",
+  "credits": [
+    {
+      "name": "AOC - Advanced Engine Management",
+      "version": "1a adapté AOC/Zuti",
+      "authors": "II/JG51-Lutz",
+      "status": "intégré, statique vérifié",
+      "paths": "_Game_Enhancements/Mod_AOC_Public ; Files/294ABC86A89FAEB4 ; Files/684916A0E86D1CC8 ; Files/AF5F8A326C3FA53C",
+      "sources": "manifests/aoc-v1.15.json",
+      "evidence": "266 profils présents ; 3/3 classes identiques au manifeste. Source documentée HSFX4. Runtime non essayé."
+    },
+    {
+      "name": "6DOF Tracker",
+      "version": "2.0 sHr",
+      "authors": "à confirmer ; ne pas transformer suffixe sHr en attribution sans source",
+      "status": "mod optionnel vérifié",
+      "paths": "Files/61B3D5C8AF16E35E ; Files/65A9E2D846D578F2 ; Files/6EABC2640E2C18C4 ; Files/95B1C616D7D23EA6 ; Files/AED23A24CF06FFE0",
+      "sources": "manifests/profiles-6dof-v1.15.json ; #res/IL2 1946/Packs/AAA_Community_Installer_ver_1_1/MODS/6DOF_Tracker_2_0_sHr",
+      "evidence": "5/5 fichiers identiques source AAA ; activable profils 3/6/9, pas activation actuelle."
+    },
+    {
+      "name": "Zuti Moving Dogfight Server",
+      "version": "1.13 STD",
+      "authors": "Zuti ; Fireball pour CTO/Carrier incorporés selon historique original",
+      "status": "intégré selon audit existant",
+      "paths": "Files/Tools ; Files/Sample Missions ; classes décrites manifeste",
+      "sources": "manifests/mods/zuti-mds-1.13-static.json ; _Documentations/Mods and Tools/Zuti MDS 1.13/Lisez-moi - Zuti MDS 1.13.txt",
+      "evidence": "Audit existant 30 classes chargées dans ancien dump ; scan actuel confirme outils et 6 missions exemples. Exemples ne prouvent pas usage runtime."
+    },
+    {
+      "name": "BombBayDoors Plus",
+      "version": "notice 2.5.3 ; version code exacte inconnue",
+      "authors": "à identifier",
+      "status": "identification partielle",
+      "paths": "Files/BombBayDoors_Plus_README.txt",
+      "sources": "Même notice ; source locale AAA MODS/BombBayDoors_Plus_v2_0",
+      "evidence": "Notice sans auteur. 121/123 chemins présents source AAA v2 mais 13 seulement identiques. Ne pas affirmer module 2.5.3 intégral depuis seule notice."
+    },
+    {
+      "name": "HUDConfig",
+      "version": "source de comparaison v1",
+      "authors": "à identifier",
+      "status": "complet non confirmé",
+      "paths": "4 chemins de classes source présents",
+      "sources": "Source AAA locale MODS/HUDConfig_v1",
+      "evidence": "4/6 chemins présents, 0 identique ; 2 textures absentes. Fusion possible non analysée."
+    },
+    {
+      "name": "HUD Immersion",
+      "version": "non indiquée",
+      "authors": "à identifier",
+      "status": "option fournie",
+      "paths": "_Game Switcher/HudLogImmersion/MODS/STD/i18n/hud_log_ru.properties",
+      "sources": "Open_Sturmovik_Switcher.bat ; manifests/switcher-v1.15.json",
+      "evidence": "Option pour profils moddés. HUD racine différent de variantes historiques switcher ; ne pas qualifier sélection courante."
+    },
+    {
+      "name": "Bf-110G - variantes viseur Schräge Musik",
+      "version": "non indiquée",
+      "authors": "magot",
+      "status": "variantes fournies",
+      "paths": "Files/3do/Cockpit/Bf-110G/reticle versions",
+      "sources": "Schräge musik 3 type gun sights.txt dans ce dossier",
+      "evidence": "Notice signée magot ; dit copier variante vers xeticle.tga. Sélection actuelle non prouvée."
+    },
+    {
+      "name": "Blackout Darker",
+      "version": "10 pour cent plus sombre",
+      "authors": "à identifier",
+      "status": "variante fournie",
+      "paths": "Files/3do/Effects/overload/Darker",
+      "sources": "Read.txt dans ce dossier",
+      "evidence": "Notice décrit 10% plus sombre, ne prouve pas sélection."
+    },
+    {
+      "name": "Variantes textures véhicules et bus",
+      "version": "non indiquée",
+      "authors": "à identifier",
+      "status": "variantes fournies",
+      "paths": "Files/3do/Cars ; Files/3do/Cars/-Bus",
+      "sources": "Cars read me.txt ; Bus read me.txt",
+      "evidence": "Instructions copier variantes Guy, NAAFI ou RAF et enlever préfixe. Ne pas assimiler noms de variantes à auteurs."
+    },
+    {
+      "name": "Gamma Panel - Gapa",
+      "version": "1.0.0.20",
+      "authors": "Tomasz Porosiński",
+      "status": "compagnon optionnel fourni",
+      "paths": "_Game_Enhancements/Gapa/gapa.exe",
+      "sources": "gapa.txt ; métadonnées Windows executable",
+      "evidence": "Notice et version Windows concordent ; désactivé par défaut selon README améliorations."
+    },
+    {
+      "name": "San's IL2 FOV Changer",
+      "version": "RC 1.0",
+      "authors": "San ; code joystick basé sur Mark Harris",
+      "status": "compagnon optionnel fourni",
+      "paths": "_Game_Enhancements/San's IL2 FOV Changer/San's_IL2_FovChanger_RC.exe",
+      "sources": "Readme.txt ; métadonnées Windows executable",
+      "evidence": "Copyright SAN 2009 ; notice crédite Mark Harris pour code joystick. Pas lancé."
+    },
+    {
+      "name": "Bombsight Table 2",
+      "version": "2 (désignation paquet)",
+      "authors": "WT_Pedropan ; WT_Pitr",
+      "status": "outil externe fourni",
+      "paths": "_Utilities/Bombsight Table 2/Bombsight Table 2.exe",
+      "sources": "Help-en.txt dans ce dossier",
+      "evidence": "Auteurs section Authors. Aides RTF .txt référencées dans programme : maintenir originaux."
+    },
+    {
+      "name": "HardBall Aircraft Viewer",
+      "version": "4.08",
+      "authors": "Matt « Flight Lieutenant HardBall » Henderson",
+      "status": "outil externe fourni",
+      "paths": "_Utilities/HardBall408/HardBall408.exe",
+      "sources": "_Documentations/Mods and Tools/HardBall Aircraft Viewer 4.08/Manuel - HardBall Aircraft Viewer 4.08.rtf",
+      "evidence": "Notice signée. FileVersion Windows 4.00.0008 ; données historiques 4.08."
+    },
+    {
+      "name": "IL2 Sticks",
+      "version": "1.0h Beta",
+      "authors": "FoolTrottel",
+      "status": "outil historique fourni",
+      "paths": "_Utilities/IL2 Sticks/IL2-Sticks.exe",
+      "sources": "Readme on Installation.txt ; IL2-Sticks.htm dans ce dossier",
+      "evidence": "Version notice juillet 2005 ; auteur métadonnée manuel. HTML référencé dans executable."
+    },
+    {
+      "name": "IL2 Compare",
+      "version": "2.4",
+      "authors": "à confirmer ; Ross Youss remercié dans manuel HardBall pour IL2 Compare",
+      "status": "outil externe fourni",
+      "paths": "_Utilities/IL2C/ILC2.exe",
+      "sources": "history.txt ; manuel HardBall",
+      "evidence": "Version 2.4.0.0 ; données AEP 2.01. Le remerciement ne suffit pas à établir attribution directe complète."
+    },
+    {
+      "name": "IL2 JoyControl - JoyCtrl",
+      "version": "1.4.2.1",
+      "authors": "Oleg_BS",
+      "status": "outil externe fourni",
+      "paths": "_Utilities/JoyCtrl/JoyCtrl.exe",
+      "sources": "Métadonnées Windows executable",
+      "evidence": "LegalCopyright (c) Oleg_BS, CompanyName BreakSoft. Aucune notice locale identifiée."
+    },
+    {
+      "name": "Lowengrin Dynamic Campaign Generator",
+      "version": "3.43",
+      "authors": "Lowengrin ; prénom non établi dans scan",
+      "status": "outil externe fourni",
+      "paths": "_Utilities/Lowegrin_DCG/il2dcg.exe",
+      "sources": "Readme.txt dans ce dossier",
+      "evidence": "Historique commence version 3.43, site lowengrin.com ; aucun remplacement DGen/NGen testé ou demandé."
+    },
+    {
+      "name": "Mission Mate",
+      "version": "6.0.1",
+      "authors": "CrazySchmidt ; Barbs",
+      "status": "outil externe fourni",
+      "paths": "_Utilities/Mission Mate 6/Mission Mate v6.0.exe",
+      "sources": "Help Files/MisMate 6 help.htm dans ce dossier",
+      "evidence": "Auteurs en tête du manuel. Ne pas recopier liste familiale/testeurs. Skins Geoff Fisken fournies dans outil : Dave Bakshi selon manuel, sans preuve copie dans jeu."
+    },
+    {
+      "name": "Quick Mission Tuner 1946",
+      "version": "2.00.0009",
+      "authors": "DiverseWare",
+      "status": "outil historique fourni",
+      "paths": "_Utilities/Quick Mission Tuner/MissionTuner V2.exe",
+      "sources": "Métadonnées Windows executable ; docs/AUDIT_OS_PROGRAMS.md",
+      "evidence": "FileVersion et copyright DiverseWare 2003-2007 ; catalogue ancien."
+    },
+    {
+      "name": "IL2 Properties Editor et Difficulty Editor",
+      "version": "Properties 2.0 ; Difficulty V1 fichier",
+      "authors": "MadBran, signature MWF 12T - MadBran - F4U-1C",
+      "status": "outils auxiliaires QMT",
+      "paths": "_Utilities/Quick Mission Tuner/Utilities/Properies-EditiorV2",
+      "sources": "ReadMe.txt ; english.txt dans ce dossier",
+      "evidence": "Notice version 2.0 ; FileVersion générique Properties 1.0.0.0. Conserver regroupés sous QMT."
+    },
+    {
+      "name": "Shift-Rot",
+      "version": "non indiquée",
+      "authors": "Antonio M.",
+      "status": "outil auxiliaire QMT",
+      "paths": "_Utilities/Quick Mission Tuner/Utilities/Shift-Rot/shift-rot1.exe",
+      "sources": "readme!.txt dans ce dossier",
+      "evidence": "Signature Created by Antonio M."
+    },
+    {
+      "name": "WeatherSet",
+      "version": "inconnue",
+      "authors": "à identifier",
+      "status": "outil externe fourni",
+      "paths": "_Utilities/WeatherSet/WeatherSet.exe",
+      "sources": "docs/AUDIT_OS_PROGRAMS.md",
+      "evidence": "Pas de notice/version/auteur identifié localement. Fonctionnement effet 4.09m non validé ancien audit."
+    },
+    {
+      "name": "ZipNav",
+      "version": "1.1",
+      "authors": "à identifier",
+      "status": "outil externe fourni",
+      "paths": "_Utilities/ZipNav/ZipNavV1.1.exe",
+      "sources": "Readme.txt dans ce dossier",
+      "evidence": "Readme décrit changements V1.0 ; nom exe V1.1. Ne pas déduire auteur du préfixe zip."
+    },
+    {
+      "name": "Zuti Airports Extractor et Mods Conflicts Revealer",
+      "version": "non indiquées",
+      "authors": "Zuti pour Airports Extractor ; second à confirmer",
+      "status": "outils auxiliaires MDS",
+      "paths": "Files/Tools/AirportsExtractor/ZutiAirportsExtractor.jar ; Files/Tools/Mods_Conflicts_Revealer/IL2_ModsConflictsRevealer.jar",
+      "sources": "manifests/mods/zuti-mds-1.13-static.json",
+      "evidence": "2 jars et 2 run.bat. Pas de notice libre trouvée ; pas exécutés."
+    }
+  ],
+  "exclusions": [
+    "Files/i18n/credits_ru.properties est historique : ne pas recopier employés/testeurs ni considérer toutes mentions comme preuve de mods intégrés.",
+    "Files/3do/Plane/CR32/Gear32.txt : fragment structurel hierarchique ; conserver sur place, usage exact non établi.",
+    "Files/3do/Cockpit/JU-87G2RUDEL-Gun/x.txt : liste de ressources ; usage exact inconnu, ne pas déplacer arbitrairement.",
+    "Files/3do/Plane/Bf-109K-14/New Text Document.txt vide ; pas une notice.",
+    "Files/3do/Arms/Flare/New Folder (5)/New Text Document.txt : extrait hexadécimal isolé ; pas une notice exploitable.",
+    "AOC profiles, IL2C DataSpeed/DataTurn, QMT_*.txt, Mission Mate MM*.txt/FBPath.txt/User Defined Loadouts et Skins.txt sont données fonctionnelles.",
+    "Files/Sample Missions : 6 .mis seulement, aucun document libre.",
+    "Help Files Mission Mate : 104 fichiers/13562544 octets, index recommandé.",
+    "IL2-Sticks.htm référence IL2-Sticks_files ; répertoire d'images déjà absent avant rangement."
+  ]
+}

@@ -24,6 +24,10 @@
 - En l'absence de demande explicite, les IA doivent rester sur la branche
   courante et limiter leurs modifications a celle-ci.
 
+## Objectif du projet
+
+- Open Sturmovik vise la beaute maximale et le realisme maximal.
+
 ## Emplacement des depots et dossiers de travail
 
 - Les sous-dossiers d'un dossier principal dont le nom commence par `_` ne
