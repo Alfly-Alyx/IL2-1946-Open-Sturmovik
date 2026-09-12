@@ -950,48 +950,11 @@ else {
 }
 
 $testConf = Join-Path $root '_Game Switcher\conf.max.ini'
-if (Test-Path -LiteralPath $testConf -PathType Leaf) {
-    $introLines = @(Select-String -LiteralPath $testConf -Pattern '^\s*Intro\s*=\s*(\d+)\s*$')
-    if ($introLines.Count -gt 0 -and $introLines[-1].Matches[0].Groups[1].Value -eq '0') {
-        Add-Check 'Introduction du profil de test' PASS 'Intro=0 dans conf.max.ini.'
-    }
-    else {
-        Add-Check 'Introduction du profil de test' FAIL 'Intro=0 absent de conf.max.ini.'
-    }
-
-    $focusValues = New-Object System.Collections.Generic.List[string]
-    $gameCloudValues = New-Object System.Collections.Generic.List[string]
-    $renderCloudValues = New-Object System.Collections.Generic.List[string]
-    $currentSection = ''
-    foreach ($line in Get-Content -LiteralPath $testConf) {
-        if ($line -match '^\s*\[([^]]+)\]\s*$') {
-            $currentSection = $Matches[1]
-            continue
-        }
-        if ($line -match '^\s*DrawIfNotFocused\s*=\s*(\d+)\s*$' -and $currentSection -ieq 'window') {
-            $focusValues.Add($Matches[1])
-        }
-        elseif ($line -match '^\s*TypeClouds\s*=\s*(\d+)\s*$') {
-            if ($currentSection -ieq 'game') {
-                $gameCloudValues.Add($Matches[1])
-            }
-            elseif ($currentSection -ieq 'Render_OpenGL') {
-                $renderCloudValues.Add($Matches[1])
-            }
-        }
-    }
-    if ($focusValues.Count -eq 1 -and $focusValues[0] -eq '1' -and
-        $gameCloudValues.Count -eq 1 -and $gameCloudValues[0] -eq '1' -and
-        $renderCloudValues.Count -eq 1 -and $renderCloudValues[0] -eq '1') {
-        Add-Check 'Profil focus et nuages v1.15' PASS 'DrawIfNotFocused=1 est sous [window] ; TypeClouds=1 est present sous [game] et [Render_OpenGL], comme dans la configuration officielle 4.09m.'
-    }
-    else {
-        Add-Check 'Profil focus et nuages v1.15' FAIL 'Le profil ne reproduit pas les emplacements officiels : DrawIfNotFocused sous [window], TypeClouds sous [game] et [Render_OpenGL].'
-    }
+if (Test-Path -LiteralPath $testConf) {
+    Add-Check 'Ancien profil conf.max.ini retire' FAIL 'conf.max.ini doit rester absent du pack v1.15.'
 }
 else {
-    Add-Check 'Introduction du profil de test' FAIL 'conf.max.ini absent.'
-    Add-Check 'Profil focus et nuages v1.15' FAIL 'conf.max.ini absent.'
+    Add-Check 'Ancien profil conf.max.ini retire' PASS 'conf.max.ini est absent comme demande.'
 }
 
 if ($DumpRoot) {

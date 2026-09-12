@@ -258,7 +258,7 @@ References systeme : [limites d'adressage des versions de Windows](https://learn
 
 ## Configuration graphique
 
-Le modele `conf.max.ini` active le niveau maximal connu pour le chemin OpenGL historique : shaders materiels, eau 4, ombres, lumieres, geometrie, foret et distance elevees. Le selecteur fusionne seulement les sections gerees afin de conserver resolution, son, reseau et commandes du joueur.
+L'ancien modele `conf.max.ini` a ete retire du pack. Le candidat `_Game Switcher/conf.ini` reste conserve hors production et sans activation automatique ; il documente le niveau maximal connu pour le chemin OpenGL historique : shaders materiels, eau 4, ombres, lumieres, geometrie, foret et distance elevees.
 
 Les extensions `TexEnvCombine4NV`, `DepthClampNV` et `TextureShaderNV` sont activees uniquement lorsque la carte active est NVIDIA. Intel, AMD et les cartes non identifiees restent sur les options generiques ARB. Cette detection par fournisseur est une securite initiale ; un futur assistant graphique devra tester la creation du contexte et les extensions reelles.
 
