@@ -4,11 +4,11 @@ Ce dossier contient le nouvel installeur complet d'Open Sturmovik 1.15.
 Il ne s'agit pas d'un patch pour une ancienne version d'Open Sturmovik.
 Les anciens scripts Inno Setup ne servent pas de reference.
 
-Le Payload a ete prepare le 13 septembre 2026 : 129 483 fichiers pour
-26 257 828 254 octets. La compilation definitive avec Inno Setup 7.1.0
-a reussi le 13 septembre 2026 en 4 120,375 secondes (1 h 08 min 40 s).
-Elle produit huit fichiers .bin, un executable Setup et SHA256SUMS.txt pour
-7 472 333 788 octets au total, manifeste compris.
+Le Payload final contient 129 483 fichiers pour 26 257 828 361 octets. La
+compilation corrigee avec Inno Setup 7.1.0 a reussi le 14 septembre 2026
+en 4 509,374 secondes (1 h 15 min 09 s). Elle produit huit fichiers .bin,
+un executable Setup et SHA256SUMS.txt pour 7 472 412 328 octets au total,
+manifeste compris.
 
 L'installation est prevue par-dessus un IL-2 Sturmovik 1946 d'origine en
 version 4.07m, 4.08m, 4.09b ou 4.09m. Le script tente de retrouver le dossier
@@ -140,6 +140,7 @@ docs\ROTATION_FONDS_CHARGEMENT.md.
 
 assets\source-manifest.json conserve pour le logo, l'icone et chaque fond son
 chemin source, ses dimensions et son empreinte SHA-256.
+
 ## Parties de 1 Go
 
 Le script Inno active le decoupage avec :
@@ -151,8 +152,8 @@ Le script Inno active le decoupage avec :
 Chaque fichier .bin produit est donc limite a 1 000 000 000 octets.
 Write-ReleaseChecksums.ps1 a confirme cette limite pour les huit parties et
 l'executable, puis a produit Output\SHA256SUMS.txt. Six parties font exactement
-1 000 000 000 octets ; la partie 1 fait 982 193 152 octets, la partie 8
-fait 472 333 218 octets et l'executable fait 17 806 529 octets. Toutes les
+1 000 000 000 octets ; la partie 1 fait 982 025 728 octets, la partie 8
+fait 472 411 936 octets et l'executable fait 17 973 775 octets. Toutes les
 parties doivent etre publiees ensemble dans la meme GitHub Release.
 
 ## Incident du premier essai reel
@@ -178,9 +179,13 @@ installeur. Le marqueur est supprime uniquement lorsque
 .open-sturmovik-installed a ete ecrit. Si l'assistant s'arrete normalement
 avant la fin, le conf.ini d'origine est restaure depuis sa sauvegarde.
 
-La nouvelle sortie doit etre analysee par F-Secure avant diffusion. Une
+La sortie corrigee a ete analysee manuellement par F-Secure le 14 septembre
+2026 a 21 h 53 avec les signatures VDF du jour : 10 elements analyses,
+0 element dangereux. Le rapport est conserve dans
+WIP\artifacts\installer\fsecure-scan-corrected-build-20260914.txt. Une
 signature de code Authenticode reste la mesure durable pour reduire les faux
 positifs sur un nouvel executable auto-extractible.
+
 ## Preparation et controles
 
 Prepare-OpenSturmovikPayload.ps1 fabrique WIP\development\installer\Payload depuis une liste
@@ -210,7 +215,9 @@ PowerShell par l'installeur.
 Le source Inno est Open_Sturmovik_1.15.iss. La compilation definitive a ete
 realisee avec ISCC.exe 7.1.0 apres validation du contenu. Le controle
 Test-OpenSturmovikInstaller.ps1 execute sur la sortie compilee retourne Status OK.
-L'etape suivante est un essai reel d'installation sur une copie jetable du jeu.
+L'etape suivante est la reprise controlee de l'installation interrompue, qui
+porte maintenant le marqueur .open-sturmovik-installing et conserve son
+conf.ini d'origine ainsi que conf.ini.bak.
 
 Documentation Inno Setup utilisee :
 
