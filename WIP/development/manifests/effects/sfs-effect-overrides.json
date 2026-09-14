@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "engine": "IL-2 1946 4.09m",
+  "overrides": [
+    {
+      "path": "Effects/Smokes/SmokeBoiling.eff",
+      "source_archive": "files.SFS",
+      "source_archive_sha256": "9F7D136C586EB3FCD258C5C000F34951D410A0236934F22ABA2516637874B095",
+      "compatible_source_archive_sha256": [
+        "9F7D136C586EB3FCD258C5C000F34951D410A0236934F22ABA2516637874B095",
+        "18F3C5471D93642916394DE53B482051106E024DDAC8124C7B0D700D1796B05A",
+        "FCFCE245EC23FF314C6CD86E9A51D563D091CFF74DDD0B46B704B670C0340C6A",
+        "5CB81D4FAE005429B701CE3DCAC001892DB2C66D0AECEE0A00E918D5E8892E71"
+      ],
+      "source_entry_size": 378,
+      "source_entry_sha256": "F1D6845FCC6232F0C0FB43AB134CB647ADDFBEA1F7F27AE9ACC8788872D94216",
+      "override_size": 359,
+      "override_sha256": "963A8A7322A484E4923952C7D816E80FB44500CBC1DA1DFF34319C01F51D1EFB",
+      "changes": [
+        {
+          "line": 7,
+          "field": "nParticles",
+          "original": "2000",
+          "normalized": "512",
+          "minimum": 1,
+          "maximum": 512
+        }
+      ]
+    }
+  ]
+}

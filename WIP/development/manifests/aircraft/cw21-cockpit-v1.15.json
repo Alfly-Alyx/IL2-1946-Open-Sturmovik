@@ -1,0 +1,987 @@
+{
+  "gameVersion": "4.09m",
+  "sourceForum": "https://www.sas1946.com/main/index.php?topic=49201.0",
+  "sourceArchive": "D:\\Projets\\GITHUB\\#res\\IL2 1946\\Mods\\Utilisés\\Cockpit_CW-21_for409.zip",
+  "sourceArchiveSha256": "CB6FC40E2ACEFC8F479B00AC5E07FCFAF400633B3882B155AFE7736C6C451DB3",
+  "sourceStockAircraftSha256": "AB31568D9645B8F665B24262162920B3B01FD8057A024DF9A0230513D9210C65",
+  "excludedDonorClasses": [
+    "F00C363EBB3865E8",
+    "723373B2DBC01626"
+  ],
+  "strategy": "Four authentic cockpit classes and assets; stock 4.09m CW_21 gains cockpitClass, explicit weaponsList/weaponsMap registration, a CW-21-only unique ArrayList helper and one resolved-audio diagnostic line per aircraft load. Stock FMD, parent, paint and default armament retained; global Aircraft loader unchanged.",
+  "registrationContractTest": "PASS: emitted registration plus actual effective Aircraft.weapons/getWeaponsRegistered bytecode, with API/input doubles; repeated late imports preserve exactly three choices and all slots. Not an in-game or SFS-decryption test.",
+  "uniqueListHelper": {
+    "class": "com.maddox.il2.objects.air.OpenSturmovikCW21LoadoutList",
+    "path": "Files/7F567DAABB958052",
+    "sha256": "550EA60D46EFAA9F8D481A4D695109A99073C1BBC4040ED31F8B957A894FDC7B"
+  },
+  "effectiveAircraftSha256": "079760CADF85DA3CB26856C0D5B541EBC51E017A450F1648B27426D8E00D7BE3",
+  "effectiveAircraftSource": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/air/Aircraft",
+  "effectiveWeaponsRegisterIsEmpty": true,
+  "soundDiagnosis": "Resolved soundName/startStopName/propName logged; no audio gain or physics change; listening test pending",
+  "armament": {
+    "default": [
+      "MGunBrowning303ki 300",
+      "MGunBrowning303ki 300",
+      "MGunBrowning303ki 300",
+      "MGunBrowning303ki 300"
+    ],
+    "2x303_2x50": [
+      "MGunBrowning303ki 300",
+      "MGunBrowning303ki 300",
+      "MGunBrowning50si 230",
+      "MGunBrowning50si 230"
+    ],
+    "none": []
+  },
+  "missingClasses": [],
+  "ambiguousClasses": [],
+  "errors": [],
+  "dependencyOrigins": {
+    "com/maddox/il2/fm/Controls": "Files/34B2D47E9F860052",
+    "com/maddox/il2/engine/Actor": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/Actor",
+    "com/maddox/rts/ObjState": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/rts/ObjState",
+    "com/maddox/rts/MessageComponent": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/rts/MessageComponent",
+    "com/maddox/rts/Destroy": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/rts/Destroy",
+    "com/maddox/il2/objects/sounds/SndAircraft": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/sounds/SndAircraft",
+    "com/maddox/il2/engine/ActorHMesh": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/ActorHMesh",
+    "com/maddox/il2/engine/ActorMesh": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/ActorMesh",
+    "com/maddox/il2/objects/air/CW21xyz": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/air/CW21xyz",
+    "com/maddox/il2/objects/air/Scheme1": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/air/Scheme1",
+    "com/maddox/il2/objects/air/Aircraft": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/air/Aircraft",
+    "com/maddox/il2/objects/air/NetAircraft": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/air/NetAircraft",
+    "com/maddox/il2/engine/MsgCollisionListener": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/MsgCollisionListener",
+    "com/maddox/il2/engine/MsgCollisionRequestListener": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/MsgCollisionRequestListener",
+    "com/maddox/il2/ai/MsgExplosionListener": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/ai/MsgExplosionListener",
+    "com/maddox/il2/ai/MsgShotListener": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/ai/MsgShotListener",
+    "com/maddox/rts/MsgEndActionListener": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/rts/MsgEndActionListener",
+    "com/maddox/il2/ai/ground/Predator": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/ai/ground/Predator",
+    "com/maddox/il2/ai/ground/Prey": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/ai/ground/Prey",
+    "com/maddox/il2/objects/air/TypeFighter": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/air/TypeFighter",
+    "com/maddox/il2/objects/air/CW_21": "candidate",
+    "com/maddox/il2/fm/FlightModel": "Files/106BE08E745DD716",
+    "com/maddox/il2/fm/FlightModelMain": "Files/294ABC86A89FAEB4",
+    "com/maddox/il2/fm/FMMath": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/fm/FMMath",
+    "com/maddox/il2/engine/Interpolate": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/Interpolate",
+    "com/maddox/il2/objects/air/OpenSturmovikCW21LoadoutList": "candidate",
+    "com/maddox/util/HashMapInt": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/util/HashMapInt",
+    "com/maddox/il2/fm/Motor": "Files/AF5F8A326C3FA53C",
+    "com/maddox/il2/fm/EnginesInterface": "Files/0CB3F1BCB9DB0050",
+    "com/maddox/il2/objects/air/NetAircraft$SPAWN": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/air/NetAircraft$SPAWN",
+    "com/maddox/il2/engine/ActorSpawn": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/ActorSpawn",
+    "com/maddox/rts/NetSpawn": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/rts/NetSpawn",
+    "com/maddox/il2/engine/HierMesh": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/HierMesh",
+    "com/maddox/il2/engine/Mesh": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/Mesh",
+    "com/maddox/il2/engine/GObj": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/GObj",
+    "com/maddox/il2/engine/GObjInstance": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/GObjInstance",
+    "com/maddox/rts/Finger": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/rts/Finger",
+    "com/maddox/il2/objects/air/Aircraft$_WeaponSlot": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/air/Aircraft$_WeaponSlot",
+    "com/maddox/rts/Property": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/rts/Property",
+    "com/maddox/il2/objects/air/PaintSchemeFMPar00du": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/air/PaintSchemeFMPar00du",
+    "com/maddox/il2/objects/air/PaintSchemeFMPar00": "Files/778DAB24D92AE4D2",
+    "com/maddox/il2/objects/air/PaintScheme": "Files/7ADF28D60EE36B52",
+    "com/maddox/il2/objects/air/CockpitCW_21$Variables": "candidate",
+    "com/maddox/il2/objects/air/CockpitCW_21": "candidate",
+    "com/maddox/il2/objects/air/CockpitPilot": "Files/1F8E9514CA7C6CDC",
+    "com/maddox/il2/objects/air/Cockpit": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/air/Cockpit",
+    "com/maddox/il2/objects/air/CockpitCW_21$1": "candidate",
+    "com/maddox/il2/ai/AnglesFork": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/ai/AnglesFork",
+    "com/maddox/il2/objects/air/CockpitCW_21$Interpolater": "candidate",
+    "com/maddox/il2/engine/InterpolateRef": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/InterpolateRef",
+    "com/maddox/il2/engine/Orientation": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/Orientation",
+    "com/maddox/il2/engine/Orient": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/Orient",
+    "com/maddox/JGP/Vector3f": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/JGP/Vector3f",
+    "com/maddox/JGP/Tuple3f": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/JGP/Tuple3f",
+    "com/maddox/JGP/Vector3d": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/JGP/Vector3d",
+    "com/maddox/JGP/Tuple3d": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/JGP/Tuple3d",
+    "com/maddox/il2/fm/AircraftState": "Files/B27261D242F3990A",
+    "com/maddox/rts/Time": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/rts/Time",
+    "com/maddox/il2/ai/World": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/ai/World",
+    "com/maddox/il2/fm/Mass": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/fm/Mass",
+    "com/maddox/JGP/Point3d": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/JGP/Point3d",
+    "com/maddox/il2/engine/Mat": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/Mat",
+    "com/maddox/il2/engine/FObj": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/FObj",
+    "com/maddox/il2/engine/FObjInstance": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/FObjInstance",
+    "com/maddox/il2/fm/Pitot": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/fm/Pitot",
+    "com/maddox/rts/Message": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/rts/Message",
+    "com/maddox/il2/objects/weapons/MGunBrowning50si": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/weapons/MGunBrowning50si",
+    "com/maddox/il2/objects/weapons/MGunBrowning50s": "Files/B4A9DC1605135A48",
+    "com/maddox/il2/objects/weapons/MGunUBs": "Files/835915CE653CD4EC",
+    "com/maddox/il2/objects/weapons/MGunAircraftGeneric": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/weapons/MGunAircraftGeneric",
+    "com/maddox/il2/objects/weapons/Gun": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/objects/weapons/Gun",
+    "com/maddox/il2/engine/GunGeneric": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/engine/GunGeneric",
+    "com/maddox/il2/ai/BulletEmitter": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/ai/BulletEmitter",
+    "com/maddox/il2/ai/BulletAimer": "_Game Switcher/4.09m Mods ON (NO 6DOF)/files.SFS:com/maddox/il2/ai/BulletAimer"
+  },
+  "runtimeJarBadCrcCount": 5251,
+  "activeFiles": [
+    {
+      "path": "Files/21CA8D7CE1D2BD0C",
+      "size": 918,
+      "sha256": "E9105507EC36265DFADF4DA10274872E1E07C6AB79B3615A93BE8BFF3216F844"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/BOTTOM.tga",
+      "size": 196876,
+      "sha256": "03A366CC676CCA9F7BE26EB38625A1811BDB26380668F4408778E9659E51FBC6"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Body.msh",
+      "size": 103897,
+      "sha256": "C0D8EF1517540A67A903CC5B13F5194A10DF6063E778F03467FBFAAA8D56FBA0"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CANOPY1.tga",
+      "size": 196876,
+      "sha256": "D6D4EE5D882840DFFAC80957B1956711170F3CD19443828A14B5056891F04C5D"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CF_d0.msh",
+      "size": 1968,
+      "sha256": "8703392F6C0D32639A38D27E96B35CF14429985E174D2B310832D31970A5D35A"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CF_d1.msh",
+      "size": 1968,
+      "sha256": "7A4EF47309E739C85577A5AE598ACC19BED5A7D65CDBAF11776C57AD3AF35175"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CF_d2.msh",
+      "size": 1968,
+      "sha256": "78D534CAC84C33682B705125328168514D6982F15048CD0D8D1BC178B0BBDAEC"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CLOCK2.tga",
+      "size": 262668,
+      "sha256": "8B1214153DB8CB382122646366CE51BADA052DE005F183C3B9BCEB7FDB9E4C98"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CLOCK2_night.tga",
+      "size": 65580,
+      "sha256": "298BB13A413E04D894C02C0B4CC3DB334042066A8255423D827C10FE5CEC7F82"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CLOCK3.tga",
+      "size": 262668,
+      "sha256": "E20313C2D12923DC286787039CB1CC01EA21C6710A894D6B65342F7DAEB08F87"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CLOCK3_night.tga",
+      "size": 65580,
+      "sha256": "E77BBD66B538B76EEA0A63170B27DD46646EC64238DCEA6CA02DF6943B69E4CF"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CLOCK5.tga",
+      "size": 262668,
+      "sha256": "42CBBA6A93916E317E8413A757F5E620D9D9E4C7F53098931E6B20186EA727E7"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CLOCK5_night.tga",
+      "size": 65580,
+      "sha256": "59524BEC56DF74175F6FEABC8044EDC2CB42C245DB161737B7454FBF307E73E6"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CLOCKS1.tga",
+      "size": 262668,
+      "sha256": "1B2D88323A969AD96DB509FB9329C39651A491D18859E50B95917B7D28DB5C9F"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CLOCKS1_night.tga",
+      "size": 65580,
+      "sha256": "5F42B9EBF03CE4227864783F6E2AC0E7DD108DB6272248E5F69B63CF7016F56D"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CW.tga",
+      "size": 196876,
+      "sha256": "33D097CF8F3C12C50EAEDF04C06F1A5C996CF7267304F607F2F9C2E0C0F686C8"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CW2.mat",
+      "size": 667,
+      "sha256": "E7A102BD24333C5E2A6BC427036DC11D60C28A7B2FE255675CD48659E6A121A2"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CW2.tga",
+      "size": 196876,
+      "sha256": "F27550DCE6BEAF3C6BEED71E3BD9592506C83B69EFC5DCD332D0833815DAEECD"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CW3.tga",
+      "size": 262668,
+      "sha256": "528CBE12980011D43337BC8CE1206AAC5EF0CAD0A3B69DEBBA06C032DB0D5525"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CW4.tga",
+      "size": 196876,
+      "sha256": "F1A04D2F8030E988283298E2784AEF4853EA4B36DD027220115703FFBCF7A8A7"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CW5.tga",
+      "size": 262668,
+      "sha256": "A8AD163A69B8C94E64859AEF61FB69CAAF3FB2E3C7D259E60D653BF3FE51FA08"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Canopy.msh",
+      "size": 10774,
+      "sha256": "290018F0D5DA56E529750D7F2373F5691E0C3314BE6982FFB0AB0E9B8EFD219A"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CanopyGlass.msh",
+      "size": 3308,
+      "sha256": "4A8835C80167581E398BD10ED0FC3434F9789DC9EFCA8FA4293D2A5D3FE962A2"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/CanopyGlassDamage.msh",
+      "size": 2156,
+      "sha256": "33125BC219028608F4482EA51CA942EA31D8D2B8524030B1065A9E75288D0AE2"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Compass.mat",
+      "size": 671,
+      "sha256": "7C223A63A57C7981F13124102878DE56C68F128834E6AE1526193378587999C9"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Compass.tga",
+      "size": 33077,
+      "sha256": "8253FC80AAB69FA77A0081D7BE91C2D502DBB5E3A19CFCA83DE7942DE6DA22F0"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Compass_night.mat",
+      "size": 637,
+      "sha256": "040927CC6F368EA2460288C2B7B4864E3FCD2F3D35ED913F335B455DACB532A6"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Compass_night.tga",
+      "size": 32812,
+      "sha256": "1D0C94BA4FAD4763F12F9930C486C3EEFD9A84296FA759305FDE90117F326062"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/DCLOCKS.tga",
+      "size": 262668,
+      "sha256": "7F239D93BC2B755DB4F9BA0DFD3E339984406D295F507FF44EBBECC9A30CEB13"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Electronics.msh",
+      "size": 23410,
+      "sha256": "8C7EF1C1B270AF428BEFB58C9C0E05F6C05DCAA3384595ACCFD3EF330E913598"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/GAS.tga",
+      "size": 196876,
+      "sha256": "633B121AC5291C178CCD61D2D7CB98EF698432B463146F93F794F1B0BA603F35"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/GAS2.tga",
+      "size": 262668,
+      "sha256": "9BC2C33D8ADAA8BB3AFB1E73B8923D1D7B919B39CE8F7867815EC2AD5D893DA5"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Gauges.msh",
+      "size": 5408,
+      "sha256": "6CCBD9C02FA6273FFA50A8792922EB3D472473002A618B058FD583E797EE7D01"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Gauges1_D0.msh",
+      "size": 1894,
+      "sha256": "B489440D8097D96C5CBAB0CFB2D93AA7962B914BB314E5F7E22C279294F20191"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Gauges1_D1.msh",
+      "size": 1322,
+      "sha256": "58EB18A0FE062B81221C113113D53144A55176F38667A56A643793DF8CFC2477"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Gauges2_D0.msh",
+      "size": 1896,
+      "sha256": "99E5B72B89DA6EF91BB5802E45F592F7AC4FF178CE1CA13D8B16E6385FFB618E"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Gauges2_D1.msh",
+      "size": 1322,
+      "sha256": "0AA6058AB262ED6E58DE8553D0411623377C494073B020A34D651A8BC6676E42"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Glass.msh",
+      "size": 2248,
+      "sha256": "C46246E99D475FFEE3F7D9457308E2DC7931AC6E333A7FD071B44653721A6BB9"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/GlassDamage.mat",
+      "size": 721,
+      "sha256": "C1C30999D932DF14C5F7EE487F1BEBD19646A0252142E8DBD1233CDA93554AFC"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/GlassOil.msh",
+      "size": 2247,
+      "sha256": "67B9CE9BEE4059D0DEB8F0BCA2CDE4546BF44AA2EE980366B46978D7F1CDA232"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Glass_damage.msh",
+      "size": 1492,
+      "sha256": "16E67FBA00C9A9B182831C80D20D13A7CB857CEA3369E46694D722B2DA7D765D"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Gloss1D0o.mat",
+      "size": 756,
+      "sha256": "75DC5062DEB00842E67DE02AFD4A2EDAA0F112521F14E594444BE0E36A714A50"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Gloss1D1o.mat",
+      "size": 610,
+      "sha256": "6E469F332A57957BD0EF748E310FA65C21251DB9B490F6C6F199DB61DA09AE15"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Gloss2D1o.mat",
+      "size": 113,
+      "sha256": "F6FD41D20E6DACDB5A934B25582AC9823A608D9A711772B870929CDE6045C2F6"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Gloss2D2o.mat",
+      "size": 99,
+      "sha256": "5C86C443520205CD29668A4665EC2EC95A33B7F88A4CBC0B65B39B1B2F3928C4"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/HOLE.tga",
+      "size": 65804,
+      "sha256": "821539AFEA9E0BC9B65FAE34E1F76E466B0A46204B1CE32AB87A8F648E2FDE38"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/LIGHTS.tga",
+      "size": 65554,
+      "sha256": "3084E2E6ED017007E86D0E11E97E4FB73592FF5A8A4F7213136535C2BA5D1BB3"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/PANEL.tga",
+      "size": 196876,
+      "sha256": "C8F650CF25DA2ECC97D503DE681001CFD610FD9D5CB64EEC27B186C26BD61531"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/PEDAL.tga",
+      "size": 65804,
+      "sha256": "23CAAC4029BDFBADCFB6FC4A2FE5ADCE252A38269F9CBB1199165E6531FC951B"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/PLACARD.tga",
+      "size": 66154,
+      "sha256": "BD4B1F6A5F7E83B47D45ED25C753A3F8D411F1DC116D969ACB7B89CB85F30D69"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Parts.msh",
+      "size": 50420,
+      "sha256": "B9EA48AA8DF2831CFD990E25E750BB1CDF13E12CA567F25406DC5689D8500CDD"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/RETICLE2.tga",
+      "size": 262668,
+      "sha256": "58A8709F74E4F9B21C9F2E81E7721EE1F16D7D2465F70CFD1389F60C6C71E36F"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/RIMS.tga",
+      "size": 196876,
+      "sha256": "42E891CCF0918C07A97ECC026BBE38ECF3BC4BE87A89D1E970CEC09C6037FEED"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/RIMS2.tga",
+      "size": 196626,
+      "sha256": "E0C5563C9CFB777B78AE61F39B8D33985FDEE7EC5A0EAB5F28382ED693A483DE"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/SEAT.tga",
+      "size": 196876,
+      "sha256": "335171EB21232690E9C70F5026ED006CC1C120C7580FDDCD720A4C75CB769106"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/SEAT2.tga",
+      "size": 196876,
+      "sha256": "94116DB66EF5CC686B39B43EA22B4EF72752C74D29A0FB1834C1D51252AA8A22"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/SIDELEFT.tga",
+      "size": 196876,
+      "sha256": "BB0C8F0724ED8F0C09A80D9B1C242788597EDE338EB41881F2E52DC2506345C5"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/STRUCT.tga",
+      "size": 262668,
+      "sha256": "B44F01A51DE55150A101AB64B375985F084E72ABCC25D168BAF1475763CC6040"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/STUFF.tga",
+      "size": 262668,
+      "sha256": "64B2B4DDC35EE8AAAD4D9D1668B6DB60BD73F77484775CAF914646F6EC6EA3B4"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/STUFF2.tga",
+      "size": 262668,
+      "sha256": "EFA3DBD1D5BB71BEAB6740DEB9B8C6323490AD7BDA0EF9164F376B0E672D89DC"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/STUFF3.tga",
+      "size": 262668,
+      "sha256": "AAD8E3732CA64E40DECEFF58B50525FC550E4E814581F84A1B1EC643917E7F74"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/STUFF4.tga",
+      "size": 262668,
+      "sha256": "FC7F379DD59F40BF62192E3E5CDAC4FB1E2B0C563F1AC028E2F785DF5BC0D44C"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/STUFF4_night.tga",
+      "size": 65580,
+      "sha256": "B302BA34188877D63143A211A11A4BEFD6A29C4D06339F87F21FB770CAB06335"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/STUFF5.tga",
+      "size": 262668,
+      "sha256": "DEA5E0ADCD6D0FE8A97B7481FA7A5AA86040E215792C834EB536679096C6C139"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/STUFF5_night.tga",
+      "size": 65580,
+      "sha256": "6766271E8472EED7CC2F1EE870082C8EB5E86934070DCC94964C5B816BCB953D"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/THROTTLE.tga",
+      "size": 65804,
+      "sha256": "A1637A09DD137FA232D410885C33EDB41CC3ECA827440E7C21A2D184121D0DCD"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/TRANSMIT.tga",
+      "size": 196876,
+      "sha256": "603ED95D3DB816324D05E40E6EC688A714DABEF3E955AB973E731D1D26F80267"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/WINDS.tga",
+      "size": 65804,
+      "sha256": "BFBBBA4F445666F36B63B823D7DAA1CBF193E0D49B8B80C73AAD1FB606C1E2FC"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/WarningLight1.msh",
+      "size": 989,
+      "sha256": "73AE3E6389D9BDA43411A7BEEBB7F2F30A3091FDE4F5E8CA5D7C541F69A11E9C"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/WarningLight2.msh",
+      "size": 989,
+      "sha256": "40AB6EEDA81041660E43037CAFDDEC61D6B62B16344F6BDAC29BB4EC74BAB1D2"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/WarningLight3.msh",
+      "size": 989,
+      "sha256": "735CCFF69DD5C831F073C5FD4D0CFB07B8B9D785C2BDC2C62EB72F40E9F1AE9F"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/WarningLight4.msh",
+      "size": 989,
+      "sha256": "317B09BD67DAA6AEB03A6712D2B6436F45065761053031F2687FF4C8162C1B47"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/WarningLight5.msh",
+      "size": 989,
+      "sha256": "F24282BC3B179B945EB97457BCCFB4E9DBDF2E3203A39527DD191BE2D9585B21"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/WarningLight6.msh",
+      "size": 989,
+      "sha256": "15DAD94B283A03A10A7917FD9E2E6793FDCF12E2A9CBE63E765A25DD0D26D0F6"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/WarningLight7.msh",
+      "size": 989,
+      "sha256": "BA149B9F5297637E841B9CD92E893AF9ECE8F7B88072F2E9E87EC0DD898AF8E2"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/WarningLight8.msh",
+      "size": 989,
+      "sha256": "F37D31A0887C19EFF95C57416000937C68F5B18BDE8C021E48AB5B285C2EEDDA"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/WarningLights.msh",
+      "size": 2511,
+      "sha256": "3F0D19631CFB799075E8962B5D78ED55FC5AA2C28B0C3292169E979AFE56A93C"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/XGlassHoles_TR.tga",
+      "size": 65804,
+      "sha256": "8791540E7F16460BBA2DBB25D1F8A4F6D9C4FCAF1FD73C1F02FDAE3B08301110"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/ZOil.mat",
+      "size": 711,
+      "sha256": "6E73D7997A2C02D212FA8632235F93851C61987A1048D685D1912A1700884AF0"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/ZOil.tga",
+      "size": 65804,
+      "sha256": "582A33038C1A9A232C7789F102930C7F2AFB393F1B488FBD7611FEDE0D594B23"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_Ignition.msh",
+      "size": 2491,
+      "sha256": "48791064558E23B16F55C3DF9E9C05C75D68B55614E276CD814A954BEBF53B4F"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_LevelMixture.msh",
+      "size": 6037,
+      "sha256": "6080BD68921A4196BA9C351B427167EC70B885171A5545BA35F8B156AB85636F"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_LevelThrottle.msh",
+      "size": 6034,
+      "sha256": "D87A5AC641E1D55617886F9DEC1DD0D0E0A9C98648E413C2C51BFF0F7AB0A291"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_LeverFlaps.msh",
+      "size": 4543,
+      "sha256": "E87541D4438CAFAEC5034E51A6FD3C3FF0A4472C9D86FC4782463B5E5A460DB3"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_LeverGear.msh",
+      "size": 4408,
+      "sha256": "A7169646B625C9E484A62DEA3D320286EEE8D2758270C9495174A03DF0D74FEB"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_LeverRPM.msh",
+      "size": 3811,
+      "sha256": "B8D91A3ABCB3B9D52F1DC01C0D88DF76B8420C8184FEC06BCE78E793DF4E0A56"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_LeverSuperc.msh",
+      "size": 5674,
+      "sha256": "BEFDC3AD48362DE26897C3292CB45D4FE7AF4E60574F0365D88EEE82BD7E5CED"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedAlt.msh",
+      "size": 1182,
+      "sha256": "F6A4D939B021C221F216029929668D02E1FE418B7CD589E50ABCAD481CCED1A3"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedBall.msh",
+      "size": 989,
+      "sha256": "6D327D06A6930C3DCC025F793D8C4AC4D97D5AC4ED844EE88D0C6E8569FAA3BA"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedClockHour.msh",
+      "size": 1182,
+      "sha256": "85E89B3AF5A3E592787A636C66BF150CA6C10EBDD610C8CD08134C131DC97A15"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedClockMinute.msh",
+      "size": 1182,
+      "sha256": "AE72DF384BC1D18937F911C8FE104F5A1C81A93C644FD6FC3911FF73F9D3FD9F"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedCompass.msh",
+      "size": 4756,
+      "sha256": "B8CE89AA9DB17F060C26525A9726E70EE1D3FD00E23FED289D02D6A4F7B6628A"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedCompass2.msh",
+      "size": 945,
+      "sha256": "298D0DB4F1C88721FB47928B25F401DA51C064C03921CC5074C984C6B499FBBA"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedCylTemp.msh",
+      "size": 1182,
+      "sha256": "4D0DEABF6D56888F1CF565B88A979C13E5203AD67D1B1EAFD7B37C052959C2EB"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedFuel.msh",
+      "size": 989,
+      "sha256": "21263F8ABA9CD2F7A214E6A764B99232462BFCD5C2FE79A5BF6450304A37C60B"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedFuelPres.msh",
+      "size": 1182,
+      "sha256": "2739FCDA567C04C906AC6ED3FCADA40875655E8DC51CBC357E88CEE9A604718C"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedHydrPres.msh",
+      "size": 1182,
+      "sha256": "33AA07628B35C122335A4BEF1C5F9EDEA0F2FB7D57BA52D6707446FAB44D8AF4"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedManifoldPres.msh",
+      "size": 1182,
+      "sha256": "08DB2FF9675DF63C37075E14AE0A58FF98971D51982B66865359AC23622DFD9B"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedOilPres.msh",
+      "size": 1182,
+      "sha256": "AFD5032E19D6248605ECA8B0F0FC2C79399720E6066ED57F83EC1D651B752448"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedOilTemp.msh",
+      "size": 1182,
+      "sha256": "34D6A61862DF7DA24E986B32C89D65D6BB407D962304BDF51088640A3C168C1E"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedRPM.msh",
+      "size": 1182,
+      "sha256": "BF105B50CF932F5BE3D6FAEA1F0AC62F52C0B5C091263B9C1BA16C8215EC16CC"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedSpeed.msh",
+      "size": 1182,
+      "sha256": "2990F0A2404A407D4B2DB6D9168A58F7C59508A64D12C340056EE95993DE77FA"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedTurn.msh",
+      "size": 1182,
+      "sha256": "92E15F3A0926132DCC8691C1921D72DE081C111704C27758F007B27C2F77EBB0"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_NeedVSpeed.msh",
+      "size": 1182,
+      "sha256": "B7372341ACD39B5CF3ABA6D8B7907E5C242A1D36B3A1F288B44D09EC118FEC20"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_PedalL1.msh",
+      "size": 3417,
+      "sha256": "F323FF0199EA37BAE7BA08213994B579B3BE3EE988ABFFDF1C659EAD961043BB"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_PedalL2.msh",
+      "size": 4565,
+      "sha256": "D10E6F27A2D879045286FF9538F63200D8ABA4167E50FF77C5BEB2AF6C6476DA"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_PedalR1.msh",
+      "size": 3417,
+      "sha256": "479C36FDBBE8AF78F7371F57F2004599914FEA7B411ABAFA988109EE97FBB16E"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_PedalR2.msh",
+      "size": 4546,
+      "sha256": "3669BA82771C4E9E8D7A4CD681F13169A5397628BC62CB49D88E16D773ED4C91"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_RodMixture.msh",
+      "size": 3957,
+      "sha256": "6DC5C5649B1F10D47590CCBA1CFCFA585F065197F726FF9F13C8F4C2BFE47035"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_RodSuperc.msh",
+      "size": 3957,
+      "sha256": "9929E246880FD0AFA22ABEB16EF264DBEF1F0D0D27D3881F61DB24595BEF852F"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_RodThrottle.msh",
+      "size": 3957,
+      "sha256": "044042EFA1AA496DFC995D564DAD648B26EA7D71322D29AB250E573CE6742BE7"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_Stick.msh",
+      "size": 8485,
+      "sha256": "1A97284551889161F025A70AD5F7BC4F7290697D0B0661D7E82F8809D3B41080"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_Switch1.msh",
+      "size": 989,
+      "sha256": "9BFF16F1E54D899DEA27BA31F14D35374BE564438C420F74CC510B029BD49C14"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_Switch2.msh",
+      "size": 989,
+      "sha256": "70F3BD13B5138A523555D5D5CA6FAA6E175434B2D56EF52AF9F364CCC761FEDC"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_Switch3.msh",
+      "size": 989,
+      "sha256": "2E5878F98E4307918FE9ABF7FD505A8A93C70CF8236F200FF316765B169ED285"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_Switch4.msh",
+      "size": 989,
+      "sha256": "2058FB30DD38EAA28A5395DA18987D1314098F57B9678AA838EB17E36C2B7CB0"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_Switch5.msh",
+      "size": 989,
+      "sha256": "9A73F54D369F462356AE0362C0216214FB0820EE6EDB1A49A5F360D068473A43"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_Switch6.msh",
+      "size": 989,
+      "sha256": "588509CD4D695E62530C353775415FA320F855B6002DA536B4AE0BE3267C69E4"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/Z_Switch7.msh",
+      "size": 989,
+      "sha256": "32843451EBCDDD67DAC3CA7A09BC90DC00F3CD321D8EF4D529520BFF11F7C529"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/bottom.mat",
+      "size": 670,
+      "sha256": "5D58A7BA075C2CBD3A215E84AFD8766D038C05999AF6DAAE8A92E19FD6EEFE0D"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/canopy1.mat",
+      "size": 671,
+      "sha256": "71A379B5CA97BE5578BC43CF6C82254ECEE0E289164DACA8861F29AE7051AECE"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/clock2.mat",
+      "size": 670,
+      "sha256": "208AFAF0875BA013A38AED26078EA1F232F8ED54F8DF2D51A8CCD13FD4D98FB9"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/clock2_night.mat",
+      "size": 635,
+      "sha256": "3EC9212B1E200BCDBC4C751839EE70C9300D5F53389087DB1ABB6A8740EEFF29"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/clock3.mat",
+      "size": 670,
+      "sha256": "DC03208A723E8431ADF8938A64E9DC584CD4A547B0DDD1F7903FB95E7109E5B6"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/clock3_night.mat",
+      "size": 634,
+      "sha256": "35DDB31D84334AB7E4921A74177FBA198E5629C2AB42AFD33AA6056A24E7EAC3"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/clock5.mat",
+      "size": 670,
+      "sha256": "48AC61886DE8F4A15BB84A8EB3C84F4998F0B091D49CC8893DCDE330C119AB58"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/clock5_night.mat",
+      "size": 635,
+      "sha256": "91C8A965035259D7E6D8009B0B70DB0651CAE8142E81B7E2FD67D351A7DF3D79"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/clocks1.mat",
+      "size": 671,
+      "sha256": "7898C30599ED3E8A3D690560632B7279C016CDE5FCF7C0BF0811215D02BB062F"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/clocks1_night.mat",
+      "size": 638,
+      "sha256": "A880FAFA2ECA32C124823CDFC57206A07CCF1077009F145414318584EE04DD6E"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/cw.mat",
+      "size": 666,
+      "sha256": "03F01C60871422817771C4113983DF4E679867C622D4BB6181CE737899EEC43D"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/cw3.mat",
+      "size": 667,
+      "sha256": "822609AB2A57BCA751FEAAC134516D454F30969D3FF8E133D5E37E11DB1FA080"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/cw4.mat",
+      "size": 667,
+      "sha256": "8158E7AC21F9AA3E0C5E10CD22A75DE49D5142DF4A29BB08A645BCA1DCBCEF6D"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/cw5.mat",
+      "size": 667,
+      "sha256": "0B2CBB0DDB41A1695E0426892CEF1E62FA127DA4CD3E49D7185234301D5FADA4"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/damage1o.tga",
+      "size": 4194322,
+      "sha256": "5DECA8A86E3AAC96820EFE22084F216A8A028C77280A03D96AE7EF4B483D6B0D"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/damage2o.tga",
+      "size": 4194322,
+      "sha256": "B31EB185FB4E15749E87F2B67AB26922AAF2EF60E5D619E37D18DA250619F721"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/dclocks.mat",
+      "size": 671,
+      "sha256": "5CB2E1002F8D80A876448CFA3A5C8E88282857C304085FD9E9001CB6D4892408"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/gas.mat",
+      "size": 667,
+      "sha256": "C4B1FD38361D66ECCF00A34DE072B77C3D498FAFB037EADA172911B82A56D2BF"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/gas2.mat",
+      "size": 668,
+      "sha256": "D264E9B4A2CFC5D8B1DA0F1CBC76C82465188D80DD428A83146F27B94C2BE61E"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/hier.him",
+      "size": 7341,
+      "sha256": "9167AB6AD3207B74911CE7EDB758A64D805AD98EFE000BE4D962A32C498622AB"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/hole.mat",
+      "size": 668,
+      "sha256": "103828A22F9C9A9589DEED542A6694EF35745743BE21C61CAA5E9DF67211307C"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/lights.mat",
+      "size": 670,
+      "sha256": "F823F82AFB525914D603AB4FC7B2F78DF6737E09EE92E8BBD7E5A64B5CBF5D02"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/panel.mat",
+      "size": 669,
+      "sha256": "34903B6B0772ABA970CE48BE50CACB0E902EF3BB4BBF3EA2A96B035F58DA23CA"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/pedal.mat",
+      "size": 669,
+      "sha256": "6C7671E00D34FA83FD1DAE995C4DBD243B5F08E7EA7A0C20934C71A17B437303"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/placard.mat",
+      "size": 671,
+      "sha256": "6732024653892E7EC04DB473A5BEC7CA3330113231FDCFA52804D70D8ED66A98"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/rec1.mat",
+      "size": 668,
+      "sha256": "F3FD830FD764211775A2C65D757DB81B15D4F0A337AE7F413B793D292E166159"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/rec1.tga",
+      "size": 196876,
+      "sha256": "1E36546CAE15729ECBAB955983C3C98A627EEDA9EAE8379FF6E8A14BDF119525"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/reticle2.mat",
+      "size": 672,
+      "sha256": "7B75D99AD9EFFDC86BE6AF62FD6EA7385CB6982B5461C671DADFE6143C19C189"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/rims.mat",
+      "size": 668,
+      "sha256": "0B65FAAE2C8849404ED179CC44770BE1AC2D3F57A31102EAF9240024E123DE6F"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/rims2.mat",
+      "size": 669,
+      "sha256": "1840A77F0524D8B5CF95AE864AD2DAFD7865154E1E39377C2310EF6F777256B8"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/rims3.mat",
+      "size": 669,
+      "sha256": "56B748A48AA168630A8249C722F1C270557B07A55146C328FFD9A89FF360FEE2"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/rims3.tga",
+      "size": 196876,
+      "sha256": "E2E5D9AAA0694AE3A38F3C3680572825318B2D57A2E7DD65ECBF07FE562D62DD"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/seat.mat",
+      "size": 668,
+      "sha256": "969044B53F62751168092DEB7394F43D7A55DECB1C830A8A6526881FCEB17A02"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/seat2.mat",
+      "size": 669,
+      "sha256": "CC229FBEA2600C0EC58C35BF9D886265C5BB4FB66B1249E96040FF19471BC134"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/sideleft.mat",
+      "size": 672,
+      "sha256": "95157322D7C975503DBDD7C7F16D4D4381360A813459367B8D4966522BB2A955"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/skin1o.tga",
+      "size": 22,
+      "sha256": "AE01DB37EE7D5AFEFF25EA891B898318DF30580F6DA3A0F3D942CAFFAF6D9531"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/struct.mat",
+      "size": 670,
+      "sha256": "CEF064DAF4AA285FB1AE4D1E6519FB678152E8C4A0A6AF5F0FC7CD65B7FAE837"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/stuff.mat",
+      "size": 669,
+      "sha256": "AEF16DC525CEB7CEE68B506B2928E656FE64D798AC83F5047DBF57B227C3111B"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/stuff2.mat",
+      "size": 670,
+      "sha256": "DD6B9024A37FFF9ABD39816813F91D5AB6FC0268D62739C6656B89DF472A5E2C"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/stuff3.mat",
+      "size": 670,
+      "sha256": "9577A929AFF4303E6F7D801214D9636C96B3FD8EFB8381C758786E7316EAB599"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/stuff4.mat",
+      "size": 670,
+      "sha256": "FA0B9CAE14C1977140212CB39B557A2BD0CEF6D05F7F5860B8D691DBEAEC8543"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/stuff4_night.mat",
+      "size": 633,
+      "sha256": "3C83D172BB2EEC9FCDEBDA299B10D83FCD840FDC7C66674077104D061C673CB1"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/stuff5.mat",
+      "size": 670,
+      "sha256": "E24AD12291449C55B737C5BE470AE5718017F9266262F2F9D251A4BBB81DF919"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/stuff5_night.mat",
+      "size": 636,
+      "sha256": "DEBE1E17E516A4FACADB648988FE51B617C387F1C2E7139B960A11502BA38B73"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/throttle.mat",
+      "size": 672,
+      "sha256": "890125848D3E842CB51CE223AF1875BFF63B76CD3AFC44ED9CB4DD74660D25B1"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/transmit.mat",
+      "size": 672,
+      "sha256": "07BC593E492E900D37C7D698A13F8F0DA4C46C2A7ADEEA4DCB32528D1F42A5BC"
+    },
+    {
+      "path": "Files/3do/Cockpit/CW-21/winds.mat",
+      "size": 693,
+      "sha256": "DBA6BB74937EA66D23B8C691FFA4984CF0A8E909B6EBB3C2CCBBCC690421CE3F"
+    },
+    {
+      "path": "Files/68E6863AAE2BAB5C",
+      "size": 213,
+      "sha256": "B28D34D624F259FE74D3F0DCE7828DD9ED8458C3E178A46C5BE176AEEE52F633"
+    },
+    {
+      "path": "Files/7F567DAABB958052",
+      "size": 276,
+      "sha256": "550EA60D46EFAA9F8D481A4D695109A99073C1BBC4040ED31F8B957A894FDC7B"
+    },
+    {
+      "path": "Files/BAB3AB548B9EE8A4",
+      "size": 4442,
+      "sha256": "BC86ECF8ACB4995641DEE8C694101978E415ED98877D923CC3EF894FCB0752F6"
+    },
+    {
+      "path": "Files/BC0B01A0EB339004",
+      "size": 10733,
+      "sha256": "7C529CAD656340BFE43450BA738AD8B94DB6A53CC7D2337169B7A6D451C8D172"
+    },
+    {
+      "path": "Files/F00C363EBB3865E8",
+      "size": 5235,
+      "sha256": "6CB3045084C0B2337472FAD8C721941637D442391910AB05D731CAF3A41ED783"
+    }
+  ],
+  "staticPassed": true,
+  "runtimeValidation": "pending",
+  "mdsRemovalValidation": {
+    "date": "2026-09-12",
+    "contractEvidence": "docs/research/zuti-family-reconstruction-20260912/cw21-stock-contract.json",
+    "fullInstallerAudit": "PASS: 6 classes, 165 cockpit assets, installed=False",
+    "stockLoaderProfilesTested": [
+      "4.08m",
+      "4.09b",
+      "4.09m"
+    ],
+    "scope": "Actual loader bytecode with API/input doubles; full cockpit API/resource audit targets 4.09m; in-game validation pending."
+  }
+}

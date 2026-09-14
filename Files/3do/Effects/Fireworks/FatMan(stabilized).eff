@@ -1,0 +1,23 @@
+[ClassInfo]
+  ClassName TParticlesSystemParams
+[General]
+  MatName ../TEXTURES/SmokeN.mat
+  Color0 0.82 0.82 0.82 0.72
+  Color1 0.95 0.95 0.95 0.0
+  nParticles 512
+  ; Spawned after the ten-minute rise; emission ends one hour after detonation.
+  FinishTime 2990.0
+  MaxR 32.0
+  PhiN 8.0
+  PsiN 8.0
+  ; 4.09m hard limit. The persistent emitter renews particles inside this pool.
+  LiveTime 128.0
+  EmitFrq 4.0
+  TranspTransitionTime 128.0f
+  EmitVelocity 2.0 8.0
+  EmitTheta 0.0 180.0
+  GasResist 0.004
+  VertAccel 0.0
+  Wind 20.0
+  Size 1800.0 4200.0
+  Rnd 0.90

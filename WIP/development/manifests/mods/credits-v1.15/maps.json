@@ -1,0 +1,5221 @@
+{
+  "scanned_date": "2026-09-11",
+  "branch_verified": "v1.15",
+  "root": "D:\\Projets\\GITHUB\\IL2-1946-Open-Sturmovik",
+  "registry": "Files/Maps/all.ini",
+  "registry_sha256": "E003FFF4D5826F774A0D38D0372BC914F702AD6D2DAD84B70E387A661D45D0E9",
+  "methodology": "Lecture statique locale. Les paires alias/chemin .ini sont extraites y compris autour de 0x1A pour les documenter; aucun comportement du moteur ni chargement en jeu affirme. Les chemins absents en fichiers libres peuvent exister dans les archives SFS, non inspectees ici.",
+  "declared_pairs": 406,
+  "unique_load_paths": 198,
+  "unique_directories": 112,
+  "paths_with_loose_ini": 163,
+  "variants": [
+    {
+      "load": "3BG_KTO_Winter/load.ini",
+      "directory": "3BG_KTO_Winter",
+      "aliases": [
+        "Coree_Hiver"
+      ],
+      "registry_lines": [
+        55
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 88,
+          "reference": "LowLand0 = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        },
+        {
+          "line": 89,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand1_fields_Hiver.tga"
+        },
+        {
+          "line": 90,
+          "reference": "LowLand2 = land/winter/Mbug_sk_LowLand2_fields_Hiver03.tga"
+        },
+        {
+          "line": 91,
+          "reference": "LowLand3 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 93,
+          "reference": "MidLand0 = land/winter/Mbug_sk_fields_midland0_Hiver.tga,2"
+        },
+        {
+          "line": 94,
+          "reference": "MidLand1 = land/winter/Mbug_sk_fields_midland1_Hiver01.tga,2"
+        },
+        {
+          "line": 95,
+          "reference": "MidLand2 = land/winter/Mbug_sk_fields_midland2_Hiver.tga,2"
+        },
+        {
+          "line": 96,
+          "reference": "MidLand3 = land/winter/Mbug_sk_fields_midland3_Hiver.tga"
+        },
+        {
+          "line": 98,
+          "reference": "Mount0 = land/winter/Mbug_sk_fields_mount0_Hiver.tga"
+        },
+        {
+          "line": 99,
+          "reference": "Mount1 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 100,
+          "reference": "Mount2 = land/winter/Mbug_sk_fields_mount2_Hiver.tga,2"
+        },
+        {
+          "line": 101,
+          "reference": "Mount3 = land/winter/Mbug_sk_fields_mount3_Hiver.tga"
+        },
+        {
+          "line": 103,
+          "reference": "Country0 = land/winter/Mbug_bigcountry_hiver.tga"
+        },
+        {
+          "line": 104,
+          "reference": "Country1 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 105,
+          "reference": "Country2 = land/winter/Mbug_sk_fields_mount4_Hiver.tga,2"
+        },
+        {
+          "line": 106,
+          "reference": "Country3 = land/winter/Mbug_sk_fields_mount5_Hiver.tga"
+        },
+        {
+          "line": 108,
+          "reference": "City0    = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        },
+        {
+          "line": 109,
+          "reference": "City1    = land/winter/Mbug_sk_MidCity_Hiver.tga"
+        },
+        {
+          "line": 111,
+          "reference": "City3    = land/winter/Mbug_sk_Factory_Hiver.tga"
+        },
+        {
+          "line": 113,
+          "reference": "AirField0= land/winter/Mbug_sk_fields_airfieldGr_Hiver.tga,4"
+        },
+        {
+          "line": 118,
+          "reference": "Wood0 = land/winter/Mbug_sk_ForestGr_Hiver.tga,4"
+        },
+        {
+          "line": 120,
+          "reference": "Wood2 = land/winter/Mbug_sk_ForestFar_Hiver.tga"
+        },
+        {
+          "line": 126,
+          "reference": "Water3 = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        }
+      ]
+    },
+    {
+      "load": "3BG_KTO/load.ini",
+      "directory": "3BG_KTO",
+      "aliases": [
+        "Coree_ete"
+      ],
+      "registry_lines": [
+        54
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Aleutians/load.ini",
+      "directory": "Aleutians",
+      "aliases": [
+        "Aleutians"
+      ],
+      "registry_lines": [
+        3
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "AP_Ukraine/load_w.ini",
+      "directory": "AP_Ukraine",
+      "aliases": [
+        "Ukraine_W"
+      ],
+      "registry_lines": [
+        376
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors_W.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "AP_Ukraine/load.ini",
+      "directory": "AP_Ukraine",
+      "aliases": [
+        "Ukraine"
+      ],
+      "registry_lines": [
+        375
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "ardennes/GW_winload.ini",
+      "directory": "ardennes",
+      "aliases": [
+        "Ardennes_hiver",
+        "Ardennes_HiverG"
+      ],
+      "registry_lines": [
+        6,
+        7
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actorsw.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 73,
+          "reference": "LowLand0 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 74,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand1_fields_Hiver.tga"
+        },
+        {
+          "line": 75,
+          "reference": "LowLand2 = land/winter/Mbug_sk_LowLand2_fields_Hiver03.tga"
+        },
+        {
+          "line": 76,
+          "reference": "LowLand3 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 77,
+          "reference": "MidLand0 = land/winter/Mbug_sk_midland4_Hiver.tga"
+        },
+        {
+          "line": 81,
+          "reference": "Mount0   = land/winter/Mbug_sk_fields_mount4_Hiver.tga,2"
+        },
+        {
+          "line": 85,
+          "reference": "Country0 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 87,
+          "reference": "Country2 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 88,
+          "reference": "Country3 = land/winter/Mbug_bigcountry_hiver.tga"
+        },
+        {
+          "line": 93,
+          "reference": "AirField0= land/winter/Mbug_sk_fields_airfieldGr_Hiver.tga,4"
+        },
+        {
+          "line": 97,
+          "reference": "Wood0    = land/winter/Mbug_sk_ForestGr_Hiver.tga,4"
+        },
+        {
+          "line": 103,
+          "reference": "Water2   = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        }
+      ]
+    },
+    {
+      "load": "Ardennes/sload.ini",
+      "directory": "Ardennes",
+      "aliases": [
+        "Ardennes_S"
+      ],
+      "registry_lines": [
+        8,
+        9,
+        10
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Ardennes/wload.ini",
+      "directory": "Ardennes",
+      "aliases": [
+        "Ardennes_W"
+      ],
+      "registry_lines": [
+        11,
+        12,
+        13
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actorsw.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 73,
+          "reference": "LowLand0 = land/winter/Mbug_sk_LowLand0_lowres2.tga //land/winter/LowLand_1.tga,2"
+        },
+        {
+          "line": 74,
+          "reference": "LowLand1 = land/winter/Mbug_sk_fields_midland0_lowres2.tga //land/winter/LowLand_2.tga"
+        },
+        {
+          "line": 78,
+          "reference": "MidLand0 = land/winter/Mbug_sk_LowLand3_fields_lowres.tga //land/winter/midland.tga"
+        },
+        {
+          "line": 83,
+          "reference": "Mount0   = land/winter/Mbug_sk_LowLand2_fields_lowres03.tga //land/winter/mount.tga"
+        },
+        {
+          "line": 88,
+          "reference": "Country0 = land/winter/Mbug_bigcountry_lowres.tga //land/winter/bigcountry.tga"
+        },
+        {
+          "line": 89,
+          "reference": "Country1 = land/winter/Mbug_sk_country_mount_lowres.tga //land/winter/countries.tga"
+        },
+        {
+          "line": 91,
+          "reference": "Country3 = land/winter/Mbug_bigcountry_lowres.tga //bigcountry.tga"
+        },
+        {
+          "line": 98,
+          "reference": "AirField0= land/winter/Mbug_sk_fields_airfieldGr_lowres.tga,4"
+        },
+        {
+          "line": 103,
+          "reference": "Wood0    = land/winter/Mbug_sk_ForestGr_lowres.tga"
+        },
+        {
+          "line": 110,
+          "reference": "Water2   = land/winter/Mbug_sk_fields_midland0_lowres.tga //water/CoastLinew.tga"
+        }
+      ]
+    },
+    {
+      "load": "ash_BoF/ash_load.ini",
+      "directory": "ash_BoF",
+      "aliases": [
+        "ash_Battle_of_France_1940",
+        "France_1940"
+      ],
+      "registry_lines": [
+        14,
+        103
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 35,
+          "reference": "ash_actors_master13-07.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "B29_Alley/load.ini",
+      "directory": "B29_Alley",
+      "aliases": [
+        "B29_Alley"
+      ],
+      "registry_lines": [
+        18
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Balaton/GW_load_w.ini",
+      "directory": "Balaton",
+      "aliases": [
+        "Balaton_winterG"
+      ],
+      "registry_lines": [
+        26
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 29,
+          "reference": "actors_w.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 83,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 84,
+          "reference": "LowLand2 = land/winter/Mbug_sk_LowLand1_fields_Hiver.tga"
+        },
+        {
+          "line": 85,
+          "reference": "LowLand3 = land/winter/Mbug_sk_LowLand2_fields_Hiver03.tga"
+        },
+        {
+          "line": 88,
+          "reference": "MidLand1 = land/winter/Mbug_sk_fields_airfieldGr_Hiver.tga"
+        },
+        {
+          "line": 89,
+          "reference": "MidLand2 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 93,
+          "reference": "Mount1   = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 94,
+          "reference": "Mount2   = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 95,
+          "reference": "Mount3   = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 97,
+          "reference": "Country0 = land/winter/Mbug_bigcountry_hiver.tga"
+        },
+        {
+          "line": 119,
+          "reference": "Water2   = land/winter/Mbug_sk_fields_midland0_Hiver.tga,2"
+        }
+      ]
+    },
+    {
+      "load": "Balaton/load_w.ini",
+      "directory": "Balaton",
+      "aliases": [
+        "Balaton_winter"
+      ],
+      "registry_lines": [
+        23,
+        24,
+        25
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 29,
+          "reference": "actors_w.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 83,
+          "reference": "LowLand0 = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        },
+        {
+          "line": 84,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand1_fields_Hiver.tga"
+        },
+        {
+          "line": 85,
+          "reference": "LowLand2 = land/winter/Mbug_sk_LowLand2_fields_Hiver03.tga"
+        },
+        {
+          "line": 86,
+          "reference": "LowLand3 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 88,
+          "reference": "MidLand0 = land/winter/Mbug_sk_fields_midland0_Hiver.tga"
+        },
+        {
+          "line": 89,
+          "reference": "MidLand1 = land/winter/Mbug_sk_fields_midland1_Hiver01.tga"
+        },
+        {
+          "line": 90,
+          "reference": "MidLand2 = land/winter/Mbug_sk_fields_midland2_Hiver.tga"
+        },
+        {
+          "line": 91,
+          "reference": "MidLand3 = land/winter/Mbug_sk_fields_midland3_Hiver.tga"
+        },
+        {
+          "line": 93,
+          "reference": "Mount0 = land/winter/Mbug_sk_fields_mount0_Hiver.tga"
+        },
+        {
+          "line": 94,
+          "reference": "Mount1 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 95,
+          "reference": "Mount2 = land/winter/Mbug_sk_fields_mount2_Hiver.tga,2"
+        },
+        {
+          "line": 96,
+          "reference": "Mount3 = land/winter/Mbug_sk_fields_mount3_Hiver.tga"
+        },
+        {
+          "line": 98,
+          "reference": "Country0 = land/winter/Mbug_bigcountry_hiver.tga"
+        },
+        {
+          "line": 99,
+          "reference": "Country1 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 100,
+          "reference": "Country2 = land/winter/Mbug_sk_Factory_Hiver.tga"
+        },
+        {
+          "line": 103,
+          "reference": "City0 = land/winter/Mbug_sk_DownCity_Hiver.tga"
+        },
+        {
+          "line": 104,
+          "reference": "City1 = land/winter/Mbug_sk_MidCity_Hiver.tga"
+        },
+        {
+          "line": 106,
+          "reference": "City3 = land/winter/Mbug_sk_Factory_Hiver.tga"
+        },
+        {
+          "line": 108,
+          "reference": "AirField0= land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga,4"
+        },
+        {
+          "line": 113,
+          "reference": "Wood0 = land/winter/Mbug_sk_ForestGr_Hiver.tga,4"
+        },
+        {
+          "line": 120,
+          "reference": "Water2   = land/winter/Mbug_sk_LowLand0_Hiver.tga //water/CoastLineW.tga"
+        }
+      ]
+    },
+    {
+      "load": "Balaton/load.ini",
+      "directory": "Balaton",
+      "aliases": [
+        "Balaton"
+      ],
+      "registry_lines": [
+        19,
+        20,
+        21
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 37,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Balaton/vp_load.ini",
+      "directory": "Balaton",
+      "aliases": [
+        "Balaton_VP"
+      ],
+      "registry_lines": [
+        22
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 41,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Berlin/Autumn_CKY_load.ini",
+      "directory": "Berlin",
+      "aliases": [
+        "Berlin_autumn"
+      ],
+      "registry_lines": [
+        31
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 29,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Berlin/load.ini",
+      "directory": "Berlin",
+      "aliases": [
+        "Berlin"
+      ],
+      "registry_lines": [
+        28,
+        29,
+        30
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 29,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Berlin/Winter_CKY_load.ini",
+      "directory": "Berlin",
+      "aliases": [
+        "Berlin_winter"
+      ],
+      "registry_lines": [
+        32
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 29,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Bessarabia-beta/load.ini",
+      "directory": "Bessarabia-beta",
+      "aliases": [
+        "Bessarabia-beta"
+      ],
+      "registry_lines": [
+        35
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Bessarabia/load_Iasi.ini",
+      "directory": "Bessarabia",
+      "aliases": [
+        "Iasi_Online",
+        "IasiOnline"
+      ],
+      "registry_lines": [
+        119,
+        120,
+        121
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Bessarabia/load_Odessa.ini",
+      "directory": "Bessarabia",
+      "aliases": [
+        "Odessa_Online",
+        "OdessaOnline"
+      ],
+      "registry_lines": [
+        282,
+        283,
+        284
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Bessarabia/load.ini",
+      "directory": "Bessarabia",
+      "aliases": [
+        "Basserabia",
+        "Bessarabia"
+      ],
+      "registry_lines": [
+        27,
+        33,
+        34
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Burma/load.ini",
+      "directory": "Burma",
+      "aliases": [
+        "Burma"
+      ],
+      "registry_lines": [
+        37,
+        38,
+        39
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "CAL_Zimbotho/load.ini",
+      "directory": "CAL_Zimbotho",
+      "aliases": [
+        "Zimbotho"
+      ],
+      "registry_lines": [
+        388
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 86,
+          "reference": "Mount2 = land/summer/CAL_Zimbotho/fsmd_mount3base.tga      // 10"
+        },
+        {
+          "line": 87,
+          "reference": "Mount3 = land/summer/CAL_Zimbotho/fsmd_mount3_cald.tga     // 11"
+        }
+      ]
+    },
+    {
+      "load": "CAN_Channel/CAN_40_load.ini",
+      "directory": "CAN_Channel",
+      "aliases": [
+        "BoB_Channel",
+        "English_Channel_1940"
+      ],
+      "registry_lines": [
+        36,
+        85,
+        86
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors_40.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Chichi/load.ini",
+      "directory": "Chichi",
+      "aliases": [
+        "Chichi"
+      ],
+      "registry_lines": [
+        42,
+        43,
+        44
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "CoralSea/2_load.ini",
+      "directory": "CoralSea",
+      "aliases": [
+        "CoralSeaOnline2"
+      ],
+      "registry_lines": [
+        51,
+        52,
+        53
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Coralsea/Atlantic_summer_CKY_load.ini",
+      "directory": "Coralsea",
+      "aliases": [
+        "Atlantic_summer"
+      ],
+      "registry_lines": [
+        15
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 46,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Coralsea/Atlantic_winter_CKY_load.ini",
+      "directory": "Coralsea",
+      "aliases": [
+        "Atlantic_winter"
+      ],
+      "registry_lines": [
+        16
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 46,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "CoralSea/load.ini",
+      "directory": "CoralSea",
+      "aliases": [
+        "CoralSea"
+      ],
+      "registry_lines": [
+        45,
+        46,
+        47
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "CoralSea/Online_load.ini",
+      "directory": "CoralSea",
+      "aliases": [
+        "CoralSeaOnline"
+      ],
+      "registry_lines": [
+        48,
+        49,
+        50
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Crimea/fly_Z_d_load.ini",
+      "directory": "Crimea",
+      "aliases": [
+        "Crimea_desert"
+      ],
+      "registry_lines": [
+        59
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 40,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Crimea/load.ini",
+      "directory": "Crimea",
+      "aliases": [
+        "Crimea"
+      ],
+      "registry_lines": [
+        56,
+        57,
+        58
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 40,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "desert/load.ini",
+      "directory": "desert",
+      "aliases": [
+        "OnlineDesert"
+      ],
+      "registry_lines": [
+        289,
+        290,
+        291
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "dlc_SpainSW/dlc_load.ini",
+      "directory": "dlc_SpainSW",
+      "aliases": [
+        "Espagne_Sud"
+      ],
+      "registry_lines": [
+        87
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 40,
+          "reference": "dlc_actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "dlv_Philippines/aload.ini",
+      "directory": "dlv_Philippines",
+      "aliases": [
+        "PhilippinesBis"
+      ],
+      "registry_lines": [
+        307
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "dlv_Philippines/load.ini",
+      "directory": "dlv_Philippines",
+      "aliases": [
+        "dlv_Philippines",
+        "Philippines"
+      ],
+      "registry_lines": [
+        61,
+        305,
+        306
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "dlv_Sinai/load.ini",
+      "directory": "dlv_Sinai",
+      "aliases": [
+        "dlv_Sinai",
+        "Sinai"
+      ],
+      "registry_lines": [
+        62,
+        63,
+        321,
+        322
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Empty1a_Winter/load.ini",
+      "directory": "Empty1a_Winter",
+      "aliases": [
+        "Empty1a_Winter"
+      ],
+      "registry_lines": [
+        67,
+        68
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Empty1a/load.ini",
+      "directory": "Empty1a",
+      "aliases": [
+        "Empty1a"
+      ],
+      "registry_lines": [
+        65,
+        66
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Empty1b_Winter/load.ini",
+      "directory": "Empty1b_Winter",
+      "aliases": [
+        "Empty1b_Winter"
+      ],
+      "registry_lines": [
+        71,
+        72
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Empty1b/load.ini",
+      "directory": "Empty1b",
+      "aliases": [
+        "Empty1b"
+      ],
+      "registry_lines": [
+        69,
+        70
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Empty2a_Winter/load.ini",
+      "directory": "Empty2a_Winter",
+      "aliases": [
+        "Empty2a_Winter"
+      ],
+      "registry_lines": [
+        75,
+        76
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Empty2a/load.ini",
+      "directory": "Empty2a",
+      "aliases": [
+        "Empty2a"
+      ],
+      "registry_lines": [
+        73,
+        74
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Empty2b_Winter/load.ini",
+      "directory": "Empty2b_Winter",
+      "aliases": [
+        "Empty2b_Winter"
+      ],
+      "registry_lines": [
+        79,
+        80
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Empty2b/load.ini",
+      "directory": "Empty2b",
+      "aliases": [
+        "Empty2b"
+      ],
+      "registry_lines": [
+        77,
+        78
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Empty4a/load.ini",
+      "directory": "Empty4a",
+      "aliases": [
+        "Empty4a"
+      ],
+      "registry_lines": [
+        81,
+        82
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Empty4b/load.ini",
+      "directory": "Empty4b",
+      "aliases": [
+        "Empty4b"
+      ],
+      "registry_lines": [
+        83,
+        84
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "fa/load.ini",
+      "directory": "fa",
+      "aliases": [
+        "VFA2009"
+      ],
+      "registry_lines": [
+        377
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 37,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "ffb_Thailand/load.ini",
+      "directory": "ffb_Thailand",
+      "aliases": [
+        "ffb_Thailand",
+        "Thailand"
+      ],
+      "registry_lines": [
+        88,
+        362
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 37,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "finsgulf/Kt_load_W.ini",
+      "directory": "finsgulf",
+      "aliases": [
+        "Finsgulf_Mod01W"
+      ],
+      "registry_lines": [
+        95
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 38,
+          "reference": "actors_w.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "finsgulf/Kt_load.ini",
+      "directory": "finsgulf",
+      "aliases": [
+        "Finsgulf_Mod01"
+      ],
+      "registry_lines": [
+        94
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "FinsGulf/load_w.ini",
+      "directory": "FinsGulf",
+      "aliases": [
+        "FinsGulf_Winter",
+        "WinterFinsGulf"
+      ],
+      "registry_lines": [
+        96,
+        386,
+        387
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 38,
+          "reference": "actors_w.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 78,
+          "reference": "LowLand0 = land/winter/Mbug_sk_LowLand0_lowres2.tga,2 //with land/winter/Mbug_sk_fields_midland0_lowres2.tga"
+        },
+        {
+          "line": 79,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand3_fields_lowres.tga"
+        },
+        {
+          "line": 80,
+          "reference": "LowLand2 = land/winter/Mbug_sk_LowLand2_fields_lowres03.tga //large fields"
+        },
+        {
+          "line": 81,
+          "reference": "LowLand3 = land/winter/Mbug_sk_LowLand3_fields_lowres.tga"
+        },
+        {
+          "line": 83,
+          "reference": "MidLand0 = land/winter/Mbug_sk_midland4_lowres.tga"
+        },
+        {
+          "line": 84,
+          "reference": "MidLand1 = land/winter/Mbug_sk_LowLand5_fields_lowres.tga"
+        },
+        {
+          "line": 85,
+          "reference": "MidLand2 = land/winter/Mbug_sk_midland4_lowres.tga // unused imo"
+        },
+        {
+          "line": 86,
+          "reference": "MidLand3 = land/winter/Mbug_sk_fields_midland0_lowres.tga //rivers, seashore"
+        },
+        {
+          "line": 88,
+          "reference": "Mount0   = land/winter/Mbug_sk_LowLand0_lowres.tga"
+        },
+        {
+          "line": 89,
+          "reference": "Mount1   = land/winter/Mbug_sk_LowLand0_lowres.tga //unused imo"
+        },
+        {
+          "line": 90,
+          "reference": "Mount2   = land/winter/Mbug_sk_LowLand0_lowres.tga"
+        },
+        {
+          "line": 93,
+          "reference": "Country0 = land/winter/Mbug_bigcountry_lowres.tga"
+        },
+        {
+          "line": 101,
+          "reference": "City3    = land/winter/Mbug_sk_LowLand0_lowres.tga,2 //water/Snow1.tga"
+        },
+        {
+          "line": 103,
+          "reference": "AirField0= land/winter/Mbug_sk_fields_airfieldGr1_lowres.tga,4 //land/winter/airfieldGr.tga"
+        },
+        {
+          "line": 108,
+          "reference": "Wood0    = land/winter/Mbug_sk_ForestGr_lowres.tga //land/winter/Mbug_sk_LowLand0_lowres.tga"
+        },
+        {
+          "line": 115,
+          "reference": "Water2   = land/winter/Mbug_sk_fields_midland0_lowres.tga,2"
+        },
+        {
+          "line": 116,
+          "reference": "Water3   = land/winter/Mbug_sk_fields_midland0_lowres.tga,2 //water/Snow2.tga,2"
+        }
+      ]
+    },
+    {
+      "load": "FinsGulf/load.ini",
+      "directory": "FinsGulf",
+      "aliases": [
+        "FinsGulf"
+      ],
+      "registry_lines": [
+        91,
+        92,
+        93
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "fly_zo_BOB/fly_Z_normA_load.ini",
+      "directory": "fly_zo_BOB",
+      "aliases": [
+        "fly_Z_BOB_A",
+        "NormandyBOB_autumn"
+      ],
+      "registry_lines": [
+        97,
+        98,
+        269,
+        405
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "fly_zo_BOB/fly_Z_normS_load.ini",
+      "directory": "fly_zo_BOB",
+      "aliases": [
+        "fly_Z_BOB_S",
+        "NormandyBOB_summer"
+      ],
+      "registry_lines": [
+        99,
+        100,
+        270,
+        404
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "fly_zo_BOB/fly_Z_normW_load.ini",
+      "directory": "fly_zo_BOB",
+      "aliases": [
+        "fly_Z_BOB_W",
+        "NormandyBOB_winter"
+      ],
+      "registry_lines": [
+        101,
+        102,
+        271,
+        406
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Guadal/eload.ini",
+      "directory": "Guadal",
+      "aliases": [
+        "Guadal_Mod",
+        "GuadalE"
+      ],
+      "registry_lines": [
+        107,
+        109,
+        110,
+        111
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 37,
+          "reference": "early_actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Guadal/load.ini",
+      "directory": "Guadal",
+      "aliases": [
+        "Guadal"
+      ],
+      "registry_lines": [
+        104,
+        105,
+        106
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 37,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Guadal/Sept_load.ini",
+      "directory": "Guadal",
+      "aliases": [
+        "Guadal_Mod02"
+      ],
+      "registry_lines": [
+        108
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 47,
+          "reference": "Guadlsept42_actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Hawaii_ffb/load.ini",
+      "directory": "Hawaii_ffb",
+      "aliases": [
+        "Hawaii_Mod"
+      ],
+      "registry_lines": [
+        115
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 47,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Hawaii/load.ini",
+      "directory": "Hawaii",
+      "aliases": [
+        "Hawaii"
+      ],
+      "registry_lines": [
+        112,
+        113,
+        114
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 47,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "HB_Atolls/load.ini",
+      "directory": "HB_Atolls",
+      "aliases": [
+        "Atolls",
+        "HB_Atolls"
+      ],
+      "registry_lines": [
+        17,
+        116
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 44,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "HB_PacificIslands/load.ini",
+      "directory": "HB_PacificIslands",
+      "aliases": [
+        "PacificIslandsHB"
+      ],
+      "registry_lines": [
+        298
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "HRt_canarias7/HRt_canarias7_load.ini",
+      "directory": "HRt_canarias7",
+      "aliases": [
+        "HRt_Canarias7"
+      ],
+      "registry_lines": [
+        117
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 37,
+          "reference": "HRt_canarias7_actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "HRt_canarias7/HRt_canarias7GCE_load.ini",
+      "directory": "HRt_canarias7",
+      "aliases": [
+        "HRt_Canarias7GCE"
+      ],
+      "registry_lines": [
+        118
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 38,
+          "reference": "HRt_canarias7GCE_actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "IJ_Sakishima/load.ini",
+      "directory": "IJ_Sakishima",
+      "aliases": [
+        "IJ_Sakishima",
+        "Sakishima"
+      ],
+      "registry_lines": [
+        122,
+        312,
+        313
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 45,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "It_new_italy_DF/It_load.ini",
+      "directory": "It_new_italy_DF",
+      "aliases": [
+        "OnlineItaly_New"
+      ],
+      "registry_lines": [
+        296
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 36,
+          "reference": "It_actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Italy_DF/load.ini",
+      "directory": "Italy_DF",
+      "aliases": [
+        "Italy_DF",
+        "OnlineItaly"
+      ],
+      "registry_lines": [
+        124,
+        292,
+        293,
+        294
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 36,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Italy_DF/wload.ini",
+      "directory": "Italy_DF",
+      "aliases": [
+        "OnlineItaly_mod"
+      ],
+      "registry_lines": [
+        295
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 36,
+          "reference": "It_actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Iwo/load.ini",
+      "directory": "Iwo",
+      "aliases": [
+        "Iwo"
+      ],
+      "registry_lines": [
+        126,
+        127,
+        128
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 48,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Iwo/Online_load.ini",
+      "directory": "Iwo",
+      "aliases": [
+        "IwoOnine",
+        "IwoOnline"
+      ],
+      "registry_lines": [
+        129,
+        130,
+        131
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Japan1/load.ini",
+      "directory": "Japan1",
+      "aliases": [
+        "Kyushu"
+      ],
+      "registry_lines": [
+        156,
+        157,
+        158
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "JV69_LYBIA_N-E/JV69_M_load.ini",
+      "directory": "JV69_LYBIA_N-E",
+      "aliases": [
+        "LYBIA_N-E"
+      ],
+      "registry_lines": [
+        170,
+        171
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 38,
+          "reference": "JV69_actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "KhalkhinGol/load.ini",
+      "directory": "KhalkhinGol",
+      "aliases": [
+        "KhalkhinGol"
+      ],
+      "registry_lines": [
+        132,
+        133
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Kiev/load.ini",
+      "directory": "Kiev",
+      "aliases": [
+        "Kiev"
+      ],
+      "registry_lines": [
+        134,
+        135,
+        136
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 40,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Kt_channel/load.ini",
+      "directory": "Kt_channel",
+      "aliases": [
+        "Channel"
+      ],
+      "registry_lines": [
+        41
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 36,
+          "reference": "actors_v2.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Kt_eastafrica/load.ini",
+      "directory": "Kt_eastafrica",
+      "aliases": [
+        "Eastafrica"
+      ],
+      "registry_lines": [
+        64
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Kt_Finland/load_winter.ini",
+      "directory": "Kt_Finland",
+      "aliases": [
+        "Finland_winter"
+      ],
+      "registry_lines": [
+        90
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 27,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 76,
+          "reference": "LowLand0 = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        },
+        {
+          "line": 77,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand1_fields_Hiver.tga"
+        },
+        {
+          "line": 78,
+          "reference": "LowLand2 = land/winter/Mbug_sk_LowLand2_fields_Hiver03.tga"
+        },
+        {
+          "line": 79,
+          "reference": "LowLand3 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 81,
+          "reference": "MidLand0 = land/winter/Mbug_sk_fields_midland0_Hiver.tga,2"
+        },
+        {
+          "line": 82,
+          "reference": "MidLand1 = land/winter/Mbug_sk_fields_midland1_Hiver01.tga,2"
+        },
+        {
+          "line": 83,
+          "reference": "MidLand2 = land/winter/Mbug_sk_fields_midland2_Hiver.tga,2"
+        },
+        {
+          "line": 84,
+          "reference": "MidLand3 = land/winter/Mbug_sk_fields_midland3_Hiver.tga"
+        },
+        {
+          "line": 86,
+          "reference": "Mount0 = land/winter/Mbug_sk_fields_mount0_Hiver.tga"
+        },
+        {
+          "line": 87,
+          "reference": "Mount1 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 88,
+          "reference": "Mount2 = land/winter/Mbug_sk_fields_mount2_Hiver.tga,2"
+        },
+        {
+          "line": 89,
+          "reference": "Mount3 = land/winter/Mbug_sk_fields_mount3_Hiver.tga"
+        },
+        {
+          "line": 91,
+          "reference": "Country0 = land/winter/Mbug_bigcountry_hiver.tga"
+        },
+        {
+          "line": 92,
+          "reference": "Country1 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 93,
+          "reference": "Country2 = land/winter/Mbug_sk_fields_mount4_Hiver.tga,2"
+        },
+        {
+          "line": 94,
+          "reference": "Country3 = land/winter/Mbug_sk_fields_mount5_Hiver.tga"
+        },
+        {
+          "line": 96,
+          "reference": "City0 = land/winter/Mbug_sk_DownCity_Hiver.tga"
+        },
+        {
+          "line": 97,
+          "reference": "City1 = land/winter/Mbug_sk_MidCity_Hiver.tga"
+        },
+        {
+          "line": 99,
+          "reference": "City3 = land/winter/Mbug_sk_Factory_Hiver.tga"
+        },
+        {
+          "line": 101,
+          "reference": "AirField0= land/winter/Mbug_sk_fields_airfieldGr_Hiver.tga,4"
+        },
+        {
+          "line": 102,
+          "reference": "AirField1= land/winter/Mbug_sk_fields_airfieldGr_Hiver.tga,4"
+        },
+        {
+          "line": 103,
+          "reference": "AirField2= land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga,4"
+        },
+        {
+          "line": 106,
+          "reference": "Wood0 = land/winter/Mbug_sk_ForestGr_Hiver.tga,4"
+        },
+        {
+          "line": 108,
+          "reference": "Wood2 = land/winter/Mbug_sk_ForestFar_Hiver.tga"
+        }
+      ]
+    },
+    {
+      "load": "Kt_Finland/load.ini",
+      "directory": "Kt_Finland",
+      "aliases": [
+        "Finland_summer"
+      ],
+      "registry_lines": [
+        89
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Kt_svir/load.ini",
+      "directory": "Kt_svir",
+      "aliases": [
+        "svir"
+      ],
+      "registry_lines": [
+        357
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors5s.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Kt_svir/loadw.ini",
+      "directory": "Kt_svir",
+      "aliases": [
+        "svir_Winter"
+      ],
+      "registry_lines": [
+        358
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 29,
+          "reference": "actorsw5.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Kuban/load.ini",
+      "directory": "Kuban",
+      "aliases": [
+        "Kuban"
+      ],
+      "registry_lines": [
+        138,
+        139,
+        140
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 32,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Kurland/GW_wload.ini",
+      "directory": "Kurland",
+      "aliases": [
+        "Kurland_WinterG"
+      ],
+      "registry_lines": [
+        151
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 35,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 77,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 79,
+          "reference": "LowLand3 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 82,
+          "reference": "MidLand1 = land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga"
+        },
+        {
+          "line": 84,
+          "reference": "MidLand3 = land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga"
+        },
+        {
+          "line": 87,
+          "reference": "Mount1   = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 88,
+          "reference": "Mount2   = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 91,
+          "reference": "Country0 = land/winter/Mbug_bigcountry_hiver.tga"
+        },
+        {
+          "line": 101,
+          "reference": "AirField0= land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga,4"
+        },
+        {
+          "line": 113,
+          "reference": "Water2   = land/winter/Mbug_sk_LowLand0_Hiver.tga,2"
+        }
+      ]
+    },
+    {
+      "load": "Kurland/load_online.ini",
+      "directory": "Kurland",
+      "aliases": [
+        "Kurland_Autumn_online"
+      ],
+      "registry_lines": [
+        144,
+        145
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors_online.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Kurland/load.ini",
+      "directory": "Kurland",
+      "aliases": [
+        "Kurland_Autumn"
+      ],
+      "registry_lines": [
+        141,
+        142,
+        143
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Kurland/wload_online.ini",
+      "directory": "Kurland",
+      "aliases": [
+        "Kurland_Winter_online"
+      ],
+      "registry_lines": [
+        149,
+        150
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Kurland/wload.ini",
+      "directory": "Kurland",
+      "aliases": [
+        "Kurland_Winter"
+      ],
+      "registry_lines": [
+        146,
+        147,
+        148
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 35,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 77,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 79,
+          "reference": "LowLand3 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 82,
+          "reference": "MidLand1 = land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga"
+        },
+        {
+          "line": 84,
+          "reference": "MidLand3 = land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga"
+        },
+        {
+          "line": 87,
+          "reference": "Mount1   = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 88,
+          "reference": "Mount2   = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 91,
+          "reference": "Country0 = land/winter/Mbug_bigcountry_hiver.tga"
+        },
+        {
+          "line": 101,
+          "reference": "AirField0= land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga,4"
+        },
+        {
+          "line": 113,
+          "reference": "Water2   = land/winter/Mbug_sk_LowLand0_Hiver.tga,2"
+        }
+      ]
+    },
+    {
+      "load": "Kursk/load.ini",
+      "directory": "Kursk",
+      "aliases": [
+        "Kursk"
+      ],
+      "registry_lines": [
+        152,
+        153,
+        154
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 35,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Kwajalein/load.ini",
+      "directory": "Kwajalein",
+      "aliases": [
+        "Kwajalein"
+      ],
+      "registry_lines": [
+        155
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 35,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "LAL_Okinawa/load.ini",
+      "directory": "LAL_Okinawa",
+      "aliases": [
+        "LAL_Okinawa"
+      ],
+      "registry_lines": [
+        160
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 47,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "LALnormandy1/LAL_load1.ini",
+      "directory": "LALnormandy1",
+      "aliases": [
+        "LALnormandy1"
+      ],
+      "registry_lines": [
+        161
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "LAL1actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "LALnormandy2/LAL_load2.ini",
+      "directory": "LALnormandy2",
+      "aliases": [
+        "LAL_Normandie-44"
+      ],
+      "registry_lines": [
+        159
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "1actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Lviv/load.ini",
+      "directory": "Lviv",
+      "aliases": [
+        "Lvov"
+      ],
+      "registry_lines": [
+        162,
+        163,
+        164
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 42,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Lviv/vp_load.ini",
+      "directory": "Lviv",
+      "aliases": [
+        "Lvov_ModVP"
+      ],
+      "registry_lines": [
+        166
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 42,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Lviv/winter_CKY_load.ini",
+      "directory": "Lviv",
+      "aliases": [
+        "Lvov_winterMod"
+      ],
+      "registry_lines": [
+        168
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 42,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Lviv/wload.ini",
+      "directory": "Lviv",
+      "aliases": [
+        "Lvov_hiver",
+        "Lvov_winter"
+      ],
+      "registry_lines": [
+        165,
+        167
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 42,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Lybia_N-E/tob2_M_load.ini",
+      "directory": "Lybia_N-E",
+      "aliases": [
+        "Lybia"
+      ],
+      "registry_lines": [
+        169
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 38,
+          "reference": "1actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Manchuria/load.ini",
+      "directory": "Manchuria",
+      "aliases": [
+        "Manchuria"
+      ],
+      "registry_lines": [
+        176,
+        177,
+        178
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Marianas/load.ini",
+      "directory": "Marianas",
+      "aliases": [
+        "Marianas"
+      ],
+      "registry_lines": [
+        179,
+        180,
+        181
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 47,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Marianas/Online_load.ini",
+      "directory": "Marianas",
+      "aliases": [
+        "MarianasOnline"
+      ],
+      "registry_lines": [
+        182,
+        183,
+        184
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 47,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Mbug_Slovakia_winter/load.ini",
+      "directory": "Mbug_Slovakia_winter",
+      "aliases": [
+        "Mbug_Slovakia_winter"
+      ],
+      "registry_lines": [
+        185
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 4,
+          "reference": "SmallMap = Mbug_map_m.tga"
+        },
+        {
+          "line": 6,
+          "reference": "FarMap = Mbug_map_f.tga"
+        },
+        {
+          "line": 14,
+          "reference": "Mbug_ed_m01.tga"
+        },
+        {
+          "line": 15,
+          "reference": "Mbug_ed_m02.tga"
+        },
+        {
+          "line": 72,
+          "reference": "LowLand0 = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        },
+        {
+          "line": 73,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand1_fields_Hiver.tga"
+        },
+        {
+          "line": 74,
+          "reference": "LowLand2 = land/winter/Mbug_sk_LowLand2_fields_Hiver03.tga"
+        },
+        {
+          "line": 75,
+          "reference": "LowLand3 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 77,
+          "reference": "MidLand0 = land/winter/Mbug_sk_fields_midland0_Hiver.tga,2"
+        },
+        {
+          "line": 78,
+          "reference": "MidLand1 = land/winter/Mbug_sk_fields_midland1_Hiver01.tga,2"
+        },
+        {
+          "line": 79,
+          "reference": "MidLand2 = land/winter/Mbug_sk_fields_midland2_Hiver.tga,2"
+        },
+        {
+          "line": 80,
+          "reference": "MidLand3 = land/winter/Mbug_sk_fields_midland3_Hiver.tga"
+        },
+        {
+          "line": 82,
+          "reference": "Mount0 = land/winter/Mbug_sk_fields_mount0_Hiver.tga"
+        },
+        {
+          "line": 83,
+          "reference": "Mount1 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 84,
+          "reference": "Mount2 = land/winter/Mbug_sk_fields_mount2_Hiver.tga,2"
+        },
+        {
+          "line": 85,
+          "reference": "Mount3 = land/winter/Mbug_sk_fields_mount3_Hiver.tga"
+        },
+        {
+          "line": 87,
+          "reference": "Country0 = land/winter/Mbug_bigcountry_hiver.tga"
+        },
+        {
+          "line": 88,
+          "reference": "Country1 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 89,
+          "reference": "Country2 = land/winter/Mbug_sk_fields_mount4_Hiver.tga,2"
+        },
+        {
+          "line": 90,
+          "reference": "Country3 = land/winter/Mbug_sk_fields_mount5_Hiver.tga"
+        },
+        {
+          "line": 92,
+          "reference": "City0 = land/winter/Mbug_sk_DownCity_Hiver.tga"
+        },
+        {
+          "line": 93,
+          "reference": "City1 = land/winter/Mbug_sk_MidCity_Hiver.tga"
+        },
+        {
+          "line": 95,
+          "reference": "City3 = land/winter/Mbug_sk_Factory_Hiver.tga"
+        },
+        {
+          "line": 97,
+          "reference": "AirField0= land/winter/Mbug_sk_fields_airfieldGr_Hiver.tga,4"
+        },
+        {
+          "line": 98,
+          "reference": "AirField1= land/winter/Mbug_sk_Factory1_Hiver.tga"
+        },
+        {
+          "line": 99,
+          "reference": "AirField2= land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga,4"
+        },
+        {
+          "line": 100,
+          "reference": "AirField3= land/winter/Mbug_sk_midland4_Hiver.tga,2"
+        },
+        {
+          "line": 102,
+          "reference": "Wood0 = land/winter/Mbug_sk_ForestGr_Hiver.tga,4"
+        },
+        {
+          "line": 104,
+          "reference": "Wood2 = land/winter/Mbug_sk_ForestFar_Hiver.tga"
+        },
+        {
+          "line": 109,
+          "reference": "Water2 = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        }
+      ]
+    },
+    {
+      "load": "midway_ffb/load.ini",
+      "directory": "midway_ffb",
+      "aliases": [
+        "Midway_Mod"
+      ],
+      "registry_lines": [
+        191
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 41,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "midway/BPload.ini",
+      "directory": "midway",
+      "aliases": [
+        "Midway_Histo"
+      ],
+      "registry_lines": [
+        190
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 41,
+          "reference": "BPactors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 139,
+          "reference": "Water2 = Bombsaways_Tarawa/Tarawa/Shallows1a_Fields_A.tga"
+        }
+      ]
+    },
+    {
+      "load": "Midway/load.ini",
+      "directory": "Midway",
+      "aliases": [
+        "Midway"
+      ],
+      "registry_lines": [
+        187,
+        188,
+        189
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 41,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Moscow/GW_load.ini",
+      "directory": "Moscow",
+      "aliases": [
+        "Moscow_HiverG"
+      ],
+      "registry_lines": [
+        195
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 26,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 80,
+          "reference": "LowLand0 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 81,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand1_fields_Hiver.tga"
+        },
+        {
+          "line": 90,
+          "reference": "Mount0   = land/winter/Mbug_sk_fields_mount0_Hiver.tga"
+        },
+        {
+          "line": 95,
+          "reference": "Country0 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 96,
+          "reference": "Country1 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        }
+      ]
+    },
+    {
+      "load": "Moscow/load.ini",
+      "directory": "Moscow",
+      "aliases": [
+        "Moscow"
+      ],
+      "registry_lines": [
+        192,
+        193,
+        194
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 26,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 80,
+          "reference": "LowLand0 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 81,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand1_fields_Hiver.tga"
+        },
+        {
+          "line": 90,
+          "reference": "Mount0   = land/winter/Mbug_sk_fields_mount0_Hiver.tga"
+        },
+        {
+          "line": 95,
+          "reference": "Country0 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 96,
+          "reference": "Country1 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        }
+      ]
+    },
+    {
+      "load": "Moscow/sload.ini",
+      "directory": "Moscow",
+      "aliases": [
+        "SummerMoscow"
+      ],
+      "registry_lines": [
+        351,
+        352,
+        353
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "sactors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Moscow/vp_load.ini",
+      "directory": "Moscow",
+      "aliases": [
+        "Moscow_vp"
+      ],
+      "registry_lines": [
+        196
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 35,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "mrz_Centmed/mrz_centmed_load.ini",
+      "directory": "mrz_Centmed",
+      "aliases": [
+        "Central_Mediterranean",
+        "MedCentrale"
+      ],
+      "registry_lines": [
+        40,
+        186
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 37,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "mrz_Malta/mrz_load_high.ini",
+      "directory": "mrz_Malta",
+      "aliases": [
+        "Malta_high",
+        "mrz_Malta_high"
+      ],
+      "registry_lines": [
+        173,
+        198,
+        199
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 45,
+          "reference": "actors_high.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "mrz_Malta/mrz_load_medium.ini",
+      "directory": "mrz_Malta",
+      "aliases": [
+        "Malta_medium",
+        "mrz_Malta_medium"
+      ],
+      "registry_lines": [
+        174,
+        200
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 45,
+          "reference": "actors_medium.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "mrz_Malta/mrz_load.ini",
+      "directory": "mrz_Malta",
+      "aliases": [
+        "Malta",
+        "mrz_Malta"
+      ],
+      "registry_lines": [
+        172,
+        197
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 45,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "MTO/load_light.ini",
+      "directory": "MTO",
+      "aliases": [
+        "MTO_Light"
+      ],
+      "registry_lines": [
+        203
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "MTO/load.ini",
+      "directory": "MTO",
+      "aliases": [
+        "MTO"
+      ],
+      "registry_lines": [
+        201,
+        202
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "murmansk/GW_load.ini",
+      "directory": "murmansk",
+      "aliases": [
+        "Murmansk_HiverG"
+      ],
+      "registry_lines": [
+        207
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 85,
+          "reference": "Mount0   = land/winter/Mbug_sk_fields_mount4_Hiver.tga"
+        },
+        {
+          "line": 86,
+          "reference": "Mount1   = land/winter/Mbug_sk_fields_mount4_Hiver.tga"
+        },
+        {
+          "line": 87,
+          "reference": "Mount2   = land/winter/Mbug_sk_fields_mount4_Hiver.tga,2"
+        },
+        {
+          "line": 90,
+          "reference": "Country0 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 91,
+          "reference": "Country1 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 102,
+          "reference": "AirField2= land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 112,
+          "reference": "Water2   = land/winter/Mbug_sk_LowLand0_Hiver.tga,2"
+        }
+      ]
+    },
+    {
+      "load": "murmansk/load.ini",
+      "directory": "murmansk",
+      "aliases": [
+        "Murmansk"
+      ],
+      "registry_lines": [
+        204,
+        205,
+        206
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 85,
+          "reference": "Mount0   = land/winter/Mbug_sk_fields_mount4_Hiver.tga"
+        },
+        {
+          "line": 86,
+          "reference": "Mount1   = land/winter/Mbug_sk_fields_mount4_Hiver.tga"
+        },
+        {
+          "line": 87,
+          "reference": "Mount2   = land/winter/Mbug_sk_fields_mount4_Hiver.tga,2"
+        },
+        {
+          "line": 90,
+          "reference": "Country0 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 91,
+          "reference": "Country1 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 102,
+          "reference": "AirField2= land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 112,
+          "reference": "Water2   = land/winter/Mbug_sk_LowLand0_Hiver.tga,2"
+        }
+      ]
+    },
+    {
+      "load": "MurmanskS/load.ini",
+      "directory": "MurmanskS",
+      "aliases": [
+        "MurmanskSummer"
+      ],
+      "registry_lines": [
+        208,
+        209,
+        210
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 38,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net1Summer/load.ini",
+      "directory": "Net1Summer",
+      "aliases": [
+        "Net1Summer"
+      ],
+      "registry_lines": [
+        211,
+        212,
+        213
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net1Winter/GW_load.ini",
+      "directory": "Net1Winter",
+      "aliases": [
+        "Net1WinterG"
+      ],
+      "registry_lines": [
+        217
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 26,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 80,
+          "reference": "LowLand0 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 81,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand1_fields_Hiver.tga"
+        },
+        {
+          "line": 92,
+          "reference": "Country0 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 93,
+          "reference": "Country1 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 104,
+          "reference": "Wood0    = land/winter/Mbug_sk_ForestGr_Hiver.tga,4"
+        }
+      ]
+    },
+    {
+      "load": "Net1Winter/load.ini",
+      "directory": "Net1Winter",
+      "aliases": [
+        "Net1Winter"
+      ],
+      "registry_lines": [
+        214,
+        215,
+        216
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net2Summer/load.ini",
+      "directory": "Net2Summer",
+      "aliases": [
+        "Net2Summer"
+      ],
+      "registry_lines": [
+        218,
+        219,
+        220
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net2Winter/GW_load.ini",
+      "directory": "Net2Winter",
+      "aliases": [
+        "Net2WinterG"
+      ],
+      "registry_lines": [
+        224
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 25,
+          "reference": "S-actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net2Winter/load.ini",
+      "directory": "Net2Winter",
+      "aliases": [
+        "Net2Winter"
+      ],
+      "registry_lines": [
+        221,
+        222,
+        223
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net3Summer/jload.ini",
+      "directory": "Net3Summer",
+      "aliases": [
+        "Net3Summer_jungle"
+      ],
+      "registry_lines": [
+        228
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net3Summer/load.ini",
+      "directory": "Net3Summer",
+      "aliases": [
+        "Net3Summer"
+      ],
+      "registry_lines": [
+        225,
+        226,
+        227
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net5Summer/fly_Z_A_load.ini",
+      "directory": "Net5Summer",
+      "aliases": [
+        "Net5_autumn"
+      ],
+      "registry_lines": [
+        229
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net5Summer/fly_Z_W_load.ini",
+      "directory": "Net5Summer",
+      "aliases": [
+        "Net5_winter"
+      ],
+      "registry_lines": [
+        230
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net5Summer/load.ini",
+      "directory": "Net5Summer",
+      "aliases": [
+        "Net5Summer"
+      ],
+      "registry_lines": [
+        231,
+        232,
+        233
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net6Island/load.ini",
+      "directory": "Net6Island",
+      "aliases": [
+        "Net6Island"
+      ],
+      "registry_lines": [
+        234,
+        235,
+        236
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net7Islands/load.ini",
+      "directory": "Net7Islands",
+      "aliases": [
+        "Net7Islands"
+      ],
+      "registry_lines": [
+        237,
+        238,
+        239
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net8Islands/load_v2.ini",
+      "directory": "Net8Islands",
+      "aliases": [
+        "Net8Islands_v2"
+      ],
+      "registry_lines": [
+        243,
+        244,
+        245
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Net8Islands/load.ini",
+      "directory": "Net8Islands",
+      "aliases": [
+        "Net8Islands"
+      ],
+      "registry_lines": [
+        240,
+        241,
+        242
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "NetIslands/load.ini",
+      "directory": "NetIslands",
+      "aliases": [
+        "NetIslands"
+      ],
+      "registry_lines": [
+        246,
+        247,
+        248
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Netmountains/load.ini",
+      "directory": "Netmountains",
+      "aliases": [
+        "NetMountains"
+      ],
+      "registry_lines": [
+        249,
+        250,
+        251
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 36,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "NewGuinea/load.ini",
+      "directory": "NewGuinea",
+      "aliases": [
+        "NewGuinea"
+      ],
+      "registry_lines": [
+        252,
+        253,
+        254
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "normandy/fly_Z_normA_load.ini",
+      "directory": "normandy",
+      "aliases": [
+        "Normandy_autumn"
+      ],
+      "registry_lines": [
+        255
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "normandy/fly_Z_normS_load.ini",
+      "directory": "normandy",
+      "aliases": [
+        "Normandy_summer"
+      ],
+      "registry_lines": [
+        258
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "normandy/fly_Z_normW_load.ini",
+      "directory": "normandy",
+      "aliases": [
+        "Normandy_winter"
+      ],
+      "registry_lines": [
+        259
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "normandy/GW_norm_load.ini",
+      "directory": "normandy",
+      "aliases": [
+        "Normandy_March"
+      ],
+      "registry_lines": [
+        257
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 81,
+          "reference": "MidLand3 = land/winter/GW_fsmd_rock_3a.tga,2"
+        }
+      ]
+    },
+    {
+      "load": "normandy/GW_norm2_load.ini",
+      "directory": "normandy",
+      "aliases": [
+        "Normandy_january"
+      ],
+      "registry_lines": [
+        256
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 81,
+          "reference": "MidLand3 = land/winter/GW_fsmd_rock_3a.tga,2"
+        }
+      ]
+    },
+    {
+      "load": "Normandy/load.ini",
+      "directory": "Normandy",
+      "aliases": [
+        "Normandy2"
+      ],
+      "registry_lines": [
+        263,
+        264,
+        265
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Normandy/load1.ini",
+      "directory": "Normandy",
+      "aliases": [
+        "Normandy3"
+      ],
+      "registry_lines": [
+        266,
+        267,
+        268
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors1.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Normandy/load2.ini",
+      "directory": "Normandy",
+      "aliases": [
+        "Normandy1"
+      ],
+      "registry_lines": [
+        260,
+        261,
+        262
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors2.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Norway/fly_Z_w_load.ini",
+      "directory": "Norway",
+      "aliases": [
+        "Norway_winterMod"
+      ],
+      "registry_lines": [
+        277
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 80,
+          "reference": "MidLand2 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 83,
+          "reference": "Mount0   = land/winter/GW_fsmd_rock_3a.tga,2"
+        },
+        {
+          "line": 85,
+          "reference": "Mount2   = land/winter/GW_fsmd_rock_3b.tga,2"
+        },
+        {
+          "line": 90,
+          "reference": "Country2 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 101,
+          "reference": "AirField3= land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga,4"
+        },
+        {
+          "line": 103,
+          "reference": "Wood0    = land/winter/Mbug_sk_ForestGr_Hiver.tga,2"
+        },
+        {
+          "line": 105,
+          "reference": "Wood2    = land/winter/Mbug_sk_ForestFar_Hiver.tga"
+        },
+        {
+          "line": 110,
+          "reference": "Water2   = land/winter/Mbug_sk_fields_midland0_Hiver.tga,2"
+        }
+      ]
+    },
+    {
+      "load": "Norway/GW_load.ini",
+      "directory": "Norway",
+      "aliases": [
+        "Norway_HiverG"
+      ],
+      "registry_lines": [
+        275
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 80,
+          "reference": "MidLand2 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga"
+        },
+        {
+          "line": 83,
+          "reference": "Mount0   = land/winter/GW_fsmd_rock_3a.tga,2"
+        },
+        {
+          "line": 85,
+          "reference": "Mount2   = land/winter/GW_fsmd_rock_3b.tga,2"
+        },
+        {
+          "line": 90,
+          "reference": "Country2 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 101,
+          "reference": "AirField3= land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga,4"
+        },
+        {
+          "line": 103,
+          "reference": "Wood0    = land/winter/Mbug_sk_ForestGr_Hiver.tga,2"
+        },
+        {
+          "line": 105,
+          "reference": "Wood2    = land/winter/Mbug_sk_ForestFar_Hiver.tga"
+        },
+        {
+          "line": 110,
+          "reference": "Water2   = land/winter/Mbug_sk_fields_midland0_Hiver.tga,2"
+        }
+      ]
+    },
+    {
+      "load": "Norway/load.ini",
+      "directory": "Norway",
+      "aliases": [
+        "Norway"
+      ],
+      "registry_lines": [
+        272,
+        273,
+        274
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Norway/wload.ini",
+      "directory": "Norway",
+      "aliases": [
+        "Norway_winter"
+      ],
+      "registry_lines": [
+        276
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "NTL_Darwin_Small/NTL_Darwin_Small_load.ini",
+      "directory": "NTL_Darwin_Small",
+      "aliases": [
+        "Darwin_Small",
+        "NTL_Darwin_Small"
+      ],
+      "registry_lines": [
+        60,
+        199,
+        278
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "NTL_Darwin_Small_actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "NWEurope/load.ini",
+      "directory": "NWEurope",
+      "aliases": [
+        "NWEurope"
+      ],
+      "registry_lines": [
+        279,
+        280,
+        281
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "OJ/load.ini",
+      "directory": "OJ",
+      "aliases": [
+        "Korea_Japan"
+      ],
+      "registry_lines": [
+        137
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 37,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Okinawa/load.ini",
+      "directory": "Okinawa",
+      "aliases": [
+        "Okinawa"
+      ],
+      "registry_lines": [
+        285,
+        286
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Okinawa/Online_load.ini",
+      "directory": "Okinawa",
+      "aliases": [
+        "OkinawaOnline"
+      ],
+      "registry_lines": [
+        287,
+        288
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Pacific_islands_ffb/load.ini",
+      "directory": "Pacific_islands_ffb",
+      "aliases": [
+        "Pacific_Mod"
+      ],
+      "registry_lines": [
+        297
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Palau/load.ini",
+      "directory": "Palau",
+      "aliases": [
+        "Palau"
+      ],
+      "registry_lines": [
+        299,
+        300,
+        301
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 47,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Palau/Online_load.ini",
+      "directory": "Palau",
+      "aliases": [
+        "PalauOnline"
+      ],
+      "registry_lines": [
+        302,
+        303,
+        304
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Prokhorovka/load.ini",
+      "directory": "Prokhorovka",
+      "aliases": [
+        "Prokhorovka"
+      ],
+      "registry_lines": [
+        308,
+        309,
+        310
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "RD_Malvinas/RD_load.ini",
+      "directory": "RD_Malvinas",
+      "aliases": [
+        "Malvinas",
+        "RD_Malvinas"
+      ],
+      "registry_lines": [
+        175,
+        311,
+        312
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "SandsOfTime/2vp_load.ini",
+      "directory": "SandsOfTime",
+      "aliases": [
+        "SandsOfTime2"
+      ],
+      "registry_lines": [
+        318
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "SandsOfTime/3vp_load.ini",
+      "directory": "SandsOfTime",
+      "aliases": [
+        "SandsOfTime3"
+      ],
+      "registry_lines": [
+        319
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "SandsOfTime/load.ini",
+      "directory": "SandsOfTime",
+      "aliases": [
+        "SandsOfTime"
+      ],
+      "registry_lines": [
+        314,
+        315,
+        316
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "SandsOfTime/vp_load.ini",
+      "directory": "SandsOfTime",
+      "aliases": [
+        "SandsOfTime1"
+      ],
+      "registry_lines": [
+        317
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "singapore/load.ini",
+      "directory": "singapore",
+      "aliases": [
+        "Singapore"
+      ],
+      "registry_lines": [
+        323,
+        324,
+        325
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "singapore/load2.ini",
+      "directory": "singapore",
+      "aliases": [
+        "Singapore2"
+      ],
+      "registry_lines": [
+        326,
+        327,
+        328
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors2.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Slot/load_0144.ini",
+      "directory": "Slot",
+      "aliases": [
+        "The_Slot_01-44"
+      ],
+      "registry_lines": [
+        363,
+        364
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors_0144.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Slot/load_0743.ini",
+      "directory": "Slot",
+      "aliases": [
+        "The_Slot_07-43"
+      ],
+      "registry_lines": [
+        365,
+        366
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors_0743.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Slot/load_0842.ini",
+      "directory": "Slot",
+      "aliases": [
+        "The_Slot_08-42"
+      ],
+      "registry_lines": [
+        367,
+        368
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors_0842.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Slot/load_1042.ini",
+      "directory": "Slot",
+      "aliases": [
+        "The_Slot_10-42"
+      ],
+      "registry_lines": [
+        369,
+        370
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors_1042.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Slot/load_1043.ini",
+      "directory": "Slot",
+      "aliases": [
+        "The_Slot_10-43"
+      ],
+      "registry_lines": [
+        371,
+        372
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors_1043.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Slot/load_1242.ini",
+      "directory": "Slot",
+      "aliases": [
+        "The_Slot_12-42"
+      ],
+      "registry_lines": [
+        373,
+        374
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 39,
+          "reference": "actors_1242.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Slovakia/load_online.ini",
+      "directory": "Slovakia",
+      "aliases": [
+        "Slovakia_Online",
+        "Slovakia_summer(online)",
+        "SlovakiaOnline"
+      ],
+      "registry_lines": [
+        332,
+        334,
+        337
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Slovakia/load_winter_online.ini",
+      "directory": "Slovakia",
+      "aliases": [
+        "Slovakia_winter(online)"
+      ],
+      "registry_lines": [
+        336
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Slovakia/load_winter.ini",
+      "directory": "Slovakia",
+      "aliases": [
+        "Slovakia_winter"
+      ],
+      "registry_lines": [
+        335
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Slovakia/load.ini",
+      "directory": "Slovakia",
+      "aliases": [
+        "Slovakia",
+        "Slovakia_summer"
+      ],
+      "registry_lines": [
+        329,
+        330,
+        331,
+        333
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 33,
+          "reference": "actors_summer.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Smolensk/load.ini",
+      "directory": "Smolensk",
+      "aliases": [
+        "Smolensk"
+      ],
+      "registry_lines": [
+        344,
+        345,
+        346
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Stgrad/GW_load.ini",
+      "directory": "Stgrad",
+      "aliases": [
+        "Stalingrad_HiverG"
+      ],
+      "registry_lines": [
+        347
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 77,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 86,
+          "reference": "Mount0   = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 91,
+          "reference": "Country0 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 92,
+          "reference": "Country1 = land/winter/Mbug_bigcountry_hiver.tga"
+        },
+        {
+          "line": 106,
+          "reference": "Wood0    = land/winter/Mbug_sk_ForestGr_Hiver.tga,4"
+        },
+        {
+          "line": 113,
+          "reference": "Water2   = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        }
+      ]
+    },
+    {
+      "load": "Stgrad/load.ini",
+      "directory": "Stgrad",
+      "aliases": [
+        "Stgrad"
+      ],
+      "registry_lines": [
+        348,
+        349,
+        350
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 77,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 86,
+          "reference": "Mount0   = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga"
+        },
+        {
+          "line": 91,
+          "reference": "Country0 = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 92,
+          "reference": "Country1 = land/winter/Mbug_bigcountry_hiver.tga"
+        },
+        {
+          "line": 106,
+          "reference": "Wood0    = land/winter/Mbug_sk_ForestGr_Hiver.tga,4"
+        },
+        {
+          "line": 113,
+          "reference": "Water2   = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        }
+      ]
+    },
+    {
+      "load": "Stgrad/sload.ini",
+      "directory": "Stgrad",
+      "aliases": [
+        "SummerStgrad"
+      ],
+      "registry_lines": [
+        354,
+        355,
+        356
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "sactors.static",
+          "loose_file_exists": false
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Tarawa/load.ini",
+      "directory": "Tarawa",
+      "aliases": [
+        "Tarawa"
+      ],
+      "registry_lines": [
+        359,
+        360
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Test/load.ini",
+      "directory": "Test",
+      "aliases": [
+        "Test"
+      ],
+      "registry_lines": [
+        361
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "vkg_Crete/load.ini",
+      "directory": "vkg_Crete",
+      "aliases": [
+        "vkg_Crete"
+      ],
+      "registry_lines": [
+        378
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actorsUI.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "vkg_El_Alamein/load_ZAF.ini",
+      "directory": "vkg_El_Alamein",
+      "aliases": [
+        "vkg_El_Alamein_ZAF"
+      ],
+      "registry_lines": [
+        379
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 34,
+          "reference": "actors_ZAF.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "VKG_Grand_Canyon/load.ini",
+      "directory": "VKG_Grand_Canyon",
+      "aliases": [
+        "VKG_Grand_Canyon"
+      ],
+      "registry_lines": [
+        380
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 37,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "vol_ItalyAfricaGreece/vol_ita_load.ini",
+      "directory": "vol_ItalyAfricaGreece",
+      "aliases": [
+        "Italy_Greece",
+        "vol_ItalyAfricaGreece"
+      ],
+      "registry_lines": [
+        125,
+        381,
+        382
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 35,
+          "reference": "vol_ita_actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "vol_Sardegna/vol_load.ini",
+      "directory": "vol_Sardegna",
+      "aliases": [
+        "Sardegna",
+        "vol_Sardegna"
+      ],
+      "registry_lines": [
+        320,
+        383
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 40,
+          "reference": "vol_actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Wake/load.ini",
+      "directory": "Wake",
+      "aliases": [
+        "Wake"
+      ],
+      "registry_lines": [
+        384,
+        385
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "zip_Alpen/zip_Alpen_east_load.ini",
+      "directory": "zip_Alpen",
+      "aliases": [
+        "Alpen_east",
+        "zip_Alpen_east"
+      ],
+      "registry_lines": [
+        4,
+        391,
+        392
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 37,
+          "reference": "actors_east.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 91,
+          "reference": "MidLand1 = land/summer/zip_Alpen/fsmd_mount3.tga"
+        }
+      ]
+    },
+    {
+      "load": "zip_Alpen/zip_Alpen_load.ini",
+      "directory": "zip_Alpen",
+      "aliases": [
+        "zip_Alpen"
+      ],
+      "registry_lines": [
+        389,
+        390
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 37,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 91,
+          "reference": "MidLand1 = land/summer/zip_Alpen/fsmd_mount3.tga"
+        }
+      ]
+    },
+    {
+      "load": "zip_Alpen/zip_Alpen_west_load.ini",
+      "directory": "zip_Alpen",
+      "aliases": [
+        "Alpen_west",
+        "zip_Alpen_west"
+      ],
+      "registry_lines": [
+        5,
+        393,
+        394
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 37,
+          "reference": "actors_west.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 91,
+          "reference": "MidLand1 = land/summer/zip_Alpen/fsmd_mount3.tga"
+        }
+      ]
+    },
+    {
+      "load": "zip_Islands/load.ini",
+      "directory": "zip_Islands",
+      "aliases": [
+        "Islands"
+      ],
+      "registry_lines": [
+        123
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 36,
+          "reference": "actors.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 95,
+          "reference": "Mount0 = land/summer/zip_Islands/fsmd_mount3.tga"
+        }
+      ]
+    },
+    {
+      "load": "Zuti_Slovenia/Slovenia_Airports.ini",
+      "directory": "Zuti_Slovenia",
+      "aliases": [
+        "Zuti_Slovenia_Airports"
+      ],
+      "registry_lines": [
+        396
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Zuti_Slovenia/Slovenia_load.ini",
+      "directory": "Zuti_Slovenia",
+      "aliases": [
+        "Zuti_Slovenia"
+      ],
+      "registry_lines": [
+        395
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Zuti_Slovenia/Slovenia_Off_s.ini",
+      "directory": "Zuti_Slovenia",
+      "aliases": [
+        "Slovenia_Off_S",
+        "Zuti_Slovenia_Off_S"
+      ],
+      "registry_lines": [
+        338,
+        397
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 32,
+          "reference": "actors-10S.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Zuti_Slovenia/Slovenia_Off_w.ini",
+      "directory": "Zuti_Slovenia",
+      "aliases": [
+        "Slovenia_Off_W",
+        "Zuti_Slovenia_Off_W"
+      ],
+      "registry_lines": [
+        339,
+        398
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 32,
+          "reference": "actors-10W.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 73,
+          "reference": "Rail     = land/winter/Mbug_sk_Rail_Hiver"
+        },
+        {
+          "line": 74,
+          "reference": "Road     = land/winter/Mbug_sk_Road_Hiver"
+        },
+        {
+          "line": 78,
+          "reference": "LowLand0 = land/winter/Mbug_sk_fields_midland0_Hiver.tga,2\t//RGB=0"
+        },
+        {
+          "line": 79,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand0_Hiver.tga\t\t//RGB=1 -> Boundry level contains RGB=4 and RGB=5 for smoother transition where bounding with LowLand2/3"
+        },
+        {
+          "line": 80,
+          "reference": "LowLand2 = land/winter/Mbug_sk_LowLand2_fields_Hiver03.tga \t//RGB=2 -> Mixed with RGB=3 and RGB=4 (little)"
+        },
+        {
+          "line": 81,
+          "reference": "LowLand3 = land/winter/Mbug_sk_LowLand1_fields_Hiver.tga \t//RGB=3 -> Mixed with RGB=2 and RGB=4 (little)"
+        },
+        {
+          "line": 83,
+          "reference": "MidLand0 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga \t//RGB=4 -> Mixed with RGB=5 and RGB=2 (little)"
+        },
+        {
+          "line": 84,
+          "reference": "MidLand1 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga; \t//RGB=5 -> Mixed with RGB=6 and RGB=4 (little)"
+        },
+        {
+          "line": 85,
+          "reference": "MidLand2 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga \t//RGB=6 -> Mixed with RGB=5 and RGB=4 (little)"
+        },
+        {
+          "line": 86,
+          "reference": "MidLand3 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga \t//RGB=7 -> Mixed with RGB=6"
+        },
+        {
+          "line": 88,
+          "reference": "Country0 = land/winter/Mbug_sk_LowLand0_Hiver.tga \t\t//RGB=12 -> Mixed with RGB=13"
+        },
+        {
+          "line": 89,
+          "reference": "Country1 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga\t//RGB=13 -> Mixed with RGB=12"
+        },
+        {
+          "line": 90,
+          "reference": "Country2 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga\t//RGB=14"
+        },
+        {
+          "line": 91,
+          "reference": "Country3 = land/winter/Mbug_sk_LowLand0_Hiver.tga\t\t//RGB=15"
+        },
+        {
+          "line": 93,
+          "reference": "Mount0 = land/winter/Mbug_sk_LowLand0_Hiver.tga\t\t\t//RGB=8"
+        },
+        {
+          "line": 94,
+          "reference": "Mount1 = land/winter/Mbug_sk_fields_mount4_Hiver.tga,2\t\t//RGB=9"
+        },
+        {
+          "line": 95,
+          "reference": "Mount2 = land/winter/Mbug_sk_fields_mount4_Hiver.tga,2\t\t//RGB=10"
+        },
+        {
+          "line": 96,
+          "reference": "Mount3 = land/winter/Mbug_sk_fields_mount5_Hiver.tga\t\t//RGB=11"
+        },
+        {
+          "line": 98,
+          "reference": "City0    = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 99,
+          "reference": "City1    = land/winter/Mbug_sk_DownCity_Hiver.tga"
+        },
+        {
+          "line": 100,
+          "reference": "City2    = land/winter/Mbug_sk_MidCity_Hiver.tga"
+        },
+        {
+          "line": 101,
+          "reference": "City3    = land/winter/Mbug_sk_fields_airfieldGr_Hiver.tga"
+        },
+        {
+          "line": 103,
+          "reference": "AirField0= land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga, 2"
+        },
+        {
+          "line": 105,
+          "reference": "AirField2= land/winter/Mbug_sk_DownCity_Hiver.tga\t\t//RGB=22 -> Used for railway stations in cities"
+        },
+        {
+          "line": 106,
+          "reference": "AirField3= land/winter/Mbug_sk_LowLand0_Hiver.tga\t\t//RGB=23 -> Used to represent beaches around rivers (only rivers, sea is linked to water section)"
+        },
+        {
+          "line": 108,
+          "reference": "Wood0    = land/winter/Mbug_sk_ForestGr_Hiver.tga,4"
+        },
+        {
+          "line": 110,
+          "reference": "Wood2    = land/winter/Mbug_sk_ForestFar_Hiver.tga"
+        },
+        {
+          "line": 115,
+          "reference": "Water2 = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        },
+        {
+          "line": 116,
+          "reference": "Water3 = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        }
+      ]
+    },
+    {
+      "load": "Zuti_Slovenia/Slovenia_On_s.ini",
+      "directory": "Zuti_Slovenia",
+      "aliases": [
+        "Slovenia_On_S",
+        "Zuti_Slovenia_On_S"
+      ],
+      "registry_lines": [
+        340,
+        399
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 32,
+          "reference": "actors-50S.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Zuti_Slovenia/Slovenia_On_w.ini",
+      "directory": "Zuti_Slovenia",
+      "aliases": [
+        "Slovenia_On_w",
+        "Zuti_Slovenia_On_w"
+      ],
+      "registry_lines": [
+        341,
+        400
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 32,
+          "reference": "actors-50W.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 73,
+          "reference": "Rail     = land/winter/Mbug_sk_Rail_Hiver"
+        },
+        {
+          "line": 74,
+          "reference": "Road     = land/winter/Mbug_sk_Road_Hiver"
+        },
+        {
+          "line": 78,
+          "reference": "LowLand0 = land/winter/Mbug_sk_fields_midland0_Hiver.tga,2\t//RGB=0"
+        },
+        {
+          "line": 79,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand0_Hiver.tga,2\t\t//RGB=1 -> Boundry level contains RGB=4 and RGB=5 for smoother transition where bounding with LowLand2/3"
+        },
+        {
+          "line": 80,
+          "reference": "LowLand2 = land/winter/Mbug_sk_LowLand2_fields_Hiver03.tga \t//RGB=2 -> Mixed with RGB=3 and RGB=4 (little)"
+        },
+        {
+          "line": 81,
+          "reference": "LowLand3 = land/winter/Mbug_sk_LowLand1_fields_Hiver.tga \t//RGB=3 -> Mixed with RGB=2 and RGB=4 (little)"
+        },
+        {
+          "line": 83,
+          "reference": "MidLand0 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga \t//RGB=4 -> Mixed with RGB=5 and RGB=2 (little)"
+        },
+        {
+          "line": 84,
+          "reference": "MidLand1 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga; \t//RGB=5 -> Mixed with RGB=6 and RGB=4 (little)"
+        },
+        {
+          "line": 85,
+          "reference": "MidLand2 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga \t//RGB=6 -> Mixed with RGB=5 and RGB=4 (little)"
+        },
+        {
+          "line": 86,
+          "reference": "MidLand3 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga \t//RGB=7 -> Mixed with RGB=6"
+        },
+        {
+          "line": 88,
+          "reference": "Country0 = land/winter/Mbug_sk_LowLand0_Hiver.tga,2 \t\t//RGB=12 -> Mixed with RGB=13"
+        },
+        {
+          "line": 89,
+          "reference": "Country1 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga\t//RGB=13 -> Mixed with RGB=12"
+        },
+        {
+          "line": 90,
+          "reference": "Country2 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga\t//RGB=14"
+        },
+        {
+          "line": 91,
+          "reference": "Country3 = land/winter/Mbug_sk_LowLand0_Hiver.tga\t\t//RGB=15"
+        },
+        {
+          "line": 93,
+          "reference": "Mount0 = land/winter/Mbug_sk_LowLand0_Hiver.tga,2\t\t//RGB=8"
+        },
+        {
+          "line": 94,
+          "reference": "Mount1 = land/winter/Mbug_sk_fields_mount4_Hiver.tga\t\t//RGB=9"
+        },
+        {
+          "line": 95,
+          "reference": "Mount2 = land/winter/Mbug_sk_fields_mount4_Hiver.tga\t\t//RGB=10"
+        },
+        {
+          "line": 96,
+          "reference": "Mount3 = land/winter/Mbug_sk_fields_mount5_Hiver.tga\t\t//RGB=11"
+        },
+        {
+          "line": 98,
+          "reference": "City0    = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 99,
+          "reference": "City1    = land/winter/Mbug_sk_DownCity_Hiver.tga"
+        },
+        {
+          "line": 100,
+          "reference": "City2    = land/winter/Mbug_sk_MidCity_Hiver.tga"
+        },
+        {
+          "line": 101,
+          "reference": "City3    = land/winter/Mbug_sk_fields_airfieldGr_Hiver.tga"
+        },
+        {
+          "line": 103,
+          "reference": "AirField0= land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga,4"
+        },
+        {
+          "line": 105,
+          "reference": "AirField2= land/winter/Mbug_sk_DownCity_Hiver.tga\t\t//RGB=22 -> Used for railway stations in cities"
+        },
+        {
+          "line": 106,
+          "reference": "AirField3= land/winter/Mbug_sk_LowLand0_Hiver.tga\t\t//RGB=23 -> Used to represent beaches around rivers (only rivers, sea is linked to water section)"
+        },
+        {
+          "line": 108,
+          "reference": "Wood0    = land/winter/Mbug_sk_ForestGr_Hiver.tga,2"
+        },
+        {
+          "line": 110,
+          "reference": "Wood2    = land/winter/Mbug_sk_ForestFar_Hiver.tga,2"
+        },
+        {
+          "line": 115,
+          "reference": "Water2 = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        },
+        {
+          "line": 116,
+          "reference": "Water3 = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        }
+      ]
+    },
+    {
+      "load": "Zuti_Slovenia/Slovenia_Online.ini",
+      "directory": "Zuti_Slovenia",
+      "aliases": [
+        "Zuti_Slovenia_Online"
+      ],
+      "registry_lines": [
+        401
+      ],
+      "loose_load_exists": false,
+      "static_references": [],
+      "texture_evidence": []
+    },
+    {
+      "load": "Zuti_Slovenia/Slovenia_Summer.ini",
+      "directory": "Zuti_Slovenia",
+      "aliases": [
+        "Slovenia_Summer",
+        "Zuti_Slovenia_Summer"
+      ],
+      "registry_lines": [
+        342,
+        402
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 32,
+          "reference": "actors-Summer.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": []
+    },
+    {
+      "load": "Zuti_Slovenia/Slovenia_Winter.ini",
+      "directory": "Zuti_Slovenia",
+      "aliases": [
+        "Slovenia_Winter",
+        "Zuti_Slovenia_Winter"
+      ],
+      "registry_lines": [
+        343,
+        403
+      ],
+      "loose_load_exists": true,
+      "static_references": [
+        {
+          "line": 32,
+          "reference": "actors-Winter.static",
+          "loose_file_exists": true
+        }
+      ],
+      "texture_evidence": [
+        {
+          "line": 73,
+          "reference": "Rail     = land/winter/Mbug_sk_Rail_Hiver"
+        },
+        {
+          "line": 74,
+          "reference": "Road     = land/winter/Mbug_sk_Road_Hiver"
+        },
+        {
+          "line": 78,
+          "reference": "LowLand0 = land/winter/Mbug_sk_fields_midland0_Hiver.tga,2\t//RGB=0"
+        },
+        {
+          "line": 79,
+          "reference": "LowLand1 = land/winter/Mbug_sk_LowLand0_Hiver.tga\t\t//RGB=1 -> Boundry level contains RGB=4 and RGB=5 for smoother transition where bounding with LowLand2/3"
+        },
+        {
+          "line": 80,
+          "reference": "LowLand2 = land/winter/Mbug_sk_LowLand2_fields_Hiver03.tga \t//RGB=2 -> Mixed with RGB=3 and RGB=4 (little)"
+        },
+        {
+          "line": 81,
+          "reference": "LowLand3 = land/winter/Mbug_sk_LowLand1_fields_Hiver.tga \t//RGB=3 -> Mixed with RGB=2 and RGB=4 (little)"
+        },
+        {
+          "line": 83,
+          "reference": "MidLand0 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga \t//RGB=4 -> Mixed with RGB=5 and RGB=2 (little)"
+        },
+        {
+          "line": 84,
+          "reference": "MidLand1 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga; \t//RGB=5 -> Mixed with RGB=6 and RGB=4 (little)"
+        },
+        {
+          "line": 85,
+          "reference": "MidLand2 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga \t//RGB=6 -> Mixed with RGB=5 and RGB=4 (little)"
+        },
+        {
+          "line": 86,
+          "reference": "MidLand3 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga \t//RGB=7 -> Mixed with RGB=6"
+        },
+        {
+          "line": 88,
+          "reference": "Country0 = land/winter/Mbug_sk_LowLand0_Hiver.tga \t\t//RGB=12 -> Mixed with RGB=13"
+        },
+        {
+          "line": 89,
+          "reference": "Country1 = land/winter/Mbug_sk_LowLand3_fields_Hiver.tga\t//RGB=13 -> Mixed with RGB=12"
+        },
+        {
+          "line": 90,
+          "reference": "Country2 = land/winter/Mbug_sk_LowLand5_fields_Hiver.tga\t//RGB=14"
+        },
+        {
+          "line": 91,
+          "reference": "Country3 = land/winter/Mbug_sk_LowLand0_Hiver.tga\t\t//RGB=15"
+        },
+        {
+          "line": 93,
+          "reference": "Mount0 = land/winter/Mbug_sk_LowLand0_Hiver.tga\t\t\t//RGB=8"
+        },
+        {
+          "line": 94,
+          "reference": "Mount1 = land/winter/Mbug_sk_fields_mount4_Hiver.tga,2\t\t//RGB=9"
+        },
+        {
+          "line": 95,
+          "reference": "Mount2 = land/winter/Mbug_sk_fields_mount4_Hiver.tga,2\t\t//RGB=10"
+        },
+        {
+          "line": 96,
+          "reference": "Mount3 = land/winter/Mbug_sk_fields_mount5_Hiver.tga\t\t//RGB=11"
+        },
+        {
+          "line": 98,
+          "reference": "City0    = land/winter/Mbug_sk_country_mount_Hiver.tga"
+        },
+        {
+          "line": 99,
+          "reference": "City1    = land/winter/Mbug_sk_DownCity_Hiver.tga"
+        },
+        {
+          "line": 100,
+          "reference": "City2    = land/winter/Mbug_sk_MidCity_Hiver.tga"
+        },
+        {
+          "line": 101,
+          "reference": "City3    = land/winter/Mbug_sk_fields_airfieldGr_Hiver.tga"
+        },
+        {
+          "line": 103,
+          "reference": "AirField0= land/winter/Mbug_sk_fields_airfieldGr1_Hiver.tga, 2"
+        },
+        {
+          "line": 105,
+          "reference": "AirField2= land/winter/Mbug_sk_DownCity_Hiver.tga\t\t//RGB=22 -> Used for railway stations in cities"
+        },
+        {
+          "line": 106,
+          "reference": "AirField3= land/winter/Mbug_sk_LowLand0_Hiver.tga\t\t//RGB=23 -> Used to represent beaches around rivers (only rivers, sea is linked to water section)"
+        },
+        {
+          "line": 108,
+          "reference": "Wood0    = land/winter/Mbug_sk_ForestGr_Hiver.tga,4"
+        },
+        {
+          "line": 110,
+          "reference": "Wood2    = land/winter/Mbug_sk_ForestFar_Hiver.tga"
+        },
+        {
+          "line": 115,
+          "reference": "Water2 = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        },
+        {
+          "line": 116,
+          "reference": "Water3 = land/winter/Mbug_sk_LowLand0_Hiver.tga"
+        }
+      ]
+    }
+  ],
+  "undeclared_directories": [
+    {
+      "directory": "_Tex",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "ag_Archangelsk",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "ag_Cartagena",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "ag_Djibouti",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "ag_Norway",
+      "direct_ini_count": 1
+    },
+    {
+      "directory": "Benghalli",
+      "direct_ini_count": 1
+    },
+    {
+      "directory": "Bombsaways_Tarawa",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "CAN_EnglishChannel",
+      "direct_ini_count": 4
+    },
+    {
+      "directory": "Cat_Midway_Expanded",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "cztx_BurmaLower",
+      "direct_ini_count": 1
+    },
+    {
+      "directory": "DCG normandy rouds",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "grand_canyon",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "HB_Hokkaido",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "Italian_Front",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "land",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "Malta_42",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "new_map",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "Sal_Truk",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "samples",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "Singapore2",
+      "direct_ini_count": 1
+    },
+    {
+      "directory": "tc_hawaain-islands",
+      "direct_ini_count": 0
+    },
+    {
+      "directory": "Textures",
+      "direct_ini_count": 0
+    }
+  ],
+  "registry_anomalies": [
+    {
+      "line": 116,
+      "raw": "\u001aHB_Atolls HB_Atolls/load.ini",
+      "observation": "Octet 0x1A present; effet moteur non teste"
+    },
+    {
+      "line": 199,
+      "raw": "mrz_Malta_high mrz_Malta/mrz_load_high.ini \u001aNTL_Darwin_Small NTL_Darwin_Small/NTL_Darwin_Small_load.ini",
+      "observation": "Octet 0x1A present; effet moteur non teste"
+    },
+    {
+      "line": 312,
+      "raw": "RD_Malvinas RD_Malvinas/RD_load.ini\u001aIJ_Sakishima IJ_Sakishima/load.ini",
+      "observation": "Octet 0x1A present; effet moteur non teste"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "release": "1.15",
+  "scope": "P-39 Allison V-1710 runtime sound chain",
+  "source": {
+    "family": "AAA Community Installer 1.1 / historical Open Sturmovik 1.1",
+    "recoveredSample": "Files\\Samples\\xallison_1001.wav",
+    "recoveredSampleSha256": "66B2B6E4454F8B8B17F3261DE96146653FE29A227211D78D1D4E35EADAA77DF2"
+  },
+  "fixes": [
+    "Restore the missing external low-RPM xallison_1001.wav layer from the matching historical source.",
+    "Correct the duplicated sample.Allison_1001 section name to sample.xAllison_1001 in the base mixer and its V1700 runtime alias.",
+    "Provide the runtime motor.Allison start begin/end presets and complete both motor.Allison_tb start presets.",
+    "Use the existing Allison_tb starter/startup recordings; do not synthesize or pitch an unrelated engine recording."
+  ],
+  "files": {
+    "Files\\Samples\\xallison_1001.wav": "66B2B6E4454F8B8B17F3261DE96146653FE29A227211D78D1D4E35EADAA77DF2",
+    "Files\\Samples\\Allison_tb_XX_Starter.wav": "5F3F3BE0BB7DAB670D74330F7B7A5BE3C5E3E258316D5CC5071CF2A34B2D846D",
+    "Files\\Samples\\Allison_tb_XX_Startup.wav": "F22D330CFEA38AC8481465ECB2CD9E8B79CE2767EC6ED30468ADECC3AF75E53D",
+    "Files\\presets\\sounds\\motor.Allison.prs": "F80E33FEA474E3B261930A9628AD453C14816BE13CFE341103ACF13D8E9A78AB",
+    "Files\\presets\\sounds\\motor.Allison_V1700_series.prs": "05390DBB36DEDA8ED2BFDEC0073C432E7E88B3C6A76BD82684297B880AE6465D",
+    "Files\\presets\\sounds\\motor.Allison.start.begin.prs": "160EB2477D005E646ACD6AF87AEA82C55735EC548028704FC797EE76C0F6D40B",
+    "Files\\presets\\sounds\\motor.Allison.start.end.prs": "19AD64D4F3BC68094A3C7FA738705E6E409D52FC1B3B81F4C74EA7103A40A301",
+    "Files\\presets\\sounds\\motor.Allison_tb.start.begin.prs": "85847F4680CAAF6504DF879E179DF383B6063FB5F4D9063FE24CAACB7A600C47",
+    "Files\\presets\\sounds\\motor.Allison_tb.start.end.prs": "2E13CA0D859411736DA41931C95913CA9999187F38B2FEF30C6D06933CF4425A"
+  },
+  "runtimeValidation": "pending-single-final-campaign"
+}

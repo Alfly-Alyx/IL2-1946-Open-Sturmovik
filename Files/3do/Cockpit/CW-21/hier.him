@@ -1,0 +1,267 @@
+[_ROOT_]
+VisibilitySphere 2.12559
+[Body]
+Mesh Body
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[Parts]
+Mesh Parts
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[Gauges]
+Mesh Gauges
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[Gauges1_D0]
+Mesh Gauges1_D0
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[Gauges1_D1]
+Mesh Gauges1_D1
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[Gauges2_D0]
+Mesh Gauges2_D0
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[Gauges2_D1]
+Mesh Gauges2_D1
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[Electronics]
+Mesh Electronics
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[Canopy]
+Mesh Canopy
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 -0.921215 0.001389 0.754605
+[Z_Stick]
+Mesh Z_Stick
+Parent Body
+Attaching 1 0 0 0 0 -1.000000 0 1 0 -0.463893 -0.000210 -0.144003
+[Z_PedalR1]
+Mesh Z_PedalR1
+Parent Body
+Attaching 1 0 0 0 0 -1.000000 0 1 0 -0.297310 -0.299542 0.218799
+[Z_PedalR2]
+Mesh Z_PedalR2
+Parent Z_PedalR1
+Attaching 1 0 0 0 1 0 0 0 1 -0.000036 0.254994 0.077902
+[Z_PedalL1]
+Mesh Z_PedalL1
+Parent Body
+Attaching 1 0 0 0 0 -1.000000 0 1 0 -0.297431 0.302449 0.219250
+[Z_PedalL2]
+Mesh Z_PedalL2
+Parent Z_PedalL1
+Attaching 1 0 0 0 1 0 0 0 1 -0.000003 0.255398 -0.087436
+[Z_LeverRPM]
+Mesh Z_LeverRPM
+Parent Body
+Attaching 0.874558 -0.088370 0.476800 0.484920 0.159376 -0.859914 0 0.983255 0.182236 -0.528232 0.329375 0.249777
+[Z_LevelMixture]
+Mesh Z_LevelMixture
+Parent Body
+Attaching 0.806961 -0.107629 0.580716 0.590605 0.147057 -0.793448 0 0.983255 0.182236 -0.528886 0.300370 0.267848
+[Z_LevelThrottle]
+Mesh Z_LevelThrottle
+Parent Body
+Attaching 0.805887 -0.107896 0.582155 0.592070 0.146861 -0.792392 0 0.983255 0.182235 -0.529102 0.325254 0.272959
+[Z_LeverSuperc]
+Mesh Z_LeverSuperc
+Parent Body
+Attaching 0.808097 -0.107346 0.579186 0.589050 0.147264 -0.794565 0 0.983255 0.182235 -0.529328 0.349357 0.277038
+[Z_RodMixture]
+Mesh Z_RodMixture
+Parent Z_LevelMixture
+Attaching 0.806961 0.590605 0 -0.590603 0.806958 -0.002460 -0.001453 0.001985 1 -0.001122 0.071542 0.001224
+[Z_RodThrottle]
+Mesh Z_RodThrottle
+Parent Z_LevelThrottle
+Attaching 0.805887 0.592070 0 -0.592061 0.805875 -0.005381 -0.003186 0.004337 1 -0.000806 0.071835 0.001068
+[Z_RodSuperc]
+Mesh Z_RodSuperc
+Parent Z_LeverSuperc
+Attaching 0.808097 0.589050 0 -0.589033 0.808075 -0.007413 -0.004367 0.005991 1 0.000218 0.071743 0.000761
+[Z_NeedCylTemp]
+Mesh Z_NeedCylTemp
+Parent Body
+Attaching 0 0.573576 -0.819152 0 0.819152 0.573576 1 0 0 -0.205117 -0.000488 0.519444
+[Z_NeedSpeed]
+Mesh Z_NeedSpeed
+Parent Body
+Attaching 0 1 0 0 0 1 1 0 0 -0.205117 0.090887 0.716877
+[Z_NeedVSpeed]
+Mesh Z_NeedVSpeed
+Parent Body
+Attaching 0 0 -1.000000 0 1 0 1 0 0 -0.205117 -0.093841 0.719842
+[Z_NeedAlt]
+Mesh Z_NeedAlt
+Parent Body
+Attaching 0 1 0 0 0 1 1 0 0 -0.205117 0.090491 0.627937
+[Z_NeedRPM]
+Mesh Z_NeedRPM
+Parent Body
+Attaching 0 1 0 0 0 1 1 0 0 -0.205117 -0.093301 0.538096
+[Z_NeedManifoldPres]
+Mesh Z_NeedManifoldPres
+Parent Body
+Attaching 0 -0.906308 -0.422618 0 0.422618 -0.906308 1 0 0 -0.205117 -0.185613 0.536941
+[Z_NeedOilTemp]
+Mesh Z_NeedOilTemp
+Parent Body
+Attaching 0 0 -1.000000 0 1 0 1 0 0 -0.205117 -0.092688 0.630259
+[Z_NeedBall]
+Mesh Z_NeedBall
+Parent Body
+Attaching 0 1 0 0 0 1 1 0 0 -0.205117 -0.001024 0.846673
+[Z_NeedTurn]
+Mesh Z_NeedTurn
+Parent Body
+Attaching 0 1 0 0 0 1 1 0 0 -0.205117 -0.000834 0.719807
+[Z_NeedFuelPres]
+Mesh Z_NeedFuelPres
+Parent Body
+Attaching 0 -1.000000 0 0 0 -1.000000 1 0 0 -0.204400 -0.098337 0.617531
+[Z_NeedOilPres]
+Mesh Z_NeedOilPres
+Parent Body
+Attaching 0 -1.000000 0 0 0 -1.000000 1 0 0 -0.204400 -0.088597 0.617716
+[Z_NeedHydrPres]
+Mesh Z_NeedHydrPres
+Parent Body
+Attaching 0 -0.707107 -0.707107 0 0.707107 -0.707107 1 0 0 -0.205117 0.089700 0.536498
+[Z_NeedClockHour]
+Mesh Z_NeedClockHour
+Parent Body
+Attaching 0 1 0 0 0 1 1 0 0 -0.204774 0.181665 0.688736
+[Z_NeedClockMinute]
+Mesh Z_NeedClockMinute
+Parent Body
+Attaching 0 1 0 0 0 1 1 0 0 -0.205117 0.181736 0.689120
+[Z_NeedFuel]
+Mesh Z_NeedFuel
+Parent Body
+Attaching 0 0.906308 -0.422618 0 0.422618 0.906308 1 0 0 -0.205117 0.276817 0.514822
+[Glass]
+Mesh Glass
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[CanopyGlass]
+Mesh CanopyGlass
+Parent Canopy
+Attaching 1 0 0 0 1 0 0 0 1 0.921215 -0.001389 -0.754605
+[Glass_damage]
+Mesh Glass_damage
+Parent Body
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[GlassOil]
+Mesh GlassOil
+Parent _ROOT_
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[CanopyGlassDamage]
+Mesh CanopyGlassDamage
+Parent Canopy
+Hidden
+Attaching 1 0 0 0 1 0 0 0 1 0.921215 -0.001389 -0.754605
+[Z_Switch1]
+Mesh Z_Switch1
+Parent Body
+Attaching 1 0 0 0 0.965926 -0.258819 0 0.258819 0.965926 -0.407952 0.308308 0.415399
+[Z_Switch2]
+Mesh Z_Switch2
+Parent Body
+Attaching 1 0 0 0 0.965926 -0.258819 0 0.258819 0.965926 -0.376631 0.308131 0.414904
+[Z_Switch3]
+Mesh Z_Switch3
+Parent Body
+Attaching 1 0 0 0 0.965926 -0.258819 0 0.258819 0.965926 -0.346751 0.308308 0.415399
+[Z_Switch4]
+Mesh Z_Switch4
+Parent Body
+Attaching 1 0 0 0 0.965926 -0.258819 0 0.258819 0.965926 -0.318310 0.308308 0.414319
+[Z_Switch5]
+Mesh Z_Switch5
+Parent Body
+Attaching 1 0 0 0 0.965926 -0.258819 0 0.258819 0.965926 -0.409178 0.317654 0.473881
+[Z_Switch6]
+Mesh Z_Switch6
+Parent Body
+Attaching 1 0 0 0 0.965926 -0.258819 0 0.258819 0.965926 -0.377858 0.317654 0.473881
+[Z_Switch7]
+Mesh Z_Switch7
+Parent Body
+Attaching 1 0 0 0 0.965926 -0.258819 0 0.258819 0.965926 -0.343639 0.316892 0.469491
+[Z_NeedCompass2]
+Mesh Z_NeedCompass2
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 -0.144151 -0.000037 0.629955
+[Z_NeedCompass]
+Mesh Z_NeedCompass
+Parent Z_NeedCompass2
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[Z_LeverFlaps]
+Mesh Z_LeverFlaps
+Parent Body
+Attaching 1 0 0 0 0 -1.000000 0 1 0 -0.664994 0.276875 0.031761
+[Z_LeverGear]
+Mesh Z_LeverGear
+Parent Body
+Attaching 1 0 0 0 0 -1.000000 0 1 0 -0.605078 0.276875 0.032220
+[Z_Ignition]
+Mesh Z_Ignition
+Parent Electronics
+Attaching 1 0 0 0 0 -1.000000 0 1 0 -0.378921 0.291238 0.349418
+[CF_d0]
+Mesh CF_d0
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[CF_d1]
+Mesh CF_d1
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[CF_d2]
+Mesh CF_d2
+Parent _ROOT_
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[WarningLights]
+Mesh WarningLights
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[WarningLight1]
+Mesh WarningLight1
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[WarningLight2]
+Mesh WarningLight2
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[WarningLight3]
+Mesh WarningLight3
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[WarningLight4]
+Mesh WarningLight4
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[WarningLight5]
+Mesh WarningLight5
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[WarningLight6]
+Mesh WarningLight6
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[WarningLight7]
+Mesh WarningLight7
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000
+[WarningLight8]
+Mesh WarningLight8
+Parent Body
+Attaching 1 0 0 0 1 0 0 0 1 0.000000 0.000000 0.000000

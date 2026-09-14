@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 1,
+  "dateUtc": "2026-09-11T15:55:37.3854349Z",
+  "branch": "codex/rotation-fonds",
+  "java": {
+    "schemaVersion": 1,
+    "dateUtc": "2026-09-11T15:51:30.6058435Z",
+    "repositoryRoot": "C:\\Users\\Alexis\\.codex\\rotation-fonds",
+    "branch": "codex/rotation-fonds",
+    "sourceSha256": "7DE108067405A14EEF070C3523C6BE40B6736A7CC936CA63B91CD89C80A9F79F",
+    "javac": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.8-hotspot\\bin\\javac.exe",
+    "java": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.8-hotspot\\bin\\java.exe",
+    "verification": "-Xverify:all",
+    "gameLaunched": false,
+    "nativeRenderingValidated": false,
+    "legacyIl2JvmExecuted": false,
+    "result": "PASS",
+    "variants": [
+      {
+        "variant": "source",
+        "result": "PASS",
+        "assertions": 5949,
+        "passed": 18,
+        "exitCode": 0,
+        "report": "C:\\Users\\Alexis\\.codex\\rotation-fonds\\build\\loading-rotation-test-run-985d7a54ff174f959e8f98a749875a4f\\source-fixtures\\result.properties",
+        "log": "C:\\Users\\Alexis\\.codex\\rotation-fonds\\build\\loading-rotation-test-run-985d7a54ff174f959e8f98a749875a4f\\source.log"
+      },
+      {
+        "variant": "packaged-java47",
+        "result": "PASS",
+        "assertions": 5949,
+        "passed": 18,
+        "exitCode": 0,
+        "report": "C:\\Users\\Alexis\\.codex\\rotation-fonds\\build\\loading-rotation-test-run-985d7a54ff174f959e8f98a749875a4f\\packaged-java47-fixtures\\result.properties",
+        "log": "C:\\Users\\Alexis\\.codex\\rotation-fonds\\build\\loading-rotation-test-run-985d7a54ff174f959e8f98a749875a4f\\packaged-java47.log"
+      }
+    ]
+  },
+  "installationTests": {
+    "result": "PASS",
+    "powershell": "5.1.19041.6456",
+    "fixtureRoot": "C:\\Users\\Alexis\\.codex\\rotation-fonds\\build\\loading-rotation-install-tests\\run-680e8e53ff94445fa631b80ef689f44f",
+    "moduleSha256": "A8887D332EB66ADB4FDB4F82235F81A4996231D662A0E134C5405E7E4E0556F9",
+    "checkCount": 78,
+    "checks": [
+      {
+        "name": "Initial status is uninstalled and disabled",
+        "passed": true
+      },
+      {
+        "name": "Install leaves rotation disabled",
+        "passed": true
+      },
+      {
+        "name": "Install class B96FAC8E2C4DDBE0",
+        "passed": true
+      },
+      {
+        "name": "Install class F35AD7F42DE76ABC",
+        "passed": true
+      },
+      {
+        "name": "Install image forgotten-battles-box",
+        "passed": true
+      },
+      {
+        "name": "Install image il2-2001",
+        "passed": true
+      },
+      {
+        "name": "Install image background-3",
+        "passed": true
+      },
+      {
+        "name": "Install image il2-2001-box",
+        "passed": true
+      },
+      {
+        "name": "Install inventory has 2 classes, 4 textures, 20 materials and configuration",
+        "passed": true
+      },
+      {
+        "name": "Install preserves original background, material, configuration, EXE and SFS",
+        "passed": true
+      },
+      {
+        "name": "Repeated install is idempotent",
+        "passed": true
+      },
+      {
+        "name": "Repeated install file count",
+        "passed": true
+      },
+      {
+        "name": "Repeated install byte-identical files and original absences",
+        "passed": true
+      },
+      {
+        "name": "Official double weight with two images is rejected",
+        "passed": true
+      },
+      {
+        "name": "Duplicate selection is rejected",
+        "passed": true
+      },
+      {
+        "name": "Unknown image is rejected",
+        "passed": true
+      },
+      {
+        "name": "Invalid selections do not change active files file count",
+        "passed": true
+      },
+      {
+        "name": "Invalid selections do not change active files byte-identical files and original absences",
+        "passed": true
+      },
+      {
+        "name": "Valid weighted selection is persisted",
+        "passed": true
+      },
+      {
+        "name": "Disable clears activation",
+        "passed": true
+      },
+      {
+        "name": "Disable retains installed package class B96FAC8E2C4DDBE0",
+        "passed": true
+      },
+      {
+        "name": "Disable retains installed package class F35AD7F42DE76ABC",
+        "passed": true
+      },
+      {
+        "name": "Disable retains installed package image forgotten-battles-box",
+        "passed": true
+      },
+      {
+        "name": "Disable retains installed package image il2-2001",
+        "passed": true
+      },
+      {
+        "name": "Disable retains installed package image background-3",
+        "passed": true
+      },
+      {
+        "name": "Disable retains installed package image il2-2001-box",
+        "passed": true
+      },
+      {
+        "name": "Disable retains installed package inventory has 2 classes, 4 textures, 20 materials and configuration",
+        "passed": true
+      },
+      {
+        "name": "Remove reports a complete restoration",
+        "passed": true
+      },
+      {
+        "name": "Remove restores mixed initial contents and absences file count",
+        "passed": true
+      },
+      {
+        "name": "Remove restores mixed initial contents and absences byte-identical files and original absences",
+        "passed": true
+      },
+      {
+        "name": "Durable original backups are retained",
+        "passed": true
+      },
+      {
+        "name": "Real locked destination interrupts installation",
+        "passed": true
+      },
+      {
+        "name": "Journal remains when rollback is blocked by the same lock",
+        "passed": true
+      },
+      {
+        "name": "Next management action recovers then refuses uninstalled removal",
+        "passed": true
+      },
+      {
+        "name": "Interrupted installation journal is recovered after lock release",
+        "passed": true
+      },
+      {
+        "name": "Recovery restores pre-installation files file count",
+        "passed": true
+      },
+      {
+        "name": "Recovery restores pre-installation files byte-identical files and original absences",
+        "passed": true
+      },
+      {
+        "name": "Retry after interrupted install class B96FAC8E2C4DDBE0",
+        "passed": true
+      },
+      {
+        "name": "Retry after interrupted install class F35AD7F42DE76ABC",
+        "passed": true
+      },
+      {
+        "name": "Retry after interrupted install image forgotten-battles-box",
+        "passed": true
+      },
+      {
+        "name": "Retry after interrupted install image il2-2001",
+        "passed": true
+      },
+      {
+        "name": "Retry after interrupted install image background-3",
+        "passed": true
+      },
+      {
+        "name": "Retry after interrupted install image il2-2001-box",
+        "passed": true
+      },
+      {
+        "name": "Retry after interrupted install inventory has 2 classes, 4 textures, 20 materials and configuration",
+        "passed": true
+      },
+      {
+        "name": "Real locked configuration interrupts Enable update",
+        "passed": true
+      },
+      {
+        "name": "Configuration rollback journal is preserved while locked",
+        "passed": true
+      },
+      {
+        "name": "Configuration journal is recovered before idempotent install",
+        "passed": true
+      },
+      {
+        "name": "Configuration recovery restores prior enabled state file count",
+        "passed": true
+      },
+      {
+        "name": "Configuration recovery restores prior enabled state byte-identical files and original absences",
+        "passed": true
+      },
+      {
+        "name": "Failure and recovery preserve original game files",
+        "passed": true
+      },
+      {
+        "name": "Committed journal is finalized without rolling back",
+        "passed": true
+      },
+      {
+        "name": "Committed recovery preserves published files file count",
+        "passed": true
+      },
+      {
+        "name": "Committed recovery preserves published files byte-identical files and original absences",
+        "passed": true
+      },
+      {
+        "name": "Remove preserves and reports a manually changed texture",
+        "passed": true
+      },
+      {
+        "name": "Custom texture removal restores all other files file count",
+        "passed": true
+      },
+      {
+        "name": "Custom texture removal restores all other files byte-identical files and original absences",
+        "passed": true
+      },
+      {
+        "name": "Remove refuses a manually changed Java class",
+        "passed": true
+      },
+      {
+        "name": "Class conflict does not partially uninstall resources file count",
+        "passed": true
+      },
+      {
+        "name": "Class conflict does not partially uninstall resources byte-identical files and original absences",
+        "passed": true
+      },
+      {
+        "name": "Class conflict preserves original game files",
+        "passed": true
+      },
+      {
+        "name": "Install refuses an unknown ConsoleGL0 override",
+        "passed": true
+      },
+      {
+        "name": "Unknown override remains byte-identical file count",
+        "passed": true
+      },
+      {
+        "name": "Unknown override remains byte-identical byte-identical files and original absences",
+        "passed": true
+      },
+      {
+        "name": "Enable refuses modified installed resources",
+        "passed": true
+      },
+      {
+        "name": "Rejected activation preserves all installed files file count",
+        "passed": true
+      },
+      {
+        "name": "Rejected activation preserves all installed files byte-identical files and original absences",
+        "passed": true
+      },
+      {
+        "name": "Remove reports custom material and dependent texture",
+        "passed": true
+      },
+      {
+        "name": "Custom material removal retains its texture and restores other files file count",
+        "passed": true
+      },
+      {
+        "name": "Custom material removal retains its texture and restores other files byte-identical files and original absences",
+        "passed": true
+      },
+      {
+        "name": "Remove refuses a damaged original backup",
+        "passed": true
+      },
+      {
+        "name": "Damaged backup causes no partial restoration file count",
+        "passed": true
+      },
+      {
+        "name": "Damaged backup causes no partial restoration byte-identical files and original absences",
+        "passed": true
+      },
+      {
+        "name": "Damaged backup preserves original game files",
+        "passed": true
+      },
+      {
+        "name": "Install refuses an unrecognized game profile",
+        "passed": true
+      },
+      {
+        "name": "Unrecognized profile receives no game file changes file count",
+        "passed": true
+      },
+      {
+        "name": "Unrecognized profile receives no game file changes byte-identical files and original absences",
+        "passed": true
+      },
+      {
+        "name": "PowerShell 5.1 entry script resolves its default GameRoot",
+        "passed": true
+      },
+      {
+        "name": "Module remained unchanged throughout this test run",
+        "passed": true
+      }
+    ],
+    "gameLaunched": false,
+    "uiTested": false
+  },
+  "finalInstallation": {
+    "dateUtc": "2026-09-11T15:53:38.045391Z",
+    "branch": "codex/rotation-fonds",
+    "status": {
+      "installed": true,
+      "configuration": {
+        "enabled": true,
+        "images": [
+          "forgotten-battles-box",
+          "il2-2001",
+          "background-3",
+          "il2-2001-box"
+        ],
+        "official": "il2-2001",
+        "mode": "shuffle"
+      }
+    },
+    "resourceDirectory": "Files/gui/backgrounds",
+    "installedEntries": 27,
+    "installedHashesVerified": true,
+    "originalFilesUnchanged": {
+      "Files/background0.tga": "E1C0BFB53AE7E5891BF7A4F8333D33F119B177E373DBE8B6BBEC3014EC7CB898",
+      "Files/gui/Background.tga": "0CB0E846175E36FECBCB18CC02B6206BB0000FBA8F54A4B61418F8BE3824A7B4",
+      "il2fb.exe": "9ACE9A542AC7203D8A66961570B6854C11FB0BF721F0234DA9D6095D69D2525C",
+      "files.SFS": "9F7D136C586EB3FCD258C5C000F34951D410A0236934F22ABA2516637874B095",
+      "Files/gui/background0_ru.mat": "A7A3F8BD7FEBF409B383C035986106A547B8E49E5D7892FA57E6E3EA2611E319"
+    },
+    "previousResourceDirectoryAbsent": true,
+    "nativeGameLaunched": false,
+    "selection": {
+      "schemaVersion": 1,
+      "status": "selected-by-user",
+      "images": [
+        {
+          "id": "forgotten-battles-box",
+          "label": "Forgotten Battles - jaquette, logo gauche",
+          "weight": 1,
+          "sourceFilename": "Forgotten Battles - jaquette remaster 1586x992 - logo gauche.png",
+          "source": "Sources/forgotten-battles-box.png",
+          "path": "Images/forgotten-battles-box.tga",
+          "sha256": "9faa45e35347fdc0f985f4885c3bbcca09ce33b5c43719d83680e80c861f62bf",
+          "sourceSha256": "86110029f4cce647868f10fa88ecf5bddd4bc3216a6924ebbc3e1b8d2e18c1d9",
+          "width": 1586,
+          "height": 992
+        },
+        {
+          "id": "il2-2001",
+          "label": "IL-2 Sturmovik 2001 Retail - officiel",
+          "weight": 2,
+          "sourceFilename": "IL-2 Sturmovik 2001 Retail - remaster 1586x992.png",
+          "source": "Sources/il2-2001.png",
+          "path": "Images/il2-2001.tga",
+          "sha256": "d4688d451498e4ef2dbbcbcabd0af005bac0d3e6f81fc803fea0b321b507e0c7",
+          "sourceSha256": "c53eeb3c57a06d20cf5531e275654210c6df8e4593268b3673bdee080d70b692",
+          "width": 1586,
+          "height": 992
+        },
+        {
+          "id": "background-3",
+          "label": "Fond 3 (3.png)",
+          "weight": 1,
+          "sourceFilename": "3.png",
+          "source": "Sources/background-3.png",
+          "path": "Images/background-3.tga",
+          "sha256": "b09610f817e70a40210177fe3f153d60286746b52a6b12032275611335bd8960",
+          "sourceSha256": "309619edc79365b224656fdbbc186d2f2fbbbbf52a8e8e74330ed4ec40ed01af",
+          "width": 1586,
+          "height": 992
+        },
+        {
+          "id": "il2-2001-box",
+          "label": "IL-2 Sturmovik 2001 - jaquette",
+          "weight": 1,
+          "sourceFilename": "IL-2 Sturmovik 2001 - jaquette remaster 1586x992.png",
+          "source": "Sources/il2-2001-box.png",
+          "path": "Images/il2-2001-box.tga",
+          "sha256": "2e706d63b686f8a47238aea93f5ca0b57ac402881f623fda83e6a403b22dbba1",
+          "sourceSha256": "b747f4feebe2c03761c6375e6c70ba5d136b890a96ce88bcfe304e11cba4b4cc",
+          "width": 1586,
+          "height": 992
+        }
+      ]
+    }
+  },
+  "patch": {
+    "schemaVersion": 1,
+    "kind": "open-sturmovik-loading-rotation-patch",
+    "target": "Open Sturmovik v1.15; verified ConsoleGL0 shared by modded 4.08m, 4.09b and 4.09m",
+    "sourceClassSha256": "1C36806AA965835949125E09518425DD45D6E927EB1E055B3E701A5647215D9C",
+    "helperSourceSha256": "7DE108067405A14EEF070C3523C6BE40B6736A7CC936CA63B91CD89C80A9F79F",
+    "patcherSourceSha256": "70D0F812352AC05989A5EC269B0589073D2477039E31727D177D77CD6642B00F",
+    "classes": [
+      {
+        "class": "com.maddox.il2.engine.ConsoleGL0",
+        "looseName": "B96FAC8E2C4DDBE0",
+        "path": "Files/B96FAC8E2C4DDBE0",
+        "size": 4554,
+        "javaMajor": 47,
+        "sha256": "F84ED70CF90AE4764A2768462A7DE96DC207BA1F0F6FE86800A5376DE0003A96"
+      },
+      {
+        "class": "com.maddox.il2.engine.OpenSturmovikLoadingRotation",
+        "looseName": "F35AD7F42DE76ABC",
+        "path": "Files/F35AD7F42DE76ABC",
+        "size": 8425,
+        "javaMajor": 47,
+        "sha256": "F057D53D3E7B9DCF865AB3ADEA2395DAB3BB8875634C9AFE6632AC2243E6C571"
+      }
+    ]
+  },
+  "uiRenderedAndInspected": true,
+  "uiScreenshot": "build/loading-rotation-ui/settings-backgrounds.png",
+  "nativeGameLaunched": false,
+  "nativeRenderingValidated": false,
+  "legacyIl2JvmExecuted": false,
+  "imagePixelsIndependentlyVerified": true,
+  "imageVerification": "Pillow: 1586x992 RGB pixels identical to each source PNG; bottom-left TGA descriptor 0",
+  "scope": "Isolated development copy only; shared v1.15 unchanged",
+  "laterSizeCorrection": "manifests/loading-rotation-size-correction.json",
+  "initialNativeTest": "manifests/loading-rotation-native-first-launch.json"
+}

@@ -5,13 +5,14 @@
   Color0 0.9 0.9 0.9 1
   Color1 1.0 1.0 1.0 0
   nParticles 512
-  FinishTime 8.0
+  ; Initial toroidal cloud. Fixed high-altitude layers continue the growth.
+  FinishTime 60.0
   MaxR 32.0
   PhiN 5.0
   PsiN 5.0
   LiveTime 128.0
   EmitFrq 100.0
-  TranspTransitionTime 120.0f
+  TranspTransitionTime 128.0f
   EmitVelocity -500.0 1000.0
   EmitTheta 92.0 92.0
   GasResist 0.003

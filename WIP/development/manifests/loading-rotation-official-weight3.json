@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "request": "Increase official il2-2001 from two to three occurrences per cycle.",
+  "baseCommit": "2c9fafe9383df6e7d433621215fa576b7f991124",
+  "upstreamCommit": "b3ed8a505ece716a0c5ec1764f4d37c2bfff2f11",
+  "deployment": {
+    "deployedUtc": "2026-09-11T20:40:05.7954958Z",
+    "official": "il2-2001",
+    "weight": 3,
+    "cycleLength": 6,
+    "entriesVerified": 27,
+    "configurationByteIdentical": true,
+    "previousStateByteIdentical": true,
+    "previousStateSha256": "C89837A948EFE4A802C69022E8DE1E29EDD1BB045D943A07CC87ED8D278DDC6D",
+    "restorationProvenancePreserved": true,
+    "normalizedSourceSha256": "C05A4D8C2D1A18BA8F6682E554A98BA31B2EBB74C609A6E6E1EC0519676A526D",
+    "compiledClassesIdenticalToTestedPackage": true,
+    "classes": [
+      {
+        "class": "com.maddox.il2.engine.ConsoleGL0",
+        "looseName": "B96FAC8E2C4DDBE0",
+        "path": "Files/B96FAC8E2C4DDBE0",
+        "size": 4554,
+        "javaMajor": 47,
+        "sha256": "F84ED70CF90AE4764A2768462A7DE96DC207BA1F0F6FE86800A5376DE0003A96"
+      },
+      {
+        "class": "com.maddox.il2.engine.OpenSturmovikLoadingRotation",
+        "looseName": "F35AD7F42DE76ABC",
+        "path": "Files/F35AD7F42DE76ABC",
+        "size": 8536,
+        "javaMajor": 47,
+        "sha256": "F115A2B6DF536AF7906D92091762D2B23356B8650600481EA2B7802E2CD799EA"
+      }
+    ],
+    "gameLaunched": false
+  },
+  "images": [
+    {
+      "id": "forgotten-battles-box",
+      "weight": 1,
+      "bytes": 4193493,
+      "sha256": "FFA3E0B2A0F5BB0EDD762E42C07EE197B3939D4F27A26B11651346DCEFE2E1B4"
+    },
+    {
+      "id": "il2-2001",
+      "weight": 3,
+      "bytes": 4193493,
+      "sha256": "A15B147FFBEFA2062966258355B86AB3CB34DCCAD099ABA71D6CBB61BB8E1F10"
+    },
+    {
+      "id": "background-3",
+      "weight": 1,
+      "bytes": 4193493,
+      "sha256": "51671AE9D3CB0C2C8D8926970DF127DA7EC42CA6FC8C38E008A8C9E247E9C5CE"
+    },
+    {
+      "id": "il2-2001-box",
+      "weight": 1,
+      "bytes": 4193493,
+      "sha256": "8A2259019CD8377F7E8730DE0E8FE2D54647CFA8851FF2863ED189C8D0FE248C"
+    }
+  ],
+  "javaTests": {
+    "schemaVersion": 1,
+    "dateUtc": "2026-09-11T20:37:32.3990601Z",
+    "repositoryRoot": "C:\\Users\\Alexis\\.codex\\rotation-fonds",
+    "branch": "codex/rotation-fonds",
+    "sourceSha256": "77E17643D7CE8E1100A4CCBEE3D548EA6FA53A1CD332472742DD49AC549C5679",
+    "javac": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.8-hotspot\\bin\\javac.exe",
+    "java": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.8-hotspot\\bin\\java.exe",
+    "verification": "-Xverify:all",
+    "gameLaunched": false,
+    "nativeRenderingValidated": false,
+    "legacyIl2JvmExecuted": false,
+    "result": "PASS",
+    "variants": [
+      {
+        "variant": "source",
+        "result": "PASS",
+        "assertions": 7036,
+        "passed": 19,
+        "exitCode": 0,
+        "report": "C:\\Users\\Alexis\\.codex\\rotation-fonds\\build\\loading-rotation-test-run-9100b168a4b94d7b880b4bcd0b7763dd\\source-fixtures\\result.properties",
+        "log": "C:\\Users\\Alexis\\.codex\\rotation-fonds\\build\\loading-rotation-test-run-9100b168a4b94d7b880b4bcd0b7763dd\\source.log"
+      },
+      {
+        "variant": "packaged-java47",
+        "result": "PASS",
+        "assertions": 7036,
+        "passed": 19,
+        "exitCode": 0,
+        "report": "C:\\Users\\Alexis\\.codex\\rotation-fonds\\build\\loading-rotation-test-run-9100b168a4b94d7b880b4bcd0b7763dd\\packaged-java47-fixtures\\result.properties",
+        "log": "C:\\Users\\Alexis\\.codex\\rotation-fonds\\build\\loading-rotation-test-run-9100b168a4b94d7b880b4bcd0b7763dd\\packaged-java47.log"
+      }
+    ]
+  },
+  "installerTests": {
+    "result": "PASS",
+    "powershell": "5.1.19041.6456",
+    "checkCount": 79,
+    "moduleSha256": "9947C29BE3C1ECF99C8B495631BBC7EB6D62FA3C92842F922BABABFFC65108A9",
+    "report": "build/loading-rotation-install-tests/official-weight3-20260911/report.json",
+    "sha256": "1AEF42975D5BAFDA82C487E12656F467DC63733B0B6983ECBAB21F869A65940E"
+  },
+  "sourceLineEndings": "After tests, two CRLF lines were normalized to LF to match Git. Rebuilding produced both classes byte-identical to the tested package. The tested Java 47 helper is therefore exactly the deployed helper.",
+  "migration": "The weight is included in the selection signature. A legacy saved cycle is reconstructed on next successful native material load, retaining last to avoid immediate repetition. Active state has not yet advanced.",
+  "backupDirectory": "WIP/loading-rotation-weight3-20260911",
+  "backupInventorySha256": "413D53C3F88B79946EEEDBD8C86484F0553449F45A55E13DA94655C181F250F9",
+  "gameLaunched": false,
+  "scope": "Logic and installer tested outside the game. Earlier native visual acceptance on profiles 8 and 9 concerned official weight two."
+}

@@ -1,0 +1,23 @@
+[ClassInfo]
+  ClassName TParticlesSystemParams
+[General]
+  MatName ../TEXTURES/SmokeN.mat
+  Color0 0.88 0.88 0.88 0.92
+  Color1 0.98 0.98 0.98 0.0
+  nParticles 256
+  ; One fixed cloud-head layer every 60 simulation seconds.
+  FinishTime 60.0
+  MaxR 32.0
+  PhiN 6.0
+  PsiN 6.0
+  ; The actor remains for the complete 128-second natural particle drain.
+  LiveTime 128.0
+  EmitFrq 24.0
+  TranspTransitionTime 128.0f
+  EmitVelocity 25.0 55.0
+  EmitTheta 0.0 35.0
+  GasResist 0.0015
+  VertAccel 0.0
+  Wind 20.0
+  Size 700.0 1700.0
+  Rnd 0.35

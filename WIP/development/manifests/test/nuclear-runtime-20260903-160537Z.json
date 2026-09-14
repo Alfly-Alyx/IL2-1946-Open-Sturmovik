@@ -1,0 +1,82 @@
+{
+  "schema": "open-sturmovik-nuclear-runtime-v1",
+  "run": "20260903-160537Z-profile9-warm-windowed1024-startup",
+  "capture": "WIP/tests/captures/startup/20260903-160537Z-profile9-warm-windowed1024-startup",
+  "candidate": "nuclear-overlap-and-natural-drain-v1.15",
+  "verdict": "REJECTED_VISUAL_ASCENT",
+  "environment": {
+    "profile": "4.09m modded / historical 6DOF / native OpenGL safe",
+    "resolution": "1024x768 windowed",
+    "gpu": "Intel(R) UHD Graphics 620",
+    "opengl": "4.6.0 - Build 31.0.101.2141"
+  },
+  "events": [
+    {
+      "id": 1,
+      "surface": "land",
+      "detonation_utc": "2026-09-03T16:13:52Z",
+      "mission_end_utc": "2026-09-03T16:15:36Z",
+      "observed_age_s": 104,
+      "last_logged_phase": "mature-rise",
+      "expected_anchor_agl_at_end_m": 4209,
+      "user_observation": "The visual result is attractive overall, but one cloud point rises rapidly while the remaining particle mass stagnates low.",
+      "responsive_samples": 721,
+      "nonresponsive_samples": 0,
+      "peak_working_set_mib": 652.2,
+      "peak_private_mib": 670.7,
+      "peak_virtual_mib": 1966.4,
+      "average_equivalent_cpu_cores": 0.77
+    },
+    {
+      "id": 2,
+      "surface": "land",
+      "detonation_utc": "2026-09-03T16:19:03Z",
+      "mission_end_utc": "2026-09-03T16:19:25Z",
+      "observed_age_s": 22,
+      "last_logged_phase": "early-rise",
+      "user_observation": "The same cloud-shape defect remained visible from another aircraft/view.",
+      "responsive_samples": 151,
+      "nonresponsive_samples": 0,
+      "peak_working_set_mib": 658.4,
+      "peak_private_mib": 676.1,
+      "peak_virtual_mib": 1984.2,
+      "average_equivalent_cpu_cores": 0.8
+    }
+  ],
+  "evidence": {
+    "initial_visuals_per_event": 6,
+    "duplicate_visual_dispatch": false,
+    "java_nuclear_exception": false,
+    "post_detonation_hang": false,
+    "reached_120_s_boundary": false,
+    "reached_600_s_target": false,
+    "reached_cleanup": false,
+    "representative_frame": "screen/frames/frame-006500.jpg"
+  },
+  "diagnosis": {
+    "confirmed": "Eff3DActor position changes move the emitter for future particles, while particles already emitted remain in world space. The result is a detached rising origin above a low stagnant mass.",
+    "height_interpretation": "The reported 3-4 km height is not evidence that the 12 km target failed: event 1 ended at about 104 s, where the configured curve places the anchor around 4.2 km AGL. Neither event reached the 600 s summit.",
+    "required_replacement": "Use fixed overlapping layers at bounded ages and altitudes; never move a live emitter."
+  },
+  "separate_anomalies": [
+    {
+      "type": "sound",
+      "time_utc": "2026-09-03T16:17:49Z",
+      "count_file_not_found": 25,
+      "messages": [
+        "Cannot load sample pool: motor.Allison.start.begin",
+        "Cannot load sample pool: motor.Allison.start.end",
+        "Cannot load sound preset motor.Allison_V1700_series (java.lang.Exception: Invalid preset format)"
+      ],
+      "scope": "Mission/aircraft sound loading, independent from the nuclear effect."
+    }
+  ],
+  "next_candidate": {
+    "name": "nuclear-fixed-layers-v1.15",
+    "status": "OFFLINE_VALIDATED_RUNTIME_PENDING",
+    "head_layer_checkpoints_s": [30, 90, 150, 210, 270, 330, 390, 450, 510, 570],
+    "torus_layer_checkpoints_s": [90, 210, 330, 450, 570],
+    "maximum_created_visual_actors_per_blast": 22,
+    "shock_and_damage_changed": false
+  }
+}

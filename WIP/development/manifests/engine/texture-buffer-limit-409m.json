@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "observedUtc": "2026-09-11T18:18:31Z",
+  "game": "Open Sturmovik v1.15 / IL-2 4.09m",
+  "profile": 8,
+  "renderer": "DirectX dx8Wrap.dll",
+  "window": [
+    1024,
+    768
+  ],
+  "evidenceLevel": "R: buffer limit reported by native engine; not a universal format limit",
+  "reportedBufferBytes": 4202496,
+  "rejectedRgbTexture": {
+    "width": 1586,
+    "height": 992,
+    "bitsPerPixel": 24,
+    "pixelBytes": 4719936,
+    "path": "gui/backgrounds/forgotten-battles-box.tga"
+  },
+  "assetFileBudgetBytes": 4200000,
+  "budgetIsProjectChoice": true,
+  "gpuReportedMaximumDimension": 8192,
+  "log": "test-assets/loading-rotation/native-first-launch.log",
+  "logSha256": "e1546123324f15e3bb9c7b95d7ae31b769a0280e46287c9a8b39f4812299dae8",
+  "binaries": [
+    {
+      "file": "il2_core.dll",
+      "sha256": "3145f63a53061c40604b57ded2f96313559bd69692123e7479d8c409339eceb3",
+      "bytes": 1552384,
+      "messageFileOffset": "0x1253e0"
+    },
+    {
+      "file": "il2_corep4.dll",
+      "sha256": "0b4cd130051e7d853219480606a1508c0fbb3c7fd29fa8af87bb72bbd37bb979",
+      "bytes": 1634304,
+      "messageFileOffset": "0x1393e8"
+    },
+    {
+      "file": "il2fb.exe",
+      "sha256": "70b3f84edd111921b93cdfd720d6394764dd7c40249d0cd3617b18a7a3f990d3",
+      "bytes": 348160,
+      "messageFileOffset": null
+    },
+    {
+      "file": "files.SFS",
+      "sha256": "18f3c5471d93642916394de53b482051106e024ddac8124c7b0d700d1796b05a",
+      "bytes": 24126259,
+      "messageFileOffset": null
+    },
+    {
+      "file": "wrapper.dll",
+      "sha256": "8b6091c38f1241f2cb7d4eaf239de662a2c862b57b14d7aca9074c5c37a03f78",
+      "bytes": 233472,
+      "messageFileOffset": null
+    }
+  ],
+  "unknowns": [
+    "Allocation site and structure",
+    "Boundary acceptance at exactly4202496 bytes",
+    "Other formats and profiles",
+    "Native rendering of resized1495x935 textures"
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "captured_utc": "2026-08-31T00:00:00Z",
+  "purpose": "Reference communautaire pour le diagnostic reproductible du gel B-29 Silverplate/Fat Man. Ne pas deployer automatiquement dans le jeu.",
+  "source": {
+    "title": "Boeing B-29 Silverplate Atomic Bomber v1.2",
+    "community_thread": "https://www.sas1946.com/main/index.php?topic=7894.0",
+    "download_page": "https://www.mediafire.com/file/vw5x4vbj8dq3y3z/silverplate.7z/file",
+    "archive_path": "D:\\Projets\\GITHUB\\res\\IL2 1946\\Mods\\B29 Silverplate v1.2\\silverplate.7z",
+    "size": 13196771,
+    "sha256": "18CC06BEE46804B481A2072E9B70B3152E09E0B40AE8788384739E8F41A0527A"
+  },
+  "matching_runtime_classes": [
+    {
+      "class": "com.maddox.il2.objects.weapons.BombFatMan",
+      "file": "Files/830E5C5AC3A1C77A",
+      "size": 2127,
+      "sha256": "515DCE7B2FE6B555F9F56FC7EA1DFB96C33EBE6F370CCD8FD149FD6FB1C3CA6C"
+    },
+    {
+      "class": "com.maddox.il2.objects.weapons.BombGunFatMan",
+      "file": "Files/46168B5EEE532404",
+      "size": 1376,
+      "sha256": "8B5AC1B92495BF01811628796E1899F326ABC613B5E3243004A4BF492ED40868"
+    },
+    {
+      "class": "com.maddox.il2.objects.weapons.Bomb",
+      "file": "Files/1E8A600CBE71D698",
+      "size": 12475,
+      "sha256": "43420376EE821F297435087DC8032F9936D8AC6A7AEAAC290C968A737AE2C8B6"
+    }
+  ],
+  "eliminated_candidate": {
+    "class": "com.maddox.il2.objects.weapons.BombGun",
+    "file": "Files/ED31205CA2346688",
+    "source_mod": "semi-realDropBomb v2.0",
+    "size": 9931,
+    "sha256": "08F959473BF6649E49685D4FF4C7C7D132FABBCC4B5AF94BF5C338A0F4C02FC9",
+    "present_in_silverplate_archive": false,
+    "ab_result": "Gel reproduit avec la classe BombGun officielle 4.09m ; cette surcharge n'est pas la cause primaire."
+  },
+  "official_409m_control": {
+    "client_patch_sha256": "1ECC6661B132B38974044CEB13EA64436CCEC3C3D67F85843F02F8E48F3AE45F",
+    "files_sfs_sha256": "9F7D136C586EB3FCD258C5C000F34951D410A0236934F22ABA2516637874B095",
+    "bombgun_size": 7395,
+    "bombgun_sha256": "2C0007C200CE7F721AC236124E24E3D073CEE465951BC8CD2F31BCDB2AD0E626",
+    "ab_capture": "WIP/tests/captures/startup/20260831-164731Z-profile9-warm-windowed1024-startup",
+    "ab_dump": "process-dumps/il2fb.exe_260831_194117.dmp",
+    "ab_dump_sha256": "5961FD46E6B46499659A60140D1BD19D5B9EC7F28CC38DCACE505B770D8DE825"
+  },
+  "abi_conflict": {
+    "caller_class": "com.maddox.il2.objects.weapons.Bomb",
+    "called_class": "com.maddox.il2.objects.effects.Explosions",
+    "required_method": "generate",
+    "required_descriptor": "(Lcom/maddox/il2/engine/Actor;Lcom/maddox/JGP/Point3d;FIFI)V",
+    "active_open_sturmovik": {
+      "file": "Files/72DCDDF4D2AD25E8",
+      "size": 25836,
+      "sha256": "2F66A5AA35C0DF6D29D44DA27FC71DDEF1198F05B9974D92DE11B22F14926F91",
+      "required_method_present": false,
+      "features": [
+        "Zuti crater visibility multipliers"
+      ]
+    },
+    "silverplate_v1_2": {
+      "size": 25703,
+      "sha256": "4749790F3DD6CA95E6FC81930B866A83531F735F4DC6161D6C99921A8811B1A9",
+      "required_method_present": true,
+      "features": [
+        "Fat Man and Little Boy routing"
+      ]
+    },
+    "expected_linkage_error": "java.lang.NoSuchMethodError"
+  },
+  "validated_test_ab": {
+    "scope": "Dossier de test uniquement ; depot v1.15 inchange",
+    "bombgun_restored_sha256": "08F959473BF6649E49685D4FF4C7C7D132FABBCC4B5AF94BF5C338A0F4C02FC9",
+    "explosions_family_source": "Boeing B-29 Silverplate Atomic Bomber v1.2",
+    "explosions_family_file_count": 15,
+    "backup_path": "C:\\Users\\Alexis\\Desktop\\IL 2 Sturmovik 1946 test\\Open-Sturmovik-backups\\critical-explosions-20260831",
+    "readiness_passed": true,
+    "readiness_checks": 46,
+    "capture": "WIP/tests/captures/startup/20260831-184314Z-profile9-warm-windowed1024-startup",
+    "result": "Fat Man larguee et impact confirme, trois objets statiques detruits, vol poursuivi, retour et arret normaux.",
+    "responding_false_after_trigger": 0,
+    "process_dump_count": 0,
+    "zuti_timer_stopped_cleanly": true,
+    "session_peak_working_set_mib": 689.07,
+    "session_peak_private_mib": 706.47,
+    "session_peak_virtual_mib": 1971.07,
+    "impact_window": {
+      "observed_utc": "2026-08-31T18:50:33Z",
+      "gpu_3d_max_percent": 50.67,
+      "gpu_shared_memory_max_mib": 172.56,
+      "disk_max_percent": 3.63
+    },
+    "visual_effect_status": "Destructions et message de coup direct confirmes ; panache nucleaire complet non clairement visible dans la capture."
+  },
+  "validated_visual_ab": {
+    "capture": "WIP/tests/captures/startup/20260831-192529Z-profile9-warm-windowed1024-startup",
+    "little_boy": {
+      "result": "Impact sans gel ; trois objets statiques detruits a 12:00:40.",
+      "radius_m": 3200,
+      "power": 8000000,
+      "new_effect": 1,
+      "nuke": 1
+    },
+    "fat_man": {
+      "result": "Impact sans gel ; trois objets statiques detruits a 12:01:13.",
+      "radius_m": 3200,
+      "power": 13000000,
+      "new_effect": 1,
+      "nuke": 1
+    },
+    "declared_atomic_loadout_count": 2,
+    "shared_visual_path": "Explosions.bombFatMan_land/water",
+    "pause_resume_result": "Pour les deux bombes, le panache devient des masses nuageuses puis une petite explosion conventionnelle apres pause/reprise.",
+    "conventional_followup": "La branche nucleaire non ActorLand appelle explicitement bomb50_land(point3d, -1.0f, 10.0f).",
+    "effect_timing_risk": "FinishTime 1..30 s, LiveTime 1..99999 s et cinq Eff3DActor crees avec une duree -1.",
+    "realistic_blast_requirement": "Zones progressives 3D, flash, surpression, souffle et dommages retardes ; cas de validation B-29 a 5000 m.",
+    "loading_hang_dump": {
+      "file": "process-dumps/il2fb.exe_260831_214117.dmp",
+      "sha256": "CACA2268002E79B2DA797E0F14893F29BDFB11A2AA69C0975ED0BBBDD6AC8ADD",
+      "classification": "Faux gel pendant le chargement d'une mission Hawker.",
+      "main_thread": "ig9icd32.dll <- opengl32!glTexImage2D <- il2_corep4!BmpUtils_BMP8PalTo4TGA4",
+      "exception_stream_present": false
+    },
+    "hawker_visual_result": "Trois missions courtes ; aucune texture absente reproduite dans l'installation de test actuelle.",
+    "session_peak_working_set_mib": 840.88,
+    "session_peak_private_mib": 705.01,
+    "session_peak_virtual_mib": 2000.21,
+    "exit_status": "APPCRASH Windows 0xc0000005 dans un module inconnu a 21:44:43 ; a reproduire avec un dump reserve."
+  }
+}

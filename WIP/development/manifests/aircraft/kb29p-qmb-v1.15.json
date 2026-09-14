@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "release": "1.15",
+  "gameVersion": "4.09m",
+  "aircraft": "com.maddox.il2.objects.air.KB_29P",
+  "sourceClass": {
+    "path": "Files\\2083079EF880398E",
+    "sha256": "0E761121A10FD1B3224ED9B29E91895D2C0013C2F411BD08DBF50D2E0E24AB1F",
+    "javaMajor": 47,
+    "flightModel": "FlightModels/B-29.fmd",
+    "cockpitClassBeforePatch": null
+  },
+  "patchedClass": {
+    "path": "Files\\2083079EF880398E",
+    "sha256": "0BC5BDBDFB58E0165CF664940DADA6615750DEC6CA18BF6657266E9E7E779CFB",
+    "javaMajor": 47,
+    "cockpitClasses": [
+      "com.maddox.il2.objects.air.CockpitB29"
+    ]
+  },
+  "cockpitEvidence": {
+    "loadedClassSha256": "4ED9248FB6EC0770CDFAF082F42611EC8C375B2FA9571363834C22C8B618693F",
+    "javaMajor": 46,
+    "mesh": "3DO/Cockpit/B-29/CockpitB29.him",
+    "meshPresentInPayload": true,
+    "compatibility": [
+      "The KB-29P and B-29 already use the same FlightModels/B-29.fmd.",
+      "The tanker exterior is a B-29 derivative and contains the standard cockpit exterior section.",
+      "Only the B-29 pilot cockpit is exposed; B-29 bombardier and gunner stations are not attached to the tanker."
+    ]
+  },
+  "builder": {
+    "script": "tools\\Patch-KB29PQuickMission.ps1",
+    "implementation": "tools\\java\\OpenSturmovikAircraftPatcher.java"
+  },
+  "removedCompetingOverride": "Files/com/maddox/il2/objects/air/KB_29P.class",
+  "runtimeValidation": "pending-after-canonical-class-replacement"
+}

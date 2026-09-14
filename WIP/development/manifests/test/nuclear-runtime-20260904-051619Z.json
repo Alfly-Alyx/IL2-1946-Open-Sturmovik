@@ -1,0 +1,80 @@
+{
+  "schema": "open-sturmovik-nuclear-runtime-observation-v1",
+  "run": "WIP/tests/captures/startup/20260904-051619Z-profile9-warm-windowed1024-startup",
+  "scenario": {
+    "mission": "Nuclear-Little-Boy-Static-Cameras",
+    "map": "Smolensk",
+    "aircraft": "B-29 Silverplate",
+    "weapon": "Little Boy",
+    "surface": "land",
+    "pause_resume_tested": false,
+    "view": "F2 followed by Ctrl+F2; vertical camera stack centered on impact",
+    "selected_camera_per_frame_known": false
+  },
+  "timeline_utc": {
+    "process_detected": "2026-09-04T05:17:01.7273836Z",
+    "mission_load_start": "2026-09-04T05:19:49Z",
+    "mission_playing": "2026-09-04T05:20:06Z",
+    "detonation": "2026-09-04T05:21:08Z",
+    "mission_stop": "2026-09-04T05:26:38Z",
+    "process_end": "2026-09-04T05:26:58.6565159Z"
+  },
+  "nuclear_log": [
+    { "age_ms": 0, "action": "created", "phase": "detonation", "actors": 0, "created": 0, "destroyed": 0, "rise_layers": 0, "target_agl_m": 603 },
+    { "age_ms": 1000, "action": "phase", "phase": "early-rise", "actors": 6, "created": 6, "destroyed": 0, "rise_layers": 0, "target_agl_m": 641 },
+    { "age_ms": 30000, "action": "rise-layer-30s", "phase": "mature-rise", "actors": 7, "created": 7, "destroyed": 0, "rise_layers": 1, "target_agl_m": 1714 },
+    { "age_ms": 90000, "action": "rise-layer-90s", "phase": "mature-rise", "actors": 9, "created": 9, "destroyed": 0, "rise_layers": 2, "target_agl_m": 3766 },
+    { "age_ms": 120000, "action": "phase", "phase": "late-rise", "actors": 9, "created": 9, "destroyed": 0, "rise_layers": 2, "target_agl_m": 4707 },
+    { "age_ms": 130000, "action": "transients-drained", "phase": "late-rise", "actors": 6, "created": 9, "destroyed": 3, "rise_layers": 2, "target_agl_m": 5007 },
+    { "age_ms": 150000, "action": "rise-layer-150s", "phase": "late-rise", "actors": 7, "created": 10, "destroyed": 3, "rise_layers": 3, "target_agl_m": 5590 },
+    { "age_ms": 210000, "action": "rise-layer-210s", "phase": "late-rise", "actors": 9, "created": 12, "destroyed": 3, "rise_layers": 4, "target_agl_m": 7186 },
+    { "age_ms": 270000, "action": "rise-layer-270s", "phase": "late-rise", "actors": 10, "created": 13, "destroyed": 3, "rise_layers": 5, "target_agl_m": 8554 }
+  ],
+  "nuclear_window_0_330_seconds": {
+    "samples": 2426,
+    "not_responding_samples": 0,
+    "mean_cpu_logical_cores": 0.89,
+    "working_set_mib": { "min": 653.11, "max": 659.22 },
+    "private_mib": { "min": 670.65, "max": 676.73 },
+    "virtual_mib": { "min": 1962.61, "max": 1965.11 },
+    "gpu_3d_percent": { "average": 82.35, "max": 97.06 },
+    "gpu_local_mib": { "average": 162.36, "max": 164.47 },
+    "disk_c_busy_percent": { "average": 1.98, "max": 33.78 }
+  },
+  "capture": {
+    "valid_jpeg_frames": 5152,
+    "jpeg_gib": 0.317,
+    "frame_errors": 150,
+    "frame_error_scope": "two window-handle transition intervals before mission start",
+    "visual_mission_coverage": "complete",
+    "new_ntrk_created": false
+  },
+  "visual_checkpoints": [
+    { "age_s": 1, "frame": "screen/frames/frame-001950.jpg", "observation": "white flash fills frame" },
+    { "age_s": 5, "frame": "screen/frames/frame-001987.jpg", "observation": "fireball fills almost entire frame; camera too close" },
+    { "age_s": 30, "frame": "screen/frames/frame-002216.jpg", "observation": "camera engulfed by smoke" },
+    { "age_s": 90, "frame": "screen/frames/frame-002761.jpg", "observation": "smoke occupies most of frame" },
+    { "age_s": 150, "frame": "screen/frames/frame-003313.jpg", "observation": "column visible laterally" },
+    { "age_s": 210, "frame": "screen/frames/frame-003864.jpg", "observation": "terrain only while controller still owns nine actors" },
+    { "age_s": 270, "frame": "screen/frames/frame-004414.jpg", "observation": "camera inside or behind a cloud layer" },
+    { "age_s": 300, "frame": "screen/frames/frame-004689.jpg", "observation": "cloud layer appears at lower edge" }
+  ],
+  "other_findings": [
+    "No nuclear exception, duplicate event or logical reset was logged.",
+    "The programmed rise curve matches all logged checkpoints through 270 seconds.",
+    "The 12 km Little Boy summit at 600 seconds was not reached by this run.",
+    "Vertical impact-centered cameras intersect the rising visual volume and cannot provide a stable full-profile measurement.",
+    "samples/music/menu/ab.wav and music/inflight remain missing.",
+    "The Perfect renderer notices remain expected on Intel UHD 620 with the safe native OpenGL profile."
+  ],
+  "verdict": {
+    "logical_continuity_through_270_seconds": "PASS",
+    "in_mission_responsiveness": "PASS",
+    "memory_stability_through_330_seconds": "PASS",
+    "vertical_camera_alignment_to_impact": "PASS",
+    "stable_full_mushroom_framing": "FAIL",
+    "pause_resume": "NOT TESTED",
+    "summit_12km": "NOT REACHED",
+    "cleanup_3728s": "NOT REACHED"
+  }
+}
