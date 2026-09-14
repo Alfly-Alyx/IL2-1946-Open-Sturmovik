@@ -11,7 +11,7 @@ $repositoryRoot = [IO.Path]::GetFullPath((Join-Path $installerRoot '..\..\..'))
 $scriptPath = Join-Path $installerRoot 'Open_Sturmovik_1.15.iss'
 $assetManifestPath = Join-Path $installerRoot 'assets\source-manifest.json'
 $payloadPath = Join-Path $installerRoot 'Payload'
-$validatedConfHash = '77B73E1F14CB7FEBF9EC14B63A68D42A45AF4BB7D26AA6978DF2143D8C7B6103'
+$validatedConfHash = '769F8C22AC4CD23A351A0BAC57912B9F7746387EEBF550A1756A88F689F45EF1'
 
 function Assert-Condition {
     param(
@@ -49,11 +49,16 @@ $requiredFragments = @(
     '_Game Switchers',
     'RenameFile(CurrentConf, ConfBackupPath)',
     'procedure CurInstallProgressChanged',
+    'procedure PrepareInstallBackgrounds',
+    'procedure ApplyNativeResolution',
+    'GetSystemMetrics(SM_CXSCREEN)',
+    '.open-sturmovik-installing',
+    'Made possible by the community, for the community',
+    'InstallProgressFill',
+    'SetupIconFile=assets\exec-0631d7c4__avion-carte__Windows.ico',
     'BackgroundCount = 8;',
     'Open_Sturmovik_Game.vbs',
-    'Set-OpenSturmovikNativeResolution.ps1',
-    'IconFilename: "{app}\il2fb.exe"',
-    '[Run]'
+    'IconFilename: "{app}\il2fb.exe"'
 )
 
 foreach ($fragment in $requiredFragments) {
@@ -63,6 +68,22 @@ foreach ($fragment in $requiredFragments) {
 Assert-Condition (-not ($source -match '(?im)^\s*Source:\s*"Payload\\Users')) 'Le script Inno ne doit contenir aucune source Payload\Users.'
 Assert-Condition (-not ($source -match '(?i)GetFileVersion|ComparePackedVersion')) 'Le script Inno ne doit pas verifier la version IL-2 presente.'
 Assert-Condition (-not ($source -match '(?im)^\s*LicenseFile=')) 'La page d information ne doit pas imposer une acceptation de licence.'
+Assert-Condition (-not ($source -match '(?im)^\s*\[Run\]')) 'L installeur ne doit lancer aucun programme externe apres extraction.'
+Assert-Condition (-not ($source -match '(?i)ExecutionPolicy\s+Bypass')) 'L installeur ne doit pas contourner la strategie PowerShell.'
+
+$backgroundCallback = [regex]::Match(
+    $source,
+    '(?s)procedure SetInstallBackground.*?(?=procedure ConfigureInstallPage)'
+)
+Assert-Condition $backgroundCallback.Success 'Le bloc SetInstallBackground est introuvable.'
+Assert-Condition (-not $backgroundCallback.Value.Contains('ExtractTemporaryFile')) 'La rotation des fonds ne doit jamais appeler l extracteur pendant la copie du Payload.'
+
+$backgroundPreparation = [regex]::Match(
+    $source,
+    '(?s)procedure PrepareInstallBackgrounds.*?(?=function PrepareToInstall)'
+)
+Assert-Condition $backgroundPreparation.Success 'Le prechargement des fonds est introuvable.'
+Assert-Condition $backgroundPreparation.Value.Contains('ExtractTemporaryFile') 'Les fonds doivent etre extraits avant le debut de la copie.'
 
 $desktopShortcutCount = [regex]::Matches(
     $source,
@@ -71,7 +92,8 @@ $desktopShortcutCount = [regex]::Matches(
 Assert-Condition ($desktopShortcutCount -eq 11) "Le script Inno contient $desktopShortcutCount raccourcis Bureau au lieu de 11."
 
 $assets = Get-Content -LiteralPath $assetManifestPath -Raw | ConvertFrom-Json
-Assert-Condition (@($assets.assets).Count -eq 9) 'Le manifeste doit contenir le logo et huit fonds.'
+Assert-Condition (@($assets.assets).Count -eq 10) 'Le manifeste doit contenir le logo, l icone Windows et huit fonds.'
+Assert-Condition (@($assets.assets | Where-Object { $_.role -eq 'setup-icon' }).Count -eq 1) 'Le manifeste doit contenir exactement une icone d installeur.'
 Assert-Condition (@($assets.assets | Where-Object { $_.role -like 'background-*' }).Count -eq 8) 'Le manifeste doit contenir exactement huit fonds.'
 foreach ($asset in $assets.assets) {
     $path = Join-Path $installerRoot $asset.installerPath

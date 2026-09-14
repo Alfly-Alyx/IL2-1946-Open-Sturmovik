@@ -8,6 +8,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $installerRoot = [IO.Path]::GetFullPath($PSScriptRoot).TrimEnd('\')
+$repositoryRoot = [IO.Path]::GetFullPath((Join-Path $installerRoot '..\..\..')).TrimEnd('\')
 $payloadPath = [IO.Path]::GetFullPath($PayloadRoot).TrimEnd('\')
 $payloadParent = [IO.Path]::GetDirectoryName($payloadPath).TrimEnd('\')
 $payloadName = [IO.Path]::GetFileName($payloadPath)
@@ -30,7 +31,8 @@ if (Test-Path -LiteralPath (Join-Path $payloadPath 'conf.ini')) {
 
 $switcherRoot = Join-Path $payloadPath '_Game Switcher'
 $profileRoot = Join-Path $switcherRoot '4.09m Mods ON (NO 6DOF)'
-$languageRoot = Join-Path $switcherRoot 'Languages\4.09m'
+$payloadLanguageRoot = Join-Path $switcherRoot 'Languages'
+$languageRoot = Join-Path $payloadLanguageRoot '4.09m'
 $i18nRoot = Join-Path $payloadPath 'Files\i18n'
 
 function Copy-CheckedFile {
@@ -54,6 +56,15 @@ function Copy-CheckedFile {
     }
 }
 
+$sourceLanguageRoot = Join-Path $repositoryRoot '_Game Switcher\Languages'
+$sourceLanguageFiles = @(Get-ChildItem -LiteralPath $sourceLanguageRoot -Recurse -Filter '*.properties' -File)
+if ($sourceLanguageFiles.Count -ne 846) {
+    throw "Le depot contient $($sourceLanguageFiles.Count) ressources de langue du switcheur au lieu de 846."
+}
+foreach ($catalogue in $sourceLanguageFiles) {
+    $relativePath = $catalogue.FullName.Substring($sourceLanguageRoot.Length).TrimStart('\')
+    Copy-CheckedFile -Source $catalogue.FullName -Destination (Join-Path $payloadLanguageRoot $relativePath)
+}
 foreach ($fileName in @(
     'il2fb.exe',
     'files.SFS',
@@ -89,6 +100,14 @@ foreach ($musicFile in $musicFiles) {
     Copy-CheckedFile -Source $musicFile.FullName -Destination (Join-Path $musicTarget $musicFile.Name)
 }
 
+$baseI18nRoot = Join-Path $repositoryRoot 'Files\i18n'
+$baseCatalogues = @(Get-ChildItem -LiteralPath $baseI18nRoot -Filter '*.properties' -File)
+if ($baseCatalogues.Count -ne 180) {
+    throw "Le depot contient $($baseCatalogues.Count) catalogues actifs au lieu de 180."
+}
+foreach ($catalogue in $baseCatalogues) {
+    Copy-CheckedFile -Source $catalogue.FullName -Destination (Join-Path $i18nRoot $catalogue.Name)
+}
 $versionCatalogues = @(Get-ChildItem -LiteralPath (Join-Path $languageRoot 'i18n') -Filter '*_fr.properties' -File)
 foreach ($catalogue in $versionCatalogues) {
     Copy-CheckedFile -Source $catalogue.FullName -Destination (Join-Path $i18nRoot $catalogue.Name)
@@ -103,6 +122,8 @@ foreach ($catalogue in $moddedCatalogues) {
 }
 Copy-CheckedFile -Source (Join-Path $switcherRoot 'HudLogStock\MODS\STD\i18n\hud_log_fr.properties') -Destination (Join-Path $i18nRoot 'hud_log_ru.properties')
 
+$sourceConfTemplate = Join-Path $repositoryRoot '_Game Switcher\conf.ini'
+Copy-CheckedFile -Source $sourceConfTemplate -Destination (Join-Path $switcherRoot 'conf.ini')
 $confTemplate = Join-Path $switcherRoot 'conf.ini'
 $confContent = [IO.File]::ReadAllText($confTemplate)
 if ([regex]::Matches($confContent, '(?m)^locale=fr\s*$').Count -ne 1) {
