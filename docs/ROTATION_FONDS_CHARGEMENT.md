@@ -1,12 +1,22 @@
 # Rotation des fonds de chargement Open Sturmovik
 
-État du 11 septembre 2026 — Open Sturmovik v1.15, profils moddés 4.08m, 4.09b et 4.09m, avec ou sans 6DOF. Développement isolé sur `codex/rotation-fonds`. La logique est testée hors jeu. Le premier lancement natif a atteint le helper, mais refusé la texture 1586 × 992. Les copies ont ensuite été réduites sous 4,20 Mo. Deux lancements directs successifs ont changé de fond ; Alexis a confirmé visuellement que le changement fonctionne parfaitement.
+État consolidé le 13 septembre 2026 — Open Sturmovik v1.15, profils moddés 4.08m, 4.09b et 4.09m, avec ou sans 6DOF. Alexis a confirmé visuellement, le 11 septembre, que deux lancements directs successifs affichaient des fonds différents. Les copies TGA réduites sous la limite du moteur, les classes Java, les matériaux, la configuration active et les ressources de gestion sont présents dans le dépôt principal et dans `installer/Payload`.
+
+## Place dans l'installeur et interaction avec l'affichage
+
+L'installeur livre directement les deux classes adaptées, les quatre TGA et leurs matériaux depuis `installer/Payload`. Il ne réinstalle pas le correctif au moyen de l'outil de gestion : les fichiers actifs font déjà partie du pack complet. L'outil reste utile pour choisir les images, activer, désactiver ou retirer le mécanisme de façon contrôlée.
+
+Cette rotation est indépendante de la résolution d'écran. `Set-OpenSturmovikNativeResolution.ps1` met à jour `width`, `height`, `FullScreen`, `ChangeScreenRes` et `SaveAspect` dans le `conf.ini` de la racine avant le lancement. La classe `OpenSturmovikLoadingRotation` choisit ensuite un matériau de chargement dans le moteur. Une panne du choix de fond revient au matériau historique et ne modifie pas la résolution.
+
+Elle est également distincte des huit images PNG de l'assistant Inno Setup : celles-ci changent selon l'avancement de la copie, tandis que les quatre TGA du jeu suivent un cycle persistant entre les démarrages.
+
+Lors du contrôle du 13 septembre, le moteur a bien créé un contexte 1920 × 1080. Le journal contient aussi une tentative refusée de chargement de `GUI/background.tga`, texture de 18 662 400 octets, pour un tampon limité à 4 202 496 octets. Alexis confirme cependant que le fond était visible pendant ce lancement : ce message est non bloquant et ne prouve pas l'absence du fond affiché. Les quatre fonds de rotation placés sous `Files/gui/backgrounds` sont distincts et leur taille est contrôlée avant installation.
 
 ## Utilisation et principe
 
-Après installation et activation, le choix du fond intervient **dans le démarrage du jeu**. On continue donc à ouvrir `il2fb.exe` ou son raccourci habituel. La fenêtre `Open_Sturmovik_Fonds.vbs`, également accessible par `Open_Sturmovik_Fonds.bat`, sert seulement à installer et régler la fonctionnalité. Son interface est portée par `tools/Manage-LoadingRotation.ps1`.
+Après installation et activation, le choix du fond intervient **dans le démarrage du jeu**. On continue donc à ouvrir `il2fb.exe` ou son raccourci habituel. La fenêtre `_Game Switcher/Open_Sturmovik_Fonds.vbs`, également accessible par `_Game Switcher/Open_Sturmovik_Fonds.bat`, sert seulement à installer et régler la fonctionnalité. Son interface est portée par `tools/Manage-LoadingRotation.ps1`.
 
-L'installation laisse la rotation **désactivée**. Dans la fenêtre, choisir de deux à quatre images, puis le mode ordonné ou mélangé. On peut désigner un fond « officiel » : il apparaîtra trois fois par cycle, les autres une fois. Cette préférence exige quatre images ; avec moins de quatre images, le fond officiel serait trop fréquent pour éviter les répétitions consécutives sur la durée.
+L'action `Install` de l'outil de gestion laisse la rotation **désactivée**. Le pack complet 1.15 la livre déjà activée avec la sélection validée ci-dessous. Dans la fenêtre, choisir de deux à quatre images, puis le mode ordonné ou mélangé. On peut désigner un fond « officiel » : il apparaîtra trois fois par cycle, les autres une fois. Cette préférence exige quatre images ; avec moins de quatre images, le fond officiel serait trop fréquent pour éviter les répétitions consécutives sur la durée.
 
 Avec quatre images dont une officielle, six passages peuvent donner : **Officiel → A → Officiel → B → Officiel → C**. Le cycle suivant respecte aussi la différence avec le dernier fond précédent. En mode mélangé, l'ordre varie tout en conservant ces fréquences exactes. Sans fond officiel, chaque image apparaît une fois par cycle.
 
@@ -74,7 +84,7 @@ Omettre `-OfficialId` donne des fréquences égales ; `-Mode ordered` choisit l'
 
 `1C36806AA965835949125E09518425DD45D6E927EB1E055B3E701A5647215D9C`.
 
-Le désassemblage local de cette classe montre la tentative de matériau suffixé par la langue avant le matériau générique. C'est pourquoi l'installation ajoute les variantes linguistiques. Le fichier d'analyse préexistant `WIP/sdk/nuclear-real-api/pause-engine-decompiled/com/maddox/il2/game/Main3D.java`, ligne 703 dans le checkout de référence, appelle `exclusiveDraw("gui/background0.mat")` lorsque `UseStartLog` est désactivé. Ce dernier fichier est une observation de décompilation 4.09m ; il ne constitue pas à lui seul une preuve d'identité avec toute classe active future.
+Le désassemblage local de cette classe montre la tentative de matériau suffixé par la langue avant le matériau générique. C'est pourquoi l'installation ajoute les variantes linguistiques. Le fichier d'analyse préexistant `WIP/dependances/sdk/nuclear-real-api/pause-engine-decompiled/com/maddox/il2/game/Main3D.java`, ligne 703 dans le checkout de référence, appelle `exclusiveDraw("gui/background0.mat")` lorsque `UseStartLog` est désactivé. Ce dernier fichier est une observation de décompilation 4.09m ; il ne constitue pas à lui seul une preuve d'identité avec toute classe active future.
 
 Reproduction depuis la copie de développement :
 
@@ -118,7 +128,7 @@ Un arrêt forcé pendant la sélection peut laisser `selection.lock`. Les démar
 
 Les **49 contrôles de préparation passent**, ainsi que les 25 contrôles de contenu. Le seul avertissement de contenu concerne l'absence normale de vérification par dump d'une exécution, puisque le jeu reste fermé. Les 27 fichiers de rotation correspondent toujours à leurs empreintes. Le manifeste `manifests/loading-rotation-preparation.json` conserve les résultats, les provenances et les empreintes. Cette préparation ne valide ni l'affichage natif ni toutes les fonctions du jeu.
 
-**Provenance vérifiée.** Les 134 fichiers absents ajoutés représentent 2 307 720 642 octets : 45 SFS historiques, `bin` et `lib`, trois DLL de base et les paramètres nécessaires au test. Ils proviennent exclusivement de la copie historique `C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\test-installations\IL 2 Sturmovik 1946 test`, restée en lecture seule. Sa reconstruction DVD 4.07m puis correctifs 4.09m est décrite dans `PROTOCOLE_PREMIER_LANCEMENT.md` et ses démarrages dans `RESULTATS_TESTS_DEMARRAGE_2026-08-30.md`. Le déplacement de cette copie est tracé dans `manifests/test/local-layout-v1.15.json`. Les 52 archives présentes et 17 empreintes de référence ont été contrôlées avant copie. Chaque fichier ajouté a ensuite été comparé par SHA-256 à sa source.
+**Provenance vérifiée.** Les 134 fichiers absents ajoutés représentent 2 307 720 642 octets : 45 SFS historiques, `bin` et `lib`, trois DLL de base et les paramètres nécessaires au test. Ils proviennent exclusivement de la copie historique `C:\Users\Alexis\DATA\Projets\GITHUB\IL2-1946-Open-Sturmovik\WIP\tests\installations\IL 2 Sturmovik 1946 test`, restée en lecture seule. Sa reconstruction DVD 4.07m puis correctifs 4.09m est décrite dans `PROTOCOLE_PREMIER_LANCEMENT.md` et ses démarrages dans `RESULTATS_TESTS_DEMARRAGE_2026-08-30.md`. Le déplacement de cette copie est tracé dans `manifests/test/local-layout-v1.15.json`. Les 52 archives présentes et 17 empreintes de référence ont été contrôlées avant copie. Chaque fichier ajouté a ensuite été comparé par SHA-256 à sa source.
 
 La recherche prioritaire dans `#res/IL2 1946` a également retrouvé l'ISO DVD authentique, vérifié contre son `SOURCE.txt` : SHA-256 `7BA9629BD21B7D4A44AB022FB7AD28E328543F84412113A67C1E03E7747FED78`, taille 3 609 690 112 octets, volume DISK1 du 14 novembre 2006. L'ISO n'a pas été extrait pour cette préparation. Les dossiers intitulés `_4.09m` et l'ancienne référence `WIP/resources/IL2/IL 2 Sturmovik 1946` contiennent désormais des fichiers postérieurs à 4.09m : ils n'ont pas servi de donneurs. Un nom de dossier ne suffit pas à établir une version.
 
@@ -221,4 +231,31 @@ Le lancement direct demandé par Alexis à 04:58:25 UTC utilise le profil 9, **4
 
 Alexis confirme « c’est bon pour moi » et autorise le commit ainsi que la publication sur `v1.15`, sur GitHub et dans le checkout local indiqué. Cette confirmation valide l’affichage de cet essai et la transition depuis l’ancien état. Un cycle de six lancements natifs n’est pas présenté comme réalisé : les fréquences exactes et les frontières restent couvertes par les tests de logique. Les états et empreintes sont conservés dans [`loading-rotation-native-acceptance.json`](../manifests/loading-rotation-native-acceptance.json).
 
-Les ressources sources du module validé sont archivées dans `D:\Projets\GITHUB\#res\IL2 1946\Mods\Utilisés\Open Sturmovik - rotation fonds v1.15 - 2026-09-12`. Les archives antérieures de réserve restent des états historiques. La publication fournit le module optionnel complet et ses outils ; son installation et son activation se font par `Open_Sturmovik_Fonds.vbs`.
+Les ressources sources du module validé sont archivées dans `D:\Projets\GITHUB\#res\IL2 1946\Mods\Utilisés\Open Sturmovik - rotation fonds v1.15 - 2026-09-12`. Les archives antérieures de réserve restent des états historiques. La publication fournit le module optionnel complet et ses outils ; son installation et son activation se font par `_Game Switcher/Open_Sturmovik_Fonds.vbs`.
+
+## Éléments distincts gérés par le sélecteur — 13 septembre 2026
+
+La rotation des fonds de chargement agit dans `Files/gui/backgrounds` par la classe `ConsoleGL0`. Trois autres éléments visuels ne doivent pas être confondus avec elle :
+
+- `Files/background0.tga` est le fond de chargement Maddox choisi automatiquement selon le rapport d’écran ;
+- `Files/gui/Background.tga` est le fond du menu Open Sturmovik, installé en mode moddé et retiré en mode stock ;
+- `Files/B44652EE36C23D32` surcharge `ConsoleGL0Render` pour afficher la version et le mode pendant le chargement initial.
+
+La langue `fr` ou `us` de `[rts] locale=` participe au choix des matériaux suffixés par le moteur. Elle est désormais sélectionnable dans le switcher. Le détail des chaînes stock, dont `V 4.09b1m`, et des chaînes installées se trouve dans `WIP/analyses/affichage-version-chargement/README.md` dans le dépôt de développement.
+## Adaptation native apres installation (13 septembre 2026)
+
+Le profil installe par defaut est le profil 8 : 4.09m Open Sturmovik sans
+6DOF. Pendant la construction du Payload, `Files/background0.tga` recoit le
+fond 4:3 qui correspond au `conf.ini` de repli en 1024 x 768.
+
+Apres la copie de l'installeur, puis avant chaque lancement du jeu,
+`_Game Switcher/Set-OpenSturmovikNativeResolution.ps1` lit la resolution active
+de l'ecran principal. Le rapport largeur/hauteur applique les memes seuils que
+le switcher : 4:3 jusqu'a 1,420 ; 16:10 jusqu'a 1,700 ; 16:9 jusqu'a 2,050 ;
+21:9 jusqu'a 2,800 ; 32:9 au-dela. Le fichier correspondant de
+`_Game Switcher/Resources/Loading Backgrounds/Maddox/<format>/Background.tga`
+est copie dans `Files/background0.tga`. Les champs `background` et `resolution`
+de `_Game Switcher/active-profile.txt` sont actualises avec le resultat.
+
+Fait verifie : cette selection utilise les dimensions detectees au moment de
+l'execution et ne contient aucune resolution propre a l'ecran de developpement.

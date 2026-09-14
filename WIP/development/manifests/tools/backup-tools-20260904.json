@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-04",
+  "backup_root": "D:/Projets/GITHUB/res/IL2 1946/Outils",
+  "role": "backup-only",
+  "working_copy_root": "WIP/dependances/sdk",
+  "items": [
+    {"name":"7z2602-x64.exe","size":1657896,"sha256":"6745FA76DC2EA031596D8678F6F6B99C3C1B435B4164A63485ADBBC7B8D82EF0","category":"compression"},
+    {"name":"7zr.exe","size":602112,"sha256":"56B8CC9F4971CEF253644FAFE54063ED7FDCA551D4DEE0F8C6BAA81B855ACD72","category":"decompression"},
+    {"name":"Actors_Tool_v1.5.7z","size":46902,"sha256":"7FE7F477A9ABB600F1395CA73554939CFA344F8EB2D922AD01C889B82DF95ECA","category":"il2-data"},
+    {"name":"cfr-0.152.jar","size":2162315,"sha256":"F686E8F3DED377D7BC87D216A90E9E9512DF4156E75B06C655A16648AE8765B2","category":"java-decompiler"},
+    {"name":"cfr-0.152.jar.sha256","size":64,"sha256":"29840F06BAFDFFFA74E85AE03D244841579864ECEC670DCB75DD9FE9FE66B374","category":"checksum"},
+    {"name":"dir.bat","size":662,"sha256":"3784F17B88F23EE3AE5E136D78D89D34323E729F8B287D1272264B3C13D18CAF","category":"helper"},
+    {"name":"Eclipse-Temurin-JDK-17.0.20+8-Windows-x64.7z","size":155909076,"sha256":"C0604B706C0CA072D71C72B3BB570C263655BD939EB6E6F5E2E218DA30E65F7A","category":"java-compiler"},
+    {"name":"HEdit_v2.zip","size":164805,"sha256":"73651BA4D8AF84CF4782361F799D3C93C0A4561DEA172B05D912E4EAEF997361","category":"hex-editor"},
+    {"name":"IL-2_Extractor_MikeTool.7z","size":19674,"sha256":"1488677EBAA4CB9F4425D1A97AA14439A4B49FE79710593434C2372C6C69DE10","category":"il2-extractor"},
+    {"name":"IL-2_Selector_4.0.2_Server.zip","size":541507,"sha256":"6E2B01261DBF06C9686FEAA8FF74B28FAD965431D38BED5E2D5F389E9B585219","category":"selector"},
+    {"name":"IL-2_Selector_5.1.2.zip","size":7750929,"sha256":"0F1A8C6DDB4D6062DE84F99583B932C1DE429E1D2D7119DCA8EE69EB7817C7D4","category":"selector"},
+    {"name":"IL-2_Selector_Manual.pdf","size":1057731,"sha256":"CB2765E113D4B46701F4989ECBC859459AE36D3E66407CC15576B4D70CD13F36","category":"documentation"},
+    {"name":"llvm-mingw-20260826-msvcrt-x86_64.zip","size":173072078,"sha256":"5D98777270D28334EA9363AF4EF32BA011D9758EA6AD7D49E1809E997A621A98","category":"windows-x86-compiler"},
+    {"name":"Msh_ConverterEx.7z","size":35956773,"sha256":"D5924F71D979222ACBFE04A65B3A4C9D8EDC628C553EE692E4E2D00ABC7693E7","category":"mesh-converter"},
+    {"name":"Msh_Viewer_64e.7z","size":1341824,"sha256":"4000ECC980E89B02271B43E2A85AAF074B735EB946EE391BC18F6657EA7B72E7","category":"mesh-viewer"},
+    {"name":"NTRKwizard_for410buttons.7z","size":121179,"sha256":"748188B9E0DD9A89CC125E035830E475A86773A58DB4573A80384C817E69728A","category":"buttons-inspector"},
+    {"name":"OpenIL2-source-63031643.bundle","size":12296548,"sha256":"79339D703CBD5831B57489505BC64F29F68B7DFE6A7C20AE1DC5A2A2DC1E4A5A","category":"sfs-source"},
+    {"name":"SFS packer SFSA_v1.1.0.1.rar","size":656646,"sha256":"20860FF878629FA668B34433D8ED14A03D9D34D1BE24BF2333CABF0A913F9F19","category":"sfs-packer"},
+    {"name":"SFS_filelists_2025-10-31.7z","size":32150408,"sha256":"E524511FD019FD61924C83276ADBA697E81CFB7AD2FD94747278C07CCD8D75AF","category":"sfs-filelists"},
+    {"name":"SFSExtractV31.rar","size":7457030,"sha256":"A4AF8FA4DED6BE1D8AC34EAE5A2014E19531A3CDC5715773974C263DB959CB95","category":"sfs-extractor"},
+    {"name":"SFSManager V4.1.rar","size":38415001,"sha256":"D30676013BFD497B2E70A6819C2179D296BDE128B69D87E774EA4963EC1BB751","category":"sfs-manager"},
+    {"name":"Universal_Static.ini_Checker_v1.3.7z","size":81133,"sha256":"FB834AC869CBDBAD92CC216B74DDC35B8BE28CB847BEAC8263B6251A2828947A","category":"ini-validator"},
+    {"name":"ViewIMF.7z","size":18080,"sha256":"618A07034052E376C9665A9697CB6DBB2564308ECDFE8EDF4834F226133E78D3","category":"imf-viewer"}
+  ],
+  "verification": {
+    "openil2_bundle": "git bundle verify: complete history, commit 63031643bd14c0f89255b97a9e954b552ed215f1",
+    "jdk_archive": "7-Zip test: Everything is Ok; 87 folders; 492 files; 317543400 bytes unpacked",
+    "llvm_mingw_archive": "7-Zip test: Everything is Ok; 247 folders; 8986 files; 687725879 bytes unpacked",
+    "wrapper_rebuild": "LLVM 23.1.0 msvcrt; PE32 i386; SHA-256 3A9485BA75ED3E1C2D4CFFD55EC5353DDFE9520F5AC0D77E8F537AC5A13E49F5; cache tests PASS"
+  }
+}

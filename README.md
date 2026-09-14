@@ -28,14 +28,16 @@ les variantes 4.08m et 4.09b, soit neuf profils au total :
 
 Le profil recommandé est **Open Sturmovik 4.09m sans 6DOF**. Le changement de
 profil s'effectue avec `Open_Sturmovik_Switcher.bat`, jeu fermé. Les profils
-Original restaurent les composants officiels correspondants.
+Original restaurent les composants officiels correspondants. Chaque profil dispose de son
+propre dossier complet sous `_Game Switcher` ; voir
+[organisation des profils](docs/ORGANISATION_PROFILS_SWITCHER.md).
 
 La version officielle 4.15.1m ne doit pas être installée par-dessus le profil
 modifié 4.09m.
 
 ## Fonds de chargement
 
-`Open_Sturmovik_Fonds.vbs` permet d'installer, d'activer ou de désactiver la
+[`_Game Switcher/Open_Sturmovik_Fonds.vbs`](_Game%20Switcher/Open_Sturmovik_Fonds.vbs) permet d'installer, d'activer ou de désactiver la
 rotation facultative des fonds de chargement. Les images choisies alternent au
 démarrage du jeu modifié et les fichiers remplacés peuvent être restaurés.
 
@@ -125,9 +127,9 @@ Official version 4.15.1m must not be installed over the modded 4.09m profile.
 
 ## Loading backgrounds
 
-`Open_Sturmovik_Fonds.vbs` installs, enables or disables the optional loading
+`_Game Switcher/Open_Sturmovik_Fonds.vbs` installs, enables or disables the optional loading
 background rotation. The selected images alternate when the modded game starts,
-and replaced files can be restored.
+and replaced files can be restored. See the [loading background documentation](docs/ROTATION_FONDS_CHARGEMENT.md).
 
 ## Name and identity
 
@@ -174,3 +176,10 @@ Game files and works by other authors remain subject to the rights and terms of
 their respective owners. Alfly's license does not replace those terms or place
 the entire pack under a single license. Its scope is explained in
 [docs/LICENSING.md](docs/LICENSING.md).
+
+## Configuration initiale installee
+
+Le nouvel installeur complet prepare par defaut le profil **4.09m Open
+Sturmovik sans 6DOF**, avec HUD standard et langue francaise. Le switcher reste
+disponible pour choisir ensuite une autre version, le mode 6DOF, le HUD ou la
+langue.
