@@ -118,8 +118,13 @@ exec-0631d7c4__avion-carte__Windows.ico, derivee de l'illustration
 exec-0631d7c4__avion-carte__master-1024.
 
 La page de copie reprend une presentation sobre inspiree des anciens
-InstallShield : panneau sombre, filet rouge, informations blanches, barre de
-progression integree et pourcentage visible. Elle affiche en grand
+InstallShield : panneau bleu anthracite, filet rouge, informations blanches,
+barre de progression integree et pourcentage visible. Le style Inno Setup
+modern dark fournit une base sombre et constante aux boites de dialogue, tandis que les
+libelles places sur les photographies sont explicitement affiches en blanc.
+Les panneaux personnalises excluent seClient et seBorder de StyleElements pour
+que leurs couleurs ne soient pas remplacees par le theme Windows.
+Elle affiche en grand
 Open Sturmovik, puis la signature
 Made possible by the community, for the community.
 
@@ -127,7 +132,7 @@ Les huit fonds 1586 x 992 demandes sont ranges dans assets\backgrounds sous
 les noms 01.png a 08.png. Ils ne changent pas selon une minuterie. La
 progression totale de la copie est divisee en huit intervalles ;
 CurInstallProgressChanged choisit l'image correspondant a l'intervalle
-atteint et l'affiche avec une opacite de 112. Les huit PNG sont extraits dans
+atteint et l'affiche avec une opacite de 96. Les huit PNG sont extraits dans
 le dossier temporaire par PrepareInstallBackgrounds, avant le debut de la
 copie du Payload. Le rappel de progression ne fait ensuite qu'afficher un PNG
 deja prepare ; il ne rappelle jamais l'extracteur Inno pendant une extraction.

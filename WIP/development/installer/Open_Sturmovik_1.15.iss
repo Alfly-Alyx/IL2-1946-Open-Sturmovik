@@ -24,12 +24,12 @@ OutputDir=Output
 OutputBaseFilename={#OutputBaseName}
 InfoBeforeFile=NOTICE_INSTALLATION.txt
 SetupIconFile=assets\exec-0631d7c4__avion-carte__Windows.ico
-WizardStyle=modern dynamic
+WizardStyle=modern dark includetitlebar
 WizardBackColor=#101820
 WizardBackColorDynamicDark=#101820
 WizardBackImageFile=assets\backgrounds\01.png
 WizardBackImageFileDynamicDark=assets\backgrounds\01.png
-WizardBackImageOpacity=112
+WizardBackImageOpacity=96
 WizardSmallImageFile=assets\exec-d2e28692__logo-IL2-B__master-1024.png
 WizardImageFile=
 Compression=lzma2/ultra64
@@ -399,7 +399,7 @@ begin
     Images[0] := TPngImage.Create;
     try
       Images[0].LoadFromFile(ExpandConstant('{tmp}\' + FileName));
-      WizardSetBackImage(Images, True, True, 112);
+      WizardSetBackImage(Images, True, True, 96);
     finally
       Images[0].Free;
     end;
@@ -408,15 +408,33 @@ begin
   end;
 end;
 
+procedure SetLightLabel(ALabel: TNewStaticText);
+begin
+  ALabel.StyleElements := ALabel.StyleElements - [seFont];
+  ALabel.Font.Color := clWhite;
+end;
+
+procedure ConfigureWizardForeground;
+begin
+  SetLightLabel(WizardForm.PageNameLabel);
+  WizardForm.PageNameLabel.Font.Style := [fsBold];
+  SetLightLabel(WizardForm.PageDescriptionLabel);
+  WizardForm.PageDescriptionLabel.Font.Color := StrToColor('#DCE6EA');
+
+  SetLightLabel(WizardForm.InfoBeforeClickLabel);
+  SetLightLabel(WizardForm.SelectDirLabel);
+  SetLightLabel(WizardForm.SelectDirBrowseLabel);
+  SetLightLabel(WizardForm.DiskSpaceLabel);
+  SetLightLabel(WizardForm.ReadyLabel);
+  SetLightLabel(WizardForm.PreparingLabel);
+  SetLightLabel(WizardForm.FinishedHeadingLabel);
+  SetLightLabel(WizardForm.FinishedLabel);
+  SetLightLabel(WizardForm.InfoAfterClickLabel);
+end;
+
 procedure ConfigureInstallPage;
 begin
-  WizardForm.PageNameLabel.StyleElements :=
-    WizardForm.PageNameLabel.StyleElements - [seFont];
-  WizardForm.PageNameLabel.Font.Color := clWhite;
-  WizardForm.PageNameLabel.Font.Style := [fsBold];
-  WizardForm.PageDescriptionLabel.StyleElements :=
-    WizardForm.PageDescriptionLabel.StyleElements - [seFont];
-  WizardForm.PageDescriptionLabel.Font.Color := StrToColor('#DCE6EA');
+  ConfigureWizardForeground;
 
   { A restrained installer card inspired by classic InstallShield layouts. }
   InstallCard := TPanel.Create(WizardForm);
@@ -431,6 +449,7 @@ begin
   InstallCard.BevelKind := bkFlat;
   InstallCard.BevelOuter := bvNone;
   InstallCard.ParentBackground := False;
+  InstallCard.StyleElements := InstallCard.StyleElements - [seClient, seBorder];
 
   InstallAccentBar := TPanel.Create(WizardForm);
   InstallAccentBar.Parent := InstallCard;
@@ -442,6 +461,7 @@ begin
   InstallAccentBar.Color := StrToColor('#9C332D');
   InstallAccentBar.BevelOuter := bvNone;
   InstallAccentBar.ParentBackground := False;
+  InstallAccentBar.StyleElements := InstallAccentBar.StyleElements - [seClient, seBorder];
 
   InstallTitleLabel := TNewStaticText.Create(WizardForm);
   InstallTitleLabel.Parent := InstallCard;
@@ -483,6 +503,7 @@ begin
   InstallDivider.Color := StrToColor('#52616A');
   InstallDivider.BevelOuter := bvNone;
   InstallDivider.ParentBackground := False;
+  InstallDivider.StyleElements := InstallDivider.StyleElements - [seClient, seBorder];
 
   WizardForm.StatusLabel.Parent := InstallCard;
   WizardForm.StatusLabel.AutoSize := False;
@@ -534,6 +555,7 @@ begin
   InstallProgressTrack.BevelKind := bkFlat;
   InstallProgressTrack.BevelOuter := bvNone;
   InstallProgressTrack.ParentBackground := False;
+  InstallProgressTrack.StyleElements := InstallProgressTrack.StyleElements - [seClient, seBorder];
 
   InstallProgressFill := TPanel.Create(WizardForm);
   InstallProgressFill.Parent := InstallProgressTrack;
@@ -545,7 +567,9 @@ begin
   InstallProgressFill.Color := StrToColor('#568A4B');
   InstallProgressFill.BevelOuter := bvNone;
   InstallProgressFill.ParentBackground := False;
+  InstallProgressFill.StyleElements := InstallProgressFill.StyleElements - [seClient, seBorder];
 end;
+
 procedure CurInstallProgressChanged(
   CurProgress, MaxProgress: Integer);
 var
