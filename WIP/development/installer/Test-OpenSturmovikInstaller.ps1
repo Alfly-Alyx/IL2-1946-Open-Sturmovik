@@ -27,6 +27,7 @@ function Assert-Condition {
 Assert-Condition (Test-Path -LiteralPath $scriptPath) 'Le script Inno Setup est absent.'
 Assert-Condition (Test-Path -LiteralPath $assetManifestPath) 'Le manifeste des ressources visuelles est absent.'
 Assert-Condition (Test-Path -LiteralPath (Join-Path $installerRoot 'NOTICE_INSTALLATION.txt')) 'La page d information avant installation est absente.'
+Assert-Condition (Test-Path -LiteralPath (Join-Path $installerRoot 'assets\exec-37073acd__logo-IL2-A__master-1024.png')) 'Le logo transparent de l assistant est absent.'
 
 $source = Get-Content -LiteralPath $scriptPath -Raw
 $requiredFragments = @(
@@ -36,8 +37,12 @@ $requiredFragments = @(
     'UsePreviousAppDir=no',
     'Uninstallable=no',
     'InfoBeforeFile=NOTICE_INSTALLATION.txt',
-    'WizardStyle=modern dark includetitlebar',
-    'WizardBackImageOpacity=96',
+    'WizardStyle=modern',
+    'DisableWelcomePage=no',
+    'procedure ConfigureWelcomePage;',
+    'Made possible by the community, for the community',
+    'WizardSmallImageFile=assets\exec-37073acd__logo-IL2-A__master-1024.png',
+    'procedure PositionWizardLogo;',
     'Excludes: "conf.ini"',
     'Payload\_Game Switcher\conf.ini',
     'DestName: "conf.ini"',
@@ -50,21 +55,13 @@ $requiredFragments = @(
     'Open Sturmovik Switcher.exe',
     '_Game Switchers',
     'RenameFile(CurrentConf, ConfBackupPath)',
-    'procedure CurInstallProgressChanged',
-    'procedure PrepareInstallBackgrounds',
     'procedure ApplyNativeResolution',
     'GetSystemMetrics(SM_CXSCREEN)',
     '.open-sturmovik-installing',
-    'Made possible by the community, for the community',
-    'InstallProgressFill',
-    'procedure ConfigureWizardForeground',
-    '[seClient, seBorder]',
     'SetupIconFile=assets\exec-0631d7c4__avion-carte__Windows.ico',
-    'BackgroundCount = 8;',
     'Open_Sturmovik_Game.vbs',
     'IconFilename: "{app}\il2fb.exe"'
 )
-
 foreach ($fragment in $requiredFragments) {
     Assert-Condition ($source.Contains($fragment)) "Regle attendue absente du script Inno : $fragment"
 }
@@ -74,22 +71,11 @@ Assert-Condition (-not ($source -match '(?i)GetFileVersion|ComparePackedVersion'
 Assert-Condition (-not ($source -match '(?im)^\s*LicenseFile=')) 'La page d information ne doit pas imposer une acceptation de licence.'
 Assert-Condition (-not ($source -match '(?im)^\s*\[Run\]')) 'L installeur ne doit lancer aucun programme externe apres extraction.'
 Assert-Condition (-not ($source -match '(?i)ExecutionPolicy\s+Bypass')) 'L installeur ne doit pas contourner la strategie PowerShell.'
-Assert-Condition (-not $source.Contains('WizardStyle=modern dynamic')) 'Le style dynamic rend les textes et panneaux illisibles sur les fonds sombres.'
-
-$backgroundCallback = [regex]::Match(
-    $source,
-    '(?s)procedure SetInstallBackground.*?(?=procedure ConfigureInstallPage)'
-)
-Assert-Condition $backgroundCallback.Success 'Le bloc SetInstallBackground est introuvable.'
-Assert-Condition (-not $backgroundCallback.Value.Contains('ExtractTemporaryFile')) 'La rotation des fonds ne doit jamais appeler l extracteur pendant la copie du Payload.'
-
-$backgroundPreparation = [regex]::Match(
-    $source,
-    '(?s)procedure PrepareInstallBackgrounds.*?(?=function PrepareToInstall)'
-)
-Assert-Condition $backgroundPreparation.Success 'Le prechargement des fonds est introuvable.'
-Assert-Condition $backgroundPreparation.Value.Contains('ExtractTemporaryFile') 'Les fonds doivent etre extraits avant le debut de la copie.'
-
+Assert-Condition (-not ($source -match '(?im)^WizardBack(Image|Color)')) 'L installeur ne doit plus appliquer de fond personnalise.'
+Assert-Condition (-not ($source -match '(?im)^WizardImageFile=')) 'L installeur ne doit pas appliquer de grande image de page personnalisee.'
+Assert-Condition (-not ($source -match '(?im)^\s*Source:\s*"assets\\(backgrounds|heroes)')) 'Aucun fond ne doit etre embarque par l installeur.'
+Assert-Condition (-not $source.Contains('CurInstallProgressChanged')) 'La rotation visuelle abandonnee ne doit plus etre presente.'
+Assert-Condition (-not $source.Contains('PrepareInstallBackgrounds')) 'Le prechargement visuel abandonne ne doit plus etre present.'
 $desktopShortcutCount = [regex]::Matches(
     $source,
     '(?im)^Name:\s*"\{autodesktop\}'
