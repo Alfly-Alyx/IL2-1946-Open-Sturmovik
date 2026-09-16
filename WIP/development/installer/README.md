@@ -5,10 +5,16 @@ Il ne s'agit pas d'un patch pour une ancienne version d'Open Sturmovik.
 Les anciens scripts Inno Setup ne servent pas de reference.
 
 Le Payload final contient 129 483 fichiers pour 26 257 828 361 octets. La
-compilation corrigee avec Inno Setup 7.1.0 a reussi le 14 septembre 2026
-en 4 509,374 secondes (1 h 15 min 09 s). Elle produit huit fichiers .bin,
-un executable Setup et SHA256SUMS.txt pour 7 472 412 328 octets au total,
-manifeste compris.
+compilation definitive de la presentation standard avec Inno Setup 6.7.3 a
+reussi le 15 septembre 2026. Elle a dure 4 765,687 secondes
+(1 h 19 min 26 s) et produit huit fichiers .bin, un executable Setup et
+SHA256SUMS.txt pour 7 446 546 037 octets au total, manifeste compris.
+
+Inno Setup 6.7.3 a ete retenu apres comparaison avec l'ancien installeur 1.1,
+qui a ete compile avec Inno Setup 6.3.0 et utilise lui aussi le lanceur normal
+SetupLdr. Aucun ancien script d'installation n'a ete repris. Le changement de
+compilateur conserve donc l'organisation classique Setup.exe + fichiers .bin,
+sans ajouter de Setup-0.bin.
 
 L'installation est prevue par-dessus un IL-2 Sturmovik 1946 d'origine en
 version 4.07m, 4.08m, 4.09b ou 4.09m. Le script tente de retrouver le dossier
@@ -112,35 +118,28 @@ Le document `docs\ORGANISATION_PROFILS_SWITCHER.md` decrit leur contenu et les
 controles d'integrite.
 ## Identite visuelle
 
-Le logo exec-d2e28692__logo-IL2-B__master-1024.png reste l'image de marque
-affichee par l'assistant. L'executable Setup utilise l'icone Windows
+L'assistant utilise la presentation et les couleurs standard du style moderne
+d'Inno Setup. Il n'embarque aucun fond, aucune colonne illustree et aucun
+panneau personnalise. Cette presentation conserve les controles natifs et leur
+comportement normal sur toutes les versions de Windows.
+
+Une page d'accueil textuelle precede la page Information. Elle affiche
+**Open Sturmovik** en grand puis la formule
+**Made possible by the community, for the community**, sans grande
+illustration.
+
+Le petit logo transparent
+exec-37073acd__logo-IL2-A__master-1024.png apparait en haut a gauche de
+l'en-tete des pages. Le titre et la description sont decales vers la droite
+pour ne jamais le recouvrir. L'executable Setup conserve l'icone Windows
 exec-0631d7c4__avion-carte__Windows.ico, derivee de l'illustration
-exec-0631d7c4__avion-carte__master-1024.
+exec-0631d7c4__avion-carte__master-1024. Les anciennes ressources graphiques
+restent rangees dans assets comme references de travail, sans etre incluses.
 
-La page de copie reprend une presentation sobre inspiree des anciens
-InstallShield : panneau sombre, filet rouge, informations blanches, barre de
-progression integree et pourcentage visible. Elle affiche en grand
-Open Sturmovik, puis la signature
-Made possible by the community, for the community.
-
-Les huit fonds 1586 x 992 demandes sont ranges dans assets\backgrounds sous
-les noms 01.png a 08.png. Ils ne changent pas selon une minuterie. La
-progression totale de la copie est divisee en huit intervalles ;
-CurInstallProgressChanged choisit l'image correspondant a l'intervalle
-atteint et l'affiche avec une opacite de 112. Les huit PNG sont extraits dans
-le dossier temporaire par PrepareInstallBackgrounds, avant le debut de la
-copie du Payload. Le rappel de progression ne fait ensuite qu'afficher un PNG
-deja prepare ; il ne rappelle jamais l'extracteur Inno pendant une extraction.
-
-Cette rotation appartient uniquement a l'assistant d'installation. La
-rotation des fonds de chargement du jeu est un mecanisme distinct. Ses
-lanceurs sont _Game Switcher\Open_Sturmovik_Fonds.vbs et
+La rotation des fonds de chargement du jeu est un mecanisme distinct et reste
+active. Ses lanceurs sont _Game Switcher\Open_Sturmovik_Fonds.vbs et
 _Game Switcher\Open_Sturmovik_Fonds.bat. Il est documente dans
 docs\ROTATION_FONDS_CHARGEMENT.md.
-
-assets\source-manifest.json conserve pour le logo, l'icone et chaque fond son
-chemin source, ses dimensions et son empreinte SHA-256.
-
 ## Parties de 1 Go
 
 Le script Inno active le decoupage avec :
@@ -150,11 +149,11 @@ Le script Inno active le decoupage avec :
     DiskSliceSize=1000000000
 
 Chaque fichier .bin produit est donc limite a 1 000 000 000 octets.
-Write-ReleaseChecksums.ps1 a confirme cette limite pour les huit parties et
-l'executable, puis a produit Output\SHA256SUMS.txt. Six parties font exactement
-1 000 000 000 octets ; la partie 1 fait 982 025 728 octets, la partie 8
-fait 472 411 936 octets et l'executable fait 17 973 775 octets. Toutes les
-parties doivent etre publiees ensemble dans la meme GitHub Release.
+Le controle final a confirme cette limite pour les huit parties et a produit
+Output\SHA256SUMS.txt. Six parties font exactement 1 000 000 000 octets ;
+la partie 1 fait 984 962 048 octets, la partie 8 fait 446 545 533 octets et
+l'executable fait 15 037 567 octets. Les neuf fichiers doivent toujours etre
+conserves et distribues ensemble.
 
 ## Incident du premier essai reel
 
@@ -162,7 +161,9 @@ Le premier essai reel du 14 septembre 2026 s'est interrompu apres la copie
 d'environ 16,14 Gio. Deux causes ont ete observees :
 
 - F-Secure a place Open-Sturmovik-1.15-Setup.exe en quarantaine sous le
-  verdict heuristique Drop.Win32.FakeProgSelfRun.444087 ;
+  verdict heuristique Drop.Win32.FakeProgSelfRun.444087. Une autre compilation
+  avec Inno Setup 7.1.0 a ensuite ete detectee le 15 septembre sous le verdict
+  Drop.Win32.FakeProgSelfRun.413706 ;
 - le rappel de progression tentait d'extraire le fond suivant pendant
   l'extraction du Payload. Le journal contient 186 911 occurrences de
   Cannot call file extractor recursively.
@@ -179,12 +180,20 @@ installeur. Le marqueur est supprime uniquement lorsque
 .open-sturmovik-installed a ete ecrit. Si l'assistant s'arrete normalement
 avant la fin, le conf.ini d'origine est restaure depuis sa sauvegarde.
 
-La sortie corrigee a ete analysee manuellement par F-Secure le 14 septembre
-2026 a 21 h 53 avec les signatures VDF du jour : 10 elements analyses,
-0 element dangereux. Le rapport est conserve dans
-WIP\artifacts\installer\fsecure-scan-corrected-build-20260914.txt. Une
-signature de code Authenticode reste la mesure durable pour reduire les faux
-positifs sur un nouvel executable auto-extractible.
+La sortie definitive reconstruite avec Inno Setup 6.7.3 porte l'empreinte
+SHA-256 suivante pour son executable :
+
+    18BE7C202FC2683F401D24018A6B677FC9BC1E70FE4C4B2425C79379882C7058
+
+Le 15 septembre 2026, une copie de cet executable a ete placee dans un nouveau
+dossier ne beneficiant pas de l'exclusion creee lors de la restauration de
+l'ancienne compilation. Le fichier a ete lu integralement pour recalculer son
+empreinte, est reste present apres le controle et n'a produit aucune nouvelle
+alerte dans le journal F-Secure. Ce resultat valide le correctif avec les
+signatures F-Secure de cette machine au moment du test ; il ne remplace pas la
+classification des autres moteurs antivirus. Une signature de code
+Authenticode reste la mesure durable pour etablir la reputation des prochaines
+versions d'un executable auto-extractible.
 
 ## Preparation et controles
 
@@ -213,11 +222,10 @@ appel a l'extracteur depuis le rappel de progression et tout lancement de
 PowerShell par l'installeur.
 
 Le source Inno est Open_Sturmovik_1.15.iss. La compilation definitive a ete
-realisee avec ISCC.exe 7.1.0 apres validation du contenu. Le controle
-Test-OpenSturmovikInstaller.ps1 execute sur la sortie compilee retourne Status OK.
-L'etape suivante est la reprise controlee de l'installation interrompue, qui
-porte maintenant le marqueur .open-sturmovik-installing et conserve son
-conf.ini d'origine ainsi que conf.ini.bak.
+realisee avec ISCC.exe 6.7.3 apres validation du contenu. Le controle
+Test-OpenSturmovikInstaller.ps1 execute sur la sortie compilee retourne Status
+OK. Aucun essai d'installation n'a ete lance sur la machine de compilation.
+L'etape suivante est un essai controle sur une installation IL-2 de test.
 
 Documentation Inno Setup utilisee :
 

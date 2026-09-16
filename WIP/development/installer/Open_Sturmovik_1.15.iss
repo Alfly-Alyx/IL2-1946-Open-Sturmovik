@@ -12,6 +12,7 @@ AppPublisherURL=https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik
 AppSupportURL=https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik/issues
 VersionInfoVersion=1.15.0.0
 DefaultDirName={code:GetDefaultInstallDir}
+DisableWelcomePage=no
 DisableDirPage=no
 DirExistsWarning=no
 DisableProgramGroupPage=yes
@@ -24,14 +25,8 @@ OutputDir=Output
 OutputBaseFilename={#OutputBaseName}
 InfoBeforeFile=NOTICE_INSTALLATION.txt
 SetupIconFile=assets\exec-0631d7c4__avion-carte__Windows.ico
-WizardStyle=modern dynamic
-WizardBackColor=#101820
-WizardBackColorDynamicDark=#101820
-WizardBackImageFile=assets\backgrounds\01.png
-WizardBackImageFileDynamicDark=assets\backgrounds\01.png
-WizardBackImageOpacity=112
-WizardSmallImageFile=assets\exec-d2e28692__logo-IL2-B__master-1024.png
-WizardImageFile=
+WizardStyle=modern
+WizardSmallImageFile=assets\exec-37073acd__logo-IL2-A__master-1024.png
 Compression=lzma2/ultra64
 SolidCompression=yes
 DiskSpanning=yes
@@ -57,15 +52,6 @@ english.IncompleteMarkerFailed=Setup could not prepare interrupted-installation 
 french.IncompleteMarkerFailed=L'installeur n'a pas pu préparer la reprise après interruption. Aucun fichier d'Open Sturmovik n'a été copié.
 
 [Files]
-; Images placees avant le gros bloc solide pour une extraction temporaire rapide.
-Source: "assets\backgrounds\01.png"; Flags: dontcopy noencryption
-Source: "assets\backgrounds\02.png"; Flags: dontcopy noencryption
-Source: "assets\backgrounds\03.png"; Flags: dontcopy noencryption
-Source: "assets\backgrounds\04.png"; Flags: dontcopy noencryption
-Source: "assets\backgrounds\05.png"; Flags: dontcopy noencryption
-Source: "assets\backgrounds\06.png"; Flags: dontcopy noencryption
-Source: "assets\backgrounds\07.png"; Flags: dontcopy noencryption
-Source: "assets\backgrounds\08.png"; Flags: dontcopy noencryption
 
 ; Fichiers situes directement a la racine du jeu.
 Source: "Payload\*"; DestDir: "{app}"; Excludes: "conf.ini"; Flags: ignoreversion overwritereadonly uninsneveruninstall
@@ -107,7 +93,6 @@ Name: "{autodesktop}\ZipNav"; Filename: "{app}\_Utilities\ZipNav\ZipNavV1.1.exe"
 
 [Code]
 const
-  BackgroundCount = 8;
   UninstallKey = 'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall';
   SM_CXSCREEN = 0;
   SM_CYSCREEN = 1;
@@ -119,16 +104,6 @@ var
   InstallCompleted: Boolean;
   IncompleteMarkerCreated: Boolean;
   IncompleteMarkerPath: String;
-  BackgroundsPrepared: Boolean;
-  LastBackgroundIndex: Integer;
-  InstallCard: TPanel;
-  InstallAccentBar: TPanel;
-  InstallDivider: TPanel;
-  InstallProgressTrack: TPanel;
-  InstallProgressFill: TPanel;
-  InstallTitleLabel: TNewStaticText;
-  InstallTaglineLabel: TNewStaticText;
-  InstallPercentLabel: TNewStaticText;
 
 function GetSystemMetrics(nIndex: Integer): Integer;
   external 'GetSystemMetrics@user32.dll stdcall';
@@ -296,29 +271,6 @@ begin
   Result := Candidate;
 end;
 
-procedure PrepareInstallBackgrounds;
-var
-  I: Integer;
-  FileName: String;
-begin
-  if BackgroundsPrepared then
-    Exit;
-
-  { Extract all images before the main file extractor starts. Calling
-    ExtractTemporaryFile from CurInstallProgressChanged is recursive and can
-    flood the log until Setup terminates. }
-  BackgroundsPrepared := True;
-  for I := 1 to BackgroundCount do
-  begin
-    FileName := Format('0%d.png', [I]);
-    try
-      ExtractTemporaryFile(FileName);
-    except
-      Log(Format('Could not preload installer background %s: %s', [FileName, GetExceptionMessage]));
-    end;
-  end;
-end;
-
 function PrepareToInstall(var NeedsRestart: Boolean): String;
 var
   Root: String;
@@ -332,8 +284,6 @@ begin
     Result := OldOpenSturmovikError(Root);
     Exit;
   end;
-
-  PrepareInstallBackgrounds;
 
   if ConfBackupPrepared then
     Exit;
@@ -372,203 +322,57 @@ begin
   ConfBackupPrepared := True;
 end;
 
-procedure SetInstallBackground(Index: Integer);
+procedure ConfigureWelcomePage;
 var
-  Images: TArrayOfGraphic;
-  FileName: String;
+  ContentWidth: Integer;
 begin
-  if Index < 0 then
-    Index := 0;
-  if Index >= BackgroundCount then
-    Index := BackgroundCount - 1;
-  if Index = LastBackgroundIndex then
-    Exit;
+  { Text-only welcome page before the information notice. }
+  WizardForm.WizardBitmapImage.Visible := False;
+  ContentWidth := WizardForm.WelcomeLabel1.Parent.ClientWidth - ScaleX(64);
 
-  { Mark the interval before loading, so one bad image cannot be retried for
-    every file in the payload. }
-  LastBackgroundIndex := Index;
-  FileName := Format('0%d.png', [Index + 1]);
-  if not FileExists(ExpandConstant('{tmp}\' + FileName)) then
-  begin
-    Log('Installer background was not preloaded: ' + FileName);
-    Exit;
-  end;
+  WizardForm.WelcomeLabel1.AutoSize := False;
+  WizardForm.WelcomeLabel1.Left := ScaleX(32);
+  WizardForm.WelcomeLabel1.Top := ScaleY(105);
+  WizardForm.WelcomeLabel1.Width := ContentWidth;
+  WizardForm.WelcomeLabel1.Height := ScaleY(44);
+  WizardForm.WelcomeLabel1.Alignment := taCenter;
+  WizardForm.WelcomeLabel1.Font.Size := 24;
+  WizardForm.WelcomeLabel1.Font.Style := [fsBold];
+  WizardForm.WelcomeLabel1.Caption := 'Open Sturmovik';
 
-  try
-    SetLength(Images, 1);
-    Images[0] := TPngImage.Create;
-    try
-      Images[0].LoadFromFile(ExpandConstant('{tmp}\' + FileName));
-      WizardSetBackImage(Images, True, True, 112);
-    finally
-      Images[0].Free;
-    end;
-  except
-    Log(Format('Could not display installer background %s: %s', [FileName, GetExceptionMessage]));
-  end;
-end;
-
-procedure ConfigureInstallPage;
-begin
-  WizardForm.PageNameLabel.StyleElements :=
-    WizardForm.PageNameLabel.StyleElements - [seFont];
-  WizardForm.PageNameLabel.Font.Color := clWhite;
-  WizardForm.PageNameLabel.Font.Style := [fsBold];
-  WizardForm.PageDescriptionLabel.StyleElements :=
-    WizardForm.PageDescriptionLabel.StyleElements - [seFont];
-  WizardForm.PageDescriptionLabel.Font.Color := StrToColor('#DCE6EA');
-
-  { A restrained installer card inspired by classic InstallShield layouts. }
-  InstallCard := TPanel.Create(WizardForm);
-  InstallCard.Parent := WizardForm.InstallingPage;
-  InstallCard.Left := ScaleX(22);
-  InstallCard.Top := ScaleY(26);
-  InstallCard.Width :=
-    WizardForm.InstallingPage.ClientWidth - ScaleX(44);
-  InstallCard.Height := ScaleY(210);
-  InstallCard.Caption := '';
-  InstallCard.Color := StrToColor('#17242C');
-  InstallCard.BevelKind := bkFlat;
-  InstallCard.BevelOuter := bvNone;
-  InstallCard.ParentBackground := False;
-
-  InstallAccentBar := TPanel.Create(WizardForm);
-  InstallAccentBar.Parent := InstallCard;
-  InstallAccentBar.Left := 0;
-  InstallAccentBar.Top := 0;
-  InstallAccentBar.Width := ScaleX(4);
-  InstallAccentBar.Height := InstallCard.Height;
-  InstallAccentBar.Caption := '';
-  InstallAccentBar.Color := StrToColor('#9C332D');
-  InstallAccentBar.BevelOuter := bvNone;
-  InstallAccentBar.ParentBackground := False;
-
-  InstallTitleLabel := TNewStaticText.Create(WizardForm);
-  InstallTitleLabel.Parent := InstallCard;
-  InstallTitleLabel.AutoSize := False;
-  InstallTitleLabel.Left := ScaleX(24);
-  InstallTitleLabel.Top := ScaleY(16);
-  InstallTitleLabel.Width := InstallCard.Width - ScaleX(48);
-  InstallTitleLabel.Height := ScaleY(38);
-  InstallTitleLabel.Caption := 'Open Sturmovik';
-  InstallTitleLabel.StyleElements :=
-    InstallTitleLabel.StyleElements - [seFont];
-  InstallTitleLabel.Font.Name := 'Segoe UI';
-  InstallTitleLabel.Font.Size := 24;
-  InstallTitleLabel.Font.Style := [fsBold];
-  InstallTitleLabel.Font.Color := clWhite;
-
-  InstallTaglineLabel := TNewStaticText.Create(WizardForm);
-  InstallTaglineLabel.Parent := InstallCard;
-  InstallTaglineLabel.AutoSize := False;
-  InstallTaglineLabel.Left := ScaleX(26);
-  InstallTaglineLabel.Top := ScaleY(55);
-  InstallTaglineLabel.Width := InstallCard.Width - ScaleX(52);
-  InstallTaglineLabel.Height := ScaleY(20);
-  InstallTaglineLabel.Caption :=
+  WizardForm.WelcomeLabel2.AutoSize := False;
+  WizardForm.WelcomeLabel2.Left := ScaleX(32);
+  WizardForm.WelcomeLabel2.Top := WizardForm.WelcomeLabel1.Top +
+    WizardForm.WelcomeLabel1.Height + ScaleY(14);
+  WizardForm.WelcomeLabel2.Width := ContentWidth;
+  WizardForm.WelcomeLabel2.Height := ScaleY(50);
+  WizardForm.WelcomeLabel2.Alignment := taCenter;
+  WizardForm.WelcomeLabel2.Caption :=
     'Made possible by the community, for the community';
-  InstallTaglineLabel.StyleElements :=
-    InstallTaglineLabel.StyleElements - [seFont];
-  InstallTaglineLabel.Font.Name := 'Segoe UI';
-  InstallTaglineLabel.Font.Size := 9;
-  InstallTaglineLabel.Font.Color := StrToColor('#B9C7CD');
-
-  InstallDivider := TPanel.Create(WizardForm);
-  InstallDivider.Parent := InstallCard;
-  InstallDivider.Left := ScaleX(24);
-  InstallDivider.Top := ScaleY(82);
-  InstallDivider.Width := InstallCard.Width - ScaleX(48);
-  InstallDivider.Height := 1;
-  InstallDivider.Caption := '';
-  InstallDivider.Color := StrToColor('#52616A');
-  InstallDivider.BevelOuter := bvNone;
-  InstallDivider.ParentBackground := False;
-
-  WizardForm.StatusLabel.Parent := InstallCard;
-  WizardForm.StatusLabel.AutoSize := False;
-  WizardForm.StatusLabel.Left := ScaleX(24);
-  WizardForm.StatusLabel.Top := ScaleY(98);
-  WizardForm.StatusLabel.Width := InstallCard.Width - ScaleX(126);
-  WizardForm.StatusLabel.Height := ScaleY(20);
-  WizardForm.StatusLabel.StyleElements :=
-    WizardForm.StatusLabel.StyleElements - [seFont];
-  WizardForm.StatusLabel.Font.Color := clWhite;
-  WizardForm.StatusLabel.Font.Style := [fsBold];
-
-  InstallPercentLabel := TNewStaticText.Create(WizardForm);
-  InstallPercentLabel.Parent := InstallCard;
-  InstallPercentLabel.AutoSize := False;
-  InstallPercentLabel.Left := InstallCard.Width - ScaleX(94);
-  InstallPercentLabel.Top := ScaleY(95);
-  InstallPercentLabel.Width := ScaleX(70);
-  InstallPercentLabel.Height := ScaleY(24);
-  InstallPercentLabel.Alignment := taRightJustify;
-  InstallPercentLabel.Caption := '0 %';
-  InstallPercentLabel.StyleElements :=
-    InstallPercentLabel.StyleElements - [seFont];
-  InstallPercentLabel.Font.Color := clWhite;
-  InstallPercentLabel.Font.Style := [fsBold];
-  InstallPercentLabel.Font.Size := 11;
-
-  WizardForm.FilenameLabel.Parent := InstallCard;
-  WizardForm.FilenameLabel.AutoSize := False;
-  WizardForm.FilenameLabel.Left := ScaleX(24);
-  WizardForm.FilenameLabel.Top := ScaleY(124);
-  WizardForm.FilenameLabel.Width := InstallCard.Width - ScaleX(48);
-  WizardForm.FilenameLabel.Height := ScaleY(34);
-  WizardForm.FilenameLabel.WordWrap := True;
-  WizardForm.FilenameLabel.StyleElements :=
-    WizardForm.FilenameLabel.StyleElements - [seFont];
-  WizardForm.FilenameLabel.Font.Color := StrToColor('#DCE6EA');
-
-  WizardForm.ProgressGauge.Visible := False;
-
-  InstallProgressTrack := TPanel.Create(WizardForm);
-  InstallProgressTrack.Parent := InstallCard;
-  InstallProgressTrack.Left := ScaleX(24);
-  InstallProgressTrack.Top := ScaleY(170);
-  InstallProgressTrack.Width := InstallCard.Width - ScaleX(48);
-  InstallProgressTrack.Height := ScaleY(18);
-  InstallProgressTrack.Caption := '';
-  InstallProgressTrack.Color := StrToColor('#34434C');
-  InstallProgressTrack.BevelKind := bkFlat;
-  InstallProgressTrack.BevelOuter := bvNone;
-  InstallProgressTrack.ParentBackground := False;
-
-  InstallProgressFill := TPanel.Create(WizardForm);
-  InstallProgressFill.Parent := InstallProgressTrack;
-  InstallProgressFill.Left := 1;
-  InstallProgressFill.Top := 1;
-  InstallProgressFill.Width := 1;
-  InstallProgressFill.Height := InstallProgressTrack.Height - 2;
-  InstallProgressFill.Caption := '';
-  InstallProgressFill.Color := StrToColor('#568A4B');
-  InstallProgressFill.BevelOuter := bvNone;
-  InstallProgressFill.ParentBackground := False;
 end;
-procedure CurInstallProgressChanged(
-  CurProgress, MaxProgress: Integer);
+procedure PositionWizardLogo;
 var
-  Index: Integer;
-  FillWidth: Integer;
+  TextLeft: Integer;
 begin
-  if MaxProgress <= 0 then
-    Exit;
+  WizardForm.WizardSmallBitmapImage.AutoSize := False;
+  WizardForm.WizardSmallBitmapImage.Stretch := True;
+  WizardForm.WizardSmallBitmapImage.BackColor := WizardForm.MainPanel.Color;
+  WizardForm.WizardSmallBitmapImage.Left := ScaleX(10);
+  WizardForm.WizardSmallBitmapImage.Top := ScaleY(8);
+  WizardForm.WizardSmallBitmapImage.Width := ScaleX(48);
+  WizardForm.WizardSmallBitmapImage.Height := ScaleY(48);
 
-  FillWidth :=
-    ((InstallProgressTrack.Width - 2) * CurProgress) div MaxProgress;
-  if FillWidth < 1 then
-    FillWidth := 1;
-  if FillWidth > InstallProgressTrack.Width - 2 then
-    FillWidth := InstallProgressTrack.Width - 2;
-  InstallProgressFill.Width := FillWidth;
-  InstallPercentLabel.Caption :=
-    Format('%d %%', [(CurProgress * 100) div MaxProgress]);
-
-  Index := (CurProgress * BackgroundCount) div MaxProgress;
-  SetInstallBackground(Index);
+  TextLeft := WizardForm.WizardSmallBitmapImage.Left +
+    WizardForm.WizardSmallBitmapImage.Width + ScaleX(12);
+  WizardForm.PageNameLabel.Left := TextLeft;
+  WizardForm.PageNameLabel.Width :=
+    WizardForm.WizardSmallBitmapImage.Parent.ClientWidth -
+    TextLeft - ScaleX(12);
+  WizardForm.PageDescriptionLabel.Left := TextLeft;
+  WizardForm.PageDescriptionLabel.Width :=
+    WizardForm.WizardSmallBitmapImage.Parent.ClientWidth -
+    TextLeft - ScaleX(12);
 end;
-
 procedure InitializeWizard;
 begin
   ConfBackupCreated := False;
@@ -576,9 +380,8 @@ begin
   InstallCompleted := False;
   IncompleteMarkerCreated := False;
   IncompleteMarkerPath := '';
-  BackgroundsPrepared := False;
-  LastBackgroundIndex := -1;
-  ConfigureInstallPage;
+  PositionWizardLogo;
+  ConfigureWelcomePage;
 end;
 
 procedure UpdateActiveProfileResolution(
@@ -693,13 +496,11 @@ begin
   Log('Native resolution applied: ' + IntToStr(Width) + 'x' +
     IntToStr(Height) + ', loading background ' + BackgroundFormat + '.');
 end;
+
 procedure CurStepChanged(CurStep: TSetupStep);
 var
   MarkerPath: String;
 begin
-  if CurStep = ssInstall then
-    SetInstallBackground(0);
-
   if CurStep = ssPostInstall then
     ApplyNativeResolution;
 
