@@ -20,6 +20,16 @@ Le pack est principalement construit autour d'IL-2 4.09m, tout en permettant de 
 
 Open Sturmovik n'est pas un jeu autonome. IL-2 Sturmovik 1946 doit déjà être installé.
 
+### Histoire du pack
+
+Open Sturmovik naît en 2006 comme un pack destiné à une escadrille virtuelle. Il rassemble alors différents mods de la communauté autour des versions 4.08 et 4.09 d'IL-2 1946.
+
+Ces créations n'ayant pas toujours été conçues pour fonctionner ensemble, les premières versions demandaient de nombreux réglages et pouvaient rencontrer des incompatibilités. Une version complète 1.0, puis un patch 1.1, ont été distribués pour faire évoluer le pack.
+
+La version 1.15 reprend ce travail sous la forme d'une reconstruction complète. Elle réorganise les versions originales et modifiées, corrige les incompatibilités retrouvées et fournit un installeur complet accompagné d'un switcher unique.
+
+Open Sturmovik conserve les moteurs historiques 4.08m, 4.09b et 4.09m afin de préserver les contenus et les mods créés pour cette période du jeu.
+
 ### Ce que propose la version 1.15
 
 Le switcher donne accès à neuf profils :
@@ -73,6 +83,16 @@ It brings together aircraft, maps, campaigns, missions, sounds, visual enhanceme
 The pack is mainly built around IL-2 4.09m while also allowing players to use versions 4.08m and 4.09b or return to the original game.
 
 Open Sturmovik is not a standalone game. IL-2 Sturmovik 1946 must already be installed.
+
+### History of the pack
+
+Open Sturmovik began in 2006 as a pack created for a virtual squadron. It brought together different community mods built around the 4.08 and 4.09 versions of IL-2 1946.
+
+Because these creations were not always designed to work together, the early versions required many adjustments and could suffer from compatibility problems. A complete version 1.0, followed by a 1.1 patch, was distributed as the pack evolved.
+
+Version 1.15 rebuilds the pack as a complete installation. It reorganizes the original and modded versions, fixes the compatibility problems that were found, and provides a complete installer with a single switcher.
+
+Open Sturmovik retains the historical 4.08m, 4.09b and 4.09m engines in order to preserve the content and mods created for that period of the game.
 
 ### What version 1.15 provides
 
