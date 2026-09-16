@@ -16,7 +16,7 @@ Open Sturmovik est une extension communautaire non officielle pour **IL-2 Sturmo
 
 Le projet a été créé par Alfly en 2006 pour une escadrille virtuelle. La version 1.15 reconstruit cet ensemble historique, corrige les incompatibilités retrouvées et réunit le jeu modifié, le sélecteur de profils, les outils et les ressources nécessaires.
 
-Une copie légitime d'IL-2 Sturmovik 1946 est indispensable. Open Sturmovik ne constitue pas un jeu autonome.
+IL-2 Sturmovik 1946 est indispensable. Open Sturmovik ne constitue pas un jeu autonome.
 
 ### Télécharger et installer
 
@@ -65,20 +65,6 @@ Cela représente neuf profils complets. Le sélecteur permet également de chois
 - Polski.
 
 La structure exacte des profils est décrite dans [Organisation des profils du switcher](docs/ORGANISATION_PROFILS_SWITCHER.md).
-
-### Protection des données du joueur
-
-L'installeur ne copie rien dans le dossier **Users**. Le nom du joueur, les profils, les commandes, les préférences, les campagnes et la progression sont conservés.
-
-Les fichiers déjà présents dans **Missions** et **PaintSchemes** ne sont pas remplacés. Le pack ajoute uniquement les éléments absents dans ces deux dossiers.
-
-Le fichier **conf.ini** constitue l'exception volontaire :
-
-1. le fichier existant est sauvegardé sous **conf.ini.bak** ;
-2. si cette sauvegarde existe déjà, un nom daté est utilisé ;
-3. le conf.ini du pack est installé ;
-4. la résolution native et le plein écran sont appliqués ;
-5. si l'installation est interrompue, l'ancien conf.ini est restauré lorsque cela reste possible.
 
 ### Raccourcis et utilitaires
 
