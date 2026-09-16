@@ -1,213 +1,219 @@
 # Open Sturmovik 1.15
 
-Open Sturmovik est un projet personnel d'Alfly qui regroupe, adapte et rend
-compatibles des améliorations créées pour **IL-2 Sturmovik 1946**. Son objectif
-est de proposer à la communauté et à tout joueur intéressé une version enrichie
-du jeu, belle, réaliste, cohérente et facile à installer.
+**Made possible by the community, for the community.**
 
-Le projet est né en 2006 comme pack destiné à une escadrille virtuelle. Les
-premières versions souffraient de nombreux conflits entre mods. Le travail
-actuel consiste à reconstruire cet ensemble et à corriger ces incompatibilités
-afin d'obtenir la version la plus fiable et utilisable possible.
+[Français](#français) · [English](#english)
 
-Open Sturmovik est une extension communautaire non officielle. Une installation
-du jeu IL-2 Sturmovik 1946 reste nécessaire.
-
-## Version 1.15
-
-La version 1.15 est une installation complète d'Open Sturmovik. Elle ne
-constitue pas un patch de la version 1.10 et ne demande pas qu'une ancienne
-version d'Open Sturmovik soit déjà installée.
-
-La base modifiée stable reste IL-2 1946 **4.09m**. Le sélecteur propose aussi
-les variantes 4.08m et 4.09b, soit neuf profils au total :
-
-- Original ;
-- Open Sturmovik sans 6DOF ;
-- Open Sturmovik avec 6DOF.
-
-Le profil recommandé est **Open Sturmovik 4.09m sans 6DOF**. Le changement de
-profil s'effectue avec `Open_Sturmovik_Switcher.bat`, jeu fermé. Les profils
-Original restaurent les composants officiels correspondants. Chaque profil dispose de son
-propre dossier complet sous `_Game Switcher` ; voir
-[organisation des profils](docs/ORGANISATION_PROFILS_SWITCHER.md).
-
-La version officielle 4.15.1m ne doit pas être installée par-dessus le profil
-modifié 4.09m.
-
-## Feuille de route
-
-### Version 1.15
-
-- Améliorer la stabilité et la vitesse de chargement du jeu.
-- Améliorer les réglages de config.ini.
-- Mettre à jour les bibliothèques.
-- Mettre à jour les exécutables.
-- Consolider Open Sturmovik dans des fichiers SFS.
-
-### Version 1.2
-
-- Mettre à jour Open Sturmovik vers IL-2 4.12.
-- Ajouter du nouveau contenu.
-## Fonds de chargement
-
-[`_Game Switcher/Open_Sturmovik_Fonds.vbs`](_Game%20Switcher/Open_Sturmovik_Fonds.vbs) permet d'installer, d'activer ou de désactiver la
-rotation facultative des fonds de chargement. Les images choisies alternent au
-démarrage du jeu modifié et les fichiers remplacés peuvent être restaurés.
-
-## Nom et identité
-
-Le nom **Open Sturmovik** est associé à ce projet depuis 2006. « Open » exprime
-son ouverture au partage, aux contributions et aux
-modifications non commerciales. « Sturmovik » est un clin d'œil au premier
-IL-2 Sturmovik, sorti en 2001.
-
-Les forks sont permis s'ils sont clairement présentés comme des versions
-dérivées et conservent les mentions d'origine et les crédits. Afin d'éviter
-toute confusion avec ce projet, un projet distinct devrait employer un autre
-nom.
-
-## Images et créations communautaires
-
-Plusieurs icônes, fonds d'écran et autres visuels sont des remixes d'images des
-précédents titres de la série, notamment IL-2 Sturmovik (2001), Forgotten
-Battles et Pacific Fighters. Les fonds des menus de missions et de pays
-proviennent aussi de captures d'écran partagées par la communauté.
-
-Ces éléments rendent hommage au jeu et à sa communauté. Alfly ne revendique pas
-la création des œuvres d'origine, des mods ou des captures utilisées.
-
-## Crédits et contributions
-
-La perte d'un ancien disque dur a fait disparaître une partie des archives qui
-permettaient d'identifier précisément tous les mods et leurs auteurs. Les
-crédits sont reconstruits au fur et à mesure que les sources sont retrouvées.
-
-Si vous reconnaissez votre travail, vous pouvez demander l'ajout ou la
-correction d'un crédit. Vous pouvez également proposer une création et préciser
-les conditions autorisant son intégration. Dans les deux cas, utilisez les
-[discussions du dépôt GitHub](https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik/discussions).
-
-Les attributions actuellement connues figurent dans les
-[crédits](<_Documentations/Mods and Tools/Credits - Open Sturmovik.md>) et les
-[notices des composants tiers](docs/THIRD_PARTY_NOTICES.md).
-
-## Utilisation, modification et partage
-
-Les contributions originales d'Alfly peuvent être téléchargées, utilisées,
-copiées, modifiées, partagées sur Internet et intégrées à des forks dans un
-cadre non commercial, selon les conditions de [LICENSE.md](LICENSE.md). Tout
-usage commercial est interdit.
-
-Les fichiers du jeu et les créations d'autres auteurs restent soumis aux droits
-et conditions de leurs propriétaires. La licence d'Alfly ne les remplace pas et
-ne place pas l'ensemble du pack sous une licence unique. Le périmètre est
-détaillé dans [docs/LICENSING.md](docs/LICENSING.md).
+[**Télécharger / Download Open Sturmovik 1.15**](https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik/releases/tag/v1.15)
 
 ---
 
-# English version
+## Français
 
-Open Sturmovik is a personal project by Alfly that brings together, adapts and
-makes compatible enhancements created for **IL-2 Sturmovik 1946**. Its purpose
-is to offer the community and any interested player an enhanced version of the
-game that is beautiful, realistic, consistent and easy to install.
+### Présentation
 
-The project began in 2006 as a pack for a virtual squadron. Its early versions
-suffered from many conflicts between mods. The current work rebuilds this
-collection and fixes those incompatibilities to make Open Sturmovik as reliable
-and usable as possible.
+Open Sturmovik est une extension communautaire non officielle pour **IL-2 Sturmovik 1946**. Le projet rassemble, adapte et rend compatibles des améliorations créées par la communauté afin de proposer une installation cohérente et simple à utiliser.
 
-Open Sturmovik is an unofficial community expansion. An installation of
-IL-2 Sturmovik 1946 is still required.
+Le projet a été créé par Alfly en 2006 pour une escadrille virtuelle. La version 1.15 reconstruit cet ensemble historique, corrige les incompatibilités retrouvées et réunit le jeu modifié, le sélecteur de profils, les outils et les ressources nécessaires.
 
-## Version 1.15
+Une copie légitime d'IL-2 Sturmovik 1946 est indispensable. Open Sturmovik ne constitue pas un jeu autonome.
 
-Version 1.15 is a complete Open Sturmovik installation. It is not a patch for
-version 1.10 and does not require a previous version of Open Sturmovik.
+### Télécharger et installer
 
-The stable modded base remains IL-2 1946 **4.09m**. The switcher also offers
-the 4.08m and 4.09b variants, for a total of nine profiles:
+La version 1.15 est une **installation complète d'Open Sturmovik**. Ce n'est pas un patch à appliquer sur une ancienne version du pack.
 
-- Original;
+1. Ouvrez la [release Open Sturmovik 1.15](https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik/releases/tag/v1.15).
+2. Téléchargez **Open-Sturmovik-1.15-Setup.exe** et les huit fichiers **Open-Sturmovik-1.15-Setup-1.bin** à **Open-Sturmovik-1.15-Setup-8.bin**.
+3. Placez les neuf fichiers dans le même dossier.
+4. Lancez uniquement **Open-Sturmovik-1.15-Setup.exe**.
+5. Sélectionnez le dossier de votre installation IL-2 Sturmovik 1946.
+
+Les fichiers BIN sont les données de l'installeur. Ils sont lus automatiquement par Setup.exe et ne doivent pas être ouverts séparément. **SHA256SUMS.txt** permet de vérifier l'intégrité de chaque téléchargement.
+
+L'installation est prévue par-dessus une installation IL-2 d'origine en version **4.07m, 4.08m, 4.09b ou 4.09m**. L'installeur propose un chemin probable, mais ne vérifie pas la version du jeu choisie. Il refuse en revanche un dossier qui contient déjà une ancienne installation d'Open Sturmovik.
+
+### Configuration installée par défaut
+
+Après l'installation, le jeu est configuré avec :
+
+- IL-2 **4.09m** ;
+- Open Sturmovik **sans 6DOF** ;
+- HUD standard ;
+- langue française ;
+- affichage plein écran ;
+- détection automatique de la résolution native de l'écran principal ;
+- volume de musique réglé sur 2.
+
+Le sélecteur permet ensuite de changer cette configuration, jeu fermé.
+
+### Sélecteur de profils
+
+Le switcher propose les trois moteurs **4.08m**, **4.09b** et **4.09m**. Chacun possède trois modes :
+
+- jeu original ;
+- Open Sturmovik sans 6DOF ;
+- Open Sturmovik avec 6DOF.
+
+Cela représente neuf profils complets. Le sélecteur permet également de choisir le HUD **Standard** ou **Immersion** et la langue du jeu :
+
+- Français ;
+- English ;
+- Deutsch ;
+- Русский ;
+- Čeština ;
+- Magyar ;
+- Polski.
+
+La structure exacte des profils est décrite dans [Organisation des profils du switcher](docs/ORGANISATION_PROFILS_SWITCHER.md).
+
+### Protection des données du joueur
+
+L'installeur ne copie rien dans le dossier **Users**. Le nom du joueur, les profils, les commandes, les préférences, les campagnes et la progression sont conservés.
+
+Les fichiers déjà présents dans **Missions** et **PaintSchemes** ne sont pas remplacés. Le pack ajoute uniquement les éléments absents dans ces deux dossiers.
+
+Le fichier **conf.ini** constitue l'exception volontaire :
+
+1. le fichier existant est sauvegardé sous **conf.ini.bak** ;
+2. si cette sauvegarde existe déjà, un nom daté est utilisé ;
+3. le conf.ini du pack est installé ;
+4. la résolution native et le plein écran sont appliqués ;
+5. si l'installation est interrompue, l'ancien conf.ini est restauré lorsque cela reste possible.
+
+### Raccourcis et utilitaires
+
+L'installation crée des raccourcis de Bureau pour :
+
+- lancer Open Sturmovik avec adaptation à la résolution de l'écran ;
+- ouvrir le switcher ;
+- accéder aux utilitaires livrés avec le pack.
+
+Aucun utilitaire n'est lancé automatiquement pendant l'installation.
+
+### Fonds de chargement
+
+Les profils modifiés peuvent utiliser la rotation des fonds de chargement Open Sturmovik. Le système choisit les ressources adaptées au profil et à la langue, tout en conservant un mécanisme de désactivation et de restauration.
+
+Voir [Rotation des fonds de chargement](docs/ROTATION_FONDS_CHARGEMENT.md).
+
+### Documentation
+
+- [Organisation des profils du switcher](docs/ORGANISATION_PROFILS_SWITCHER.md)
+- [Rotation des fonds de chargement](docs/ROTATION_FONDS_CHARGEMENT.md)
+- [Licence et périmètre](docs/LICENSING.md)
+- [Notices des composants tiers](docs/THIRD_PARTY_NOTICES.md)
+- [Crédits détaillés](<_Documentations/Mods and Tools/Credits - Open Sturmovik.md>)
+
+### Licence, crédits et contributions
+
+Les contributions originales d'Alfly sont utilisables, modifiables et partageables dans un cadre non commercial selon [LICENSE.md](LICENSE.md). Tout usage commercial de ces contributions est interdit.
+
+IL-2 Sturmovik 1946, les mods, les outils, les illustrations, les sons et les autres contenus tiers conservent les droits et conditions de leurs auteurs. Leur présence dans Open Sturmovik ne les place pas sous la licence d'Alfly.
+
+Une partie des anciennes archives de crédits a été perdue. Si vous reconnaissez votre travail ou souhaitez corriger une attribution, utilisez les [discussions GitHub](https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik/discussions).
+
+---
+
+## English
+
+### Overview
+
+Open Sturmovik is an unofficial community expansion for **IL-2 Sturmovik 1946**. It brings together, adapts and makes compatible enhancements created by the community in order to provide a consistent package that is easy to install and use.
+
+Alfly started the project in 2006 for a virtual squadron. Version 1.15 rebuilds that historical collection, fixes the incompatibilities that were found, and brings together the modded game, profile switcher, utilities and required resources.
+
+A legitimate copy of IL-2 Sturmovik 1946 is required. Open Sturmovik is not a standalone game.
+
+### Download and installation
+
+Version 1.15 is a **complete Open Sturmovik installation**. It is not a patch for an older version of the pack.
+
+1. Open the [Open Sturmovik 1.15 release](https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik/releases/tag/v1.15).
+2. Download **Open-Sturmovik-1.15-Setup.exe** and all eight files from **Open-Sturmovik-1.15-Setup-1.bin** through **Open-Sturmovik-1.15-Setup-8.bin**.
+3. Place all nine files in the same folder.
+4. Run **Open-Sturmovik-1.15-Setup.exe** only.
+5. Select your IL-2 Sturmovik 1946 installation folder.
+
+The BIN files contain the installer data. Setup.exe reads them automatically; do not open them separately. Use **SHA256SUMS.txt** to verify the integrity of every downloaded file.
+
+Installation is intended for an original IL-2 installation running **4.07m, 4.08m, 4.09b or 4.09m**. Setup suggests a likely installation path but does not verify the selected game version. It does refuse a folder that already contains an older Open Sturmovik installation.
+
+### Default configuration
+
+After installation, the game starts with:
+
+- IL-2 **4.09m**;
+- Open Sturmovik **without 6DOF**;
+- standard HUD;
+- French language;
+- full-screen display;
+- automatic detection of the primary monitor's native resolution;
+- music volume set to 2.
+
+The switcher can change these settings afterward while the game is closed.
+
+### Profile switcher
+
+The switcher provides the **4.08m**, **4.09b** and **4.09m** engines. Each engine has three modes:
+
+- original game;
 - Open Sturmovik without 6DOF;
 - Open Sturmovik with 6DOF.
 
-The recommended profile is **Open Sturmovik 4.09m without 6DOF**. Run
-`Open_Sturmovik_Switcher.bat` while the game is closed to change profiles. The
-Original profiles restore the corresponding official components.
+This gives a total of nine complete profiles. The switcher also selects the **Standard** or **Immersion** HUD and the game language:
 
-Official version 4.15.1m must not be installed over the modded 4.09m profile.
+- Français;
+- English;
+- Deutsch;
+- Русский;
+- Čeština;
+- Magyar;
+- Polski.
 
-## Roadmap
+The exact profile layout is documented in [Switcher profile organization](docs/ORGANISATION_PROFILS_SWITCHER.md).
 
-### Version 1.15
+### Player data protection
 
-- Improve game loading stability and speed.
-- Improve config.ini.
-- Update libraries.
-- Update executables.
-- Consolidate Open Sturmovik into SFS files.
+Setup never copies files into the **Users** folder. Player names, profiles, controls, preferences, campaigns and progress are preserved.
 
-### Version 1.2
+Existing files in **Missions** and **PaintSchemes** are not overwritten. The pack only adds missing items to those two folders.
 
-- Update Open Sturmovik to IL-2 4.12.
-- Add new content.
-## Loading backgrounds
+The **conf.ini** file is the deliberate exception:
 
-`_Game Switcher/Open_Sturmovik_Fonds.vbs` installs, enables or disables the optional loading
-background rotation. The selected images alternate when the modded game starts,
-and replaced files can be restored. See the [loading background documentation](docs/ROTATION_FONDS_CHARGEMENT.md).
+1. the existing file is backed up as **conf.ini.bak**;
+2. if that backup already exists, a dated name is used;
+3. the pack's conf.ini is installed;
+4. native resolution and full-screen mode are applied;
+5. if installation is interrupted, Setup restores the previous conf.ini whenever possible.
 
-## Name and identity
+### Shortcuts and utilities
 
-The name **Open Sturmovik** has been associated with this project since 2006.
-“Open” expresses its openness to sharing, contributions and non-commercial
-modifications. “Sturmovik” is a reference to the first IL-2 Sturmovik, released
-in 2001.
+Setup creates Desktop shortcuts for:
 
-Forks are allowed when they are clearly presented as derivative versions and
-retain the original notices and credits. To avoid confusion with this project,
-a separate project should use a different name.
+- launching Open Sturmovik with automatic screen-resolution adjustment;
+- opening the profile switcher;
+- accessing the utilities included with the pack.
 
-## Images and community creations
+No utility is launched automatically during installation.
 
-Several icons, backgrounds and other visuals are remixes of images from earlier
-games in the series, including IL-2 Sturmovik (2001), Forgotten Battles and
-Pacific Fighters. Mission and country menu backgrounds also come from
-screenshots shared by the community.
+### Loading backgrounds
 
-These elements pay tribute to the game and its community. Alfly does not claim
-authorship of the original works, mods or screenshots used.
+Modded profiles can use the Open Sturmovik loading-background rotation. The system selects resources for the active profile and language and retains options to disable the feature or restore replaced files.
 
-## Credits and contributions
+See [Loading background rotation](docs/ROTATION_FONDS_CHARGEMENT.md).
 
-The loss of an old hard drive destroyed some of the archives that identified
-every mod and its author. The credits are being rebuilt as sources are found.
+### Documentation
 
-If you recognize your work, you may request that a credit be added or corrected.
-You may also submit a creation and state the terms that authorize its inclusion.
-In both cases, use the
-[GitHub repository discussions](https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik/discussions).
+- [Switcher profile organization](docs/ORGANISATION_PROFILS_SWITCHER.md)
+- [Loading background rotation](docs/ROTATION_FONDS_CHARGEMENT.md)
+- [Licensing scope](docs/LICENSING.md)
+- [Third-party notices](docs/THIRD_PARTY_NOTICES.md)
+- [Detailed credits](<_Documentations/Mods and Tools/Credits - Open Sturmovik.md>)
 
-Currently known attributions are listed in the
-[credits](<_Documentations/Mods and Tools/Credits - Open Sturmovik.md>) and
-[third-party notices](docs/THIRD_PARTY_NOTICES.md).
+### License, credits and contributions
 
-## Use, modification and sharing
+Alfly's original contributions may be used, modified and shared for non-commercial purposes under [LICENSE.md](LICENSE.md). Commercial use of those contributions is prohibited.
 
-Alfly's original contributions may be downloaded, used, copied, modified,
-shared on the Internet and included in forks for non-commercial purposes under
-the terms of [LICENSE.md](LICENSE.md). All commercial use is prohibited.
+IL-2 Sturmovik 1946, mods, utilities, illustrations, sounds and other third-party material remain subject to the rights and terms of their respective authors. Their inclusion in Open Sturmovik does not place them under Alfly's license.
 
-Game files and works by other authors remain subject to the rights and terms of
-their respective owners. Alfly's license does not replace those terms or place
-the entire pack under a single license. Its scope is explained in
-[docs/LICENSING.md](docs/LICENSING.md).
-
-## Configuration initiale installee
-
-Le nouvel installeur complet prepare par defaut le profil **4.09m Open
-Sturmovik sans 6DOF**, avec HUD standard et langue francaise. Le switcher reste
-disponible pour choisir ensuite une autre version, le mode 6DOF, le HUD ou la
-langue.
+Some historical credit records were lost. If you recognize your work or want to correct an attribution, use the [GitHub Discussions](https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik/discussions).
