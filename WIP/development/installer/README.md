@@ -19,10 +19,19 @@ sans ajouter de Setup-0.bin.
 L'installation est prevue par-dessus un IL-2 Sturmovik 1946 d'origine en
 version 4.07m, 4.08m, 4.09b ou 4.09m. Le script tente de retrouver le dossier
 du jeu depuis les entrees de desinstallation Windows et les emplacements
-courants Steam, Ubisoft et GOG. Cette detection sert uniquement a proposer
-un chemin. La version presente n'est ni lue ni verifiee et un dossier choisi
+courants Steam, Ubisoft et GOG. Il recherche aussi, sur les lecteurs C: a Z:,
+les variantes usuelles placees directement a la racine, sous `Games`,
+`SteamLibrary`, `Steam`, `Games\Steam`, `Ubisoft`, `Games\Ubisoft`,
+`Program Files`, `Program Files (x86)` et `GOG Games`. Cela couvre les anciennes
+installations InstallShield dont l'entree Windows existe mais dont le champ
+`InstallLocation` est vide. Cette detection sert uniquement a proposer un
+chemin. La version presente n'est ni lue ni verifiee et un dossier choisi
 manuellement n'est pas refuse au motif qu'il ne serait pas reconnu comme une
 base compatible.
+
+`AppendDefaultDirName=no` conserve exactement le dossier choisi avec le bouton
+Parcourir. Si le joueur selectionne `D:\Games\IL-2 Sturmovik 1946`, l'assistant
+n'ajoute donc pas une seconde fois `IL-2 Sturmovik 1946` a la fin du chemin.
 
 Le seul refus automatique concerne un dossier qui contient deja Open
 Sturmovik. Les marqueurs controles sont :

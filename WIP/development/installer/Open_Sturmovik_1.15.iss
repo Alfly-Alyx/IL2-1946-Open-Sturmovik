@@ -12,6 +12,7 @@ AppPublisherURL=https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik
 AppSupportURL=https://github.com/Alfly-Alyx/IL2-1946-Open-Sturmovik/issues
 VersionInfoVersion=1.15.0.0
 DefaultDirName={code:GetDefaultInstallDir}
+AppendDefaultDirName=no
 DisableWelcomePage=no
 DisableDirPage=no
 DirExistsWarning=no
@@ -162,13 +163,86 @@ begin
   end;
 end;
 
+function UseIL2Candidate(
+  const Candidate: String;
+  var InstallPath: String): Boolean;
+begin
+  Result := IsIL2Directory(Candidate);
+  if Result then
+    InstallPath := Candidate;
+end;
+
+function FindIL2InCommonDriveFolders(var InstallPath: String): Boolean;
+var
+  DriveCode: Integer;
+  DriveRoot: String;
+begin
+  Result := False;
+
+  for DriveCode := Ord('C') to Ord('Z') do
+  begin
+    DriveRoot := Chr(DriveCode) + ':\';
+
+    Result := UseIL2Candidate(
+      DriveRoot + 'Games\IL-2 Sturmovik 1946', InstallPath);
+    if Result then Exit;
+    Result := UseIL2Candidate(
+      DriveRoot + 'Games\IL 2 Sturmovik 1946', InstallPath);
+    if Result then Exit;
+    Result := UseIL2Candidate(
+      DriveRoot + 'IL-2 Sturmovik 1946', InstallPath);
+    if Result then Exit;
+    Result := UseIL2Candidate(
+      DriveRoot + 'IL 2 Sturmovik 1946', InstallPath);
+    if Result then Exit;
+    Result := UseIL2Candidate(
+      DriveRoot + 'SteamLibrary\steamapps\common\IL 2 Sturmovik 1946',
+      InstallPath);
+    if Result then Exit;
+    Result := UseIL2Candidate(
+      DriveRoot + 'Steam\steamapps\common\IL 2 Sturmovik 1946', InstallPath);
+    if Result then Exit;
+    Result := UseIL2Candidate(
+      DriveRoot + 'Games\Steam\steamapps\common\IL 2 Sturmovik 1946',
+      InstallPath);
+    if Result then Exit;
+    Result := UseIL2Candidate(
+      DriveRoot +
+      'Program Files (x86)\Steam\steamapps\common\IL 2 Sturmovik 1946',
+      InstallPath);
+    if Result then Exit;
+    Result := UseIL2Candidate(
+      DriveRoot +
+      'Program Files\Steam\steamapps\common\IL 2 Sturmovik 1946',
+      InstallPath);
+    if Result then Exit;
+    Result := UseIL2Candidate(
+      DriveRoot + 'Ubisoft\IL-2 Sturmovik 1946', InstallPath);
+    if Result then Exit;
+    Result := UseIL2Candidate(
+      DriveRoot + 'Games\Ubisoft\IL-2 Sturmovik 1946', InstallPath);
+    if Result then Exit;
+    Result := UseIL2Candidate(
+      DriveRoot + 'Program Files (x86)\Ubisoft\IL-2 Sturmovik 1946',
+      InstallPath);
+    if Result then Exit;
+    Result := UseIL2Candidate(
+      DriveRoot + 'Program Files\Ubisoft\IL-2 Sturmovik 1946', InstallPath);
+    if Result then Exit;
+    Result := UseIL2Candidate(
+      DriveRoot + 'GOG Games\IL-2 Sturmovik 1946', InstallPath);
+    if Result then Exit;
+  end;
+end;
+
 function GetDefaultInstallDir(Param: String): String;
 var
   Candidate: String;
 begin
   if FindIL2InUninstallKey(HKCU, UninstallKey, Candidate) or
      FindIL2InUninstallKey(HKLM32, UninstallKey, Candidate) or
-     FindIL2InUninstallKey(HKLM64, UninstallKey, Candidate) then
+     FindIL2InUninstallKey(HKLM64, UninstallKey, Candidate) or
+     FindIL2InCommonDriveFolders(Candidate) then
   begin
     Result := Candidate;
     Exit;
