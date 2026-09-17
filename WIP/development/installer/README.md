@@ -5,10 +5,10 @@ Il ne s'agit pas d'un patch pour une ancienne version d'Open Sturmovik.
 Les anciens scripts Inno Setup ne servent pas de reference.
 
 Le Payload final contient 129 483 fichiers pour 26 257 828 361 octets. La
-compilation definitive de la presentation standard avec Inno Setup 6.7.3 a
-reussi le 15 septembre 2026. Elle a dure 4 765,687 secondes
-(1 h 19 min 26 s) et produit huit fichiers .bin, un executable Setup et
-SHA256SUMS.txt pour 7 446 546 037 octets au total, manifeste compris.
+compilation corrigee avec Inno Setup 6.7.3 a reussi le 16 septembre 2026.
+Elle a dure environ 5 777 secondes (1 h 36 min 17 s) et produit huit fichiers
+.bin, un executable Setup et SHA256SUMS.txt pour 7 446 545 803 octets au total,
+manifeste compris.
 
 Inno Setup 6.7.3 a ete retenu apres comparaison avec l'ancien installeur 1.1,
 qui a ete compile avec Inno Setup 6.3.0 et utilise lui aussi le lanceur normal
@@ -160,8 +160,8 @@ Le script Inno active le decoupage avec :
 Chaque fichier .bin produit est donc limite a 1 000 000 000 octets.
 Le controle final a confirme cette limite pour les huit parties et a produit
 Output\SHA256SUMS.txt. Six parties font exactement 1 000 000 000 octets ;
-la partie 1 fait 984 962 048 octets, la partie 8 fait 446 545 533 octets et
-l'executable fait 15 037 567 octets. Les neuf fichiers doivent toujours etre
+la partie 1 fait 984 962 560 octets, la partie 8 fait 446 545 021 octets et
+l'executable fait 15 037 333 octets. Les neuf fichiers doivent toujours etre
 conserves et distribues ensemble.
 
 ## Incident du premier essai reel
