@@ -101,7 +101,6 @@ Les crédits portent sur les contributions indiquées. Ils ne remplacent pas ceu
 | Gamma Panel | Tomasz Porosiński | Réglage optionnel du gamma. |
 | Bombsight Table 2 | WT_Pedropan ; WT_Pitr | Outil de calcul pour le bombardement. |
 | HardBall Aircraft Viewer 4.08 | Matt « HardBall » Henderson | Consultation des caractéristiques des avions. |
-| IL2 Sticks | FoolTrottel | Configuration des commandes. |
 | IL2 JoyControl | Oleg_BS | Réglage des commandes. |
 | Mission Mate 6 | CrazySchmidt ; Barbs | Préparation de missions. |
 | Quick Mission Tuner 1946 | DiverseWare | Modification de missions. |

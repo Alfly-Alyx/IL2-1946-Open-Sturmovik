@@ -5,7 +5,7 @@ Ce dossier regroupe les programmes qui preparent, configurent, analysent ou acco
 Categories presentes :
 
 - creation de campagnes et missions : Mission Mate, Quick Mission Tuner et WeatherSet ;
-- configuration des commandes : JoyCtrl et IL2 Sticks ;
+- configuration des commandes : JoyCtrl ;
 - consultation et comparaison : HardBall408 et IL2 Compare ;
 - aide au pilote : Bombsight Table 2 et ZipNav.
 

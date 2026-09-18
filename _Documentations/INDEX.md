@@ -84,8 +84,6 @@ Crédits et notices regroupés par sujet. Les fichiers historiques conservent le
 - [Gamma Panel 1.0 / gapa.txt](<Mods and Tools/Gamma Panel 1.0/gapa.txt>)
 - [HardBall Aircraft Viewer 4.08 / Manuel - HardBall Aircraft Viewer 4.08.rtf](<Mods and Tools/HardBall Aircraft Viewer 4.08/Manuel - HardBall Aircraft Viewer 4.08.rtf>)
 - [IL2 Compare 2.4 / history.txt](<Mods and Tools/IL2 Compare 2.4/history.txt>)
-- [IL2 Sticks 1.0h / IL2-Sticks.htm](<Mods and Tools/IL2 Sticks 1.0h/IL2-Sticks.htm>)
-- [IL2 Sticks 1.0h / Readme on Installation.txt](<Mods and Tools/IL2 Sticks 1.0h/Readme on Installation.txt>)
 - [Lowengrin DCG 3.43 / Installation and Settings Instructions.txt](<Mods and Tools/Lowengrin DCG 3.43/Installation and Settings Instructions.txt>)
 - [Lowengrin DCG 3.43 / Readme.txt](<Mods and Tools/Lowengrin DCG 3.43/Readme.txt>)
 - [Mission Mate 6.0.1 / README.md](<Mods and Tools/Mission Mate 6.0.1/README.md>)
